@@ -7,19 +7,19 @@ const INDEX_NAMES = {
   "Nasdaq": "那斯達克",
   "Dow Jones": "道瓊",
   "Nikkei 225": "日經 225",
-  "Hang Seng": "恆生",
-  "恆生": "恆生",
-  "KOSPI": "韓國 KOSPI",
-  "Shanghai Composite": "上證",
-  "上證": "上證",
-  "Shenzhen": "深證",
+  "Hang Seng": "恆生指數",
+  "恆生": "恆生指數",
+  "KOSPI": "韓國綜合",
+  "Shanghai Composite": "上證綜合",
+  "上證": "上證綜合",
+  "Shenzhen": "深證成指",
   "滬深300": "滬深 300",
-  "Nifty 50": "印度 Nifty 50",
-  "ASX 200": "澳洲 ASX 200",
-  "Euro Stoxx 50": "歐洲 STOXX 50",
-  "DAX": "德國 DAX",
-  "FTSE 100": "英國 FTSE 100",
-  "CAC 40": "法國 CAC 40"
+  "Nifty 50": "印度 50",
+  "ASX 200": "澳洲 200",
+  "Euro Stoxx 50": "歐洲 50",
+  "DAX": "德國 30",
+  "FTSE 100": "富時 100",
+  "CAC 40": "法國 40"
 };
 
 function indexLabel(name) {
@@ -69,11 +69,11 @@ const BOND_BOP_CODES = {
   "UK 10Y": "GBUK120"
 };
 const BOND_NAMES = {
-  "US 10Y": "美 10Y",
-  "US 2Y": "美 2Y",
-  "Germany 10Y": "德 10Y",
-  "Japan 10Y": "日 10Y",
-  "UK 10Y": "英 10Y"
+  "US 10Y": "美國 10年",
+  "US 2Y": "美國 2年",
+  "Germany 10Y": "德國 10年",
+  "Japan 10Y": "日本 10年",
+  "UK 10Y": "英國 10年"
 };
 function bondLink(name) {
   const code = BOND_BOP_CODES[name];
