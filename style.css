@@ -169,6 +169,12 @@ table.indices thead th {
   background: var(--bg);
   font-weight: 600;
 }
+table.indices .date-col {
+  font-size: 12px;
+  color: var(--text-mute);
+  white-space: nowrap;
+  text-align: center;
+}
 
 .tabs {
   display: flex;
