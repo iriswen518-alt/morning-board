@@ -254,7 +254,7 @@ function renderMarketSheet() {
       <td class="${pctClass(i.daily_pct)}">${fmtPct(i.daily_pct)}</td>
       <td class="${pctClass(i.mtd_pct)}">${fmtPct(i.mtd_pct)}</td>
       <td class="${pctClass(i.ytd_pct)}">${fmtPct(i.ytd_pct)}</td>
-      <td class="date-col">${escapeHtml(date)}</td>
+      <td class="date-col">${escapeHtml(shortDate(i.closing_date) || date)}</td>
     </tr>
   `).join("");
   const bondRows = (m.bonds || []).map(b => `
@@ -263,7 +263,7 @@ function renderMarketSheet() {
       <td>${b.yield_pct != null ? b.yield_pct.toFixed(2) + "%" : "—"}</td>
       <td class="${bpsClass(b.daily_bps)}">${fmtBps(b.daily_bps)}</td>
       <td class="${bpsClass(b.mtd_bps)}">${fmtBps(b.mtd_bps)}</td>
-      <td class="date-col">${escapeHtml(date)}</td>
+      <td class="date-col">${escapeHtml(shortDate(b.closing_date) || date)}</td>
     </tr>
   `).join("");
 
@@ -274,7 +274,7 @@ function renderMarketSheet() {
       <td class="${pctClass(f.daily_pct)}">${fmtPct(f.daily_pct)}</td>
       <td class="${pctClass(f.mtd_pct)}">${fmtPct(f.mtd_pct)}</td>
       <td class="${pctClass(f.ytd_pct)}">${fmtPct(f.ytd_pct)}</td>
-      <td class="date-col">${escapeHtml(date)}</td>
+      <td class="date-col">${escapeHtml(shortDate(f.closing_date) || date)}</td>
     </tr>
   `).join("");
 

@@ -7,7 +7,8 @@
       "close": 7337.11,
       "daily_pct": -0.38,
       "mtd_pct": 1.48,
-      "ytd_pct": 7.18
+      "ytd_pct": 7.18,
+      "closing_date": null
     },
     {
       "name": "Nasdaq",
@@ -15,7 +16,8 @@
       "close": 25806.2,
       "daily_pct": -0.13,
       "mtd_pct": 2.75,
-      "ytd_pct": 11.03
+      "ytd_pct": 11.03,
+      "closing_date": null
     },
     {
       "name": "Dow Jones",
@@ -23,7 +25,8 @@
       "close": 49596.97,
       "daily_pct": -0.63,
       "mtd_pct": 0.2,
-      "ytd_pct": 3.19
+      "ytd_pct": 3.19,
+      "closing_date": null
     },
     {
       "name": "Euro Stoxx 50",
@@ -31,7 +34,8 @@
       "close": 6025.0,
       "daily_pct": 2.6,
       "mtd_pct": null,
-      "ytd_pct": null
+      "ytd_pct": null,
+      "closing_date": null
     },
     {
       "name": "DAX",
@@ -39,7 +43,8 @@
       "close": 24919.0,
       "daily_pct": 2.12,
       "mtd_pct": null,
-      "ytd_pct": 2.33
+      "ytd_pct": 2.33,
+      "closing_date": null
     },
     {
       "name": "FTSE 100",
@@ -47,7 +52,8 @@
       "close": 10276.95,
       "daily_pct": -1.55,
       "mtd_pct": null,
-      "ytd_pct": 4.16
+      "ytd_pct": 4.16,
+      "closing_date": null
     },
     {
       "name": "CAC 40",
@@ -55,7 +61,8 @@
       "close": 8210.0,
       "daily_pct": -1.1,
       "mtd_pct": null,
-      "ytd_pct": null
+      "ytd_pct": null,
+      "closing_date": null
     },
     {
       "name": "Nikkei 225",
@@ -63,7 +70,8 @@
       "close": 62833.84,
       "daily_pct": 5.58,
       "mtd_pct": null,
-      "ytd_pct": 24.82
+      "ytd_pct": 24.82,
+      "closing_date": null
     },
     {
       "name": "TAIEX",
@@ -71,7 +79,8 @@
       "close": 41933.78,
       "daily_pct": 1.93,
       "mtd_pct": null,
-      "ytd_pct": 46.85
+      "ytd_pct": 46.85,
+      "closing_date": null
     },
     {
       "name": "KOSPI",
@@ -79,7 +88,8 @@
       "close": 7490.05,
       "daily_pct": 1.43,
       "mtd_pct": null,
-      "ytd_pct": 77.68
+      "ytd_pct": 77.68,
+      "closing_date": null
     },
     {
       "name": "恆生",
@@ -87,7 +97,8 @@
       "close": 26626.0,
       "daily_pct": 1.57,
       "mtd_pct": null,
-      "ytd_pct": 3.88
+      "ytd_pct": 3.88,
+      "closing_date": null
     },
     {
       "name": "上證",
@@ -95,7 +106,8 @@
       "close": 4180.0,
       "daily_pct": 0.48,
       "mtd_pct": null,
-      "ytd_pct": null
+      "ytd_pct": null,
+      "closing_date": null
     },
     {
       "name": "滬深300",
@@ -103,7 +115,8 @@
       "close": 4901.0,
       "daily_pct": 0.48,
       "mtd_pct": null,
-      "ytd_pct": 6.22
+      "ytd_pct": 6.22,
+      "closing_date": null
     },
     {
       "name": "Nifty 50",
@@ -111,7 +124,8 @@
       "close": 24327.0,
       "daily_pct": -0.02,
       "mtd_pct": null,
-      "ytd_pct": null
+      "ytd_pct": null,
+      "closing_date": null
     },
     {
       "name": "ASX 200",
@@ -119,7 +133,8 @@
       "close": 8878.1,
       "daily_pct": 0.96,
       "mtd_pct": null,
-      "ytd_pct": 1.88
+      "ytd_pct": 1.88,
+      "closing_date": null
     }
   ],
   "bonds": [
@@ -127,31 +142,36 @@
       "name": "US 10Y",
       "yield_pct": 4.35,
       "daily_bps": null,
-      "mtd_bps": null
+      "mtd_bps": null,
+      "closing_date": null
     },
     {
       "name": "US 2Y",
       "yield_pct": 3.86,
       "daily_bps": -1.0,
-      "mtd_bps": null
+      "mtd_bps": null,
+      "closing_date": null
     },
     {
       "name": "Germany 10Y",
       "yield_pct": 2.97,
       "daily_bps": null,
-      "mtd_bps": null
+      "mtd_bps": null,
+      "closing_date": null
     },
     {
       "name": "Japan 10Y",
       "yield_pct": 2.45,
       "daily_bps": null,
-      "mtd_bps": null
+      "mtd_bps": null,
+      "closing_date": null
     },
     {
       "name": "UK 10Y",
       "yield_pct": 4.8,
       "daily_bps": null,
-      "mtd_bps": null
+      "mtd_bps": null,
+      "closing_date": null
     }
   ],
   "fx": [
@@ -160,42 +180,48 @@
       "close": 98.03,
       "daily_pct": -0.01,
       "mtd_pct": null,
-      "ytd_pct": null
+      "ytd_pct": null,
+      "closing_date": null
     },
     {
       "name": "EUR/USD",
       "close": 1.1752,
       "daily_pct": 0.03,
       "mtd_pct": null,
-      "ytd_pct": null
+      "ytd_pct": null,
+      "closing_date": null
     },
     {
       "name": "USD/JPY",
       "close": 156.9,
       "daily_pct": 0.32,
       "mtd_pct": null,
-      "ytd_pct": null
+      "ytd_pct": null,
+      "closing_date": null
     },
     {
       "name": "GBP/USD",
       "close": 1.3598,
       "daily_pct": null,
       "mtd_pct": null,
-      "ytd_pct": null
+      "ytd_pct": null,
+      "closing_date": null
     },
     {
       "name": "USD/CNY",
       "close": null,
       "daily_pct": null,
       "mtd_pct": null,
-      "ytd_pct": null
+      "ytd_pct": null,
+      "closing_date": null
     },
     {
       "name": "USD/TWD",
       "close": 31.35,
       "daily_pct": null,
       "mtd_pct": null,
-      "ytd_pct": null
+      "ytd_pct": null,
+      "closing_date": null
     }
   ],
   "summary": "A split global session: Nikkei 225 surged +5.58% to 62,833.84 (first-ever close above 62,000), TAIEX advanced +1.93% to 41,933.78 (extending record after Wednesday's first close above 41,000), and KOSPI held above 7,000 on AI chip momentum; European markets diverged with DAX +2.12% while FTSE 100 (-1.55%) and CAC 40 (-1.10%) fell on energy sector drag; US markets reversed from intraday all-time highs to close modestly lower (S&P -0.38%) as oil bounced back from session lows amid Iran deal uncertainty."
