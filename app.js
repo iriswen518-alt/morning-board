@@ -310,19 +310,22 @@ function renderNewsSheet() {
 
 function renderFinNews() {
   const sections = DATA.news.sections || [];
-  return sections.map(s => `
-    <h3 style="color:var(--brand-deep); margin-top:18px">${escapeHtml(s.section_zh || s.section)}</h3>
-    ${s.items.map(it => `
-      <div class="news-item">
-        <h3>${escapeHtml(it.title_zh || it.title_en)}</h3>
-        <div class="summary">${escapeHtml(it.summary_zh || it.summary_en || "")}</div>
-        ${it.source_url ? `<a class="source" href="${it.source_url}" target="_blank" rel="noopener">${escapeHtml(it.source_name || "來源")} ↗</a>` : ""}
-        ${it.title_en ? `<span class="toggle-en" data-toggle>EN</span><div class="en">
-          <strong>${escapeHtml(it.title_en)}</strong><br>${escapeHtml(it.summary_en || "")}
-        </div>` : ""}
-      </div>
-    `).join("")}
-  `).join("");
+  return sections.map(s => {
+    // 只渲染有中文標題的條目；無中文則整則跳過
+    const items = (s.items || []).filter(it => it.title_zh);
+    if (!items.length) return "";
+    const sectionTitle = s.section_zh || s.section;
+    return `
+      <h3 style="color:var(--brand-deep); margin-top:18px">${escapeHtml(sectionTitle)}</h3>
+      ${items.map(it => `
+        <div class="news-item">
+          <h3>${escapeHtml(it.title_zh)}</h3>
+          <div class="summary">${escapeHtml(it.summary_zh || "")}</div>
+          ${it.source_url ? `<a class="source" href="${it.source_url}" target="_blank" rel="noopener">${escapeHtml(it.source_name || "來源")} ↗</a>` : ""}
+        </div>
+      `).join("")}
+    `;
+  }).join("");
 }
 
 function renderTaxNews() {
@@ -362,11 +365,6 @@ function wireNewsTabs() {
       const which = t.dataset.tab;
       $("tab-fin").hidden = which !== "fin";
       $("tab-tax").hidden = which !== "tax";
-    });
-  });
-  document.querySelectorAll("[data-toggle]").forEach(el => {
-    el.addEventListener("click", () => {
-      el.nextElementSibling.classList.toggle("show");
     });
   });
 }
