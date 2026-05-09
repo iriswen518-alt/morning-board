@@ -26,6 +26,42 @@ function indexLabel(name) {
   return INDEX_NAMES[name] || name;
 }
 
+const INDEX_BOP_CODES = {
+  "TAIEX": "EB09999",
+  "S&P 500": "SPY.US",
+  "Nasdaq": "AI000020",
+  "Dow Jones": "AI000010",
+  "Nikkei 225": "AI000030",
+  "KOSPI": "AI000070",
+  "Hang Seng": "AI000040",
+  "恆生": "AI000040",
+  "Shanghai Composite": "AI000220",
+  "上證": "AI000220",
+  "滬深300": "AI000545",
+  "Euro Stoxx 50": "AI001048",
+  "ASX 200": "AI000320"
+};
+
+function indexUrl(name) {
+  const code = INDEX_BOP_CODES[name];
+  return code
+    ? `https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=${encodeURIComponent(code)}`
+    : null;
+}
+
+function indexLink(name) {
+  const url = indexUrl(name);
+  const label = escapeHtml(indexLabel(name));
+  return url
+    ? `<a href="${url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${label}</a>`
+    : label;
+}
+
+function fmtInt(n) {
+  if (n === null || n === undefined) return "—";
+  return Math.round(n).toLocaleString("en-US");
+}
+
 async function load(name) {
   const r = await fetch(`data/${name}.json?t=${Date.now()}`);
   if (!r.ok) throw new Error(`${name}: ${r.status}`);
@@ -96,8 +132,8 @@ function renderMarketPreview() {
     .filter(Boolean);
   $("market-preview").innerHTML = top.map(i => `
     <div class="row">
-      <span class="name">${escapeHtml(indexLabel(i.name))}</span>
-      <span class="val">${fmtNum(i.close)} <span class="${pctClass(i.daily_pct)}">${fmtPct(i.daily_pct)}</span></span>
+      <span class="name">${indexLink(i.name)}</span>
+      <span class="val">${fmtInt(i.close)} <span class="${pctClass(i.daily_pct)}">${fmtPct(i.daily_pct)}</span></span>
     </div>
   `).join("");
 }
@@ -149,8 +185,8 @@ function renderMarketSheet() {
   const m = DATA.market;
   const rows = m.indices.map(i => `
     <tr>
-      <td>${escapeHtml(indexLabel(i.name))}</td>
-      <td>${fmtNum(i.close)}</td>
+      <td>${indexLink(i.name)}</td>
+      <td>${fmtInt(i.close)}</td>
       <td class="${pctClass(i.daily_pct)}">${fmtPct(i.daily_pct)}</td>
       <td class="${pctClass(i.mtd_pct)}">${fmtPct(i.mtd_pct)}</td>
       <td class="${pctClass(i.ytd_pct)}">${fmtPct(i.ytd_pct)}</td>
