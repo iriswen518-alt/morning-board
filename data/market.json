@@ -122,5 +122,81 @@
       "ytd_pct": 1.88
     }
   ],
+  "bonds": [
+    {
+      "name": "US 10Y",
+      "yield_pct": 4.35,
+      "daily_bps": null,
+      "mtd_bps": null
+    },
+    {
+      "name": "US 2Y",
+      "yield_pct": 3.86,
+      "daily_bps": -1.0,
+      "mtd_bps": null
+    },
+    {
+      "name": "Germany 10Y",
+      "yield_pct": 2.97,
+      "daily_bps": null,
+      "mtd_bps": null
+    },
+    {
+      "name": "Japan 10Y",
+      "yield_pct": 2.45,
+      "daily_bps": null,
+      "mtd_bps": null
+    },
+    {
+      "name": "UK 10Y",
+      "yield_pct": 4.8,
+      "daily_bps": null,
+      "mtd_bps": null
+    }
+  ],
+  "fx": [
+    {
+      "name": "DXY",
+      "close": 98.03,
+      "daily_pct": -0.01,
+      "mtd_pct": null,
+      "ytd_pct": null
+    },
+    {
+      "name": "EUR/USD",
+      "close": 1.1752,
+      "daily_pct": 0.03,
+      "mtd_pct": null,
+      "ytd_pct": null
+    },
+    {
+      "name": "USD/JPY",
+      "close": 156.9,
+      "daily_pct": 0.32,
+      "mtd_pct": null,
+      "ytd_pct": null
+    },
+    {
+      "name": "GBP/USD",
+      "close": 1.3598,
+      "daily_pct": null,
+      "mtd_pct": null,
+      "ytd_pct": null
+    },
+    {
+      "name": "USD/CNY",
+      "close": null,
+      "daily_pct": null,
+      "mtd_pct": null,
+      "ytd_pct": null
+    },
+    {
+      "name": "USD/TWD",
+      "close": 31.35,
+      "daily_pct": null,
+      "mtd_pct": null,
+      "ytd_pct": null
+    }
+  ],
   "summary": "A split global session: Nikkei 225 surged +5.58% to 62,833.84 (first-ever close above 62,000), TAIEX advanced +1.93% to 41,933.78 (extending record after Wednesday's first close above 41,000), and KOSPI held above 7,000 on AI chip momentum; European markets diverged with DAX +2.12% while FTSE 100 (-1.55%) and CAC 40 (-1.10%) fell on energy sector drag; US markets reversed from intraday all-time highs to close modestly lower (S&P -0.38%) as oil bounced back from session lows amid Iran deal uncertainty."
 }
