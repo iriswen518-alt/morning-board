@@ -1,6 +1,31 @@
 // Morning Board app
 const $ = (id) => document.getElementById(id);
 
+const INDEX_NAMES = {
+  "TAIEX": "加權指數",
+  "S&P 500": "標普 500",
+  "Nasdaq": "那斯達克",
+  "Dow Jones": "道瓊",
+  "Nikkei 225": "日經 225",
+  "Hang Seng": "恆生",
+  "恆生": "恆生",
+  "KOSPI": "韓國 KOSPI",
+  "Shanghai Composite": "上證",
+  "上證": "上證",
+  "Shenzhen": "深證",
+  "滬深300": "滬深 300",
+  "Nifty 50": "印度 Nifty 50",
+  "ASX 200": "澳洲 ASX 200",
+  "Euro Stoxx 50": "歐洲 STOXX 50",
+  "DAX": "德國 DAX",
+  "FTSE 100": "英國 FTSE 100",
+  "CAC 40": "法國 CAC 40"
+};
+
+function indexLabel(name) {
+  return INDEX_NAMES[name] || name;
+}
+
 async function load(name) {
   const r = await fetch(`data/${name}.json?t=${Date.now()}`);
   if (!r.ok) throw new Error(`${name}: ${r.status}`);
@@ -67,7 +92,7 @@ function renderMarketPreview() {
     .filter(Boolean);
   $("market-preview").innerHTML = top.map(i => `
     <div class="row">
-      <span class="name">${i.name}</span>
+      <span class="name">${escapeHtml(indexLabel(i.name))}</span>
       <span class="val">${fmtNum(i.close)} <span class="${pctClass(i.daily_pct)}">${fmtPct(i.daily_pct)}</span></span>
     </div>
   `).join("");
@@ -120,7 +145,7 @@ function renderMarketSheet() {
   const m = DATA.market;
   const rows = m.indices.map(i => `
     <tr>
-      <td>${escapeHtml(i.name)}</td>
+      <td>${escapeHtml(indexLabel(i.name))}</td>
       <td>${fmtNum(i.close)}</td>
       <td class="${pctClass(i.daily_pct)}">${fmtPct(i.daily_pct)}</td>
       <td class="${pctClass(i.mtd_pct)}">${fmtPct(i.mtd_pct)}</td>
