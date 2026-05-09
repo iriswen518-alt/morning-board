@@ -62,6 +62,61 @@ function fmtInt(n) {
   return Math.round(n).toLocaleString("en-US");
 }
 
+const BOND_BOP_CODES = {
+  "US 10Y": "GBUS120",
+  "Germany 10Y": "GBDM120",
+  "Japan 10Y": "GBJP120",
+  "UK 10Y": "GBUK120"
+};
+const BOND_NAMES = {
+  "US 10Y": "美 10Y",
+  "US 2Y": "美 2Y",
+  "Germany 10Y": "德 10Y",
+  "Japan 10Y": "日 10Y",
+  "UK 10Y": "英 10Y"
+};
+function bondLink(name) {
+  const code = BOND_BOP_CODES[name];
+  const label = escapeHtml(BOND_NAMES[name] || name);
+  return code
+    ? `<a href="https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=${encodeURIComponent(code)}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${label}</a>`
+    : label;
+}
+
+const FX_BOP_CODES = {
+  "DXY": "EI0001",
+  "EUR/USD": "AX000090",
+  "USD/JPY": "AX000030",
+  "GBP/USD": "AX000040",
+  "USD/CNY": "AX000250"
+};
+const FX_NAMES = {
+  "DXY": "美元指數",
+  "EUR/USD": "歐元/美元",
+  "USD/JPY": "美元/日圓",
+  "GBP/USD": "英鎊/美元",
+  "USD/CNY": "美元/人民幣"
+};
+function fxLink(name) {
+  const code = FX_BOP_CODES[name];
+  const label = escapeHtml(FX_NAMES[name] || name);
+  return code
+    ? `<a href="https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=${encodeURIComponent(code)}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${label}</a>`
+    : label;
+}
+
+function fmtBps(n) {
+  if (n === null || n === undefined) return "—";
+  const sign = n > 0 ? "+" : "";
+  return `${sign}${Math.round(n)}`;
+}
+
+function bpsClass(n) {
+  if (n === null || n === undefined) return "";
+  // For bond yields, rising = up; user asked for red-up/green-down convention
+  return n > 0 ? "up" : (n < 0 ? "down" : "");
+}
+
 async function load(name) {
   const r = await fetch(`data/${name}.json?t=${Date.now()}`);
   if (!r.ok) throw new Error(`${name}: ${r.status}`);
@@ -192,13 +247,52 @@ function renderMarketSheet() {
       <td class="${pctClass(i.ytd_pct)}">${fmtPct(i.ytd_pct)}</td>
     </tr>
   `).join("");
+  const bondRows = (m.bonds || []).map(b => `
+    <tr>
+      <td>${bondLink(b.name)}</td>
+      <td>${b.yield_pct != null ? b.yield_pct.toFixed(2) + "%" : "—"}</td>
+      <td class="${bpsClass(b.daily_bps)}">${fmtBps(b.daily_bps)}</td>
+      <td class="${bpsClass(b.mtd_bps)}">${fmtBps(b.mtd_bps)}</td>
+    </tr>
+  `).join("");
+
+  const fxRows = (m.fx || []).map(f => `
+    <tr>
+      <td>${fxLink(f.name)}</td>
+      <td>${f.close != null ? f.close.toLocaleString("en-US", { maximumFractionDigits: 4 }) : "—"}</td>
+      <td class="${pctClass(f.daily_pct)}">${fmtPct(f.daily_pct)}</td>
+      <td class="${pctClass(f.mtd_pct)}">${fmtPct(f.mtd_pct)}</td>
+      <td class="${pctClass(f.ytd_pct)}">${fmtPct(f.ytd_pct)}</td>
+    </tr>
+  `).join("");
+
   return `
+    <h3 style="color:var(--brand-deep); margin:0 0 8px">股市指數</h3>
     <table class="indices">
       <thead><tr>
         <th>指數</th><th>收盤</th><th>日</th><th>MTD</th><th>YTD</th>
       </tr></thead>
       <tbody>${rows}</tbody>
     </table>
+
+    ${bondRows ? `
+    <h3 style="color:var(--brand-deep); margin:24px 0 8px">公債殖利率</h3>
+    <table class="indices">
+      <thead><tr>
+        <th>債別</th><th>殖利率</th><th>日變動 (bps)</th><th>MTD (bps)</th>
+      </tr></thead>
+      <tbody>${bondRows}</tbody>
+    </table>` : ""}
+
+    ${fxRows ? `
+    <h3 style="color:var(--brand-deep); margin:24px 0 8px">匯率</h3>
+    <table class="indices">
+      <thead><tr>
+        <th>幣別</th><th>收盤</th><th>日</th><th>MTD</th><th>YTD</th>
+      </tr></thead>
+      <tbody>${fxRows}</tbody>
+    </table>` : ""}
+
     <p style="margin-top:16px; font-size:14px; color:var(--text-mute); line-height:1.6">${escapeHtml(m.summary || "")}</p>
   `;
 }
