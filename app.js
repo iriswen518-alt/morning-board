@@ -212,7 +212,7 @@ function renderFundsPreview() {
   $("funds-preview").innerHTML = funds.map(f => `
     <div class="row">
       <span class="name">${escapeHtml(f.name_zh)}</span>
-      <span class="val ${pctClass(f.perf['1m'])}">${fmtPct(f.perf['1m'])} / 1M</span>
+      <span class="val ${pctClass(f.perf['1m'])}">${fmtPct(f.perf['1m'])} / 近1月</span>
     </div>
   `).join("") || "<div class='row'>—</div>";
 }
@@ -270,7 +270,7 @@ function renderMarketSheet() {
     <h3 style="color:var(--brand-deep); margin:0 0 8px">股市指數</h3>
     <table class="indices">
       <thead><tr>
-        <th>指數</th><th>收盤</th><th>日</th><th>MTD</th><th>YTD</th>
+        <th>指數</th><th>收盤</th><th>日</th><th>月來</th><th>今年</th>
       </tr></thead>
       <tbody>${rows}</tbody>
     </table>
@@ -279,7 +279,7 @@ function renderMarketSheet() {
     <h3 style="color:var(--brand-deep); margin:24px 0 8px">公債殖利率</h3>
     <table class="indices">
       <thead><tr>
-        <th>債別</th><th>殖利率</th><th>日變動 (bps)</th><th>MTD (bps)</th>
+        <th>債別</th><th>殖利率</th><th>日變動</th><th>月來變動</th>
       </tr></thead>
       <tbody>${bondRows}</tbody>
     </table>` : ""}
@@ -288,7 +288,7 @@ function renderMarketSheet() {
     <h3 style="color:var(--brand-deep); margin:24px 0 8px">匯率</h3>
     <table class="indices">
       <thead><tr>
-        <th>幣別</th><th>收盤</th><th>日</th><th>MTD</th><th>YTD</th>
+        <th>幣別</th><th>收盤</th><th>日</th><th>月來</th><th>今年</th>
       </tr></thead>
       <tbody>${fxRows}</tbody>
     </table>` : ""}
@@ -347,10 +347,10 @@ function renderFundsSheet() {
       <h3>${escapeHtml(f.name_zh)}</h3>
       <p class="tagline">${escapeHtml(f.tagline || "")}</p>
       <div class="grid">
-        <div><label>NAV</label>${fmtNum(f.nav)} ${escapeHtml(f.currency || "")}</div>
+        <div><label>淨值</label>${fmtNum(f.nav)} ${escapeHtml(f.currency || "")}</div>
         <div><label>日漲跌</label><span class="${pctClass(f.change_pct)}">${fmtPct(f.change_pct)}</span></div>
-        <div><label>1M</label><span class="${pctClass(f.perf?.['1m'])}">${fmtPct(f.perf?.['1m'])}</span></div>
-        <div><label>YTD</label><span class="${pctClass(f.perf?.ytd)}">${fmtPct(f.perf?.ytd)}</span></div>
+        <div><label>近1月</label><span class="${pctClass(f.perf?.['1m'])}">${fmtPct(f.perf?.['1m'])}</span></div>
+        <div><label>今年來</label><span class="${pctClass(f.perf?.ytd)}">${fmtPct(f.perf?.ytd)}</span></div>
       </div>
       ${f.source_url ? `<a class="source" href="${f.source_url}" target="_blank" rel="noopener" style="display:block;margin-top:8px">板信基金頁 ↗</a>` : ""}
     </div>
