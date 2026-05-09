@@ -317,7 +317,7 @@ function renderFinNews() {
         <h3>${escapeHtml(it.title_zh || it.title_en)}</h3>
         <div class="summary">${escapeHtml(it.summary_zh || it.summary_en || "")}</div>
         ${it.source_url ? `<a class="source" href="${it.source_url}" target="_blank" rel="noopener">${escapeHtml(it.source_name || "來源")} ↗</a>` : ""}
-        ${it.title_en ? `<span class="toggle-en" data-toggle>展開英文</span><div class="en">
+        ${it.title_en ? `<span class="toggle-en" data-toggle>EN</span><div class="en">
           <strong>${escapeHtml(it.title_en)}</strong><br>${escapeHtml(it.summary_en || "")}
         </div>` : ""}
       </div>
