@@ -1,38 +1,22 @@
-const CACHE = "morning-board-v2";
-const ASSETS = [
-  "./",
-  "./index.html",
-  "./style.css",
-  "./app.js",
-  "./manifest.json",
-  "./icon-192.png",
-  "./icon-512.png",
-];
-
+// Kill-switch SW v3 — wipe all caches, unregister self, force reload all clients.
+// Once everyone has run this, replace with a real SW again.
 self.addEventListener("install", e => {
-  e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)));
   self.skipWaiting();
 });
 
 self.addEventListener("activate", e => {
-  e.waitUntil(
-    caches.keys().then(keys =>
-      Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k)))
-    ).then(() => self.clients.claim())
-  );
+  e.waitUntil((async () => {
+    const keys = await caches.keys();
+    await Promise.all(keys.map(k => caches.delete(k)));
+    await self.registration.unregister();
+    const clients = await self.clients.matchAll({ type: "window" });
+    for (const c of clients) {
+      try { c.navigate(c.url); } catch {}
+    }
+  })());
 });
 
-// Network-first for everything; fallback to cache only when offline.
-// Trades a bit of speed for guaranteed freshness — fixes "stuck on old version" issues.
 self.addEventListener("fetch", e => {
-  const req = e.request;
-  e.respondWith(
-    fetch(req).then(res => {
-      if (res.ok) {
-        const clone = res.clone();
-        caches.open(CACHE).then(c => c.put(req, clone));
-      }
-      return res;
-    }).catch(() => caches.match(req).then(c => c || Response.error()))
-  );
+  // Always go to network, never cache.
+  e.respondWith(fetch(e.request).catch(() => new Response("offline", { status: 503 })));
 });
