@@ -156,10 +156,11 @@ let DATA = {};
 
 async function init() {
   try {
-    const [meta, market, news, tax, funds] = await Promise.all([
+    const [meta, market, news, tax, funds, stocks] = await Promise.all([
       load("meta"), load("market"), load("news"), load("tax"), load("funds"),
+      load("stocks").catch(() => ({ us_stocks: [], tw_stocks: [] })),
     ]);
-    DATA = { meta, market, news, tax, funds };
+    DATA = { meta, market, news, tax, funds, stocks };
   } catch (e) {
     $("updated").textContent = `載入失敗：${e.message}`;
     return;
@@ -304,7 +305,39 @@ function renderMarketSheet() {
       <tbody>${fxRows}</tbody>
     </table>` : ""}
 
+    ${renderStocksTable("美股", DATA.stocks?.us_stocks)}
+    ${renderStocksTable("台股", DATA.stocks?.tw_stocks)}
+
     ${renderMarketHighlights(m)}
+  `;
+}
+
+function renderStocksTable(title, list) {
+  if (!list || !list.length) return "";
+  const fmtPrice = (p, kind) => {
+    if (p === null || p === undefined) return "—";
+    const prefix = kind === "TW" ? "" : "$";
+    return prefix + p.toLocaleString("en-US", { maximumFractionDigits: 2 });
+  };
+  const rows = list.map(s => `
+    <tr>
+      <td>${s.source_url
+        ? `<a href="${s.source_url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${escapeHtml(s.name_zh)}</a>`
+        : escapeHtml(s.name_zh)}</td>
+      <td style="color:var(--text-mute); font-size:12px">${escapeHtml(s.symbol)}</td>
+      <td>${fmtPrice(s.price, s.kind)}</td>
+      <td class="${pctClass(s.change_pct)}">${fmtPct(s.change_pct)}</td>
+      <td class="date-col">${escapeHtml(shortDate(s.market_date))}</td>
+    </tr>
+  `).join("");
+  return `
+    <h3 style="color:var(--brand-deep); margin:24px 0 8px">${title}</h3>
+    <table class="indices">
+      <thead><tr>
+        <th>名稱</th><th>代碼</th><th>收盤</th><th>日</th><th class="date-col">收盤日</th>
+      </tr></thead>
+      <tbody>${rows}</tbody>
+    </table>
   `;
 }
 
