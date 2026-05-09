@@ -36,13 +36,42 @@ body {
 }
 
 .topbar {
-  padding: 20px 16px 16px;
-  background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
+  position: relative;
+  padding: 24px 18px 20px;
+  background:
+    radial-gradient(circle at 90% -20%, rgba(255, 255, 255, 0.22), transparent 55%),
+    radial-gradient(ellipse at -10% 110%, rgba(23, 181, 173, 0.55), transparent 60%),
+    linear-gradient(135deg, #003D91 0%, #019AB3 55%, #17B5AD 100%);
   color: white;
+  overflow: hidden;
 }
+.topbar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 70% 130%, rgba(255, 217, 107, 0.18), transparent 45%);
+  pointer-events: none;
+}
+.topbar::after {
+  content: "";
+  position: absolute;
+  top: -40%; right: -25%;
+  width: 70%; height: 200%;
+  background: linear-gradient(120deg, transparent 30%, rgba(255, 255, 255, 0.08) 50%, transparent 70%);
+  transform: rotate(12deg);
+  pointer-events: none;
+}
+.topbar > * { position: relative; z-index: 1; }
 
-.topbar h1 { margin: 0 0 4px; font-size: 22px; }
-.topbar .updated { margin: 0; font-size: 13px; opacity: 0.9; }
+.topbar h1 {
+  margin: 0 0 6px;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+.topbar .updated { margin: 0; font-size: 13px; opacity: 0.92; }
 
 #cards {
   padding: 12px;
