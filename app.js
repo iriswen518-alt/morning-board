@@ -245,6 +245,7 @@ function closeSheet() {
 
 function renderMarketSheet() {
   const m = DATA.market;
+  const date = shortDate(m.closing_date);
   const rows = m.indices.map(i => `
     <tr>
       <td>${indexLink(i.name)}</td>
@@ -252,6 +253,7 @@ function renderMarketSheet() {
       <td class="${pctClass(i.daily_pct)}">${fmtPct(i.daily_pct)}</td>
       <td class="${pctClass(i.mtd_pct)}">${fmtPct(i.mtd_pct)}</td>
       <td class="${pctClass(i.ytd_pct)}">${fmtPct(i.ytd_pct)}</td>
+      <td class="date-col">${escapeHtml(date)}</td>
     </tr>
   `).join("");
   const bondRows = (m.bonds || []).map(b => `
@@ -260,6 +262,7 @@ function renderMarketSheet() {
       <td>${b.yield_pct != null ? b.yield_pct.toFixed(2) + "%" : "—"}</td>
       <td class="${bpsClass(b.daily_bps)}">${fmtBps(b.daily_bps)}</td>
       <td class="${bpsClass(b.mtd_bps)}">${fmtBps(b.mtd_bps)}</td>
+      <td class="date-col">${escapeHtml(date)}</td>
     </tr>
   `).join("");
 
@@ -270,6 +273,7 @@ function renderMarketSheet() {
       <td class="${pctClass(f.daily_pct)}">${fmtPct(f.daily_pct)}</td>
       <td class="${pctClass(f.mtd_pct)}">${fmtPct(f.mtd_pct)}</td>
       <td class="${pctClass(f.ytd_pct)}">${fmtPct(f.ytd_pct)}</td>
+      <td class="date-col">${escapeHtml(date)}</td>
     </tr>
   `).join("");
 
@@ -277,7 +281,7 @@ function renderMarketSheet() {
     <h3 style="color:var(--brand-deep); margin:0 0 8px">股市指數</h3>
     <table class="indices">
       <thead><tr>
-        <th>指數</th><th>收盤</th><th>日</th><th>本月</th><th>今年</th>
+        <th>指數</th><th>收盤</th><th>日</th><th>本月</th><th>今年</th><th class="date-col">收盤日</th>
       </tr></thead>
       <tbody>${rows}</tbody>
     </table>
@@ -286,7 +290,7 @@ function renderMarketSheet() {
     <h3 style="color:var(--brand-deep); margin:24px 0 8px">公債殖利率</h3>
     <table class="indices">
       <thead><tr>
-        <th>債別</th><th>殖利率</th><th>日變動</th><th>本月變動</th>
+        <th>債別</th><th>殖利率</th><th>日變動</th><th>本月變動</th><th class="date-col">收盤日</th>
       </tr></thead>
       <tbody>${bondRows}</tbody>
     </table>` : ""}
@@ -295,7 +299,7 @@ function renderMarketSheet() {
     <h3 style="color:var(--brand-deep); margin:24px 0 8px">匯率</h3>
     <table class="indices">
       <thead><tr>
-        <th>幣別</th><th>收盤</th><th>日</th><th>本月</th><th>今年</th>
+        <th>幣別</th><th>收盤</th><th>日</th><th>本月</th><th>今年</th><th class="date-col">收盤日</th>
       </tr></thead>
       <tbody>${fxRows}</tbody>
     </table>` : ""}
