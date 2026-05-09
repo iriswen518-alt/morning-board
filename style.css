@@ -25,6 +25,8 @@
 
 * { box-sizing: border-box; }
 
+[hidden] { display: none !important; }
+
 body {
   margin: 0;
   font-family: -apple-system, "Noto Sans CJK TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
