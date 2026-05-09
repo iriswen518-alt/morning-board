@@ -39,7 +39,11 @@ const INDEX_BOP_CODES = {
   "上證": "AI000220",
   "滬深300": "AI000545",
   "Euro Stoxx 50": "AI001048",
-  "ASX 200": "AI000320"
+  "ASX 200": "AI000320",
+  "Nifty 50": "INDA.US",
+  "DAX": "EWG.US",
+  "FTSE 100": "AJ011660",
+  "CAC 40": "AI000170"
 };
 
 function indexUrl(name) {
@@ -64,6 +68,7 @@ function fmtInt(n) {
 
 const BOND_BOP_CODES = {
   "US 10Y": "GBUS120",
+  "US 2Y": "GBUS024",
   "Germany 10Y": "GBDM120",
   "Japan 10Y": "GBJP120",
   "UK 10Y": "GBUK120"
@@ -88,14 +93,16 @@ const FX_BOP_CODES = {
   "EUR/USD": "AX000090",
   "USD/JPY": "AX000030",
   "GBP/USD": "AX000040",
-  "USD/CNY": "AX000250"
+  "USD/CNY": "AX000250",
+  "USD/TWD": "AX000010"
 };
 const FX_NAMES = {
   "DXY": "美元指數",
   "EUR/USD": "歐元/美元",
   "USD/JPY": "美元/日圓",
   "GBP/USD": "英鎊/美元",
-  "USD/CNY": "美元/人民幣"
+  "USD/CNY": "美元/人民幣",
+  "USD/TWD": "美元/台幣"
 };
 function fxLink(name) {
   const code = FX_BOP_CODES[name];
@@ -270,7 +277,7 @@ function renderMarketSheet() {
     <h3 style="color:var(--brand-deep); margin:0 0 8px">股市指數</h3>
     <table class="indices">
       <thead><tr>
-        <th>指數</th><th>收盤</th><th>日</th><th>月來</th><th>今年</th>
+        <th>指數</th><th>收盤</th><th>日</th><th>本月</th><th>今年</th>
       </tr></thead>
       <tbody>${rows}</tbody>
     </table>
@@ -279,7 +286,7 @@ function renderMarketSheet() {
     <h3 style="color:var(--brand-deep); margin:24px 0 8px">公債殖利率</h3>
     <table class="indices">
       <thead><tr>
-        <th>債別</th><th>殖利率</th><th>日變動</th><th>月來變動</th>
+        <th>債別</th><th>殖利率</th><th>日變動</th><th>本月變動</th>
       </tr></thead>
       <tbody>${bondRows}</tbody>
     </table>` : ""}
@@ -288,12 +295,27 @@ function renderMarketSheet() {
     <h3 style="color:var(--brand-deep); margin:24px 0 8px">匯率</h3>
     <table class="indices">
       <thead><tr>
-        <th>幣別</th><th>收盤</th><th>日</th><th>月來</th><th>今年</th>
+        <th>幣別</th><th>收盤</th><th>日</th><th>本月</th><th>今年</th>
       </tr></thead>
       <tbody>${fxRows}</tbody>
     </table>` : ""}
 
-    <p style="margin-top:16px; font-size:14px; color:var(--text-mute); line-height:1.6">${escapeHtml(m.summary || "")}</p>
+    ${renderMarketHighlights(m)}
+  `;
+}
+
+function renderMarketHighlights(m) {
+  const ix = (m.indices || []).filter(i => i.daily_pct !== null && i.daily_pct !== undefined);
+  if (!ix.length) return "";
+  const fmt = i => `${escapeHtml(indexLabel(i.name))} ${fmtPct(i.daily_pct)}`;
+  const ups = ix.slice().sort((a, b) => b.daily_pct - a.daily_pct).filter(i => i.daily_pct > 0).slice(0, 3);
+  const downs = ix.slice().sort((a, b) => a.daily_pct - b.daily_pct).filter(i => i.daily_pct < 0).slice(0, 3);
+  return `
+    <h3 style="color:var(--brand-deep); margin:24px 0 8px">今日重點</h3>
+    <ul style="font-size:14px; line-height:1.8; padding-left:20px; margin:0">
+      ${ups.length ? `<li><strong class="up">領漲</strong>：${ups.map(fmt).join("、")}</li>` : ""}
+      ${downs.length ? `<li><strong class="down">領跌</strong>：${downs.map(fmt).join("、")}</li>` : ""}
+    </ul>
   `;
 }
 
@@ -350,6 +372,7 @@ function renderFundsSheet() {
         <div><label>淨值</label>${fmtNum(f.nav)} ${escapeHtml(f.currency || "")}</div>
         <div><label>日漲跌</label><span class="${pctClass(f.change_pct)}">${fmtPct(f.change_pct)}</span></div>
         <div><label>近1月</label><span class="${pctClass(f.perf?.['1m'])}">${fmtPct(f.perf?.['1m'])}</span></div>
+        <div><label>近3月</label><span class="${pctClass(f.perf?.['3m'])}">${fmtPct(f.perf?.['3m'])}</span></div>
         <div><label>今年來</label><span class="${pctClass(f.perf?.ytd)}">${fmtPct(f.perf?.ytd)}</span></div>
       </div>
       ${f.source_url ? `<a class="source" href="${f.source_url}" target="_blank" rel="noopener" style="display:block;margin-top:8px">板信基金頁 ↗</a>` : ""}

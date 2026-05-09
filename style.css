@@ -209,9 +209,9 @@ table.indices thead th {
 .fund-card .tagline { font-size: 12px; color: var(--text-mute); margin: 0 0 8px; }
 .fund-card .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
-  font-size: 13px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  font-size: 12px;
 }
 .fund-card .grid > div { text-align: center; }
 .fund-card .grid label { display: block; font-size: 11px; color: var(--text-mute); }
