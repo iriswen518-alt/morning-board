@@ -226,7 +226,7 @@ function renderFundsPreview() {
 }
 
 function openSheet(target) {
-  const titles = { market: "全球股市", news: "重要新聞", funds: "精選基金" };
+  const titles = { market: "全球市場", news: "重要新聞", funds: "精選基金" };
   $("sheet-title").textContent = titles[target];
   $("mask").hidden = false;
   $("sheet").hidden = false;
