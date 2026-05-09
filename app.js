@@ -414,7 +414,11 @@ function renderFundsSheet() {
       <h3>${escapeHtml(f.name_zh)}</h3>
       <p class="tagline">${escapeHtml(f.tagline || "")}</p>
       <div class="grid">
-        <div><label>淨值</label>${fmtNum(f.nav)} ${escapeHtml(f.currency || "")}</div>
+        <div>
+          <label>淨值</label>
+          ${fmtNum(f.nav)} ${escapeHtml(f.currency || "")}
+          ${f.nav_date ? `<div class="cell-sub">${escapeHtml(shortDate(f.nav_date))}</div>` : ""}
+        </div>
         <div><label>日漲跌</label><span class="${pctClass(f.change_pct)}">${fmtPct(f.change_pct)}</span></div>
         <div><label>近1月</label><span class="${pctClass(f.perf?.['1m'])}">${fmtPct(f.perf?.['1m'])}</span></div>
         <div><label>近3月</label><span class="${pctClass(f.perf?.['3m'])}">${fmtPct(f.perf?.['3m'])}</span></div>
