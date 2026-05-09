@@ -310,12 +310,20 @@ function renderMarketHighlights(m) {
   const fmt = i => `${escapeHtml(indexLabel(i.name))} ${fmtPct(i.daily_pct)}`;
   const ups = ix.slice().sort((a, b) => b.daily_pct - a.daily_pct).filter(i => i.daily_pct > 0).slice(0, 3);
   const downs = ix.slice().sort((a, b) => a.daily_pct - b.daily_pct).filter(i => i.daily_pct < 0).slice(0, 3);
+  const tldr = (DATA.news && DATA.news.tldr) ? DATA.news.tldr.slice(0, 5) : [];
+
   return `
     <h3 style="color:var(--brand-deep); margin:24px 0 8px">今日重點</h3>
     <ul style="font-size:14px; line-height:1.8; padding-left:20px; margin:0">
       ${ups.length ? `<li><strong class="up">領漲</strong>：${ups.map(fmt).join("、")}</li>` : ""}
       ${downs.length ? `<li><strong class="down">領跌</strong>：${downs.map(fmt).join("、")}</li>` : ""}
     </ul>
+
+    ${tldr.length ? `
+      <h3 style="color:var(--brand-deep); margin:20px 0 8px">影響因素</h3>
+      <ul style="font-size:14px; line-height:1.7; padding-left:20px; margin:0; color:var(--text)">
+        ${tldr.map(t => `<li>${escapeHtml(t)}</li>`).join("")}
+      </ul>` : ""}
   `;
 }
 
