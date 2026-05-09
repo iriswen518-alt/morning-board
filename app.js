@@ -324,9 +324,10 @@ function renderStocksTable(title, list) {
       <td>${s.source_url
         ? `<a href="${s.source_url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${escapeHtml(s.name_zh)}</a>`
         : escapeHtml(s.name_zh)}</td>
-      <td style="color:var(--text-mute); font-size:12px">${escapeHtml(s.symbol)}</td>
       <td>${fmtPrice(s.price, s.kind)}</td>
       <td class="${pctClass(s.change_pct)}">${fmtPct(s.change_pct)}</td>
+      <td class="${pctClass(s.mtd_pct)}">${fmtPct(s.mtd_pct)}</td>
+      <td class="${pctClass(s.ytd_pct)}">${fmtPct(s.ytd_pct)}</td>
       <td class="date-col">${escapeHtml(shortDate(s.market_date))}</td>
     </tr>
   `).join("");
@@ -334,7 +335,7 @@ function renderStocksTable(title, list) {
     <h3 style="color:var(--brand-deep); margin:24px 0 8px">${title}</h3>
     <table class="indices">
       <thead><tr>
-        <th>名稱</th><th>代碼</th><th>收盤</th><th>日</th><th class="date-col">收盤日</th>
+        <th>名稱</th><th>收盤</th><th>日</th><th>本月</th><th>今年</th><th class="date-col">收盤日</th>
       </tr></thead>
       <tbody>${rows}</tbody>
     </table>
