@@ -441,18 +441,48 @@ function renderMarketHighlights(m) {
 function renderNewsSheet() {
   return `
     <div class="tabs">
-      <button class="tab active" data-tab="fin">財經</button>
+      <button class="tab active" data-tab="market">股市</button>
+      <button class="tab" data-tab="wm">財管</button>
       <button class="tab" data-tab="tax">稅務</button>
     </div>
-    <div id="tab-fin">${renderFinNews()}</div>
-    <div id="tab-tax" hidden>${renderTaxNews()}</div>
+    <div id="tab-market">${renderNewsByCategory("market")}</div>
+    <div id="tab-wm" hidden>${renderNewsByCategory("wm")}</div>
+    <div id="tab-tax" hidden>${renderNewsByCategory("tax")}</div>
   `;
 }
 
-function renderFinNews() {
-  const sections = DATA.news.sections || [];
-  return sections.map(s => {
-    // 只渲染有中文標題的條目；無中文則整則跳過
+// 把 news.json 的 sections 名稱對應到 3 大類
+const SECTION_TO_CATEGORY = {
+  "Taiwan Equities": "market",
+  "股市行情": "market",
+  "Industry": "market",
+  "產業動態": "market",
+  "產業": "market",
+  "Global Markets": "market",
+  "國際財經": "market",
+  "Macro & Policy": "market",
+  "總經政策": "market",
+  "Financial Sector": "wm",
+  "金融族群": "wm",
+  "金融": "wm",
+  "Wealth Management": "wm",
+  "財富管理": "wm",
+  "財管": "wm",
+  "Tax & Regulations": "tax",
+  "稅務法規": "tax",
+  "稅務": "tax",
+};
+
+function sectionCategory(section) {
+  const en = section.section || "";
+  const zh = section.section_zh || "";
+  return SECTION_TO_CATEGORY[en] || SECTION_TO_CATEGORY[zh] || "market";
+}
+
+function renderNewsByCategory(cat) {
+  const sections = (DATA.news.sections || [])
+    .filter(s => sectionCategory(s) === cat);
+  let html = sections.map(s => {
     const items = (s.items || []).filter(it => it.title_zh);
     if (!items.length) return "";
     const sectionTitle = s.section_zh || s.section;
@@ -467,19 +497,29 @@ function renderFinNews() {
       `).join("")}
     `;
   }).join("");
+
+  // 稅務 tab 附加 tax.json 的深度文章
+  if (cat === "tax") {
+    const taxItems = (DATA.tax && DATA.tax.items) || [];
+    if (taxItems.length) {
+      html += `
+        <h3 style="color:var(--brand-deep); margin-top:18px">稅務深度</h3>
+        ${taxItems.map(it => `
+          <div class="news-item">
+            <h3>${escapeHtml(it.title)}</h3>
+            <div class="summary">${escapeHtml(it.summary)}</div>
+            ${it.source_url ? `<a class="source" href="${it.source_url}" target="_blank" rel="noopener">${escapeHtml(it.source_name || "來源")} ↗</a>` : ""}
+          </div>
+        `).join("")}
+      `;
+    }
+  }
+
+  if (!html.trim()) return `<p style="color:var(--text-mute); padding:20px 0">本分類今日無新聞</p>`;
+  return html;
 }
 
-function renderTaxNews() {
-  const items = DATA.tax.items || [];
-  if (!items.length) return "<p style='color:var(--text-mute)'>今日無稅務新聞</p>";
-  return items.map(it => `
-    <div class="news-item">
-      <h3>${escapeHtml(it.title)}</h3>
-      <div class="summary">${escapeHtml(it.summary)}</div>
-      ${it.source_url ? `<a class="source" href="${it.source_url}" target="_blank" rel="noopener">${escapeHtml(it.source_name || "來源")} ↗</a>` : ""}
-    </div>
-  `).join("");
-}
+// renderTaxNews() removed — tax content merged into renderNewsByCategory("tax")
 
 function renderFundsSheet() {
   const funds = DATA.funds.funds || [];
@@ -504,13 +544,16 @@ function renderFundsSheet() {
 }
 
 function wireNewsTabs() {
+  const tabIds = ["tab-market", "tab-wm", "tab-tax"];
   document.querySelectorAll(".tab").forEach(t => {
     t.addEventListener("click", () => {
       document.querySelectorAll(".tab").forEach(x => x.classList.remove("active"));
       t.classList.add("active");
-      const which = t.dataset.tab;
-      $("tab-fin").hidden = which !== "fin";
-      $("tab-tax").hidden = which !== "tax";
+      const which = "tab-" + t.dataset.tab;
+      tabIds.forEach(id => {
+        const el = $(id);
+        if (el) el.hidden = id !== which;
+      });
     });
   });
 }
