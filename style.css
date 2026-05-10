@@ -33,6 +33,41 @@ body {
   background: var(--bg-alt);
   color: var(--text);
   -webkit-font-smoothing: antialiased;
+  overscroll-behavior-y: contain;
+}
+
+#pull-indicator {
+  position: fixed;
+  top: -56px;
+  left: 0; right: 0;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  z-index: 200;
+  background: linear-gradient(180deg, #003D91, #019AB3);
+  box-shadow: 0 2px 8px rgba(0, 31, 77, 0.3);
+  transition: transform 0.25s ease;
+  pointer-events: none;
+}
+#pull-indicator .arrow {
+  display: inline-block;
+  transition: transform 0.2s ease;
+  font-size: 18px;
+}
+#pull-indicator.ready .arrow { transform: rotate(180deg); }
+#pull-indicator.refreshing .arrow {
+  animation: pull-spin 0.8s linear infinite;
+}
+#pull-indicator.done {
+  background: linear-gradient(180deg, #17B5AD, #019AB3);
+}
+@keyframes pull-spin {
+  to { transform: rotate(360deg); }
 }
 
 .topbar {

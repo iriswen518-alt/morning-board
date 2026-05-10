@@ -185,6 +185,79 @@ async function init() {
       regs.forEach(r => r.unregister());
     }).catch(() => {});
   }
+
+  setupPullToRefresh();
+}
+
+let _pullStartY = 0;
+let _pullCurrentY = 0;
+let _isPulling = false;
+const _PULL_THRESHOLD = 80;
+
+function setupPullToRefresh() {
+  const ind = document.createElement("div");
+  ind.id = "pull-indicator";
+  ind.innerHTML = '<span class="arrow">↓</span><span class="text">下拉更新</span>';
+  document.body.prepend(ind);
+
+  document.addEventListener("touchstart", (e) => {
+    if (window.scrollY > 0) return;
+    if (document.querySelector(".sheet:not([hidden])")) return;
+    _pullStartY = e.touches[0].clientY;
+    _pullCurrentY = _pullStartY;
+    _isPulling = true;
+    ind.classList.remove("done");
+  }, { passive: true });
+
+  document.addEventListener("touchmove", (e) => {
+    if (!_isPulling) return;
+    _pullCurrentY = e.touches[0].clientY;
+    const dy = _pullCurrentY - _pullStartY;
+    if (dy <= 0) return;
+    const offset = Math.min(dy * 0.5, 80);
+    ind.style.transform = `translateY(${offset}px)`;
+    ind.classList.toggle("ready", dy > _PULL_THRESHOLD);
+  }, { passive: true });
+
+  document.addEventListener("touchend", async () => {
+    if (!_isPulling) return;
+    const dy = _pullCurrentY - _pullStartY;
+    _isPulling = false;
+    const textEl = ind.querySelector(".text");
+    if (dy > _PULL_THRESHOLD) {
+      ind.classList.add("refreshing");
+      textEl.textContent = "更新中…";
+      try {
+        await refreshData();
+        textEl.textContent = "✓ 已更新";
+        ind.classList.add("done");
+      } catch (err) {
+        textEl.textContent = "更新失敗";
+      }
+      setTimeout(() => {
+        ind.style.transform = "";
+        ind.classList.remove("refreshing", "ready");
+        textEl.textContent = "下拉更新";
+        ind.querySelector(".arrow").textContent = "↓";
+      }, 1200);
+    } else {
+      ind.style.transform = "";
+      ind.classList.remove("ready");
+    }
+  }, { passive: true });
+}
+
+async function refreshData() {
+  const [meta, market, news, tax, funds, stocks] = await Promise.all([
+    load("meta"), load("market"), load("news"), load("tax"), load("funds"),
+    load("stocks").catch(() => DATA.stocks || { us_stocks: [], tw_stocks: [] }),
+  ]);
+  DATA = { meta, market, news, tax, funds, stocks };
+  $("updated").textContent =
+    `上次更新：${DATA.meta.built_at.replace("T", " ").slice(0, 16)}`;
+  renderMarketPreview();
+  renderNewsPreview();
+  renderFundsPreview();
 }
 
 function renderMarketPreview() {
