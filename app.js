@@ -248,6 +248,28 @@ function setupPullToRefresh() {
 }
 
 async function refreshData() {
+  // 先檢查伺服器是否有新版 app.js（透過 index.html 內的 cache-bust 版本）
+  try {
+    const r = await fetch("./index.html?nc=" + Date.now(),
+      { cache: "no-store" });
+    if (r.ok) {
+      const html = await r.text();
+      const m = html.match(/app\.js\?v=([0-9-]+)/);
+      if (m) {
+        const liveVer = m[1];
+        const cur = document.querySelector('script[src*="app.js"]');
+        const curMatch = cur && cur.src.match(/v=([0-9-]+)/);
+        const curVer = curMatch ? curMatch[1] : null;
+        if (curVer && liveVer !== curVer) {
+          // 有新版 → 強制重載整個 PWA（帶 query 繞過快取）
+          location.replace(location.pathname + "?t=" + Date.now());
+          return;
+        }
+      }
+    }
+  } catch (_) { /* 網路失敗就略過版本檢查，繼續刷資料 */ }
+
+  // 資料刷新：fetch 6 個 JSON
   const [meta, market, news, tax, funds, stocks] = await Promise.all([
     load("meta"), load("market"), load("news"), load("tax"), load("funds"),
     load("stocks").catch(() => DATA.stocks || { us_stocks: [], tw_stocks: [] }),
