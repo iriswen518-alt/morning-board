@@ -1,114 +1,114 @@
 {
-  "generated_at": "2026-05-11T12:08:51+08:00",
-  "source": "Yahoo Finance v8 (US+TW history) + TWSE realtime (TW price)",
+  "generated_at": "2026-05-11T13:08:19+08:00",
+  "source": "Stooq (US price) + TWSE (TW price) + Yahoo (MTD/YTD best-effort)",
   "us_stocks": [
     {
       "symbol": "NVDA",
       "name_zh": "輝達",
       "kind": "US",
-      "price": null,
+      "price": 215.2,
       "change_pct": null,
       "mtd_pct": null,
       "ytd_pct": null,
-      "market_date": null,
+      "market_date": "2026-05-08",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NVDA.US",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "AAPL",
       "name_zh": "蘋果",
       "kind": "US",
-      "price": null,
+      "price": 293.32,
       "change_pct": null,
       "mtd_pct": null,
       "ytd_pct": null,
-      "market_date": null,
+      "market_date": "2026-05-08",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AAPL.US",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "MSFT",
       "name_zh": "微軟",
       "kind": "US",
-      "price": null,
+      "price": 415.12,
       "change_pct": null,
       "mtd_pct": null,
       "ytd_pct": null,
-      "market_date": null,
+      "market_date": "2026-05-08",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MSFT.US",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "GOOGL",
       "name_zh": "字母",
       "kind": "US",
-      "price": null,
+      "price": 400.8,
       "change_pct": null,
       "mtd_pct": null,
       "ytd_pct": null,
-      "market_date": null,
+      "market_date": "2026-05-08",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GOOGL.US",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "AMZN",
       "name_zh": "亞馬遜",
       "kind": "US",
-      "price": null,
+      "price": 272.68,
       "change_pct": null,
       "mtd_pct": null,
       "ytd_pct": null,
-      "market_date": null,
+      "market_date": "2026-05-08",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AMZN.US",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "META",
       "name_zh": "Meta",
       "kind": "US",
-      "price": null,
+      "price": 609.63,
       "change_pct": null,
       "mtd_pct": null,
       "ytd_pct": null,
-      "market_date": null,
+      "market_date": "2026-05-08",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=META.US",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "TSLA",
       "name_zh": "特斯拉",
       "kind": "US",
-      "price": null,
+      "price": 428.35,
       "change_pct": null,
       "mtd_pct": null,
       "ytd_pct": null,
-      "market_date": null,
+      "market_date": "2026-05-08",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TSLA.US",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "AVGO",
       "name_zh": "博通",
       "kind": "US",
-      "price": null,
+      "price": 430.0,
       "change_pct": null,
       "mtd_pct": null,
       "ytd_pct": null,
-      "market_date": null,
+      "market_date": "2026-05-08",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AVGO.US",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "TSM",
       "name_zh": "台積電ADR",
       "kind": "US",
-      "price": null,
+      "price": 411.68,
       "change_pct": null,
       "mtd_pct": null,
       "ytd_pct": null,
-      "market_date": null,
+      "market_date": "2026-05-08",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TSM.US",
-      "error": "stale"
+      "error": null
     }
   ],
   "tw_stocks": [
@@ -116,37 +116,37 @@
       "symbol": "2330",
       "name_zh": "台積電",
       "kind": "TW",
-      "price": 2290.0,
-      "change_pct": -0.87,
+      "price": 2255.0,
+      "change_pct": -1.53,
       "mtd_pct": null,
       "ytd_pct": null,
       "market_date": "2026-05-11",
       "source_url": "https://tw.stock.yahoo.com/quote/2330.TW",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "2317",
       "name_zh": "鴻海",
       "kind": "TW",
-      "price": 250.0,
-      "change_pct": -1.38,
+      "price": 252.5,
+      "change_pct": 1.0,
       "mtd_pct": null,
       "ytd_pct": null,
       "market_date": "2026-05-11",
       "source_url": "https://tw.stock.yahoo.com/quote/2317.TW",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "2454",
       "name_zh": "聯發科",
       "kind": "TW",
-      "price": 3920.0,
-      "change_pct": 7.99,
+      "price": 3930.0,
+      "change_pct": 8.26,
       "mtd_pct": null,
       "ytd_pct": null,
       "market_date": "2026-05-11",
       "source_url": "https://tw.stock.yahoo.com/quote/2454.TW",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "2308",
@@ -176,8 +176,8 @@
       "symbol": "2891",
       "name_zh": "中信金",
       "kind": "TW",
-      "price": 56.4,
-      "change_pct": 0.36,
+      "price": 55.6,
+      "change_pct": -1.42,
       "mtd_pct": 7.84,
       "ytd_pct": 12.35,
       "market_date": "2026-05-11",
@@ -188,13 +188,13 @@
       "symbol": "1301",
       "name_zh": "台塑",
       "kind": "TW",
-      "price": 48.55,
-      "change_pct": -2.02,
+      "price": 49.45,
+      "change_pct": 1.85,
       "mtd_pct": null,
       "ytd_pct": null,
       "market_date": "2026-05-11",
       "source_url": "https://tw.stock.yahoo.com/quote/1301.TW",
-      "error": "stale"
+      "error": null
     }
   ]
 }
