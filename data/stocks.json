@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-11T13:08:19+08:00",
+  "generated_at": "2026-05-11T13:11:13+08:00",
   "source": "Stooq (US price) + TWSE (TW price) + Yahoo (MTD/YTD best-effort)",
   "us_stocks": [
     {
@@ -117,31 +117,31 @@
       "name_zh": "台積電",
       "kind": "TW",
       "price": 2255.0,
-      "change_pct": -1.53,
+      "change_pct": null,
       "mtd_pct": null,
       "ytd_pct": null,
       "market_date": "2026-05-11",
       "source_url": "https://tw.stock.yahoo.com/quote/2330.TW",
-      "error": null
+      "error": "stale"
     },
     {
       "symbol": "2317",
       "name_zh": "鴻海",
       "kind": "TW",
       "price": 252.5,
-      "change_pct": 1.0,
+      "change_pct": null,
       "mtd_pct": null,
       "ytd_pct": null,
       "market_date": "2026-05-11",
       "source_url": "https://tw.stock.yahoo.com/quote/2317.TW",
-      "error": null
+      "error": "stale"
     },
     {
       "symbol": "2454",
       "name_zh": "聯發科",
       "kind": "TW",
-      "price": 3930.0,
-      "change_pct": 8.26,
+      "price": 3950.0,
+      "change_pct": 8.82,
       "mtd_pct": null,
       "ytd_pct": null,
       "market_date": "2026-05-11",
@@ -153,7 +153,7 @@
       "name_zh": "台達電",
       "kind": "TW",
       "price": 2200.0,
-      "change_pct": -3.51,
+      "change_pct": null,
       "mtd_pct": null,
       "ytd_pct": null,
       "market_date": "2026-05-11",
@@ -165,7 +165,7 @@
       "name_zh": "廣達",
       "kind": "TW",
       "price": 340.5,
-      "change_pct": -1.02,
+      "change_pct": null,
       "mtd_pct": null,
       "ytd_pct": null,
       "market_date": "2026-05-11",
@@ -177,7 +177,7 @@
       "name_zh": "中信金",
       "kind": "TW",
       "price": 55.6,
-      "change_pct": -1.42,
+      "change_pct": null,
       "mtd_pct": 7.84,
       "ytd_pct": 12.35,
       "market_date": "2026-05-11",
@@ -189,12 +189,12 @@
       "name_zh": "台塑",
       "kind": "TW",
       "price": 49.45,
-      "change_pct": 1.85,
+      "change_pct": null,
       "mtd_pct": null,
       "ytd_pct": null,
       "market_date": "2026-05-11",
       "source_url": "https://tw.stock.yahoo.com/quote/1301.TW",
-      "error": null
+      "error": "stale"
     }
   ]
 }
