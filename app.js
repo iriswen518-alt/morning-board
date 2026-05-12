@@ -155,16 +155,21 @@ function shortDate(iso) {
 let DATA = {};
 
 async function init() {
-  try {
-    const [meta, market, news, tax, funds, stocks, insurance] = await Promise.all([
-      load("meta"), load("market"), load("news"), load("tax"), load("funds"),
-      load("stocks").catch(() => ({ us_stocks: [], tw_stocks: [] })),
-      load("insurances").catch(() => ({ insurances: [] })),
-    ]);
-    DATA = { meta, market, news, tax, funds, stocks, insurance };
-  } catch (e) {
-    $("updated").textContent = `載入失敗：${e.message}`;
-    return;
+  // 每個來源各自有 fallback：一個壞不拖垮全頁
+  const safe = (name, fallback) => load(name).catch(() => fallback);
+  const [meta, market, news, tax, funds, stocks, insurance] = await Promise.all([
+    safe("meta", { built_at: "", today: "", sources_status: {} }),
+    safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
+    safe("news", { news_date: "", tldr: [], sections: [] }),
+    safe("tax", { tax_date: "", items: [] }),
+    safe("funds", { funds: [] }),
+    safe("stocks", { us_stocks: [], tw_stocks: [] }),
+    safe("insurances", { insurances: [] }),
+  ]);
+  DATA = { meta, market, news, tax, funds, stocks, insurance };
+  if (!meta.built_at) {
+    $("updated").textContent = `載入部分失敗（顯示快取資料）`;
+    // 仍繼續 render 其他能讀到的資料
   }
 
   $("updated").textContent = `上次更新：${DATA.meta.built_at.replace("T", " ").slice(0, 16)}`;
