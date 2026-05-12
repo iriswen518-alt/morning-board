@@ -180,12 +180,9 @@ async function init() {
   $("back").addEventListener("click", closeSheet);
   $("mask").addEventListener("click", closeSheet);
 
-  // Temporarily disabled until kill-switch SW (v3) wipes old caches everywhere.
-  // Re-enable in a future commit once we confirm clients are clean.
+  // Network-only SW v4: forces fresh fetch on every PWA open
   if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.getRegistrations().then(regs => {
-      regs.forEach(r => r.unregister());
-    }).catch(() => {});
+    navigator.serviceWorker.register("service-worker.js").catch(() => {});
   }
 
   setupPullToRefresh();
