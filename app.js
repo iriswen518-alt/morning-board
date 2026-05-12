@@ -273,17 +273,26 @@ async function refreshData() {
     }
   } catch (_) { /* 網路失敗就略過版本檢查，繼續刷資料 */ }
 
-  // 資料刷新：fetch 6 個 JSON
-  const [meta, market, news, tax, funds, stocks] = await Promise.all([
-    load("meta"), load("market"), load("news"), load("tax"), load("funds"),
-    load("stocks").catch(() => DATA.stocks || { us_stocks: [], tw_stocks: [] }),
+  // 資料刷新：fetch 7 個 JSON，每個各自有 fallback
+  const safe = (name, fallback) => load(name).catch(() => DATA[name === "insurances" ? "insurance" : name] || fallback);
+  const [meta, market, news, tax, funds, stocks, insurance] = await Promise.all([
+    safe("meta", { built_at: "", today: "", sources_status: {} }),
+    safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
+    safe("news", { news_date: "", tldr: [], sections: [] }),
+    safe("tax", { tax_date: "", items: [] }),
+    safe("funds", { funds: [] }),
+    safe("stocks", { us_stocks: [], tw_stocks: [] }),
+    safe("insurances", { insurances: [] }),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks };
-  $("updated").textContent =
-    `上次更新：${DATA.meta.built_at.replace("T", " ").slice(0, 16)}`;
+  DATA = { meta, market, news, tax, funds, stocks, insurance };
+  if (DATA.meta && DATA.meta.built_at) {
+    $("updated").textContent =
+      `上次更新：${DATA.meta.built_at.replace("T", " ").slice(0, 16)}`;
+  }
   renderMarketPreview();
   renderNewsPreview();
   renderFundsPreview();
+  renderInsurancePreview();
 }
 
 function renderMarketPreview() {
