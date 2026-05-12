@@ -1,81 +1,96 @@
 {
-  "generated_at": "2026-05-12T17:13:23+08:00",
+  "generated_at": "2026-05-12T17:16:03+08:00",
   "source": "manual curation (insurances.json)",
   "insurances": [
     {
-      "id": "sample_life_1",
-      "name_zh": "（請替換）終身壽險 A",
-      "company": "保險公司名",
-      "type": "終身壽險",
-      "currency": "TWD",
-      "term": "終身",
-      "min_premium_unit": "年繳",
-      "tagline": "保障+儲蓄雙效，可貸款",
-      "highlights": [
-        "身故/完全失能保險金",
-        "解約金穩定累積"
-      ],
-      "source_url": ""
-    },
-    {
-      "id": "sample_invest_1",
-      "name_zh": "（請替換）投資型保單 B",
-      "company": "保險公司名",
-      "type": "投資型",
+      "id": "kgi_quanjia_baobei",
+      "code": "N00",
+      "name_zh": "凱基人壽 全家保倍 美元利率變動型終身壽險（定期給付型）",
+      "company": "凱基人壽",
+      "type": "終身壽險（利率變動）",
       "currency": "USD",
-      "term": "彈性",
-      "min_premium_unit": "首期",
-      "tagline": "結合保險與基金，配息穩定",
+      "term": "躉繳",
+      "tagline": "美元利變壽險，三種繳期可選，享回饋分享金",
       "highlights": [
-        "保額隨投資價值調整",
-        "月配息選擇"
+        "壽險保障 + 宣告利率回饋分享金",
+        "躉繳第 4 年起保障約 3 倍總繳保費",
+        "可申請生命末期提前給付保險金",
+        "身故/完全失能保險金可分期定期給付",
+        "保障至 110 歲祝壽保險金"
       ],
-      "source_url": ""
+      "source_url": "https://www.kgilife.com.tw/zh-tw/product-overview/personal/life-refund/apnupl"
     },
     {
-      "id": "sample_annuity_1",
-      "name_zh": "（請替換）利率變動年金 C",
-      "company": "保險公司名",
-      "type": "年金險",
+      "id": "skl_taishin_shuangying",
+      "code": "TAR02102",
+      "name_zh": "新光人壽 台新雙盈 分紅還本終身保險 - 二年繳費",
+      "company": "新光人壽（原台新人壽）",
+      "type": "分紅還本終身壽險",
+      "currency": "TWD",
+      "term": "二年繳",
+      "tagline": "分紅 + 還本，紅利可現金領或儲存生息",
+      "highlights": [
+        "美式分紅保單，年度+終期紅利",
+        "還本給付，現金流穩定",
+        "紅利可選擇領取現金或累積生息",
+        "分紅金額非保證，依公司經營績效",
+        "二年繳費，終身保障"
+      ],
+      "source_url": "https://www.skl.com.tw/"
+    },
+    {
+      "id": "skl_shang_haoli",
+      "code": "PB000",
+      "name_zh": "新光人壽 尚好利 利率變動型終身壽險 - 躉繳",
+      "company": "新光人壽",
+      "type": "終身壽險（利率變動）",
+      "currency": "TWD",
+      "term": "躉繳",
+      "tagline": "台幣利變終身壽險，宣告利率回饋",
+      "highlights": [
+        "躉繳投保年齡 0–85 歲",
+        "保額 10 萬–6,000 萬元",
+        "保單價值準備金 × 門檻比率 三者取大",
+        "110 歲祝壽保險金",
+        "增值回饋分享金按宣告利率累積"
+      ],
+      "source_url": "https://www.skl.com.tw/9612da7214.html"
+    },
+    {
+      "id": "cardif_hongyun_shuangxiang",
+      "code": "PCT01A0102",
+      "name_zh": "法國巴黎人壽 鴻運雙享 終身保險",
+      "company": "法國巴黎人壽",
+      "type": "分紅終身壽險（定期給付）",
+      "currency": "TWD",
+      "term": "終身保障",
+      "tagline": "美式分紅，年度+終期紅利，靈活配置",
+      "highlights": [
+        "美式分紅保單",
+        "年度保單紅利 + 終期保單紅利",
+        "紅利可選現金或儲存生息",
+        "給付：身故/喪葬/完全失能/生存/長壽保險金",
+        "分紅金額不保證，依保險公司績效"
+      ],
+      "source_url": "https://life.cardif.com.tw/"
+    },
+    {
+      "id": "farglory_chuanfu_wanhao",
+      "code": "BH100",
+      "name_zh": "遠雄人壽 傳富萬豪 美元利率變動型終身壽險 - 躉繳",
+      "company": "遠雄人壽",
+      "type": "終身壽險（利率變動）",
       "currency": "USD",
-      "term": "6 年",
-      "min_premium_unit": "躉繳",
-      "tagline": "宣告利率高於定存，鎖息",
+      "term": "躉繳 / 2 年繳",
+      "tagline": "美元利變、最高 75 歲投保、傳承利器",
       "highlights": [
-        "6 年宣告利率 5%",
-        "到期一次領回或年金化"
+        "美元計價終身壽險",
+        "最高投保年齡 75 歲",
+        "躉繳 / 2 年繳自由選",
+        "增值回饋分享金可增購保額",
+        "身故保險金可指定分期定期給付"
       ],
-      "source_url": ""
-    },
-    {
-      "id": "sample_medical_1",
-      "name_zh": "（請替換）實支實付醫療 D",
-      "company": "保險公司名",
-      "type": "醫療險",
-      "currency": "TWD",
-      "term": "1 年",
-      "min_premium_unit": "年繳",
-      "tagline": "副本理賠、住院日額",
-      "highlights": [
-        "住院 / 手術 / 雜費 三項實支",
-        "副本受理"
-      ],
-      "source_url": ""
-    },
-    {
-      "id": "sample_accident_1",
-      "name_zh": "（請替換）意外險 E",
-      "company": "保險公司名",
-      "type": "意外險",
-      "currency": "TWD",
-      "term": "1 年",
-      "min_premium_unit": "年繳",
-      "tagline": "高額身故 + 醫療雜費",
-      "highlights": [
-        "身故/失能 500 萬",
-        "傷害醫療日額 1500 元"
-      ],
-      "source_url": ""
+      "source_url": "https://www.fglife.com.tw/goods12.html?planType=1"
     }
   ]
 }
