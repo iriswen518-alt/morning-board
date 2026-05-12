@@ -156,11 +156,12 @@ let DATA = {};
 
 async function init() {
   try {
-    const [meta, market, news, tax, funds, stocks] = await Promise.all([
+    const [meta, market, news, tax, funds, stocks, insurance] = await Promise.all([
       load("meta"), load("market"), load("news"), load("tax"), load("funds"),
       load("stocks").catch(() => ({ us_stocks: [], tw_stocks: [] })),
+      load("insurances").catch(() => ({ insurances: [] })),
     ]);
-    DATA = { meta, market, news, tax, funds, stocks };
+    DATA = { meta, market, news, tax, funds, stocks, insurance };
   } catch (e) {
     $("updated").textContent = `載入失敗：${e.message}`;
     return;
@@ -171,6 +172,7 @@ async function init() {
   renderMarketPreview();
   renderNewsPreview();
   renderFundsPreview();
+  renderInsurancePreview();
 
   document.querySelectorAll(".expand-btn").forEach(btn => {
     btn.addEventListener("click", () => openSheet(btn.dataset.target));
@@ -320,8 +322,22 @@ function renderFundsPreview() {
   `).join("") || "<div class='row'>—</div>";
 }
 
+function renderInsurancePreview() {
+  const list = (DATA.insurance && DATA.insurance.insurances) || [];
+  const top = list.slice(0, 3);
+  if (top.length) {
+    $("insurance-date").textContent = `${top.length} 檔商品`;
+  }
+  $("insurance-preview").innerHTML = top.map(it => `
+    <div class="row">
+      <span class="name">${escapeHtml(it.name_zh)}</span>
+      <span class="val" style="font-size:12px; color:var(--text-mute)">${escapeHtml(it.type || "")}</span>
+    </div>
+  `).join("") || "<div class='row'>—</div>";
+}
+
 function openSheet(target) {
-  const titles = { market: "全球市場", news: "重要新聞", funds: "精選基金" };
+  const titles = { market: "全球市場", news: "重要新聞", funds: "精選基金", insurance: "精選保險" };
   $("sheet-title").textContent = titles[target];
   $("mask").hidden = false;
   $("sheet").hidden = false;
@@ -330,8 +346,33 @@ function openSheet(target) {
   if (target === "market") body.innerHTML = renderMarketSheet();
   else if (target === "news") body.innerHTML = renderNewsSheet();
   else if (target === "funds") body.innerHTML = renderFundsSheet();
+  else if (target === "insurance") body.innerHTML = renderInsuranceSheet();
 
   if (target === "news") wireNewsTabs();
+}
+
+function renderInsuranceSheet() {
+  const list = (DATA.insurance && DATA.insurance.insurances) || [];
+  if (!list.length) {
+    return "<p style='color:var(--text-mute); padding:20px 0'>尚未提供保險商品清單</p>";
+  }
+  return list.map(it => `
+    <div class="fund-card">
+      <h3>${escapeHtml(it.name_zh)}</h3>
+      <p class="tagline">${escapeHtml(it.tagline || "")}</p>
+      <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:6px; font-size:12px; margin-top:8px">
+        <div><label style="display:block; font-size:11px; color:var(--text-mute)">公司</label>${escapeHtml(it.company || "—")}</div>
+        <div><label style="display:block; font-size:11px; color:var(--text-mute)">類型</label>${escapeHtml(it.type || "—")}</div>
+        <div><label style="display:block; font-size:11px; color:var(--text-mute)">幣別</label>${escapeHtml(it.currency || "—")}</div>
+        <div><label style="display:block; font-size:11px; color:var(--text-mute)">期間</label>${escapeHtml(it.term || "—")}</div>
+      </div>
+      ${(it.highlights && it.highlights.length) ? `
+        <ul style="margin:8px 0 0; padding-left:18px; font-size:13px; line-height:1.6">
+          ${it.highlights.map(h => `<li>${escapeHtml(h)}</li>`).join("")}
+        </ul>` : ""}
+      ${it.source_url ? `<a class="source" href="${it.source_url}" target="_blank" rel="noopener" style="display:block; margin-top:8px">商品頁 ↗</a>` : ""}
+    </div>
+  `).join("");
 }
 
 function closeSheet() {

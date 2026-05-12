@@ -1,0 +1,81 @@
+{
+  "generated_at": "2026-05-12T17:13:23+08:00",
+  "source": "manual curation (insurances.json)",
+  "insurances": [
+    {
+      "id": "sample_life_1",
+      "name_zh": "（請替換）終身壽險 A",
+      "company": "保險公司名",
+      "type": "終身壽險",
+      "currency": "TWD",
+      "term": "終身",
+      "min_premium_unit": "年繳",
+      "tagline": "保障+儲蓄雙效，可貸款",
+      "highlights": [
+        "身故/完全失能保險金",
+        "解約金穩定累積"
+      ],
+      "source_url": ""
+    },
+    {
+      "id": "sample_invest_1",
+      "name_zh": "（請替換）投資型保單 B",
+      "company": "保險公司名",
+      "type": "投資型",
+      "currency": "USD",
+      "term": "彈性",
+      "min_premium_unit": "首期",
+      "tagline": "結合保險與基金，配息穩定",
+      "highlights": [
+        "保額隨投資價值調整",
+        "月配息選擇"
+      ],
+      "source_url": ""
+    },
+    {
+      "id": "sample_annuity_1",
+      "name_zh": "（請替換）利率變動年金 C",
+      "company": "保險公司名",
+      "type": "年金險",
+      "currency": "USD",
+      "term": "6 年",
+      "min_premium_unit": "躉繳",
+      "tagline": "宣告利率高於定存，鎖息",
+      "highlights": [
+        "6 年宣告利率 5%",
+        "到期一次領回或年金化"
+      ],
+      "source_url": ""
+    },
+    {
+      "id": "sample_medical_1",
+      "name_zh": "（請替換）實支實付醫療 D",
+      "company": "保險公司名",
+      "type": "醫療險",
+      "currency": "TWD",
+      "term": "1 年",
+      "min_premium_unit": "年繳",
+      "tagline": "副本理賠、住院日額",
+      "highlights": [
+        "住院 / 手術 / 雜費 三項實支",
+        "副本受理"
+      ],
+      "source_url": ""
+    },
+    {
+      "id": "sample_accident_1",
+      "name_zh": "（請替換）意外險 E",
+      "company": "保險公司名",
+      "type": "意外險",
+      "currency": "TWD",
+      "term": "1 年",
+      "min_premium_unit": "年繳",
+      "tagline": "高額身故 + 醫療雜費",
+      "highlights": [
+        "身故/失能 500 萬",
+        "傷害醫療日額 1500 元"
+      ],
+      "source_url": ""
+    }
+  ]
+}
