@@ -30,7 +30,12 @@
 body {
   margin: 0;
   font-family: -apple-system, "Noto Sans CJK TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
-  background: var(--bg-alt);
+  background:
+    radial-gradient(ellipse 80% 60% at 0% 0%, rgba(1, 154, 179, 0.08), transparent 60%),
+    radial-gradient(ellipse 60% 50% at 100% 0%, rgba(23, 181, 173, 0.09), transparent 60%),
+    radial-gradient(ellipse 70% 40% at 50% 100%, rgba(0, 61, 145, 0.05), transparent 70%),
+    var(--bg-alt);
+  background-attachment: fixed;
   color: var(--text);
   -webkit-font-smoothing: antialiased;
   overscroll-behavior-y: contain;
@@ -113,11 +118,13 @@ body {
   top: 0;
   z-index: 50;
   display: flex;
-  gap: 4px;
-  padding: 0 12px;
-  background: var(--bg);
+  gap: 16px;
+  padding: 0 16px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: saturate(180%) blur(12px);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
   border-bottom: 1px solid var(--border);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 1px 6px rgba(0, 31, 77, 0.05);
   overflow-x: auto;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
@@ -126,7 +133,7 @@ body {
 
 .main-tab {
   flex: 0 0 auto;
-  padding: 14px 16px;
+  padding: 14px 8px;
   background: none;
   border: none;
   border-bottom: 3px solid transparent;
@@ -145,11 +152,40 @@ body {
   font-weight: 600;
 }
 
+@media (prefers-color-scheme: dark) {
+  .main-nav { background: rgba(15, 20, 25, 0.85); }
+}
+
 #content {
-  padding: 16px;
+  padding: 20px 16px 32px;
   max-width: 1200px;
   margin: 0 auto;
   animation: contentIn 0.25s ease-out;
+}
+
+#content > h3 {
+  position: relative;
+  padding-left: 14px;
+  margin: 24px 0 10px;
+  font-size: 17px;
+  color: var(--brand-deep);
+}
+#content > h3:first-child { margin-top: 4px; }
+#content > h3::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 4px; bottom: 4px;
+  width: 4px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, var(--brand-deep), var(--brand-primary) 50%, var(--brand-secondary));
+}
+
+#content > table.indices {
+  background: var(--bg);
+  border-radius: 12px;
+  padding: 4px 12px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
 }
 @keyframes contentIn {
   from { opacity: 0; transform: translateY(8px); }
@@ -350,12 +386,12 @@ table.indices .date-col {
   }
 
   .main-nav {
-    padding: 0 32px;
-    gap: 8px;
+    padding: 0 40px;
+    gap: 40px;
     justify-content: center;
   }
   .main-tab {
-    padding: 18px 24px;
+    padding: 20px 4px;
     font-size: 16px;
   }
 
