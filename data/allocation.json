@@ -1,0 +1,178 @@
+{
+  "generated_at": "2026-05-13T14:59:02+08:00",
+  "source": "manual curation (Vanguard/BlackRock/Schwab/JPMorgan refs)",
+  "version": 1,
+  "updated": "2026-05-13",
+  "note": "本配置綜合 Vanguard、BlackRock、Schwab、JPMorgan 等機構之 2026 model portfolio 並對應板信可申購商品",
+  "profiles": [
+    {
+      "key": "conservative",
+      "name": "保守型",
+      "subtitle": "退休／追求穩定現金流",
+      "stance": "OW",
+      "target_return": "4–6%／年",
+      "max_drawdown": "−5–10%",
+      "color": "#2a9d8f",
+      "allocations": [
+        {
+          "asset": "投資等級債券",
+          "pct": 50,
+          "note": "美元 AAA／AA 級債券，現金流穩定",
+          "panhsin": "海外債 FECB0117/0184/0231 + 富蘭克林公司債基金"
+        },
+        {
+          "asset": "新興市場債",
+          "pct": 15,
+          "note": "EMBI 利差 365bp，戰術配置",
+          "panhsin": "東方匯理新興市場債券基金"
+        },
+        {
+          "asset": "全球股票",
+          "pct": 20,
+          "note": "已開發為主、配息型優先",
+          "panhsin": "施羅德環球收益成長 + 富蘭克林華美多重資產"
+        },
+        {
+          "asset": "黃金",
+          "pct": 5,
+          "note": "結構性配置、避險",
+          "panhsin": "FA01 富蘭克林黃金基金"
+        },
+        {
+          "asset": "現金／短債",
+          "pct": 10,
+          "note": "流動性緩衝",
+          "panhsin": "美元活存或短天期外幣定存"
+        }
+      ]
+    },
+    {
+      "key": "balanced",
+      "name": "平衡型",
+      "subtitle": "中長期累積／工作期主流",
+      "stance": "OW",
+      "target_return": "6–9%／年",
+      "max_drawdown": "−15–20%",
+      "color": "#019AB3",
+      "allocations": [
+        {
+          "asset": "投資等級債券",
+          "pct": 30,
+          "note": "AAA／AA 美元公司債為核心錨",
+          "panhsin": "海外債 FECB0231/0251/0184 + 富蘭克林公司債基金"
+        },
+        {
+          "asset": "新興／策略債",
+          "pct": 10,
+          "note": "EMBI＋全球策略收益",
+          "panhsin": "東方匯理新興市場債券＋東方匯理全球策略收益"
+        },
+        {
+          "asset": "全球股票",
+          "pct": 25,
+          "note": "已開發＋新興均衡",
+          "panhsin": "施羅德環球收益成長 + 柏瑞日本多重資產"
+        },
+        {
+          "asset": "AI／科技主題",
+          "pct": 10,
+          "note": "AI capex 大循環受益",
+          "panhsin": "安聯台灣科技 + 聯博國際科技"
+        },
+        {
+          "asset": "區域主題（日／韓／越／印）",
+          "pct": 10,
+          "note": "戰術配置：日 5%、韓 2%、越 2%、印 1%",
+          "panhsin": "柏瑞日本＋利安資金韓國／越南／印度"
+        },
+        {
+          "asset": "黃金",
+          "pct": 8,
+          "note": "戰略核心配置",
+          "panhsin": "FA01 富蘭克林黃金 + 晉達環球黃金"
+        },
+        {
+          "asset": "現金",
+          "pct": 7,
+          "note": "回檔加碼預備金",
+          "panhsin": "美元活存"
+        }
+      ]
+    },
+    {
+      "key": "aggressive",
+      "name": "積極型",
+      "subtitle": "年輕族群／高風險承受度",
+      "stance": "OW",
+      "target_return": "9–14%／年",
+      "max_drawdown": "−25–35%",
+      "color": "#d62828",
+      "allocations": [
+        {
+          "asset": "AI／科技主題",
+          "pct": 20,
+          "note": "AI capex 大循環核心引擎",
+          "panhsin": "安聯台灣科技 + 聯博國際科技"
+        },
+        {
+          "asset": "區域主題（日／韓／越／印）",
+          "pct": 20,
+          "note": "戰略配置：日 8%、韓 5%、越 4%、印 3%",
+          "panhsin": "柏瑞日本＋利安資金韓國／越南／印度"
+        },
+        {
+          "asset": "全球股票",
+          "pct": 25,
+          "note": "已開發＋新興、成長型偏多",
+          "panhsin": "聯博國際科技＋富蘭克林新興月收益"
+        },
+        {
+          "asset": "投資等級債券",
+          "pct": 10,
+          "note": "降息週期資本利得＋息收",
+          "panhsin": "海外債 FECB0231/0251 + 富蘭克林公司債基金"
+        },
+        {
+          "asset": "新興／策略債",
+          "pct": 10,
+          "note": "EMBI 利差",
+          "panhsin": "東方匯理新興市場債券＋全球策略收益"
+        },
+        {
+          "asset": "黃金",
+          "pct": 10,
+          "note": "對沖系統性風險",
+          "panhsin": "FA01 富蘭克林黃金 + 晉達環球黃金"
+        },
+        {
+          "asset": "現金",
+          "pct": 5,
+          "note": "回檔加碼預備金",
+          "panhsin": "美元活存"
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "name": "Vanguard Target Retirement Funds",
+      "url": "https://investor.vanguard.com/investment-products/mutual-funds/target-retirement-funds",
+      "note": "依退休年期動態調整股債比"
+    },
+    {
+      "name": "BlackRock Model Portfolios",
+      "url": "https://www.blackrock.com/us/financial-professionals/investments/model-portfolios",
+      "note": "全球資產配置框架，三大風險屬性"
+    },
+    {
+      "name": "Schwab Intelligent Portfolios",
+      "url": "https://www.schwab.com/intelligent-portfolios",
+      "note": "智能再平衡，含現金緩衝"
+    },
+    {
+      "name": "JPMorgan Long-Term Capital Market Assumptions",
+      "url": "https://am.jpmorgan.com/us/en/asset-management/adv/insights/portfolio-insights/ltcma/",
+      "note": "10–15 年資產類別預期報酬"
+    }
+  ]
+}

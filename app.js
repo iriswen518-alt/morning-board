@@ -158,7 +158,7 @@ let CURRENT_TAB = "market";
 async function init() {
   // 每個來源各自有 fallback：一個壞不拖垮全頁
   const safe = (name, fallback) => load(name).catch(() => fallback);
-  const [meta, market, news, tax, funds, stocks, insurance, obonds, targets] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, insurance, obonds, targets, allocation] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
@@ -168,8 +168,9 @@ async function init() {
     safe("insurances", { insurances: [] }),
     safe("overseas_bonds", { bonds: [] }),
     safe("targets", { targets: [], summary: {}, entry_sequence: [] }),
+    safe("allocation", { profiles: [], references: [] }),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, insurance, obonds, targets };
+  DATA = { meta, market, news, tax, funds, stocks, insurance, obonds, targets, allocation };
   if (!meta.built_at) {
     $("updated").textContent = `載入部分失敗（顯示快取資料）`;
   } else {
@@ -210,9 +211,11 @@ function switchTab(name) {
   else if (name === "insurance") body.innerHTML = renderInsuranceSheet();
   else if (name === "obonds") body.innerHTML = renderObondsSheet();
   else if (name === "targets") body.innerHTML = renderTargetsSheet();
+  else if (name === "allocation") body.innerHTML = renderAllocationSheet();
   if (name === "news") wireNewsTabs();
   if (name === "market") wireMarketTabs();
   if (name === "targets") wireTargetsTabs();
+  if (name === "allocation") wireAllocationTabs();
   window.scrollTo({ top: 0, behavior: "instant" in window ? "instant" : "auto" });
 }
 
@@ -330,7 +333,7 @@ async function refreshData() {
 
   // 資料刷新：fetch 7 個 JSON，每個各自有 fallback
   const safe = (name, fallback) => load(name).catch(() => DATA[name === "insurances" ? "insurance" : name] || fallback);
-  const [meta, market, news, tax, funds, stocks, insurance, obonds, targets] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, insurance, obonds, targets, allocation] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
@@ -340,8 +343,9 @@ async function refreshData() {
     safe("insurances", { insurances: [] }),
     safe("overseas_bonds", { bonds: [] }),
     safe("targets", { targets: [], summary: {}, entry_sequence: [] }),
+    safe("allocation", { profiles: [], references: [] }),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, insurance, obonds, targets };
+  DATA = { meta, market, news, tax, funds, stocks, insurance, obonds, targets, allocation };
   if (DATA.meta && DATA.meta.built_at) {
     $("updated").textContent =
       `上次更新：${DATA.meta.built_at.replace("T", " ").slice(0, 16)}`;
@@ -438,30 +442,8 @@ function renderTargetsSheet() {
     </button>
   `).join("");
 
-  // 主題推薦基金（板信可申購）
-  const themeFunds = data.theme_funds || [];
-  const fundCardFor = f => {
-    const nameHtml = f.source_url
-      ? `<a href="${f.source_url}" target="_blank" rel="noopener">${escapeHtml(f.name_zh)}</a>`
-      : escapeHtml(f.name_zh);
-    const codeChip = f.code && f.code !== "—"
-      ? `<span class="chip chip-default" style="margin-right:4px">${escapeHtml(f.code)}</span>`
-      : "";
-    return `
-      <div class="fund-card">
-        <h3>${nameHtml}</h3>
-        <div style="margin-bottom:6px">${codeChip}${currencyChip(f.currency)}</div>
-        <p class="tagline">${escapeHtml(f.tagline || "")}</p>
-      </div>`;
-  };
-
   // Tab panes（不顯示編號）
   const panes = list.map((t, i) => {
-    const fundsForTheme = themeFunds.filter(f => f.theme === t.key);
-    const fundsSection = fundsForTheme.length ? `
-      <h4 style="margin:20px 0 10px;color:var(--brand-deep);font-size:16px">板信代售推薦基金</h4>
-      ${fundsForTheme.map(fundCardFor).join("")}
-    ` : "";
     return `
     <div class="t-pane ${i === 0 ? "active" : ""}" id="t-pane-${escapeHtml(t.key)}">
       <div class="t-head">
@@ -494,7 +476,7 @@ function renderTargetsSheet() {
 
       <div class="t-section t-pitch">
         <div class="t-section-head"><span class="t-section-icon">🎯</span><span>行銷話術</span></div>
-        <div class="t-section-body">${escapeHtml(t.pitch || t.action || "—")}</div>
+        <div class="t-section-body">${renderBulletsOrText(t.pitch || t.action)}</div>
       </div>
 
       <details class="t-detail">
@@ -516,27 +498,113 @@ function renderTargetsSheet() {
           <div class="t-trigger t-trigger-trim"><strong>▼ 減碼觸發</strong>${escapeHtml(t.trim_trigger || "—")}</div>
         </div>
       </details>
-
-      ${fundsSection}
     </div>
   `;
   }).join("");
 
-  // Entry sequence
-  const seqHtml = seq.length ? `
-    <h3>建議進場順序</h3>
+  // 建議配置比重（依進場順序排序）
+  const allocHtml = seq.length ? `
+    <h3>建議配置比重</h3>
     <ol class="t-seq">
       ${seq.map(s => {
         const d = byKey[s.key] || {};
-        return `<li><span class="t-seq-num">${s.num}</span><strong>${escapeHtml(d.name || s.key)}</strong>　<span class="t-seq-note">${escapeHtml(s.note)}</span></li>`;
+        return `<li><strong>${escapeHtml(d.name || s.key)}</strong>　<span style="color:var(--brand-primary);font-weight:600">${escapeHtml(d.alloc || "")}</span></li>`;
       }).join("")}
     </ol>` : "";
 
   return `
     <div class="t-tab-row">${tabBtns}</div>
     <div class="t-panes">${panes}</div>
-    ${seqHtml}
+    ${allocHtml}
   `;
+}
+
+function renderAllocationSheet() {
+  const data = DATA.allocation || {};
+  const profiles = data.profiles || [];
+  const refs = data.references || [];
+  if (!profiles.length) {
+    return "<p style='color:var(--text-mute); padding:20px 0'>尚未提供資產配置資料</p>";
+  }
+
+  const tabBtns = profiles.map((p, i) => `
+    <button class="t-tab ${i === 0 ? "active" : ""}" data-atab="${escapeHtml(p.key)}">
+      <span>${escapeHtml(p.name)}</span>
+      <span class="chip chip-default" style="margin-left:4px;background:${p.color || 'var(--brand-primary)'}22;color:${p.color || 'var(--brand-deep)'}">${escapeHtml(p.target_return || "")}</span>
+    </button>
+  `).join("");
+
+  const panes = profiles.map((p, i) => {
+    const total = (p.allocations || []).reduce((s, a) => s + (a.pct || 0), 0);
+    const rows = (p.allocations || []).map(a => `
+      <div class="a-row">
+        <div class="a-asset">
+          <div class="a-asset-name">${escapeHtml(a.asset)}</div>
+          <div class="a-asset-note">${escapeHtml(a.note || "")}</div>
+        </div>
+        <div class="a-bar-wrap">
+          <div class="a-bar" style="width:${a.pct}%;background:${p.color || 'var(--brand-primary)'}"></div>
+          <span class="a-pct">${a.pct}%</span>
+        </div>
+        <div class="a-panhsin">${escapeHtml(a.panhsin || "")}</div>
+      </div>
+    `).join("");
+
+    return `
+      <div class="t-pane ${i === 0 ? "active" : ""}" id="a-pane-${escapeHtml(p.key)}">
+        <div class="a-head" style="border-left:5px solid ${p.color || 'var(--brand-primary)'}">
+          <div>
+            <div class="a-name">${escapeHtml(p.name)}<span class="a-sub">${escapeHtml(p.subtitle || "")}</span></div>
+            <div class="a-stat-row">
+              <span class="a-stat"><label>目標報酬</label>${escapeHtml(p.target_return || "—")}</span>
+              <span class="a-stat"><label>最大回撤</label>${escapeHtml(p.max_drawdown || "—")}</span>
+              <span class="a-stat"><label>合計</label>${total}%</span>
+            </div>
+          </div>
+        </div>
+        <div class="a-table">
+          <div class="a-header">
+            <div>資產類別</div>
+            <div>比重</div>
+            <div>板信對應商品</div>
+          </div>
+          ${rows}
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  const refsHtml = refs.length ? `
+    <h3>市場參考資料來源</h3>
+    <div class="a-refs">
+      ${refs.map(r => `
+        <a href="${r.url}" target="_blank" rel="noopener" class="a-ref">
+          <div class="a-ref-name">${escapeHtml(r.name)} ↗</div>
+          <div class="a-ref-note">${escapeHtml(r.note || "")}</div>
+        </a>`).join("")}
+    </div>` : "";
+
+  const noteHtml = data.note ? `<p class="a-note">${escapeHtml(data.note)}</p>` : "";
+
+  return `
+    ${noteHtml}
+    <div class="t-tab-row">${tabBtns}</div>
+    <div class="t-panes">${panes}</div>
+    ${refsHtml}
+  `;
+}
+
+function wireAllocationTabs() {
+  const buttons = document.querySelectorAll(".t-tab[data-atab]");
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const key = btn.dataset.atab;
+      buttons.forEach(b => b.classList.toggle("active", b.dataset.atab === key));
+      document.querySelectorAll(".t-pane[id^='a-pane-']").forEach(p => {
+        p.classList.toggle("active", p.id === `a-pane-${key}`);
+      });
+    });
+  });
 }
 
 function wireTargetsTabs() {
