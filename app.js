@@ -183,7 +183,7 @@ async function init() {
   switchTab(CURRENT_TAB);
 
   if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("service-worker.js?v=20260513-1235").catch(() => {});
+    navigator.serviceWorker.register("service-worker.js?v=20260513-1252").catch(() => {});
   }
 
   setupPullToRefresh();
@@ -393,9 +393,10 @@ function renderObondsSheet() {
           ${priceDate}
         </div>
       </div>
-      <div style="display:grid; grid-template-columns:repeat(2, 1fr); gap:6px; font-size:14px; margin-top:6px; text-align:center">
-        <div><label style="display:block; font-size:12px; color:var(--text-mute); margin-bottom:2px">日漲跌</label><span class="${pctClass(b.daily_change)}">${b.daily_change == null ? "—" : (b.daily_change > 0 ? "+" : "") + Number(b.daily_change).toFixed(2)}</span></div>
-        <div><label style="display:block; font-size:12px; color:var(--text-mute); margin-bottom:2px">日漲跌幅</label><span class="${pctClass(b.daily_change_pct)}">${fmtPctNum(b.daily_change_pct)}</span></div>
+      <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:6px; font-size:14px; margin-top:6px; text-align:center">
+        <div><label style="display:block; font-size:12px; color:var(--text-mute); margin-bottom:2px">週%</label><span class="${pctClass(b.perf_1w)}">${fmtPctNum(b.perf_1w)}</span></div>
+        <div><label style="display:block; font-size:12px; color:var(--text-mute); margin-bottom:2px">月%</label><span class="${pctClass(b.perf_1m)}">${fmtPctNum(b.perf_1m)}</span></div>
+        <div><label style="display:block; font-size:12px; color:var(--text-mute); margin-bottom:2px">季%</label><span class="${pctClass(b.perf_3m)}">${fmtPctNum(b.perf_3m)}</span></div>
       </div>
     </div>
   `;
