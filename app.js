@@ -323,34 +323,25 @@ function renderObondsSheet() {
   }
   const fmtCoupon = c => (c === null || c === undefined) ? "—"
     : (c === 0 ? "零息" : `${c.toFixed(2)}%`);
-  return `
-    <table class="indices" style="font-size:13px">
-      <thead><tr>
-        <th>名稱</th><th>幣別</th><th>票面利率</th><th>到期日</th><th>信評</th>
-      </tr></thead>
-      <tbody>
-        ${list.map(b => {
-          const url = bondUrl(b);
-          const nameHtml = url
-            ? `<a href="${url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${escapeHtml(b.name_zh)}</a>`
-            : escapeHtml(b.name_zh);
-          return `
-            <tr>
-              <td>
-                <div>${nameHtml}</div>
-                <div style="font-size:11px; color:var(--text-mute); font-family:Menlo,monospace">${escapeHtml(b.code || "")} · ${escapeHtml(b.isin || "")}</div>
-                <div style="font-size:11px; color:var(--text-mute)">${escapeHtml(b.issuer || "")}・${escapeHtml(b.type || "")}</div>
-              </td>
-              <td>${escapeHtml(b.currency || "")}</td>
-              <td>${fmtCoupon(b.coupon_pct)}</td>
-              <td style="font-size:12px">${escapeHtml(b.maturity || "—")}</td>
-              <td style="font-size:11px">${escapeHtml(b.rating || "—")}</td>
-            </tr>
-          `;
-        }).join("")}
-      </tbody>
-    </table>
+  return list.map(b => {
+    const url = bondUrl(b);
+    const nameHtml = url
+      ? `<a href="${url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${escapeHtml(b.name_zh)}</a>`
+      : escapeHtml(b.name_zh);
+    const taglineParts = [b.issuer, b.type, b.code, b.isin].filter(Boolean).map(escapeHtml);
+    return `
+    <div class="fund-card">
+      <h3>${nameHtml}</h3>
+      <p class="tagline">${taglineParts.join("・")}</p>
+      <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:6px; font-size:12px; margin-top:8px">
+        <div><label style="display:block; font-size:11px; color:var(--text-mute)">幣別</label>${escapeHtml(b.currency || "—")}</div>
+        <div><label style="display:block; font-size:11px; color:var(--text-mute)">票面利率</label>${fmtCoupon(b.coupon_pct)}</div>
+        <div><label style="display:block; font-size:11px; color:var(--text-mute)">到期日</label>${escapeHtml(b.maturity || "—")}</div>
+        <div><label style="display:block; font-size:11px; color:var(--text-mute)">信評</label><span style="font-size:11px">${escapeHtml(b.rating || "—")}</span></div>
+      </div>
+    </div>
   `;
+  }).join("");
 }
 
 function renderInsuranceSheet() {
