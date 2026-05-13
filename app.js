@@ -567,10 +567,7 @@ function renderAllocationSheet() {
   }
 
   const tabBtns = profiles.map((p, i) => `
-    <button class="t-tab ${i === 0 ? "active" : ""}" data-atab="${escapeHtml(p.key)}">
-      <span>${escapeHtml(p.name)}</span>
-      <span class="chip chip-default" style="margin-left:4px;background:${p.color || 'var(--brand-primary)'}22;color:${p.color || 'var(--brand-deep)'}">${escapeHtml(p.target_return || "")}</span>
-    </button>
+    <button class="tab ${i === 0 ? "active" : ""}" data-atab="${escapeHtml(p.key)}">${escapeHtml(p.name)}</button>
   `).join("");
 
   const panes = profiles.map((p, i) => {
@@ -627,14 +624,14 @@ function renderAllocationSheet() {
 
   return `
     ${noteHtml}
-    <div class="t-tab-row">${tabBtns}</div>
+    <div class="tabs">${tabBtns}</div>
     <div class="t-panes">${panes}</div>
     ${refsHtml}
   `;
 }
 
 function wireAllocationTabs() {
-  const buttons = document.querySelectorAll(".t-tab[data-atab]");
+  const buttons = document.querySelectorAll(".tab[data-atab]");
   buttons.forEach(btn => {
     btn.addEventListener("click", () => {
       const key = btn.dataset.atab;
