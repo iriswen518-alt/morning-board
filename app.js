@@ -210,6 +210,7 @@ function switchTab(name) {
   else if (name === "funds") body.innerHTML = renderFundsSheet();
   else if (name === "insurance") body.innerHTML = renderInsuranceSheet();
   else if (name === "obonds") body.innerHTML = renderObondsSheet();
+  else if (name === "dca") body.innerHTML = renderDcaSheet();
   else if (name === "targets") body.innerHTML = renderTargetsSheet();
   else if (name === "allocation") body.innerHTML = renderAllocationSheet();
   if (name === "news") wireNewsTabs();
@@ -419,6 +420,44 @@ function stanceChip(stance) {
   return `<span class="stance-pill ${cls}">${label}</span>`;
 }
 
+const THEME_INDEX_NAME = {
+  "korea": "KOSPI",
+  "japan": "Nikkei 225",
+  "ai": "Nasdaq",
+  "vietnam": null,
+  "india": "Nifty 50",
+  "gold": null,
+  "bonds": null
+};
+
+function renderThemeIndexBlock(themeKey) {
+  const idxName = THEME_INDEX_NAME[themeKey];
+  if (!idxName) return "";
+  const m = DATA.market || {};
+  const ix = (m.indices || []).find(i => i.name === idxName);
+  if (!ix) return "";
+  const date = shortDate(ix.closing_date || m.closing_date);
+  return `
+    <div class="t-section">
+      <div class="t-section-head"><span class="t-section-icon">📈</span><span>標的市場指數</span></div>
+      <div class="t-section-body">
+        <table class="indices" style="margin-top:6px">
+          <thead><tr>
+            <th>指數</th><th>收盤</th><th>日</th><th>本月</th><th>今年</th><th class="date-col">收盤日</th>
+          </tr></thead>
+          <tbody><tr>
+            <td>${indexLink(ix.name)}</td>
+            <td>${fmtInt(ix.close)}</td>
+            <td class="${pctClass(ix.daily_pct)}">${fmtPct(ix.daily_pct)}</td>
+            <td class="${pctClass(ix.mtd_pct)}">${fmtPct(ix.mtd_pct)}</td>
+            <td class="${pctClass(ix.ytd_pct)}">${fmtPct(ix.ytd_pct)}</td>
+            <td class="date-col">${escapeHtml(date)}</td>
+          </tr></tbody>
+        </table>
+      </div>
+    </div>`;
+}
+
 function renderTargetsSheet() {
   const data = DATA.targets || {};
   const list = data.targets || [];
@@ -461,6 +500,8 @@ function renderTargetsSheet() {
           </div>
         `).join("")}
       </div>
+
+      ${renderThemeIndexBlock(t.key)}
 
       <div class="t-section t-status">
         <div class="t-section-head"><span class="t-section-icon">📊</span><span>市場現況</span></div>
@@ -869,6 +910,58 @@ function renderNewsByCategory(cat) {
 }
 
 // renderTaxNews() removed — tax content merged into renderNewsByCategory("tax")
+
+function renderDcaSheet() {
+  const funds = (DATA.funds.funds || []).filter(f => f.perf_dca);
+  if (!funds.length) {
+    return "<p style='color:var(--text-mute); padding:20px 0'>尚未取得定期定額績效資料</p>";
+  }
+  const header = `<p style="color:var(--text-mute); font-size:13px; margin:0 0 12px">下列為板信架上基金的「單筆申購 vs. 定期定額」累積報酬率比較（資料來源：bopfund.moneydj.com）。</p>`;
+  return header + funds.map(f => {
+    const nameHtml = f.source_url
+      ? `<a href="${f.source_url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${escapeHtml(f.name_zh)}</a>`
+      : escapeHtml(f.name_zh);
+    const chips = currencyChip(f.currency);
+    const s = f.perf_single || {};
+    const d = f.perf_dca || {};
+    const cell = (v) => `<span class="${pctClass(v)}">${fmtPct(v)}</span>`;
+    return `
+    <div class="fund-card">
+      <h3>${nameHtml}</h3>
+      ${chips ? `<div style="margin-bottom:6px">${chips}</div>` : ""}
+      ${f.tagline ? `<p class="tagline">${escapeHtml(f.tagline)}</p>` : ""}
+      <table class="indices" style="margin-top:8px; font-size:13px">
+        <thead><tr>
+          <th>申購方式</th>
+          <th>近1月</th><th>近3月</th><th>近6月</th>
+          <th>近1年</th><th>近3年</th>
+          <th class="date-col">基準日</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>單筆申購</strong></td>
+            <td>${cell(s['1m'])}</td>
+            <td>${cell(s['3m'])}</td>
+            <td>${cell(s['6m'])}</td>
+            <td>${cell(s['1y'])}</td>
+            <td>${cell(s['3y'])}</td>
+            <td class="date-col">${escapeHtml(f.perf_date || "—")}</td>
+          </tr>
+          <tr>
+            <td><strong>定期定額</strong></td>
+            <td>${cell(d['1m'])}</td>
+            <td>${cell(d['3m'])}</td>
+            <td>${cell(d['6m'])}</td>
+            <td>${cell(d['1y'])}</td>
+            <td>${cell(d['3y'])}</td>
+            <td class="date-col">${escapeHtml(f.perf_date || "—")}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  `;
+  }).join("");
+}
 
 function renderFundsSheet() {
   const funds = DATA.funds.funds || [];
