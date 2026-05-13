@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-13T09:22:22+08:00",
+  "generated_at": "2026-05-13T09:40:24+08:00",
   "source": "finnhub (US price+daily) + Yahoo (US MTD/YTD) + TWSE (TW)",
   "us_stocks": [
     {
@@ -72,7 +72,7 @@
       "ytd_pct": -8.65,
       "market_date": "2026-05-12",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=META.US",
-      "error": null
+      "error": "stale"
     },
     {
       "symbol": "TSLA",
@@ -96,7 +96,7 @@
       "ytd_pct": 21.15,
       "market_date": "2026-05-12",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AVGO.US",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "TSM",
@@ -140,10 +140,10 @@
       "symbol": "2454",
       "name_zh": "聯發科",
       "kind": "TW",
-      "price": 3620.0,
-      "change_pct": -2.16,
-      "mtd_pct": 38.7,
-      "ytd_pct": 153.15,
+      "price": 3640.0,
+      "change_pct": -1.62,
+      "mtd_pct": 39.46,
+      "ytd_pct": 154.55,
       "market_date": "2026-05-13",
       "source_url": "https://tw.stock.yahoo.com/quote/2454.TW",
       "error": null
@@ -176,10 +176,10 @@
       "symbol": "2891",
       "name_zh": "中信金",
       "kind": "TW",
-      "price": 54.4,
-      "change_pct": 1.68,
-      "mtd_pct": 4.02,
-      "ytd_pct": 8.37,
+      "price": 53.5,
+      "change_pct": null,
+      "mtd_pct": 2.29,
+      "ytd_pct": 6.57,
       "market_date": "2026-05-13",
       "source_url": "https://tw.stock.yahoo.com/quote/2891.TW",
       "error": null
@@ -188,10 +188,10 @@
       "symbol": "1301",
       "name_zh": "台塑",
       "kind": "TW",
-      "price": 47.65,
-      "change_pct": null,
-      "mtd_pct": -7.48,
-      "ytd_pct": 22.18,
+      "price": 46.95,
+      "change_pct": -1.47,
+      "mtd_pct": -8.83,
+      "ytd_pct": 20.38,
       "market_date": "2026-05-13",
       "source_url": "https://tw.stock.yahoo.com/quote/1301.TW",
       "error": null

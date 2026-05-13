@@ -108,6 +108,54 @@ body {
 }
 .topbar .updated { margin: 0; font-size: 13px; opacity: 0.92; }
 
+.main-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  gap: 4px;
+  padding: 0 12px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.main-nav::-webkit-scrollbar { display: none; }
+
+.main-tab {
+  flex: 0 0 auto;
+  padding: 14px 16px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  color: var(--text-mute);
+  font-size: 15px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.main-tab:hover { color: var(--brand-primary); }
+.main-tab.active {
+  color: var(--brand-primary);
+  border-bottom-color: var(--brand-primary);
+  font-weight: 600;
+}
+
+#content {
+  padding: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: contentIn 0.25s ease-out;
+}
+@keyframes contentIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 #cards {
   padding: 12px;
   display: flex;
@@ -299,6 +347,20 @@ table.indices .date-col {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+  }
+
+  .main-nav {
+    padding: 0 32px;
+    gap: 8px;
+    justify-content: center;
+  }
+  .main-tab {
+    padding: 18px 24px;
+    font-size: 16px;
+  }
+
+  #content {
+    padding: 32px;
   }
 
   .card {

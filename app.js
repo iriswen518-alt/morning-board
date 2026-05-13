@@ -153,6 +153,7 @@ function shortDate(iso) {
 }
 
 let DATA = {};
+let CURRENT_TAB = "market";
 
 async function init() {
   // 每個來源各自有 fallback：一個壞不拖垮全頁
@@ -170,29 +171,36 @@ async function init() {
   DATA = { meta, market, news, tax, funds, stocks, insurance, obonds };
   if (!meta.built_at) {
     $("updated").textContent = `載入部分失敗（顯示快取資料）`;
-    // 仍繼續 render 其他能讀到的資料
+  } else {
+    $("updated").textContent = `上次更新：${DATA.meta.built_at.replace("T", " ").slice(0, 16)}`;
   }
 
-  $("updated").textContent = `上次更新：${DATA.meta.built_at.replace("T", " ").slice(0, 16)}`;
-
-  renderMarketPreview();
-  renderNewsPreview();
-  renderFundsPreview();
-  renderInsurancePreview();
-  renderObondsPreview();
-
-  document.querySelectorAll(".expand-btn").forEach(btn => {
-    btn.addEventListener("click", () => openSheet(btn.dataset.target));
+  document.querySelectorAll(".main-tab").forEach(btn => {
+    btn.addEventListener("click", () => switchTab(btn.dataset.tab));
   });
-  $("back").addEventListener("click", closeSheet);
-  $("mask").addEventListener("click", closeSheet);
 
-  // Network-only SW v4: forces fresh fetch on every PWA open
+  switchTab(CURRENT_TAB);
+
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("service-worker.js").catch(() => {});
   }
 
   setupPullToRefresh();
+}
+
+function switchTab(name) {
+  CURRENT_TAB = name;
+  document.querySelectorAll(".main-tab").forEach(b => {
+    b.classList.toggle("active", b.dataset.tab === name);
+  });
+  const body = $("content");
+  if (name === "market") body.innerHTML = renderMarketSheet();
+  else if (name === "news") body.innerHTML = renderNewsSheet();
+  else if (name === "funds") body.innerHTML = renderFundsSheet();
+  else if (name === "insurance") body.innerHTML = renderInsuranceSheet();
+  else if (name === "obonds") body.innerHTML = renderObondsSheet();
+  if (name === "news") wireNewsTabs();
+  window.scrollTo({ top: 0, behavior: "instant" in window ? "instant" : "auto" });
 }
 
 let _pullStartY = 0;
@@ -208,7 +216,6 @@ function setupPullToRefresh() {
 
   document.addEventListener("touchstart", (e) => {
     if (window.scrollY > 0) return;
-    if (document.querySelector(".sheet:not([hidden])")) return;
     _pullStartY = e.touches[0].clientY;
     _pullCurrentY = _pullStartY;
     _isPulling = true;
@@ -292,93 +299,7 @@ async function refreshData() {
     $("updated").textContent =
       `上次更新：${DATA.meta.built_at.replace("T", " ").slice(0, 16)}`;
   }
-  renderMarketPreview();
-  renderNewsPreview();
-  renderFundsPreview();
-  renderInsurancePreview();
-  renderObondsPreview();
-}
-
-function renderMarketPreview() {
-  const m = DATA.market;
-  $("market-date").textContent = `收盤日 ${shortDate(m.closing_date)}`;
-  const top = ["TAIEX", "S&P 500"]
-    .map(name => m.indices.find(i => i.name === name))
-    .filter(Boolean);
-  $("market-preview").innerHTML = top.map(i => `
-    <div class="row">
-      <span class="name">${indexLink(i.name)}</span>
-      <span class="val">${fmtInt(i.close)} <span class="${pctClass(i.daily_pct)}">${fmtPct(i.daily_pct)}</span></span>
-    </div>
-  `).join("");
-}
-
-function renderNewsPreview() {
-  const tldr = (DATA.news.tldr || []).slice(0, 1);
-  $("news-date").textContent = shortDate(DATA.news.news_date);
-  $("news-preview").innerHTML = tldr.map(t =>
-    `<div class="row">• ${escapeHtml(t)}</div>`
-  ).join("") || "<div class='row'>—</div>";
-}
-
-function renderFundsPreview() {
-  const funds = (DATA.funds.funds || [])
-    .filter(f => f.perf && f.perf["1m"] !== null && f.perf["1m"] !== undefined)
-    .sort((a, b) => b.perf["1m"] - a.perf["1m"])
-    .slice(0, 3);
-  if (funds.length) {
-    $("funds-date").textContent = `淨值 ${shortDate(funds[0].nav_date)}`;
-  }
-  $("funds-preview").innerHTML = funds.map(f => `
-    <div class="row">
-      <span class="name">${escapeHtml(f.name_zh)}</span>
-      <span class="val ${pctClass(f.perf['1m'])}">${fmtPct(f.perf['1m'])} / 近1月</span>
-    </div>
-  `).join("") || "<div class='row'>—</div>";
-}
-
-function renderInsurancePreview() {
-  const list = (DATA.insurance && DATA.insurance.insurances) || [];
-  const top = list.slice(0, 3);
-  if (top.length) {
-    $("insurance-date").textContent = `${top.length} 檔商品`;
-  }
-  $("insurance-preview").innerHTML = top.map(it => `
-    <div class="row">
-      <span class="name">${escapeHtml(it.name_zh)}</span>
-      <span class="val" style="font-size:12px; color:var(--text-mute)">${escapeHtml(it.type || "")}</span>
-    </div>
-  `).join("") || "<div class='row'>—</div>";
-}
-
-function renderObondsPreview() {
-  const list = (DATA.obonds && DATA.obonds.bonds) || [];
-  const top = list.slice(0, 3);
-  if (list.length) {
-    $("obonds-date").textContent = `${list.length} 檔債券`;
-  }
-  $("obonds-preview").innerHTML = top.map(it => `
-    <div class="row">
-      <span class="name">${escapeHtml(it.name_zh)}</span>
-      <span class="val" style="font-size:12px; color:var(--text-mute)">${escapeHtml(it.currency || "")}</span>
-    </div>
-  `).join("") || "<div class='row'>—</div>";
-}
-
-function openSheet(target) {
-  const titles = { market: "全球市場", news: "重要新聞", funds: "精選基金", insurance: "精選保險", obonds: "精選海外債" };
-  $("sheet-title").textContent = titles[target];
-  $("mask").hidden = false;
-  $("sheet").hidden = false;
-
-  const body = $("sheet-body");
-  if (target === "market") body.innerHTML = renderMarketSheet();
-  else if (target === "news") body.innerHTML = renderNewsSheet();
-  else if (target === "funds") body.innerHTML = renderFundsSheet();
-  else if (target === "insurance") body.innerHTML = renderInsuranceSheet();
-  else if (target === "obonds") body.innerHTML = renderObondsSheet();
-
-  if (target === "news") wireNewsTabs();
+  switchTab(CURRENT_TAB);
 }
 
 function renderObondsSheet() {
@@ -434,11 +355,6 @@ function renderInsuranceSheet() {
       ${it.source_url ? `<a class="source" href="${it.source_url}" target="_blank" rel="noopener" style="display:block; margin-top:8px">商品頁 ↗</a>` : ""}
     </div>
   `).join("");
-}
-
-function closeSheet() {
-  $("sheet").hidden = true;
-  $("mask").hidden = true;
 }
 
 function renderMarketSheet() {

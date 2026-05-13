@@ -8,7 +8,7 @@
 <link rel="manifest" href="manifest.json">
 <link rel="icon" type="image/png" href="icon-192.png">
 <link rel="apple-touch-icon" href="icon-192.png">
-<link rel="stylesheet" href="style.css?v=20260513-0922">
+<link rel="stylesheet" href="style.css?v=20260513-0940">
 </head>
 <body>
 
@@ -17,57 +17,20 @@
   <p class="updated" id="updated">載入中…</p>
 </header>
 
-<main id="cards">
-  <article class="card" data-section="market">
-    <header>
-      <h2>全球市場</h2>
-      <span class="card-date" id="market-date"></span>
-    </header>
-    <div class="preview" id="market-preview">載入中…</div>
-    <button class="expand-btn" data-target="market">點此看全部 ▾</button>
-  </article>
+<nav class="main-nav" id="main-nav">
+  <button class="main-tab active" data-tab="market">全球市場</button>
+  <button class="main-tab" data-tab="news">重要新聞</button>
+  <button class="main-tab" data-tab="funds">精選推薦</button>
+  <button class="main-tab" data-tab="insurance">精選保險</button>
+  <button class="main-tab" data-tab="obonds">海外債券</button>
+</nav>
 
-  <article class="card" data-section="news">
-    <header>
-      <h2>重要新聞</h2>
-      <span class="card-date" id="news-date"></span>
-    </header>
-    <div class="preview" id="news-preview">載入中…</div>
-    <button class="expand-btn" data-target="news">點此看全部 ▾</button>
-  </article>
-
-  <article class="card" data-section="funds">
-    <header>
-      <h2>精選基金</h2>
-      <span class="card-date" id="funds-date"></span>
-    </header>
-    <div class="preview" id="funds-preview">載入中…</div>
-    <button class="expand-btn" data-target="funds">點此看全部 ▾</button>
-  </article>
-
-  <article class="card" data-section="insurance">
-    <header>
-      <h2>精選保險</h2>
-      <span class="card-date" id="insurance-date"></span>
-    </header>
-    <div class="preview" id="insurance-preview">載入中…</div>
-    <button class="expand-btn" data-target="insurance">點此看全部 ▾</button>
-  </article>
-</main>
+<main id="content">載入中…</main>
 
 <footer class="disclaimer">
   資料僅供內部參考，不構成任何投資建議
 </footer>
 
-<div class="sheet-mask" id="mask" hidden></div>
-<aside class="sheet" id="sheet" hidden>
-  <header class="sheet-head">
-    <button class="back-btn" id="back">←</button>
-    <h2 id="sheet-title"></h2>
-  </header>
-  <div class="sheet-body" id="sheet-body"></div>
-</aside>
-
-<script src="app.js?v=20260513-0922"></script>
+<script src="app.js?v=20260513-0940"></script>
 </body>
 </html>
