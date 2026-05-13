@@ -302,6 +302,11 @@ async function refreshData() {
   switchTab(CURRENT_TAB);
 }
 
+function bondUrl(b) {
+  if (!b.isin || !b.code) return null;
+  return `https://bopfund.moneydj.com/b2bbond/BondBasic/Basic01?id=${encodeURIComponent(b.isin)}&bid=${encodeURIComponent(b.code)}`;
+}
+
 function renderObondsSheet() {
   const list = (DATA.obonds && DATA.obonds.bonds) || [];
   if (!list.length) {
@@ -315,19 +320,25 @@ function renderObondsSheet() {
         <th>名稱</th><th>幣別</th><th>票面利率</th><th>到期日</th><th>信評</th>
       </tr></thead>
       <tbody>
-        ${list.map(b => `
-          <tr>
-            <td>
-              <div>${escapeHtml(b.name_zh)}</div>
-              <div style="font-size:11px; color:var(--text-mute); font-family:Menlo,monospace">${escapeHtml(b.code || "")} · ${escapeHtml(b.isin || "")}</div>
-              <div style="font-size:11px; color:var(--text-mute)">${escapeHtml(b.issuer || "")}・${escapeHtml(b.type || "")}</div>
-            </td>
-            <td>${escapeHtml(b.currency || "")}</td>
-            <td>${fmtCoupon(b.coupon_pct)}</td>
-            <td style="font-size:12px">${escapeHtml(b.maturity || "—")}</td>
-            <td style="font-size:11px">${escapeHtml(b.rating || "—")}</td>
-          </tr>
-        `).join("")}
+        ${list.map(b => {
+          const url = bondUrl(b);
+          const nameHtml = url
+            ? `<a href="${url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${escapeHtml(b.name_zh)}</a>`
+            : escapeHtml(b.name_zh);
+          return `
+            <tr>
+              <td>
+                <div>${nameHtml}</div>
+                <div style="font-size:11px; color:var(--text-mute); font-family:Menlo,monospace">${escapeHtml(b.code || "")} · ${escapeHtml(b.isin || "")}</div>
+                <div style="font-size:11px; color:var(--text-mute)">${escapeHtml(b.issuer || "")}・${escapeHtml(b.type || "")}</div>
+              </td>
+              <td>${escapeHtml(b.currency || "")}</td>
+              <td>${fmtCoupon(b.coupon_pct)}</td>
+              <td style="font-size:12px">${escapeHtml(b.maturity || "—")}</td>
+              <td style="font-size:11px">${escapeHtml(b.rating || "—")}</td>
+            </tr>
+          `;
+        }).join("")}
       </tbody>
     </table>
   `;
