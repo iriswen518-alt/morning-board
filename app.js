@@ -623,10 +623,10 @@ function renderAllocationSheet() {
   const noteHtml = data.note ? `<p class="a-note">${escapeHtml(data.note)}</p>` : "";
 
   return `
-    ${noteHtml}
     <div class="tabs">${tabBtns}</div>
     <div class="t-panes">${panes}</div>
     ${refsHtml}
+    ${noteHtml}
   `;
 }
 
