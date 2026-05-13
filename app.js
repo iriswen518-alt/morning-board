@@ -302,7 +302,7 @@ async function refreshData() {
 function renderMarketPreview() {
   const m = DATA.market;
   $("market-date").textContent = `收盤日 ${shortDate(m.closing_date)}`;
-  const top = ["TAIEX", "S&P 500", "Nikkei 225"]
+  const top = ["TAIEX", "S&P 500"]
     .map(name => m.indices.find(i => i.name === name))
     .filter(Boolean);
   $("market-preview").innerHTML = top.map(i => `
@@ -314,7 +314,7 @@ function renderMarketPreview() {
 }
 
 function renderNewsPreview() {
-  const tldr = (DATA.news.tldr || []).slice(0, 3);
+  const tldr = (DATA.news.tldr || []).slice(0, 1);
   $("news-date").textContent = shortDate(DATA.news.news_date);
   $("news-preview").innerHTML = tldr.map(t =>
     `<div class="row">• ${escapeHtml(t)}</div>`
@@ -386,19 +386,25 @@ function renderObondsSheet() {
   if (!list.length) {
     return "<p style='color:var(--text-mute); padding:20px 0'>尚未提供海外債清單</p>";
   }
+  const fmtCoupon = c => (c === null || c === undefined) ? "—"
+    : (c === 0 ? "零息" : `${c.toFixed(2)}%`);
   return `
-    <table class="indices">
+    <table class="indices" style="font-size:13px">
       <thead><tr>
-        <th>名稱</th><th>發行人</th><th>類型</th><th>幣別</th><th>代碼</th>
+        <th>名稱</th><th>幣別</th><th>票面利率</th><th>到期日</th><th>信評</th>
       </tr></thead>
       <tbody>
         ${list.map(b => `
           <tr>
-            <td>${escapeHtml(b.name_zh)}</td>
-            <td style="font-size:12px; color:var(--text-mute)">${escapeHtml(b.issuer || "")}</td>
-            <td>${escapeHtml(b.type || "")}</td>
+            <td>
+              <div>${escapeHtml(b.name_zh)}</div>
+              <div style="font-size:11px; color:var(--text-mute); font-family:Menlo,monospace">${escapeHtml(b.code || "")} · ${escapeHtml(b.isin || "")}</div>
+              <div style="font-size:11px; color:var(--text-mute)">${escapeHtml(b.issuer || "")}・${escapeHtml(b.type || "")}</div>
+            </td>
             <td>${escapeHtml(b.currency || "")}</td>
-            <td style="font-size:11px; color:var(--text-mute); font-family:Menlo,monospace">${escapeHtml(b.code || "")}<br>${escapeHtml(b.isin || "")}</td>
+            <td>${fmtCoupon(b.coupon_pct)}</td>
+            <td style="font-size:12px">${escapeHtml(b.maturity || "—")}</td>
+            <td style="font-size:11px">${escapeHtml(b.rating || "—")}</td>
           </tr>
         `).join("")}
       </tbody>

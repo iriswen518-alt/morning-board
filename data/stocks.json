@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-13T09:15:47+08:00",
+  "generated_at": "2026-05-13T09:22:22+08:00",
   "source": "finnhub (US price+daily) + Yahoo (US MTD/YTD) + TWSE (TW)",
   "us_stocks": [
     {
@@ -96,7 +96,7 @@
       "ytd_pct": 21.15,
       "market_date": "2026-05-12",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AVGO.US",
-      "error": null
+      "error": "stale"
     },
     {
       "symbol": "TSM",
@@ -140,10 +140,10 @@
       "symbol": "2454",
       "name_zh": "聯發科",
       "kind": "TW",
-      "price": 3680.0,
-      "change_pct": -0.54,
-      "mtd_pct": 41.0,
-      "ytd_pct": 157.34,
+      "price": 3620.0,
+      "change_pct": -2.16,
+      "mtd_pct": 38.7,
+      "ytd_pct": 153.15,
       "market_date": "2026-05-13",
       "source_url": "https://tw.stock.yahoo.com/quote/2454.TW",
       "error": null
@@ -176,10 +176,10 @@
       "symbol": "2891",
       "name_zh": "中信金",
       "kind": "TW",
-      "price": 53.5,
-      "change_pct": null,
-      "mtd_pct": 2.29,
-      "ytd_pct": 6.57,
+      "price": 54.4,
+      "change_pct": 1.68,
+      "mtd_pct": 4.02,
+      "ytd_pct": 8.37,
       "market_date": "2026-05-13",
       "source_url": "https://tw.stock.yahoo.com/quote/2891.TW",
       "error": null

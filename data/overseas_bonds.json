@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-13T09:16:12+08:00",
+  "generated_at": "2026-05-13T09:22:47+08:00",
   "source": "manual curation (overseas_bonds.json)",
   "bonds": [
     {
@@ -9,7 +9,10 @@
       "name_zh": "蘋果美元公司債",
       "issuer": "Apple Inc.",
       "type": "公司債",
-      "currency": "USD"
+      "currency": "USD",
+      "coupon_pct": 4.25,
+      "maturity": "2047-02-09",
+      "rating": "Aaa / AA+ (Moody's / S&P)"
     },
     {
       "id": "fecb0170_amazon",
@@ -18,7 +21,10 @@
       "name_zh": "亞馬遜美元公司債",
       "issuer": "Amazon.com Inc.",
       "type": "公司債",
-      "currency": "USD"
+      "currency": "USD",
+      "coupon_pct": 4.05,
+      "maturity": "2047-08-22",
+      "rating": "AA- (S&P)"
     },
     {
       "id": "fecb0184_brk",
@@ -27,7 +33,10 @@
       "name_zh": "波克夏海瑟威金融美元公司債",
       "issuer": "Berkshire Hathaway Finance",
       "type": "公司債",
-      "currency": "USD"
+      "currency": "USD",
+      "coupon_pct": 4.4,
+      "maturity": "2042-05-15",
+      "rating": "Aa2 / AA (Moody's / S&P)"
     },
     {
       "id": "fecb0219_saudi",
@@ -36,7 +45,10 @@
       "name_zh": "沙烏地阿拉伯美元主權債",
       "issuer": "Kingdom of Saudi Arabia",
       "type": "主權債",
-      "currency": "USD"
+      "currency": "USD",
+      "coupon_pct": 5.0,
+      "maturity": "2049-04-17",
+      "rating": "A1 / A+ (Moody's / S&P)"
     },
     {
       "id": "fecb0231_lilly",
@@ -45,7 +57,10 @@
       "name_zh": "禮來美元公司債",
       "issuer": "Eli Lilly and Co.",
       "type": "公司債",
-      "currency": "USD"
+      "currency": "USD",
+      "coupon_pct": 5.2,
+      "maturity": "2064-08-12",
+      "rating": "A1 / A+ (Moody's / S&P)"
     },
     {
       "id": "fecb0247_ms_zero",
@@ -54,7 +69,10 @@
       "name_zh": "摩根士丹利金融美元零息債",
       "issuer": "Morgan Stanley",
       "type": "公司債（零息）",
-      "currency": "USD"
+      "currency": "USD",
+      "coupon_pct": 0.0,
+      "maturity": "—",
+      "rating": "A1 / A- (Moody's / S&P)"
     },
     {
       "id": "fecb0251_alphabet",
@@ -63,7 +81,10 @@
       "name_zh": "Alphabet 美元公司債",
       "issuer": "Alphabet Inc.",
       "type": "公司債",
-      "currency": "USD"
+      "currency": "USD",
+      "coupon_pct": 5.35,
+      "maturity": "2045-04-01",
+      "rating": "Aa2 / AA+ (Moody's / S&P)"
     },
     {
       "id": "fecb0252_meta",
@@ -72,16 +93,22 @@
       "name_zh": "Meta 平台美元公司債",
       "issuer": "Meta Platforms Inc.",
       "type": "公司債",
-      "currency": "USD"
+      "currency": "USD",
+      "coupon_pct": 5.5,
+      "maturity": "2045-11-15",
+      "rating": "A1 / A+ (Moody's / S&P)"
     },
     {
       "id": "fecb0244_gs_aud",
       "code": "FECB0244",
       "isin": "XS2814357799",
       "name_zh": "高盛金融澳幣公司債",
-      "issuer": "Goldman Sachs",
+      "issuer": "Goldman Sachs Group",
       "type": "公司債",
-      "currency": "AUD"
+      "currency": "AUD",
+      "coupon_pct": null,
+      "maturity": "—",
+      "rating": "A2 / BBB+ (Moody's / S&P)"
     },
     {
       "id": "fecb0249_vic_aud",
@@ -89,8 +116,11 @@
       "isin": "AU3SG0003163",
       "name_zh": "維多利亞財務公司澳幣債",
       "issuer": "Treasury Corporation of Victoria",
-      "type": "主權/地方政府債",
-      "currency": "AUD"
+      "type": "地方政府債",
+      "currency": "AUD",
+      "coupon_pct": 5.5,
+      "maturity": "2039-09-15",
+      "rating": "Aaa / AA (Moody's / S&P)"
     }
   ]
 }
