@@ -202,6 +202,7 @@ function switchTab(name) {
     b.classList.toggle("active", b.dataset.tab === name);
   });
   const body = $("content");
+  body.dataset.section = name;
   if (name === "market") body.innerHTML = renderMarketSheet();
   else if (name === "news") body.innerHTML = renderNewsSheet();
   else if (name === "funds") body.innerHTML = renderFundsSheet();
@@ -210,6 +211,22 @@ function switchTab(name) {
   if (name === "news") wireNewsTabs();
   if (name === "market") wireMarketTabs();
   window.scrollTo({ top: 0, behavior: "instant" in window ? "instant" : "auto" });
+}
+
+function currencyChip(cur) {
+  if (!cur) return "";
+  const c = String(cur).toUpperCase();
+  const cls = c === "USD" ? "chip-usd" : c === "TWD" ? "chip-twd" : c === "AUD" ? "chip-aud" : "chip-default";
+  return `<span class="chip ${cls}">${escapeHtml(c)}</span>`;
+}
+
+function typeChip(type) {
+  if (!type) return "";
+  let cls = "chip-default";
+  if (type.includes("零息")) cls = "chip-zero";
+  else if (type.includes("主權") || type.includes("地方政府")) cls = "chip-sov";
+  else if (type.includes("公司")) cls = "chip-corp";
+  return `<span class="chip ${cls}">${escapeHtml(type)}</span>`;
 }
 
 function wireMarketTabs() {
@@ -345,11 +362,13 @@ function renderObondsSheet() {
     const nameHtml = url
       ? `<a href="${url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${escapeHtml(b.name_zh)}</a>`
       : escapeHtml(b.name_zh);
-    const taglineParts = [b.issuer, b.type, b.code, b.isin].filter(Boolean).map(escapeHtml);
+    const chips = [currencyChip(b.currency), typeChip(b.type)].join("");
+    const meta = [b.issuer, b.code, b.isin].filter(Boolean).map(escapeHtml).join("・");
     return `
     <div class="fund-card">
       <h3>${nameHtml}</h3>
-      <p class="tagline">${taglineParts.join("・")}</p>
+      <div style="margin-bottom:6px">${chips}</div>
+      <p class="tagline">${meta}</p>
       <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:6px; font-size:12px; margin-top:8px; text-align:center">
         <div><label style="display:block; font-size:11px; color:var(--text-mute)">幣別</label>${escapeHtml(b.currency || "—")}</div>
         <div><label style="display:block; font-size:11px; color:var(--text-mute)">票面利率</label>${fmtCoupon(b.coupon_pct)}</div>
@@ -370,9 +389,11 @@ function renderInsuranceSheet() {
     const nameHtml = it.source_url
       ? `<a href="${it.source_url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${escapeHtml(it.name_zh)}</a>`
       : escapeHtml(it.name_zh);
+    const chips = [currencyChip(it.currency), typeChip(it.type)].join("");
     return `
     <div class="fund-card">
       <h3>${nameHtml}</h3>
+      <div style="margin-bottom:6px">${chips}</div>
       <p class="tagline">${escapeHtml(it.tagline || "")}</p>
       <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:6px; font-size:12px; margin-top:8px">
         <div><label style="display:block; font-size:11px; color:var(--text-mute)">公司</label>${escapeHtml(it.company || "—")}</div>
@@ -617,9 +638,11 @@ function renderFundsSheet() {
     const nameHtml = f.source_url
       ? `<a href="${f.source_url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${escapeHtml(f.name_zh)}</a>`
       : escapeHtml(f.name_zh);
+    const chips = currencyChip(f.currency);
     return `
     <div class="fund-card">
       <h3>${nameHtml}</h3>
+      ${chips ? `<div style="margin-bottom:6px">${chips}</div>` : ""}
       <p class="tagline">${escapeHtml(f.tagline || "")}</p>
       <div class="grid">
         <div>
