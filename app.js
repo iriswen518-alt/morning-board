@@ -183,7 +183,7 @@ async function init() {
   switchTab(CURRENT_TAB);
 
   if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("service-worker.js?v=20260513-1252").catch(() => {});
+    navigator.serviceWorker.register("service-worker.js?v=20260513-1300").catch(() => {});
   }
 
   setupPullToRefresh();
