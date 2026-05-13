@@ -182,7 +182,7 @@ async function init() {
   switchTab(CURRENT_TAB);
 
   if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("service-worker.js").catch(() => {});
+    navigator.serviceWorker.register("service-worker.js?v=20260513-1135").catch(() => {});
   }
 
   setupPullToRefresh();
@@ -369,11 +369,11 @@ function renderObondsSheet() {
       <h3>${nameHtml}</h3>
       <div style="margin-bottom:6px">${chips}</div>
       <p class="tagline">${meta}</p>
-      <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:6px; font-size:12px; margin-top:8px; text-align:center">
-        <div><label style="display:block; font-size:11px; color:var(--text-mute)">幣別</label>${escapeHtml(b.currency || "—")}</div>
-        <div><label style="display:block; font-size:11px; color:var(--text-mute)">票面利率</label>${fmtCoupon(b.coupon_pct)}</div>
-        <div><label style="display:block; font-size:11px; color:var(--text-mute)">到期日</label>${escapeHtml(b.maturity || "—")}</div>
-        <div><label style="display:block; font-size:11px; color:var(--text-mute)">信評</label><span style="font-size:11px">${escapeHtml(b.rating || "—")}</span></div>
+      <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:6px; font-size:15px; margin-top:8px; text-align:center">
+        <div><label style="display:block; font-size:13px; color:var(--text-mute); margin-bottom:2px">幣別</label>${escapeHtml(b.currency || "—")}</div>
+        <div><label style="display:block; font-size:13px; color:var(--text-mute); margin-bottom:2px">票面利率</label>${fmtCoupon(b.coupon_pct)}</div>
+        <div><label style="display:block; font-size:13px; color:var(--text-mute); margin-bottom:2px">到期日</label>${escapeHtml(b.maturity || "—")}</div>
+        <div><label style="display:block; font-size:13px; color:var(--text-mute); margin-bottom:2px">信評</label><span>${escapeHtml(b.rating || "—")}</span></div>
       </div>
     </div>
   `;
@@ -387,7 +387,7 @@ function renderInsuranceSheet() {
   }
   return list.map(it => {
     const nameHtml = it.source_url
-      ? `<a href="${it.source_url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${escapeHtml(it.name_zh)}</a>`
+      ? `<a href="${it.source_url}" target="_blank" rel="noopener">${escapeHtml(it.name_zh)}</a>`
       : escapeHtml(it.name_zh);
     const chips = [currencyChip(it.currency), typeChip(it.type)].join("");
     return `
@@ -395,14 +395,14 @@ function renderInsuranceSheet() {
       <h3>${nameHtml}</h3>
       <div style="margin-bottom:6px">${chips}</div>
       <p class="tagline">${escapeHtml(it.tagline || "")}</p>
-      <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:6px; font-size:12px; margin-top:8px">
-        <div><label style="display:block; font-size:11px; color:var(--text-mute)">公司</label>${escapeHtml(it.company || "—")}</div>
-        <div><label style="display:block; font-size:11px; color:var(--text-mute)">類型</label>${escapeHtml(it.type || "—")}</div>
-        <div><label style="display:block; font-size:11px; color:var(--text-mute)">幣別</label>${escapeHtml(it.currency || "—")}</div>
-        <div><label style="display:block; font-size:11px; color:var(--text-mute)">期間</label>${escapeHtml(it.term || "—")}</div>
+      <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:6px; font-size:15px; margin-top:8px">
+        <div><label style="display:block; font-size:13px; color:var(--text-mute); margin-bottom:2px">公司</label>${escapeHtml(it.company || "—")}</div>
+        <div><label style="display:block; font-size:13px; color:var(--text-mute); margin-bottom:2px">類型</label>${escapeHtml(it.type || "—")}</div>
+        <div><label style="display:block; font-size:13px; color:var(--text-mute); margin-bottom:2px">幣別</label>${escapeHtml(it.currency || "—")}</div>
+        <div><label style="display:block; font-size:13px; color:var(--text-mute); margin-bottom:2px">期間</label>${escapeHtml(it.term || "—")}</div>
       </div>
       ${(it.highlights && it.highlights.length) ? `
-        <ul style="margin:8px 0 0; padding-left:18px; font-size:13px; line-height:1.6">
+        <ul style="margin:10px 0 0; padding-left:18px; font-size:14px; line-height:1.7">
           ${it.highlights.map(h => `<li>${escapeHtml(h)}</li>`).join("")}
         </ul>` : ""}
     </div>
@@ -479,7 +479,7 @@ function renderMarketSheet() {
 
     <div class="tabs">
       <button class="tab active" data-mtab="indices">股市</button>
-      <button class="tab" data-mtab="bonds">公債殖利率</button>
+      <button class="tab" data-mtab="bonds">債券</button>
       <button class="tab" data-mtab="fx">匯率</button>
       <button class="tab" data-mtab="us">美股</button>
       <button class="tab" data-mtab="tw">台股</button>
@@ -552,7 +552,7 @@ function renderMarketHighlights(m) {
 function renderNewsSheet() {
   return `
     <div class="tabs">
-      <button class="tab active" data-tab="market">股市</button>
+      <button class="tab active" data-tab="market">市場</button>
       <button class="tab" data-tab="wm">財管</button>
       <button class="tab" data-tab="tax">稅務</button>
     </div>

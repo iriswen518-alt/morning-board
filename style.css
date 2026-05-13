@@ -113,15 +113,12 @@ body {
 }
 .topbar .updated {
   margin: 8px 0 0;
-  display: inline-block;
-  padding: 6px 14px;
-  background: rgba(255, 255, 255, 0.18);
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
-  border-radius: 999px;
+  padding: 0;
+  background: none;
+  border: none;
   font-size: 13px;
   font-weight: 500;
+  opacity: 0.92;
 }
 
 .main-nav {
@@ -130,8 +127,11 @@ body {
   z-index: 50;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 0;
   padding: 0 16px;
+  max-width: 1200px;
+  margin: 0 auto;
   background: #fff;
   border-bottom: 4px solid var(--brand-secondary);
   box-shadow: 0 2px 8px rgba(0, 31, 77, 0.06);
@@ -142,10 +142,11 @@ body {
 .main-nav::-webkit-scrollbar { display: none; }
 
 .main-tab {
-  flex: 0 0 auto;
+  flex: 1 1 0;
   position: relative;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
   padding: 14px 18px;
   background: none;
@@ -198,7 +199,7 @@ body {
 #content h3.section-title,
 #content > h3 {
   position: relative;
-  padding-left: 14px;
+  padding-left: 0;
   margin: 24px 0 10px;
   font-size: 17px;
   color: var(--brand-deep);
@@ -206,14 +207,7 @@ body {
 #content > h3:first-child,
 #content h3.section-title:first-child { margin-top: 4px; }
 #content h3.section-title::before,
-#content > h3::before {
-  content: "";
-  position: absolute;
-  left: 0; top: 4px; bottom: 4px;
-  width: 4px;
-  border-radius: 2px;
-  background: linear-gradient(180deg, var(--brand-deep), var(--brand-primary) 50%, var(--brand-secondary));
-}
+#content > h3::before { display: none; }
 
 #content table.indices {
   background: var(--bg);
@@ -515,15 +509,18 @@ table.indices .date-col {
 
 .fund-card {
   position: relative;
-  padding: 14px 16px 14px 18px;
+  padding: 14px 16px;
   margin-bottom: 10px;
   background: var(--bg);
-  border: 1px solid var(--border);
-  border-left: 4px solid var(--brand-primary);
+  border: 1px solid var(--border) !important;
+  border-left: 1px solid var(--border) !important;
   border-radius: 12px;
   box-shadow: var(--shadow);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
+/* 強制覆寫：所有分頁、所有 section 下的 fund-card 都禁止彩色左襯線 */
+#content[data-section] .fund-card,
+.fund-card { border-left-color: var(--border) !important; border-left-width: 1px !important; }
 .fund-card:hover {
   transform: translateY(-1px);
   box-shadow: 0 4px 14px rgba(0, 31, 77, 0.08);
@@ -537,10 +534,25 @@ table.indices .date-col {
 }
 .fund-card h3::before { display: none; }
 
-/* 卡片色條依分類變色 */
-#content[data-section="insurance"] .fund-card { border-left-color: #f59e0b; }
-#content[data-section="obonds"] .fund-card { border-left-color: var(--brand-deep); }
-#content[data-section="market"] .fund-card { border-left-color: var(--brand-secondary); }
+/* 卡片標題若為外部連結，加 ↗ icon 與 hover 強化 */
+.fund-card h3 a[target="_blank"] {
+  color: var(--brand-deep);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.fund-card h3 a[target="_blank"]::after {
+  content: " ↗";
+  font-size: 0.85em;
+  color: var(--brand-primary);
+  margin-left: 2px;
+}
+.fund-card h3 a[target="_blank"]:hover {
+  color: var(--brand-primary);
+  border-bottom-color: var(--brand-primary);
+}
+
+/* 卡片左側色條已移除（保留 hook 不再設色） */
 
 /* 色塊標籤 */
 .chip {
@@ -560,13 +572,13 @@ table.indices .date-col {
 .chip-sov { background: #F0E1F5; color: #5a1f72; }
 .chip-zero { background: #FFE5E5; color: #8a2020; }
 .chip-default { background: #EDEDED; color: #555; }
-.fund-card .tagline { font-size: 12px; color: var(--text-mute); margin: 0 0 8px; }
+.fund-card .tagline { font-size: 14px; color: var(--text-sub); margin: 0 0 10px; }
 .fund-card .grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 6px;
-  font-size: 12px;
+  font-size: 15px;
 }
 .fund-card .grid > div { text-align: center; }
-.fund-card .grid label { display: block; font-size: 11px; color: var(--text-mute); }
-.fund-card .grid .cell-sub { font-size: 10px; color: var(--text-mute); margin-top: 2px; }
+.fund-card .grid label { display: block; font-size: 13px; color: var(--text-mute); margin-bottom: 2px; }
+.fund-card .grid .cell-sub { font-size: 12px; color: var(--text-mute); margin-top: 2px; }

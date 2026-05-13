@@ -1,7 +1,7 @@
-// Network-first with cache fallback (v5)
+// Network-first with cache fallback (v6)
 // 永遠優先網路（拿最新），失敗時用上次成功的快取。
 // 兼顧「總是新」+「網路 blip 時不爆」。
-const CACHE = "morning-board-v5";
+const CACHE = "morning-board-v6";
 
 self.addEventListener("install", e => {
   self.skipWaiting();
