@@ -512,8 +512,9 @@ table.indices .date-col {
 }
 .fund-card h3 {
   margin: 0 0 4px;
-  font-size: 16px;
-  color: var(--text);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--brand-deep);
   padding-left: 0;
 }
 .fund-card h3::before { display: none; }

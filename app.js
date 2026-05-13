@@ -208,7 +208,24 @@ function switchTab(name) {
   else if (name === "insurance") body.innerHTML = renderInsuranceSheet();
   else if (name === "obonds") body.innerHTML = renderObondsSheet();
   if (name === "news") wireNewsTabs();
+  if (name === "market") wireMarketTabs();
   window.scrollTo({ top: 0, behavior: "instant" in window ? "instant" : "auto" });
+}
+
+function wireMarketTabs() {
+  const buttons = document.querySelectorAll(".tab[data-mtab]");
+  const ids = Array.from(buttons).map(b => "mtab-" + b.dataset.mtab);
+  buttons.forEach(t => {
+    t.addEventListener("click", () => {
+      buttons.forEach(x => x.classList.remove("active"));
+      t.classList.add("active");
+      const which = "mtab-" + t.dataset.mtab;
+      ids.forEach(id => {
+        const el = $(id);
+        if (el) el.hidden = id !== which;
+      });
+    });
+  });
 }
 
 let _pullStartY = 0;
@@ -406,37 +423,51 @@ function renderMarketSheet() {
     </tr>
   `).join("");
 
-  return `
-    ${renderMarketHighlights(m)}
+  const usStocks = DATA.stocks?.us_stocks || [];
+  const twStocks = DATA.stocks?.tw_stocks || [];
 
-    <h3>股市指數</h3>
+  const stocksTab = `
     <table class="indices">
       <thead><tr>
         <th>指數</th><th>收盤</th><th>日</th><th>本月</th><th>今年</th><th class="date-col">收盤日</th>
       </tr></thead>
       <tbody>${rows}</tbody>
-    </table>
+    </table>`;
 
-    ${bondRows ? `
-    <h3>公債殖利率</h3>
+  const bondsTab = bondRows ? `
     <table class="indices">
       <thead><tr>
         <th>債別</th><th>殖利率</th><th>日變動</th><th>本月變動</th><th class="date-col">收盤日</th>
       </tr></thead>
       <tbody>${bondRows}</tbody>
-    </table>` : ""}
+    </table>` : `<p style="color:var(--text-mute); padding:20px 0">尚未提供公債資料</p>`;
 
-    ${fxRows ? `
-    <h3>匯率</h3>
+  const fxTab = fxRows ? `
     <table class="indices">
       <thead><tr>
         <th>幣別</th><th>收盤</th><th>日</th><th>本月</th><th>今年</th><th class="date-col">收盤日</th>
       </tr></thead>
       <tbody>${fxRows}</tbody>
-    </table>` : ""}
+    </table>` : `<p style="color:var(--text-mute); padding:20px 0">尚未提供匯率資料</p>`;
 
-    ${renderStocksTable("美股", DATA.stocks?.us_stocks)}
-    ${renderStocksTable("台股", DATA.stocks?.tw_stocks)}
+  const usTab = renderStocksTable("", usStocks) || `<p style="color:var(--text-mute); padding:20px 0">尚未提供美股資料</p>`;
+  const twTab = renderStocksTable("", twStocks) || `<p style="color:var(--text-mute); padding:20px 0">尚未提供台股資料</p>`;
+
+  return `
+    ${renderMarketHighlights(m)}
+
+    <div class="tabs">
+      <button class="tab active" data-mtab="indices">股市</button>
+      <button class="tab" data-mtab="bonds">公債殖利率</button>
+      <button class="tab" data-mtab="fx">匯率</button>
+      <button class="tab" data-mtab="us">美股</button>
+      <button class="tab" data-mtab="tw">台股</button>
+    </div>
+    <div id="mtab-indices">${stocksTab}</div>
+    <div id="mtab-bonds" hidden>${bondsTab}</div>
+    <div id="mtab-fx" hidden>${fxTab}</div>
+    <div id="mtab-us" hidden>${usTab}</div>
+    <div id="mtab-tw" hidden>${twTab}</div>
   `;
 }
 
@@ -460,7 +491,7 @@ function renderStocksTable(title, list) {
     </tr>
   `).join("");
   return `
-    <h3>${title}</h3>
+    ${title ? `<h3>${title}</h3>` : ""}
     <table class="indices">
       <thead><tr>
         <th>名稱</th><th>收盤</th><th>日</th><th>本月</th><th>今年</th><th class="date-col">收盤日</th>
