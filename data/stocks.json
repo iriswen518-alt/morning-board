@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-13T09:59:32+08:00",
+  "generated_at": "2026-05-13T10:08:52+08:00",
   "source": "finnhub (US price+daily) + Yahoo (US MTD/YTD) + TWSE (TW)",
   "us_stocks": [
     {
@@ -24,7 +24,7 @@
       "ytd_pct": 8.44,
       "market_date": "2026-05-12",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AAPL.US",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "MSFT",
@@ -140,10 +140,10 @@
       "symbol": "2454",
       "name_zh": "聯發科",
       "kind": "TW",
-      "price": 3630.0,
-      "change_pct": -1.89,
-      "mtd_pct": 39.08,
-      "ytd_pct": 153.85,
+      "price": 3615.0,
+      "change_pct": -2.3,
+      "mtd_pct": 38.51,
+      "ytd_pct": 152.8,
       "market_date": "2026-05-13",
       "source_url": "https://tw.stock.yahoo.com/quote/2454.TW",
       "error": null
@@ -176,10 +176,10 @@
       "symbol": "2891",
       "name_zh": "中信金",
       "kind": "TW",
-      "price": 54.6,
-      "change_pct": 2.06,
-      "mtd_pct": 4.4,
-      "ytd_pct": 8.76,
+      "price": 54.7,
+      "change_pct": 2.24,
+      "mtd_pct": 4.59,
+      "ytd_pct": 8.96,
       "market_date": "2026-05-13",
       "source_url": "https://tw.stock.yahoo.com/quote/2891.TW",
       "error": null

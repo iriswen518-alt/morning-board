@@ -333,7 +333,7 @@ function renderObondsSheet() {
     <div class="fund-card">
       <h3>${nameHtml}</h3>
       <p class="tagline">${taglineParts.join("・")}</p>
-      <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:6px; font-size:12px; margin-top:8px">
+      <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:6px; font-size:12px; margin-top:8px; text-align:center">
         <div><label style="display:block; font-size:11px; color:var(--text-mute)">幣別</label>${escapeHtml(b.currency || "—")}</div>
         <div><label style="display:block; font-size:11px; color:var(--text-mute)">票面利率</label>${fmtCoupon(b.coupon_pct)}</div>
         <div><label style="display:block; font-size:11px; color:var(--text-mute)">到期日</label>${escapeHtml(b.maturity || "—")}</div>
@@ -407,7 +407,9 @@ function renderMarketSheet() {
   `).join("");
 
   return `
-    <h3 style="color:var(--brand-deep); margin:0 0 8px">股市指數</h3>
+    ${renderMarketHighlights(m)}
+
+    <h3>股市指數</h3>
     <table class="indices">
       <thead><tr>
         <th>指數</th><th>收盤</th><th>日</th><th>本月</th><th>今年</th><th class="date-col">收盤日</th>
@@ -416,7 +418,7 @@ function renderMarketSheet() {
     </table>
 
     ${bondRows ? `
-    <h3 style="color:var(--brand-deep); margin:24px 0 8px">公債殖利率</h3>
+    <h3>公債殖利率</h3>
     <table class="indices">
       <thead><tr>
         <th>債別</th><th>殖利率</th><th>日變動</th><th>本月變動</th><th class="date-col">收盤日</th>
@@ -425,7 +427,7 @@ function renderMarketSheet() {
     </table>` : ""}
 
     ${fxRows ? `
-    <h3 style="color:var(--brand-deep); margin:24px 0 8px">匯率</h3>
+    <h3>匯率</h3>
     <table class="indices">
       <thead><tr>
         <th>幣別</th><th>收盤</th><th>日</th><th>本月</th><th>今年</th><th class="date-col">收盤日</th>
@@ -435,8 +437,6 @@ function renderMarketSheet() {
 
     ${renderStocksTable("美股", DATA.stocks?.us_stocks)}
     ${renderStocksTable("台股", DATA.stocks?.tw_stocks)}
-
-    ${renderMarketHighlights(m)}
   `;
 }
 
@@ -460,7 +460,7 @@ function renderStocksTable(title, list) {
     </tr>
   `).join("");
   return `
-    <h3 style="color:var(--brand-deep); margin:24px 0 8px">${title}</h3>
+    <h3>${title}</h3>
     <table class="indices">
       <thead><tr>
         <th>名稱</th><th>收盤</th><th>日</th><th>本月</th><th>今年</th><th class="date-col">收盤日</th>
@@ -479,17 +479,21 @@ function renderMarketHighlights(m) {
   const tldr = (DATA.news && DATA.news.tldr) ? DATA.news.tldr.slice(0, 5) : [];
 
   return `
-    <h3 style="color:var(--brand-deep); margin:24px 0 8px">今日重點</h3>
-    <ul style="font-size:14px; line-height:1.8; padding-left:20px; margin:0">
-      ${ups.length ? `<li><strong class="up">領漲</strong>：${ups.map(fmt).join("、")}</li>` : ""}
-      ${downs.length ? `<li><strong class="down">領跌</strong>：${downs.map(fmt).join("、")}</li>` : ""}
-    </ul>
+    <h3>今日重點</h3>
+    <div class="fund-card">
+      <ul style="font-size:14px; line-height:1.8; padding-left:20px; margin:0">
+        ${ups.length ? `<li><strong class="up">領漲</strong>：${ups.map(fmt).join("、")}</li>` : ""}
+        ${downs.length ? `<li><strong class="down">領跌</strong>：${downs.map(fmt).join("、")}</li>` : ""}
+      </ul>
+    </div>
 
     ${tldr.length ? `
-      <h3 style="color:var(--brand-deep); margin:20px 0 8px">影響因素</h3>
-      <ul style="font-size:14px; line-height:1.7; padding-left:20px; margin:0; color:var(--text)">
-        ${tldr.map(t => `<li>${escapeHtml(t)}</li>`).join("")}
-      </ul>` : ""}
+      <h3>影響因素</h3>
+      <div class="fund-card">
+        <ul style="font-size:14px; line-height:1.7; padding-left:20px; margin:0">
+          ${tldr.map(t => `<li>${escapeHtml(t)}</li>`).join("")}
+        </ul>
+      </div>` : ""}
   `;
 }
 

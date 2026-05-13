@@ -8,7 +8,7 @@
 <link rel="manifest" href="manifest.json">
 <link rel="icon" type="image/png" href="icon-192.png">
 <link rel="apple-touch-icon" href="icon-192.png">
-<link rel="stylesheet" href="style.css?v=20260513-1000">
+<link rel="stylesheet" href="style.css?v=20260513-1009">
 </head>
 <body>
 
@@ -18,11 +18,46 @@
 </header>
 
 <nav class="main-nav" id="main-nav">
-  <button class="main-tab active" data-tab="market">全球市場</button>
-  <button class="main-tab" data-tab="news">重要新聞</button>
-  <button class="main-tab" data-tab="funds">精選基金</button>
-  <button class="main-tab" data-tab="insurance">精選保險</button>
-  <button class="main-tab" data-tab="obonds">精選海外債</button>
+  <button class="main-tab active" data-tab="market">
+    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M3 12h18M12 3a13 13 0 0 1 0 18M12 3a13 13 0 0 0 0 18"/>
+    </svg>
+    <span>全球市場</span>
+  </button>
+  <button class="main-tab" data-tab="news">
+    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M4 5h13a2 2 0 0 1 2 2v11a2 2 0 0 0 2-2V8"/>
+      <path d="M4 5v13a2 2 0 0 0 2 2h13"/>
+      <path d="M8 9h7M8 13h7M8 17h5"/>
+    </svg>
+    <span>重要新聞</span>
+  </button>
+  <button class="main-tab" data-tab="funds">
+    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M3 20h18"/>
+      <rect x="5" y="13" width="3" height="7" rx="0.5"/>
+      <rect x="10.5" y="9" width="3" height="11" rx="0.5"/>
+      <rect x="16" y="5" width="3" height="15" rx="0.5"/>
+    </svg>
+    <span>精選基金</span>
+  </button>
+  <button class="main-tab" data-tab="insurance">
+    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 3l8 3v5c0 4.5-3.2 8.5-8 10-4.8-1.5-8-5.5-8-10V6l8-3z"/>
+      <path d="M9 12l2.2 2.2L15.5 10"/>
+    </svg>
+    <span>精選保險</span>
+  </button>
+  <button class="main-tab" data-tab="obonds">
+    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M6 3h9l4 4v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/>
+      <path d="M14 3v5h5"/>
+      <path d="M8 13h8M8 17h5"/>
+      <circle cx="15.5" cy="17" r="1.7"/>
+    </svg>
+    <span>精選海外債</span>
+  </button>
 </nav>
 
 <main id="content">載入中…</main>
@@ -31,6 +66,6 @@
   資料僅供內部參考，不構成任何投資建議
 </footer>
 
-<script src="app.js?v=20260513-1000"></script>
+<script src="app.js?v=20260513-1009"></script>
 </body>
 </html>
