@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-13T14:07:13+08:00",
+  "generated_at": "2026-05-13T14:18:27+08:00",
   "source": "manual curation (targets.json)",
   "version": 2,
   "updated": "2026-05-08",
@@ -284,6 +284,96 @@
       "action": "立即建倉，以國際組織債 5%+ 為錨；UST belly 透過 00679B（TWD）／IEF（USD）；EM Sov（EMBI）戰術 365bp 利差；IG/HY 過緊不追。",
       "add_trigger": "10Y UST ≥4.50%（長端加碼）；IG OAS >150bp（信用 re-pricing）",
       "trim_trigger": "核心 PCE >3.0% 重新加速；Fed 轉鷹回升；IG OAS >130bp"
+    }
+  ],
+  "theme_funds": [
+    {
+      "theme": "korea",
+      "code": "LI02",
+      "name_zh": "利安資金韓國基金（美元）",
+      "currency": "USD",
+      "tagline": "MSCI Korea Value-Up 改革題材；近一年 +220%",
+      "source_url": "https://bopfund.moneydj.com/w/wb/wb01_LIC04-LI02.djhtm"
+    },
+    {
+      "theme": "japan",
+      "code": "—",
+      "name_zh": "柏瑞日本多重資產基金",
+      "currency": "TWD",
+      "tagline": "參與日本重估行情與降低單一波動",
+      "source_url": "https://bopfund.moneydj.com/"
+    },
+    {
+      "theme": "gold",
+      "code": "FA01",
+      "name_zh": "富蘭克林黃金基金美元 A",
+      "currency": "USD",
+      "tagline": "金礦類股佈局，抗通膨＋去美元化",
+      "source_url": "https://bopfund.moneydj.com/w/wb/wb01_FLZ01-FA01.djhtm"
+    },
+    {
+      "theme": "gold",
+      "code": "IG14",
+      "name_zh": "晉達環球策略-環球黃金基金 C 收益股份",
+      "currency": "USD",
+      "tagline": "黃金產業含配息收益版",
+      "source_url": "https://bopfund.moneydj.com/w/wb/wb01_GSF17-IG14.djhtm"
+    },
+    {
+      "theme": "ai",
+      "code": "—",
+      "name_zh": "安聯台灣科技基金",
+      "currency": "TWD",
+      "tagline": "台股 AI 與半導體供應鏈主動選股",
+      "source_url": "https://bopfund.moneydj.com/"
+    },
+    {
+      "theme": "ai",
+      "code": "—",
+      "name_zh": "聯博-國際科技基金 A 美元",
+      "currency": "USD",
+      "tagline": "全球科技巨頭與雲端軟體應用",
+      "source_url": "https://bopfund.moneydj.com/"
+    },
+    {
+      "theme": "vietnam",
+      "code": "LI01",
+      "name_zh": "利安資金越南基金 A 級別美元",
+      "currency": "USD",
+      "tagline": "FDI 轉移之長期選擇權；MSCI 升等催化",
+      "source_url": "https://bopfund.moneydj.com/w/wb/wb01_LIC28-LI01.djhtm"
+    },
+    {
+      "theme": "india",
+      "code": "LIC01",
+      "name_zh": "利安資金印度基金 A 級別美元",
+      "currency": "USD",
+      "tagline": "印度長期成長敘事；先卡位 2% 追蹤",
+      "source_url": "https://bopfund.moneydj.com/w/wb/wb01_LIC01.djhtm"
+    },
+    {
+      "theme": "bonds",
+      "code": "—",
+      "name_zh": "東方匯理新興市場債券基金",
+      "currency": "USD",
+      "tagline": "捕捉新興國家主權債與公司債利差",
+      "source_url": "https://bopfund.moneydj.com/"
+    },
+    {
+      "theme": "bonds",
+      "code": "—",
+      "name_zh": "富蘭克林公司債基金",
+      "currency": "USD",
+      "tagline": "鎖定高評級企業債殖利率，佈局降息",
+      "source_url": "https://bopfund.moneydj.com/"
+    },
+    {
+      "theme": "bonds",
+      "code": "—",
+      "name_zh": "東方匯理全球策略收益基金",
+      "currency": "USD",
+      "tagline": "無指標限制之靈活彈性債券策略",
+      "source_url": "https://bopfund.moneydj.com/"
     }
   ]
 }

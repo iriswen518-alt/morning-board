@@ -183,7 +183,7 @@ async function init() {
   switchTab(CURRENT_TAB);
 
   if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("service-worker.js?v=20260513-1420").catch(() => {});
+    navigator.serviceWorker.register("service-worker.js?v=20260513-1440").catch(() => {});
   }
 
   setupPullToRefresh();
@@ -508,11 +508,37 @@ function renderTargetsSheet() {
       }).join("")}
     </ol>` : "";
 
+  // 主題推薦基金（板信可申購）
+  const themeFunds = data.theme_funds || [];
+  const fundsHtml = themeFunds.length ? `
+    <h3>主題推薦基金 <span style="font-size:13px;color:var(--text-mute);font-weight:normal">（板信代售）</span></h3>
+    ${themeFunds.map(f => {
+      const themeName = (byKey[f.theme] || {}).name || f.theme;
+      const themeNum = (byKey[f.theme] || {}).num || "";
+      const nameHtml = f.source_url
+        ? `<a href="${f.source_url}" target="_blank" rel="noopener">${escapeHtml(f.name_zh)}</a>`
+        : escapeHtml(f.name_zh);
+      const codeChip = f.code && f.code !== "—"
+        ? `<span class="chip chip-default" style="margin-right:4px">${escapeHtml(f.code)}</span>`
+        : "";
+      return `
+        <div class="fund-card">
+          <h3>${nameHtml}</h3>
+          <div style="margin-bottom:6px">
+            ${codeChip}${currencyChip(f.currency)}
+            <span class="chip chip-default" style="background:#E5F2F5;color:var(--brand-deep)">${escapeHtml(themeNum)} ${escapeHtml(themeName)}</span>
+          </div>
+          <p class="tagline">${escapeHtml(f.tagline || "")}</p>
+        </div>`;
+    }).join("")}
+  ` : "";
+
   return `
     ${kpiHtml}
     <div class="t-tab-row">${tabBtns}</div>
     <div class="t-panes">${panes}</div>
     ${seqHtml}
+    ${fundsHtml}
   `;
 }
 
