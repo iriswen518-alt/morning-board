@@ -183,7 +183,7 @@ async function init() {
   switchTab(CURRENT_TAB);
 
   if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("service-worker.js?v=20260513-1440").catch(() => {});
+    navigator.serviceWorker.register("service-worker.js?v=20260513-1510").catch(() => {});
   }
 
   setupPullToRefresh();
@@ -403,6 +403,14 @@ function renderObondsSheet() {
   }).join("");
 }
 
+function renderBulletsOrText(content) {
+  if (!content) return "—";
+  if (Array.isArray(content)) {
+    return `<ul style="margin:0;padding-left:20px;line-height:1.85">${content.map(c => `<li>${escapeHtml(c)}</li>`).join("")}</ul>`;
+  }
+  return escapeHtml(content);
+}
+
 function stanceChip(stance) {
   const label = stance === "OW" ? "加碼" : (stance === "UW" ? "減碼" : "中立");
   const cls = stance === "OW" ? "stance-ow" : (stance === "UW" ? "stance-uw" : "stance-nt");
@@ -422,30 +430,43 @@ function renderTargetsSheet() {
   const byKey = {};
   list.forEach(t => { byKey[t.key] = t; });
 
-  // KPI strip
-  const kpiHtml = `
-    <div class="targets-kpi">
-      <div class="t-kpi"><div class="t-kpi-label">主題覆蓋</div><div class="t-kpi-value">${summary.themes ?? list.length}</div></div>
-      <div class="t-kpi"><div class="t-kpi-label">加碼</div><div class="t-kpi-value t-up">${summary.overweight ?? 0}</div></div>
-      <div class="t-kpi"><div class="t-kpi-label">中立</div><div class="t-kpi-value t-mute">${summary.neutral ?? 0}</div></div>
-      <div class="t-kpi"><div class="t-kpi-label">資料基準</div><div class="t-kpi-value" style="font-size:14px">${escapeHtml(data.quote_basis || data.updated || "—")}</div></div>
-    </div>
-  `;
-
-  // Tab buttons
+  // Tab buttons（不顯示編號）
   const tabBtns = list.map((t, i) => `
     <button class="t-tab ${i === 0 ? "active" : ""}" data-ttab="${escapeHtml(t.key)}">
-      <span>${escapeHtml(t.num || "")} ${escapeHtml(t.name)}</span>
+      <span>${escapeHtml(t.name)}</span>
       ${stanceChip(t.stance)}
     </button>
   `).join("");
 
-  // Tab panes
-  const panes = list.map((t, i) => `
+  // 主題推薦基金（板信可申購）
+  const themeFunds = data.theme_funds || [];
+  const fundCardFor = f => {
+    const nameHtml = f.source_url
+      ? `<a href="${f.source_url}" target="_blank" rel="noopener">${escapeHtml(f.name_zh)}</a>`
+      : escapeHtml(f.name_zh);
+    const codeChip = f.code && f.code !== "—"
+      ? `<span class="chip chip-default" style="margin-right:4px">${escapeHtml(f.code)}</span>`
+      : "";
+    return `
+      <div class="fund-card">
+        <h3>${nameHtml}</h3>
+        <div style="margin-bottom:6px">${codeChip}${currencyChip(f.currency)}</div>
+        <p class="tagline">${escapeHtml(f.tagline || "")}</p>
+      </div>`;
+  };
+
+  // Tab panes（不顯示編號）
+  const panes = list.map((t, i) => {
+    const fundsForTheme = themeFunds.filter(f => f.theme === t.key);
+    const fundsSection = fundsForTheme.length ? `
+      <h4 style="margin:20px 0 10px;color:var(--brand-deep);font-size:16px">板信代售推薦基金</h4>
+      ${fundsForTheme.map(fundCardFor).join("")}
+    ` : "";
+    return `
     <div class="t-pane ${i === 0 ? "active" : ""}" id="t-pane-${escapeHtml(t.key)}">
       <div class="t-head">
         <div>
-          <div class="t-name">${escapeHtml(t.num || "")} ${escapeHtml(t.name)}　<span class="t-alloc">${escapeHtml(t.alloc || "")}</span></div>
+          <div class="t-name">${escapeHtml(t.name)}　<span class="t-alloc">${escapeHtml(t.alloc || "")}</span></div>
           <div class="t-tagline">${escapeHtml(t.tagline || "")}</div>
         </div>
         ${stanceChip(t.stance)}
@@ -463,12 +484,12 @@ function renderTargetsSheet() {
 
       <div class="t-section t-status">
         <div class="t-section-head"><span class="t-section-icon">📊</span><span>市場現況</span></div>
-        <div class="t-section-body">${escapeHtml(t.market_status || t.view || "—")}</div>
+        <div class="t-section-body">${renderBulletsOrText(t.market_status || t.view)}</div>
       </div>
 
       <div class="t-section t-opp">
         <div class="t-section-head"><span class="t-section-icon">💡</span><span>投資機會</span></div>
-        <div class="t-section-body">${escapeHtml(t.opportunity || t.reason || "—")}</div>
+        <div class="t-section-body">${renderBulletsOrText(t.opportunity || t.reason)}</div>
       </div>
 
       <div class="t-section t-pitch">
@@ -495,8 +516,11 @@ function renderTargetsSheet() {
           <div class="t-trigger t-trigger-trim"><strong>▼ 減碼觸發</strong>${escapeHtml(t.trim_trigger || "—")}</div>
         </div>
       </details>
+
+      ${fundsSection}
     </div>
-  `).join("");
+  `;
+  }).join("");
 
   // Entry sequence
   const seqHtml = seq.length ? `
@@ -508,37 +532,10 @@ function renderTargetsSheet() {
       }).join("")}
     </ol>` : "";
 
-  // 主題推薦基金（板信可申購）
-  const themeFunds = data.theme_funds || [];
-  const fundsHtml = themeFunds.length ? `
-    <h3>主題推薦基金 <span style="font-size:13px;color:var(--text-mute);font-weight:normal">（板信代售）</span></h3>
-    ${themeFunds.map(f => {
-      const themeName = (byKey[f.theme] || {}).name || f.theme;
-      const themeNum = (byKey[f.theme] || {}).num || "";
-      const nameHtml = f.source_url
-        ? `<a href="${f.source_url}" target="_blank" rel="noopener">${escapeHtml(f.name_zh)}</a>`
-        : escapeHtml(f.name_zh);
-      const codeChip = f.code && f.code !== "—"
-        ? `<span class="chip chip-default" style="margin-right:4px">${escapeHtml(f.code)}</span>`
-        : "";
-      return `
-        <div class="fund-card">
-          <h3>${nameHtml}</h3>
-          <div style="margin-bottom:6px">
-            ${codeChip}${currencyChip(f.currency)}
-            <span class="chip chip-default" style="background:#E5F2F5;color:var(--brand-deep)">${escapeHtml(themeNum)} ${escapeHtml(themeName)}</span>
-          </div>
-          <p class="tagline">${escapeHtml(f.tagline || "")}</p>
-        </div>`;
-    }).join("")}
-  ` : "";
-
   return `
-    ${kpiHtml}
     <div class="t-tab-row">${tabBtns}</div>
     <div class="t-panes">${panes}</div>
     ${seqHtml}
-    ${fundsHtml}
   `;
 }
 

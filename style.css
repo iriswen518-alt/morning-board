@@ -695,12 +695,6 @@ table.indices .date-col {
 }
 .t-section-icon { font-size: 18px; }
 .t-section-body { font-size: 15px; line-height: 1.75; color: var(--text); }
-.t-section.t-status { border-left: 4px solid var(--brand-primary); }
-.t-section.t-opp { border-left: 4px solid var(--brand-secondary); }
-.t-section.t-pitch {
-  border-left: 4px solid #e08a3c;
-  background: linear-gradient(135deg, #fff8f0, #fff);
-}
 .t-section.t-pitch .t-section-body {
   font-weight: 600;
   color: var(--brand-deep);
@@ -748,17 +742,23 @@ table.indices .date-col {
   list-style: none;
   padding: 0;
   margin: 12px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 .t-seq li {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 10px 14px;
+  gap: 8px;
+  padding: 8px 14px;
   background: var(--bg);
   border: 1px solid var(--border);
-  border-radius: 10px;
-  margin-bottom: 6px;
+  border-radius: 999px;
   font-size: 14px;
+}
+.t-seq li .t-seq-note { display: none; }
+@media (max-width: 768px) {
+  .t-seq li .t-seq-note { display: none; }
 }
 .t-seq-num {
   display: inline-flex;
