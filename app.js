@@ -588,7 +588,7 @@ function renderAllocationSheet() {
 
     return `
       <div class="t-pane ${i === 0 ? "active" : ""}" id="a-pane-${escapeHtml(p.key)}">
-        <div class="a-head" style="border-left:5px solid ${p.color || 'var(--brand-primary)'}">
+        <div class="a-head">
           <div>
             <div class="a-name">${escapeHtml(p.name)}<span class="a-sub">${escapeHtml(p.subtitle || "")}</span></div>
             <div class="a-stat-row">
