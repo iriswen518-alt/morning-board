@@ -922,8 +922,7 @@ function renderDcaSheet() {
   if (!funds.length) {
     return "<p style='color:var(--text-mute); padding:20px 0'>尚未取得定期定額績效資料</p>";
   }
-  const header = `<p style="color:var(--text-mute); font-size:13px; margin:0 0 12px">下列為板信架上基金的「單筆申購 vs. 定期定額」累積報酬率比較。資料來源：板信銀行基金績效頁（bopfund.moneydj.com，MoneyDJ 計算），每檔卡片下方提供原始頁面連結可對照。</p>`;
-  return header + funds.map(f => {
+  return funds.map(f => {
     const nameHtml = f.source_url
       ? `<a href="${f.source_url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${escapeHtml(f.name_zh)}</a>`
       : escapeHtml(f.name_zh);
