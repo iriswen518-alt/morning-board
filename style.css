@@ -276,6 +276,96 @@ table.indices .date-col {
   padding: 16px 16px 24px;
 }
 
+/* ===== 桌面版響應式（>= 768px）===== */
+@media (min-width: 768px) {
+  .topbar {
+    padding: 32px 48px 28px;
+  }
+  .topbar h1 {
+    font-size: 32px;
+    max-width: 1200px;
+    margin: 0 auto 6px;
+  }
+  .topbar .updated {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 15px;
+  }
+
+  #cards {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 32px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .card {
+    padding: 24px;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+  }
+  .card h2 { font-size: 22px; }
+  .card-date { font-size: 14px; }
+  .preview {
+    font-size: 16px;
+    flex: 1;
+  }
+  .preview .row { padding: 6px 0; }
+  .expand-btn {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .disclaimer {
+    font-size: 13px;
+    padding: 24px 16px 40px;
+  }
+
+  /* Sheet — 桌面變成置中 modal、不是全屏 */
+  .sheet {
+    left: 50%;
+    right: auto;
+    transform: translate(-50%, 100%);
+    width: 90vw;
+    max-width: 900px;
+    height: 85vh;
+    border-radius: 16px;
+    margin-bottom: 5vh;
+  }
+  @keyframes sheetUp {
+    to { transform: translate(-50%, 0); }
+  }
+  .sheet-head { padding: 18px 24px; }
+  .sheet-head h2 { font-size: 22px; }
+  .sheet-body { padding: 24px; }
+
+  table.indices { font-size: 15px; }
+  table.indices th, table.indices td { padding: 10px 8px; }
+
+  .fund-card { padding: 16px; }
+  .fund-card h3 { font-size: 17px; }
+  .fund-card .grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .news-item h3 { font-size: 18px; }
+  .news-item .summary { font-size: 15px; }
+}
+
+/* ===== 大螢幕（>= 1280px）— 4 欄佈局 ===== */
+@media (min-width: 1280px) {
+  #cards {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1400px;
+  }
+  .card { min-height: 240px; }
+}
+
 .fund-card {
   padding: 12px;
   margin-bottom: 10px;
