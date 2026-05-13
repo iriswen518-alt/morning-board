@@ -157,7 +157,7 @@ let DATA = {};
 async function init() {
   // 每個來源各自有 fallback：一個壞不拖垮全頁
   const safe = (name, fallback) => load(name).catch(() => fallback);
-  const [meta, market, news, tax, funds, stocks, insurance] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, insurance, obonds] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
@@ -165,8 +165,9 @@ async function init() {
     safe("funds", { funds: [] }),
     safe("stocks", { us_stocks: [], tw_stocks: [] }),
     safe("insurances", { insurances: [] }),
+    safe("overseas_bonds", { bonds: [] }),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, insurance };
+  DATA = { meta, market, news, tax, funds, stocks, insurance, obonds };
   if (!meta.built_at) {
     $("updated").textContent = `載入部分失敗（顯示快取資料）`;
     // 仍繼續 render 其他能讀到的資料
@@ -178,6 +179,7 @@ async function init() {
   renderNewsPreview();
   renderFundsPreview();
   renderInsurancePreview();
+  renderObondsPreview();
 
   document.querySelectorAll(".expand-btn").forEach(btn => {
     btn.addEventListener("click", () => openSheet(btn.dataset.target));
@@ -275,7 +277,7 @@ async function refreshData() {
 
   // 資料刷新：fetch 7 個 JSON，每個各自有 fallback
   const safe = (name, fallback) => load(name).catch(() => DATA[name === "insurances" ? "insurance" : name] || fallback);
-  const [meta, market, news, tax, funds, stocks, insurance] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, insurance, obonds] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
@@ -283,8 +285,9 @@ async function refreshData() {
     safe("funds", { funds: [] }),
     safe("stocks", { us_stocks: [], tw_stocks: [] }),
     safe("insurances", { insurances: [] }),
+    safe("overseas_bonds", { bonds: [] }),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, insurance };
+  DATA = { meta, market, news, tax, funds, stocks, insurance, obonds };
   if (DATA.meta && DATA.meta.built_at) {
     $("updated").textContent =
       `上次更新：${DATA.meta.built_at.replace("T", " ").slice(0, 16)}`;
@@ -293,6 +296,7 @@ async function refreshData() {
   renderNewsPreview();
   renderFundsPreview();
   renderInsurancePreview();
+  renderObondsPreview();
 }
 
 function renderMarketPreview() {
@@ -347,8 +351,22 @@ function renderInsurancePreview() {
   `).join("") || "<div class='row'>—</div>";
 }
 
+function renderObondsPreview() {
+  const list = (DATA.obonds && DATA.obonds.bonds) || [];
+  const top = list.slice(0, 3);
+  if (list.length) {
+    $("obonds-date").textContent = `${list.length} 檔債券`;
+  }
+  $("obonds-preview").innerHTML = top.map(it => `
+    <div class="row">
+      <span class="name">${escapeHtml(it.name_zh)}</span>
+      <span class="val" style="font-size:12px; color:var(--text-mute)">${escapeHtml(it.currency || "")}</span>
+    </div>
+  `).join("") || "<div class='row'>—</div>";
+}
+
 function openSheet(target) {
-  const titles = { market: "全球市場", news: "重要新聞", funds: "精選基金", insurance: "精選保險" };
+  const titles = { market: "全球市場", news: "重要新聞", funds: "精選基金", insurance: "精選保險", obonds: "精選海外債" };
   $("sheet-title").textContent = titles[target];
   $("mask").hidden = false;
   $("sheet").hidden = false;
@@ -358,8 +376,34 @@ function openSheet(target) {
   else if (target === "news") body.innerHTML = renderNewsSheet();
   else if (target === "funds") body.innerHTML = renderFundsSheet();
   else if (target === "insurance") body.innerHTML = renderInsuranceSheet();
+  else if (target === "obonds") body.innerHTML = renderObondsSheet();
 
   if (target === "news") wireNewsTabs();
+}
+
+function renderObondsSheet() {
+  const list = (DATA.obonds && DATA.obonds.bonds) || [];
+  if (!list.length) {
+    return "<p style='color:var(--text-mute); padding:20px 0'>尚未提供海外債清單</p>";
+  }
+  return `
+    <table class="indices">
+      <thead><tr>
+        <th>名稱</th><th>發行人</th><th>類型</th><th>幣別</th><th>代碼</th>
+      </tr></thead>
+      <tbody>
+        ${list.map(b => `
+          <tr>
+            <td>${escapeHtml(b.name_zh)}</td>
+            <td style="font-size:12px; color:var(--text-mute)">${escapeHtml(b.issuer || "")}</td>
+            <td>${escapeHtml(b.type || "")}</td>
+            <td>${escapeHtml(b.currency || "")}</td>
+            <td style="font-size:11px; color:var(--text-mute); font-family:Menlo,monospace">${escapeHtml(b.code || "")}<br>${escapeHtml(b.isin || "")}</td>
+          </tr>
+        `).join("")}
+      </tbody>
+    </table>
+  `;
 }
 
 function renderInsuranceSheet() {
