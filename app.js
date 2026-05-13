@@ -386,18 +386,16 @@ function renderObondsSheet() {
         <div><label style="display:block; font-size:13px; color:var(--text-mute); margin-bottom:2px">到期日</label>${escapeHtml(b.maturity || "—")}</div>
         <div><label style="display:block; font-size:13px; color:var(--text-mute); margin-bottom:2px">信評</label><span>${escapeHtml(b.rating || "—")}</span></div>
       </div>
-      <div style="display:grid; grid-template-columns:repeat(2, 1fr); gap:6px; font-size:15px; margin-top:8px; text-align:center; padding-top:8px; border-top:1px dashed var(--border)">
+      <div style="display:grid; grid-template-columns:repeat(5, 1fr); gap:6px; font-size:14px; margin-top:8px; text-align:center; padding-top:8px; border-top:1px dashed var(--border)">
         <div>
-          <label style="display:block; font-size:13px; color:var(--text-mute); margin-bottom:2px">申購參考殖利率</label>
+          <label style="display:block; font-size:12px; color:var(--text-mute); margin-bottom:2px">申購參考殖利率</label>
           <span class="up">${fmtPctNum(b.bid_yield_pct)}</span>
         </div>
         <div>
-          <label style="display:block; font-size:13px; color:var(--text-mute); margin-bottom:2px">贖回參考價</label>
+          <label style="display:block; font-size:12px; color:var(--text-mute); margin-bottom:2px">贖回參考價</label>
           ${fmtPrice(b.ask_price)}
           ${priceDate}
         </div>
-      </div>
-      <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:6px; font-size:14px; margin-top:6px; text-align:center">
         <div><label style="display:block; font-size:12px; color:var(--text-mute); margin-bottom:2px">週%</label><span class="${pctClass(b.perf_1w)}">${fmtPctNum(b.perf_1w)}</span></div>
         <div><label style="display:block; font-size:12px; color:var(--text-mute); margin-bottom:2px">月%</label><span class="${pctClass(b.perf_1m)}">${fmtPctNum(b.perf_1m)}</span></div>
         <div><label style="display:block; font-size:12px; color:var(--text-mute); margin-bottom:2px">季%</label><span class="${pctClass(b.perf_3m)}">${fmtPctNum(b.perf_3m)}</span></div>
