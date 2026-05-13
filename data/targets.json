@@ -1,0 +1,289 @@
+{
+  "generated_at": "2026-05-13T11:29:37+08:00",
+  "source": "manual curation (targets.json)",
+  "version": 2,
+  "updated": "2026-05-08",
+  "quote_basis": "2026-05-06",
+  "summary": {
+    "themes": 7,
+    "overweight": 5,
+    "neutral": 2
+  },
+  "entry_sequence": [
+    {
+      "key": "bonds",
+      "num": 1,
+      "note": "立即建倉、以國際組織債為錨"
+    },
+    {
+      "key": "gold",
+      "num": 2,
+      "note": "已是核心、−5% 回檔加碼"
+    },
+    {
+      "key": "japan",
+      "num": 3,
+      "note": "3–6 月 DCA、銀行優先"
+    },
+    {
+      "key": "ai",
+      "num": 4,
+      "note": "QQQ/SOXX 核心 + 能源基建"
+    },
+    {
+      "key": "korea",
+      "num": 5,
+      "note": "等 −10% 回檔、上限 5% NAV"
+    },
+    {
+      "key": "vietnam",
+      "num": 6,
+      "note": "12–18 月慢速 DCA、上限 4%"
+    },
+    {
+      "key": "india",
+      "num": 7,
+      "note": "等待觸發、先 2% 卡位"
+    }
+  ],
+  "targets": [
+    {
+      "key": "korea",
+      "num": "①",
+      "name": "韓國",
+      "stance": "OW",
+      "alloc": "5–8% NAV",
+      "tagline": "MSCI Korea｜EWY YTD +75%｜估值最便宜 + Value-Up 改革",
+      "ytd": "+75%",
+      "stats": [
+        {
+          "k": "fwd P/E",
+          "v": "6.81x",
+          "sub": "折 EM 42%"
+        },
+        {
+          "k": "盈餘成長",
+          "v": "+220%",
+          "sub": "拉抬非評價膨脹"
+        },
+        {
+          "k": "部位上限",
+          "v": "5% NAV",
+          "sub": "戰術型"
+        }
+      ],
+      "market_status": "MSCI Korea 2026 YTD +75%（EWY），fwd P/E 僅 6.81x，較 EM 折讓 42%，仍為亞洲估值最便宜的核心市場；盈餘年增 +220% 為主要驅動，非評價膨脹。Value-Up 改革持續推進，外資資金結構性回補。",
+      "opportunity": "（一）估值有 30% 重估空間：歷史折讓修復 20–30%；（二）盈餘+治理雙引擎：晶片/汽車/化工景氣同步＋庫藏股取消、ROE 改革；（三）EWY/00657 提供低門檻進場通道。",
+      "pitch": "「韓國折價最深、改革續行——但 5/6 月急漲、要等 10% 回檔分批進場，部位上限 5%，建議 EWY（USD）或 00657（TWD）。」",
+      "view": "最便宜＋Value-Up 改革，估值最具吸引力。",
+      "reason": "fwd P/E 6.81x（折 EM 42%），盈餘 +220% 拉抬而非評價膨脹；MSCI Korea 多年期改革題材延續。",
+      "action": "等 −10% 回檔再加碼；部位上限 5% NAV，勿追 5/6 月急漲。建倉建議透過 EWY（USD）或 00657（TWD）。",
+      "add_trigger": "回檔至 fwd P/E <6.5x；外資由淨賣轉淨買",
+      "trim_trigger": "外資單月淨賣 >KRW 10 兆；fwd P/E >9x"
+    },
+    {
+      "key": "japan",
+      "num": "②",
+      "name": "日本",
+      "stance": "OW",
+      "alloc": "8–12% NAV",
+      "tagline": "Nikkei 59,513｜升息週期 + TSE 改革雙主軸",
+      "ytd": "+strong",
+      "stats": [
+        {
+          "k": "建議部位",
+          "v": "8–12%",
+          "sub": "戰略+戰術"
+        },
+        {
+          "k": "雙主軸",
+          "v": "銀行+半導體",
+          "sub": "兩條獨立 alpha"
+        },
+        {
+          "k": "Nikkei",
+          "v": "59,513",
+          "sub": "報價基準"
+        }
+      ],
+      "market_status": "Nikkei 突破 59,500，BoJ 升息週期啟動下日圓走弱、利差擴大；TSE 庫藏股/PBR 改革第 4 年加速，企業治理回報歷史高位；半導體設備（TEL、Advantest、SCREEN）受惠 capex super-cycle。",
+      "opportunity": "兩條獨立 alpha：（一）銀行＝升息利差直接放大 NII，MUFG／SMBC 估值仍合理；（二）半導體設備＝AI 資本支出帶動全球需求。回檔風險顯著低於韓國。",
+      "pitch": "「日股雙主軸：升息收益＋AI capex。3–6 月慢速 DCA，銀行優先、半導體等 −10% 回檔；可用 EWJ（USD）或 00657。」",
+      "view": "升息週期＋TSE 改革雙主軸，回檔風險低於韓國。",
+      "reason": "銀行（MUFG／SMBC）受惠 BoJ 升息；半導體設備（TEL／Advantest）受惠 capex super-cycle，兩條獨立 alpha。",
+      "action": "3–6 個月 DCA 建倉；銀行於弱勢加碼；半導體僅 −10% 回檔加碼。可透過 EWJ（USD）或 00657（TWD 日股 ETF）。",
+      "add_trigger": "TSE 庫藏股加速；USD/JPY 維持 >150 偏弱",
+      "trim_trigger": "BoJ 意外升 >50bps；USD/JPY <140"
+    },
+    {
+      "key": "gold",
+      "num": "③",
+      "name": "黃金",
+      "stance": "OW",
+      "alloc": "5–10% NAV",
+      "tagline": "Spot $4,690｜結構性底部上移、戰略核心",
+      "ytd": "+strong",
+      "stats": [
+        {
+          "k": "Spot",
+          "v": "$4,690",
+          "sub": "結構性底部上移"
+        },
+        {
+          "k": "央行買盤",
+          "v": "+1,000噸",
+          "sub": "連 4 年"
+        },
+        {
+          "k": "部位區間",
+          "v": "5–10%",
+          "sub": "戰略核心"
+        }
+      ],
+      "market_status": "Spot 黃金 $4,690 / 盎司，全球央行（中國、波蘭、印度、土耳其等）連續 4 年買盤 >1,000 噸／年，去美元化結構性需求；實質利率高位但見頂、DXY 偏弱、地緣風險高，多重利多疊加。",
+      "opportunity": "戰略核心配置：抗通膨＋避險＋去美元化三合一；雖已不便宜但未到減碼水位，戰術上有流動性事件（margin call）回檔風險即為加碼窗口。",
+      "pitch": "「黃金已是核心配置，不追 $4,700+。可用台銀黃金存摺、00708L（黃金期信）或實體金幣；只在 −5% 回檔加碼。」",
+      "view": "結構性底部上移；戰術上有流動性事件回檔風險。",
+      "reason": "央行買盤連 4 年 +1,000 噸，結構性底部上移；雖已不便宜但未到減碼水位。",
+      "action": "已是核心，僅在 −5% 回檔加碼，勿追 $4,700+。可透過台銀黃金存摺、00708L（黃金期信）或實體金幣。",
+      "add_trigger": "DXY 跌破 95；地緣衝擊 −5% 回檔",
+      "trim_trigger": "WGC 央行需求 <200t 連兩季"
+    },
+    {
+      "key": "ai",
+      "num": "④",
+      "name": "AI 主題",
+      "stance": "OW",
+      "alloc": "8–15% NAV",
+      "tagline": "NVDA +34%｜Hyperscaler capex super-cycle",
+      "ytd": "+strong",
+      "stats": [
+        {
+          "k": "Capex",
+          "v": "$520B",
+          "sub": "YoY +62%"
+        },
+        {
+          "k": "fwd P/E",
+          "v": "28x",
+          "sub": "Premium"
+        },
+        {
+          "k": "建議部位",
+          "v": "8–15%",
+          "sub": "戰略+戰術"
+        }
+      ],
+      "market_status": "四大 hyperscaler（MSFT/AMZN/GOOGL/META）2026 capex 合計 $520B（YoY +62%），super-cycle 進入第三年；NVDA 年初至今 +34%，但漲幅擴散至能源（CEG、VST）與資料中心基建（VRT、ETN），單一名稱集中度下降。",
+      "opportunity": "（一）核心 QQQ／SOXX 取得 super-cycle beta；（二）「廣度配置」買 capex 受益者中估值仍合理者（電力、HVAC、冷卻、銅）；（三）僅在 −15% 回檔大幅加碼。",
+      "pitch": "「AI 不是只買 NVDA——電力、冷卻、基建一起賺。核心 QQQ／00891 + 廣度配置 CEG／VRT，總部位不超過 15%。」",
+      "view": "capex super-cycle 已被定價，廣度爆發降低集中風險。",
+      "reason": "Hyperscaler capex US$520B（YoY +62%）super-cycle；NVDA +34% YTD，但廣度擴散至能源/基建。",
+      "action": "核心 QQQ／SOXX（00662／00891），廣度配置 CEG／VST／VRT 等能源基建落後者；控管總部位 ≤15%。",
+      "add_trigger": "QQQ −15% 回檔；非 NVDA 名稱領漲",
+      "trim_trigger": "主要 hyperscaler 2027 capex 指引轉平／向下；NVDA fwd P/E >35x"
+    },
+    {
+      "key": "vietnam",
+      "num": "⑤",
+      "name": "越南",
+      "stance": "NT",
+      "alloc": "2–6% NAV",
+      "tagline": "本幣 YTD +5–7%｜FDI 高增、流動性管線未到位",
+      "ytd": "+5–7%",
+      "stats": [
+        {
+          "k": "FDI Q1",
+          "v": "+34.7%",
+          "sub": "YoY"
+        },
+        {
+          "k": "fwd P/E",
+          "v": "11.2x",
+          "sub": "印度半價"
+        },
+        {
+          "k": "部位上限",
+          "v": "4% NAV",
+          "sub": "戰略長線"
+        }
+      ],
+      "market_status": "VN-Index 本幣 YTD +5–7%；FTSE Secondary EM 升等 2025；FDI Q1 +34.7%（YoY）；fwd P/E 11.2x，僅印度的一半。但 HOSE ADV 僅 US$850M、外資 49% 持股上限、MSCI EM 升等遞延至 2027，流動性管線尚未到位。",
+      "opportunity": "FDI 轉移（中國 + 1）之長期選擇權：（一）製造業轉移帶動 GDP 6–7%；（二）銀行/不動產/工業園區估值偏低；（三）MSCI EM 升等是潛在催化劑。但需慢速建倉以免流動性風險。",
+      "pitch": "「越南是 10 年題材、不是 10 個月。透過 00885 慢速 DCA（12–18 月），部位上限 4%，等 MSCI 升等確認再加。」",
+      "view": "EM-Frontier 最便宜＋FDI 高增；流動性管線未到位（HOSE ADV 偏低、外資 49% 上限、MSCI 升等遞延）。",
+      "reason": "FTSE Secondary EM 2025 升等；FDI Q1 +34.7%，fwd P/E 11.2x（印度半價）；但 HOSE ADV 僅 USD 850M、MSCI EM 升等遞延 2027。",
+      "action": "12–18 月慢速 DCA 透過 00885；部位上限 4% NAV；視為 FDI 轉移之長期選擇權。",
+      "add_trigger": "MSCI EM 升等確認；HOSE ADV >USD 1.5B；銀行 NPL <2%",
+      "trim_trigger": "USD/VND 突破 26,500；Vingroup-tier 違約；HOSE ADV 腰斬"
+    },
+    {
+      "key": "india",
+      "num": "⑥",
+      "name": "印度",
+      "stance": "NT",
+      "alloc": "5–8% NAV",
+      "tagline": "INDA YTD −9.89%｜敘事最強但進場時點不利",
+      "ytd": "−9.89%",
+      "stats": [
+        {
+          "k": "fwd P/E",
+          "v": "22x",
+          "sub": "溢 MSCI EM 88%"
+        },
+        {
+          "k": "估值高位",
+          "v": "5 年",
+          "sub": "高點"
+        },
+        {
+          "k": "卡位部位",
+          "v": "2%",
+          "sub": "via 00652"
+        }
+      ],
+      "market_status": "INDA 2026 YTD −9.89%；fwd P/E 22x（溢 MSCI EM 88%）為 5 年高位；FII（外資）連續淨賣，盈餘修正持續下修；GDP 6.5–7% 仍亮眼但已被定價。長期人口紅利（中位年齡 28.4 歲）與內需題材未變。",
+      "opportunity": "敘事最強但進場時點不利——故事對、時點錯。短期建議「卡位 2%」追蹤，等估值修正＋FII 回補確認再加碼。長期 10 年仍是亞洲最具結構性成長的市場。",
+      "pitch": "「印度是長期最強敘事，但現在估值貴。先用 00652 卡 2% 追蹤；等 FII 連兩月淨買或 RBI 降息再加碼，不要追高。」",
+      "view": "敘事最強但進場時點不利——故事對、時點錯。",
+      "reason": "fwd P/E 22x（溢 MSCI EM 88%）為 5 年高位；FII 連續淨賣，盈餘修正未止跌。",
+      "action": "FII 連兩月淨買／RBI 降息 >25bps／fwd P/E <20x 任一觸發加碼；先以 2% 透過 00652 作為「追蹤卡位」。",
+      "add_trigger": "FII 連兩月淨買；RBI 降息 >25bps；fwd P/E <20x",
+      "trim_trigger": "fwd P/E >24x 且無 EPS 上修"
+    },
+    {
+      "key": "bonds",
+      "num": "⑦",
+      "name": "債券",
+      "stance": "OW",
+      "alloc": "10–35% NAV",
+      "tagline": "UST 10Y 4.37%｜核心現金流、最高信心 + 最低執行風險",
+      "ytd": "+positive carry",
+      "stats": [
+        {
+          "k": "UST 10Y",
+          "v": "4.37%",
+          "sub": "正利差"
+        },
+        {
+          "k": "國際組織債",
+          "v": "5.05–5.20%",
+          "sub": "AAA + USD"
+        },
+        {
+          "k": "IG OAS",
+          "v": "88bp",
+          "sub": "偏緊"
+        }
+      ],
+      "market_status": "UST 10Y 殖利率 4.37%（正實質利差），Fed 年內預期再降 2 碼；國際組織債（AfDB／IBRD／EIB）AAA 評等＋5.05–5.20% USD 殖利率為 HNW sweet spot；IG OAS 88bp 偏緊、HY OAS 300bp 不追，EMBI 戰術 365bp 利差具備吸引力。",
+      "opportunity": "最高信心、最低執行風險的「先建倉錨」：（一）國際組織債 AAA + 5%+ USD 殖利率，現金流穩定；（二）UST belly（5–7Y）期限溢酬重建；（三）降息週期啟動時債券價格上行還有資本利得空間。",
+      "pitch": "「先把債券建好，再談股票配置。國際組織債 5%+ 是 HNW 的 sweet spot；UST 用 00679B（TWD）／IEF（USD）；現在不追 IG/HY。」",
+      "view": "最高信心、最低執行風險；先建倉的錨。",
+      "reason": "UST 10Y 4.37% 正利差；Fed 年內仍預期再降 2 碼；期限溢酬重建；國際組織債（AfDB／IBRD／EIB）AAA + 5.05–5.20% USD 殖利率為 HNW sweet spot。",
+      "action": "立即建倉，以國際組織債 5%+ 為錨；UST belly 透過 00679B（TWD）／IEF（USD）；EM Sov（EMBI）戰術 365bp 利差；IG/HY 過緊不追。",
+      "add_trigger": "10Y UST ≥4.50%（長端加碼）；IG OAS >150bp（信用 re-pricing）",
+      "trim_trigger": "核心 PCE >3.0% 重新加速；Fed 轉鷹回升；IG OAS >130bp"
+    }
+  ]
+}

@@ -158,7 +158,7 @@ let CURRENT_TAB = "market";
 async function init() {
   // 每個來源各自有 fallback：一個壞不拖垮全頁
   const safe = (name, fallback) => load(name).catch(() => fallback);
-  const [meta, market, news, tax, funds, stocks, insurance, obonds] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, insurance, obonds, targets] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
@@ -167,8 +167,9 @@ async function init() {
     safe("stocks", { us_stocks: [], tw_stocks: [] }),
     safe("insurances", { insurances: [] }),
     safe("overseas_bonds", { bonds: [] }),
+    safe("targets", { targets: [], summary: {}, entry_sequence: [] }),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, insurance, obonds };
+  DATA = { meta, market, news, tax, funds, stocks, insurance, obonds, targets };
   if (!meta.built_at) {
     $("updated").textContent = `載入部分失敗（顯示快取資料）`;
   } else {
@@ -182,7 +183,7 @@ async function init() {
   switchTab(CURRENT_TAB);
 
   if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("service-worker.js?v=20260513-1135").catch(() => {});
+    navigator.serviceWorker.register("service-worker.js?v=20260513-1158").catch(() => {});
   }
 
   setupPullToRefresh();
@@ -208,8 +209,10 @@ function switchTab(name) {
   else if (name === "funds") body.innerHTML = renderFundsSheet();
   else if (name === "insurance") body.innerHTML = renderInsuranceSheet();
   else if (name === "obonds") body.innerHTML = renderObondsSheet();
+  else if (name === "targets") body.innerHTML = renderTargetsSheet();
   if (name === "news") wireNewsTabs();
   if (name === "market") wireMarketTabs();
+  if (name === "targets") wireTargetsTabs();
   window.scrollTo({ top: 0, behavior: "instant" in window ? "instant" : "auto" });
 }
 
@@ -327,7 +330,7 @@ async function refreshData() {
 
   // 資料刷新：fetch 7 個 JSON，每個各自有 fallback
   const safe = (name, fallback) => load(name).catch(() => DATA[name === "insurances" ? "insurance" : name] || fallback);
-  const [meta, market, news, tax, funds, stocks, insurance, obonds] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, insurance, obonds, targets] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
@@ -336,8 +339,9 @@ async function refreshData() {
     safe("stocks", { us_stocks: [], tw_stocks: [] }),
     safe("insurances", { insurances: [] }),
     safe("overseas_bonds", { bonds: [] }),
+    safe("targets", { targets: [], summary: {}, entry_sequence: [] }),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, insurance, obonds };
+  DATA = { meta, market, news, tax, funds, stocks, insurance, obonds, targets };
   if (DATA.meta && DATA.meta.built_at) {
     $("updated").textContent =
       `上次更新：${DATA.meta.built_at.replace("T", " ").slice(0, 16)}`;
@@ -357,6 +361,8 @@ function renderObondsSheet() {
   }
   const fmtCoupon = c => (c === null || c === undefined) ? "—"
     : (c === 0 ? "零息" : `${c.toFixed(2)}%`);
+  const fmtPctNum = p => (p === null || p === undefined) ? "—" : fmtPct(p);
+  const fmtPrice = p => (p === null || p === undefined) ? "—" : Number(p).toFixed(2);
   return list.map(b => {
     const url = bondUrl(b);
     const nameHtml = url
@@ -364,6 +370,7 @@ function renderObondsSheet() {
       : escapeHtml(b.name_zh);
     const chips = [currencyChip(b.currency), typeChip(b.type)].join("");
     const meta = [b.issuer, b.code, b.isin].filter(Boolean).map(escapeHtml).join("・");
+    const priceDate = b.price_date ? `<div style="font-size:11px;color:var(--text-mute);margin-top:2px">${escapeHtml(shortDate(b.price_date))}</div>` : "";
     return `
     <div class="fund-card">
       <h3>${nameHtml}</h3>
@@ -375,9 +382,151 @@ function renderObondsSheet() {
         <div><label style="display:block; font-size:13px; color:var(--text-mute); margin-bottom:2px">到期日</label>${escapeHtml(b.maturity || "—")}</div>
         <div><label style="display:block; font-size:13px; color:var(--text-mute); margin-bottom:2px">信評</label><span>${escapeHtml(b.rating || "—")}</span></div>
       </div>
+      <div style="display:grid; grid-template-columns:repeat(2, 1fr); gap:6px; font-size:15px; margin-top:8px; text-align:center; padding-top:8px; border-top:1px dashed var(--border)">
+        <div>
+          <label style="display:block; font-size:13px; color:var(--text-mute); margin-bottom:2px">申購參考殖利率</label>
+          <span class="up">${fmtPctNum(b.bid_yield_pct)}</span>
+        </div>
+        <div>
+          <label style="display:block; font-size:13px; color:var(--text-mute); margin-bottom:2px">贖回參考價</label>
+          ${fmtPrice(b.ask_price)}
+          ${priceDate}
+        </div>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:6px; font-size:14px; margin-top:6px; text-align:center">
+        <div><label style="display:block; font-size:12px; color:var(--text-mute); margin-bottom:2px">週績效</label><span class="${pctClass(b.perf_1w)}">${fmtPctNum(b.perf_1w)}</span></div>
+        <div><label style="display:block; font-size:12px; color:var(--text-mute); margin-bottom:2px">月績效</label><span class="${pctClass(b.perf_1m)}">${fmtPctNum(b.perf_1m)}</span></div>
+        <div><label style="display:block; font-size:12px; color:var(--text-mute); margin-bottom:2px">季績效</label><span class="${pctClass(b.perf_3m)}">${fmtPctNum(b.perf_3m)}</span></div>
+      </div>
     </div>
   `;
   }).join("");
+}
+
+function stanceChip(stance) {
+  const label = stance === "OW" ? "加碼" : (stance === "UW" ? "減碼" : "中立");
+  const cls = stance === "OW" ? "stance-ow" : (stance === "UW" ? "stance-uw" : "stance-nt");
+  return `<span class="stance-pill ${cls}">${label}</span>`;
+}
+
+function renderTargetsSheet() {
+  const data = DATA.targets || {};
+  const list = data.targets || [];
+  if (!list.length) {
+    return "<p style='color:var(--text-mute); padding:20px 0'>尚未提供主題市場清單</p>";
+  }
+  const summary = data.summary || {};
+  const seq = data.entry_sequence || [];
+
+  // 主題索引（用於建議順序排序）
+  const byKey = {};
+  list.forEach(t => { byKey[t.key] = t; });
+
+  // KPI strip
+  const kpiHtml = `
+    <div class="targets-kpi">
+      <div class="t-kpi"><div class="t-kpi-label">主題覆蓋</div><div class="t-kpi-value">${summary.themes ?? list.length}</div></div>
+      <div class="t-kpi"><div class="t-kpi-label">加碼</div><div class="t-kpi-value t-up">${summary.overweight ?? 0}</div></div>
+      <div class="t-kpi"><div class="t-kpi-label">中立</div><div class="t-kpi-value t-mute">${summary.neutral ?? 0}</div></div>
+      <div class="t-kpi"><div class="t-kpi-label">資料基準</div><div class="t-kpi-value" style="font-size:14px">${escapeHtml(data.quote_basis || data.updated || "—")}</div></div>
+    </div>
+  `;
+
+  // Tab buttons
+  const tabBtns = list.map((t, i) => `
+    <button class="t-tab ${i === 0 ? "active" : ""}" data-ttab="${escapeHtml(t.key)}">
+      <span>${escapeHtml(t.num || "")} ${escapeHtml(t.name)}</span>
+      ${stanceChip(t.stance)}
+    </button>
+  `).join("");
+
+  // Tab panes
+  const panes = list.map((t, i) => `
+    <div class="t-pane ${i === 0 ? "active" : ""}" id="t-pane-${escapeHtml(t.key)}">
+      <div class="t-head">
+        <div>
+          <div class="t-name">${escapeHtml(t.num || "")} ${escapeHtml(t.name)}　<span class="t-alloc">${escapeHtml(t.alloc || "")}</span></div>
+          <div class="t-tagline">${escapeHtml(t.tagline || "")}</div>
+        </div>
+        ${stanceChip(t.stance)}
+      </div>
+
+      <div class="t-stats">
+        ${(t.stats || []).map(s => `
+          <div class="t-stat">
+            <div class="t-stat-k">${escapeHtml(s.k)}</div>
+            <div class="t-stat-v">${escapeHtml(s.v)}</div>
+            <div class="t-stat-sub">${escapeHtml(s.sub || "")}</div>
+          </div>
+        `).join("")}
+      </div>
+
+      <div class="t-section t-status">
+        <div class="t-section-head"><span class="t-section-icon">📊</span><span>市場現況</span></div>
+        <div class="t-section-body">${escapeHtml(t.market_status || t.view || "—")}</div>
+      </div>
+
+      <div class="t-section t-opp">
+        <div class="t-section-head"><span class="t-section-icon">💡</span><span>投資機會</span></div>
+        <div class="t-section-body">${escapeHtml(t.opportunity || t.reason || "—")}</div>
+      </div>
+
+      <div class="t-section t-pitch">
+        <div class="t-section-head"><span class="t-section-icon">🎯</span><span>行銷話術</span></div>
+        <div class="t-section-body">${escapeHtml(t.pitch || t.action || "—")}</div>
+      </div>
+
+      <details class="t-detail">
+        <summary>進階：操作建議與加減碼觸發</summary>
+        <div class="t-section">
+          <div class="t-section-head"><span>內部觀點 VIEW</span></div>
+          <div class="t-section-body">${escapeHtml(t.view || "—")}</div>
+        </div>
+        <div class="t-section">
+          <div class="t-section-head"><span>理由 RATIONALE</span></div>
+          <div class="t-section-body">${escapeHtml(t.reason || "—")}</div>
+        </div>
+        <div class="t-section">
+          <div class="t-section-head"><span>操作 ACTION</span></div>
+          <div class="t-section-body">${escapeHtml(t.action || "—")}</div>
+        </div>
+        <div class="t-triggers">
+          <div class="t-trigger t-trigger-add"><strong>▲ 加碼觸發</strong>${escapeHtml(t.add_trigger || "—")}</div>
+          <div class="t-trigger t-trigger-trim"><strong>▼ 減碼觸發</strong>${escapeHtml(t.trim_trigger || "—")}</div>
+        </div>
+      </details>
+    </div>
+  `).join("");
+
+  // Entry sequence
+  const seqHtml = seq.length ? `
+    <h3>建議進場順序</h3>
+    <ol class="t-seq">
+      ${seq.map(s => {
+        const d = byKey[s.key] || {};
+        return `<li><span class="t-seq-num">${s.num}</span><strong>${escapeHtml(d.name || s.key)}</strong>　<span class="t-seq-note">${escapeHtml(s.note)}</span></li>`;
+      }).join("")}
+    </ol>` : "";
+
+  return `
+    ${kpiHtml}
+    <div class="t-tab-row">${tabBtns}</div>
+    <div class="t-panes">${panes}</div>
+    ${seqHtml}
+  `;
+}
+
+function wireTargetsTabs() {
+  const buttons = document.querySelectorAll(".t-tab[data-ttab]");
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const key = btn.dataset.ttab;
+      buttons.forEach(b => b.classList.toggle("active", b.dataset.ttab === key));
+      document.querySelectorAll(".t-pane").forEach(p => {
+        p.classList.toggle("active", p.id === `t-pane-${key}`);
+      });
+    });
+  });
 }
 
 function renderInsuranceSheet() {
