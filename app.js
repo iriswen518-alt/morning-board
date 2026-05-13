@@ -186,6 +186,14 @@ async function init() {
   }
 
   setupPullToRefresh();
+
+  // 進入畫面/從背景回到前景時自動檢查新版
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible") checkForNewVersion();
+  });
+  window.addEventListener("pageshow", (e) => {
+    if (e.persisted) checkForNewVersion();
+  });
 }
 
 function switchTab(name) {
@@ -260,27 +268,28 @@ function setupPullToRefresh() {
   }, { passive: true });
 }
 
-async function refreshData() {
-  // 先檢查伺服器是否有新版 app.js（透過 index.html 內的 cache-bust 版本）
+async function checkForNewVersion() {
   try {
     const r = await fetch("./index.html?nc=" + Date.now(),
       { cache: "no-store" });
-    if (r.ok) {
-      const html = await r.text();
-      const m = html.match(/app\.js\?v=([0-9-]+)/);
-      if (m) {
-        const liveVer = m[1];
-        const cur = document.querySelector('script[src*="app.js"]');
-        const curMatch = cur && cur.src.match(/v=([0-9-]+)/);
-        const curVer = curMatch ? curMatch[1] : null;
-        if (curVer && liveVer !== curVer) {
-          // 有新版 → 強制重載整個 PWA（帶 query 繞過快取）
-          location.replace(location.pathname + "?t=" + Date.now());
-          return;
-        }
-      }
+    if (!r.ok) return false;
+    const html = await r.text();
+    const m = html.match(/app\.js\?v=([0-9-]+)/);
+    if (!m) return false;
+    const liveVer = m[1];
+    const cur = document.querySelector('script[src*="app.js"]');
+    const curMatch = cur && cur.src.match(/v=([0-9-]+)/);
+    const curVer = curMatch ? curMatch[1] : null;
+    if (curVer && liveVer !== curVer) {
+      location.replace(location.pathname + "?t=" + Date.now());
+      return true;
     }
-  } catch (_) { /* 網路失敗就略過版本檢查，繼續刷資料 */ }
+  } catch (_) { /* 忽略網路錯誤 */ }
+  return false;
+}
+
+async function refreshData() {
+  if (await checkForNewVersion()) return;
 
   // 資料刷新：fetch 7 個 JSON，每個各自有 fallback
   const safe = (name, fallback) => load(name).catch(() => DATA[name === "insurances" ? "insurance" : name] || fallback);
@@ -349,9 +358,13 @@ function renderInsuranceSheet() {
   if (!list.length) {
     return "<p style='color:var(--text-mute); padding:20px 0'>尚未提供保險商品清單</p>";
   }
-  return list.map(it => `
+  return list.map(it => {
+    const nameHtml = it.source_url
+      ? `<a href="${it.source_url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${escapeHtml(it.name_zh)}</a>`
+      : escapeHtml(it.name_zh);
+    return `
     <div class="fund-card">
-      <h3>${escapeHtml(it.name_zh)}</h3>
+      <h3>${nameHtml}</h3>
       <p class="tagline">${escapeHtml(it.tagline || "")}</p>
       <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:6px; font-size:12px; margin-top:8px">
         <div><label style="display:block; font-size:11px; color:var(--text-mute)">公司</label>${escapeHtml(it.company || "—")}</div>
@@ -363,9 +376,9 @@ function renderInsuranceSheet() {
         <ul style="margin:8px 0 0; padding-left:18px; font-size:13px; line-height:1.6">
           ${it.highlights.map(h => `<li>${escapeHtml(h)}</li>`).join("")}
         </ul>` : ""}
-      ${it.source_url ? `<a class="source" href="${it.source_url}" target="_blank" rel="noopener" style="display:block; margin-top:8px">商品頁 ↗</a>` : ""}
     </div>
-  `).join("");
+  `;
+  }).join("");
 }
 
 function renderMarketSheet() {
@@ -574,9 +587,13 @@ function renderNewsByCategory(cat) {
 
 function renderFundsSheet() {
   const funds = DATA.funds.funds || [];
-  return funds.map(f => `
+  return funds.map(f => {
+    const nameHtml = f.source_url
+      ? `<a href="${f.source_url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${escapeHtml(f.name_zh)}</a>`
+      : escapeHtml(f.name_zh);
+    return `
     <div class="fund-card">
-      <h3>${escapeHtml(f.name_zh)}</h3>
+      <h3>${nameHtml}</h3>
       <p class="tagline">${escapeHtml(f.tagline || "")}</p>
       <div class="grid">
         <div>
@@ -589,9 +606,9 @@ function renderFundsSheet() {
         <div><label>近3月</label><span class="${pctClass(f.perf?.['3m'])}">${fmtPct(f.perf?.['3m'])}</span></div>
         <div><label>今年來</label><span class="${pctClass(f.perf?.ytd)}">${fmtPct(f.perf?.ytd)}</span></div>
       </div>
-      ${f.source_url ? `<a class="source" href="${f.source_url}" target="_blank" rel="noopener" style="display:block;margin-top:8px">板信基金頁 ↗</a>` : ""}
     </div>
-  `).join("");
+  `;
+  }).join("");
 }
 
 function wireNewsTabs() {
