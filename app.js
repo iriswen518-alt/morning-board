@@ -187,6 +187,14 @@ function buildSearchIndex() {
   for (const b of (DATA.obonds?.bonds || [])) {
     idx.push({ tab: "obonds", tabLabel: "精選海外債", title: b.name_zh || b.name || b.isin || "", text: [b.tagline, b.summary, b.issuer].filter(Boolean).join(" ") });
   }
+  // 海外股票
+  for (const s of (DATA.stocks?.us_stocks || [])) {
+    idx.push({ tab: "usstocks", tabLabel: "海外股票", title: `${s.symbol} ${s.name_zh || ""}`.trim(), text: "" });
+  }
+  // 台股
+  for (const s of (DATA.stocks?.tw_stocks || [])) {
+    idx.push({ tab: "market", tabLabel: "全球市場 · 台股", title: `${s.symbol} ${s.name_zh || ""}`.trim(), text: "" });
+  }
   // 保險
   for (const ins of (DATA.insurance?.insurances || [])) {
     idx.push({ tab: "insurance", tabLabel: "精選保險", title: ins.name || ins.title || "", text: [ins.tagline, ins.summary, ins.company].filter(Boolean).join(" ") });
@@ -326,6 +334,7 @@ function switchTab(name) {
   else if (name === "funds") body.innerHTML = renderFundsSheet();
   else if (name === "insurance") body.innerHTML = renderInsuranceSheet();
   else if (name === "obonds") body.innerHTML = renderObondsSheet();
+  else if (name === "usstocks") body.innerHTML = renderUsStocksSheet();
   else if (name === "dca") body.innerHTML = renderDcaSheet();
   else if (name === "targets") body.innerHTML = renderTargetsSheet();
   else if (name === "allocation") body.innerHTML = renderAllocationSheet();
@@ -905,6 +914,15 @@ function renderMarketSheet() {
     <div id="mtab-us" hidden>${usTab}</div>
     <div id="mtab-tw" hidden>${twTab}</div>
   `;
+}
+
+function renderUsStocksSheet() {
+  const list = DATA.stocks?.us_stocks || [];
+  if (!list.length) {
+    return `<p style="color:var(--text-mute); padding:20px 0">尚未提供海外股票資料</p>`;
+  }
+  const note = `<p style="color:var(--text-mute); font-size:13px; padding:6px 0 12px">資料來源：板信商銀網路銀行 iQuote。點選名稱可至板信即時報價頁。</p>`;
+  return note + renderStocksTable("", list);
 }
 
 function renderStocksTable(title, list) {
