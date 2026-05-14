@@ -301,6 +301,23 @@ function wireSearch() {
   input.addEventListener("focus", e => {
     if (e.target.value.trim()) doSearch(e.target.value);
   });
+  // Enter 鍵：立即搜尋並跳到第一筆結果
+  input.addEventListener("keydown", e => {
+    if (e.key !== "Enter") return;
+    e.preventDefault();
+    clearTimeout(timer);
+    const q = input.value.trim();
+    if (!q) return;
+    doSearch(q);
+    const first = panel.querySelector(".search-result");
+    if (first) {
+      first.click();
+    } else {
+      panel.hidden = false;
+      panel.classList.add("flash-hit");
+      setTimeout(() => panel.classList.remove("flash-hit"), 800);
+    }
+  });
   // 阻止 main-nav 攔截搜尋 panel click
   panel.addEventListener("mousedown", e => e.stopPropagation());
   // 點外部關閉
