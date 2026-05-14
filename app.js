@@ -312,6 +312,7 @@ async function init() {
   }
 
   setupPullToRefresh();
+  setupSearch();
 
   // 進入畫面/從背景回到前景時自動檢查新版
   document.addEventListener("visibilitychange", () => {
@@ -383,6 +384,117 @@ let _pullStartY = 0;
 let _pullCurrentY = 0;
 let _isPulling = false;
 const _PULL_THRESHOLD = 80;
+
+function buildSearchIndex() {
+  const idx = [];
+  const push = (item) => { if (item.title) idx.push(item); };
+
+  // 精選基金
+  (DATA.funds?.funds || []).forEach(f => push({
+    title: f.name_zh, tag: "精選基金", tab: "funds",
+    snippet: f.tagline || ""
+  }));
+  // 定期定額
+  (DATA.dca?.funds || []).forEach(f => push({
+    title: f.name_zh, tag: "定期定額", tab: "dca",
+    snippet: (f.category ? `[${f.category}] ` : "") + (f.tagline || "")
+  }));
+  // 海外債
+  (DATA.obonds?.bonds || []).forEach(b => push({
+    title: b.name_zh, tag: "精選海外債", tab: "obonds",
+    snippet: `${b.code || ""} ${b.issuer || ""} ${b.currency || ""}`.trim()
+  }));
+  // 保險
+  (DATA.insurance?.insurances || []).forEach(i => push({
+    title: i.name_zh, tag: "精選保險", tab: "insurance",
+    snippet: `${i.company || ""} ${i.tagline || ""}`.trim()
+  }));
+  // 美/台股
+  (DATA.stocks?.us_stocks || []).forEach(s => push({
+    title: `${s.symbol} ${s.name_zh || ""}`, tag: "美股", tab: "market",
+    snippet: ""
+  }));
+  (DATA.stocks?.tw_stocks || []).forEach(s => push({
+    title: `${s.symbol} ${s.name_zh || ""}`, tag: "台股", tab: "market",
+    snippet: ""
+  }));
+  // 主題市場
+  (DATA.targets?.targets || []).forEach(t => push({
+    title: t.name, tag: "主題市場", tab: "targets",
+    snippet: t.tagline || ""
+  }));
+  // 資產配置
+  (DATA.allocation?.profiles || []).forEach(p => push({
+    title: p.name, tag: "資產配置", tab: "allocation",
+    snippet: p.subtitle || ""
+  }));
+  // 財富傳承（每個 topic + 每條法條）
+  (DATA.wealth?.topics || []).forEach(t => {
+    push({ title: t.name, tag: "財富傳承", tab: "wealth",
+      snippet: t.summary || "" });
+    (t.laws || []).forEach(law => push({
+      title: `${law.code || ""} ${law.title || ""}`.trim(),
+      tag: `財富傳承 / ${t.name}`,
+      tab: "wealth",
+      snippet: (law.content || "").slice(0, 80)
+    }));
+  });
+  // 新聞 / 稅務新聞
+  (DATA.news?.sections || []).forEach(sec => {
+    (sec.items || []).forEach(it => push({
+      title: it.title || "", tag: `新聞 / ${sec.cat || ""}`, tab: "news",
+      snippet: it.summary || ""
+    }));
+  });
+  (DATA.tax?.items || []).forEach(it => push({
+    title: it.title || "", tag: "稅務新聞", tab: "wealth",
+    snippet: it.summary || ""
+  }));
+  return idx;
+}
+
+function setupSearch() {
+  const input = $("search-input");
+  const box = $("search-results");
+  if (!input || !box) return;
+  let index = null;
+  const ensure = () => { if (!index) index = buildSearchIndex(); return index; };
+
+  const render = (q) => {
+    const query = q.trim().toLowerCase();
+    if (!query) { box.hidden = true; box.innerHTML = ""; return; }
+    const items = ensure();
+    const hits = items.filter(it => {
+      const hay = `${it.title} ${it.tag} ${it.snippet}`.toLowerCase();
+      return hay.includes(query);
+    }).slice(0, 30);
+    if (!hits.length) {
+      box.innerHTML = `<div class="search-result-empty">查無結果</div>`;
+    } else {
+      box.innerHTML = hits.map((it, i) => `
+        <button class="search-result" data-tab="${escapeHtml(it.tab)}" data-i="${i}">
+          <div class="sr-title">${escapeHtml(it.title)}</div>
+          <div class="sr-meta">${escapeHtml(it.tag)}</div>
+          ${it.snippet ? `<div class="sr-snippet">${escapeHtml(it.snippet)}</div>` : ""}
+        </button>`).join("");
+      box.querySelectorAll(".search-result").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const tab = btn.dataset.tab;
+          if (tab) switchTab(tab);
+          box.hidden = true;
+          input.value = "";
+        });
+      });
+    }
+    box.hidden = false;
+  };
+
+  input.addEventListener("input", (e) => render(e.target.value));
+  input.addEventListener("focus", (e) => { if (e.target.value) render(e.target.value); });
+  document.addEventListener("click", (e) => {
+    if (!box.contains(e.target) && e.target !== input) box.hidden = true;
+  });
+}
 
 function setupPullToRefresh() {
   const ind = document.createElement("div");
