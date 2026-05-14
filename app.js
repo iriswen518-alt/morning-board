@@ -1207,7 +1207,7 @@ const CALC_TABS = [
   {key: "estate",    name: "遺產稅"},
   {key: "house",     name: "房地合一稅"},
   {key: "land",      name: "土地增值稅"},
-  {key: "case_house",name: "房產繼承/贈與/買賣比較"},
+  {key: "case_house",name: "房產：繼承/贈與/買賣比較"},
   {key: "case_stock",name: "股票：個人/投資公司比較"},
   {key: "case_fund", name: "基金：個人/投資公司比較"},
   {key: "case_realty",name: "房產：個人/投資公司比較"},
