@@ -139,17 +139,14 @@ body {
 .search-wrap input:focus { outline: 2px solid rgba(255,255,255,0.7); }
 
 #search-results {
-  position: absolute;
-  top: calc(100% + 4px);
-  left: 0;
-  right: 0;
+  position: fixed;
   background: #fff;
   border: 1px solid var(--border, #e1e4e8);
   border-radius: 10px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.15);
   max-height: 65vh;
   overflow-y: auto;
-  z-index: 200;
+  z-index: 1000;
   text-align: left;
 }
 .search-result {

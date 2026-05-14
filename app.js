@@ -268,6 +268,12 @@ function wireSearch() {
   if (!input || !panel) { console.warn("[search] input/panel not found"); return; }
   console.log("[search] wired. SEARCH_INDEX size:", SEARCH_INDEX.length);
   let timer;
+  const positionPanel = () => {
+    const r = input.getBoundingClientRect();
+    panel.style.top = (r.bottom + 4) + "px";
+    panel.style.left = r.left + "px";
+    panel.style.width = r.width + "px";
+  };
   const doSearch = (q) => {
     if (!q.trim()) { panel.hidden = true; panel.innerHTML = ""; return; }
     if (!SEARCH_INDEX || !SEARCH_INDEX.length) {
@@ -275,6 +281,7 @@ function wireSearch() {
       try { SEARCH_INDEX = buildSearchIndex(); } catch(e) { console.error("[search] build idx fail:", e); }
     }
     const results = runSearch(q);
+    positionPanel();
     panel.hidden = false;
     panel.innerHTML = results.length
       ? results.map(r => `
@@ -324,6 +331,10 @@ function wireSearch() {
   document.addEventListener("click", e => {
     if (!input.contains(e.target) && !panel.contains(e.target)) panel.hidden = true;
   });
+  // 視窗/捲動時若面板開著就重算位置
+  const repositionIfOpen = () => { if (!panel.hidden) positionPanel(); };
+  window.addEventListener("resize", repositionIfOpen);
+  window.addEventListener("scroll", repositionIfOpen, true);
 }
 
 async function init() {
