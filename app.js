@@ -265,40 +265,47 @@ function runSearch(q) {
 function wireSearch() {
   const input = $("search-input");
   const panel = $("search-results");
-  if (!input || !panel) return;
+  if (!input || !panel) { console.warn("[search] input/panel not found"); return; }
+  console.log("[search] wired. SEARCH_INDEX size:", SEARCH_INDEX.length);
   let timer;
+  const doSearch = (q) => {
+    if (!q.trim()) { panel.hidden = true; panel.innerHTML = ""; return; }
+    if (!SEARCH_INDEX || !SEARCH_INDEX.length) {
+      // 首次輸入時若 index 還空，現場建一次
+      try { SEARCH_INDEX = buildSearchIndex(); } catch(e) { console.error("[search] build idx fail:", e); }
+    }
+    const results = runSearch(q);
+    panel.hidden = false;
+    panel.innerHTML = results.length
+      ? results.map(r => `
+          <button class="search-result" data-tab="${escapeHtml(r.tab)}">
+            <div class="sr-title">${escapeHtml(r.title || "(無標題)")}</div>
+            <div class="sr-meta">${escapeHtml(r.tabLabel || "")}</div>
+            <div class="sr-snippet">${escapeHtml(r.snippet || "")}</div>
+          </button>`).join("")
+      : `<div class="search-result-empty">無相符結果（共 ${SEARCH_INDEX.length} 筆索引）</div>`;
+    panel.querySelectorAll(".search-result").forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        const r = results[i] || {};
+        PENDING_HIGHLIGHT = r.title || "";
+        switchTab(btn.dataset.tab);
+        panel.hidden = true;
+        input.value = "";
+      });
+    });
+  };
   input.addEventListener("input", e => {
     clearTimeout(timer);
-    const q = e.target.value;
-    if (!q.trim()) { panel.hidden = true; panel.innerHTML = ""; return; }
-    timer = setTimeout(() => {
-      const results = runSearch(q);
-      panel.hidden = false;
-      panel.innerHTML = results.length
-        ? results.map(r => `
-            <button class="search-result" data-tab="${escapeHtml(r.tab)}">
-              <div class="sr-title">${escapeHtml(r.title || "(無標題)")}</div>
-              <div class="sr-meta">${escapeHtml(r.tabLabel || "")}</div>
-              <div class="sr-snippet">${escapeHtml(r.snippet || "")}</div>
-            </button>`).join("")
-        : `<div class="search-result-empty">無相符結果</div>`;
-      panel.querySelectorAll(".search-result").forEach((btn, i) => {
-        btn.addEventListener("click", () => {
-          const r = results[i] || {};
-          PENDING_HIGHLIGHT = r.title || "";
-          switchTab(btn.dataset.tab);
-          panel.hidden = true;
-          input.value = "";
-        });
-      });
-    }, 150);
+    timer = setTimeout(() => doSearch(e.target.value), 150);
   });
+  input.addEventListener("focus", e => {
+    if (e.target.value.trim()) doSearch(e.target.value);
+  });
+  // 阻止 main-nav 攔截搜尋 panel click
+  panel.addEventListener("mousedown", e => e.stopPropagation());
   // 點外部關閉
   document.addEventListener("click", e => {
     if (!input.contains(e.target) && !panel.contains(e.target)) panel.hidden = true;
-  });
-  input.addEventListener("focus", () => {
-    if (input.value.trim() && panel.innerHTML) panel.hidden = false;
   });
 }
 
@@ -1316,7 +1323,38 @@ function renderCalcIncome() {
       <div class="calc-row"><label>其他扣除額</label><input type="number" id="ci-other" value="0"></div>
       <button class="calc-btn" onclick="doCalcIncome()">試算</button>
       <div class="calc-result" id="ci-result"></div>
-    </div>`;
+    </div>
+    <details class="calc-notes">
+      <summary>相關規定說明（114 年度）</summary>
+      <h4>免稅額</h4>
+      <ul>
+        <li>本人、配偶及受扶養親屬：每人 92,000 元</li>
+        <li>本人、配偶年滿 70 歲或受扶養之直系尊親屬：每人 138,000 元</li>
+      </ul>
+      <h4>扣除額：標準 vs 列舉（擇一）</h4>
+      <ul>
+        <li>標準扣除額：單身 132,000；夫妻合併申報 264,000</li>
+        <li>列舉扣除額：捐贈、人身保險費（每人上限 24,000）、醫藥及生育費、災害損失、購屋借款利息（每戶上限 300,000）、房屋租金支出（每戶上限 120,000）</li>
+      </ul>
+      <h4>特別扣除額</h4>
+      <ul>
+        <li>薪資所得特別扣除：每人 218,000</li>
+        <li>儲蓄投資特別扣除：每戶 270,000</li>
+        <li>身心障礙特別扣除：每人 218,000</li>
+        <li>教育學費特別扣除：每人 25,000（大專以上子女）</li>
+        <li>幼兒學前特別扣除：5 歲以下每人 120,000（第二名以上加倍）</li>
+        <li>長期照顧特別扣除：每人 120,000</li>
+      </ul>
+      <h4>稅率級距（114 年度）</h4>
+      <ul>
+        <li>590,000 以下：5%</li>
+        <li>590,001 – 1,330,000：12%（累進差額 29,500）</li>
+        <li>1,330,001 – 2,660,000：20%（累進差額 118,300）</li>
+        <li>2,660,001 – 4,980,000：30%（累進差額 384,300）</li>
+        <li>4,980,001 以上：40%（累進差額 1,080,300）</li>
+      </ul>
+      <p class="calc-note-src">資料來源：所得稅法 §17、財政部 114 年度公告</p>
+    </details>`;
 }
 
 function renderCalcAmt() {

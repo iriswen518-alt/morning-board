@@ -1053,3 +1053,43 @@ table.indices .date-col {
   .calc-row { grid-template-columns: 1fr; gap: 4px; }
   .calc-row label { font-size: 12px; }
 }
+
+/* ===== 稅負試算下方相關規定 ===== */
+.calc-notes {
+  max-width: 720px;
+  margin-top: 16px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 18px;
+  box-shadow: var(--shadow);
+}
+.calc-notes summary {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--brand-deep);
+  padding: 4px 0;
+  list-style: revert;
+}
+.calc-notes summary:hover { color: var(--brand-primary); }
+.calc-notes[open] summary { margin-bottom: 6px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+.calc-notes h4 {
+  margin: 12px 0 4px;
+  font-size: 14px;
+  color: var(--brand-primary);
+}
+.calc-notes ul {
+  margin: 4px 0 8px;
+  padding-left: 22px;
+  font-size: 13px;
+  line-height: 1.75;
+  color: var(--text-sub, var(--text));
+}
+.calc-notes li { margin-bottom: 2px; }
+.calc-note-src {
+  margin-top: 10px;
+  font-size: 11px;
+  color: var(--text-mute);
+  font-style: italic;
+}
