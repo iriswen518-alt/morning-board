@@ -1207,7 +1207,10 @@ const CALC_TABS = [
   {key: "estate",    name: "遺產稅"},
   {key: "house",     name: "房地合一稅"},
   {key: "land",      name: "土地增值稅"},
-  {key: "case_house",name: "案例：房產繼承 vs 贈與"},
+  {key: "case_house",name: "房產繼承/贈與/買賣比較"},
+  {key: "case_stock",name: "股票：個人/投資公司比較"},
+  {key: "case_fund", name: "基金：個人/投資公司比較"},
+  {key: "case_realty",name: "房產：個人/投資公司比較"},
 ];
 
 function fmtMoney(n) {
@@ -1309,6 +1312,9 @@ function renderCalcSheet() {
       <div class="t-pane" id="c-pane-house">${renderCalcHouse()}</div>
       <div class="t-pane" id="c-pane-land">${renderCalcLand()}</div>
       <div class="t-pane" id="c-pane-case_house">${renderCalcCaseHouse()}</div>
+      <div class="t-pane" id="c-pane-case_stock">${renderCalcCaseStock()}</div>
+      <div class="t-pane" id="c-pane-case_fund">${renderCalcCaseFund()}</div>
+      <div class="t-pane" id="c-pane-case_realty">${renderCalcCaseRealty()}</div>
     </div>
     <p class="a-note" style="margin-top:24px">本試算依 114 年度（2026 年申報）級距，僅供參考。實際以稅捐稽徵機關核定為準。</p>
   `;
@@ -1317,15 +1323,15 @@ function renderCalcSheet() {
 function renderCalcCaseHouse() {
   return `
     <div class="calc-form">
-      <h3>案例試算：房產繼承 vs 贈與比較</h3>
+      <h3>案例試算：房產繼承 vs 贈與 vs 買賣比較</h3>
       <p style="font-size:13px; color:var(--text-sub); margin-bottom:14px">
-        同一筆房地，比較「繼承」與「贈與」兩種傳承方式之稅負總成本（含本次傳承稅 ＋ 未來出售之房地合一稅）。
+        同一筆房地，比較「繼承」「贈與」「買賣」三種傳承方式之稅負總成本（本次移轉稅 ＋ 未來受讓人出售之房地合一稅）。
       </p>
       <h4 style="margin:8px 0 6px;font-size:14px;color:var(--brand-deep)">房產基本資料</h4>
-      <div class="calc-row"><label>土地公告現值（取得時）</label><input type="number" id="cx-land-cur" placeholder="例：12000000"></div>
-      <div class="calc-row"><label>房屋評定標準價格（取得時）</label><input type="number" id="cx-house-cur" placeholder="例：3000000"></div>
+      <div class="calc-row"><label>土地公告現值（移轉時）</label><input type="number" id="cx-land-cur" placeholder="例：12000000"></div>
+      <div class="calc-row"><label>房屋評定標準價格（移轉時）</label><input type="number" id="cx-house-cur" placeholder="例：3000000"></div>
       <div class="calc-row"><label>土地原規定地價／前次移轉現值</label><input type="number" id="cx-land-ori" placeholder="例：5000000"></div>
-      <div class="calc-row"><label>市價（預估出售金額）</label><input type="number" id="cx-market" placeholder="例：30000000"></div>
+      <div class="calc-row"><label>市價（預估出售／買賣價金）</label><input type="number" id="cx-market" placeholder="例：30000000"></div>
       <h4 style="margin:14px 0 6px;font-size:14px;color:var(--brand-deep)">家庭情況（影響遺產稅扣除額）</h4>
       <div class="calc-row"><label>被繼承人遺產總額（含本房產）</label><input type="number" id="cx-estate-total" placeholder="例：40000000"></div>
       <div class="calc-row"><label>有配偶？（有則扣 553 萬）</label>
@@ -1338,9 +1344,13 @@ function renderCalcCaseHouse() {
         <select id="cx-gift-spouse"><option value="0" selected>否（直系卑親屬）</option><option value="1">是</option></select>
       </div>
       <div class="calc-row"><label>當年度其他贈與（影響 244 萬免稅）</label><input type="number" id="cx-other-gift" value="0"></div>
-      <h4 style="margin:14px 0 6px;font-size:14px;color:var(--brand-deep)">日後出售情境</h4>
+      <h4 style="margin:14px 0 6px;font-size:14px;color:var(--brand-deep)">買賣情境（父母→子女）</h4>
+      <div class="calc-row"><label>父母原始取得成本（房地合計）</label><input type="number" id="cx-parent-cost" placeholder="例：8000000"></div>
+      <div class="calc-row"><label>父母已持有年數（影響父母端房地合一）</label><input type="number" id="cx-parent-hold" value="15"></div>
+      <h4 style="margin:14px 0 6px;font-size:14px;color:var(--brand-deep)">日後（受讓人）出售情境</h4>
       <div class="calc-row"><label>繼承後預計持有年數再出售</label><input type="number" id="cx-hold-inherit" value="11"></div>
       <div class="calc-row"><label>贈與後預計持有年數再出售</label><input type="number" id="cx-hold-gift" value="3"></div>
+      <div class="calc-row"><label>買賣後預計持有年數再出售</label><input type="number" id="cx-hold-sale" value="3"></div>
       <div class="calc-row"><label>是否符合自住 6 年條件再出售</label>
         <select id="cx-selfuse"><option value="0">否</option><option value="1">是</option></select>
       </div>
@@ -1365,32 +1375,45 @@ function renderCalcCaseHouse() {
         <li>取得成本：以贈與時公告現值 + 房屋評定標準價</li>
         <li>未來出售房地合一：持有期間從受贈日重新起算，短期出售稅率高（≤2 年 45%、2–5 年 35%）</li>
       </ul>
+      <h4>買賣路徑（父母賣給子女；推薦於子女有實際購買能力時）</h4>
+      <ul>
+        <li>父母端房地合一稅：(市價 − 父母原始取得成本) × 持有年限對應稅率（≤2 年 45%、2–5 年 35%、5–10 年 20%、&gt;10 年 15%）</li>
+        <li>父母端土地增值稅：(土地公告現值 − 原規定地價) × 累進稅率（一般稅率 20/30/40%）</li>
+        <li>子女端房屋契稅：6%（房屋評定標準價 × 6%）</li>
+        <li>子女端印花稅：契約金額 × 0.1%（土地公告現值 + 房屋評定價）</li>
+        <li>取得成本：以實際買賣價金（市價）為基礎，未來再出售之房地合一稅基極低</li>
+        <li><b style="color:#d62828">⚠ 擬制贈與風險（遺贈稅法 §5 第 6 款）</b>：父母與子女間買賣，稅捐機關推定為贈與；子女須提供「實際支付價款」與「資金來源非父母提供」之證明（例如子女自有薪資、貸款、實際支付匯款紀錄等），否則仍依贈與稅課徵。</li>
+      </ul>
       <h4>建議判斷原則</h4>
       <ul>
-        <li>遺產 &lt; 1,333 萬免稅額：繼承幾乎零成本，明顯優於贈與</li>
+        <li>遺產 &lt; 1,333 萬免稅額：繼承幾乎零成本，明顯優於贈與與買賣</li>
         <li>遺產 1,471 萬 ~ 2,000 萬：繼承 10% 稅率，仍多優於贈與（贈與含土增＋契稅）</li>
-        <li>遺產 ≥ 5,621 萬：邊際稅率 15-20%，可考慮分年贈與（每年 244 萬免稅額）攤平</li>
-        <li>急需移轉控制權／怕保留遺產失敗：贈與雖貴但確定</li>
-        <li>受贈後短期出售（&lt; 5 年）：贈與路徑房地合一 35-45%，總成本反而高，建議繼承</li>
+        <li>遺產 ≥ 5,621 萬：邊際稅率 15-20%，可考慮分年贈與或安排買賣分擔稅基</li>
+        <li>父母帳上市價 ≫ 公告現值 → 買賣路徑父母房地合一稅高，未必划算</li>
+        <li>子女有真實購買能力＋持有年限長 → 買賣可降低未來房地合一稅，但須備齊資金來源證明</li>
+        <li>受贈／受讓後短期出售（&lt; 5 年）：贈與／買賣路徑房地合一 35-45%，總成本反而高，建議繼承</li>
         <li>受贈為配偶：土增稅不課徵、契稅減半，但仍須贈與稅；可作為配偶間財產移轉</li>
       </ul>
-      <p class="calc-note-src">資料來源：遺贈稅法 §16-§22、§39；所得稅法 §14-4；土地稅法 §28-§39-1；契稅條例</p>
+      <p class="calc-note-src">資料來源：遺贈稅法 §5、§16-§22、§39；所得稅法 §14-4；土地稅法 §28-§39-1；契稅條例；印花稅法 §7</p>
     </details>`;
 }
 
 function doCalcCaseHouse() {
-  const landCur = +$("cx-land-cur").value || 0;       // 土地公告現值（取得時）
-  const houseCur = +$("cx-house-cur").value || 0;     // 房屋評定價（取得時）
+  const landCur = +$("cx-land-cur").value || 0;       // 土地公告現值（移轉時）
+  const houseCur = +$("cx-house-cur").value || 0;     // 房屋評定價（移轉時）
   const landOri = +$("cx-land-ori").value || 0;       // 土地原規定地價
-  const market = +$("cx-market").value || 0;          // 市價
+  const market = +$("cx-market").value || 0;          // 市價／買賣價金
   const estateTotal = +$("cx-estate-total").value || 0;
   const hasSpouse = +$("cx-spouse").value === 1;
   const children = +$("cx-children").value || 0;
   const otherDeduct = +$("cx-other-deduct").value || 0;
   const giftSpouse = +$("cx-gift-spouse").value === 1;
   const otherGift = +$("cx-other-gift").value || 0;
+  const parentCost = +$("cx-parent-cost").value || 0;
+  const parentHold = +$("cx-parent-hold").value || 0;
   const holdInherit = +$("cx-hold-inherit").value || 0;
   const holdGift = +$("cx-hold-gift").value || 0;
+  const holdSale = +$("cx-hold-sale").value || 0;
   const selfUse = +$("cx-selfuse").value === 1;
 
   // 房地價值（公告現值總和，課稅基準）
@@ -1399,11 +1422,8 @@ function doCalcCaseHouse() {
   // ========== 繼承路徑 ==========
   const inheritDeductions = (hasSpouse ? 5530000 : 0) + children * 560000 + otherDeduct;
   const estateRes = calcEstateTax(estateTotal, inheritDeductions);
-  // 房產佔遺產比例 → 攤分到本房產的遺產稅
   const houseShareInherit = estateTotal > 0 ? declaredValue / estateTotal : 0;
   const inheritEstateTax = estateRes.tax * houseShareInherit;
-  // 繼承免徵土增稅、契稅
-  // 未來出售房地合一：取得成本 = 公告現值 + 房屋評定價（繼承時）
   const inheritGain = Math.max(0, market - declaredValue);
   const inheritHL = calcHouseLandTax(inheritGain, holdInherit, selfUse);
   const inheritTotal = inheritEstateTax + inheritHL.tax;
@@ -1411,30 +1431,56 @@ function doCalcCaseHouse() {
   // ========== 贈與路徑 ==========
   const giftAmount = declaredValue + otherGift;
   const giftRes = calcGiftTax(giftAmount);
-  // 攤分到本房產
   const houseShareGift = giftAmount > 0 ? declaredValue / giftAmount : 1;
   const giftTaxOnHouse = giftRes.tax * houseShareGift;
-  // 土地增值稅（贈與須課，配偶間不課徵）
   let giftLVT = 0;
   if (!giftSpouse) {
     const incLand = landCur - landOri;
     const lvtRes = calcLandValueTax(incLand, landOri, false, 0);
     giftLVT = lvtRes.tax;
   }
-  // 房屋契稅 6%
   const giftDeed = houseCur * 0.06;
-  // 未來出售房地合一：取得成本 = 公告現值 + 房屋評定價（贈與時）
   const giftGain = Math.max(0, market - declaredValue);
   const giftHL = calcHouseLandTax(giftGain, holdGift, selfUse);
   const giftTotal = giftTaxOnHouse + giftLVT + giftDeed + giftHL.tax;
 
-  const winner = inheritTotal < giftTotal ? "繼承" : "贈與";
-  const diff = Math.abs(inheritTotal - giftTotal);
+  // ========== 買賣路徑（父母→子女） ==========
+  // 父母端房地合一：(市價 − 父母取得成本) × 持有期間對應稅率
+  const saleParentGain = Math.max(0, market - parentCost);
+  const saleParentHL = calcHouseLandTax(saleParentGain, parentHold, false); // 父母端通常非自住適用
+  // 父母端土增稅（一般買賣須課）
+  const incLandSale = landCur - landOri;
+  const saleLVT = incLandSale > 0 ? calcLandValueTax(incLandSale, landOri, false, 0).tax : 0;
+  // 子女端契稅 6%
+  const saleDeed = houseCur * 0.06;
+  // 子女端印花稅 0.1%（公告現值 + 評定價）
+  const saleStamp = declaredValue * 0.001;
+  // 未來子女出售房地合一：取得成本＝實際買賣價金（市價），通常 gain 接近 0
+  // 但若未來再增值，假設市價維持 → gain = 0；保守起見以 gain=0 計
+  const saleFutureGain = 0; // 子女以市價取得，未來出售若市價未變動則 gain=0
+  const saleFutureHL = calcHouseLandTax(saleFutureGain, holdSale, selfUse);
+  const saleTotal = saleParentHL.tax + saleLVT + saleDeed + saleStamp + saleFutureHL.tax;
+
+  // 三方比較取最低
+  const paths = [
+    { name: "繼承", total: inheritTotal },
+    { name: "贈與", total: giftTotal },
+    { name: "買賣", total: saleTotal },
+  ];
+  paths.sort((a, b) => a.total - b.total);
+  const winner = paths[0].name;
+  const diff = paths[1].total - paths[0].total;
+
+  const winnerNote = {
+    "繼承": "；惟須等待被繼承人離世，無立即移轉效果。",
+    "贈與": "；可立即移轉房產控制權。",
+    "買賣": "；可立即移轉，但須備齊子女資金來源證明，避免被認定擬制贈與（遺贈稅法 §5）。",
+  };
 
   $("cx-result").innerHTML = `
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:10px">
+    <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:12px;margin-bottom:10px">
       <div style="padding:10px;background:#fff;border-radius:6px;border-left:4px solid var(--brand-deep)">
-        <div style="font-size:13px;color:var(--brand-deep);font-weight:700;margin-bottom:6px">🏛️ 繼承路徑</div>
+        <div style="font-size:13px;color:var(--brand-deep);font-weight:700;margin-bottom:6px">繼承路徑</div>
         <div class="kv"><span>遺產稅（房產佔比）</span><b>${fmtMoney(inheritEstateTax)}</b></div>
         <div class="kv"><span>土地增值稅</span><b style="color:var(--down)">免徵</b></div>
         <div class="kv"><span>房屋契稅</span><b style="color:var(--down)">免徵</b></div>
@@ -1442,17 +1488,348 @@ function doCalcCaseHouse() {
         <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:16px">${fmtMoney(inheritTotal)}</b></div>
       </div>
       <div style="padding:10px;background:#fff;border-radius:6px;border-left:4px solid #e08a3c">
-        <div style="font-size:13px;color:#e08a3c;font-weight:700;margin-bottom:6px">🎁 贈與路徑</div>
+        <div style="font-size:13px;color:#e08a3c;font-weight:700;margin-bottom:6px">贈與路徑</div>
         <div class="kv"><span>贈與稅（房產佔比）</span><b>${fmtMoney(giftTaxOnHouse)}</b></div>
         <div class="kv"><span>土地增值稅${giftSpouse?'（配偶不課徵）':''}</span><b>${fmtMoney(giftLVT)}</b></div>
         <div class="kv"><span>房屋契稅 6%</span><b>${fmtMoney(giftDeed)}</b></div>
         <div class="kv"><span>未來出售房地合一（${giftHL.rate}）</span><b>${fmtMoney(giftHL.tax)}</b></div>
         <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:16px">${fmtMoney(giftTotal)}</b></div>
       </div>
+      <div style="padding:10px;background:#fff;border-radius:6px;border-left:4px solid #6a5acd">
+        <div style="font-size:13px;color:#6a5acd;font-weight:700;margin-bottom:6px">買賣路徑</div>
+        <div class="kv"><span>父母房地合一（${saleParentHL.rate}）</span><b>${fmtMoney(saleParentHL.tax)}</b></div>
+        <div class="kv"><span>父母土地增值稅</span><b>${fmtMoney(saleLVT)}</b></div>
+        <div class="kv"><span>子女房屋契稅 6%</span><b>${fmtMoney(saleDeed)}</b></div>
+        <div class="kv"><span>子女印花稅 0.1%</span><b>${fmtMoney(saleStamp)}</b></div>
+        <div class="kv"><span>未來出售房地合一（${saleFutureHL.rate}）</span><b>${fmtMoney(saleFutureHL.tax)}</b></div>
+        <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:16px">${fmtMoney(saleTotal)}</b></div>
+      </div>
     </div>
     <div style="padding:12px 14px;background:linear-gradient(135deg,#E5F2F5,#fff);border-radius:8px;border-left:5px solid var(--brand-primary)">
       <div style="font-size:15px;font-weight:700;color:var(--brand-deep);margin-bottom:4px">建議：${winner}路徑較划算</div>
-      <div style="font-size:13px;color:var(--text-sub)">差額約 <b>${fmtMoney(diff)}</b>${winner === "繼承" ? "；惟須等待被繼承人離世，無立即移轉效果。" : "；可立即移轉房產控制權。"}</div>
+      <div style="font-size:13px;color:var(--text-sub)">較次低差額約 <b>${fmtMoney(diff)}</b>${winnerNote[winner] || ""}</div>
+    </div>`;
+}
+
+// ========== 案例：股票 個人 vs 投資公司 ==========
+function renderCalcCaseStock() {
+  return `
+    <div class="calc-form">
+      <h3>案例試算：股票持有 個人 vs 投資公司比較</h3>
+      <p style="font-size:13px;color:var(--text-sub);margin-bottom:14px">
+        比較相同股票部位由「個人」或「投資公司」持有，於年度配息＋資本利得情境下之稅負總和。
+      </p>
+      <h4 style="margin:8px 0 6px;font-size:14px;color:var(--brand-deep)">投資情境</h4>
+      <div class="calc-row"><label>年股利所得（境內公司股利）</label><input type="number" id="cs-div" placeholder="例：5000000"></div>
+      <div class="calc-row"><label>年資本利得（賣股獲利）</label><input type="number" id="cs-gain" placeholder="例:10000000"></div>
+      <div class="calc-row"><label>個人邊際稅率</label>
+        <select id="cs-rate">
+          <option value="0.05">5%</option>
+          <option value="0.12">12%</option>
+          <option value="0.20">20%</option>
+          <option value="0.30" selected>30%</option>
+          <option value="0.40">40%</option>
+        </select>
+      </div>
+      <div class="calc-row"><label>投資公司股利是否分配給股東？</label>
+        <select id="cs-distrib">
+          <option value="0" selected>否（保留盈餘，加徵 5%）</option>
+          <option value="1">是（最終分配給個人，再課稅）</option>
+        </select>
+      </div>
+      <button class="calc-btn" onclick="doCalcCaseStock()">試算比較</button>
+      <div class="calc-result" id="cs-result"></div>
+    </div>
+    <details class="calc-notes">
+      <summary>試算邏輯與規則說明</summary>
+      <h4>個人持有</h4>
+      <ul>
+        <li>股利：所得稅法 §15 兩制擇一。合併計稅＝股利 × 邊際稅率 − min(股利 × 8.5%, 80,000)；分離計稅＝股利 × 28%。取較低者。</li>
+        <li>二代健保補充保費：股利 × 2.11%（單筆 ≥ 2 萬元才扣，單次上限 1,000 萬元）</li>
+        <li>資本利得：證券交易所得停徵（§4-1），個人不課所得稅</li>
+      </ul>
+      <h4>投資公司持有</h4>
+      <ul>
+        <li>股利：法人間股利免稅（§42）</li>
+        <li>未分配盈餘加徵 5%（§66-9）：若不分配，當年盈餘 × 5%</li>
+        <li>資本利得：個人證所稅停徵不適用法人；計入營利事業最低稅負，基本稅額 12%（基本稅額條例 §7）</li>
+        <li>若最終分配給個人股東：個人再課股利兩制（雙重課稅）</li>
+        <li>額外成本：公司設立、會計師簽證、營業稅申報等行政費用（本試算未計入）</li>
+      </ul>
+      <p class="calc-note-src">資料來源：所得稅法 §4-1、§15、§42、§66-9；所得基本稅額條例 §7；全民健保法 §31</p>
+    </details>`;
+}
+function doCalcCaseStock() {
+  const div = +$("cs-div").value || 0;
+  const gain = +$("cs-gain").value || 0;
+  const rate = +$("cs-rate").value || 0.3;
+  const distrib = +$("cs-distrib").value === 1;
+
+  // 個人端
+  // 股利兩制
+  const taxCombined = Math.max(0, div * rate - Math.min(div * 0.085, 80000));
+  const taxSeparate = div * 0.28;
+  const personalDivTax = Math.min(taxCombined, taxSeparate);
+  const divMethod = taxCombined < taxSeparate ? "合併計稅" : "分離 28%";
+  // 二代健保 2.11%（單次 ≥ 2 萬 扣繳）
+  const personalNHI = div >= 20000 ? Math.min(div, 10000000) * 0.0211 : 0;
+  // 資本利得：個人停徵
+  const personalGain = 0;
+  const personalTotal = personalDivTax + personalNHI + personalGain;
+
+  // 投資公司端
+  // 股利免稅，但未分配盈餘加徵 5%（假設股利進入盈餘且不分配）
+  let companyDivTax = 0;
+  let companyRetention = 0;
+  let companyDistribToPerson = 0;
+  if (distrib) {
+    // 分配出來：個人股利兩制再算一次（雙重課稅）
+    const finalDiv = div; // 簡化：股利全額分配
+    const tc = Math.max(0, finalDiv * rate - Math.min(finalDiv * 0.085, 80000));
+    const ts = finalDiv * 0.28;
+    companyDistribToPerson = Math.min(tc, ts);
+  } else {
+    // 未分配盈餘加徵 5%
+    companyRetention = div * 0.05;
+  }
+  // 資本利得計入營利事業最低稅負 12%
+  const companyGainAMT = gain * 0.12;
+  const companyTotal = companyDivTax + companyRetention + companyDistribToPerson + companyGainAMT;
+
+  const winner = personalTotal < companyTotal ? "個人持有" : "投資公司持有";
+  const diff = Math.abs(personalTotal - companyTotal);
+
+  $("cs-result").innerHTML = `
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:10px">
+      <div style="padding:10px;background:#fff;border-radius:6px;border-left:4px solid var(--brand-deep)">
+        <div style="font-size:13px;color:var(--brand-deep);font-weight:700;margin-bottom:6px">個人持有</div>
+        <div class="kv"><span>股利稅（${divMethod}）</span><b>${fmtMoney(personalDivTax)}</b></div>
+        <div class="kv"><span>二代健保 2.11%</span><b>${fmtMoney(personalNHI)}</b></div>
+        <div class="kv"><span>資本利得稅</span><b style="color:var(--down)">停徵</b></div>
+        <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:16px">${fmtMoney(personalTotal)}</b></div>
+      </div>
+      <div style="padding:10px;background:#fff;border-radius:6px;border-left:4px solid #6a5acd">
+        <div style="font-size:13px;color:#6a5acd;font-weight:700;margin-bottom:6px">投資公司持有</div>
+        <div class="kv"><span>股利稅（§42 免稅）</span><b style="color:var(--down)">免徵</b></div>
+        ${distrib
+          ? `<div class="kv"><span>分配給個人再課（兩制擇低）</span><b>${fmtMoney(companyDistribToPerson)}</b></div>`
+          : `<div class="kv"><span>未分配盈餘加徵 5%</span><b>${fmtMoney(companyRetention)}</b></div>`}
+        <div class="kv"><span>資本利得最低稅負 12%</span><b>${fmtMoney(companyGainAMT)}</b></div>
+        <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:16px">${fmtMoney(companyTotal)}</b></div>
+      </div>
+    </div>
+    <div style="padding:12px 14px;background:linear-gradient(135deg,#E5F2F5,#fff);border-radius:8px;border-left:5px solid var(--brand-primary)">
+      <div style="font-size:15px;font-weight:700;color:var(--brand-deep);margin-bottom:4px">建議：${winner}較划算</div>
+      <div style="font-size:13px;color:var(--text-sub)">差額約 <b>${fmtMoney(diff)}</b>${winner === "投資公司持有" ? "；惟須計入公司設立與行政成本，且未來盈餘分配給個人時將二次課稅。" : "；個人持有單純，但股利大額時邊際稅率高。"}</div>
+    </div>`;
+}
+
+// ========== 案例：基金 個人 vs 投資公司 ==========
+function renderCalcCaseFund() {
+  return `
+    <div class="calc-form">
+      <h3>案例試算：基金持有 個人 vs 投資公司比較</h3>
+      <p style="font-size:13px;color:var(--text-sub);margin-bottom:14px">
+        比較相同基金部位由「個人」或「投資公司」持有，於配息＋贖回利得情境下之稅負總和。
+      </p>
+      <h4 style="margin:8px 0 6px;font-size:14px;color:var(--brand-deep)">基金類型與所得</h4>
+      <div class="calc-row"><label>基金發行地</label>
+        <select id="cf-loc">
+          <option value="dom" selected>境內基金（投信發行）</option>
+          <option value="off">境外基金（盧森堡/開曼）</option>
+        </select>
+      </div>
+      <div class="calc-row"><label>年配息（合計）</label><input type="number" id="cf-div" placeholder="例：3000000"></div>
+      <div class="calc-row"><label>年贖回利得（資本利得）</label><input type="number" id="cf-gain" placeholder="例：5000000"></div>
+      <div class="calc-row"><label>個人邊際稅率（適用海外所得＞綜所稅取大用）</label>
+        <select id="cf-rate">
+          <option value="0.05">5%</option>
+          <option value="0.20">20%</option>
+          <option value="0.30" selected>30%</option>
+          <option value="0.40">40%</option>
+        </select>
+      </div>
+      <button class="calc-btn" onclick="doCalcCaseFund()">試算比較</button>
+      <div class="calc-result" id="cf-result"></div>
+    </div>
+    <details class="calc-notes">
+      <summary>試算邏輯與規則說明</summary>
+      <h4>境內基金（投信發行）</h4>
+      <ul>
+        <li>個人：贖回利得屬證券交易所得，<b>停徵</b>（§4-1）；配息依組成課稅（股利兩制／利息合併或併儲蓄扣除 27 萬／財產交易併綜所）</li>
+        <li>投資公司：贖回利得為證券交易所得，免營所稅，但計入未分配盈餘加徵 5%；配息中股利部分依 §42 免稅、利息部分併營所稅 20%</li>
+      </ul>
+      <h4>境外基金（盧森堡 SICAV、開曼公司型）</h4>
+      <ul>
+        <li>個人：贖回利得＋配息＝海外所得，計入最低稅負；扣除 670 萬免稅後 × 20%，與綜所稅取大繳納</li>
+        <li>投資公司：境外基金贖回利得＋配息屬營利事業所得，併入營所稅 20%</li>
+      </ul>
+      <p class="calc-note-src">資料來源：所得稅法 §4-1、§14、§42；所得基本稅額條例 §12；財政部 99.10.4 台財稅字第 09904100250 號令</p>
+    </details>`;
+}
+function doCalcCaseFund() {
+  const loc = $("cf-loc").value;
+  const div = +$("cf-div").value || 0;
+  const gain = +$("cf-gain").value || 0;
+  const rate = +$("cf-rate").value || 0.3;
+
+  let personalTotal, companyTotal;
+  let personalBreakdown, companyBreakdown;
+
+  if (loc === "dom") {
+    // 境內基金
+    // 個人：配息簡化全部以股利兩制處理；贖回利得停徵
+    const tc = Math.max(0, div * rate - Math.min(div * 0.085, 80000));
+    const ts = div * 0.28;
+    const personalDivTax = Math.min(tc, ts);
+    personalTotal = personalDivTax;
+    personalBreakdown = `
+      <div class="kv"><span>配息（股利兩制取低）</span><b>${fmtMoney(personalDivTax)}</b></div>
+      <div class="kv"><span>贖回利得</span><b style="color:var(--down)">停徵</b></div>`;
+
+    // 投資公司：配息股利部分 §42 免稅（簡化全免），贖回利得計入未分配盈餘 5%
+    const companyRet = (div + gain) * 0.05; // 簡化：當年盈餘 = 配息+贖回利得，全留未分配
+    companyTotal = companyRet;
+    companyBreakdown = `
+      <div class="kv"><span>配息（§42 免稅）</span><b style="color:var(--down)">免徵</b></div>
+      <div class="kv"><span>未分配盈餘加徵 5%（含贖回利得）</span><b>${fmtMoney(companyRet)}</b></div>`;
+  } else {
+    // 境外基金
+    // 個人：合計海外所得，扣 670 萬，× 20%，與綜所稅取大（簡化：只看 AMT 部分）
+    const overseas = div + gain;
+    const amt = Math.max(0, overseas - 6700000) * 0.20;
+    personalTotal = amt;
+    personalBreakdown = `
+      <div class="kv"><span>海外所得合計</span><span>${fmtMoney(overseas)}</span></div>
+      <div class="kv"><span>扣 670 萬後 × 20%（與綜所稅取大）</span><b>${fmtMoney(amt)}</b></div>`;
+
+    // 投資公司：併入營所稅 20%
+    const companyTax = (div + gain) * 0.20;
+    companyTotal = companyTax;
+    companyBreakdown = `
+      <div class="kv"><span>境外基金所得合計</span><span>${fmtMoney(overseas)}</span></div>
+      <div class="kv"><span>計入營所稅 20%</span><b>${fmtMoney(companyTax)}</b></div>`;
+  }
+
+  const winner = personalTotal < companyTotal ? "個人持有" : "投資公司持有";
+  const diff = Math.abs(personalTotal - companyTotal);
+
+  $("cf-result").innerHTML = `
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:10px">
+      <div style="padding:10px;background:#fff;border-radius:6px;border-left:4px solid var(--brand-deep)">
+        <div style="font-size:13px;color:var(--brand-deep);font-weight:700;margin-bottom:6px">個人持有</div>
+        ${personalBreakdown}
+        <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:16px">${fmtMoney(personalTotal)}</b></div>
+      </div>
+      <div style="padding:10px;background:#fff;border-radius:6px;border-left:4px solid #6a5acd">
+        <div style="font-size:13px;color:#6a5acd;font-weight:700;margin-bottom:6px">投資公司持有</div>
+        ${companyBreakdown}
+        <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:16px">${fmtMoney(companyTotal)}</b></div>
+      </div>
+    </div>
+    <div style="padding:12px 14px;background:linear-gradient(135deg,#E5F2F5,#fff);border-radius:8px;border-left:5px solid var(--brand-primary)">
+      <div style="font-size:15px;font-weight:700;color:var(--brand-deep);margin-bottom:4px">建議：${winner}較划算</div>
+      <div style="font-size:13px;color:var(--text-sub)">差額約 <b>${fmtMoney(diff)}</b>${loc==="dom" ? "（境內基金，個人贖回利得停徵為關鍵優勢）" : "（境外基金，個人有 670 萬免稅額；公司全額併入營所稅）"}</div>
+    </div>`;
+}
+
+// ========== 案例：房產 個人 vs 投資公司 ==========
+function renderCalcCaseRealty() {
+  return `
+    <div class="calc-form">
+      <h3>案例試算：房產持有 個人 vs 投資公司比較</h3>
+      <p style="font-size:13px;color:var(--text-sub);margin-bottom:14px">
+        比較同一筆出租房產由「個人」或「投資公司」持有，於持有期間（租賃所得）＋未來出售（房地合一）之稅負總和。
+      </p>
+      <h4 style="margin:8px 0 6px;font-size:14px;color:var(--brand-deep)">房產與租賃資料</h4>
+      <div class="calc-row"><label>年租金收入</label><input type="number" id="cr-rent" placeholder="例：1200000"></div>
+      <div class="calc-row"><label>取得成本（含土地房屋）</label><input type="number" id="cr-cost" placeholder="例：15000000"></div>
+      <div class="calc-row"><label>預估出售價</label><input type="number" id="cr-sale" placeholder="例：25000000"></div>
+      <div class="calc-row"><label>持有年數</label><input type="number" id="cr-hold" value="6"></div>
+      <div class="calc-row"><label>個人邊際稅率</label>
+        <select id="cr-rate">
+          <option value="0.05">5%</option>
+          <option value="0.20">20%</option>
+          <option value="0.30" selected>30%</option>
+          <option value="0.40">40%</option>
+        </select>
+      </div>
+      <button class="calc-btn" onclick="doCalcCaseRealty()">試算比較</button>
+      <div class="calc-result" id="cr-result"></div>
+    </div>
+    <details class="calc-notes">
+      <summary>試算邏輯與規則說明</summary>
+      <h4>個人持有</h4>
+      <ul>
+        <li>租賃所得：租金 × 57%（扣 43% 必要費用率）併入綜所稅，按邊際稅率課徵</li>
+        <li>持有：自住地價稅 2‰／房屋稅 1.2%；非自住稅率較高</li>
+        <li>出售：房地合一 §14-4，依持有期間 45/35/20/15%（自住可享 400 萬免稅＋10% 優惠）</li>
+      </ul>
+      <h4>投資公司持有（房地產業以外）</h4>
+      <ul>
+        <li>租賃所得：列入營業收入，扣除實際費用後依營所稅 20%</li>
+        <li>持有：地價稅一般稅率 10‰；房屋稅 3-3.6%（非自住、營業用較高）</li>
+        <li>出售：法人房地合一 §24-5；持有 ≤ 2 年 45%、2-5 年 35%、&gt; 5 年 20%（法人無自住優惠）</li>
+        <li>盈餘分配：若分配給個人股東須再課股利稅；不分配則加徵 5%</li>
+      </ul>
+      <p class="calc-note-src">資料來源：所得稅法 §14-4、§24-5；土地稅法；房屋稅條例；§66-9</p>
+    </details>`;
+}
+function doCalcCaseRealty() {
+  const rent = +$("cr-rent").value || 0;
+  const cost = +$("cr-cost").value || 0;
+  const sale = +$("cr-sale").value || 0;
+  const hold = +$("cr-hold").value || 0;
+  const rate = +$("cr-rate").value || 0.3;
+
+  const gain = Math.max(0, sale - cost);
+
+  // 個人持有
+  const personalRentTax = rent * 0.57 * rate; // 43% 必要費用率
+  // 房地合一個人稅率
+  let personalHLRate;
+  if (hold <= 2) personalHLRate = 0.45;
+  else if (hold <= 5) personalHLRate = 0.35;
+  else if (hold <= 10) personalHLRate = 0.20;
+  else personalHLRate = 0.15;
+  const personalSaleTax = gain * personalHLRate;
+  const personalTotal = personalRentTax + personalSaleTax;
+
+  // 投資公司持有
+  // 租賃所得：簡化扣 30% 費用 → 課營所稅 20%
+  const companyRentTax = rent * 0.70 * 0.20;
+  // 房地合一法人稅率
+  let companyHLRate;
+  if (hold <= 2) companyHLRate = 0.45;
+  else if (hold <= 5) companyHLRate = 0.35;
+  else companyHLRate = 0.20;
+  const companySaleTax = gain * companyHLRate;
+  // 出售後盈餘若未分配加徵 5%（簡化以 gain 為盈餘來源）
+  const companyRet = Math.max(0, gain - companySaleTax) * 0.05;
+  const companyTotal = companyRentTax + companySaleTax + companyRet;
+
+  const winner = personalTotal < companyTotal ? "個人持有" : "投資公司持有";
+  const diff = Math.abs(personalTotal - companyTotal);
+
+  $("cr-result").innerHTML = `
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:10px">
+      <div style="padding:10px;background:#fff;border-radius:6px;border-left:4px solid var(--brand-deep)">
+        <div style="font-size:13px;color:var(--brand-deep);font-weight:700;margin-bottom:6px">個人持有</div>
+        <div class="kv"><span>租賃所得稅（×57%×${(rate*100).toFixed(0)}%）</span><b>${fmtMoney(personalRentTax)}</b></div>
+        <div class="kv"><span>房地合一（${(personalHLRate*100).toFixed(0)}%）</span><b>${fmtMoney(personalSaleTax)}</b></div>
+        <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:16px">${fmtMoney(personalTotal)}</b></div>
+      </div>
+      <div style="padding:10px;background:#fff;border-radius:6px;border-left:4px solid #6a5acd">
+        <div style="font-size:13px;color:#6a5acd;font-weight:700;margin-bottom:6px">投資公司持有</div>
+        <div class="kv"><span>租金併營所稅 20%（×70%）</span><b>${fmtMoney(companyRentTax)}</b></div>
+        <div class="kv"><span>房地合一（${(companyHLRate*100).toFixed(0)}%）</span><b>${fmtMoney(companySaleTax)}</b></div>
+        <div class="kv"><span>未分配盈餘加徵 5%</span><b>${fmtMoney(companyRet)}</b></div>
+        <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:16px">${fmtMoney(companyTotal)}</b></div>
+      </div>
+    </div>
+    <div style="padding:12px 14px;background:linear-gradient(135deg,#E5F2F5,#fff);border-radius:8px;border-left:5px solid var(--brand-primary)">
+      <div style="font-size:15px;font-weight:700;color:var(--brand-deep);margin-bottom:4px">建議：${winner}較划算</div>
+      <div style="font-size:13px;color:var(--text-sub)">差額約 <b>${fmtMoney(diff)}</b>；持有 ≤ 5 年短期持有時，個人房地合一稅率與法人相同，但法人多了營所稅與未分配盈餘加徵。</div>
     </div>`;
 }
 
