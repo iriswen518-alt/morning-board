@@ -439,33 +439,32 @@ const THEME_INDEX_NAME = {
 function renderThemeFundsBlock(themeKey) {
   const tf = ((DATA.targets || {}).theme_funds || []).filter(f => f.theme === themeKey);
   if (!tf.length) return "";
-  const rows = tf.map(f => {
+  const cards = tf.map(f => {
     const name = f.bop_name_zh || f.name_zh || "";
     const nameHtml = f.source_url
-      ? `<a href="${escapeHtml(f.source_url)}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${escapeHtml(name)}</a>`
+      ? `<a href="${escapeHtml(f.source_url)}" target="_blank" rel="noopener">${escapeHtml(name)}</a>`
       : escapeHtml(name);
     const perf = f.perf || {};
-    const navDate = f.nav_date ? `<div class="cell-sub">${escapeHtml(shortDate(f.nav_date))}</div>` : "";
-    return `<tr>
-      <td>${nameHtml}</td>
-      <td>${fmtNum(f.nav)}${navDate}</td>
-      <td class="${pctClass(f.change_pct)}">${fmtPct(f.change_pct)}</td>
-      <td class="${pctClass(perf['1m'])}">${fmtPct(perf['1m'])}</td>
-      <td class="${pctClass(perf.ytd)}">${fmtPct(perf.ytd)}</td>
-      <td class="${pctClass(perf['1y'])}">${fmtPct(perf['1y'])}</td>
-    </tr>`;
+    return `
+    <div class="fund-card">
+      <h3>${nameHtml}</h3>
+      <div class="grid">
+        <div>
+          <label>淨值</label>
+          ${fmtNum(f.nav)} ${escapeHtml(f.currency || "")}
+          ${f.nav_date ? `<div class="cell-sub">${escapeHtml(shortDate(f.nav_date))}</div>` : ""}
+        </div>
+        <div><label>日</label><span class="${pctClass(f.change_pct)}">${fmtPct(f.change_pct)}</span></div>
+        <div><label>近1月</label><span class="${pctClass(perf['1m'])}">${fmtPct(perf['1m'])}</span></div>
+        <div><label>今年</label><span class="${pctClass(perf.ytd)}">${fmtPct(perf.ytd)}</span></div>
+        <div><label>近1年</label><span class="${pctClass(perf['1y'])}">${fmtPct(perf['1y'])}</span></div>
+      </div>
+    </div>`;
   }).join("");
   return `
     <div class="t-section">
       <div class="t-section-head"><span class="t-section-icon">💰</span><span>相關基金績效</span></div>
-      <div class="t-section-body">
-        <table class="indices" style="margin-top:6px">
-          <thead><tr>
-            <th>基金</th><th>淨值</th><th>日</th><th>近1月</th><th>今年</th><th>近1年</th>
-          </tr></thead>
-          <tbody>${rows}</tbody>
-        </table>
-      </div>
+      <div class="t-section-body">${cards}</div>
     </div>`;
 }
 
