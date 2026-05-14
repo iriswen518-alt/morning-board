@@ -933,34 +933,34 @@ function renderDcaSheet() {
       <h3>${nameHtml}</h3>
       ${chips ? `<div style="margin-bottom:6px">${chips}</div>` : ""}
       ${f.tagline ? `<p class="tagline">${escapeHtml(f.tagline)}</p>` : ""}
-      <table class="indices" style="margin-top:8px; font-size:13px">
-        <thead><tr>
-          <th>申購方式</th>
-          <th>近1月</th><th>近3月</th><th>近6月</th>
-          <th>近1年</th><th>近3年</th>
-          <th class="date-col">基準日</th>
-        </tr></thead>
-        <tbody>
-          <tr>
-            <td><strong>單筆申購</strong></td>
-            <td>${cell(s['1m'])}</td>
-            <td>${cell(s['3m'])}</td>
-            <td>${cell(s['6m'])}</td>
-            <td>${cell(s['1y'])}</td>
-            <td>${cell(s['3y'])}</td>
-            <td class="date-col">${escapeHtml(f.perf_date || "—")}</td>
-          </tr>
-          <tr>
-            <td><strong>定期定額</strong></td>
-            <td>${cell(d['1m'])}</td>
-            <td>${cell(d['3m'])}</td>
-            <td>${cell(d['6m'])}</td>
-            <td>${cell(d['1y'])}</td>
-            <td>${cell(d['3y'])}</td>
-            <td class="date-col">${escapeHtml(f.perf_date || "—")}</td>
-          </tr>
-        </tbody>
-      </table>
+      <div style="font-size:11px; color:var(--text-mute); margin-top:8px">基準日 ${escapeHtml(f.perf_date || "—")}</div>
+      <div style="overflow-x:auto; -webkit-overflow-scrolling:touch; margin-top:4px">
+        <table class="indices" style="font-size:13px; min-width:420px">
+          <thead><tr>
+            <th>申購方式</th>
+            <th>近1月</th><th>近3月</th><th>近6月</th>
+            <th>近1年</th><th>近3年</th>
+          </tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>單筆申購</strong></td>
+              <td>${cell(s['1m'])}</td>
+              <td>${cell(s['3m'])}</td>
+              <td>${cell(s['6m'])}</td>
+              <td>${cell(s['1y'])}</td>
+              <td>${cell(s['3y'])}</td>
+            </tr>
+            <tr>
+              <td><strong>定期定額</strong></td>
+              <td>${cell(d['1m'])}</td>
+              <td>${cell(d['3m'])}</td>
+              <td>${cell(d['6m'])}</td>
+              <td>${cell(d['1y'])}</td>
+              <td>${cell(d['3y'])}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       ${perfUrl ? `<a class="source" href="${perfUrl}" target="_blank" rel="noopener" style="display:inline-block;margin-top:8px;font-size:12px">資料來源：板信績效頁 ↗</a>` : ""}
     </div>
   `;
