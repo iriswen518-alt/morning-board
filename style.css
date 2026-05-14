@@ -480,13 +480,16 @@ table.indices .date-col {
   }
 
   .main-nav {
-    padding: 0 40px;
-    gap: 40px;
+    padding: 0 24px;
+    gap: 4px;
     justify-content: center;
+    flex-wrap: wrap;
+    overflow-x: visible;
   }
   .main-tab {
-    padding: 20px 4px;
-    font-size: 16px;
+    flex: 0 1 auto;
+    padding: 16px 10px;
+    font-size: 15px;
   }
 
   #content {

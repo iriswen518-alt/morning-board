@@ -1207,6 +1207,7 @@ const CALC_TABS = [
   {key: "estate",    name: "遺產稅"},
   {key: "house",     name: "房地合一稅"},
   {key: "land",      name: "土地增值稅"},
+  {key: "case_house",name: "案例：房產繼承 vs 贈與"},
 ];
 
 function fmtMoney(n) {
@@ -1308,8 +1309,151 @@ function renderCalcSheet() {
       <div class="t-pane" id="c-pane-estate">${renderCalcEstate()}</div>
       <div class="t-pane" id="c-pane-house">${renderCalcHouse()}</div>
       <div class="t-pane" id="c-pane-land">${renderCalcLand()}</div>
+      <div class="t-pane" id="c-pane-case_house">${renderCalcCaseHouse()}</div>
     </div>
   `;
+}
+
+function renderCalcCaseHouse() {
+  return `
+    <div class="calc-form">
+      <h3>案例試算：房產繼承 vs 贈與比較</h3>
+      <p style="font-size:13px; color:var(--text-sub); margin-bottom:14px">
+        同一筆房地，比較「繼承」與「贈與」兩種傳承方式之稅負總成本（含本次傳承稅 ＋ 未來出售之房地合一稅）。
+      </p>
+      <h4 style="margin:8px 0 6px;font-size:14px;color:var(--brand-deep)">房產基本資料</h4>
+      <div class="calc-row"><label>土地公告現值（取得時）</label><input type="number" id="cx-land-cur" placeholder="例：12000000"></div>
+      <div class="calc-row"><label>房屋評定標準價格（取得時）</label><input type="number" id="cx-house-cur" placeholder="例：3000000"></div>
+      <div class="calc-row"><label>土地原規定地價／前次移轉現值</label><input type="number" id="cx-land-ori" placeholder="例：5000000"></div>
+      <div class="calc-row"><label>市價（預估出售金額）</label><input type="number" id="cx-market" placeholder="例：30000000"></div>
+      <h4 style="margin:14px 0 6px;font-size:14px;color:var(--brand-deep)">家庭情況（影響遺產稅扣除額）</h4>
+      <div class="calc-row"><label>被繼承人遺產總額（含本房產）</label><input type="number" id="cx-estate-total" placeholder="例：40000000"></div>
+      <div class="calc-row"><label>有配偶？（有則扣 553 萬）</label>
+        <select id="cx-spouse"><option value="0">無</option><option value="1" selected>有</option></select>
+      </div>
+      <div class="calc-row"><label>直系卑親屬人數（每人扣 56 萬）</label><input type="number" id="cx-children" value="2"></div>
+      <div class="calc-row"><label>其他扣除額（喪葬 138 萬已預設）</label><input type="number" id="cx-other-deduct" value="1380000"></div>
+      <h4 style="margin:14px 0 6px;font-size:14px;color:var(--brand-deep)">贈與情境</h4>
+      <div class="calc-row"><label>受贈人為配偶？（土增稅不課徵）</label>
+        <select id="cx-gift-spouse"><option value="0" selected>否（直系卑親屬）</option><option value="1">是</option></select>
+      </div>
+      <div class="calc-row"><label>當年度其他贈與（影響 244 萬免稅）</label><input type="number" id="cx-other-gift" value="0"></div>
+      <h4 style="margin:14px 0 6px;font-size:14px;color:var(--brand-deep)">日後出售情境</h4>
+      <div class="calc-row"><label>繼承後預計持有年數再出售</label><input type="number" id="cx-hold-inherit" value="11"></div>
+      <div class="calc-row"><label>贈與後預計持有年數再出售</label><input type="number" id="cx-hold-gift" value="3"></div>
+      <div class="calc-row"><label>是否符合自住 6 年條件再出售</label>
+        <select id="cx-selfuse"><option value="0">否</option><option value="1">是</option></select>
+      </div>
+      <button class="calc-btn" onclick="doCalcCaseHouse()">試算比較</button>
+      <div class="calc-result" id="cx-result"></div>
+    </div>
+    <details class="calc-notes">
+      <summary>試算邏輯與規則說明</summary>
+      <h4>繼承路徑（推薦於高齡長輩、財產量大）</h4>
+      <ul>
+        <li>遺產稅：以遺產總額計算，免稅 1,333 萬＋扣除額（配偶 553 / 子女 56/人 / 喪葬 138 等）</li>
+        <li>土地增值稅：<b>免徵</b>（§39）</li>
+        <li>房屋契稅：免徵</li>
+        <li>取得成本：以繼承時公告現值 + 房屋評定標準價</li>
+        <li>未來出售房地合一：持有期間含被繼承人持有期間，多落在 ≥10 年 15% 級距</li>
+      </ul>
+      <h4>贈與路徑（推薦於年輕、財產量低、分年規劃）</h4>
+      <ul>
+        <li>贈與稅：贈與淨額（公告現值 + 評定價 − 244 萬免稅）× 10/15/20%</li>
+        <li>土地增值稅：須繳納（除配偶間贈與不課徵）；受贈人為直系卑親屬須繳一般稅率</li>
+        <li>房屋契稅：6%（房屋評定標準價 × 6%）</li>
+        <li>取得成本：以贈與時公告現值 + 房屋評定標準價</li>
+        <li>未來出售房地合一：持有期間從受贈日重新起算，短期出售稅率高（≤2 年 45%、2–5 年 35%）</li>
+      </ul>
+      <h4>建議判斷原則</h4>
+      <ul>
+        <li>遺產 &lt; 1,333 萬免稅額：繼承幾乎零成本，明顯優於贈與</li>
+        <li>遺產 1,471 萬 ~ 2,000 萬：繼承 10% 稅率，仍多優於贈與（贈與含土增＋契稅）</li>
+        <li>遺產 ≥ 5,621 萬：邊際稅率 15-20%，可考慮分年贈與（每年 244 萬免稅額）攤平</li>
+        <li>急需移轉控制權／怕保留遺產失敗：贈與雖貴但確定</li>
+        <li>受贈後短期出售（&lt; 5 年）：贈與路徑房地合一 35-45%，總成本反而高，建議繼承</li>
+        <li>受贈為配偶：土增稅不課徵、契稅減半，但仍須贈與稅；可作為配偶間財產移轉</li>
+      </ul>
+      <p class="calc-note-src">資料來源：遺贈稅法 §16-§22、§39；所得稅法 §14-4；土地稅法 §28-§39-1；契稅條例</p>
+    </details>`;
+}
+
+function doCalcCaseHouse() {
+  const landCur = +$("cx-land-cur").value || 0;       // 土地公告現值（取得時）
+  const houseCur = +$("cx-house-cur").value || 0;     // 房屋評定價（取得時）
+  const landOri = +$("cx-land-ori").value || 0;       // 土地原規定地價
+  const market = +$("cx-market").value || 0;          // 市價
+  const estateTotal = +$("cx-estate-total").value || 0;
+  const hasSpouse = +$("cx-spouse").value === 1;
+  const children = +$("cx-children").value || 0;
+  const otherDeduct = +$("cx-other-deduct").value || 0;
+  const giftSpouse = +$("cx-gift-spouse").value === 1;
+  const otherGift = +$("cx-other-gift").value || 0;
+  const holdInherit = +$("cx-hold-inherit").value || 0;
+  const holdGift = +$("cx-hold-gift").value || 0;
+  const selfUse = +$("cx-selfuse").value === 1;
+
+  // 房地價值（公告現值總和，課稅基準）
+  const declaredValue = landCur + houseCur;
+
+  // ========== 繼承路徑 ==========
+  const inheritDeductions = (hasSpouse ? 5530000 : 0) + children * 560000 + otherDeduct;
+  const estateRes = calcEstateTax(estateTotal, inheritDeductions);
+  // 房產佔遺產比例 → 攤分到本房產的遺產稅
+  const houseShareInherit = estateTotal > 0 ? declaredValue / estateTotal : 0;
+  const inheritEstateTax = estateRes.tax * houseShareInherit;
+  // 繼承免徵土增稅、契稅
+  // 未來出售房地合一：取得成本 = 公告現值 + 房屋評定價（繼承時）
+  const inheritGain = Math.max(0, market - declaredValue);
+  const inheritHL = calcHouseLandTax(inheritGain, holdInherit, selfUse);
+  const inheritTotal = inheritEstateTax + inheritHL.tax;
+
+  // ========== 贈與路徑 ==========
+  const giftAmount = declaredValue + otherGift;
+  const giftRes = calcGiftTax(giftAmount);
+  // 攤分到本房產
+  const houseShareGift = giftAmount > 0 ? declaredValue / giftAmount : 1;
+  const giftTaxOnHouse = giftRes.tax * houseShareGift;
+  // 土地增值稅（贈與須課，配偶間不課徵）
+  let giftLVT = 0;
+  if (!giftSpouse) {
+    const incLand = landCur - landOri;
+    const lvtRes = calcLandValueTax(incLand, landOri, false, 0);
+    giftLVT = lvtRes.tax;
+  }
+  // 房屋契稅 6%
+  const giftDeed = houseCur * 0.06;
+  // 未來出售房地合一：取得成本 = 公告現值 + 房屋評定價（贈與時）
+  const giftGain = Math.max(0, market - declaredValue);
+  const giftHL = calcHouseLandTax(giftGain, holdGift, selfUse);
+  const giftTotal = giftTaxOnHouse + giftLVT + giftDeed + giftHL.tax;
+
+  const winner = inheritTotal < giftTotal ? "繼承" : "贈與";
+  const diff = Math.abs(inheritTotal - giftTotal);
+
+  $("cx-result").innerHTML = `
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:10px">
+      <div style="padding:10px;background:#fff;border-radius:6px;border-left:4px solid var(--brand-deep)">
+        <div style="font-size:13px;color:var(--brand-deep);font-weight:700;margin-bottom:6px">🏛️ 繼承路徑</div>
+        <div class="kv"><span>遺產稅（房產佔比）</span><b>${fmtMoney(inheritEstateTax)}</b></div>
+        <div class="kv"><span>土地增值稅</span><b style="color:var(--down)">免徵</b></div>
+        <div class="kv"><span>房屋契稅</span><b style="color:var(--down)">免徵</b></div>
+        <div class="kv"><span>未來出售房地合一（${inheritHL.rate}）</span><b>${fmtMoney(inheritHL.tax)}</b></div>
+        <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:16px">${fmtMoney(inheritTotal)}</b></div>
+      </div>
+      <div style="padding:10px;background:#fff;border-radius:6px;border-left:4px solid #e08a3c">
+        <div style="font-size:13px;color:#e08a3c;font-weight:700;margin-bottom:6px">🎁 贈與路徑</div>
+        <div class="kv"><span>贈與稅（房產佔比）</span><b>${fmtMoney(giftTaxOnHouse)}</b></div>
+        <div class="kv"><span>土地增值稅${giftSpouse?'（配偶不課徵）':''}</span><b>${fmtMoney(giftLVT)}</b></div>
+        <div class="kv"><span>房屋契稅 6%</span><b>${fmtMoney(giftDeed)}</b></div>
+        <div class="kv"><span>未來出售房地合一（${giftHL.rate}）</span><b>${fmtMoney(giftHL.tax)}</b></div>
+        <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:16px">${fmtMoney(giftTotal)}</b></div>
+      </div>
+    </div>
+    <div style="padding:12px 14px;background:linear-gradient(135deg,#E5F2F5,#fff);border-radius:8px;border-left:5px solid var(--brand-primary)">
+      <div style="font-size:15px;font-weight:700;color:var(--brand-deep);margin-bottom:4px">建議：${winner}路徑較划算</div>
+      <div style="font-size:13px;color:var(--text-sub)">差額約 <b>${fmtMoney(diff)}</b>${winner === "繼承" ? "；惟須等待被繼承人離世，無立即移轉效果。" : "；可立即移轉房產控制權。"}</div>
+    </div>`;
 }
 
 function renderCalcIncome() {
