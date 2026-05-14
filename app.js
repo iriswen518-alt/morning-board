@@ -158,7 +158,7 @@ let CURRENT_TAB = "market";
 async function init() {
   // 每個來源各自有 fallback：一個壞不拖垮全頁
   const safe = (name, fallback) => load(name).catch(() => fallback);
-  const [meta, market, news, tax, funds, stocks, insurance, obonds, targets, allocation, dca] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, insurance, obonds, targets, allocation, dca, wealth] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
@@ -170,8 +170,9 @@ async function init() {
     safe("targets", { targets: [], summary: {}, entry_sequence: [] }),
     safe("allocation", { profiles: [], references: [] }),
     safe("dca", { funds: [] }),
+    safe("wealth_transfer", { topics: [] }),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, insurance, obonds, targets, allocation, dca };
+  DATA = { meta, market, news, tax, funds, stocks, insurance, obonds, targets, allocation, dca, wealth };
   if (!meta.built_at) {
     $("updated").textContent = `載入部分失敗（顯示快取資料）`;
   } else {
@@ -214,10 +215,12 @@ function switchTab(name) {
   else if (name === "dca") body.innerHTML = renderDcaSheet();
   else if (name === "targets") body.innerHTML = renderTargetsSheet();
   else if (name === "allocation") body.innerHTML = renderAllocationSheet();
+  else if (name === "wealth") body.innerHTML = renderWealthSheet();
   if (name === "news") wireNewsTabs();
   if (name === "market") wireMarketTabs();
   if (name === "targets") wireTargetsTabs();
   if (name === "allocation") wireAllocationTabs();
+  if (name === "wealth") wireWealthTabs();
   window.scrollTo({ top: 0, behavior: "instant" in window ? "instant" : "auto" });
 }
 
@@ -335,7 +338,7 @@ async function refreshData() {
 
   // 資料刷新：fetch 7 個 JSON，每個各自有 fallback
   const safe = (name, fallback) => load(name).catch(() => DATA[name === "insurances" ? "insurance" : name] || fallback);
-  const [meta, market, news, tax, funds, stocks, insurance, obonds, targets, allocation, dca] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, insurance, obonds, targets, allocation, dca, wealth] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
@@ -347,8 +350,9 @@ async function refreshData() {
     safe("targets", { targets: [], summary: {}, entry_sequence: [] }),
     safe("allocation", { profiles: [], references: [] }),
     safe("dca", { funds: [] }),
+    safe("wealth_transfer", { topics: [] }),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, insurance, obonds, targets, allocation, dca };
+  DATA = { meta, market, news, tax, funds, stocks, insurance, obonds, targets, allocation, dca, wealth };
   if (DATA.meta && DATA.meta.built_at) {
     $("updated").textContent =
       `上次更新：${DATA.meta.built_at.replace("T", " ").slice(0, 16)}`;
@@ -914,6 +918,89 @@ function fundPerfUrl(f) {
   if (!f.bop_code) return null;
   const base = f.fund_type === "A" ? "wr/wr03" : "wb/wb03";
   return `https://bopfund.moneydj.com/w/${base}.djhtm?a=${encodeURIComponent(f.bop_code)}`;
+}
+
+function renderWealthSheet() {
+  const wealth = DATA.wealth || {};
+  const topics = wealth.topics || [];
+  if (!topics.length) {
+    return "<p style='color:var(--text-mute); padding:20px 0'>尚未提供財富傳承資料</p>";
+  }
+
+  // 加上一個「稅務新聞」虛擬 tab
+  const newsKey = "news";
+  const allTabs = [...topics.map(t => ({key: t.key, name: t.name, icon: t.icon})), {key: newsKey, name: "稅務新聞", icon: "📰"}];
+
+  const tabBtns = allTabs.map((t, i) => `
+    <button class="t-tab ${i === 0 ? "active" : ""}" data-wtab="${escapeHtml(t.key)}">
+      <span>${t.icon || ""} ${escapeHtml(t.name)}</span>
+    </button>
+  `).join("");
+
+  // 8 個主題 pane
+  const topicPanes = topics.map((t, i) => `
+    <div class="t-pane ${i === 0 ? "active" : ""}" id="w-pane-${escapeHtml(t.key)}">
+      <div class="t-head">
+        <div>
+          <div class="t-name">${t.icon || ""} ${escapeHtml(t.name)}</div>
+          <div class="t-tagline">${escapeHtml(t.summary || "")}</div>
+        </div>
+      </div>
+      ${(t.laws || []).map(law => `
+        <div class="w-law">
+          <div class="w-law-head">
+            <span class="w-law-code">${escapeHtml(law.code || "")}</span>
+            <span class="w-law-title">${escapeHtml(law.title || "")}</span>
+          </div>
+          <div class="w-law-body">${escapeHtml(law.content || "")}</div>
+          ${law.source ? `<div class="w-law-source">資料來源：${escapeHtml(law.source)}</div>` : ""}
+        </div>
+      `).join("")}
+    </div>
+  `).join("");
+
+  // 稅務新聞 pane（從 DATA.tax 取）
+  const taxItems = (DATA.tax && DATA.tax.items) || [];
+  const newsPane = `
+    <div class="t-pane" id="w-pane-${newsKey}">
+      <div class="t-head">
+        <div>
+          <div class="t-name">📰 稅務新聞</div>
+          <div class="t-tagline">每日自動彙整財富傳承相關稅務新聞（資料日 ${escapeHtml(DATA.tax?.tax_date || "—")}）</div>
+        </div>
+      </div>
+      ${taxItems.length ? taxItems.map(it => `
+        <div class="w-law">
+          <div class="w-law-head">
+            <span class="w-law-title">${it.url ? `<a href="${it.url}" target="_blank" rel="noopener">${escapeHtml(it.title || "")}</a>` : escapeHtml(it.title || "")}</span>
+          </div>
+          ${it.summary ? `<div class="w-law-body">${escapeHtml(it.summary)}</div>` : ""}
+          ${it.source ? `<div class="w-law-source">${escapeHtml(it.source)}</div>` : ""}
+        </div>
+      `).join("") : "<p style='color:var(--text-mute);padding:12px'>今日無稅務新聞</p>"}
+    </div>
+  `;
+
+  const noteHtml = wealth.note ? `<p class="a-note">${escapeHtml(wealth.note)}</p>` : "";
+
+  return `
+    ${noteHtml}
+    <div class="t-tab-row">${tabBtns}</div>
+    <div class="t-panes">${topicPanes}${newsPane}</div>
+  `;
+}
+
+function wireWealthTabs() {
+  const buttons = document.querySelectorAll(".t-tab[data-wtab]");
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const key = btn.dataset.wtab;
+      buttons.forEach(b => b.classList.toggle("active", b.dataset.wtab === key));
+      document.querySelectorAll(".t-pane[id^='w-pane-']").forEach(p => {
+        p.classList.toggle("active", p.id === `w-pane-${key}`);
+      });
+    });
+  });
 }
 
 function renderDcaSheet() {

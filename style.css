@@ -869,3 +869,54 @@ table.indices .date-col {
   .a-row { grid-template-columns: 1fr; gap: 6px; padding: 12px; }
   .a-stat-row { gap: 12px; font-size: 13px; }
 }
+
+/* ===== Wealth Transfer (財富傳承) ===== */
+.w-law {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  box-shadow: var(--shadow);
+}
+.w-law-head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+.w-law-code {
+  display: inline-block;
+  background: var(--brand-light, #CCE8ED);
+  color: var(--brand-deep);
+  font-weight: 700;
+  font-size: 13px;
+  padding: 3px 10px;
+  border-radius: 4px;
+}
+.w-law-title {
+  font-weight: 700;
+  color: var(--text);
+  font-size: 15px;
+}
+.w-law-title a {
+  color: var(--brand-primary);
+  text-decoration: none;
+}
+.w-law-title a:hover { color: var(--brand-deep); text-decoration: underline; }
+.w-law-body {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--text);
+  background: var(--bg-alt);
+  padding: 10px 14px;
+  border-radius: 6px;
+  border-left: 3px solid var(--brand-secondary);
+  white-space: pre-wrap;
+}
+.w-law-source {
+  font-size: 12px;
+  color: var(--text-mute);
+  margin-top: 6px;
+}
