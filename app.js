@@ -457,7 +457,6 @@ function renderThemeFundsBlock(themeKey) {
         <div><label>日</label><span class="${pctClass(f.change_pct)}">${fmtPct(f.change_pct)}</span></div>
         <div><label>近1月</label><span class="${pctClass(perf['1m'])}">${fmtPct(perf['1m'])}</span></div>
         <div><label>今年</label><span class="${pctClass(perf.ytd)}">${fmtPct(perf.ytd)}</span></div>
-        <div><label>近1年</label><span class="${pctClass(perf['1y'])}">${fmtPct(perf['1y'])}</span></div>
       </div>
     </div>`;
   }).join("");

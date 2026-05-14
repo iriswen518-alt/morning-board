@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-14T17:31:12+08:00",
+  "generated_at": "2026-05-14T17:33:29+08:00",
   "source": "finnhub (US price+daily) + Yahoo (US MTD/YTD) + TWSE (TW)",
   "us_stocks": [
     {
@@ -36,7 +36,7 @@
       "ytd_pct": -16.21,
       "market_date": "2026-05-13",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MSFT.US",
-      "error": null
+      "error": "stale"
     },
     {
       "symbol": "GOOGL",
@@ -72,7 +72,7 @@
       "ytd_pct": -6.58,
       "market_date": "2026-05-13",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=META.US",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "TSLA",
