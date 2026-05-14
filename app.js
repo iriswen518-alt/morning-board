@@ -1300,7 +1300,6 @@ function renderCalcSheet() {
   `).join("");
 
   return `
-    <p class="a-note">本試算依 114 年度（2026 年申報）級距，僅供參考。實際以稅捐稽徵機關核定為準。</p>
     <div class="tabs tabs-wrap">${tabBtns}</div>
     <div class="t-panes">
       <div class="t-pane active" id="c-pane-income">${renderCalcIncome()}</div>
@@ -1311,6 +1310,7 @@ function renderCalcSheet() {
       <div class="t-pane" id="c-pane-land">${renderCalcLand()}</div>
       <div class="t-pane" id="c-pane-case_house">${renderCalcCaseHouse()}</div>
     </div>
+    <p class="a-note" style="margin-top:24px">本試算依 114 年度（2026 年申報）級距，僅供參考。實際以稅捐稽徵機關核定為準。</p>
   `;
 }
 

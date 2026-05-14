@@ -179,7 +179,7 @@ body {
   justify-content: space-between;
   gap: 0;
   padding: 0 16px;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   background: #fff;
   border-bottom: 4px solid var(--brand-secondary);
@@ -480,16 +480,23 @@ table.indices .date-col {
   }
 
   .main-nav {
-    padding: 0 24px;
-    gap: 4px;
-    justify-content: center;
-    flex-wrap: wrap;
+    padding: 0 12px;
+    gap: 0;
+    justify-content: space-between;
+    flex-wrap: nowrap;
     overflow-x: visible;
   }
   .main-tab {
-    flex: 0 1 auto;
-    padding: 16px 10px;
-    font-size: 15px;
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 16px 4px;
+    gap: 4px;
+    font-size: 14px;
+  }
+  .main-tab .tab-icon {
+    width: 16px;
+    height: 16px;
+    flex: 0 0 16px;
   }
 
   #content {
