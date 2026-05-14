@@ -158,7 +158,7 @@ let CURRENT_TAB = "market";
 async function init() {
   // 每個來源各自有 fallback：一個壞不拖垮全頁
   const safe = (name, fallback) => load(name).catch(() => fallback);
-  const [meta, market, news, tax, funds, stocks, insurance, obonds, targets, allocation] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, insurance, obonds, targets, allocation, dca] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
@@ -169,8 +169,9 @@ async function init() {
     safe("overseas_bonds", { bonds: [] }),
     safe("targets", { targets: [], summary: {}, entry_sequence: [] }),
     safe("allocation", { profiles: [], references: [] }),
+    safe("dca", { funds: [] }),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, insurance, obonds, targets, allocation };
+  DATA = { meta, market, news, tax, funds, stocks, insurance, obonds, targets, allocation, dca };
   if (!meta.built_at) {
     $("updated").textContent = `載入部分失敗（顯示快取資料）`;
   } else {
@@ -334,7 +335,7 @@ async function refreshData() {
 
   // 資料刷新：fetch 7 個 JSON，每個各自有 fallback
   const safe = (name, fallback) => load(name).catch(() => DATA[name === "insurances" ? "insurance" : name] || fallback);
-  const [meta, market, news, tax, funds, stocks, insurance, obonds, targets, allocation] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, insurance, obonds, targets, allocation, dca] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
@@ -345,8 +346,9 @@ async function refreshData() {
     safe("overseas_bonds", { bonds: [] }),
     safe("targets", { targets: [], summary: {}, entry_sequence: [] }),
     safe("allocation", { profiles: [], references: [] }),
+    safe("dca", { funds: [] }),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, insurance, obonds, targets, allocation };
+  DATA = { meta, market, news, tax, funds, stocks, insurance, obonds, targets, allocation, dca };
   if (DATA.meta && DATA.meta.built_at) {
     $("updated").textContent =
       `上次更新：${DATA.meta.built_at.replace("T", " ").slice(0, 16)}`;
@@ -915,53 +917,28 @@ function fundPerfUrl(f) {
 }
 
 function renderDcaSheet() {
-  const funds = (DATA.funds.funds || []).filter(f => f.perf_dca);
-  if (!funds.length) {
-    return "<p style='color:var(--text-mute); padding:20px 0'>尚未取得定期定額績效資料</p>";
+  const dca = DATA.dca || {};
+  const list = dca.funds || [];
+  if (!list.length) {
+    return "<p style='color:var(--text-mute); padding:20px 0'>尚未提供定期定額清單</p>";
   }
-  return funds.map(f => {
+  const noteHtml = dca.note ? `<p class="a-note">${escapeHtml(dca.note)}</p>` : "";
+  return noteHtml + list.map(f => {
     const nameHtml = f.source_url
-      ? `<a href="${f.source_url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${escapeHtml(f.name_zh)}</a>`
+      ? `<a href="${f.source_url}" target="_blank" rel="noopener">${escapeHtml(f.name_zh)}</a>`
       : escapeHtml(f.name_zh);
-    const chips = currencyChip(f.currency);
-    const s = f.perf_single || {};
-    const d = f.perf_dca || {};
-    const cell = (v) => `<span class="${pctClass(v)}">${fmtPct(v)}</span>`;
-    const perfUrl = fundPerfUrl(f);
+    const codeChip = f.code && f.code !== "—"
+      ? `<span class="chip chip-default" style="margin-right:4px">${escapeHtml(f.code)}</span>`
+      : "";
+    const catChip = f.category
+      ? `<span class="chip chip-default" style="background:#E5F2F5;color:var(--brand-deep);margin-left:4px">${escapeHtml(f.category)}</span>`
+      : "";
     return `
     <div class="fund-card">
       <h3>${nameHtml}</h3>
-      ${chips ? `<div style="margin-bottom:6px">${chips}</div>` : ""}
-      ${f.tagline ? `<p class="tagline">${escapeHtml(f.tagline)}</p>` : ""}
-      <div style="font-size:11px; color:var(--text-mute); margin-top:8px">基準日 ${escapeHtml(f.perf_date || "—")}</div>
-      <div style="overflow-x:auto; -webkit-overflow-scrolling:touch; margin-top:4px">
-        <table class="indices" style="font-size:13px; min-width:360px">
-          <thead><tr>
-            <th>申購方式</th>
-            <th>近3月</th><th>近6月</th>
-            <th>近1年</th><th>近3年</th>
-          </tr></thead>
-          <tbody>
-            <tr>
-              <td><strong>單筆申購</strong></td>
-              <td>${cell(s['3m'])}</td>
-              <td>${cell(s['6m'])}</td>
-              <td>${cell(s['1y'])}</td>
-              <td>${cell(s['3y'])}</td>
-            </tr>
-            <tr>
-              <td><strong>定期定額</strong></td>
-              <td>${cell(d['3m'])}</td>
-              <td>${cell(d['6m'])}</td>
-              <td>${cell(d['1y'])}</td>
-              <td>${cell(d['3y'])}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      ${perfUrl ? `<a class="source" href="${perfUrl}" target="_blank" rel="noopener" style="display:inline-block;margin-top:8px;font-size:12px">資料來源：板信績效頁 ↗</a>` : ""}
-    </div>
-  `;
+      <div style="margin-bottom:6px">${codeChip}${currencyChip(f.currency)}${catChip}</div>
+      <p class="tagline">${escapeHtml(f.tagline || "")}</p>
+    </div>`;
   }).join("");
 }
 
