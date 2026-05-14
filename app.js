@@ -154,6 +154,117 @@ function shortDate(iso) {
 
 let DATA = {};
 let CURRENT_TAB = "market";
+let SEARCH_INDEX = [];
+
+function buildSearchIndex() {
+  const idx = [];
+  // 主題市場 — 主題本身
+  for (const t of (DATA.targets?.targets || [])) {
+    const txt = [t.market_status, t.opportunity, t.pitch, t.view, t.reason, t.action, t.add_trigger, t.trim_trigger]
+      .map(v => Array.isArray(v) ? v.join(" ") : (v || "")).join(" ");
+    idx.push({ tab: "targets", tabLabel: "主題市場", title: t.name || t.key, text: txt });
+  }
+  // 主題相關基金
+  for (const f of (DATA.targets?.theme_funds || [])) {
+    idx.push({ tab: "targets", tabLabel: `主題市場 · ${f.theme || ""}`, title: f.bop_name_zh || f.name_zh || "", text: f.tagline || "" });
+  }
+  // 財富傳承（含 fund_tax 等所有法規條目；過濾凱基）
+  for (const t of (DATA.wealth?.topics || [])) {
+    for (const law of t.laws || []) {
+      if ((law.title && law.title.includes("凱基")) || (law.source && law.source.includes("凱基"))) continue;
+      idx.push({ tab: "wealth", tabLabel: `財富傳承 · ${t.name}`, title: `${law.code || ""} ${law.title || ""}`.trim(), text: law.content || "" });
+    }
+  }
+  // 精選基金
+  for (const f of (DATA.funds?.funds || [])) {
+    idx.push({ tab: "funds", tabLabel: "精選基金", title: f.name_zh || "", text: f.tagline || "" });
+  }
+  // 定期定額
+  for (const f of (DATA.dca?.funds || [])) {
+    idx.push({ tab: "dca", tabLabel: "定期定額", title: f.name_zh || "", text: f.tagline || "" });
+  }
+  // 海外債
+  for (const b of (DATA.obonds?.bonds || [])) {
+    idx.push({ tab: "obonds", tabLabel: "精選海外債", title: b.name_zh || b.name || b.isin || "", text: [b.tagline, b.summary, b.issuer].filter(Boolean).join(" ") });
+  }
+  // 保險
+  for (const ins of (DATA.insurance?.insurances || [])) {
+    idx.push({ tab: "insurance", tabLabel: "精選保險", title: ins.name || ins.title || "", text: [ins.tagline, ins.summary, ins.company].filter(Boolean).join(" ") });
+  }
+  // 新聞 TLDR + 各分區
+  for (const item of (DATA.news?.tldr || [])) {
+    const title = typeof item === "string" ? item : (item.title || "");
+    const text = typeof item === "string" ? "" : (item.text || item.summary || "");
+    idx.push({ tab: "news", tabLabel: "重要新聞 · TLDR", title, text });
+  }
+  for (const sec of (DATA.news?.sections || [])) {
+    for (const item of sec.items || []) {
+      idx.push({ tab: "news", tabLabel: `重要新聞 · ${sec.name || ""}`, title: item.title || "", text: item.summary || item.text || "" });
+    }
+  }
+  // 稅務新聞
+  for (const item of (DATA.tax?.items || [])) {
+    idx.push({ tab: "wealth", tabLabel: "財富傳承 · 稅務新聞", title: item.title || "", text: item.summary || item.text || "" });
+  }
+  return idx;
+}
+
+function runSearch(q) {
+  q = (q || "").trim().toLowerCase();
+  if (!q) return [];
+  const out = [];
+  for (const item of SEARCH_INDEX) {
+    const hay = ((item.title || "") + " " + (item.text || "")).toLowerCase();
+    const pos = hay.indexOf(q);
+    if (pos < 0) continue;
+    const raw = (item.title || "") + " · " + (item.text || "");
+    const before = Math.max(0, pos - 20);
+    const after = Math.min(raw.length, pos + q.length + 40);
+    const snippet = (before > 0 ? "…" : "") + raw.slice(before, after) + (after < raw.length ? "…" : "");
+    out.push({ ...item, snippet });
+    if (out.length >= 30) break;
+  }
+  return out;
+}
+
+function wireSearch() {
+  const input = $("search-input");
+  const panel = $("search-results");
+  if (!input || !panel) return;
+  let timer;
+  input.addEventListener("input", e => {
+    clearTimeout(timer);
+    const q = e.target.value;
+    if (!q.trim()) { panel.hidden = true; panel.innerHTML = ""; return; }
+    timer = setTimeout(() => {
+      const results = runSearch(q);
+      panel.hidden = false;
+      panel.innerHTML = results.length
+        ? results.map(r => `
+            <button class="search-result" data-tab="${escapeHtml(r.tab)}">
+              <div class="sr-title">${escapeHtml(r.title || "(無標題)")}</div>
+              <div class="sr-meta">${escapeHtml(r.tabLabel || "")}</div>
+              <div class="sr-snippet">${escapeHtml(r.snippet || "")}</div>
+            </button>`).join("")
+        : `<div class="search-result-empty">無相符結果</div>`;
+      panel.querySelectorAll(".search-result").forEach(btn => {
+        btn.addEventListener("click", () => {
+          switchTab(btn.dataset.tab);
+          panel.hidden = true;
+          input.value = "";
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      });
+    }, 150);
+  });
+  // 點外部關閉
+  document.addEventListener("click", e => {
+    if (!input.contains(e.target) && !panel.contains(e.target)) panel.hidden = true;
+  });
+  input.addEventListener("focus", () => {
+    if (input.value.trim() && panel.innerHTML) panel.hidden = false;
+  });
+}
 
 async function init() {
   // 每個來源各自有 fallback：一個壞不拖垮全頁
@@ -182,6 +293,9 @@ async function init() {
   document.querySelectorAll(".main-tab").forEach(btn => {
     btn.addEventListener("click", () => switchTab(btn.dataset.tab));
   });
+
+  SEARCH_INDEX = buildSearchIndex();
+  wireSearch();
 
   switchTab(CURRENT_TAB);
 
