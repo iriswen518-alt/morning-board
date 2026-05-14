@@ -1322,37 +1322,46 @@ function renderCalcSheet() {
 
 function renderCalcCaseHouse() {
   return `
-    <div class="calc-form">
+    <div class="calc-form calc-form-wide">
       <h3>案例試算：房產繼承 vs 贈與 vs 買賣比較</h3>
       <p style="font-size:13px; color:var(--text-sub); margin-bottom:14px">
         同一筆房地，比較「繼承」「贈與」「買賣」三種傳承方式之稅負總成本（本次移轉稅 ＋ 未來受讓人出售之房地合一稅）。
       </p>
-      <h4 style="margin:8px 0 6px;font-size:14px;color:var(--brand-deep)">房產基本資料</h4>
-      <div class="calc-row"><label>土地公告現值（移轉時）</label><input type="number" id="cx-land-cur" placeholder="例：12000000"></div>
-      <div class="calc-row"><label>房屋評定標準價格（移轉時）</label><input type="number" id="cx-house-cur" placeholder="例：3000000"></div>
-      <div class="calc-row"><label>土地原規定地價／前次移轉現值</label><input type="number" id="cx-land-ori" placeholder="例：5000000"></div>
-      <div class="calc-row"><label>市價（預估出售／買賣價金）</label><input type="number" id="cx-market" placeholder="例：30000000"></div>
-      <h4 style="margin:14px 0 6px;font-size:14px;color:var(--brand-deep)">家庭情況（影響遺產稅扣除額）</h4>
-      <div class="calc-row"><label>被繼承人遺產總額（含本房產）</label><input type="number" id="cx-estate-total" placeholder="例：40000000"></div>
-      <div class="calc-row"><label>有配偶？（有則扣 553 萬）</label>
-        <select id="cx-spouse"><option value="0">無</option><option value="1" selected>有</option></select>
+      <div class="calc-shared">
+        <h4>共用資料：房產與受讓人條件</h4>
+        <div class="calc-row"><label>土地公告現值（移轉時）</label><input type="number" id="cx-land-cur" placeholder="例：12000000"></div>
+        <div class="calc-row"><label>房屋評定標準價格（移轉時）</label><input type="number" id="cx-house-cur" placeholder="例：3000000"></div>
+        <div class="calc-row"><label>土地原規定地價／前次移轉現值</label><input type="number" id="cx-land-ori" placeholder="例：5000000"></div>
+        <div class="calc-row"><label>市價（預估出售／買賣價金）</label><input type="number" id="cx-market" placeholder="例：30000000"></div>
+        <div class="calc-row"><label>受讓人是否符合自住 6 年條件再出售</label>
+          <select id="cx-selfuse"><option value="0">否</option><option value="1">是</option></select>
+        </div>
       </div>
-      <div class="calc-row"><label>直系卑親屬人數（每人扣 56 萬）</label><input type="number" id="cx-children" value="2"></div>
-      <div class="calc-row"><label>其他扣除額（喪葬 138 萬已預設）</label><input type="number" id="cx-other-deduct" value="1380000"></div>
-      <h4 style="margin:14px 0 6px;font-size:14px;color:var(--brand-deep)">贈與情境</h4>
-      <div class="calc-row"><label>受贈人為配偶？（土增稅不課徵）</label>
-        <select id="cx-gift-spouse"><option value="0" selected>否（直系卑親屬）</option><option value="1">是</option></select>
-      </div>
-      <div class="calc-row"><label>當年度其他贈與（影響 244 萬免稅）</label><input type="number" id="cx-other-gift" value="0"></div>
-      <h4 style="margin:14px 0 6px;font-size:14px;color:var(--brand-deep)">買賣情境（父母→子女）</h4>
-      <div class="calc-row"><label>父母原始取得成本（房地合計）</label><input type="number" id="cx-parent-cost" placeholder="例：8000000"></div>
-      <div class="calc-row"><label>父母已持有年數（影響父母端房地合一）</label><input type="number" id="cx-parent-hold" value="15"></div>
-      <h4 style="margin:14px 0 6px;font-size:14px;color:var(--brand-deep)">日後（受讓人）出售情境</h4>
-      <div class="calc-row"><label>繼承後預計持有年數再出售</label><input type="number" id="cx-hold-inherit" value="11"></div>
-      <div class="calc-row"><label>贈與後預計持有年數再出售</label><input type="number" id="cx-hold-gift" value="3"></div>
-      <div class="calc-row"><label>買賣後預計持有年數再出售</label><input type="number" id="cx-hold-sale" value="3"></div>
-      <div class="calc-row"><label>是否符合自住 6 年條件再出售</label>
-        <select id="cx-selfuse"><option value="0">否</option><option value="1">是</option></select>
+      <div class="calc-cols cols-3">
+        <div class="calc-col col-inherit">
+          <h4>繼承路徑</h4>
+          <div class="calc-row"><label>被繼承人遺產總額（含本房產）</label><input type="number" id="cx-estate-total" placeholder="例：40000000"></div>
+          <div class="calc-row"><label>有配偶？（扣 553 萬）</label>
+            <select id="cx-spouse"><option value="0">無</option><option value="1" selected>有</option></select>
+          </div>
+          <div class="calc-row"><label>直系卑親屬人數（每人扣 56 萬）</label><input type="number" id="cx-children" value="2"></div>
+          <div class="calc-row"><label>其他扣除額（喪葬 138 萬已預設）</label><input type="number" id="cx-other-deduct" value="1380000"></div>
+          <div class="calc-row"><label>繼承後預計持有年數再出售</label><input type="number" id="cx-hold-inherit" value="11"></div>
+        </div>
+        <div class="calc-col col-gift">
+          <h4>贈與路徑</h4>
+          <div class="calc-row"><label>受贈人為配偶？（土增稅不課徵）</label>
+            <select id="cx-gift-spouse"><option value="0" selected>否（直系卑親屬）</option><option value="1">是</option></select>
+          </div>
+          <div class="calc-row"><label>當年度其他贈與（影響 244 萬免稅）</label><input type="number" id="cx-other-gift" value="0"></div>
+          <div class="calc-row"><label>贈與後預計持有年數再出售</label><input type="number" id="cx-hold-gift" value="3"></div>
+        </div>
+        <div class="calc-col col-sale">
+          <h4>買賣路徑（父母→子女）</h4>
+          <div class="calc-row"><label>父母原始取得成本（房地合計）</label><input type="number" id="cx-parent-cost" placeholder="例：8000000"></div>
+          <div class="calc-row"><label>父母已持有年數（影響房地合一）</label><input type="number" id="cx-parent-hold" value="15"></div>
+          <div class="calc-row"><label>買賣後預計持有年數再出售</label><input type="number" id="cx-hold-sale" value="3"></div>
+        </div>
       </div>
       <button class="calc-btn" onclick="doCalcCaseHouse()">試算比較</button>
       <div class="calc-result" id="cx-result"></div>
@@ -1514,28 +1523,44 @@ function doCalcCaseHouse() {
 // ========== 案例：股票 個人 vs 投資公司 ==========
 function renderCalcCaseStock() {
   return `
-    <div class="calc-form">
+    <div class="calc-form calc-form-wide">
       <h3>案例試算：股票持有 個人 vs 投資公司比較</h3>
       <p style="font-size:13px;color:var(--text-sub);margin-bottom:14px">
         比較相同股票部位由「個人」或「投資公司」持有，於年度配息＋資本利得情境下之稅負總和。
       </p>
-      <h4 style="margin:8px 0 6px;font-size:14px;color:var(--brand-deep)">投資情境</h4>
-      <div class="calc-row"><label>年股利所得（境內公司股利）</label><input type="number" id="cs-div" placeholder="例：5000000"></div>
-      <div class="calc-row"><label>年資本利得（賣股獲利）</label><input type="number" id="cs-gain" placeholder="例:10000000"></div>
-      <div class="calc-row"><label>個人邊際稅率</label>
-        <select id="cs-rate">
-          <option value="0.05">5%</option>
-          <option value="0.12">12%</option>
-          <option value="0.20">20%</option>
-          <option value="0.30" selected>30%</option>
-          <option value="0.40">40%</option>
-        </select>
+      <div class="calc-shared">
+        <h4>共用：投資情境</h4>
+        <div class="calc-row"><label>年股利所得（境內公司股利）</label><input type="number" id="cs-div" placeholder="例：5000000"></div>
+        <div class="calc-row"><label>年資本利得（賣股獲利）</label><input type="number" id="cs-gain" placeholder="例：10000000"></div>
       </div>
-      <div class="calc-row"><label>投資公司股利是否分配給股東？</label>
-        <select id="cs-distrib">
-          <option value="0" selected>否（保留盈餘，加徵 5%）</option>
-          <option value="1">是（最終分配給個人，再課稅）</option>
-        </select>
+      <div class="calc-cols cols-2">
+        <div class="calc-col col-person">
+          <h4>個人持有</h4>
+          <div class="calc-row"><label>個人邊際稅率</label>
+            <select id="cs-rate">
+              <option value="0.05">5%</option>
+              <option value="0.12">12%</option>
+              <option value="0.20">20%</option>
+              <option value="0.30" selected>30%</option>
+              <option value="0.40">40%</option>
+            </select>
+          </div>
+          <p style="font-size:12px;color:var(--text-mute);margin:6px 0 0">
+            股利兩制取低 + 二代健保 2.11%；資本利得停徵
+          </p>
+        </div>
+        <div class="calc-col col-company">
+          <h4>投資公司持有</h4>
+          <div class="calc-row"><label>股利是否分配給股東？</label>
+            <select id="cs-distrib">
+              <option value="0" selected>否（保留盈餘，加徵 5%）</option>
+              <option value="1">是（最終分配，再課個人）</option>
+            </select>
+          </div>
+          <p style="font-size:12px;color:var(--text-mute);margin:6px 0 0">
+            §42 股利免稅；資本利得計入最低稅負 12%
+          </p>
+        </div>
       </div>
       <button class="calc-btn" onclick="doCalcCaseStock()">試算比較</button>
       <div class="calc-result" id="cs-result"></div>
@@ -1627,27 +1652,43 @@ function doCalcCaseStock() {
 // ========== 案例：基金 個人 vs 投資公司 ==========
 function renderCalcCaseFund() {
   return `
-    <div class="calc-form">
+    <div class="calc-form calc-form-wide">
       <h3>案例試算：基金持有 個人 vs 投資公司比較</h3>
       <p style="font-size:13px;color:var(--text-sub);margin-bottom:14px">
         比較相同基金部位由「個人」或「投資公司」持有，於配息＋贖回利得情境下之稅負總和。
       </p>
-      <h4 style="margin:8px 0 6px;font-size:14px;color:var(--brand-deep)">基金類型與所得</h4>
-      <div class="calc-row"><label>基金發行地</label>
-        <select id="cf-loc">
-          <option value="dom" selected>境內基金（投信發行）</option>
-          <option value="off">境外基金（盧森堡/開曼）</option>
-        </select>
+      <div class="calc-shared">
+        <h4>共用：基金類型與所得</h4>
+        <div class="calc-row"><label>基金發行地</label>
+          <select id="cf-loc">
+            <option value="dom" selected>境內基金（投信發行）</option>
+            <option value="off">境外基金（盧森堡/開曼）</option>
+          </select>
+        </div>
+        <div class="calc-row"><label>年配息（合計）</label><input type="number" id="cf-div" placeholder="例：3000000"></div>
+        <div class="calc-row"><label>年贖回利得（資本利得）</label><input type="number" id="cf-gain" placeholder="例：5000000"></div>
       </div>
-      <div class="calc-row"><label>年配息（合計）</label><input type="number" id="cf-div" placeholder="例：3000000"></div>
-      <div class="calc-row"><label>年贖回利得（資本利得）</label><input type="number" id="cf-gain" placeholder="例：5000000"></div>
-      <div class="calc-row"><label>個人邊際稅率（適用海外所得＞綜所稅取大用）</label>
-        <select id="cf-rate">
-          <option value="0.05">5%</option>
-          <option value="0.20">20%</option>
-          <option value="0.30" selected>30%</option>
-          <option value="0.40">40%</option>
-        </select>
+      <div class="calc-cols cols-2">
+        <div class="calc-col col-person">
+          <h4>個人持有</h4>
+          <div class="calc-row"><label>個人邊際稅率</label>
+            <select id="cf-rate">
+              <option value="0.05">5%</option>
+              <option value="0.20">20%</option>
+              <option value="0.30" selected>30%</option>
+              <option value="0.40">40%</option>
+            </select>
+          </div>
+          <p style="font-size:12px;color:var(--text-mute);margin:6px 0 0">
+            境內：贖回停徵、股利兩制。境外：海外所得扣 670 萬後 ×20% AMT
+          </p>
+        </div>
+        <div class="calc-col col-company">
+          <h4>投資公司持有</h4>
+          <p style="font-size:12px;color:var(--text-mute);margin:6px 0 0">
+            境內：股利 §42 免稅、贖回計入未分配盈餘 5% 加徵。境外：贖回利得+配息併營所稅 20%
+          </p>
+        </div>
       </div>
       <button class="calc-btn" onclick="doCalcCaseFund()">試算比較</button>
       <div class="calc-result" id="cf-result"></div>
@@ -1736,23 +1777,39 @@ function doCalcCaseFund() {
 // ========== 案例：房產 個人 vs 投資公司 ==========
 function renderCalcCaseRealty() {
   return `
-    <div class="calc-form">
+    <div class="calc-form calc-form-wide">
       <h3>案例試算：房產持有 個人 vs 投資公司比較</h3>
       <p style="font-size:13px;color:var(--text-sub);margin-bottom:14px">
         比較同一筆出租房產由「個人」或「投資公司」持有，於持有期間（租賃所得）＋未來出售（房地合一）之稅負總和。
       </p>
-      <h4 style="margin:8px 0 6px;font-size:14px;color:var(--brand-deep)">房產與租賃資料</h4>
-      <div class="calc-row"><label>年租金收入</label><input type="number" id="cr-rent" placeholder="例：1200000"></div>
-      <div class="calc-row"><label>取得成本（含土地房屋）</label><input type="number" id="cr-cost" placeholder="例：15000000"></div>
-      <div class="calc-row"><label>預估出售價</label><input type="number" id="cr-sale" placeholder="例：25000000"></div>
-      <div class="calc-row"><label>持有年數</label><input type="number" id="cr-hold" value="6"></div>
-      <div class="calc-row"><label>個人邊際稅率</label>
-        <select id="cr-rate">
-          <option value="0.05">5%</option>
-          <option value="0.20">20%</option>
-          <option value="0.30" selected>30%</option>
-          <option value="0.40">40%</option>
-        </select>
+      <div class="calc-shared">
+        <h4>共用：房產與租賃資料</h4>
+        <div class="calc-row"><label>年租金收入</label><input type="number" id="cr-rent" placeholder="例：1200000"></div>
+        <div class="calc-row"><label>取得成本（含土地房屋）</label><input type="number" id="cr-cost" placeholder="例：15000000"></div>
+        <div class="calc-row"><label>預估出售價</label><input type="number" id="cr-sale" placeholder="例：25000000"></div>
+        <div class="calc-row"><label>持有年數</label><input type="number" id="cr-hold" value="6"></div>
+      </div>
+      <div class="calc-cols cols-2">
+        <div class="calc-col col-person">
+          <h4>個人持有</h4>
+          <div class="calc-row"><label>個人邊際稅率</label>
+            <select id="cr-rate">
+              <option value="0.05">5%</option>
+              <option value="0.20">20%</option>
+              <option value="0.30" selected>30%</option>
+              <option value="0.40">40%</option>
+            </select>
+          </div>
+          <p style="font-size:12px;color:var(--text-mute);margin:6px 0 0">
+            租金 ×57% 併綜所稅；房地合一依持有期間 45/35/20/15%（自住優惠）
+          </p>
+        </div>
+        <div class="calc-col col-company">
+          <h4>投資公司持有</h4>
+          <p style="font-size:12px;color:var(--text-mute);margin:6px 0 0">
+            租金 ×70% 併營所稅 20%；房地合一 45/35/20%（無自住）+ 未分配盈餘加徵 5%
+          </p>
+        </div>
       </div>
       <button class="calc-btn" onclick="doCalcCaseRealty()">試算比較</button>
       <div class="calc-result" id="cr-result"></div>
