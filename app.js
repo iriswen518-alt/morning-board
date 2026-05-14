@@ -928,11 +928,11 @@ function renderWealthSheet() {
 
   // 加上一個「稅務新聞」虛擬 tab
   const newsKey = "news";
-  const allTabs = [...topics.map(t => ({key: t.key, name: t.name, icon: t.icon})), {key: newsKey, name: "稅務新聞", icon: "📰"}];
+  const allTabs = [...topics.map(t => ({key: t.key, name: t.name})), {key: newsKey, name: "稅務新聞"}];
 
   const tabBtns = allTabs.map((t, i) => `
     <button class="tab ${i === 0 ? "active" : ""}" data-wtab="${escapeHtml(t.key)}">
-      ${t.icon || ""} ${escapeHtml(t.name)}
+      ${escapeHtml(t.name)}
     </button>
   `).join("");
 
@@ -941,7 +941,7 @@ function renderWealthSheet() {
     <div class="t-pane ${i === 0 ? "active" : ""}" id="w-pane-${escapeHtml(t.key)}">
       <div class="t-head">
         <div>
-          <div class="t-name">${t.icon || ""} ${escapeHtml(t.name)}</div>
+          <div class="t-name">${escapeHtml(t.name)}</div>
           <div class="t-tagline">${escapeHtml(t.summary || "")}</div>
         </div>
       </div>
@@ -964,7 +964,7 @@ function renderWealthSheet() {
     <div class="t-pane" id="w-pane-${newsKey}">
       <div class="t-head">
         <div>
-          <div class="t-name">📰 稅務新聞</div>
+          <div class="t-name">稅務新聞</div>
           <div class="t-tagline">每日自動彙整財富傳承相關稅務新聞（資料日 ${escapeHtml(DATA.tax?.tax_date || "—")}）</div>
         </div>
       </div>

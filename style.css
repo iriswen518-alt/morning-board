@@ -364,7 +364,7 @@ table.indices .date-col {
   box-shadow: var(--shadow);
 }
 .tabs.tabs-wrap { flex-wrap: wrap; }
-.tabs.tabs-wrap .tab { flex: 0 0 auto; min-width: 96px; }
+.tabs.tabs-wrap .tab { flex: 1 1 96px; min-width: 96px; }
 .tab {
   flex: 1;
   padding: 8px 12px;
