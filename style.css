@@ -971,3 +971,85 @@ table.indices .date-col {
   color: var(--text-mute);
   margin-top: 6px;
 }
+
+/* ===== 搜尋結果定位高亮 ===== */
+.flash-hit {
+  animation: flash-glow 2s ease;
+  border-radius: 6px;
+}
+@keyframes flash-glow {
+  0%   { background: #FFE082; box-shadow: 0 0 0 4px rgba(255, 224, 130, 0.6); }
+  60%  { background: #FFF3C4; box-shadow: 0 0 0 2px rgba(255, 224, 130, 0.3); }
+  100% { background: transparent; box-shadow: none; }
+}
+
+/* ===== 稅負試算表單 ===== */
+.calc-form {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: var(--shadow);
+  max-width: 720px;
+}
+.calc-form h3 {
+  color: var(--brand-deep);
+  font-size: 18px;
+  margin: 0 0 14px;
+}
+.calc-row {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.calc-row label {
+  font-size: 13px;
+  color: var(--text-sub, var(--text));
+}
+.calc-row input, .calc-row select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 15px;
+  font-family: inherit;
+}
+.calc-row input:focus, .calc-row select:focus {
+  outline: 2px solid var(--brand-primary);
+  border-color: var(--brand-primary);
+}
+.calc-btn {
+  margin-top: 8px;
+  padding: 10px 22px;
+  background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+}
+.calc-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(1, 154, 179, 0.3); }
+.calc-result {
+  margin-top: 14px;
+  padding: 14px 16px;
+  background: var(--bg-alt);
+  border-radius: 8px;
+  border-left: 4px solid var(--brand-primary);
+}
+.calc-result:empty { display: none; }
+.calc-result .kv {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+  font-size: 14px;
+}
+.calc-result .kv b { font-variant-numeric: tabular-nums; }
+
+@media (max-width: 768px) {
+  .calc-row { grid-template-columns: 1fr; gap: 4px; }
+  .calc-row label { font-size: 12px; }
+}

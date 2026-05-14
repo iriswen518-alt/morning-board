@@ -155,6 +155,29 @@ function shortDate(iso) {
 let DATA = {};
 let CURRENT_TAB = "market";
 let SEARCH_INDEX = [];
+let PENDING_HIGHLIGHT = null;
+
+function flashFindInContent(needle) {
+  if (!needle) return false;
+  const root = $("content");
+  if (!root) return false;
+  const lower = needle.toLowerCase().trim();
+  if (!lower) return false;
+  // 取得所有葉節點（含文字的最內層 element）
+  const all = root.querySelectorAll("h1, h2, h3, h4, p, td, li, span, div, button, a");
+  let hit = null;
+  for (const el of all) {
+    // 跳過容器類元素（避免命中整個 pane）
+    if (el.children.length > 3) continue;
+    const text = (el.textContent || "").toLowerCase();
+    if (text.includes(lower)) { hit = el; break; }
+  }
+  if (!hit) return false;
+  hit.scrollIntoView({ behavior: "smooth", block: "center" });
+  hit.classList.add("flash-hit");
+  setTimeout(() => hit.classList.remove("flash-hit"), 2200);
+  return true;
+}
 
 function buildSearchIndex() {
   const idx = [];
@@ -259,12 +282,13 @@ function wireSearch() {
               <div class="sr-snippet">${escapeHtml(r.snippet || "")}</div>
             </button>`).join("")
         : `<div class="search-result-empty">無相符結果</div>`;
-      panel.querySelectorAll(".search-result").forEach(btn => {
+      panel.querySelectorAll(".search-result").forEach((btn, i) => {
         btn.addEventListener("click", () => {
+          const r = results[i] || {};
+          PENDING_HIGHLIGHT = r.title || "";
           switchTab(btn.dataset.tab);
           panel.hidden = true;
           input.value = "";
-          window.scrollTo({ top: 0, behavior: "smooth" });
         });
       });
     }, 150);
@@ -344,12 +368,20 @@ function switchTab(name) {
   else if (name === "targets") body.innerHTML = renderTargetsSheet();
   else if (name === "allocation") body.innerHTML = renderAllocationSheet();
   else if (name === "wealth") body.innerHTML = renderWealthSheet();
+  else if (name === "calc") body.innerHTML = renderCalcSheet();
   if (name === "news") wireNewsTabs();
   if (name === "market") wireMarketTabs();
   if (name === "targets") wireTargetsTabs();
   if (name === "allocation") wireAllocationTabs();
   if (name === "wealth") wireWealthTabs();
-  window.scrollTo({ top: 0, behavior: "instant" in window ? "instant" : "auto" });
+  if (name === "calc") wireCalcTabs();
+  if (PENDING_HIGHLIGHT) {
+    const target = PENDING_HIGHLIGHT;
+    PENDING_HIGHLIGHT = null;
+    setTimeout(() => flashFindInContent(target), 80);
+  } else {
+    window.scrollTo({ top: 0, behavior: "instant" in window ? "instant" : "auto" });
+  }
 }
 
 function currencyChip(cur) {
@@ -1158,6 +1190,298 @@ function renderWealthSheet() {
     <div class="tabs tabs-wrap">${tabBtns}</div>
     <div class="t-panes">${topicPanes}${newsPane}</div>
   `;
+}
+
+// ===== 稅負試算 =====
+const CALC_TABS = [
+  {key: "income",    name: "綜所稅"},
+  {key: "amt",       name: "最低稅負制"},
+  {key: "gift",      name: "贈與稅"},
+  {key: "estate",    name: "遺產稅"},
+  {key: "house",     name: "房地合一稅"},
+  {key: "land",      name: "土地增值稅"},
+];
+
+function fmtMoney(n) {
+  if (n === null || n === undefined || isNaN(n)) return "—";
+  return "NT$ " + Math.round(n).toLocaleString("en-US");
+}
+
+// 綜所稅試算（114 年度）
+function calcIncomeTax(taxableIncome) {
+  const brackets = [
+    {limit: 590000,  rate: 0.05, base: 0},
+    {limit: 1330000, rate: 0.12, base: 29500},
+    {limit: 2660000, rate: 0.20, base: 118300},
+    {limit: 4980000, rate: 0.30, base: 384300},
+    {limit: Infinity, rate: 0.40, base: 1080300},
+  ];
+  for (const b of brackets) {
+    if (taxableIncome <= b.limit) {
+      const lower = brackets[brackets.indexOf(b) - 1]?.limit || 0;
+      return Math.max(0, b.base + (taxableIncome - lower) * b.rate);
+    }
+  }
+  return 0;
+}
+
+// 贈與稅
+function calcGiftTax(giftAmount) {
+  const net = Math.max(0, giftAmount - 2440000); // 244 萬免稅
+  if (net <= 0) return {net, tax: 0, rate: "0%"};
+  if (net <= 28110000) return {net, tax: net * 0.10, rate: "10%"};
+  if (net <= 56210000) return {net, tax: net * 0.15 - 1405500, rate: "15%"};
+  return {net, tax: net * 0.20 - 4216000, rate: "20%"};
+}
+
+// 遺產稅
+function calcEstateTax(total, deductions) {
+  const net = Math.max(0, total - 13330000 - deductions); // 1,333 萬免稅 + 扣除額
+  if (net <= 0) return {net, tax: 0, rate: "0%"};
+  if (net <= 56210000) return {net, tax: net * 0.10, rate: "10%"};
+  if (net <= 112420000) return {net, tax: net * 0.15 - 2810500, rate: "15%"};
+  return {net, tax: net * 0.20 - 8431500, rate: "20%"};
+}
+
+// 房地合一稅
+function calcHouseLandTax(gain, holdYears, isSelfUse) {
+  if (gain <= 0) return {taxable: 0, tax: 0, rate: "0%"};
+  if (isSelfUse && holdYears >= 6) {
+    const taxable = Math.max(0, gain - 4000000); // 自住 400 萬免稅額
+    return {taxable, tax: taxable * 0.10, rate: "10%（自住）"};
+  }
+  if (holdYears <= 2) return {taxable: gain, tax: gain * 0.45, rate: "45%"};
+  if (holdYears <= 5) return {taxable: gain, tax: gain * 0.35, rate: "35%"};
+  if (holdYears <= 10) return {taxable: gain, tax: gain * 0.20, rate: "20%"};
+  return {taxable: gain, tax: gain * 0.15, rate: "15%"};
+}
+
+// 土地增值稅（簡化版：未考慮物價指數調整、長期持有減徵）
+function calcLandValueTax(increase, originPrice, isSelfUse, holdYears) {
+  if (increase <= 0) return {tax: 0, rate: "0%"};
+  if (isSelfUse) return {tax: increase * 0.10, rate: "10%（自用）"};
+  const ratio = increase / originPrice;
+  let baseRate, base;
+  if (ratio <= 1) { baseRate = 0.20; base = 0; }
+  else if (ratio <= 2) { baseRate = 0.30; base = originPrice * 0.10; }
+  else { baseRate = 0.40; base = originPrice * 0.30; }
+  let tax = base + increase * baseRate;
+  // 長期持有減徵
+  let reduceRate = 0;
+  if (holdYears >= 40) reduceRate = 0.40;
+  else if (holdYears >= 30) reduceRate = 0.30;
+  else if (holdYears >= 20) reduceRate = 0.20;
+  tax = tax * (1 - reduceRate);
+  return {tax, rate: `${(baseRate * 100)}%${reduceRate ? `（持有 ${holdYears} 年減 ${reduceRate * 100}%）` : ""}`};
+}
+
+// 最低稅負制（114 年度）
+function calcAmtTax(comprehensive, overseas, largeInsurance, otherAdditions, regularIncomeTax) {
+  let amtBase = comprehensive;
+  if (overseas >= 1000000) amtBase += overseas;
+  if (largeInsurance > 37400000) amtBase += (largeInsurance - 37400000);
+  amtBase += otherAdditions;
+  const amt = Math.max(0, (amtBase - 6700000) * 0.20);
+  const final = Math.max(amt, regularIncomeTax);
+  return {amtBase, amt, regular: regularIncomeTax, final, needPay: final - regularIncomeTax};
+}
+
+function renderCalcSheet() {
+  const tabBtns = CALC_TABS.map((t, i) => `
+    <button class="tab ${i === 0 ? "active" : ""}" data-ctab="${escapeHtml(t.key)}">${escapeHtml(t.name)}</button>
+  `).join("");
+
+  return `
+    <p class="a-note">本試算依 114 年度（2026 年申報）級距，僅供參考。實際以稅捐稽徵機關核定為準。</p>
+    <div class="tabs tabs-wrap">${tabBtns}</div>
+    <div class="t-panes">
+      <div class="t-pane active" id="c-pane-income">${renderCalcIncome()}</div>
+      <div class="t-pane" id="c-pane-amt">${renderCalcAmt()}</div>
+      <div class="t-pane" id="c-pane-gift">${renderCalcGift()}</div>
+      <div class="t-pane" id="c-pane-estate">${renderCalcEstate()}</div>
+      <div class="t-pane" id="c-pane-house">${renderCalcHouse()}</div>
+      <div class="t-pane" id="c-pane-land">${renderCalcLand()}</div>
+    </div>
+  `;
+}
+
+function renderCalcIncome() {
+  return `
+    <div class="calc-form">
+      <h3>綜合所得稅試算</h3>
+      <div class="calc-row"><label>所得總額（年薪/總收入）</label><input type="number" id="ci-income" placeholder="例：1500000"></div>
+      <div class="calc-row"><label>免稅額（單身 92,000 / 70 歲以上 138,000）</label><input type="number" id="ci-exempt" value="92000"></div>
+      <div class="calc-row"><label>標準扣除額（單身 132k / 夫妻 264k）</label><input type="number" id="ci-deduct" value="132000"></div>
+      <div class="calc-row"><label>薪資特別扣除（每人上限 218k）</label><input type="number" id="ci-salary" value="218000"></div>
+      <div class="calc-row"><label>其他扣除額</label><input type="number" id="ci-other" value="0"></div>
+      <button class="calc-btn" onclick="doCalcIncome()">試算</button>
+      <div class="calc-result" id="ci-result"></div>
+    </div>`;
+}
+
+function renderCalcAmt() {
+  return `
+    <div class="calc-form">
+      <h3>最低稅負制試算（個人 AMT）</h3>
+      <div class="calc-row"><label>綜所淨額（已扣除免稅額/扣除額）</label><input type="number" id="ca-comp" placeholder="例：5000000"></div>
+      <div class="calc-row"><label>海外所得（一申報戶全年合計）</label><input type="number" id="ca-overseas" value="0"></div>
+      <div class="calc-row"><label>大額人壽保險給付（要保≠受益）</label><input type="number" id="ca-ins" value="0"></div>
+      <div class="calc-row"><label>未上市股票交易所得＋其他加項</label><input type="number" id="ca-other" value="0"></div>
+      <div class="calc-row"><label>原本綜所稅應納稅額</label><input type="number" id="ca-regular" value="0"></div>
+      <button class="calc-btn" onclick="doCalcAmt()">試算</button>
+      <div class="calc-result" id="ca-result"></div>
+    </div>`;
+}
+
+function renderCalcGift() {
+  return `
+    <div class="calc-form">
+      <h3>贈與稅試算</h3>
+      <div class="calc-row"><label>本年度贈與總額</label><input type="number" id="cg-amount" placeholder="例：10000000"></div>
+      <p style="font-size:13px; color:var(--text-mute)">114 年度免稅額 244 萬／級距 10% (≤2,811 萬) → 15% → 20% (>5,621 萬)</p>
+      <button class="calc-btn" onclick="doCalcGift()">試算</button>
+      <div class="calc-result" id="cg-result"></div>
+    </div>`;
+}
+
+function renderCalcEstate() {
+  return `
+    <div class="calc-form">
+      <h3>遺產稅試算</h3>
+      <div class="calc-row"><label>遺產總額</label><input type="number" id="ce-total" placeholder="例：50000000"></div>
+      <div class="calc-row"><label>配偶扣除額（有配偶填 5,530,000）</label><input type="number" id="ce-spouse" value="0"></div>
+      <div class="calc-row"><label>直系血親卑親屬人數（每人扣 56 萬）</label><input type="number" id="ce-children" value="0"></div>
+      <div class="calc-row"><label>父母人數（每人扣 138 萬）</label><input type="number" id="ce-parents" value="0"></div>
+      <div class="calc-row"><label>喪葬費扣除（固定 1,380,000）</label><input type="number" id="ce-funeral" value="1380000"></div>
+      <div class="calc-row"><label>其他扣除額</label><input type="number" id="ce-other" value="0"></div>
+      <p style="font-size:13px; color:var(--text-mute)">114 年度免稅額 1,333 萬／級距 10% (≤5,621 萬) → 15% → 20% (>1.1242 億)</p>
+      <button class="calc-btn" onclick="doCalcEstate()">試算</button>
+      <div class="calc-result" id="ce-result"></div>
+    </div>`;
+}
+
+function renderCalcHouse() {
+  return `
+    <div class="calc-form">
+      <h3>房地合一稅試算（2.0）</h3>
+      <div class="calc-row"><label>交易所得（賣價 − 成本 − 必要費用）</label><input type="number" id="ch-gain" placeholder="例：3000000"></div>
+      <div class="calc-row"><label>持有年數</label><input type="number" id="ch-years" value="3"></div>
+      <div class="calc-row"><label>是否符合自住房地（6 年條件）</label>
+        <select id="ch-selfuse"><option value="0">否</option><option value="1">是</option></select>
+      </div>
+      <p style="font-size:13px; color:var(--text-mute)">≤2 年 45%／2–5 年 35%／5–10 年 20%／>10 年 15%；自住 10% + 400 萬免稅額</p>
+      <button class="calc-btn" onclick="doCalcHouse()">試算</button>
+      <div class="calc-result" id="ch-result"></div>
+    </div>`;
+}
+
+function renderCalcLand() {
+  return `
+    <div class="calc-form">
+      <h3>土地增值稅試算（簡化）</h3>
+      <div class="calc-row"><label>現值移轉價</label><input type="number" id="cl-current" placeholder="例：20000000"></div>
+      <div class="calc-row"><label>原規定地價（含物價調整後）</label><input type="number" id="cl-origin" placeholder="例：8000000"></div>
+      <div class="calc-row"><label>是否為自用住宅</label>
+        <select id="cl-selfuse"><option value="0">否</option><option value="1">是</option></select>
+      </div>
+      <div class="calc-row"><label>持有年數（一般稅率才減徵）</label><input type="number" id="cl-years" value="10"></div>
+      <p style="font-size:13px; color:var(--text-mute)">漲價 1 倍 20%／2 倍 30%／>2 倍 40%；長期持有 20/30/40 年減 20/30/40%；自用 10%</p>
+      <button class="calc-btn" onclick="doCalcLand()">試算</button>
+      <div class="calc-result" id="cl-result"></div>
+    </div>`;
+}
+
+function wireCalcTabs() {
+  const buttons = document.querySelectorAll(".tab[data-ctab]");
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const key = btn.dataset.ctab;
+      buttons.forEach(b => b.classList.toggle("active", b.dataset.ctab === key));
+      document.querySelectorAll(".t-pane[id^='c-pane-']").forEach(p => {
+        p.classList.toggle("active", p.id === `c-pane-${key}`);
+      });
+    });
+  });
+}
+
+function doCalcIncome() {
+  const income = +$("ci-income").value || 0;
+  const exempt = +$("ci-exempt").value || 0;
+  const deduct = +$("ci-deduct").value || 0;
+  const salary = +$("ci-salary").value || 0;
+  const other = +$("ci-other").value || 0;
+  const taxable = Math.max(0, income - exempt - deduct - salary - other);
+  const tax = calcIncomeTax(taxable);
+  $("ci-result").innerHTML = `
+    <div class="kv"><span>所得淨額</span><b>${fmtMoney(taxable)}</b></div>
+    <div class="kv"><span>應納稅額</span><b style="color:var(--up)">${fmtMoney(tax)}</b></div>
+    <div class="kv"><span>實質稅率</span><b>${income > 0 ? (tax / income * 100).toFixed(2) : 0}%</b></div>`;
+}
+
+function doCalcAmt() {
+  const comp = +$("ca-comp").value || 0;
+  const ov = +$("ca-overseas").value || 0;
+  const ins = +$("ca-ins").value || 0;
+  const other = +$("ca-other").value || 0;
+  const reg = +$("ca-regular").value || 0;
+  const r = calcAmtTax(comp, ov, ins, other, reg);
+  $("ca-result").innerHTML = `
+    <div class="kv"><span>基本所得額</span><b>${fmtMoney(r.amtBase)}</b></div>
+    <div class="kv"><span>最低稅負（基本稅額）</span><b>${fmtMoney(r.amt)}</b></div>
+    <div class="kv"><span>原綜所稅</span><b>${fmtMoney(r.regular)}</b></div>
+    <div class="kv"><span>取大者為應納</span><b style="color:var(--up)">${fmtMoney(r.final)}</b></div>
+    <div class="kv"><span>需補繳（基本稅額 − 綜所稅）</span><b>${fmtMoney(Math.max(0, r.needPay))}</b></div>`;
+}
+
+function doCalcGift() {
+  const amount = +$("cg-amount").value || 0;
+  const r = calcGiftTax(amount);
+  $("cg-result").innerHTML = `
+    <div class="kv"><span>贈與淨額</span><b>${fmtMoney(r.net)}</b></div>
+    <div class="kv"><span>適用稅率</span><b>${r.rate}</b></div>
+    <div class="kv"><span>應納贈與稅</span><b style="color:var(--up)">${fmtMoney(r.tax)}</b></div>`;
+}
+
+function doCalcEstate() {
+  const total = +$("ce-total").value || 0;
+  const spouse = +$("ce-spouse").value || 0;
+  const children = (+$("ce-children").value || 0) * 560000;
+  const parents = (+$("ce-parents").value || 0) * 1380000;
+  const funeral = +$("ce-funeral").value || 0;
+  const other = +$("ce-other").value || 0;
+  const deductions = spouse + children + parents + funeral + other;
+  const r = calcEstateTax(total, deductions);
+  $("ce-result").innerHTML = `
+    <div class="kv"><span>遺產總額</span><b>${fmtMoney(total)}</b></div>
+    <div class="kv"><span>免稅額</span><b>${fmtMoney(13330000)}</b></div>
+    <div class="kv"><span>扣除額合計</span><b>${fmtMoney(deductions)}</b></div>
+    <div class="kv"><span>遺產淨額</span><b>${fmtMoney(r.net)}</b></div>
+    <div class="kv"><span>適用稅率</span><b>${r.rate}</b></div>
+    <div class="kv"><span>應納遺產稅</span><b style="color:var(--up)">${fmtMoney(r.tax)}</b></div>`;
+}
+
+function doCalcHouse() {
+  const gain = +$("ch-gain").value || 0;
+  const years = +$("ch-years").value || 0;
+  const self = +$("ch-selfuse").value === 1;
+  const r = calcHouseLandTax(gain, years, self);
+  $("ch-result").innerHTML = `
+    <div class="kv"><span>課稅所得</span><b>${fmtMoney(r.taxable)}</b></div>
+    <div class="kv"><span>適用稅率</span><b>${r.rate}</b></div>
+    <div class="kv"><span>應納稅額</span><b style="color:var(--up)">${fmtMoney(r.tax)}</b></div>`;
+}
+
+function doCalcLand() {
+  const cur = +$("cl-current").value || 0;
+  const ori = +$("cl-origin").value || 0;
+  const self = +$("cl-selfuse").value === 1;
+  const years = +$("cl-years").value || 0;
+  const inc = cur - ori;
+  const r = calcLandValueTax(inc, ori, self, years);
+  $("cl-result").innerHTML = `
+    <div class="kv"><span>漲價總數</span><b>${fmtMoney(inc)}</b></div>
+    <div class="kv"><span>適用稅率</span><b>${r.rate}</b></div>
+    <div class="kv"><span>應納土地增值稅</span><b style="color:var(--up)">${fmtMoney(r.tax)}</b></div>`;
 }
 
 function wireWealthTabs() {
