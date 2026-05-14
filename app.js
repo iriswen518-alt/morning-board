@@ -480,7 +480,7 @@ function renderTargetsSheet() {
   // Tab buttons（不顯示編號）
   const tabBtns = list.map((t, i) => `
     <button class="tab ${i === 0 ? "active" : ""}" data-ttab="${escapeHtml(t.key)}">
-      ${escapeHtml(t.name)} ${stanceChip(t.stance)}
+      ${escapeHtml(t.name)}
     </button>
   `).join("");
 
@@ -490,10 +490,9 @@ function renderTargetsSheet() {
     <div class="t-pane ${i === 0 ? "active" : ""}" id="t-pane-${escapeHtml(t.key)}">
       <div class="t-head">
         <div>
-          <div class="t-name">${escapeHtml(t.name)}　<span class="t-alloc">${escapeHtml(t.alloc || "")}</span></div>
+          <div class="t-name">${escapeHtml(t.name)}</div>
           <div class="t-tagline">${escapeHtml(t.tagline || "")}</div>
         </div>
-        ${stanceChip(t.stance)}
       </div>
 
       <div class="t-stats">
@@ -546,20 +545,9 @@ function renderTargetsSheet() {
   `;
   }).join("");
 
-  // 建議配置比重（依進場順序排序）
-  const allocHtml = seq.length ? `
-    <h3>建議配置比重</h3>
-    <ol class="t-seq">
-      ${seq.map(s => {
-        const d = byKey[s.key] || {};
-        return `<li><strong>${escapeHtml(d.name || s.key)}</strong>　<span style="color:var(--brand-primary);font-weight:600">${escapeHtml(d.alloc || "")}</span></li>`;
-      }).join("")}
-    </ol>` : "";
-
   return `
     <div class="tabs tabs-wrap">${tabBtns}</div>
     <div class="t-panes">${panes}</div>
-    ${allocHtml}
   `;
 }
 
@@ -1013,17 +1001,25 @@ function renderDcaSheet() {
     const nameHtml = f.source_url
       ? `<a href="${f.source_url}" target="_blank" rel="noopener">${escapeHtml(f.name_zh)}</a>`
       : escapeHtml(f.name_zh);
-    const codeChip = f.code && f.code !== "—"
-      ? `<span class="chip chip-default" style="margin-right:4px">${escapeHtml(f.code)}</span>`
-      : "";
     const catChip = f.category
       ? `<span class="chip chip-default" style="background:#E5F2F5;color:var(--brand-deep);margin-left:4px">${escapeHtml(f.category)}</span>`
       : "";
     return `
     <div class="fund-card">
       <h3>${nameHtml}</h3>
-      <div style="margin-bottom:6px">${codeChip}${currencyChip(f.currency)}${catChip}</div>
+      <div style="margin-bottom:6px">${currencyChip(f.currency)}${catChip}</div>
       <p class="tagline">${escapeHtml(f.tagline || "")}</p>
+      <div class="grid">
+        <div>
+          <label>淨值</label>
+          ${fmtNum(f.nav)} ${escapeHtml(f.currency || "")}
+          ${f.nav_date ? `<div class="cell-sub">${escapeHtml(shortDate(f.nav_date))}</div>` : ""}
+        </div>
+        <div><label>日漲跌</label><span class="${pctClass(f.change_pct)}">${fmtPct(f.change_pct)}</span></div>
+        <div><label>近1月</label><span class="${pctClass(f.perf?.['1m'])}">${fmtPct(f.perf?.['1m'])}</span></div>
+        <div><label>近3月</label><span class="${pctClass(f.perf?.['3m'])}">${fmtPct(f.perf?.['3m'])}</span></div>
+        <div><label>今年來</label><span class="${pctClass(f.perf?.ytd)}">${fmtPct(f.perf?.ytd)}</span></div>
+      </div>
     </div>`;
   }).join("");
 }
