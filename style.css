@@ -122,7 +122,7 @@ body {
 }
 
 /* === 搜尋框 === */
-.search-wrap { position: relative; margin-top: 10px; }
+.search-wrap { position: relative; margin-top: 10px; z-index: 100; }
 .search-wrap input {
   width: 100%;
   padding: 9px 12px;

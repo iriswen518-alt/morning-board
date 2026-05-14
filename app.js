@@ -249,15 +249,15 @@ function runSearch(q) {
   if (!q) return [];
   const out = [];
   for (const item of SEARCH_INDEX) {
-    const hay = ((item.title || "") + " " + (item.text || "")).toLowerCase();
+    const hay = ((item.title || "") + " " + (item.text || "") + " " + (item.tabLabel || "")).toLowerCase();
     const pos = hay.indexOf(q);
     if (pos < 0) continue;
-    const raw = (item.title || "") + " · " + (item.text || "");
+    const raw = (item.title || "") + " · " + (item.tabLabel || "") + " · " + (item.text || "");
     const before = Math.max(0, pos - 20);
     const after = Math.min(raw.length, pos + q.length + 40);
     const snippet = (before > 0 ? "…" : "") + raw.slice(before, after) + (after < raw.length ? "…" : "");
     out.push({ ...item, snippet });
-    if (out.length >= 30) break;
+    if (out.length >= 50) break;
   }
   return out;
 }
