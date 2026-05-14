@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-14T17:00:45+08:00",
+  "generated_at": "2026-05-14T17:27:14+08:00",
   "source": "manual curation (targets.json)",
   "version": 2,
   "updated": "2026-05-13",
@@ -378,7 +378,20 @@
       "name_zh": "利安資金韓國基金（美元）",
       "currency": "USD",
       "tagline": "MSCI Korea Value-Up 改革題材；近一年 +220%",
-      "source_url": "https://bopfund.moneydj.com/w/wb/wb01_LIC04-LI02.djhtm"
+      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=LIC04-LI02",
+      "fund_id": "uob_korea",
+      "nav": 3.05,
+      "nav_date": "2026-05-13",
+      "change_pct": 3.32,
+      "perf": {
+        "1m": 43.66,
+        "3m": 51.52,
+        "6m": 107.62,
+        "ytd": 95.51,
+        "1y": 234.06,
+        "3y": 263.96
+      },
+      "bop_name_zh": "利安資金韓國基金(美元)"
     },
     {
       "theme": "japan",
@@ -386,7 +399,20 @@
       "name_zh": "柏瑞日本多重資產基金",
       "currency": "TWD",
       "tagline": "參與日本重估行情與降低單一波動",
-      "source_url": "https://bopfund.moneydj.com/"
+      "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACAI453-YD18",
+      "fund_id": "pinebridge_japan_multi_asset",
+      "nav": 11.0141,
+      "nav_date": "2026-05-12",
+      "change_pct": 0.52,
+      "perf": {
+        "1m": 2.17,
+        "3m": -2.08,
+        "6m": 8.82,
+        "ytd": 6.9,
+        "1y": null,
+        "3y": null
+      },
+      "bop_name_zh": "柏瑞日本多重資產基金N月配息(台幣)"
     },
     {
       "theme": "gold",
@@ -394,7 +420,20 @@
       "name_zh": "富蘭克林黃金基金美元 A",
       "currency": "USD",
       "tagline": "金礦類股佈局，抗通膨＋去美元化",
-      "source_url": "https://bopfund.moneydj.com/w/wb/wb01_FLZ01-FA01.djhtm"
+      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLZ01-FA01",
+      "fund_id": "franklin_gold",
+      "nav": 54.4,
+      "nav_date": "2026-05-13",
+      "change_pct": 0.24,
+      "perf": {
+        "1m": 1.91,
+        "3m": -0.06,
+        "6m": 41.84,
+        "ytd": 17.9,
+        "1y": 137.8,
+        "3y": 281.4
+      },
+      "bop_name_zh": "富蘭克林黃金基金美元A"
     },
     {
       "theme": "gold",
@@ -402,7 +441,20 @@
       "name_zh": "晉達環球策略-環球黃金基金 C 收益股份",
       "currency": "USD",
       "tagline": "黃金產業含配息收益版",
-      "source_url": "https://bopfund.moneydj.com/w/wb/wb01_GSF17-IG14.djhtm"
+      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=GSF17-IG14",
+      "fund_id": "investec_gold",
+      "nav": 190.61,
+      "nav_date": "2026-05-13",
+      "change_pct": 0.05,
+      "perf": {
+        "1m": -1.26,
+        "3m": -7.58,
+        "6m": 25.28,
+        "ytd": 9.48,
+        "1y": 119.82,
+        "3y": 208.13
+      },
+      "bop_name_zh": "晉達環球策略基金-環球黃金基金C收益股份"
     },
     {
       "theme": "ai",
@@ -410,7 +462,20 @@
       "name_zh": "安聯台灣科技基金",
       "currency": "TWD",
       "tagline": "台股 AI 與半導體供應鏈主動選股",
-      "source_url": "https://bopfund.moneydj.com/"
+      "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACDD04-2602",
+      "fund_id": "allianz_tw_tech",
+      "nav": 781.76,
+      "nav_date": "2026-05-14",
+      "change_pct": 2.43,
+      "perf": {
+        "1m": 31.35,
+        "3m": 67.81,
+        "6m": 136.78,
+        "ytd": 101.73,
+        "1y": 283.37,
+        "3y": 559.05
+      },
+      "bop_name_zh": "安聯台灣科技基金"
     },
     {
       "theme": "ai",
@@ -418,7 +483,20 @@
       "name_zh": "聯博-國際科技基金 A 美元",
       "currency": "USD",
       "tagline": "全球科技巨頭與雲端軟體應用",
-      "source_url": "https://bopfund.moneydj.com/"
+      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=ALZ03-AL08",
+      "fund_id": "ab_intl_tech",
+      "nav": 1561.36,
+      "nav_date": "2026-05-13",
+      "change_pct": 1.84,
+      "perf": {
+        "1m": 20.1,
+        "3m": 28.28,
+        "6m": 35.21,
+        "ytd": 32.83,
+        "1y": 75.4,
+        "3y": 193.09
+      },
+      "bop_name_zh": "聯博-國際科技基金A級別美元"
     },
     {
       "theme": "vietnam",
@@ -426,15 +504,41 @@
       "name_zh": "利安資金越南基金 A 級別美元",
       "currency": "USD",
       "tagline": "FDI 轉移之長期選擇權；MSCI 升等催化",
-      "source_url": "https://bopfund.moneydj.com/w/wb/wb01_LIC28-LI01.djhtm"
+      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=LIC28-LI01",
+      "fund_id": "uob_vietnam",
+      "nav": 0.882,
+      "nav_date": "2026-05-13",
+      "change_pct": -1.12,
+      "perf": {
+        "1m": 5.25,
+        "3m": 0.92,
+        "6m": 9.43,
+        "ytd": 2.8,
+        "1y": 29.52,
+        "3y": 43.41
+      },
+      "bop_name_zh": "利安資金越南基金A級別美元"
     },
     {
       "theme": "india",
-      "code": "LIC01",
-      "name_zh": "利安資金印度基金 A 級別美元",
+      "code": "FR59",
+      "name_zh": "富蘭克林坦伯頓印度基金",
       "currency": "USD",
-      "tagline": "印度長期成長敘事；先卡位 2% 追蹤",
-      "source_url": "https://bopfund.moneydj.com/w/wb/wb01_LIC01.djhtm"
+      "tagline": "印度長期成長敘事",
+      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLZ79-FR59",
+      "fund_id": "franklin_india",
+      "nav": 56.49,
+      "nav_date": "2026-05-13",
+      "change_pct": 0.05,
+      "perf": {
+        "1m": -3.19,
+        "3m": -11.82,
+        "6m": -16.8,
+        "ytd": -16.41,
+        "1y": -18.02,
+        "3y": 14.7
+      },
+      "bop_name_zh": "富蘭克林坦伯頓全球投資系列印度基金美元A(acc)"
     },
     {
       "theme": "bonds",
@@ -442,7 +546,20 @@
       "name_zh": "東方匯理新興市場債券基金",
       "currency": "USD",
       "tagline": "捕捉新興國家主權債與公司債利差",
-      "source_url": "https://bopfund.moneydj.com/"
+      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=PIZA8-PI0W",
+      "fund_id": "amundi_em_bond",
+      "nav": 44.19,
+      "nav_date": "2026-05-13",
+      "change_pct": 0.05,
+      "perf": {
+        "1m": 1.06,
+        "3m": 0.15,
+        "6m": 5.06,
+        "ytd": 2.96,
+        "1y": 14.4,
+        "3y": 37.72
+      },
+      "bop_name_zh": "東方匯理基金新興市場債券A美元(月配息)"
     },
     {
       "theme": "bonds",
@@ -450,7 +567,20 @@
       "name_zh": "富蘭克林公司債基金",
       "currency": "USD",
       "tagline": "鎖定高評級企業債殖利率，佈局降息",
-      "source_url": "https://bopfund.moneydj.com/"
+      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLZ41-FR14",
+      "fund_id": "franklin_corporate_bond",
+      "nav": 5.21,
+      "nav_date": "2026-05-13",
+      "change_pct": 0.0,
+      "perf": {
+        "1m": 0.17,
+        "3m": -0.03,
+        "6m": 2.24,
+        "ytd": 0.92,
+        "1y": 6.66,
+        "3y": 26.98
+      },
+      "bop_name_zh": "富蘭克林坦伯頓全球投資系列公司債基金美元A(Mdis)"
     },
     {
       "theme": "bonds",
@@ -458,7 +588,20 @@
       "name_zh": "東方匯理全球策略收益基金",
       "currency": "USD",
       "tagline": "無指標限制之靈活彈性債券策略",
-      "source_url": "https://bopfund.moneydj.com/"
+      "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACCF311-ZJ04",
+      "fund_id": "amundi_global_strategic",
+      "nav": 10.14,
+      "nav_date": "2026-05-12",
+      "change_pct": -0.2,
+      "perf": {
+        "1m": 0.1,
+        "3m": null,
+        "6m": null,
+        "ytd": 1.4,
+        "1y": null,
+        "3y": null
+      },
+      "bop_name_zh": "東方匯理全球策略收益基金-ND月配型(美元)"
     }
   ]
 }

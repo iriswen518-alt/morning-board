@@ -436,6 +436,39 @@ const THEME_INDEX_NAME = {
   "bonds": null
 };
 
+function renderThemeFundsBlock(themeKey) {
+  const tf = ((DATA.targets || {}).theme_funds || []).filter(f => f.theme === themeKey);
+  if (!tf.length) return "";
+  const rows = tf.map(f => {
+    const name = f.bop_name_zh || f.name_zh || "";
+    const nameHtml = f.source_url
+      ? `<a href="${escapeHtml(f.source_url)}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${escapeHtml(name)}</a>`
+      : escapeHtml(name);
+    const perf = f.perf || {};
+    const navDate = f.nav_date ? `<div class="cell-sub">${escapeHtml(shortDate(f.nav_date))}</div>` : "";
+    return `<tr>
+      <td>${nameHtml}</td>
+      <td>${fmtNum(f.nav)}${navDate}</td>
+      <td class="${pctClass(f.change_pct)}">${fmtPct(f.change_pct)}</td>
+      <td class="${pctClass(perf['1m'])}">${fmtPct(perf['1m'])}</td>
+      <td class="${pctClass(perf.ytd)}">${fmtPct(perf.ytd)}</td>
+      <td class="${pctClass(perf['1y'])}">${fmtPct(perf['1y'])}</td>
+    </tr>`;
+  }).join("");
+  return `
+    <div class="t-section">
+      <div class="t-section-head"><span class="t-section-icon">💰</span><span>相關基金績效</span></div>
+      <div class="t-section-body">
+        <table class="indices" style="margin-top:6px">
+          <thead><tr>
+            <th>基金</th><th>淨值</th><th>日</th><th>近1月</th><th>今年</th><th>近1年</th>
+          </tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>
+    </div>`;
+}
+
 function renderThemeIndexBlock(themeKey) {
   const idxName = THEME_INDEX_NAME[themeKey];
   if (!idxName) return "";
@@ -506,6 +539,7 @@ function renderTargetsSheet() {
       </div>
 
       ${renderThemeIndexBlock(t.key)}
+      ${renderThemeFundsBlock(t.key)}
 
       <div class="t-section t-status">
         <div class="t-section-head"><span class="t-section-icon">📊</span><span>市場現況</span></div>
@@ -933,18 +967,17 @@ function renderWealthSheet() {
           <div class="t-tagline">${escapeHtml(t.summary || "")}</div>
         </div>
       </div>
-      ${(t.laws || []).map(law => {
-        const hideSource = law.source && law.source.includes("凱基");
-        return `
+      ${(t.laws || [])
+        .filter(law => !((law.title && law.title.includes("凱基")) || (law.source && law.source.includes("凱基"))))
+        .map(law => `
         <div class="w-law">
           <div class="w-law-head">
             <span class="w-law-code">${escapeHtml(law.code || "")}</span>
             <span class="w-law-title">${escapeHtml(law.title || "")}</span>
           </div>
           <div class="w-law-body">${escapeHtml(law.content || "")}</div>
-          ${law.source && !hideSource ? `<div class="w-law-source">資料來源：${escapeHtml(law.source)}</div>` : ""}
-        </div>`;
-      }).join("")}
+          ${law.source ? `<div class="w-law-source">資料來源：${escapeHtml(law.source)}</div>` : ""}
+        </div>`).join("")}
     </div>
   `).join("");
 
