@@ -1047,7 +1047,7 @@ function renderUsStocksSheet() {
     ${renderStocksTable("", curated)}
   ` : "";
   const popularBlock = popular.length ? `
-    <h2 style="font-size:16px; margin:18px 0 8px;">市場熱門海外股票 / ETF</h2>
+    <h2 style="font-size:16px; margin:18px 0 8px;">熱門海外股票</h2>
     <p style="color:var(--text-mute); font-size:12px; margin:0 0 8px;">資料來源：Yahoo Finance trending（流動性過低個股已過濾），每次 build 重抓。</p>
     ${renderStocksTable("", popular)}
   ` : "";
