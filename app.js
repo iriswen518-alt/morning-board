@@ -479,9 +479,8 @@ function renderTargetsSheet() {
 
   // Tab buttons（不顯示編號）
   const tabBtns = list.map((t, i) => `
-    <button class="t-tab ${i === 0 ? "active" : ""}" data-ttab="${escapeHtml(t.key)}">
-      <span>${escapeHtml(t.name)}</span>
-      ${stanceChip(t.stance)}
+    <button class="tab ${i === 0 ? "active" : ""}" data-ttab="${escapeHtml(t.key)}">
+      ${escapeHtml(t.name)} ${stanceChip(t.stance)}
     </button>
   `).join("");
 
@@ -558,7 +557,7 @@ function renderTargetsSheet() {
     </ol>` : "";
 
   return `
-    <div class="t-tab-row">${tabBtns}</div>
+    <div class="tabs tabs-wrap">${tabBtns}</div>
     <div class="t-panes">${panes}</div>
     ${allocHtml}
   `;
@@ -650,7 +649,7 @@ function wireAllocationTabs() {
 }
 
 function wireTargetsTabs() {
-  const buttons = document.querySelectorAll(".t-tab[data-ttab]");
+  const buttons = document.querySelectorAll(".tab[data-ttab]");
   buttons.forEach(btn => {
     btn.addEventListener("click", () => {
       const key = btn.dataset.ttab;
@@ -932,8 +931,8 @@ function renderWealthSheet() {
   const allTabs = [...topics.map(t => ({key: t.key, name: t.name, icon: t.icon})), {key: newsKey, name: "稅務新聞", icon: "📰"}];
 
   const tabBtns = allTabs.map((t, i) => `
-    <button class="t-tab ${i === 0 ? "active" : ""}" data-wtab="${escapeHtml(t.key)}">
-      <span>${t.icon || ""} ${escapeHtml(t.name)}</span>
+    <button class="tab ${i === 0 ? "active" : ""}" data-wtab="${escapeHtml(t.key)}">
+      ${t.icon || ""} ${escapeHtml(t.name)}
     </button>
   `).join("");
 
@@ -985,13 +984,13 @@ function renderWealthSheet() {
 
   return `
     ${noteHtml}
-    <div class="t-tab-row">${tabBtns}</div>
+    <div class="tabs tabs-wrap">${tabBtns}</div>
     <div class="t-panes">${topicPanes}${newsPane}</div>
   `;
 }
 
 function wireWealthTabs() {
-  const buttons = document.querySelectorAll(".t-tab[data-wtab]");
+  const buttons = document.querySelectorAll(".tab[data-wtab]");
   buttons.forEach(btn => {
     btn.addEventListener("click", () => {
       const key = btn.dataset.wtab;
