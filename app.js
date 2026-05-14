@@ -998,8 +998,7 @@ function renderDcaSheet() {
   if (!list.length) {
     return "<p style='color:var(--text-mute); padding:20px 0'>尚未提供定期定額清單</p>";
   }
-  const noteHtml = dca.note ? `<p class="a-note">${escapeHtml(dca.note)}</p>` : "";
-  return noteHtml + list.map(f => {
+  return list.map(f => {
     const nameHtml = f.source_url
       ? `<a href="${f.source_url}" target="_blank" rel="noopener">${escapeHtml(f.name_zh)}</a>`
       : escapeHtml(f.name_zh);
