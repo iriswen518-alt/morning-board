@@ -187,9 +187,13 @@ function buildSearchIndex() {
   for (const b of (DATA.obonds?.bonds || [])) {
     idx.push({ tab: "obonds", tabLabel: "精選海外債", title: b.name_zh || b.name || b.isin || "", text: [b.tagline, b.summary, b.issuer].filter(Boolean).join(" ") });
   }
-  // 海外股票
+  // 海外股票（精選）
   for (const s of (DATA.stocks?.us_stocks || [])) {
-    idx.push({ tab: "usstocks", tabLabel: "海外股票", title: `${s.symbol} ${s.name_zh || ""}`.trim(), text: "" });
+    idx.push({ tab: "usstocks", tabLabel: "海外股票 · 精選", title: `${s.symbol} ${s.name_zh || ""}`.trim(), text: "" });
+  }
+  // 海外股票（熱門）
+  for (const s of (DATA.popular?.stocks || [])) {
+    idx.push({ tab: "usstocks", tabLabel: "海外股票 · 熱門", title: `${s.symbol} ${s.name_zh || ""}`.trim(), text: "" });
   }
   // 台股
   for (const s of (DATA.stocks?.tw_stocks || [])) {
@@ -277,13 +281,14 @@ function wireSearch() {
 async function init() {
   // 每個來源各自有 fallback：一個壞不拖垮全頁
   const safe = (name, fallback) => load(name).catch(() => fallback);
-  const [meta, market, news, tax, funds, stocks, insurance, obonds, targets, allocation, dca, wealth] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, popular, insurance, obonds, targets, allocation, dca, wealth] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
     safe("tax", { tax_date: "", items: [] }),
     safe("funds", { funds: [] }),
     safe("stocks", { us_stocks: [], tw_stocks: [] }),
+    safe("popular_stocks", { stocks: [] }),
     safe("insurances", { insurances: [] }),
     safe("overseas_bonds", { bonds: [] }),
     safe("targets", { targets: [], summary: {}, entry_sequence: [] }),
@@ -291,7 +296,7 @@ async function init() {
     safe("dca", { funds: [] }),
     safe("wealth_transfer", { topics: [] }),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, insurance, obonds, targets, allocation, dca, wealth };
+  DATA = { meta, market, news, tax, funds, stocks, popular, insurance, obonds, targets, allocation, dca, wealth };
   if (!meta.built_at) {
     $("updated").textContent = `載入部分失敗（顯示快取資料）`;
   } else {
@@ -573,13 +578,14 @@ async function refreshData() {
 
   // 資料刷新：fetch 7 個 JSON，每個各自有 fallback
   const safe = (name, fallback) => load(name).catch(() => DATA[name === "insurances" ? "insurance" : name] || fallback);
-  const [meta, market, news, tax, funds, stocks, insurance, obonds, targets, allocation, dca, wealth] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, popular, insurance, obonds, targets, allocation, dca, wealth] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
     safe("tax", { tax_date: "", items: [] }),
     safe("funds", { funds: [] }),
     safe("stocks", { us_stocks: [], tw_stocks: [] }),
+    safe("popular_stocks", { stocks: [] }),
     safe("insurances", { insurances: [] }),
     safe("overseas_bonds", { bonds: [] }),
     safe("targets", { targets: [], summary: {}, entry_sequence: [] }),
@@ -587,7 +593,7 @@ async function refreshData() {
     safe("dca", { funds: [] }),
     safe("wealth_transfer", { topics: [] }),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, insurance, obonds, targets, allocation, dca, wealth };
+  DATA = { meta, market, news, tax, funds, stocks, popular, insurance, obonds, targets, allocation, dca, wealth };
   if (DATA.meta && DATA.meta.built_at) {
     $("updated").textContent =
       `上次更新：${DATA.meta.built_at.replace("T", " ").slice(0, 16)}`;
@@ -1029,12 +1035,23 @@ function renderMarketSheet() {
 }
 
 function renderUsStocksSheet() {
-  const list = DATA.stocks?.us_stocks || [];
-  if (!list.length) {
+  const curated = DATA.stocks?.us_stocks || [];
+  const popular = DATA.popular?.stocks || [];
+  const hasAny = curated.length || popular.length;
+  if (!hasAny) {
     return `<p style="color:var(--text-mute); padding:20px 0">尚未提供海外股票資料</p>`;
   }
   const note = `<p style="color:var(--text-mute); font-size:13px; padding:6px 0 12px">資料來源：板信商銀網路銀行 iQuote。點選名稱可至板信即時報價頁。</p>`;
-  return note + renderStocksTable("", list);
+  const curatedBlock = curated.length ? `
+    <h2 style="font-size:16px; margin:12px 0 8px;">精選海外股票</h2>
+    ${renderStocksTable("", curated)}
+  ` : "";
+  const popularBlock = popular.length ? `
+    <h2 style="font-size:16px; margin:18px 0 8px;">市場熱門海外股票 / ETF</h2>
+    <p style="color:var(--text-mute); font-size:12px; margin:0 0 8px;">資料來源：Yahoo Finance trending（流動性過低個股已過濾），每次 build 重抓。</p>
+    ${renderStocksTable("", popular)}
+  ` : "";
+  return note + curatedBlock + popularBlock;
 }
 
 function renderStocksTable(title, list) {
