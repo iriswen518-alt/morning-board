@@ -933,16 +933,18 @@ function renderWealthSheet() {
           <div class="t-tagline">${escapeHtml(t.summary || "")}</div>
         </div>
       </div>
-      ${(t.laws || []).map(law => `
+      ${(t.laws || []).map(law => {
+        const hideSource = law.source && law.source.includes("凱基");
+        return `
         <div class="w-law">
           <div class="w-law-head">
             <span class="w-law-code">${escapeHtml(law.code || "")}</span>
             <span class="w-law-title">${escapeHtml(law.title || "")}</span>
           </div>
           <div class="w-law-body">${escapeHtml(law.content || "")}</div>
-          ${law.source ? `<div class="w-law-source">資料來源：${escapeHtml(law.source)}</div>` : ""}
-        </div>
-      `).join("")}
+          ${law.source && !hideSource ? `<div class="w-law-source">資料來源：${escapeHtml(law.source)}</div>` : ""}
+        </div>`;
+      }).join("")}
     </div>
   `).join("");
 
