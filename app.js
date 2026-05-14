@@ -935,16 +935,15 @@ function renderDcaSheet() {
       ${f.tagline ? `<p class="tagline">${escapeHtml(f.tagline)}</p>` : ""}
       <div style="font-size:11px; color:var(--text-mute); margin-top:8px">基準日 ${escapeHtml(f.perf_date || "—")}</div>
       <div style="overflow-x:auto; -webkit-overflow-scrolling:touch; margin-top:4px">
-        <table class="indices" style="font-size:13px; min-width:420px">
+        <table class="indices" style="font-size:13px; min-width:360px">
           <thead><tr>
             <th>申購方式</th>
-            <th>近1月</th><th>近3月</th><th>近6月</th>
+            <th>近3月</th><th>近6月</th>
             <th>近1年</th><th>近3年</th>
           </tr></thead>
           <tbody>
             <tr>
               <td><strong>單筆申購</strong></td>
-              <td>${cell(s['1m'])}</td>
               <td>${cell(s['3m'])}</td>
               <td>${cell(s['6m'])}</td>
               <td>${cell(s['1y'])}</td>
@@ -952,7 +951,6 @@ function renderDcaSheet() {
             </tr>
             <tr>
               <td><strong>定期定額</strong></td>
-              <td>${cell(d['1m'])}</td>
               <td>${cell(d['3m'])}</td>
               <td>${cell(d['6m'])}</td>
               <td>${cell(d['1y'])}</td>
