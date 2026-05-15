@@ -1255,16 +1255,16 @@ function renderWealthSheet() {
 
 // ===== 稅負試算 =====
 const CALC_TABS = [
-  {key: "income",    name: "綜所稅"},
-  {key: "amt",       name: "最低稅負制"},
-  {key: "gift",      name: "贈與稅"},
-  {key: "estate",    name: "遺產稅"},
-  {key: "house",     name: "房地合一稅"},
-  {key: "land",      name: "土地增值稅"},
-  {key: "case_house",name: "房產：繼承/贈與/買賣比較"},
-  {key: "case_stock",name: "股票：個人/投資公司比較"},
-  {key: "case_fund", name: "基金：個人/投資公司比較"},
-  {key: "case_realty",name: "房產：個人/投資公司比較"},
+  {key: "income",    name: "綜所稅",       group: "single"},
+  {key: "amt",       name: "最低稅負制",   group: "single"},
+  {key: "gift",      name: "贈與稅",       group: "single"},
+  {key: "estate",    name: "遺產稅",       group: "single"},
+  {key: "house",     name: "房地合一稅",   group: "single"},
+  {key: "land",      name: "土地增值稅",   group: "single"},
+  {key: "case_house",name: "房產：繼承/贈與/買賣比較",  group: "compare"},
+  {key: "case_stock",name: "股票：個人/投資公司比較", group: "compare"},
+  {key: "case_fund", name: "基金：個人/投資公司比較", group: "compare"},
+  {key: "case_realty",name: "房產：個人/投資公司比較", group: "compare"},
 ];
 
 function fmtMoney(n) {
