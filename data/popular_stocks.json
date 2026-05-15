@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-15T13:00:50+08:00",
+  "generated_at": "2026-05-15T15:00:58+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -63,30 +63,6 @@
       "error": null
     },
     {
-      "symbol": "RDW",
-      "name_zh": "RDW",
-      "kind": "US",
-      "price": 13.99,
-      "change_pct": 22.08,
-      "mtd_pct": 52.23,
-      "ytd_pct": 84.08,
-      "market_date": "2026-05-14",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RDW.US",
-      "error": null
-    },
-    {
-      "symbol": "ONDS",
-      "name_zh": "ONDS",
-      "kind": "US",
-      "price": 11.21,
-      "change_pct": 26.52,
-      "mtd_pct": 11.65,
-      "ytd_pct": 14.86,
-      "market_date": "2026-05-14",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ONDS.US",
-      "error": null
-    },
-    {
       "symbol": "UPST",
       "name_zh": "UPST",
       "kind": "US",
@@ -96,6 +72,18 @@
       "ytd_pct": -32.06,
       "market_date": "2026-05-14",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=UPST.US",
+      "error": null
+    },
+    {
+      "symbol": "SOXS",
+      "name_zh": "SOXS",
+      "kind": "US",
+      "price": 8.27,
+      "change_pct": -0.96,
+      "mtd_pct": -37.82,
+      "ytd_pct": -86.79,
+      "market_date": "2026-05-14",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOXS.US",
       "error": null
     },
     {
@@ -111,15 +99,51 @@
       "error": null
     },
     {
-      "symbol": "TTWO",
-      "name_zh": "TTWO",
+      "symbol": "ONDS",
+      "name_zh": "ONDS",
       "kind": "US",
-      "price": 242.41,
-      "change_pct": 6.79,
-      "mtd_pct": 13.4,
-      "ytd_pct": -5.32,
+      "price": 11.21,
+      "change_pct": 26.52,
+      "mtd_pct": 11.65,
+      "ytd_pct": 14.86,
       "market_date": "2026-05-14",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TTWO.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ONDS.US",
+      "error": null
+    },
+    {
+      "symbol": "COIN",
+      "name_zh": "COIN",
+      "kind": "US",
+      "price": 212.01,
+      "change_pct": 5.06,
+      "mtd_pct": 12.91,
+      "ytd_pct": -6.25,
+      "market_date": "2026-05-14",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=COIN.US",
+      "error": null
+    },
+    {
+      "symbol": "RDW",
+      "name_zh": "RDW",
+      "kind": "US",
+      "price": 13.99,
+      "change_pct": 22.08,
+      "mtd_pct": 52.23,
+      "ytd_pct": 84.08,
+      "market_date": "2026-05-14",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RDW.US",
+      "error": null
+    },
+    {
+      "symbol": "SNDK",
+      "name_zh": "SNDK",
+      "kind": "US",
+      "price": 1382.72,
+      "change_pct": -4.46,
+      "mtd_pct": 26.1,
+      "ytd_pct": 482.49,
+      "market_date": "2026-05-14",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SNDK.US",
       "error": null
     },
     {
@@ -135,27 +159,39 @@
       "error": null
     },
     {
-      "symbol": "NNE",
-      "name_zh": "NNE",
+      "symbol": "INTC",
+      "name_zh": "INTC",
       "kind": "US",
-      "price": 27.54,
-      "change_pct": 1.81,
-      "mtd_pct": 17.79,
-      "ytd_pct": 14.7,
+      "price": 115.93,
+      "change_pct": -3.62,
+      "mtd_pct": 22.7,
+      "ytd_pct": 214.17,
       "market_date": "2026-05-14",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NNE.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=INTC.US",
       "error": null
     },
     {
-      "symbol": "COIN",
-      "name_zh": "COIN",
+      "symbol": "SQQQ",
+      "name_zh": "SQQQ",
       "kind": "US",
-      "price": 212.01,
-      "change_pct": 5.06,
-      "mtd_pct": 12.91,
-      "ytd_pct": -6.25,
+      "price": 41.07,
+      "change_pct": -2.19,
+      "mtd_pct": -20.48,
+      "ytd_pct": -40.04,
       "market_date": "2026-05-14",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=COIN.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SQQQ.US",
+      "error": null
+    },
+    {
+      "symbol": "SLV",
+      "name_zh": "SLV",
+      "kind": "US",
+      "price": 75.51,
+      "change_pct": -4.84,
+      "mtd_pct": 13.28,
+      "ytd_pct": 17.22,
+      "market_date": "2026-05-14",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SLV.US",
       "error": null
     },
     {
