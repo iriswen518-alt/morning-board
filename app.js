@@ -204,13 +204,13 @@ function buildSearchIndex() {
       idx.push({ tab: "wealth", tabLabel: `財富傳承 · ${t.name}`, title: `${law.code || ""} ${law.title || ""}`.trim(), text: law.content || "" });
     }
   }
-  // 精選基金
+  // 精選基金 · 單筆投資
   for (const f of (DATA.funds?.funds || [])) {
-    idx.push({ tab: "funds", tabLabel: "精選基金", title: f.name_zh || "", text: f.tagline || "" });
+    idx.push({ tab: "funds", subtab: "lump", tabLabel: "精選基金 · 單筆投資", title: f.name_zh || "", text: f.tagline || "" });
   }
-  // 定期定額
+  // 精選基金 · 定期定額
   for (const f of (DATA.dca?.funds || [])) {
-    idx.push({ tab: "dca", tabLabel: "定期定額", title: f.name_zh || "", text: f.tagline || "" });
+    idx.push({ tab: "funds", subtab: "dca", tabLabel: "精選基金 · 定期定額", title: f.name_zh || "", text: f.tagline || "" });
   }
   // 海外債
   for (const b of (DATA.obonds?.bonds || [])) {
@@ -406,13 +406,24 @@ function switchTab(name) {
   else if (name === "insurance") body.innerHTML = renderInsuranceSheet();
   else if (name === "obonds") body.innerHTML = renderObondsSheet();
   else if (name === "usstocks") body.innerHTML = renderUsStocksSheet();
-  else if (name === "dca") body.innerHTML = renderDcaSheet();
+  else if (name === "dca") {
+    // dca 已併入 funds 的次分頁；舊的 hash 連結轉到 funds#dca
+    body.innerHTML = renderFundsSheet();
+    PENDING_SUBTAB = "dca";
+    name = "funds";
+    CURRENT_TAB = "funds";
+    body.dataset.section = "funds";
+    document.querySelectorAll(".main-tab").forEach(b => {
+      b.classList.toggle("active", b.dataset.tab === "funds");
+    });
+  }
   else if (name === "targets") body.innerHTML = renderTargetsSheet();
   else if (name === "allocation") body.innerHTML = renderAllocationSheet();
   else if (name === "wealth") body.innerHTML = renderWealthSheet();
   else if (name === "calc") body.innerHTML = renderCalcSheet();
   if (name === "news") wireNewsTabs();
   if (name === "market") wireMarketTabs();
+  if (name === "funds") wireFundsTabs();
   if (name === "targets") wireTargetsTabs();
   if (name === "allocation") wireAllocationTabs();
   if (name === "wealth") wireWealthTabs();
@@ -420,7 +431,7 @@ function switchTab(name) {
   if (PENDING_SUBTAB) {
     const sub = PENDING_SUBTAB;
     PENDING_SUBTAB = null;
-    const sel = ["mtab", "atab", "ttab", "ctab", "wtab", "ntab"]
+    const sel = ["mtab", "atab", "ttab", "ctab", "wtab", "ntab", "ftab"]
       .map(a => `.tab[data-${a}="${sub}"]`).join(",");
     const subBtn = document.querySelector(sel);
     if (subBtn) subBtn.click();
@@ -2351,9 +2362,38 @@ function wireWealthTabs() {
   });
 }
 
-function renderDcaSheet() {
-  const dca = DATA.dca || {};
-  const list = dca.funds || [];
+function renderLumpFundCards() {
+  const funds = (DATA.funds || {}).funds || [];
+  if (!funds.length) {
+    return "<p style='color:var(--text-mute); padding:20px 0'>尚未提供精選基金清單</p>";
+  }
+  return funds.map(f => {
+    const nameHtml = f.source_url
+      ? `<a href="${f.source_url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${escapeHtml(f.name_zh)}</a>`
+      : escapeHtml(f.name_zh);
+    const chips = currencyChip(f.currency);
+    return `
+    <div class="fund-card">
+      <h3>${nameHtml}</h3>
+      ${chips ? `<div style="margin-bottom:6px">${chips}</div>` : ""}
+      <p class="tagline">${escapeHtml(f.tagline || "")}</p>
+      <div class="grid">
+        <div>
+          <label>淨值</label>
+          ${fmtNum(f.nav)} ${escapeHtml(f.currency || "")}
+          ${f.nav_date ? `<div class="cell-sub">${escapeHtml(shortDate(f.nav_date))}</div>` : ""}
+        </div>
+        <div><label>日漲跌</label><span class="${pctClass(f.change_pct)}">${fmtPct(f.change_pct)}</span></div>
+        <div><label>近1月</label><span class="${pctClass(f.perf?.['1m'])}">${fmtPct(f.perf?.['1m'])}</span></div>
+        <div><label>近3月</label><span class="${pctClass(f.perf?.['3m'])}">${fmtPct(f.perf?.['3m'])}</span></div>
+        <div><label>今年來</label><span class="${pctClass(f.perf?.ytd)}">${fmtPct(f.perf?.ytd)}</span></div>
+      </div>
+    </div>`;
+  }).join("");
+}
+
+function renderDcaFundCards() {
+  const list = ((DATA.dca || {}).funds) || [];
   if (!list.length) {
     return "<p style='color:var(--text-mute); padding:20px 0'>尚未提供定期定額清單</p>";
   }
@@ -2384,32 +2424,37 @@ function renderDcaSheet() {
   }).join("");
 }
 
+// 已合併：精選基金主分頁，內含「單筆投資」與「定期定額」兩個次分頁
 function renderFundsSheet() {
-  const funds = DATA.funds.funds || [];
-  return funds.map(f => {
-    const nameHtml = f.source_url
-      ? `<a href="${f.source_url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${escapeHtml(f.name_zh)}</a>`
-      : escapeHtml(f.name_zh);
-    const chips = currencyChip(f.currency);
-    return `
-    <div class="fund-card">
-      <h3>${nameHtml}</h3>
-      ${chips ? `<div style="margin-bottom:6px">${chips}</div>` : ""}
-      <p class="tagline">${escapeHtml(f.tagline || "")}</p>
-      <div class="grid">
-        <div>
-          <label>淨值</label>
-          ${fmtNum(f.nav)} ${escapeHtml(f.currency || "")}
-          ${f.nav_date ? `<div class="cell-sub">${escapeHtml(shortDate(f.nav_date))}</div>` : ""}
-        </div>
-        <div><label>日漲跌</label><span class="${pctClass(f.change_pct)}">${fmtPct(f.change_pct)}</span></div>
-        <div><label>近1月</label><span class="${pctClass(f.perf?.['1m'])}">${fmtPct(f.perf?.['1m'])}</span></div>
-        <div><label>近3月</label><span class="${pctClass(f.perf?.['3m'])}">${fmtPct(f.perf?.['3m'])}</span></div>
-        <div><label>今年來</label><span class="${pctClass(f.perf?.ytd)}">${fmtPct(f.perf?.ytd)}</span></div>
-      </div>
+  return `
+    <div class="tabs">
+      <button class="tab active" data-ftab="lump">單筆投資</button>
+      <button class="tab" data-ftab="dca">定期定額</button>
     </div>
+    <div id="ftab-lump">${renderLumpFundCards()}</div>
+    <div id="ftab-dca" hidden>${renderDcaFundCards()}</div>
   `;
-  }).join("");
+}
+
+function renderDcaSheet() {
+  // 保留以維持向後相容；實際內容在 renderFundsSheet 的 dca 次分頁
+  return renderFundsSheet();
+}
+
+function wireFundsTabs() {
+  const buttons = document.querySelectorAll(".tab[data-ftab]");
+  const ids = Array.from(buttons).map(b => "ftab-" + b.dataset.ftab);
+  buttons.forEach(t => {
+    t.addEventListener("click", () => {
+      buttons.forEach(x => x.classList.remove("active"));
+      t.classList.add("active");
+      const which = "ftab-" + t.dataset.ftab;
+      ids.forEach(id => {
+        const el = $(id);
+        if (el) el.hidden = id !== which;
+      });
+    });
+  });
 }
 
 function wireNewsTabs() {
