@@ -156,6 +156,7 @@ let DATA = {};
 let CURRENT_TAB = "market";
 let SEARCH_INDEX = [];
 let PENDING_HIGHLIGHT = null;
+let PENDING_SUBTAB = null;
 
 function flashFindInContent(needle) {
   if (!needle) return false;
@@ -163,20 +164,25 @@ function flashFindInContent(needle) {
   if (!root) return false;
   const lower = needle.toLowerCase().trim();
   if (!lower) return false;
-  // 取得所有葉節點（含文字的最內層 element）
+  // 嘗試多種比對：完整字串、去空白、token（長到短）
+  const tokens = lower.split(/\s+/).filter(t => t.length >= 2).sort((a, b) => b.length - a.length);
+  const needles = [lower, lower.replace(/\s+/g, ""), ...tokens];
   const all = root.querySelectorAll("h1, h2, h3, h4, p, td, li, span, div, button, a");
-  let hit = null;
-  for (const el of all) {
-    // 跳過容器類元素（避免命中整個 pane）
-    if (el.children.length > 3) continue;
-    const text = (el.textContent || "").toLowerCase();
-    if (text.includes(lower)) { hit = el; break; }
+  for (const n of needles) {
+    if (!n) continue;
+    for (const el of all) {
+      if (el.children.length > 3) continue;
+      const text = (el.textContent || "").toLowerCase();
+      const textNoSpace = text.replace(/\s+/g, "");
+      if (text.includes(n) || textNoSpace.includes(n)) {
+        el.scrollIntoView({ behavior: "smooth", block: "center" });
+        el.classList.add("flash-hit");
+        setTimeout(() => el.classList.remove("flash-hit"), 2200);
+        return true;
+      }
+    }
   }
-  if (!hit) return false;
-  hit.scrollIntoView({ behavior: "smooth", block: "center" });
-  hit.classList.add("flash-hit");
-  setTimeout(() => hit.classList.remove("flash-hit"), 2200);
-  return true;
+  return false;
 }
 
 function buildSearchIndex() {
@@ -220,7 +226,7 @@ function buildSearchIndex() {
   }
   // 台股
   for (const s of (DATA.stocks?.tw_stocks || [])) {
-    idx.push({ tab: "market", tabLabel: "全球市場 · 台股", title: `${s.symbol} ${s.name_zh || ""}`.trim(), text: "" });
+    idx.push({ tab: "market", subtab: "tw", tabLabel: "全球市場 · 台股", title: `${s.symbol} ${s.name_zh || ""}`.trim(), text: "台股 台灣股市" });
   }
   // 保險
   for (const ins of (DATA.insurance?.insurances || [])) {
@@ -295,6 +301,7 @@ function wireSearch() {
       btn.addEventListener("click", () => {
         const r = results[i] || {};
         PENDING_HIGHLIGHT = r.title || "";
+        PENDING_SUBTAB = r.subtab || null;
         switchTab(btn.dataset.tab);
         panel.hidden = true;
         input.value = "";
@@ -410,10 +417,18 @@ function switchTab(name) {
   if (name === "allocation") wireAllocationTabs();
   if (name === "wealth") wireWealthTabs();
   if (name === "calc") wireCalcTabs();
+  if (PENDING_SUBTAB) {
+    const sub = PENDING_SUBTAB;
+    PENDING_SUBTAB = null;
+    const sel = ["mtab", "atab", "ttab", "ctab", "wtab", "ntab"]
+      .map(a => `.tab[data-${a}="${sub}"]`).join(",");
+    const subBtn = document.querySelector(sel);
+    if (subBtn) subBtn.click();
+  }
   if (PENDING_HIGHLIGHT) {
     const target = PENDING_HIGHLIGHT;
     PENDING_HIGHLIGHT = null;
-    setTimeout(() => flashFindInContent(target), 80);
+    setTimeout(() => flashFindInContent(target), 120);
   } else {
     window.scrollTo({ top: 0, behavior: "instant" in window ? "instant" : "auto" });
   }
