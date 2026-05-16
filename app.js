@@ -212,9 +212,12 @@ function buildSearchIndex() {
   for (const f of (DATA.dca?.funds || [])) {
     idx.push({ tab: "funds", subtab: "dca", tabLabel: "精選基金 · 定期定額", title: f.name_zh || "", text: f.tagline || "" });
   }
-  // 精選基金 · 超越ETF
-  for (const f of (DATA.beatetf?.funds || [])) {
+  // 精選基金 · 超越ETF（funds + etfs）
+  for (const f of (DATA.beatetf?.funds?.items || [])) {
     idx.push({ tab: "funds", subtab: "beatetf", tabLabel: "精選基金 · 超越ETF", title: f.name_zh || "", text: DATA.beatetf?.tagline || "" });
+  }
+  for (const e of (DATA.beatetf?.etfs?.items || [])) {
+    idx.push({ tab: "funds", subtab: "beatetf", tabLabel: "精選基金 · 超越ETF", title: `${e.symbol || ""} ${e.name_zh || ""}`.trim(), text: e.category || "" });
   }
   // 海外債
   for (const b of (DATA.obonds?.bonds || [])) {
@@ -2432,29 +2435,41 @@ function renderDcaFundCards() {
 
 function renderBeatEtfCards() {
   const data = DATA.beatetf || {};
-  const funds = data.funds || [];
-  if (!funds.length) {
+  const fundItems = (data.funds && data.funds.items) || [];
+  const etfItems  = (data.etfs  && data.etfs.items)  || [];
+  if (!fundItems.length && !etfItems.length) {
     return "<p style='color:var(--text-mute); padding:20px 0'>尚未提供超越ETF清單</p>";
   }
   const periods = [
-    { key: "1y",  label: "近1年" },
-    { key: "3y",  label: "近3年" },
-    { key: "5y",  label: "近5年" },
-    { key: "10y", label: "近10年" },
-    { key: "20y", label: "近20年" }
+    { key: "1m", label: "近1月" },
+    { key: "3m", label: "近3月" },
+    { key: "6m", label: "近6月" },
+    { key: "1y", label: "近1年" },
+    { key: "3y", label: "近3年" },
+    { key: "5y", label: "近5年" }
   ];
-  const bench = data.benchmark || null;
   const fmtR = v => (v === null || v === undefined) ? "—" : `${Number(v).toFixed(1)}%`;
   const cellClass = v => (v === null || v === undefined) ? "" : (v > 0 ? "up" : (v < 0 ? "down" : ""));
 
   const tdBase = "padding:6px 8px;border-bottom:1px solid var(--border)";
   const thBase = "padding:6px 8px;border-bottom:1px solid var(--border);background:#CCE8ED";
+  const thBaseEtf = "padding:6px 8px;border-bottom:1px solid var(--border);background:#E5F2F5";
 
   const headerCells = periods.map(p =>
     `<th style="${thBase};text-align:right">${p.label}</th>`
   ).join("");
 
-  const rows = funds.map(f => {
+  const headerCellsEtf = periods.map(p =>
+    `<th style="${thBaseEtf};text-align:right">${p.label}</th>`
+  ).join("");
+
+  const fundRows = fundItems.map(f => {
+    if (f.unlisted) {
+      return `<tr>
+        <td style="${tdBase};white-space:nowrap;color:var(--text-mute)">${escapeHtml(f.name_zh)}</td>
+        <td colspan="${periods.length}" style="${tdBase};color:var(--text-mute);font-size:12px">${escapeHtml(f.note || "未上架")}</td>
+      </tr>`;
+    }
     const cells = periods.map(p => {
       const v = f.perf?.[p.key];
       return `<td style="${tdBase};text-align:right" class="${cellClass(v)}">${fmtR(v)}</td>`;
@@ -2462,17 +2477,20 @@ function renderBeatEtfCards() {
     return `<tr><td style="${tdBase};white-space:nowrap">${escapeHtml(f.name_zh)}</td>${cells}</tr>`;
   }).join("");
 
-  const benchRow = bench ? `
-    <tr style="background:#E5F2F5;font-weight:600">
-      <td style="${tdBase};white-space:nowrap">${escapeHtml(bench.name)}（對照）</td>
-      ${periods.map(p => {
-        const v = bench.perf?.[p.key];
-        return `<td style="${tdBase};text-align:right">${fmtR(v)}</td>`;
-      }).join("")}
-    </tr>` : "";
+  const etfRows = etfItems.map(e => {
+    const catChip = e.category
+      ? `<span class="chip chip-default" style="background:#E5F2F5;color:var(--brand-deep);margin-left:6px;font-size:11px">${escapeHtml(e.category)}</span>`
+      : "";
+    const cells = periods.map(p => {
+      const v = e.perf?.[p.key];
+      return `<td style="${tdBase};text-align:right" class="${cellClass(v)}">${fmtR(v)}</td>`;
+    }).join("");
+    return `<tr><td style="${tdBase};white-space:nowrap">${escapeHtml(e.name_zh)}${catChip}</td>${cells}</tr>`;
+  }).join("");
 
-  return `
-    <div style="overflow-x:auto">
+  const fundsBlock = fundItems.length ? `
+    <div style="margin-bottom:6px;font-weight:600;color:var(--brand-deep)">老牌主動式台股基金</div>
+    <div style="overflow-x:auto;margin-bottom:18px">
       <table style="width:100%;border-collapse:collapse;font-size:13px">
         <thead>
           <tr>
@@ -2480,13 +2498,27 @@ function renderBeatEtfCards() {
             ${headerCells}
           </tr>
         </thead>
-        <tbody>
-          ${rows}
-          ${benchRow}
-        </tbody>
+        <tbody>${fundRows}</tbody>
       </table>
     </div>
-  `;
+  ` : "";
+
+  const etfsBlock = etfItems.length ? `
+    <div style="margin-bottom:6px;font-weight:600;color:var(--brand-deep)">代表性台股 ETF（對照）</div>
+    <div style="overflow-x:auto">
+      <table style="width:100%;border-collapse:collapse;font-size:13px">
+        <thead>
+          <tr>
+            <th style="${thBaseEtf};text-align:left">ETF</th>
+            ${headerCellsEtf}
+          </tr>
+        </thead>
+        <tbody>${etfRows}</tbody>
+      </table>
+    </div>
+  ` : "";
+
+  return `${fundsBlock}${etfsBlock}`;
 }
 
 // 已合併：精選基金主分頁，內含「單筆投資」、「定期定額」、「超越ETF」三個次分頁
