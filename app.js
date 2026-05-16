@@ -212,6 +212,10 @@ function buildSearchIndex() {
   for (const f of (DATA.dca?.funds || [])) {
     idx.push({ tab: "funds", subtab: "dca", tabLabel: "精選基金 · 定期定額", title: f.name_zh || "", text: f.tagline || "" });
   }
+  // 精選基金 · 超越ETF
+  for (const f of (DATA.beatetf?.funds || [])) {
+    idx.push({ tab: "funds", subtab: "beatetf", tabLabel: "精選基金 · 超越ETF", title: f.name_zh || "", text: DATA.beatetf?.tagline || "" });
+  }
   // 海外債
   for (const b of (DATA.obonds?.bonds || [])) {
     idx.push({ tab: "obonds", tabLabel: "精選海外債", title: b.name_zh || b.name || b.isin || "", text: [b.tagline, b.summary, b.issuer].filter(Boolean).join(" ") });
@@ -347,7 +351,7 @@ function wireSearch() {
 async function init() {
   // 每個來源各自有 fallback：一個壞不拖垮全頁
   const safe = (name, fallback) => load(name).catch(() => fallback);
-  const [meta, market, news, tax, funds, stocks, popular, insurance, obonds, targets, allocation, dca, wealth] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, popular, insurance, obonds, targets, allocation, dca, wealth, beatetf] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
@@ -361,8 +365,9 @@ async function init() {
     safe("allocation", { profiles: [], references: [] }),
     safe("dca", { funds: [] }),
     safe("wealth_transfer", { topics: [] }),
+    safe("beatetf", { funds: [], benchmark: null }),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, popular, insurance, obonds, targets, allocation, dca, wealth };
+  DATA = { meta, market, news, tax, funds, stocks, popular, insurance, obonds, targets, allocation, dca, wealth, beatetf };
   if (!meta.built_at) {
     $("updated").textContent = `載入部分失敗（顯示快取資料）`;
   } else {
@@ -559,7 +564,7 @@ async function refreshData() {
 
   // 資料刷新：fetch 7 個 JSON，每個各自有 fallback
   const safe = (name, fallback) => load(name).catch(() => DATA[name === "insurances" ? "insurance" : name] || fallback);
-  const [meta, market, news, tax, funds, stocks, popular, insurance, obonds, targets, allocation, dca, wealth] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, popular, insurance, obonds, targets, allocation, dca, wealth, beatetf] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
@@ -573,8 +578,9 @@ async function refreshData() {
     safe("allocation", { profiles: [], references: [] }),
     safe("dca", { funds: [] }),
     safe("wealth_transfer", { topics: [] }),
+    safe("beatetf", { funds: [], benchmark: null }),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, popular, insurance, obonds, targets, allocation, dca, wealth };
+  DATA = { meta, market, news, tax, funds, stocks, popular, insurance, obonds, targets, allocation, dca, wealth, beatetf };
   SEARCH_INDEX = buildSearchIndex();
   if (DATA.meta && DATA.meta.built_at) {
     $("updated").textContent =
@@ -2424,15 +2430,86 @@ function renderDcaFundCards() {
   }).join("");
 }
 
-// 已合併：精選基金主分頁，內含「單筆投資」與「定期定額」兩個次分頁
+function renderBeatEtfCards() {
+  const data = DATA.beatetf || {};
+  const funds = data.funds || [];
+  if (!funds.length) {
+    return "<p style='color:var(--text-mute); padding:20px 0'>尚未提供超越ETF清單</p>";
+  }
+  const periods = [
+    { key: "1y",  label: "近1年" },
+    { key: "3y",  label: "近3年" },
+    { key: "5y",  label: "近5年" },
+    { key: "10y", label: "近10年" },
+    { key: "20y", label: "近20年" }
+  ];
+  const bench = data.benchmark || null;
+  const fmtR = v => (v === null || v === undefined) ? "—" : `${Number(v).toFixed(1)}%`;
+  const cellClass = v => (v === null || v === undefined) ? "" : (v > 0 ? "up" : (v < 0 ? "down" : ""));
+
+  const tdBase = "padding:6px 8px;border-bottom:1px solid var(--border)";
+  const thBase = "padding:6px 8px;border-bottom:1px solid var(--border);background:#CCE8ED";
+
+  const headerCells = periods.map(p =>
+    `<th style="${thBase};text-align:right">${p.label}</th>`
+  ).join("");
+
+  const rows = funds.map(f => {
+    const cells = periods.map(p => {
+      const v = f.perf?.[p.key];
+      return `<td style="${tdBase};text-align:right" class="${cellClass(v)}">${fmtR(v)}</td>`;
+    }).join("");
+    return `<tr><td style="${tdBase};white-space:nowrap">${escapeHtml(f.name_zh)}</td>${cells}</tr>`;
+  }).join("");
+
+  const benchRow = bench ? `
+    <tr style="background:#E5F2F5;font-weight:600">
+      <td style="${tdBase};white-space:nowrap">${escapeHtml(bench.name)}（對照）</td>
+      ${periods.map(p => {
+        const v = bench.perf?.[p.key];
+        return `<td style="${tdBase};text-align:right">${fmtR(v)}</td>`;
+      }).join("")}
+    </tr>` : "";
+
+  const srcLine = data.source_url
+    ? `<a href="${data.source_url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${escapeHtml(data.source || "資料來源")}</a>`
+    : escapeHtml(data.source || "");
+  const dateLine = data.stat_date ? `；資料截至 ${escapeHtml(data.stat_date)}` : "";
+
+  return `
+    <div style="padding:8px 0 12px 0">
+      <p class="tagline" style="margin:0 0 8px 0">${escapeHtml(data.tagline || "")}</p>
+      <p style="font-size:12px;color:var(--text-mute);margin:0">${srcLine}${dateLine}</p>
+    </div>
+    <div style="overflow-x:auto">
+      <table style="width:100%;border-collapse:collapse;font-size:13px">
+        <thead>
+          <tr>
+            <th style="${thBase};text-align:left">基金名稱</th>
+            ${headerCells}
+          </tr>
+        </thead>
+        <tbody>
+          ${rows}
+          ${benchRow}
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:11px;color:var(--text-mute);margin-top:10px">數字為「定期定額累積報酬率」（%）。紅漲綠跌。資料來源：Smart 智富月刊／佑佑、峰哥對談影片。</p>
+  `;
+}
+
+// 已合併：精選基金主分頁，內含「單筆投資」、「定期定額」、「超越ETF」三個次分頁
 function renderFundsSheet() {
   return `
     <div class="tabs">
       <button class="tab active" data-ftab="lump">單筆投資</button>
       <button class="tab" data-ftab="dca">定期定額</button>
+      <button class="tab" data-ftab="beatetf">超越ETF</button>
     </div>
     <div id="ftab-lump">${renderLumpFundCards()}</div>
     <div id="ftab-dca" hidden>${renderDcaFundCards()}</div>
+    <div id="ftab-beatetf" hidden>${renderBeatEtfCards()}</div>
   `;
 }
 
