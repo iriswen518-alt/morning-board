@@ -2453,15 +2453,14 @@ function renderBeatEtfCards() {
 
   const tdBase = "padding:6px 8px;border-bottom:1px solid var(--border)";
   const thBase = "padding:6px 8px;border-bottom:1px solid var(--border);background:#CCE8ED";
-  const thBaseEtf = "padding:6px 8px;border-bottom:1px solid var(--border);background:#E5F2F5";
 
   const headerCells = periods.map(p =>
     `<th style="${thBase};text-align:right">${p.label}</th>`
   ).join("");
 
-  const headerCellsEtf = periods.map(p =>
-    `<th style="${thBaseEtf};text-align:right">${p.label}</th>`
-  ).join("");
+  const groupHeader = (title, bg) => `<tr>
+    <td colspan="${periods.length + 1}" style="padding:10px 8px;font-weight:600;color:var(--brand-deep);background:${bg};border-bottom:1px solid var(--border)">${escapeHtml(title)}</td>
+  </tr>`;
 
   const fundRows = fundItems.map(f => {
     if (f.unlisted) {
@@ -2491,37 +2490,24 @@ function renderBeatEtfCards() {
     return `<tr><td style="${tdBase};white-space:nowrap">${escapeHtml(e.name_zh)}${catChip}</td>${cells}</tr>`;
   }).join("");
 
-  const fundsBlock = fundItems.length ? `
-    <div style="margin-bottom:6px;font-weight:600;color:var(--brand-deep)">老牌主動式台股基金</div>
-    <div style="overflow-x:auto;margin-bottom:18px">
-      <table style="width:100%;border-collapse:collapse;font-size:13px">
-        <thead>
-          <tr>
-            <th style="${thBase};text-align:left">基金名稱</th>
-            ${headerCells}
-          </tr>
-        </thead>
-        <tbody>${fundRows}</tbody>
-      </table>
-    </div>
-  ` : "";
-
-  const etfsBlock = etfItems.length ? `
-    <div style="margin-bottom:6px;font-weight:600;color:var(--brand-deep)">代表性台股 ETF（對照）</div>
+  return `
     <div style="overflow-x:auto">
       <table style="width:100%;border-collapse:collapse;font-size:13px">
         <thead>
           <tr>
-            <th style="${thBaseEtf};text-align:left">ETF</th>
-            ${headerCellsEtf}
+            <th style="${thBase};text-align:left">名稱</th>
+            ${headerCells}
           </tr>
         </thead>
-        <tbody>${etfRows}</tbody>
+        <tbody>
+          ${fundItems.length ? groupHeader("老牌主動式台股基金", "#CCE8ED") : ""}
+          ${fundRows}
+          ${etfItems.length ? groupHeader("代表性台股 ETF（對照）", "#E5F2F5") : ""}
+          ${etfRows}
+        </tbody>
       </table>
     </div>
-  ` : "";
-
-  return `${fundsBlock}${etfsBlock}`;
+  `;
 }
 
 // 已合併：精選基金主分頁，內含「單筆投資」、「定期定額」、「超越ETF」三個次分頁
