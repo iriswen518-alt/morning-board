@@ -2486,7 +2486,6 @@ function renderBeatEtfCards() {
         </tbody>
       </table>
     </div>
-    <p style="font-size:11px;color:var(--text-mute);margin-top:10px">數字為「定期定額累積報酬率」（%）。紅漲綠跌。資料來源：Smart 智富月刊／佑佑、峰哥對談影片。</p>
   `;
 }
 
