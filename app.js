@@ -2471,16 +2471,7 @@ function renderBeatEtfCards() {
       }).join("")}
     </tr>` : "";
 
-  const srcLine = data.source_url
-    ? `<a href="${data.source_url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${escapeHtml(data.source || "資料來源")}</a>`
-    : escapeHtml(data.source || "");
-  const dateLine = data.stat_date ? `；資料截至 ${escapeHtml(data.stat_date)}` : "";
-
   return `
-    <div style="padding:8px 0 12px 0">
-      <p class="tagline" style="margin:0 0 8px 0">${escapeHtml(data.tagline || "")}</p>
-      <p style="font-size:12px;color:var(--text-mute);margin:0">${srcLine}${dateLine}</p>
-    </div>
     <div style="overflow-x:auto">
       <table style="width:100%;border-collapse:collapse;font-size:13px">
         <thead>
