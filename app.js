@@ -2435,7 +2435,7 @@ function renderDcaFundCards() {
 
 function renderBeatEtfCards() {
   const data = DATA.beatetf || {};
-  const fundItems = (data.funds && data.funds.items) || [];
+  const fundItems = ((data.funds && data.funds.items) || []).filter(f => !f.unlisted);
   const etfItems  = (data.etfs  && data.etfs.items)  || [];
   if (!fundItems.length && !etfItems.length) {
     return "<p style='color:var(--text-mute); padding:20px 0'>尚未提供超越ETF清單</p>";
@@ -2470,11 +2470,14 @@ function renderBeatEtfCards() {
         <td colspan="${periods.length}" style="${tdBase};color:var(--text-mute);font-size:12px">${escapeHtml(f.note || "未上架")}</td>
       </tr>`;
     }
+    const nameHtml = f.source_url
+      ? `<a href="${f.source_url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${escapeHtml(f.name_zh)}</a>`
+      : escapeHtml(f.name_zh);
     const cells = periods.map(p => {
       const v = f.perf?.[p.key];
       return `<td style="${tdBase};text-align:right" class="${cellClass(v)}">${fmtR(v)}</td>`;
     }).join("");
-    return `<tr><td style="${tdBase};white-space:nowrap">${escapeHtml(f.name_zh)}</td>${cells}</tr>`;
+    return `<tr><td style="${tdBase};white-space:nowrap">${nameHtml}</td>${cells}</tr>`;
   }).join("");
 
   const etfRows = etfItems.map(e => {
