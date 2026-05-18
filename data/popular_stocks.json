@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-18T12:00:59+08:00",
+  "generated_at": "2026-05-18T13:00:40+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -39,18 +39,6 @@
       "error": null
     },
     {
-      "symbol": "PATH",
-      "name_zh": "PATH",
-      "kind": "US",
-      "price": 10.27,
-      "change_pct": 6.2,
-      "mtd_pct": -0.29,
-      "ytd_pct": -37.34,
-      "market_date": "2026-05-15",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PATH.US",
-      "error": null
-    },
-    {
       "symbol": "SATS",
       "name_zh": "SATS",
       "kind": "US",
@@ -75,6 +63,18 @@
       "error": null
     },
     {
+      "symbol": "PATH",
+      "name_zh": "PATH",
+      "kind": "US",
+      "price": 10.27,
+      "change_pct": 6.2,
+      "mtd_pct": -0.29,
+      "ytd_pct": -37.34,
+      "market_date": "2026-05-15",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PATH.US",
+      "error": null
+    },
+    {
       "symbol": "LI",
       "name_zh": "LI",
       "kind": "US",
@@ -84,6 +84,18 @@
       "ytd_pct": 9.33,
       "market_date": "2026-05-15",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LI.US",
+      "error": null
+    },
+    {
+      "symbol": "CMPS",
+      "name_zh": "CMPS",
+      "kind": "US",
+      "price": 10.37,
+      "change_pct": -2.35,
+      "mtd_pct": 14.46,
+      "ytd_pct": 50.29,
+      "market_date": "2026-05-15",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CMPS.US",
       "error": null
     },
     {
@@ -99,27 +111,15 @@
       "error": null
     },
     {
-      "symbol": "IBRX",
-      "name_zh": "IBRX",
+      "symbol": "USO",
+      "name_zh": "USO",
       "kind": "US",
-      "price": 7.97,
-      "change_pct": -2.21,
-      "mtd_pct": 12.25,
-      "ytd_pct": 302.53,
+      "price": 148.23,
+      "change_pct": 3.66,
+      "mtd_pct": 0.78,
+      "ytd_pct": 114.33,
       "market_date": "2026-05-15",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IBRX.US",
-      "error": null
-    },
-    {
-      "symbol": "DXYZ",
-      "name_zh": "DXYZ",
-      "kind": "US",
-      "price": 47.62,
-      "change_pct": 4.61,
-      "mtd_pct": 46.25,
-      "ytd_pct": 55.47,
-      "market_date": "2026-05-15",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DXYZ.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=USO.US",
       "error": null
     },
     {
