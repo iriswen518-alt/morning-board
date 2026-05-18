@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-18T10:14:34+08:00",
+  "generated_at": "2026-05-18T12:00:19+08:00",
   "source": "finnhub (US price+daily) + Yahoo (US MTD/YTD) + TWSE (TW)",
   "us_stocks": [
     {
@@ -116,11 +116,11 @@
       "symbol": "2330",
       "name_zh": "台積電",
       "kind": "TW",
-      "price": 2265.0,
+      "price": 2135.0,
       "change_pct": null,
-      "mtd_pct": 6.09,
-      "ytd_pct": 46.13,
-      "market_date": "2026-05-15",
+      "mtd_pct": 21.31,
+      "ytd_pct": 37.74,
+      "market_date": "2026-04-30",
       "source_url": "https://tw.stock.yahoo.com/quote/2330.TW",
       "error": null
     },
@@ -128,11 +128,11 @@
       "symbol": "2317",
       "name_zh": "鴻海",
       "kind": "TW",
-      "price": 247.5,
-      "change_pct": -0.4,
+      "price": 248.5,
+      "change_pct": null,
       "mtd_pct": 12.76,
-      "ytd_pct": 7.38,
-      "market_date": "2026-05-18",
+      "ytd_pct": 7.81,
+      "market_date": "2026-05-15",
       "source_url": "https://tw.stock.yahoo.com/quote/2317.TW",
       "error": null
     },
@@ -140,10 +140,10 @@
       "symbol": "2454",
       "name_zh": "聯發科",
       "kind": "TW",
-      "price": 3235.0,
-      "change_pct": -0.77,
-      "mtd_pct": 23.95,
-      "ytd_pct": 126.22,
+      "price": 3450.0,
+      "change_pct": 5.83,
+      "mtd_pct": 32.18,
+      "ytd_pct": 141.26,
       "market_date": "2026-05-18",
       "source_url": "https://tw.stock.yahoo.com/quote/2454.TW",
       "error": null

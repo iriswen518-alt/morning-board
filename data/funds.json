@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-18T09:13:31+08:00",
+  "generated_at": "2026-05-18T12:00:13+08:00",
   "source": "bopfund.moneydj.com",
   "funds": [
     {
@@ -99,40 +99,40 @@
       "currency": "美元",
       "bop_code": "PYZT8-SB06",
       "fund_type": "B",
-      "nav": 131.494,
-      "nav_date": "2026-05-14",
-      "change": 0.72,
-      "change_pct": 0.55,
+      "nav": 129.999,
+      "nav_date": "2026-05-15",
+      "change": -1.5,
+      "change_pct": -1.14,
       "perf": {
-        "1m": 4.08,
-        "3m": 4.55,
-        "6m": 12.73,
-        "ytd": 10.37,
-        "1y": 26.4,
-        "3y": 55.06
+        "1m": 2.52,
+        "3m": 3.36,
+        "6m": 11.45,
+        "ytd": 9.12,
+        "1y": 25.2,
+        "3y": 53.6
       },
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=PYZT8-SB06",
       "match_score": 0.581,
       "error": null,
       "perf_single": {
-        "1m": 4.08,
-        "3m": 4.55,
-        "6m": 12.73,
-        "1y": 26.4,
-        "2y": 36.44,
-        "3y": 55.06,
-        "5y": 32.32
+        "1m": 2.52,
+        "3m": 3.36,
+        "6m": 11.45,
+        "1y": 25.2,
+        "2y": 34.2,
+        "3y": 53.6,
+        "5y": 30.81
       },
       "perf_dca": {
-        "1m": 4.08,
-        "3m": 5.45,
-        "6m": 7.59,
-        "1y": 13.55,
-        "2y": 23.36,
-        "3y": 31.09,
-        "5y": 37.24
+        "1m": 2.52,
+        "3m": 4.12,
+        "6m": 6.33,
+        "1y": 12.1,
+        "2y": 21.75,
+        "3y": 29.43,
+        "5y": 35.66
       },
-      "perf_date": "05-14"
+      "perf_date": "05-15"
     },
     {
       "id": "franklin_sinoam_multi_asset",
@@ -201,7 +201,26 @@
       },
       "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACAI453-YD18",
       "match_score": 0.667,
-      "error": null
+      "error": null,
+      "perf_single": {
+        "1m": 2.33,
+        "3m": -0.72,
+        "6m": 9.12,
+        "1y": null,
+        "2y": null,
+        "3y": null,
+        "5y": null
+      },
+      "perf_dca": {
+        "1m": 2.33,
+        "3m": 1.74,
+        "6m": 4.53,
+        "1y": null,
+        "2y": null,
+        "3y": null,
+        "5y": null
+      },
+      "perf_date": "05-14"
     },
     {
       "id": "first_global_utilities",
@@ -608,41 +627,41 @@
       "currency": "美元",
       "bop_code": "GSF17-IG14",
       "fund_type": "B",
-      "nav": 190.61,
-      "nav_date": "2026-05-13",
-      "change": 0.1,
-      "change_pct": 0.05,
+      "nav": 173.39,
+      "nav_date": "2026-05-15",
+      "change": -17.22,
+      "change_pct": -9.03,
       "perf": {
-        "1m": -1.26,
-        "3m": -7.58,
-        "6m": 25.28,
-        "ytd": 9.48,
-        "1y": 119.82,
-        "3y": 208.13
+        "1m": -10.05,
+        "3m": -15.93,
+        "6m": 14.79,
+        "ytd": -0.41,
+        "1y": 102.75,
+        "3y": 174.92
       },
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=GSF17-IG14",
       "match_score": 0.774,
       "error": null,
       "perf_single": {
-        "1m": -1.26,
-        "3m": -7.58,
-        "6m": 25.28,
-        "1y": 119.82,
-        "2y": 205.12,
-        "3y": 208.13,
-        "5y": 178.96
+        "1m": -10.05,
+        "3m": -15.93,
+        "6m": 14.79,
+        "1y": 102.75,
+        "2y": 171.09,
+        "3y": 174.92,
+        "5y": 148.27
       },
       "perf_dca": {
-        "1m": -1.26,
-        "3m": -1.28,
-        "6m": 5.44,
-        "1y": 40.33,
-        "2y": 106.64,
-        "3y": 152.94,
-        "5y": 182.57
+        "1m": -10.05,
+        "3m": -10.16,
+        "6m": -3.93,
+        "1y": 27.82,
+        "2y": 87.35,
+        "3y": 128.67,
+        "5y": 157.6
       },
-      "perf_date": "05-13"
+      "perf_date": "05-15"
     }
   ],
-  "dca_generated_at": "2026-05-18T09:30:35+08:00"
+  "dca_generated_at": "2026-05-18T12:00:16+08:00"
 }

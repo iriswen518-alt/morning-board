@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-18T10:44:43+08:00",
+  "generated_at": "2026-05-18T12:00:59+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -39,18 +39,6 @@
       "error": null
     },
     {
-      "symbol": "SOXL",
-      "name_zh": "SOXL",
-      "kind": "US",
-      "price": 164.18,
-      "change_pct": -11.82,
-      "mtd_pct": 29.3,
-      "ytd_pct": 290.63,
-      "market_date": "2026-05-15",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOXL.US",
-      "error": null
-    },
-    {
       "symbol": "PATH",
       "name_zh": "PATH",
       "kind": "US",
@@ -63,39 +51,51 @@
       "error": null
     },
     {
-      "symbol": "SOXS",
-      "name_zh": "SOXS",
+      "symbol": "SATS",
+      "name_zh": "SATS",
       "kind": "US",
-      "price": 9.23,
-      "change_pct": 11.61,
-      "mtd_pct": -30.6,
-      "ytd_pct": -85.26,
+      "price": 137.23,
+      "change_pct": 1.57,
+      "mtd_pct": 11.44,
+      "ytd_pct": 26.25,
       "market_date": "2026-05-15",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOXS.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SATS.US",
       "error": null
     },
     {
-      "symbol": "SQQQ",
-      "name_zh": "SQQQ",
+      "symbol": "DAL",
+      "name_zh": "DAL",
       "kind": "US",
-      "price": 42.98,
-      "change_pct": 4.65,
-      "mtd_pct": -16.79,
-      "ytd_pct": -37.26,
+      "price": 70.23,
+      "change_pct": -1.84,
+      "mtd_pct": 3.29,
+      "ytd_pct": 1.2,
       "market_date": "2026-05-15",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SQQQ.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DAL.US",
       "error": null
     },
     {
-      "symbol": "BMNR",
-      "name_zh": "BMNR",
+      "symbol": "LI",
+      "name_zh": "LI",
       "kind": "US",
-      "price": 19.87,
-      "change_pct": -9.68,
-      "mtd_pct": -7.15,
-      "ytd_pct": -26.81,
+      "price": 18.51,
+      "change_pct": -3.94,
+      "mtd_pct": 3.81,
+      "ytd_pct": 9.33,
       "market_date": "2026-05-15",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BMNR.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LI.US",
+      "error": null
+    },
+    {
+      "symbol": "NEE",
+      "name_zh": "NEE",
+      "kind": "US",
+      "price": 93.36,
+      "change_pct": -2.42,
+      "mtd_pct": -4.62,
+      "ytd_pct": 16.29,
+      "market_date": "2026-05-15",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NEE.US",
       "error": null
     },
     {
@@ -111,8 +111,20 @@
       "error": null
     },
     {
+      "symbol": "DXYZ",
+      "name_zh": "DXYZ",
+      "kind": "US",
+      "price": 47.62,
+      "change_pct": 4.61,
+      "mtd_pct": 46.25,
+      "ytd_pct": 55.47,
+      "market_date": "2026-05-15",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DXYZ.US",
+      "error": null
+    },
+    {
       "symbol": "SPY",
-      "name_zh": "SPY",
+      "name_zh": "SPDR S&P 500 ETF",
       "kind": "US",
       "price": 739.17,
       "change_pct": -1.2,
@@ -120,18 +132,6 @@
       "ytd_pct": 8.4,
       "market_date": "2026-05-15",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPY.US",
-      "error": null
-    },
-    {
-      "symbol": "DAL",
-      "name_zh": "DAL",
-      "kind": "US",
-      "price": 70.23,
-      "change_pct": -1.84,
-      "mtd_pct": 3.29,
-      "ytd_pct": 1.2,
-      "market_date": "2026-05-15",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DAL.US",
       "error": null
     },
     {
