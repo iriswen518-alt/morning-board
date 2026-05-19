@@ -904,6 +904,8 @@ function positionLookup(item) {
       },
       fund_type: f.fund_type || "A",
       code: f.bop_code || f.id, fee_pct: f.fee_pct ?? null,
+      yield_pct: f.distribution_yield_pct ?? null,
+      url: f.bop_code ? `https://bopfund.moneydj.com/w/${f.fund_type === "A" ? "wr/wr902" : "wb/wb902"}.djhtm?a=${encodeURIComponent(f.bop_code)}` : null,
     };
   }
   if (kind === "bond") {
@@ -926,12 +928,14 @@ function positionLookup(item) {
       yield_pct: b.bid_yield_pct ?? null,
       coupon_pct: b.coupon_pct ?? null,
       fee_pct: 0,
+      url: bondUrl(b),
     };
   }
   if (kind === "us_stock" || kind === "tw_stock") {
     const src = kind === "us_stock" ? (DATA.stocks?.us_stocks || []) : (DATA.stocks?.tw_stocks || []);
     const s = src.find(x => x.symbol === item.symbol);
     if (!s) return null;
+    const suffix = kind === "us_stock" ? ".US" : ".TW";
     return {
       kind, name: s.name_zh || s.symbol, currency: positionCcyZh(kind === "us_stock" ? "USD" : "TWD"),
       category: kind === "us_stock" ? "us_stock" : "tw_stock",
@@ -943,14 +947,21 @@ function positionLookup(item) {
         "5y": s.perf_5y ?? null,
       },
       code: s.symbol, fee_pct: 0,
+      url: `https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=${encodeURIComponent(s.symbol + suffix)}`,
     };
   }
   if (kind === "cash") {
     const ccyZh = positionCcyZh(item.currency || "TWD");
     return { kind, name: `現金（${ccyZh}）`, currency: ccyZh,
-      category: "cash", perf: {}, code: "CASH", fee_pct: 0 };
+      category: "cash", perf: {}, code: "CASH", fee_pct: 0, url: null };
   }
   return null;
+}
+
+function positionLinkName(meta) {
+  const safe = escapeHtml(meta.name);
+  if (!meta.url) return safe;
+  return `<a href="${meta.url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${safe}</a>`;
 }
 
 function positionAssetClass(meta) {
@@ -1107,20 +1118,23 @@ function detectOverlap(resolved) {
 }
 
 function computeIncome(resolved) {
-  // Sum yield from bonds + flag any distributing funds
-  let bondYieldNum = 0, bondWeight = 0;
-  let distFundNames = [];
+  // 加總所有「會配息」標的（海外債 + 配息型基金）的加權年化殖利率/配息率
+  let yNum = 0, yWeight = 0;
+  const breakdown = [];  // [{name, kind, yield, weight}]
+  const distFundUnknown = []; // fund_type B 但 distribution_yield_pct 為 null（累積型或缺資料）
   resolved.forEach(({ meta, weight }) => {
     if (meta.kind === "bond" && typeof meta.yield_pct === "number") {
-      bondYieldNum += meta.yield_pct * weight;
-      bondWeight += weight;
-    }
-    if (meta.kind === "fund" && meta.fund_type === "B") {
-      distFundNames.push(meta.name);
+      yNum += meta.yield_pct * weight; yWeight += weight;
+      breakdown.push({ name: meta.name, kind: "bond", yield: meta.yield_pct, weight });
+    } else if (meta.kind === "fund" && typeof meta.yield_pct === "number") {
+      yNum += meta.yield_pct * weight; yWeight += weight;
+      breakdown.push({ name: meta.name, kind: "fund", yield: meta.yield_pct, weight });
+    } else if (meta.kind === "fund" && meta.fund_type === "B") {
+      distFundUnknown.push(meta.name);
     }
   });
-  const bondYield = bondWeight > 0 ? bondYieldNum / bondWeight : null;
-  return { bondYield, bondWeight, distFundNames };
+  const avgYield = yWeight > 0 ? yNum / yWeight : null;
+  return { avgYield, yWeight, breakdown, distFundUnknown };
 }
 
 // SVG chart helpers ────────────────────────────────────────────────────────
@@ -1351,7 +1365,7 @@ function renderPositionAnalysisPanel(items, title, isPreset) {
 
   const constituentRows = resolved.map(({ meta, weight }) => `
     <tr>
-      <td>${escapeHtml(meta.name)}</td>
+      <td>${positionLinkName(meta)}</td>
       <td>${escapeHtml(positionAssetClass(meta))}</td>
       <td>${escapeHtml(meta.currency || "—")}</td>
       <td style="text-align:right">${weight}%</td>
@@ -1407,7 +1421,7 @@ function renderPositionAnalysisPanel(items, title, isPreset) {
             <tbody>
               ${resolved.map(({ meta, weight }) => `
                 <tr>
-                  <td>${escapeHtml(meta.name)}</td>
+                  <td>${positionLinkName(meta)}</td>
                   <td style="text-align:right">${weight}%</td>
                   <td class="${pctClass(meta.perf?.ytd)}" style="text-align:right">${fmtPct(meta.perf?.ytd)}</td>
                   <td class="${pctClass(meta.perf?.["1y"])}" style="text-align:right">${fmtPct(meta.perf?.["1y"])}</td>
@@ -1438,42 +1452,12 @@ function renderPositionAnalysisPanel(items, title, isPreset) {
         <summary>④ 風險</summary>
         <div class="position-metric-grid">
           <div class="position-metric">
-            <div class="position-metric-label">集中度</div>
-            <div class="position-metric-val">${risk.hhi.toFixed(3)}</div>
-            <div class="position-metric-note">${risk.hhi >= 0.25 ? "偏高（單一持倉佔比過大）" : risk.hhi >= 0.15 ? "中等" : "分散度尚可"}（0 至 1，越大越集中）</div>
-          </div>
-          <div class="position-metric">
-            <div class="position-metric-label">最大資產類別佔比</div>
-            <div class="position-metric-val">${risk.topCls[1].toFixed(1)}%</div>
-            <div class="position-metric-note">${escapeHtml(risk.topCls[0])} 為最大類別</div>
-          </div>
-          <div class="position-metric">
-            <div class="position-metric-label">最大回撤估算</div>
-            <div class="position-metric-val">${risk.mddProxy > 0 ? "−" + risk.mddProxy.toFixed(1) + "%" : "—"}</div>
-            <div class="position-metric-note">採近期負績效絕對值加權（粗估）</div>
-          </div>
-          <div class="position-metric">
-            <div class="position-metric-label">最弱 1 年加權貢獻</div>
-            <div class="position-metric-val">${risk.weakest1y === null ? "—" : (risk.weakest1y >= 0 ? "+" : "") + risk.weakest1y.toFixed(2) + "%"}</div>
-            <div class="position-metric-note">${
-              risk.weakest1y === null ? "無近 1 年績效資料可比較" :
-              risk.weakestRaw < 0
-                ? `${escapeHtml((risk.weakestName||"").slice(0,12))} 近 1 年 ${risk.weakestRaw.toFixed(1)}%（歷史最壞情境）`
-                : `${escapeHtml((risk.weakestName||"").slice(0,12))} 近 1 年 ${risk.weakestRaw.toFixed(1)}%（過去 1 年無虧損標的，此為最弱拉抬者）`
-            }</div>
-          </div>
-          <div class="position-metric">
             <div class="position-metric-label">年化波動度</div>
             <div class="position-metric-val">${risk.volProxy.toFixed(1)}%</div>
             <div class="position-metric-note">採資產類別 benchmark 加權（粗估）</div>
           </div>
-          <div class="position-metric">
-            <div class="position-metric-label">下檔風險（95% 信心）</div>
-            <div class="position-metric-val">${risk.var95 === null ? "—" : risk.var95 > 0 ? "−" + risk.var95.toFixed(1) + "%" : "無顯著下檔"}</div>
-            <div class="position-metric-note">${risk.var95 === null ? "無近 1 年績效可估" : "95% 信心區間最差年度報酬（粗估）"}</div>
-          </div>
         </div>
-        <p class="position-foot">最大回撤、年化波動度、下檔風險 均為估算值（資產類別 benchmark 加權、未含相關性）；後續將從歷史淨值時序精算。</p>
+        <p class="position-foot">年化波動度為估算值（依資產類別 benchmark 加權、未含標的間相關性）；後續將從歷史淨值時序精算。</p>
       </details>
 
       ${overlaps.length ? `
@@ -1483,17 +1467,30 @@ function renderPositionAnalysisPanel(items, title, isPreset) {
         </details>
       ` : ""}
 
-      ${(income.bondYield !== null || income.distFundNames.length) ? `
+      ${(income.avgYield !== null || income.distFundUnknown.length) ? `
         <details class="position-block" open>
           <summary>⑥ 配息現金流</summary>
-          ${income.bondYield !== null ? `
-            <p>海外債部位加權平均殖利率：<b>${income.bondYield.toFixed(2)}%</b>（佔組合 ${income.bondWeight}%）</p>
-            <p>估算 1 年配息（以該部位 NT$ 100 萬本金）：<b>${(income.bondYield * 10000).toLocaleString("en-US", { maximumFractionDigits: 0 })} 元</b></p>
+          ${income.avgYield !== null ? `
+            <p>配息部位加權平均殖利率：<b>${income.avgYield.toFixed(2)}%</b>（佔組合 ${income.yWeight}%）</p>
+            <p>估算 1 年配息（以該部位 NT$ 100 萬本金）：<b>${Math.round(income.avgYield * 10000).toLocaleString("en-US")} 元</b></p>
+            <table class="position-perf" style="margin-top:8px">
+              <thead><tr><th>標的</th><th>類別</th><th style="text-align:right">權重</th><th style="text-align:right">年化殖利率</th></tr></thead>
+              <tbody>
+                ${income.breakdown.map(b => `
+                  <tr>
+                    <td>${escapeHtml(b.name)}</td>
+                    <td>${b.kind === "bond" ? "海外債（YTM）" : "配息型基金"}</td>
+                    <td style="text-align:right">${b.weight}%</td>
+                    <td style="text-align:right" class="up">${b.yield.toFixed(2)}%</td>
+                  </tr>
+                `).join("")}
+              </tbody>
+            </table>
           ` : ""}
-          ${income.distFundNames.length ? `
-            <p>組合內含 ${income.distFundNames.length} 支配息型基金（fund_type B）；殖利率資料尚未整合，v2 補上。</p>
+          ${income.distFundUnknown.length ? `
+            <p class="position-foot">另有 ${income.distFundUnknown.length} 支國內基金或無配息資料的標的未計入。</p>
           ` : ""}
-          <p class="position-foot">部分配息可能來自本金（依金管會配息揭露規定，請參閱各基金說明書）。</p>
+          <p class="position-foot">部分配息可能來自本金（依金管會配息揭露規定，請參閱各基金說明書）；海外債採到期殖利率（YTM）、配息基金採近 12 月配息加總／當日 NAV。</p>
         </details>
       ` : ""}
 
