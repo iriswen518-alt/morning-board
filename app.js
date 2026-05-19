@@ -268,13 +268,13 @@ function buildSearchIndex() {
   for (const item of (DATA.tax?.items || [])) {
     idx.push({ tab: "wealth", tabLabel: "財富傳承 · 稅務新聞", title: item.title || "", text: item.summary || item.text || "" });
   }
+  // 資產配置（每個 profile）
+  for (const p of (DATA.allocation?.profiles || [])) {
+    idx.push({ tab: "allocation", subtab: p.key, tabLabel: "資產配置", title: p.name || p.key, text: `${p.subtitle || ""} 目標報酬 ${p.target_return || ""} 最大回撤 ${p.max_drawdown || ""}` });
+  }
   // 投組分析 · 預設組合
   for (const p of (DATA.presets?.presets || [])) {
     idx.push({ tab: "portfolio", subtab: "preset", tabLabel: "投組分析 · 預設組合", title: p.name || "", text: `${p.tagline || ""} 配置 組合 集中度 風險 費用 配息` });
-  }
-  // 投組分析 · 配置原則（每個 profile）
-  for (const p of (DATA.allocation?.profiles || [])) {
-    idx.push({ tab: "portfolio", subtab: "alloc", tabLabel: "投組分析 · 配置原則", title: p.name || p.key, text: `${p.subtitle || ""} 目標報酬 ${p.target_return || ""} 最大回撤 ${p.max_drawdown || ""}` });
   }
   // 投組分析 · 自訂組合
   idx.push({ tab: "portfolio", subtab: "custom", tabLabel: "投組分析 · 自訂組合", title: "自訂組合", text: "自選 組合 配置 HHI 重疊 配息 風險 費用 教育示範" });
@@ -451,20 +451,9 @@ function switchTab(name) {
     });
   }
   else if (name === "targets") body.innerHTML = renderTargetsSheet();
-  else if (name === "allocation") {
-    // 舊分頁「資產配置」已併入「投組分析 → 配置原則」次分頁
-    PORTFOLIO_SUBTAB = "alloc";
-    body.innerHTML = renderPortfolioSheet();
-    PENDING_SUBTAB = "alloc";
-    name = "portfolio";
-    CURRENT_TAB = "portfolio";
-    body.dataset.section = "portfolio";
-    document.querySelectorAll(".main-tab").forEach(b => {
-      b.classList.toggle("active", b.dataset.tab === "portfolio");
-    });
-  }
+  else if (name === "allocation") body.innerHTML = renderAllocationSheet();
   else if (name === "position") {
-    // 舊分頁「部位分析」已併入「投組分析 → 預設組合」次分頁
+    // 舊「部位分析」已併入「投組分析」（預設組合）
     PORTFOLIO_SUBTAB = "preset";
     body.innerHTML = renderPortfolioSheet();
     PENDING_SUBTAB = "preset";
@@ -482,6 +471,7 @@ function switchTab(name) {
   if (name === "market") wireMarketTabs();
   if (name === "funds") wireFundsTabs();
   if (name === "targets") wireTargetsTabs();
+  if (name === "allocation") wireAllocationTabs();
   if (name === "portfolio") wirePortfolioTabs();
   if (name === "wealth") wireWealthTabs();
   if (name === "calc") wireCalcTabs();
@@ -976,7 +966,7 @@ function positionCcyZh(code) {
   return CURRENCY_ZH[code] || code;
 }
 
-let PORTFOLIO_SUBTAB = "alloc";    // alloc | preset | custom
+let PORTFOLIO_SUBTAB = "preset";   // preset | custom
 let POSITION_SELECTED_PRESET = null;
 let POSITION_CUSTOM = [];          // [{kind, id|symbol|currency, weight}]
 let POSITION_PENDING_ADD = { kind: "fund", ref: "", weight: "" };
@@ -1235,23 +1225,18 @@ function renderPortfolioSheet() {
     POSITION_CUSTOM = positionLoadCustom();
   }
   const subtab = PORTFOLIO_SUBTAB;
-  const isAlloc  = subtab === "alloc";
   const isPreset = subtab === "preset";
   const isCustom = subtab === "custom";
 
   return `
     <div class="position-banner">
-      本分頁為<b>教育示範用途</b>，不構成個人化投資建議；配置原則為策略示範，預設組合與自訂組合之分析僅以站上既有清單與歷史資料計算。
+      本分頁為<b>教育示範用途</b>，不構成個人化投資建議；分析結果僅以站上既有清單與歷史資料計算。
     </div>
     <div class="tabs">
-      <button class="tab ${isAlloc  ? "active" : ""}" data-prtab="alloc">配置原則</button>
       <button class="tab ${isPreset ? "active" : ""}" data-prtab="preset">預設組合</button>
       <button class="tab ${isCustom ? "active" : ""}" data-prtab="custom">自訂組合</button>
     </div>
     <div class="t-panes">
-      <div class="t-pane ${isAlloc  ? "active" : ""}" id="pf-pane-alloc">
-        ${renderAllocationSheet()}
-      </div>
       <div class="t-pane ${isPreset ? "active" : ""}" id="pf-pane-preset">
         ${renderPositionPresetPane(presets)}
       </div>
@@ -1555,19 +1540,13 @@ function rerenderPortfolio() {
 }
 
 function wirePortfolioTabs() {
-  // Top-level subtab switching (配置原則 / 預設組合 / 自訂組合)
+  // Subtab switching (預設組合 / 自訂組合)
   document.querySelectorAll(".tab[data-prtab]").forEach(btn => {
     btn.addEventListener("click", () => {
       PORTFOLIO_SUBTAB = btn.dataset.prtab;
       rerenderPortfolio();
     });
   });
-
-  // 配置原則 subtab needs its own profile-tab wiring
-  if (PORTFOLIO_SUBTAB === "alloc") {
-    wireAllocationTabs();
-    return;
-  }
 
   // 預設組合 / 自訂組合 共用以下事件
   document.querySelectorAll(".position-preset-card").forEach(btn => {
