@@ -268,10 +268,6 @@ function buildSearchIndex() {
   for (const item of (DATA.tax?.items || [])) {
     idx.push({ tab: "wealth", tabLabel: "財富傳承 · 稅務新聞", title: item.title || "", text: item.summary || item.text || "" });
   }
-  // 資產配置（每個 profile）
-  for (const p of (DATA.allocation?.profiles || [])) {
-    idx.push({ tab: "allocation", subtab: p.key, tabLabel: "資產配置", title: p.name || p.key, text: `${p.subtitle || ""} 目標報酬 ${p.target_return || ""} 最大回撤 ${p.max_drawdown || ""}` });
-  }
   // 投組分析 · 預設組合
   for (const p of (DATA.presets?.presets || [])) {
     idx.push({ tab: "portfolio", subtab: "preset", tabLabel: "投組分析 · 預設組合", title: p.name || "", text: `${p.tagline || ""} 配置 組合 集中度 風險 費用 配息` });
@@ -451,9 +447,8 @@ function switchTab(name) {
     });
   }
   else if (name === "targets") body.innerHTML = renderTargetsSheet();
-  else if (name === "allocation") body.innerHTML = renderAllocationSheet();
-  else if (name === "position") {
-    // 舊「部位分析」已併入「投組分析」（預設組合）
+  else if (name === "position" || name === "allocation") {
+    // 舊「部位分析」「資產配置」分頁已併入「投組分析」（預設組合）
     PORTFOLIO_SUBTAB = "preset";
     body.innerHTML = renderPortfolioSheet();
     PENDING_SUBTAB = "preset";
@@ -471,7 +466,6 @@ function switchTab(name) {
   if (name === "market") wireMarketTabs();
   if (name === "funds") wireFundsTabs();
   if (name === "targets") wireTargetsTabs();
-  if (name === "allocation") wireAllocationTabs();
   if (name === "portfolio") wirePortfolioTabs();
   if (name === "wealth") wireWealthTabs();
   if (name === "calc") wireCalcTabs();
@@ -855,90 +849,6 @@ function renderTargetsSheet() {
   `;
 }
 
-function renderAllocationSheet() {
-  const data = DATA.allocation || {};
-  const profiles = data.profiles || [];
-  const refs = data.references || [];
-  if (!profiles.length) {
-    return "<p style='color:var(--text-mute); padding:20px 0'>尚未提供資產配置資料</p>";
-  }
-
-  const tabBtns = profiles.map((p, i) => `
-    <button class="tab ${i === 0 ? "active" : ""}" data-atab="${escapeHtml(p.key)}">${escapeHtml(p.name)}</button>
-  `).join("");
-
-  const panes = profiles.map((p, i) => {
-    const total = (p.allocations || []).reduce((s, a) => s + (a.pct || 0), 0);
-    const rows = (p.allocations || []).map(a => `
-      <div class="a-row">
-        <div class="a-asset">
-          <div class="a-asset-name">${escapeHtml(a.asset)}</div>
-          <div class="a-asset-note">${escapeHtml(a.note || "")}</div>
-        </div>
-        <div class="a-bar-wrap">
-          <div class="a-bar" style="width:${a.pct}%;background:${p.color || 'var(--brand-primary)'}"></div>
-          <span class="a-pct">${a.pct}%</span>
-        </div>
-        <div class="a-panhsin">${escapeHtml(a.panhsin || "")}</div>
-      </div>
-    `).join("");
-
-    return `
-      <div class="t-pane ${i === 0 ? "active" : ""}" id="a-pane-${escapeHtml(p.key)}">
-        <div class="a-head">
-          <div>
-            <div class="a-name">${escapeHtml(p.name)}<span class="a-sub">${escapeHtml(p.subtitle || "")}</span></div>
-            <div class="a-stat-row">
-              <span class="a-stat"><label>目標報酬</label>${escapeHtml(p.target_return || "—")}</span>
-              <span class="a-stat"><label>最大回撤</label>${escapeHtml(p.max_drawdown || "—")}</span>
-              <span class="a-stat"><label>合計</label>${total}%</span>
-            </div>
-          </div>
-        </div>
-        <div class="a-table">
-          <div class="a-header">
-            <div>資產類別</div>
-            <div>比重</div>
-            <div>板信對應商品</div>
-          </div>
-          ${rows}
-        </div>
-      </div>
-    `;
-  }).join("");
-
-  const refsHtml = refs.length ? `
-    <h3>市場參考資料來源</h3>
-    <div class="a-refs">
-      ${refs.map(r => `
-        <a href="${r.url}" target="_blank" rel="noopener" class="a-ref">
-          <div class="a-ref-name">${escapeHtml(r.name)} ↗</div>
-          <div class="a-ref-note">${escapeHtml(r.note || "")}</div>
-        </a>`).join("")}
-    </div>` : "";
-
-  const noteHtml = data.note ? `<p class="a-note">${escapeHtml(data.note)}</p>` : "";
-
-  return `
-    <div class="tabs">${tabBtns}</div>
-    <div class="t-panes">${panes}</div>
-    ${refsHtml}
-    ${noteHtml}
-  `;
-}
-
-function wireAllocationTabs() {
-  const buttons = document.querySelectorAll(".tab[data-atab]");
-  buttons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      const key = btn.dataset.atab;
-      buttons.forEach(b => b.classList.toggle("active", b.dataset.atab === key));
-      document.querySelectorAll(".t-pane[id^='a-pane-']").forEach(p => {
-        p.classList.toggle("active", p.id === `a-pane-${key}`);
-      });
-    });
-  });
-}
 
 // ─────────────────────────────────────────────────────────────────────────
 // 部位分析 Position Analysis Tab
@@ -977,10 +887,22 @@ function positionLookup(item) {
   if (kind === "fund") {
     const f = (DATA.funds?.funds || []).find(x => x.id === item.id);
     if (!f) return null;
+    // fund JSON 將 5y 放在 perf_single（單筆累積），perf 物件不含 5y
+    const fp = f.perf || {};
+    const fps = f.perf_single || {};
     return {
       kind, name: f.name_zh, currency: positionCcyZh(f.currency || "美元"),
       category: f.category || "balanced",
-      perf: f.perf || {}, fund_type: f.fund_type || "A",
+      perf: {
+        "1m": fp["1m"] ?? fps["1m"] ?? null,
+        "3m": fp["3m"] ?? fps["3m"] ?? null,
+        "6m": fp["6m"] ?? fps["6m"] ?? null,
+        ytd: fp.ytd ?? fps.ytd ?? null,
+        "1y": fp["1y"] ?? fps["1y"] ?? null,
+        "3y": fp["3y"] ?? fps["3y"] ?? null,
+        "5y": fps["5y"] ?? fp["5y"] ?? null,
+      },
+      fund_type: f.fund_type || "A",
       code: f.bop_code || f.id, fee_pct: f.fee_pct ?? null,
     };
   }
@@ -1001,7 +923,13 @@ function positionLookup(item) {
     return {
       kind, name: s.name_zh || s.symbol, currency: positionCcyZh(kind === "us_stock" ? "USD" : "TWD"),
       category: kind === "us_stock" ? "us_stock" : "tw_stock",
-      perf: { ytd: s.ytd_pct ?? null, "1m": s.mtd_pct ?? null },
+      perf: {
+        ytd: s.ytd_pct ?? null,
+        "1m": s.mtd_pct ?? null,
+        "1y": s.perf_1y ?? null,
+        "3y": s.perf_3y ?? null,
+        "5y": s.perf_5y ?? null,
+      },
       code: s.symbol, fee_pct: 0,
     };
   }
@@ -1078,14 +1006,23 @@ function computeRisk(resolved) {
     }
   });
 
-  // Worst 1y holding weighted contribution (proxy for "worst 12m repeat")
-  let worst1y = 0;
+  // 最弱 1Y 加權貢獻：找出 1Y 報酬最低（不管正負）的標的，看其加權貢獻
+  // 用意：若有負報酬，揭示「歷史最壞情境」；若全正，揭示「最弱拉抬者」
+  let weakest1y = null;       // 加權貢獻百分點
+  let weakestName = null;
+  let weakestRaw = null;       // 該標的本身的 1Y 報酬
   resolved.forEach(({ meta, weight }) => {
     const y = meta.perf?.["1y"];
-    if (typeof y === "number" && y < 0) worst1y += y * weight / 100;
+    if (typeof y !== "number") return;
+    const contrib = y * weight / 100;
+    if (weakest1y === null || contrib < weakest1y) {
+      weakest1y = contrib;
+      weakestName = meta.name;
+      weakestRaw = y;
+    }
   });
 
-  return { hhi, topCls, mddProxy, worst1y };
+  return { hhi, topCls, mddProxy, weakest1y, weakestName, weakestRaw };
 }
 
 function computeCost(resolved) {
@@ -1485,9 +1422,14 @@ function renderPositionAnalysisPanel(items, title, isPreset) {
             <div class="position-metric-note">採近期負績效絕對值加權（粗估）</div>
           </div>
           <div class="position-metric">
-            <div class="position-metric-label">過去 1 年最壞情境</div>
-            <div class="position-metric-val">${risk.worst1y < 0 ? risk.worst1y.toFixed(1) + "%" : "—"}</div>
-            <div class="position-metric-note">負績效標的加權貢獻合計</div>
+            <div class="position-metric-label">最弱 1Y 加權貢獻</div>
+            <div class="position-metric-val">${risk.weakest1y === null ? "—" : (risk.weakest1y >= 0 ? "+" : "") + risk.weakest1y.toFixed(2) + "pp"}</div>
+            <div class="position-metric-note">${
+              risk.weakest1y === null ? "無 1Y 績效資料可比較" :
+              risk.weakestRaw < 0
+                ? `${escapeHtml((risk.weakestName||"").slice(0,12))} 1Y ${risk.weakestRaw.toFixed(1)}%（歷史最壞情境）`
+                : `${escapeHtml((risk.weakestName||"").slice(0,12))} 1Y ${risk.weakestRaw.toFixed(1)}%（過去 1Y 無虧損標的，此為最弱拉抬者）`
+            }</div>
           </div>
         </div>
         <p class="position-foot">MDD（最大回撤）為估算值；v2 將從歷史 NAV 時序精算。</p>
