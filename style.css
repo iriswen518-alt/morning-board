@@ -1112,7 +1112,7 @@ table.indices .date-col {
 
 /* ===== 稅負試算下方相關規定 ===== */
 .calc-notes {
-  max-width: 720px;
+  max-width: 1200px;
   margin-top: 16px;
   background: var(--bg);
   border: 1px solid var(--border);
@@ -1492,4 +1492,9 @@ table.indices .date-col {
   font-size: 12.5px;
   line-height: 1.6;
   color: #003D91;
+}
+
+/* 稅負試算頁的 footnote 與其他區塊同寬 */
+#content[data-section="calc"] .a-note {
+  max-width: 1200px;
 }
