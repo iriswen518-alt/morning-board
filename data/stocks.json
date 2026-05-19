@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-19T12:00:05+08:00",
+  "generated_at": "2026-05-19T13:00:28+08:00",
   "source": "finnhub (US price+daily) + Yahoo (US MTD/YTD) + TWSE (TW)",
   "us_stocks": [
     {
@@ -12,7 +12,7 @@
       "ytd_pct": 19.21,
       "market_date": "2026-05-18",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NVDA.US",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "AAPL",
@@ -24,7 +24,7 @@
       "ytd_pct": 9.56,
       "market_date": "2026-05-18",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AAPL.US",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "MSFT",
@@ -36,7 +36,7 @@
       "ytd_pct": -12.42,
       "market_date": "2026-05-18",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MSFT.US",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "GOOGL",
@@ -48,7 +48,7 @@
       "ytd_pct": 26.82,
       "market_date": "2026-05-18",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GOOGL.US",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "AMZN",
@@ -60,7 +60,7 @@
       "ytd_pct": 14.75,
       "market_date": "2026-05-18",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AMZN.US",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "META",
@@ -72,7 +72,7 @@
       "ytd_pct": -7.41,
       "market_date": "2026-05-18",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=META.US",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "TSLA",
@@ -84,7 +84,7 @@
       "ytd_pct": -8.83,
       "market_date": "2026-05-18",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TSLA.US",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "AVGO",
@@ -96,7 +96,7 @@
       "ytd_pct": 21.56,
       "market_date": "2026-05-18",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AVGO.US",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "TSM",
@@ -108,7 +108,7 @@
       "ytd_pct": 30.29,
       "market_date": "2026-05-18",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TSM.US",
-      "error": "stale"
+      "error": null
     }
   ],
   "tw_stocks": [
@@ -122,7 +122,7 @@
       "ytd_pct": 44.52,
       "market_date": "2026-05-18",
       "source_url": "https://tw.stock.yahoo.com/quote/2330.TW",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "2317",
@@ -134,19 +134,19 @@
       "ytd_pct": 7.81,
       "market_date": "2026-05-18",
       "source_url": "https://tw.stock.yahoo.com/quote/2317.TW",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "2454",
       "name_zh": "聯發科",
       "kind": "TW",
-      "price": 3340.0,
-      "change_pct": -1.76,
-      "mtd_pct": 27.97,
-      "ytd_pct": 133.57,
+      "price": 3120.0,
+      "change_pct": -8.24,
+      "mtd_pct": 19.54,
+      "ytd_pct": 118.18,
       "market_date": "2026-05-19",
       "source_url": "https://tw.stock.yahoo.com/quote/2454.TW",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "2308",
@@ -158,19 +158,19 @@
       "ytd_pct": 109.76,
       "market_date": "2026-05-18",
       "source_url": "https://tw.stock.yahoo.com/quote/2308.TW",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "2382",
       "name_zh": "廣達",
       "kind": "TW",
-      "price": 300.0,
-      "change_pct": null,
-      "mtd_pct": -4.0,
-      "ytd_pct": 10.29,
-      "market_date": "2026-05-18",
+      "price": 291.5,
+      "change_pct": -2.83,
+      "mtd_pct": -6.72,
+      "ytd_pct": 7.17,
+      "market_date": "2026-05-19",
       "source_url": "https://tw.stock.yahoo.com/quote/2382.TW",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "2891",
@@ -182,7 +182,7 @@
       "ytd_pct": 9.16,
       "market_date": "2026-05-18",
       "source_url": "https://tw.stock.yahoo.com/quote/2891.TW",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "1301",
@@ -194,7 +194,7 @@
       "ytd_pct": 17.69,
       "market_date": "2026-05-18",
       "source_url": "https://tw.stock.yahoo.com/quote/1301.TW",
-      "error": "stale"
+      "error": null
     }
   ]
 }
