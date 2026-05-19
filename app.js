@@ -268,6 +268,12 @@ function buildSearchIndex() {
   for (const item of (DATA.tax?.items || [])) {
     idx.push({ tab: "wealth", tabLabel: "財富傳承 · 稅務新聞", title: item.title || "", text: item.summary || item.text || "" });
   }
+  // 部位分析 · 預設組合
+  for (const p of (DATA.presets?.presets || [])) {
+    idx.push({ tab: "position", tabLabel: "部位分析 · 預設組合", title: p.name || "", text: `${p.tagline || ""} 配置 組合 集中度 風險 費用 配息` });
+  }
+  // 部位分析 · 通用關鍵字
+  idx.push({ tab: "position", tabLabel: "部位分析", title: "部位分析 · 自訂組合", text: "自選 組合 配置 HHI 重疊 配息 風險 費用 教育示範" });
   return idx;
 }
 
@@ -368,7 +374,7 @@ function wireSearch() {
 async function init() {
   // 每個來源各自有 fallback：一個壞不拖垮全頁
   const safe = (name, fallback) => load(name).catch(() => fallback);
-  const [meta, market, news, tax, funds, stocks, popular, insurance, obonds, targets, allocation, dca, wealth, beatetf] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, popular, insurance, obonds, targets, allocation, dca, wealth, beatetf, presets] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
@@ -383,8 +389,9 @@ async function init() {
     safe("dca", { funds: [] }),
     safe("wealth_transfer", { topics: [] }),
     safe("beatetf", { funds: [], benchmark: null }),
+    safe("presets", { presets: [] }),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, popular, insurance, obonds, targets, allocation, dca, wealth, beatetf };
+  DATA = { meta, market, news, tax, funds, stocks, popular, insurance, obonds, targets, allocation, dca, wealth, beatetf, presets };
   if (!meta.built_at) {
     $("updated").textContent = `載入部分失敗（顯示快取資料）`;
   } else {
@@ -441,6 +448,7 @@ function switchTab(name) {
   }
   else if (name === "targets") body.innerHTML = renderTargetsSheet();
   else if (name === "allocation") body.innerHTML = renderAllocationSheet();
+  else if (name === "position") body.innerHTML = renderPositionSheet();
   else if (name === "wealth") body.innerHTML = renderWealthSheet();
   else if (name === "calc") body.innerHTML = renderCalcSheet();
   if (name === "news") wireNewsTabs();
@@ -448,6 +456,7 @@ function switchTab(name) {
   if (name === "funds") wireFundsTabs();
   if (name === "targets") wireTargetsTabs();
   if (name === "allocation") wireAllocationTabs();
+  if (name === "position") wirePositionTabs();
   if (name === "wealth") wireWealthTabs();
   if (name === "calc") wireCalcTabs();
   if (PENDING_SUBTAB) {
@@ -581,7 +590,7 @@ async function refreshData() {
 
   // 資料刷新：fetch 7 個 JSON，每個各自有 fallback
   const safe = (name, fallback) => load(name).catch(() => DATA[name === "insurances" ? "insurance" : name] || fallback);
-  const [meta, market, news, tax, funds, stocks, popular, insurance, obonds, targets, allocation, dca, wealth, beatetf] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, popular, insurance, obonds, targets, allocation, dca, wealth, beatetf, presets] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
@@ -596,8 +605,9 @@ async function refreshData() {
     safe("dca", { funds: [] }),
     safe("wealth_transfer", { topics: [] }),
     safe("beatetf", { funds: [], benchmark: null }),
+    safe("presets", { presets: [] }),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, popular, insurance, obonds, targets, allocation, dca, wealth, beatetf };
+  DATA = { meta, market, news, tax, funds, stocks, popular, insurance, obonds, targets, allocation, dca, wealth, beatetf, presets };
   SEARCH_INDEX = buildSearchIndex();
   if (DATA.meta && DATA.meta.built_at) {
     $("updated").textContent =
@@ -912,6 +922,682 @@ function wireAllocationTabs() {
       });
     });
   });
+}
+
+// ─────────────────────────────────────────────────────────────────────────
+// 部位分析 Position Analysis Tab
+// 教育示範用途；無 PII；標的池僅限站上既有清單；純前端計算 + localStorage
+// ─────────────────────────────────────────────────────────────────────────
+
+const POSITION_LS_KEY = "morningBoard.positionAnalysis.v1";
+const ASSET_CLASS_COLOR = {
+  "股票": "#019AB3",
+  "債券": "#003D91",
+  "平衡": "#17B5AD",
+  "現金": "#9ca3af",
+};
+
+let POSITION_SUBTAB = "preset";   // preset | custom
+let POSITION_SELECTED_PRESET = null;
+let POSITION_CUSTOM = [];          // [{kind, id|symbol|currency, weight}]
+let POSITION_PENDING_ADD = { kind: "fund", ref: "", weight: "" };
+
+function positionLookup(item) {
+  // Returns { name, currency, category, perf, fund_type, kind, code }
+  const kind = item.kind;
+  if (kind === "fund") {
+    const f = (DATA.funds?.funds || []).find(x => x.id === item.id);
+    if (!f) return null;
+    return {
+      kind, name: f.name_zh, currency: f.currency || "美元",
+      category: f.category || "balanced",
+      perf: f.perf || {}, fund_type: f.fund_type || "A",
+      code: f.bop_code || f.id, fee_pct: f.fee_pct ?? null,
+    };
+  }
+  if (kind === "bond") {
+    const b = (DATA.obonds?.bonds || []).find(x => x.id === item.id);
+    if (!b) return null;
+    return {
+      kind, name: b.name_zh, currency: b.currency || "USD",
+      category: "bond", perf: { ytd: b.perf_3m ?? null, "1y": null, "6m": b.perf_3m ?? null },
+      code: b.code || b.id, yield_pct: b.bid_yield_pct ?? null, coupon_pct: b.coupon_pct ?? null,
+      fee_pct: 0,
+    };
+  }
+  if (kind === "us_stock" || kind === "tw_stock") {
+    const src = kind === "us_stock" ? (DATA.stocks?.us_stocks || []) : (DATA.stocks?.tw_stocks || []);
+    const s = src.find(x => x.symbol === item.symbol);
+    if (!s) return null;
+    return {
+      kind, name: s.name_zh || s.symbol, currency: kind === "us_stock" ? "USD" : "TWD",
+      category: kind === "us_stock" ? "us_stock" : "tw_stock",
+      perf: { ytd: s.ytd_pct ?? null, "1m": s.mtd_pct ?? null },
+      code: s.symbol, fee_pct: 0,
+    };
+  }
+  if (kind === "cash") {
+    return { kind, name: `現金（${item.currency || "TWD"}）`, currency: item.currency || "TWD",
+      category: "cash", perf: {}, code: "CASH", fee_pct: 0 };
+  }
+  return null;
+}
+
+function positionAssetClass(meta) {
+  // 4-class bucket: 股票 / 債券 / 平衡 / 現金
+  if (!meta) return "其他";
+  if (meta.category === "cash") return "現金";
+  if (meta.category === "bond" || meta.category === "income") return "債券";
+  if (meta.category === "balanced") return "平衡";
+  return "股票";
+}
+
+function positionNormalizedItems(items) {
+  // Resolve items into [{item, meta, weight}], dropping any that no longer exist
+  return items.map(it => {
+    const meta = positionLookup(it);
+    return meta ? { item: it, meta, weight: Number(it.weight) || 0 } : null;
+  }).filter(Boolean);
+}
+
+function computeAllocation(resolved) {
+  const byClass = {};
+  const byCcy = {};
+  resolved.forEach(({ meta, weight }) => {
+    const cls = positionAssetClass(meta);
+    byClass[cls] = (byClass[cls] || 0) + weight;
+    const ccy = meta.currency === "台幣" ? "TWD" : meta.currency;
+    byCcy[ccy] = (byCcy[ccy] || 0) + weight;
+  });
+  return { byClass, byCcy };
+}
+
+function computePerformance(resolved) {
+  // weighted avg of available periods; if any holding lacks a period, that
+  // holding contributes 0 weight to that period and the divisor shrinks.
+  const periods = ["ytd", "1y", "3y", "5y"];
+  const result = {};
+  periods.forEach(p => {
+    let num = 0, denom = 0;
+    resolved.forEach(({ meta, weight }) => {
+      const v = meta.perf?.[p];
+      if (typeof v === "number") { num += v * weight; denom += weight; }
+    });
+    result[p] = denom > 0 ? num / denom : null;
+  });
+  return result;
+}
+
+function computeRisk(resolved) {
+  // HHI: weight fraction squared sum (max 1.0 = single holding)
+  const totalW = resolved.reduce((s, r) => s + r.weight, 0) || 1;
+  const hhi = resolved.reduce((s, r) => s + Math.pow(r.weight / totalW, 2), 0);
+
+  // Concentration narrative: top asset class share
+  const alloc = computeAllocation(resolved).byClass;
+  const sortedCls = Object.entries(alloc).sort((a, b) => b[1] - a[1]);
+  const topCls = sortedCls[0] || ["—", 0];
+
+  // MDD proxy: weighted sum of |min(0, ytd)|; honest disclosure: estimate
+  let mddProxy = 0;
+  resolved.forEach(({ meta, weight }) => {
+    const ytd = meta.perf?.ytd;
+    if (typeof ytd === "number" && ytd < 0) mddProxy += Math.abs(ytd) * weight / 100;
+    const half = meta.perf?.["6m"];
+    if (typeof half === "number" && half < 0) {
+      mddProxy = Math.max(mddProxy, Math.abs(half) * weight / 100);
+    }
+  });
+
+  // Worst 1y holding weighted contribution (proxy for "worst 12m repeat")
+  let worst1y = 0;
+  resolved.forEach(({ meta, weight }) => {
+    const y = meta.perf?.["1y"];
+    if (typeof y === "number" && y < 0) worst1y += y * weight / 100;
+  });
+
+  return { hhi, topCls, mddProxy, worst1y };
+}
+
+function computeCost(resolved) {
+  // weighted fee_pct; if any holding lacks fee, fall back to 0 with a flag
+  let num = 0, denom = 0, anyMissing = false;
+  resolved.forEach(({ meta, weight }) => {
+    if (meta.fee_pct === null || meta.fee_pct === undefined) {
+      if (meta.kind === "fund") anyMissing = true;
+    } else {
+      num += meta.fee_pct * weight; denom += weight;
+    }
+  });
+  const weighted = denom > 0 ? num / denom : null;
+  return { weighted, anyMissing };
+}
+
+function detectOverlap(resolved) {
+  const warnings = [];
+  // 1) Same fund category > 50%
+  const catSum = {};
+  resolved.forEach(({ meta, weight }) => {
+    if (meta.kind !== "fund") return;
+    catSum[meta.category] = (catSum[meta.category] || 0) + weight;
+  });
+  Object.entries(catSum).forEach(([cat, sum]) => {
+    if (sum > 50) {
+      const names = resolved
+        .filter(r => r.meta.kind === "fund" && r.meta.category === cat)
+        .map(r => `${r.meta.name.slice(0, 14)}（${r.weight}%）`);
+      warnings.push({
+        kind: "same_category",
+        msg: `「${cat}」類基金合計 ${sum}%，集中度偏高：${names.join("、")}`,
+      });
+    }
+  });
+  // 2) Same bop_code prefix (different share classes of same fund)
+  const codePrefix = {};
+  resolved.forEach(({ meta, weight }) => {
+    if (meta.kind !== "fund" || !meta.code) return;
+    const prefix = String(meta.code).slice(0, 6);
+    (codePrefix[prefix] ||= []).push({ name: meta.name, weight });
+  });
+  Object.values(codePrefix).forEach(arr => {
+    if (arr.length > 1) {
+      warnings.push({
+        kind: "same_fund",
+        msg: `同一基金不同級別重複申購：${arr.map(a => `${a.name.slice(0, 14)}（${a.weight}%）`).join("、")}`,
+      });
+    }
+  });
+  return warnings;
+}
+
+function computeIncome(resolved) {
+  // Sum yield from bonds + flag any distributing funds
+  let bondYieldNum = 0, bondWeight = 0;
+  let distFundNames = [];
+  resolved.forEach(({ meta, weight }) => {
+    if (meta.kind === "bond" && typeof meta.yield_pct === "number") {
+      bondYieldNum += meta.yield_pct * weight;
+      bondWeight += weight;
+    }
+    if (meta.kind === "fund" && meta.fund_type === "B") {
+      distFundNames.push(meta.name);
+    }
+  });
+  const bondYield = bondWeight > 0 ? bondYieldNum / bondWeight : null;
+  return { bondYield, bondWeight, distFundNames };
+}
+
+// SVG chart helpers ────────────────────────────────────────────────────────
+function positionPieSvg(data, size = 180) {
+  // data = { label: value, ... }
+  const entries = Object.entries(data).filter(([, v]) => v > 0);
+  const total = entries.reduce((s, [, v]) => s + v, 0);
+  if (total <= 0) return `<svg width="${size}" height="${size}"></svg>`;
+  const cx = size / 2, cy = size / 2, r = size / 2 - 4;
+  let acc = 0;
+  const slices = entries.map(([label, v]) => {
+    const start = acc / total * Math.PI * 2;
+    acc += v;
+    const end = acc / total * Math.PI * 2;
+    const large = end - start > Math.PI ? 1 : 0;
+    const x1 = cx + Math.sin(start) * r, y1 = cy - Math.cos(start) * r;
+    const x2 = cx + Math.sin(end) * r,   y2 = cy - Math.cos(end) * r;
+    const color = ASSET_CLASS_COLOR[label] || "#7ec5d4";
+    const d = `M${cx},${cy} L${x1},${y1} A${r},${r} 0 ${large} 1 ${x2},${y2} Z`;
+    return `<path d="${d}" fill="${color}" stroke="#fff" stroke-width="1.5"></path>`;
+  }).join("");
+  return `<svg viewBox="0 0 ${size} ${size}" width="${size}" height="${size}" class="position-pie">${slices}</svg>`;
+}
+
+function positionBarsHtml(data, color = "#019AB3") {
+  const entries = Object.entries(data).filter(([, v]) => v > 0);
+  const max = Math.max(...entries.map(([, v]) => v), 1);
+  return entries.map(([label, v]) => `
+    <div class="position-bar-row">
+      <div class="position-bar-label">${escapeHtml(label)}</div>
+      <div class="position-bar-track">
+        <div class="position-bar-fill" style="width:${(v / max * 100).toFixed(1)}%;background:${ASSET_CLASS_COLOR[label] || color}"></div>
+      </div>
+      <div class="position-bar-val">${v.toFixed(1)}%</div>
+    </div>
+  `).join("");
+}
+
+// localStorage ──────────────────────────────────────────────────────────────
+function positionLoadCustom() {
+  try {
+    const raw = localStorage.getItem(POSITION_LS_KEY);
+    if (!raw) return [];
+    const doc = JSON.parse(raw);
+    if (doc.schema_version !== 1 || !Array.isArray(doc.portfolio)) return [];
+    return doc.portfolio;
+  } catch { return []; }
+}
+
+function positionSaveCustom(portfolio) {
+  try {
+    localStorage.setItem(POSITION_LS_KEY, JSON.stringify({
+      schema_version: 1,
+      saved_at: new Date().toISOString(),
+      portfolio,
+    }));
+    return true;
+  } catch { return false; }
+}
+
+function positionClearCustom() {
+  try { localStorage.removeItem(POSITION_LS_KEY); } catch {}
+}
+
+// Renderers ─────────────────────────────────────────────────────────────────
+function renderPositionSheet() {
+  const presets = DATA.presets?.presets || [];
+  if (!presets.length && POSITION_CUSTOM.length === 0) {
+    POSITION_CUSTOM = positionLoadCustom();
+  }
+  const subtab = POSITION_SUBTAB;
+  const presetActive = subtab === "preset";
+
+  return `
+    <div class="position-banner">
+      本分頁為<b>教育示範用途</b>，不構成個人化投資建議；分析結果僅以站上既有清單與歷史資料計算。
+    </div>
+    <div class="tabs">
+      <button class="tab ${presetActive ? "active" : ""}" data-ptab="preset">預設組合</button>
+      <button class="tab ${!presetActive ? "active" : ""}" data-ptab="custom">自訂組合</button>
+    </div>
+    <div class="t-panes">
+      <div class="t-pane ${presetActive ? "active" : ""}" id="p-pane-preset">
+        ${renderPositionPresetPane(presets)}
+      </div>
+      <div class="t-pane ${!presetActive ? "active" : ""}" id="p-pane-custom">
+        ${renderPositionCustomPane()}
+      </div>
+    </div>
+  `;
+}
+
+function renderPositionPresetPane(presets) {
+  if (!presets.length) {
+    return `<p style="color:var(--text-mute); padding:20px 0">預設組合資料尚未生成（請先跑 build）</p>`;
+  }
+  const cards = presets.map(p => {
+    const isSel = POSITION_SELECTED_PRESET === p.id;
+    return `
+      <button class="position-preset-card ${isSel ? "selected" : ""}" data-preset="${escapeHtml(p.id)}" style="border-top-color:${p.color || "#019AB3"}">
+        <div class="position-preset-name">${escapeHtml(p.name)}</div>
+        <div class="position-preset-tag">${escapeHtml(p.tagline || "")}</div>
+        <div class="position-preset-count">${p.items.length} 個標的</div>
+      </button>
+    `;
+  }).join("");
+
+  const selected = POSITION_SELECTED_PRESET
+    ? presets.find(p => p.id === POSITION_SELECTED_PRESET)
+    : null;
+
+  return `
+    <div class="position-preset-grid">${cards}</div>
+    ${selected ? renderPositionAnalysisPanel(selected.items, `預設組合：${selected.name}`, true) : `
+      <p style="color:var(--text-mute); padding:24px 0; text-align:center">
+        ↑ 點任一卡片載入分析；4 組組合均為示範用 templates，非個人化建議
+      </p>
+    `}
+  `;
+}
+
+function renderPositionCustomPane() {
+  const items = POSITION_CUSTOM;
+  return `
+    <div class="position-composer">
+      <div class="position-composer-row">
+        <label>類別
+          <select id="pc-kind">
+            <option value="fund" ${POSITION_PENDING_ADD.kind === "fund" ? "selected" : ""}>基金</option>
+            <option value="bond" ${POSITION_PENDING_ADD.kind === "bond" ? "selected" : ""}>海外債</option>
+            <option value="us_stock" ${POSITION_PENDING_ADD.kind === "us_stock" ? "selected" : ""}>美股</option>
+            <option value="tw_stock" ${POSITION_PENDING_ADD.kind === "tw_stock" ? "selected" : ""}>台股</option>
+            <option value="cash" ${POSITION_PENDING_ADD.kind === "cash" ? "selected" : ""}>現金</option>
+          </select>
+        </label>
+        <label>標的
+          <select id="pc-ref">${positionRefOptions(POSITION_PENDING_ADD.kind, POSITION_PENDING_ADD.ref)}</select>
+        </label>
+        <label>權重 %
+          <input id="pc-weight" type="number" min="1" max="100" step="1" value="${POSITION_PENDING_ADD.weight}" placeholder="10">
+        </label>
+        <button class="position-btn" id="pc-add">加入</button>
+      </div>
+      <div class="position-composer-hint">標的清單僅限站上既有資料；資料僅存於此瀏覽器，不會上傳。</div>
+    </div>
+    ${renderPositionCustomList(items)}
+    <div class="position-composer-actions">
+      <button class="position-btn primary" id="pc-save">儲存到此瀏覽器</button>
+      <button class="position-btn" id="pc-load">載入上次儲存</button>
+      <button class="position-btn warn" id="pc-clear">清空</button>
+    </div>
+    ${items.length > 0 ? renderPositionAnalysisPanel(items, "你的自訂組合", false) : `
+      <p style="color:var(--text-mute); padding:24px 0; text-align:center">
+        ↑ 加入至少一個標的後即可看到分析
+      </p>
+    `}
+  `;
+}
+
+function positionRefOptions(kind, currentRef) {
+  if (kind === "fund") {
+    return (DATA.funds?.funds || []).map(f =>
+      `<option value="${escapeHtml(f.id)}" ${f.id === currentRef ? "selected" : ""}>${escapeHtml(f.name_zh)}</option>`
+    ).join("");
+  }
+  if (kind === "bond") {
+    return (DATA.obonds?.bonds || []).map(b =>
+      `<option value="${escapeHtml(b.id)}" ${b.id === currentRef ? "selected" : ""}>${escapeHtml(b.name_zh)}</option>`
+    ).join("");
+  }
+  if (kind === "us_stock") {
+    return (DATA.stocks?.us_stocks || []).map(s =>
+      `<option value="${escapeHtml(s.symbol)}" ${s.symbol === currentRef ? "selected" : ""}>${escapeHtml(s.name_zh || s.symbol)}（${escapeHtml(s.symbol)}）</option>`
+    ).join("");
+  }
+  if (kind === "tw_stock") {
+    return (DATA.stocks?.tw_stocks || []).map(s =>
+      `<option value="${escapeHtml(s.symbol)}" ${s.symbol === currentRef ? "selected" : ""}>${escapeHtml(s.name_zh || s.symbol)}（${escapeHtml(s.symbol)}）</option>`
+    ).join("");
+  }
+  if (kind === "cash") {
+    return ["TWD", "USD"].map(c =>
+      `<option value="${c}" ${c === currentRef ? "selected" : ""}>${c}</option>`
+    ).join("");
+  }
+  return "";
+}
+
+function renderPositionCustomList(items) {
+  if (!items.length) {
+    return `<p style="color:var(--text-mute); padding:8px 0">尚未加入任何標的</p>`;
+  }
+  const rows = items.map((it, idx) => {
+    const meta = positionLookup(it);
+    const name = meta ? meta.name : `<span style="color:var(--ph-bad,#d62828)">(已下架：${escapeHtml(it.id || it.symbol || it.currency || "")})</span>`;
+    return `
+      <tr>
+        <td>${name}</td>
+        <td><input type="number" min="0" max="100" step="1" value="${it.weight}" data-idx="${idx}" class="position-list-weight" style="width:60px"> %</td>
+        <td><button class="position-btn small" data-del="${idx}">刪除</button></td>
+      </tr>
+    `;
+  }).join("");
+  const total = items.reduce((s, x) => s + Number(x.weight || 0), 0);
+  const totalCls = total === 100 ? "ok" : "warn";
+  return `
+    <table class="position-list">
+      <thead><tr><th>標的</th><th style="width:130px">權重</th><th style="width:70px">操作</th></tr></thead>
+      <tbody>${rows}</tbody>
+      <tfoot><tr><td>合計</td><td class="position-total ${totalCls}">${total}%</td><td></td></tr></tfoot>
+    </table>
+  `;
+}
+
+function renderPositionAnalysisPanel(items, title, isPreset) {
+  const resolved = positionNormalizedItems(items);
+  if (!resolved.length) {
+    return `<div class="position-analysis"><p>找不到任何有效標的（資料可能尚未載入）</p></div>`;
+  }
+  const alloc = computeAllocation(resolved);
+  const perf = computePerformance(resolved);
+  const risk = computeRisk(resolved);
+  const cost = computeCost(resolved);
+  const overlaps = detectOverlap(resolved);
+  const income = computeIncome(resolved);
+
+  const constituentRows = resolved.map(({ meta, weight }) => `
+    <tr>
+      <td>${escapeHtml(meta.name)}</td>
+      <td>${escapeHtml(positionAssetClass(meta))}</td>
+      <td>${escapeHtml(meta.currency || "—")}</td>
+      <td style="text-align:right">${weight}%</td>
+    </tr>
+  `).join("");
+
+  return `
+    <div class="position-analysis">
+      <h3 class="position-analysis-title">${escapeHtml(title)}</h3>
+
+      <details class="position-block" open>
+        <summary>① 構成清單（${resolved.length} 個標的）</summary>
+        <table class="position-constituents">
+          <thead><tr><th>標的</th><th>類別</th><th>幣別</th><th style="text-align:right">權重</th></tr></thead>
+          <tbody>${constituentRows}</tbody>
+        </table>
+      </details>
+
+      <details class="position-block" open>
+        <summary>② 配置現況</summary>
+        <div class="position-alloc-grid">
+          <div class="position-alloc-pie">
+            ${positionPieSvg(alloc.byClass)}
+            <div class="position-alloc-legend">
+              ${Object.entries(alloc.byClass).map(([k, v]) => `
+                <div><span class="position-legend-dot" style="background:${ASSET_CLASS_COLOR[k] || "#7ec5d4"}"></span>${escapeHtml(k)} ${v.toFixed(1)}%</div>
+              `).join("")}
+            </div>
+          </div>
+          <div class="position-alloc-bars">
+            <h4>幣別曝險</h4>
+            ${positionBarsHtml(alloc.byCcy)}
+          </div>
+        </div>
+      </details>
+
+      <details class="position-block" open>
+        <summary>③ 績效歷史（加權平均，含現金 0%）</summary>
+        <table class="position-perf">
+          <thead><tr><th>期間</th><th>你的組合</th><th>說明</th></tr></thead>
+          <tbody>
+            <tr><td>YTD 今年以來</td><td class="${pctClass(perf.ytd)}">${fmtPct(perf.ytd)}</td><td>依各標的 YTD 加權</td></tr>
+            <tr><td>近 1 年</td><td class="${pctClass(perf["1y"])}">${fmtPct(perf["1y"])}</td><td>單筆投入計算</td></tr>
+            <tr><td>近 3 年</td><td class="${pctClass(perf["3y"])}">${fmtPct(perf["3y"])}</td><td>單筆投入計算</td></tr>
+            <tr><td>近 5 年</td><td class="${pctClass(perf["5y"])}">${fmtPct(perf["5y"])}</td><td>單筆投入計算</td></tr>
+          </tbody>
+        </table>
+        <p class="position-foot">歷史表現非未來保證；組合假設權重維持不變，且不含交易成本與匯率變動。</p>
+      </details>
+
+      <details class="position-block" open>
+        <summary>④ 風險</summary>
+        <div class="position-metric-grid">
+          <div class="position-metric">
+            <div class="position-metric-label">集中度 HHI</div>
+            <div class="position-metric-val">${risk.hhi.toFixed(3)}</div>
+            <div class="position-metric-note">${risk.hhi >= 0.25 ? "偏高（單一持倉佔比過大）" : risk.hhi >= 0.15 ? "中等" : "分散度尚可"}</div>
+          </div>
+          <div class="position-metric">
+            <div class="position-metric-label">最大資產類別佔比</div>
+            <div class="position-metric-val">${risk.topCls[1].toFixed(1)}%</div>
+            <div class="position-metric-note">${escapeHtml(risk.topCls[0])} 為最大類別</div>
+          </div>
+          <div class="position-metric">
+            <div class="position-metric-label">MDD 估算</div>
+            <div class="position-metric-val">${risk.mddProxy > 0 ? "−" + risk.mddProxy.toFixed(1) + "%" : "—"}</div>
+            <div class="position-metric-note">採近期負績效絕對值加權（粗估）</div>
+          </div>
+          <div class="position-metric">
+            <div class="position-metric-label">過去 1 年最壞情境</div>
+            <div class="position-metric-val">${risk.worst1y < 0 ? risk.worst1y.toFixed(1) + "%" : "—"}</div>
+            <div class="position-metric-note">負績效標的加權貢獻合計</div>
+          </div>
+        </div>
+        <p class="position-foot">MDD（最大回撤）為估算值；v2 將從歷史 NAV 時序精算。</p>
+      </details>
+
+      <details class="position-block" open>
+        <summary>⑤ 費用估算</summary>
+        ${cost.weighted === null ? `
+          <p class="position-foot">基金費用率資料尚未整合至本站 JSON，預計 v2 補上。海外債與股票部分已視為 0%。</p>
+        ` : `
+          <p>加權平均年費用率：<b>${cost.weighted.toFixed(2)}%</b></p>
+          <p>估算 1 年實付（以 NT$ 100 萬本金）：<b>${(cost.weighted * 10000).toLocaleString("en-US", { maximumFractionDigits: 0 })} 元</b></p>
+          ${cost.anyMissing ? `<p class="position-foot">部分基金缺費率資料，已從加權計算中略過。</p>` : ""}
+        `}
+      </details>
+
+      ${overlaps.length ? `
+        <details class="position-block position-warn" open>
+          <summary>⑥ 重疊提醒</summary>
+          ${overlaps.map(w => `<div class="position-warn-card">${escapeHtml(w.msg)}</div>`).join("")}
+        </details>
+      ` : ""}
+
+      ${(income.bondYield !== null || income.distFundNames.length) ? `
+        <details class="position-block" open>
+          <summary>⑦ 配息現金流</summary>
+          ${income.bondYield !== null ? `
+            <p>海外債部位加權平均殖利率：<b>${income.bondYield.toFixed(2)}%</b>（佔組合 ${income.bondWeight}%）</p>
+            <p>估算 1 年配息（以該部位 NT$ 100 萬本金）：<b>${(income.bondYield * 10000).toLocaleString("en-US", { maximumFractionDigits: 0 })} 元</b></p>
+          ` : ""}
+          ${income.distFundNames.length ? `
+            <p>組合內含 ${income.distFundNames.length} 支配息型基金（fund_type B）；殖利率資料尚未整合，v2 補上。</p>
+          ` : ""}
+          <p class="position-foot">部分配息可能來自本金（依金管會配息揭露規定，請參閱各基金說明書）。</p>
+        </details>
+      ` : ""}
+
+      ${isPreset ? `
+        <div class="position-handoff">
+          <button class="position-btn primary" data-copy-preset>複製此組合到「自訂組合」當基底 ⇒</button>
+        </div>
+      ` : ""}
+    </div>
+  `;
+}
+
+function wirePositionTabs() {
+  // Subtab switching
+  document.querySelectorAll(".tab[data-ptab]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      POSITION_SUBTAB = btn.dataset.ptab;
+      $("content").innerHTML = renderPositionSheet();
+      wirePositionTabs();
+    });
+  });
+
+  // Preset card clicks
+  document.querySelectorAll(".position-preset-card").forEach(btn => {
+    btn.addEventListener("click", () => {
+      POSITION_SELECTED_PRESET = btn.dataset.preset;
+      $("content").innerHTML = renderPositionSheet();
+      wirePositionTabs();
+      // scroll to analysis panel
+      const a = document.querySelector(".position-analysis");
+      if (a) a.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+
+  // Copy preset to custom
+  document.querySelectorAll("[data-copy-preset]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const presets = DATA.presets?.presets || [];
+      const p = presets.find(x => x.id === POSITION_SELECTED_PRESET);
+      if (!p) return;
+      POSITION_CUSTOM = p.items.map(it => ({ ...it }));
+      POSITION_SUBTAB = "custom";
+      $("content").innerHTML = renderPositionSheet();
+      wirePositionTabs();
+    });
+  });
+
+  // Custom composer: kind change → re-render to refresh ref options
+  const kindSel = document.getElementById("pc-kind");
+  if (kindSel) {
+    kindSel.addEventListener("change", () => {
+      POSITION_PENDING_ADD.kind = kindSel.value;
+      POSITION_PENDING_ADD.ref = "";
+      $("content").innerHTML = renderPositionSheet();
+      wirePositionTabs();
+    });
+  }
+  const refSel = document.getElementById("pc-ref");
+  if (refSel) {
+    refSel.addEventListener("change", () => { POSITION_PENDING_ADD.ref = refSel.value; });
+  }
+  const wInput = document.getElementById("pc-weight");
+  if (wInput) {
+    wInput.addEventListener("input", () => { POSITION_PENDING_ADD.weight = wInput.value; });
+  }
+
+  // Add button
+  const addBtn = document.getElementById("pc-add");
+  if (addBtn) {
+    addBtn.addEventListener("click", () => {
+      const kind = (document.getElementById("pc-kind") || {}).value;
+      const ref = (document.getElementById("pc-ref") || {}).value;
+      const weight = Number((document.getElementById("pc-weight") || {}).value);
+      if (!kind || !ref || !weight || weight <= 0) {
+        alert("請填齊類別、標的、權重");
+        return;
+      }
+      const newItem = { kind, weight };
+      if (kind === "cash") newItem.currency = ref;
+      else if (kind === "us_stock" || kind === "tw_stock") newItem.symbol = ref;
+      else newItem.id = ref;
+      POSITION_CUSTOM.push(newItem);
+      POSITION_PENDING_ADD.weight = "";
+      $("content").innerHTML = renderPositionSheet();
+      wirePositionTabs();
+    });
+  }
+
+  // Inline weight edits
+  document.querySelectorAll(".position-list-weight").forEach(input => {
+    input.addEventListener("change", () => {
+      const idx = Number(input.dataset.idx);
+      const v = Number(input.value);
+      if (POSITION_CUSTOM[idx]) {
+        POSITION_CUSTOM[idx].weight = v;
+        $("content").innerHTML = renderPositionSheet();
+        wirePositionTabs();
+      }
+    });
+  });
+
+  // Delete buttons
+  document.querySelectorAll("[data-del]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const idx = Number(btn.dataset.del);
+      POSITION_CUSTOM.splice(idx, 1);
+      $("content").innerHTML = renderPositionSheet();
+      wirePositionTabs();
+    });
+  });
+
+  // Save / Load / Clear
+  const saveBtn = document.getElementById("pc-save");
+  if (saveBtn) {
+    saveBtn.addEventListener("click", () => {
+      const ok = positionSaveCustom(POSITION_CUSTOM);
+      alert(ok ? "已儲存到此瀏覽器" : "儲存失敗（可能無 localStorage 權限）");
+    });
+  }
+  const loadBtn = document.getElementById("pc-load");
+  if (loadBtn) {
+    loadBtn.addEventListener("click", () => {
+      POSITION_CUSTOM = positionLoadCustom();
+      $("content").innerHTML = renderPositionSheet();
+      wirePositionTabs();
+    });
+  }
+  const clearBtn = document.getElementById("pc-clear");
+  if (clearBtn) {
+    clearBtn.addEventListener("click", () => {
+      if (!confirm("確定清空目前的自訂組合？")) return;
+      POSITION_CUSTOM = [];
+      positionClearCustom();
+      POSITION_SELECTED_PRESET = null;
+      $("content").innerHTML = renderPositionSheet();
+      wirePositionTabs();
+    });
+  }
 }
 
 function wireTargetsTabs() {

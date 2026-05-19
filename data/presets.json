@@ -1,0 +1,189 @@
+{
+  "generated_at": "2026-05-19T00:00:00+08:00",
+  "source": "manual_curation",
+  "note": "預設組合僅作教育示範用途，非個人化投資建議。標的均取自站上既有清單。",
+  "presets": [
+    {
+      "id": "conservative",
+      "name": "保守 30/70",
+      "tagline": "債券為主、保留現金，預期波動最低",
+      "color": "#003D91",
+      "items": [
+        {
+          "kind": "bond",
+          "id": "fecb0231_lilly",
+          "weight": 25
+        },
+        {
+          "kind": "bond",
+          "id": "fecb0184_brk",
+          "weight": 20
+        },
+        {
+          "kind": "bond",
+          "id": "fecb0117_apple",
+          "weight": 15
+        },
+        {
+          "kind": "bond",
+          "id": "fecb0247_ms_zero",
+          "weight": 10
+        },
+        {
+          "kind": "fund",
+          "id": "schroder_global_income",
+          "weight": 20
+        },
+        {
+          "kind": "cash",
+          "currency": "TWD",
+          "weight": 10
+        }
+      ]
+    },
+    {
+      "id": "balanced",
+      "name": "穩健 50/50",
+      "tagline": "股債均衡，加入主題基金分散區域",
+      "color": "#019AB3",
+      "items": [
+        {
+          "kind": "bond",
+          "id": "fecb0117_apple",
+          "weight": 20
+        },
+        {
+          "kind": "bond",
+          "id": "fecb0184_brk",
+          "weight": 15
+        },
+        {
+          "kind": "fund",
+          "id": "amundi_em_bond",
+          "weight": 15
+        },
+        {
+          "kind": "fund",
+          "id": "allianz_tw_tech",
+          "weight": 15
+        },
+        {
+          "kind": "fund",
+          "id": "ab_intl_tech",
+          "weight": 15
+        },
+        {
+          "kind": "fund",
+          "id": "franklin_india",
+          "weight": 10
+        },
+        {
+          "kind": "cash",
+          "currency": "TWD",
+          "weight": 10
+        }
+      ]
+    },
+    {
+      "id": "aggressive",
+      "name": "積極 80/20",
+      "tagline": "股票為主，混合美股七雄與台股科技",
+      "color": "#17B5AD",
+      "items": [
+        {
+          "kind": "us_stock",
+          "symbol": "NVDA",
+          "weight": 10
+        },
+        {
+          "kind": "us_stock",
+          "symbol": "AAPL",
+          "weight": 8
+        },
+        {
+          "kind": "us_stock",
+          "symbol": "MSFT",
+          "weight": 8
+        },
+        {
+          "kind": "us_stock",
+          "symbol": "GOOGL",
+          "weight": 6
+        },
+        {
+          "kind": "us_stock",
+          "symbol": "AMZN",
+          "weight": 6
+        },
+        {
+          "kind": "us_stock",
+          "symbol": "META",
+          "weight": 6
+        },
+        {
+          "kind": "us_stock",
+          "symbol": "TSLA",
+          "weight": 6
+        },
+        {
+          "kind": "fund",
+          "id": "allianz_tw_tech",
+          "weight": 15
+        },
+        {
+          "kind": "fund",
+          "id": "ab_intl_tech",
+          "weight": 10
+        },
+        {
+          "kind": "bond",
+          "id": "fecb0117_apple",
+          "weight": 10
+        },
+        {
+          "kind": "bond",
+          "id": "fecb0247_ms_zero",
+          "weight": 10
+        },
+        {
+          "kind": "cash",
+          "currency": "TWD",
+          "weight": 5
+        }
+      ]
+    },
+    {
+      "id": "ai_theme",
+      "name": "AI 主題",
+      "tagline": "純 AI / 半導體相關標的，波動最大",
+      "color": "#d62828",
+      "items": [
+        {
+          "kind": "us_stock",
+          "symbol": "NVDA",
+          "weight": 25
+        },
+        {
+          "kind": "us_stock",
+          "symbol": "TSM",
+          "weight": 20
+        },
+        {
+          "kind": "us_stock",
+          "symbol": "AVGO",
+          "weight": 15
+        },
+        {
+          "kind": "fund",
+          "id": "allianz_tw_tech",
+          "weight": 20
+        },
+        {
+          "kind": "fund",
+          "id": "ab_intl_tech",
+          "weight": 20
+        }
+      ]
+    }
+  ]
+}
