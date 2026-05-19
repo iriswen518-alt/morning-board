@@ -1,5 +1,228 @@
 {
-  "closing_date": "2026-05-18",
-  "indices": [],
-  "summary": ""
+  "closing_date": "2026-05-19",
+  "indices": [
+    {
+      "name": "S&P 500",
+      "name_zh": null,
+      "close": 7403.0498046875,
+      "daily_pct": -0.07,
+      "mtd_pct": 2.39,
+      "ytd_pct": 25.87,
+      "closing_date": "2026-05-18"
+    },
+    {
+      "name": "Nasdaq Composite",
+      "name_zh": null,
+      "close": 26090.73,
+      "daily_pct": -0.51,
+      "mtd_pct": 3.89,
+      "ytd_pct": 33.89,
+      "closing_date": "2026-05-18"
+    },
+    {
+      "name": "Dow Jones",
+      "name_zh": null,
+      "close": 49686.12109375,
+      "daily_pct": 0.32,
+      "mtd_pct": 0.38,
+      "ytd_pct": 16.79,
+      "closing_date": "2026-05-18"
+    },
+    {
+      "name": "Euro Stoxx 50",
+      "name_zh": null,
+      "close": 5827.759765625,
+      "daily_pct": -0.57,
+      "mtd_pct": null,
+      "ytd_pct": null,
+      "closing_date": "2026-05-15"
+    },
+    {
+      "name": "DAX",
+      "name_zh": null,
+      "close": 23950.5703125,
+      "daily_pct": -2.07,
+      "mtd_pct": -2.56,
+      "ytd_pct": 18.89,
+      "closing_date": "2026-05-15"
+    },
+    {
+      "name": "FTSE 100",
+      "name_zh": null,
+      "close": 10195.400390625,
+      "daily_pct": -1.71,
+      "mtd_pct": null,
+      "ytd_pct": null,
+      "closing_date": "2026-05-15"
+    },
+    {
+      "name": "CAC 40",
+      "name_zh": null,
+      "close": 7952.5498046875,
+      "daily_pct": -1.6,
+      "mtd_pct": null,
+      "ytd_pct": null,
+      "closing_date": "2026-05-15"
+    },
+    {
+      "name": "Nikkei 225",
+      "name_zh": null,
+      "close": 61409.2890625,
+      "daily_pct": -1.99,
+      "mtd_pct": 2.58,
+      "ytd_pct": 52.44,
+      "closing_date": "2026-05-15"
+    },
+    {
+      "name": "TAIEX 加權指數",
+      "name_zh": null,
+      "close": 41172.359375,
+      "daily_pct": -1.39,
+      "mtd_pct": null,
+      "ytd_pct": null,
+      "closing_date": "2026-05-15"
+    },
+    {
+      "name": "KOSPI",
+      "name_zh": null,
+      "close": 7493.18017578125,
+      "daily_pct": -6.12,
+      "mtd_pct": null,
+      "ytd_pct": null,
+      "closing_date": "2026-05-15"
+    },
+    {
+      "name": "Hang Seng 恆生",
+      "name_zh": null,
+      "close": null,
+      "daily_pct": null,
+      "mtd_pct": null,
+      "ytd_pct": null,
+      "closing_date": null
+    },
+    {
+      "name": "Shanghai 上證",
+      "name_zh": null,
+      "close": null,
+      "daily_pct": null,
+      "mtd_pct": null,
+      "ytd_pct": null,
+      "closing_date": null
+    },
+    {
+      "name": "CSI 300 滬深300",
+      "name_zh": null,
+      "close": 4833.52,
+      "daily_pct": -0.54,
+      "mtd_pct": 0.2,
+      "ytd_pct": 22.99,
+      "closing_date": "2026-05-19"
+    },
+    {
+      "name": "Nifty 50",
+      "name_zh": null,
+      "close": 23643.5,
+      "daily_pct": -0.19,
+      "mtd_pct": null,
+      "ytd_pct": null,
+      "closing_date": "2026-05-15"
+    },
+    {
+      "name": "S&P/ASX 200",
+      "name_zh": null,
+      "close": 8475.0,
+      "daily_pct": -1.8,
+      "mtd_pct": -2.2,
+      "ytd_pct": 3.87,
+      "closing_date": "2026-05-19"
+    }
+  ],
+  "bonds": [
+    {
+      "name": "US 10-Year",
+      "yield_pct": 4.61,
+      "daily_bps": 14.0,
+      "mtd_bps": 31.0,
+      "closing_date": "2026-05-18"
+    },
+    {
+      "name": "US 2-Year",
+      "yield_pct": null,
+      "daily_bps": null,
+      "mtd_bps": null,
+      "closing_date": null
+    },
+    {
+      "name": "Germany 10-Year",
+      "yield_pct": null,
+      "daily_bps": null,
+      "mtd_bps": null,
+      "closing_date": null
+    },
+    {
+      "name": "Japan 10-Year",
+      "yield_pct": null,
+      "daily_bps": null,
+      "mtd_bps": null,
+      "closing_date": null
+    },
+    {
+      "name": "UK 10-Year",
+      "yield_pct": null,
+      "daily_bps": null,
+      "mtd_bps": null,
+      "closing_date": null
+    }
+  ],
+  "fx": [
+    {
+      "name": "DXY 美元指數",
+      "close": null,
+      "daily_pct": null,
+      "mtd_pct": null,
+      "ytd_pct": null,
+      "closing_date": null
+    },
+    {
+      "name": "EUR/USD",
+      "close": 1.161440134048462,
+      "daily_pct": -0.41,
+      "mtd_pct": -0.32,
+      "ytd_pct": -0.85,
+      "closing_date": "2026-05-18"
+    },
+    {
+      "name": "USD/JPY",
+      "close": 158.843994140625,
+      "daily_pct": 0.29,
+      "mtd_pct": -0.73,
+      "ytd_pct": 1.66,
+      "closing_date": "2026-05-18"
+    },
+    {
+      "name": "GBP/USD",
+      "close": 1.330849051475525,
+      "daily_pct": -0.62,
+      "mtd_pct": -0.5,
+      "ytd_pct": -0.35,
+      "closing_date": "2026-05-18"
+    },
+    {
+      "name": "USD/CNY",
+      "close": 6.809199810028076,
+      "daily_pct": 0.36,
+      "mtd_pct": -0.56,
+      "ytd_pct": -2.81,
+      "closing_date": "2026-05-18"
+    },
+    {
+      "name": "USD/TWD",
+      "close": 31.586999893188477,
+      "daily_pct": 0.07,
+      "mtd_pct": -0.06,
+      "ytd_pct": 1.16,
+      "closing_date": "2026-05-18"
+    }
+  ],
+  "summary": "US equities closed mixed on May 18 as surging Treasury yields and elevated oil prices weighed on tech-heavy indices, while the Dow managed modest gains; European indices lacked complete MTD/YTD baselines (Euro Stoxx 50, FTSE 100, CAC 40 marked —); Asian indices DAX, Nikkei, CSI 300, and ASX 200 all recorded full data, with Nikkei +2.58% MTD and +52.44% since Dec 2024."
 }
