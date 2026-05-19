@@ -1434,3 +1434,16 @@ table.indices .date-col {
   .position-composer-row select,
   .position-composer-row input { min-width: 0; width: 100%; }
 }
+
+.position-subhead {
+  margin: 12px 0 4px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--brand-deep);
+}
+.position-perf-scroll { overflow-x: auto; }
+.position-perf-each th, .position-perf-each td {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.position-perf-each td:first-child { white-space: normal; max-width: 220px; }

@@ -1391,7 +1391,37 @@ function renderPositionAnalysisPanel(items, title, isPreset) {
       </details>
 
       <details class="position-block" open>
-        <summary>③ 績效歷史（加權平均，含現金 0%）</summary>
+        <summary>③ 績效歷史</summary>
+
+        <h4 class="position-subhead">個別標的</h4>
+        <div class="position-perf-scroll">
+          <table class="position-perf position-perf-each">
+            <thead>
+              <tr>
+                <th>標的</th>
+                <th style="text-align:right">權重</th>
+                <th style="text-align:right">YTD</th>
+                <th style="text-align:right">近 1 年</th>
+                <th style="text-align:right">近 3 年</th>
+                <th style="text-align:right">近 5 年</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${resolved.map(({ meta, weight }) => `
+                <tr>
+                  <td>${escapeHtml(meta.name)}</td>
+                  <td style="text-align:right">${weight}%</td>
+                  <td class="${pctClass(meta.perf?.ytd)}" style="text-align:right">${fmtPct(meta.perf?.ytd)}</td>
+                  <td class="${pctClass(meta.perf?.["1y"])}" style="text-align:right">${fmtPct(meta.perf?.["1y"])}</td>
+                  <td class="${pctClass(meta.perf?.["3y"])}" style="text-align:right">${fmtPct(meta.perf?.["3y"])}</td>
+                  <td class="${pctClass(meta.perf?.["5y"])}" style="text-align:right">${fmtPct(meta.perf?.["5y"])}</td>
+                </tr>
+              `).join("")}
+            </tbody>
+          </table>
+        </div>
+
+        <h4 class="position-subhead">綜合績效（加權平均，現金與缺值不計入）</h4>
         <table class="position-perf">
           <thead><tr><th>期間</th><th>你的組合</th><th>說明</th></tr></thead>
           <tbody>
@@ -1401,7 +1431,7 @@ function renderPositionAnalysisPanel(items, title, isPreset) {
             <tr><td>近 5 年</td><td class="${pctClass(perf["5y"])}">${fmtPct(perf["5y"])}</td><td>單筆投入計算</td></tr>
           </tbody>
         </table>
-        <p class="position-foot">歷史表現非未來保證；組合假設權重維持不變，且不含交易成本與匯率變動。</p>
+        <p class="position-foot">「—」代表該標的無此期間績效資料；歷史表現非未來保證，組合假設權重維持不變、不含交易成本與匯率變動。</p>
       </details>
 
       <details class="position-block" open>
