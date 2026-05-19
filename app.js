@@ -1120,15 +1120,15 @@ function detectOverlap(resolved) {
 function computeIncome(resolved) {
   // 加總所有「會配息」標的（海外債 + 配息型基金）的加權年化殖利率/配息率
   let yNum = 0, yWeight = 0;
-  const breakdown = [];  // [{name, kind, yield, weight}]
+  const breakdown = [];  // [{meta, kind, yield, weight}]
   const distFundUnknown = []; // fund_type B 但 distribution_yield_pct 為 null（累積型或缺資料）
   resolved.forEach(({ meta, weight }) => {
     if (meta.kind === "bond" && typeof meta.yield_pct === "number") {
       yNum += meta.yield_pct * weight; yWeight += weight;
-      breakdown.push({ name: meta.name, kind: "bond", yield: meta.yield_pct, weight });
+      breakdown.push({ meta, kind: "bond", yield: meta.yield_pct, weight });
     } else if (meta.kind === "fund" && typeof meta.yield_pct === "number") {
       yNum += meta.yield_pct * weight; yWeight += weight;
-      breakdown.push({ name: meta.name, kind: "fund", yield: meta.yield_pct, weight });
+      breakdown.push({ meta, kind: "fund", yield: meta.yield_pct, weight });
     } else if (meta.kind === "fund" && meta.fund_type === "B") {
       distFundUnknown.push(meta.name);
     }
@@ -1478,7 +1478,7 @@ function renderPositionAnalysisPanel(items, title, isPreset) {
               <tbody>
                 ${income.breakdown.map(b => `
                   <tr>
-                    <td>${escapeHtml(b.name)}</td>
+                    <td>${positionLinkName(b.meta)}</td>
                     <td>${b.kind === "bond" ? "海外債（YTM）" : "配息型基金"}</td>
                     <td style="text-align:right">${b.weight}%</td>
                     <td style="text-align:right" class="up">${b.yield.toFixed(2)}%</td>
