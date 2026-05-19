@@ -268,12 +268,16 @@ function buildSearchIndex() {
   for (const item of (DATA.tax?.items || [])) {
     idx.push({ tab: "wealth", tabLabel: "財富傳承 · 稅務新聞", title: item.title || "", text: item.summary || item.text || "" });
   }
-  // 部位分析 · 預設組合
+  // 投組分析 · 預設組合
   for (const p of (DATA.presets?.presets || [])) {
-    idx.push({ tab: "position", tabLabel: "部位分析 · 預設組合", title: p.name || "", text: `${p.tagline || ""} 配置 組合 集中度 風險 費用 配息` });
+    idx.push({ tab: "portfolio", subtab: "preset", tabLabel: "投組分析 · 預設組合", title: p.name || "", text: `${p.tagline || ""} 配置 組合 集中度 風險 費用 配息` });
   }
-  // 部位分析 · 通用關鍵字
-  idx.push({ tab: "position", tabLabel: "部位分析", title: "部位分析 · 自訂組合", text: "自選 組合 配置 HHI 重疊 配息 風險 費用 教育示範" });
+  // 投組分析 · 配置原則（每個 profile）
+  for (const p of (DATA.allocation?.profiles || [])) {
+    idx.push({ tab: "portfolio", subtab: "alloc", tabLabel: "投組分析 · 配置原則", title: p.name || p.key, text: `${p.subtitle || ""} 目標報酬 ${p.target_return || ""} 最大回撤 ${p.max_drawdown || ""}` });
+  }
+  // 投組分析 · 自訂組合
+  idx.push({ tab: "portfolio", subtab: "custom", tabLabel: "投組分析 · 自訂組合", title: "自訂組合", text: "自選 組合 配置 HHI 重疊 配息 風險 費用 教育示範" });
   return idx;
 }
 
@@ -447,22 +451,44 @@ function switchTab(name) {
     });
   }
   else if (name === "targets") body.innerHTML = renderTargetsSheet();
-  else if (name === "allocation") body.innerHTML = renderAllocationSheet();
-  else if (name === "position") body.innerHTML = renderPositionSheet();
+  else if (name === "allocation") {
+    // 舊分頁「資產配置」已併入「投組分析 → 配置原則」次分頁
+    PORTFOLIO_SUBTAB = "alloc";
+    body.innerHTML = renderPortfolioSheet();
+    PENDING_SUBTAB = "alloc";
+    name = "portfolio";
+    CURRENT_TAB = "portfolio";
+    body.dataset.section = "portfolio";
+    document.querySelectorAll(".main-tab").forEach(b => {
+      b.classList.toggle("active", b.dataset.tab === "portfolio");
+    });
+  }
+  else if (name === "position") {
+    // 舊分頁「部位分析」已併入「投組分析 → 預設組合」次分頁
+    PORTFOLIO_SUBTAB = "preset";
+    body.innerHTML = renderPortfolioSheet();
+    PENDING_SUBTAB = "preset";
+    name = "portfolio";
+    CURRENT_TAB = "portfolio";
+    body.dataset.section = "portfolio";
+    document.querySelectorAll(".main-tab").forEach(b => {
+      b.classList.toggle("active", b.dataset.tab === "portfolio");
+    });
+  }
+  else if (name === "portfolio") body.innerHTML = renderPortfolioSheet();
   else if (name === "wealth") body.innerHTML = renderWealthSheet();
   else if (name === "calc") body.innerHTML = renderCalcSheet();
   if (name === "news") wireNewsTabs();
   if (name === "market") wireMarketTabs();
   if (name === "funds") wireFundsTabs();
   if (name === "targets") wireTargetsTabs();
-  if (name === "allocation") wireAllocationTabs();
-  if (name === "position") wirePositionTabs();
+  if (name === "portfolio") wirePortfolioTabs();
   if (name === "wealth") wireWealthTabs();
   if (name === "calc") wireCalcTabs();
   if (PENDING_SUBTAB) {
     const sub = PENDING_SUBTAB;
     PENDING_SUBTAB = null;
-    const sel = ["mtab", "atab", "ttab", "ctab", "wtab", "ntab", "ftab"]
+    const sel = ["mtab", "atab", "ttab", "ctab", "wtab", "ntab", "ftab", "prtab"]
       .map(a => `.tab[data-${a}="${sub}"]`).join(",");
     const subBtn = document.querySelector(sel);
     if (subBtn) subBtn.click();
@@ -937,7 +963,7 @@ const ASSET_CLASS_COLOR = {
   "現金": "#9ca3af",
 };
 
-let POSITION_SUBTAB = "preset";   // preset | custom
+let PORTFOLIO_SUBTAB = "alloc";    // alloc | preset | custom
 let POSITION_SELECTED_PRESET = null;
 let POSITION_CUSTOM = [];          // [{kind, id|symbol|currency, weight}]
 let POSITION_PENDING_ADD = { kind: "fund", ref: "", weight: "" };
@@ -1190,27 +1216,33 @@ function positionClearCustom() {
 }
 
 // Renderers ─────────────────────────────────────────────────────────────────
-function renderPositionSheet() {
+function renderPortfolioSheet() {
   const presets = DATA.presets?.presets || [];
   if (!presets.length && POSITION_CUSTOM.length === 0) {
     POSITION_CUSTOM = positionLoadCustom();
   }
-  const subtab = POSITION_SUBTAB;
-  const presetActive = subtab === "preset";
+  const subtab = PORTFOLIO_SUBTAB;
+  const isAlloc  = subtab === "alloc";
+  const isPreset = subtab === "preset";
+  const isCustom = subtab === "custom";
 
   return `
     <div class="position-banner">
-      本分頁為<b>教育示範用途</b>，不構成個人化投資建議；分析結果僅以站上既有清單與歷史資料計算。
+      本分頁為<b>教育示範用途</b>，不構成個人化投資建議；配置原則為策略示範，預設組合與自訂組合之分析僅以站上既有清單與歷史資料計算。
     </div>
     <div class="tabs">
-      <button class="tab ${presetActive ? "active" : ""}" data-ptab="preset">預設組合</button>
-      <button class="tab ${!presetActive ? "active" : ""}" data-ptab="custom">自訂組合</button>
+      <button class="tab ${isAlloc  ? "active" : ""}" data-prtab="alloc">配置原則</button>
+      <button class="tab ${isPreset ? "active" : ""}" data-prtab="preset">預設組合</button>
+      <button class="tab ${isCustom ? "active" : ""}" data-prtab="custom">自訂組合</button>
     </div>
     <div class="t-panes">
-      <div class="t-pane ${presetActive ? "active" : ""}" id="p-pane-preset">
+      <div class="t-pane ${isAlloc  ? "active" : ""}" id="pf-pane-alloc">
+        ${renderAllocationSheet()}
+      </div>
+      <div class="t-pane ${isPreset ? "active" : ""}" id="pf-pane-preset">
         ${renderPositionPresetPane(presets)}
       </div>
-      <div class="t-pane ${!presetActive ? "active" : ""}" id="p-pane-custom">
+      <div class="t-pane ${isCustom ? "active" : ""}" id="pf-pane-custom">
         ${renderPositionCustomPane()}
       </div>
     </div>
@@ -1260,15 +1292,17 @@ function renderPositionCustomPane() {
             <option value="cash" ${POSITION_PENDING_ADD.kind === "cash" ? "selected" : ""}>現金</option>
           </select>
         </label>
-        <label>標的
+        <label class="position-composer-ref">標的
           <select id="pc-ref">${positionRefOptions(POSITION_PENDING_ADD.kind, POSITION_PENDING_ADD.ref)}</select>
         </label>
         <label>權重 %
           <input id="pc-weight" type="number" min="1" max="100" step="1" value="${POSITION_PENDING_ADD.weight}" placeholder="10">
         </label>
-        <button class="position-btn" id="pc-add">加入</button>
       </div>
-      <div class="position-composer-hint">標的清單僅限站上既有資料；資料僅存於此瀏覽器，不會上傳。</div>
+      <div class="position-composer-addrow">
+        <button class="position-btn primary large" id="pc-add">＋ 加入此標的</button>
+        <div class="position-composer-hint">標的清單僅限站上既有資料；資料僅存於此瀏覽器，不會上傳。</div>
+      </div>
     </div>
     ${renderPositionCustomList(items)}
     <div class="position-composer-actions">
@@ -1502,49 +1536,55 @@ function renderPositionAnalysisPanel(items, title, isPreset) {
   `;
 }
 
-function wirePositionTabs() {
-  // Subtab switching
-  document.querySelectorAll(".tab[data-ptab]").forEach(btn => {
+function rerenderPortfolio() {
+  $("content").innerHTML = renderPortfolioSheet();
+  wirePortfolioTabs();
+}
+
+function wirePortfolioTabs() {
+  // Top-level subtab switching (配置原則 / 預設組合 / 自訂組合)
+  document.querySelectorAll(".tab[data-prtab]").forEach(btn => {
     btn.addEventListener("click", () => {
-      POSITION_SUBTAB = btn.dataset.ptab;
-      $("content").innerHTML = renderPositionSheet();
-      wirePositionTabs();
+      PORTFOLIO_SUBTAB = btn.dataset.prtab;
+      rerenderPortfolio();
     });
   });
 
-  // Preset card clicks
+  // 配置原則 subtab needs its own profile-tab wiring
+  if (PORTFOLIO_SUBTAB === "alloc") {
+    wireAllocationTabs();
+    return;
+  }
+
+  // 預設組合 / 自訂組合 共用以下事件
   document.querySelectorAll(".position-preset-card").forEach(btn => {
     btn.addEventListener("click", () => {
       POSITION_SELECTED_PRESET = btn.dataset.preset;
-      $("content").innerHTML = renderPositionSheet();
-      wirePositionTabs();
-      // scroll to analysis panel
+      rerenderPortfolio();
       const a = document.querySelector(".position-analysis");
       if (a) a.scrollIntoView({ behavior: "smooth", block: "start" });
     });
   });
 
-  // Copy preset to custom
   document.querySelectorAll("[data-copy-preset]").forEach(btn => {
     btn.addEventListener("click", () => {
       const presets = DATA.presets?.presets || [];
       const p = presets.find(x => x.id === POSITION_SELECTED_PRESET);
       if (!p) return;
       POSITION_CUSTOM = p.items.map(it => ({ ...it }));
-      POSITION_SUBTAB = "custom";
-      $("content").innerHTML = renderPositionSheet();
-      wirePositionTabs();
+      PORTFOLIO_SUBTAB = "custom";
+      rerenderPortfolio();
     });
   });
 
-  // Custom composer: kind change → re-render to refresh ref options
+  // 自訂組合 composer
   const kindSel = document.getElementById("pc-kind");
   if (kindSel) {
     kindSel.addEventListener("change", () => {
       POSITION_PENDING_ADD.kind = kindSel.value;
       POSITION_PENDING_ADD.ref = "";
-      $("content").innerHTML = renderPositionSheet();
-      wirePositionTabs();
+      POSITION_PENDING_ADD.weight = document.getElementById("pc-weight")?.value || "";
+      rerenderPortfolio();
     });
   }
   const refSel = document.getElementById("pc-ref");
@@ -1556,13 +1596,15 @@ function wirePositionTabs() {
     wInput.addEventListener("input", () => { POSITION_PENDING_ADD.weight = wInput.value; });
   }
 
-  // Add button
   const addBtn = document.getElementById("pc-add");
   if (addBtn) {
     addBtn.addEventListener("click", () => {
-      const kind = (document.getElementById("pc-kind") || {}).value;
-      const ref = (document.getElementById("pc-ref") || {}).value;
-      const weight = Number((document.getElementById("pc-weight") || {}).value);
+      const kindEl = document.getElementById("pc-kind");
+      const refEl = document.getElementById("pc-ref");
+      const wEl = document.getElementById("pc-weight");
+      const kind = kindEl?.value;
+      const ref = refEl?.value;
+      const weight = Number(wEl?.value);
       if (!kind || !ref || !weight || weight <= 0) {
         alert("請填齊類別、標的、權重");
         return;
@@ -1573,8 +1615,11 @@ function wirePositionTabs() {
       else newItem.id = ref;
       POSITION_CUSTOM.push(newItem);
       POSITION_PENDING_ADD.weight = "";
-      $("content").innerHTML = renderPositionSheet();
-      wirePositionTabs();
+      rerenderPortfolio();
+      // Scroll to the newly added row for visual confirmation
+      const rows = document.querySelectorAll(".position-list tbody tr");
+      const last = rows[rows.length - 1];
+      if (last) last.scrollIntoView({ behavior: "smooth", block: "center" });
     });
   }
 
@@ -1585,23 +1630,19 @@ function wirePositionTabs() {
       const v = Number(input.value);
       if (POSITION_CUSTOM[idx]) {
         POSITION_CUSTOM[idx].weight = v;
-        $("content").innerHTML = renderPositionSheet();
-        wirePositionTabs();
+        rerenderPortfolio();
       }
     });
   });
 
-  // Delete buttons
   document.querySelectorAll("[data-del]").forEach(btn => {
     btn.addEventListener("click", () => {
       const idx = Number(btn.dataset.del);
       POSITION_CUSTOM.splice(idx, 1);
-      $("content").innerHTML = renderPositionSheet();
-      wirePositionTabs();
+      rerenderPortfolio();
     });
   });
 
-  // Save / Load / Clear
   const saveBtn = document.getElementById("pc-save");
   if (saveBtn) {
     saveBtn.addEventListener("click", () => {
@@ -1613,8 +1654,7 @@ function wirePositionTabs() {
   if (loadBtn) {
     loadBtn.addEventListener("click", () => {
       POSITION_CUSTOM = positionLoadCustom();
-      $("content").innerHTML = renderPositionSheet();
-      wirePositionTabs();
+      rerenderPortfolio();
     });
   }
   const clearBtn = document.getElementById("pc-clear");
@@ -1624,8 +1664,7 @@ function wirePositionTabs() {
       POSITION_CUSTOM = [];
       positionClearCustom();
       POSITION_SELECTED_PRESET = null;
-      $("content").innerHTML = renderPositionSheet();
-      wirePositionTabs();
+      rerenderPortfolio();
     });
   }
 }

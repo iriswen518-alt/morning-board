@@ -1447,3 +1447,26 @@ table.indices .date-col {
   font-variant-numeric: tabular-nums;
 }
 .position-perf-each td:first-child { white-space: normal; max-width: 220px; }
+
+/* 投組分析 — composer 加入按鈕獨立成一列，避免在窄螢幕被擠到看不見 */
+.position-composer-addrow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--border);
+}
+.position-composer-ref { flex: 1 1 280px; min-width: 240px; }
+.position-btn.large {
+  font-size: 15px;
+  padding: 10px 22px;
+  font-weight: 700;
+  min-width: 160px;
+}
+@media (max-width: 720px) {
+  .position-composer-addrow { flex-direction: column; align-items: stretch; }
+  .position-btn.large { width: 100%; }
+}
