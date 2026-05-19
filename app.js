@@ -909,25 +909,21 @@ function positionLookup(item) {
   if (kind === "bond") {
     const b = (DATA.obonds?.bonds || []).find(x => x.id === item.id);
     if (!b) return null;
-    // 海外債 JSON 僅有 1W/1M/3M，沒有歷史價格序列無法計算真實 YTD/1Y/3Y/5Y
-    // → 1Y/3Y/5Y 用「申購殖利率 YTM」推估持有至期滿之累積預期報酬（標示為估算）
-    const ytm = b.bid_yield_pct;
-    const ytmFrac = typeof ytm === "number" ? ytm / 100 : null;
-    const cum = (n) => ytmFrac == null ? null : +(((1 + ytmFrac) ** n - 1) * 100).toFixed(2);
+    // 海外債資料源 IceBond API 僅提供 1週/1月/3月，無歷史價格序列。
+    // YTD/1Y/3Y/5Y 一律 null（不推估、不假裝有資料）。
     return {
       kind, name: b.name_zh, currency: positionCcyZh(b.currency || "USD"),
       category: "bond",
       perf: {
         "1m": b.perf_1m ?? null,
         "3m": b.perf_3m ?? null,
-        ytd: null,                 // 不假裝 — 真實 YTD 資料不存在
-        "1y": ytm ?? null,         // YTM ≈ 1 年預期報酬
-        "3y": cum(3),              // (1+YTM)^3 - 1
-        "5y": cum(5),              // (1+YTM)^5 - 1
+        ytd: null,
+        "1y": null,
+        "3y": null,
+        "5y": null,
       },
-      perf_estimated: true,         // flag：以 YTM 推估，非歷史價格報酬
       code: b.code || b.id,
-      yield_pct: ytm ?? null,
+      yield_pct: b.bid_yield_pct ?? null,
       coupon_pct: b.coupon_pct ?? null,
       fee_pct: 0,
     };
@@ -1027,6 +1023,7 @@ function computeRisk(resolved) {
   let weakest1y = null;       // 加權貢獻百分點
   let weakestName = null;
   let weakestRaw = null;       // 該標的本身的 1Y 報酬
+  let mu1y = 0, muDenom = 0;  // 順手算 1Y 加權平均，供 VaR 用
   resolved.forEach(({ meta, weight }) => {
     const y = meta.perf?.["1y"];
     if (typeof y !== "number") return;
@@ -1036,9 +1033,26 @@ function computeRisk(resolved) {
       weakestName = meta.name;
       weakestRaw = y;
     }
+    mu1y += y * weight; muDenom += weight;
+  });
+  const mu = muDenom > 0 ? mu1y / muDenom : null;
+
+  // 年化波動度粗估：資產類別 benchmark 加權（不考慮相關性，v2 從 NAV 時序精算）
+  const VOL_BY_CLASS = { "股票": 18, "債券": 6, "平衡": 12, "現金": 1, "其他": 15 };
+  let volProxy = 0;
+  resolved.forEach(({ meta, weight }) => {
+    const cls = positionAssetClass(meta);
+    volProxy += (VOL_BY_CLASS[cls] || 15) * weight / 100;
   });
 
-  return { hhi, topCls, mddProxy, weakest1y, weakestName, weakestRaw };
+  // VaR 95% / 1Y 粗估：常態單尾 1.65σ - μ；若 μ ≥ 1.65σ 則無顯著下檔
+  let var95 = null;
+  if (mu !== null) {
+    const v = 1.65 * volProxy - mu;
+    var95 = v > 0 ? v : 0;
+  }
+
+  return { hhi, topCls, mddProxy, weakest1y, weakestName, weakestRaw, volProxy, var95 };
 }
 
 function computeCost(resolved) {
@@ -1332,7 +1346,6 @@ function renderPositionAnalysisPanel(items, title, isPreset) {
   const alloc = computeAllocation(resolved);
   const perf = computePerformance(resolved);
   const risk = computeRisk(resolved);
-  const cost = computeCost(resolved);
   const overlaps = detectOverlap(resolved);
   const income = computeIncome(resolved);
 
@@ -1385,51 +1398,39 @@ function renderPositionAnalysisPanel(items, title, isPreset) {
               <tr>
                 <th>標的</th>
                 <th style="text-align:right">權重</th>
-                <th style="text-align:right">YTD</th>
+                <th style="text-align:right">今年以來</th>
                 <th style="text-align:right">近 1 年</th>
                 <th style="text-align:right">近 3 年</th>
                 <th style="text-align:right">近 5 年</th>
               </tr>
             </thead>
             <tbody>
-              ${resolved.map(({ meta, weight }) => {
-                const est = meta.perf_estimated;
-                const cell = (p, periodLabel) => {
-                  const v = meta.perf?.[p];
-                  const cls = pctClass(v);
-                  // 海外債的 1Y/3Y/5Y 是 YTM 推估、不是歷史
-                  const isEstimateCell = est && (p === "1y" || p === "3y" || p === "5y");
-                  const estCls = isEstimateCell ? " position-perf-est" : "";
-                  const prefix = isEstimateCell && v !== null && v !== undefined ? "≈" : "";
-                  const title = isEstimateCell ? ` title="海外債：以申購殖利率（YTM ${meta.yield_pct?.toFixed(2)}%）推估 ${periodLabel} 累積預期報酬，非歷史價格報酬"` : "";
-                  return `<td class="${cls}${estCls}"${title} style="text-align:right">${prefix}${fmtPct(v)}</td>`;
-                };
-                return `
+              ${resolved.map(({ meta, weight }) => `
                 <tr>
                   <td>${escapeHtml(meta.name)}</td>
                   <td style="text-align:right">${weight}%</td>
-                  ${cell("ytd", "YTD")}
-                  ${cell("1y", "1Y")}
-                  ${cell("3y", "3Y")}
-                  ${cell("5y", "5Y")}
-                </tr>`;
-              }).join("")}
+                  <td class="${pctClass(meta.perf?.ytd)}" style="text-align:right">${fmtPct(meta.perf?.ytd)}</td>
+                  <td class="${pctClass(meta.perf?.["1y"])}" style="text-align:right">${fmtPct(meta.perf?.["1y"])}</td>
+                  <td class="${pctClass(meta.perf?.["3y"])}" style="text-align:right">${fmtPct(meta.perf?.["3y"])}</td>
+                  <td class="${pctClass(meta.perf?.["5y"])}" style="text-align:right">${fmtPct(meta.perf?.["5y"])}</td>
+                </tr>
+              `).join("")}
             </tbody>
           </table>
         </div>
 
-        <h4 class="position-subhead">綜合績效（加權平均，現金與缺值不計入${resolved.some(r => r.meta.perf_estimated) ? "；海外債 1Y/3Y/5Y 為 YTM 推估" : ""}）</h4>
+        <h4 class="position-subhead">綜合績效（加權平均，現金與缺值不計入）</h4>
         <table class="position-perf">
           <thead><tr><th>期間</th><th>你的組合</th><th>說明</th></tr></thead>
           <tbody>
-            <tr><td>YTD 今年以來</td><td class="${pctClass(perf.ytd)}">${fmtPct(perf.ytd)}</td><td>依各標的 YTD 加權</td></tr>
+            <tr><td>今年以來</td><td class="${pctClass(perf.ytd)}">${fmtPct(perf.ytd)}</td><td>依各標的當期報酬加權</td></tr>
             <tr><td>近 1 年</td><td class="${pctClass(perf["1y"])}">${fmtPct(perf["1y"])}</td><td>單筆投入計算</td></tr>
             <tr><td>近 3 年</td><td class="${pctClass(perf["3y"])}">${fmtPct(perf["3y"])}</td><td>單筆投入計算</td></tr>
             <tr><td>近 5 年</td><td class="${pctClass(perf["5y"])}">${fmtPct(perf["5y"])}</td><td>單筆投入計算</td></tr>
           </tbody>
         </table>
         <p class="position-foot">
-          「—」代表該標的無此期間績效資料。<b>海外債的 1Y/3Y/5Y 以「≈」前綴標示，為以申購殖利率（YTM）推估之累積預期報酬，非歷史價格報酬</b>（因海外債資料源不提供長期歷史價格序列）。歷史表現非未來保證；組合假設權重維持不變、不含交易成本與匯率變動。
+          「—」代表該標的無此期間績效資料。海外債資料源僅提供 1 週/1 月/3 月之短期報酬，沒有長期歷史價格序列，故 1 年/3 年/5 年欄位以「—」誠實標示。歷史表現非未來保證；組合假設權重維持不變、不含交易成本與匯率變動。
         </p>
       </details>
 
@@ -1437,9 +1438,9 @@ function renderPositionAnalysisPanel(items, title, isPreset) {
         <summary>④ 風險</summary>
         <div class="position-metric-grid">
           <div class="position-metric">
-            <div class="position-metric-label">集中度 HHI</div>
+            <div class="position-metric-label">集中度</div>
             <div class="position-metric-val">${risk.hhi.toFixed(3)}</div>
-            <div class="position-metric-note">${risk.hhi >= 0.25 ? "偏高（單一持倉佔比過大）" : risk.hhi >= 0.15 ? "中等" : "分散度尚可"}</div>
+            <div class="position-metric-note">${risk.hhi >= 0.25 ? "偏高（單一持倉佔比過大）" : risk.hhi >= 0.15 ? "中等" : "分散度尚可"}（0 至 1，越大越集中）</div>
           </div>
           <div class="position-metric">
             <div class="position-metric-label">最大資產類別佔比</div>
@@ -1447,45 +1448,44 @@ function renderPositionAnalysisPanel(items, title, isPreset) {
             <div class="position-metric-note">${escapeHtml(risk.topCls[0])} 為最大類別</div>
           </div>
           <div class="position-metric">
-            <div class="position-metric-label">MDD 估算</div>
+            <div class="position-metric-label">最大回撤估算</div>
             <div class="position-metric-val">${risk.mddProxy > 0 ? "−" + risk.mddProxy.toFixed(1) + "%" : "—"}</div>
             <div class="position-metric-note">採近期負績效絕對值加權（粗估）</div>
           </div>
           <div class="position-metric">
-            <div class="position-metric-label">最弱 1Y 加權貢獻</div>
-            <div class="position-metric-val">${risk.weakest1y === null ? "—" : (risk.weakest1y >= 0 ? "+" : "") + risk.weakest1y.toFixed(2) + "pp"}</div>
+            <div class="position-metric-label">最弱 1 年加權貢獻</div>
+            <div class="position-metric-val">${risk.weakest1y === null ? "—" : (risk.weakest1y >= 0 ? "+" : "") + risk.weakest1y.toFixed(2) + "%"}</div>
             <div class="position-metric-note">${
-              risk.weakest1y === null ? "無 1Y 績效資料可比較" :
+              risk.weakest1y === null ? "無近 1 年績效資料可比較" :
               risk.weakestRaw < 0
-                ? `${escapeHtml((risk.weakestName||"").slice(0,12))} 1Y ${risk.weakestRaw.toFixed(1)}%（歷史最壞情境）`
-                : `${escapeHtml((risk.weakestName||"").slice(0,12))} 1Y ${risk.weakestRaw.toFixed(1)}%（過去 1Y 無虧損標的，此為最弱拉抬者）`
+                ? `${escapeHtml((risk.weakestName||"").slice(0,12))} 近 1 年 ${risk.weakestRaw.toFixed(1)}%（歷史最壞情境）`
+                : `${escapeHtml((risk.weakestName||"").slice(0,12))} 近 1 年 ${risk.weakestRaw.toFixed(1)}%（過去 1 年無虧損標的，此為最弱拉抬者）`
             }</div>
           </div>
+          <div class="position-metric">
+            <div class="position-metric-label">年化波動度</div>
+            <div class="position-metric-val">${risk.volProxy.toFixed(1)}%</div>
+            <div class="position-metric-note">採資產類別 benchmark 加權（粗估）</div>
+          </div>
+          <div class="position-metric">
+            <div class="position-metric-label">下檔風險（95% 信心）</div>
+            <div class="position-metric-val">${risk.var95 === null ? "—" : risk.var95 > 0 ? "−" + risk.var95.toFixed(1) + "%" : "無顯著下檔"}</div>
+            <div class="position-metric-note">${risk.var95 === null ? "無近 1 年績效可估" : "95% 信心區間最差年度報酬（粗估）"}</div>
+          </div>
         </div>
-        <p class="position-foot">MDD（最大回撤）為估算值；v2 將從歷史 NAV 時序精算。</p>
-      </details>
-
-      <details class="position-block" open>
-        <summary>⑤ 費用估算</summary>
-        ${cost.weighted === null ? `
-          <p class="position-foot">基金費用率資料尚未整合至本站 JSON，預計 v2 補上。海外債與股票部分已視為 0%。</p>
-        ` : `
-          <p>加權平均年費用率：<b>${cost.weighted.toFixed(2)}%</b></p>
-          <p>估算 1 年實付（以 NT$ 100 萬本金）：<b>${(cost.weighted * 10000).toLocaleString("en-US", { maximumFractionDigits: 0 })} 元</b></p>
-          ${cost.anyMissing ? `<p class="position-foot">部分基金缺費率資料，已從加權計算中略過。</p>` : ""}
-        `}
+        <p class="position-foot">最大回撤、年化波動度、下檔風險 均為估算值（資產類別 benchmark 加權、未含相關性）；後續將從歷史淨值時序精算。</p>
       </details>
 
       ${overlaps.length ? `
         <details class="position-block position-warn" open>
-          <summary>⑥ 重疊提醒</summary>
+          <summary>⑤ 重疊提醒</summary>
           ${overlaps.map(w => `<div class="position-warn-card">${escapeHtml(w.msg)}</div>`).join("")}
         </details>
       ` : ""}
 
       ${(income.bondYield !== null || income.distFundNames.length) ? `
         <details class="position-block" open>
-          <summary>⑦ 配息現金流</summary>
+          <summary>⑥ 配息現金流</summary>
           ${income.bondYield !== null ? `
             <p>海外債部位加權平均殖利率：<b>${income.bondYield.toFixed(2)}%</b>（佔組合 ${income.bondWeight}%）</p>
             <p>估算 1 年配息（以該部位 NT$ 100 萬本金）：<b>${(income.bondYield * 10000).toLocaleString("en-US", { maximumFractionDigits: 0 })} 元</b></p>
