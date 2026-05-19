@@ -1410,6 +1410,7 @@ function renderPositionAnalysisPanel(items, title, isPreset) {
         <summary>③ 績效歷史</summary>
 
         <h4 class="position-subhead">個別標的</h4>
+        <div class="position-perf-fxnote">績效以各標的<b>本幣計價</b>計算（NAV/價格漲跌幅），未調整為台幣等值；對台幣投資人實際換回台幣的報酬會因匯率變動而不同。</div>
         <div class="position-perf-scroll">
           <table class="position-perf position-perf-each">
             <thead>
@@ -1437,7 +1438,8 @@ function renderPositionAnalysisPanel(items, title, isPreset) {
           </table>
         </div>
 
-        <h4 class="position-subhead">綜合績效（依完整組合權重加權，缺值以 0 計入）</h4>
+        <h4 class="position-subhead">綜合績效（本幣加權，依完整組合權重；缺值以 0 計入）</h4>
+        <div class="position-perf-fxnote">本表為<b>各標的本幣報酬之加權平均</b>，未調整為台幣等值；組合內含外幣部位時，台幣投資人實際換回台幣的報酬會因匯率變動而不同。</div>
         <table class="position-perf">
           <thead><tr><th>期間</th><th>你的組合</th><th>資料覆蓋率</th></tr></thead>
           <tbody>
@@ -1460,7 +1462,7 @@ function renderPositionAnalysisPanel(items, title, isPreset) {
           </tbody>
         </table>
         <p class="position-foot">
-          綜合績效採完整組合權重加權（分母 = 100%）。資料覆蓋率 = 該期間有真實績效資料的部位占比；其餘部位（如海外債長期、現金）以 0% 計入，故結果為<b>下界估算</b>，實際整體表現可能更高。海外債資料源僅提供 1 週/1 月/3 月之短期報酬，無長期歷史價格序列。歷史表現非未來保證；組合假設權重維持不變、不含交易成本與匯率變動。
+          綜合績效採完整組合權重加權（分母 = 100%）。資料覆蓋率 = 該期間有真實績效資料的部位占比；其餘部位（如海外債長期、現金）以 0% 計入，故結果為<b>下界估算</b>，實際整體表現可能更高。海外債資料源僅提供 1 週/1 月/3 月之短期報酬，無長期歷史價格序列。<b>所有數字均以各標的本幣計算，未調整匯率變動</b>；歷史表現非未來保證；組合假設權重維持不變、不含交易成本。
         </p>
       </details>
 
