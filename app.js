@@ -962,6 +962,19 @@ const ASSET_CLASS_COLOR = {
   "平衡": "#17B5AD",
   "現金": "#9ca3af",
 };
+const CURRENCY_ZH = {
+  "USD": "美元", "TWD": "台幣", "EUR": "歐元", "JPY": "日圓",
+  "AUD": "澳幣", "GBP": "英鎊", "CNY": "人民幣", "RMB": "人民幣",
+  "HKD": "港幣", "CHF": "瑞士法郎", "KRW": "韓元", "NZD": "紐幣",
+  "SGD": "新幣", "CAD": "加幣", "ZAR": "南非幣",
+  // 已經是中文的 passthrough
+  "美元": "美元", "台幣": "台幣", "歐元": "歐元", "日圓": "日圓",
+  "澳幣": "澳幣", "英鎊": "英鎊", "人民幣": "人民幣", "港幣": "港幣",
+};
+function positionCcyZh(code) {
+  if (!code) return "—";
+  return CURRENCY_ZH[code] || code;
+}
 
 let PORTFOLIO_SUBTAB = "alloc";    // alloc | preset | custom
 let POSITION_SELECTED_PRESET = null;
@@ -975,7 +988,7 @@ function positionLookup(item) {
     const f = (DATA.funds?.funds || []).find(x => x.id === item.id);
     if (!f) return null;
     return {
-      kind, name: f.name_zh, currency: f.currency || "美元",
+      kind, name: f.name_zh, currency: positionCcyZh(f.currency || "美元"),
       category: f.category || "balanced",
       perf: f.perf || {}, fund_type: f.fund_type || "A",
       code: f.bop_code || f.id, fee_pct: f.fee_pct ?? null,
@@ -985,7 +998,7 @@ function positionLookup(item) {
     const b = (DATA.obonds?.bonds || []).find(x => x.id === item.id);
     if (!b) return null;
     return {
-      kind, name: b.name_zh, currency: b.currency || "USD",
+      kind, name: b.name_zh, currency: positionCcyZh(b.currency || "USD"),
       category: "bond", perf: { ytd: b.perf_3m ?? null, "1y": null, "6m": b.perf_3m ?? null },
       code: b.code || b.id, yield_pct: b.bid_yield_pct ?? null, coupon_pct: b.coupon_pct ?? null,
       fee_pct: 0,
@@ -996,14 +1009,15 @@ function positionLookup(item) {
     const s = src.find(x => x.symbol === item.symbol);
     if (!s) return null;
     return {
-      kind, name: s.name_zh || s.symbol, currency: kind === "us_stock" ? "USD" : "TWD",
+      kind, name: s.name_zh || s.symbol, currency: positionCcyZh(kind === "us_stock" ? "USD" : "TWD"),
       category: kind === "us_stock" ? "us_stock" : "tw_stock",
       perf: { ytd: s.ytd_pct ?? null, "1m": s.mtd_pct ?? null },
       code: s.symbol, fee_pct: 0,
     };
   }
   if (kind === "cash") {
-    return { kind, name: `現金（${item.currency || "TWD"}）`, currency: item.currency || "TWD",
+    const ccyZh = positionCcyZh(item.currency || "TWD");
+    return { kind, name: `現金（${ccyZh}）`, currency: ccyZh,
       category: "cash", perf: {}, code: "CASH", fee_pct: 0 };
   }
   return null;
@@ -1032,8 +1046,7 @@ function computeAllocation(resolved) {
   resolved.forEach(({ meta, weight }) => {
     const cls = positionAssetClass(meta);
     byClass[cls] = (byClass[cls] || 0) + weight;
-    const ccy = meta.currency === "台幣" ? "TWD" : meta.currency;
-    byCcy[ccy] = (byCcy[ccy] || 0) + weight;
+    byCcy[meta.currency] = (byCcy[meta.currency] || 0) + weight;
   });
   return { byClass, byCcy };
 }
