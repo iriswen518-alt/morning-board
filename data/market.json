@@ -1,5 +1,5 @@
 {
-  "closing_date": "2026-05-18",
+  "closing_date": "2026-05-19",
   "indices": [
     {
       "name": "S&P 500",
@@ -67,29 +67,29 @@
     {
       "name": "Nikkei 225",
       "name_zh": null,
-      "close": 60815.94921875,
-      "daily_pct": -0.97,
+      "close": 60442.33984375,
+      "daily_pct": -0.61,
       "mtd_pct": 2.58,
       "ytd_pct": 52.44,
-      "closing_date": "2026-05-18"
+      "closing_date": "2026-05-19"
     },
     {
       "name": "TAIEX 加權指數",
       "name_zh": null,
-      "close": 40891.8203125,
-      "daily_pct": -0.68,
+      "close": 40175.55859375,
+      "daily_pct": -1.75,
       "mtd_pct": null,
       "ytd_pct": null,
-      "closing_date": "2026-05-18"
+      "closing_date": "2026-05-19"
     },
     {
       "name": "KOSPI",
       "name_zh": null,
-      "close": 7516.0400390625,
-      "daily_pct": 0.31,
+      "close": 7287.6298828125,
+      "daily_pct": -3.04,
       "mtd_pct": null,
       "ytd_pct": null,
-      "closing_date": "2026-05-18"
+      "closing_date": "2026-05-19"
     },
     {
       "name": "Hang Seng 恆生",
@@ -130,97 +130,97 @@
     {
       "name": "S&P/ASX 200",
       "name_zh": null,
-      "close": 8505.2998046875,
-      "daily_pct": -1.45,
+      "close": 8604.7001953125,
+      "daily_pct": 1.17,
       "mtd_pct": -2.2,
       "ytd_pct": 3.87,
-      "closing_date": "2026-05-18"
+      "closing_date": "2026-05-19"
     }
   ],
   "bonds": [
     {
       "name": "US 10-Year",
-      "yield_pct": 4.61,
-      "daily_bps": 14.0,
-      "mtd_bps": 31.0,
+      "yield_pct": 4.62,
+      "daily_bps": 2.8,
+      "mtd_bps": 23.3,
       "closing_date": "2026-05-18"
     },
     {
       "name": "US 2-Year",
-      "yield_pct": null,
-      "daily_bps": null,
+      "yield_pct": 4.07,
+      "daily_bps": -1.6,
       "mtd_bps": null,
-      "closing_date": null
+      "closing_date": "2026-05-19"
     },
     {
       "name": "Germany 10-Year",
-      "yield_pct": null,
-      "daily_bps": null,
+      "yield_pct": 3.15,
+      "daily_bps": -1.1,
       "mtd_bps": null,
-      "closing_date": null
+      "closing_date": "2026-05-19"
     },
     {
       "name": "Japan 10-Year",
-      "yield_pct": null,
-      "daily_bps": null,
+      "yield_pct": 2.79,
+      "daily_bps": 6.7,
       "mtd_bps": null,
-      "closing_date": null
+      "closing_date": "2026-05-19"
     },
     {
       "name": "UK 10-Year",
-      "yield_pct": null,
-      "daily_bps": null,
+      "yield_pct": 5.11,
+      "daily_bps": -7.4,
       "mtd_bps": null,
-      "closing_date": null
+      "closing_date": "2026-05-19"
     }
   ],
   "fx": [
     {
       "name": "DXY 美元指數",
-      "close": null,
-      "daily_pct": null,
-      "mtd_pct": null,
-      "ytd_pct": null,
-      "closing_date": null
+      "close": 98.97000122070312,
+      "daily_pct": -0.3,
+      "mtd_pct": 1.03,
+      "ytd_pct": 0.82,
+      "closing_date": "2026-05-18"
     },
     {
       "name": "EUR/USD",
       "close": 1.161440134048462,
       "daily_pct": -0.41,
-      "mtd_pct": -0.38,
-      "ytd_pct": -0.91,
+      "mtd_pct": -0.34,
+      "ytd_pct": -0.87,
       "closing_date": "2026-05-18"
     },
     {
       "name": "USD/JPY",
       "close": 158.843994140625,
       "daily_pct": 0.29,
-      "mtd_pct": -0.74,
-      "ytd_pct": 1.65,
+      "mtd_pct": -0.72,
+      "ytd_pct": 1.68,
       "closing_date": "2026-05-18"
     },
     {
       "name": "GBP/USD",
       "close": 1.330849051475525,
       "daily_pct": -0.62,
-      "mtd_pct": -0.61,
-      "ytd_pct": -0.45,
+      "mtd_pct": -0.57,
+      "ytd_pct": -0.41,
       "closing_date": "2026-05-18"
     },
     {
       "name": "USD/CNY",
       "close": 6.809199810028076,
       "daily_pct": 0.36,
-      "mtd_pct": -0.53,
-      "ytd_pct": -2.79,
+      "mtd_pct": -0.57,
+      "ytd_pct": -2.82,
       "closing_date": "2026-05-18"
     },
     {
       "name": "USD/TWD",
       "close": 31.586999893188477,
       "daily_pct": 0.07,
-      "mtd_pct": -0.03,
-      "ytd_pct": 1.2,
+      "mtd_pct": 0.02,
+      "ytd_pct": 1.24,
       "closing_date": "2026-05-18"
     }
   ],
