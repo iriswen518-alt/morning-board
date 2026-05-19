@@ -1470,3 +1470,10 @@ table.indices .date-col {
   .position-composer-addrow { flex-direction: column; align-items: stretch; }
   .position-btn.large { width: 100%; }
 }
+
+/* 海外債 1Y/3Y/5Y 為 YTM 推估，非歷史；以斜體 + 半透明區分 */
+.position-perf-est {
+  font-style: italic;
+  opacity: 0.72;
+  cursor: help;
+}

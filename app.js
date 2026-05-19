@@ -909,10 +909,26 @@ function positionLookup(item) {
   if (kind === "bond") {
     const b = (DATA.obonds?.bonds || []).find(x => x.id === item.id);
     if (!b) return null;
+    // 海外債 JSON 僅有 1W/1M/3M，沒有歷史價格序列無法計算真實 YTD/1Y/3Y/5Y
+    // → 1Y/3Y/5Y 用「申購殖利率 YTM」推估持有至期滿之累積預期報酬（標示為估算）
+    const ytm = b.bid_yield_pct;
+    const ytmFrac = typeof ytm === "number" ? ytm / 100 : null;
+    const cum = (n) => ytmFrac == null ? null : +(((1 + ytmFrac) ** n - 1) * 100).toFixed(2);
     return {
       kind, name: b.name_zh, currency: positionCcyZh(b.currency || "USD"),
-      category: "bond", perf: { ytd: b.perf_3m ?? null, "1y": null, "6m": b.perf_3m ?? null },
-      code: b.code || b.id, yield_pct: b.bid_yield_pct ?? null, coupon_pct: b.coupon_pct ?? null,
+      category: "bond",
+      perf: {
+        "1m": b.perf_1m ?? null,
+        "3m": b.perf_3m ?? null,
+        ytd: null,                 // 不假裝 — 真實 YTD 資料不存在
+        "1y": ytm ?? null,         // YTM ≈ 1 年預期報酬
+        "3y": cum(3),              // (1+YTM)^3 - 1
+        "5y": cum(5),              // (1+YTM)^5 - 1
+      },
+      perf_estimated: true,         // flag：以 YTM 推估，非歷史價格報酬
+      code: b.code || b.id,
+      yield_pct: ytm ?? null,
+      coupon_pct: b.coupon_pct ?? null,
       fee_pct: 0,
     };
   }
@@ -1376,21 +1392,33 @@ function renderPositionAnalysisPanel(items, title, isPreset) {
               </tr>
             </thead>
             <tbody>
-              ${resolved.map(({ meta, weight }) => `
+              ${resolved.map(({ meta, weight }) => {
+                const est = meta.perf_estimated;
+                const cell = (p, periodLabel) => {
+                  const v = meta.perf?.[p];
+                  const cls = pctClass(v);
+                  // 海外債的 1Y/3Y/5Y 是 YTM 推估、不是歷史
+                  const isEstimateCell = est && (p === "1y" || p === "3y" || p === "5y");
+                  const estCls = isEstimateCell ? " position-perf-est" : "";
+                  const prefix = isEstimateCell && v !== null && v !== undefined ? "≈" : "";
+                  const title = isEstimateCell ? ` title="海外債：以申購殖利率（YTM ${meta.yield_pct?.toFixed(2)}%）推估 ${periodLabel} 累積預期報酬，非歷史價格報酬"` : "";
+                  return `<td class="${cls}${estCls}"${title} style="text-align:right">${prefix}${fmtPct(v)}</td>`;
+                };
+                return `
                 <tr>
                   <td>${escapeHtml(meta.name)}</td>
                   <td style="text-align:right">${weight}%</td>
-                  <td class="${pctClass(meta.perf?.ytd)}" style="text-align:right">${fmtPct(meta.perf?.ytd)}</td>
-                  <td class="${pctClass(meta.perf?.["1y"])}" style="text-align:right">${fmtPct(meta.perf?.["1y"])}</td>
-                  <td class="${pctClass(meta.perf?.["3y"])}" style="text-align:right">${fmtPct(meta.perf?.["3y"])}</td>
-                  <td class="${pctClass(meta.perf?.["5y"])}" style="text-align:right">${fmtPct(meta.perf?.["5y"])}</td>
-                </tr>
-              `).join("")}
+                  ${cell("ytd", "YTD")}
+                  ${cell("1y", "1Y")}
+                  ${cell("3y", "3Y")}
+                  ${cell("5y", "5Y")}
+                </tr>`;
+              }).join("")}
             </tbody>
           </table>
         </div>
 
-        <h4 class="position-subhead">綜合績效（加權平均，現金與缺值不計入）</h4>
+        <h4 class="position-subhead">綜合績效（加權平均，現金與缺值不計入${resolved.some(r => r.meta.perf_estimated) ? "；海外債 1Y/3Y/5Y 為 YTM 推估" : ""}）</h4>
         <table class="position-perf">
           <thead><tr><th>期間</th><th>你的組合</th><th>說明</th></tr></thead>
           <tbody>
@@ -1400,7 +1428,9 @@ function renderPositionAnalysisPanel(items, title, isPreset) {
             <tr><td>近 5 年</td><td class="${pctClass(perf["5y"])}">${fmtPct(perf["5y"])}</td><td>單筆投入計算</td></tr>
           </tbody>
         </table>
-        <p class="position-foot">「—」代表該標的無此期間績效資料；歷史表現非未來保證，組合假設權重維持不變、不含交易成本與匯率變動。</p>
+        <p class="position-foot">
+          「—」代表該標的無此期間績效資料。<b>海外債的 1Y/3Y/5Y 以「≈」前綴標示，為以申購殖利率（YTM）推估之累積預期報酬，非歷史價格報酬</b>（因海外債資料源不提供長期歷史價格序列）。歷史表現非未來保證；組合假設權重維持不變、不含交易成本與匯率變動。
+        </p>
       </details>
 
       <details class="position-block" open>
