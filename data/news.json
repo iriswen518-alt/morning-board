@@ -1,11 +1,11 @@
 {
-  "news_date": "2026-05-13",
+  "news_date": "2026-05-19",
   "tldr": [
-    "美 4 月 CPI 年增 3.8% 創三年高，市場將降息預期推遲到 2027 年；費半 -3.01%、高通崩跌 11.46%、台積 ADR -1.79%，台股盤前承壓。",
-    "台積電「雙利多」：首季股利調升至每股 7 元（共 1,815 億元、255 萬名股東受惠），同時對美國子公司增資不逾 200 億美元，全球 capex 故事再升級。",
-    "統一主動式 ETF 00403A 掛牌寫下募集 791.7 億、首日規模 1,177 億、單日成交 420 萬張三項紀錄；公司罕見發布溢價警語，財管商品從被動指數轉向主動策略的拐點顯現。",
-    "4 月全國稅收 1,895 億元（+23%）、證交稅單月 546 億元（年增 2.1 倍、史上新高）；證交稅成為今年總稅收成長最大支柱。",
-    "金管會重罰台中商銀 3,200 萬元 AML 缺失、預告擴大金融控股集團審查；北區國稅局提醒新臺新租稅協定 2027 年生效（股利/權利金降至 10%），保單變更要保人即視為贈與。"
+    "美國長天期殖利率走高拖累晶片股，費城半導體指數跌逾 2%、S&P 500 小跌，輝達財報前夕為今日台股開盤蒙上保守氛圍。",
+    "國巨受惠 AI 伺服器 MLCC 需求攻上漲停、市值首破兆元；大立光林家六年來首度買回自家股票，業界研判 CPO 將有催化題材。",
+    "南韓地方法院限縮三星電子罷工範圍，原本市場期待的記憶體轉單效應恐落空，但 DRAM/NAND 報價仍居高不下。",
+    "川普證實原定 5/19 對伊朗的軍事行動應中東國家要求暫緩，地緣風險短線降溫，但油價與航運供應鏈仍需密切觀察。",
+    "經濟部預估 4 月外銷訂單將連 15 月正成長、金額達 870–890 億美元、年增近 50%，AI 帶動的外需循環尚未轉弱。"
   ],
   "sections": [
     {
@@ -13,44 +13,28 @@
       "section_zh": "股市行情",
       "items": [
         {
-          "title_zh": "台積電 Q1 配息調升至 7 元創新高 255 萬股東受惠",
-          "title_en": "TSMC lifts Q1 dividend to a record NT$7/share — NT$181.5 bn payout to 2.55 mn shareholders",
-          "summary_zh": "台積電董事會核准首季每股配息 7 元（較前季 6 元增 16.7%），共發放 1,815.26 億元現金；除息日 9/16、發放日 10/8。國發基金以 16.5 億股可入帳逾 115 億元，全體 255.3 萬名股東同享。法人預估今年全年現金股利可達 28 元以上，反映自由現金流穩健、AI 資本支出與股東回饋雙軌並進。",
-          "summary_en": "TSMC's board approved a Q1 cash dividend of NT$7/share, +16.7% from the prior NT$6, setting a new quarterly-dividend high. Ex-dividend date is 9/16 and payment on 10/8. The NT$181.5 bn aggregate payout flows to 2.55 mn registered shareholders; the National Development Fund alone collects more than NT$11.5 bn on its 1.65 bn shares. Analysts now model full-year 2026 cash dividend above NT$28, reflecting robust free cash flow even as capex accelerates. The hike confirms a dual-track shareholder-return narrative alongside aggressive AI-driven capacity expansion.",
+          "title_zh": "國巨躋身市值兆元俱樂部",
+          "title_en": "Yageo crosses NT$1 trillion market cap on AI-MLCC demand",
+          "summary_zh": "被動元件龍頭國巨 5/18 不畏大盤重挫，逆勢攻上漲停 501 元，改寫去年「一拆四」後新天價，市值首度突破兆元、達 1.03 兆元，正式加入兆元股俱樂部。公司表示，AI 伺服器與高階手機帶動 MLCC 需求強勁，能見度延伸至 2H26，高規產品報價走穩。國巨突破象徵非半導體 AI 硬體供應鏈將出現新一輪估值重評。",
+          "summary_en": "Passive-component leader Yageo defied a weak Taiex on May 18 and surged to its daily limit of NT$501, the highest since last year's 1-for-4 stock split, lifting market capitalisation to NT$1.03 trillion and earning a place in the trillion-NT$ club. Management attributes the upcycle to MLCC demand pulled by AI servers and high-end smartphones, with order visibility extending into 2H26 and pricing for high-spec parts firming. The breakthrough signals a broader rerating for the non-semiconductor AI hardware supply chain.",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/5607/9498782"
+          "source_url": "https://money.udn.com/money/story/5612/9510775?from=edn_maintab_cate"
         },
         {
-          "title_zh": "暌違 26 年 聯電重返百元大關",
-          "title_en": "UMC reclaims NT$100 after 26 years — AI demand revives mature-node cycle",
-          "summary_zh": "聯電 12 日漲停收 104.5 元，相隔 26 年再站上百元。AI 帶動成熟製程需求復甦，第一季 28/22 奈米製程產能利用率近 80%、7 月將調漲晶圓代工報價；法人預估 2026 年 EPS 達 4.6~4.9 元，視為結構性多頭題材。聯電也是「英特爾合作概念股」核心成員，搭配川習會時程同步受惠。",
-          "summary_en": "UMC closed limit-up at NT$104.5 on 5/12, regaining the NT$100 mark for the first time in 26 years. The rally is fueled by AI-led mature-node recovery (28/22 nm utilization near 80% in Q1) and channel-checked foundry price hikes targeted for July. Analysts project 2026 EPS of NT$4.6–4.9, framing the move as structural rather than speculative. The breakthrough cements UMC's renewed status as a key AI-foundry beneficiary outside TSMC and reinforces the \"Intel concept\" basket (with Faraday, Quanta) ahead of the Trump-Xi summit.",
-          "source_name": "工商時報",
-          "source_url": "https://www.ctee.com.tw/news/20260513700060-430201"
-        },
-        {
-          "title_zh": "外資減碼 台股 42K 近高情怯",
-          "title_en": "TAIEX hits 42,253 record but foreign sellers cap gains — investors warn of \"K-Pop\" concentration risk",
-          "summary_zh": "台股 12 日盤中衝 42,253 點再創高、外資大賣壓抑尾盤、收 41,898 點，投信狂買 383.17 億元為次高紀錄。專家警告台股出現與韓股相似的「漲勢集中 AI、市值膨脹、散戶 ETF 化」三大風險；下一波觀察美 4 月 CPI、費半 -3% 隔夜壓力與 5/13–15 川習會。",
-          "summary_en": "TAIEX intraday-touched 42,253 on 5/12 before settling at 41,898 (+108 pts); foreign investors sold heavily while domestic investment trusts bought NT$38.3 bn, the second-largest single-day buy on record. Analysts flag a Korea-style \"concentration-AI / mega-cap-inflated / retail-ETF-driven\" three-headed risk pattern. Near-term focus: pre-open reaction to US April CPI (3.8%), Philadelphia Semi -3% overnight, and US-China headline volatility through the 5/13–15 Trump-Xi summit.",
-          "source_name": "工商時報",
-          "source_url": "https://www.ctee.com.tw/news/20260513700043-439901"
-        },
-        {
-          "title_zh": "MSCI 半年調整 台股新增旺矽、小型指數新增均華等 15 檔",
-          "title_en": "MSCI semi-annual rebalance — Walsin Lihwa added to Global Standard, 15 new names in Global Small Cap",
-          "summary_zh": "MSCI 半年度調整公布：全球標準指數台股新增旺矽（6223），刪除亞泥、仁寶、華航等 7 檔；全球小型指數新增均華、台灣高鐵、可成等 15 檔、刪除 12 檔。5/29 盤後生效，被動 ETF 將同步調倉，新增者短線流動性放大、被刪除者承壓。",
-          "summary_en": "MSCI's May rebalance adds Walton Microelectronics (6223) to the Global Standard Taiwan basket while deleting Asia Cement, Compal and China Airlines plus 4 others; the Global Small Cap basket adds 15 names including Junfeng, Taiwan High Speed Rail and Catcher Technology, deleting 12. Effective after 5/29 close. Passive funds will rebalance accordingly, likely lifting short-term liquidity in additions and pressuring deletions. Index-tracking AUM impact concentrates around the 5/29 print.",
-          "source_name": "工商時報",
-          "source_url": "https://www.ctee.com.tw/news/20260513700483-430201"
-        },
-        {
-          "title_zh": "南亞處分南電股票 174 億元",
-          "title_en": "Nan Ya Plastics to divest NT$17.4 bn of Nan Ya PCB shares — second wave between 5/13 and year-end",
-          "summary_zh": "南亞董事會通過 5/13 起至年底處分子公司南電股票 1,938.5 萬股，以南電前一日收盤 900 元估算市值約 174.47 億元，為第二波減持；處分後持股仍達 60.97%、不影響控制權，公司強調為充實營運資金與提高股票流通性。南電 4 月營收創 40 個月新高、首季獲利為 2023Q3 以來最佳，市場觀察籌碼吸納強度。",
-          "summary_en": "Nan Ya Plastics' board approved disposing of 19.385 mn Nan Ya PCB shares (~NT$17.4 bn at NT$900 reference) between 5/13 and year-end, reducing stake from 62.92% to 60.97%. Management framed the move as funding working capital and improving share-float liquidity, not a control-of-business signal. With Nan Ya PCB's April revenue at a 40-month high and Q1 profit the best since Q3-2023, attention turns to whether the supply absorbs amid ABF substrate cycle momentum.",
+          "title_zh": "大立光林家六年來首見 增持自家股",
+          "title_en": "Largan founding family buys own stock for first time in six years, CPO catalyst awaited",
+          "summary_zh": "公開資訊觀測站顯示，林耀英家族於 2020 年成立的閉鎖控股公司茂鈺增持大立光 100 張，是家族集中閉鎖股權後六年來首度公開市場買進。業界解讀為對未來 CPO（共同封裝光學）相關訂單的信心宣示，大立光正將精密光學能量切入 AI 資料中心光通訊互連市場。",
+          "summary_en": "Disclosures show 茂鈺, the family holding vehicle set up in 2020 to consolidate ownership of optical-lens leader Largan, increased its stake by 100 lots—the family's first open-market buy since locking up holdings six years ago. Industry observers read the move as a confidence signal ahead of expected Co-Packaged Optics (CPO) related order news, where Largan is positioning its precision optics capability for AI-data-centre interconnect.",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/5607/9498706"
+          "source_url": "https://money.udn.com/money/story/5612/9510773?from=edn_maintab_cate"
+        },
+        {
+          "title_zh": "和大擬取得格斯電池經營權 沈國榮有望出任新董座",
+          "title_en": "Hota Industrial set to take operating control of Gus Battery",
+          "summary_zh": "汽車齒輪大廠和大將取得電動車電池廠商格斯電池經營權，總裁沈國榮可望出任新董座。本案延續和大從內燃機齒輪跨入電動動力鏈的轉型布局，也為格斯在競爭激烈的台灣電池產業帶來資金與營運奧援。",
+          "summary_en": "Auto-gear specialist Hota Industrial is poised to take operating control of EV battery firm Gus Battery, with chairman Shen Kuo-jung tipped to assume the chair role at the target company. The deal extends Hota's pivot from internal-combustion gears into the electrified-powertrain value chain and provides Gus with deeper capital and operating support amid Taiwan's competitive battery landscape.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/5612/9510732?from=edn_subcatelist_cate"
         }
       ]
     },
@@ -59,52 +43,68 @@
       "section_zh": "產業動態",
       "items": [
         {
-          "title_zh": "台積增資美國廠 200 億美元",
-          "title_en": "TSMC double-down on US — board approves up to US$20 bn capital injection into TSMC Arizona",
-          "summary_zh": "台積電董事會通過總額 312.84 億美元資本預算，核准對美國子公司 TSMC Arizona 增資不超過 200 億美元，加速美國先進製程與先進封裝布局，P2 廠預計 2027 下半年量產 3 奈米。鎖定美國長期 AI 產能、配合川習會強化台美科技合作；全台設備、材料、土建相關供應鏈布局美國卡位戰升溫。",
-          "summary_en": "Alongside the dividend hike, TSMC's board approved a US$31.3 bn capital expenditure budget and authorized up to US$20 bn additional capital for TSMC Arizona, accelerating US advanced-process and packaging build-out. P2 fab targets 3-nm volume production by H2 2027. The move locks in long-term AI capacity in the US, tightens the bond with Washington ahead of the Trump-Xi summit, and reshuffles supplier opportunities across local construction, equipment and material vendors entering the Arizona ecosystem.",
-          "source_name": "工商時報",
-          "source_url": "https://www.ctee.com.tw/news/20260513700034-430501"
-        },
-        {
-          "title_zh": "台積電訂單飛了？特斯拉 AI6.5 晶片恐「全轉單」給英特爾",
-          "title_en": "Tesla weighs full-shift of AI6.5 chip from TSMC to Intel — White House lobbies for US foundry wins",
-          "summary_zh": "特斯拉考慮將原定由台積電代工的 AI6.5 晶片全數轉單給英特爾。川普政府推動「晶片美國製造」並成為英特爾股東後，積極協助英特爾爭取大客戶；若成真，攸關台積電先進製程地位與美國晶片自主化進度。華爾街仍質疑英特爾先進製程良率與量產可靠度，台廠基板/測試/封裝供應鏈面臨重新配置風險。",
-          "summary_en": "Reports indicate Tesla is considering moving the entire AI6.5 chip production from TSMC to Intel Foundry, driven by the Trump administration's \"Chip US Manufacturing\" push after becoming a major Intel shareholder. The White House is actively wooing large customers for Intel. The shift, if executed, would be a symbolic blow to TSMC's leading-edge dominance, although Wall Street remains skeptical given Intel's unresolved yield and ramp-up challenges on advanced nodes. Supply-chain reallocation risk for Taiwanese substrate, test and packaging vendors.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6456004"
-        },
-        {
-          "title_zh": "台積電攜應材衝先進製程 目標加速 AI 規模化",
-          "title_en": "TSMC + Applied Materials open Silicon Valley innovation hub — co-development to accelerate AI at scale",
-          "summary_zh": "台積電與美商應用材料宣布在矽谷創新中心啟動深度合作，共同研發新世代半導體材料、設備與製程，聚焦 AI 與 HPC、複雜 3D 電晶體、製程整合與良率三大領域。打破過去「設備商單向供應」模式為「晶圓廠提前共研」，加速台積電先進製程；光洋科、京鼎等周邊台廠可望受惠。",
-          "summary_en": "TSMC and Applied Materials announced a deep co-development partnership at Applied's Silicon Valley innovation center, jointly tackling next-generation semiconductor materials, equipment and process integration. Three focus areas: AI/HPC scaling, complex 3D transistors, and process integration / yield. The shift breaks the traditional \"supplier-to-fab\" model into \"fab-pre-participates-in-R&D\", which speeds up TSMC's AI-node roadmap. Taiwanese suppliers KYEC, Lextar and Kinik may benefit indirectly via the broader equipment-and-materials ecosystem.",
+          "title_zh": "三星電子罷工範圍遭法院限縮 台廠轉單效應恐落空",
+          "title_en": "Court limits Samsung strike scope; Taiwan memory order-shift effect fades",
+          "summary_zh": "南韓地方法院核准三星電子限制工會罷工範圍的聲請，要求工會必須確保不至於中斷生產，否則每日重罰。裁定大幅壓縮台灣 DRAM/NAND 廠原本布局的轉單窗口，市場對「一次性轉單紅利」的期待降溫，但記憶體結構性供給偏緊的格局未變。",
+          "summary_en": "A Korean district court approved Samsung Electronics' request to restrict the planned strike by its largest-ever union action, requiring the union to ensure production continuity or face daily penalties. The ruling materially limits the disruption window that Taiwanese DRAM/NAND suppliers had been positioning for, and tempers expectations of a one-off order-shift windfall, though structural memory tightness remains.",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/5612/9498779"
+          "source_url": "https://money.udn.com/money/story/5612/9510769?from=edn_maintab_cate"
         },
         {
-          "title_zh": "陸推「無敵鐵金剛」掀起機器人新革命 所羅門、上銀等沾光",
-          "title_en": "China's Unitree unveils mass-producible humanoid GD01 — Solomon and Hiwin emerge as Taiwan plays",
-          "summary_zh": "中國宇樹科技發表首款量產可載人機器人 GD01，重 500 公斤、人形雙足與四足切換、人民幣 390 萬元起，被視為人形機器人量產里程碑。台廠供應鏈中，所羅門提供 AI 機器視覺系統、上銀供應滾柱螺桿與減速機等關鍵零組件，將受惠人形機器人放量訂單，是今日盤面值得關注的機器人題材股。",
-          "summary_en": "China-based Unitree Robotics unveiled its first mass-producible passenger-grade humanoid robot GD01, weighing ~500 kg, switching between bipedal and quadrupedal modes, priced from RMB 3.9 mn. The launch is viewed as a humanoid-robotics mass-production milestone. Taiwan supply-chain plays: Solomon provides AI machine-vision systems, Hiwin supplies roller screws and reducers — both expected to gain order momentum as the humanoid theme spreads through the Taiwan stock market in 2026.",
+          "title_zh": "低軌衛星台鏈布局加速 昇達科、鐳洋、啟碁等動能可期",
+          "title_en": "LEO satellite Taiwan chain targets NT$284.6 bn output as 60 firms join global supply",
+          "summary_zh": "經濟部統計，至 2025 年底已有 55 家台廠打進國際低軌衛星供應鏈，太空產業產值衝上 2,771 億元；2026 年目標再添至 60 家、產值挑戰 2,846 億元。受惠廠商涵蓋昇達科、鐳洋、啟碁等，搭配 AI 與韌性通訊需求，衛星寬頻建置週期持續加速。",
+          "summary_en": "MOEA reports 55 Taiwan suppliers had won spots in global low-earth-orbit satellite supply chains by year-end 2025, lifting the space industry's output to NT$277.1 bn, with the 2026 target raised to 60 firms and NT$284.6 bn. Beneficiaries include 昇達科 (Universal Microwave), 鐳洋 (Rapidtek) and 啟碁 (Sercomm), as the satellite-internet build-out cycle accelerates alongside AI and resilient-comms demand.",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/5612/9498754"
+          "source_url": "https://money.udn.com/money/story/5612/9510823?from=edn_maintab_cate"
         },
         {
-          "title_zh": "記憶體供應拉警報！三星勞資談判破局 工會下周四恐發動 5 萬人大罷工",
-          "title_en": "Samsung union plans 18-day strike from 5/21 — DRAM/NAND supply alarm for AI servers",
-          "summary_zh": "三星與工會 17 小時薪資談判破裂（工會要求營業利益 15% 為獎金、資方僅允 10%），工會自 5/21 起發動 18 天罷工，4.1 萬人起跳上看 5 萬人。三星為全球最大記憶體廠，恐衝擊 DRAM/NAND 供應與報價，台廠記憶體模組（華邦電、南亞科、威剛、群聯）受惠轉單與漲價，但 AI 伺服器供應鏈成本同步上揚。",
-          "summary_en": "Samsung's 17-hour collective-bargaining session collapsed (union demands 15% of operating profit as bonus vs. company's 10%). The union has scheduled an 18-day strike starting 5/21 with 41,000+ workers participating, potentially climbing to 50,000. Given Samsung's role as the world's largest memory maker, strike risk threatens DRAM/NAND supply and pricing. Taiwanese memory-module makers (Winbond, Nanya Tech, ADATA, Phison) face order-diversion and price-hike tailwinds; downstream AI-server BOM costs rise.",
+          "title_zh": "記憶體報價走高 二手翻新機走紅 矽創、敦泰迎大單",
+          "title_en": "DRAM price surge pushes mid/low-end phone OEMs toward refurbished sets; Sitronix, FocalTech win orders",
+          "summary_zh": "DRAM/NAND 報價持續走高，壓縮中低階智慧手機毛利，中國與印度品牌轉而擴大翻新機（refurbished）市場，連帶帶動顯示驅動 IC 訂單。矽創、敦泰被點名為主要受惠廠，凸顯記憶體通膨正重塑手機 BOM 經濟學。",
+          "summary_en": "Persistent DRAM/NAND price increases are squeezing margins on entry- and mid-tier smartphones, prompting Chinese and Indian OEMs to expand the refurbished-handset segment. Display-driver suppliers 矽創 (Sitronix) and 敦泰 (FocalTech) are reportedly the main winners of the resulting component orders, illustrating how memory inflation is reshaping the smartphone bill-of-materials economics.",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/5599/9499091"
+          "source_url": "https://money.udn.com/money/story/11162/9510795?from=edn_subcatelist_cate"
         },
         {
-          "title_zh": "賴總統：台美合作 SMR 技術",
-          "title_en": "Taiwan-US sign SMR MOUs — Wyoming Univ. partners CCU, INER and ITRI on small modular reactors",
-          "summary_zh": "總統賴清德接見美國懷俄明州州長戈登，懷俄明大學與中央大學、國家原子能研究院、工研院簽署 MOU，深化小型模組化反應爐（SMR）、碳捕捉利用與封存合作。今年台美已簽多項經貿協議；對能源安全、淨零轉型及核能供應鏈相關產業帶來新題材。",
-          "summary_en": "President Lai received Wyoming Governor Mark Gordon as the University of Wyoming signed MOUs with Taiwan's Central University, Institute of Nuclear Energy Research and ITRI to deepen Small Modular Reactor (SMR), Carbon Capture, Utilization and Storage (CCUS) collaboration. This is one of several Taiwan-US economic agreements inked this year. Implications: incremental positives for energy-security and net-zero supply chains; potential SMR-related theme plays in Taiwan equipment, materials, engineering and IPP sectors.",
-          "source_name": "工商時報",
-          "source_url": "https://www.ctee.com.tw/news/20260513700069-430101"
+          "title_zh": "聯發科、高通鞏固手機晶片版圖",
+          "title_en": "MediaTek and Qualcomm tighten duopoly grip on smartphone SoC market",
+          "summary_zh": "最新產業數據顯示，聯發科與高通持續鞏固全球手機 SoC 市占率，二線挑戰者空間有限。兩大廠押注端側 AI 與 3nm/4nm 製程優勢，於 2H26 新機週期前對手機品牌客戶的議價能力進一步上升。",
+          "summary_en": "Latest industry data shows MediaTek and Qualcomm continue to consolidate share in the global mobile-SoC market, leaving little room for second-tier challengers as both vendors lean into AI-on-device features and 3nm/4nm process advantages. The duopoly increases bargaining power against handset OEMs entering 2H26 product cycles.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/11162/9510796?from=edn_subcatelist_cate"
+        },
+        {
+          "title_zh": "大型 CSP 繳出亮麗成績單 老 AI 股能否搭輝達財報再衝一波",
+          "title_en": "Strong hyperscaler capex sets up old-AI plays ahead of NVIDIA earnings",
+          "summary_zh": "美國主要雲端服務供應商（CSP）最新財報釋出強勁資本支出展望，對台灣 ODM、伺服器主機板與散熱「老 AI 股」帶來想像空間；市場焦點轉向即將公布的輝達財報，是否再次成為 AI 硬體循環下一波催化劑。",
+          "summary_en": "Major US cloud service providers (CSPs) delivered upbeat capex outlooks in their latest results, with implications for Taiwan's \"old-AI\" ODM, server-board and thermal names. Market attention now pivots to NVIDIA's upcoming print as the next catalyst for the AI hardware cycle's next leg.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/11162/9510704?from=edn_subcatelist_cate"
+        },
+        {
+          "title_zh": "2026 台北國際電腦展 輝達新平台、機器人成焦點",
+          "title_en": "Computex 2026 spotlight: NVIDIA's new platform and humanoid robots",
+          "summary_zh": "今年 Computex 主軸鎖定輝達下一代 AI 平台亮相及機器人應用，台灣 ODM/OEM 全面端出伺服器、散熱與邊緣運算解決方案，再次確立台灣在全球 AI 硬體建置中不可替代的位置。",
+          "summary_en": "This year's Computex in Taipei centres on NVIDIA's next-generation AI platform unveil and a deep robotics line-up, with island-wide ODMs/OEMs demonstrating server, cooling and edge solutions. The show reinforces Taiwan's role as the indispensable hardware partner for the global AI build-out.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/11162/9508696?from=edn_subcatelist_cate"
+        },
+        {
+          "title_zh": "CIP 傳出售彰化離岸風場 經濟部：未收申請、未見退出疑慮",
+          "title_en": "CIP reportedly weighing sale of Changhua offshore wind farm; MOEA says no formal filing yet",
+          "summary_zh": "彭博引述知情人士報導，丹麥 CIP 與泰國 PTT 旗下 GPSC 正考慮出售或部分轉讓在台灣的彰芳暨西島離岸風場。經濟部表示尚未收到任何申請、亦未見退出市場跡象，但消息再度引發市場對台灣離岸風場專案財務可行性的關注。",
+          "summary_en": "Bloomberg sources say Denmark's Copenhagen Infrastructure Partners (CIP) and Thailand's PTT-affiliated GPSC are considering exiting—either fully or partially—their Changfang & Xidao offshore wind project in Taiwan. The MOEA stressed it has received no formal application and saw no signs of a market exit, but the report adds to investor scrutiny of offshore-wind project economics in Taiwan.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/7307/9510730?from=edn_maintab_cate"
+        },
+        {
+          "title_zh": "遠雄港董座葉鈞耀：抓住榮景 躍居 AI 鏈隱形房東",
+          "title_en": "Far Eastern Air Logistics chair Yeh: positioning as the AI supply chain's invisible landlord",
+          "summary_zh": "遠雄港董座葉鈞耀專訪指出，集團善用物流園區資產服務 AI 伺服器與高值貨運需求，定位為 AI 硬體生態的「隱形房東」，每坪租金收益顯著提升。",
+          "summary_en": "In an interview, Far Eastern Air Logistics (遠雄港) chair Yeh Chun-yao outlines how the group leverages its logistics-park footprint to serve AI server and high-value-cargo demand, reshaping itself into a \"hidden landlord\" for the AI hardware ecosystem and earning higher rental yields per square metre.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/10871/9508676?from=edn_subcatelist_cate"
         }
       ]
     },
@@ -113,36 +113,12 @@
       "section_zh": "金融業",
       "items": [
         {
-          "title_zh": "金管會重罰台中商銀 3,200 萬 — AML/KYC 缺失",
-          "title_en": "FSC fines Taichung Commercial Bank NT$32 mn for AML/KYC lapses — signals stricter private-bank scrutiny",
-          "summary_zh": "金管會依銀行法第 129 條第 7 款及違反銀行法第 45 條之 1、洗防法規定，重罰台中商銀 3,200 萬元；缺失包括未建立妥善企業戶開戶審查機制、網銀額度控管不足、異常交易監控規範不完善。影響全體金融業 AML/KYC 作業強度，財管端應提高高資產客戶來源審查與帳戶監控警覺。",
-          "summary_en": "The FSC imposed a NT$32 mn penalty on Taichung Commercial Bank under Banking Act Art. 129(7), Art. 45-1 and the Money Laundering Control Act. Deficiencies include inadequate corporate-account opening review, insufficient internet-banking limit controls and incomplete suspicious-transaction monitoring. The fine signals broader AML/KYC pressure on the banking sector, with direct implications for wealth-management front-office practices on high-net-worth client onboarding and source-of-funds verification.",
-          "source_name": "金管會新聞稿",
-          "source_url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2&mcustomize=news_view.jsp&dataserno=202605120001&dtable=News"
-        },
-        {
-          "title_zh": "房貸違約潮來了？全台逾放筆數暴增六成",
-          "title_en": "Mortgage NPL count jumps 60% YoY — early-warning signal as 新青安 grace periods unwind",
-          "summary_zh": "內政部 2025 第 3 季全國住宅貸款逾放 2,203 筆，創近 9 季新高、季增 41%、年增 60%；高雄 408 筆居冠、新北、台北次之。違約率仍 0.08% 低檔，但筆數激增為初期警訊；新青安寬限期陸續到期，房貸壓力恐放大，銀行需提升提存與授信紀律。",
-          "summary_en": "Ministry of Interior statistics show Q3-2025 nationwide residential-mortgage delinquency cases reached 2,203 — a 9-quarter high, +41% QoQ and +60% YoY. Kaohsiung leads with 408 cases, followed by New Taipei and Taipei. Headline delinquency rate remains low at 0.08%, but the case-count surge is an early-warning signal. As \"新青安\" (new youth-housing) grace periods expire from 2026 onward, mortgage stress could amplify. Banks face provisioning headwinds; LTV-monitoring discipline becomes paramount.",
-          "source_name": "工商時報",
-          "source_url": "https://www.ctee.com.tw/news/20260512701312-430601"
-        },
-        {
-          "title_zh": "貸房入股一窩瘋？金管會：銀行會做好授信 5P、風控",
-          "title_en": "FSC: banks will apply 5P discipline as housing-equity loans spill into the equity market",
-          "summary_zh": "台股突破 4 萬點掀全民炒股熱，理財型房貸及信貸資金回流股市。銀行局副局長王允中表示：至 2 月底消費者貸款年增 501 億元，但銀行授信均依 5P 原則評估，信貸用途多元、無法推定全數進場；金管會強調將持續監理槓桿風險。",
-          "summary_en": "As TAIEX broke 40,000, retail traders are increasingly using housing-equity loans and signature loans to chase stocks. FSC Banking Bureau Deputy Director Wang Yun-chung confirmed consumer-loan growth of NT$50.1 bn YTD through February but emphasized banks are applying full 5P (People, Purpose, Payment, Protection, Perspective) credit checks. Signature-loan purposes are diversified and cannot be presumed all-equity-bound. The FSC will continue monitoring leverage risk in retail margins / stock-backed loans.",
-          "source_name": "工商時報",
-          "source_url": "https://www.ctee.com.tw/news/20260513700051-439901"
-        },
-        {
-          "title_zh": "玉山銀行獲准升格美國達拉斯分行",
-          "title_en": "E.Sun Bank Dallas branch upgrade approved — Taiwan banks' US presence climbs to 26",
-          "summary_zh": "金管會同意玉山銀行將達拉斯代表人辦事處升格為分行，海外據點達 16 處、橫跨 11 國。考量德州大型企業與臺商進駐快速擴張，有助建構北美完整金融服務平台；我國銀行在美分行總數增至 26 家，強化臺商海外金融與財富管理服務銜接。",
-          "summary_en": "The FSC approved E.Sun Bank's upgrade of its Dallas representative office into a full branch, bringing the bank's overseas footprint to 16 sites across 11 countries. The Dallas upgrade responds to rapid Texas-corporate / Taiwanese-business expansion and complements E.Sun's North America platform. Taiwan banks' total US branch count rises to 26, reinforcing cross-border SME-banking and HNW-wealth-management bridges between Taipei and the US Southwest.",
-          "source_name": "金管會新聞稿",
-          "source_url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2&mcustomize=news_view.jsp&dataserno=202605120003&dtable=News"
+          "title_zh": "天逸集團假交易真掏空案 藏鏡人溫峰泰滯留海外多年遭逮 北檢漏夜偵訊",
+          "title_en": "Tien Yi Group \"fake-trade real-embezzlement\" mastermind Wen Feng-tai arrested after years overseas",
+          "summary_zh": "天逸集團涉嫌以「假交易、真掏空」掏空公司資金，藏鏡人溫峰泰在海外滯留多年後遭逮，北檢漏夜偵訊。本案再度引發對關係人貿易融資安排與銀行授信實質審查機制的關注。",
+          "summary_en": "Prosecutors took into overnight questioning Wen Feng-tai, identified as the behind-the-scenes mastermind of the Tien Yi (天逸) Group case involving fake trade transactions and embezzlement of corporate funds. Wen had been in hiding overseas for years; his arrest reopens scrutiny of related-party trade financing arrangements and bank credit-due-diligence practices in trade finance.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/5648/9510893?from=edn_subcatelist_cate"
         }
       ]
     },
@@ -151,36 +127,20 @@
       "section_zh": "財富管理",
       "items": [
         {
-          "title_zh": "主動式台股 ETF 上路甫滿周年 00403A 掀高潮 再寫三大紀錄",
-          "title_en": "Active ETF 00403A debut sets three records — NT$117.7 bn day-1 AUM, 4.20 mn lots, 5.57% premium",
-          "summary_zh": "統一投信主動式 ETF 00403A 5/12 掛牌：募集 791.7 億元、首日規模 1,176.8 億元、單日成交 420.4 萬張，三項皆寫主動式 ETF 新高，並創台股單一商品成交量天量。30 分鐘爆百萬張、最高 10.96 元、溢價逾 6%。資金來自高息 ETF 轉進、券商造市與散戶追價；公司罕見發布溢價警語，反映台灣 ETF 投資生態正從被動指數轉向主動策略。",
-          "summary_en": "Uni-President Investment's active Taiwan-equity ETF 00403A listed 5/12 with NT$79.2 bn raised, NT$117.7 bn day-1 AUM and 4.20 mn lots traded — all active-ETF records and a single-product TAIEX volume high. Within 30 minutes of open, 1 mn+ lots traded; intraday high NT$10.96 with premium exceeding 6%. Uni-President issued a rare overvaluation alert. Capital sources: rotation from high-dividend ETFs, market-making by brokers, and retail chasing. The move signals Taiwan's wealth-product menu pivoting from passive indexing toward active strategies.",
+          "title_zh": "凱基投信投資長歐陽渭棠：艦隊策略 掌握長多",
+          "title_en": "KGI Investment CIO Ou-Yang Wei-Tang: \"fleet strategy\" to capture the long-term uptrend",
+          "summary_zh": "在經濟日報「投資大趨勢論壇」上，凱基投信投資長歐陽渭棠提出「艦隊策略」因應 AI 結構性循環：以 AI 主流大型股為旗艦，搭配供應鏈衛星部位與增益型收益基金，兼顧成長性與回檔控制，適合財管客戶長線布局。",
+          "summary_en": "At the Economic Daily News Investment Mega-Trend Forum, KGI Investment Trust CIO Ou-Yang Wei-Tang outlined a \"fleet strategy\" for navigating the structural AI cycle: combining flagship AI mega-caps with satellite positions in supply-chain beneficiaries and yield-enhancing income funds to balance growth and drawdown control for wealth-management clients.",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/5618/9498814"
+          "source_url": "https://money.udn.com/money/story/5648/9510816?from=edn_subcatelist_cate"
         },
         {
-          "title_zh": "保單要保人變更子女應申報贈與稅",
-          "title_en": "NTBNA: switching policyholder to children triggers gift tax — file within 30 days",
-          "summary_zh": "父母將保單要保人變更為子女屬「無償移轉保單價值」之贈與，以變更日保單價值準備金為贈與標的，原要保人應於變更後 30 日內申報。可扣除每年 244 萬元免稅額；未申報補稅加罰，主動補報補繳免罰。為財富傳承高頻使用工具，務必同步搭配保單檢視與贈與稅試算。",
-          "summary_en": "North-District NTB reminds that changing a life-insurance contract's policyholder from parent to child constitutes a free transfer of policy-value reserves and is a gift-tax event, measured at the policy-value-reserve on the change date. The original policyholder must file within 30 days. The annual gift-tax exemption is NT$2.44 mn. Voluntary correction before audit/notice avoids penalty. Critical practice point for wealth-management succession workflows — pair with policy-value review and gift-tax simulation before execution.",
-          "source_name": "北區國稅局",
-          "source_url": "https://www.ntbna.gov.tw/singlehtml/374fe8c4b18e48c691a6806ac02b9984?cntId=a0e466ca4b984170b783350ba6854095"
-        },
-        {
-          "title_zh": "韓股今年飆漲 85% 掀資金大遷徙！民眾棄保險、定存轉戰股市 壽險解約金飆近 5 兆韓元",
-          "title_en": "Korea Lesson — KOSPI +85% YTD triggers KRW 4.9 tn life-insurance surrender wave",
-          "summary_zh": "韓國股市今年漲幅 85%，吸引民眾大量解約保險、提領定存投入股市；三大壽險巨頭 Q1 解約金 4.9 兆韓元（+16.3%）、儲蓄型保單解約激增 23.2%；五大銀行定存兩個多月內縮減 12 兆韓元。金融業分化：壽險獲利下滑、證券獲利暴增。為台灣家庭資產配置與財管商品線可借鏡的場景。",
-          "summary_en": "Korea's stock market is up 85% YTD, fueling a mass migration from insurance and deposits into equities. Top-3 Korean life insurers' Q1 surrenders hit KRW 4.9 tn (+16.3% YoY); savings-policy surrender surged +23.2%; the top-5 banks' deposits shrunk KRW 12 tn in just over two months. Industry-wide split: life-insurance profit falls, brokerage profit surges. The dynamic is a relevant scenario for Taiwan high-net-worth and mass-affluent asset-allocation conversations as TAIEX nears 42,000.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6454489"
-        },
-        {
-          "title_zh": "預告放寬保險業跨領域經理人聘任範圍",
-          "title_en": "FSC pre-announces expanded cross-domain talent rule for insurance executives",
-          "summary_zh": "現行專業領域改採概括授權方式，除保留資訊、科技、法律、電子商務、數位經濟、財會、人資外，新增「醫療、投資、行銷、不動產、永續經濟」等領域；保險業副總、協理、經理可廣納跨界專才以提升競爭力。預告期 60 日；對保險業 ESG/醫療/不動產/數位財管等新興業務佈局實質助益。",
-          "summary_en": "The FSC pre-announces an amendment to \"Insurance Company Director / Officer Qualification Rules\" replacing the current closed list (IT, finance, law, e-commerce, digital economy, accounting, HR) with a broader \"general-authorization\" framework, adding medical, investment, marketing, real estate and sustainable-economy domains. 60-day comment period. Implication: insurers can recruit broader cross-domain talent — useful for ESG, healthcare wealth, real-asset and digital-wealth product roadmaps.",
-          "source_name": "金管會新聞稿",
-          "source_url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2&mcustomize=news_view.jsp&dataserno=202605120002&dtable=News"
+          "title_zh": "元大投信董事長劉宗聖：ETF 市場 三大機會",
+          "title_en": "Yuanta ITC chairman Liu Tsung-Sheng: three opportunities in the ETF market",
+          "summary_zh": "元大投信董事長劉宗聖點出 ETF 市場三大機會：AI/科技主題 ETF、結合主動選股的高息收 ETF，以及因應利率波動的全球多元資產 ETF。隨著台灣 ETF 總規模續創新高，投信與銀行財管平台持續強化 ETF 模型組合產品線。",
+          "summary_en": "Yuanta Investment Trust chairman Liu Tsung-Sheng identified three forward opportunities in the Taiwan ETF market: AI/technology theme ETFs, high-dividend income ETFs with active overlay, and global multi-asset ETFs that address rising rate volatility. With local ETF AUM continuing to break records, fund houses and bank wealth-management platforms are doubling down on ETF model-portfolio offerings.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/5648/9510792?from=edn_subcatelist_cate"
         }
       ]
     },
@@ -189,36 +149,12 @@
       "section_zh": "稅務法規",
       "items": [
         {
-          "title_zh": "台股 4 月交易熱 證交稅創高每天進帳 27 億 躍總稅收成長大支柱",
-          "title_en": "April national tax revenue NT$189.5 bn (+23% YoY) — securities transaction tax NT$54.6 bn is a single-month record",
-          "summary_zh": "財政部公布 4 月全國總稅收 1,895 億元、年增 23%，創史上最強 4 月；1–4 月累計 8,450 億元、年增 19.3%，達分配預算 113.7%、全年預算 21.4%。證交稅單月實徵 546 億元（年增 368 億、增幅 2.1 倍），日均 27 億並連九紅；台股日均量首度破兆達 1.14 兆，證交稅成總稅收成長最大支柱，亦凸顯稅收依賴股市波動的結構性風險。",
-          "summary_en": "MOF reports April 2026 national tax collected at NT$189.5 bn (+23.0% YoY); 4-month cumulative NT$845 bn (+19.3% YoY), reaching 113.7% of pro-rata budget and 21.4% of full-year budget. Securities transaction tax alone collected NT$54.6 bn in a single month (a NT$36.8 bn / +2.1x YoY surge, ninth consecutive monthly increase) on TAIEX daily turnover above NT$1 tn. Securities tax has now become the largest growth pillar of the 2026 fiscal program, also exposing fiscal dependence on equity-market volatility.",
+          "title_zh": "行動工商憑證正式上線 首年推 18 萬家企業上鏈",
+          "title_en": "Mobile e-business certificate goes live: tax filing, e-invoice, labour-insurance enrolment all on a smartphone",
+          "summary_zh": "經濟部商業發展署 5/18 宣布行動工商憑證上線，企業負責人與高階主管未來可透過手機完成報稅、開發票、勞健保加退保、合約用印等程序，無需實體 IC 卡。經濟部以首年 18 萬家企業商號為目標，加速全國約 56 萬家工商憑證用戶邁向行動化、無插卡時代。對企業稅務與行政成本影響顯著。",
+          "summary_en": "MOEA's Department of Commerce launched the Mobile Business Certificate (行動工商憑證) on May 18, enabling company representatives and senior executives to complete tax filing, e-invoice issuance, labour/health-insurance enrolments and contract e-signing directly via mobile—without a physical IC card. The agency targets 180,000 enterprises and businesses in the first year, accelerating the cardless digital-government transition for Taiwan's ~560,000 entity-card holders.",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/6710/9498798"
-        },
-        {
-          "title_zh": "臺新租稅協定新約三大變動",
-          "title_en": "NTBNA: new Taiwan-Singapore tax treaty effective 2027/1/1 — three key changes",
-          "summary_zh": "臺星新約於 2026/2/13 生效、自 2027/1/1 起適用。三大變動：(1) 股利、權利金、利息上限稅率統一降至 10%（原最高 40%/15%）；(2) 建築工程常設機構門檻由「1 年內逾 6 月」改為「持續逾 9 月」並新增「服務常設機構」；(3) 間接稅額扣抵、視同已納稅額扣抵僅適用至 118 年度、119 年起停止。對臺星跨境投資、控股架構與信託架構規劃影響顯著。",
-          "summary_en": "The revised Taiwan-Singapore tax treaty entered force on 2026/2/13 and applies from 2027/1/1. Three key changes: (1) Unified 10% cap on dividends/royalties/interest (vs. previous 40%/15% maximum); (2) Construction-PE threshold lifted from \"6 months within 1 year\" to \"continuous 9 months\", with new service-PE concept added; (3) Indirect tax credit and deemed-paid credit only available through tax year 2029 — discontinued from 2030. Material implications for cross-border investment, holding-company architecture and trust structures involving Singapore.",
-          "source_name": "北區國稅局",
-          "source_url": "https://www.ntbna.gov.tw/singlehtml/374fe8c4b18e48c691a6806ac02b9984?cntId=411d7c86c20d4ebd9e161d7907746114"
-        },
-        {
-          "title_zh": "生前訂約售不動產未過戶仍列遺產",
-          "title_en": "NTBCA: pre-death real-estate sales without title transfer still part of the estate",
-          "summary_zh": "被繼承人生前訂約出售不動產但死亡時尚未完成移轉登記，仍屬遺產；應以死亡年度公告現值/評定標準價格申報，已收訂金外的未收價款應列為債權、買賣相關債務可作未償債務扣除。實例：賣價 1 億、評定價 3,500 萬，繼承人申報遺產 3,500 萬、扣同額債務、列債權 9,000 萬。對高齡客戶不動產處分時點與遺囑/信託搭配規劃具直接影響。",
-          "summary_en": "Central-District NTB clarifies that if a decedent signed a real-estate sale contract before death but title transfer was not completed, the property remains part of the gross estate. Reporting basis: government-assessed land/building values at the date of death. Unreceived consideration becomes an estate receivable; related contractual debts deductible as unpaid obligations. Worked example: NT$100 mn sale price, NT$35 mn assessed value, NT$90 mn outstanding consideration — net estate inclusion structurally lower than headline sale price. Critical input for senior-client real-estate planning and trust/will sequencing.",
-          "source_name": "中區國稅局",
-          "source_url": "https://www.ntbca.gov.tw/singlehtml/3c844e426e9c4b5ebcaaa18694d7e230?cntId=210637a8324143fba009fdde3a71fa3f"
-        },
-        {
-          "title_zh": "大陸來源所得應併同綜所稅申報",
-          "title_en": "NTBT: China-source income must be filed with personal Taiwan income tax",
-          "summary_zh": "境內居住個人取得大陸來源所得應併入綜所稅申報；大陸已繳稅可扣抵但以該所得增加之應納稅額為上限。未能提示成本費用證明者，按不動產實際成交價 12% 計算所得額。漏報需補稅加罰，未經檢舉前自動補報依法免罰。對兩岸資產配置、不動產處分客戶之申報合規甚為關鍵。",
-          "summary_en": "Taipei NTB reminds Taiwan-resident individuals that China-source income must be aggregated into the Taiwan personal income tax return. Mainland-paid taxes are creditable, capped at the incremental Taiwan tax attributable to the China-source income. Without cost-substantiation, taxable income is presumed at 12% of real-estate gross sale proceeds. Voluntary correction prior to audit/notice avoids penalty. Important compliance input for cross-Strait wealth-allocation clients with mainland property dispositions or operating income.",
-          "source_name": "台北國稅局",
-          "source_url": "https://www.ntbt.gov.tw/singlehtml/41ae3594197f4f69b47753ce08188516?cntId=f7ca990d11e94fbca7414507bb502920"
+          "source_url": "https://money.udn.com/money/story/7307/9510603?from=edn_maintab_cate"
         }
       ]
     },
@@ -227,28 +163,44 @@
       "section_zh": "總經政策",
       "items": [
         {
-          "title_zh": "美 4 月 CPI 升幅年增 3.8% 三年高點 Fed 降息機率愈來愈小",
-          "title_en": "US April CPI 3.8% — three-year high, Fed cut bets pushed to 2027+",
-          "summary_zh": "美 4 月 CPI 年增 3.8% 創 2023-2024 新高；核心 CPI 年增 2.8%、月增 0.4% 雙雙超預期；汽油較去年暴增 28.4%、能源向非能源項目擴散。市場押注 Fed 最快在 2027 年 4 月前重啟升息（機率 70%）、30 年期殖利率逼近 5%；長期高利率延續、風險資產估值與台股權值股、新台幣匯價同步承壓。市場對 6/2026 降息僅給予 2.4% 機率。",
-          "summary_en": "US April CPI rose 3.8% YoY, a 2023-2024 high; core CPI 2.8% YoY and +0.4% MoM, both beating consensus. Gasoline surged 28.4% YoY, energy-driven price pressure widening into services (notably airfares). Traders now price 70% odds of an actual Fed rate-hike by April 2027 rather than cuts. 30-year Treasury yield approaches 5%; Treasury auctions hit highest cost since Feb 2025. Implications: tighter-for-longer rate regime, headwinds for risk-asset valuations, USD/NTD policy room narrows. Markets price 6/2026 cut odds at just 2.4%.",
+          "title_zh": "外銷訂單估連 15 月成長 4 月接單估 870–890 億美元 年增近 50%",
+          "title_en": "April export orders forecast at US$87–89 bn, +50% YoY for 15th straight monthly gain",
+          "summary_zh": "經濟部預估 4 月外銷訂單將達 870–890 億美元，年增近 50%、連 15 月正成長。AI 伺服器、先進製程 IC 與高階手機為主要拉動力，數據強化 AI 帶動外需循環的結構性穩健性，並支撐 2026 全年 GDP 預估上修。",
+          "summary_en": "The MOEA expects Taiwan's April export orders to land at US$87–89 bn, an annual rise of nearly 50% that would mark the 15th consecutive month of growth. The pull is driven by AI servers, advanced-node ICs and high-end smartphones; the print reinforces the structural strength of the AI-led external-demand cycle and supports upward revisions to FY26 GDP forecasts.",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/5599/9498792"
+          "source_url": "https://money.udn.com/money/story/10869/9507255?from=edn_subcatelist_cate"
         },
         {
-          "title_zh": "川普透露將和習近平談對台軍售 卓揆：在互信基礎上推進合作",
-          "title_en": "Trump signals he will raise Taiwan arms sales directly with Xi at 5/14 summit",
-          "summary_zh": "川普表態將在 5/14 川習會中與習近平討論對台軍售議題，可能違反雷根「六項保證」之不事先徵詢中國的慣例。卓揆強調台美關係深化、美方多次重申不容片面改變台海現狀。經濟學者警示中方可能祭出關鍵礦產施壓，造成軍售寒蟬效應。對國防供應鏈、台美關係與短線匯市、台股政治風險溢價皆有重大影響。",
-          "summary_en": "Trump said he plans to discuss US arms sales to Taiwan with Xi Jinping at the 5/14 summit, a potential breach of Reagan's \"Six Assurances\" (which prohibit prior consultation with China). Premier Cho stresses deepening US-Taiwan ties and emphasizes Washington's repeated assurances against unilateral changes to the Taiwan Strait status quo. Economists warn China may leverage critical-minerals pressure, creating a chilling effect on the arms-sale program. Implications: defense-supply-chain volatility, US-Taiwan relationship recalibration, and FX/equity political-risk premium.",
+          "title_zh": "美光、台積電大案挹注 前 4 月僑外與對外投資金額成長",
+          "title_en": "Micron and TSMC large cases drive YTD inbound/outbound investment growth",
+          "summary_zh": "投審會資料顯示，美光與台積電大型投資案推升 2026 年前 4 月僑外投資與對外投資金額同步成長，反映全球半導體資本支出再配置，台灣同時扮演「先進封裝吸引外資」與「海外擴廠輸出資本」雙重角色。",
+          "summary_en": "MOEA Investment Commission data show that mega-deals from Micron and TSMC have propelled inbound foreign investment (僑外投資) and outbound investment (對外投資) growth in the first four months of 2026. The pattern reflects the global semiconductor capex realignment, with Taiwan a key node both as inbound destination (for advanced packaging) and outbound investor (overseas fab build-outs).",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/7307/9498815"
+          "source_url": "https://money.udn.com/money/story/10869/9505498?from=edn_subcatelist_cate"
         },
         {
-          "title_zh": "通膨走錯路！古爾斯比憂服務業物價失控 盛讚鮑爾是「名人堂級」Fed 主席",
-          "title_en": "Chicago Fed's Goolsbee: inflation \"going in the wrong direction\" — services prices losing control",
-          "summary_zh": "芝加哥 Fed 總裁古爾斯比示警通膨「正朝錯誤方向發展」，服務業物價回升令人憂心、經濟可能已過熱、Fed 需採取行動；通膨已連續 5 年高於 2% 目標、非能源服務業通膨擴散。古爾斯比並盛讚鮑爾為「名人堂級」主席，為新任 Fed 主席華許上任埋下複雜的政策背景與市場期待。",
-          "summary_en": "Chicago Fed President Goolsbee warned inflation is \"moving in the wrong direction\", with services prices accelerating raising fears the economy is overheating and the Fed needs to act. Inflation has now stayed above the 2% target for five consecutive years; non-energy-services inflation rebound shows price pressure has broadened from goods to services. Goolsbee praised outgoing Chair Powell as a \"Hall of Fame-tier\" Fed Chair — setting up a complex policy backdrop for incoming Chair Warsh.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6455970"
+          "title_zh": "中東衝突效應 瀝青、塑膠、機電設備齊揚 營造工程物價指數三年新高",
+          "title_en": "Middle East tensions push construction price index to three-year high",
+          "summary_zh": "中東衝突推升瀝青、塑膠製品與機電設備價格，使台灣營造工程物價指數攀上三年新高。對基礎建設預算、營建商與公共工程承包商帶來新一波投入成本壓力，連帶影響房價可負擔性與政府資本支出規劃。",
+          "summary_en": "Middle East conflict has lifted prices of asphalt, plastics and electromechanical equipment, sending Taiwan's Construction Engineering Price Index to a three-year high. The print signals renewed input-cost pressure for infrastructure budgets, real-estate developers and public-works contractors, with knock-on effects on housing affordability and government capex plans.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/10869/9501235?from=edn_subcatelist_cate"
+        },
+        {
+          "title_zh": "主計總處：七成勞工賺不到平均薪資",
+          "title_en": "DGBAS: 70% of Taiwan workers earn below the average wage",
+          "summary_zh": "主計總處最新統計顯示，台灣約七成勞工月薪低於平均水準，凸顯 AI 帶動的總體成長與中下層家庭所得之間的落差。數據將持續影響所得分配、家庭稅負與消費韌性的政策辯論。",
+          "summary_en": "Latest Directorate-General of Budget, Accounting and Statistics (DGBAS) data show ~70% of Taiwan's wage earners receive incomes below the published mean monthly wage, underscoring the gap between AI-driven aggregate growth and bottom-half household income. The figure feeds the ongoing policy debate on income distribution, household tax burden and consumption resilience.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/10869/9496221?from=edn_subcatelist_cate"
+        },
+        {
+          "title_zh": "賴政府 520 二周年 朝野盤點產業與能源攻防",
+          "title_en": "Lai Ching-te marks two years in office: industry and energy policy taking stock",
+          "summary_zh": "5/20 賴清德總統任期過半，朝野立委同步檢視政府成績單：股市攻上 4 萬點、出口與 GDP 受惠 AI 表現亮眼，但傳產與能源轉型仍是壓力。未來兩年政策重點預計聚焦於產業升級、能源結構與稅制改革。",
+          "summary_en": "As May 20 marks the midpoint of President Lai's term, both ruling and opposition legislators review the administration's report card: the Taiex broke 40,000, exports and GDP look strong on the AI tailwind, but traditional sectors and energy transition remain pressure points. The next two years' policy debate is expected to focus on industrial upgrading, energy mix and tax reform.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/7307/9510679?from=edn_maintab_cate"
         }
       ]
     },
@@ -257,28 +209,20 @@
       "section_zh": "國際財經",
       "items": [
         {
-          "title_zh": "美股收盤／晶片飆股全跌壓垮美股 通膨高油價漲讓降息希望全滅",
-          "title_en": "US stocks tumble — Philadelphia Semi -3.01%, Qualcomm -11.46%, TSMC ADR -1.79%",
-          "summary_zh": "標普 500 跌 0.16%、那指跌 0.71%、費半重摔 3.01%、道瓊靠防禦類股險守紅盤。高通暴跌 11.46%（蘋果訂單損失）、英特爾 -6.82%、美光 -3.61%；台積電 ADR 跌 1.79% 至 397.28 美元、日月光 ADR 跌 2.89%、聯電 ADR 逆勢漲 3.01%。布蘭特原油升破 107、西德州破 102 美元，年內降息預期破滅、升息風險浮現；台股盤前 AI 權值股承壓、聯電可望逆勢。",
-          "summary_en": "All three major US indices fell on 5/12 as hot CPI plus Middle East tension hammered chip leaders. Dow +0.11% (saved by defensives), S&P -0.16%, Nasdaq -0.71%; Philadelphia Semi -3.01%. Qualcomm collapsed 11.46% on Apple-order loss; Intel -6.82%; Micron -3.61% after Monday's record high; TSMC ADR -1.79% to US$397.28; ASE ADR -2.89%; UMC ADR +3.01% standing out. WTI broke US$102, Brent above US$107 on US-Iran headlines. Cut-bets evaporate, hike-risk emerges. Setup for Taipei: heavy on AI-mega-cap, possible UMC outperformance.",
+          "title_zh": "美股收盤／S&P 500 小跌 費半重挫逾 2% 殖利率飆高晶片股淪重災區",
+          "title_en": "Wall Street close: S&P 500 slips, SOX down >2% as long-end yields surge hits chips",
+          "summary_zh": "美股最新交易日收低，S&P 500 微跌、費城半導體指數跌逾 2%，長天期公債殖利率彈升衝擊高估值成長與晶片股。殖利率彈升反映赤字供給與通膨黏性的疑慮，台北開盤預料消化此一風險訊號，尤以 AI 半導體權值股壓力較大，輝達財報前夕走勢更為敏感。",
+          "summary_en": "US equities ended the latest session lower, with the S&P 500 modestly down and the Philadelphia Semiconductor Index (SOX) falling more than 2% as a sharp rise in long-end Treasury yields disproportionately hit growth and chip names. The yield reset reflects concerns about deficit-driven supply and sticky inflation; Taipei's open is likely to digest this risk-off cue, especially across AI semiconductor names ahead of NVIDIA's earnings.",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/123398/9499070"
+          "source_url": "https://money.udn.com/money/story/5599/9511054"
         },
         {
-          "title_zh": "高通被點名晶片股「問題兒童」股價暴跌超 11%",
-          "title_en": "Qualcomm labelled \"the problem child\" of the chip rally — stock crashes 11%",
-          "summary_zh": "高通 5/12 暴跌逾 11% 至 210.31 美元，被科技分析師點名為「晶片漲勢中的問題兒童」。原因包括蘋果持續減少晶片採購、Android 手機需求疲弱、PC 處理器面臨輝達競爭；本益比逾 20 倍但獲利成長轉弱、估值吸引力下降、AI 資料中心業務仍屬早期。半導體族群整體承壓（英特爾 -6.82%、美光 -3.61%），輝達逆勢小漲；美通膨與中東緊張加劇避險。",
-          "summary_en": "Qualcomm plunged over 11% on 5/12 to US$210.31, called \"the problem child of the semiconductor rally\" by tech analysts. Drivers: Apple's continued reduction in Qualcomm chip purchases, weak Android handset demand, and Nvidia competition pressuring PC processors. Qualcomm trades above 20x P/E with decelerating earnings, eroding valuation appeal; its AI-data-center business remains early-stage. Sector-wide: Intel -6.82%, Micron -3.61%, while Nvidia bucked the trend with a modest gain. US inflation hot + Middle East tension fueled risk-off.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6455985"
-        },
-        {
-          "title_zh": "美光出現罕見技術訊號 是警訊還是買點？",
-          "title_en": "Micron flashes rare overbought RSI 85 — caution after a 705% one-year run",
-          "summary_zh": "美光 5/11 RSI 升至 85 進入極度超買區，5/12 一度下跌 6.84%；今年累漲 159.71%、過去一年飆升 704.76%（3 月底 311 美元拉到 5/11 高點 818 美元）。基本面：2026 年 HBM 產能售罄、2027 年大部分已預訂、AI 加速器需求驅動龐大。分析認為「最容易賺的那段可能已過去」，新進資金需評估高位進場風險，既有投資人面臨獲利了結契機。",
-          "summary_en": "Micron's RSI hit 85 on 5/11 (extreme overbought) and the stock dropped 6.84% intraday on 5/12. YTD +159.71%; one-year +704.76% (March-end US$311 → 5/11 high US$818). Fundamentals remain robust: 2026 HBM capacity fully sold out, most 2027 already pre-booked, AI accelerator demand driving structural demand. However analysts caution \"the easy money has likely been made\"; new entrants must evaluate high-altitude entry risk, existing holders face profit-taking decision points.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6455971"
+          "title_zh": "川普：原定 5/19 對伊朗發動攻擊 應中東國家要求暫緩",
+          "title_en": "Trump postpones planned May 19 strike on Iran at request of Middle East partners",
+          "summary_zh": "川普證實原訂 5/19 對伊朗的軍事行動，應中東國家請求暫緩以保留談判空間。短線壓低油價與航運的地緣風險溢酬，但對峙結構未解，能源、國防與紅海航運相關部位仍須留意。",
+          "summary_en": "Former-and-incoming US President Trump confirmed that a planned May 19 military action against Iran has been postponed at the request of Middle East partner countries seeking time for negotiation. The pause cools immediate geopolitical risk premia in oil and shipping markets but leaves the underlying confrontation dynamic unresolved—a relevant overhang for energy, defence and Red Sea shipping exposures.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/5599/9510984"
         }
       ]
     }
