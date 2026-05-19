@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-19T09:27:42+08:00",
+  "generated_at": "2026-05-19T10:01:20+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -99,6 +99,18 @@
       "error": null
     },
     {
+      "symbol": "BSX",
+      "name_zh": "Boston Scientific",
+      "kind": "US",
+      "price": 55.92,
+      "change_pct": 6.15,
+      "mtd_pct": -2.93,
+      "ytd_pct": -41.35,
+      "market_date": "2026-05-18",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BSX.US",
+      "error": null
+    },
+    {
       "symbol": "REGN",
       "name_zh": "再生元",
       "kind": "US",
@@ -135,20 +147,8 @@
       "error": null
     },
     {
-      "symbol": "PURR",
-      "name_zh": "Hyperliquid Strategies",
-      "kind": "US",
-      "price": 6.93,
-      "change_pct": -0.86,
-      "mtd_pct": 15.12,
-      "ytd_pct": 94.66,
-      "market_date": "2026-05-18",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PURR.US",
-      "error": null
-    },
-    {
       "symbol": "BX",
-      "name_zh": "Blackstone",
+      "name_zh": "BX",
       "kind": "US",
       "price": 117.04,
       "change_pct": -0.72,
@@ -195,6 +195,18 @@
       "error": null
     },
     {
+      "symbol": "SPY",
+      "name_zh": "SPDR S&P 500 ETF",
+      "kind": "US",
+      "price": 738.65,
+      "change_pct": -0.07,
+      "mtd_pct": 2.78,
+      "ytd_pct": 8.32,
+      "market_date": "2026-05-18",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPY.US",
+      "error": null
+    },
+    {
       "symbol": "QQQ",
       "name_zh": "Invesco 那斯達克 100 ETF",
       "kind": "US",
@@ -228,6 +240,18 @@
       "ytd_pct": 3.42,
       "market_date": "2026-05-18",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DIA.US",
+      "error": null
+    },
+    {
+      "symbol": "VTI",
+      "name_zh": "Vanguard 全美股 ETF",
+      "kind": "US",
+      "price": 362.36,
+      "change_pct": -0.1,
+      "mtd_pct": 2.31,
+      "ytd_pct": 8.08,
+      "market_date": "2026-05-18",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VTI.US",
       "error": null
     },
     {
