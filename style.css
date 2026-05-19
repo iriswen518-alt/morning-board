@@ -1477,3 +1477,7 @@ table.indices .date-col {
   opacity: 0.72;
   cursor: help;
 }
+
+/* 覆蓋率染色：100% 預設無色、50-80% 黃、<50% 紅 */
+.position-cov-warn { color: #c47200; font-weight: 600; }
+.position-cov-bad  { color: #d62828; font-weight: 600; }

@@ -993,17 +993,21 @@ function computeAllocation(resolved) {
 }
 
 function computePerformance(resolved) {
-  // weighted avg of available periods; if any holding lacks a period, that
-  // holding contributes 0 weight to that period and the divisor shrinks.
+  // 真實加權績效：分母 = 整個組合權重；缺值（如海外債長期、現金）視為 0 計入
+  // 同步回傳覆蓋率，讓使用者知道有多少 % 部位是真實有資料
   const periods = ["ytd", "1y", "3y", "5y"];
+  const totalW = resolved.reduce((s, r) => s + r.weight, 0) || 100;
   const result = {};
   periods.forEach(p => {
-    let num = 0, denom = 0;
+    let num = 0, dataW = 0;
     resolved.forEach(({ meta, weight }) => {
       const v = meta.perf?.[p];
-      if (typeof v === "number") { num += v * weight; denom += weight; }
+      if (typeof v === "number") { num += v * weight; dataW += weight; }
     });
-    result[p] = denom > 0 ? num / denom : null;
+    result[p] = {
+      value: totalW > 0 ? num / totalW : null,
+      coverage: totalW > 0 ? dataW / totalW * 100 : 0,
+    };
   });
   return result;
 }
@@ -1433,18 +1437,30 @@ function renderPositionAnalysisPanel(items, title, isPreset) {
           </table>
         </div>
 
-        <h4 class="position-subhead">綜合績效（加權平均，現金與缺值不計入）</h4>
+        <h4 class="position-subhead">綜合績效（依完整組合權重加權，缺值以 0 計入）</h4>
         <table class="position-perf">
-          <thead><tr><th>期間</th><th>你的組合</th><th>說明</th></tr></thead>
+          <thead><tr><th>期間</th><th>你的組合</th><th>資料覆蓋率</th></tr></thead>
           <tbody>
-            <tr><td>今年以來</td><td class="${pctClass(perf.ytd)}">${fmtPct(perf.ytd)}</td><td>依各標的當期報酬加權</td></tr>
-            <tr><td>近 1 年</td><td class="${pctClass(perf["1y"])}">${fmtPct(perf["1y"])}</td><td>單筆投入計算</td></tr>
-            <tr><td>近 3 年</td><td class="${pctClass(perf["3y"])}">${fmtPct(perf["3y"])}</td><td>單筆投入計算</td></tr>
-            <tr><td>近 5 年</td><td class="${pctClass(perf["5y"])}">${fmtPct(perf["5y"])}</td><td>單筆投入計算</td></tr>
+            ${[
+              ["ytd", "今年以來"],
+              ["1y",  "近 1 年"],
+              ["3y",  "近 3 年"],
+              ["5y",  "近 5 年"],
+            ].map(([k, label]) => {
+              const o = perf[k] || {};
+              const v = o.value;
+              const cov = o.coverage ?? 0;
+              const covCls = cov >= 80 ? "" : cov >= 50 ? "position-cov-warn" : "position-cov-bad";
+              return `<tr>
+                <td>${label}</td>
+                <td class="${pctClass(v)}">${v === null ? "—" : fmtPct(v)}</td>
+                <td class="${covCls}">${cov.toFixed(0)}%${cov < 100 ? "（其餘以 0 計入）" : ""}</td>
+              </tr>`;
+            }).join("")}
           </tbody>
         </table>
         <p class="position-foot">
-          「—」代表該標的無此期間績效資料。海外債資料源僅提供 1 週/1 月/3 月之短期報酬，沒有長期歷史價格序列，故 1 年/3 年/5 年欄位以「—」誠實標示。歷史表現非未來保證；組合假設權重維持不變、不含交易成本與匯率變動。
+          綜合績效採完整組合權重加權（分母 = 100%）。資料覆蓋率 = 該期間有真實績效資料的部位占比；其餘部位（如海外債長期、現金）以 0% 計入，故結果為<b>下界估算</b>，實際整體表現可能更高。海外債資料源僅提供 1 週/1 月/3 月之短期報酬，無長期歷史價格序列。歷史表現非未來保證；組合假設權重維持不變、不含交易成本與匯率變動。
         </p>
       </details>
 
