@@ -1214,9 +1214,6 @@ function renderPortfolioSheet() {
   const isCustom = subtab === "custom";
 
   return `
-    <div class="position-banner">
-      本分頁為<b>教育示範用途</b>，不構成個人化投資建議；分析結果僅以站上既有清單與歷史資料計算。
-    </div>
     <div class="tabs">
       <button class="tab ${isPreset ? "active" : ""}" data-prtab="preset">預設組合</button>
       <button class="tab ${isCustom ? "active" : ""}" data-prtab="custom">自訂組合</button>
