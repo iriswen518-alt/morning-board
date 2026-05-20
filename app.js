@@ -3271,20 +3271,21 @@ function renderFundCompare() {
     return "<p style='color:var(--text-mute); padding:20px 0'>尚未提供基金績效比較資料</p>";
   }
   const asOf = data.static_as_of || "";
+  const asOfNote = data.as_of_note || "";
   const chips = cats.map((c, i) =>
     `<button class="cmp-cat${i === 0 ? " active" : ""}" data-cmpcat="${escapeHtml(c.key)}">${escapeHtml(c.label)}</button>`
   ).join("");
   const panes = cats.map((c, i) => {
     const inCat = funds.filter(f => f.category === c.key);
     const cards = inCat.length
-      ? inCat.map(renderCompareCard).join("")
+      ? inCat.map(f => renderCompareCard(f, asOf)).join("")
       : "<p style='color:var(--text-mute); padding:16px 0'>本類別暫無基金</p>";
     return `<div class="cmp-pane" id="cmp-pane-${escapeHtml(c.key)}"${i === 0 ? "" : " hidden"}>${cards}</div>`;
   }).join("");
 
   return `
     <div class="cmp-intro">
-      本分頁為教育示範用途,將精選基金與晨星同類平均、代表性指數及同類競品並列比較,僅呈現公開數據,不構成投資建議。風險與同類資料截止日:${escapeHtml(asOf || "—")}。
+      本分頁為教育示範用途,將精選基金與晨星同類平均、同類競品並列比較,僅呈現公開數據,不構成投資建議。比較表之報酬率、波動度、Sharpe 皆為 SITCA 投信投顧公會同一基準日數據以利對比;${escapeHtml(asOfNote || ("資料截止 " + asOf))}。近1/3/5年報酬為滾動累積報酬率(含息),非曆年、非年化。
     </div>
     <div class="cmp-cats">${chips}</div>
     ${panes}
@@ -3306,7 +3307,7 @@ function wireFundCompare() {
   });
 }
 
-function renderCompareCard(f) {
+function renderCompareCard(f, asOf) {
   const s = f.self || {};
   const stars = f.morningstar_rating
     ? "★".repeat(f.morningstar_rating) + "☆".repeat(5 - f.morningstar_rating)
@@ -3323,14 +3324,14 @@ function renderCompareCard(f) {
         <h3>${escapeHtml(f.name_zh)}</h3>
         <div class="cmp-card-chips">${msCat}${rrChip}${starHtml}</div>
       </div>
-      ${renderCompareTable(f)}
+      ${renderCompareTable(f, asOf)}
       ${renderCompareRank(f)}
       ${renderRiskReturnScatter(f)}
       ${renderHoldingsBlock(s)}
     </div>`;
 }
 
-function renderCompareTable(f) {
+function renderCompareTable(f, asOf) {
   const fmtR = v => (v === null || v === undefined) ? "—" : `${Number(v).toFixed(1)}%`;
   const cls = v => (v === null || v === undefined) ? "" : (v > 0 ? "up" : (v < 0 ? "down" : ""));
   const fmtV = (v, suffix) => (v === null || v === undefined) ? "—" : `${Number(v).toFixed(2)}${suffix || ""}`;
@@ -3339,7 +3340,7 @@ function renderCompareTable(f) {
   const s = f.self || {};
   rows.push({ label: f.name_zh, hi: true, ret: s.return || {}, std: s.std_3y, sharpe: s.sharpe_3y });
   const ca = f.category_avg || {};
-  rows.push({ label: "晨星同類平均", ret: ca.return || {}, std: ca.std_3y, sharpe: ca.sharpe_3y });
+  rows.push({ label: "晨星同類平均", ret: ca.return || {}, std: ca.std_3y, sharpe: ca.sharpe_3y, always: true });
   if (f.benchmark) {
     rows.push({ label: f.benchmark.name, ret: f.benchmark.return || {}, std: f.benchmark.std_3y, sharpe: f.benchmark.sharpe_3y });
   }
@@ -3347,13 +3348,17 @@ function renderCompareTable(f) {
     rows.push({ label: p.name, ret: p.return || {}, std: p.std_3y, sharpe: p.sharpe_3y });
   }
 
+  const rowHasData = r => r.hi || r.always ||
+    [r.ret["1y"], r.ret["3y"], r.ret["5y"], r.std, r.sharpe].some(v => v !== null && v !== undefined);
+  const shownRows = rows.filter(rowHasData);
+
   const periods = [["1y", "近1年"], ["3y", "近3年"], ["5y", "近5年"]];
   const head = `<tr>
     <th class="cmp-th-l">比較對象</th>
     ${periods.map(p => `<th>${p[1]}報酬</th>`).join("")}
     <th>年化波動度</th><th>Sharpe</th>
   </tr>`;
-  const body = rows.map(r => `
+  const body = shownRows.map(r => `
     <tr class="${r.hi ? "cmp-row-self" : ""}">
       <td class="cmp-td-l">${escapeHtml(r.label || "—")}</td>
       ${periods.map(p => `<td class="${cls(r.ret[p[0]])}">${fmtR(r.ret[p[0]])}</td>`).join("")}
@@ -3362,7 +3367,8 @@ function renderCompareTable(f) {
     </tr>`).join("");
 
   return `<div class="cmp-table-wrap"><table class="cmp-table">
-    <thead>${head}</thead><tbody>${body}</tbody></table></div>`;
+    <thead>${head}</thead><tbody>${body}</tbody></table></div>
+    <div class="cmp-asof">報酬率／波動度／Sharpe 資料截止 ${escapeHtml(asOf || "—")}（SITCA 投信投顧公會）；無同基準日資料之指數/競品不列入。</div>`;
 }
 
 function renderCompareRank(f) {
@@ -3372,6 +3378,7 @@ function renderCompareRank(f) {
     ["波動度", r.std_3y_pct],
     ["Sharpe", r.sharpe_3y_pct],
   ];
+  if (items.every(it => it[1] === null || it[1] === undefined)) return "";
   const badges = items.map(it => {
     const v = it[1];
     const txt = (v === null || v === undefined) ? "—" : `同類前 ${v}%`;
@@ -3387,9 +3394,7 @@ function renderRiskReturnScatter(f) {
   const ca = f.category_avg || {};
   pts.push({ x: ca.std_3y, y: (ca.return || {})["3y"], label: "同類平均", cls: "avg" });
   if (f.benchmark) pts.push({ x: f.benchmark.std_3y, y: (f.benchmark.return || {})["3y"], label: "指數", cls: "bench" });
-  for (const p of (f.peers || [])) {
-    pts.push({ x: p.std_3y, y: (p.return || {})["3y"], label: p.name, cls: "peer" });
-  }
+  (f.peers || []).forEach((p, i) => pts.push({ x: p.std_3y, y: (p.return || {})["3y"], label: "競品" + (i + 1), cls: "peer" }));
   const valid = pts.filter(p => p.x !== null && p.x !== undefined && p.y !== null && p.y !== undefined);
   if (valid.length < 2) {
     return `<div class="cmp-scatter-empty">風險報酬定位圖:資料不足</div>`;
@@ -3404,9 +3409,13 @@ function renderRiskReturnScatter(f) {
   const dots = valid.map(p => `
     <circle cx="${sx(p.x).toFixed(1)}" cy="${sy(p.y).toFixed(1)}" r="${p.cls === "self" ? 6 : 4.5}"
       fill="${colors[p.cls]}" stroke="#fff" stroke-width="1.5"></circle>`).join("");
-  const labels = valid.map(p => `
-    <text x="${(sx(p.x) + 7).toFixed(1)}" y="${(sy(p.y) + 3).toFixed(1)}"
-      font-size="9" fill="#4b5563">${escapeHtml(p.label)}</text>`).join("");
+  const labels = valid.map(p => {
+    const px = sx(p.x), py = sy(p.y);
+    const rightSide = px > PAD + (W - PAD - 12) * 0.62;
+    const tx = rightSide ? px - 8 : px + 8;
+    const anchor = rightSide ? "end" : "start";
+    return `<text x="${tx.toFixed(1)}" y="${(py + 3).toFixed(1)}" text-anchor="${anchor}" font-size="9" fill="#4b5563">${escapeHtml(p.label)}</text>`;
+  }).join("");
   return `
     <div class="cmp-scatter">
       <div class="cmp-scatter-title">風險報酬定位(近3年)</div>
@@ -3450,8 +3459,8 @@ function renderCompareMethodology(asOf) {
     <div class="cmp-method">
       <div class="cmp-method-title">方法與資料來源</div>
       <ul>
-        <li>報酬率:單筆投資累積報酬率,來源板信基金平台,隨每日淨值更新。</li>
-        <li>年化波動度、Sharpe、Beta、晨星評等:採晨星台灣／投信投顧公會公開公布值,非自行計算;資料截止日 ${escapeHtml(asOf || "—")},每月更新。</li>
+        <li>報酬率:近1/3/5年滾動累積報酬率(含息),來源 SITCA 投信投顧公會,截至 2026-03-31,每月更新。</li>
+        <li>年化波動度、Sharpe、Beta、晨星評等:採 SITCA／晨星公開公布值,非自行計算;與報酬率同基準日,以確保同表可比。</li>
         <li>基金規模、總費用率(經理費+保管費)、前十大持股:來源板信基金平台。</li>
         <li>晨星同類平均:採該同類別之公開統計。同類排名、產業分布若來源未公開則顯示「—」。</li>
         <li>過去績效不代表未來表現;基金投資可能發生本金損失,請詳閱公開說明書與風險預告書。本分頁僅供參考,不構成投資建議。</li>
