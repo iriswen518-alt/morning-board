@@ -592,18 +592,12 @@ table.indices .date-col {
 }
 .fund-card h3::before { display: none; }
 
-/* 卡片標題若為外部連結，加 ↗ icon 與 hover 強化 */
+/* 卡片標題若為外部連結，hover 強化（不加 ↗ icon） */
 .fund-card h3 a[target="_blank"] {
   color: var(--brand-deep);
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: color 0.15s ease, border-color 0.15s ease;
-}
-.fund-card h3 a[target="_blank"]::after {
-  content: " ↗";
-  font-size: 0.85em;
-  color: var(--brand-primary);
-  margin-left: 2px;
 }
 .fund-card h3 a[target="_blank"]:hover {
   color: var(--brand-primary);

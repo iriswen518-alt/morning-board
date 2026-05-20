@@ -1908,7 +1908,7 @@ function renderNewsByCategory(cat) {
         <div class="news-item">
           <h3>${escapeHtml(it.title_zh)}</h3>
           <div class="summary">${escapeHtml(it.summary_zh || "")}</div>
-          ${it.source_url ? `<a class="source" href="${it.source_url}" target="_blank" rel="noopener">${escapeHtml(it.source_name || "來源")} ↗</a>` : ""}
+          ${it.source_url ? `<a class="source" href="${it.source_url}" target="_blank" rel="noopener">${escapeHtml(it.source_name || "來源")}</a>` : ""}
         </div>
       `).join("")}
     `;
@@ -1924,7 +1924,7 @@ function renderNewsByCategory(cat) {
           <div class="news-item">
             <h3>${escapeHtml(it.title)}</h3>
             <div class="summary">${escapeHtml(it.summary)}</div>
-            ${it.source_url ? `<a class="source" href="${it.source_url}" target="_blank" rel="noopener">${escapeHtml(it.source_name || "來源")} ↗</a>` : ""}
+            ${it.source_url ? `<a class="source" href="${it.source_url}" target="_blank" rel="noopener">${escapeHtml(it.source_name || "來源")}</a>` : ""}
           </div>
         `).join("")}
       `;
@@ -3315,13 +3315,14 @@ function renderBasicsBlock(f) {
     : `${Number(s.aum_twd_yi).toLocaleString("zh-TW", { maximumFractionDigits: 1 })} 億元`;
   const foreignNote = (s.aum_twd_yi != null && s.aum_ccy && s.aum_ccy !== "台幣" && s.aum_ccy !== "新台幣")
     ? `<span class="cmp-basics-note">（${escapeHtml(s.aum_ccy)}規模匯率換算）</span>` : "";
+  const aumDate = s.aum_date ? `<span class="cmp-basics-note">${escapeHtml(s.aum_date)}</span>` : "";
   const exp = (s.expense_ratio === null || s.expense_ratio === undefined)
     ? "—" : `${Number(s.expense_ratio).toFixed(2)}%`;
   const dy = (s.distribution_yield === null || s.distribution_yield === undefined)
     ? "—" : `${Number(s.distribution_yield).toFixed(2)}%`;
   return `<div class="cmp-basics">
     <span><b>成立日期</b> ${escapeHtml(inc)}</span>
-    <span><b>基金規模</b> ${aum}${foreignNote}</span>
+    <span><b>基金總規模</b> ${aum}${foreignNote} ${aumDate}</span>
     <span><b>總費用率</b> ${exp}</span>
     <span><b>年化配息率</b> ${dy}</span>
   </div>`;
@@ -3482,9 +3483,9 @@ function renderCompareMethodology(asOf) {
       <ul>
         <li>報酬率:近1/3/5年滾動累積報酬率(含息),來源 SITCA 投信投顧公會,截至 2026-03-31,每月更新。</li>
         <li>年化波動度、Sharpe、Beta、晨星評等:採 SITCA／晨星公開公布值,非自行計算;與報酬率同基準日,以確保同表可比。</li>
-        <li>基金規模、總費用率(經理費+保管費)、前十大持股:來源板信基金平台。</li>
+        <li>基金總規模、總費用率(經理費+保管費)、前十大持股:來源板信基金平台。</li>
         <li>晨星同類平均:採該同類別之公開統計。同類排名、產業分布若來源未公開則顯示「—」。</li>
-        <li>基金規模以新台幣億元表示;外幣計價基金以 USD/TWD 即期匯率換算,規模與成立日期來源板信基金平台。</li>
+        <li>基金規模採全級別合計之「基金總規模」,以新台幣億元表示(外幣計價基金以 USD/TWD 即期匯率換算);規模日期見各卡。來源板信基金平台。</li>
         <li>過去績效不代表未來表現;基金投資可能發生本金損失,請詳閱公開說明書與風險預告書。本分頁僅供參考,不構成投資建議。</li>
       </ul>
     </div>`;
