@@ -3339,10 +3339,13 @@ function renderCompareCard(f, asOf) {
     ? `<span class="cmp-chip cmp-chip-rr">${escapeHtml(f.rr)}</span>` : "";
   const starHtml = stars
     ? `<span class="cmp-stars" title="晨星評等">${stars}</span>` : "";
+  const nameHtml = f.source_url
+    ? `<a href="${f.source_url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${escapeHtml(f.name_zh)}</a>`
+    : escapeHtml(f.name_zh);
   return `
     <div class="cmp-card">
       <div class="cmp-card-head">
-        <h3>${escapeHtml(f.name_zh)}</h3>
+        <h3>${nameHtml}</h3>
         <div class="cmp-card-chips">${msCat}${rrChip}${starHtml}</div>
       </div>
       ${renderBasicsBlock(f)}
@@ -3360,7 +3363,7 @@ function renderCompareTable(f, asOf) {
 
   const rows = [];
   const s = f.self || {};
-  rows.push({ label: f.name_zh, hi: true, ret: s.return || {}, std: s.std_3y, sharpe: s.sharpe_3y });
+  rows.push({ label: f.name_zh, url: f.source_url, hi: true, ret: s.return || {}, std: s.std_3y, sharpe: s.sharpe_3y });
   const ca = f.category_avg || {};
   rows.push({ label: "晨星同類平均", ret: ca.return || {}, std: ca.std_3y, sharpe: ca.sharpe_3y, always: true });
   if (f.benchmark) {
@@ -3382,7 +3385,7 @@ function renderCompareTable(f, asOf) {
   </tr>`;
   const body = shownRows.map(r => `
     <tr class="${r.hi ? "cmp-row-self" : ""}">
-      <td class="cmp-td-l">${escapeHtml(r.label || "—")}</td>
+      <td class="cmp-td-l">${r.url ? `<a href="${r.url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${escapeHtml(r.label || "—")}</a>` : escapeHtml(r.label || "—")}</td>
       ${periods.map(p => `<td class="${cls(r.ret[p[0]])}">${fmtR(r.ret[p[0]])}</td>`).join("")}
       <td>${fmtV(r.std, "%")}</td>
       <td>${fmtV(r.sharpe)}</td>
