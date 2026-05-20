@@ -233,6 +233,11 @@ function buildSearchIndex() {
   for (const e of (DATA.beatetf?.etfs?.items || [])) {
     idx.push({ tab: "funds", subtab: "beatetf", tabLabel: "精選基金 · 超越ETF", title: `${e.symbol || ""} ${e.name_zh || ""}`.trim(), text: e.category || "" });
   }
+  // 精選基金 · 基金績效比較
+  for (const f of (DATA.fund_compare?.funds || [])) {
+    idx.push({ tab: "funds", subtab: "compare", tabLabel: "精選基金 · 基金績效比較",
+               title: f.name_zh || "", text: `${f.morningstar_category || ""} 同類比較 績效 風險 波動` });
+  }
   // 海外債
   for (const b of (DATA.obonds?.bonds || [])) {
     idx.push({ tab: "obonds", tabLabel: "精選海外債", title: b.name_zh || b.name || b.isin || "", text: [b.tagline, b.summary, b.issuer].filter(Boolean).join(" ") });
@@ -374,7 +379,7 @@ function wireSearch() {
 async function init() {
   // 每個來源各自有 fallback：一個壞不拖垮全頁
   const safe = (name, fallback) => load(name).catch(() => fallback);
-  const [meta, market, news, tax, funds, stocks, popular, insurance, obonds, targets, allocation, dca, wealth, beatetf, presets] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, popular, insurance, obonds, targets, allocation, dca, wealth, beatetf, presets, fund_compare] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
@@ -390,8 +395,9 @@ async function init() {
     safe("wealth_transfer", { topics: [] }),
     safe("beatetf", { funds: [], benchmark: null }),
     safe("presets", { presets: [] }),
+    safe("fund_compare", { funds: [], categories: [] }),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, popular, insurance, obonds, targets, allocation, dca, wealth, beatetf, presets };
+  DATA = { meta, market, news, tax, funds, stocks, popular, insurance, obonds, targets, allocation, dca, wealth, beatetf, presets, fund_compare };
   if (!meta.built_at) {
     $("updated").textContent = `載入部分失敗（顯示快取資料）`;
   } else {
@@ -464,7 +470,7 @@ function switchTab(name) {
   else if (name === "calc") body.innerHTML = renderCalcSheet();
   if (name === "news") wireNewsTabs();
   if (name === "market") wireMarketTabs();
-  if (name === "funds") wireFundsTabs();
+  if (name === "funds") { wireFundsTabs(); wireFundCompare(); }
   if (name === "targets") wireTargetsTabs();
   if (name === "portfolio") wirePortfolioTabs();
   if (name === "wealth") wireWealthTabs();
@@ -600,7 +606,7 @@ async function refreshData() {
 
   // 資料刷新：fetch 7 個 JSON，每個各自有 fallback
   const safe = (name, fallback) => load(name).catch(() => DATA[name === "insurances" ? "insurance" : name] || fallback);
-  const [meta, market, news, tax, funds, stocks, popular, insurance, obonds, targets, allocation, dca, wealth, beatetf, presets] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, popular, insurance, obonds, targets, allocation, dca, wealth, beatetf, presets, fund_compare] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
@@ -616,8 +622,9 @@ async function refreshData() {
     safe("wealth_transfer", { topics: [] }),
     safe("beatetf", { funds: [], benchmark: null }),
     safe("presets", { presets: [] }),
+    safe("fund_compare", { funds: [], categories: [] }),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, popular, insurance, obonds, targets, allocation, dca, wealth, beatetf, presets };
+  DATA = { meta, market, news, tax, funds, stocks, popular, insurance, obonds, targets, allocation, dca, wealth, beatetf, presets, fund_compare };
   SEARCH_INDEX = buildSearchIndex();
   if (DATA.meta && DATA.meta.built_at) {
     $("updated").textContent =
@@ -3255,17 +3262,216 @@ function renderBeatEtfCards() {
   `;
 }
 
-// 已合併：精選基金主分頁，內含「單筆投資」、「定期定額」、「超越ETF」三個次分頁
+// ===== 基金績效比較次分頁 =====
+function renderFundCompare() {
+  const data = DATA.fund_compare || {};
+  const cats = data.categories || [];
+  const funds = data.funds || [];
+  if (!funds.length) {
+    return "<p style='color:var(--text-mute); padding:20px 0'>尚未提供基金績效比較資料</p>";
+  }
+  const asOf = data.static_as_of || "";
+  const chips = cats.map((c, i) =>
+    `<button class="cmp-cat${i === 0 ? " active" : ""}" data-cmpcat="${escapeHtml(c.key)}">${escapeHtml(c.label)}</button>`
+  ).join("");
+  const panes = cats.map((c, i) => {
+    const inCat = funds.filter(f => f.category === c.key);
+    const cards = inCat.length
+      ? inCat.map(renderCompareCard).join("")
+      : "<p style='color:var(--text-mute); padding:16px 0'>本類別暫無基金</p>";
+    return `<div class="cmp-pane" id="cmp-pane-${escapeHtml(c.key)}"${i === 0 ? "" : " hidden"}>${cards}</div>`;
+  }).join("");
+
+  return `
+    <div class="cmp-intro">
+      本分頁為教育示範用途,將精選基金與晨星同類平均、代表性指數及同類競品並列比較,僅呈現公開數據,不構成投資建議。風險與同類資料截止日:${escapeHtml(asOf || "—")}。
+    </div>
+    <div class="cmp-cats">${chips}</div>
+    ${panes}
+    ${renderCompareMethodology(asOf)}
+  `;
+}
+
+function wireFundCompare() {
+  const btns = document.querySelectorAll(".cmp-cat[data-cmpcat]");
+  btns.forEach(b => {
+    b.addEventListener("click", () => {
+      btns.forEach(x => x.classList.remove("active"));
+      b.classList.add("active");
+      const key = b.dataset.cmpcat;
+      document.querySelectorAll(".cmp-pane").forEach(p => {
+        p.hidden = p.id !== `cmp-pane-${key}`;
+      });
+    });
+  });
+}
+
+function renderCompareCard(f) {
+  const s = f.self || {};
+  const stars = f.morningstar_rating
+    ? "★".repeat(f.morningstar_rating) + "☆".repeat(5 - f.morningstar_rating)
+    : "";
+  const msCat = f.morningstar_category
+    ? `<span class="cmp-chip">${escapeHtml(f.morningstar_category)}</span>` : "";
+  const rrChip = f.rr
+    ? `<span class="cmp-chip cmp-chip-rr">${escapeHtml(f.rr)}</span>` : "";
+  const starHtml = stars
+    ? `<span class="cmp-stars" title="晨星評等">${stars}</span>` : "";
+  return `
+    <div class="cmp-card">
+      <div class="cmp-card-head">
+        <h3>${escapeHtml(f.name_zh)}</h3>
+        <div class="cmp-card-chips">${msCat}${rrChip}${starHtml}</div>
+      </div>
+      ${renderCompareTable(f)}
+      ${renderCompareRank(f)}
+      ${renderRiskReturnScatter(f)}
+      ${renderHoldingsBlock(s)}
+    </div>`;
+}
+
+function renderCompareTable(f) {
+  const fmtR = v => (v === null || v === undefined) ? "—" : `${Number(v).toFixed(1)}%`;
+  const cls = v => (v === null || v === undefined) ? "" : (v > 0 ? "up" : (v < 0 ? "down" : ""));
+  const fmtV = (v, suffix) => (v === null || v === undefined) ? "—" : `${Number(v).toFixed(2)}${suffix || ""}`;
+
+  const rows = [];
+  const s = f.self || {};
+  rows.push({ label: f.name_zh, hi: true, ret: s.return || {}, std: s.std_3y, sharpe: s.sharpe_3y });
+  const ca = f.category_avg || {};
+  rows.push({ label: "晨星同類平均", ret: ca.return || {}, std: ca.std_3y, sharpe: ca.sharpe_3y });
+  if (f.benchmark) {
+    rows.push({ label: f.benchmark.name, ret: f.benchmark.return || {}, std: f.benchmark.std_3y, sharpe: f.benchmark.sharpe_3y });
+  }
+  for (const p of (f.peers || [])) {
+    rows.push({ label: p.name, ret: p.return || {}, std: p.std_3y, sharpe: p.sharpe_3y });
+  }
+
+  const periods = [["1y", "近1年"], ["3y", "近3年"], ["5y", "近5年"]];
+  const head = `<tr>
+    <th class="cmp-th-l">比較對象</th>
+    ${periods.map(p => `<th>${p[1]}報酬</th>`).join("")}
+    <th>年化波動度</th><th>Sharpe</th>
+  </tr>`;
+  const body = rows.map(r => `
+    <tr class="${r.hi ? "cmp-row-self" : ""}">
+      <td class="cmp-td-l">${escapeHtml(r.label || "—")}</td>
+      ${periods.map(p => `<td class="${cls(r.ret[p[0]])}">${fmtR(r.ret[p[0]])}</td>`).join("")}
+      <td>${fmtV(r.std, "%")}</td>
+      <td>${fmtV(r.sharpe)}</td>
+    </tr>`).join("");
+
+  return `<div class="cmp-table-wrap"><table class="cmp-table">
+    <thead>${head}</thead><tbody>${body}</tbody></table></div>`;
+}
+
+function renderCompareRank(f) {
+  const r = f.category_rank || {};
+  const items = [
+    ["近1年報酬", r.return_1y_pct],
+    ["波動度", r.std_3y_pct],
+    ["Sharpe", r.sharpe_3y_pct],
+  ];
+  const badges = items.map(it => {
+    const v = it[1];
+    const txt = (v === null || v === undefined) ? "—" : `同類前 ${v}%`;
+    return `<span class="cmp-badge"><b>${escapeHtml(it[0])}</b> ${txt}</span>`;
+  }).join("");
+  return `<div class="cmp-rank">${badges}</div>`;
+}
+
+function renderRiskReturnScatter(f) {
+  const pts = [];
+  const s = f.self || {};
+  pts.push({ x: s.std_3y, y: (s.return || {})["3y"], label: "本檔", cls: "self" });
+  const ca = f.category_avg || {};
+  pts.push({ x: ca.std_3y, y: (ca.return || {})["3y"], label: "同類平均", cls: "avg" });
+  if (f.benchmark) pts.push({ x: f.benchmark.std_3y, y: (f.benchmark.return || {})["3y"], label: "指數", cls: "bench" });
+  for (const p of (f.peers || [])) {
+    pts.push({ x: p.std_3y, y: (p.return || {})["3y"], label: p.name, cls: "peer" });
+  }
+  const valid = pts.filter(p => p.x !== null && p.x !== undefined && p.y !== null && p.y !== undefined);
+  if (valid.length < 2) {
+    return `<div class="cmp-scatter-empty">風險報酬定位圖:資料不足</div>`;
+  }
+  const W = 280, H = 160, PAD = 34;
+  const xs = valid.map(p => p.x), ys = valid.map(p => p.y);
+  const xMin = Math.min(...xs), xMax = Math.max(...xs);
+  const yMin = Math.min(...ys), yMax = Math.max(...ys);
+  const sx = v => PAD + (xMax === xMin ? 0.5 : (v - xMin) / (xMax - xMin)) * (W - PAD - 12);
+  const sy = v => (H - PAD) - (yMax === yMin ? 0.5 : (v - yMin) / (yMax - yMin)) * (H - PAD - 12);
+  const colors = { self: "#019AB3", avg: "#9aa5ad", bench: "#003D91", peer: "#17B5AD" };
+  const dots = valid.map(p => `
+    <circle cx="${sx(p.x).toFixed(1)}" cy="${sy(p.y).toFixed(1)}" r="${p.cls === "self" ? 6 : 4.5}"
+      fill="${colors[p.cls]}" stroke="#fff" stroke-width="1.5"></circle>`).join("");
+  const labels = valid.map(p => `
+    <text x="${(sx(p.x) + 7).toFixed(1)}" y="${(sy(p.y) + 3).toFixed(1)}"
+      font-size="9" fill="#4b5563">${escapeHtml(p.label)}</text>`).join("");
+  return `
+    <div class="cmp-scatter">
+      <div class="cmp-scatter-title">風險報酬定位(近3年)</div>
+      <svg viewBox="0 0 ${W} ${H}" class="cmp-scatter-svg" role="img" aria-label="風險報酬散點圖">
+        <line x1="${PAD}" y1="${H - PAD}" x2="${W - 6}" y2="${H - PAD}" stroke="#d8dee3"></line>
+        <line x1="${PAD}" y1="6" x2="${PAD}" y2="${H - PAD}" stroke="#d8dee3"></line>
+        <text x="${W - 6}" y="${H - PAD + 14}" font-size="9" fill="#9aa5ad" text-anchor="end">波動度 →</text>
+        <text x="${PAD - 6}" y="12" font-size="9" fill="#9aa5ad">報酬 ↑</text>
+        ${dots}${labels}
+      </svg>
+    </div>`;
+}
+
+function renderHoldingsBlock(s) {
+  const conc = s.top10_concentration;
+  const concTxt = (conc === null || conc === undefined) ? "—" : `${Number(conc).toFixed(1)}%`;
+  const holds = (s.top_holdings || []).slice(0, 10);
+  const holdTxt = holds.length
+    ? holds.map(h => `${escapeHtml(h.name)} ${Number(h.pct).toFixed(1)}%`).join("、")
+    : "—";
+  const secs = (s.sector_top3 || []);
+  const maxPct = secs.length ? Math.max(...secs.map(x => x.pct || 0)) : 1;
+  const bars = secs.length
+    ? secs.map(x => `
+        <div class="cmp-bar-row">
+          <span class="cmp-bar-label">${escapeHtml(x.name)}</span>
+          <span class="cmp-bar-track"><span class="cmp-bar-fill" style="width:${Math.round((x.pct || 0) / maxPct * 100)}%"></span></span>
+          <span class="cmp-bar-val">${Number(x.pct || 0).toFixed(1)}%</span>
+        </div>`).join("")
+    : "<div class='cmp-bar-row' style='color:var(--text-mute)'>產業分布:—</div>";
+  return `
+    <div class="cmp-holdings">
+      <div class="cmp-holdings-line"><b>前十大持股集中度</b> ${concTxt}</div>
+      <div class="cmp-holdings-line cmp-holdings-list"><b>前十大持股</b> ${holdTxt}</div>
+      <div class="cmp-holdings-bars"><div class="cmp-holdings-line"><b>產業／類股分布</b></div>${bars}</div>
+    </div>`;
+}
+
+function renderCompareMethodology(asOf) {
+  return `
+    <div class="cmp-method">
+      <div class="cmp-method-title">方法與資料來源</div>
+      <ul>
+        <li>報酬率:單筆投資累積報酬率,來源板信基金平台,隨每日淨值更新。</li>
+        <li>年化波動度、Sharpe、Beta、晨星評等:採晨星台灣／投信投顧公會公開公布值,非自行計算;資料截止日 ${escapeHtml(asOf || "—")},每月更新。</li>
+        <li>基金規模、總費用率(經理費+保管費)、前十大持股:來源板信基金平台。</li>
+        <li>晨星同類平均:採該同類別之公開統計。同類排名、產業分布若來源未公開則顯示「—」。</li>
+        <li>過去績效不代表未來表現;基金投資可能發生本金損失,請詳閱公開說明書與風險預告書。本分頁僅供參考,不構成投資建議。</li>
+      </ul>
+    </div>`;
+}
+
+// 已合併：精選基金主分頁，內含「單筆投資」、「定期定額」、「超越ETF」、「基金績效比較」四個次分頁
 function renderFundsSheet() {
   return `
     <div class="tabs">
       <button class="tab active" data-ftab="lump">單筆投資</button>
       <button class="tab" data-ftab="dca">定期定額</button>
       <button class="tab" data-ftab="beatetf">超越ETF</button>
+      <button class="tab" data-ftab="compare">基金績效比較</button>
     </div>
     <div id="ftab-lump">${renderLumpFundCards()}</div>
     <div id="ftab-dca" hidden>${renderDcaFundCards()}</div>
     <div id="ftab-beatetf" hidden>${renderBeatEtfCards()}</div>
+    <div id="ftab-compare" hidden>${renderFundCompare()}</div>
   `;
 }
 

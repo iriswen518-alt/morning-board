@@ -1477,3 +1477,60 @@ table.indices .date-col {
 #content[data-section="calc"] .a-note {
   max-width: 1200px;
 }
+
+/* ===== 基金績效比較次分頁 ===== */
+.cmp-intro {
+  background: #E5F2F5; border-left: 4px solid var(--brand-primary, #019AB3);
+  padding: 10px 14px; border-radius: 6px; font-size: 13px;
+  line-height: 1.6; color: #334; margin: 10px 0 14px;
+}
+.cmp-cats { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.cmp-cat {
+  border: 1px solid #cdd6db; background: #fff; color: #44525a;
+  padding: 6px 14px; border-radius: 999px; font-size: 13px; cursor: pointer;
+}
+.cmp-cat.active { background: var(--brand-primary, #019AB3); color: #fff; border-color: var(--brand-primary, #019AB3); }
+.cmp-card {
+  border: 1px solid #e3e8eb; border-radius: 10px; padding: 14px 16px;
+  margin-bottom: 16px; background: #fff;
+}
+.cmp-card-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; }
+.cmp-card-head h3 { margin: 0; font-size: 16px; color: var(--brand-deep, #003D91); }
+.cmp-card-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.cmp-chip {
+  background: #E5F2F5; color: var(--brand-deep, #003D91);
+  font-size: 11px; padding: 2px 8px; border-radius: 4px;
+}
+.cmp-chip-rr { background: #fdeede; color: #9a5b00; }
+.cmp-stars { color: #e3a008; font-size: 13px; letter-spacing: 1px; }
+.cmp-table-wrap { overflow-x: auto; margin: 10px 0; }
+.cmp-table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+.cmp-table th, .cmp-table td {
+  padding: 6px 8px; border-bottom: 1px solid var(--border, #e5e7eb); text-align: right;
+}
+.cmp-table th { background: #CCE8ED; color: var(--brand-deep, #003D91); }
+.cmp-th-l, .cmp-td-l { text-align: left !important; white-space: nowrap; }
+.cmp-row-self td { background: #f1f9fb; font-weight: 600; }
+.cmp-rank { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0; }
+.cmp-badge {
+  background: #f3f5f6; border-radius: 4px; padding: 3px 9px; font-size: 11.5px; color: #44525a;
+}
+.cmp-scatter { margin: 10px 0; }
+.cmp-scatter-title, .cmp-scatter-empty {
+  font-size: 12px; color: var(--text-mute, #6b7280); margin-bottom: 4px;
+}
+.cmp-scatter-svg { width: 100%; max-width: 320px; height: auto; }
+.cmp-holdings { margin-top: 8px; font-size: 12.5px; line-height: 1.7; }
+.cmp-holdings-line b { color: var(--brand-deep, #003D91); }
+.cmp-holdings-list { color: #44525a; }
+.cmp-bar-row { display: flex; align-items: center; gap: 8px; margin: 3px 0; }
+.cmp-bar-label { width: 84px; flex-shrink: 0; }
+.cmp-bar-track { flex: 1; background: #eef1f2; border-radius: 3px; height: 10px; }
+.cmp-bar-fill { display: block; height: 10px; border-radius: 3px; background: var(--brand-primary, #019AB3); }
+.cmp-bar-val { width: 48px; text-align: right; flex-shrink: 0; }
+.cmp-method {
+  background: #f6f7f9; border: 1px solid #e5e7eb; border-radius: 6px;
+  padding: 12px 14px; font-size: 12px; line-height: 1.65; color: #4b5563; margin-top: 8px;
+}
+.cmp-method-title { font-weight: 600; color: var(--brand-deep, #003D91); margin-bottom: 4px; }
+.cmp-method ul { margin: 0; padding-left: 18px; }
