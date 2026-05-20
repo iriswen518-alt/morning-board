@@ -3312,7 +3312,7 @@ function renderBasicsBlock(f) {
   const inc = s.inception_date || "—";
   const aum = (s.aum_twd_yi === null || s.aum_twd_yi === undefined)
     ? "—"
-    : `${Number(s.aum_twd_yi).toLocaleString("zh-TW", { maximumFractionDigits: 1 })} 億元`;
+    : `${Number(s.aum_twd_yi).toLocaleString("zh-TW", { maximumFractionDigits: 0 })} 億元`;
   const foreignNote = (s.aum_twd_yi != null && s.aum_ccy && s.aum_ccy !== "台幣" && s.aum_ccy !== "新台幣")
     ? `<span class="cmp-basics-note">（${escapeHtml(s.aum_ccy)}規模匯率換算）</span>` : "";
   const aumDate = s.aum_date ? `<span class="cmp-basics-note">${escapeHtml(s.aum_date)}</span>` : "";
