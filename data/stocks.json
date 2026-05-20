@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-20T12:00:18+08:00",
+  "generated_at": "2026-05-20T13:00:53+08:00",
   "source": "finnhub (US price+daily) + Yahoo (US MTD/YTD) + TWSE (TW)",
   "us_stocks": [
     {
@@ -15,7 +15,7 @@
       "perf_5y": 1409.73,
       "market_date": "2026-05-19",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NVDA.US",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "AAPL",
@@ -30,7 +30,7 @@
       "perf_5y": 134.84,
       "market_date": "2026-05-19",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AAPL.US",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "MSFT",
@@ -45,7 +45,7 @@
       "perf_5y": 69.35,
       "market_date": "2026-05-19",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MSFT.US",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "GOOGL",
@@ -60,7 +60,7 @@
       "perf_5y": 236.08,
       "market_date": "2026-05-19",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GOOGL.US",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "AMZN",
@@ -75,7 +75,7 @@
       "perf_5y": 59.71,
       "market_date": "2026-05-19",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AMZN.US",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "META",
@@ -90,7 +90,7 @@
       "perf_5y": 89.14,
       "market_date": "2026-05-19",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=META.US",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "TSLA",
@@ -105,7 +105,7 @@
       "perf_5y": 106.61,
       "market_date": "2026-05-19",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TSLA.US",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "AVGO",
@@ -120,7 +120,7 @@
       "perf_5y": 803.45,
       "market_date": "2026-05-19",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AVGO.US",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "TSM",
@@ -135,7 +135,7 @@
       "perf_5y": 246.58,
       "market_date": "2026-05-19",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TSM.US",
-      "error": "stale"
+      "error": null
     }
   ],
   "tw_stocks": [
@@ -147,72 +147,72 @@
       "change_pct": null,
       "mtd_pct": 3.28,
       "ytd_pct": 42.26,
-      "perf_1y": 125.46,
-      "perf_3y": 314.47,
-      "perf_5y": 284.82,
+      "perf_1y": 124.44,
+      "perf_3y": 312.59,
+      "perf_5y": 283.07,
       "market_date": "2026-05-19",
       "source_url": "https://tw.stock.yahoo.com/quote/2330.TW",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "2317",
       "name_zh": "鴻海",
       "kind": "TW",
-      "price": 245.0,
-      "change_pct": null,
-      "mtd_pct": 11.62,
-      "ytd_pct": 6.29,
-      "perf_1y": 57.79,
-      "perf_3y": 135.92,
-      "perf_5y": 121.92,
-      "market_date": "2026-05-19",
+      "price": 239.5,
+      "change_pct": -2.24,
+      "mtd_pct": 9.11,
+      "ytd_pct": 3.9,
+      "perf_1y": 55.84,
+      "perf_3y": 133.01,
+      "perf_5y": 119.18,
+      "market_date": "2026-05-20",
       "source_url": "https://tw.stock.yahoo.com/quote/2317.TW",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "2454",
       "name_zh": "聯發科",
       "kind": "TW",
-      "price": 3310.0,
-      "change_pct": 4.91,
-      "mtd_pct": 26.82,
-      "ytd_pct": 131.47,
-      "perf_1y": 150.95,
-      "perf_3y": 372.78,
-      "perf_5y": 245.55,
+      "price": 3165.0,
+      "change_pct": 0.32,
+      "mtd_pct": 21.26,
+      "ytd_pct": 121.33,
+      "perf_1y": 147.91,
+      "perf_3y": 367.05,
+      "perf_5y": 241.36,
       "market_date": "2026-05-20",
       "source_url": "https://tw.stock.yahoo.com/quote/2454.TW",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "2308",
       "name_zh": "台達電",
       "kind": "TW",
-      "price": 1930.0,
-      "change_pct": 0.78,
-      "mtd_pct": -10.85,
-      "ytd_pct": 100.42,
-      "perf_1y": 426.68,
-      "perf_3y": 528.06,
-      "perf_5y": 566.09,
-      "market_date": "2026-05-20",
+      "price": 1915.0,
+      "change_pct": null,
+      "mtd_pct": -11.55,
+      "ytd_pct": 98.86,
+      "perf_1y": 421.2,
+      "perf_3y": 521.53,
+      "perf_5y": 559.17,
+      "market_date": "2026-05-19",
       "source_url": "https://tw.stock.yahoo.com/quote/2308.TW",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "2382",
       "name_zh": "廣達",
       "kind": "TW",
       "price": 290.0,
-      "change_pct": null,
+      "change_pct": 0.0,
       "mtd_pct": -7.2,
       "ytd_pct": 6.62,
-      "perf_1y": 9.76,
-      "perf_3y": 168.35,
-      "perf_5y": 229.39,
-      "market_date": "2026-05-19",
+      "perf_1y": 9.01,
+      "perf_3y": 166.51,
+      "perf_5y": 227.14,
+      "market_date": "2026-05-20",
       "source_url": "https://tw.stock.yahoo.com/quote/2382.TW",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "2891",
@@ -222,12 +222,12 @@
       "change_pct": null,
       "mtd_pct": 5.93,
       "ytd_pct": 10.36,
-      "perf_1y": 37.49,
-      "perf_3y": 135.25,
-      "perf_5y": 153.98,
+      "perf_1y": 38.44,
+      "perf_3y": 136.89,
+      "perf_5y": 155.75,
       "market_date": "2026-05-19",
       "source_url": "https://tw.stock.yahoo.com/quote/2891.TW",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "1301",
@@ -237,12 +237,12 @@
       "change_pct": null,
       "mtd_pct": -10.78,
       "ytd_pct": 17.82,
-      "perf_1y": 22.63,
-      "perf_3y": -51.86,
-      "perf_5y": -53.87,
+      "perf_1y": 23.04,
+      "perf_3y": -51.7,
+      "perf_5y": -53.72,
       "market_date": "2026-05-19",
       "source_url": "https://tw.stock.yahoo.com/quote/1301.TW",
-      "error": "stale"
+      "error": null
     }
   ]
 }

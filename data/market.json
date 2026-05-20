@@ -4,7 +4,7 @@
     {
       "name": "S&P 500",
       "name_zh": null,
-      "close": 7353.61,
+      "close": 7353.60986328125,
       "daily_pct": -0.67,
       "mtd_pct": 1.71,
       "ytd_pct": 7.42,
@@ -13,7 +13,7 @@
     {
       "name": "Nasdaq Composite",
       "name_zh": null,
-      "close": 25870.71,
+      "close": 25870.7109375,
       "daily_pct": -0.84,
       "mtd_pct": 3.01,
       "ytd_pct": 11.31,
@@ -22,7 +22,7 @@
     {
       "name": "Dow Jones",
       "name_zh": null,
-      "close": 49363.88,
+      "close": 49363.87890625,
       "daily_pct": -0.65,
       "mtd_pct": -0.27,
       "ytd_pct": 2.7,
@@ -31,7 +31,7 @@
     {
       "name": "Euro Stoxx 50",
       "name_zh": null,
-      "close": 5851.16,
+      "close": 5851.16015625,
       "daily_pct": 0.04,
       "mtd_pct": -1.94,
       "ytd_pct": 1.04,
@@ -40,7 +40,7 @@
     {
       "name": "DAX",
       "name_zh": null,
-      "close": 24400.65,
+      "close": 24400.650390625,
       "daily_pct": 0.38,
       "mtd_pct": 1.86,
       "ytd_pct": -0.37,
@@ -49,7 +49,7 @@
     {
       "name": "FTSE 100",
       "name_zh": null,
-      "close": 10330.55,
+      "close": 10330.599609375,
       "daily_pct": 0.07,
       "mtd_pct": -2.12,
       "ytd_pct": 4.02,
@@ -58,7 +58,7 @@
     {
       "name": "CAC 40",
       "name_zh": null,
-      "close": 7981.76,
+      "close": 7981.759765625,
       "daily_pct": -0.07,
       "mtd_pct": null,
       "ytd_pct": -1.7,
@@ -67,7 +67,7 @@
     {
       "name": "Nikkei 225",
       "name_zh": null,
-      "close": 60550.59,
+      "close": 60550.58984375,
       "daily_pct": -0.44,
       "mtd_pct": 2.14,
       "ytd_pct": 20.28,
@@ -76,7 +76,7 @@
     {
       "name": "TAIEX 加權指數",
       "name_zh": null,
-      "close": 40175.56,
+      "close": 40175.55859375,
       "daily_pct": -1.75,
       "mtd_pct": 1.66,
       "ytd_pct": 38.71,
@@ -85,7 +85,7 @@
     {
       "name": "KOSPI",
       "name_zh": null,
-      "close": 7271.66,
+      "close": 7271.66015625,
       "daily_pct": -3.25,
       "mtd_pct": 10.2,
       "ytd_pct": 72.56,
@@ -94,7 +94,7 @@
     {
       "name": "Hang Seng 恆生",
       "name_zh": null,
-      "close": 25797.85,
+      "close": 25797.849609375,
       "daily_pct": 0.48,
       "mtd_pct": -0.64,
       "ytd_pct": 0.65,
@@ -103,7 +103,7 @@
     {
       "name": "Shanghai 上證",
       "name_zh": null,
-      "close": 4169.54,
+      "close": 4169.5380859375,
       "daily_pct": 0.92,
       "mtd_pct": 1.4,
       "ytd_pct": 5.16,
@@ -112,8 +112,8 @@
     {
       "name": "CSI 300 滬深300",
       "name_zh": null,
-      "close": 4848.38,
-      "daily_pct": -0.09,
+      "close": 4852.8798828125,
+      "daily_pct": 0.4,
       "mtd_pct": 0.85,
       "ytd_pct": 4.24,
       "closing_date": "2026-05-19"
@@ -130,57 +130,57 @@
     {
       "name": "S&P/ASX 200",
       "name_zh": null,
-      "close": 8630.8,
-      "daily_pct": -0.11,
+      "close": 8604.7001953125,
+      "daily_pct": 1.17,
       "mtd_pct": -0.4,
       "ytd_pct": -0.96,
-      "closing_date": "2026-05-15"
+      "closing_date": "2026-05-19"
     }
   ],
   "bonds": [
     {
       "name": "US 10-Year",
-      "yield_pct": 4.687,
-      "daily_bps": 8.0,
-      "mtd_bps": 30.0,
+      "yield_pct": 4.67,
+      "daily_bps": 4.4,
+      "mtd_bps": 27.7,
       "closing_date": "2026-05-19"
     },
     {
       "name": "US 2-Year",
-      "yield_pct": 4.122,
-      "daily_bps": 3.0,
+      "yield_pct": 4.11,
+      "daily_bps": -1.2,
       "mtd_bps": 16.0,
-      "closing_date": "2026-05-19"
+      "closing_date": "2026-05-20"
     },
     {
       "name": "Germany 10-Year",
-      "yield_pct": 3.16,
-      "daily_bps": 3.0,
+      "yield_pct": 3.19,
+      "daily_bps": 2.7,
       "mtd_bps": 13.0,
-      "closing_date": "2026-05-19"
+      "closing_date": "2026-05-20"
     },
     {
       "name": "Japan 10-Year",
-      "yield_pct": 2.794,
-      "daily_bps": 6.0,
+      "yield_pct": 2.79,
+      "daily_bps": -0.8,
       "mtd_bps": 27.0,
-      "closing_date": "2026-05-19"
+      "closing_date": "2026-05-20"
     },
     {
       "name": "UK 10-Year",
-      "yield_pct": 5.07,
-      "daily_bps": 1.0,
+      "yield_pct": 5.13,
+      "daily_bps": 2.3,
       "mtd_bps": 24.0,
-      "closing_date": "2026-05-19"
+      "closing_date": "2026-05-20"
     }
   ],
   "fx": [
     {
       "name": "DXY 美元指數",
-      "close": 99.33,
-      "daily_pct": 0.36,
-      "mtd_pct": null,
-      "ytd_pct": 1.4,
+      "close": 99.30000305175781,
+      "daily_pct": 0.33,
+      "mtd_pct": 1.31,
+      "ytd_pct": 1.1,
       "closing_date": "2026-05-19"
     },
     {
