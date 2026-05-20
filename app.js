@@ -2296,7 +2296,7 @@ function doCalcCaseHouse() {
 
   $("cx-result").innerHTML = `
     <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:12px;margin-bottom:10px">
-      <div style="padding:10px;background:#fff;border-radius:6px;border-left:4px solid var(--brand-deep)">
+      <div style="padding:10px;background:#fff;border-radius:6px">
         <div style="font-size:13px;color:var(--brand-deep);font-weight:700;margin-bottom:6px">繼承路徑</div>
         <div class="kv"><span>遺產稅（房產佔比）</span><b>${fmtMoney(inheritEstateTax)}</b></div>
         <div class="kv"><span>土地增值稅</span><b style="color:var(--down)">免徵</b></div>
@@ -2304,7 +2304,7 @@ function doCalcCaseHouse() {
         <div class="kv"><span>未來出售房地合一（${inheritHL.rate}）</span><b>${fmtMoney(inheritHL.tax)}</b></div>
         <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:16px">${fmtMoney(inheritTotal)}</b></div>
       </div>
-      <div style="padding:10px;background:#fff;border-radius:6px;border-left:4px solid #e08a3c">
+      <div style="padding:10px;background:#fff;border-radius:6px">
         <div style="font-size:13px;color:#e08a3c;font-weight:700;margin-bottom:6px">贈與路徑</div>
         <div class="kv"><span>贈與稅（房產佔比）</span><b>${fmtMoney(giftTaxOnHouse)}</b></div>
         <div class="kv"><span>土地增值稅${giftSpouse?'（配偶不課徵）':''}</span><b>${fmtMoney(giftLVT)}</b></div>
@@ -2312,7 +2312,7 @@ function doCalcCaseHouse() {
         <div class="kv"><span>未來出售房地合一（${giftHL.rate}）</span><b>${fmtMoney(giftHL.tax)}</b></div>
         <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:16px">${fmtMoney(giftTotal)}</b></div>
       </div>
-      <div style="padding:10px;background:#fff;border-radius:6px;border-left:4px solid #6a5acd">
+      <div style="padding:10px;background:#fff;border-radius:6px">
         <div style="font-size:13px;color:#6a5acd;font-weight:700;margin-bottom:6px">買賣路徑</div>
         <div class="kv"><span>父母房地合一（${saleParentHL.rate}）</span><b>${fmtMoney(saleParentHL.tax)}</b></div>
         <div class="kv"><span>父母土地增值稅</span><b>${fmtMoney(saleLVT)}</b></div>
@@ -2322,7 +2322,7 @@ function doCalcCaseHouse() {
         <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:16px">${fmtMoney(saleTotal)}</b></div>
       </div>
     </div>
-    <div style="padding:12px 14px;background:linear-gradient(135deg,#E5F2F5,#fff);border-radius:8px;border-left:5px solid var(--brand-primary)">
+    <div style="padding:12px 14px;background:linear-gradient(135deg,#E5F2F5,#fff);border-radius:8px">
       <div style="font-size:15px;font-weight:700;color:var(--brand-deep);margin-bottom:4px">建議：${winner}路徑較划算</div>
       <div style="font-size:13px;color:var(--text-sub)">較次低差額約 <b>${fmtMoney(diff)}</b>${winnerNote[winner] || ""}</div>
     </div>`;
@@ -2434,14 +2434,14 @@ function doCalcCaseStock() {
 
   $("cs-result").innerHTML = `
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:10px">
-      <div style="padding:10px;background:#fff;border-radius:6px;border-left:4px solid var(--brand-deep)">
+      <div style="padding:10px;background:#fff;border-radius:6px">
         <div style="font-size:13px;color:var(--brand-deep);font-weight:700;margin-bottom:6px">個人持有</div>
         <div class="kv"><span>股利稅（${divMethod}）</span><b>${fmtMoney(personalDivTax)}</b></div>
         <div class="kv"><span>二代健保 2.11%</span><b>${fmtMoney(personalNHI)}</b></div>
         <div class="kv"><span>資本利得稅</span><b style="color:var(--down)">停徵</b></div>
         <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:16px">${fmtMoney(personalTotal)}</b></div>
       </div>
-      <div style="padding:10px;background:#fff;border-radius:6px;border-left:4px solid #6a5acd">
+      <div style="padding:10px;background:#fff;border-radius:6px">
         <div style="font-size:13px;color:#6a5acd;font-weight:700;margin-bottom:6px">投資公司持有</div>
         <div class="kv"><span>股利稅（§42 免稅）</span><b style="color:var(--down)">免徵</b></div>
         ${distrib
@@ -2451,7 +2451,7 @@ function doCalcCaseStock() {
         <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:16px">${fmtMoney(companyTotal)}</b></div>
       </div>
     </div>
-    <div style="padding:12px 14px;background:linear-gradient(135deg,#E5F2F5,#fff);border-radius:8px;border-left:5px solid var(--brand-primary)">
+    <div style="padding:12px 14px;background:linear-gradient(135deg,#E5F2F5,#fff);border-radius:8px">
       <div style="font-size:15px;font-weight:700;color:var(--brand-deep);margin-bottom:4px">建議：${winner}較划算</div>
       <div style="font-size:13px;color:var(--text-sub)">差額約 <b>${fmtMoney(diff)}</b>${winner === "投資公司持有" ? "；惟須計入公司設立與行政成本，且未來盈餘分配給個人時將二次課稅。" : "；個人持有單純，但股利大額時邊際稅率高。"}</div>
     </div>`;
@@ -2565,18 +2565,18 @@ function doCalcCaseFund() {
 
   $("cf-result").innerHTML = `
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:10px">
-      <div style="padding:10px;background:#fff;border-radius:6px;border-left:4px solid var(--brand-deep)">
+      <div style="padding:10px;background:#fff;border-radius:6px">
         <div style="font-size:13px;color:var(--brand-deep);font-weight:700;margin-bottom:6px">個人持有</div>
         ${personalBreakdown}
         <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:16px">${fmtMoney(personalTotal)}</b></div>
       </div>
-      <div style="padding:10px;background:#fff;border-radius:6px;border-left:4px solid #6a5acd">
+      <div style="padding:10px;background:#fff;border-radius:6px">
         <div style="font-size:13px;color:#6a5acd;font-weight:700;margin-bottom:6px">投資公司持有</div>
         ${companyBreakdown}
         <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:16px">${fmtMoney(companyTotal)}</b></div>
       </div>
     </div>
-    <div style="padding:12px 14px;background:linear-gradient(135deg,#E5F2F5,#fff);border-radius:8px;border-left:5px solid var(--brand-primary)">
+    <div style="padding:12px 14px;background:linear-gradient(135deg,#E5F2F5,#fff);border-radius:8px">
       <div style="font-size:15px;font-weight:700;color:var(--brand-deep);margin-bottom:4px">建議：${winner}較划算</div>
       <div style="font-size:13px;color:var(--text-sub)">差額約 <b>${fmtMoney(diff)}</b>${loc==="dom" ? "（境內基金，個人贖回利得停徵為關鍵優勢）" : "（境外基金，個人有 670 萬免稅額；公司全額併入營所稅）"}</div>
     </div>`;
@@ -2678,13 +2678,13 @@ function doCalcCaseRealty() {
 
   $("cr-result").innerHTML = `
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:10px">
-      <div style="padding:10px;background:#fff;border-radius:6px;border-left:4px solid var(--brand-deep)">
+      <div style="padding:10px;background:#fff;border-radius:6px">
         <div style="font-size:13px;color:var(--brand-deep);font-weight:700;margin-bottom:6px">個人持有</div>
         <div class="kv"><span>租賃所得稅（×57%×${(rate*100).toFixed(0)}%）</span><b>${fmtMoney(personalRentTax)}</b></div>
         <div class="kv"><span>房地合一（${(personalHLRate*100).toFixed(0)}%）</span><b>${fmtMoney(personalSaleTax)}</b></div>
         <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:16px">${fmtMoney(personalTotal)}</b></div>
       </div>
-      <div style="padding:10px;background:#fff;border-radius:6px;border-left:4px solid #6a5acd">
+      <div style="padding:10px;background:#fff;border-radius:6px">
         <div style="font-size:13px;color:#6a5acd;font-weight:700;margin-bottom:6px">投資公司持有</div>
         <div class="kv"><span>租金併營所稅 20%（×70%）</span><b>${fmtMoney(companyRentTax)}</b></div>
         <div class="kv"><span>房地合一（${(companyHLRate*100).toFixed(0)}%）</span><b>${fmtMoney(companySaleTax)}</b></div>
@@ -2692,7 +2692,7 @@ function doCalcCaseRealty() {
         <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:16px">${fmtMoney(companyTotal)}</b></div>
       </div>
     </div>
-    <div style="padding:12px 14px;background:linear-gradient(135deg,#E5F2F5,#fff);border-radius:8px;border-left:5px solid var(--brand-primary)">
+    <div style="padding:12px 14px;background:linear-gradient(135deg,#E5F2F5,#fff);border-radius:8px">
       <div style="font-size:15px;font-weight:700;color:var(--brand-deep);margin-bottom:4px">建議：${winner}較划算</div>
       <div style="font-size:13px;color:var(--text-sub)">差額約 <b>${fmtMoney(diff)}</b>；持有 ≤ 5 年短期持有時，個人房地合一稅率與法人相同，但法人多了營所稅與未分配盈餘加徵。</div>
     </div>`;

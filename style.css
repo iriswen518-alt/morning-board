@@ -970,7 +970,6 @@ table.indices .date-col {
   background: var(--bg-alt);
   padding: 10px 14px;
   border-radius: 6px;
-  border-left: 3px solid var(--brand-secondary);
   white-space: pre-wrap;
 }
 .w-law-source {
@@ -1044,7 +1043,6 @@ table.indices .date-col {
   padding: 14px 16px;
   background: var(--bg-alt);
   border-radius: 8px;
-  border-left: 4px solid var(--brand-primary);
 }
 .calc-result:empty { display: none; }
 .calc-result .kv {
@@ -1075,13 +1073,7 @@ table.indices .date-col {
   border-radius: 8px;
   padding: 12px 14px;
   background: #fff;
-  border-top: 4px solid var(--brand-primary);
 }
-.calc-col.col-inherit { border-top-color: var(--brand-deep); }
-.calc-col.col-gift    { border-top-color: #e08a3c; }
-.calc-col.col-sale    { border-top-color: #6a5acd; }
-.calc-col.col-person  { border-top-color: var(--brand-deep); }
-.calc-col.col-company { border-top-color: #6a5acd; }
 .calc-col > h4 {
   margin: 0 0 10px;
   font-size: 14px;
@@ -1160,7 +1152,6 @@ table.indices .date-col {
 .position-preset-card {
   background: #fff;
   border: 1px solid var(--border);
-  border-top: 4px solid var(--brand-primary);
   border-radius: 8px;
   padding: 14px 16px;
   cursor: pointer;
@@ -1307,7 +1298,6 @@ table.indices .date-col {
 .position-block.position-warn { background: #fff7e6; border-color: #f0b67f; }
 .position-warn-card {
   background: #fff;
-  border-left: 3px solid #f0b67f;
   padding: 10px 12px;
   margin: 6px 0;
   border-radius: 3px;
@@ -1475,7 +1465,6 @@ table.indices .date-col {
 /* 績效表上方匯率註記 */
 .position-perf-fxnote {
   background: #eef6f8;
-  border-left: 3px solid #019AB3;
   padding: 8px 12px;
   margin: 6px 0 8px;
   border-radius: 4px;
