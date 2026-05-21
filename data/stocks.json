@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-21T08:40:56+08:00",
+  "generated_at": "2026-05-21T10:19:42+08:00",
   "source": "finnhub (US price+daily) + Yahoo (US MTD/YTD) + TWSE (TW)",
   "us_stocks": [
     {
@@ -15,7 +15,7 @@
       "perf_5y": 1390.62,
       "market_date": "2026-05-20",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NVDA.US",
-      "error": null
+      "error": "stale"
     },
     {
       "symbol": "AAPL",
@@ -30,7 +30,7 @@
       "perf_5y": 140.97,
       "market_date": "2026-05-20",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AAPL.US",
-      "error": null
+      "error": "stale"
     },
     {
       "symbol": "MSFT",
@@ -45,7 +45,7 @@
       "perf_5y": 71.74,
       "market_date": "2026-05-20",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MSFT.US",
-      "error": null
+      "error": "stale"
     },
     {
       "symbol": "GOOGL",
@@ -60,7 +60,7 @@
       "perf_5y": 239.05,
       "market_date": "2026-05-20",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GOOGL.US",
-      "error": null
+      "error": "stale"
     },
     {
       "symbol": "AMZN",
@@ -75,7 +75,7 @@
       "perf_5y": 65.47,
       "market_date": "2026-05-20",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AMZN.US",
-      "error": null
+      "error": "stale"
     },
     {
       "symbol": "META",
@@ -90,7 +90,7 @@
       "perf_5y": 91.34,
       "market_date": "2026-05-20",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=META.US",
-      "error": null
+      "error": "stale"
     },
     {
       "symbol": "TSLA",
@@ -105,7 +105,7 @@
       "perf_5y": 115.5,
       "market_date": "2026-05-20",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TSLA.US",
-      "error": null
+      "error": "stale"
     },
     {
       "symbol": "AVGO",
@@ -120,7 +120,7 @@
       "perf_5y": 825.8,
       "market_date": "2026-05-20",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AVGO.US",
-      "error": null
+      "error": "stale"
     },
     {
       "symbol": "TSM",
@@ -135,7 +135,7 @@
       "perf_5y": 259.07,
       "market_date": "2026-05-20",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TSM.US",
-      "error": null
+      "error": "stale"
     }
   ],
   "tw_stocks": [
@@ -152,7 +152,7 @@
       "perf_5y": 281.33,
       "market_date": "2026-05-20",
       "source_url": "https://tw.stock.yahoo.com/quote/2330.TW",
-      "error": null
+      "error": "stale"
     },
     {
       "symbol": "2317",
@@ -167,7 +167,7 @@
       "perf_5y": 119.18,
       "market_date": "2026-05-20",
       "source_url": "https://tw.stock.yahoo.com/quote/2317.TW",
-      "error": null
+      "error": "stale"
     },
     {
       "symbol": "2454",
@@ -182,7 +182,7 @@
       "perf_5y": 238.22,
       "market_date": "2026-05-20",
       "source_url": "https://tw.stock.yahoo.com/quote/2454.TW",
-      "error": null
+      "error": "stale"
     },
     {
       "symbol": "2308",
@@ -197,7 +197,7 @@
       "perf_5y": 562.63,
       "market_date": "2026-05-20",
       "source_url": "https://tw.stock.yahoo.com/quote/2308.TW",
-      "error": null
+      "error": "stale"
     },
     {
       "symbol": "2382",
@@ -212,7 +212,7 @@
       "perf_5y": 226.58,
       "market_date": "2026-05-20",
       "source_url": "https://tw.stock.yahoo.com/quote/2382.TW",
-      "error": null
+      "error": "stale"
     },
     {
       "symbol": "2891",
@@ -227,7 +227,7 @@
       "perf_5y": 155.75,
       "market_date": "2026-05-20",
       "source_url": "https://tw.stock.yahoo.com/quote/2891.TW",
-      "error": null
+      "error": "stale"
     },
     {
       "symbol": "1301",
@@ -242,7 +242,7 @@
       "perf_5y": -53.72,
       "market_date": "2026-05-20",
       "source_url": "https://tw.stock.yahoo.com/quote/1301.TW",
-      "error": null
+      "error": "stale"
     }
   ]
 }
