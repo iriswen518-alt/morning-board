@@ -155,6 +155,13 @@ function pctClass(n) {
   return n > 0 ? "up" : (n < 0 ? "down" : "");
 }
 
+// 把績效數字包成連到該檔績效來源頁的連結，供使用者點開驗證數值。
+// color:inherit 保留紅漲綠跌染色；無 url 或無資料（—）時回傳純文字。
+function perfLink(text, url) {
+  if (!url || text === "—" || text === "") return text;
+  return `<a href="${escapeHtml(url)}" target="_blank" rel="noopener" class="perf-link" style="color:inherit;text-decoration:underline">${text}</a>`;
+}
+
 function fmtNum(n) {
   if (n === null || n === undefined) return "—";
   return n.toLocaleString("en-US", { maximumFractionDigits: 2 });
@@ -728,8 +735,8 @@ function renderThemeFundsBlock(themeKey) {
           ${f.nav_date ? `<div class="cell-sub">${escapeHtml(shortDate(f.nav_date))}</div>` : ""}
         </div>
         <div><label>日</label><span class="${pctClass(f.change_pct)}">${fmtPct(f.change_pct)}</span></div>
-        <div><label>近1月</label><span class="${pctClass(perf['1m'])}">${fmtPct(perf['1m'])}</span></div>
-        <div><label>今年</label><span class="${pctClass(perf.ytd)}">${fmtPct(perf.ytd)}</span></div>
+        <div><label>近1月</label><span class="${pctClass(perf['1m'])}">${perfLink(fmtPct(perf['1m']), f.source_url)}</span></div>
+        <div><label>今年</label><span class="${pctClass(perf.ytd)}">${perfLink(fmtPct(perf.ytd), f.source_url)}</span></div>
       </div>
     </div>`;
   }).join("");
@@ -3145,9 +3152,9 @@ function renderLumpFundCards() {
           ${f.nav_date ? `<div class="cell-sub">${escapeHtml(shortDate(f.nav_date))}</div>` : ""}
         </div>
         <div><label>日漲跌</label><span class="${pctClass(f.change_pct)}">${fmtPct(f.change_pct)}</span></div>
-        <div><label>近1月</label><span class="${pctClass(f.perf?.['1m'])}">${fmtPct(f.perf?.['1m'])}</span></div>
-        <div><label>近3月</label><span class="${pctClass(f.perf?.['3m'])}">${fmtPct(f.perf?.['3m'])}</span></div>
-        <div><label>今年來</label><span class="${pctClass(f.perf?.ytd)}">${fmtPct(f.perf?.ytd)}</span></div>
+        <div><label>近1月</label><span class="${pctClass(f.perf?.['1m'])}">${perfLink(fmtPct(f.perf?.['1m']), f.source_url)}</span></div>
+        <div><label>近3月</label><span class="${pctClass(f.perf?.['3m'])}">${perfLink(fmtPct(f.perf?.['3m']), f.source_url)}</span></div>
+        <div><label>今年來</label><span class="${pctClass(f.perf?.ytd)}">${perfLink(fmtPct(f.perf?.ytd), f.source_url)}</span></div>
       </div>
     </div>`;
   }).join("");
@@ -3177,9 +3184,9 @@ function renderDcaFundCards() {
           ${f.nav_date ? `<div class="cell-sub">${escapeHtml(shortDate(f.nav_date))}</div>` : ""}
         </div>
         <div><label>日漲跌</label><span class="${pctClass(f.change_pct)}">${fmtPct(f.change_pct)}</span></div>
-        <div><label>近1月</label><span class="${pctClass(f.perf?.['1m'])}">${fmtPct(f.perf?.['1m'])}</span></div>
-        <div><label>近3月</label><span class="${pctClass(f.perf?.['3m'])}">${fmtPct(f.perf?.['3m'])}</span></div>
-        <div><label>今年來</label><span class="${pctClass(f.perf?.ytd)}">${fmtPct(f.perf?.ytd)}</span></div>
+        <div><label>近1月</label><span class="${pctClass(f.perf?.['1m'])}">${perfLink(fmtPct(f.perf?.['1m']), f.source_url)}</span></div>
+        <div><label>近3月</label><span class="${pctClass(f.perf?.['3m'])}">${perfLink(fmtPct(f.perf?.['3m']), f.source_url)}</span></div>
+        <div><label>今年來</label><span class="${pctClass(f.perf?.ytd)}">${perfLink(fmtPct(f.perf?.ytd), f.source_url)}</span></div>
       </div>
     </div>`;
   }).join("");
@@ -3226,7 +3233,7 @@ function renderBeatEtfCards() {
       : escapeHtml(f.name_zh);
     const cells = periods.map(p => {
       const v = f.perf?.[p.key];
-      return `<td style="${tdBase};text-align:right" class="${cellClass(v)}">${fmtR(v)}</td>`;
+      return `<td style="${tdBase};text-align:right" class="${cellClass(v)}">${perfLink(fmtR(v), f.source_url)}</td>`;
     }).join("");
     return `<tr><td style="${tdBase};white-space:nowrap">${nameHtml}</td>${cells}</tr>`;
   }).join("");
@@ -3386,7 +3393,7 @@ function renderCompareTable(f, asOf) {
   const body = shownRows.map(r => `
     <tr class="${r.hi ? "cmp-row-self" : ""}">
       <td class="cmp-td-l">${r.url ? `<a href="${r.url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${escapeHtml(r.label || "—")}</a>` : escapeHtml(r.label || "—")}</td>
-      ${periods.map(p => `<td class="${cls(r.ret[p[0]])}">${fmtR(r.ret[p[0]])}</td>`).join("")}
+      ${periods.map(p => `<td class="${cls(r.ret[p[0]])}">${perfLink(fmtR(r.ret[p[0]]), r.url)}</td>`).join("")}
       <td>${fmtV(r.std, "%")}</td>
       <td>${fmtV(r.sharpe)}</td>
     </tr>`).join("");
