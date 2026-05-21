@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-21T13:01:47+08:00",
+  "generated_at": "2026-05-21T15:01:28+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -39,15 +39,27 @@
       "error": null
     },
     {
-      "symbol": "ARM",
-      "name_zh": "Arm",
+      "symbol": "NBIS",
+      "name_zh": "Nebius",
       "kind": "US",
-      "price": 256.73,
-      "change_pct": 15.05,
-      "mtd_pct": 22.07,
-      "ytd_pct": 134.86,
+      "price": 191.82,
+      "change_pct": -2.99,
+      "mtd_pct": 38.77,
+      "ytd_pct": 129.16,
       "market_date": "2026-05-20",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ARM.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NBIS.US",
+      "error": null
+    },
+    {
+      "symbol": "AMD",
+      "name_zh": "超微",
+      "kind": "US",
+      "price": 447.58,
+      "change_pct": 8.1,
+      "mtd_pct": 26.26,
+      "ytd_pct": 108.99,
+      "market_date": "2026-05-20",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AMD.US",
       "error": null
     },
     {
@@ -60,18 +72,6 @@
       "ytd_pct": 30.24,
       "market_date": "2026-05-20",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TE.US",
-      "error": null
-    },
-    {
-      "symbol": "IREN",
-      "name_zh": "IREN",
-      "kind": "US",
-      "price": 52.71,
-      "change_pct": 10.41,
-      "mtd_pct": 15.82,
-      "ytd_pct": 39.56,
-      "market_date": "2026-05-20",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IREN.US",
       "error": null
     },
     {
@@ -99,15 +99,15 @@
       "error": null
     },
     {
-      "symbol": "IMVT",
-      "name_zh": "Immunovant",
+      "symbol": "IREN",
+      "name_zh": "IREN",
       "kind": "US",
-      "price": 35.56,
-      "change_pct": 35.26,
-      "mtd_pct": 31.0,
-      "ytd_pct": 39.89,
+      "price": 52.71,
+      "change_pct": 10.41,
+      "mtd_pct": 15.82,
+      "ytd_pct": 39.56,
       "market_date": "2026-05-20",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IMVT.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IREN.US",
       "error": null
     },
     {
@@ -123,42 +123,6 @@
       "error": null
     },
     {
-      "symbol": "SPCX",
-      "name_zh": "SPAC and New Issue ETF",
-      "kind": "US",
-      "price": 21.95,
-      "change_pct": -0.18,
-      "mtd_pct": 0.0,
-      "ytd_pct": 1.4,
-      "market_date": "2026-05-20",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPCX.US",
-      "error": null
-    },
-    {
-      "symbol": "AMD",
-      "name_zh": "超微",
-      "kind": "US",
-      "price": 447.58,
-      "change_pct": 8.1,
-      "mtd_pct": 26.26,
-      "ytd_pct": 108.99,
-      "market_date": "2026-05-20",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AMD.US",
-      "error": null
-    },
-    {
-      "symbol": "NBIS",
-      "name_zh": "Nebius",
-      "kind": "US",
-      "price": 191.82,
-      "change_pct": -2.99,
-      "mtd_pct": 38.77,
-      "ytd_pct": 129.16,
-      "market_date": "2026-05-20",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NBIS.US",
-      "error": null
-    },
-    {
       "symbol": "SMCI",
       "name_zh": "美超微",
       "kind": "US",
@@ -171,27 +135,15 @@
       "error": null
     },
     {
-      "symbol": "MRAM",
-      "name_zh": "Everspin Technologies",
+      "symbol": "BE",
+      "name_zh": "Bloom Energy",
       "kind": "US",
-      "price": 28.94,
-      "change_pct": -8.76,
-      "mtd_pct": 58.32,
-      "ytd_pct": 211.85,
+      "price": 282.31,
+      "change_pct": 8.02,
+      "mtd_pct": -0.37,
+      "ytd_pct": 224.91,
       "market_date": "2026-05-20",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MRAM.US",
-      "error": null
-    },
-    {
-      "symbol": "ENPH",
-      "name_zh": "Enphase Energy",
-      "kind": "US",
-      "price": 53.15,
-      "change_pct": 13.67,
-      "mtd_pct": 61.26,
-      "ytd_pct": 65.83,
-      "market_date": "2026-05-20",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ENPH.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BE.US",
       "error": null
     },
     {
@@ -207,15 +159,63 @@
       "error": null
     },
     {
-      "symbol": "ABNB",
-      "name_zh": "Airbnb",
+      "symbol": "GS",
+      "name_zh": "高盛",
       "kind": "US",
-      "price": 135.55,
-      "change_pct": 3.35,
-      "mtd_pct": -3.43,
-      "ytd_pct": -0.13,
+      "price": 982.12,
+      "change_pct": 5.75,
+      "mtd_pct": 6.32,
+      "ytd_pct": 11.73,
       "market_date": "2026-05-20",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ABNB.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GS.US",
+      "error": null
+    },
+    {
+      "symbol": "CRWV",
+      "name_zh": "CoreWeave",
+      "kind": "US",
+      "price": 101.28,
+      "change_pct": 1.47,
+      "mtd_pct": -9.25,
+      "ytd_pct": 41.43,
+      "market_date": "2026-05-20",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRWV.US",
+      "error": null
+    },
+    {
+      "symbol": "RDDT",
+      "name_zh": "Reddit",
+      "kind": "US",
+      "price": 146.72,
+      "change_pct": -5.27,
+      "mtd_pct": -0.35,
+      "ytd_pct": -36.17,
+      "market_date": "2026-05-20",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RDDT.US",
+      "error": null
+    },
+    {
+      "symbol": "ENPH",
+      "name_zh": "Enphase Energy",
+      "kind": "US",
+      "price": 53.15,
+      "change_pct": 13.67,
+      "mtd_pct": 61.26,
+      "ytd_pct": 65.83,
+      "market_date": "2026-05-20",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ENPH.US",
+      "error": null
+    },
+    {
+      "symbol": "MUU",
+      "name_zh": "Direxion Daily MU Bull 2X ETF",
+      "kind": "US",
+      "price": 509.89,
+      "change_pct": 9.42,
+      "mtd_pct": 88.34,
+      "ytd_pct": 406.14,
+      "market_date": "2026-05-20",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MUU.US",
       "error": null
     },
     {
