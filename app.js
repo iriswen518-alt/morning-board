@@ -3393,7 +3393,7 @@ function renderCompareTable(f, asOf) {
   const body = shownRows.map(r => `
     <tr class="${r.hi ? "cmp-row-self" : ""}">
       <td class="cmp-td-l">${r.url ? `<a href="${r.url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${escapeHtml(r.label || "—")}</a>` : escapeHtml(r.label || "—")}</td>
-      ${periods.map(p => `<td class="${cls(r.ret[p[0]])}">${perfLink(fmtR(r.ret[p[0]]), r.url)}</td>`).join("")}
+      ${periods.map(p => `<td class="${cls(r.ret[p[0]])}">${fmtR(r.ret[p[0]])}</td>`).join("")}
       <td>${fmtV(r.std, "%")}</td>
       <td>${fmtV(r.sharpe)}</td>
     </tr>`).join("");
