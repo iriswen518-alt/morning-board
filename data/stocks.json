@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-22T10:01:43+08:00",
+  "generated_at": "2026-05-22T12:55:13+08:00",
   "source": "finnhub (US price+daily) + Yahoo (US MTD/YTD) + TWSE (TW)",
   "us_stocks": [
     {
@@ -15,7 +15,7 @@
       "perf_5y": 1390.62,
       "market_date": "2026-05-21",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NVDA.US",
-      "error": null
+      "error": "stale"
     },
     {
       "symbol": "AAPL",
@@ -30,7 +30,7 @@
       "perf_5y": 140.97,
       "market_date": "2026-05-21",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AAPL.US",
-      "error": null
+      "error": "stale"
     },
     {
       "symbol": "MSFT",
@@ -45,7 +45,7 @@
       "perf_5y": 71.74,
       "market_date": "2026-05-21",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MSFT.US",
-      "error": null
+      "error": "stale"
     },
     {
       "symbol": "GOOGL",
@@ -60,7 +60,7 @@
       "perf_5y": 239.05,
       "market_date": "2026-05-21",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GOOGL.US",
-      "error": null
+      "error": "stale"
     },
     {
       "symbol": "AMZN",
@@ -75,7 +75,7 @@
       "perf_5y": 65.47,
       "market_date": "2026-05-21",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AMZN.US",
-      "error": null
+      "error": "stale"
     },
     {
       "symbol": "META",
@@ -147,8 +147,8 @@
       "change_pct": null,
       "mtd_pct": 4.45,
       "ytd_pct": 43.87,
-      "perf_1y": 127.6,
-      "perf_3y": 321.7,
+      "perf_1y": 129.12,
+      "perf_3y": 324.53,
       "perf_5y": 289.18,
       "market_date": "2026-05-21",
       "source_url": "https://tw.stock.yahoo.com/quote/2330.TW",
@@ -162,8 +162,8 @@
       "change_pct": null,
       "mtd_pct": 12.76,
       "ytd_pct": 7.38,
-      "perf_1y": 63.07,
-      "perf_3y": 143.41,
+      "perf_1y": 63.4,
+      "perf_3y": 143.9,
       "perf_5y": 126.03,
       "market_date": "2026-05-21",
       "source_url": "https://tw.stock.yahoo.com/quote/2317.TW",
@@ -177,8 +177,8 @@
       "change_pct": null,
       "mtd_pct": 36.02,
       "ytd_pct": 148.25,
-      "perf_1y": 184.15,
-      "perf_3y": 425.84,
+      "perf_1y": 187.17,
+      "perf_3y": 431.42,
       "perf_5y": 271.73,
       "market_date": "2026-05-21",
       "source_url": "https://tw.stock.yahoo.com/quote/2454.TW",
@@ -188,14 +188,14 @@
       "symbol": "2308",
       "name_zh": "台達電",
       "kind": "TW",
-      "price": 2030.0,
-      "change_pct": null,
-      "mtd_pct": -6.24,
-      "ytd_pct": 110.8,
-      "perf_1y": 448.94,
-      "perf_3y": 585.95,
+      "price": 2100.0,
+      "change_pct": 3.45,
+      "mtd_pct": -3.0,
+      "ytd_pct": 118.07,
+      "perf_1y": 454.23,
+      "perf_3y": 592.56,
       "perf_5y": 602.42,
-      "market_date": "2026-05-21",
+      "market_date": "2026-05-22",
       "source_url": "https://tw.stock.yahoo.com/quote/2308.TW",
       "error": null
     },
@@ -203,14 +203,14 @@
       "symbol": "2382",
       "name_zh": "廣達",
       "kind": "TW",
-      "price": 308.0,
-      "change_pct": null,
-      "mtd_pct": -1.44,
-      "ytd_pct": 13.24,
-      "perf_1y": 17.57,
-      "perf_3y": 193.93,
+      "price": 315.5,
+      "change_pct": 2.44,
+      "mtd_pct": 0.96,
+      "ytd_pct": 15.99,
+      "perf_1y": 17.94,
+      "perf_3y": 194.86,
       "perf_5y": 246.85,
-      "market_date": "2026-05-21",
+      "market_date": "2026-05-22",
       "source_url": "https://tw.stock.yahoo.com/quote/2382.TW",
       "error": null
     },
@@ -222,8 +222,8 @@
       "change_pct": null,
       "mtd_pct": 9.94,
       "ytd_pct": 14.54,
-      "perf_1y": 35.2,
-      "perf_3y": 135.77,
+      "perf_1y": 34.73,
+      "perf_3y": 134.96,
       "perf_5y": 154.42,
       "market_date": "2026-05-21",
       "source_url": "https://tw.stock.yahoo.com/quote/2891.TW",
@@ -237,8 +237,8 @@
       "change_pct": null,
       "mtd_pct": -11.17,
       "ytd_pct": 17.31,
-      "perf_1y": 25.69,
-      "perf_3y": -51.6,
+      "perf_1y": 26.11,
+      "perf_3y": -51.44,
       "perf_5y": -53.36,
       "market_date": "2026-05-21",
       "source_url": "https://tw.stock.yahoo.com/quote/1301.TW",
