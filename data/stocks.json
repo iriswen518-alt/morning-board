@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-22T12:55:13+08:00",
+  "generated_at": "2026-05-22T13:00:55+08:00",
   "source": "finnhub (US price+daily) + Yahoo (US MTD/YTD) + TWSE (TW)",
   "us_stocks": [
     {
@@ -15,7 +15,7 @@
       "perf_5y": 1390.62,
       "market_date": "2026-05-21",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NVDA.US",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "AAPL",
@@ -45,7 +45,7 @@
       "perf_5y": 71.74,
       "market_date": "2026-05-21",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MSFT.US",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "GOOGL",
@@ -60,7 +60,7 @@
       "perf_5y": 239.05,
       "market_date": "2026-05-21",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GOOGL.US",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "AMZN",
@@ -75,7 +75,7 @@
       "perf_5y": 65.47,
       "market_date": "2026-05-21",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AMZN.US",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "META",
@@ -90,7 +90,7 @@
       "perf_5y": 91.34,
       "market_date": "2026-05-21",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=META.US",
-      "error": null
+      "error": "stale"
     },
     {
       "symbol": "TSLA",
@@ -177,8 +177,8 @@
       "change_pct": null,
       "mtd_pct": 36.02,
       "ytd_pct": 148.25,
-      "perf_1y": 187.17,
-      "perf_3y": 431.42,
+      "perf_1y": 189.43,
+      "perf_3y": 435.61,
       "perf_5y": 271.73,
       "market_date": "2026-05-21",
       "source_url": "https://tw.stock.yahoo.com/quote/2454.TW",
@@ -188,14 +188,14 @@
       "symbol": "2308",
       "name_zh": "台達電",
       "kind": "TW",
-      "price": 2100.0,
-      "change_pct": 3.45,
-      "mtd_pct": -3.0,
-      "ytd_pct": 118.07,
-      "perf_1y": 454.23,
-      "perf_3y": 592.56,
+      "price": 2030.0,
+      "change_pct": null,
+      "mtd_pct": -6.24,
+      "ytd_pct": 110.8,
+      "perf_1y": 451.59,
+      "perf_3y": 589.26,
       "perf_5y": 602.42,
-      "market_date": "2026-05-22",
+      "market_date": "2026-05-21",
       "source_url": "https://tw.stock.yahoo.com/quote/2308.TW",
       "error": null
     },
@@ -203,14 +203,14 @@
       "symbol": "2382",
       "name_zh": "廣達",
       "kind": "TW",
-      "price": 315.5,
-      "change_pct": 2.44,
-      "mtd_pct": 0.96,
-      "ytd_pct": 15.99,
+      "price": 308.0,
+      "change_pct": null,
+      "mtd_pct": -1.44,
+      "ytd_pct": 13.24,
       "perf_1y": 17.94,
       "perf_3y": 194.86,
       "perf_5y": 246.85,
-      "market_date": "2026-05-22",
+      "market_date": "2026-05-21",
       "source_url": "https://tw.stock.yahoo.com/quote/2382.TW",
       "error": null
     },
@@ -222,8 +222,8 @@
       "change_pct": null,
       "mtd_pct": 9.94,
       "ytd_pct": 14.54,
-      "perf_1y": 34.73,
-      "perf_3y": 134.96,
+      "perf_1y": 34.97,
+      "perf_3y": 135.37,
       "perf_5y": 154.42,
       "market_date": "2026-05-21",
       "source_url": "https://tw.stock.yahoo.com/quote/2891.TW",
@@ -237,8 +237,8 @@
       "change_pct": null,
       "mtd_pct": -11.17,
       "ytd_pct": 17.31,
-      "perf_1y": 26.11,
-      "perf_3y": -51.44,
+      "perf_1y": 25.97,
+      "perf_3y": -51.5,
       "perf_5y": -53.36,
       "market_date": "2026-05-21",
       "source_url": "https://tw.stock.yahoo.com/quote/1301.TW",
