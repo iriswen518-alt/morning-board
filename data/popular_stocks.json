@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-05-22T15:57:57+08:00",
+  "generated_at": "2026-05-22T17:01:37+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
-      "symbol": "IBM",
-      "name_zh": "International Business Machines",
+      "symbol": "QBTS",
+      "name_zh": "D-Wave Quantum",
       "kind": "US",
-      "price": 252.97,
-      "change_pct": 12.43,
-      "mtd_pct": 9.52,
-      "ytd_pct": -14.6,
+      "price": 25.74,
+      "change_pct": 33.37,
+      "mtd_pct": 26.92,
+      "ytd_pct": -1.57,
       "market_date": "2026-05-21",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IBM.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QBTS.US",
       "error": null
     },
     {
@@ -24,6 +24,18 @@
       "ytd_pct": -0.5,
       "market_date": "2026-05-21",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RGTI.US",
+      "error": null
+    },
+    {
+      "symbol": "IBM",
+      "name_zh": "IBM",
+      "kind": "US",
+      "price": 252.97,
+      "change_pct": 12.43,
+      "mtd_pct": 9.52,
+      "ytd_pct": -14.6,
+      "market_date": "2026-05-21",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IBM.US",
       "error": null
     },
     {
@@ -51,18 +63,6 @@
       "error": null
     },
     {
-      "symbol": "WDAY",
-      "name_zh": "Workday",
-      "kind": "US",
-      "price": 121.85,
-      "change_pct": -3.76,
-      "mtd_pct": -0.45,
-      "ytd_pct": -43.27,
-      "market_date": "2026-05-21",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=WDAY.US",
-      "error": null
-    },
-    {
       "symbol": "IONQ",
       "name_zh": "IonQ",
       "kind": "US",
@@ -72,18 +72,6 @@
       "ytd_pct": 31.25,
       "market_date": "2026-05-21",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IONQ.US",
-      "error": null
-    },
-    {
-      "symbol": "GFS",
-      "name_zh": "GlobalFoundries",
-      "kind": "US",
-      "price": 81.35,
-      "change_pct": 14.92,
-      "mtd_pct": 25.93,
-      "ytd_pct": 132.96,
-      "market_date": "2026-05-21",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GFS.US",
       "error": null
     },
     {
@@ -99,27 +87,27 @@
       "error": null
     },
     {
-      "symbol": "WMT",
-      "name_zh": "沃爾瑪",
+      "symbol": "GFS",
+      "name_zh": "GlobalFoundries",
       "kind": "US",
-      "price": 121.34,
-      "change_pct": -7.27,
-      "mtd_pct": -8.03,
-      "ytd_pct": 8.91,
+      "price": 81.35,
+      "change_pct": 14.92,
+      "mtd_pct": 25.93,
+      "ytd_pct": 132.96,
       "market_date": "2026-05-21",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=WMT.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GFS.US",
       "error": null
     },
     {
-      "symbol": "SPOT",
-      "name_zh": "Spotify",
+      "symbol": "WDAY",
+      "name_zh": "Workday",
       "kind": "US",
-      "price": 489.93,
-      "change_pct": 13.06,
-      "mtd_pct": 9.71,
-      "ytd_pct": -15.63,
+      "price": 121.85,
+      "change_pct": -3.76,
+      "mtd_pct": -0.45,
+      "ytd_pct": -43.27,
       "market_date": "2026-05-21",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPOT.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=WDAY.US",
       "error": null
     },
     {
@@ -135,15 +123,27 @@
       "error": null
     },
     {
-      "symbol": "QTUM",
-      "name_zh": "Defiance Quantum ETF",
+      "symbol": "SPOT",
+      "name_zh": "Spotify",
       "kind": "US",
-      "price": 149.33,
-      "change_pct": 2.67,
-      "mtd_pct": 11.42,
-      "ytd_pct": 36.18,
+      "price": 489.93,
+      "change_pct": 13.06,
+      "mtd_pct": 9.71,
+      "ytd_pct": -15.63,
       "market_date": "2026-05-21",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QTUM.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPOT.US",
+      "error": null
+    },
+    {
+      "symbol": "WMT",
+      "name_zh": "沃爾瑪",
+      "kind": "US",
+      "price": 121.34,
+      "change_pct": -7.27,
+      "mtd_pct": -8.03,
+      "ytd_pct": 8.91,
+      "market_date": "2026-05-21",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=WMT.US",
       "error": null
     },
     {
@@ -159,20 +159,8 @@
       "error": null
     },
     {
-      "symbol": "BB",
-      "name_zh": "BlackBerry",
-      "kind": "US",
-      "price": 6.65,
-      "change_pct": 7.26,
-      "mtd_pct": 23.15,
-      "ytd_pct": 75.46,
-      "market_date": "2026-05-21",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BB.US",
-      "error": null
-    },
-    {
       "symbol": "WYFI",
-      "name_zh": "WYFI",
+      "name_zh": "WhiteFiber",
       "kind": "US",
       "price": 29.55,
       "change_pct": 22.16,
@@ -183,39 +171,15 @@
       "error": null
     },
     {
-      "symbol": "BULL",
-      "name_zh": "Webull",
+      "symbol": "BIRK",
+      "name_zh": "Birkenstock Holding",
       "kind": "US",
-      "price": 6.61,
-      "change_pct": -5.44,
-      "mtd_pct": -3.22,
-      "ytd_pct": -14.93,
+      "price": 39.67,
+      "change_pct": 19.45,
+      "mtd_pct": 2.4,
+      "ytd_pct": -3.01,
       "market_date": "2026-05-21",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BULL.US",
-      "error": null
-    },
-    {
-      "symbol": "DECK",
-      "name_zh": "Deckers Outdoor",
-      "kind": "US",
-      "price": 102.62,
-      "change_pct": 4.46,
-      "mtd_pct": 0.41,
-      "ytd_pct": -1.01,
-      "market_date": "2026-05-21",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DECK.US",
-      "error": null
-    },
-    {
-      "symbol": "QCOM",
-      "name_zh": "高通",
-      "kind": "US",
-      "price": 213.41,
-      "change_pct": 5.38,
-      "mtd_pct": 18.84,
-      "ytd_pct": 24.76,
-      "market_date": "2026-05-21",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QCOM.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BIRK.US",
       "error": null
     },
     {
@@ -312,6 +276,18 @@
       "ytd_pct": 57.69,
       "market_date": "2026-05-21",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SMH.US",
+      "error": null
+    },
+    {
+      "symbol": "SOXX",
+      "name_zh": "iShares 半導體 ETF",
+      "kind": "US",
+      "price": 524.71,
+      "change_pct": 0.85,
+      "mtd_pct": 13.71,
+      "ytd_pct": 74.24,
+      "market_date": "2026-05-21",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOXX.US",
       "error": null
     },
     {
