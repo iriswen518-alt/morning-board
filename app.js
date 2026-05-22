@@ -3372,7 +3372,7 @@ function renderCompareTable(f, asOf) {
   const s = f.self || {};
   rows.push({ label: f.name_zh, url: f.source_url, hi: true, ret: s.return || {}, std: s.std_3y, sharpe: s.sharpe_3y });
   const ca = f.category_avg || {};
-  rows.push({ label: "晨星同類平均", url: null, ret: ca.return || {}, std: ca.std_3y, sharpe: ca.sharpe_3y, always: true });
+  rows.push({ label: "晨星同類平均", url: null, catUrl: f.category_url, ret: ca.return || {}, std: ca.std_3y, sharpe: ca.sharpe_3y, always: true });
   if (f.benchmark) {
     rows.push({ label: f.benchmark.name, url: f.benchmark.url || null, ret: f.benchmark.return || {}, std: f.benchmark.std_3y, sharpe: f.benchmark.sharpe_3y });
   }
@@ -3392,7 +3392,7 @@ function renderCompareTable(f, asOf) {
   </tr>`;
   const body = shownRows.map(r => `
     <tr class="${r.hi ? "cmp-row-self" : ""}">
-      <td class="cmp-td-l">${r.url ? `<a href="${r.url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${escapeHtml(r.label || "—")}</a>` : escapeHtml(r.label || "—")}</td>
+      <td class="cmp-td-l">${(r.url || r.catUrl) ? `<a href="${r.url || r.catUrl}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${escapeHtml(r.label || "—")}</a>` : escapeHtml(r.label || "—")}</td>
       ${periods.map(p => `<td class="${cls(r.ret[p[0]])}">${perfLink(fmtR(r.ret[p[0]]), r.url)}</td>`).join("")}
       <td>${fmtV(r.std, "%")}</td>
       <td>${fmtV(r.sharpe)}</td>
