@@ -3292,7 +3292,7 @@ function renderFundCompare() {
 
   return `
     <div class="cmp-intro">
-      本分頁為教育示範用途,將精選基金與晨星同類平均、同類競品並列比較,僅呈現公開數據,不構成投資建議。比較表之報酬率、波動度、Sharpe 皆為 SITCA 投信投顧公會同一基準日數據以利對比;${escapeHtml(asOfNote || ("資料截止 " + asOf))}。近1/3/5年報酬為滾動累積報酬率(含息),非曆年、非年化。
+      本分頁為教育示範用途,將精選基金與晨星同類平均、同類競品並列比較,僅呈現公開數據,不構成投資建議。比較表報酬率來自 MoneyDJ 每日更新(可點數字查證),波動度與 Sharpe 為 SITCA 截至 2026-03-31;晨星同類平均截至 2026-04-30。近1/3/5年報酬為滾動累積報酬率(含息),非曆年、非年化。
     </div>
     <div class="cmp-cats">${chips}</div>
     ${panes}
@@ -3372,12 +3372,12 @@ function renderCompareTable(f, asOf) {
   const s = f.self || {};
   rows.push({ label: f.name_zh, url: f.source_url, hi: true, ret: s.return || {}, std: s.std_3y, sharpe: s.sharpe_3y });
   const ca = f.category_avg || {};
-  rows.push({ label: "晨星同類平均", ret: ca.return || {}, std: ca.std_3y, sharpe: ca.sharpe_3y, always: true });
+  rows.push({ label: "晨星同類平均", url: null, ret: ca.return || {}, std: ca.std_3y, sharpe: ca.sharpe_3y, always: true });
   if (f.benchmark) {
-    rows.push({ label: f.benchmark.name, ret: f.benchmark.return || {}, std: f.benchmark.std_3y, sharpe: f.benchmark.sharpe_3y });
+    rows.push({ label: f.benchmark.name, url: f.benchmark.url || null, ret: f.benchmark.return || {}, std: f.benchmark.std_3y, sharpe: f.benchmark.sharpe_3y });
   }
   for (const p of (f.peers || [])) {
-    rows.push({ label: p.name, ret: p.return || {}, std: p.std_3y, sharpe: p.sharpe_3y });
+    rows.push({ label: p.name, url: p.url || null, ret: p.return || {}, std: p.std_3y, sharpe: p.sharpe_3y });
   }
 
   const rowHasData = r => r.hi || r.always ||
@@ -3393,14 +3393,14 @@ function renderCompareTable(f, asOf) {
   const body = shownRows.map(r => `
     <tr class="${r.hi ? "cmp-row-self" : ""}">
       <td class="cmp-td-l">${r.url ? `<a href="${r.url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${escapeHtml(r.label || "—")}</a>` : escapeHtml(r.label || "—")}</td>
-      ${periods.map(p => `<td class="${cls(r.ret[p[0]])}">${fmtR(r.ret[p[0]])}</td>`).join("")}
+      ${periods.map(p => `<td class="${cls(r.ret[p[0]])}">${perfLink(fmtR(r.ret[p[0]]), r.url)}</td>`).join("")}
       <td>${fmtV(r.std, "%")}</td>
       <td>${fmtV(r.sharpe)}</td>
     </tr>`).join("");
 
   return `<div class="cmp-table-wrap"><table class="cmp-table">
     <thead>${head}</thead><tbody>${body}</tbody></table></div>
-    <div class="cmp-asof">報酬率／波動度／Sharpe 資料截止 ${escapeHtml(asOf || "—")}（SITCA 投信投顧公會）；無同基準日資料之指數/競品不列入。</div>`;
+    <div class="cmp-asof">報酬率為各基金 MoneyDJ 最新淨值日數字(每日更新、可點數字查證);年化波動度、Sharpe 為 SITCA 截至 2026-03-31;晨星同類平均截至 2026-04-30。</div>`;
 }
 
 function renderCompareRank(f) {
@@ -3491,8 +3491,8 @@ function renderCompareMethodology(asOf) {
     <div class="cmp-method">
       <div class="cmp-method-title">方法與資料來源</div>
       <ul>
-        <li>報酬率:近1/3/5年滾動累積報酬率(含息),來源 SITCA 投信投顧公會,截至 2026-03-31,每月更新。</li>
-        <li>年化波動度、Sharpe、Beta、晨星評等:採 SITCA／晨星公開公布值,非自行計算;與報酬率同基準日,以確保同表可比。</li>
+        <li>報酬率採 MoneyDJ 各基金績效頁之近1/3/5年累積報酬(含息),每日更新,點數字可開啟來源頁查證;晨星同類平均與風險指標仍為 SITCA 月底數據,故報酬率與其餘欄位日期不同。</li>
+        <li>年化波動度、Sharpe、Beta、晨星評等:採 SITCA／晨星公開公布值,非自行計算;資料截至 2026-03-31。</li>
         <li>基金總規模、總費用率(經理費+保管費)、前十大持股:來源板信基金平台。</li>
         <li>晨星同類平均:採該同類別之公開統計。同類排名、產業分布若來源未公開則顯示「—」。</li>
         <li>基金規模採全級別合計之「基金總規模」,以新台幣億元表示(外幣計價基金以 USD/TWD 即期匯率換算);規模日期見各卡。來源板信基金平台。</li>

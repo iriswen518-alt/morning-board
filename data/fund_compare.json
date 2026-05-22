@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-22T08:41:00+08:00",
+  "generated_at": "2026-05-22T08:56:31+08:00",
   "static_as_of": "2026-03-31",
   "as_of_note": "風險指標及同基金報酬截至 2026-03-31；同類別平均截至 2026-04-30",
   "fx_usdtwd": 31.65,
@@ -33,9 +33,9 @@
       "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACDD04-2602",
       "self": {
         "return": {
-          "1y": 159.56,
-          "3y": 297.83,
-          "5y": 378.7
+          "1y": 261.03,
+          "3y": 489.37,
+          "5y": 693.12
         },
         "std_3y": 24.29,
         "std_1y": null,
@@ -113,33 +113,36 @@
       "benchmark": {
         "name": "元大台灣卓越50基金（0050）",
         "return": {
-          "1y": 71.75,
-          "3y": 155.28,
-          "5y": 145.82
+          "1y": 113.26,
+          "3y": 238.17,
+          "5y": 233.1
         },
         "std_3y": null,
-        "sharpe_3y": null
+        "sharpe_3y": null,
+        "url": "https://www.moneydj.com/ETF/X/Basic/Basic0008.xdjhtm?etfid=0050.TW"
       },
       "peers": [
         {
           "name": "統一奔騰基金",
           "return": {
-            "1y": 130.34,
-            "3y": 246.71,
-            "5y": 342.78
+            "1y": 206.13,
+            "3y": 383.34,
+            "5y": 531.39
           },
           "std_3y": 25.03,
-          "sharpe_3y": 1.75
+          "sharpe_3y": 1.75,
+          "url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACPS10-0501"
         },
         {
           "name": "景順台灣科技基金",
           "return": {
-            "1y": 101.59,
-            "3y": 161.67,
-            "5y": 147.04
+            "1y": 178.32,
+            "3y": 284.22,
+            "5y": 291.67
           },
           "std_3y": 22.45,
-          "sharpe_3y": 1.5
+          "sharpe_3y": 1.5,
+          "url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACCS07-1701"
         }
       ],
       "sources": {
@@ -159,9 +162,9 @@
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=ALZ03-AL08",
       "self": {
         "return": {
-          "1y": 48.13,
-          "3y": 106.83,
-          "5y": 62.93
+          "1y": 77.69,
+          "3y": 179.54,
+          "5y": 123.9
         },
         "std_3y": 22.05,
         "std_1y": null,
@@ -198,23 +201,25 @@
       "benchmark": {
         "name": "富邦NASDAQ-100基金（00662）",
         "return": {
-          "1y": 18.92,
-          "3y": 89.11,
-          "5y": 103.52
+          "1y": 44.22,
+          "3y": 117.92,
+          "5y": 145.72
         },
         "std_3y": null,
-        "sharpe_3y": null
+        "sharpe_3y": null,
+        "url": "https://www.moneydj.com/ETF/X/Basic/Basic0008.xdjhtm?etfid=00662.TW"
       },
       "peers": [
         {
           "name": "富蘭克林科技基金",
           "return": {
-            "1y": 42.52,
-            "3y": 77.06,
-            "5y": null
+            "1y": 205.79,
+            "3y": 394.97,
+            "5y": 462.27
           },
           "std_3y": 27.73,
-          "sharpe_3y": 0.81
+          "sharpe_3y": 0.81,
+          "url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACFT12-2811"
         },
         {
           "name": "貝萊德世界科技基金",
@@ -224,7 +229,8 @@
             "5y": 35.28
           },
           "std_3y": 21.6,
-          "sharpe_3y": 0.79
+          "sharpe_3y": 0.79,
+          "url": null
         }
       ],
       "sources": {
@@ -244,9 +250,9 @@
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=PYZT8-SB06",
       "self": {
         "return": {
-          "1y": 18.36,
-          "3y": 38.8,
-          "5y": 21.14
+          "1y": 23.48,
+          "3y": 51.27,
+          "5y": 29.71
         },
         "std_3y": 9.86,
         "std_1y": null,
@@ -282,9 +288,14 @@
       },
       "benchmark": {
         "name": "MSCI 世界高股息指數",
-        "return": {},
+        "return": {
+          "1y": null,
+          "3y": null,
+          "5y": null
+        },
         "std_3y": null,
-        "sharpe_3y": null
+        "sharpe_3y": null,
+        "url": null
       },
       "peers": [
         {
@@ -295,7 +306,8 @@
             "5y": 31.53
           },
           "std_3y": 9.87,
-          "sharpe_3y": 0.84
+          "sharpe_3y": 0.84,
+          "url": null
         },
         {
           "name": "安聯收益成長基金",
@@ -305,7 +317,8 @@
             "5y": 22.14
           },
           "std_3y": 8.1,
-          "sharpe_3y": 0.61
+          "sharpe_3y": 0.61,
+          "url": null
         }
       ],
       "sources": {
@@ -325,9 +338,9 @@
       "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACFT48-2815",
       "self": {
         "return": {
-          "1y": 13.23,
-          "3y": 47.9,
-          "5y": 45.95
+          "1y": 37.16,
+          "3y": 70.35,
+          "5y": 67.22
         },
         "std_3y": 8.12,
         "std_1y": null,
@@ -404,30 +417,37 @@
       },
       "benchmark": {
         "name": "六四股債混合（MSCI World 40/Bloomberg Agg 60）",
-        "return": {},
+        "return": {
+          "1y": null,
+          "3y": null,
+          "5y": null
+        },
         "std_3y": null,
-        "sharpe_3y": null
+        "sharpe_3y": null,
+        "url": null
       },
       "peers": [
         {
           "name": "安聯四季雙收入息組合基金",
           "return": {
-            "1y": 12.05,
-            "3y": 43.96,
-            "5y": 44.41
+            "1y": 32.45,
+            "3y": 57.25,
+            "5y": 60.08
           },
           "std_3y": null,
-          "sharpe_3y": null
+          "sharpe_3y": null,
+          "url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACDD28-2620"
         },
         {
           "name": "野村鴻利基金",
           "return": {
-            "1y": 92.91,
-            "3y": 163.7,
-            "5y": 562.21
+            "1y": 275.38,
+            "3y": 449.43,
+            "5y": 615.16
           },
           "std_3y": null,
-          "sharpe_3y": null
+          "sharpe_3y": null,
+          "url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=AC0001-1429"
         }
       ],
       "sources": {
@@ -485,9 +505,14 @@
       },
       "benchmark": {
         "name": "日經225指數",
-        "return": {},
+        "return": {
+          "1y": null,
+          "3y": null,
+          "5y": null
+        },
         "std_3y": null,
-        "sharpe_3y": null
+        "sharpe_3y": null,
+        "url": null
       },
       "peers": [
         {
@@ -498,17 +523,19 @@
             "5y": 18.39
           },
           "std_3y": null,
-          "sharpe_3y": null
+          "sharpe_3y": null,
+          "url": null
         },
         {
           "name": "富蘭克林華美多重資產收益基金",
           "return": {
-            "1y": 13.23,
-            "3y": 47.9,
-            "5y": 45.95
+            "1y": 37.16,
+            "3y": 70.35,
+            "5y": 67.22
           },
           "std_3y": null,
-          "sharpe_3y": null
+          "sharpe_3y": null,
+          "url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACFT48-2815"
         }
       ],
       "sources": {
@@ -528,9 +555,9 @@
       "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACNC74-1229",
       "self": {
         "return": {
-          "1y": 17.04,
-          "3y": 40.47,
-          "5y": 64.12
+          "1y": 19.48,
+          "3y": 37.21,
+          "5y": 57.86
         },
         "std_3y": 11.06,
         "std_1y": null,
@@ -607,9 +634,14 @@
       },
       "benchmark": {
         "name": "標普全球基礎建設指數",
-        "return": {},
+        "return": {
+          "1y": null,
+          "3y": null,
+          "5y": null
+        },
         "std_3y": null,
-        "sharpe_3y": null
+        "sharpe_3y": null,
+        "url": null
       },
       "peers": [
         {
@@ -620,7 +652,8 @@
             "5y": null
           },
           "std_3y": 13.15,
-          "sharpe_3y": 1.19
+          "sharpe_3y": 1.19,
+          "url": null
         },
         {
           "name": "富蘭克林華美全球基礎建設收益基金",
@@ -630,7 +663,8 @@
             "5y": null
           },
           "std_3y": null,
-          "sharpe_3y": null
+          "sharpe_3y": null,
+          "url": null
         }
       ],
       "sources": {
@@ -650,9 +684,9 @@
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLZL4-FF19",
       "self": {
         "return": {
-          "1y": 30.78,
-          "3y": 53.07,
-          "5y": 22.54
+          "1y": 37.5,
+          "3y": 67.15,
+          "5y": 28.55
         },
         "std_3y": 11.33,
         "std_1y": null,
@@ -688,20 +722,26 @@
       },
       "benchmark": {
         "name": "新興市場股債混合（MSCI EM 50/EMBI 50）",
-        "return": {},
+        "return": {
+          "1y": null,
+          "3y": null,
+          "5y": null
+        },
         "std_3y": null,
-        "sharpe_3y": null
+        "sharpe_3y": null,
+        "url": null
       },
       "peers": [
         {
           "name": "摩根新興雙利平衡基金",
           "return": {
-            "1y": 18.67,
-            "3y": 47.99,
-            "5y": 30.85
+            "1y": 92.08,
+            "3y": 156.61,
+            "5y": 154.71
           },
           "std_3y": 10.04,
-          "sharpe_3y": 1.24
+          "sharpe_3y": 1.24,
+          "url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACJF87-0411"
         },
         {
           "name": "聯博新興市場多元收益基金",
@@ -711,7 +751,8 @@
             "5y": 25.03
           },
           "std_3y": 8.42,
-          "sharpe_3y": 0.98
+          "sharpe_3y": 0.98,
+          "url": null
         }
       ],
       "sources": {
@@ -731,9 +772,9 @@
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=PIZA8-PI0W",
       "self": {
         "return": {
-          "1y": 10.35,
-          "3y": 31.9,
-          "5y": 13.41
+          "1y": 13.6,
+          "3y": 38.23,
+          "5y": 13.85
         },
         "std_3y": 5.94,
         "std_1y": null,
@@ -769,30 +810,37 @@
       },
       "benchmark": {
         "name": "摩根新興市場債券指數（EMBI）",
-        "return": {},
+        "return": {
+          "1y": null,
+          "3y": null,
+          "5y": null
+        },
         "std_3y": null,
-        "sharpe_3y": null
+        "sharpe_3y": null,
+        "url": null
       },
       "peers": [
         {
           "name": "富蘭克林華美新興國家固定收益基金",
           "return": {
-            "1y": 15.43,
-            "3y": 25.56,
-            "5y": 14.49
+            "1y": 16.18,
+            "3y": 27.63,
+            "5y": 7.42
           },
           "std_3y": 7.56,
-          "sharpe_3y": 0.88
+          "sharpe_3y": 0.88,
+          "url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACFT93-28F6"
         },
         {
           "name": "聯博新興市場債券基金",
           "return": {
-            "1y": 10.45,
-            "3y": 38.69,
-            "5y": 31.79
+            "1y": 12.33,
+            "3y": 37.01,
+            "5y": 10.16
           },
           "std_3y": 6.4,
-          "sharpe_3y": 1.0
+          "sharpe_3y": 1.0,
+          "url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=ALZR3-AL1J"
         }
       ],
       "sources": {
@@ -812,9 +860,9 @@
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLZ41-FR14",
       "self": {
         "return": {
-          "1y": 6.68,
-          "3y": 25.6,
-          "5y": 20.44
+          "1y": 6.66,
+          "3y": 27.24,
+          "5y": 20.53
         },
         "std_3y": 4.37,
         "std_1y": null,
@@ -850,20 +898,26 @@
       },
       "benchmark": {
         "name": "彭博美國公司債指數",
-        "return": {},
+        "return": {
+          "1y": null,
+          "3y": null,
+          "5y": null
+        },
         "std_3y": null,
-        "sharpe_3y": null
+        "sharpe_3y": null,
+        "url": null
       },
       "peers": [
         {
           "name": "聯博美國非投資等級債券基金",
           "return": {
-            "1y": 6.17,
-            "3y": 25.1,
-            "5y": 16.38
+            "1y": 6.46,
+            "3y": 24.66,
+            "5y": 17.67
           },
           "std_3y": null,
-          "sharpe_3y": 0.64
+          "sharpe_3y": 0.64,
+          "url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=PAZB0-FT0D"
         },
         {
           "name": "PIMCO美國非投資等級債券基金",
@@ -873,7 +927,8 @@
             "5y": 15.04
           },
           "std_3y": null,
-          "sharpe_3y": 0.56
+          "sharpe_3y": 0.56,
+          "url": null
         }
       ],
       "sources": {
@@ -945,11 +1000,11 @@
             "pct": 1.48
           },
           {
-            "name": "ELECTRICITE DE FRANCE SA SER EMTN (BR) (REG S)",
+            "name": "SOCIETE GENERALE SER REGS (REG) (REG S) VAR 08J",
             "pct": 1.43
           },
           {
-            "name": "SOCIETE GENERALE SER REGS (REG) (REG S) VAR 08J",
+            "name": "ELECTRICITE DE FRANCE SA SER EMTN (BR) (REG S)",
             "pct": 1.43
           }
         ],
@@ -972,30 +1027,37 @@
       },
       "benchmark": {
         "name": "彭博全球綜合債券指數",
-        "return": {},
+        "return": {
+          "1y": null,
+          "3y": null,
+          "5y": null
+        },
         "std_3y": null,
-        "sharpe_3y": null
+        "sharpe_3y": null,
+        "url": null
       },
       "peers": [
         {
           "name": "施羅德環球基金－環球債券C類累積",
           "return": {
-            "1y": -12.3,
-            "3y": -1.32,
-            "5y": 6.8
+            "1y": 2.19,
+            "3y": 6.9,
+            "5y": -16.97
           },
           "std_3y": null,
-          "sharpe_3y": null
+          "sharpe_3y": null,
+          "url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=PYZ46-SC16"
         },
         {
           "name": "富蘭克林華美全球投資級債券基金",
           "return": {
-            "1y": 1.01,
-            "3y": -0.22,
-            "5y": 4.53
+            "1y": 4.83,
+            "3y": 8.14,
+            "5y": 0.56
           },
           "std_3y": null,
-          "sharpe_3y": null
+          "sharpe_3y": null,
+          "url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACFT17-28F3"
         }
       ],
       "sources": {
@@ -1015,9 +1077,9 @@
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=LIC04-LI02",
       "self": {
         "return": {
-          "1y": 103.59,
-          "3y": 100.11,
-          "5y": 58.43
+          "1y": 197.42,
+          "3y": 218.32,
+          "5y": 147.8
         },
         "std_3y": 34.27,
         "std_1y": null,
@@ -1053,20 +1115,26 @@
       },
       "benchmark": {
         "name": "MSCI 韓國指數",
-        "return": {},
+        "return": {
+          "1y": null,
+          "3y": null,
+          "5y": null
+        },
         "std_3y": null,
-        "sharpe_3y": null
+        "sharpe_3y": null,
+        "url": null
       },
       "peers": [
         {
           "name": "摩根南韓基金",
           "return": {
-            "1y": 95.26,
-            "3y": 84.0,
-            "5y": null
+            "1y": 142.23,
+            "3y": 149.79,
+            "5y": 77.98
           },
           "std_3y": 31.32,
-          "sharpe_3y": 0.65
+          "sharpe_3y": 0.65,
+          "url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=JFZ11-JF09"
         },
         {
           "name": "霸菱韓國基金",
@@ -1076,7 +1144,8 @@
             "5y": null
           },
           "std_3y": 38.88,
-          "sharpe_3y": 0.67
+          "sharpe_3y": 0.67,
+          "url": null
         }
       ],
       "sources": {
@@ -1096,9 +1165,9 @@
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=LIC28-LI01",
       "self": {
         "return": {
-          "1y": 13.51,
-          "3y": 30.39,
-          "5y": 17.18
+          "1y": 29.24,
+          "3y": 43.04,
+          "5y": 16.47
         },
         "std_3y": 17.46,
         "std_1y": null,
@@ -1135,33 +1204,36 @@
       "benchmark": {
         "name": "富邦富時越南ETF（00885）",
         "return": {
-          "1y": 37.3,
-          "3y": 52.42,
-          "5y": 15.41
+          "1y": 61.44,
+          "3y": 67.77,
+          "5y": 25.31
         },
         "std_3y": null,
-        "sharpe_3y": null
+        "sharpe_3y": null,
+        "url": "https://www.moneydj.com/ETF/X/Basic/Basic0008.xdjhtm?etfid=00885.TW"
       },
       "peers": [
         {
           "name": "富邦越南機會基金",
           "return": {
-            "1y": 2.72,
-            "3y": -0.84,
-            "5y": 27.91
+            "1y": 79.86,
+            "3y": 120.14,
+            "5y": 75.62
           },
           "std_3y": 19.7,
-          "sharpe_3y": 0.45
+          "sharpe_3y": 0.45,
+          "url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACJS24-2019"
         },
         {
           "name": "中國信託越南機會基金",
           "return": {
-            "1y": -3.3,
-            "3y": -8.81,
-            "5y": 19.76
+            "1y": 21.36,
+            "3y": 26.32,
+            "5y": 9.29
           },
           "std_3y": 21.11,
-          "sharpe_3y": 0.33
+          "sharpe_3y": 0.33,
+          "url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACDS94-0920"
         }
       ],
       "sources": {
@@ -1181,9 +1253,9 @@
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLZ79-FR59",
       "self": {
         "return": {
-          "1y": -16.89,
-          "3y": 14.83,
-          "5y": 18.94
+          "1y": -17.83,
+          "3y": 16.08,
+          "5y": 19.92
         },
         "std_3y": 15.28,
         "std_1y": null,
@@ -1220,12 +1292,13 @@
       "benchmark": {
         "name": "富邦印度ETF（00652）",
         "return": {
-          "1y": -16.27,
-          "3y": 10.6,
-          "5y": 21.66
+          "1y": -12.02,
+          "3y": 8.85,
+          "5y": 26.31
         },
         "std_3y": null,
-        "sharpe_3y": null
+        "sharpe_3y": null,
+        "url": "https://www.moneydj.com/ETF/X/Basic/Basic0008.xdjhtm?etfid=00652.TW"
       },
       "peers": [
         {
@@ -1236,17 +1309,19 @@
             "5y": 88.1
           },
           "std_3y": 17.03,
-          "sharpe_3y": 0.7
+          "sharpe_3y": 0.7,
+          "url": null
         },
         {
           "name": "宏利環球基金－印度股票基金",
           "return": {
-            "1y": -14.69,
-            "3y": 21.83,
-            "5y": 133.0
+            "1y": -11.98,
+            "3y": 15.93,
+            "5y": 12.04
           },
           "std_3y": 14.76,
-          "sharpe_3y": 0.23
+          "sharpe_3y": 0.23,
+          "url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=AIZ49-PB07"
         }
       ],
       "sources": {
@@ -1266,9 +1341,9 @@
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLZ01-FA01",
       "self": {
         "return": {
-          "1y": 120.87,
-          "3y": 243.08,
-          "5y": 424.69
+          "1y": 96.48,
+          "3y": 249.72,
+          "5y": 156.18
         },
         "std_3y": 36.28,
         "std_1y": null,
@@ -1304,20 +1379,26 @@
       },
       "benchmark": {
         "name": "黃金現貨（倫敦金）",
-        "return": {},
+        "return": {
+          "1y": null,
+          "3y": null,
+          "5y": null
+        },
         "std_3y": null,
-        "sharpe_3y": null
+        "sharpe_3y": null,
+        "url": null
       },
       "peers": [
         {
           "name": "晉達環球策略基金－環球黃金基金",
           "return": {
-            "1y": 110.32,
-            "3y": 193.28,
-            "5y": 358.58
+            "1y": 89.52,
+            "3y": 184.55,
+            "5y": 131.85
           },
           "std_3y": 36.6,
-          "sharpe_3y": 1.04
+          "sharpe_3y": 1.04,
+          "url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=GSF17-IG14"
         },
         {
           "name": "貝萊德世界黃金基金",
@@ -1327,7 +1408,8 @@
             "5y": 275.47
           },
           "std_3y": null,
-          "sharpe_3y": null
+          "sharpe_3y": null,
+          "url": null
         }
       ],
       "sources": {
@@ -1347,9 +1429,9 @@
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=GSF17-IG14",
       "self": {
         "return": {
-          "1y": 110.32,
-          "3y": 193.28,
-          "5y": 358.58
+          "1y": 89.52,
+          "3y": 184.55,
+          "5y": 131.85
         },
         "std_3y": 36.6,
         "std_1y": null,
@@ -1385,20 +1467,26 @@
       },
       "benchmark": {
         "name": "黃金現貨（倫敦金）",
-        "return": {},
+        "return": {
+          "1y": null,
+          "3y": null,
+          "5y": null
+        },
         "std_3y": null,
-        "sharpe_3y": null
+        "sharpe_3y": null,
+        "url": null
       },
       "peers": [
         {
           "name": "富蘭克林黃金基金",
           "return": {
-            "1y": 120.87,
-            "3y": 243.08,
-            "5y": 424.69
+            "1y": 96.48,
+            "3y": 249.72,
+            "5y": 156.18
           },
           "std_3y": 36.28,
-          "sharpe_3y": 1.19
+          "sharpe_3y": 1.19,
+          "url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLZ01-FA01"
         },
         {
           "name": "貝萊德世界黃金基金",
@@ -1408,7 +1496,8 @@
             "5y": 275.47
           },
           "std_3y": null,
-          "sharpe_3y": null
+          "sharpe_3y": null,
+          "url": null
         }
       ],
       "sources": {
