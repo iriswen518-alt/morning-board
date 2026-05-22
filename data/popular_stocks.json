@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-22T08:41:35+08:00",
+  "generated_at": "2026-05-22T09:01:43+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -63,6 +63,18 @@
       "error": null
     },
     {
+      "symbol": "QUBT",
+      "name_zh": "Quantum Computing",
+      "kind": "US",
+      "price": 11.41,
+      "change_pct": 19.35,
+      "mtd_pct": 26.5,
+      "ytd_pct": 11.21,
+      "market_date": "2026-05-21",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QUBT.US",
+      "error": null
+    },
+    {
       "symbol": "IONQ",
       "name_zh": "IonQ",
       "kind": "US",
@@ -88,7 +100,7 @@
     },
     {
       "symbol": "TTWO",
-      "name_zh": "Take-Two Interactive Software,",
+      "name_zh": "TTWO",
       "kind": "US",
       "price": 238.08,
       "change_pct": 0.62,
@@ -112,7 +124,7 @@
     },
     {
       "symbol": "GFS",
-      "name_zh": "GlobalFoundries",
+      "name_zh": "GFS",
       "kind": "US",
       "price": 81.35,
       "change_pct": 14.92,
@@ -148,7 +160,7 @@
     },
     {
       "symbol": "DECK",
-      "name_zh": "DECK",
+      "name_zh": "Deckers Outdoor",
       "kind": "US",
       "price": 102.62,
       "change_pct": 4.46,
@@ -172,7 +184,7 @@
     },
     {
       "symbol": "DXYZ",
-      "name_zh": "DXYZ",
+      "name_zh": "Destiny Tech100",
       "kind": "US",
       "price": 61.66,
       "change_pct": 26.87,
@@ -220,7 +232,7 @@
     },
     {
       "symbol": "QTUM",
-      "name_zh": "Defiance Quantum ETF",
+      "name_zh": "QTUM",
       "kind": "US",
       "price": 149.33,
       "change_pct": 2.67,
@@ -252,18 +264,6 @@
       "ytd_pct": -19.58,
       "market_date": "2026-05-21",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QS.US",
-      "error": null
-    },
-    {
-      "symbol": "SPY",
-      "name_zh": "SPDR S&P 500 ETF",
-      "kind": "US",
-      "price": 742.72,
-      "change_pct": 0.2,
-      "mtd_pct": 3.35,
-      "ytd_pct": 8.92,
-      "market_date": "2026-05-21",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPY.US",
       "error": null
     },
     {
@@ -300,18 +300,6 @@
       "ytd_pct": 4.69,
       "market_date": "2026-05-21",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DIA.US",
-      "error": null
-    },
-    {
-      "symbol": "VTI",
-      "name_zh": "Vanguard 全美股 ETF",
-      "kind": "US",
-      "price": 365.09,
-      "change_pct": 0.25,
-      "mtd_pct": 3.08,
-      "ytd_pct": 8.89,
-      "market_date": "2026-05-21",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VTI.US",
       "error": null
     },
     {
