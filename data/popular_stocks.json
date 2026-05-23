@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-23T09:47:00+08:00",
+  "generated_at": "2026-05-23T15:24:59+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -27,18 +27,6 @@
       "error": null
     },
     {
-      "symbol": "QCOM",
-      "name_zh": "高通",
-      "kind": "US",
-      "price": 238.16,
-      "change_pct": 11.6,
-      "mtd_pct": 32.62,
-      "ytd_pct": 39.23,
-      "market_date": "2026-05-22",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QCOM.US",
-      "error": null
-    },
-    {
       "symbol": "BB",
       "name_zh": "BlackBerry",
       "kind": "US",
@@ -51,6 +39,18 @@
       "error": null
     },
     {
+      "symbol": "NVTS",
+      "name_zh": "Navitas Semiconductor Corporati",
+      "kind": "US",
+      "price": 29.25,
+      "change_pct": 19.98,
+      "mtd_pct": 77.27,
+      "ytd_pct": 309.66,
+      "market_date": "2026-05-22",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NVTS.US",
+      "error": null
+    },
+    {
       "symbol": "F",
       "name_zh": "福特",
       "kind": "US",
@@ -60,30 +60,6 @@
       "ytd_pct": 13.8,
       "market_date": "2026-05-22",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=F.US",
-      "error": null
-    },
-    {
-      "symbol": "AKTX",
-      "name_zh": "Akari Therapeutics",
-      "kind": "US",
-      "price": 18.27,
-      "change_pct": 255.45,
-      "mtd_pct": 238.33,
-      "ytd_pct": 58.04,
-      "market_date": "2026-05-22",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AKTX.US",
-      "error": null
-    },
-    {
-      "symbol": "HYLN",
-      "name_zh": "Hyliion",
-      "kind": "US",
-      "price": 5.99,
-      "change_pct": 42.62,
-      "mtd_pct": 213.61,
-      "ytd_pct": 225.54,
-      "market_date": "2026-05-22",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HYLN.US",
       "error": null
     },
     {
@@ -111,66 +87,6 @@
       "error": null
     },
     {
-      "symbol": "NVTS",
-      "name_zh": "Navitas Semiconductor Corporati",
-      "kind": "US",
-      "price": 29.25,
-      "change_pct": 19.98,
-      "mtd_pct": 77.27,
-      "ytd_pct": 309.66,
-      "market_date": "2026-05-22",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NVTS.US",
-      "error": null
-    },
-    {
-      "symbol": "FJET",
-      "name_zh": "Starfighters Space",
-      "kind": "US",
-      "price": 7.2,
-      "change_pct": 39.81,
-      "mtd_pct": 43.14,
-      "ytd_pct": -38.2,
-      "market_date": "2026-05-22",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FJET.US",
-      "error": null
-    },
-    {
-      "symbol": "NOK",
-      "name_zh": "Nokia Corporation Sponsored",
-      "kind": "US",
-      "price": 15.47,
-      "change_pct": 9.1,
-      "mtd_pct": 19.83,
-      "ytd_pct": 139.1,
-      "market_date": "2026-05-22",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NOK.US",
-      "error": null
-    },
-    {
-      "symbol": "RDW",
-      "name_zh": "Redwire",
-      "kind": "US",
-      "price": 17.49,
-      "change_pct": 13.94,
-      "mtd_pct": 90.32,
-      "ytd_pct": 130.13,
-      "market_date": "2026-05-22",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RDW.US",
-      "error": null
-    },
-    {
-      "symbol": "HLIT",
-      "name_zh": "Harmonic",
-      "kind": "US",
-      "price": 15.2,
-      "change_pct": 19.68,
-      "mtd_pct": 32.98,
-      "ytd_pct": 53.69,
-      "market_date": "2026-05-22",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HLIT.US",
-      "error": null
-    },
-    {
       "symbol": "HPE",
       "name_zh": "Hewlett Packard Enterprise Comp",
       "kind": "US",
@@ -192,6 +108,90 @@
       "ytd_pct": 121.28,
       "market_date": "2026-05-22",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FLY.US",
+      "error": null
+    },
+    {
+      "symbol": "HLIT",
+      "name_zh": "Harmonic",
+      "kind": "US",
+      "price": 15.2,
+      "change_pct": 19.68,
+      "mtd_pct": 32.98,
+      "ytd_pct": 53.69,
+      "market_date": "2026-05-22",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HLIT.US",
+      "error": null
+    },
+    {
+      "symbol": "AKTX",
+      "name_zh": "Akari Therapeutics",
+      "kind": "US",
+      "price": 18.27,
+      "change_pct": 255.45,
+      "mtd_pct": 238.33,
+      "ytd_pct": 58.04,
+      "market_date": "2026-05-22",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AKTX.US",
+      "error": null
+    },
+    {
+      "symbol": "HYLN",
+      "name_zh": "Hyliion",
+      "kind": "US",
+      "price": 5.99,
+      "change_pct": 42.62,
+      "mtd_pct": 213.61,
+      "ytd_pct": 225.54,
+      "market_date": "2026-05-22",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HYLN.US",
+      "error": null
+    },
+    {
+      "symbol": "CBRS",
+      "name_zh": "Cerebras Systems",
+      "kind": "US",
+      "price": 256.78,
+      "change_pct": -8.9,
+      "mtd_pct": null,
+      "ytd_pct": null,
+      "market_date": "2026-05-22",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CBRS.US",
+      "error": null
+    },
+    {
+      "symbol": "KO",
+      "name_zh": "可口可樂",
+      "kind": "US",
+      "price": 81.48,
+      "change_pct": 0.38,
+      "mtd_pct": 3.45,
+      "ytd_pct": 16.55,
+      "market_date": "2026-05-22",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=KO.US",
+      "error": null
+    },
+    {
+      "symbol": "RDDT",
+      "name_zh": "Reddit",
+      "kind": "US",
+      "price": 141.67,
+      "change_pct": -5.58,
+      "mtd_pct": -3.78,
+      "ytd_pct": -38.37,
+      "market_date": "2026-05-22",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RDDT.US",
+      "error": null
+    },
+    {
+      "symbol": "RDW",
+      "name_zh": "Redwire",
+      "kind": "US",
+      "price": 17.49,
+      "change_pct": 13.94,
+      "mtd_pct": 90.32,
+      "ytd_pct": 130.13,
+      "market_date": "2026-05-22",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RDW.US",
       "error": null
     },
     {
