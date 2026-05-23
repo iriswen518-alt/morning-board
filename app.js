@@ -1846,7 +1846,7 @@ function renderStockBriefBlock() {
           <span style="font-size:13px;">本週 ${wkPct}</span>
         </div>
         <ul style="margin:0 0 8px; padding-left:0; list-style:none;">${newsHtml}</ul>
-        <div style="font-size:13px; line-height:1.55; padding:8px 10px; background:#f8f9fb; border-left:3px solid #019AB3; border-radius:0 4px 4px 0;">
+        <div style="font-size:13px; line-height:1.55; padding:8px 10px; background:#f8f9fb; border-radius:4px;">
           <strong style="color:#019AB3;">論點檢視：</strong>${st.thesis_check || "—"}
         </div>
         ${catalyst}
