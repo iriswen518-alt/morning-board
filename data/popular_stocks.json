@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-23T15:24:59+08:00",
+  "generated_at": "2026-05-23T17:01:30+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -39,6 +39,18 @@
       "error": null
     },
     {
+      "symbol": "HPQ",
+      "name_zh": "HP",
+      "kind": "US",
+      "price": 25.24,
+      "change_pct": 15.25,
+      "mtd_pct": 21.0,
+      "ytd_pct": 13.29,
+      "market_date": "2026-05-22",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HPQ.US",
+      "error": null
+    },
+    {
       "symbol": "NVTS",
       "name_zh": "Navitas Semiconductor Corporati",
       "kind": "US",
@@ -63,18 +75,6 @@
       "error": null
     },
     {
-      "symbol": "HPQ",
-      "name_zh": "HP",
-      "kind": "US",
-      "price": 25.24,
-      "change_pct": 15.25,
-      "mtd_pct": 21.0,
-      "ytd_pct": 13.29,
-      "market_date": "2026-05-22",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HPQ.US",
-      "error": null
-    },
-    {
       "symbol": "SWKS",
       "name_zh": "Skyworks Solutions",
       "kind": "US",
@@ -84,18 +84,6 @@
       "ytd_pct": 29.98,
       "market_date": "2026-05-22",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SWKS.US",
-      "error": null
-    },
-    {
-      "symbol": "HPE",
-      "name_zh": "Hewlett Packard Enterprise Comp",
-      "kind": "US",
-      "price": 37.58,
-      "change_pct": 10.63,
-      "mtd_pct": 30.62,
-      "ytd_pct": 56.45,
-      "market_date": "2026-05-22",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HPE.US",
       "error": null
     },
     {
@@ -123,18 +111,6 @@
       "error": null
     },
     {
-      "symbol": "AKTX",
-      "name_zh": "Akari Therapeutics",
-      "kind": "US",
-      "price": 18.27,
-      "change_pct": 255.45,
-      "mtd_pct": 238.33,
-      "ytd_pct": 58.04,
-      "market_date": "2026-05-22",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AKTX.US",
-      "error": null
-    },
-    {
       "symbol": "HYLN",
       "name_zh": "Hyliion",
       "kind": "US",
@@ -159,30 +135,6 @@
       "error": null
     },
     {
-      "symbol": "KO",
-      "name_zh": "可口可樂",
-      "kind": "US",
-      "price": 81.48,
-      "change_pct": 0.38,
-      "mtd_pct": 3.45,
-      "ytd_pct": 16.55,
-      "market_date": "2026-05-22",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=KO.US",
-      "error": null
-    },
-    {
-      "symbol": "RDDT",
-      "name_zh": "Reddit",
-      "kind": "US",
-      "price": 141.67,
-      "change_pct": -5.58,
-      "mtd_pct": -3.78,
-      "ytd_pct": -38.37,
-      "market_date": "2026-05-22",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RDDT.US",
-      "error": null
-    },
-    {
       "symbol": "RDW",
       "name_zh": "Redwire",
       "kind": "US",
@@ -192,6 +144,54 @@
       "ytd_pct": 130.13,
       "market_date": "2026-05-22",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RDW.US",
+      "error": null
+    },
+    {
+      "symbol": "HPE",
+      "name_zh": "Hewlett Packard Enterprise Comp",
+      "kind": "US",
+      "price": 37.58,
+      "change_pct": 10.63,
+      "mtd_pct": 30.62,
+      "ytd_pct": 56.45,
+      "market_date": "2026-05-22",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HPE.US",
+      "error": null
+    },
+    {
+      "symbol": "NASA",
+      "name_zh": "Tema Space Innovators ETF",
+      "kind": "US",
+      "price": 38.76,
+      "change_pct": 6.13,
+      "mtd_pct": 31.88,
+      "ytd_pct": null,
+      "market_date": "2026-05-22",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NASA.US",
+      "error": null
+    },
+    {
+      "symbol": "SNPS",
+      "name_zh": "Synopsys",
+      "kind": "US",
+      "price": 524.74,
+      "change_pct": 4.12,
+      "mtd_pct": 8.73,
+      "ytd_pct": 11.71,
+      "market_date": "2026-05-22",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SNPS.US",
+      "error": null
+    },
+    {
+      "symbol": "QCOM",
+      "name_zh": "高通",
+      "kind": "US",
+      "price": 238.16,
+      "change_pct": 11.6,
+      "mtd_pct": 32.62,
+      "ytd_pct": 39.23,
+      "market_date": "2026-05-22",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QCOM.US",
       "error": null
     },
     {
