@@ -1811,8 +1811,9 @@ function renderUsStocksSheet() {
 
 function renderStockBriefBlock() {
   const brief = DATA.stock_brief || {};
-  const stocks = brief.stocks || [];
-  if (!stocks.length) {
+  const curatedBrief = brief.stocks || [];
+  const popularBrief = brief.popular_stocks || [];
+  if (!curatedBrief.length && !popularBrief.length) {
     return `
       <h2 style="font-size:16px; margin:24px 0 8px;">週度檢視</h2>
       <p style="color:var(--text-mute); font-size:12px; margin:0 0 8px;">每週日晚 20:30 自動更新。本週尚未產出。</p>
@@ -1821,48 +1822,67 @@ function renderStockBriefBlock() {
   const updated = brief.generated_at
     ? brief.generated_at.replace("T", " ").slice(0, 16)
     : "—";
-  const weekOf = brief.week_of || "—";
-  const impColor = (lvl) => ({ HIGH: "#d62828", MED: "#f59e0b", LOW: "#6b7280" })[lvl] || "#6b7280";
-  const impLabel = (lvl) => ({ HIGH: "高", MED: "中", LOW: "低" })[lvl] || lvl;
+  const wkStart = brief.week_of_start || "";
+  const wkEnd = brief.week_of_end || "";
+  // 取月日呈現（5/17 ~ 5/24）
+  const shortMD = (iso) => iso ? iso.slice(5).replace("-", "/").replace(/^0/, "") : "";
+  const dateLabel = (wkStart && wkEnd)
+    ? `（${shortMD(wkStart)} ~ ${shortMD(wkEnd)}）`
+    : (brief.week_of ? `（${brief.week_of}）` : "");
 
-  const cards = stocks.map(st => {
-    const wkPct = (typeof st.weekly_change_pct === "number")
-      ? `<span style="color:${st.weekly_change_pct >= 0 ? "#d62828" : "#2a9d8f"};">${st.weekly_change_pct >= 0 ? "+" : ""}${st.weekly_change_pct.toFixed(2)}%</span>`
-      : "—";
-    const newsHtml = (st.news_highlights || []).map(n => `
-      <li style="margin-bottom:8px; line-height:1.55;">
-        <span style="display:inline-block; padding:1px 6px; border-radius:3px; font-size:11px; color:#fff; background:${impColor(n.importance)}; margin-right:6px;">${impLabel(n.importance)}</span>
-        <a href="${n.url}" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">${n.headline_zh || n.headline_en}</a>
-        <span style="color:var(--text-mute); font-size:12px; margin-left:6px;">${n.source || ""} · ${n.published || ""}</span>
-      </li>
-    `).join("") || `<li style="color:var(--text-mute); font-size:13px;">本週無重大新聞</li>`;
+  const curatedCards = curatedBrief.map(renderBriefCard).join("");
+  const popularCards = popularBrief.map(renderBriefCard).join("");
 
-    const catalyst = st.next_week_catalyst
-      ? `<div style="margin-top:6px; font-size:13px; color:var(--text-mute);"><strong>下週觀察：</strong>${st.next_week_catalyst}</div>`
-      : "";
+  const curatedSection = curatedBrief.length ? `
+    <h3 style="font-size:15px; margin:14px 0 8px; color:#019AB3;">精選股票本週重點</h3>
+    ${curatedCards}
+  ` : "";
 
-    return `
-      <div style="border:1px solid var(--border, #e5e7eb); border-radius:8px; padding:14px; margin-bottom:12px; background:var(--card-bg, #fff);">
-        <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px;">
-          <strong style="font-size:15px;">${st.symbol} ${st.name_zh || ""}</strong>
-          <span style="font-size:13px;">本週 ${wkPct}</span>
-        </div>
-        <ul style="margin:0 0 8px; padding-left:0; list-style:none;">${newsHtml}</ul>
-        <div style="font-size:13px; line-height:1.55; padding:8px 10px; background:#f8f9fb; border-radius:4px;">
-          <strong style="color:#019AB3;">論點檢視：</strong>${st.thesis_check || "—"}
-        </div>
-        ${catalyst}
-      </div>
-    `;
-  }).join("");
+  const popularSection = popularBrief.length ? `
+    <h3 style="font-size:15px; margin:18px 0 4px; color:#019AB3;">熱門股票本週重點</h3>
+    <p style="color:var(--text-mute); font-size:12px; margin:0 0 8px;">取週日晚 snapshot 前 10 檔，避免每次 build 輪動造成解讀混亂。</p>
+    ${popularCards}
+  ` : "";
 
   return `
-    <h2 style="font-size:16px; margin:24px 0 4px;">週度檢視</h2>
+    <h2 style="font-size:16px; margin:24px 0 4px;">週度檢視${dateLabel}</h2>
     <p style="color:var(--text-mute); font-size:12px; margin:0 0 12px;">
-      AI 摘要・資訊聚合・非投資建議・週期 ${weekOf}・更新 ${updated}<br>
+      AI 摘要・資訊聚合・非投資建議・更新 ${updated}<br>
       資料來源：finnhub company-news；摘要由 Claude CLI 產出。本區塊僅供研究，不構成個股投資建議。
     </p>
-    ${cards}
+    ${curatedSection}
+    ${popularSection}
+  `;
+}
+
+function renderBriefCard(st) {
+  const impColor = (lvl) => ({ HIGH: "#d62828", MED: "#f59e0b", LOW: "#6b7280" })[lvl] || "#6b7280";
+  const impLabel = (lvl) => ({ HIGH: "高", MED: "中", LOW: "低" })[lvl] || lvl;
+  const wkPct = (typeof st.weekly_change_pct === "number")
+    ? `<span style="color:${st.weekly_change_pct >= 0 ? "#d62828" : "#2a9d8f"};">${st.weekly_change_pct >= 0 ? "+" : ""}${st.weekly_change_pct.toFixed(2)}%</span>`
+    : "—";
+  const newsHtml = (st.news_highlights || []).map(n => `
+    <li style="margin-bottom:8px; line-height:1.55;">
+      <span style="display:inline-block; padding:1px 6px; border-radius:3px; font-size:11px; color:#fff; background:${impColor(n.importance)}; margin-right:6px;">${impLabel(n.importance)}</span>
+      <a href="${n.url}" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">${n.headline_zh || n.headline_en}</a>
+      <span style="color:var(--text-mute); font-size:12px; margin-left:6px;">${n.source || ""} · ${n.published || ""}</span>
+    </li>
+  `).join("") || `<li style="color:var(--text-mute); font-size:13px;">本週無重大新聞</li>`;
+  const catalyst = st.next_week_catalyst
+    ? `<div style="margin-top:6px; font-size:13px; color:var(--text-mute);"><strong>下週觀察：</strong>${st.next_week_catalyst}</div>`
+    : "";
+  return `
+    <div style="border:1px solid var(--border, #e5e7eb); border-radius:8px; padding:14px; margin-bottom:12px; background:var(--card-bg, #fff);">
+      <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px;">
+        <strong style="font-size:15px;">${st.symbol} ${st.name_zh || ""}</strong>
+        <span style="font-size:13px;">本週 ${wkPct}</span>
+      </div>
+      <ul style="margin:0 0 8px; padding-left:0; list-style:none;">${newsHtml}</ul>
+      <div style="font-size:13px; line-height:1.55; padding:8px 10px; background:#f8f9fb; border-radius:4px;">
+        <strong style="color:#019AB3;">論點檢視：</strong>${st.thesis_check || "—"}
+      </div>
+      ${catalyst}
+    </div>
   `;
 }
 
