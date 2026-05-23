@@ -386,7 +386,7 @@ function wireSearch() {
 async function init() {
   // 每個來源各自有 fallback：一個壞不拖垮全頁
   const safe = (name, fallback) => load(name).catch(() => fallback);
-  const [meta, market, news, tax, funds, stocks, popular, insurance, obonds, targets, allocation, dca, wealth, beatetf, presets, fund_compare] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, targets, allocation, dca, wealth, beatetf, presets, fund_compare] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
@@ -394,6 +394,7 @@ async function init() {
     safe("funds", { funds: [] }),
     safe("stocks", { us_stocks: [], tw_stocks: [] }),
     safe("popular_stocks", { stocks: [] }),
+    safe("stock_brief", { generated_at: "", week_of: "", stocks: [] }),
     safe("insurances", { insurances: [] }),
     safe("overseas_bonds", { bonds: [] }),
     safe("targets", { targets: [], summary: {}, entry_sequence: [] }),
@@ -404,7 +405,7 @@ async function init() {
     safe("presets", { presets: [] }),
     safe("fund_compare", { funds: [], categories: [] }),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, popular, insurance, obonds, targets, allocation, dca, wealth, beatetf, presets, fund_compare };
+  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, targets, allocation, dca, wealth, beatetf, presets, fund_compare };
   if (!meta.built_at) {
     $("updated").textContent = `載入部分失敗（顯示快取資料）`;
   } else {
@@ -613,7 +614,7 @@ async function refreshData() {
 
   // 資料刷新：fetch 7 個 JSON，每個各自有 fallback
   const safe = (name, fallback) => load(name).catch(() => DATA[name === "insurances" ? "insurance" : name] || fallback);
-  const [meta, market, news, tax, funds, stocks, popular, insurance, obonds, targets, allocation, dca, wealth, beatetf, presets, fund_compare] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, targets, allocation, dca, wealth, beatetf, presets, fund_compare] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
@@ -621,6 +622,7 @@ async function refreshData() {
     safe("funds", { funds: [] }),
     safe("stocks", { us_stocks: [], tw_stocks: [] }),
     safe("popular_stocks", { stocks: [] }),
+    safe("stock_brief", { generated_at: "", week_of: "", stocks: [] }),
     safe("insurances", { insurances: [] }),
     safe("overseas_bonds", { bonds: [] }),
     safe("targets", { targets: [], summary: {}, entry_sequence: [] }),
@@ -631,7 +633,7 @@ async function refreshData() {
     safe("presets", { presets: [] }),
     safe("fund_compare", { funds: [], categories: [] }),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, popular, insurance, obonds, targets, allocation, dca, wealth, beatetf, presets, fund_compare };
+  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, targets, allocation, dca, wealth, beatetf, presets, fund_compare };
   SEARCH_INDEX = buildSearchIndex();
   if (DATA.meta && DATA.meta.built_at) {
     $("updated").textContent =
@@ -1787,7 +1789,8 @@ function renderMarketSheet() {
 function renderUsStocksSheet() {
   const curated = DATA.stocks?.us_stocks || [];
   const popular = DATA.popular?.stocks || [];
-  const hasAny = curated.length || popular.length;
+  const briefStocks = DATA.stock_brief?.stocks || [];
+  const hasAny = curated.length || popular.length || briefStocks.length;
   if (!hasAny) {
     return `<p style="color:var(--text-mute); padding:20px 0">尚未提供海外股票資料</p>`;
   }
@@ -1801,7 +1804,64 @@ function renderUsStocksSheet() {
     <p style="color:var(--text-mute); font-size:12px; margin:0 0 8px;">資料來源：Yahoo Finance trending（流動性過低個股已過濾），每次 build 重抓。</p>
     ${renderStocksTable("", popular)}
   ` : "";
-  return note + curatedBlock + popularBlock;
+  return note + curatedBlock + popularBlock + renderStockBriefBlock();
+}
+
+function renderStockBriefBlock() {
+  const brief = DATA.stock_brief || {};
+  const stocks = brief.stocks || [];
+  if (!stocks.length) {
+    return `
+      <h2 style="font-size:16px; margin:24px 0 8px;">週度檢視</h2>
+      <p style="color:var(--text-mute); font-size:12px; margin:0 0 8px;">每週日晚 20:30 自動更新。本週尚未產出。</p>
+    `;
+  }
+  const updated = brief.generated_at
+    ? brief.generated_at.replace("T", " ").slice(0, 16)
+    : "—";
+  const weekOf = brief.week_of || "—";
+  const impColor = (lvl) => ({ HIGH: "#d62828", MED: "#f59e0b", LOW: "#6b7280" })[lvl] || "#6b7280";
+  const impLabel = (lvl) => ({ HIGH: "高", MED: "中", LOW: "低" })[lvl] || lvl;
+
+  const cards = stocks.map(st => {
+    const wkPct = (typeof st.weekly_change_pct === "number")
+      ? `<span style="color:${st.weekly_change_pct >= 0 ? "#d62828" : "#2a9d8f"};">${st.weekly_change_pct >= 0 ? "+" : ""}${st.weekly_change_pct.toFixed(2)}%</span>`
+      : "—";
+    const newsHtml = (st.news_highlights || []).map(n => `
+      <li style="margin-bottom:8px; line-height:1.55;">
+        <span style="display:inline-block; padding:1px 6px; border-radius:3px; font-size:11px; color:#fff; background:${impColor(n.importance)}; margin-right:6px;">${impLabel(n.importance)}</span>
+        <a href="${n.url}" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">${n.headline_zh || n.headline_en}</a>
+        <span style="color:var(--text-mute); font-size:12px; margin-left:6px;">${n.source || ""} · ${n.published || ""}</span>
+      </li>
+    `).join("") || `<li style="color:var(--text-mute); font-size:13px;">本週無重大新聞</li>`;
+
+    const catalyst = st.next_week_catalyst
+      ? `<div style="margin-top:6px; font-size:13px; color:var(--text-mute);"><strong>下週觀察：</strong>${st.next_week_catalyst}</div>`
+      : "";
+
+    return `
+      <div style="border:1px solid var(--border, #e5e7eb); border-radius:8px; padding:14px; margin-bottom:12px; background:var(--card-bg, #fff);">
+        <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px;">
+          <strong style="font-size:15px;">${st.symbol} ${st.name_zh || ""}</strong>
+          <span style="font-size:13px;">本週 ${wkPct}</span>
+        </div>
+        <ul style="margin:0 0 8px; padding-left:0; list-style:none;">${newsHtml}</ul>
+        <div style="font-size:13px; line-height:1.55; padding:8px 10px; background:#f8f9fb; border-left:3px solid #019AB3; border-radius:0 4px 4px 0;">
+          <strong style="color:#019AB3;">論點檢視：</strong>${st.thesis_check || "—"}
+        </div>
+        ${catalyst}
+      </div>
+    `;
+  }).join("");
+
+  return `
+    <h2 style="font-size:16px; margin:24px 0 4px;">週度檢視</h2>
+    <p style="color:var(--text-mute); font-size:12px; margin:0 0 12px;">
+      AI 摘要・資訊聚合・非投資建議・週期 ${weekOf}・更新 ${updated}<br>
+      資料來源：finnhub company-news；摘要由 Claude CLI 產出。本區塊僅供研究，不構成個股投資建議。
+    </p>
+    ${cards}
+  `;
 }
 
 function renderStocksTable(title, list) {
