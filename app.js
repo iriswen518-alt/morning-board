@@ -1933,11 +1933,12 @@ function renderBriefCard(st, wkStart, wkEnd) {
   const wkColor = hasReal
     ? (st.weekly_change_pct >= 0 ? "#d62828" : "#2a9d8f")
     : "inherit";
+  // 顯示為「基準收盤 → 最新收盤」格式，避免讀者誤解為「資料區間 5/15~5/22」
   const wkRange = (st.weekly_start && st.weekly_as_of)
-    ? `(${shortMD(st.weekly_start)}~${shortMD(st.weekly_as_of)})`
+    ? `(基準 ${shortMD(st.weekly_start)} → ${shortMD(st.weekly_as_of)})`
     : "";
   const wkTitle = hasReal
-    ? `定義：${st.weekly_definition || "5 個交易日 close-to-close"}\n資料截止：${st.weekly_as_of || "—"}\n資料區間起：${st.weekly_start || "—"}\n來源：${st.weekly_source || "yahoo_chart"}（點開可驗證）`
+    ? `定義：${st.weekly_definition || "5 個交易日 close-to-close"}\n基準收盤日（denominator）：${st.weekly_start || "—"}\n最新收盤日（numerator）：${st.weekly_as_of || "—"}\n算法：(${st.weekly_as_of} 收盤 / ${st.weekly_start} 收盤) − 1\n來源：${st.weekly_source || "yahoo_chart"}（點開可驗證）`
     : "weekly 資料未取得，點開 Yahoo 自驗";
   const wkValue = yahooUrl
     ? `<a href="${yahooUrl}" target="_blank" rel="noopener" title="${wkTitle.replace(/"/g,'&quot;')}" style="color:${wkColor}; text-decoration:underline; text-decoration-style:dotted; font-size:13px;">${wkPctStr}</a>`
