@@ -179,6 +179,43 @@ let SEARCH_INDEX = [];
 let PENDING_HIGHLIGHT = null;
 let PENDING_SUBTAB = null;
 
+// init 時 fetch 失敗（伺服器重啟瞬間／網路 blip）的 data 名稱會被記下，
+// 使用者切到對應 tab 時背景重試一次再重畫，避免長期卡在 fallback 空狀態。
+const FAILED_LOADS = new Set();
+const LOAD_NAME_TO_DATA_KEY = {
+  meta: "meta", market: "market", news: "news", tax: "tax",
+  funds: "funds", stocks: "stocks", popular_stocks: "popular",
+  stock_brief: "stock_brief", insurances: "insurance",
+  overseas_bonds: "obonds", targets: "targets",
+  allocation: "allocation", dca: "dca", wealth_transfer: "wealth",
+  beatetf: "beatetf", presets: "presets", fund_compare: "fund_compare",
+};
+const TAB_LOAD_DEPS = {
+  market: ["market", "stocks"],
+  news: ["news"],
+  funds: ["funds", "dca", "beatetf", "fund_compare"],
+  obonds: ["overseas_bonds"],
+  usstocks: ["stocks", "popular_stocks", "stock_brief"],
+  insurance: ["insurances"],
+  targets: ["targets"],
+  portfolio: ["presets", "allocation", "targets"],
+  wealth: ["wealth_transfer", "tax"],
+};
+async function retryFailedForTab(tabName) {
+  const deps = TAB_LOAD_DEPS[tabName] || [];
+  const toRetry = deps.filter(n => FAILED_LOADS.has(n));
+  if (!toRetry.length) return false;
+  const results = await Promise.all(toRetry.map(async name => {
+    try {
+      const data = await load(name);
+      DATA[LOAD_NAME_TO_DATA_KEY[name]] = data;
+      FAILED_LOADS.delete(name);
+      return true;
+    } catch (_) { return false; }
+  }));
+  return results.some(Boolean);
+}
+
 function flashFindInContent(needle) {
   if (!needle) return false;
   const root = $("content");
@@ -385,7 +422,8 @@ function wireSearch() {
 
 async function init() {
   // 每個來源各自有 fallback：一個壞不拖垮全頁
-  const safe = (name, fallback) => load(name).catch(() => fallback);
+  // 失敗時記到 FAILED_LOADS，使用者切到對應 tab 時會背景重試
+  const safe = (name, fallback) => load(name).catch(() => { FAILED_LOADS.add(name); return fallback; });
   const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, targets, allocation, dca, wealth, beatetf, presets, fund_compare] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
@@ -500,6 +538,14 @@ function switchTab(name) {
   } else {
     window.scrollTo({ top: 0, behavior: "instant" in window ? "instant" : "auto" });
   }
+
+  // 背景重試 init 時失敗的資料；成功就重畫一次（避免 fallback 空狀態卡住）
+  retryFailedForTab(name).then(updated => {
+    if (updated && CURRENT_TAB === name) {
+      SEARCH_INDEX = buildSearchIndex();
+      switchTab(name);
+    }
+  });
 }
 
 function currencyChip(cur) {
@@ -615,7 +661,10 @@ async function refreshData() {
   if (await checkForNewVersion()) return;
 
   // 資料刷新：fetch 7 個 JSON，每個各自有 fallback
-  const safe = (name, fallback) => load(name).catch(() => DATA[name === "insurances" ? "insurance" : name] || fallback);
+  const safe = (name, fallback) => load(name).catch(() => {
+    FAILED_LOADS.add(name);
+    return DATA[name === "insurances" ? "insurance" : name] || fallback;
+  });
   const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, targets, allocation, dca, wealth, beatetf, presets, fund_compare] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
@@ -1858,13 +1907,28 @@ function renderStockBriefBlock() {
 function renderBriefCard(st, wkStart, wkEnd) {
   const impColor = (lvl) => ({ HIGH: "#d62828", MED: "#f59e0b", LOW: "#6b7280" })[lvl] || "#6b7280";
   const impLabel = (lvl) => ({ HIGH: "高", MED: "中", LOW: "低" })[lvl] || lvl;
-  // Yahoo Finance 標的頁：台股 .TW 自動正確，美股 symbol 也適用
-  const yahooUrl = st.symbol ? `https://finance.yahoo.com/quote/${encodeURIComponent(st.symbol)}/` : null;
-  // 2026-05-24 HOTFIX：weekly_change_pct 來源實際是 MTD（regenerate_stock_brief.py 用 mtd_pct 近似），
-  // 與 Yahoo 5D 對不上。在資料管線修好（Phase 2）之前，先用 5D 標籤導向 Yahoo 自驗。
-  const wkPct = yahooUrl
-    ? `<a href="${yahooUrl}" target="_blank" rel="noopener" title="點開 Yahoo Finance 5D 圖驗證" style="color:#019AB3; text-decoration:underline; text-decoration-style:dotted; font-size:12px;">查 Yahoo 5D ↗</a>`
-    : `<span style="color:var(--text-mute); font-size:12px;">5D 驗證中</span>`;
+  // Yahoo Finance 標的頁：台股 4 位數字加 .TW，美股 symbol 直用
+  const ySym = st.symbol && /^\d{4}$/.test(st.symbol) ? `${st.symbol}.TW` : st.symbol;
+  const yahooUrl = ySym ? `https://finance.yahoo.com/quote/${encodeURIComponent(ySym)}/` : null;
+  // 真實 5 個交易日 close-to-close（資料管線改從 Yahoo chart API 抓，2026-05-24 修正）
+  const shortMD = (iso) => iso ? iso.slice(5).replace("-", "/").replace(/^0/, "") : "";
+  const hasReal = typeof st.weekly_change_pct === "number";
+  const wkPctStr = hasReal
+    ? `${st.weekly_change_pct >= 0 ? "+" : ""}${st.weekly_change_pct.toFixed(2)}%`
+    : "—";
+  const wkColor = hasReal
+    ? (st.weekly_change_pct >= 0 ? "#d62828" : "#2a9d8f")
+    : "inherit";
+  const wkRange = (st.weekly_start && st.weekly_as_of)
+    ? `(${shortMD(st.weekly_start)}~${shortMD(st.weekly_as_of)})`
+    : "";
+  const wkTitle = hasReal
+    ? `定義：${st.weekly_definition || "5 個交易日 close-to-close"}\n資料截止：${st.weekly_as_of || "—"}\n資料區間起：${st.weekly_start || "—"}\n來源：${st.weekly_source || "yahoo_chart"}（點開可驗證）`
+    : "weekly 資料未取得，點開 Yahoo 自驗";
+  const wkValue = yahooUrl
+    ? `<a href="${yahooUrl}" target="_blank" rel="noopener" title="${wkTitle.replace(/"/g,'&quot;')}" style="color:${wkColor}; text-decoration:underline; text-decoration-style:dotted; font-size:13px;">${wkPctStr}</a>`
+    : `<span style="color:${wkColor}; font-size:13px;">${wkPctStr}</span>`;
+  const wkPct = `<span style="font-size:13px;">本週${wkRange ? ` <span style="color:var(--text-mute); font-size:11px;">${wkRange}</span>` : ""} ${wkValue}</span>`;
   const newsHtml = (st.news_highlights || []).map(n => `
     <li style="margin-bottom:8px; line-height:1.55;">
       <span style="display:inline-block; padding:1px 6px; border-radius:3px; font-size:11px; color:#fff; background:${impColor(n.importance)}; margin-right:6px;">${impLabel(n.importance)}</span>
