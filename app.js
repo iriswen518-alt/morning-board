@@ -1795,7 +1795,12 @@ function renderMarketSheet() {
   const stocksTab = `
     <table class="indices">
       <thead><tr>
-        <th>指數</th><th>收盤</th><th>日</th><th>本月</th><th>今年</th><th class="date-col">收盤日</th>
+        <th title="點名稱可開 MoneyDJ 圖表頁驗證">指數</th>
+        <th title="收盤價（來源：Yahoo Finance）">收盤</th>
+        <th title="日報酬率｜定義：今日收盤 vs 昨日收盤｜來源：Yahoo Finance / FRED">日</th>
+        <th title="MTD｜定義：當月首交易日收盤 → 最新收盤｜來源：Yahoo Finance">本月</th>
+        <th title="YTD｜定義：去年最後交易日收盤 → 最新收盤｜來源：Yahoo Finance">今年</th>
+        <th class="date-col" title="收盤日：最新交易日；US ET 收盤後 build；TW TWSE 公告日">收盤日</th>
       </tr></thead>
       <tbody>${rows}</tbody>
     </table>`;
@@ -1803,7 +1808,11 @@ function renderMarketSheet() {
   const bondsTab = bondRows ? `
     <table class="indices">
       <thead><tr>
-        <th>債別</th><th>殖利率</th><th>日變動</th><th>本月變動</th><th class="date-col">收盤日</th>
+        <th title="點名稱可開 MoneyDJ 圖表頁驗證">債別</th>
+        <th title="到期殖利率（YTM, %）｜來源：FRED (US) / 各國央行 / Yahoo Finance">殖利率</th>
+        <th title="日變動 bps｜定義：今日 yield − 昨日 yield｜來源：FRED">日變動</th>
+        <th title="MTD 變動 bps｜定義：當月首交易日 yield → 最新 yield｜來源：FRED">本月變動</th>
+        <th class="date-col" title="債券殖利率公告日">收盤日</th>
       </tr></thead>
       <tbody>${bondRows}</tbody>
     </table>` : `<p style="color:var(--text-mute); padding:20px 0">尚未提供公債資料</p>`;
@@ -1811,7 +1820,12 @@ function renderMarketSheet() {
   const fxTab = fxRows ? `
     <table class="indices">
       <thead><tr>
-        <th>幣別</th><th>收盤</th><th>日</th><th>本月</th><th>今年</th><th class="date-col">收盤日</th>
+        <th title="點名稱可開 MoneyDJ 圖表頁驗證">幣別</th>
+        <th title="收盤匯率｜來源：Yahoo Finance">收盤</th>
+        <th title="日報酬率｜定義：今日收盤 vs 昨日收盤｜來源：Yahoo Finance">日</th>
+        <th title="MTD｜定義：當月首交易日收盤 → 最新收盤｜來源：Yahoo Finance">本月</th>
+        <th title="YTD｜定義：去年最後交易日收盤 → 最新收盤｜來源：Yahoo Finance">今年</th>
+        <th class="date-col" title="收盤日：最新交易日 ET 收盤後 build">收盤日</th>
       </tr></thead>
       <tbody>${fxRows}</tbody>
     </table>` : `<p style="color:var(--text-mute); padding:20px 0">尚未提供匯率資料</p>`;
