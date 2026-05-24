@@ -1830,8 +1830,8 @@ function renderStockBriefBlock() {
     ? `（${shortMD(wkStart)} ~ ${shortMD(wkEnd)}）`
     : (brief.week_of ? `（${brief.week_of}）` : "");
 
-  const curatedCards = curatedBrief.map(renderBriefCard).join("");
-  const popularCards = popularBrief.map(renderBriefCard).join("");
+  const curatedCards = curatedBrief.map(st => renderBriefCard(st, wkStart, wkEnd)).join("");
+  const popularCards = popularBrief.map(st => renderBriefCard(st, wkStart, wkEnd)).join("");
 
   const curatedSection = curatedBrief.length ? `
     <h3 style="font-size:15px; margin:14px 0 8px; color:#019AB3;">精選股票本週重點</h3>
@@ -1855,12 +1855,23 @@ function renderStockBriefBlock() {
   `;
 }
 
-function renderBriefCard(st) {
+function renderBriefCard(st, wkStart, wkEnd) {
   const impColor = (lvl) => ({ HIGH: "#d62828", MED: "#f59e0b", LOW: "#6b7280" })[lvl] || "#6b7280";
   const impLabel = (lvl) => ({ HIGH: "高", MED: "中", LOW: "低" })[lvl] || lvl;
-  const wkPct = (typeof st.weekly_change_pct === "number")
-    ? `<span style="color:${st.weekly_change_pct >= 0 ? "#d62828" : "#2a9d8f"};">${st.weekly_change_pct >= 0 ? "+" : ""}${st.weekly_change_pct.toFixed(2)}%</span>`
+  // 月日呈現 (5/19~5/23)；wkStart/wkEnd 來自父層 brief.week_of_start / week_of_end
+  const shortMD = (iso) => iso ? iso.slice(5).replace("-", "/").replace(/^0/, "") : "";
+  const wkRange = (wkStart && wkEnd) ? `(${shortMD(wkStart)}~${shortMD(wkEnd)})` : "";
+  // Yahoo Finance 標的頁：台股 .TW 自動正確，美股 symbol 也適用
+  const yahooUrl = st.symbol ? `https://finance.yahoo.com/quote/${encodeURIComponent(st.symbol)}/` : null;
+  const wkPctVal = (typeof st.weekly_change_pct === "number")
+    ? `${st.weekly_change_pct >= 0 ? "+" : ""}${st.weekly_change_pct.toFixed(2)}%`
     : "—";
+  const wkColor = (typeof st.weekly_change_pct === "number")
+    ? (st.weekly_change_pct >= 0 ? "#d62828" : "#2a9d8f")
+    : "inherit";
+  const wkPct = yahooUrl && wkPctVal !== "—"
+    ? `<a href="${yahooUrl}" target="_blank" rel="noopener" title="Yahoo Finance 驗證" style="color:${wkColor}; text-decoration:underline; text-decoration-style:dotted;">${wkPctVal}</a>`
+    : `<span style="color:${wkColor};">${wkPctVal}</span>`;
   const newsHtml = (st.news_highlights || []).map(n => `
     <li style="margin-bottom:8px; line-height:1.55;">
       <span style="display:inline-block; padding:1px 6px; border-radius:3px; font-size:11px; color:#fff; background:${impColor(n.importance)}; margin-right:6px;">${impLabel(n.importance)}</span>
@@ -1875,7 +1886,7 @@ function renderBriefCard(st) {
     <div style="border:1px solid var(--border, #e5e7eb); border-radius:8px; padding:14px; margin-bottom:12px; background:var(--card-bg, #fff);">
       <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px;">
         <strong style="font-size:15px;">${st.symbol} ${st.name_zh || ""}</strong>
-        <span style="font-size:13px;">本週 ${wkPct}</span>
+        <span style="font-size:13px;">本週${wkRange ? ` <span style="color:var(--text-mute); font-size:11px;">${wkRange}</span>` : ""} ${wkPct}</span>
       </div>
       <ul style="margin:0 0 8px; padding-left:0; list-style:none;">${newsHtml}</ul>
       <div style="font-size:13px; line-height:1.55; padding:8px 10px; background:#f8f9fb; border-radius:4px;">
