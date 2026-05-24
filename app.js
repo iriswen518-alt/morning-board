@@ -1858,20 +1858,13 @@ function renderStockBriefBlock() {
 function renderBriefCard(st, wkStart, wkEnd) {
   const impColor = (lvl) => ({ HIGH: "#d62828", MED: "#f59e0b", LOW: "#6b7280" })[lvl] || "#6b7280";
   const impLabel = (lvl) => ({ HIGH: "高", MED: "中", LOW: "低" })[lvl] || lvl;
-  // 月日呈現 (5/19~5/23)；wkStart/wkEnd 來自父層 brief.week_of_start / week_of_end
-  const shortMD = (iso) => iso ? iso.slice(5).replace("-", "/").replace(/^0/, "") : "";
-  const wkRange = (wkStart && wkEnd) ? `(${shortMD(wkStart)}~${shortMD(wkEnd)})` : "";
   // Yahoo Finance 標的頁：台股 .TW 自動正確，美股 symbol 也適用
   const yahooUrl = st.symbol ? `https://finance.yahoo.com/quote/${encodeURIComponent(st.symbol)}/` : null;
-  const wkPctVal = (typeof st.weekly_change_pct === "number")
-    ? `${st.weekly_change_pct >= 0 ? "+" : ""}${st.weekly_change_pct.toFixed(2)}%`
-    : "—";
-  const wkColor = (typeof st.weekly_change_pct === "number")
-    ? (st.weekly_change_pct >= 0 ? "#d62828" : "#2a9d8f")
-    : "inherit";
-  const wkPct = yahooUrl && wkPctVal !== "—"
-    ? `<a href="${yahooUrl}" target="_blank" rel="noopener" title="Yahoo Finance 驗證" style="color:${wkColor}; text-decoration:underline; text-decoration-style:dotted;">${wkPctVal}</a>`
-    : `<span style="color:${wkColor};">${wkPctVal}</span>`;
+  // 2026-05-24 HOTFIX：weekly_change_pct 來源實際是 MTD（regenerate_stock_brief.py 用 mtd_pct 近似），
+  // 與 Yahoo 5D 對不上。在資料管線修好（Phase 2）之前，先用 5D 標籤導向 Yahoo 自驗。
+  const wkPct = yahooUrl
+    ? `<a href="${yahooUrl}" target="_blank" rel="noopener" title="點開 Yahoo Finance 5D 圖驗證" style="color:#019AB3; text-decoration:underline; text-decoration-style:dotted; font-size:12px;">查 Yahoo 5D ↗</a>`
+    : `<span style="color:var(--text-mute); font-size:12px;">5D 驗證中</span>`;
   const newsHtml = (st.news_highlights || []).map(n => `
     <li style="margin-bottom:8px; line-height:1.55;">
       <span style="display:inline-block; padding:1px 6px; border-radius:3px; font-size:11px; color:#fff; background:${impColor(n.importance)}; margin-right:6px;">${impLabel(n.importance)}</span>
@@ -1886,7 +1879,7 @@ function renderBriefCard(st, wkStart, wkEnd) {
     <div style="border:1px solid var(--border, #e5e7eb); border-radius:8px; padding:14px; margin-bottom:12px; background:var(--card-bg, #fff);">
       <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px;">
         <strong style="font-size:15px;">${st.symbol} ${st.name_zh || ""}</strong>
-        <span style="font-size:13px;">本週${wkRange ? ` <span style="color:var(--text-mute); font-size:11px;">${wkRange}</span>` : ""} ${wkPct}</span>
+        <span>${wkPct}</span>
       </div>
       <ul style="margin:0 0 8px; padding-left:0; list-style:none;">${newsHtml}</ul>
       <div style="font-size:13px; line-height:1.55; padding:8px 10px; background:#f8f9fb; border-radius:4px;">
@@ -1904,23 +1897,36 @@ function renderStocksTable(title, list) {
     const prefix = kind === "TW" ? "" : "$";
     return prefix + p.toLocaleString("en-US", { maximumFractionDigits: 2 });
   };
+  // 來源驗證 URL：美股優先 Yahoo Finance 歷史頁（使用者偏好），台股優先 Yahoo TW
+  const verifyUrl = (s) => {
+    if (s.kind === "TW") return `https://tw.stock.yahoo.com/quote/${s.symbol}.TW/history`;
+    return `https://finance.yahoo.com/quote/${encodeURIComponent(s.symbol)}/history`;
+  };
+  const srcLabel = (s) => s.kind === "TW"
+    ? "原始來源：TWSE；驗證：Yahoo TW 歷史頁"
+    : "原始來源：finnhub /quote（價/日%）+ Yahoo（MTD/YTD）；驗證：Yahoo Finance 歷史頁";
   const rows = list.map(s => `
     <tr>
       <td>${s.source_url
-        ? `<a href="${s.source_url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${escapeHtml(s.name_zh)}</a>`
+        ? `<a href="${s.source_url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline" title="${escapeHtml(srcLabel(s))}">${escapeHtml(s.name_zh)}</a>`
         : escapeHtml(s.name_zh)}</td>
       <td>${fmtPrice(s.price, s.kind)}</td>
       <td class="${pctClass(s.change_pct)}">${fmtPct(s.change_pct)}</td>
       <td class="${pctClass(s.mtd_pct)}">${fmtPct(s.mtd_pct)}</td>
       <td class="${pctClass(s.ytd_pct)}">${fmtPct(s.ytd_pct)}</td>
-      <td class="date-col">${escapeHtml(shortDate(s.market_date))}</td>
+      <td class="date-col"><a href="${verifyUrl(s)}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline; text-decoration-style:dotted;" title="${escapeHtml(srcLabel(s))}">${escapeHtml(shortDate(s.market_date))}</a></td>
     </tr>
   `).join("");
   return `
     ${title ? `<h3>${title}</h3>` : ""}
     <table class="indices">
       <thead><tr>
-        <th>名稱</th><th>收盤</th><th>日</th><th>本月</th><th>今年</th><th class="date-col">收盤日</th>
+        <th>名稱</th>
+        <th title="收盤價，來源見名稱欄連結">收盤</th>
+        <th title="日報酬率，定義：今日收盤 vs 昨日收盤；來源：finnhub /quote (US) 或 TWSE (TW)">日</th>
+        <th title="月初到今報酬率（MTD），來源：Yahoo (US) 或 TWSE (TW)">本月</th>
+        <th title="年初到今報酬率（YTD），來源：Yahoo (US) 或 TWSE (TW)">今年</th>
+        <th class="date-col" title="收盤日：finnhub quote 的 timestamp（ET 時區）轉日期，或 TWSE 公告日">收盤日</th>
       </tr></thead>
       <tbody>${rows}</tbody>
     </table>
