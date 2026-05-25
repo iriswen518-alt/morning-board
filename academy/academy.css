@@ -230,5 +230,15 @@
   }
 }
 
-/* 手機分頁：復用主站 style.css 的 .nav-toggle/overlay 規則；
-   academy.js 會在 .main-nav 前 inject 一個 .nav-toggle 按鈕。 */
+/* 手機版 academy 不用 nav-toggle，main-nav 直接顯示（覆寫主站 style.css 的 display:none） */
+@media (max-width: 640px) {
+  .main-nav {
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding: 12px 14px;
+    background: linear-gradient(160deg, #f0f9fb 0%, #e8f5f6 50%, #def1f2 100%);
+    overflow: visible;
+  }
+}

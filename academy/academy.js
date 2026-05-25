@@ -135,39 +135,5 @@ async function loadChapter() {
   }
 }
 
-function injectMobileNavToggle() {
-  const nav = document.querySelector('.main-nav');
-  if (!nav || document.querySelector('.nav-toggle')) return;
-  const activeTab = nav.querySelector('.main-tab.active span');
-  const currentLabel = activeTab ? activeTab.textContent : '小學堂';
-  const toggle = document.createElement('button');
-  toggle.className = 'nav-toggle';
-  toggle.type = 'button';
-  toggle.setAttribute('aria-label', '開啟分頁選單');
-  toggle.setAttribute('aria-expanded', 'false');
-  toggle.innerHTML = `
-    <svg class="nav-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="M4 6h16M4 12h16M4 18h16"/>
-    </svg>
-    <span class="nav-toggle-label">分頁</span>
-    <span class="nav-current">${currentLabel}</span>
-    <svg class="nav-toggle-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="M6 9l6 6 6-6"/>
-    </svg>
-  `;
-  nav.parentNode.insertBefore(toggle, nav);
-  toggle.addEventListener('click', () => {
-    const open = document.body.classList.toggle('nav-open');
-    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-  nav.addEventListener('click', (e) => {
-    if (e.target.closest('.main-tab')) {
-      document.body.classList.remove('nav-open');
-      toggle.setAttribute('aria-expanded', 'false');
-    }
-  });
-}
-
-injectMobileNavToggle();
 loadCourses();
 loadChapter();
