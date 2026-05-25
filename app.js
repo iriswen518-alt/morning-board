@@ -2560,15 +2560,15 @@ function renderTwStockResults(code) {
       <div id="tw-snap-${escapeHtml(code)}" class="tw-snap-wrap"><div class="tw-snap-loading">載入即時行情中…</div></div>
       ${linkSection("即時報價", "#019AB3", groups.realtime)}
       <div class="tw-res-section">
-        <div class="tw-res-title" style="color:#019AB3">PASS 1 ｜ 基本面（內建摘要 + 點連結看原站）</div>
+        <div class="tw-res-title" style="color:#019AB3">1. 基本面</div>
         <div class="tw-data-cards">${pass1Cards}</div>
       </div>
       <div class="tw-res-section">
-        <div class="tw-res-title" style="color:#017A8F">PASS 2 ｜ 籌碼（內建當日數字 + 點連結看趨勢）</div>
+        <div class="tw-res-title" style="color:#017A8F">2. 籌碼</div>
         <div class="tw-data-cards">${pass2Cards}</div>
       </div>
       ${linkSection("二手研究（快速發現）", "#17B5AD", groups.secondary)}
-      <p class="tw-res-note">最終決策請回 MOPS／TWSE 對原始資料。</p>
+      <p class="tw-res-note">最終決策請回 MOPS／TWSE 對原始資料。Yahoo 股市為公開揭露摘要，便利檢視用。</p>
     </div>`;
 }
 
@@ -2688,23 +2688,23 @@ function renderTwStockSheet() {
     <h3 style="font-size:16px;margin:18px 0 8px">檢視流程</h3>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:18px">
       <div style="background:#CCE8ED;padding:14px;border-radius:8px;text-align:center">
-        <div style="font-size:11px;color:#003D91;letter-spacing:1.5px;font-weight:bold">PASS 1</div>
+        <div style="font-size:11px;color:#003D91;letter-spacing:1.5px;font-weight:bold">1.</div>
         <div style="font-size:16px;font-weight:bold;color:#003D91;margin:6px 0">MOPS 基本面</div>
         <div style="font-size:12px;color:#444">5 個必看頁面</div>
       </div>
       <div style="background:#E5F2F5;padding:14px;border-radius:8px;text-align:center">
-        <div style="font-size:11px;color:#003D91;letter-spacing:1.5px;font-weight:bold">PASS 2</div>
+        <div style="font-size:11px;color:#003D91;letter-spacing:1.5px;font-weight:bold">2.</div>
         <div style="font-size:16px;font-weight:bold;color:#003D91;margin:6px 0">TWSE 籌碼</div>
         <div style="font-size:12px;color:#444">3 項關鍵指標</div>
       </div>
       <div style="background:#CCE8ED;padding:14px;border-radius:8px;text-align:center">
-        <div style="font-size:11px;color:#003D91;letter-spacing:1.5px;font-weight:bold">PASS 3</div>
+        <div style="font-size:11px;color:#003D91;letter-spacing:1.5px;font-weight:bold">3.</div>
         <div style="font-size:16px;font-weight:bold;color:#003D91;margin:6px 0">產業／競爭</div>
         <div style="font-size:12px;color:#444">3 個檢核點</div>
       </div>
     </div>
 
-    <h3 style="font-size:16px;margin:24px 0 8px">1.｜MOPS 看公司基本面</h3>
+    <h3 style="font-size:16px;margin:24px 0 8px">1. MOPS 看公司基本面</h3>
     <div style="background:#E5F2F5;padding:12px 16px;border-radius:6px;margin:10px 0;font-size:13px">
       入口：<b>${lnk("https://mops.twse.com.tw", "mops.twse.com.tw")}</b> → 上方搜尋輸入股票代號或公司名
     </div>
@@ -2723,7 +2723,7 @@ function renderTwStockSheet() {
     </table>
     </div>
 
-    <h3 style="font-size:16px;margin:24px 0 8px">2.｜TWSE 看籌碼</h3>
+    <h3 style="font-size:16px;margin:24px 0 8px">2. TWSE 看籌碼</h3>
     <div style="background:#E5F2F5;padding:12px 16px;border-radius:6px;margin:10px 0;font-size:13px">
       入口：<b>${lnk("https://www.twse.com.tw", "www.twse.com.tw")}</b> → 交易資訊
     </div>
@@ -2740,7 +2740,7 @@ function renderTwStockSheet() {
     </table>
     </div>
 
-    <h3 style="font-size:16px;margin:24px 0 8px">3.｜產業／競爭</h3>
+    <h3 style="font-size:16px;margin:24px 0 8px">3. 產業／競爭</h3>
     <div style="overflow-x:auto">
     <table style="width:100%;border-collapse:collapse;font-size:13.5px;min-width:520px">
       <tr style="background:#17B5AD;color:#fff">
