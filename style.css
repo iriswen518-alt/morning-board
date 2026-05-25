@@ -1632,6 +1632,29 @@ table.indices .date-col {
 .tw-basic-v.tw-down, .tw-data-card-body .tw-basic-v.tw-down { color: var(--down); }
 .tw-chips-v.tw-up, .tw-chips-delta.tw-up { color: var(--up); }
 .tw-chips-v.tw-down, .tw-chips-delta.tw-down { color: var(--down); }
+
+/* 綜合小結（個股結果即時報價之後、基本面之前） */
+.tw-summary {
+  background: linear-gradient(135deg, #f0f7fb, #ffffff);
+  border: 1px solid #d0e3eb;
+  border-radius: 10px;
+  padding: 8px 16px;
+}
+.tw-sum-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 14px;
+  padding: 8px 0;
+  font-size: 13.5px;
+  flex-wrap: wrap;
+}
+.tw-sum-row + .tw-sum-row { border-top: 1px dashed #e3edf2; }
+.tw-sum-k { color: var(--text-mute, #6b7280); font-size: 12px; white-space: nowrap; }
+.tw-sum-v { font-weight: 600; color: #1a1a1a; text-align: right; }
+.tw-sum-v .tw-up { color: var(--up); }
+.tw-sum-v .tw-down { color: var(--down); }
+.tw-sum-loading { color: var(--text-mute, #6b7280); font-size: 12.5px; font-style: italic; padding: 6px 0; }
 .tw-data-card-loading { color: var(--text-mute, #6b7280); font-size: 12px; padding: 4px 0; }
 .tw-data-card-hint { color: var(--text-mute, #6b7280); font-size: 12px; font-style: italic; padding: 2px 0; }
 .tw-data-card-link { display: inline-block; margin-top: 8px; padding-top: 6px; border-top: 1px dashed #eef1f4; font-size: 12px; font-weight: 600; color: var(--brand-primary, #019AB3); text-decoration: none; }

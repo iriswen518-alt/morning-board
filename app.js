@@ -2119,10 +2119,59 @@ async function loadTwStockSnapshot(code, market) {
     console.error("[twstock] snapshot render threw:", e);
     slot2.outerHTML = `<div id="tw-snap-${code}" class="tw-snap-wrap"><div class="tw-snap-err">摘要顯示異常（${escapeHtml(String(e.message || e))}），請改點下方連結。</div></div>`;
   }
+  // 綜合小結：snap 資料先入 cache
+  if (snap && snap.ok) updateTwSummary(code, { snap });
   // 接力載入籌碼摘要（三大法人 + 融資融券，僅上市股有 TWSE 籌碼 API）
   if (market !== "上櫃") loadTwStockChips(code);
   // 接力載入公司基本面（公司資料 / 月營收 / 季營益）
   loadTwStockBasic(code, market);
+}
+
+// ============ 綜合小結 (Result Summary) ============
+const TW_RESULT_CACHE = {};
+function updateTwSummary(code, patch) {
+  TW_RESULT_CACHE[code] = { ...(TW_RESULT_CACHE[code] || {}), ...patch };
+  const slot = document.getElementById(`tw-summary-${code}`);
+  if (!slot) return;
+  slot.innerHTML = renderTwSummaryBody(TW_RESULT_CACHE[code]);
+}
+function renderTwSummaryBody(c) {
+  if (!c) return `<div class="tw-sum-loading">資料載入中…</div>`;
+  const bits = [];
+  if (c.snap && c.snap.ok) {
+    const pct = Number(c.snap.changePct);
+    const cls = pct > 0 ? "tw-up" : pct < 0 ? "tw-down" : "tw-flat";
+    const sign = pct > 0 ? "+" : "";
+    const chgTxt = c.snap.change != null ? `${sign}${fmtNum(c.snap.change, 2)} ` : "";
+    bits.push(`<div class="tw-sum-row"><span class="tw-sum-k">今日報價</span><span class="tw-sum-v">${fmtNum(c.snap.price, 2)} ${c.snap.currency || "TWD"}　<span class="${cls}">${chgTxt}(${sign}${pct.toFixed(2)}%)</span></span></div>`);
+  }
+  if (c.rev) {
+    const yoy = fmtPct(c.rev.yoy_pct);
+    const cls = pctClass(c.rev.yoy_pct);
+    bits.push(`<div class="tw-sum-row"><span class="tw-sum-k">${fmtYyyymmFromRoc(c.rev.ym)} 月營收</span><span class="tw-sum-v">${fmtRevenue(c.rev.current)}　YoY <span class="${cls}">${yoy}</span></span></div>`);
+  }
+  if (c.fin) {
+    const yr = parseInt(c.fin.year) + 1911;
+    bits.push(`<div class="tw-sum-row"><span class="tw-sum-k">${yr}Q${c.fin.quarter} 獲利率</span><span class="tw-sum-v">毛利 ${c.fin.gpm || "—"}%　營益 ${c.fin.opm || "—"}%　純益 ${c.fin.npm || "—"}%</span></div>`);
+  }
+  if (c.t86Row) {
+    const total = fmtChipChange(c.t86Row[18]);
+    const foreign = fmtChipChange(c.t86Row[4]);
+    bits.push(`<div class="tw-sum-row"><span class="tw-sum-k">${c.chipsDate || ""} 三大法人</span><span class="tw-sum-v">合計 <span class="${total.cls}">${total.txt}</span>　外資 <span class="${foreign.cls}">${foreign.txt}</span></span></div>`);
+  }
+  if (c.margnRow) {
+    const finToday = parseTwseNum(c.margnRow[6]);
+    const finPrev = parseTwseNum(c.margnRow[5]);
+    const finDelta = (finToday != null && finPrev != null) ? finToday - finPrev : null;
+    if (finToday != null) {
+      const cls = finDelta == null ? "" : finDelta > 0 ? "tw-up" : finDelta < 0 ? "tw-down" : "tw-flat";
+      const sign = finDelta == null ? "" : finDelta > 0 ? "+" : finDelta < 0 ? "−" : "";
+      const deltaStr = finDelta == null ? "" : `　(<span class="${cls}">${sign}${Math.abs(finDelta).toLocaleString("zh-TW")}</span>)`;
+      bits.push(`<div class="tw-sum-row"><span class="tw-sum-k">融資餘額</span><span class="tw-sum-v">${Number(finToday).toLocaleString("zh-TW")} 張${deltaStr}</span></div>`);
+    }
+  }
+  if (!bits.length) return `<div class="tw-sum-loading">資料載入中…</div>`;
+  return bits.join("");
 }
 
 const TW_BULK_CACHE = {};
@@ -2254,6 +2303,7 @@ async function loadTwStockBasic(code, market) {
   fillCardSlot(code, "company", renderCompanyBody(data.info, isOtc));
   fillCardSlot(code, "revenue", renderRevenueBody(data.revenue));
   if (!isOtc) fillCardSlot(code, "finance", renderFinanceBody(data.finance));
+  updateTwSummary(code, { info: data.info, rev: data.revenue, fin: isOtc ? null : data.finance });
 }
 
 const TW_CHIPS_CACHE = {};
@@ -2441,6 +2491,7 @@ async function loadTwStockChips(code) {
   }
   fillCardSlot(code, "inst", renderInstBody(data.date, data.t86Row));
   fillCardSlot(code, "margin", renderMarginBody(data.date, data.margnRow));
+  updateTwSummary(code, { t86Row: data.t86Row, margnRow: data.margnRow, chipsDate: data.date });
 }
 
 function twStockFindByCode(code) {
@@ -2497,6 +2548,7 @@ function twStockLinks(code) {
 }
 
 function renderTwStockResults(code) {
+  delete TW_RESULT_CACHE[code];
   const rec = twStockFindByCode(code);
   const groups = twStockLinks(code);
   const isOtc = rec?.market === "上櫃";
@@ -2559,6 +2611,10 @@ function renderTwStockResults(code) {
       </div>
       <div id="tw-snap-${escapeHtml(code)}" class="tw-snap-wrap"><div class="tw-snap-loading">載入即時行情中…</div></div>
       ${linkSection("即時報價", "#019AB3", groups.realtime)}
+      <div class="tw-res-section">
+        <div class="tw-res-title" style="color:#017A8F">綜合小結</div>
+        <div class="tw-summary" id="tw-summary-${escapeHtml(code)}"><div class="tw-sum-loading">資料載入中…</div></div>
+      </div>
       <div class="tw-res-section">
         <div class="tw-res-title" style="color:#019AB3">1. 基本面</div>
         <div class="tw-data-cards">${pass1Cards}</div>
