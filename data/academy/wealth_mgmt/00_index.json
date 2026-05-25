@@ -1,0 +1,12 @@
+{
+  "course": "wealth_mgmt",
+  "course_name": "財富管理",
+  "chapters": [
+    { "slug": "overview", "title": "財富管理總論與業務全景", "file": "01_overview.json" },
+    { "slug": "segmentation", "title": "客戶分群與適格性（HNW/Affluent/Mass、CRS、KYC）", "file": "02_segmentation.json" },
+    { "slug": "allocation", "title": "資產配置原則（生命週期、目標、風險屬性）", "file": "03_allocation.json" },
+    { "slug": "products", "title": "商品總覽（存款／基金／保險／債券／結構型／不動產）", "file": "04_products.json" },
+    { "slug": "performance", "title": "績效衡量與基準（TWR/MWR、Benchmark、Sharpe、MDD）", "file": "05_performance.json" },
+    { "slug": "regulation", "title": "監理與合規（信託業法、財管 2.0、金管會、適合度評估）", "file": "06_regulation.json" }
+  ]
+}

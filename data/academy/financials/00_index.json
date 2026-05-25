@@ -1,0 +1,12 @@
+{
+  "course": "financials",
+  "course_name": "財報分析",
+  "chapters": [
+    { "slug": "statements", "title": "三大財務報表結構", "file": "01_statements.json" },
+    { "slug": "ratios", "title": "關鍵財務比率", "file": "02_ratios.json" },
+    { "slug": "dupont", "title": "杜邦分析（ROE 分解）", "file": "03_dupont.json" },
+    { "slug": "cashflow", "title": "現金流量分析", "file": "04_cashflow.json" },
+    { "slug": "valuation", "title": "估值方法", "file": "05_valuation.json" },
+    { "slug": "redflags", "title": "財報紅旗與行業差異", "file": "06_redflags.json" }
+  ]
+}
