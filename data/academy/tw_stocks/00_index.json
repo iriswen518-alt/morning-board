@@ -1,0 +1,36 @@
+{
+  "course": "tw_stocks",
+  "course_name": "台股",
+  "chapters": [
+    {
+      "slug": "market",
+      "title": "市場與交易制度",
+      "file": "01_market.json"
+    },
+    {
+      "slug": "kanban",
+      "title": "看盤基礎（指數、類股、籌碼）",
+      "file": "02_kanban.json"
+    },
+    {
+      "slug": "fundamentals",
+      "title": "基本面分析",
+      "file": "03_fundamentals.json"
+    },
+    {
+      "slug": "technical",
+      "title": "技術面與型態",
+      "file": "04_technical.json"
+    },
+    {
+      "slug": "tax",
+      "title": "稅務與成本",
+      "file": "05_tax.json"
+    },
+    {
+      "slug": "risk",
+      "title": "風險商品",
+      "file": "06_risk.json"
+    }
+  ]
+}
