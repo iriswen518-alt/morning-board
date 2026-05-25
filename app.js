@@ -2096,13 +2096,29 @@ function renderTwStockSnapshot(snap, rec) {
 
 async function loadTwStockSnapshot(code, market) {
   const slot = document.getElementById(`tw-snap-${code}`);
-  if (!slot) return;
-  const snap = await fetchTwStockSnapshot(code, market);
-  // re-find in case of re-render
+  if (!slot) {
+    console.warn("[twstock] snapshot slot not found for", code);
+    return;
+  }
+  let snap;
+  try {
+    snap = await fetchTwStockSnapshot(code, market);
+  } catch (e) {
+    console.error("[twstock] snapshot fetch threw:", e);
+    snap = { ok: false, error: `未預期錯誤：${e.message || e}` };
+  }
   const slot2 = document.getElementById(`tw-snap-${code}`);
-  if (!slot2) return;
+  if (!slot2) {
+    console.warn("[twstock] snapshot slot disappeared for", code);
+    return;
+  }
   const rec = twStockFindByCode(code);
-  slot2.outerHTML = `<div id="tw-snap-${code}" class="tw-snap-wrap">${renderTwStockSnapshot(snap, rec)}</div>`;
+  try {
+    slot2.outerHTML = `<div id="tw-snap-${code}" class="tw-snap-wrap">${renderTwStockSnapshot(snap, rec)}</div>`;
+  } catch (e) {
+    console.error("[twstock] snapshot render threw:", e);
+    slot2.outerHTML = `<div id="tw-snap-${code}" class="tw-snap-wrap"><div class="tw-snap-err">摘要顯示異常（${escapeHtml(String(e.message || e))}），請改點下方連結。</div></div>`;
+  }
 }
 
 function twStockFindByCode(code) {
