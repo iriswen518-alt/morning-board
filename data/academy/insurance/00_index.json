@@ -1,0 +1,36 @@
+{
+  "course": "insurance",
+  "course_name": "保險",
+  "chapters": [
+    {
+      "slug": "overview",
+      "title": "保險基本概念與分類",
+      "file": "01_overview.json"
+    },
+    {
+      "slug": "protection",
+      "title": "保障型保險",
+      "file": "02_protection.json"
+    },
+    {
+      "slug": "savings",
+      "title": "儲蓄型保險",
+      "file": "03_savings.json"
+    },
+    {
+      "slug": "investment",
+      "title": "投資型保險",
+      "file": "04_investment.json"
+    },
+    {
+      "slug": "tax",
+      "title": "保險稅務規劃",
+      "file": "05_tax.json"
+    },
+    {
+      "slug": "risk",
+      "title": "保險紅旗與消費者陷阱",
+      "file": "06_risk.json"
+    }
+  ]
+}
