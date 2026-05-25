@@ -1,0 +1,36 @@
+{
+  "course": "funds",
+  "course_name": "基金",
+  "chapters": [
+    {
+      "slug": "overview",
+      "title": "基金總論與分類",
+      "file": "01_overview.json"
+    },
+    {
+      "slug": "fees",
+      "title": "費用結構與真實成本",
+      "file": "02_fees.json"
+    },
+    {
+      "slug": "selection",
+      "title": "選基金的五個關鍵指標",
+      "file": "03_selection.json"
+    },
+    {
+      "slug": "dca",
+      "title": "定期定額策略",
+      "file": "04_dca.json"
+    },
+    {
+      "slug": "tax",
+      "title": "基金贖回與配息稅務",
+      "file": "05_tax.json"
+    },
+    {
+      "slug": "risk",
+      "title": "常見風險與紅旗",
+      "file": "06_risk.json"
+    }
+  ]
+}
