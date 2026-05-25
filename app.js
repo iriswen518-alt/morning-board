@@ -1925,41 +1925,120 @@ function fmtDateFromEpoch(sec) {
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
 }
 
+function parseTwseRoc(d) {
+  const m = String(d || "").split("/");
+  if (m.length !== 3) return "—";
+  return `${parseInt(m[0]) + 1911}-${m[1].padStart(2, "0")}-${m[2].padStart(2, "0")}`;
+}
+function parseTwseNum(s) {
+  const n = Number(String(s ?? "").replace(/[,\s+]/g, ""));
+  return Number.isFinite(n) ? n : null;
+}
+
+async function fetchTwseStockDay(code, yyyymm01) {
+  const url = `https://www.twse.com.tw/exchangeReport/STOCK_DAY?response=json&date=${yyyymm01}&stockNo=${encodeURIComponent(code)}`;
+  const resp = await fetch(url, { mode: "cors" });
+  if (!resp.ok) throw new Error(`TWSE HTTP ${resp.status}`);
+  const json = await resp.json();
+  if (json.stat !== "OK" || !Array.isArray(json.data) || !json.data.length) {
+    throw new Error(`TWSE ${json.stat || "無資料"}`);
+  }
+  return json.data;
+}
+
+async function fetchTwseSnapshot(code) {
+  const now = new Date();
+  const ym = (y, m) => `${y}${String(m + 1).padStart(2, "0")}01`;
+  let rows;
+  try {
+    rows = await fetchTwseStockDay(code, ym(now.getFullYear(), now.getMonth()));
+  } catch {
+    // 月初無本月資料 → 退到上個月
+    const prev = new Date(now.getFullYear(), now.getMonth() - 1, 1);
+    rows = await fetchTwseStockDay(code, ym(prev.getFullYear(), prev.getMonth()));
+  }
+  if (!rows.length) throw new Error("TWSE 月資料為空");
+  // 若本月只有 1 筆，補抓上月以利取得昨收與 sparkline
+  if (rows.length < 5) {
+    try {
+      const prev = new Date(now.getFullYear(), now.getMonth() - 1, 1);
+      const prevRows = await fetchTwseStockDay(code, ym(prev.getFullYear(), prev.getMonth()));
+      rows = [...prevRows, ...rows];
+    } catch {}
+  }
+  const last = rows[rows.length - 1];
+  const prevRow = rows[rows.length - 2];
+  const close = parseTwseNum(last[6]);
+  const prevClose = prevRow ? parseTwseNum(prevRow[6]) : null;
+  const changeRaw = parseTwseNum(last[7]);
+  const change = prevClose != null ? close - prevClose : changeRaw;
+  const changePct = prevClose ? (change / prevClose) * 100 : null;
+  const sparkPoints = rows.slice(-10).map(r => ({ c: parseTwseNum(r[6]) })).filter(p => p.c != null);
+  return {
+    ok: true, source: "TWSE 證交所",
+    price: close, prevClose, change, changePct,
+    open: parseTwseNum(last[3]),
+    high: parseTwseNum(last[4]),
+    low: parseTwseNum(last[5]),
+    volume: parseTwseNum(last[1]),
+    dateStr: parseTwseRoc(last[0]),
+    currency: "TWD",
+    sparkPoints,
+  };
+}
+
+async function fetchYahooSnapshot(code, market) {
+  const symbol = `${code}${twYahooSuffix(market)}`;
+  const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}?range=1mo&interval=1d`;
+  const resp = await fetch(url, { mode: "cors" });
+  if (!resp.ok) throw new Error(`Yahoo HTTP ${resp.status}`);
+  const json = await resp.json();
+  const result = json?.chart?.result?.[0];
+  const err = json?.chart?.error;
+  if (err || !result) throw new Error(err?.description || "Yahoo 無資料");
+  const meta = result.meta || {};
+  const ts = result.timestamp || [];
+  const q = result.indicators?.quote?.[0] || {};
+  const closes = (q.close || []).filter(x => x != null);
+  if (!closes.length) throw new Error("Yahoo 空資料");
+  const price = meta.regularMarketPrice ?? closes[closes.length - 1];
+  const prevClose = closes.length >= 2 ? closes[closes.length - 2] : (meta.chartPreviousClose ?? null);
+  const change = prevClose != null ? price - prevClose : null;
+  const changePct = prevClose ? (change / prevClose) * 100 : null;
+  const lastIdx = (q.close || []).length - 1;
+  const lastTs = ts[lastIdx] || meta.regularMarketTime;
+  const sparkPoints = ts.map((t, i) => ({ t, c: q.close?.[i] })).filter(p => p.c != null).slice(-10);
+  return {
+    ok: true, source: "Yahoo Finance",
+    symbol, price, prevClose, change, changePct,
+    open: q.open?.[lastIdx],
+    high: q.high?.[lastIdx],
+    low: q.low?.[lastIdx],
+    volume: q.volume?.[lastIdx],
+    dateStr: fmtDateFromEpoch(lastTs),
+    currency: meta.currency || "TWD",
+    sparkPoints,
+  };
+}
+
 async function fetchTwStockSnapshot(code, market) {
   const key = `${code}|${market}`;
   if (TW_STOCK_SNAPSHOT_CACHE[key]) return TW_STOCK_SNAPSHOT_CACHE[key];
-  const symbol = `${code}${twYahooSuffix(market)}`;
-  const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}?range=1mo&interval=1d`;
+  const primary = market === "上櫃" ? () => fetchYahooSnapshot(code, market) : () => fetchTwseSnapshot(code);
+  const fallback = market === "上櫃" ? () => fetchTwseSnapshot(code) : () => fetchYahooSnapshot(code, market);
+  let snap;
   try {
-    const resp = await fetch(url, { mode: "cors" });
-    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-    const json = await resp.json();
-    const result = json?.chart?.result?.[0];
-    const err = json?.chart?.error;
-    if (err || !result) throw new Error(err?.description || "no data");
-    const meta = result.meta || {};
-    const ts = result.timestamp || [];
-    const q = result.indicators?.quote?.[0] || {};
-    const closes = (q.close || []).filter(x => x != null);
-    const last = closes.length;
-    if (!last) throw new Error("空資料");
-    const price = meta.regularMarketPrice ?? closes[last - 1];
-    const prevClose = last >= 2 ? closes[last - 2] : (meta.chartPreviousClose ?? null);
-    const change = prevClose != null ? price - prevClose : null;
-    const changePct = prevClose ? (change / prevClose) * 100 : null;
-    const lastIdx = (q.close || []).length - 1;
-    const open = q.open?.[lastIdx];
-    const high = q.high?.[lastIdx];
-    const low = q.low?.[lastIdx];
-    const volume = q.volume?.[lastIdx];
-    const lastTs = ts[lastIdx] || meta.regularMarketTime;
-    const sparkPoints = ts.map((t, i) => ({ t, c: q.close?.[i] })).filter(p => p.c != null).slice(-10);
-    const snap = { ok: true, symbol, price, prevClose, change, changePct, open, high, low, volume, dateStr: fmtDateFromEpoch(lastTs), currency: meta.currency || "TWD", sparkPoints };
-    TW_STOCK_SNAPSHOT_CACHE[key] = snap;
-    return snap;
-  } catch (e) {
-    return { ok: false, error: String(e.message || e) };
+    snap = await primary();
+  } catch (e1) {
+    try {
+      snap = await fallback();
+      snap.fallbackFrom = String(e1.message || e1);
+    } catch (e2) {
+      snap = { ok: false, error: `${e1.message} ／ ${e2.message}` };
+    }
   }
+  if (snap.ok) TW_STOCK_SNAPSHOT_CACHE[key] = snap;
+  return snap;
 }
 
 function renderSparkline(points, width = 160, height = 40) {
@@ -2011,7 +2090,7 @@ function renderTwStockSnapshot(snap, rec) {
         <div><span class="tw-snap-k">成交量</span><span class="tw-snap-v">${fmtVolume(snap.volume)}</span></div>
         <div><span class="tw-snap-k">資料日</span><span class="tw-snap-v">${escapeHtml(snap.dateStr)}</span></div>
       </div>
-      <div class="tw-snap-foot">資料源：Yahoo Finance（瀏覽器直接抓取，無中介伺服器、無 API 金鑰）</div>
+      <div class="tw-snap-foot">資料源：${escapeHtml(snap.source || "Yahoo Finance")}（瀏覽器直接抓取，無中介伺服器、無 API 金鑰）${snap.fallbackFrom ? `<span class="tw-snap-fallback"> · 主源失敗已自動切換</span>` : ""}</div>
     </div>`;
 }
 
