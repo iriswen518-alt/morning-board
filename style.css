@@ -1627,6 +1627,11 @@ table.indices .date-col {
 .tw-data-card-body > div { display: flex; justify-content: space-between; gap: 8px; }
 .tw-data-card-body .tw-basic-k { color: var(--text-mute, #6b7280); }
 .tw-data-card-body .tw-basic-v { font-weight: 600; color: #222; text-align: right; }
+/* 紅漲綠跌：個股卡片內 +/- 數字染色（提高 specificity 蓋過 .tw-basic-v 預設深灰） */
+.tw-basic-v.tw-up, .tw-data-card-body .tw-basic-v.tw-up { color: var(--up); }
+.tw-basic-v.tw-down, .tw-data-card-body .tw-basic-v.tw-down { color: var(--down); }
+.tw-chips-v.tw-up, .tw-chips-delta.tw-up { color: var(--up); }
+.tw-chips-v.tw-down, .tw-chips-delta.tw-down { color: var(--down); }
 .tw-data-card-loading { color: var(--text-mute, #6b7280); font-size: 12px; padding: 4px 0; }
 .tw-data-card-hint { color: var(--text-mute, #6b7280); font-size: 12px; font-style: italic; padding: 2px 0; }
 .tw-data-card-link { display: inline-block; margin-top: 8px; padding-top: 6px; border-top: 1px dashed #eef1f4; font-size: 12px; font-weight: 600; color: var(--brand-primary, #019AB3); text-decoration: none; }
