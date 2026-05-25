@@ -1729,99 +1729,198 @@ table.indices .date-col {
 .tw-res-note { font-size: 11.5px; color: var(--text-mute, #6b7280); margin: 14px 0 0; padding-top: 10px; border-top: 1px dashed #eef1f4; }
 
 /* ===========================================
-   台股資訊 — 手機版收緊（max-width: 640px）
-   解決：
-   - 產業 chip grid 換行太多 → 改橫向滾動
-   - PASS 1/2 卡片邊距太大 → 收緊
-   - hero / snapshot 字體 / padding 收緊
+   台股資訊 — 標準 RWD breakpoints
+   ≤1024 桌面 mid / ≤768 平板 / ≤640 手機 / ≤380 小手機
+   理念：手機要美觀不只省空間
+   - 觸控目標 ≥44px
+   - 字級階層保留
+   - 卡片有 subtle shadow 區分背景
+   - 產業 chip 做成 iOS segmented control 風
    =========================================== */
+@media (max-width: 1024px) {
+  .tw-data-cards { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+  .tw-ind-tabs { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); }
+}
+@media (max-width: 768px) {
+  .tw-data-cards { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .tw-snap-grid { grid-template-columns: repeat(3, 1fr); }
+  .tw-chips-grid { grid-template-columns: repeat(2, 1fr); }
+  .tw-matches-list { grid-template-columns: repeat(2, 1fr); }
+}
 @media (max-width: 640px) {
-  /* 產業分頁：改橫向滾動單列，節省垂直空間 */
+  /* === 產業分頁：iOS segmented control 風橫向滾動 === */
   .tw-ind-tabs {
     display: flex;
     grid-template-columns: none;
     flex-wrap: nowrap;
     overflow-x: auto;
-    padding-bottom: 6px;
-    margin: 0 -16px 12px;
-    padding-left: 16px;
-    padding-right: 16px;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding: 4px 16px 8px;
+    margin: 0 -16px 16px;
+    gap: 8px;
     scrollbar-width: none;
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: x proximity;
+    mask-image: linear-gradient(to right, transparent 0, #000 16px, #000 calc(100% - 16px), transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 16px, #000 calc(100% - 16px), transparent 100%);
   }
   .tw-ind-tabs::-webkit-scrollbar { display: none; }
   .tw-ind-tab {
     flex: 0 0 auto;
     min-width: auto;
-    min-height: 34px;
-    padding: 6px 12px;
-    font-size: 12.5px;
+    min-height: 36px;
+    padding: 8px 14px;
+    font-size: 14px;
+    border-radius: 999px;
     scroll-snap-align: start;
+    box-shadow: 0 1px 2px rgba(0, 31, 77, 0.04);
   }
-  .tw-ind-tab-n {
-    font-size: 10.5px;
-    padding: 1px 5px;
-    min-width: 18px;
+  .tw-ind-tab.active { box-shadow: 0 3px 8px rgba(1, 154, 179, 0.28); }
+  .tw-ind-tab-n { font-size: 11px; padding: 1px 7px; min-width: 20px; }
+
+  /* === 搜尋區：清爽留白 === */
+  .tw-search-box {
+    padding: 14px 14px;
+    border-radius: 14px;
+    box-shadow: 0 1px 3px rgba(0, 31, 77, 0.04);
+  }
+  .tw-search-row { gap: 8px; }
+  .tw-search-row input {
+    padding: 12px 14px;
+    font-size: 16px;  /* iOS 不會 auto-zoom */
+    border-radius: 10px;
+  }
+  .tw-search-btn {
+    padding: 0 18px;
+    font-size: 15px;
+    border-radius: 10px;
+    min-height: 44px;
+  }
+  .tw-pick-row { gap: 6px; margin-top: 12px; }
+  .tw-pick {
+    padding: 7px 12px;
+    font-size: 13px;
+    border-radius: 999px;
+    min-height: 32px;
+  }
+  .tw-pick-label { font-size: 13px; }
+  .tw-search-hint { font-size: 11.5px; margin-top: 10px; }
+
+  /* === 結果主卡片 === */
+  .tw-res-card {
+    padding: 14px 14px;
+    border-radius: 14px;
+    box-shadow: 0 1px 3px rgba(0, 31, 77, 0.06);
+  }
+  .tw-res-header {
+    gap: 10px;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+  }
+  .tw-res-id { gap: 8px; align-items: center; }
+  .tw-res-code { font-size: 22px; line-height: 1; }
+  .tw-res-name { font-size: 16px; font-weight: 600; }
+  .tw-res-market { font-size: 10.5px; padding: 2.5px 8px; }
+  .tw-res-quote {
+    font-size: 13px;
+    padding: 6px 10px;
+    background: #F2F8FA;
+    border-radius: 999px;
+    min-height: 32px;
+    display: inline-flex;
+    align-items: center;
   }
 
-  /* 搜尋區 padding 收緊 */
-  .tw-search-box { padding: 12px 14px; margin: 0 0 16px; }
-  .tw-search-row input { padding: 9px 11px; font-size: 14px; }
-  .tw-search-btn { padding: 0 14px; font-size: 13px; }
-  .tw-pick-row { gap: 5px; margin-top: 10px; }
-  .tw-pick { padding: 4px 9px; font-size: 12px; }
-  .tw-search-hint { font-size: 11px; }
-
-  /* 結果卡片 header 重排：價格資訊上方、查報價連結下方 */
-  .tw-res-card { padding: 12px 14px; }
-  .tw-res-header { gap: 8px; padding-bottom: 8px; margin-bottom: 8px; }
-  .tw-res-code { font-size: 20px; }
-  .tw-res-name { font-size: 15px; }
-  .tw-res-quote { font-size: 12px; }
-
-  /* 摘要面板 padding + 字體收緊 */
-  .tw-snap { padding: 12px 14px; }
-  .tw-snap-pricenum { font-size: 24px; }
-  .tw-snap-change { font-size: 13px; }
-  .tw-snap-head { gap: 10px; }
-  .tw-snap-spark { margin-left: 0; flex-basis: 100%; }
+  /* === 摘要面板：價格大、sparkline 全寬 === */
+  .tw-snap { padding: 16px 14px; border-radius: 12px; }
+  .tw-snap-head { gap: 12px; flex-wrap: wrap; align-items: flex-end; }
+  .tw-snap-pricenum { font-size: 32px; font-weight: 800; }
+  .tw-snap-cur { font-size: 12px; }
+  .tw-snap-change { font-size: 15px; gap: 8px; }
+  .tw-snap-spark {
+    margin-left: 0;
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 4px 0;
+  }
+  .tw-spark { width: 100%; height: 50px; max-width: 320px; }
   .tw-snap-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 6px 12px;
-    margin-top: 10px;
-    padding-top: 10px;
-    font-size: 12px;
+    gap: 10px 16px;
+    margin-top: 14px;
+    padding-top: 12px;
+    font-size: 13px;
   }
-  .tw-snap-foot { font-size: 10px; }
+  .tw-snap-foot { font-size: 11px; margin-top: 12px; }
 
-  /* 籌碼卡片內部 grid 一律 2 列 */
-  .tw-chips { padding: 12px 14px; }
-  .tw-chips-grid { grid-template-columns: repeat(2, 1fr); gap: 6px 10px; }
-  .tw-chips-cell { padding: 6px 8px; }
+  /* === 籌碼卡片 === */
+  .tw-chips { padding: 14px 14px; border-radius: 12px; }
+  .tw-chips-title { font-size: 14px; }
+  .tw-chips-grid { grid-template-columns: repeat(2, 1fr); gap: 8px 10px; }
+  .tw-chips-cell { padding: 8px 10px; }
+  .tw-chips-k { font-size: 11.5px; }
+  .tw-chips-v { font-size: 13px; }
 
-  /* PASS 1/2 data card grid：每張卡片佔滿單欄 */
+  /* === PASS 1/2：iOS 圓角卡 1 欄全寬 === */
   .tw-data-cards {
     grid-template-columns: 1fr;
-    gap: 8px;
+    gap: 10px;
   }
-  .tw-data-card { padding: 10px 12px 8px; min-height: auto; }
-  .tw-data-card-title { font-size: 12.5px; margin-bottom: 6px; }
-  .tw-data-card-body { font-size: 12px; gap: 2px; }
-  .tw-data-card-link { font-size: 11.5px; margin-top: 6px; padding-top: 5px; }
+  .tw-data-card {
+    padding: 14px 14px 10px;
+    min-height: auto;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 31, 77, 0.04);
+  }
+  .tw-data-card-plain { background: #F8FAFB; box-shadow: none; }
+  .tw-data-card-title { font-size: 14px; margin-bottom: 10px; }
+  .tw-data-card-sub-inline { font-size: 11.5px; margin-bottom: 6px; }
+  .tw-data-card-body { font-size: 13px; gap: 5px; }
+  .tw-data-card-link {
+    font-size: 13px;
+    margin-top: 10px;
+    padding-top: 8px;
+    min-height: 24px;
+  }
   .tw-data-card-loading,
-  .tw-data-card-hint { font-size: 11.5px; }
+  .tw-data-card-hint { font-size: 12px; padding: 4px 0; }
 
-  /* PASS 標題收緊 */
-  .tw-res-section { margin-top: 14px; }
-  .tw-res-title { font-size: 12.5px; margin-bottom: 6px; }
+  /* PASS 標題：可呼吸 */
+  .tw-res-section { margin-top: 18px; }
+  .tw-res-title { font-size: 14px; margin-bottom: 10px; font-weight: 700; }
 
-  /* 二手研究 + 即時報價 link chips */
-  .tw-link { padding: 5px 10px; font-size: 12px; }
-  .tw-res-links { gap: 5px; }
+  /* 連結 chips：觸控友善 */
+  .tw-link {
+    padding: 8px 14px;
+    font-size: 13px;
+    border-radius: 999px;
+    min-height: 32px;
+    display: inline-flex;
+    align-items: center;
+  }
+  .tw-res-links { gap: 6px; }
 
-  /* 搜尋多筆 match list 改 1 欄 */
+  /* === 多筆 match 改卡片式 1 欄 === */
+  .tw-matches { padding: 12px 14px; border-radius: 12px; }
+  .tw-matches-title { font-size: 13px; margin-bottom: 8px; }
   .tw-matches-list { grid-template-columns: 1fr; gap: 6px; }
-  .tw-match { padding: 7px 10px; }
-  .tw-match-code { min-width: 48px; }
-  .tw-match-name { font-size: 12.5px; }
+  .tw-match {
+    padding: 10px 12px;
+    border-radius: 10px;
+    min-height: 44px;
+  }
+  .tw-match-code { font-size: 14px; min-width: 52px; }
+  .tw-match-name { font-size: 14px; }
+}
+
+/* 很小的手機 < 380px */
+@media (max-width: 380px) {
+  .tw-snap-pricenum { font-size: 28px; }
+  .tw-snap-grid { font-size: 12px; }
+  .tw-chips-grid { grid-template-columns: 1fr; }
+  .tw-data-card { padding: 12px 12px 8px; }
+  .tw-data-card-body { font-size: 12.5px; }
+  .tw-res-code { font-size: 20px; }
+  .tw-res-name { font-size: 14.5px; }
 }
