@@ -2126,25 +2126,15 @@ async function loadTwStockSnapshot(code, market) {
 }
 
 const TW_BULK_CACHE = {};
-async function loadTwBulk(url) {
-  if (TW_BULK_CACHE[url]) return TW_BULK_CACHE[url];
-  const resp = await fetch(url, { mode: "cors" });
-  if (!resp.ok) throw new Error(`bulk ${resp.status}`);
-  const txt = await resp.text();
-  if (txt.trim().startsWith("<")) throw new Error("bulk redirected (HTML)");
-  const json = JSON.parse(txt);
-  if (!Array.isArray(json)) throw new Error("bulk not array");
-  TW_BULK_CACHE[url] = json;
+async function loadTwBulkLocal(name) {
+  if (TW_BULK_CACHE[name]) return TW_BULK_CACHE[name];
+  const resp = await fetch(`data/${name}.json?t=${Date.now()}`);
+  if (!resp.ok) throw new Error(`local ${name} ${resp.status}`);
+  const json = await resp.json();
+  if (!Array.isArray(json)) throw new Error(`local ${name} not array`);
+  TW_BULK_CACHE[name] = json;
   return json;
 }
-
-const TW_BULK_ENDPOINTS = {
-  listed_info: "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
-  listed_revenue: "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
-  listed_finance: "https://openapi.twse.com.tw/v1/opendata/t187ap17_L",
-  otc_info: "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_O",
-  otc_revenue: "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap05_O",
-};
 
 function fmtTwMoney(s) {  // 整數元 → 億/萬元
   const n = parseTwseNum(s);
@@ -2187,28 +2177,23 @@ async function fetchTwStockBasic(code, market) {
   const isOtc = market === "上櫃";
   const result = { ok: true, info: null, revenue: null, finance: null };
   const promises = [
-    loadTwBulk(isOtc ? TW_BULK_ENDPOINTS.otc_info : TW_BULK_ENDPOINTS.listed_info)
+    loadTwBulkLocal("tw_company_info")
       .then(arr => {
-        const codeKey = isOtc ? "SecuritiesCompanyCode" : "公司代號";
-        result.info = arr.find(r => String(r[codeKey] || "").trim() === code) || null;
+        result.info = arr.find(r => r.code === code && r.market === market) || null;
       })
       .catch(e => { result.infoErr = e.message; }),
-    loadTwBulk(isOtc ? TW_BULK_ENDPOINTS.otc_revenue : TW_BULK_ENDPOINTS.listed_revenue)
+    loadTwBulkLocal("tw_revenue")
       .then(arr => {
-        result.revenue = arr.find(r => String(r["公司代號"] || "").trim() === code) || null;
+        result.revenue = arr.find(r => r.code === code && r.market === market) || null;
       })
       .catch(e => { result.revenueErr = e.message; }),
   ];
   if (!isOtc) {
     promises.push(
-      loadTwBulk(TW_BULK_ENDPOINTS.listed_finance)
+      loadTwBulkLocal("tw_finance")
         .then(arr => {
-          // 取最近一季資料（按 年度+季別 倒序）
-          const rows = arr.filter(r => String(r["公司代號"] || "").trim() === code);
-          rows.sort((a, b) => {
-            const ka = `${a["年度"]}${a["季別"]}`, kb = `${b["年度"]}${b["季別"]}`;
-            return kb.localeCompare(ka);
-          });
+          const rows = arr.filter(r => r.code === code);
+          rows.sort((a, b) => `${b.year}${b.quarter}`.localeCompare(`${a.year}${a.quarter}`));
           result.finance = rows[0] || null;
         })
         .catch(e => { result.financeErr = e.message; })
@@ -2226,57 +2211,47 @@ function renderTwBasicCards(data, market, code) {
   const fin = data.finance;
   const cards = [];
   if (info) {
-    const industry = isOtc ? null : info["產業別"];  // 上市產業別為代碼，pass-through
-    const chairman = isOtc ? info.Chairman : info["董事長"];
-    const gm = isOtc ? info.GeneralManager : info["總經理"];
-    const capital = isOtc ? info["Paidin.Capital.NTDollars"] : info["實收資本額"];
-    const listDate = isOtc ? info.DateOfListing : info["上市日期"];
-    const incDate = isOtc ? info.DateOfIncorporation : info["成立日期"];
     cards.push(`
       <div class="tw-basic-card">
         <div class="tw-basic-card-title">公司資料</div>
         <div class="tw-basic-card-body">
-          <div><span class="tw-basic-k">董事長</span><span class="tw-basic-v">${escapeHtml(chairman || "—")}</span></div>
-          <div><span class="tw-basic-k">總經理</span><span class="tw-basic-v">${escapeHtml(gm || "—")}</span></div>
-          <div><span class="tw-basic-k">實收資本</span><span class="tw-basic-v">${fmtTwMoney(capital)}</span></div>
-          <div><span class="tw-basic-k">成立日</span><span class="tw-basic-v">${fmtDate8(incDate)}</span></div>
-          <div><span class="tw-basic-k">${isOtc ? "上櫃日" : "上市日"}</span><span class="tw-basic-v">${fmtDate8(listDate)}</span></div>
+          <div><span class="tw-basic-k">董事長</span><span class="tw-basic-v">${escapeHtml(info.chairman || "—")}</span></div>
+          <div><span class="tw-basic-k">總經理</span><span class="tw-basic-v">${escapeHtml(info.gm || "—")}</span></div>
+          <div><span class="tw-basic-k">實收資本</span><span class="tw-basic-v">${fmtTwMoney(info.capital)}</span></div>
+          <div><span class="tw-basic-k">成立日</span><span class="tw-basic-v">${fmtDate8(info.inc_date)}</span></div>
+          <div><span class="tw-basic-k">${isOtc ? "上櫃日" : "上市日"}</span><span class="tw-basic-v">${fmtDate8(info.list_date)}</span></div>
         </div>
       </div>`);
   }
   if (rev) {
-    const ym = rev["資料年月"];
-    const mom = rev["營業收入-上月比較增減(%)"];
-    const yoy = rev["營業收入-去年同月增減(%)"];
-    const cumYoy = rev["累計營業收入-前期比較增減(%)"];
     cards.push(`
       <div class="tw-basic-card">
-        <div class="tw-basic-card-title">月營收 <span class="tw-basic-card-sub">${fmtYyyymmFromRoc(ym)}</span></div>
+        <div class="tw-basic-card-title">月營收 <span class="tw-basic-card-sub">${fmtYyyymmFromRoc(rev.ym)}</span></div>
         <div class="tw-basic-card-body">
-          <div><span class="tw-basic-k">當月營收</span><span class="tw-basic-v">${fmtRevenue(rev["營業收入-當月營收"])}</span></div>
-          <div><span class="tw-basic-k">月增率</span><span class="tw-basic-v ${pctClass(mom)}">${fmtPct(mom)}</span></div>
-          <div><span class="tw-basic-k">年增率</span><span class="tw-basic-v ${pctClass(yoy)}">${fmtPct(yoy)}</span></div>
-          <div><span class="tw-basic-k">累計營收</span><span class="tw-basic-v">${fmtRevenue(rev["累計營業收入-當月累計營收"])}</span></div>
-          <div><span class="tw-basic-k">累計年增</span><span class="tw-basic-v ${pctClass(cumYoy)}">${fmtPct(cumYoy)}</span></div>
+          <div><span class="tw-basic-k">當月營收</span><span class="tw-basic-v">${fmtRevenue(rev.current)}</span></div>
+          <div><span class="tw-basic-k">月增率</span><span class="tw-basic-v ${pctClass(rev.mom_pct)}">${fmtPct(rev.mom_pct)}</span></div>
+          <div><span class="tw-basic-k">年增率</span><span class="tw-basic-v ${pctClass(rev.yoy_pct)}">${fmtPct(rev.yoy_pct)}</span></div>
+          <div><span class="tw-basic-k">累計營收</span><span class="tw-basic-v">${fmtRevenue(rev.cum_current)}</span></div>
+          <div><span class="tw-basic-k">累計年增</span><span class="tw-basic-v ${pctClass(rev.cum_yoy_pct)}">${fmtPct(rev.cum_yoy_pct)}</span></div>
         </div>
       </div>`);
   }
   if (fin) {
-    const yr = parseInt(fin["年度"]) + 1911;
+    const yr = parseInt(fin.year) + 1911;
     cards.push(`
       <div class="tw-basic-card">
-        <div class="tw-basic-card-title">季營益 <span class="tw-basic-card-sub">${yr}Q${escapeHtml(String(fin["季別"]))}</span></div>
+        <div class="tw-basic-card-title">季營益 <span class="tw-basic-card-sub">${yr}Q${escapeHtml(String(fin.quarter))}</span></div>
         <div class="tw-basic-card-body">
-          <div><span class="tw-basic-k">營業收入</span><span class="tw-basic-v">${escapeHtml(fin["營業收入(百萬元)"] || "—")} 百萬</span></div>
-          <div><span class="tw-basic-k">毛利率</span><span class="tw-basic-v">${escapeHtml(fin["毛利率(%)(營業毛利)/(營業收入)"] || "—")}%</span></div>
-          <div><span class="tw-basic-k">營益率</span><span class="tw-basic-v">${escapeHtml(fin["營業利益率(%)(營業利益)/(營業收入)"] || "—")}%</span></div>
-          <div><span class="tw-basic-k">稅後純益率</span><span class="tw-basic-v">${escapeHtml(fin["稅後純益率(%)(稅後純益)/(營業收入)"] || "—")}%</span></div>
+          <div><span class="tw-basic-k">營業收入</span><span class="tw-basic-v">${escapeHtml(fin.revenue_m || "—")} 百萬</span></div>
+          <div><span class="tw-basic-k">毛利率</span><span class="tw-basic-v">${escapeHtml(fin.gpm || "—")}%</span></div>
+          <div><span class="tw-basic-k">營益率</span><span class="tw-basic-v">${escapeHtml(fin.opm || "—")}%</span></div>
+          <div><span class="tw-basic-k">稅後純益率</span><span class="tw-basic-v">${escapeHtml(fin.npm || "—")}%</span></div>
         </div>
       </div>`);
   } else if (isOtc) {
     cards.push(`<div class="tw-basic-card tw-basic-card-note">季營益資料：TWSE OpenAPI 不收上櫃，請點下方「損益表（季）」連結至 Yahoo 查看</div>`);
   }
-  if (!cards.length) return `<div class="tw-snap-err">公司基本面資料抓取失敗</div>`;
+  if (!cards.length) return `<div class="tw-snap-err">公司基本面資料抓取失敗（可能本機 JSON 未刷新）</div>`;
   return `<div class="tw-basic-cards">${cards.join("")}</div>`;
 }
 
