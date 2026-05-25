@@ -2678,9 +2678,7 @@ function renderTwStockSheet() {
   const lnk = (href, text) => `<a href="${href}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${text}</a>`;
   return `
     <div style="background:linear-gradient(135deg,#019AB3,#003D91);color:#fff;padding:22px 24px;border-radius:10px;margin-bottom:20px">
-      <div style="font-size:12px;letter-spacing:2px;opacity:0.85">PERSONAL · TAIWAN EQUITY · RESEARCH SOP</div>
-      <h2 style="margin:6px 0 6px 0;color:#fff;border:none;font-size:22px">台股資訊</h2>
-      <div style="font-size:13px;opacity:0.9">任何個股都依這份順序跑一遍：基本面 → 籌碼 → 產業</div>
+      <h2 style="margin:0;color:#fff;border:none;font-size:22px">台股資訊</h2>
     </div>
 
     ${renderTwStockSearch()}
