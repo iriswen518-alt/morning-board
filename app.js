@@ -457,6 +457,8 @@ async function init() {
     btn.addEventListener("click", () => switchTab(btn.dataset.tab));
   });
 
+  wireNavToggle();
+
   SEARCH_INDEX = buildSearchIndex();
   wireSearch();
 
@@ -546,6 +548,8 @@ function switchTab(name) {
     window.scrollTo({ top: 0, behavior: "instant" in window ? "instant" : "auto" });
   }
 
+  updateNavCurrent();
+
   // 背景重試 init 時失敗的資料；成功就重畫一次（避免 fallback 空狀態卡住）
   retryFailedForTab(name).then(updated => {
     if (updated && CURRENT_TAB === name) {
@@ -553,6 +557,29 @@ function switchTab(name) {
       switchTab(name);
     }
   });
+}
+
+function wireNavToggle() {
+  const toggle = document.getElementById("nav-toggle");
+  const nav = document.getElementById("main-nav");
+  if (!toggle || !nav) return;
+  toggle.addEventListener("click", () => {
+    const open = document.body.classList.toggle("nav-open");
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  nav.addEventListener("click", (e) => {
+    if (e.target.closest(".main-tab") && document.body.classList.contains("nav-open")) {
+      document.body.classList.remove("nav-open");
+      toggle.setAttribute("aria-expanded", "false");
+    }
+  });
+}
+
+function updateNavCurrent() {
+  const el = document.getElementById("nav-current");
+  if (!el) return;
+  const active = document.querySelector(".main-tab.active span");
+  if (active) el.textContent = active.textContent;
 }
 
 function currencyChip(cur) {
@@ -2602,9 +2629,29 @@ function twStockSearchByKeyword(kw, limit = 12) {
   return [...starts, ...contains].slice(0, limit);
 }
 
+// 各大類代表股 (市值/知名度排序)，給熱門快選
+const TW_MEGA_REPRESENTATIVES = {
+  "科技電子": ["2330", "2317", "2454", "3008", "2382", "2308", "2303", "2376"],
+  "金融保險": ["2882", "2891", "2881", "2884", "2886", "2883", "2887", "2890"],
+  "生技醫療": ["4174", "6446", "1707", "4137", "4123", "4147", "1789", "6505"],
+  "傳產製造": ["1301", "1303", "2002", "1216", "1326", "1101", "1102", "2105"],
+  "民生服務": ["2603", "2609", "2615", "2912", "2412", "2207", "2911", "2204"],
+  "ETF": ["0050", "0056", "00878", "00713", "00919", "00940", "00936", "006208"],
+};
 function twIndustryQuickPicks(megaName, limit = 12) {
   const list = DATA?.tw_stocks || [];
   if (megaName === "全部") return TW_STOCK_QUICKPICK;
+  const reps = TW_MEGA_REPRESENTATIVES[megaName];
+  if (reps && reps.length) {
+    const picks = [];
+    for (const code of reps) {
+      const s = list.find(x => x.code === code);
+      if (s) picks.push({ code: s.code, name: s.name });
+      if (picks.length >= limit) break;
+    }
+    if (picks.length) return picks;
+  }
+  // fallback：取該大類前 N 檔
   return list.filter(s => twMegaIncludes(s.industry || "其他", megaName)).slice(0, limit).map(s => ({ code: s.code, name: s.name }));
 }
 

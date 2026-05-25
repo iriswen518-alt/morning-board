@@ -1943,3 +1943,88 @@ table.indices .date-col {
   .tw-res-code { font-size: 20px; }
   .tw-res-name { font-size: 14.5px; }
 }
+
+/* === 手機分頁：sticky 按鈕 + 展開區塊網格 === */
+.nav-toggle { display: none; }
+
+@media (max-width: 640px) {
+  .nav-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px 16px;
+    background: #fff;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    font-family: inherit;
+    font-size: 15px;
+    color: var(--brand-deep);
+    cursor: pointer;
+    position: sticky;
+    top: 0;
+    z-index: 60;
+    box-shadow: 0 2px 6px rgba(0,31,77,0.04);
+  }
+  .nav-toggle-icon,
+  .nav-toggle-caret {
+    width: 18px;
+    height: 18px;
+    color: var(--brand-primary);
+    flex: none;
+    transition: transform 0.18s ease;
+  }
+  .nav-toggle-label { font-weight: 600; }
+  .nav-current {
+    color: var(--text-mute);
+    font-size: 13px;
+    flex: 1;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  body.nav-open .nav-toggle-caret { transform: rotate(180deg); }
+
+  .main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.98);
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 60px 16px 24px;
+    overflow-y: auto;
+    border-bottom: none;
+    box-shadow: none;
+  }
+  body.nav-open .main-nav { display: grid; }
+  body.nav-open { overflow: hidden; }
+
+  .main-tab {
+    flex: none;
+    flex-direction: column;
+    gap: 6px;
+    padding: 16px 6px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--bg);
+    color: var(--brand-deep);
+    font-size: 12.5px;
+    line-height: 1.2;
+    text-align: center;
+    white-space: normal;
+  }
+  .main-tab .tab-icon { width: 26px; height: 26px; flex: 0 0 26px; }
+  .main-tab + .main-tab::before { display: none; }
+  .main-tab.active {
+    background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
+    color: #fff;
+    border-color: var(--brand-primary);
+    font-weight: 600;
+  }
+}
