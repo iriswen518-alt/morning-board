@@ -947,6 +947,13 @@ table.indices .date-col {
   padding: 3px 10px;
   border-radius: 4px;
 }
+.w-law-code a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+.w-law-code a:hover { text-decoration-thickness: 2px; }
 .w-law-title {
   font-weight: 700;
   color: var(--text);

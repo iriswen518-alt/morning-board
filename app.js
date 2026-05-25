@@ -515,6 +515,7 @@ function switchTab(name) {
   else if (name === "wealth") body.innerHTML = renderWealthSheet();
   else if (name === "calc") body.innerHTML = renderCalcSheet();
   else if (name === "assist") body.innerHTML = renderAssistSheet();
+  else if (name === "twstock") body.innerHTML = renderTwStockSheet();
   if (name === "assist") wireAssistTab();
   if (name === "news") wireNewsTabs();
   if (name === "market") wireMarketTabs();
@@ -1885,6 +1886,125 @@ function renderUsStocksSheet() {
   return note + curatedBlock + popularBlock + renderStockBriefBlock();
 }
 
+function renderTwStockSheet() {
+  const lnk = (href, text) => `<a href="${href}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${text}</a>`;
+  return `
+    <div style="background:linear-gradient(135deg,#019AB3,#003D91);color:#fff;padding:22px 24px;border-radius:10px;margin-bottom:20px">
+      <div style="font-size:12px;letter-spacing:2px;opacity:0.85">PERSONAL · TAIWAN EQUITY · RESEARCH SOP</div>
+      <h2 style="margin:6px 0 6px 0;color:#fff;border:none;font-size:22px">台股資訊源 SOP（個人版）</h2>
+      <div style="font-size:13px;opacity:0.9">任何個股都依這份順序跑一遍：基本面 → 籌碼 → 產業</div>
+    </div>
+
+    <h3 style="font-size:16px;margin:18px 0 8px">三遍流程</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:18px">
+      <div style="background:#CCE8ED;padding:14px;border-radius:8px;text-align:center">
+        <div style="font-size:11px;color:#003D91;letter-spacing:1.5px;font-weight:bold">PASS 1</div>
+        <div style="font-size:16px;font-weight:bold;color:#003D91;margin:6px 0">MOPS 基本面</div>
+        <div style="font-size:12px;color:#444">5 個必看頁面</div>
+      </div>
+      <div style="background:#E5F2F5;padding:14px;border-radius:8px;text-align:center">
+        <div style="font-size:11px;color:#003D91;letter-spacing:1.5px;font-weight:bold">PASS 2</div>
+        <div style="font-size:16px;font-weight:bold;color:#003D91;margin:6px 0">TWSE 籌碼</div>
+        <div style="font-size:12px;color:#444">3 項關鍵指標</div>
+      </div>
+      <div style="background:#CCE8ED;padding:14px;border-radius:8px;text-align:center">
+        <div style="font-size:11px;color:#003D91;letter-spacing:1.5px;font-weight:bold">PASS 3</div>
+        <div style="font-size:16px;font-weight:bold;color:#003D91;margin:6px 0">產業／競爭</div>
+        <div style="font-size:12px;color:#444">3 個檢核點</div>
+      </div>
+    </div>
+
+    <h3 style="font-size:16px;margin:24px 0 8px">第一遍｜MOPS 看公司基本面</h3>
+    <div style="background:#E5F2F5;padding:12px 16px;border-radius:6px;margin:10px 0;font-size:13px">
+      入口：<b>${lnk("https://mops.twse.com.tw", "mops.twse.com.tw")}</b> → 上方搜尋輸入股票代號或公司名
+    </div>
+    <div style="overflow-x:auto">
+    <table style="width:100%;border-collapse:collapse;font-size:13.5px;min-width:520px">
+      <tr style="background:#019AB3;color:#fff">
+        <th style="padding:10px;text-align:left;width:32px">#</th>
+        <th style="padding:10px;text-align:left;width:38%">看什麼</th>
+        <th style="padding:10px;text-align:left">記下什麼</th>
+      </tr>
+      <tr style="background:#F2F8FA"><td style="padding:8px 12px;text-align:center"><b>1</b></td><td style="padding:8px 12px"><b>公司治理一覽表</b></td><td style="padding:8px 12px">資本額、員工數、董事長、產業別、實收資本</td></tr>
+      <tr><td style="padding:8px 12px;text-align:center"><b>2</b></td><td style="padding:8px 12px"><b>月營收</b>（每月 10 日後）</td><td style="padding:8px 12px">最近 12 個月趨勢、年增率、累計年增率</td></tr>
+      <tr style="background:#F2F8FA"><td style="padding:8px 12px;text-align:center"><b>3</b></td><td style="padding:8px 12px"><b>最新季財報</b></td><td style="padding:8px 12px">三表 + 毛利率／營益率／EPS 三大關鍵</td></tr>
+      <tr><td style="padding:8px 12px;text-align:center"><b>4</b></td><td style="padding:8px 12px"><b>重大訊息</b>（過去 3 個月）</td><td style="padding:8px 12px">併購、買回庫藏股、業績預警、董監異動</td></tr>
+      <tr style="background:#F2F8FA"><td style="padding:8px 12px;text-align:center"><b>5</b></td><td style="padding:8px 12px"><b>法說會簡報</b></td><td style="padding:8px 12px">公司怎麼講自己（管理層敘事 vs 數字）</td></tr>
+    </table>
+    </div>
+
+    <h3 style="font-size:16px;margin:24px 0 8px">第二遍｜TWSE 看籌碼</h3>
+    <div style="background:#E5F2F5;padding:12px 16px;border-radius:6px;margin:10px 0;font-size:13px">
+      入口：<b>${lnk("https://www.twse.com.tw", "www.twse.com.tw")}</b> → 交易資訊
+    </div>
+    <div style="overflow-x:auto">
+    <table style="width:100%;border-collapse:collapse;font-size:13.5px;min-width:520px">
+      <tr style="background:#017A8F;color:#fff">
+        <th style="padding:10px;text-align:left;width:32px">#</th>
+        <th style="padding:10px;text-align:left;width:38%">指標</th>
+        <th style="padding:10px;text-align:left">看什麼</th>
+      </tr>
+      <tr style="background:#F2F8FA"><td style="padding:8px 12px;text-align:center"><b>1</b></td><td style="padding:8px 12px"><b>三大法人買賣超</b>（最近 5 日）</td><td style="padding:8px 12px">外資、投信、自營商各別買賣超；連買連賣天數</td></tr>
+      <tr><td style="padding:8px 12px;text-align:center"><b>2</b></td><td style="padding:8px 12px"><b>融資融券餘額變化</b></td><td style="padding:8px 12px">融資增 = 散戶看好；融券增 = 看空或避險</td></tr>
+      <tr style="background:#F2F8FA"><td style="padding:8px 12px;text-align:center"><b>3</b></td><td style="padding:8px 12px"><b>借券賣出餘額</b></td><td style="padding:8px 12px">外資／法人放空指標；快速攀升警訊</td></tr>
+    </table>
+    </div>
+
+    <h3 style="font-size:16px;margin:24px 0 8px">第三遍｜產業／競爭</h3>
+    <div style="overflow-x:auto">
+    <table style="width:100%;border-collapse:collapse;font-size:13.5px;min-width:520px">
+      <tr style="background:#17B5AD;color:#fff">
+        <th style="padding:10px;text-align:left;width:32px">#</th>
+        <th style="padding:10px;text-align:left;width:38%">資料</th>
+        <th style="padding:10px;text-align:left">用途</th>
+      </tr>
+      <tr style="background:#F2F8FA"><td style="padding:8px 12px;text-align:center"><b>1</b></td><td style="padding:8px 12px"><b>公司年報「行業狀況」章節</b></td><td style="padding:8px 12px">產業地位、市佔、上下游、技術門檻</td></tr>
+      <tr><td style="padding:8px 12px;text-align:center"><b>2</b></td><td style="padding:8px 12px"><b>最近一次法說會 Q&amp;A</b></td><td style="padding:8px 12px">分析師問什麼 = 市場關注點</td></tr>
+      <tr style="background:#F2F8FA"><td style="padding:8px 12px;text-align:center"><b>3</b></td><td style="padding:8px 12px"><b>同業比較表</b>（找 3 家競品）</td><td style="padding:8px 12px">營收成長、毛利率、PE、ROE 對比</td></tr>
+    </table>
+    </div>
+
+    <h3 style="font-size:16px;margin:28px 0 8px">紅旗訊號（看到立即扣分）</h3>
+    <div style="background:#FFEBEE;padding:16px 20px;border-radius:6px">
+      <table style="width:100%;border-collapse:collapse;font-size:13.5px">
+        <tr><td style="padding:6px 0;width:28px">⛔</td><td style="padding:6px 0"><b>處置股／變更交易方法</b> — 監管警示，遠離</td></tr>
+        <tr><td style="padding:6px 0">⛔</td><td style="padding:6px 0"><b>內部人連續申讓</b> — 董監對自家股票沒信心</td></tr>
+        <tr><td style="padding:6px 0">⛔</td><td style="padding:6px 0"><b>業績預警公告</b> — 重大訊息列出</td></tr>
+        <tr><td style="padding:6px 0">⛔</td><td style="padding:6px 0"><b>連續 2 季毛利率衰退</b> — 護城河可能失守</td></tr>
+        <tr><td style="padding:6px 0">⛔</td><td style="padding:6px 0"><b>應收帳款週轉天數異常拉長</b> — 收款品質惡化</td></tr>
+        <tr><td style="padding:6px 0">⛔</td><td style="padding:6px 0"><b>會計師非無保留意見</b> — 財報品質警訊</td></tr>
+        <tr><td style="padding:6px 0">⛔</td><td style="padding:6px 0"><b>頻繁更換會計師事務所或財務長</b> — 財務透明度疑慮</td></tr>
+      </table>
+    </div>
+
+    <h3 style="font-size:16px;margin:24px 0 8px">綠旗訊號（看到加分）</h3>
+    <div style="background:#E8F5E9;padding:16px 20px;border-radius:6px">
+      <table style="width:100%;border-collapse:collapse;font-size:13.5px">
+        <tr><td style="padding:6px 0;width:28px">✅</td><td style="padding:6px 0"><b>連續多季營收／EPS 雙增長</b> — 基本面擴張</td></tr>
+        <tr><td style="padding:6px 0">✅</td><td style="padding:6px 0"><b>毛利率穩定或上升</b> — 議價能力佳</td></tr>
+        <tr><td style="padding:6px 0">✅</td><td style="padding:6px 0"><b>自由現金流為正且穩定</b> — 真正賺到錢</td></tr>
+        <tr><td style="padding:6px 0">✅</td><td style="padding:6px 0"><b>長期穩定發股利</b> — 對股東負責</td></tr>
+        <tr><td style="padding:6px 0">✅</td><td style="padding:6px 0"><b>外資長期持股比例高且穩定</b> — 機構認可</td></tr>
+        <tr><td style="padding:6px 0">✅</td><td style="padding:6px 0"><b>法說會誠實面對問題</b>（不只報喜）— 管理層可信</td></tr>
+      </table>
+    </div>
+
+    <h3 style="font-size:16px;margin:28px 0 8px">工具備忘</h3>
+    <div style="overflow-x:auto">
+    <table style="width:100%;border-collapse:collapse;font-size:13.5px;min-width:520px">
+      <tr style="background:#F2F8FA"><td style="padding:8px 12px;width:30%"><b>MOPS</b></td><td style="padding:8px 12px">${lnk("https://mops.twse.com.tw", "mops.twse.com.tw")} — 第一手揭露</td></tr>
+      <tr><td style="padding:8px 12px"><b>TWSE</b></td><td style="padding:8px 12px">${lnk("https://www.twse.com.tw", "www.twse.com.tw")} — 行情、籌碼</td></tr>
+      <tr style="background:#F2F8FA"><td style="padding:8px 12px"><b>Goodinfo!</b></td><td style="padding:8px 12px">${lnk("https://goodinfo.tw", "goodinfo.tw")} — 個股資料總覽（二手，僅供發現）</td></tr>
+      <tr><td style="padding:8px 12px"><b>財報狗</b></td><td style="padding:8px 12px">${lnk("https://statementdog.com", "statementdog.com")} — 財報視覺化</td></tr>
+      <tr style="background:#F2F8FA"><td style="padding:8px 12px"><b>CMoney</b></td><td style="padding:8px 12px">${lnk("https://cmoney.tw", "cmoney.tw")} — 法人籌碼</td></tr>
+    </table>
+    </div>
+    <p style="color:var(--text-mute);font-size:12.5px;margin:10px 0 4px">二手網站只用來「快速發現」，最終決策必回 MOPS／TWSE 對原始資料。</p>
+
+    <p class="a-note" style="margin-top:24px;font-size:12px;color:var(--text-mute)">個人研究 SOP v1.0 · 2026-05-08 建立</p>
+  `;
+}
+
 function renderStockBriefBlock() {
   const brief = DATA.stock_brief || {};
   const curatedBrief = brief.stocks || [];
@@ -2172,7 +2292,7 @@ function renderWealthSheet() {
         .map(law => `
         <div class="w-law">
           <div class="w-law-head">
-            <span class="w-law-code">${escapeHtml(law.code || "")}</span>
+            <span class="w-law-code">${renderLawCode(law.code || "")}</span>
             <span class="w-law-title">${escapeHtml(law.title || "")}</span>
           </div>
           <div class="w-law-body">${escapeHtml(law.content || "")}</div>
@@ -3752,6 +3872,46 @@ function escapeHtml(s) {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#39;");
+}
+
+// 法條代碼 → 全國法規資料庫 pcode（法規 ID）
+const LAW_PCODE_MAP = {
+  "遺贈稅法": "G0340072",
+  "遺產及贈與稅法": "G0340072",
+  "遺產及贈與稅法施行細則": "G0340073",
+  "所得稅法": "G0340003",
+  "所得稅法施行細則": "G0340004",
+  "所得基本稅額條例": "G0340097",
+  "所得基本稅額條例施行細則": "G0340098",
+  "土地稅法": "G0340048",
+  "土地稅法施行細則": "G0340049",
+  "民法": "B0000001",
+  "信託法": "I0020023",
+  "信託業法": "G0380025",
+  "保險法": "G0390002",
+  "全民健康保險法": "L0060001",
+};
+
+// 將「法名 §條號」字串轉成可點擊連結；多筆引用、條號帶 -N 均支援
+function renderLawCode(codeStr) {
+  if (!codeStr) return "";
+  const re = /([一-龥]+(?:法|條例|細則|辦法))\s*§\s*(\d+(?:-\d+)?)/g;
+  let out = "";
+  let last = 0;
+  let m;
+  while ((m = re.exec(codeStr)) !== null) {
+    out += escapeHtml(codeStr.slice(last, m.index));
+    const pcode = LAW_PCODE_MAP[m[1]];
+    if (pcode) {
+      const url = `https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=${pcode}&flno=${encodeURIComponent(m[2])}`;
+      out += `<a href="${url}" target="_blank" rel="noopener" title="全國法規資料庫">${escapeHtml(m[0])}</a>`;
+    } else {
+      out += escapeHtml(m[0]);
+    }
+    last = m.index + m[0].length;
+  }
+  out += escapeHtml(codeStr.slice(last));
+  return out;
 }
 
 // ============ 資產規劃 (Asset Planning) ============
