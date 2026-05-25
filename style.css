@@ -1552,6 +1552,29 @@ table.indices .date-col {
   margin-left: 3px;
 }
 .tabs .tab.active .tw-ind-tab-n { opacity: 0.9; }
+/* 手機版用下拉式選單取代 7 個 chip 防止 wrap 凌亂；桌機隱藏 */
+.tw-ind-select-wrap { display: none; }
+.tw-ind-select {
+  width: 100%;
+  padding: 11px 36px 11px 14px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--brand-deep, #003D91);
+  background: #fff url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23019AB3' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>") no-repeat right 14px center;
+  border: 1px solid #c8d6dd;
+  border-radius: 10px;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  min-height: 44px;
+}
+.tw-ind-select:focus { outline: 2px solid var(--brand-primary, #019AB3); outline-offset: -1px; border-color: var(--brand-primary, #019AB3); }
+.tw-ind-select-label {
+  display: block;
+  font-size: 12px;
+  color: var(--text-mute, #6b7280);
+  margin-bottom: 6px;
+}
 
 /* 台股研究 - 個股快查 */
 .tw-search-box { background: #F2F8FA; border-radius: 10px; padding: 16px 18px; margin: 0 0 22px; }
@@ -1706,10 +1729,9 @@ table.indices .date-col {
   .tw-matches-list { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 640px) {
-  /* 7 大類 wrap：每行 3-4 個（min-width 96px from .tabs-wrap .tab），自然成 2-3 行 */
-  .tw-ind-tabs.tabs { padding: 3px; }
-  .tw-ind-tabs .tab { padding: 7px 8px; font-size: 13px; flex: 1 1 80px; min-width: 80px; }
-  .tw-ind-tab-n { font-size: 10.5px; }
+  /* 7 大類 chip 在手機上 wrap 太凌亂，改用下拉式選單 */
+  .tw-ind-tabs.tabs { display: none; }
+  .tw-ind-select-wrap { display: block; margin-bottom: 14px; }
 
   /* === 搜尋區：清爽留白 === */
   .tw-search-box {

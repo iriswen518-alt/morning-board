@@ -2796,13 +2796,22 @@ function renderTwStockMatchList(matches, keyword) {
 function renderTwIndustryTabs() {
   const items = twMegaList();
   if (!items.length) return "";
-  return `<div class="tabs tabs-wrap tw-ind-tabs" id="tw-ind-tabs">${
+  const tabs = `<div class="tabs tabs-wrap tw-ind-tabs" id="tw-ind-tabs">${
     items.map(it => `
       <button class="tab ${TW_INDUSTRY_FILTER === it.name ? "active" : ""}" type="button" onclick="setTwIndustry('${escapeHtml(it.name)}')">
         ${escapeHtml(it.name)} <span class="tw-ind-tab-n">${it.count}</span>
       </button>
     `).join("")
   }</div>`;
+  const options = items.map(it =>
+    `<option value="${escapeHtml(it.name)}" ${TW_INDUSTRY_FILTER === it.name ? "selected" : ""}>${escapeHtml(it.name)}（${it.count}）</option>`
+  ).join("");
+  const select = `
+    <label class="tw-ind-select-wrap" for="tw-ind-select">
+      <span class="tw-ind-select-label">產業大類</span>
+      <select id="tw-ind-select" class="tw-ind-select" onchange="setTwIndustry(this.value)">${options}</select>
+    </label>`;
+  return tabs + select;
 }
 
 function setTwIndustry(name) {
