@@ -2685,7 +2685,7 @@ function renderTwStockSheet() {
 
     ${renderTwStockSearch()}
 
-    <h3 style="font-size:16px;margin:18px 0 8px">三遍流程</h3>
+    <h3 style="font-size:16px;margin:18px 0 8px">檢視流程</h3>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:18px">
       <div style="background:#CCE8ED;padding:14px;border-radius:8px;text-align:center">
         <div style="font-size:11px;color:#003D91;letter-spacing:1.5px;font-weight:bold">PASS 1</div>
