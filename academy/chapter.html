@@ -5,14 +5,121 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#019AB3">
 <title>理財小學堂</title>
-<link rel="stylesheet" href="academy.css?v=20260525-1">
+<link rel="stylesheet" href="../style.css?v=20260525-1302">
+<link rel="stylesheet" href="academy.css?v=20260525-2">
 </head>
 <body>
 
-<header class="academy-topbar">
+<header class="topbar">
   <h1 id="chapter-title">理財小學堂</h1>
-  <a class="back-link" href="index.html">← 返回課程分類</a>
+  <p class="updated">理財知識庫</p>
 </header>
+
+<nav class="main-nav">
+  <a class="main-tab" href="../#market">
+    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M3 12h18M12 3a13 13 0 0 1 0 18M12 3a13 13 0 0 0 0 18"/>
+    </svg>
+    <span>全球市場</span>
+  </a>
+  <a class="main-tab" href="../#news">
+    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M4 5h13a2 2 0 0 1 2 2v11a2 2 0 0 0 2-2V8"/>
+      <path d="M4 5v13a2 2 0 0 0 2 2h13"/>
+      <path d="M8 9h7M8 13h7M8 17h5"/>
+    </svg>
+    <span>重要新聞</span>
+  </a>
+  <a class="main-tab" href="../#funds">
+    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M3 20h18"/>
+      <rect x="5" y="13" width="3" height="7" rx="0.5"/>
+      <rect x="10.5" y="9" width="3" height="11" rx="0.5"/>
+      <rect x="16" y="5" width="3" height="15" rx="0.5"/>
+    </svg>
+    <span>精選基金</span>
+  </a>
+  <a class="main-tab" href="../#obonds">
+    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M6 3h9l4 4v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/>
+      <path d="M14 3v5h5"/>
+      <path d="M8 13h8M8 17h5"/>
+      <circle cx="15.5" cy="17" r="1.7"/>
+    </svg>
+    <span>精選海外債</span>
+  </a>
+  <a class="main-tab" href="../#usstocks">
+    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M8 14l3-3 3 3 3-5"/>
+      <path d="M14 9h3v3"/>
+    </svg>
+    <span>海外股票</span>
+  </a>
+  <a class="main-tab" href="../#twstock">
+    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M4 19V8l8-5 8 5v11"/>
+      <path d="M4 19h16"/>
+      <path d="M9 19v-6h6v6"/>
+      <path d="M10 9h4"/>
+    </svg>
+    <span>台股資訊</span>
+  </a>
+  <a class="main-tab" href="../#insurance">
+    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 3l8 3v5c0 4.5-3.2 8.5-8 10-4.8-1.5-8-5.5-8-10V6l8-3z"/>
+      <path d="M9 12l2.2 2.2L15.5 10"/>
+    </svg>
+    <span>精選保險</span>
+  </a>
+  <a class="main-tab" href="../#targets">
+    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="9"/>
+      <circle cx="12" cy="12" r="5"/>
+      <circle cx="12" cy="12" r="1.6" fill="currentColor"/>
+    </svg>
+    <span>主題市場</span>
+  </a>
+  <a class="main-tab" href="../#portfolio">
+    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M12 3v9h9"/>
+      <path d="M12 12L5.5 17"/>
+    </svg>
+    <span>投組分析</span>
+  </a>
+  <a class="main-tab" href="../#wealth">
+    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M3 7l9-4 9 4v6c0 5-4 8-9 10-5-2-9-5-9-10V7z"/>
+      <path d="M9 11l2 2 4-4"/>
+    </svg>
+    <span>財富傳承</span>
+  </a>
+  <a class="main-tab" href="../#calc">
+    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <rect x="5" y="3" width="14" height="18" rx="2"/>
+      <path d="M9 7h6M9 11h6M9 15h2M13 15h2M9 19h6"/>
+    </svg>
+    <span>稅負試算</span>
+  </a>
+  <a class="main-tab" href="../#assist">
+    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M21 12a8 8 0 0 1-11 7.4L4 21l1.6-6A8 8 0 1 1 21 12z"/>
+      <circle cx="9" cy="11" r="0.6" fill="currentColor"/>
+      <circle cx="12" cy="11" r="0.6" fill="currentColor"/>
+      <circle cx="15" cy="11" r="0.6" fill="currentColor"/>
+    </svg>
+    <span>資產規劃</span>
+  </a>
+  <a class="main-tab active" href="index.html">
+    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M4 6a2 2 0 0 1 2-2h11l3 3v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/>
+      <path d="M8 8h7M8 12h7M8 16h5"/>
+    </svg>
+    <span>小學堂</span>
+  </a>
+</nav>
 
 <main class="chapter-layout">
   <aside class="chapter-sidebar">
@@ -25,14 +132,14 @@
   </article>
 </main>
 
-<footer class="academy-footer">
-  <p>僅供內部參考使用</p>
+<footer class="disclaimer">
+  資料僅供內部參考，不構成任何投資建議
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
 <script>
   mermaid.initialize({ startOnLoad: false, theme: 'neutral', securityLevel: 'loose' });
 </script>
-<script src="academy.js?v=20260525-1"></script>
+<script src="academy.js?v=20260525-2"></script>
 </body>
 </html>

@@ -460,6 +460,8 @@ async function init() {
   SEARCH_INDEX = buildSearchIndex();
   wireSearch();
 
+  const hashTab = location.hash.replace(/^#/, "");
+  if (hashTab) CURRENT_TAB = hashTab;
   switchTab(CURRENT_TAB);
 
   if ("serviceWorker" in navigator) {
