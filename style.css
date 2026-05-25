@@ -1727,3 +1727,101 @@ table.indices .date-col {
 .tw-link { display: inline-block; padding: 6px 12px; font-size: 13px; background: #F2F8FA; color: #003D91; border: 1px solid #d8e3e8; border-radius: 6px; text-decoration: none; }
 .tw-link:hover { background: var(--brand-primary, #019AB3); color: #fff; border-color: var(--brand-primary, #019AB3); }
 .tw-res-note { font-size: 11.5px; color: var(--text-mute, #6b7280); margin: 14px 0 0; padding-top: 10px; border-top: 1px dashed #eef1f4; }
+
+/* ===========================================
+   台股資訊 — 手機版收緊（max-width: 640px）
+   解決：
+   - 產業 chip grid 換行太多 → 改橫向滾動
+   - PASS 1/2 卡片邊距太大 → 收緊
+   - hero / snapshot 字體 / padding 收緊
+   =========================================== */
+@media (max-width: 640px) {
+  /* 產業分頁：改橫向滾動單列，節省垂直空間 */
+  .tw-ind-tabs {
+    display: flex;
+    grid-template-columns: none;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    margin: 0 -16px 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+  }
+  .tw-ind-tabs::-webkit-scrollbar { display: none; }
+  .tw-ind-tab {
+    flex: 0 0 auto;
+    min-width: auto;
+    min-height: 34px;
+    padding: 6px 12px;
+    font-size: 12.5px;
+    scroll-snap-align: start;
+  }
+  .tw-ind-tab-n {
+    font-size: 10.5px;
+    padding: 1px 5px;
+    min-width: 18px;
+  }
+
+  /* 搜尋區 padding 收緊 */
+  .tw-search-box { padding: 12px 14px; margin: 0 0 16px; }
+  .tw-search-row input { padding: 9px 11px; font-size: 14px; }
+  .tw-search-btn { padding: 0 14px; font-size: 13px; }
+  .tw-pick-row { gap: 5px; margin-top: 10px; }
+  .tw-pick { padding: 4px 9px; font-size: 12px; }
+  .tw-search-hint { font-size: 11px; }
+
+  /* 結果卡片 header 重排：價格資訊上方、查報價連結下方 */
+  .tw-res-card { padding: 12px 14px; }
+  .tw-res-header { gap: 8px; padding-bottom: 8px; margin-bottom: 8px; }
+  .tw-res-code { font-size: 20px; }
+  .tw-res-name { font-size: 15px; }
+  .tw-res-quote { font-size: 12px; }
+
+  /* 摘要面板 padding + 字體收緊 */
+  .tw-snap { padding: 12px 14px; }
+  .tw-snap-pricenum { font-size: 24px; }
+  .tw-snap-change { font-size: 13px; }
+  .tw-snap-head { gap: 10px; }
+  .tw-snap-spark { margin-left: 0; flex-basis: 100%; }
+  .tw-snap-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px 12px;
+    margin-top: 10px;
+    padding-top: 10px;
+    font-size: 12px;
+  }
+  .tw-snap-foot { font-size: 10px; }
+
+  /* 籌碼卡片內部 grid 一律 2 列 */
+  .tw-chips { padding: 12px 14px; }
+  .tw-chips-grid { grid-template-columns: repeat(2, 1fr); gap: 6px 10px; }
+  .tw-chips-cell { padding: 6px 8px; }
+
+  /* PASS 1/2 data card grid：每張卡片佔滿單欄 */
+  .tw-data-cards {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .tw-data-card { padding: 10px 12px 8px; min-height: auto; }
+  .tw-data-card-title { font-size: 12.5px; margin-bottom: 6px; }
+  .tw-data-card-body { font-size: 12px; gap: 2px; }
+  .tw-data-card-link { font-size: 11.5px; margin-top: 6px; padding-top: 5px; }
+  .tw-data-card-loading,
+  .tw-data-card-hint { font-size: 11.5px; }
+
+  /* PASS 標題收緊 */
+  .tw-res-section { margin-top: 14px; }
+  .tw-res-title { font-size: 12.5px; margin-bottom: 6px; }
+
+  /* 二手研究 + 即時報價 link chips */
+  .tw-link { padding: 5px 10px; font-size: 12px; }
+  .tw-res-links { gap: 5px; }
+
+  /* 搜尋多筆 match list 改 1 欄 */
+  .tw-matches-list { grid-template-columns: 1fr; gap: 6px; }
+  .tw-match { padding: 7px 10px; }
+  .tw-match-code { min-width: 48px; }
+  .tw-match-name { font-size: 12.5px; }
+}
