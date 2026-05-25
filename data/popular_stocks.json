@@ -1,5 +1,162 @@
 {
-  "generated_at": "2026-05-25T15:23:24+08:00",
+  "generated_at": "2026-05-25T17:01:37+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
-  "stocks": []
+  "stocks": [
+    {
+      "symbol": "FUTU",
+      "name_zh": "Futu",
+      "kind": "US",
+      "price": 89.76,
+      "change_pct": -27.53,
+      "mtd_pct": -41.91,
+      "ytd_pct": -45.34,
+      "market_date": "2026-05-22",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FUTU.US",
+      "error": null
+    },
+    {
+      "symbol": "SIVEF",
+      "name_zh": "SIVERS SEMICONDUCTORS AB",
+      "kind": "US",
+      "price": 7.42,
+      "change_pct": 17.78,
+      "mtd_pct": 53.94,
+      "ytd_pct": null,
+      "market_date": "2026-05-22",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SIVEF.US",
+      "error": null
+    },
+    {
+      "symbol": "SPY",
+      "name_zh": "SPDR S&P 500 ETF",
+      "kind": "US",
+      "price": 745.64,
+      "change_pct": 0.39,
+      "mtd_pct": 3.75,
+      "ytd_pct": 9.34,
+      "market_date": "2026-05-22",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPY.US",
+      "error": null
+    },
+    {
+      "symbol": "QQQ",
+      "name_zh": "Invesco 那斯達克 100 ETF",
+      "kind": "US",
+      "price": 717.54,
+      "change_pct": 0.42,
+      "mtd_pct": 7.46,
+      "ytd_pct": 16.8,
+      "market_date": "2026-05-22",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QQQ.US",
+      "error": null
+    },
+    {
+      "symbol": "IWM",
+      "name_zh": "iShares 羅素 2000 ETF",
+      "kind": "US",
+      "price": 285.12,
+      "change_pct": 0.93,
+      "mtd_pct": 2.57,
+      "ytd_pct": 15.83,
+      "market_date": "2026-05-22",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IWM.US",
+      "error": null
+    },
+    {
+      "symbol": "DIA",
+      "name_zh": "SPDR 道瓊 30 ETF",
+      "kind": "US",
+      "price": 506.12,
+      "change_pct": 0.6,
+      "mtd_pct": 1.91,
+      "ytd_pct": 5.32,
+      "market_date": "2026-05-22",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DIA.US",
+      "error": null
+    },
+    {
+      "symbol": "VTI",
+      "name_zh": "Vanguard 全美股 ETF",
+      "kind": "US",
+      "price": 366.79,
+      "change_pct": 0.47,
+      "mtd_pct": 3.56,
+      "ytd_pct": 9.4,
+      "market_date": "2026-05-22",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VTI.US",
+      "error": null
+    },
+    {
+      "symbol": "VOO",
+      "name_zh": "Vanguard S&P 500 ETF",
+      "kind": "US",
+      "price": 685.55,
+      "change_pct": 0.4,
+      "mtd_pct": 3.78,
+      "ytd_pct": 9.32,
+      "market_date": "2026-05-22",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VOO.US",
+      "error": null
+    },
+    {
+      "symbol": "ARKK",
+      "name_zh": "ARK 創新 ETF",
+      "kind": "US",
+      "price": 76.4,
+      "change_pct": -0.29,
+      "mtd_pct": 0.74,
+      "ytd_pct": -0.68,
+      "market_date": "2026-05-22",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ARKK.US",
+      "error": null
+    },
+    {
+      "symbol": "SMH",
+      "name_zh": "VanEck 半導體 ETF",
+      "kind": "US",
+      "price": 576.32,
+      "change_pct": 1.49,
+      "mtd_pct": 13.74,
+      "ytd_pct": 60.03,
+      "market_date": "2026-05-22",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SMH.US",
+      "error": null
+    },
+    {
+      "symbol": "SOXX",
+      "name_zh": "iShares 半導體 ETF",
+      "kind": "US",
+      "price": 537.33,
+      "change_pct": 2.41,
+      "mtd_pct": 16.45,
+      "ytd_pct": 78.43,
+      "market_date": "2026-05-22",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOXX.US",
+      "error": null
+    },
+    {
+      "symbol": "GLD",
+      "name_zh": "SPDR 黃金 ETF",
+      "kind": "US",
+      "price": 413.82,
+      "change_pct": -0.76,
+      "mtd_pct": -2.32,
+      "ytd_pct": 4.42,
+      "market_date": "2026-05-22",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GLD.US",
+      "error": null
+    },
+    {
+      "symbol": "TLT",
+      "name_zh": "iShares 20+ 年公債 ETF",
+      "kind": "US",
+      "price": 84.68,
+      "change_pct": 0.55,
+      "mtd_pct": -1.1,
+      "ytd_pct": -2.85,
+      "market_date": "2026-05-22",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TLT.US",
+      "error": null
+    }
+  ]
 }
