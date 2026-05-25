@@ -1569,6 +1569,26 @@ table.indices .date-col {
 .tw-res-quote { font-size: 13px; font-weight: 600; color: var(--brand-primary, #019AB3); text-decoration: none; }
 .tw-res-quote:hover { text-decoration: underline; }
 
+.tw-snap-wrap { margin: 12px 0 6px; }
+.tw-snap-loading { font-size: 13px; color: var(--text-mute, #6b7280); padding: 12px 14px; background: #F2F8FA; border-radius: 8px; }
+.tw-snap-err { font-size: 13px; color: #b45309; padding: 10px 14px; background: #FFF4E5; border-radius: 8px; }
+.tw-snap { background: #F8FAFB; border: 1px solid #e5eaef; border-radius: 10px; padding: 14px 16px; }
+.tw-snap-head { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.tw-snap-price { display: flex; align-items: baseline; gap: 6px; }
+.tw-snap-pricenum { font-size: 28px; font-weight: 700; line-height: 1; }
+.tw-snap-cur { font-size: 11px; color: var(--text-mute, #6b7280); letter-spacing: 0.5px; }
+.tw-snap-change { display: flex; gap: 10px; font-size: 14px; font-weight: 600; }
+.tw-snap-spark { margin-left: auto; }
+.tw-spark { display: block; }
+.tw-up { color: #d62828; }
+.tw-down { color: #2a9d8f; }
+.tw-flat { color: #4b5563; }
+.tw-snap-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 10px 18px; margin-top: 12px; padding-top: 12px; border-top: 1px dashed #e5eaef; font-size: 13px; }
+.tw-snap-grid > div { display: flex; justify-content: space-between; gap: 8px; }
+.tw-snap-k { color: var(--text-mute, #6b7280); }
+.tw-snap-v { font-weight: 600; color: #222; }
+.tw-snap-foot { margin-top: 10px; padding-top: 8px; border-top: 1px dashed #e5eaef; font-size: 11px; color: var(--text-mute, #6b7280); }
+
 .tw-matches { background: #fff; border: 1px solid #e5e7eb; border-radius: 10px; padding: 14px 16px; margin-top: 14px; }
 .tw-matches-title { font-size: 13px; color: var(--text-sub, #4b5563); margin-bottom: 10px; }
 .tw-matches-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 8px; }

@@ -1903,6 +1903,129 @@ const TW_STOCK_QUICKPICK = [
   { code: "1301", name: "台塑" },
 ];
 
+const TW_STOCK_SNAPSHOT_CACHE = {};
+function twYahooSuffix(market) {
+  return market === "上櫃" ? ".TWO" : ".TW";
+}
+function fmtNum(n, d) {
+  if (n === null || n === undefined || Number.isNaN(n)) return "—";
+  const opts = d != null ? { minimumFractionDigits: d, maximumFractionDigits: d } : {};
+  return Number(n).toLocaleString("zh-TW", opts);
+}
+function fmtVolume(v) {
+  if (v == null || Number.isNaN(v)) return "—";
+  const k = v / 1000;
+  if (k >= 10000) return `${(k / 10000).toFixed(2)} 億股`;
+  if (k >= 1) return `${k.toFixed(0)} 張`;
+  return `${v} 股`;
+}
+function fmtDateFromEpoch(sec) {
+  if (!sec) return "—";
+  const d = new Date(sec * 1000);
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+}
+
+async function fetchTwStockSnapshot(code, market) {
+  const key = `${code}|${market}`;
+  if (TW_STOCK_SNAPSHOT_CACHE[key]) return TW_STOCK_SNAPSHOT_CACHE[key];
+  const symbol = `${code}${twYahooSuffix(market)}`;
+  const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}?range=1mo&interval=1d`;
+  try {
+    const resp = await fetch(url, { mode: "cors" });
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    const json = await resp.json();
+    const result = json?.chart?.result?.[0];
+    const err = json?.chart?.error;
+    if (err || !result) throw new Error(err?.description || "no data");
+    const meta = result.meta || {};
+    const ts = result.timestamp || [];
+    const q = result.indicators?.quote?.[0] || {};
+    const closes = (q.close || []).filter(x => x != null);
+    const last = closes.length;
+    if (!last) throw new Error("空資料");
+    const price = meta.regularMarketPrice ?? closes[last - 1];
+    const prevClose = last >= 2 ? closes[last - 2] : (meta.chartPreviousClose ?? null);
+    const change = prevClose != null ? price - prevClose : null;
+    const changePct = prevClose ? (change / prevClose) * 100 : null;
+    const lastIdx = (q.close || []).length - 1;
+    const open = q.open?.[lastIdx];
+    const high = q.high?.[lastIdx];
+    const low = q.low?.[lastIdx];
+    const volume = q.volume?.[lastIdx];
+    const lastTs = ts[lastIdx] || meta.regularMarketTime;
+    const sparkPoints = ts.map((t, i) => ({ t, c: q.close?.[i] })).filter(p => p.c != null).slice(-10);
+    const snap = { ok: true, symbol, price, prevClose, change, changePct, open, high, low, volume, dateStr: fmtDateFromEpoch(lastTs), currency: meta.currency || "TWD", sparkPoints };
+    TW_STOCK_SNAPSHOT_CACHE[key] = snap;
+    return snap;
+  } catch (e) {
+    return { ok: false, error: String(e.message || e) };
+  }
+}
+
+function renderSparkline(points, width = 160, height = 40) {
+  if (!points || points.length < 2) return "";
+  const vals = points.map(p => p.c);
+  const min = Math.min(...vals), max = Math.max(...vals);
+  const range = max - min || 1;
+  const stepX = width / (points.length - 1);
+  const coords = points.map((p, i) => {
+    const x = (i * stepX).toFixed(1);
+    const y = (height - ((p.c - min) / range) * height).toFixed(1);
+    return `${x},${y}`;
+  }).join(" ");
+  const last = points[points.length - 1].c;
+  const first = points[0].c;
+  const up = last >= first;
+  const color = up ? "#d62828" : "#2a9d8f";
+  return `<svg class="tw-spark" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" preserveAspectRatio="none">
+    <polyline fill="none" stroke="${color}" stroke-width="1.6" points="${coords}"/>
+  </svg>`;
+}
+
+function renderTwStockSnapshot(snap, rec) {
+  if (!snap || !snap.ok) {
+    return `<div class="tw-snap-err">即時行情載入失敗${snap?.error ? `（${escapeHtml(snap.error)}）` : ""}，仍可點下方連結直接查。</div>`;
+  }
+  const upDown = snap.change > 0 ? "up" : snap.change < 0 ? "down" : "flat";
+  const sign = snap.change > 0 ? "+" : "";
+  const changeStr = snap.change != null ? `${sign}${fmtNum(snap.change, 2)}` : "—";
+  const changePctStr = snap.changePct != null ? `${sign}${fmtNum(snap.changePct, 2)}%` : "—";
+  return `
+    <div class="tw-snap">
+      <div class="tw-snap-head">
+        <div class="tw-snap-price tw-${upDown}">
+          <span class="tw-snap-pricenum">${fmtNum(snap.price, 2)}</span>
+          <span class="tw-snap-cur">${escapeHtml(snap.currency || "TWD")}</span>
+        </div>
+        <div class="tw-snap-change tw-${upDown}">
+          <span>${changeStr}</span>
+          <span>${changePctStr}</span>
+        </div>
+        <div class="tw-snap-spark">${renderSparkline(snap.sparkPoints)}</div>
+      </div>
+      <div class="tw-snap-grid">
+        <div><span class="tw-snap-k">開盤</span><span class="tw-snap-v">${fmtNum(snap.open, 2)}</span></div>
+        <div><span class="tw-snap-k">最高</span><span class="tw-snap-v">${fmtNum(snap.high, 2)}</span></div>
+        <div><span class="tw-snap-k">最低</span><span class="tw-snap-v">${fmtNum(snap.low, 2)}</span></div>
+        <div><span class="tw-snap-k">昨收</span><span class="tw-snap-v">${fmtNum(snap.prevClose, 2)}</span></div>
+        <div><span class="tw-snap-k">成交量</span><span class="tw-snap-v">${fmtVolume(snap.volume)}</span></div>
+        <div><span class="tw-snap-k">資料日</span><span class="tw-snap-v">${escapeHtml(snap.dateStr)}</span></div>
+      </div>
+      <div class="tw-snap-foot">資料源：Yahoo Finance（瀏覽器直接抓取，無中介伺服器、無 API 金鑰）</div>
+    </div>`;
+}
+
+async function loadTwStockSnapshot(code, market) {
+  const slot = document.getElementById(`tw-snap-${code}`);
+  if (!slot) return;
+  const snap = await fetchTwStockSnapshot(code, market);
+  // re-find in case of re-render
+  const slot2 = document.getElementById(`tw-snap-${code}`);
+  if (!slot2) return;
+  const rec = twStockFindByCode(code);
+  slot2.outerHTML = `<div id="tw-snap-${code}" class="tw-snap-wrap">${renderTwStockSnapshot(snap, rec)}</div>`;
+}
+
 function twStockFindByCode(code) {
   const list = DATA?.tw_stocks || [];
   if (!Array.isArray(list)) return null;
@@ -1977,6 +2100,7 @@ function renderTwStockResults(code) {
         <div class="tw-res-id"><span class="tw-res-code">${escapeHtml(code)}</span>${nameSpan}${marketBadge}</div>
         <a class="tw-res-quote" href="${escapeHtml(groups.realtime[0].url)}" target="_blank" rel="noopener">查即時報價 →</a>
       </div>
+      <div id="tw-snap-${escapeHtml(code)}" class="tw-snap-wrap"><div class="tw-snap-loading">載入即時行情中…</div></div>
       ${section("即時報價", "#019AB3", groups.realtime)}
       ${section("PASS 1 ｜ 基本面（Yahoo 摘要 + MOPS 原站）", "#019AB3", groups.pass1)}
       ${section("PASS 2 ｜ 籌碼", "#017A8F", groups.pass2)}
@@ -2042,6 +2166,8 @@ function doTwStockSearch(query) {
     const input = document.getElementById("tw-stock-input");
     if (input) input.value = codeCandidate;
     result.innerHTML = renderTwStockResults(codeCandidate);
+    const rec = twStockFindByCode(codeCandidate);
+    loadTwStockSnapshot(codeCandidate, rec?.market);
     setTimeout(() => result.scrollIntoView({ behavior: "smooth", block: "start" }), 50);
     return;
   }
@@ -2057,6 +2183,7 @@ function doTwStockSearch(query) {
     const input = document.getElementById("tw-stock-input");
     if (input) input.value = rec.code;
     result.innerHTML = renderTwStockResults(rec.code);
+    loadTwStockSnapshot(rec.code, rec.market);
     setTimeout(() => result.scrollIntoView({ behavior: "smooth", block: "start" }), 50);
     return;
   }
@@ -2074,6 +2201,14 @@ function wireTwStock() {
       }
     });
   }
+  // 切回 tab 時若有先前查詢結果，重新觸發 snapshot
+  if (TW_STOCK_QUERY) {
+    const slot = document.getElementById(`tw-snap-${TW_STOCK_QUERY}`);
+    if (slot && slot.querySelector(".tw-snap-loading")) {
+      const rec = twStockFindByCode(TW_STOCK_QUERY);
+      loadTwStockSnapshot(TW_STOCK_QUERY, rec?.market);
+    }
+  }
 }
 
 function renderTwStockSheet() {
@@ -2081,7 +2216,7 @@ function renderTwStockSheet() {
   return `
     <div style="background:linear-gradient(135deg,#019AB3,#003D91);color:#fff;padding:22px 24px;border-radius:10px;margin-bottom:20px">
       <div style="font-size:12px;letter-spacing:2px;opacity:0.85">PERSONAL · TAIWAN EQUITY · RESEARCH SOP</div>
-      <h2 style="margin:6px 0 6px 0;color:#fff;border:none;font-size:22px">台股資訊源 SOP（個人版）</h2>
+      <h2 style="margin:6px 0 6px 0;color:#fff;border:none;font-size:22px">台股資訊</h2>
       <div style="font-size:13px;opacity:0.9">任何個股都依這份順序跑一遍：基本面 → 籌碼 → 產業</div>
     </div>
 
