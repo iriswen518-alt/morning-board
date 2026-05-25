@@ -229,3 +229,6 @@
     max-height: none;
   }
 }
+
+/* 手機分頁：復用主站 style.css 的 .nav-toggle/overlay 規則；
+   academy.js 會在 .main-nav 前 inject 一個 .nav-toggle 按鈕。 */

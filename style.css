@@ -1947,6 +1947,32 @@ table.indices .date-col {
 /* === 手機分頁：sticky 按鈕 + 展開區塊網格 === */
 .nav-toggle { display: none; }
 
+/* 手機專屬：右下角「回首頁」FAB（market tab 與 nav 開啟時隱藏） */
+.home-fab {
+  display: none;
+  position: fixed;
+  right: 18px;
+  bottom: calc(18px + env(safe-area-inset-bottom, 0px));
+  z-index: 90;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
+  color: #fff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 154, 179, 0.32);
+}
+.home-fab svg { width: 18px; height: 18px; flex: 0 0 18px; }
+@media (max-width: 640px) {
+  body.show-home-fab .home-fab { display: inline-flex; }
+  body.nav-open .home-fab { display: none; }
+}
+
 @media (max-width: 640px) {
   .nav-toggle {
     display: flex;
@@ -1996,8 +2022,10 @@ table.indices .date-col {
     background: rgba(255, 255, 255, 0.98);
     display: none;
     grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: min-content;
+    align-content: start;
     gap: 10px;
-    padding: 60px 16px 24px;
+    padding: 52px 16px 24px;
     overflow-y: auto;
     border-bottom: none;
     box-shadow: none;
