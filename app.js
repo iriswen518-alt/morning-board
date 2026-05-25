@@ -2686,18 +2686,15 @@ function renderTwStockSheet() {
     <h3 style="font-size:16px;margin:18px 0 8px">檢視流程</h3>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:18px">
       <div style="background:#CCE8ED;padding:14px;border-radius:8px;text-align:center">
-        <div style="font-size:11px;color:#003D91;letter-spacing:1.5px;font-weight:bold">1.</div>
-        <div style="font-size:16px;font-weight:bold;color:#003D91;margin:6px 0">MOPS 基本面</div>
+        <div style="font-size:16px;font-weight:bold;color:#003D91;margin:0 0 6px">MOPS 基本面</div>
         <div style="font-size:12px;color:#444">5 個必看頁面</div>
       </div>
       <div style="background:#E5F2F5;padding:14px;border-radius:8px;text-align:center">
-        <div style="font-size:11px;color:#003D91;letter-spacing:1.5px;font-weight:bold">2.</div>
-        <div style="font-size:16px;font-weight:bold;color:#003D91;margin:6px 0">TWSE 籌碼</div>
+        <div style="font-size:16px;font-weight:bold;color:#003D91;margin:0 0 6px">TWSE 籌碼</div>
         <div style="font-size:12px;color:#444">3 項關鍵指標</div>
       </div>
       <div style="background:#CCE8ED;padding:14px;border-radius:8px;text-align:center">
-        <div style="font-size:11px;color:#003D91;letter-spacing:1.5px;font-weight:bold">3.</div>
-        <div style="font-size:16px;font-weight:bold;color:#003D91;margin:6px 0">產業／競爭</div>
+        <div style="font-size:16px;font-weight:bold;color:#003D91;margin:0 0 6px">產業／競爭</div>
         <div style="font-size:12px;color:#444">3 個檢核點</div>
       </div>
     </div>
