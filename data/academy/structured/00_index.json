@@ -1,0 +1,41 @@
+{
+  "course": "structured",
+  "course_name": "結構型商品",
+  "chapters": [
+    {
+      "slug": "overview",
+      "title": "結構型商品總論與分類",
+      "file": "01_overview.json"
+    },
+    {
+      "slug": "types",
+      "title": "常見結構型商品類型",
+      "file": "02_types.json"
+    },
+    {
+      "slug": "valuation",
+      "title": "結構型商品評價邏輯",
+      "file": "03_valuation.json"
+    },
+    {
+      "slug": "fees",
+      "title": "結構型商品費用與成本",
+      "file": "04_fees.json"
+    },
+    {
+      "slug": "tax",
+      "title": "結構型商品稅務",
+      "file": "05_tax.json"
+    },
+    {
+      "slug": "risk",
+      "title": "結構型商品風險與紅旗",
+      "file": "06_risk.json"
+    },
+    {
+      "slug": "regulation",
+      "title": "結構型商品法規與監理",
+      "file": "07_regulation.json"
+    }
+  ]
+}

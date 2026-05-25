@@ -1,0 +1,41 @@
+{
+  "course": "real_estate",
+  "course_name": "房地產",
+  "chapters": [
+    {
+      "slug": "overview",
+      "title": "房地產投資總論",
+      "file": "01_overview.json"
+    },
+    {
+      "slug": "valuation",
+      "title": "房地產評估指標",
+      "file": "02_valuation.json"
+    },
+    {
+      "slug": "transaction",
+      "title": "不動產交易流程與法規",
+      "file": "03_transaction.json"
+    },
+    {
+      "slug": "tax",
+      "title": "房地產稅務全圖",
+      "file": "04_tax.json"
+    },
+    {
+      "slug": "location",
+      "title": "區域選擇與時機判斷",
+      "file": "05_location.json"
+    },
+    {
+      "slug": "risk",
+      "title": "房地產風險與紅旗",
+      "file": "06_risk.json"
+    },
+    {
+      "slug": "regulation",
+      "title": "房地產法規與監理",
+      "file": "07_regulation.json"
+    }
+  ]
+}

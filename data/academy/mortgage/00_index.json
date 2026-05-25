@@ -1,0 +1,41 @@
+{
+  "course": "mortgage",
+  "course_name": "房貸",
+  "chapters": [
+    {
+      "slug": "overview",
+      "title": "房貸總論與市場",
+      "file": "01_overview.json"
+    },
+    {
+      "slug": "types",
+      "title": "房貸類型與利率結構",
+      "file": "02_types.json"
+    },
+    {
+      "slug": "repayment",
+      "title": "還款方式與本金攤還",
+      "file": "03_repayment.json"
+    },
+    {
+      "slug": "application",
+      "title": "房貸申請流程與資格",
+      "file": "04_application.json"
+    },
+    {
+      "slug": "tax",
+      "title": "房貸與購屋稅務",
+      "file": "05_tax.json"
+    },
+    {
+      "slug": "risk",
+      "title": "房貸風險與管理",
+      "file": "06_risk.json"
+    },
+    {
+      "slug": "regulation",
+      "title": "房貸法規與監理",
+      "file": "07_regulation.json"
+    }
+  ]
+}
