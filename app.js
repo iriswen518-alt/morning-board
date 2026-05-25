@@ -1768,15 +1768,28 @@ function renderMarketSheet() {
       <td class="date-col">${escapeHtml(shortDate(i.closing_date) || date)}</td>
     </tr>
   `).join("");
-  const bondRows = (m.bonds || []).map(b => `
+  // 2026-05-25：Japan / UK 10Y 無免費日頻率資料源，daily/MTD bps 顯式標 n/a* + tooltip
+  const spotOnlyBonds = new Set(["Japan 10Y", "Japan 10-Year", "UK 10Y", "UK 10-Year"]);
+  const bondRows = (m.bonds || []).map(b => {
+    const isSpotOnly = spotOnlyBonds.has(b.name);
+    const tip = isSpotOnly
+      ? '無免費日頻率資料源（Yahoo/FRED/ECB 均無），僅取即時殖利率'
+      : '';
+    const dailyCell = (isSpotOnly && b.daily_bps == null)
+      ? `<span title="${tip}" style="color:#94a3b8; cursor:help;">n/a*</span>`
+      : `<span class="${bpsClass(b.daily_bps)}">${fmtBps(b.daily_bps)}</span>`;
+    const mtdCell = (isSpotOnly && b.mtd_bps == null)
+      ? `<span title="${tip}" style="color:#94a3b8; cursor:help;">n/a*</span>`
+      : `<span class="${bpsClass(b.mtd_bps)}">${fmtBps(b.mtd_bps)}</span>`;
+    return `
     <tr>
       <td>${bondLink(b.name)}</td>
       <td>${b.yield_pct != null ? b.yield_pct.toFixed(2) + "%" : "—"}</td>
-      <td class="${bpsClass(b.daily_bps)}">${fmtBps(b.daily_bps)}</td>
-      <td class="${bpsClass(b.mtd_bps)}">${fmtBps(b.mtd_bps)}</td>
+      <td>${dailyCell}</td>
+      <td>${mtdCell}</td>
       <td class="date-col">${escapeHtml(shortDate(b.closing_date) || date)}</td>
     </tr>
-  `).join("");
+  `;}).join("");
 
   const fxRows = (m.fx || []).map(f => `
     <tr>
