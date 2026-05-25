@@ -1545,14 +1545,11 @@ table.indices .date-col {
 /* 台股研究 - 產業分頁 */
 .tw-ind-tabs {
   display: flex;
-  gap: 6px;
-  overflow-x: auto;
-  padding-bottom: 8px;
+  flex-wrap: wrap;
+  gap: 6px 8px;
+  padding-bottom: 4px;
   margin: -4px -4px 12px;
-  scrollbar-width: thin;
 }
-.tw-ind-tabs::-webkit-scrollbar { height: 6px; }
-.tw-ind-tabs::-webkit-scrollbar-thumb { background: #cfd8dd; border-radius: 4px; }
 .tw-ind-tab {
   display: inline-flex;
   align-items: baseline;
