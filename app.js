@@ -4629,25 +4629,39 @@ const LAW_PCODE_MAP = {
   "信託業法": "G0380025",
   "保險法": "G0390002",
   "全民健康保險法": "L0060001",
+  "個人計算辦法": "G0340146",
+  "個人計算受控外國企業所得適用辦法": "G0340146",
+  "營利事業計算辦法": "G0340145",
+  "營所事業計算辦法": "G0340145",
+  "營利事業認列受控外國企業所得適用辦法": "G0340145",
 };
 
-// 將「法名 §條號」字串轉成可點擊連結；多筆引用、條號帶 -N 均支援
+// 將「法名 §條號」字串轉成可點擊連結；支援多筆引用、條號帶 -N、「、§N」延伸同母法
 function renderLawCode(codeStr) {
   if (!codeStr) return "";
   const re = /([一-龥]+(?:法|條例|細則|辦法))\s*§\s*(\d+(?:-\d+)?)/g;
+  const tailRe = /[、,]\s*§\s*(\d+(?:-\d+)?)/y;
+  const wrap = (pcode, art, label) => pcode
+    ? `<a href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=${pcode}&flno=${encodeURIComponent(art)}" target="_blank" rel="noopener" title="全國法規資料庫">${escapeHtml(label)}</a>`
+    : escapeHtml(label);
   let out = "";
   let last = 0;
   let m;
   while ((m = re.exec(codeStr)) !== null) {
     out += escapeHtml(codeStr.slice(last, m.index));
     const pcode = LAW_PCODE_MAP[m[1]];
-    if (pcode) {
-      const url = `https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=${pcode}&flno=${encodeURIComponent(m[2])}`;
-      out += `<a href="${url}" target="_blank" rel="noopener" title="全國法規資料庫">${escapeHtml(m[0])}</a>`;
-    } else {
-      out += escapeHtml(m[0]);
+    out += wrap(pcode, m[2], m[0]);
+    let cursor = m.index + m[0].length;
+    tailRe.lastIndex = cursor;
+    let t;
+    while ((t = tailRe.exec(codeStr)) !== null) {
+      out += escapeHtml(codeStr.slice(cursor, t.index));
+      out += wrap(pcode, t[1], t[0]);
+      cursor = t.index + t[0].length;
+      tailRe.lastIndex = cursor;
     }
-    last = m.index + m[0].length;
+    last = cursor;
+    re.lastIndex = cursor;
   }
   out += escapeHtml(codeStr.slice(last));
   return out;
