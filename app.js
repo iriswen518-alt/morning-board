@@ -2203,76 +2203,57 @@ async function fetchTwStockBasic(code, market) {
   return result;
 }
 
-function renderTwBasicCards(data, market, code) {
-  if (!data || !data.ok) return "";
-  const isOtc = market === "上櫃";
-  const info = data.info;
-  const rev = data.revenue;
-  const fin = data.finance;
-  const cards = [];
-  if (info) {
-    cards.push(`
-      <div class="tw-basic-card">
-        <div class="tw-basic-card-title">公司資料</div>
-        <div class="tw-basic-card-body">
-          <div><span class="tw-basic-k">董事長</span><span class="tw-basic-v">${escapeHtml(info.chairman || "—")}</span></div>
-          <div><span class="tw-basic-k">總經理</span><span class="tw-basic-v">${escapeHtml(info.gm || "—")}</span></div>
-          <div><span class="tw-basic-k">實收資本</span><span class="tw-basic-v">${fmtTwMoney(info.capital)}</span></div>
-          <div><span class="tw-basic-k">成立日</span><span class="tw-basic-v">${fmtDate8(info.inc_date)}</span></div>
-          <div><span class="tw-basic-k">${isOtc ? "上櫃日" : "上市日"}</span><span class="tw-basic-v">${fmtDate8(info.list_date)}</span></div>
-        </div>
-      </div>`);
-  }
-  if (rev) {
-    cards.push(`
-      <div class="tw-basic-card">
-        <div class="tw-basic-card-title">月營收 <span class="tw-basic-card-sub">${fmtYyyymmFromRoc(rev.ym)}</span></div>
-        <div class="tw-basic-card-body">
-          <div><span class="tw-basic-k">當月營收</span><span class="tw-basic-v">${fmtRevenue(rev.current)}</span></div>
-          <div><span class="tw-basic-k">月增率</span><span class="tw-basic-v ${pctClass(rev.mom_pct)}">${fmtPct(rev.mom_pct)}</span></div>
-          <div><span class="tw-basic-k">年增率</span><span class="tw-basic-v ${pctClass(rev.yoy_pct)}">${fmtPct(rev.yoy_pct)}</span></div>
-          <div><span class="tw-basic-k">累計營收</span><span class="tw-basic-v">${fmtRevenue(rev.cum_current)}</span></div>
-          <div><span class="tw-basic-k">累計年增</span><span class="tw-basic-v ${pctClass(rev.cum_yoy_pct)}">${fmtPct(rev.cum_yoy_pct)}</span></div>
-        </div>
-      </div>`);
-  }
-  if (fin) {
-    const yr = parseInt(fin.year) + 1911;
-    cards.push(`
-      <div class="tw-basic-card">
-        <div class="tw-basic-card-title">季營益 <span class="tw-basic-card-sub">${yr}Q${escapeHtml(String(fin.quarter))}</span></div>
-        <div class="tw-basic-card-body">
-          <div><span class="tw-basic-k">營業收入</span><span class="tw-basic-v">${escapeHtml(fin.revenue_m || "—")} 百萬</span></div>
-          <div><span class="tw-basic-k">毛利率</span><span class="tw-basic-v">${escapeHtml(fin.gpm || "—")}%</span></div>
-          <div><span class="tw-basic-k">營益率</span><span class="tw-basic-v">${escapeHtml(fin.opm || "—")}%</span></div>
-          <div><span class="tw-basic-k">稅後純益率</span><span class="tw-basic-v">${escapeHtml(fin.npm || "—")}%</span></div>
-        </div>
-      </div>`);
-  } else if (isOtc) {
-    cards.push(`<div class="tw-basic-card tw-basic-card-note">季營益資料：TWSE OpenAPI 不收上櫃，請點下方「損益表（季）」連結至 Yahoo 查看</div>`);
-  }
-  if (!cards.length) return `<div class="tw-snap-err">公司基本面資料抓取失敗（可能本機 JSON 未刷新）</div>`;
-  return `<div class="tw-basic-cards">${cards.join("")}</div>`;
+function fillCardSlot(code, name, html) {
+  const slot = document.getElementById(`tw-card-${code}-${name}`);
+  if (!slot) return;
+  slot.innerHTML = html;
+}
+
+function renderCompanyBody(info, isOtc) {
+  if (!info) return `<div class="tw-data-card-hint">查無公司資料</div>`;
+  return `
+    <div><span class="tw-basic-k">董事長</span><span class="tw-basic-v">${escapeHtml(info.chairman || "—")}</span></div>
+    <div><span class="tw-basic-k">實收資本</span><span class="tw-basic-v">${fmtTwMoney(info.capital)}</span></div>
+    <div><span class="tw-basic-k">${isOtc ? "上櫃日" : "上市日"}</span><span class="tw-basic-v">${fmtDate8(info.list_date)}</span></div>
+    <div><span class="tw-basic-k">成立日</span><span class="tw-basic-v">${fmtDate8(info.inc_date)}</span></div>`;
+}
+
+function renderRevenueBody(rev) {
+  if (!rev) return `<div class="tw-data-card-hint">查無月營收</div>`;
+  return `
+    <div class="tw-data-card-sub-inline">${fmtYyyymmFromRoc(rev.ym)}</div>
+    <div><span class="tw-basic-k">當月營收</span><span class="tw-basic-v">${fmtRevenue(rev.current)}</span></div>
+    <div><span class="tw-basic-k">月增率</span><span class="tw-basic-v ${pctClass(rev.mom_pct)}">${fmtPct(rev.mom_pct)}</span></div>
+    <div><span class="tw-basic-k">年增率</span><span class="tw-basic-v ${pctClass(rev.yoy_pct)}">${fmtPct(rev.yoy_pct)}</span></div>
+    <div><span class="tw-basic-k">累計年增</span><span class="tw-basic-v ${pctClass(rev.cum_yoy_pct)}">${fmtPct(rev.cum_yoy_pct)}</span></div>`;
+}
+
+function renderFinanceBody(fin) {
+  if (!fin) return `<div class="tw-data-card-hint">查無季營益</div>`;
+  const yr = parseInt(fin.year) + 1911;
+  return `
+    <div class="tw-data-card-sub-inline">${yr}Q${escapeHtml(String(fin.quarter))}</div>
+    <div><span class="tw-basic-k">營業收入</span><span class="tw-basic-v">${escapeHtml(fin.revenue_m || "—")} 百萬</span></div>
+    <div><span class="tw-basic-k">毛利率</span><span class="tw-basic-v">${escapeHtml(fin.gpm || "—")}%</span></div>
+    <div><span class="tw-basic-k">營益率</span><span class="tw-basic-v">${escapeHtml(fin.opm || "—")}%</span></div>
+    <div><span class="tw-basic-k">稅後純益率</span><span class="tw-basic-v">${escapeHtml(fin.npm || "—")}%</span></div>`;
 }
 
 async function loadTwStockBasic(code, market) {
-  const slot = document.getElementById(`tw-basic-${code}`);
-  if (!slot) return;
   let data;
   try {
     data = await fetchTwStockBasic(code, market);
   } catch (e) {
     console.error("[twstock] basic fetch threw:", e);
-    data = { ok: false, error: String(e.message || e) };
+    fillCardSlot(code, "company", `<div class="tw-data-card-hint">載入失敗</div>`);
+    fillCardSlot(code, "revenue", `<div class="tw-data-card-hint">載入失敗</div>`);
+    if (market !== "上櫃") fillCardSlot(code, "finance", `<div class="tw-data-card-hint">載入失敗</div>`);
+    return;
   }
-  const slot2 = document.getElementById(`tw-basic-${code}`);
-  if (!slot2) return;
-  try {
-    slot2.outerHTML = `<div id="tw-basic-${code}" class="tw-basic-wrap">${renderTwBasicCards(data, market, code)}</div>`;
-  } catch (e) {
-    console.error("[twstock] basic render threw:", e);
-    slot2.outerHTML = `<div id="tw-basic-${code}" class="tw-basic-wrap"><div class="tw-snap-err">公司基本面顯示異常（${escapeHtml(String(e.message || e))}）</div></div>`;
-  }
+  const isOtc = market === "上櫃";
+  fillCardSlot(code, "company", renderCompanyBody(data.info, isOtc));
+  fillCardSlot(code, "revenue", renderRevenueBody(data.revenue));
+  if (!isOtc) fillCardSlot(code, "finance", renderFinanceBody(data.finance));
 }
 
 const TW_CHIPS_CACHE = {};
@@ -2360,28 +2341,55 @@ async function fetchTwStockChips(code) {
   return result;
 }
 
-function renderTwStockChips(data) {
+function renderInstBody(date, t86Row) {
+  if (!t86Row) return `<div class="tw-data-card-hint">當日無三大法人資料</div>`;
+  const foreign = fmtChipChange(t86Row[4]);
+  const trust = fmtChipChange(t86Row[10]);
+  const dealer = fmtChipChange(t86Row[11]);
+  const total = fmtChipChange(t86Row[18]);
+  return `
+    <div class="tw-data-card-sub-inline">${escapeHtml(date)}</div>
+    <div><span class="tw-basic-k">外資</span><span class="tw-basic-v ${foreign.cls}">${foreign.txt}</span></div>
+    <div><span class="tw-basic-k">投信</span><span class="tw-basic-v ${trust.cls}">${trust.txt}</span></div>
+    <div><span class="tw-basic-k">自營</span><span class="tw-basic-v ${dealer.cls}">${dealer.txt}</span></div>
+    <div><span class="tw-basic-k">合計</span><span class="tw-basic-v ${total.cls}">${total.txt}</span></div>`;
+}
+
+function renderMarginBody(date, margnRow) {
+  if (!margnRow) return `<div class="tw-data-card-hint">當日無融資融券</div>`;
+  const finToday = parseTwseNum(margnRow[6]);
+  const finPrev = parseTwseNum(margnRow[5]);
+  const finDelta = (finToday != null && finPrev != null) ? finToday - finPrev : null;
+  const shortToday = parseTwseNum(margnRow[12]);
+  const shortPrev = parseTwseNum(margnRow[11]);
+  const shortDelta = (shortToday != null && shortPrev != null) ? shortToday - shortPrev : null;
+  const deltaTxt = (n) => n == null ? "" : `${n > 0 ? "+" : n < 0 ? "−" : ""}${Math.abs(n).toLocaleString("zh-TW")}`;
+  const deltaCls = (n) => n > 0 ? "tw-up" : n < 0 ? "tw-down" : "tw-flat";
+  return `
+    <div class="tw-data-card-sub-inline">${escapeHtml(date)}</div>
+    <div><span class="tw-basic-k">融資餘額</span><span class="tw-basic-v">${Number(finToday).toLocaleString("zh-TW")} 張</span></div>
+    <div><span class="tw-basic-k">↳ 較前日</span><span class="tw-basic-v ${deltaCls(finDelta)}">${deltaTxt(finDelta)}</span></div>
+    <div><span class="tw-basic-k">融券餘額</span><span class="tw-basic-v">${Number(shortToday).toLocaleString("zh-TW")} 張</span></div>
+    <div><span class="tw-basic-k">↳ 較前日</span><span class="tw-basic-v ${deltaCls(shortDelta)}">${deltaTxt(shortDelta)}</span></div>`;
+}
+
+// Legacy renderTwStockChips kept for backward-compat reference (unused after refactor).
+function _renderTwStockChips_unused(data) {
   if (!data || !data.ok) {
     return `<div class="tw-snap-err">籌碼摘要載入失敗${data?.error ? `（${escapeHtml(data.error)}）` : ""}</div>`;
   }
   const { date, t86Row, margnRow } = data;
-  // T86 indices: [4] 外資, [10] 投信, [11] 自營商買賣超, [18] 三大法人合計
   const foreign = t86Row ? fmtChipChange(t86Row[4]) : { txt: "—", cls: "tw-flat" };
   const trust = t86Row ? fmtChipChange(t86Row[10]) : { txt: "—", cls: "tw-flat" };
   const dealer = t86Row ? fmtChipChange(t86Row[11]) : { txt: "—", cls: "tw-flat" };
   const total = t86Row ? fmtChipChange(t86Row[18]) : { txt: "—", cls: "tw-flat" };
-  // MI_MARGN indices: [5] 融資前日餘額, [6] 融資今日餘額, [11] 融券前日餘額, [12] 融券今日餘額
   const finToday = margnRow ? parseTwseNum(margnRow[6]) : null;
   const finPrev = margnRow ? parseTwseNum(margnRow[5]) : null;
   const finDelta = (finToday != null && finPrev != null) ? finToday - finPrev : null;
   const shortToday = margnRow ? parseTwseNum(margnRow[12]) : null;
   const shortPrev = margnRow ? parseTwseNum(margnRow[11]) : null;
   const shortDelta = (shortToday != null && shortPrev != null) ? shortToday - shortPrev : null;
-  const deltaTxt = (n) => {
-    if (n == null) return "";
-    const sign = n > 0 ? "+" : n < 0 ? "−" : "";
-    return `${sign}${Math.abs(n).toLocaleString("zh-TW")}`;
-  };
+  const deltaTxt = (n) => n == null ? "" : `${n > 0 ? "+" : n < 0 ? "−" : ""}${Math.abs(n).toLocaleString("zh-TW")}`;
   const deltaCls = (n) => n > 0 ? "tw-up" : n < 0 ? "tw-down" : "tw-flat";
   return `
     <div class="tw-chips">
@@ -2417,23 +2425,22 @@ function renderTwStockChips(data) {
 }
 
 async function loadTwStockChips(code) {
-  const slot = document.getElementById(`tw-chips-${code}`);
-  if (!slot) return;
   let data;
   try {
     data = await fetchTwStockChips(code);
   } catch (e) {
     console.error("[twstock] chips fetch threw:", e);
-    data = { ok: false, error: String(e.message || e) };
+    fillCardSlot(code, "inst", `<div class="tw-data-card-hint">載入失敗</div>`);
+    fillCardSlot(code, "margin", `<div class="tw-data-card-hint">載入失敗</div>`);
+    return;
   }
-  const slot2 = document.getElementById(`tw-chips-${code}`);
-  if (!slot2) return;
-  try {
-    slot2.outerHTML = `<div id="tw-chips-${code}" class="tw-chips-wrap">${renderTwStockChips(data)}</div>`;
-  } catch (e) {
-    console.error("[twstock] chips render threw:", e);
-    slot2.outerHTML = `<div id="tw-chips-${code}" class="tw-chips-wrap"><div class="tw-snap-err">籌碼摘要顯示異常（${escapeHtml(String(e.message || e))}）</div></div>`;
+  if (!data || !data.ok) {
+    fillCardSlot(code, "inst", `<div class="tw-data-card-hint">${escapeHtml(data?.error || "無資料")}</div>`);
+    fillCardSlot(code, "margin", `<div class="tw-data-card-hint">${escapeHtml(data?.error || "無資料")}</div>`);
+    return;
   }
+  fillCardSlot(code, "inst", renderInstBody(data.date, data.t86Row));
+  fillCardSlot(code, "margin", renderMarginBody(data.date, data.margnRow));
 }
 
 function twStockFindByCode(code) {
@@ -2492,18 +2499,58 @@ function twStockLinks(code) {
 function renderTwStockResults(code) {
   const rec = twStockFindByCode(code);
   const groups = twStockLinks(code);
+  const isOtc = rec?.market === "上櫃";
   const linkBtn = (l) => `<a class="tw-link" href="${escapeHtml(l.url)}" target="_blank" rel="noopener">${escapeHtml(l.label)}</a>`;
-  const section = (title, color, items) => `
+  const linkSection = (title, color, items) => `
     <div class="tw-res-section">
       <div class="tw-res-title" style="color:${color}">${escapeHtml(title)}</div>
       <div class="tw-res-links">${items.map(linkBtn).join("")}</div>
     </div>`;
+  const dataCard = (slotId, title, sub, linkHref, linkLabel = "查詳細") => `
+    <div class="tw-data-card">
+      <div class="tw-data-card-title">${escapeHtml(title)}${sub ? ` <span class="tw-data-card-sub">${escapeHtml(sub)}</span>` : ""}</div>
+      <div class="tw-data-card-body" id="${slotId}">
+        <div class="tw-data-card-loading">載入中…</div>
+      </div>
+      <a class="tw-data-card-link" href="${escapeHtml(linkHref)}" target="_blank" rel="noopener">${escapeHtml(linkLabel)} →</a>
+    </div>`;
+  const noDataCard = (title, linkHref, hint = "點下方連結至外站查") => `
+    <div class="tw-data-card tw-data-card-plain">
+      <div class="tw-data-card-title">${escapeHtml(title)}</div>
+      <div class="tw-data-card-body"><div class="tw-data-card-hint">${escapeHtml(hint)}</div></div>
+      <a class="tw-data-card-link" href="${escapeHtml(linkHref)}" target="_blank" rel="noopener">查詳細 →</a>
+    </div>`;
+  const yh = `https://tw.stock.yahoo.com/quote/${code}.TW`;
+  const mops = `https://mopsov.twse.com.tw/mops/web`;
   const marketBadge = rec
-    ? `<span class="tw-res-market tw-res-market-${rec.market === "上櫃" ? "otc" : "listed"}">${escapeHtml(rec.market || "")}</span>`
+    ? `<span class="tw-res-market tw-res-market-${isOtc ? "otc" : "listed"}">${escapeHtml(rec.market || "")}</span>`
     : "";
   const nameSpan = rec
     ? `<span class="tw-res-name">${escapeHtml(rec.name)}</span>`
     : `<span class="tw-res-hint">查無此代號（仍可直接點擊下方連結試查）</span>`;
+  // PASS 1 卡片：3 張 data card + 5 張 plain card
+  const pass1Cards = [
+    dataCard(`tw-card-${code}-company`, "公司資料", "", `${yh}/profile`, "查 Yahoo"),
+    dataCard(`tw-card-${code}-revenue`, "月營收", "", `${yh}/revenue`, "查 Yahoo"),
+    isOtc
+      ? noDataCard("損益表（季）", `${yh}/income-statement`, "上櫃股 TWSE OpenAPI 未提供，請至 Yahoo")
+      : dataCard(`tw-card-${code}-finance`, "季營益", "", `${yh}/income-statement`, "查 Yahoo"),
+    noDataCard("資產負債表", `${yh}/balance-sheet`),
+    noDataCard("現金流量表", `${yh}/cash-flow-statement`),
+    noDataCard("重大訊息／新聞", `${yh}/news`),
+    noDataCard("MOPS 公司資料（原始揭露）", `${mops}/t05st01?co_id=${code}`),
+    noDataCard("MOPS 月營收（原始揭露）", `${mops}/t146sb05?co_id=${code}`),
+  ].join("");
+  // PASS 2 卡片：上市才有資料
+  const pass2Cards = isOtc
+    ? [
+        noDataCard("三大法人買賣超", `${yh}/institutional-trading`, "上櫃股 TWSE 籌碼 API 未提供，請至 Yahoo"),
+        noDataCard("融資融券（資券變化）", `${yh}/margin`, "上櫃股 TWSE 籌碼 API 未提供，請至 Yahoo"),
+      ].join("")
+    : [
+        dataCard(`tw-card-${code}-inst`, "三大法人買賣超", "", `${yh}/institutional-trading`, "查 Yahoo"),
+        dataCard(`tw-card-${code}-margin`, "融資融券", "", `${yh}/margin`, "查 Yahoo"),
+      ].join("");
   return `
     <div class="tw-res-card">
       <div class="tw-res-header">
@@ -2511,12 +2558,16 @@ function renderTwStockResults(code) {
         <a class="tw-res-quote" href="${escapeHtml(groups.realtime[0].url)}" target="_blank" rel="noopener">查即時報價 →</a>
       </div>
       <div id="tw-snap-${escapeHtml(code)}" class="tw-snap-wrap"><div class="tw-snap-loading">載入即時行情中…</div></div>
-      ${rec?.market !== "上櫃" ? `<div id="tw-chips-${escapeHtml(code)}" class="tw-chips-wrap"><div class="tw-snap-loading">載入籌碼摘要中…</div></div>` : ""}
-      <div id="tw-basic-${escapeHtml(code)}" class="tw-basic-wrap"><div class="tw-snap-loading">載入公司基本面中…</div></div>
-      ${section("即時報價", "#019AB3", groups.realtime)}
-      ${section("PASS 1 ｜ 基本面（Yahoo 摘要 + MOPS 原站）", "#019AB3", groups.pass1)}
-      ${section("PASS 2 ｜ 籌碼", "#017A8F", groups.pass2)}
-      ${section("二手研究（快速發現）", "#17B5AD", groups.secondary)}
+      ${linkSection("即時報價", "#019AB3", groups.realtime)}
+      <div class="tw-res-section">
+        <div class="tw-res-title" style="color:#019AB3">PASS 1 ｜ 基本面（內建摘要 + 點連結看原站）</div>
+        <div class="tw-data-cards">${pass1Cards}</div>
+      </div>
+      <div class="tw-res-section">
+        <div class="tw-res-title" style="color:#017A8F">PASS 2 ｜ 籌碼（內建當日數字 + 點連結看趨勢）</div>
+        <div class="tw-data-cards">${pass2Cards}</div>
+      </div>
+      ${linkSection("二手研究（快速發現）", "#17B5AD", groups.secondary)}
       <p class="tw-res-note">最終決策請回 MOPS／TWSE 對原始資料。Yahoo 股市為公開揭露摘要，便利檢視用。</p>
     </div>`;
 }
