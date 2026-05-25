@@ -2911,7 +2911,7 @@ function renderTwStockSheet() {
     ${renderTwStockSearch()}
 
     <details class="tw-sop-reference">
-    <summary class="tw-sop-summary">📚 完整研究 SOP 教材（個人研究三遍流程 + MOPS / TWSE 操作指引）</summary>
+    <summary class="tw-sop-summary">📚 資料來源</summary>
 
     <h3 style="font-size:16px;margin:24px 0 8px">1. 基本面</h3>
     <div style="background:#E5F2F5;padding:12px 16px;border-radius:6px;margin:10px 0;font-size:13px">
