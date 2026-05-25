@@ -1905,30 +1905,36 @@ const TW_STOCK_QUICKPICK = [
   { code: "2603", name: "長榮" },
   { code: "1301", name: "台塑" },
 ];
-// 依 TWSE 發行量加權股價指數產業權重大致排序（市值權重高 → 低）；半導體 ~50%、金融 ~12%、電腦週邊 ~10%
-const TW_INDUSTRY_ORDER = [
-  "半導體業", "金融保險", "電腦及週邊", "電子零組件", "其他電子業",
-  "通信網路業", "塑膠工業", "光電業", "食品工業", "鋼鐵工業",
-  "航運業", "化學工業", "紡織纖維", "生技醫療", "電機機械",
-  "資訊服務業", "電子通路業", "建材營造", "汽車工業", "數位雲端",
-  "油電燃氣", "貿易百貨", "玻璃陶瓷", "水泥工業", "觀光餐旅",
-  "電器電纜", "造紙工業", "橡膠工業", "綠能環保", "運動休閒",
-  "居家生活", "文化創意業", "農業科技", "電子商務", "其他", "ETF",
+// 7 大類 → 比照精選基金/稅負試算 等次分頁樣式（.tabs.tabs-wrap）
+const TW_MEGA_CATEGORIES = [
+  { name: "全部", industries: null },
+  { name: "科技電子", industries: ["半導體業", "電子零組件", "電腦及週邊", "光電業", "通信網路業", "其他電子業", "電子通路業", "資訊服務業", "數位雲端", "電子商務"] },
+  { name: "金融保險", industries: ["金融保險"] },
+  { name: "生技醫療", industries: ["生技醫療"] },
+  { name: "傳產製造", industries: ["鋼鐵工業", "紡織纖維", "塑膠工業", "食品工業", "化學工業", "水泥工業", "玻璃陶瓷", "橡膠工業", "造紙工業", "電機機械", "電器電纜"] },
+  { name: "民生服務", industries: ["航運業", "建材營造", "汽車工業", "觀光餐旅", "貿易百貨", "油電燃氣", "綠能環保", "運動休閒", "居家生活", "文化創意業", "農業科技", "其他"] },
+  { name: "ETF", industries: ["ETF"] },
 ];
-function twIndustryList() {
-  const list = DATA?.tw_stocks || [];
-  const counts = {};
-  for (const s of list) {
-    const ind = s.industry || "其他";
-    counts[ind] = (counts[ind] || 0) + 1;
+function twMegaCategoryFor(industry) {
+  for (const c of TW_MEGA_CATEGORIES) {
+    if (c.industries && c.industries.includes(industry)) return c.name;
   }
-  const orderIdx = (name) => {
-    const i = TW_INDUSTRY_ORDER.indexOf(name);
-    return i === -1 ? 999 : i;
-  };
-  return Object.entries(counts)
-    .sort((a, b) => orderIdx(a[0]) - orderIdx(b[0]))
-    .map(([name, n]) => ({ name, count: n }));
+  return "民生服務";  // 未分類落到「其他」歸民生服務
+}
+function twMegaIncludes(industry, megaName) {
+  if (megaName === "全部") return true;
+  const c = TW_MEGA_CATEGORIES.find(m => m.name === megaName);
+  return c?.industries?.includes(industry) || false;
+}
+function twMegaList() {
+  const list = DATA?.tw_stocks || [];
+  const counts = { 全部: list.length };
+  for (const c of TW_MEGA_CATEGORIES) if (c.name !== "全部") counts[c.name] = 0;
+  for (const s of list) {
+    const mega = twMegaCategoryFor(s.industry || "其他");
+    if (counts[mega] != null) counts[mega]++;
+  }
+  return TW_MEGA_CATEGORIES.map(c => ({ name: c.name, count: counts[c.name] || 0 }));
 }
 
 const TW_STOCK_SNAPSHOT_CACHE = {};
@@ -2583,7 +2589,7 @@ function twStockSearchByKeyword(kw, limit = 12) {
   if (!Array.isArray(list) || !kw) return [];
   const q = kw.trim();
   if (!q) return [];
-  const inFilter = (s) => TW_INDUSTRY_FILTER === "全部" || s.industry === TW_INDUSTRY_FILTER;
+  const inFilter = (s) => twMegaIncludes(s.industry || "其他", TW_INDUSTRY_FILTER);
   const starts = [], contains = [];
   for (const s of list) {
     if (!inFilter(s)) continue;
@@ -2596,11 +2602,10 @@ function twStockSearchByKeyword(kw, limit = 12) {
   return [...starts, ...contains].slice(0, limit);
 }
 
-function twIndustryQuickPicks(industry, limit = 12) {
+function twIndustryQuickPicks(megaName, limit = 12) {
   const list = DATA?.tw_stocks || [];
-  if (industry === "全部") return TW_STOCK_QUICKPICK;
-  // 取該產業前 N 檔（按代號排序）
-  return list.filter(s => s.industry === industry).slice(0, limit).map(s => ({ code: s.code, name: s.name }));
+  if (megaName === "全部") return TW_STOCK_QUICKPICK;
+  return list.filter(s => twMegaIncludes(s.industry || "其他", megaName)).slice(0, limit).map(s => ({ code: s.code, name: s.name }));
 }
 
 function twStockLinks(code) {
@@ -2729,14 +2734,12 @@ function renderTwStockMatchList(matches, keyword) {
 }
 
 function renderTwIndustryTabs() {
-  const industries = twIndustryList();
-  if (!industries.length) return "";
-  const all = DATA?.tw_stocks?.length || 0;
-  const items = [{ name: "全部", count: all }, ...industries];
-  return `<div class="tw-ind-tabs" id="tw-ind-tabs">${
+  const items = twMegaList();
+  if (!items.length) return "";
+  return `<div class="tabs tabs-wrap tw-ind-tabs" id="tw-ind-tabs">${
     items.map(it => `
-      <button class="tw-ind-tab ${TW_INDUSTRY_FILTER === it.name ? "active" : ""}" type="button" onclick="setTwIndustry('${escapeHtml(it.name)}')">
-        ${escapeHtml(it.name)}<span class="tw-ind-tab-n">${it.count}</span>
+      <button class="tab ${TW_INDUSTRY_FILTER === it.name ? "active" : ""}" type="button" onclick="setTwIndustry('${escapeHtml(it.name)}')">
+        ${escapeHtml(it.name)} <span class="tw-ind-tab-n">${it.count}</span>
       </button>
     `).join("")
   }</div>`;

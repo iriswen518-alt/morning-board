@@ -1542,57 +1542,15 @@ table.indices .date-col {
 .cmp-basics b { color: var(--brand-deep, #003D91); font-weight: 600; }
 .cmp-basics-note { color: var(--text-mute, #6b7280); font-size: 11px; }
 
-/* 台股研究 - 產業分頁（等寬 grid，自動換行對齊） */
-.tw-ind-tabs {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  gap: 8px;
-  margin: 0 0 14px;
-}
-.tw-ind-tab {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  padding: 8px 10px;
-  font-size: 13px;
-  white-space: nowrap;
-  border: 1px solid #d8e3e8;
-  border-radius: 8px;
-  background: #F2F8FA;
-  color: #003D91;
-  cursor: pointer;
-  font-family: inherit;
-  line-height: 1.2;
-  min-height: 38px;
-  text-align: center;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.tw-ind-tab:hover { background: #E5F2F5; color: var(--brand-primary, #019AB3); }
-.tw-ind-tab.active {
-  background: linear-gradient(135deg, var(--brand-primary, #019AB3), var(--brand-secondary, #17B5AD));
-  color: #fff;
-  border-color: var(--brand-primary, #019AB3);
-  font-weight: 600;
-  box-shadow: 0 2px 6px rgba(1,154,179,0.18);
-}
-.tw-ind-tab.active:hover { color: #fff; }
+/* 台股研究 - 產業大類分頁 比照 .tabs.tabs-wrap，只多一個 count badge */
+.tw-ind-tabs { margin-bottom: 14px; }
 .tw-ind-tab-n {
   font-size: 11px;
   font-weight: 500;
-  opacity: 0.7;
-  padding: 1px 7px;
-  border-radius: 999px;
-  background: rgba(0, 61, 145, 0.08);
-  min-width: 22px;
-  text-align: center;
+  opacity: 0.6;
+  margin-left: 3px;
 }
-.tw-ind-tab.active .tw-ind-tab-n {
-  opacity: 1;
-  background: rgba(255, 255, 255, 0.22);
-  color: #fff;
-}
+.tabs .tab.active .tw-ind-tab-n { opacity: 0.9; }
 
 /* 台股研究 - 個股快查 */
 .tw-search-box { background: #F2F8FA; border-radius: 10px; padding: 16px 18px; margin: 0 0 22px; }
@@ -1739,7 +1697,6 @@ table.indices .date-col {
    =========================================== */
 @media (max-width: 1024px) {
   .tw-data-cards { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
-  .tw-ind-tabs { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); }
 }
 @media (max-width: 768px) {
   .tw-data-cards { grid-template-columns: repeat(2, 1fr); gap: 10px; }
@@ -1748,35 +1705,10 @@ table.indices .date-col {
   .tw-matches-list { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 640px) {
-  /* === 產業分頁：iOS segmented control 風橫向滾動 === */
-  .tw-ind-tabs {
-    display: flex;
-    grid-template-columns: none;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    padding: 4px 16px 8px;
-    margin: 0 -16px 16px;
-    gap: 8px;
-    scrollbar-width: none;
-    scroll-snap-type: x proximity;
-    mask-image: linear-gradient(to right, transparent 0, #000 16px, #000 calc(100% - 16px), transparent 100%);
-    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 16px, #000 calc(100% - 16px), transparent 100%);
-  }
-  .tw-ind-tabs::-webkit-scrollbar { display: none; }
-  .tw-ind-tab {
-    flex: 0 0 auto;
-    min-width: auto;
-    min-height: 36px;
-    padding: 8px 14px;
-    font-size: 14px;
-    border-radius: 999px;
-    scroll-snap-align: start;
-    box-shadow: 0 1px 2px rgba(0, 31, 77, 0.04);
-  }
-  .tw-ind-tab.active { box-shadow: 0 3px 8px rgba(1, 154, 179, 0.28); }
-  .tw-ind-tab-n { font-size: 11px; padding: 1px 7px; min-width: 20px; }
+  /* 7 大類 wrap：每行 3-4 個（min-width 96px from .tabs-wrap .tab），自然成 2-3 行 */
+  .tw-ind-tabs.tabs { padding: 3px; }
+  .tw-ind-tabs .tab { padding: 7px 8px; font-size: 13px; flex: 1 1 80px; min-width: 80px; }
+  .tw-ind-tab-n { font-size: 10.5px; }
 
   /* === 搜尋區：清爽留白 === */
   .tw-search-box {
@@ -1957,6 +1889,49 @@ table.indices .date-col {
 }
 .tw-sop-reference[open] > .tw-sop-summary::after { transform: rotate(180deg); }
 .tw-sop-summary:hover { background: #E5F2F5; }
+
+/* ===========================================
+   通用 RWD：適用所有分頁
+   - 表格 mobile 加 overflow-x 容器 + 字級下調
+   - 卡片 padding/radius 收緊
+   =========================================== */
+@media (max-width: 640px) {
+  /* 所有 content 內表格自動水平捲（如果 wrapper 沒包） */
+  #content table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    max-width: 100%;
+  }
+  #content table td,
+  #content table th {
+    white-space: normal;
+  }
+  /* 內文字級稍降 */
+  #content { padding: 16px 14px 28px; font-size: 14px; }
+  #content > h3, #content h3.section-title { font-size: 15px; margin: 18px 0 8px; }
+  /* 表格內字級 */
+  table.indices, .news-item, .card { font-size: 13.5px; }
+  .news-item h3 { font-size: 15px; }
+  .news-item .summary { font-size: 13.5px; }
+  /* 一般 .tabs.tabs-wrap 在手機上更緊湊 */
+  .tabs { padding: 3px; gap: 3px; }
+  .tabs .tab { padding: 7px 10px; font-size: 13px; }
+  .tabs.tabs-wrap .tab { flex: 1 1 86px; min-width: 86px; }
+  /* 計算機表單 grid 改 1 欄 */
+  .calc-cols.cols-3, .calc-cols.cols-2 { grid-template-columns: 1fr !important; }
+  /* details/summary 標題收緊 */
+  details > summary { font-size: 13px; padding: 9px 12px; }
+  /* topbar h1 + search */
+  .topbar { padding: 12px 14px 10px; }
+  .topbar h1 { font-size: 19px; }
+  .topbar .updated { font-size: 12px; }
+  .search-wrap input { padding: 8px 11px; font-size: 14px; }
+}
+@media (max-width: 380px) {
+  #content { padding: 14px 12px 26px; }
+}
 
 /* 很小的手機 < 380px */
 @media (max-width: 380px) {

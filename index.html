@@ -8,7 +8,7 @@
 <link rel="manifest" href="manifest.json">
 <link rel="icon" type="image/png" href="icon-192.png">
 <link rel="apple-touch-icon" href="icon-192.png">
-<link rel="stylesheet" href="style.css?v=20260525-2049">
+<link rel="stylesheet" href="style.css?v=20260525-2059">
 </head>
 <body>
 
@@ -20,6 +20,17 @@
     <div id="search-results" hidden></div>
   </div>
 </header>
+
+<button class="nav-toggle" id="nav-toggle" type="button" aria-label="開啟分頁選單" aria-expanded="false">
+  <svg class="nav-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M4 6h16M4 12h16M4 18h16"/>
+  </svg>
+  <span class="nav-toggle-label">分頁</span>
+  <span class="nav-current" id="nav-current">全球市場</span>
+  <svg class="nav-toggle-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M6 9l6 6 6-6"/>
+  </svg>
+</button>
 
 <nav class="main-nav" id="main-nav">
   <button class="main-tab active" data-tab="market">
@@ -133,6 +144,6 @@
   資料僅供內部參考，不構成任何投資建議
 </footer>
 
-<script src="app.js?v=20260525-2049"></script>
+<script src="app.js?v=20260525-2059"></script>
 </body>
 </html>
