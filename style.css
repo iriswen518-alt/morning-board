@@ -1796,14 +1796,30 @@ table.indices .date-col {
     border-radius: 10px;
     min-height: 44px;
   }
-  .tw-pick-row { gap: 6px; margin-top: 12px; }
+  /* 熱門快選改橫向滾動單行 */
+  .tw-pick-row {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    gap: 6px;
+    margin: 12px -14px 0;
+    padding: 0 14px 4px;
+    scrollbar-width: none;
+    align-items: center;
+    mask-image: linear-gradient(to right, transparent 0, #000 14px, #000 calc(100% - 14px), transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 14px, #000 calc(100% - 14px), transparent 100%);
+  }
+  .tw-pick-row::-webkit-scrollbar { display: none; }
   .tw-pick {
+    flex: 0 0 auto;
     padding: 7px 12px;
     font-size: 13px;
     border-radius: 999px;
     min-height: 32px;
   }
-  .tw-pick-label { font-size: 13px; }
+  .tw-pick-label { font-size: 13px; flex: 0 0 auto; color: var(--text-mute, #6b7280); }
   .tw-search-hint { font-size: 11.5px; margin-top: 10px; }
 
   /* === 結果主卡片 === */
@@ -1913,6 +1929,34 @@ table.indices .date-col {
   .tw-match-code { font-size: 14px; min-width: 52px; }
   .tw-match-name { font-size: 14px; }
 }
+
+/* SOP 教材折疊區（桌面+手機通用，預設收起） */
+.tw-sop-reference {
+  margin-top: 24px;
+  border-top: 1px solid #eef1f4;
+  padding-top: 16px;
+}
+.tw-sop-summary {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--brand-primary, #019AB3);
+  cursor: pointer;
+  padding: 10px 14px;
+  background: #F2F8FA;
+  border-radius: 8px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+.tw-sop-summary::-webkit-details-marker { display: none; }
+.tw-sop-summary::after {
+  content: "▾";
+  margin-left: auto;
+  transition: transform 0.2s;
+}
+.tw-sop-reference[open] > .tw-sop-summary::after { transform: rotate(180deg); }
+.tw-sop-summary:hover { background: #E5F2F5; }
 
 /* 很小的手機 < 380px */
 @media (max-width: 380px) {

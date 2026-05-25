@@ -2860,6 +2860,9 @@ function renderTwStockSheet() {
   return `
     ${renderTwStockSearch()}
 
+    <details class="tw-sop-reference">
+    <summary class="tw-sop-summary">📚 完整研究 SOP 教材（個人研究三遍流程 + MOPS / TWSE 操作指引）</summary>
+
     <h3 style="font-size:16px;margin:24px 0 8px">1. 基本面</h3>
     <div style="background:#E5F2F5;padding:12px 16px;border-radius:6px;margin:10px 0;font-size:13px">
       入口：<b>${lnk("https://mops.twse.com.tw", "mops.twse.com.tw")}</b> → 上方搜尋輸入股票代號或公司名
@@ -2945,6 +2948,7 @@ function renderTwStockSheet() {
     <p style="color:var(--text-mute);font-size:12.5px;margin:10px 0 4px">二手網站只用來「快速發現」，最終決策必回 MOPS／TWSE 對原始資料。</p>
 
     <p class="a-note" style="margin-top:24px;font-size:12px;color:var(--text-mute)">個人研究 SOP v1.0 · 2026-05-08 建立</p>
+    </details>
   `;
 }
 
