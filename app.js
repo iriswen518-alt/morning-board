@@ -1905,13 +1905,15 @@ const TW_STOCK_QUICKPICK = [
   { code: "2603", name: "長榮" },
   { code: "1301", name: "台塑" },
 ];
+// 依 TWSE 發行量加權股價指數產業權重大致排序（市值權重高 → 低）；半導體 ~50%、金融 ~12%、電腦週邊 ~10%
 const TW_INDUSTRY_ORDER = [
-  "半導體業", "電子零組件", "電腦及週邊", "光電業", "通信網路業", "其他電子業",
-  "電子通路業", "資訊服務業", "電子商務", "數位雲端",
-  "金融保險", "航運業", "建材營造", "鋼鐵工業", "汽車工業", "電機機械", "化學工業",
-  "生技醫療", "食品工業", "塑膠工業", "紡織纖維", "貿易百貨", "觀光餐旅",
-  "油電燃氣", "綠能環保", "運動休閒", "居家生活", "文化創意業", "農業科技",
-  "水泥工業", "電器電纜", "玻璃陶瓷", "造紙工業", "橡膠工業", "其他", "ETF",
+  "半導體業", "金融保險", "電腦及週邊", "電子零組件", "其他電子業",
+  "通信網路業", "塑膠工業", "光電業", "食品工業", "鋼鐵工業",
+  "航運業", "化學工業", "紡織纖維", "生技醫療", "電機機械",
+  "資訊服務業", "電子通路業", "建材營造", "汽車工業", "數位雲端",
+  "油電燃氣", "貿易百貨", "玻璃陶瓷", "水泥工業", "觀光餐旅",
+  "電器電纜", "造紙工業", "橡膠工業", "綠能環保", "運動休閒",
+  "居家生活", "文化創意業", "農業科技", "電子商務", "其他", "ETF",
 ];
 function twIndustryList() {
   const list = DATA?.tw_stocks || [];
@@ -2808,10 +2810,6 @@ function wireTwStock() {
 function renderTwStockSheet() {
   const lnk = (href, text) => `<a href="${href}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${text}</a>`;
   return `
-    <div style="background:linear-gradient(135deg,#019AB3,#003D91);color:#fff;padding:22px 24px;border-radius:10px;margin-bottom:20px">
-      <h2 style="margin:0;color:#fff;border:none;font-size:22px">台股資訊</h2>
-    </div>
-
     ${renderTwStockSearch()}
 
     <h3 style="font-size:16px;margin:24px 0 8px">1. 基本面</h3>
