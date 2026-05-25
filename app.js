@@ -189,6 +189,7 @@ const LOAD_NAME_TO_DATA_KEY = {
   overseas_bonds: "obonds", targets: "targets",
   allocation: "allocation", dca: "dca", wealth_transfer: "wealth",
   beatetf: "beatetf", presets: "presets", fund_compare: "fund_compare",
+  tw_stocks: "tw_stocks",
 };
 const TAB_LOAD_DEPS = {
   market: ["market", "stocks"],
@@ -200,6 +201,7 @@ const TAB_LOAD_DEPS = {
   targets: ["targets"],
   portfolio: ["presets", "allocation", "targets"],
   wealth: ["wealth_transfer", "tax"],
+  twstock: ["tw_stocks"],
 };
 async function retryFailedForTab(tabName) {
   const deps = TAB_LOAD_DEPS[tabName] || [];
@@ -424,7 +426,7 @@ async function init() {
   // 每個來源各自有 fallback：一個壞不拖垮全頁
   // 失敗時記到 FAILED_LOADS，使用者切到對應 tab 時會背景重試
   const safe = (name, fallback) => load(name).catch(() => { FAILED_LOADS.add(name); return fallback; });
-  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, targets, allocation, dca, wealth, beatetf, presets, fund_compare] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
@@ -442,8 +444,9 @@ async function init() {
     safe("beatetf", { funds: [], benchmark: null }),
     safe("presets", { presets: [] }),
     safe("fund_compare", { funds: [], categories: [] }),
+    safe("tw_stocks", []),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, targets, allocation, dca, wealth, beatetf, presets, fund_compare };
+  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks };
   if (!meta.built_at) {
     $("updated").textContent = `載入部分失敗（顯示快取資料）`;
   } else {
@@ -667,7 +670,7 @@ async function refreshData() {
     FAILED_LOADS.add(name);
     return DATA[name === "insurances" ? "insurance" : name] || fallback;
   });
-  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, targets, allocation, dca, wealth, beatetf, presets, fund_compare] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
@@ -685,8 +688,9 @@ async function refreshData() {
     safe("beatetf", { funds: [], benchmark: null }),
     safe("presets", { presets: [] }),
     safe("fund_compare", { funds: [], categories: [] }),
+    safe("tw_stocks", []),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, targets, allocation, dca, wealth, beatetf, presets, fund_compare };
+  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks };
   SEARCH_INDEX = buildSearchIndex();
   if (DATA.meta && DATA.meta.built_at) {
     $("updated").textContent =
@@ -1899,6 +1903,28 @@ const TW_STOCK_QUICKPICK = [
   { code: "1301", name: "台塑" },
 ];
 
+function twStockFindByCode(code) {
+  const list = DATA?.tw_stocks || [];
+  if (!Array.isArray(list)) return null;
+  return list.find(s => (s.code || "").toUpperCase() === code.toUpperCase()) || null;
+}
+
+function twStockSearchByKeyword(kw, limit = 12) {
+  const list = DATA?.tw_stocks || [];
+  if (!Array.isArray(list) || !kw) return [];
+  const q = kw.trim();
+  if (!q) return [];
+  const starts = [], contains = [];
+  for (const s of list) {
+    const name = s.name || "";
+    if (name === q) starts.unshift(s);          // exact
+    else if (name.startsWith(q)) starts.push(s); // prefix
+    else if (name.includes(q)) contains.push(s); // substring
+    if (starts.length + contains.length >= limit * 3) break;
+  }
+  return [...starts, ...contains].slice(0, limit);
+}
+
 function twStockLinks(code) {
   const yh = `https://tw.stock.yahoo.com/quote/${code}.TW`;
   const mops = `https://mopsov.twse.com.tw/mops/web`;
@@ -1931,6 +1957,7 @@ function twStockLinks(code) {
 }
 
 function renderTwStockResults(code) {
+  const rec = twStockFindByCode(code);
   const groups = twStockLinks(code);
   const linkBtn = (l) => `<a class="tw-link" href="${escapeHtml(l.url)}" target="_blank" rel="noopener">${escapeHtml(l.label)}</a>`;
   const section = (title, color, items) => `
@@ -1938,10 +1965,16 @@ function renderTwStockResults(code) {
       <div class="tw-res-title" style="color:${color}">${escapeHtml(title)}</div>
       <div class="tw-res-links">${items.map(linkBtn).join("")}</div>
     </div>`;
+  const marketBadge = rec
+    ? `<span class="tw-res-market tw-res-market-${rec.market === "上櫃" ? "otc" : "listed"}">${escapeHtml(rec.market || "")}</span>`
+    : "";
+  const nameSpan = rec
+    ? `<span class="tw-res-name">${escapeHtml(rec.name)}</span>`
+    : `<span class="tw-res-hint">查無此代號（仍可直接點擊下方連結試查）</span>`;
   return `
     <div class="tw-res-card">
       <div class="tw-res-header">
-        <div><span class="tw-res-code">${escapeHtml(code)}</span><span class="tw-res-hint">一鍵直達各資料源</span></div>
+        <div class="tw-res-id"><span class="tw-res-code">${escapeHtml(code)}</span>${nameSpan}${marketBadge}</div>
         <a class="tw-res-quote" href="${escapeHtml(groups.realtime[0].url)}" target="_blank" rel="noopener">查即時報價 →</a>
       </div>
       ${section("即時報價", "#019AB3", groups.realtime)}
@@ -1952,42 +1985,83 @@ function renderTwStockResults(code) {
     </div>`;
 }
 
+function renderTwStockMatchList(matches, keyword) {
+  const rows = matches.map(s => `
+    <button class="tw-match" type="button" onclick="doTwStockSearch('${s.code}')">
+      <span class="tw-match-code">${escapeHtml(s.code)}</span>
+      <span class="tw-match-name">${escapeHtml(s.name)}</span>
+      <span class="tw-match-market tw-res-market-${s.market === "上櫃" ? "otc" : "listed"}">${escapeHtml(s.market || "")}</span>
+    </button>
+  `).join("");
+  return `
+    <div class="tw-matches">
+      <div class="tw-matches-title">關鍵字「${escapeHtml(keyword)}」找到 ${matches.length} 檔：</div>
+      <div class="tw-matches-list">${rows}</div>
+    </div>`;
+}
+
 function renderTwStockSearch() {
   const picks = TW_STOCK_QUICKPICK.map(p =>
     `<button class="tw-pick" type="button" onclick="doTwStockSearch('${p.code}')">${p.code} ${escapeHtml(p.name)}</button>`
   ).join("");
   const initialResult = TW_STOCK_QUERY ? renderTwStockResults(TW_STOCK_QUERY) : "";
+  const total = Array.isArray(DATA?.tw_stocks) ? DATA.tw_stocks.length : 0;
+  const totalHint = total > 0 ? `（已載入 ${total} 檔上市櫃股票，可輸入名稱關鍵字如「台積」「金控」）` : "";
   return `
     <div class="tw-search-box">
       <div class="tw-search-row">
-        <input id="tw-stock-input" type="text" inputmode="numeric" placeholder="輸入台股代碼（如 2330）" value="${escapeHtml(TW_STOCK_QUERY)}" autocomplete="off" />
+        <input id="tw-stock-input" type="text" placeholder="輸入台股代碼或公司名稱（如 2330 或 台積電）" value="${escapeHtml(TW_STOCK_QUERY)}" autocomplete="off" />
         <button class="tw-search-btn" type="button" onclick="doTwStockSearch()">搜尋</button>
       </div>
       <div class="tw-pick-row"><span class="tw-pick-label">熱門：</span>${picks}</div>
+      ${totalHint ? `<div class="tw-search-hint">${totalHint}</div>` : ""}
       <div id="tw-stock-result">${initialResult}</div>
     </div>`;
 }
 
-function doTwStockSearch(code) {
-  let c = code;
-  if (!c) {
+function doTwStockSearch(query) {
+  let q = query;
+  if (q === undefined || q === null) {
     const input = document.getElementById("tw-stock-input");
     if (!input) return;
-    c = (input.value || "").trim();
+    q = (input.value || "").trim();
+  } else {
+    q = String(q).trim();
   }
-  c = c.replace(/[^0-9A-Za-z]/g, "").toUpperCase();
   const result = document.getElementById("tw-stock-result");
-  if (!/^[0-9A-Z]{4,6}$/.test(c)) {
-    if (result) result.innerHTML = `<div class="tw-warn">請輸入 4-6 碼代號（例如 2330、00878）</div>`;
+  if (!result) return;
+  if (!q) {
+    result.innerHTML = `<div class="tw-warn">請輸入代碼（如 2330）或公司名稱關鍵字（如 台積電）</div>`;
     return;
   }
-  TW_STOCK_QUERY = c;
-  const input = document.getElementById("tw-stock-input");
-  if (input) input.value = c;
-  if (result) {
-    result.innerHTML = renderTwStockResults(c);
+  // Detect: is this a stock code? Allow digits + optional trailing letter (ETF like 00878, 00400A)
+  const codeCandidate = q.replace(/[^0-9A-Za-z]/g, "").toUpperCase();
+  const looksLikeCode = /^[0-9]{4,6}[A-Z]?$/.test(codeCandidate);
+  if (looksLikeCode) {
+    TW_STOCK_QUERY = codeCandidate;
+    const input = document.getElementById("tw-stock-input");
+    if (input) input.value = codeCandidate;
+    result.innerHTML = renderTwStockResults(codeCandidate);
     setTimeout(() => result.scrollIntoView({ behavior: "smooth", block: "start" }), 50);
+    return;
   }
+  // Keyword search
+  const matches = twStockSearchByKeyword(q, 20);
+  if (matches.length === 0) {
+    result.innerHTML = `<div class="tw-warn">找不到「${escapeHtml(q)}」相符的上市櫃股票。請改用代碼或更短的關鍵字。</div>`;
+    return;
+  }
+  if (matches.length === 1) {
+    const rec = matches[0];
+    TW_STOCK_QUERY = rec.code;
+    const input = document.getElementById("tw-stock-input");
+    if (input) input.value = rec.code;
+    result.innerHTML = renderTwStockResults(rec.code);
+    setTimeout(() => result.scrollIntoView({ behavior: "smooth", block: "start" }), 50);
+    return;
+  }
+  result.innerHTML = renderTwStockMatchList(matches, q);
+  setTimeout(() => result.scrollIntoView({ behavior: "smooth", block: "start" }), 50);
 }
 
 function wireTwStock() {
