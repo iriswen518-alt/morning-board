@@ -1,6 +1,21 @@
 {
   "courses": [
     {
+      "slug": "wealth_mgmt",
+      "name": "財富管理",
+      "active": false
+    },
+    {
+      "slug": "macro",
+      "name": "總體經濟",
+      "active": false
+    },
+    {
+      "slug": "financials",
+      "name": "財報分析",
+      "active": false
+    },
+    {
       "slug": "tw_stocks",
       "name": "台股",
       "active": true
@@ -16,13 +31,23 @@
       "active": true
     },
     {
+      "slug": "structured",
+      "name": "結構型商品",
+      "active": true
+    },
+    {
       "slug": "insurance",
       "name": "保險",
       "active": true
     },
     {
-      "slug": "structured",
-      "name": "結構型商品",
+      "slug": "family_trust",
+      "name": "家族信託",
+      "active": false
+    },
+    {
+      "slug": "real_estate",
+      "name": "房地產",
       "active": true
     },
     {
@@ -31,9 +56,14 @@
       "active": true
     },
     {
-      "slug": "real_estate",
-      "name": "房地產",
-      "active": true
+      "slug": "client",
+      "name": "客戶經營",
+      "active": false
+    },
+    {
+      "slug": "marketing",
+      "name": "行銷技巧",
+      "active": false
     }
   ]
 }
