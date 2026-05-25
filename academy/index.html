@@ -7,8 +7,31 @@
 <title>理財小學堂</title>
 <link rel="stylesheet" href="../style.css?v=20260525-1302">
 <link rel="stylesheet" href="academy.css?v=20260525-3">
+<style>
+  .home-fab { display: none; }
+  @media (max-width: 640px) {
+    .home-fab {
+      display: inline-flex;
+      position: fixed;
+      right: 18px;
+      bottom: calc(18px + env(safe-area-inset-bottom, 0px));
+      z-index: 90;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #019AB3, #17B5AD);
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      box-shadow: 0 6px 18px rgba(1, 154, 179, 0.32);
+    }
+    .home-fab svg { width: 18px; height: 18px; flex: 0 0 18px; stroke: currentColor; }
+  }
+</style>
 </head>
-<body class="show-home-fab">
+<body>
 
 <header class="topbar">
   <h1>理財小學堂</h1>
