@@ -2119,6 +2119,169 @@ async function loadTwStockSnapshot(code, market) {
     console.error("[twstock] snapshot render threw:", e);
     slot2.outerHTML = `<div id="tw-snap-${code}" class="tw-snap-wrap"><div class="tw-snap-err">摘要顯示異常（${escapeHtml(String(e.message || e))}），請改點下方連結。</div></div>`;
   }
+  // 接力載入籌碼摘要（三大法人 + 融資融券，僅上市股有 TWSE 籌碼 API）
+  if (market !== "上櫃") loadTwStockChips(code);
+}
+
+const TW_CHIPS_CACHE = {};
+function fmtTwseDateYmd(d) {
+  return `${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, "0")}${String(d.getDate()).padStart(2, "0")}`;
+}
+function fmtShareLots(s) {
+  const n = parseTwseNum(s);
+  if (n == null) return "—";
+  const lots = n / 1000;
+  if (Math.abs(lots) >= 10000) return `${(lots / 10000).toFixed(2)} 萬張`;
+  return `${Math.round(lots).toLocaleString("zh-TW")} 張`;
+}
+function fmtChipChange(s) {
+  const n = parseTwseNum(s);
+  if (n == null) return { txt: "—", cls: "tw-flat" };
+  const lots = n / 1000;
+  const abs = Math.abs(lots);
+  const txt = abs >= 10000
+    ? `${n > 0 ? "+" : n < 0 ? "−" : ""}${(abs / 10000).toFixed(2)} 萬張`
+    : `${n > 0 ? "+" : n < 0 ? "−" : ""}${Math.round(abs).toLocaleString("zh-TW")} 張`;
+  const cls = n > 0 ? "tw-up" : n < 0 ? "tw-down" : "tw-flat";
+  return { txt, cls };
+}
+
+async function fetchT86ForDate(date) {
+  const url = `https://www.twse.com.tw/rwd/zh/fund/T86?date=${date}&selectType=ALL&response=json`;
+  const r = await fetch(url, { mode: "cors" });
+  if (!r.ok) throw new Error(`T86 ${r.status}`);
+  const j = await r.json();
+  if (j.stat !== "OK") throw new Error(`T86 ${j.stat}`);
+  return j;
+}
+async function fetchMargnForDate(date) {
+  const url = `https://www.twse.com.tw/rwd/zh/marginTrading/MI_MARGN?date=${date}&selectType=STOCK&response=json`;
+  const r = await fetch(url, { mode: "cors" });
+  if (!r.ok) throw new Error(`MARGN ${r.status}`);
+  const j = await r.json();
+  if (j.stat !== "OK") throw new Error(`MARGN ${j.stat}`);
+  return j;
+}
+
+async function fetchTwStockChips(code) {
+  if (TW_CHIPS_CACHE[code]) return TW_CHIPS_CACHE[code];
+  // 從 snapshot 拿到最近交易日（snapshot cache 內已記錄 dateStr）；否則退到今日
+  const snapKey = Object.keys(TW_STOCK_SNAPSHOT_CACHE).find(k => k.startsWith(`${code}|`));
+  const snap = snapKey ? TW_STOCK_SNAPSHOT_CACHE[snapKey] : null;
+  let targetDate;
+  if (snap?.dateStr && /^\d{4}-\d{2}-\d{2}$/.test(snap.dateStr)) {
+    targetDate = snap.dateStr.replace(/-/g, "");
+  } else {
+    targetDate = fmtTwseDateYmd(new Date());
+  }
+  // 嘗試 targetDate；若不存在則退到前一日（重試 3 次涵蓋週末/假日）
+  const tryDates = [targetDate];
+  let cursor = targetDate;
+  for (let i = 0; i < 3; i++) {
+    const y = +cursor.slice(0, 4), m = +cursor.slice(4, 6), d = +cursor.slice(6, 8);
+    const prev = new Date(y, m - 1, d - 1);
+    cursor = fmtTwseDateYmd(prev);
+    tryDates.push(cursor);
+  }
+  let t86 = null, margn = null, usedDate = null;
+  for (const date of tryDates) {
+    try {
+      const [a, b] = await Promise.all([fetchT86ForDate(date), fetchMargnForDate(date)]);
+      t86 = a;
+      margn = b;
+      usedDate = date;
+      break;
+    } catch (e) {
+      // try previous date
+    }
+  }
+  if (!t86 || !margn) throw new Error("近 4 日皆無籌碼資料");
+  const t86Row = (t86.data || []).find(r => String(r[0]).trim() === code);
+  const margnRow = (margn.tables?.[1]?.data || []).find(r => String(r[0]).trim() === code);
+  const result = {
+    ok: true,
+    date: `${usedDate.slice(0, 4)}-${usedDate.slice(4, 6)}-${usedDate.slice(6, 8)}`,
+    t86Row,
+    margnRow,
+  };
+  TW_CHIPS_CACHE[code] = result;
+  return result;
+}
+
+function renderTwStockChips(data) {
+  if (!data || !data.ok) {
+    return `<div class="tw-snap-err">籌碼摘要載入失敗${data?.error ? `（${escapeHtml(data.error)}）` : ""}</div>`;
+  }
+  const { date, t86Row, margnRow } = data;
+  // T86 indices: [4] 外資, [10] 投信, [11] 自營商買賣超, [18] 三大法人合計
+  const foreign = t86Row ? fmtChipChange(t86Row[4]) : { txt: "—", cls: "tw-flat" };
+  const trust = t86Row ? fmtChipChange(t86Row[10]) : { txt: "—", cls: "tw-flat" };
+  const dealer = t86Row ? fmtChipChange(t86Row[11]) : { txt: "—", cls: "tw-flat" };
+  const total = t86Row ? fmtChipChange(t86Row[18]) : { txt: "—", cls: "tw-flat" };
+  // MI_MARGN indices: [5] 融資前日餘額, [6] 融資今日餘額, [11] 融券前日餘額, [12] 融券今日餘額
+  const finToday = margnRow ? parseTwseNum(margnRow[6]) : null;
+  const finPrev = margnRow ? parseTwseNum(margnRow[5]) : null;
+  const finDelta = (finToday != null && finPrev != null) ? finToday - finPrev : null;
+  const shortToday = margnRow ? parseTwseNum(margnRow[12]) : null;
+  const shortPrev = margnRow ? parseTwseNum(margnRow[11]) : null;
+  const shortDelta = (shortToday != null && shortPrev != null) ? shortToday - shortPrev : null;
+  const deltaTxt = (n) => {
+    if (n == null) return "";
+    const sign = n > 0 ? "+" : n < 0 ? "−" : "";
+    return `${sign}${Math.abs(n).toLocaleString("zh-TW")}`;
+  };
+  const deltaCls = (n) => n > 0 ? "tw-up" : n < 0 ? "tw-down" : "tw-flat";
+  return `
+    <div class="tw-chips">
+      <div class="tw-chips-title">籌碼摘要 <span class="tw-chips-date">${escapeHtml(date)}</span></div>
+      ${t86Row ? `
+        <div class="tw-chips-section">
+          <div class="tw-chips-section-label">三大法人買賣超（當日）</div>
+          <div class="tw-chips-grid">
+            <div class="tw-chips-cell"><span class="tw-chips-k">外資</span><span class="tw-chips-v ${foreign.cls}">${foreign.txt}</span></div>
+            <div class="tw-chips-cell"><span class="tw-chips-k">投信</span><span class="tw-chips-v ${trust.cls}">${trust.txt}</span></div>
+            <div class="tw-chips-cell"><span class="tw-chips-k">自營</span><span class="tw-chips-v ${dealer.cls}">${dealer.txt}</span></div>
+            <div class="tw-chips-cell tw-chips-total"><span class="tw-chips-k">合計</span><span class="tw-chips-v ${total.cls}">${total.txt}</span></div>
+          </div>
+        </div>` : `<div class="tw-chips-section"><div class="tw-chips-empty">當日無三大法人資料</div></div>`}
+      ${margnRow ? `
+        <div class="tw-chips-section">
+          <div class="tw-chips-section-label">融資融券餘額</div>
+          <div class="tw-chips-grid">
+            <div class="tw-chips-cell">
+              <span class="tw-chips-k">融資餘額</span>
+              <span class="tw-chips-v">${Number(finToday).toLocaleString("zh-TW")} 張</span>
+              ${finDelta != null ? `<span class="tw-chips-delta ${deltaCls(finDelta)}">${deltaTxt(finDelta)}</span>` : ""}
+            </div>
+            <div class="tw-chips-cell">
+              <span class="tw-chips-k">融券餘額</span>
+              <span class="tw-chips-v">${Number(shortToday).toLocaleString("zh-TW")} 張</span>
+              ${shortDelta != null ? `<span class="tw-chips-delta ${deltaCls(shortDelta)}">${deltaTxt(shortDelta)}</span>` : ""}
+            </div>
+          </div>
+        </div>` : `<div class="tw-chips-section"><div class="tw-chips-empty">當日無融資融券資料</div></div>`}
+      <div class="tw-chips-foot">資料源：TWSE 證交所 T86 / MI_MARGN（瀏覽器直接抓取）</div>
+    </div>`;
+}
+
+async function loadTwStockChips(code) {
+  const slot = document.getElementById(`tw-chips-${code}`);
+  if (!slot) return;
+  let data;
+  try {
+    data = await fetchTwStockChips(code);
+  } catch (e) {
+    console.error("[twstock] chips fetch threw:", e);
+    data = { ok: false, error: String(e.message || e) };
+  }
+  const slot2 = document.getElementById(`tw-chips-${code}`);
+  if (!slot2) return;
+  try {
+    slot2.outerHTML = `<div id="tw-chips-${code}" class="tw-chips-wrap">${renderTwStockChips(data)}</div>`;
+  } catch (e) {
+    console.error("[twstock] chips render threw:", e);
+    slot2.outerHTML = `<div id="tw-chips-${code}" class="tw-chips-wrap"><div class="tw-snap-err">籌碼摘要顯示異常（${escapeHtml(String(e.message || e))}）</div></div>`;
+  }
 }
 
 function twStockFindByCode(code) {
@@ -2196,6 +2359,7 @@ function renderTwStockResults(code) {
         <a class="tw-res-quote" href="${escapeHtml(groups.realtime[0].url)}" target="_blank" rel="noopener">查即時報價 →</a>
       </div>
       <div id="tw-snap-${escapeHtml(code)}" class="tw-snap-wrap"><div class="tw-snap-loading">載入即時行情中…</div></div>
+      ${rec?.market !== "上櫃" ? `<div id="tw-chips-${escapeHtml(code)}" class="tw-chips-wrap"><div class="tw-snap-loading">載入籌碼摘要中…</div></div>` : ""}
       ${section("即時報價", "#019AB3", groups.realtime)}
       ${section("PASS 1 ｜ 基本面（Yahoo 摘要 + MOPS 原站）", "#019AB3", groups.pass1)}
       ${section("PASS 2 ｜ 籌碼", "#017A8F", groups.pass2)}
