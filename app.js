@@ -2814,38 +2814,21 @@ function renderTwStockSheet() {
 
     ${renderTwStockSearch()}
 
-    <h3 style="font-size:16px;margin:18px 0 8px">檢視流程</h3>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:18px">
-      <div style="background:#CCE8ED;padding:14px;border-radius:8px;text-align:center">
-        <div style="font-size:16px;font-weight:bold;color:#003D91;margin:0 0 6px">MOPS 基本面</div>
-        <div style="font-size:12px;color:#444">5 個必看頁面</div>
-      </div>
-      <div style="background:#E5F2F5;padding:14px;border-radius:8px;text-align:center">
-        <div style="font-size:16px;font-weight:bold;color:#003D91;margin:0 0 6px">TWSE 籌碼</div>
-        <div style="font-size:12px;color:#444">3 項關鍵指標</div>
-      </div>
-      <div style="background:#CCE8ED;padding:14px;border-radius:8px;text-align:center">
-        <div style="font-size:16px;font-weight:bold;color:#003D91;margin:0 0 6px">產業／競爭</div>
-        <div style="font-size:12px;color:#444">3 個檢核點</div>
-      </div>
-    </div>
-
-    <h3 style="font-size:16px;margin:24px 0 8px">1. MOPS 看公司基本面</h3>
+    <h3 style="font-size:16px;margin:24px 0 8px">1. 基本面</h3>
     <div style="background:#E5F2F5;padding:12px 16px;border-radius:6px;margin:10px 0;font-size:13px">
       入口：<b>${lnk("https://mops.twse.com.tw", "mops.twse.com.tw")}</b> → 上方搜尋輸入股票代號或公司名
     </div>
     <div style="overflow-x:auto">
     <table style="width:100%;border-collapse:collapse;font-size:13.5px;min-width:520px">
       <tr style="background:#019AB3;color:#fff">
-        <th style="padding:10px;text-align:left;width:32px">#</th>
-        <th style="padding:10px;text-align:left;width:38%">看什麼</th>
-        <th style="padding:10px;text-align:left">記下什麼</th>
+        <th style="padding:10px;text-align:left;width:40%">項目</th>
+        <th style="padding:10px;text-align:left">內容</th>
       </tr>
-      <tr style="background:#F2F8FA"><td style="padding:8px 12px;text-align:center"><b>1</b></td><td style="padding:8px 12px"><b>公司治理一覽表</b></td><td style="padding:8px 12px">資本額、員工數、董事長、產業別、實收資本</td></tr>
-      <tr><td style="padding:8px 12px;text-align:center"><b>2</b></td><td style="padding:8px 12px"><b>月營收</b>（每月 10 日後）</td><td style="padding:8px 12px">最近 12 個月趨勢、年增率、累計年增率</td></tr>
-      <tr style="background:#F2F8FA"><td style="padding:8px 12px;text-align:center"><b>3</b></td><td style="padding:8px 12px"><b>最新季財報</b></td><td style="padding:8px 12px">三表 + 毛利率／營益率／EPS 三大關鍵</td></tr>
-      <tr><td style="padding:8px 12px;text-align:center"><b>4</b></td><td style="padding:8px 12px"><b>重大訊息</b>（過去 3 個月）</td><td style="padding:8px 12px">併購、買回庫藏股、業績預警、董監異動</td></tr>
-      <tr style="background:#F2F8FA"><td style="padding:8px 12px;text-align:center"><b>5</b></td><td style="padding:8px 12px"><b>法說會簡報</b></td><td style="padding:8px 12px">公司怎麼講自己（管理層敘事 vs 數字）</td></tr>
+      <tr style="background:#F2F8FA"><td style="padding:8px 12px"><b>公司治理一覽表</b></td><td style="padding:8px 12px">資本額、員工數、董事長、產業別、實收資本</td></tr>
+      <tr><td style="padding:8px 12px"><b>月營收</b>（每月 10 日後）</td><td style="padding:8px 12px">最近 12 個月趨勢、年增率、累計年增率</td></tr>
+      <tr style="background:#F2F8FA"><td style="padding:8px 12px"><b>最新季財報</b></td><td style="padding:8px 12px">三表 + 毛利率／營益率／EPS 三大關鍵</td></tr>
+      <tr><td style="padding:8px 12px"><b>重大訊息</b>（過去 3 個月）</td><td style="padding:8px 12px">併購、買回庫藏股、業績預警、董監異動</td></tr>
+      <tr style="background:#F2F8FA"><td style="padding:8px 12px"><b>法說會簡報</b></td><td style="padding:8px 12px">公司怎麼講自己（管理層敘事 vs 數字）</td></tr>
     </table>
     </div>
 
@@ -2856,13 +2839,12 @@ function renderTwStockSheet() {
     <div style="overflow-x:auto">
     <table style="width:100%;border-collapse:collapse;font-size:13.5px;min-width:520px">
       <tr style="background:#017A8F;color:#fff">
-        <th style="padding:10px;text-align:left;width:32px">#</th>
-        <th style="padding:10px;text-align:left;width:38%">指標</th>
-        <th style="padding:10px;text-align:left">看什麼</th>
+        <th style="padding:10px;text-align:left;width:40%">項目</th>
+        <th style="padding:10px;text-align:left">內容</th>
       </tr>
-      <tr style="background:#F2F8FA"><td style="padding:8px 12px;text-align:center"><b>1</b></td><td style="padding:8px 12px"><b>三大法人買賣超</b>（最近 5 日）</td><td style="padding:8px 12px">外資、投信、自營商各別買賣超；連買連賣天數</td></tr>
-      <tr><td style="padding:8px 12px;text-align:center"><b>2</b></td><td style="padding:8px 12px"><b>融資融券餘額變化</b></td><td style="padding:8px 12px">融資增 = 散戶看好；融券增 = 看空或避險</td></tr>
-      <tr style="background:#F2F8FA"><td style="padding:8px 12px;text-align:center"><b>3</b></td><td style="padding:8px 12px"><b>借券賣出餘額</b></td><td style="padding:8px 12px">外資／法人放空指標；快速攀升警訊</td></tr>
+      <tr style="background:#F2F8FA"><td style="padding:8px 12px"><b>三大法人買賣超</b>（最近 5 日）</td><td style="padding:8px 12px">外資、投信、自營商各別買賣超；連買連賣天數</td></tr>
+      <tr><td style="padding:8px 12px"><b>融資融券餘額變化</b></td><td style="padding:8px 12px">融資增 = 散戶看好；融券增 = 看空或避險</td></tr>
+      <tr style="background:#F2F8FA"><td style="padding:8px 12px"><b>借券賣出餘額</b></td><td style="padding:8px 12px">外資／法人放空指標；快速攀升警訊</td></tr>
     </table>
     </div>
 
@@ -2870,13 +2852,12 @@ function renderTwStockSheet() {
     <div style="overflow-x:auto">
     <table style="width:100%;border-collapse:collapse;font-size:13.5px;min-width:520px">
       <tr style="background:#17B5AD;color:#fff">
-        <th style="padding:10px;text-align:left;width:32px">#</th>
-        <th style="padding:10px;text-align:left;width:38%">資料</th>
-        <th style="padding:10px;text-align:left">用途</th>
+        <th style="padding:10px;text-align:left;width:40%">項目</th>
+        <th style="padding:10px;text-align:left">內容</th>
       </tr>
-      <tr style="background:#F2F8FA"><td style="padding:8px 12px;text-align:center"><b>1</b></td><td style="padding:8px 12px"><b>公司年報「行業狀況」章節</b></td><td style="padding:8px 12px">產業地位、市佔、上下游、技術門檻</td></tr>
-      <tr><td style="padding:8px 12px;text-align:center"><b>2</b></td><td style="padding:8px 12px"><b>最近一次法說會 Q&amp;A</b></td><td style="padding:8px 12px">分析師問什麼 = 市場關注點</td></tr>
-      <tr style="background:#F2F8FA"><td style="padding:8px 12px;text-align:center"><b>3</b></td><td style="padding:8px 12px"><b>同業比較表</b>（找 3 家競品）</td><td style="padding:8px 12px">營收成長、毛利率、PE、ROE 對比</td></tr>
+      <tr style="background:#F2F8FA"><td style="padding:8px 12px"><b>公司年報「行業狀況」章節</b></td><td style="padding:8px 12px">產業地位、市佔、上下游、技術門檻</td></tr>
+      <tr><td style="padding:8px 12px"><b>最近一次法說會 Q&amp;A</b></td><td style="padding:8px 12px">分析師問什麼 = 市場關注點</td></tr>
+      <tr style="background:#F2F8FA"><td style="padding:8px 12px"><b>同業比較表</b>（找 3 家競品）</td><td style="padding:8px 12px">營收成長、毛利率、PE、ROE 對比</td></tr>
     </table>
     </div>
 
