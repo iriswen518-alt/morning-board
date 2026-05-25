@@ -524,6 +524,7 @@ function switchTab(name) {
   if (name === "portfolio") wirePortfolioTabs();
   if (name === "wealth") wireWealthTabs();
   if (name === "calc") wireCalcTabs();
+  if (name === "twstock") wireTwStock();
   if (PENDING_SUBTAB) {
     const sub = PENDING_SUBTAB;
     PENDING_SUBTAB = null;
@@ -1886,6 +1887,121 @@ function renderUsStocksSheet() {
   return note + curatedBlock + popularBlock + renderStockBriefBlock();
 }
 
+let TW_STOCK_QUERY = "";
+const TW_STOCK_QUICKPICK = [
+  { code: "2330", name: "台積電" },
+  { code: "2317", name: "鴻海" },
+  { code: "2454", name: "聯發科" },
+  { code: "3008", name: "大立光" },
+  { code: "2891", name: "中信金" },
+  { code: "2412", name: "中華電" },
+  { code: "2603", name: "長榮" },
+  { code: "1301", name: "台塑" },
+];
+
+function twStockLinks(code) {
+  const yh = `https://tw.stock.yahoo.com/quote/${code}.TW`;
+  const mops = `https://mopsov.twse.com.tw/mops/web`;
+  return {
+    realtime: [
+      { label: "Yahoo 股市", url: yh },
+      { label: "TradingView", url: `https://www.tradingview.com/symbols/TWSE-${code}/` },
+    ],
+    pass1: [
+      { label: "公司資料", url: `${yh}/profile` },
+      { label: "月營收", url: `${yh}/revenue` },
+      { label: "損益表（季）", url: `${yh}/income-statement` },
+      { label: "資產負債表", url: `${yh}/balance-sheet` },
+      { label: "現金流量表", url: `${yh}/cash-flow-statement` },
+      { label: "重大訊息／新聞", url: `${yh}/news` },
+      { label: "MOPS 公司資料（原始揭露）", url: `${mops}/t05st01?co_id=${code}` },
+      { label: "MOPS 月營收（原始揭露）", url: `${mops}/t146sb05?co_id=${code}` },
+    ],
+    pass2: [
+      { label: "三大法人買賣超", url: `${yh}/institutional-trading` },
+      { label: "融資融券（資券變化）", url: `${yh}/margin` },
+    ],
+    secondary: [
+      { label: "Goodinfo!", url: `https://goodinfo.tw/StockInfo/StockDetail.asp?STOCK_ID=${code}` },
+      { label: "財報狗", url: `https://statementdog.com/analysis/${code}` },
+      { label: "HiStock", url: `https://histock.tw/stock/${code}` },
+      { label: "CMoney 同學會", url: `https://www.cmoney.tw/forum/stock/${code}` },
+    ],
+  };
+}
+
+function renderTwStockResults(code) {
+  const groups = twStockLinks(code);
+  const linkBtn = (l) => `<a class="tw-link" href="${escapeHtml(l.url)}" target="_blank" rel="noopener">${escapeHtml(l.label)}</a>`;
+  const section = (title, color, items) => `
+    <div class="tw-res-section">
+      <div class="tw-res-title" style="color:${color}">${escapeHtml(title)}</div>
+      <div class="tw-res-links">${items.map(linkBtn).join("")}</div>
+    </div>`;
+  return `
+    <div class="tw-res-card">
+      <div class="tw-res-header">
+        <div><span class="tw-res-code">${escapeHtml(code)}</span><span class="tw-res-hint">一鍵直達各資料源</span></div>
+        <a class="tw-res-quote" href="${escapeHtml(groups.realtime[0].url)}" target="_blank" rel="noopener">查即時報價 →</a>
+      </div>
+      ${section("即時報價", "#019AB3", groups.realtime)}
+      ${section("PASS 1 ｜ 基本面（Yahoo 摘要 + MOPS 原站）", "#019AB3", groups.pass1)}
+      ${section("PASS 2 ｜ 籌碼", "#017A8F", groups.pass2)}
+      ${section("二手研究（快速發現）", "#17B5AD", groups.secondary)}
+      <p class="tw-res-note">最終決策請回 MOPS／TWSE 對原始資料。Yahoo 股市為公開揭露摘要，便利檢視用。</p>
+    </div>`;
+}
+
+function renderTwStockSearch() {
+  const picks = TW_STOCK_QUICKPICK.map(p =>
+    `<button class="tw-pick" type="button" onclick="doTwStockSearch('${p.code}')">${p.code} ${escapeHtml(p.name)}</button>`
+  ).join("");
+  const initialResult = TW_STOCK_QUERY ? renderTwStockResults(TW_STOCK_QUERY) : "";
+  return `
+    <div class="tw-search-box">
+      <div class="tw-search-row">
+        <input id="tw-stock-input" type="text" inputmode="numeric" placeholder="輸入台股代碼（如 2330）" value="${escapeHtml(TW_STOCK_QUERY)}" autocomplete="off" />
+        <button class="tw-search-btn" type="button" onclick="doTwStockSearch()">搜尋</button>
+      </div>
+      <div class="tw-pick-row"><span class="tw-pick-label">熱門：</span>${picks}</div>
+      <div id="tw-stock-result">${initialResult}</div>
+    </div>`;
+}
+
+function doTwStockSearch(code) {
+  let c = code;
+  if (!c) {
+    const input = document.getElementById("tw-stock-input");
+    if (!input) return;
+    c = (input.value || "").trim();
+  }
+  c = c.replace(/[^0-9A-Za-z]/g, "").toUpperCase();
+  const result = document.getElementById("tw-stock-result");
+  if (!/^[0-9A-Z]{4,6}$/.test(c)) {
+    if (result) result.innerHTML = `<div class="tw-warn">請輸入 4-6 碼代號（例如 2330、00878）</div>`;
+    return;
+  }
+  TW_STOCK_QUERY = c;
+  const input = document.getElementById("tw-stock-input");
+  if (input) input.value = c;
+  if (result) {
+    result.innerHTML = renderTwStockResults(c);
+    setTimeout(() => result.scrollIntoView({ behavior: "smooth", block: "start" }), 50);
+  }
+}
+
+function wireTwStock() {
+  const input = document.getElementById("tw-stock-input");
+  if (input) {
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        doTwStockSearch();
+      }
+    });
+  }
+}
+
 function renderTwStockSheet() {
   const lnk = (href, text) => `<a href="${href}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${text}</a>`;
   return `
@@ -1894,6 +2010,8 @@ function renderTwStockSheet() {
       <h2 style="margin:6px 0 6px 0;color:#fff;border:none;font-size:22px">台股資訊源 SOP（個人版）</h2>
       <div style="font-size:13px;opacity:0.9">任何個股都依這份順序跑一遍：基本面 → 籌碼 → 產業</div>
     </div>
+
+    ${renderTwStockSearch()}
 
     <h3 style="font-size:16px;margin:18px 0 8px">三遍流程</h3>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:18px">
