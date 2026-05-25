@@ -1894,6 +1894,7 @@ function renderUsStocksSheet() {
 }
 
 let TW_STOCK_QUERY = "";
+let TW_INDUSTRY_FILTER = "全部";  // "全部" / 產業名稱
 const TW_STOCK_QUICKPICK = [
   { code: "2330", name: "台積電" },
   { code: "2317", name: "鴻海" },
@@ -1904,6 +1905,29 @@ const TW_STOCK_QUICKPICK = [
   { code: "2603", name: "長榮" },
   { code: "1301", name: "台塑" },
 ];
+const TW_INDUSTRY_ORDER = [
+  "半導體業", "電子零組件", "電腦及週邊", "光電業", "通信網路業", "其他電子業",
+  "電子通路業", "資訊服務業", "電子商務", "數位雲端",
+  "金融保險", "航運業", "建材營造", "鋼鐵工業", "汽車工業", "電機機械", "化學工業",
+  "生技醫療", "食品工業", "塑膠工業", "紡織纖維", "貿易百貨", "觀光餐旅",
+  "油電燃氣", "綠能環保", "運動休閒", "居家生活", "文化創意業", "農業科技",
+  "水泥工業", "電器電纜", "玻璃陶瓷", "造紙工業", "橡膠工業", "其他", "ETF",
+];
+function twIndustryList() {
+  const list = DATA?.tw_stocks || [];
+  const counts = {};
+  for (const s of list) {
+    const ind = s.industry || "其他";
+    counts[ind] = (counts[ind] || 0) + 1;
+  }
+  const orderIdx = (name) => {
+    const i = TW_INDUSTRY_ORDER.indexOf(name);
+    return i === -1 ? 999 : i;
+  };
+  return Object.entries(counts)
+    .sort((a, b) => orderIdx(a[0]) - orderIdx(b[0]))
+    .map(([name, n]) => ({ name, count: n }));
+}
 
 const TW_STOCK_SNAPSHOT_CACHE = {};
 function twYahooSuffix(market) {
@@ -2507,15 +2531,24 @@ function twStockSearchByKeyword(kw, limit = 12) {
   if (!Array.isArray(list) || !kw) return [];
   const q = kw.trim();
   if (!q) return [];
+  const inFilter = (s) => TW_INDUSTRY_FILTER === "全部" || s.industry === TW_INDUSTRY_FILTER;
   const starts = [], contains = [];
   for (const s of list) {
+    if (!inFilter(s)) continue;
     const name = s.name || "";
-    if (name === q) starts.unshift(s);          // exact
-    else if (name.startsWith(q)) starts.push(s); // prefix
-    else if (name.includes(q)) contains.push(s); // substring
+    if (name === q) starts.unshift(s);
+    else if (name.startsWith(q)) starts.push(s);
+    else if (name.includes(q)) contains.push(s);
     if (starts.length + contains.length >= limit * 3) break;
   }
   return [...starts, ...contains].slice(0, limit);
+}
+
+function twIndustryQuickPicks(industry, limit = 12) {
+  const list = DATA?.tw_stocks || [];
+  if (industry === "全部") return TW_STOCK_QUICKPICK;
+  // 取該產業前 N 檔（按代號排序）
+  return list.filter(s => s.industry === industry).slice(0, limit).map(s => ({ code: s.code, name: s.name }));
 }
 
 function twStockLinks(code) {
@@ -2645,21 +2678,61 @@ function renderTwStockMatchList(matches, keyword) {
     </div>`;
 }
 
+function renderTwIndustryTabs() {
+  const industries = twIndustryList();
+  if (!industries.length) return "";
+  const all = DATA?.tw_stocks?.length || 0;
+  const items = [{ name: "全部", count: all }, ...industries];
+  return `<div class="tw-ind-tabs" id="tw-ind-tabs">${
+    items.map(it => `
+      <button class="tw-ind-tab ${TW_INDUSTRY_FILTER === it.name ? "active" : ""}" type="button" onclick="setTwIndustry('${escapeHtml(it.name)}')">
+        ${escapeHtml(it.name)}<span class="tw-ind-tab-n">${it.count}</span>
+      </button>
+    `).join("")
+  }</div>`;
+}
+
+function setTwIndustry(name) {
+  TW_INDUSTRY_FILTER = name;
+  // 切換產業時，清空搜尋結果與輸入；如果之前查的股票符合該產業則保留
+  const wrap = document.getElementById("tw-stock-result")?.closest(".tw-search-box");
+  if (wrap) wrap.outerHTML = renderTwStockSearch();
+  wireTwStock();
+  // 若有先前查的代號，且仍在新篩選的範圍內（或產業==全部），保留結果
+  if (TW_STOCK_QUERY) {
+    const rec = twStockFindByCode(TW_STOCK_QUERY);
+    const visible = TW_INDUSTRY_FILTER === "全部" || (rec && rec.industry === TW_INDUSTRY_FILTER);
+    if (visible && rec) {
+      const slot = document.getElementById("tw-stock-result");
+      if (slot) {
+        slot.innerHTML = renderTwStockResults(TW_STOCK_QUERY);
+        loadTwStockSnapshot(TW_STOCK_QUERY, rec?.market);
+      }
+    }
+  }
+}
+
 function renderTwStockSearch() {
-  const picks = TW_STOCK_QUICKPICK.map(p =>
+  const picks = twIndustryQuickPicks(TW_INDUSTRY_FILTER, 12).map(p =>
     `<button class="tw-pick" type="button" onclick="doTwStockSearch('${p.code}')">${p.code} ${escapeHtml(p.name)}</button>`
   ).join("");
   const initialResult = TW_STOCK_QUERY ? renderTwStockResults(TW_STOCK_QUERY) : "";
   const total = Array.isArray(DATA?.tw_stocks) ? DATA.tw_stocks.length : 0;
-  const totalHint = total > 0 ? `（已載入 ${total} 檔上市櫃股票，可輸入名稱關鍵字如「台積」「金控」）` : "";
+  const filterHint = TW_INDUSTRY_FILTER === "全部"
+    ? (total > 0 ? `已載入 ${total} 檔台股（上市/上櫃/興櫃含 ETF），可輸入代碼或名稱關鍵字` : "")
+    : `當前篩選：<b>${escapeHtml(TW_INDUSTRY_FILTER)}</b>，搜尋與熱門只顯示該產業`;
+  const placeholder = TW_INDUSTRY_FILTER === "全部"
+    ? "輸入台股代碼或公司名稱（如 2330 或 台積電）"
+    : `在「${TW_INDUSTRY_FILTER}」中搜尋…（仍可輸入任何代碼直接查）`;
   return `
     <div class="tw-search-box">
+      ${renderTwIndustryTabs()}
       <div class="tw-search-row">
-        <input id="tw-stock-input" type="text" placeholder="輸入台股代碼或公司名稱（如 2330 或 台積電）" value="${escapeHtml(TW_STOCK_QUERY)}" autocomplete="off" />
+        <input id="tw-stock-input" type="text" placeholder="${escapeHtml(placeholder)}" value="${escapeHtml(TW_STOCK_QUERY)}" autocomplete="off" />
         <button class="tw-search-btn" type="button" onclick="doTwStockSearch()">搜尋</button>
       </div>
-      <div class="tw-pick-row"><span class="tw-pick-label">熱門：</span>${picks}</div>
-      ${totalHint ? `<div class="tw-search-hint">${totalHint}</div>` : ""}
+      <div class="tw-pick-row"><span class="tw-pick-label">${TW_INDUSTRY_FILTER === "全部" ? "熱門" : TW_INDUSTRY_FILTER}：</span>${picks}</div>
+      ${filterHint ? `<div class="tw-search-hint">${filterHint}</div>` : ""}
       <div id="tw-stock-result">${initialResult}</div>
     </div>`;
 }
