@@ -1,26 +1,55 @@
 async function loadCourses() {
-  const grid = document.getElementById('course-grid');
-  if (!grid) return;
+  const tabsEl = document.getElementById('course-tabs');
+  const panesEl = document.getElementById('course-panes');
+  if (!tabsEl || !panesEl) return;
   try {
     const res = await fetch('../data/academy/courses.json');
     if (!res.ok) throw new Error('fetch failed');
     const data = await res.json();
-    grid.innerHTML = '';
-    for (const course of data.courses) {
-      const card = document.createElement('a');
-      card.className = 'course-card' + (course.active ? '' : ' inactive');
-      if (course.active) {
-        card.href = `chapter.html?course=${encodeURIComponent(course.slug)}`;
+    const courses = data.courses || [];
+
+    const indexes = await Promise.all(courses.map(c =>
+      c.active
+        ? fetch(`../data/academy/${c.slug}/00_index.json`)
+            .then(r => r.ok ? r.json() : null)
+            .catch(() => null)
+        : Promise.resolve(null)
+    ));
+
+    tabsEl.innerHTML = '';
+    panesEl.innerHTML = '';
+    courses.forEach((course, i) => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'tab' + (i === 0 ? ' active' : '');
+      btn.dataset.course = course.slug;
+      btn.textContent = course.name;
+      tabsEl.appendChild(btn);
+
+      const pane = document.createElement('div');
+      pane.className = 'course-pane' + (i === 0 ? ' active' : '');
+      pane.dataset.course = course.slug;
+      const idx = indexes[i];
+      if (!course.active || !idx) {
+        pane.innerHTML = '<p class="course-empty">敬請期待</p>';
+      } else {
+        const items = idx.chapters.map((ch, j) =>
+          `<li><a href="chapter.html?course=${encodeURIComponent(course.slug)}&chapter=${encodeURIComponent(ch.slug)}">${j + 1}. ${ch.title}</a></li>`
+        ).join('');
+        pane.innerHTML = `<ol class="chapter-list">${items}</ol>`;
       }
-      const meta = course.active ? '點擊進入' : '敬請期待';
-      card.innerHTML = `
-        <div class="course-name">${course.name}</div>
-        <div class="course-meta">${meta}</div>
-      `;
-      grid.appendChild(card);
-    }
+      panesEl.appendChild(pane);
+    });
+
+    tabsEl.addEventListener('click', e => {
+      const btn = e.target.closest('button.tab');
+      if (!btn) return;
+      const slug = btn.dataset.course;
+      tabsEl.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t === btn));
+      panesEl.querySelectorAll('.course-pane').forEach(p => p.classList.toggle('active', p.dataset.course === slug));
+    });
   } catch (err) {
-    grid.textContent = '載入失敗，請稍後再試。';
+    tabsEl.textContent = '載入失敗，請稍後再試。';
     console.error(err);
   }
 }
