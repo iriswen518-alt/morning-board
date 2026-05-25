@@ -2178,9 +2178,19 @@ function renderTwSummaryBody(c) {
     const cls = pctClass(c.rev.yoy_pct);
     bits.push(`<div class="tw-sum-row"><span class="tw-sum-k">${fmtYyyymmFromRoc(c.rev.ym)} 月營收</span><span class="tw-sum-v">${fmtRevenue(c.rev.current)}　YoY <span class="${cls}">${yoy}</span></span></div>`);
   }
-  if (c.fin) {
-    const yr = parseInt(c.fin.year) + 1911;
-    bits.push(`<div class="tw-sum-row"><span class="tw-sum-k">${yr}Q${c.fin.quarter} 獲利率</span><span class="tw-sum-v">毛利 ${c.fin.gpm || "—"}%　營益 ${c.fin.opm || "—"}%　純益 ${c.fin.npm || "—"}%</span></div>`);
+  if (c.inc) {
+    const yr = parseInt(c.inc.year) + 1911;
+    const rev = parseTwseNum(c.inc.revenue);
+    const gp = parseTwseNum(c.inc.gross_profit);
+    const op = parseTwseNum(c.inc.op_income);
+    const ni = parseTwseNum(c.inc.net_income);
+    const gpm = (rev && gp != null) ? (gp / rev * 100).toFixed(1) : "—";
+    const opm = (rev && op != null) ? (op / rev * 100).toFixed(1) : "—";
+    const npm = (rev && ni != null) ? (ni / rev * 100).toFixed(1) : "—";
+    bits.push(`<div class="tw-sum-row"><span class="tw-sum-k">${yr}Q${c.inc.quarter} 獲利</span><span class="tw-sum-v">毛 ${gpm}%　營益 ${opm}%　純益 ${npm}%　EPS ${c.inc.eps || "—"}</span></div>`);
+  }
+  if (c.bal && c.bal.bvps) {
+    bits.push(`<div class="tw-sum-row"><span class="tw-sum-k">每股淨值</span><span class="tw-sum-v">${c.bal.bvps} 元</span></div>`);
   }
   if (c.t86Row) {
     const total = fmtChipChange(c.t86Row[18]);
@@ -2251,31 +2261,26 @@ function fmtDate8(s) {  // "19940905" → "1994-09-05"
 }
 
 async function fetchTwStockBasic(code, market) {
-  const isOtc = market === "上櫃";
-  const result = { ok: true, info: null, revenue: null, finance: null };
+  const result = { ok: true, info: null, revenue: null, income: null, balance: null };
+  const latestByCode = (arr) => {
+    const rows = arr.filter(r => r.code === code);
+    rows.sort((a, b) => `${b.year}${b.quarter}`.localeCompare(`${a.year}${a.quarter}`));
+    return rows[0] || null;
+  };
   const promises = [
     loadTwBulkLocal("tw_company_info")
-      .then(arr => {
-        result.info = arr.find(r => r.code === code && r.market === market) || null;
-      })
+      .then(arr => { result.info = arr.find(r => r.code === code && r.market === market) || null; })
       .catch(e => { result.infoErr = e.message; }),
     loadTwBulkLocal("tw_revenue")
-      .then(arr => {
-        result.revenue = arr.find(r => r.code === code && r.market === market) || null;
-      })
+      .then(arr => { result.revenue = arr.find(r => r.code === code && r.market === market) || null; })
       .catch(e => { result.revenueErr = e.message; }),
+    loadTwBulkLocal("tw_income")
+      .then(arr => { result.income = latestByCode(arr); })
+      .catch(e => { result.incomeErr = e.message; }),
+    loadTwBulkLocal("tw_balance")
+      .then(arr => { result.balance = latestByCode(arr); })
+      .catch(e => { result.balanceErr = e.message; }),
   ];
-  if (!isOtc) {
-    promises.push(
-      loadTwBulkLocal("tw_finance")
-        .then(arr => {
-          const rows = arr.filter(r => r.code === code);
-          rows.sort((a, b) => `${b.year}${b.quarter}`.localeCompare(`${a.year}${a.quarter}`));
-          result.finance = rows[0] || null;
-        })
-        .catch(e => { result.financeErr = e.message; })
-    );
-  }
   await Promise.all(promises);
   return result;
 }
@@ -2305,7 +2310,7 @@ function renderRevenueBody(rev) {
     <div><span class="tw-basic-k">累計年增</span><span class="tw-basic-v ${pctClass(rev.cum_yoy_pct)}">${fmtPct(rev.cum_yoy_pct)}</span></div>`;
 }
 
-function renderFinanceBody(fin) {
+function renderFinanceBody(fin) {  // 舊：用 t187ap17_L；保留作為 fallback / 未來其他用途
   if (!fin) return `<div class="tw-data-card-hint">查無季營益</div>`;
   const yr = parseInt(fin.year) + 1911;
   return `
@@ -2316,22 +2321,57 @@ function renderFinanceBody(fin) {
     <div><span class="tw-basic-k">稅後純益率</span><span class="tw-basic-v">${escapeHtml(fin.npm || "—")}%</span></div>`;
 }
 
+function renderIncomeBody(inc) {
+  if (!inc) return `<div class="tw-data-card-hint">查無損益表 (一般業 schema)，請點連結查 Yahoo</div>`;
+  const yr = parseInt(inc.year) + 1911;
+  const rev = parseTwseNum(inc.revenue);
+  const gp = parseTwseNum(inc.gross_profit);
+  const op = parseTwseNum(inc.op_income);
+  const ni = parseTwseNum(inc.net_income);
+  const gpm = (rev && gp != null) ? (gp / rev * 100) : null;
+  const opm = (rev && op != null) ? (op / rev * 100) : null;
+  const npm = (rev && ni != null) ? (ni / rev * 100) : null;
+  return `
+    <div class="tw-data-card-sub-inline">${yr}Q${escapeHtml(String(inc.quarter))}</div>
+    <div><span class="tw-basic-k">營業收入</span><span class="tw-basic-v">${fmtRevenue((rev||0)/1000)}</span></div>
+    <div><span class="tw-basic-k">毛利率</span><span class="tw-basic-v">${gpm != null ? gpm.toFixed(2) + "%" : "—"}</span></div>
+    <div><span class="tw-basic-k">營益率</span><span class="tw-basic-v">${opm != null ? opm.toFixed(2) + "%" : "—"}</span></div>
+    <div><span class="tw-basic-k">稅後純益率</span><span class="tw-basic-v">${npm != null ? npm.toFixed(2) + "%" : "—"}</span></div>
+    <div><span class="tw-basic-k">EPS</span><span class="tw-basic-v">${escapeHtml(inc.eps || "—")} 元</span></div>`;
+}
+
+function renderBalanceBody(bal) {
+  if (!bal) return `<div class="tw-data-card-hint">查無資產負債表 (一般業 schema)，請點連結查 Yahoo</div>`;
+  const yr = parseInt(bal.year) + 1911;
+  const assets = parseTwseNum(bal.total_assets);
+  const liab = parseTwseNum(bal.total_liab);
+  const debtRatio = (assets && liab != null) ? (liab / assets * 100) : null;
+  return `
+    <div class="tw-data-card-sub-inline">${yr}Q${escapeHtml(String(bal.quarter))}</div>
+    <div><span class="tw-basic-k">資產總額</span><span class="tw-basic-v">${fmtRevenue((assets||0)/1000)}</span></div>
+    <div><span class="tw-basic-k">負債總額</span><span class="tw-basic-v">${fmtRevenue((liab||0)/1000)}</span></div>
+    <div><span class="tw-basic-k">權益總額</span><span class="tw-basic-v">${fmtRevenue((parseTwseNum(bal.total_equity)||0)/1000)}</span></div>
+    <div><span class="tw-basic-k">負債比率</span><span class="tw-basic-v">${debtRatio != null ? debtRatio.toFixed(1) + "%" : "—"}</span></div>
+    <div><span class="tw-basic-k">每股淨值</span><span class="tw-basic-v">${escapeHtml(bal.bvps || "—")} 元</span></div>`;
+}
+
 async function loadTwStockBasic(code, market) {
   let data;
   try {
     data = await fetchTwStockBasic(code, market);
   } catch (e) {
     console.error("[twstock] basic fetch threw:", e);
-    fillCardSlot(code, "company", `<div class="tw-data-card-hint">載入失敗</div>`);
-    fillCardSlot(code, "revenue", `<div class="tw-data-card-hint">載入失敗</div>`);
-    if (market !== "上櫃") fillCardSlot(code, "finance", `<div class="tw-data-card-hint">載入失敗</div>`);
+    for (const k of ["company", "revenue", "income", "balance"]) {
+      fillCardSlot(code, k, `<div class="tw-data-card-hint">載入失敗</div>`);
+    }
     return;
   }
   const isOtc = market === "上櫃";
   fillCardSlot(code, "company", renderCompanyBody(data.info, isOtc));
   fillCardSlot(code, "revenue", renderRevenueBody(data.revenue));
-  if (!isOtc) fillCardSlot(code, "finance", renderFinanceBody(data.finance));
-  updateTwSummary(code, { info: data.info, rev: data.revenue, fin: isOtc ? null : data.finance });
+  fillCardSlot(code, "income", renderIncomeBody(data.income));
+  fillCardSlot(code, "balance", renderBalanceBody(data.balance));
+  updateTwSummary(code, { info: data.info, rev: data.revenue, inc: data.income, bal: data.balance });
 }
 
 const TW_CHIPS_CACHE = {};
@@ -2617,14 +2657,12 @@ function renderTwStockResults(code) {
   const nameSpan = rec
     ? `<span class="tw-res-name">${escapeHtml(rec.name)}</span>`
     : `<span class="tw-res-hint">查無此代號（仍可直接點擊下方連結試查）</span>`;
-  // PASS 1 卡片：3 張 data card + 5 張 plain card
+  // PASS 1 卡片：4 張 data card + 4 張 plain card
   const pass1Cards = [
     dataCard(`tw-card-${code}-company`, "公司資料", "", `${yh}/profile`, "查 Yahoo"),
     dataCard(`tw-card-${code}-revenue`, "月營收", "", `${yh}/revenue`, "查 Yahoo"),
-    isOtc
-      ? noDataCard("損益表（季）", `${yh}/income-statement`, "上櫃股 TWSE OpenAPI 未提供，請至 Yahoo")
-      : dataCard(`tw-card-${code}-finance`, "季營益", "", `${yh}/income-statement`, "查 Yahoo"),
-    noDataCard("資產負債表", `${yh}/balance-sheet`),
+    dataCard(`tw-card-${code}-income`, "損益表（季）", "", `${yh}/income-statement`, "查 Yahoo"),
+    dataCard(`tw-card-${code}-balance`, "資產負債表（季）", "", `${yh}/balance-sheet`, "查 Yahoo"),
     noDataCard("現金流量表", `${yh}/cash-flow-statement`),
     noDataCard("重大訊息／新聞", `${yh}/news`),
     noDataCard("MOPS 公司資料（原始揭露）", `${mops}/t05st01?co_id=${code}`),
