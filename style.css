@@ -1542,27 +1542,32 @@ table.indices .date-col {
 .cmp-basics b { color: var(--brand-deep, #003D91); font-weight: 600; }
 .cmp-basics-note { color: var(--text-mute, #6b7280); font-size: 11px; }
 
-/* 台股研究 - 產業分頁 */
+/* 台股研究 - 產業分頁（等寬 grid，自動換行對齊） */
 .tw-ind-tabs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px 8px;
-  padding-bottom: 4px;
-  margin: -4px -4px 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 8px;
+  margin: 0 0 14px;
 }
 .tw-ind-tab {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 4px;
-  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 10px;
   font-size: 13px;
   white-space: nowrap;
   border: 1px solid #d8e3e8;
-  border-radius: 6px;
+  border-radius: 8px;
   background: #F2F8FA;
   color: #003D91;
   cursor: pointer;
   font-family: inherit;
+  line-height: 1.2;
+  min-height: 38px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .tw-ind-tab:hover { background: #E5F2F5; color: var(--brand-primary, #019AB3); }
 .tw-ind-tab.active {
@@ -1573,8 +1578,21 @@ table.indices .date-col {
   box-shadow: 0 2px 6px rgba(1,154,179,0.18);
 }
 .tw-ind-tab.active:hover { color: #fff; }
-.tw-ind-tab-n { font-size: 10px; opacity: 0.7; font-weight: 400; }
-.tw-ind-tab.active .tw-ind-tab-n { opacity: 0.85; }
+.tw-ind-tab-n {
+  font-size: 11px;
+  font-weight: 500;
+  opacity: 0.7;
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: rgba(0, 61, 145, 0.08);
+  min-width: 22px;
+  text-align: center;
+}
+.tw-ind-tab.active .tw-ind-tab-n {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.22);
+  color: #fff;
+}
 
 /* 台股研究 - 個股快查 */
 .tw-search-box { background: #F2F8FA; border-radius: 10px; padding: 16px 18px; margin: 0 0 22px; }
