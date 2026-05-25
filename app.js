@@ -2568,7 +2568,7 @@ function renderTwStockResults(code) {
         <div class="tw-data-cards">${pass2Cards}</div>
       </div>
       ${linkSection("二手研究（快速發現）", "#17B5AD", groups.secondary)}
-      <p class="tw-res-note">最終決策請回 MOPS／TWSE 對原始資料。Yahoo 股市為公開揭露摘要，便利檢視用。</p>
+      <p class="tw-res-note">最終決策請回 MOPS／TWSE 對原始資料。</p>
     </div>`;
 }
 
@@ -2704,7 +2704,7 @@ function renderTwStockSheet() {
       </div>
     </div>
 
-    <h3 style="font-size:16px;margin:24px 0 8px">第一遍｜MOPS 看公司基本面</h3>
+    <h3 style="font-size:16px;margin:24px 0 8px">1.｜MOPS 看公司基本面</h3>
     <div style="background:#E5F2F5;padding:12px 16px;border-radius:6px;margin:10px 0;font-size:13px">
       入口：<b>${lnk("https://mops.twse.com.tw", "mops.twse.com.tw")}</b> → 上方搜尋輸入股票代號或公司名
     </div>
@@ -2723,7 +2723,7 @@ function renderTwStockSheet() {
     </table>
     </div>
 
-    <h3 style="font-size:16px;margin:24px 0 8px">第二遍｜TWSE 看籌碼</h3>
+    <h3 style="font-size:16px;margin:24px 0 8px">2.｜TWSE 看籌碼</h3>
     <div style="background:#E5F2F5;padding:12px 16px;border-radius:6px;margin:10px 0;font-size:13px">
       入口：<b>${lnk("https://www.twse.com.tw", "www.twse.com.tw")}</b> → 交易資訊
     </div>
@@ -2740,7 +2740,7 @@ function renderTwStockSheet() {
     </table>
     </div>
 
-    <h3 style="font-size:16px;margin:24px 0 8px">第三遍｜產業／競爭</h3>
+    <h3 style="font-size:16px;margin:24px 0 8px">3.｜產業／競爭</h3>
     <div style="overflow-x:auto">
     <table style="width:100%;border-collapse:collapse;font-size:13.5px;min-width:520px">
       <tr style="background:#17B5AD;color:#fff">
