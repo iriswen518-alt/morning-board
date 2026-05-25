@@ -1605,6 +1605,17 @@ table.indices .date-col {
 .tw-chips-empty { font-size: 12px; color: var(--text-mute, #6b7280); }
 .tw-chips-foot { margin-top: 10px; padding-top: 8px; border-top: 1px dashed #eef1f4; font-size: 11px; color: var(--text-mute, #6b7280); }
 
+.tw-basic-wrap { margin: 8px 0 6px; }
+.tw-basic-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; }
+.tw-basic-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 10px; padding: 12px 14px; }
+.tw-basic-card-title { font-size: 13px; font-weight: 700; color: var(--brand-deep, #003D91); margin-bottom: 8px; display: flex; align-items: baseline; gap: 8px; }
+.tw-basic-card-sub { font-size: 11px; font-weight: 400; color: var(--text-mute, #6b7280); }
+.tw-basic-card-body { display: flex; flex-direction: column; gap: 4px; font-size: 12.5px; }
+.tw-basic-card-body > div { display: flex; justify-content: space-between; gap: 8px; }
+.tw-basic-k { color: var(--text-mute, #6b7280); }
+.tw-basic-v { font-weight: 600; color: #222; text-align: right; }
+.tw-basic-card-note { background: #FFF4E5; color: #b45309; font-size: 12px; padding: 10px 12px; border-radius: 6px; grid-column: 1 / -1; }
+
 .tw-matches { background: #fff; border: 1px solid #e5e7eb; border-radius: 10px; padding: 14px 16px; margin-top: 14px; }
 .tw-matches-title { font-size: 13px; color: var(--text-sub, #4b5563); margin-bottom: 10px; }
 .tw-matches-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 8px; }
