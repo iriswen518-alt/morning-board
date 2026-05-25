@@ -2321,6 +2321,16 @@ function renderFinanceBody(fin) {  // 舊：用 t187ap17_L；保留作為 fallba
     <div><span class="tw-basic-k">稅後純益率</span><span class="tw-basic-v">${escapeHtml(fin.npm || "—")}%</span></div>`;
 }
 
+function fmtBigKyuan(s) {  // 損益/資負原始值單位為千元，>=兆級用 兆元
+  const n = parseTwseNum(s);
+  if (n == null) return "—";
+  const yuan = n * 1000;
+  if (Math.abs(yuan) >= 1e12) return `${(yuan / 1e12).toFixed(2)} 兆元`;
+  if (Math.abs(yuan) >= 1e8) return `${(yuan / 1e8).toFixed(2)} 億元`;
+  if (Math.abs(yuan) >= 1e4) return `${(yuan / 1e4).toFixed(0)} 萬元`;
+  return `${yuan.toLocaleString("zh-TW")} 元`;
+}
+
 function renderIncomeBody(inc) {
   if (!inc) return `<div class="tw-data-card-hint">查無損益表 (一般業 schema)，請點連結查 Yahoo</div>`;
   const yr = parseInt(inc.year) + 1911;
@@ -2333,7 +2343,7 @@ function renderIncomeBody(inc) {
   const npm = (rev && ni != null) ? (ni / rev * 100) : null;
   return `
     <div class="tw-data-card-sub-inline">${yr}Q${escapeHtml(String(inc.quarter))}</div>
-    <div><span class="tw-basic-k">營業收入</span><span class="tw-basic-v">${fmtRevenue((rev||0)/1000)}</span></div>
+    <div><span class="tw-basic-k">營業收入</span><span class="tw-basic-v">${fmtBigKyuan(inc.revenue)}</span></div>
     <div><span class="tw-basic-k">毛利率</span><span class="tw-basic-v">${gpm != null ? gpm.toFixed(2) + "%" : "—"}</span></div>
     <div><span class="tw-basic-k">營益率</span><span class="tw-basic-v">${opm != null ? opm.toFixed(2) + "%" : "—"}</span></div>
     <div><span class="tw-basic-k">稅後純益率</span><span class="tw-basic-v">${npm != null ? npm.toFixed(2) + "%" : "—"}</span></div>
@@ -2348,9 +2358,9 @@ function renderBalanceBody(bal) {
   const debtRatio = (assets && liab != null) ? (liab / assets * 100) : null;
   return `
     <div class="tw-data-card-sub-inline">${yr}Q${escapeHtml(String(bal.quarter))}</div>
-    <div><span class="tw-basic-k">資產總額</span><span class="tw-basic-v">${fmtRevenue((assets||0)/1000)}</span></div>
-    <div><span class="tw-basic-k">負債總額</span><span class="tw-basic-v">${fmtRevenue((liab||0)/1000)}</span></div>
-    <div><span class="tw-basic-k">權益總額</span><span class="tw-basic-v">${fmtRevenue((parseTwseNum(bal.total_equity)||0)/1000)}</span></div>
+    <div><span class="tw-basic-k">資產總額</span><span class="tw-basic-v">${fmtBigKyuan(bal.total_assets)}</span></div>
+    <div><span class="tw-basic-k">負債總額</span><span class="tw-basic-v">${fmtBigKyuan(bal.total_liab)}</span></div>
+    <div><span class="tw-basic-k">權益總額</span><span class="tw-basic-v">${fmtBigKyuan(bal.total_equity)}</span></div>
     <div><span class="tw-basic-k">負債比率</span><span class="tw-basic-v">${debtRatio != null ? debtRatio.toFixed(1) + "%" : "—"}</span></div>
     <div><span class="tw-basic-k">每股淨值</span><span class="tw-basic-v">${escapeHtml(bal.bvps || "—")} 元</span></div>`;
 }
