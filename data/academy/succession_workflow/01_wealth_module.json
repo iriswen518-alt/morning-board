@@ -1,0 +1,43 @@
+{
+  "chapter": 1,
+  "slug": "wealth_module",
+  "title": "財富傳承模組：法規條文與稅務新聞",
+  "description": "九大主題法規彙編＋每日稅務新聞 feed 的內容架構、適用情境與查詢動線",
+  "objectives": [
+    "說明財富傳承模組九大主題的範圍與彼此的關聯",
+    "依客戶情境快速判斷該打開哪個主題子分頁",
+    "理解每筆條文卡片的欄位（條號、條文、資料來源）並能引用",
+    "掌握每日稅務新聞 feed 的更新機制與資料日揭露邏輯",
+    "在顧問流程中知道何時切換至『稅負試算』或『資產規劃』下一步"
+  ],
+  "sections": [
+    {
+      "heading": "模組定位：法規查詢與情境導引的雙重角色",
+      "html": "<p>財富傳承模組是顧問遇到傳承相關提問時的<strong>第一站</strong>，扮演兩種角色：</p><table><thead><tr><th>角色</th><th>使用情境</th><th>輸出</th></tr></thead><tbody><tr><td>法規查詢</td><td>客戶或同仁問「贈與稅免稅額多少？」「人壽保險金免稅嗎？」</td><td>對應條文全文 + 法源連結</td></tr><tr><td>情境導引</td><td>判斷接下來該用『稅負試算』算金額，或進『資產規劃』組方案</td><td>主題摘要 + 跨模組指引</td></tr></tbody></table><blockquote><p><strong>使用心法</strong>：本模組<strong>不取代</strong>正式法源（全國法規資料庫、財政部函釋），而是把高頻引用條文聚合在一處，避免在十幾個法規之間切換。重大個案仍須回到法源核對最新版本與函釋。</p></blockquote>"
+    },
+    {
+      "heading": "九大主題：依稅目／規範主軸分類",
+      "html": "<p>模組以九個 sub-tab 呈現，每個主題對應一組常用法規條文：</p><table><thead><tr><th>子分頁</th><th>核心法源</th><th>適用客戶提問範例</th></tr></thead><tbody><tr><td><strong>遺產稅</strong></td><td>遺贈稅法第 1、4、7、13、17、18、30、41、41-1 條</td><td>「免稅額多少？」「扣除額怎麼算？」「實物抵繳如何申請？」</td></tr><tr><td><strong>贈與稅</strong></td><td>遺贈稅法第 4、19、20、21、22、24 條</td><td>「每年免稅 244 萬？」「夫妻互贈免稅嗎？」</td></tr><tr><td><strong>信託稅法</strong></td><td>遺贈稅法 §5-1、§5-2、§10-1、§10-2；所得稅法 §3-4</td><td>「他益信託要課贈與稅？」「信託孳息怎麼分？」</td></tr><tr><td><strong>最低稅負制</strong></td><td>所得基本稅額條例 §3、§7、§12</td><td>「670 萬扣除額？」「海外所得要不要申報？」</td></tr><tr><td><strong>CFC 受控外國公司</strong></td><td>所得稅法 §43-3（營利事業）、§12-1（個人）</td><td>「持股 BVI 公司要不要當年課稅？」</td></tr><tr><td><strong>土地增值稅</strong></td><td>土地稅法 §28、§31、§33、§34、§39</td><td>「自用住宅優惠？」「重購退稅？」「繼承課嗎？」</td></tr><tr><td><strong>房地合一稅</strong></td><td>所得稅法 §4-4、§4-5、§14-4、§14-5、§14-6</td><td>「持有兩年內賣稅多少？」「自住 10%？」</td></tr><tr><td><strong>保險商品課稅</strong></td><td>遺贈稅法 §16；保險法 §112；所得稅法 §17、§17-3</td><td>「人壽保險金免遺產稅？」「實質課稅原則？」</td></tr><tr><td><strong>投資商品稅負彙整</strong></td><td>所得稅法（股利、利息、處分）；二代健保補充保費；AMT</td><td>「ETF 配息怎麼課？」「美股股息扣 30%？」</td></tr></tbody></table><p><strong>主題彼此不互斥</strong>：一個案件常跨多個主題。例如『高資產客戶贈與保單給子女』會同時觸及『贈與稅』『保險商品課稅』『最低稅負制』。</p>"
+    },
+    {
+      "heading": "條文卡片：欄位與引用規範",
+      "html": "<p>每個主題下方為一張張<strong>條文卡片</strong>，欄位固定為四項：</p><div class=\"mermaid\">graph LR\n    A[條號 code] --> B[條文標題 title]\n    B --> C[條文內容 content]\n    C --> D[資料來源 source]\n    style A fill:#019AB3,color:#fff\n    style D fill:#17B5AD,color:#fff</div><table><thead><tr><th>欄位</th><th>內容</th><th>使用注意</th></tr></thead><tbody><tr><td><strong>條號</strong></td><td>例：『遺贈稅法 §17』</td><td>引用時須附完整條號，避免簡寫造成爭議</td></tr><tr><td><strong>標題</strong></td><td>條文題綱（如『扣除額』）</td><td>輔助快速辨識，正式文書仍以條號為主</td></tr><tr><td><strong>內容</strong></td><td>條文全文或核心要點</td><td>本模組為摘錄；複雜案件須回到法規資料庫看完整版</td></tr><tr><td><strong>資料來源</strong></td><td>條文版本日期或財政部函釋字號</td><td>函釋會更新，引用前確認生效中</td></tr></tbody></table><blockquote><p><strong>引用規範</strong>：對外文件（如建議書、簡報、客戶郵件）引用條文時，須完整寫出『法名 + 條號 + 項款』與『版本日期或函釋字號』，並提供連結到法源（全國法規資料庫 <code>law.moj.gov.tw</code> 或財政部稅務入口網）。</p></blockquote>"
+    },
+    {
+      "heading": "稅務新聞 sub-tab：每日自動彙整",
+      "html": "<p>九個主題之後的第十個 sub-tab 為『稅務新聞』，與法規條文模組互補。</p><table><thead><tr><th>項目</th><th>內容</th></tr></thead><tbody><tr><td>來源</td><td>財政部、國稅局新聞稿；經濟日報、工商時報、聯合報、中央社等財經媒體之稅務專欄</td></tr><tr><td>更新頻率</td><td>每日早上 08:30 自動爬取最新一日新聞</td></tr><tr><td>欄位</td><td>標題（含原文連結）、摘要、來源媒體</td></tr><tr><td>資料日</td><td>標頭顯示『資料日 YYYY-MM-DD』，使用者可判斷是否已是最新</td></tr></tbody></table><p><strong>使用情境</strong>：</p><ol><li><strong>客戶提問新規上路</strong>：例如『聽說 CFC 制度有變？』先在新聞 tab 搜關鍵字，再到對應法規主題看條文。</li><li><strong>每日讀新聞養感覺</strong>：每天打開掃一遍，建立稅務時事敏感度。</li><li><strong>同仁分享素材</strong>：點開原文連結即可分享給同事或客戶，比自己搜尋更省時。</li></ol><blockquote><p><strong>限制</strong>：新聞為彙整 feed，<strong>非</strong>稅務見解。涉及客戶決策時，須以法規條文與正式函釋為準，新聞僅作為提醒『此議題近期有變動，請查最新法源』的觸發點。</p></blockquote>"
+    },
+    {
+      "heading": "跨模組串接：完成查法後的下一步",
+      "html": "<p>本模組的『查到條文』通常只是顧問流程的<strong>起點</strong>，後續會切到另外兩個 tab：</p><div class=\"mermaid\">graph LR\n    A[財富傳承<br/>查條文] -->|要算金額| B[稅負試算<br/>輸入數字]\n    A -->|要組方案| C[資產規劃<br/>整合配置]\n    B -->|算完| C\n    style A fill:#019AB3,color:#fff\n    style B fill:#17B5AD,color:#fff\n    style C fill:#a8dadc</div><table><thead><tr><th>場景</th><th>下一步切到</th><th>原因</th></tr></thead><tbody><tr><td>客戶問『贈與 1,000 萬要繳多少稅？』</td><td>稅負試算 → 贈與稅</td><td>條文是免稅額 244 萬、累進稅率 10–20%；實際金額要試算</td></tr><tr><td>客戶問『遺產 8,000 萬，孫子代位繼承怎麼算？』</td><td>稅負試算 → 遺產稅</td><td>條文是稅率與扣除額；輸入家庭結構才能算出</td></tr><tr><td>客戶問『1.5 億想分配給三個小孩減稅』</td><td>資產規劃 → Prompt Builder</td><td>跨多年贈與、信託、保險組合，需整合方案</td></tr><tr><td>客戶問『股票賣掉怎麼課？』</td><td>稅負試算 → 房地合一/投資商品比較</td><td>個人持有 vs 透過投資公司持有差距大，比較情境最直觀</td></tr></tbody></table>"
+    },
+    {
+      "heading": "操作要點與常見誤用",
+      "html": "<p><strong>正確用法</strong>：</p><ul><li>把模組當『高頻條文聚合器』，省下在十幾個法規之間切換的時間</li><li>引用時附上條號與來源，並回到法規資料庫確認最新版本</li><li>新聞 tab 當『時事雷達』，看到關鍵字立刻去條文 tab 核對細節</li></ul><p><strong>常見誤用</strong>：</p><ul><li><span style=\"color:#d62828\">把本模組當成『最終法源』直接寫進客戶建議書</span> → 須以全國法規資料庫條文為準</li><li><span style=\"color:#d62828\">看到新聞標題就轉述給客戶</span> → 新聞為摘要，可能省略前提；須讀完原文並核對條文</li><li><span style=\"color:#d62828\">忽略函釋字號</span> → 同一條文搭配不同函釋可能有完全不同結果，例如保險實質課稅</li></ul>"
+    },
+    {
+      "heading": "自我檢測",
+      "html": "<details><summary>Q1：客戶問『把保單給小孩當生日禮物有沒有問題？』，應該打開哪幾個主題子分頁？</summary><p>答：至少三個 — (1) 贈與稅（保單價值贈與是否超過 244 萬免稅額）、(2) 保險商品課稅（要保人變更的稅務效果、實質課稅）、(3) 最低稅負制（大額保險給付納入基本所得）。三者互相牽動，須一併查閱。</p></details><details><summary>Q2：條文卡片的『資料來源』欄位重要嗎？</summary><p>答：非常重要。同一條文搭配不同年份函釋會有截然不同的適用結果，特別是『實質課稅原則』『保險課稅 8 大樣態』『海外所得認定』等議題。引用前須確認函釋是否仍有效。</p></details><details><summary>Q3：稅務新聞 sub-tab 可以直接當建議書引用嗎？</summary><p>答：不可以。新聞為媒體報導摘要，可能省略前提條件或誇大重點。新聞只是『此議題近期有變動』的觸發點，正式引用須回到財政部公告、函釋或全國法規資料庫。</p></details><details><summary>Q4：查完財富傳承條文後，下一步如何判斷該切到『稅負試算』還是『資產規劃』？</summary><p>答：判斷標準 — (1) 客戶問題是『要繳多少稅』『哪個方案稅最低』→ 稅負試算；(2) 客戶問題是『怎麼分配給三個小孩』『要不要設信託』『搭配哪些商品』→ 資產規劃。前者是『算數字』，後者是『出組合』。</p></details><p><strong>資料來源：</strong></p><ul><li>全國法規資料庫 <a href=\"https://law.moj.gov.tw/\" target=\"_blank\" rel=\"noopener\">law.moj.gov.tw</a></li><li>財政部稅務入口網 <a href=\"https://www.etax.nat.gov.tw/\" target=\"_blank\" rel=\"noopener\">etax.nat.gov.tw</a></li><li>財政部臺北國稅局 <a href=\"https://www.ntbt.gov.tw/\" target=\"_blank\" rel=\"noopener\">ntbt.gov.tw</a></li></ul>"
+    }
+  ]
+}

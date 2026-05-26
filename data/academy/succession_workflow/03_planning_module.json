@@ -1,0 +1,43 @@
+{
+  "chapter": 3,
+  "slug": "planning_module",
+  "title": "資產規劃模組：Prompt 工作流與合規邊界",
+  "description": "Prompt Builder 設計理念、客戶情境輸入、Claude.ai 串接動線、PII 與適合度合規紅線",
+  "objectives": [
+    "說明資產規劃模組為何採用『Prompt Builder + 自帶 LLM』設計，而非直接呼叫雲端 API",
+    "正確填寫客戶情境輸入表單，並能解讀生成的結構化 Prompt",
+    "完成『複製 Prompt → 貼至 Claude.ai → 結果貼回美化』完整工作流",
+    "區分本模組可給的『通用建議』與不可逾越的『法定銷售程序』",
+    "識別 PII 紅線，避免在 Prompt 中輸入任何客戶可辨識個資"
+  ],
+  "sections": [
+    {
+      "heading": "模組定位：零後端的個人 PoC 工作流",
+      "html": "<p>資產規劃模組是<strong>顧問個人試作工具</strong>，定位明確：</p><table><thead><tr><th>是什麼</th><th>不是什麼</th></tr></thead><tbody><tr><td>顧問個人前置思考的草稿產生器</td><td>機構正式的客戶建議書生成系統</td></tr><tr><td>把零散資訊整理成結構化 Prompt</td><td>直接生成可交付的法定文件</td></tr><tr><td>幫顧問建立『提案骨架』</td><td>取代 KYC、適合度評估、商品適配</td></tr><tr><td>跨商品（基金／保險／結構／房產）整合視角</td><td>單一商品的詳細試算或銷售話術</td></tr></tbody></table><blockquote><p><strong>設計理念</strong>：模組採『零後端 + 自帶 LLM』架構 — 表單在前端組裝 Prompt，由顧問<strong>自己</strong>貼到自己的 Claude.ai 帳號跑，結果再貼回前端美化呈現。雲端不存任何客戶資料，避免機構資料外洩風險。</p></blockquote>"
+    },
+    {
+      "heading": "三段式工作流：填表 → 跑 LLM → 回貼",
+      "html": "<div class=\"mermaid\">graph LR\n    A[填表單<br/>客戶情境結構化] --> B[組 Prompt<br/>自動串接系統提示]\n    B --> C[複製到 Claude.ai<br/>顧問自己的帳號]\n    C --> D[貼回 PWA<br/>結果美化呈現]\n    D --> E[顧問人工複核<br/>標記採納/修改/拒絕]\n    style A fill:#019AB3,color:#fff\n    style C fill:#17B5AD,color:#fff\n    style E fill:#a8dadc</div><table><thead><tr><th>階段</th><th>位置</th><th>顧問動作</th><th>系統動作</th></tr></thead><tbody><tr><td>1. 填表</td><td>本模組左側表單</td><td>輸入年齡區間、資產規模、目標、風險偏好、現有持倉、特殊考量</td><td>欄位驗證、防 PII 提示</td></tr><tr><td>2. 組 Prompt</td><td>本模組</td><td>按『生成 Prompt』</td><td>套用 system prompt 模板、結構化客戶情境</td></tr><tr><td>3. 複製到 Claude.ai</td><td>顧問自己的 claude.ai</td><td>貼 Prompt 跑、等結果</td><td>（無 — 在 Claude.ai 上跑）</td></tr><tr><td>4. 回貼結果</td><td>本模組右側貼貼區</td><td>把 Claude.ai 輸出整段複製貼回</td><td>解析結構、美化呈現、加上合規揭露</td></tr><tr><td>5. 採納標記</td><td>本模組</td><td>對每段建議按『採納／修改／拒絕』</td><td>留下使用回饋（供後續調整 Prompt）</td></tr></tbody></table>"
+    },
+    {
+      "heading": "客戶情境輸入：可填什麼、不可填什麼",
+      "html": "<p>表單欄位設計刻意限制在『去識別、結構化』，避免 PII：</p><table><thead><tr><th>可填欄位</th><th>範例</th></tr></thead><tbody><tr><td>年齡區間</td><td>『45–54 歲』『退休前 5 年內』</td></tr><tr><td>資產規模區間</td><td>『3,000 萬–1 億』『1 億以上』</td></tr><tr><td>家庭結構（不具名）</td><td>『已婚、兩名未成年子女』</td></tr><tr><td>主要目標</td><td>『退休現金流』『子女教育金』『資產傳承』</td></tr><tr><td>風險偏好</td><td>『保守』『穩健』『成長』</td></tr><tr><td>現有持倉類別</td><td>『定存』『台股 ETF』『美股個股』『保單』</td></tr><tr><td>特殊考量</td><td>『需要海外資金移動』『近期計畫購屋』</td></tr></tbody></table><blockquote><p><strong>嚴禁輸入</strong>（PII 紅線）：</p><ul><li>客戶姓名、身分證字號、出生年月日</li><li>具體地址、電話、Email</li><li>具體帳號、券商戶號、保單號碼</li><li>具體公司名稱（若客戶為法人或股東）</li><li>任何足以反推客戶身份的組合資訊</li></ul><p>違反 PII 紅線將同時觸犯《個人資料保護法》§19、§20，與機構內控規範。</p></blockquote>"
+    },
+    {
+      "heading": "LLM 輸出的有效範圍：通用建議 vs 法定程序",
+      "html": "<p>Claude.ai 跑出的結果<strong>只能</strong>停留在『通用類別建議』層次，不能取代以下法定程序：</p><table><thead><tr><th>LLM 可給</th><th>必須走機構正式程序</th></tr></thead><tbody><tr><td>『建議配置投資等級債約 30%』</td><td>具體債券選品（須適合度評估＋商品池）</td></tr><tr><td>『可考慮設立子女教育信託』</td><td>信託契約條款（須信託業務與律師）</td></tr><tr><td>『大額保單可搭配減低 AMT 衝擊』</td><td>具體保單推薦（須適合度＋商品說明書）</td></tr><tr><td>『建議跨年贈與分批進行』</td><td>稅務申報與簽證（須會計師）</td></tr><tr><td>『資產配置比例 60/40』</td><td>實際下單（須完成 KYC、風險屬性核對）</td></tr></tbody></table><blockquote><p><strong>關鍵分界</strong>：通用方向 OK，具體商品／契約／簽證 NG。輸出僅作為顧問前置思考的草稿，<strong>正式對客戶銷售或建議書</strong>須完整完成 KYC、適合度評估、商品說明書揭露、簽署等法定流程。</p></blockquote>"
+    },
+    {
+      "heading": "合規揭露：強制顯示的四項警示",
+      "html": "<p>本模組會於介面與輸出文件強制顯示以下四項警示，<strong>不可關閉</strong>：</p><ol><li><strong>個人試作工具揭露</strong>：『此為個人試作工具，僅供工作流概念驗證；正式上線需走機構 IT／法遵程序』</li><li><strong>PII 禁止</strong>：『禁止輸入客戶實名、身分證、帳號、地址等任何 PII；只填代稱與結構化欄位』</li><li><strong>法定程序提示</strong>：『輸出僅為理財顧問參考草稿，正式商品銷售須完成 KYC、適合度評估、商品說明書揭露等法定程序』</li><li><strong>商品池限制</strong>：『商品建議只給通用類別（如「投資等級債」），實際選品請依任職機構商品池與適合度評估』</li></ol><blockquote><p><strong>為什麼必須顯示</strong>：理財顧問業務受多項法規規範（金融消費者保護法、銀行法、信託業法、證券投資信託及顧問法）。對外輸出若隱去這些揭露，可能被認定為『未盡告知義務』『誤導客戶』而觸法。模組於前端介面與貼回結果文件雙重位置強制揭露，是法遵設計，非可選功能。</p></blockquote>"
+    },
+    {
+      "heading": "使用節奏：何時打開、何時不該開",
+      "html": "<table><thead><tr><th>適合打開</th><th>不適合打開</th></tr></thead><tbody><tr><td>客戶完成 KYC 後，顧問做提案前置思考</td><td>第一次見面尚未 KYC 時</td></tr><tr><td>跨多商品（基金＋保險＋信託）需要整合視角</td><td>單一商品的詳細試算（用稅負試算或內部試算系統）</td></tr><tr><td>顧問自我學習新型客戶情境</td><td>客戶就在現場、預期立即生成可交付文件</td></tr><tr><td>內部 brainstorm、跟同事討論案例（去識別）</td><td>客戶資料未去識別前</td></tr><tr><td>盤點同類型客戶可能的方案組合</td><td>取代會計師、律師、稅務專家的專業意見</td></tr></tbody></table><p><strong>關鍵原則</strong>：本模組是<strong>顧問的個人助理</strong>，不是<strong>客戶的服務介面</strong>。使用情境是顧問在後台用，不是把畫面 turn 給客戶看。</p>"
+    },
+    {
+      "heading": "自我檢測",
+      "html": "<details><summary>Q1：客戶剛打電話來諮詢，可以馬上打開資產規劃模組請 LLM 給建議嗎？</summary><p>答：不可以。本模組設計為『KYC 完成、適合度評估完成後』顧問做提案前置思考的工具。電話諮詢階段尚未做 KYC，且無法在通話中即時輸入結構化欄位、跑 LLM、解讀結果。應先約面談、完成 KYC，再用本模組做後續方案前置整理。</p></details><details><summary>Q2：表單裡有一欄『特殊考量』，可以寫『客戶王董最近想買新店的房子』嗎？</summary><p>答：不可以。『王董』為可識別個資、『新店』為具體地址，皆違反 PII 紅線。正確寫法：『高資產客戶近期計畫購置自住房地，需考量資金來源與稅負』。去識別、結構化、不指涉特定人。</p></details><details><summary>Q3：LLM 輸出建議『可考慮配置 ABC 投信的某基金作為核心』，可以直接照搬給客戶嗎？</summary><p>答：不可以。LLM 不知道顧問任職機構的商品池、不知客戶適合度評估結果。建議書中具體選品須回到機構商品池，依適合度與客戶 KYC 結果決定。LLM 提到的具體品名僅為示例，不可直接引用。</p></details><details><summary>Q4：為什麼模組不直接接 LLM API，而要顧問複製貼上到 Claude.ai？</summary><p>答：兩個主要理由 — (1) 機構資料外洩風險：若由 PWA 後端呼叫 LLM API，客戶資料須經第三方雲端，違反金融機構資安規範；(2) PoC 階段降低 IT/法遵門檻：個人 PoC 不上機構系統，由顧問用自己的 Claude.ai 帳號跑，僅作工作流概念驗證。正式上線版本須走機構 IT 採購與法遵核可流程。</p></details><p><strong>資料來源：</strong></p><ul><li>個人資料保護法 <a href=\"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021\" target=\"_blank\" rel=\"noopener\">pcode I0050021</a></li><li>金融消費者保護法 <a href=\"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380237\" target=\"_blank\" rel=\"noopener\">pcode G0380237</a></li><li>證券投資信託及顧問法 <a href=\"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0400051\" target=\"_blank\" rel=\"noopener\">pcode G0400051</a></li><li>金融機構辦理財富管理業務作業準則（金管會發布版本）</li></ul>"
+    }
+  ]
+}
