@@ -1,0 +1,48 @@
+{
+  "course": "sales",
+  "course_name": "銷售與服務",
+  "chapters": [
+    {
+      "slug": "process",
+      "title": "銷售流程",
+      "description": "整體銷售七階段、表單填寫與系統登打",
+      "file": "01_process.json"
+    },
+    {
+      "slug": "relationship",
+      "title": "客戶關係維護",
+      "description": "關係經營策略、反對問題處理與後續服務",
+      "file": "02_relationship.json"
+    },
+    {
+      "slug": "complaint",
+      "title": "客戶抱怨處理",
+      "description": "抱怨分級、SOP、補救措施與案例",
+      "file": "03_complaint.json"
+    },
+    {
+      "slug": "disc",
+      "title": "客戶辨識 DISC",
+      "description": "DISC 與人格特質分析、依特質調整溝通",
+      "file": "04_disc.json"
+    },
+    {
+      "slug": "spin",
+      "title": "顧問式銷售 SPIN",
+      "description": "Situation／Problem／Implication／Need-payoff 四式提問",
+      "file": "05_spin.json"
+    },
+    {
+      "slug": "operation",
+      "title": "系統與下單流程",
+      "description": "財管系統、保險 e 點通、投資／保險下單表單",
+      "file": "06_operation.json"
+    },
+    {
+      "slug": "regulation",
+      "title": "法規與監理",
+      "description": "銷售七階段法定揭露、契約解約權與留證義務",
+      "file": "07_regulation.json"
+    }
+  ]
+}

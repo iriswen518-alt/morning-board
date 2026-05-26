@@ -1,0 +1,48 @@
+{
+  "course": "trust",
+  "course_name": "信託業務",
+  "chapters": [
+    {
+      "slug": "overview",
+      "title": "信託概論",
+      "description": "信託法基礎、信託架構、委託人/受託人/受益人關係",
+      "file": "01_overview.json"
+    },
+    {
+      "slug": "family_succession",
+      "title": "家族信託—財產傳承",
+      "description": "家族財產傳承相關民法、稅法案例解析",
+      "file": "02_family_succession.json"
+    },
+    {
+      "slug": "disability",
+      "title": "家族信託—失能規劃",
+      "description": "失能財產規劃、監護宣告與信託搭配",
+      "file": "03_disability.json"
+    },
+    {
+      "slug": "hnw_investment",
+      "title": "家族信託—高資產投資",
+      "description": "高資產投資金融商品信託架構與風險",
+      "file": "04_hnw_investment.json"
+    },
+    {
+      "slug": "insurance_trust",
+      "title": "保險金信託",
+      "description": "保險金信託架構、稅務優勢與常見設計",
+      "file": "05_insurance_trust.json"
+    },
+    {
+      "slug": "tax",
+      "title": "信託稅務",
+      "description": "贈與稅、遺產稅、所得稅在信託架構下的處理",
+      "file": "06_tax.json"
+    },
+    {
+      "slug": "regulation",
+      "title": "法規與監理",
+      "description": "信託法、信託業法與主管機關規範",
+      "file": "07_regulation.json"
+    }
+  ]
+}

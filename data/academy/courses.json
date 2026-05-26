@@ -48,6 +48,48 @@
       "active": true,
       "description": "涵蓋估價、交易、稅務、區位與風險，建立不動產投資基本盤。",
       "icon": "<rect x=\"4\" y=\"3\" width=\"16\" height=\"18\" rx=\"1\"/><path d=\"M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2\"/><path d=\"M11 21v-3h2v3\"/>"
+    },
+    {
+      "slug": "overseas_bonds",
+      "name": "海外債",
+      "active": true,
+      "description": "從信用評等、殖利率、風險到稅務與監理，掌握海外債券投資全貌。",
+      "icon": "<path d=\"M6 3h9l4 4v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z\"/><path d=\"M14 3v5h5\"/><path d=\"M8 13h8M8 17h5\"/><circle cx=\"16.5\" cy=\"17\" r=\"1.5\"/>"
+    },
+    {
+      "slug": "compliance",
+      "name": "法令遵循",
+      "active": true,
+      "description": "法規、AML、反詐騙、個資與金保法、內控查核，落實合規操作底線。",
+      "icon": "<path d=\"M12 3v18\"/><path d=\"M5 7h14\"/><path d=\"M5 7l-2 6h4z\"/><path d=\"M19 7l-2 6h4z\"/><path d=\"M9 21h6\"/>"
+    },
+    {
+      "slug": "sales",
+      "name": "銷售與服務",
+      "active": true,
+      "description": "銷售流程、DISC 客戶辨識、SPIN 顧問式銷售、抱怨處理與系統操作。",
+      "icon": "<circle cx=\"9\" cy=\"8\" r=\"3\"/><circle cx=\"17\" cy=\"10\" r=\"2.5\"/><path d=\"M2 21v-1c0-3 3-5 7-5s7 2 7 5v1\"/><path d=\"M14 21v-0.5c0-1.5 1.5-2.5 3-2.5s3 1 3 2.5V21\"/>"
+    },
+    {
+      "slug": "asset_allocation",
+      "name": "資產配置",
+      "active": true,
+      "description": "基礎與進階配置、跨商品整合提案、國際資產配置與動態再平衡。",
+      "icon": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 3v9l8 4\"/><path d=\"M12 12L4 16\"/>"
+    },
+    {
+      "slug": "trust",
+      "name": "信託業務",
+      "active": true,
+      "description": "家族信託、失能規劃、保險金信託與信託稅務，掌握傳承架構工具。",
+      "icon": "<rect x=\"4\" y=\"9\" width=\"16\" height=\"12\" rx=\"2\"/><path d=\"M8 9V6a4 4 0 0 1 8 0v3\"/><circle cx=\"12\" cy=\"15\" r=\"1.5\"/><path d=\"M12 17v2\"/>"
+    },
+    {
+      "slug": "macro",
+      "name": "總體經濟",
+      "active": true,
+      "description": "經濟成長、通膨、貨幣與財政政策、匯率、景氣循環與重要指標。",
+      "icon": "<path d=\"M3 17l6-6 4 4 8-8\"/><path d=\"M17 7h4v4\"/><path d=\"M3 21h18\"/>"
     }
   ]
 }

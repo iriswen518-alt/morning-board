@@ -1,0 +1,48 @@
+{
+  "course": "compliance",
+  "course_name": "法令遵循",
+  "chapters": [
+    {
+      "slug": "overview",
+      "title": "法規概論",
+      "description": "銀行法、銀行業辦理財富管理業務應注意事項與金管會函釋體系",
+      "file": "01_overview.json"
+    },
+    {
+      "slug": "aml",
+      "title": "防制洗錢",
+      "description": "AML 概念、疑似異常交易態樣辨識、通報流程與案例",
+      "file": "02_aml.json"
+    },
+    {
+      "slug": "anti_fraud",
+      "title": "反詐騙防制",
+      "description": "最新詐騙手法、防制宣導與第一線辨識責任",
+      "file": "03_anti_fraud.json"
+    },
+    {
+      "slug": "consumer",
+      "title": "客戶權益保障",
+      "description": "個資法、金融消費者保護法案例解析與遵循重點",
+      "file": "04_consumer.json"
+    },
+    {
+      "slug": "suitability",
+      "title": "銷售適合度",
+      "description": "KYC／KYP 原則、商品適合度評估與留紀錄要求",
+      "file": "05_suitability.json"
+    },
+    {
+      "slug": "audit",
+      "title": "內控與查核",
+      "description": "重點查核事項、常見缺失與三道防線分工",
+      "file": "06_audit.json"
+    },
+    {
+      "slug": "disclosure",
+      "title": "商品規範與系統",
+      "description": "基金、海外債券相關規範及系統操作介紹",
+      "file": "07_disclosure.json"
+    }
+  ]
+}

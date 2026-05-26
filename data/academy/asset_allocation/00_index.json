@@ -1,0 +1,48 @@
+{
+  "course": "asset_allocation",
+  "course_name": "資產配置",
+  "chapters": [
+    {
+      "slug": "basics",
+      "title": "基礎資產配置",
+      "description": "股債配置、風險概念、相關係數與分散原則",
+      "file": "01_basics.json"
+    },
+    {
+      "slug": "advanced",
+      "title": "進階資產配置",
+      "description": "戰術配置（TAA）、戰略配置（SAA）、再平衡頻率",
+      "file": "02_advanced.json"
+    },
+    {
+      "slug": "cross_product",
+      "title": "跨商品整合",
+      "description": "授信、股權、信託、投資、保險的整合提案邏輯",
+      "file": "03_cross_product.json"
+    },
+    {
+      "slug": "international",
+      "title": "國際資產配置",
+      "description": "跨境投資、匯率風險、全球與區域配置",
+      "file": "04_international.json"
+    },
+    {
+      "slug": "risk_mgmt",
+      "title": "風險管理",
+      "description": "波動度、最大回撤、VaR 與情境分析",
+      "file": "05_risk_mgmt.json"
+    },
+    {
+      "slug": "rebalance",
+      "title": "動態再平衡",
+      "description": "閾值法、時間法、稅務考量下的再平衡執行",
+      "file": "06_rebalance.json"
+    },
+    {
+      "slug": "regulation",
+      "title": "法規與監理",
+      "description": "跨境投資稅務、外匯規範與行內額度管理",
+      "file": "07_regulation.json"
+    }
+  ]
+}

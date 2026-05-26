@@ -1,0 +1,48 @@
+{
+  "course": "overseas_bonds",
+  "course_name": "海外債",
+  "chapters": [
+    {
+      "slug": "overview",
+      "title": "商品概論",
+      "description": "美債、歐債、亞債、新興市場債的市場分布與發行結構",
+      "file": "01_overview.json"
+    },
+    {
+      "slug": "rating",
+      "title": "信用評等",
+      "description": "投資等級、高收益、評等機構解讀與評等變動影響",
+      "file": "02_rating.json"
+    },
+    {
+      "slug": "yield",
+      "title": "殖利率與價格",
+      "description": "殖利率曲線、到期殖利率（YTM）、票息與價格反向關係",
+      "file": "03_yield.json"
+    },
+    {
+      "slug": "risk",
+      "title": "風險類型",
+      "description": "信用、利率、匯率、流動性風險的辨識與量化",
+      "file": "04_risk.json"
+    },
+    {
+      "slug": "tax",
+      "title": "稅務規劃",
+      "description": "海外利息所得、最低稅負制與分離課稅選項",
+      "file": "05_tax.json"
+    },
+    {
+      "slug": "strategy",
+      "title": "投資策略",
+      "description": "階梯式投資、久期管理、債券基金 vs 直接投資",
+      "file": "06_strategy.json"
+    },
+    {
+      "slug": "regulation",
+      "title": "法規與監理",
+      "description": "海外債券銷售規範、KYC/KYP 與系統操作要點",
+      "file": "07_regulation.json"
+    }
+  ]
+}
