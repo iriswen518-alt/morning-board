@@ -29,6 +29,34 @@
   }
 }
 
+/* === 工作流類課程：灰底色調，與知識主題課程區隔 === */
+#course-tabs.tabs.tabs-wrap .tab.tone-muted {
+  color: var(--academy-muted);
+}
+#course-tabs.tabs.tabs-wrap .tab.tone-muted.active {
+  background: linear-gradient(135deg, #9ca3af, #6b7785);
+  color: #fff;
+}
+.course-pane.tone-muted .course-hero {
+  background: linear-gradient(135deg, #eef0f2 0%, #e2e6ea 100%);
+  border-color: #d1d5db;
+}
+.course-pane.tone-muted .course-hero-icon {
+  background: linear-gradient(135deg, #9ca3af, #6b7785);
+  box-shadow: 0 4px 10px rgba(107, 119, 133, 0.22);
+}
+.course-pane.tone-muted .course-hero-badge {
+  background: #6b7785;
+}
+.course-pane.tone-muted .chapter-list li a {
+  background: #f1f3f5;
+  border-color: #d8dde2;
+}
+.course-pane.tone-muted .chapter-list li a:hover {
+  border-color: #6b7785;
+  box-shadow: 0 4px 12px rgba(107, 119, 133, 0.18);
+}
+
 .academy-main .section-title {
   font-size: 18px;
   color: var(--brand-deep);

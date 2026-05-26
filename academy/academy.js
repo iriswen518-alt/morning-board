@@ -19,15 +19,16 @@ async function loadCourses() {
     tabsEl.innerHTML = '';
     panesEl.innerHTML = '';
     courses.forEach((course, i) => {
+      const toneClass = course.tone === 'muted' ? ' tone-muted' : '';
       const btn = document.createElement('button');
       btn.type = 'button';
-      btn.className = 'tab' + (i === 0 ? ' active' : '');
+      btn.className = 'tab' + (i === 0 ? ' active' : '') + toneClass;
       btn.dataset.course = course.slug;
       btn.textContent = course.name;
       tabsEl.appendChild(btn);
 
       const pane = document.createElement('div');
-      pane.className = 'course-pane' + (i === 0 ? ' active' : '');
+      pane.className = 'course-pane' + (i === 0 ? ' active' : '') + toneClass;
       pane.dataset.course = course.slug;
       const idx = indexes[i];
       const chapterCount = idx?.chapters?.length || 0;
