@@ -3,10 +3,10 @@
   "course_name": "財富傳承",
   "chapters": [
     {
-      "slug": "wealth_module",
-      "title": "法規新聞",
-      "description": "九大主題法規彙編＋每日稅務新聞 feed 的內容架構、適用情境與查詢動線",
-      "file": "01_wealth_module.json"
+      "slug": "relevant_tax_law",
+      "title": "相關稅法",
+      "description": "傳承相關稅法條文彙整：遺贈稅、所得稅、最低稅負、土增、契稅、信託",
+      "file": "01_relevant_tax_law.json"
     },
     {
       "slug": "tax_calc_module",
@@ -15,16 +15,10 @@
       "file": "02_tax_calc_module.json"
     },
     {
-      "slug": "planning_module",
-      "title": "資產規劃",
-      "description": "Prompt Builder 設計理念、客戶情境輸入、Claude.ai 串接動線、PII 與適合度合規紅線",
-      "file": "03_planning_module.json"
-    },
-    {
-      "slug": "integration",
-      "title": "三模整合",
-      "description": "以實務個案串接『查法→試算→出方案』，掌握三個 tab 在顧問流程中的位置與切換時機",
-      "file": "04_integration.json"
+      "slug": "tax_cases",
+      "title": "稅負案例",
+      "description": "實務稅務案例集：遺贈、保險、信託、房地、跨境的常見情境分析",
+      "file": "03_tax_cases.json"
     }
   ]
 }
