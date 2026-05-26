@@ -4615,9 +4615,7 @@ function renderLumpFundCards() {
     const chips = currencyChip(f.currency);
     return `
     <div class="fund-card">
-      <h3>${nameHtml}</h3>
-      ${chips ? `<div style="margin-bottom:6px">${chips}</div>` : ""}
-      <p class="tagline">${escapeHtml(f.tagline || "")}</p>
+      <h3 style="display:flex;align-items:center;flex-wrap:wrap;gap:6px">${nameHtml}${chips}</h3>
       <div class="grid">
         <div>
           <label>淨值</label>
@@ -4643,13 +4641,11 @@ function renderDcaFundCards() {
       ? `<a href="${f.source_url}" target="_blank" rel="noopener">${escapeHtml(f.name_zh)}</a>`
       : escapeHtml(f.name_zh);
     const catChip = f.category
-      ? `<span class="chip chip-default" style="background:#E5F2F5;color:var(--brand-deep);margin-left:4px">${escapeHtml(f.category)}</span>`
+      ? `<span class="chip chip-default" style="background:#E5F2F5;color:var(--brand-deep)">${escapeHtml(f.category)}</span>`
       : "";
     return `
     <div class="fund-card">
-      <h3>${nameHtml}</h3>
-      <div style="margin-bottom:6px">${currencyChip(f.currency)}${catChip}</div>
-      <p class="tagline">${escapeHtml(f.tagline || "")}</p>
+      <h3 style="display:flex;align-items:center;flex-wrap:wrap;gap:6px">${nameHtml}${currencyChip(f.currency)}${catChip}</h3>
       <div class="grid">
         <div>
           <label>淨值</label>
