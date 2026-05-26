@@ -3,11 +3,32 @@
   "slug": "suitability",
   "title": "銷售適合度",
   "description": "KYC／KYP 原則、商品適合度評估與留紀錄要求",
-  "objectives": [],
+  "objectives": [
+    "區分 KYC 與 KYP 的不同層次與互動關係",
+    "掌握客戶分類的五大面向與評估方法",
+    "理解商品分級制度與風險屬性對照",
+    "熟悉適合度匹配矩陣與留證義務"
+  ],
   "sections": [
     {
-      "heading": "本章節內容建構中",
-      "html": "<p>本章節內容正在準備中，敬請期待後續更新。</p><p>主題摘要：KYC／KYP 原則、商品適合度評估與留紀錄要求</p>"
+      "heading": "適合度原則的法律基礎",
+      "html": "<p>「適合度原則」（Suitability）來自金融消費者保護法第 9 條，並具體展現於〈銀行業辦理財富管理業務應注意事項〉。核心精神：賣對的商品給對的客戶。</p><div class=\"mermaid\">graph LR\n    A[KYC<br/>Know Your Customer<br/>了解客戶] --> M[適合度匹配<br/>Matching]\n    B[KYP<br/>Know Your Product<br/>了解商品] --> M\n    M --> R[完成銷售或拒絕]\n    style A fill:#019AB3,color:#fff\n    style B fill:#17B5AD,color:#fff\n    style M fill:#a8dadc</div><table><thead><tr><th>條文</th><th>核心要求</th></tr></thead><tbody><tr><td>金保法 §9</td><td>金融服務業應充分了解金融消費者之相關資料</td></tr><tr><td>金保法 §10</td><td>金融服務業應充分說明該金融商品、服務或契約之重要內容</td></tr><tr><td>銀行業辦理財富管理業務應注意事項</td><td>客戶分類、商品分類、適合度評估、紀錄留存</td></tr></tbody></table><p><strong>違反代價：</strong>除主管機關行政處分（罰鍰）外，客戶可依民法第 184 條侵權行為請求損害賠償。</p>"
+    },
+    {
+      "heading": "KYC：客戶了解五大面向",
+      "html": "<p>客戶了解程序必須涵蓋下列五面向，每年至少覆核一次或重大事件時即時更新。</p><table><thead><tr><th>面向</th><th>蒐集項目</th><th>查證方式</th></tr></thead><tbody><tr><td>身分</td><td>姓名、身分證、聯絡方式、戶籍／居所</td><td>身分證正本核驗</td></tr><tr><td>財務狀況</td><td>年收入、淨資產、負債、可投資金額</td><td>客戶聲明、扣繳憑單、財產清單</td></tr><tr><td>投資經驗</td><td>過往投資商品類型、年數、金額</td><td>客戶問卷</td></tr><tr><td>投資目的</td><td>保本／成長／退休／傳承</td><td>客戶問卷、訪談紀錄</td></tr><tr><td>風險承受能力</td><td>可承受損失幅度、投資期限</td><td>標準化風險屬性問卷（RTQ）</td></tr></tbody></table><div class=\"mermaid\">graph TD\n    A[客戶風險屬性問卷] --> B{得分區間}\n    B -->|低分| C[保守型 C1]\n    B -->|中低| D[穩健型 C2]\n    B -->|中| E[平衡型 C3]\n    B -->|中高| F[成長型 C4]\n    B -->|高| G[積極型 C5]\n    style C fill:#2a9d8f,color:#fff\n    style E fill:#f4a261\n    style G fill:#d62828,color:#fff</div><p>客戶分類有效期一般為一年。重大事件（如退休、繼承、商品大幅虧損）發生時應重新評估。</p>"
+    },
+    {
+      "heading": "KYP：商品了解與分級",
+      "html": "<p>金融機構必須對銷售之每項商品建立「商品評估書」（Product Assessment），並分級對應到客戶風險屬性。</p><table><thead><tr><th>商品風險等級</th><th>典型商品</th><th>對應客戶屬性</th></tr></thead><tbody><tr><td>RR1 極低</td><td>本國公債、貨幣型基金</td><td>C1 以上</td></tr><tr><td>RR2 低</td><td>投資級債券、保守型基金、利率型結構債</td><td>C2 以上</td></tr><tr><td>RR3 中</td><td>平衡型基金、新興市場債、本國股票型基金</td><td>C3 以上</td></tr><tr><td>RR4 中高</td><td>單一國家股票基金、高收益債、ELN</td><td>C4 以上</td></tr><tr><td>RR5 高</td><td>產業型基金、單一新興股票、結構型商品（含選擇權）</td><td>C5</td></tr></tbody></table><details><summary>商品評估書應涵蓋之要素</summary><ul><li>商品結構（含選擇權元件、保本條件）</li><li>市場風險、信用風險、流動性風險、匯率風險</li><li>最大可能損失（情境模擬）</li><li>費用結構（前收／後收、申贖手續費、保管費）</li><li>稅務影響</li><li>提前贖回／到期條件</li><li>類似商品比較</li></ul></details>"
+    },
+    {
+      "heading": "適合度匹配矩陣",
+      "html": "<p>適合度匹配規則的核心是「商品風險不得高於客戶風險屬性」。下表是常用之 5×5 矩陣。</p><table><thead><tr><th>客戶＼商品</th><th>RR1</th><th>RR2</th><th>RR3</th><th>RR4</th><th>RR5</th></tr></thead><tbody><tr><td><strong>C1 保守</strong></td><td>OK</td><td>禁</td><td>禁</td><td>禁</td><td>禁</td></tr><tr><td><strong>C2 穩健</strong></td><td>OK</td><td>OK</td><td>禁</td><td>禁</td><td>禁</td></tr><tr><td><strong>C3 平衡</strong></td><td>OK</td><td>OK</td><td>OK</td><td>禁</td><td>禁</td></tr><tr><td><strong>C4 成長</strong></td><td>OK</td><td>OK</td><td>OK</td><td>OK</td><td>禁</td></tr><tr><td><strong>C5 積極</strong></td><td>OK</td><td>OK</td><td>OK</td><td>OK</td><td>OK</td></tr></tbody></table><p><strong>例外條款：</strong>客戶若主動要求購買高於其屬性等級之商品，須另行簽署「逾屬性聲明書」並由分行主管核准。但此例外不應成為常態，主管機關會查核例外比例。</p><div class=\"mermaid\">graph LR\n    A[客戶要求逾屬性商品] --> B{銀行評估}\n    B -->|風險可控| C[書面風險告知]\n    C --> D[客戶簽署逾屬性聲明書]\n    D --> E[分行主管書面核准]\n    E --> F[完成銷售]\n    B -->|風險過高| G[拒絕銷售]\n    style D fill:#f4a261\n    style G fill:#d62828,color:#fff</div>"
+    },
+    {
+      "heading": "留證義務與常見缺失",
+      "html": "<p>適合度文件保存期限至少為「業務關係結束起 5 年」（與洗錢防制法同步），實務多保存 7-10 年。</p><table><thead><tr><th>留證項目</th><th>具體文件</th></tr></thead><tbody><tr><td>客戶身分</td><td>身分證影本、開戶申請書</td></tr><tr><td>風險評估</td><td>風險屬性問卷正本、評估結果書</td></tr><tr><td>商品說明</td><td>商品說明書交付證明、客戶簽收</td></tr><tr><td>風險揭露</td><td>風險預告書、客戶簽署</td></tr><tr><td>銷售過程</td><td>錄音檔、錄影檔（複雜商品）、訪談紀錄</td></tr><tr><td>逾屬性銷售</td><td>逾屬性聲明書、主管核准書</td></tr></tbody></table><details><summary>主管機關裁罰常見缺失 Top 5</summary><ol><li><strong>風險屬性問卷形式化</strong>：問卷由業務員代填、客戶簽名未核對</li><li><strong>逾屬性銷售比例過高</strong>：例外變常規，未經主管核准</li><li><strong>商品說明書未交付</strong>：僅口頭說明，無交付證明</li><li><strong>錄音錄影檔損毀或缺漏</strong>：複雜商品銷售過程未留存</li><li><strong>客戶覆核期間超過一年</strong>：未依規定每年重新評估</li></ol></details><p><strong>資料來源：</strong>金融消費者保護法（G0380226）、銀行業辦理財富管理業務應注意事項（金管會 <a href=\"https://www.fsc.gov.tw/\" target=\"_blank\" rel=\"noopener\">fsc.gov.tw</a>）</p>"
     }
   ]
 }
