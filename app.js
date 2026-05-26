@@ -1999,8 +1999,8 @@ function twYahooSuffix(market) {
 }
 function fmtNum(n, d) {
   if (n === null || n === undefined || Number.isNaN(n)) return "—";
-  const opts = d != null ? { minimumFractionDigits: d, maximumFractionDigits: d } : {};
-  return Number(n).toLocaleString("zh-TW", opts);
+  const dd = d != null ? d : 2;
+  return Number(n).toLocaleString("zh-TW", { minimumFractionDigits: dd, maximumFractionDigits: dd });
 }
 function fmtVolume(v) {
   if (v == null || Number.isNaN(v)) return "—";
