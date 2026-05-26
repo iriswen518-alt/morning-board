@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-26T15:29:20+08:00",
+  "generated_at": "2026-05-26T17:02:00+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -63,18 +63,6 @@
       "error": null
     },
     {
-      "symbol": "MRVL",
-      "name_zh": "邁威爾",
-      "kind": "US",
-      "price": 196.33,
-      "change_pct": 2.96,
-      "mtd_pct": 18.88,
-      "ytd_pct": 131.03,
-      "market_date": "2026-05-22",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MRVL.US",
-      "error": null
-    },
-    {
       "symbol": "RDW",
       "name_zh": "Redwire",
       "kind": "US",
@@ -87,27 +75,15 @@
       "error": null
     },
     {
-      "symbol": "SOFI",
-      "name_zh": "SoFi",
+      "symbol": "MRVL",
+      "name_zh": "邁威爾",
       "kind": "US",
-      "price": 15.62,
-      "change_pct": -0.19,
-      "mtd_pct": -2.98,
-      "ytd_pct": -40.34,
+      "price": 196.33,
+      "change_pct": 2.96,
+      "mtd_pct": 18.88,
+      "ytd_pct": 131.03,
       "market_date": "2026-05-22",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOFI.US",
-      "error": null
-    },
-    {
-      "symbol": "NVTS",
-      "name_zh": "Navitas Semiconductor Corporati",
-      "kind": "US",
-      "price": 29.25,
-      "change_pct": 19.98,
-      "mtd_pct": 77.27,
-      "ytd_pct": 309.66,
-      "market_date": "2026-05-22",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NVTS.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MRVL.US",
       "error": null
     },
     {
@@ -123,15 +99,27 @@
       "error": null
     },
     {
-      "symbol": "SNDK",
-      "name_zh": "Sandisk",
+      "symbol": "RACE",
+      "name_zh": "Ferrari",
       "kind": "US",
-      "price": 1478.69,
-      "change_pct": -4.12,
-      "mtd_pct": 34.85,
-      "ytd_pct": 522.92,
+      "price": 348.24,
+      "change_pct": -0.33,
+      "mtd_pct": 0.27,
+      "ytd_pct": -5.77,
       "market_date": "2026-05-22",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SNDK.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RACE.US",
+      "error": null
+    },
+    {
+      "symbol": "NVTS",
+      "name_zh": "Navitas Semiconductor Corporati",
+      "kind": "US",
+      "price": 29.25,
+      "change_pct": 19.98,
+      "mtd_pct": 77.27,
+      "ytd_pct": 309.66,
+      "market_date": "2026-05-22",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NVTS.US",
       "error": null
     },
     {
@@ -171,6 +159,30 @@
       "error": null
     },
     {
+      "symbol": "ARM",
+      "name_zh": "Arm",
+      "kind": "US",
+      "price": 306.51,
+      "change_pct": 2.78,
+      "mtd_pct": 45.74,
+      "ytd_pct": 180.4,
+      "market_date": "2026-05-22",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ARM.US",
+      "error": null
+    },
+    {
+      "symbol": "NBIS",
+      "name_zh": "Nebius",
+      "kind": "US",
+      "price": 214.77,
+      "change_pct": -2.35,
+      "mtd_pct": 55.37,
+      "ytd_pct": 156.58,
+      "market_date": "2026-05-22",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NBIS.US",
+      "error": null
+    },
+    {
       "symbol": "NOK",
       "name_zh": "Nokia Corporation Sponsored",
       "kind": "US",
@@ -195,51 +207,27 @@
       "error": null
     },
     {
-      "symbol": "ORCL",
-      "name_zh": "甲骨文",
+      "symbol": "SNDK",
+      "name_zh": "Sandisk",
       "kind": "US",
-      "price": 192.08,
-      "change_pct": 1.22,
-      "mtd_pct": 19.02,
-      "ytd_pct": -1.45,
+      "price": 1478.69,
+      "change_pct": -4.12,
+      "mtd_pct": 34.85,
+      "ytd_pct": 522.92,
       "market_date": "2026-05-22",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ORCL.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SNDK.US",
       "error": null
     },
     {
-      "symbol": "ARM",
-      "name_zh": "Arm",
+      "symbol": "DXYZ",
+      "name_zh": "Destiny Tech100",
       "kind": "US",
-      "price": 306.51,
-      "change_pct": 2.78,
-      "mtd_pct": 45.74,
-      "ytd_pct": 180.4,
+      "price": 66.64,
+      "change_pct": 8.08,
+      "mtd_pct": 104.67,
+      "ytd_pct": 117.56,
       "market_date": "2026-05-22",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ARM.US",
-      "error": null
-    },
-    {
-      "symbol": "IREN",
-      "name_zh": "IREN",
-      "kind": "US",
-      "price": 56.83,
-      "change_pct": -2.12,
-      "mtd_pct": 24.87,
-      "ytd_pct": 50.46,
-      "market_date": "2026-05-22",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IREN.US",
-      "error": null
-    },
-    {
-      "symbol": "APLD",
-      "name_zh": "Applied Digital",
-      "kind": "US",
-      "price": 45.87,
-      "change_pct": -4.48,
-      "mtd_pct": 33.93,
-      "ytd_pct": 87.07,
-      "market_date": "2026-05-22",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=APLD.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DXYZ.US",
       "error": null
     },
     {
