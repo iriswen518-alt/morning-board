@@ -3,77 +3,51 @@
     {
       "slug": "tw_stocks",
       "name": "台股",
-      "active": true
+      "active": true,
+      "description": "從 TWSE/TPEx 制度到看盤、財報、稅務與風險，建立完整台股投資知識體系。",
+      "icon": "<path d=\"M3 20h18\"/><rect x=\"5\" y=\"12\" width=\"3\" height=\"8\" rx=\"0.5\"/><rect x=\"10.5\" y=\"8\" width=\"3\" height=\"12\" rx=\"0.5\"/><rect x=\"16\" y=\"4\" width=\"3\" height=\"16\" rx=\"0.5\"/>"
     },
     {
       "slug": "us_stocks",
       "name": "美股",
-      "active": true
+      "active": true,
+      "description": "認識美股市場運作、財報與技術分析，並掌握跨境課稅與監理規範。",
+      "icon": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M3 12h18\"/><path d=\"M12 3a13 13 0 0 1 0 18\"/><path d=\"M12 3a13 13 0 0 0 0 18\"/>"
     },
     {
       "slug": "funds",
       "name": "基金",
-      "active": true
+      "active": true,
+      "description": "從費用、選基、定期定額到稅務、風險，建立基金投資判斷能力。",
+      "icon": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 3v9h9\"/><path d=\"M12 12L5.5 17\"/>"
     },
     {
       "slug": "insurance",
       "name": "保險",
-      "active": true
+      "active": true,
+      "description": "解析保障、儲蓄、投資型保單的功能，含稅務優惠與監理規範。",
+      "icon": "<path d=\"M12 3l8 3v5c0 4.5-3.2 8.5-8 10-4.8-1.5-8-5.5-8-10V6l8-3z\"/><path d=\"M9 12l2.2 2.2L15.5 10\"/>"
     },
     {
       "slug": "structured",
       "name": "結構型商品",
-      "active": true
+      "active": true,
+      "description": "認識結構型商品的種類、訂價、費用與風險，避開常見陷阱。",
+      "icon": "<rect x=\"4\" y=\"4\" width=\"7\" height=\"7\" rx=\"1\"/><rect x=\"13\" y=\"4\" width=\"7\" height=\"7\" rx=\"1\"/><rect x=\"4\" y=\"13\" width=\"7\" height=\"7\" rx=\"1\"/><rect x=\"13\" y=\"13\" width=\"7\" height=\"7\" rx=\"1\"/>"
     },
     {
       "slug": "mortgage",
       "name": "房貸",
-      "active": true
+      "active": true,
+      "description": "從房貸類型、攤還方式、申請流程到稅務與風險，建立貸款全貌。",
+      "icon": "<path d=\"M3 12l9-9 9 9\"/><path d=\"M5 10v10h14V10\"/><path d=\"M10 14h4\"/><path d=\"M10 17h4\"/>"
     },
     {
       "slug": "real_estate",
       "name": "房地產",
-      "active": true
-    },
-    {
-      "slug": "wealth_mgmt",
-      "name": "財富管理",
-      "active": true
-    },
-    {
-      "slug": "client",
-      "name": "客戶經營",
-      "active": true
-    },
-    {
-      "slug": "family_trust",
-      "name": "家族信託",
-      "active": true
-    },
-    {
-      "slug": "financials",
-      "name": "財報分析",
-      "active": true
-    },
-    {
-      "slug": "macro",
-      "name": "總體經濟",
-      "active": true
-    },
-    {
-      "slug": "marketing",
-      "name": "行銷技巧",
-      "active": true
-    },
-    {
-      "slug": "taxation",
-      "name": "稅務規劃",
-      "active": true
-    },
-    {
-      "slug": "hnw_cases",
-      "name": "高資產案例",
-      "active": true
+      "active": true,
+      "description": "涵蓋估價、交易、稅務、區位與風險，建立不動產投資基本盤。",
+      "icon": "<rect x=\"4\" y=\"3\" width=\"16\" height=\"18\" rx=\"1\"/><path d=\"M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2\"/><path d=\"M11 21v-3h2v3\"/>"
     }
   ]
 }

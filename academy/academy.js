@@ -30,8 +30,20 @@ async function loadCourses() {
       pane.className = 'course-pane' + (i === 0 ? ' active' : '');
       pane.dataset.course = course.slug;
       const idx = indexes[i];
+      const chapterCount = idx?.chapters?.length || 0;
+      const hero = (course.description || course.icon)
+        ? `<div class="course-hero">
+             <div class="course-hero-icon">
+               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${course.icon || ''}</svg>
+             </div>
+             <div class="course-hero-meta">
+               <h3 class="course-hero-title">${course.name}${chapterCount ? `<span class="course-hero-badge">共 ${chapterCount} 章</span>` : ''}</h3>
+               ${course.description ? `<p class="course-hero-desc">${course.description}</p>` : ''}
+             </div>
+           </div>`
+        : '';
       if (!course.active || !idx) {
-        pane.innerHTML = '<p class="course-empty">敬請期待</p>';
+        pane.innerHTML = hero + '<p class="course-empty">敬請期待</p>';
       } else {
         const items = idx.chapters.map((ch, j) => {
           const href = `chapter.html?course=${encodeURIComponent(course.slug)}&chapter=${encodeURIComponent(ch.slug)}`;
@@ -40,7 +52,7 @@ async function loadCourses() {
             : '';
           return `<li><a href="${href}"><span class="ch-title">${j + 1}. ${ch.title}</span>${desc}</a></li>`;
         }).join('');
-        pane.innerHTML = `<ol class="chapter-list">${items}</ol>`;
+        pane.innerHTML = hero + `<ol class="chapter-list">${items}</ol>`;
       }
       panesEl.appendChild(pane);
     });
