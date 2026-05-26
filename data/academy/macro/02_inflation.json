@@ -1,7 +1,7 @@
 {
   "chapter": 2,
   "slug": "inflation",
-  "title": "通膨指標：CPI、PPI、PCE 與核心通膨",
+  "title": "通膨指標",
   "objectives": [
     "區分 CPI、核心 CPI、PCE、核心 PCE 的計算方式與政策意涵",
     "理解 PPI 對 CPI 的傳導機制與時差",
@@ -30,5 +30,6 @@
       "heading": "五、央行通膨目標與政策反應",
       "html": "<p>主要央行多採通膨目標制（Inflation Targeting）。Fed 自 2012 年正式設定 2% 通膨目標（PCE 為對標），ECB 2021 年改採「對稱 2%」目標，台灣央行採「物價穩定」框架但內部參考 1.5-2%。</p>\n<p><div class=\"mermaid\">flowchart TD\n  A[\"央行通膨判讀\"] --> B{\"核心通膨 vs 目標\"}\n  B -- \"持續高於目標\" --> C[\"升息 / QT\"]\n  B -- \"接近目標\" --> D[\"維持利率\"]\n  B -- \"持續低於目標\" --> E[\"降息 / QE\"]\n  C --> F[\"觀察工資 / 服務通膨 / 通膨預期\"]\n  E --> G[\"觀察通縮風險 / 失業上升\"]</div></p>\n<table>\n<thead><tr><th>央行</th><th>通膨目標</th><th>主要參考指標</th><th>2024 年通膨</th></tr></thead>\n<tbody>\n<tr><td>美國 Fed</td><td>2%（對稱平均）</td><td>Core PCE</td><td>2.8%</td></tr>\n<tr><td>歐元區 ECB</td><td>2%（對稱）</td><td>HICP</td><td>2.4%</td></tr>\n<tr><td>英國 BoE</td><td>2%</td><td>CPI</td><td>2.5%</td></tr>\n<tr><td>日本 BoJ</td><td>2%（穩定可持續）</td><td>Core CPI</td><td>2.7%</td></tr>\n<tr><td>台灣央行</td><td>無明示目標（隱含 1.5-2%）</td><td>核心 CPI</td><td>1.74%</td></tr>\n</tbody>\n</table>\n<p><strong>Fed 雙重使命（Dual Mandate）</strong></p>\n<ul>\n<li>Fed 同時追求「物價穩定」與「充分就業」，與 ECB 單一物價穩定目標不同。</li>\n<li>2020 年起改採「平均通膨目標制（AIT）」：允許通膨在一段時間內適度高於 2%，補償過去低於 2% 的時期。</li>\n<li>實務上 AIT 在 2022 年通膨衝破 9% 後被質疑，2024 年起 Fed 言論回歸傳統 2% 目標。</li>\n</ul>\n<p><strong>台灣央行的政策框架</strong></p>\n<ul>\n<li>台灣央行採「多元目標」：物價穩定、金融穩定、經濟成長。</li>\n<li>無明示通膨目標但內部參考核心 CPI 1.5-2%。</li>\n<li>2024 年 12 月台灣央行重貼現率維持 2.0%，反映通膨壓力溫和、半導體出口維持成長。</li>\n</ul>\n<details><summary>實戰應用</summary>\n<ul>\n<li>客戶問「Fed 還要升幾次」：建議引用 Core PCE 與 2% 目標的差距 + 失業率，而非單月 Headline CPI。</li>\n<li>判斷 Fed 是否降息：須看 Core PCE 至少連 3-6 個月低於 2.5%，配合勞動市場降溫（失業率 >4.5%、薪資年增率 <4%）。</li>\n<li>台灣央行政策路徑：除核心 CPI 外，更須關注房地產（信用管制工具）與半導體景氣（影響資本帳）。</li>\n</ul>\n</details>\n<details><summary>名詞定義</summary>\n<ul>\n<li><strong>通膨目標制（Inflation Targeting）</strong>：央行以明確通膨數值為政策錨點，紐西蘭 1990 年首創。</li>\n<li><strong>平均通膨目標制（Average Inflation Targeting, AIT）</strong>：Fed 2020 年採行，允許通膨在週期內平均達標。</li>\n<li><strong>HICP（Harmonised Index of Consumer Prices）</strong>：歐盟調和消費者物價指數，ECB 主要參考。</li>\n<li><strong>重貼現率</strong>：台灣央行主要政策利率，銀行向央行融通短期資金的利率。</li>\n</ul>\n</details>"
     }
-  ]
+  ],
+  "description": "CPI、PPI、PCE、核心通膨"
 }

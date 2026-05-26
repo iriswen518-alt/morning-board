@@ -1,8 +1,18 @@
 {
   "course": "hnw_cases",
-  "course_name": "高資產案例研討",
+  "course_name": "高資產案例",
   "chapters": [
-    { "slug": "succession", "title": "傳承規劃案例（企業家、退休族、單親家庭）", "file": "01_succession.json" },
-    { "slug": "cross_border", "title": "跨境資產配置案例（香港私銀、美股配置、境外保單）", "file": "02_cross_border.json" }
+    {
+      "slug": "succession",
+      "title": "傳承案例",
+      "description": "企業家、退休族、單親家庭傳承",
+      "file": "01_succession.json"
+    },
+    {
+      "slug": "cross_border",
+      "title": "跨境案例",
+      "description": "香港私銀、美股配置、境外保單",
+      "file": "02_cross_border.json"
+    }
   ]
 }

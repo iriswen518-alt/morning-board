@@ -1,7 +1,7 @@
 {
   "chapter": 2,
   "slug": "segmentation",
-  "title": "客戶分群與適格性（HNW／Affluent／Mass、CRS、KYC）",
+  "title": "客戶分群",
   "objectives": [
     "區分 Mass／Affluent／HNW／UHNW 四級客戶的資產門檻與服務內容",
     "掌握 HNW 法定門檻＝NT$1 億（依「銀行辦理高資產客戶適用之金融商品及服務管理辦法」§3）",
@@ -30,5 +30,6 @@
       "heading": "五、適合度評估（金消法 §11、商品適合性矩陣）",
       "html": "<p>適合度評估（Suitability Assessment）是金消法的<strong>核心法定義務</strong>。依金融消費者保護法第 9 條至第 11 條，金融服務業於提供商品前，必須完成「了解客戶 + 了解商品 + 適合度比對」三段流程。違反者，金管會可裁罰、客戶可循金融評議中心爭議處理。</p>\n<div class=\"mermaid\">flowchart TD\n  A[銷售前作業] --> B[了解客戶 KYC]\n  A --> C[了解商品 KYP]\n  B --> D[風險屬性 1-5 級]\n  C --> E[商品風險等級 1-5 級]\n  D --> F[適合度比對]\n  E --> F\n  F --> G{客戶屬性 ≥ 商品等級?}\n  G -- 是 --> H[可銷售]\n  G -- 否 --> I[書面拒絕或 不適合聲明]\n  H --> J[簽約 冷靜期 7 天]</div>\n<p><strong>風險屬性與商品適合性矩陣（典型）</strong></p>\n<table>\n<thead><tr><th>客戶屬性</th><th>適合商品風險等級</th><th>典型商品</th></tr></thead>\n<tbody>\n<tr><td>1 保守型</td><td>RR1</td><td>定存、貨幣型基金、台幣公債</td></tr>\n<tr><td>2 穩健型</td><td>RR1-RR2</td><td>投資級債券、債券型基金、100% 保本 SP</td></tr>\n<tr><td>3 平衡型</td><td>RR1-RR3</td><td>平衡型基金、條件保本 SP、高評級海外債</td></tr>\n<tr><td>4 積極型</td><td>RR1-RR4</td><td>股票型基金、ETF、不保本 SP、新興市場債</td></tr>\n<tr><td>5 進取型</td><td>RR1-RR5</td><td>單一個股、CHRP、槓桿 ETF、私募基金</td></tr>\n</tbody></table>\n<p><strong>金消法 §11 適合度評估的特殊規範</strong>：</p>\n<ul>\n<li>客戶若購買「超過自身風險屬性」的商品，須由 IA 主管 + 風控 + 客戶三方書面確認。</li>\n<li>70 歲以上客戶銷售複雜性商品（含 CHRP）須<strong>全程錄音錄影</strong>。</li>\n<li>銷售後客戶享有<strong>7 天冷靜期</strong>（信託商品、保險商品）。冷靜期內可無條件解約。</li>\n<li>適合度評估須<strong>每 2 年更新一次</strong>。重大事件（退休、繼承、生病）應主動觸發更新。</li>\n<li>適合度文件、錄音錄影、簽約文件保存至少 5 年。</li>\n</ul>\n<p><strong>實務操作重點</strong>：適合度不是「為了讓客戶能買特定商品而調整」。若客戶風險屬性為 2，卻想買 RR4 不保本 SP，正確流程是（1）解釋商品風險、（2）建議改買適合度範圍內商品、（3）若客戶仍堅持，須執行「不適合聲明」流程並由主管核可，不得直接調整客戶屬性問卷答案。</p>\n<details><summary>法源全文</summary>\n<p><strong>金融消費者保護法 §9</strong>（全文）：</p>\n<blockquote>金融服務業與金融消費者訂立提供金融商品或服務之契約前，應充分瞭解金融消費者之相關資料，以確保該商品或服務對金融消費者之適合度。</blockquote>\n<p><strong>金融消費者保護法 §10</strong>（全文）：</p>\n<blockquote>金融服務業與金融消費者訂立提供金融商品或服務之契約前，應向金融消費者充分說明該金融商品、服務及契約之重要內容，並充分揭露其風險。</blockquote>\n<p><strong>金融消費者保護法 §11</strong>（全文）：</p>\n<blockquote>金融服務業違反前二條規定，致金融消費者受有損害者，應負損害賠償責任。但金融服務業能證明損害之發生非因其未充分瞭解金融消費者之商品或服務適合度或非因其未說明、說明不實、錯誤或未充分揭露風險之事項所致者，不在此限。</blockquote>\n<p>資料來源：全國法規資料庫（https://law.moj.gov.tw）；金管會銀行局公告。</p>\n</details>"
     }
-  ]
+  ],
+  "description": "HNW/Affluent/Mass、CRS、KYC、適格性"
 }

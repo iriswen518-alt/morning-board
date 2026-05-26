@@ -1,7 +1,7 @@
 {
   "chapter": 4,
   "slug": "fiscal",
-  "title": "財政政策與政府債務",
+  "title": "財政政策",
   "objectives": [
     "理解政府支出與稅收的自動穩定機制",
     "掌握財政赤字、政府債務與債務上限的概念",
@@ -30,5 +30,6 @@
       "heading": "五、財政政策對股債匯影響",
       "html": "<p>財政政策透過需求、信用、預期三條路徑影響資產價格。IA 須能解釋為何同樣的財政刺激在不同情境下對股債匯有不同影響。</p>\n<p><div class=\"mermaid\">flowchart TD\n  A[\"財政擴張\"] --> B[\"股市\"]\n  A --> C[\"債市\"]\n  A --> D[\"匯市\"]\n  B --> B1[\"需求 + 企業獲利 +\"]\n  B --> B2[\"惟 利率上升壓制估值\"]\n  C --> C1[\"國債供給 +\"]\n  C --> C2[\"殖利率上升 價格下跌\"]\n  D --> D1[\"短期:利率差 升 本幣升值\"]\n  D --> D2[\"長期:債務 + 信用憂慮 本幣貶值\"]</div></p>\n<table>\n<thead><tr><th>情境</th><th>股票</th><th>債券</th><th>匯率</th><th>歷史案例</th></tr></thead>\n<tbody>\n<tr><td>衰退期財政刺激</td><td>大漲</td><td>承壓</td><td>本幣強</td><td>美 2009、2020</td></tr>\n<tr><td>過熱期財政刺激</td><td>波動</td><td>大跌</td><td>本幣強→弱</td><td>美 2021-2022</td></tr>\n<tr><td>債務危機警報</td><td>大跌</td><td>大跌</td><td>本幣大貶</td><td>英 2022 mini-budget</td></tr>\n<tr><td>緊縮財政</td><td>承壓</td><td>大漲</td><td>本幣承壓</td><td>歐元區 2010-2015</td></tr>\n</tbody>\n</table>\n<p><strong>歷史經典案例</strong></p>\n<ul>\n<li><strong>英國 2022-09 Mini-Budget 危機</strong>：Truss 政府宣布大規模減稅且未說明資金來源 → 英鎊兌美元跌至 1.035（歷史低點）、英 30Y Gilt 殖利率單日飆升 110bp、英央行緊急進場購買 Gilt 穩定市場 → Truss 上任 49 天辭職。</li>\n<li><strong>美國 2011 信評下調</strong>：S&P 將美國信評從 AAA 調降至 AA+，理由是債務上限政治僵局 → S&P 500 三週跌 16%、避險資金湧入美債（殖利率反而下降）、金價衝至 1,900 美元/盎司。</li>\n<li><strong>美國 2021 ARP 通過後</strong>：1.9 兆美元刺激方案推高需求 → 加劇通膨 → Fed 2022 激進升息 → 股債雙殺（60/40 組合年虧 18%）。</li>\n</ul>\n<p><strong>2025 年觀察重點</strong></p>\n<ul>\n<li>美國新任政府的減稅與關稅政策對赤字的影響。</li>\n<li>歐元區財政規則重啟（2024-04 通過新版《穩定與成長公約》）。</li>\n<li>中國地方政府債務化解（10 兆人民幣置換計畫）。</li>\n<li>日本利率正常化對債務成本的影響（債務 / GDP 251%、平均利率上升 0.5% 即增加 1.25% GDP 的利息支出）。</li>\n</ul>\n<details><summary>實戰應用</summary>\n<ul>\n<li>客戶問「為何同樣降稅，美國 2017 股市漲、英國 2022 股市跌」：差別在於財政空間與市場信心。美國 2017 公司稅減免在低通膨環境，市場相信赤字可控；英國 2022 在通膨 10% 環境推未融資減稅，市場質疑債務永續性。</li>\n<li>判斷財政政策是否會推升通膨：須看「赤字 / GDP 變動」 + 「央行配合度」。Fed 配合升息可抵消財政擴張的通膨壓力。</li>\n<li>建議客戶監測指標：美國 CBO 預測赤字、10Y 國債殖利率、美元指數三者同時方向，判斷財政信用是否受到質疑。</li>\n</ul>\n</details>\n<details><summary>名詞定義</summary>\n<ul>\n<li><strong>債務貨幣化（Debt Monetization）</strong>：央行直接購買政府新發行的債券，等同印鈔支應財政赤字。</li>\n<li><strong>財政紀律（Fiscal Discipline）</strong>：政府維持財政永續性的承諾與制度安排。</li>\n<li><strong>Gilt</strong>：英國政府公債的通稱。</li>\n<li><strong>主權信用評等（Sovereign Credit Rating）</strong>：信評機構（S&P、Moody's、Fitch）對主權政府償債能力的評等。</li>\n</ul>\n</details>"
     }
-  ]
+  ],
+  "description": "政府支出、稅收、債務上限"
 }

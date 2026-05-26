@@ -1,7 +1,7 @@
 {
   "chapter": 4,
   "slug": "products",
-  "title": "商品總覽（存款／基金／保險／債券／結構型／不動產）",
+  "title": "商品總覽",
   "objectives": [
     "建立完整商品光譜：保本／收益／成長／保障／另類五大類",
     "區分連結存款、定存、外幣存款的設計與適合度",
@@ -30,5 +30,6 @@
       "heading": "五、另類投資（REITs、私募、不動產、藝術品）",
       "html": "<p>另類投資（Alternative Investments）泛指「非傳統股債」的資產類別，包含 REITs（不動產投資信託）、私募基金、不動產直接持有、藝術品、紅酒等收藏品。共通特性是<strong>流動性低、進入門檻高、與股債相關性低</strong>。在 HNW 投組中，另類投資配比通常 10-30%，作為分散與通膨對沖工具。</p>\n<div class=\"mermaid\">flowchart TD\n  A[另類投資] --> B[REITs]\n  A --> C[私募基金]\n  A --> D[不動產 直接持有]\n  A --> E[藝術品 收藏]\n  B --> B1[公募 REITs 流動性高]\n  B --> B2[私募 REITs 流動性差]\n  C --> C1[私募股權 PE]\n  C --> C2[避險基金 Hedge Fund]\n  C --> C3[創投 VC]</div>\n<p><strong>另類投資比較</strong></p>\n<table>\n<thead><tr><th>類別</th><th>進入門檻</th><th>流動性</th><th>歷史報酬</th><th>主要風險</th></tr></thead>\n<tbody>\n<tr><td>公募 REITs</td><td>NT$1 萬可投資</td><td>高（交易所掛牌）</td><td>4-7% 年化</td><td>利率、空置率</td></tr>\n<tr><td>私募 REITs</td><td>NT$1,000 萬以上</td><td>低（鎖定期 3-7 年）</td><td>6-10% 年化</td><td>流動性、估值不透明</td></tr>\n<tr><td>私募股權（PE）</td><td>USD 25 萬以上</td><td>極低（10 年鎖定）</td><td>15-20% IRR（頂尖基金）</td><td>失敗風險、長期鎖定</td></tr>\n<tr><td>避險基金</td><td>USD 50 萬以上</td><td>低（季度贖回）</td><td>5-15% 年化</td><td>策略風險、費用高（2&amp;20）</td></tr>\n<tr><td>藝術品／收藏</td><td>無門檻（依品項）</td><td>極低</td><td>難量化</td><td>真偽、保險、流通</td></tr>\n</tbody></table>\n<p><strong>REITs 的兩種類型</strong>：（1）<strong>公募 REITs</strong>：依「不動產證券化條例」發行、在證交所掛牌、有市價、可即時買賣。台灣公募 REITs 規模小（約 NT$1,000 億），多為單一商辦或集合商辦。（2）<strong>私募 REITs</strong>：未上市、僅限 HNW 或專業投資人購買、流動性極低但可能有較高收益。</p>\n<p><strong>私募基金的進入條件</strong>：依「證券投資信託及顧問法」、「境外基金管理辦法」，私募基金原則上僅能向<strong>專業投資人</strong>（個人 NT$3,000 萬以上金融資產 + 投資經驗）銷售。HNW 客戶（NT$1 億以上）可購買更廣的私募商品。私募基金的「2&amp;20 收費」（2% 管理費 + 20% 績效分成）是業界慣例，雖看似高昂，但頂尖基金（如黑石、KKR）長期 IRR 仍能滿足 HNW 客戶需求。</p>\n<p><strong>不動產直接持有</strong>：台灣 HNW 客戶傳統上偏好直接持有不動產（商辦、店面、住宅）。優點：實體資產、租金現金流、增值潛力。缺點：流動性極低、單一資產集中、管理成本（仲介、稅務、空租）。財富管理角度，不動產應視為「核心非配置部位」，與金融資產配置分開規劃。</p>\n<details><summary>名詞定義</summary>\n<ul>\n<li><strong>REITs（Real Estate Investment Trust）</strong>：不動產投資信託。將不動產證券化，投資人可購買單位受益權。</li>\n<li><strong>2&amp;20</strong>：避險基金／私募基金常見收費結構。2% 年度管理費 + 20% 超額報酬分成。</li>\n<li><strong>專業投資人</strong>：依金消法 §4，個人須具備 NT$3,000 萬以上金融資產 + 充足投資經驗 + 完成適當性評估。</li>\n<li><strong>不動產證券化條例</strong>：2003 年立法，建立 REITs（不動產投資信託）與 REAT（不動產資產信託）法源。</li>\n</ul></details>"
     }
-  ]
+  ],
+  "description": "存款／基金／保險／債券／結構型／不動產"
 }

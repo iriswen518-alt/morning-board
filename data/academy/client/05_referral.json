@@ -1,7 +1,7 @@
 {
   "chapter": 5,
   "slug": "referral",
-  "title": "推薦與轉介機制",
+  "title": "轉介機制",
   "objectives": [
     "理解 NPS 滿意度與推薦意願的相關性與量測方法",
     "解釋為何轉介客戶的素質與留存率優於陌生開發",
@@ -30,5 +30,6 @@
       "heading": "五、IA 內部轉介與 cross-sell",
       "html": "<p>除了客戶間轉介，IA 之間、跨單位（投信、保經、證券子公司）的轉介同樣重要。建立內部合作網絡是 IA 長期成長的關鍵。</p>\n<p><div class=\"mermaid\">flowchart TD\n  A[IA 個人客戶] --> B{需求超出本身專長}\n  B --> C[同分行轉介]\n  B --> D[總行 HNW 團隊轉介]\n  B --> E[投信子公司]\n  B --> F[保險經紀子公司]\n  B --> G[證券子公司 不動產子公司]\n  C --> H[合作公約: 客戶不流失 業績共享]\n  D --> H\n  E --> H\n  F --> H\n  G --> H</div></p>\n<p><strong>內部轉介情境</strong></p>\n<table>\n<thead>\n<tr><th>情境</th><th>建議轉介對象</th><th>業績歸屬</th></tr>\n</thead>\n<tbody>\n<tr><td>客戶升級至法定 HNW（NT$1 億）</td><td>總行 HNW 團隊</td><td>原 IA 保留共同管理權，依內規分潤</td></tr>\n<tr><td>客戶需要主動式基金深度規劃</td><td>本行代銷團隊或投信子公司</td><td>本行代銷可繼續，依商品歸屬分潤</td></tr>\n<tr><td>客戶需要傳承信託 + 保單組合</td><td>信託部 + 保險子公司</td><td>跨單位合作專案</td></tr>\n<tr><td>客戶需要不動產規劃</td><td>不動產子公司或合作律師</td><td>諮詢費依合作模式</td></tr>\n<tr><td>客戶子女、配偶需開戶</td><td>同分行其他 IA 或同事</td><td>新 IA 為主、原 IA 保有聯繫</td></tr>\n</tbody>\n</table>\n<p><strong>內部轉介的合作公約</strong></p>\n<ol>\n<li><strong>客戶不流失</strong>：原 IA 仍保有客戶接觸權，轉介單位不可單獨主導關係。</li>\n<li><strong>業績共享</strong>：依本行內規分潤，避免單位間搶業績。</li>\n<li><strong>資訊保密</strong>：跨單位轉介須遵守個資法，僅交換必要資訊。</li>\n<li><strong>透明對客戶</strong>：客戶應知道誰是主要聯絡人、誰負責特定業務。</li>\n<li><strong>定期檢討</strong>：每季召開跨單位會議檢視合作案件、解決糾紛。</li>\n</ol>\n<p><strong>內部轉介的禁忌</strong></p>\n<ul>\n<li><strong>單方面奪客</strong>：HNW 團隊接手後排除原 IA，造成內部對立。</li>\n<li><strong>未經客戶同意揭露</strong>：將客戶資料轉介他單位前必須取得書面同意（依個資法 §19）。</li>\n<li><strong>業績鬥爭表面化</strong>：客戶感受得到內部分歧，會質疑專業度。</li>\n<li><strong>跨子公司未報備</strong>：金融控股集團內跨子公司業務須符合相關規定，含資訊安全與利益衝突管理。</li>\n</ul>\n<p><strong>內部轉介 KPI</strong></p>\n<ul>\n<li>IA 每月對外部單位轉介件數：≥ 2 件。</li>\n<li>跨單位合作案 6 個月內成交率：≥ 50%。</li>\n<li>客戶滿意度（跨單位處理）：≥ 8 分。</li>\n<li>分行月會討論跨單位合作案件數：≥ 5 件。</li>\n</ul>\n<details><summary>實戰案例</summary>\n<p><strong>案例：張先生（55 歲，AUM NT$8,000 萬，企業主）內部跨單位協作</strong></p>\n<ul>\n<li><strong>背景</strong>：張先生 IPO 套現 NT$1.2 億，AUM 升級至法定 HNW（1 億+）。</li>\n<li><strong>原 IA 王小姐</strong>：服務 5 年，建立深度信任。</li>\n<li><strong>轉介啟動</strong>：王小姐主動聯繫總行 HNW 團隊主管，安排三方面談。</li>\n<li><strong>面談分工</strong>：HNW 主管介紹境外私募、家族辦公室服務；王小姐持續負責日常聯繫與基礎商品。</li>\n<li><strong>客戶反應</strong>：感受到「升級服務」而非「被切割」。</li>\n<li><strong>內部協議</strong>：王小姐保有 70% 業績、HNW 團隊 30%，客戶聯絡人雙軌制（王小姐為日常聯繫、HNW 主管為重大決策）。</li>\n<li><strong>跨單位協作</strong>：因張先生有子女傳承需求，引入信託部與保險子公司，組成 5 人專案小組。</li>\n<li><strong>6 個月成果</strong>：完成境外私募 USD 200 萬、傳承信託 NT$3,000 萬、子女保險 NT$1,000 萬。</li>\n<li><strong>學習重點</strong>：HNW 客戶經營是「團隊作戰」，原 IA 不應排斥轉介，反而應主動引入專業團隊，提升服務深度與客戶終身價值。</li>\n</ul>\n</details>"
     }
-  ]
+  ],
+  "description": "推薦動機、轉介流程、客戶見證"
 }

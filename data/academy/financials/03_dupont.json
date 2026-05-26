@@ -1,7 +1,7 @@
 {
   "chapter": 3,
   "slug": "dupont",
-  "title": "杜邦分析（ROE 分解）",
+  "title": "杜邦分析",
   "objectives": [
     "理解 3 因子杜邦如何將 ROE 拆解為獲利、效率、槓桿三個來源",
     "運用 5 因子延伸杜邦進一步分離稅率與利息負擔的影響",
@@ -30,5 +30,6 @@
       "heading": "五、杜邦分析的限制與盲點",
       "html": "<p>杜邦框架雖然清晰，但仍有以下限制：</p>\n<ol>\n<li><strong>會計操縱可能性</strong>：淨利可透過認列時點、折舊估算、減損認列等手段調整。應同時看現金流。</li>\n<li><strong>不反映品質</strong>：權益乘數高的公司 ROE 看似漂亮，實際財務風險高。需搭配槓桿與利息保障倍數。</li>\n<li><strong>跨期比較困難</strong>：公司併購、出售部門、減資、增資都會破壞時序可比性。</li>\n<li><strong>不適用所有產業</strong>：金融業、租賃業、控股公司的杜邦結構與一般製造業差異極大。</li>\n<li><strong>不反映成長性</strong>：高 ROE 但業務萎縮 vs 中 ROE 但快速擴張，杜邦無法區分。</li>\n</ol>\n<p><strong>杜邦無法回答的問題</strong></p>\n<table>\n<thead>\n<tr><th>問題</th><th>需搭配工具</th></tr>\n</thead>\n<tbody>\n<tr><td>公司未來 ROE 可持續嗎？</td><td>產業競爭分析、技術趨勢</td></tr>\n<tr><td>ROE 中有多少是真實現金？</td><td>現金流量表分析</td></tr>\n<tr><td>會計處理是否激進？</td><td>應計項目、會計政策附註</td></tr>\n<tr><td>該公司值得買嗎？</td><td>估值分析（PE、DCF）</td></tr>\n</tbody>\n</table>\n<p><strong>實務建議</strong></p>\n<p>杜邦分析應作為「篩選工具」而非「決策工具」。看到 ROE 異常高低時，用杜邦拆解找出原因，再進一步追蹤現金流、行業地位、管理層資本配置紀錄。</p>\n<details><summary>常見客戶問題與話術</summary>\n<ul>\n<li><strong>Q：為什麼這檔股票 ROE 很高，股價反而跌？</strong><br>A：ROE 是「歷史結果」，股價反映「未來預期」。若市場認為 ROE 已到頂點、或主要靠槓桿衝出來、或商業模式即將被顛覆，即使當期 ROE 高，股價仍會下跌。可用杜邦拆解判斷該 ROE 的「品質」與「可持續性」。</li>\n<li><strong>Q：ROE 多少算合格？</strong><br>A：跨產業比較沒意義。但同產業內，連續 5 年 ROE &gt; 15% 屬優質。長期 ROE &gt; 20% 通常代表有護城河。低於股東要求報酬率（如 10%）則無法真正創造價值。</li>\n</ul>\n</details>\n\n<details><summary>法源全文</summary>\n<p><strong>公司法 §167-1</strong>（庫藏股摘要）：</p>\n<blockquote>公司除法律另有規定者外，得經董事會以董事三分之二以上之出席及出席董事過半數同意之決議，於不超過該公司已發行股份總數百分之五之範圍內，收買其股份。</blockquote>\n<p>資料來源：全國法規資料庫（https://law.moj.gov.tw）；IFRS Foundation（https://www.ifrs.org）。</p>\n</details>"
     }
-  ]
+  ],
+  "description": "ROE 三因子：淨利率 × 資產周轉 × 槓桿"
 }

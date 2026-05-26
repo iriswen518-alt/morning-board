@@ -1,7 +1,7 @@
 {
   "chapter": 4,
   "slug": "cashflow",
-  "title": "現金流量分析",
+  "title": "現金流量",
   "objectives": [
     "區分淨利與營業現金流的差異，判斷獲利品質",
     "計算並解讀自由現金流（FCF）的意涵與用途",
@@ -30,5 +30,6 @@
       "heading": "五、現金週轉天數（CCC）",
       "html": "<p>現金週轉週期（Cash Conversion Cycle, CCC）衡量公司「從付料款到收回客戶款項」需要多少天。是營運資金管理的核心指標。</p>\n<pre><code>CCC = DIO + DSO − DPO\n\nDIO（存貨天數） = 365 × 平均存貨 / 營業成本\nDSO（應收天數） = 365 × 平均應收 / 營業收入\nDPO（應付天數） = 365 × 平均應付 / 營業成本</code></pre>\n<p><div class=\"mermaid\">flowchart LR\n  A[購入原料] --> B[付款給供應商<br/>DPO 天後]\n  A --> C[製造庫存<br/>DIO 天]\n  C --> D[銷售出貨]\n  D --> E[收回客戶款<br/>DSO 天後]\n  B --> F[CCC = DIO + DSO − DPO]\n  E --> F</div></p>\n<p><strong>CCC 越短越好的原因</strong></p>\n<ul>\n<li>CCC 短代表現金流動快，需要的營運資金少。</li>\n<li>CCC 為負（如 COSTCO）代表「先收客戶錢、再付供應商」，現金自由。</li>\n<li>同產業內 CCC 縮短，代表競爭力提升或議價力增強。</li>\n</ul>\n<p><strong>案例：9923 鈺齊-KY 2023 vs 2024 CCC 趨勢</strong></p>\n<pre><code>2023 年：\n  DIO = 365 × 22 / 90 = 89 天\n  DSO = 365 × 17 / 110 = 56 天\n  DPO = 365 × 10 / 90 = 41 天\n  CCC = 89 + 56 − 41 = 104 天\n\n2024 年：\n  DIO = 365 × 20 / 96 = 76 天\n  DSO = 365 × 18 / 120 = 55 天\n  DPO = 365 × 12 / 96 = 46 天\n  CCC = 76 + 55 − 46 = 85 天\n\n趨勢：CCC 從 104 → 85 天（縮短 19 天）\n貢獻拆解：\n  存貨週轉加快 −13 天（DIO 改善）\n  應收幾乎持平  −1 天\n  應付天數延長  +5 天（DPO 增加是負貢獻方向，但對 CCC 有利）\n\n洞察：庫存管理顯著改善 + 與供應商議價力提升，\n     釋出約 (19天/365) × 96億 ≈ 5 億現金。</code></pre>\n<p><strong>各產業 CCC 對比</strong></p>\n<table>\n<thead>\n<tr><th>產業</th><th>CCC 典型範圍</th><th>關鍵驅動</th></tr>\n</thead>\n<tbody>\n<tr><td>COSTCO / WMT</td><td>−10 ~ +10 天</td><td>快速週轉 + 延後付款</td></tr>\n<tr><td>軟體 SaaS</td><td>10–40 天</td><td>無實體庫存</td></tr>\n<tr><td>晶圓代工（2330）</td><td>50–70 天</td><td>製程長 + 客戶集中</td></tr>\n<tr><td>製鞋代工（9923）</td><td>80–100 天</td><td>原料庫存高 + 出貨週期長</td></tr>\n<tr><td>建設業</td><td>500+ 天</td><td>專案期長</td></tr>\n</tbody>\n</table>\n<details><summary>常見客戶問題與話術</summary>\n<ul>\n<li><strong>Q：CFO 為什麼比淨利重要？</strong><br>A：淨利可以「做出來」（會計政策、認列時點），但現金流入帳是真實的。長期看，現金流才能還債、發股利、再投資。歷史上多數財務造假案例（如 Enron、博達科技）淨利都漂亮，但 CFO 早已惡化。</li>\n<li><strong>Q：CapEx 高的公司是好還是壞？</strong><br>A：要看「投資報酬」。資本密集產業（晶圓、電信）CapEx 高是必要的，重點看新增 CapEx 能不能帶來相應營收與獲利成長。台積電持續高 CapEx 但 ROE 仍 30%，代表投資有效。反之，CapEx 高但 ROE 持續下降，代表資本配置失敗。</li>\n<li><strong>Q：FCF 殖利率 vs 股利殖利率，哪個重要？</strong><br>A：FCF 殖利率更全面。若 FCF 殖利率 8% 但股利殖利率只有 2%，代表公司可能在累積現金、買回庫藏股、或還債，未來股利有上調空間。反之若股利殖利率 5% 但 FCF 殖利率僅 1%，可能靠借錢配息，未來股利不可持續。</li>\n</ul>\n</details>\n\n<details><summary>名詞定義</summary>\n<ul>\n<li><strong>CCC（Cash Conversion Cycle）</strong>：現金週轉週期。又稱現金循環週期。</li>\n<li><strong>營運資金（Working Capital）</strong>：流動資產 − 流動負債。代表營運所需的短期資金。</li>\n<li><strong>應計項目（Accruals）</strong>：淨利 − CFO。應計項目持續大 = 獲利品質低。</li>\n</ul>\n</details>"
     }
-  ]
+  ],
+  "description": "營業／投資／融資三大活動現金流"
 }

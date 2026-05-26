@@ -4,42 +4,50 @@
   "chapters": [
     {
       "slug": "overview",
-      "title": "財富管理總論與業務全景",
+      "title": "總論全景",
+      "description": "業務全景、HNW/Affluent/Mass、財管 2.0",
       "file": "01_overview.json"
     },
     {
       "slug": "segmentation",
-      "title": "客戶分群與適格性（HNW/Affluent/Mass、CRS、KYC）",
+      "title": "客戶分群",
+      "description": "HNW/Affluent/Mass、CRS、KYC、適格性",
       "file": "02_segmentation.json"
     },
     {
       "slug": "allocation",
-      "title": "資產配置原則（生命週期、目標、風險屬性）",
+      "title": "資產配置",
+      "description": "生命週期、目標、風險屬性、再平衡",
       "file": "03_allocation.json"
     },
     {
       "slug": "products",
-      "title": "商品總覽（存款／基金／保險／債券／結構型／不動產）",
+      "title": "商品總覽",
+      "description": "存款／基金／保險／債券／結構型／不動產",
       "file": "04_products.json"
     },
     {
       "slug": "performance",
-      "title": "績效衡量與基準（TWR/MWR、Benchmark、Sharpe、MDD）",
+      "title": "績效衡量",
+      "description": "TWR / MWR、Benchmark、Sharpe、MDD",
       "file": "05_performance.json"
     },
     {
       "slug": "regulation",
-      "title": "監理與合規（信託業法、財管 2.0、金管會、適合度評估）",
+      "title": "監理合規",
+      "description": "信託業法、財管 2.0、金管會、適合度評估",
       "file": "06_regulation.json"
     },
     {
       "slug": "operations",
-      "title": "業務管理與合規實務（產品上架、行銷推廣、理專紀律、裁罰缺失）",
+      "title": "業務管理",
+      "description": "產品上架、行銷推廣、理專紀律、裁罰缺失",
       "file": "07_operations.json"
     },
     {
       "slug": "advanced",
-      "title": "多元商品整合與進階資產配置（跨商品、金流、衍生／結構）",
+      "title": "進階整合",
+      "description": "跨商品、金流、衍生 / 結構、組合配置",
       "file": "08_advanced.json"
     }
   ]

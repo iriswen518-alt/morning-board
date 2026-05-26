@@ -1,7 +1,7 @@
 {
   "chapter": 5,
   "slug": "performance",
-  "title": "績效衡量與基準（TWR／MWR、Benchmark、Sharpe、MDD）",
+  "title": "績效衡量",
   "objectives": [
     "區分 TWR（時間加權）與 MWR（金額加權）的計算邏輯與適用情境",
     "建立「絕對報酬 vs 相對報酬」並選擇合理 Benchmark 對照",
@@ -30,5 +30,6 @@
       "heading": "五、客戶報表編製（年化、累積、分項損益、費用揭露）",
       "html": "<p>客戶投組報表是 IA 與客戶溝通的<strong>核心工具</strong>。一份合規且實用的報表至少包含：（1）資產配置現況；（2）期間損益（年化／累積／TWR／MWR）；（3）對照 benchmark；（4）分項損益（個別商品損益）；（5）費用揭露（手續費、信託費、其他）。</p>\n<div class=\"mermaid\">flowchart TD\n  A[客戶投組報表] --> B[資產配置]\n  A --> C[期間損益]\n  A --> D[對照 Benchmark]\n  A --> E[分項損益]\n  A --> F[費用揭露]\n  B --> B1[圓餅圖 餅型分布]\n  C --> C1[年化 累積 TWR MWR]\n  D --> D1[+- alpha 比較]\n  E --> E1[每檔商品損益]\n  F --> F1[手續費 信託費 其他]</div>\n<p><strong>合規報表必揭露項目（依金管會規範）</strong></p>\n<table>\n<thead><tr><th>項目</th><th>揭露細節</th></tr></thead>\n<tbody>\n<tr><td>計價方式</td><td>採 TWR 或 MWR，並標註選擇理由</td></tr>\n<tr><td>計算期間</td><td>當月、季、年、累積（自開戶日起）</td></tr>\n<tr><td>對照 Benchmark</td><td>標明 benchmark 名稱、來源</td></tr>\n<tr><td>費用總覽</td><td>本期手續費、信託費、其他費用</td></tr>\n<tr><td>分項損益</td><td>每檔商品的成本、市值、損益、報酬率</td></tr>\n<tr><td>幣別揭露</td><td>外幣商品需標示原幣損益 + 匯損益</td></tr>\n<tr><td>配息揭露</td><td>月配息基金須揭露「配息中本金比率」</td></tr>\n</tbody></table>\n<p><strong>報表常見溝通陷阱</strong>：</p>\n<ul>\n<li><strong>只給累積報酬不給年化</strong>：「累積 +45%」聽起來很多，但若這是 10 年表現，年化僅約 3.8%，未必勝過 benchmark。</li>\n<li><strong>不揭露費用</strong>：客戶看到「報酬 +5%」卻不知道扣完手續費、信託費後實際 +2.5%。</li>\n<li><strong>外幣商品只報原幣</strong>：USD 基金本身 +10%，但 USD/TWD 貶 8%，客戶實際 TWD 報酬僅 +1.2%。</li>\n<li><strong>不對照 benchmark</strong>：客戶看到「+8%」很開心，但同期 S&amp;P 500 +20%，實際是大幅落後。</li>\n</ul>\n<p><strong>定期檢討會議的標準流程</strong>：每季或每半年一次，建議流程：（1）回顧過去績效（TWR、MWR、vs benchmark）；（2）說明市場環境變化；（3）解釋投組調整邏輯；（4）檢視 KYC／適合度是否需更新；（5）討論下期計畫。會議過程須留紀錄，保存至少 5 年。</p>\n<details><summary>法源全文</summary>\n<p><strong>金融消費者保護法 §10</strong>（全文）：</p>\n<blockquote>金融服務業與金融消費者訂立提供金融商品或服務之契約前，應向金融消費者充分說明該金融商品、服務及契約之重要內容，並充分揭露其風險。</blockquote>\n<p><strong>銀行辦理特定金錢信託投資國內外有價證券業務或特定金錢信託投資國內外結構型商品業務客戶須知範本</strong>（金管會公告）：</p>\n<blockquote>銀行應定期（至少每季）寄發信託對帳單，揭露受託投資商品之名稱、單位數、市值、損益、相關費用、配息／配本金等資訊。</blockquote>\n<p>資料來源：全國法規資料庫（https://law.moj.gov.tw）；金管會銀行局公告。</p>\n</details>"
     }
-  ]
+  ],
+  "description": "TWR / MWR、Benchmark、Sharpe、MDD"
 }

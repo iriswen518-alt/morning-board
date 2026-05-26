@@ -1,7 +1,7 @@
 {
   "chapter": 3,
   "slug": "monetary",
-  "title": "央行貨幣政策：升降息、QE/QT 與殖利率曲線",
+  "title": "貨幣政策",
   "objectives": [
     "掌握央行三大傳統工具（重貼現率、存款準備率、公開市場操作）的機制",
     "理解 Fed 利率走廊（IORB、ON RRP、Fed Funds Rate）的關係",
@@ -30,5 +30,6 @@
       "heading": "五、利率對各資產類別影響",
       "html": "<p>升降息透過貼現率、現金流、估值倍數三條路徑影響資產價格。不同資產對利率敏感度不同，IA 須能解釋給客戶。</p>\n<p><div class=\"mermaid\">flowchart TD\n  A[\"利率上升\"] --> B[\"債券\"]\n  A --> C[\"股票\"]\n  A --> D[\"外匯\"]\n  A --> E[\"不動產\"]\n  B --> B1[\"債券價格 下跌<br/>長債受傷較重\"]\n  C --> C1[\"成長股 > 估值壓縮<br/>價值股 / 銀行受惠\"]\n  D --> D1[\"本幣升值<br/>套利資金流入\"]\n  E --> E1[\"房貸成本上升<br/>需求下滑\"]</div></p>\n<table>\n<thead><tr><th>資產類別</th><th>升息影響</th><th>降息影響</th><th>敏感度</th></tr></thead>\n<tbody>\n<tr><td>長天期國債（20Y+）</td><td>價格大跌</td><td>價格大漲</td><td>極高（Duration ~17）</td></tr>\n<tr><td>短天期國債（2Y）</td><td>價格小跌、殖利率上升</td><td>價格小漲</td><td>低（Duration ~2）</td></tr>\n<tr><td>投資級公司債</td><td>價格下跌</td><td>價格上漲</td><td>中（Duration 6-8）</td></tr>\n<tr><td>高收益債</td><td>價差擴張 + 利率上升</td><td>價差收斂 + 利率下降</td><td>中（信用 vs 利率）</td></tr>\n<tr><td>成長股（科技、生技）</td><td>估值倍數壓縮</td><td>估值倍數擴張</td><td>高</td></tr>\n<tr><td>價值股（金融、能源）</td><td>NIM 擴大、銀行受惠</td><td>NIM 壓縮</td><td>中</td></tr>\n<tr><td>不動產 REITs</td><td>融資成本 + 估值雙壓</td><td>融資成本下降</td><td>高</td></tr>\n<tr><td>本幣</td><td>升值（套利流入）</td><td>貶值（套利流出）</td><td>中</td></tr>\n</tbody>\n</table>\n<p><strong>債券價格與利率關係：Duration</strong></p>\n<ul>\n<li>Duration（存續期間）：利率變動 1% 時，債券價格變動的百分比。</li>\n<li>例：TLT（20Y+ 美國國債 ETF）Duration 約 17 → 利率上升 1% → 價格下跌約 17%。</li>\n<li>例：SHY（1-3Y 美國國債 ETF）Duration 約 1.8 → 利率上升 1% → 價格下跌約 1.8%。</li>\n</ul>\n<p><strong>股票估值的利率敏感度</strong></p>\n<ul>\n<li>DCF（現金流折現）模型：股價 = 未來現金流 / (1+r)^t</li>\n<li>r 上升 → 分母變大 → 股價下跌。</li>\n<li>遠期現金流占比高（成長股、長久期股票）的股票受傷較重。</li>\n<li>例：2022 年 Fed 升息週期，那斯達克下跌 33%、S&P 500 下跌 19%、道瓊下跌 9%。</li>\n</ul>\n<p><strong>2024 年實例：Fed 9 月降息後市場反應</strong></p>\n<ul>\n<li>2024-09-18 Fed 降息 2 碼（50 bp），自 5.25-5.50% → 4.75-5.00%。</li>\n<li>長債：TLT 一週內漲 2.5%，反映降息預期。</li>\n<li>股票：S&P 500 漲 1.7%、那斯達克漲 2.6%。</li>\n<li>美元：DXY 短暫下跌至 100，後回升至 104（因經濟韌性強於預期）。</li>\n<li>黃金：突破 2,650 美元/盎司歷史高點。</li>\n</ul>\n<details><summary>實戰應用</summary>\n<ul>\n<li>客戶持有大量現金擔心錯失降息：建議分批進入投資級公司債（IGSB/USIG）或中天期國債（IEF）。</li>\n<li>客戶持有大量長債擔心 QT 退場後利率反彈：可考慮部分轉移到短債 + 浮動利率債券。</li>\n<li>升息週期末段建議重新檢視 60/40 組合：降息週期長債有資本利得潛力，可適度延長 Duration。</li>\n</ul>\n</details>\n<details><summary>名詞定義</summary>\n<ul>\n<li><strong>Duration（存續期間）</strong>：債券對利率變動的敏感度指標，單位為年。Duration 越長對利率越敏感。</li>\n<li><strong>NIM（Net Interest Margin）</strong>：銀行的淨利差，放款利率減資金成本。升息有助 NIM 擴大。</li>\n<li><strong>DCF（Discounted Cash Flow）</strong>：現金流折現模型，將未來現金流以折現率（r）折現至現值。</li>\n<li><strong>套利交易（Carry Trade）</strong>：借入低利率貨幣投資高利率資產的策略，對利率差敏感。</li>\n</ul>\n</details>"
     }
-  ]
+  ],
+  "description": "升降息、QE / QT、殖利率曲線"
 }

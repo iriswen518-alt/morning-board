@@ -1,7 +1,7 @@
 {
   "chapter": 6,
   "slug": "story",
-  "title": "客戶故事與案例運用",
+  "title": "案例運用",
   "objectives": [
     "理解案例故事在金融銷售中的心理機制與轉換效果",
     "掌握案例編寫的「背景—痛點—方案—結果」四段架構",
@@ -30,5 +30,6 @@
       "heading": "五、案例庫的長期經營",
       "html": "<p>有經驗的 IA 都有自己的案例庫——一個可隨時調用、不斷更新、便於分類的資料庫。建議從入行第一年就開始建立，5 年累積 50–100 個案例後，已能應付絕大多數面談與簡報需求。</p>\n<p><div class=\"mermaid\">flowchart TD\n  A[新案例完成] --> B[編號 + 命名]\n  B --> C[歸入分類]\n  C --> D[標註 tag]\n  D --> E[儲存至案例庫]\n  E --> F[年度檢視]\n  F --> G{狀態}\n  G --> G1[更新結果]\n  G --> G2[歸檔已過時]\n  G --> G3[改寫為新案例]</div></p>\n<table>\n<thead>\n<tr><th>分類維度</th><th>標籤範例</th></tr>\n</thead>\n<tbody>\n<tr><td>客戶分層</td><td>Mass / Affluent / HNW / UHNW</td></tr>\n<tr><td>生命階段</td><td>單身 / 新婚 / 養育 / 退休 / 傳承</td></tr>\n<tr><td>商品類別</td><td>基金 / 保險 / 信託 / 結構商品 / 海外</td></tr>\n<tr><td>主題</td><td>退休 / 教育 / 傳承 / 節稅 / 風險規避</td></tr>\n<tr><td>運用情境</td><td>簡報 / 文章 / 面談 / 講座</td></tr>\n<tr><td>更新頻率</td><td>常用 / 偶用 / 待更新 / 已歸檔</td></tr>\n</tbody>\n</table>\n<p><strong>案例庫工具選擇</strong></p>\n<ul>\n<li><strong>Notion / Obsidian</strong>：適合內容多、需 tag 與連結功能。</li>\n<li><strong>Excel</strong>：簡單上手，適合表格化管理。</li>\n<li><strong>CRM 系統</strong>：若公司 CRM 有筆記功能，可直接記錄。</li>\n<li><strong>紙本筆記本</strong>：移動性好，但搜尋與更新麻煩，不建議長期使用。</li>\n</ul>\n<p><strong>案例編號規則建議</strong></p>\n<pre><code>格式：類別代碼 - 年份 - 流水號\n\n範例：\n  RT-2024-001 退休規劃案例\n  TR-2024-002 傳承信託案例\n  IN-2024-003 保險規劃案例\n  ST-2024-004 結構商品案例\n  HN-2024-005 HNW 跨境案例\n</code></pre>\n<p><strong>年度檢視 SOP</strong></p>\n<ul>\n<li><strong>每年 12 月</strong>：盤點全年新增案例與更新既有案例。</li>\n<li><strong>結果追蹤</strong>：對使用過的案例，追加「客戶後續發展」「IA 學到什麼」段落。</li>\n<li><strong>過時案例</strong>：法規變動、商品下架、客戶情境已不適用 → 歸檔不再使用。</li>\n<li><strong>新趨勢補強</strong>：對新法規（如 2024 信託 2.0、財管 2.0、CFC 規範）建立對應案例。</li>\n</ul>\n<p><strong>長期案例庫的隱性價值</strong></p>\n<ul>\n<li><strong>個人專業資產</strong>：5 年累積 50 個案例 = 5 年實戰經驗的可調用版本，對 IA 個人品牌極為加分。</li>\n<li><strong>培訓新人</strong>：成為主管後，案例庫可作為培訓素材。</li>\n<li><strong>內容行銷素材</strong>：經去識別化後，可改寫為文章、講座、Podcast 內容。</li>\n<li><strong>面對客戶問題的反應速度</strong>：客戶提出問題時，IA 能立即想到類似案例佐證，信任感大增。</li>\n</ul>\n<details><summary>實戰建議</summary>\n<ul>\n<li><strong>每週寫 1 個案例</strong>：剛入行的 IA，從每週 1 個小案例開始，1 年累積 50 個。</li>\n<li><strong>當下記錄勝於事後回憶</strong>：面談結束 24 小時內就記下要點，否則細節會遺失。</li>\n<li><strong>跨同事交換案例</strong>：團隊內部建立共享案例庫，互相學習與檢核合規。</li>\n<li><strong>定期被合規同事審閱</strong>：每半年請合規同事抽查 5–10 個案例，校正合規邊界。</li>\n</ul>\n</details>"
     }
-  ]
+  ],
+  "description": "客戶故事改編、隱私處理、佐證"
 }

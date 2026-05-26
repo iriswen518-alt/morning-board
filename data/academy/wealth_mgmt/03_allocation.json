@@ -1,7 +1,7 @@
 {
   "chapter": 3,
   "slug": "allocation",
-  "title": "資產配置原則（生命週期、目標、風險屬性）",
+  "title": "資產配置",
   "objectives": [
     "區分戰略資產配置（SAA）與戰術資產配置（TAA）的時程、頻率、KPI",
     "套用生命週期配置：30、40、50、60 歲各階段的風險屬性與商品比重",
@@ -30,5 +30,6 @@
       "heading": "五、台灣 IA 常用配置模型",
       "html": "<p>除了客製化配置，IA 也常引用幾個經典配置模型作為基準。每個模型有其哲學與適用情境，IA 應能解釋給客戶聽、並判斷是否適合套用。</p>\n<div class=\"mermaid\">flowchart TD\n  A[常見配置模型] --> B[80/20]\n  A --> C[60/40]\n  A --> D[All Weather]\n  A --> E[Permanent Portfolio]\n  B --> B1[積極 8 股 2 債]\n  C --> C1[平衡 6 股 4 債]\n  D --> D1[全天候 30 股 40 長債 15 短債 15 商品]\n  E --> E1[永久 25 股 25 長債 25 黃金 25 現金]</div>\n<p><strong>四種模型比較</strong></p>\n<table>\n<thead><tr><th>模型</th><th>配置</th><th>哲學</th><th>適用客戶</th></tr></thead>\n<tbody>\n<tr><td>80/20</td><td>股 80%／債 20%</td><td>追求長期成長、可承擔波動</td><td>30-40 歲、累積期</td></tr>\n<tr><td>60/40</td><td>股 60%／債 40%</td><td>平衡成長與保護</td><td>多數客戶基準</td></tr>\n<tr><td>All Weather（Dalio）</td><td>股 30%／長債 40%／短債 15%／商品 7.5%／黃金 7.5%</td><td>分散通膨／成長／通縮／衰退四象限</td><td>HNW、長期持有</td></tr>\n<tr><td>Permanent（Browne）</td><td>股 25%／長債 25%／黃金 25%／現金 25%</td><td>應對任一市場情境</td><td>極保守、危機防禦</td></tr>\n</tbody></table>\n<p><strong>60/40 模型的近年挑戰</strong>：傳統 60/40 在 2022 年遭遇雙殺（股債齊跌），是 1976 年以來最差表現（年度 -16%）。原因是利率上升環境下，股債相關性由負轉正，分散效果失效。對策包括（1）加入低相關性資產（黃金、商品、不動產）；（2）將部分長債改為短債或浮動利率債；（3）以選擇權或結構型商品做下檔保護。</p>\n<p><strong>All Weather 的台灣實作問題</strong>：Dalio 的 All Weather 原設計使用美國長天期公債作為通縮對沖，但台灣 IA 為客戶實作時需考量（1）長天期美債的匯率風險；（2）長債利率風險（久期 15+ 年）；（3）商品與黃金部位的取得管道（多為 ETF 或基金，非實體）。完整 All Weather 不一定適合一般 Mass Affluent 客戶，但「<strong>分散到非股債資產</strong>」的精神值得套用。</p>\n<details><summary>名詞定義</summary>\n<ul>\n<li><strong>All Weather Portfolio</strong>：橋水基金 Ray Dalio 提出的全天候配置。設計理念為「不預測經濟情境，而是讓投組在任何情境下都能存活」。</li>\n<li><strong>Permanent Portfolio</strong>：Harry Browne 於 1980 年代提出的永久投資組合。25%×4 配置，極簡且穩健。</li>\n<li><strong>Risk Parity</strong>：風險平價。讓各資產對投組的「風險貢獻」相等，而非「金額」相等。All Weather 為其代表。</li>\n</ul></details>"
     }
-  ]
+  ],
+  "description": "生命週期、目標、風險屬性、再平衡"
 }

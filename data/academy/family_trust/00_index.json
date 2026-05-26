@@ -4,37 +4,44 @@
   "chapters": [
     {
       "slug": "concepts",
-      "title": "信託基本概念",
+      "title": "基本概念",
+      "description": "信託委託人、受託人、受益人三角色",
       "file": "01_concepts.json"
     },
     {
       "slug": "types",
-      "title": "家族信託類型",
+      "title": "信託類型",
+      "description": "自益／他益、本金／收益、宣言信託",
       "file": "02_types.json"
     },
     {
       "slug": "design",
-      "title": "信託架構設計",
+      "title": "架構設計",
+      "description": "信託契約、信託財產、給付條件",
       "file": "03_design.json"
     },
     {
       "slug": "tax",
       "title": "信託稅務",
+      "description": "贈與稅、遺產稅、所得稅、實質課稅",
       "file": "04_tax.json"
     },
     {
       "slug": "cross_border",
       "title": "跨境信託",
+      "description": "境外信託、CRS、租稅天堂",
       "file": "05_cross_border.json"
     },
     {
       "slug": "law",
-      "title": "台灣信託法與相關法規",
+      "title": "信託法規",
+      "description": "信託法、信託業法、信託登記",
       "file": "06_law.json"
     },
     {
       "slug": "use_cases",
-      "title": "主要信託類型實務（家族／安養／保險金）",
+      "title": "實務案例",
+      "description": "家族／安養／保險金信託案例",
       "file": "07_use_cases.json"
     }
   ]

@@ -1,7 +1,7 @@
 {
   "chapter": 1,
   "slug": "growth",
-  "title": "經濟成長與 GDP",
+  "title": "經濟成長",
   "objectives": [
     "理解 GDP 三種計算法（生產面、支出面、所得面）的概念與差異",
     "區分名目 GDP 與實質 GDP，並掌握 GDP deflator 的角色",
@@ -30,5 +30,6 @@
       "heading": "五、GDP 發布日程與市場反應",
       "html": "<p>GDP 數據發布時市場通常已透過月度高頻指標（零售銷售、PMI、工業生產、就業）形成預期。實際數據與預期的差距才是行情驅動因素。</p>\n<p><div class=\"mermaid\">flowchart TD\n  A[GDP 發布] --> B{\"vs 市場預期?\"}\n  B -- \"優於預期\" --> C[\"股市 +<br/>美元 +<br/>長債殖利率 +\"]\n  B -- \"符合預期\" --> D[\"市場小幅波動\"]\n  B -- \"低於預期\" --> E[\"股市 -<br/>美元 -<br/>長債殖利率 -\"]\n  C --> F[\"惟過熱時 股市反向 升息預期升溫\"]\n  E --> G[\"惟衰退時 股市可能反彈 降息預期升溫\"]</div></p>\n<p><strong>美國 GDP 發布日程（BEA）</strong></p>\n<table>\n<thead><tr><th>版本</th><th>發布時點</th><th>內容</th></tr></thead>\n<tbody>\n<tr><td>Advance Estimate</td><td>季後第 1 個月底</td><td>初步估計，數據覆蓋不完整</td></tr>\n<tr><td>Second Estimate</td><td>季後第 2 個月底</td><td>修正版本，包含更多數據</td></tr>\n<tr><td>Third Estimate</td><td>季後第 3 個月底</td><td>最終版，包含完整修正</td></tr>\n</tbody>\n</table>\n<p>例：2024 Q3 GDP，Advance 於 2024-10-30 公布、Second 於 2024-11-27 公布、Third 於 2024-12-19 公布。</p>\n<p><strong>台灣 GDP 發布日程（主計總處）</strong></p>\n<ul>\n<li><strong>初步統計</strong>：季後第 7 週左右公布（如 Q3 約 11 月底）。</li>\n<li><strong>概估數</strong>：部分季別會先公布 30 天速報。</li>\n<li><strong>修正統計</strong>：每年 2、5、8、11 月綜合修正。</li>\n</ul>\n<p><strong>市場反應實例</strong></p>\n<ul>\n<li>2024-10-30 美國 Q3 GDP Advance：3.1% QoQ SAAR，預期 3.0%，符合預期 → 美元指數小幅上漲、10 年期殖利率小幅上行。</li>\n<li>2024-04-25 美國 Q1 GDP Advance：1.6% QoQ SAAR，遠低於預期 2.5% → 美元下跌、降息預期升溫。</li>\n</ul>\n<details><summary>實戰應用</summary>\n<ul>\n<li>客戶在 GDP 發布前後詢問是否進場：建議用「實際 vs 預期」、而非「實際 vs 上期」評估市場方向。</li>\n<li>建議客戶建立「總經事件日曆」：FOMC、NFP、CPI、GDP 四大事件的發布日須提前 1 週減低高槓桿部位。</li>\n<li>長期投資者不應過度反應單一季度 GDP 波動，應觀察 2-3 季趨勢與潛在 GDP 對比。</li>\n</ul>\n</details>\n<details><summary>名詞定義</summary>\n<ul>\n<li><strong>BEA（Bureau of Economic Analysis）</strong>：美國商務部經濟分析局，負責 GDP、PCE 等國民所得帳。</li>\n<li><strong>主計總處</strong>：行政院主計總處，負責台灣 GDP、CPI、人口統計等官方數據。</li>\n<li><strong>Consensus Forecast</strong>：市場（Bloomberg、Reuters）綜合各機構分析師的預測中位數，是「市場預期」的代表。</li>\n</ul>\n</details>"
     }
-  ]
+  ],
+  "description": "GDP、CPI、PMI、消費投資出口"
 }

@@ -1,7 +1,7 @@
 {
   "chapter": 1,
   "slug": "kyc",
-  "title": "KYC 與客戶分類",
+  "title": "KYC 分類",
   "objectives": [
     "理解 KYC 的三大目的：法令遵循、適合度評估、商機挖掘",
     "掌握 KYC 三層查證流程（身分、財力、投資經驗 + 風險屬性）",
@@ -30,5 +30,6 @@
       "heading": "五、KYC 資料的內部運用",
       "html": "<p>KYC 完成後，資料應流入兩條軌道：產品推薦軌、合規防線軌。兩條軌道缺一不可。</p>\n<p><div class=\"mermaid\">flowchart TD\n  A[KYC 完整資料] --> B[產品推薦軌]\n  A --> C[合規防線軌]\n  B --> B1[客戶分群標籤]\n  B --> B2[商品適配清單]\n  B --> B3[每季商機產出]\n  C --> C1[適合度比對]\n  C --> C2[銷售文件勾稽]\n  C --> C3[爭議發生時舉證]</div></p>\n<p><strong>產品推薦軌</strong></p>\n<table>\n<thead>\n<tr><th>KYC 訊號</th><th>商機類型</th><th>建議切入</th></tr>\n</thead>\n<tbody>\n<tr><td>子女出生 / 未成年</td><td>教育金、儲蓄險、信託</td><td>10–20 年期定期定額</td></tr>\n<tr><td>配偶為外籍人士</td><td>跨境傳承、外幣資產</td><td>外幣保單、海外債</td></tr>\n<tr><td>企業主、年所得 NT$500 萬以上</td><td>節稅、退休金、信託</td><td>勞退自提、退休金信託、傳承</td></tr>\n<tr><td>近期繼承大額遺產</td><td>分散配置、稅務</td><td>多元資產配置 + 分年贈與</td></tr>\n<tr><td>退休前 5 年</td><td>現金流、降風險</td><td>債券基金、保本商品、即期年金</td></tr>\n</tbody>\n</table>\n<p><strong>合規防線軌</strong></p>\n<ol>\n<li><strong>商品銷售前比對</strong>：KYC 風險屬性 vs 商品分級，系統自動攔截不符案件。</li>\n<li><strong>銷售文件勾稽</strong>：適合度評估書、商品說明書、錄音錄影紀錄應與 KYC 一致。</li>\n<li><strong>爭議發生時舉證</strong>：金融消費評議中心約 7 成爭議與「銷售過程不符適合度」有關，完整 KYC 紀錄是 IA 最重要的舉證材料。</li>\n</ol>\n<p><strong>KPI 建議</strong></p>\n<ul>\n<li>KYC 完整度（基本資料、財力、投資經驗、風險屬性、家庭結構五欄齊全）：≥ 95%。</li>\n<li>KYC 更新即時率（到期 30 天內完成）：≥ 90%。</li>\n<li>KYC 衍生商機件數（每月每位 IA）：≥ 5 件。</li>\n</ul>\n<details><summary>實戰案例</summary>\n<p><strong>案例：王先生（55 歲，企業主，AUM NT$3,500 萬）KYC 更新發現傳承商機</strong></p>\n<ul>\n<li><strong>觸發事件</strong>：年度更新時，王先生提到剛在美國買了一棟出租住宅。</li>\n<li><strong>IA 動作</strong>：</li>\n<li>1. 重新填寫 KYC「海外資產」欄位，記錄美國不動產約 USD 80 萬。</li>\n<li>2. 詢問「資金匯出路徑」，發現是透過 OBU 帳戶分 3 筆匯出 → 啟動 EDD，加填資金來源說明。</li>\n<li>3. 詢問「美國租金回流方式」→ 發現尚未規劃 → 建議開立外幣帳戶接收租金。</li>\n<li>4. 詢問「未來繼承安排」→ 王先生有 2 名子女皆為美籍 → 預約家族傳承規劃面談。</li>\n<li><strong>後續</strong>：3 個月內成交美元存款 USD 30 萬 + 子女預立信託需求進入規劃。</li>\n<li><strong>學習重點</strong>：KYC 更新時的「閒聊」常常是最大商機來源，IA 須有意識引導對話。</li>\n</ul>\n</details>"
     }
-  ]
+  ],
+  "description": "KYC 流程、客戶分類、適合度評估"
 }

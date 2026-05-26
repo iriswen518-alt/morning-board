@@ -1,7 +1,7 @@
 {
   "chapter": 7,
   "slug": "use_cases",
-  "title": "主要信託類型實務（家族信託、安養信託、保險金信託）",
+  "title": "實務案例",
   "objectives": [
     "區分家族信託、安養信託、保險金信託三類用途與適用情境",
     "掌握各類信託的契約設計重點、撥款條件、課稅原則",
@@ -29,5 +29,6 @@
       "heading": "五、信託費用、開辦門檻與業者選擇",
       "html": "<p>『業者選擇』直接影響信託服務品質。台灣信託業者分四類：本國銀行信託部、外商銀行、信託投資公司、家族辦公室。各有專長與限制。</p>\n<div class=\"mermaid\">flowchart LR\n  A[業者類型] --> B[本國銀行信託部]\n  A --> C[外商銀行 私銀]\n  A --> D[信託投資公司]\n  A --> E[家族辦公室 FO]\n  B --> B1[費用低 商品在地]\n  C --> C1[跨境強 費用高]\n  D --> D1[特化信託業務]\n  E --> E1[客製化 整合服務]</div>\n<p><strong>四類業者比較</strong></p>\n<table>\n<thead><tr><th>業者</th><th>費用</th><th>專長</th><th>適合客戶</th></tr></thead>\n<tbody>\n<tr><td>本國銀行信託部</td><td>低（設立 0.3-0.5%、年費 0.3%）</td><td>新台幣信託、安養信託、特金</td><td>淨值 1,000 萬-5 億、需求標準</td></tr>\n<tr><td>外商銀行私人銀行</td><td>高（年費 1-2%、最低資產門檻 USD 100 萬-1,000 萬）</td><td>跨境信託、境外投資</td><td>淨值 USD 500 萬以上、跨境需求</td></tr>\n<tr><td>信託投資公司</td><td>中（依案件）</td><td>特定信託、企業信託</td><td>有特定信託需求</td></tr>\n<tr><td>家族辦公室</td><td>極高（年費 2-3%、僅服務超 HNW）</td><td>客製化、家族治理、跨世代</td><td>淨值 USD 5,000 萬以上</td></tr>\n</tbody></table>\n<p><strong>選擇信託業者四問</strong></p>\n<ol>\n<li><strong>專業度</strong>：信託部員工年資、案件經驗、是否有 CPA／律師資格？</li>\n<li><strong>商品範圍</strong>：能承做的信託類型（金錢／不動產／股權／保險金）？跨境能力？</li>\n<li><strong>收費透明度</strong>：設立費／年費／追加給付費／提前終止費，是否書面明列？</li>\n<li><strong>退場機制</strong>：若不滿意服務想轉信託，受託人是否願意配合移轉？移轉費用？</li>\n</ol>\n<p><strong>典型信託費用結構</strong></p>\n<table>\n<thead><tr><th>費用項目</th><th>計費方式</th><th>本國銀行典型</th><th>外商私銀典型</th></tr></thead>\n<tbody>\n<tr><td>設立費</td><td>信託資產 × 比率，一次性</td><td>0.3-0.5%</td><td>0.5-1%</td></tr>\n<tr><td>管理費（年費）</td><td>信託資產 × 比率，每年</td><td>0.3-0.5%</td><td>0.8-2%</td></tr>\n<tr><td>給付手續費</td><td>每次撥款固定費</td><td>NT$500-2,000／次</td><td>類似</td></tr>\n<tr><td>修約費</td><td>每次契約修改</td><td>NT$10,000-30,000</td><td>類似或更高</td></tr>\n<tr><td>提前終止費</td><td>剩餘資產 × 比率</td><td>0.5-2%</td><td>1-3%</td></tr>\n</tbody></table>\n<p><strong>費用合理性的判斷標準</strong></p>\n<ul>\n<li><strong>家族信託</strong>：年費 0.3-0.8% 屬合理；超過 1% 應比較其他業者</li>\n<li><strong>安養信託</strong>：每月設立費 NT$5-10 萬、年費 NT$3-5 萬為市場常態</li>\n<li><strong>保險金信託</strong>：設立費 NT$3-5 萬、年費 NT$2-5 萬</li>\n</ul>\n<p><strong>IA 銷售信託時的合規要點</strong></p>\n<ol>\n<li><strong>不得保證收益</strong>：信託本身是『管理工具』，不保證投資績效</li>\n<li><strong>充分揭露費用</strong>：總費用率（TER）必須書面提供</li>\n<li><strong>業者風險揭露</strong>：受託人若為銀行，仍存信評風險；不適用存款保險</li>\n<li><strong>稅務風險揭露</strong>：他益型信託設立時要課贈與稅，須提醒</li>\n<li><strong>不得誤導為節稅工具</strong>：信託本身不節稅，避稅安排可能觸發實質課稅原則</li>\n</ol>\n<details><summary>名詞定義</summary>\n<ul>\n<li><strong>TER</strong>：Total Expense Ratio，總費用率，含管理費、保管費、行政費。</li>\n<li><strong>追加給付</strong>：契約原約定外，臨時增加的撥款（如突發醫療費）。</li>\n<li><strong>實質課稅原則</strong>：稅捐機關依交易實質而非形式課稅，避免透過信託架構規避稅務。</li>\n</ul></details>\n<details><summary>常見錯誤</summary>\n<ul>\n<li><strong>『信託可以節稅』</strong>：信託本身不節稅。他益型設立要課贈與稅；運用期間孳息要課所得稅；終止時可能要課贈與或遺產稅。節稅效果來自『分年贈與 + 受益人分散』，不是信託本身。</li>\n<li><strong>『信託財產絕對安全』</strong>：信託財產雖獨立於受託人，但仍受市場風險、投資選擇影響。受託人破產，信託財產可移轉至新受託人，但運用期間的投資損失不會回復。</li>\n<li><strong>『簽完就不用管』</strong>：信託應每 3-5 年檢視契約，配合家庭狀況、稅法、市場變化更新撥款條件、監察人、受益人。</li>\n</ul></details>"
     }
-  ]
+  ],
+  "description": "家族／安養／保險金信託案例"
 }

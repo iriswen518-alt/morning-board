@@ -1,7 +1,7 @@
 {
   "chapter": 1,
   "slug": "statements",
-  "title": "三大財務報表結構",
+  "title": "三大報表",
   "objectives": [
     "理解資產負債表的恆等式與流動／非流動分類邏輯",
     "掌握損益表從營收到 EPS 的逐層損益結構",
@@ -30,5 +30,6 @@
       "heading": "五、IFRS vs 台灣會計準則差異重點",
       "html": "<p>台灣自 2013 年起上市櫃公司全面採用 IFRS（國際財務報導準則），稱為 TIFRS（Taiwan IFRS）。仍有少數差異與實務調整。</p>\n<p><div class=\"mermaid\">flowchart LR\n  A[全球準則] --> B[IFRS<br/>原則式]\n  A --> C[US GAAP<br/>規則式]\n  A --> D[TIFRS<br/>台灣版 IFRS]\n  D --> D1[2013 上市櫃強制]\n  D --> D2[2015 公發強制]</div></p>\n<table>\n<thead>\n<tr><th>項目</th><th>IFRS / TIFRS</th><th>US GAAP</th></tr>\n</thead>\n<tbody>\n<tr><td>存貨評價</td><td>不允許 LIFO（後進先出）</td><td>允許 LIFO</td></tr>\n<tr><td>研發支出</td><td>研究費用化、開發符合條件可資本化</td><td>多數費用化</td></tr>\n<tr><td>固定資產重估</td><td>允許採重估價模式</td><td>不允許（僅成本模式）</td></tr>\n<tr><td>商譽攤銷</td><td>不攤銷、每年減損測試</td><td>不攤銷、每年減損測試（一致）</td></tr>\n<tr><td>租賃（IFRS 16）</td><td>承租人單一模型：使用權資產 + 租賃負債</td><td>區分營業租賃與融資租賃</td></tr>\n<tr><td>金融工具</td><td>IFRS 9：FVPL / FVOCI / AC 三分類</td><td>類似但細節差異</td></tr>\n</tbody>\n</table>\n<p><strong>對台股分析的實務影響</strong></p>\n<ul>\n<li><strong>IFRS 16 租賃資本化</strong>（2019 生效）：原本租金費用化的營業租賃，承租方必須認列「使用權資產」與「租賃負債」。對航空、零售、餐飲業負債比影響大。</li>\n<li><strong>IFRS 9 金融資產</strong>（2018 生效）：金融資產分類影響「金融資產評價損益」走 P&amp;L 或 OCI，影響淨利穩定度。</li>\n<li><strong>IFRS 15 收入認列</strong>（2018 生效）：五步驟法，影響軟體業、建設業、長期合約類收入認列時點。</li>\n<li><strong>IFRS 17 保險合約</strong>（2026 生效，台灣 2026 同步）：壽險業財報結構大改，影響國泰金、富邦金等。</li>\n</ul>\n<p><strong>台灣特殊規範</strong></p>\n<ul>\n<li>公司法 §232：無盈餘不得分派股利（含資本公積轉增資但不可發現金股利）。</li>\n<li>所得稅法 §66-9（已廢）：未分配盈餘加徵 5%（原 10%，2018 修正）。</li>\n<li>金管會證期局：要求第一季、第三季財報併同附註揭露。</li>\n</ul>\n<details><summary>名詞定義</summary>\n<ul>\n<li><strong>IFRS（International Financial Reporting Standards）</strong>：國際財務報導準則。由 IASB（國際會計準則理事會）發布。</li>\n<li><strong>TIFRS</strong>：Taiwan IFRS。台灣金管會核定採用的 IFRS 版本，可能落後 IFRS 1-2 年。</li>\n<li><strong>US GAAP</strong>：美國一般公認會計原則。由 FASB（財務會計準則理事會）發布。</li>\n<li><strong>LIFO（Last-In, First-Out）</strong>：後進先出存貨評價法。通膨時期可降低稅負，IFRS 禁用。</li>\n</ul>\n</details>\n\n<details><summary>法源全文</summary>\n<p><strong>證券交易法 §14</strong>（摘要）：</p>\n<blockquote>公司之資產負債表、綜合損益表、權益變動表、現金流量表，應依主管機關所定之規定編製。</blockquote>\n<p><strong>商業會計法 §28</strong>（全文）：</p>\n<blockquote>財務報表之內容如下：一、資產負債表。二、綜合損益表。三、現金流量表。四、權益變動表。五、其他經中央主管機關規定之財務報表。</blockquote>\n<p>資料來源：全國法規資料庫（https://law.moj.gov.tw）；金管會證期局；IFRS Foundation（https://www.ifrs.org）。</p>\n</details>"
     }
-  ]
+  ],
+  "description": "資產負債表、損益表、現金流量表"
 }

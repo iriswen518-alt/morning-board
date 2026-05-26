@@ -4,37 +4,44 @@
   "chapters": [
     {
       "slug": "kyc",
-      "title": "KYC 與客戶分類",
+      "title": "KYC 分類",
+      "description": "KYC 流程、客戶分類、適合度評估",
       "file": "01_kyc.json"
     },
     {
       "slug": "lifecycle",
-      "title": "客戶生命週期管理",
+      "title": "生命週期",
+      "description": "客戶開發 / 經營 / 維護 / 流失各階段策略",
       "file": "02_lifecycle.json"
     },
     {
       "slug": "segmentation",
-      "title": "客戶分群與差異化服務",
+      "title": "分群服務",
+      "description": "依風險／資產規模／生命階段差異化服務",
       "file": "03_segmentation.json"
     },
     {
       "slug": "touchpoint",
-      "title": "接觸頻率、聯繫策略與 CRM 系統",
+      "title": "聯繫策略",
+      "description": "接觸頻率、聯繫方式、CRM 系統運用",
       "file": "04_touchpoint.json"
     },
     {
       "slug": "referral",
-      "title": "推薦與轉介機制",
+      "title": "轉介機制",
+      "description": "推薦動機、轉介流程、客戶見證",
       "file": "05_referral.json"
     },
     {
       "slug": "hnw",
-      "title": "高資產客戶經營與危機處理",
+      "title": "高資產經營",
+      "description": "HNW 客戶經營、危機處理、家族傳承",
       "file": "06_hnw.json"
     },
     {
       "slug": "relationship",
-      "title": "客戶關係深耕（關係維護、反對問題、抱怨處理）",
+      "title": "關係深耕",
+      "description": "關係維護、反對問題處理、抱怨應對",
       "file": "07_relationship.json"
     }
   ]

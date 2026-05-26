@@ -1,7 +1,7 @@
 {
   "chapter": 8,
   "slug": "advanced",
-  "title": "多元商品整合與進階資產配置（跨商品提案、金流規劃、衍生／結構商品、商品類型整理）",
+  "title": "進階整合",
   "objectives": [
     "建構跨商品整合提案的標準流程與檢核要點",
     "規劃 HNW 客戶的多時序金流（短中長期）與資產傳承動線",
@@ -25,5 +25,6 @@
       "heading": "四、商品類型與投資方式（整合回顧）",
       "html": "<p>IA 應建立『商品類型 × 投資方式』的二維地圖。同一商品可能有多種投資方式（單筆／定期定額／槓桿／信託代操），不同投資方式對應不同稅務、風險、流動性。</p>\n<div class=\"mermaid\">flowchart LR\n  A[商品類型] --> B[現金存款]\n  A --> C[股票]\n  A --> D[債券]\n  A --> E[基金 ETF]\n  A --> F[保險]\n  A --> G[結構商品]\n  A --> H[不動產]\n  A --> I[另類 私募]</div>\n<p><strong>八大商品類型對照表</strong></p>\n<table>\n<thead><tr><th>類型</th><th>主要投資方式</th><th>典型風險</th><th>稅務</th></tr></thead>\n<tbody>\n<tr><td>現金存款</td><td>活／定存、外幣定存</td><td>通膨、匯率</td><td>利息所得 §14；27 萬以下免納</td></tr>\n<tr><td>股票（台股）</td><td>現股、信用交易、零股、定期定額</td><td>市場、個股、流動性</td><td>證交稅 0.3%；股利兩制 §15；§42 法人</td></tr>\n<tr><td>股票（美股）</td><td>現股、ADR、ETF</td><td>市場、匯率、稅務</td><td>FATCA W-8BEN；配息 30% 預扣</td></tr>\n<tr><td>債券</td><td>單筆、海外債、ETF 化、信託代買</td><td>利率、信用、匯率</td><td>境外配息列海外所得（最低稅負制）</td></tr>\n<tr><td>基金 / ETF</td><td>單筆、定期定額、轉換</td><td>市場、費用侵蝕</td><td>境內資本利得免稅；境外列海外所得</td></tr>\n<tr><td>保險</td><td>躉繳、年繳、變額</td><td>提前解約損失、保險公司信評</td><td>保費列扣 §17-1；保險金 §16 部分免列遺產</td></tr>\n<tr><td>結構商品</td><td>單筆、信託投資</td><td>條件觸發、發行商信用</td><td>到期金額（含本利）列海外所得</td></tr>\n<tr><td>不動產</td><td>自有、信託、REITs</td><td>流動性、區段、政策</td><td>房地合一 2.0、地價／房屋稅、租賃所得</td></tr>\n</tbody></table>\n<p><strong>商品搭配的『時序－風險－稅務』三角形</strong></p>\n<p>IA 在組合多商品時，應同時檢視：</p>\n<ul>\n<li><strong>時序對齊</strong>：每個商品的到期／可流動時點與客戶目標時序是否一致</li>\n<li><strong>風險不重疊</strong>：避免多商品連結同一風險源（例如同時持有 5 支科技股基金）</li>\n<li><strong>稅務最適</strong>：境內外配置、所得性質、家庭成員稅級綜合考量</li>\n</ul>\n<p><strong>跨商品提案的範例：『穩中求進』客戶（淨值 5,000 萬，60 歲，退休準備）</strong></p>\n<table>\n<thead><tr><th>商品</th><th>比重</th><th>角色</th></tr></thead>\n<tbody>\n<tr><td>外幣定存（USD 1.5 年）</td><td>20%</td><td>緊急金＋避險</td></tr>\n<tr><td>全球平衡型基金</td><td>25%</td><td>核心增值</td></tr>\n<tr><td>投資級公司債（5-7 年）</td><td>20%</td><td>定期現金流</td></tr>\n<tr><td>年金保險（10 年期）</td><td>10%</td><td>退休保障</td></tr>\n<tr><td>保險金信託</td><td>15%</td><td>傳承＋保險金管理</td></tr>\n<tr><td>不動產（自住外另持）</td><td>10%</td><td>替代資產＋租金</td></tr>\n</tbody></table>\n<details><summary>名詞定義</summary>\n<ul>\n<li><strong>商品矩陣（Product Matrix）</strong>：以『風險－期限』或『商品類別－投資方式』展開的二維表，協助 IA 規劃整合配置。</li>\n<li><strong>時序對齊</strong>：商品的可流動／到期時點與客戶實際需要動用資金的時間相符。</li>\n<li><strong>風險集中度</strong>：投資組合中對單一風險因子（產業／國家／發行商／利率）的暴露程度。</li>\n</ul></details>\n<details><summary>常見錯誤</summary>\n<ul>\n<li><strong>『一籃子科技股 + 科技基金 + 科技 ETF』看似多商品實為單一風險</strong>：分散是分散在『風險源』而非『商品數量』。</li>\n<li><strong>把高收益債當『債券』配置</strong>：高收益債與股市相關度高，行情下跌時與股票同步重挫，不具備真正避險功能。</li>\n<li><strong>只用稅務優惠決定配置</strong>：為了節稅選不適合的商品，最終損失大於節稅。稅務應為『最後優化』，不是『起點』。</li>\n</ul></details>"
     }
-  ]
+  ],
+  "description": "跨商品、金流、衍生 / 結構、組合配置"
 }

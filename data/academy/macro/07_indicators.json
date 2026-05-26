@@ -1,7 +1,7 @@
 {
   "chapter": 7,
   "slug": "indicators",
-  "title": "景氣指標判讀與商品配置實務（個體、指標、利匯率、循環商品、新聞判讀）",
+  "title": "指標判讀",
   "objectives": [
     "區分總體經濟與個體經濟、了解產業結構與勞動市場的觀察重點",
     "建立重要財經數據發布行事曆並判讀對市場的影響",
@@ -30,5 +30,6 @@
       "heading": "五、財經新聞判讀框架（事實／觀點／雜訊三分法）",
       "html": "<p>IA 每天接觸大量財經新聞，但<strong>並非每條新聞都對投資決策有用</strong>。建立『事實 / 觀點 / 雜訊』三分法是專業 IA 與業餘投資人的關鍵分水嶺。</p>\n<div class=\"mermaid\">flowchart TD\n  A[一條新聞] --> B{是什麼?}\n  B -->|事實 數據 公告| C[事實 Fact]\n  B -->|分析師 評論| D[觀點 Opinion]\n  B -->|揣測 標題殺人| E[雜訊 Noise]\n  C --> F[納入決策]\n  D --> G[參考 自行驗證]\n  E --> H[忽略 或反向操作]</div>\n<p><strong>三類新聞的辨識特徵</strong></p>\n<table>\n<thead><tr><th>類別</th><th>特徵</th><th>處理方式</th><th>範例</th></tr></thead>\n<tbody>\n<tr><td><strong>事實</strong></td><td>來源權威（政府／企業公告）、有確切數字／日期、可獨立驗證</td><td>納入決策依據；存檔追蹤</td><td>『美 7 月 CPI 年增 3.2%（預期 3.3%）』『台積電 Q2 EPS NT$9.56（YoY +35%）』</td></tr>\n<tr><td><strong>觀點</strong></td><td>分析師／經理人／名嘴判斷；有主觀色彩；常含『預期』『可能』『恐』</td><td>對照事實再判斷；觀察該分析師歷史準確率</td><td>『高盛上調 SP500 年底目標至 5500』『某基金經理人認為 Fed 將提前降息』</td></tr>\n<tr><td><strong>雜訊</strong></td><td>標題誇張、來源不明、揣測未證實傳聞、未列數據</td><td>忽略或反向觀察情緒</td><td>『○○股恐崩盤！分析師驚爆內幕』『內部人士透露重大利空』</td></tr>\n</tbody></table>\n<p><strong>新聞判讀五問</strong>（看到任何新聞先問自己）：</p>\n<ol>\n<li><strong>來源是誰？</strong>政府機構／企業公告？大型媒體？或是『某分析師』？</li>\n<li><strong>有數字嗎？</strong>有具體數字、日期、來源頁碼可查證？</li>\n<li><strong>是否已 priced in？</strong>市場已預期？或這是 surprise？</li>\n<li><strong>對投資決策有影響嗎？</strong>影響我客戶持有部位嗎？影響配置邏輯嗎？</li>\n<li><strong>需要動作嗎？</strong>還是只是『新聞而已』？多數情況答案是：不需要動作。</li>\n</ol>\n<p><strong>新聞解讀的『反人性原則』</strong></p>\n<ul>\n<li>媒體標題越誇張 → 越可能是『情緒高點』 → 該<strong>反向思考</strong></li>\n<li>『所有人都看空』 → 通常接近底部</li>\n<li>『所有人都樂觀』 → 通常接近高點</li>\n<li>『新聞天天報導』的議題 → 通常已 priced in，沒有交易機會</li>\n<li>『沒人注意的角落』 → 反而藏著真正的機會</li>\n</ul>\n<p><strong>IA 每日新聞工作流建議</strong>：</p>\n<ol>\n<li>早上 8:00 看『隔夜美股 + 重要數據結果』（5-10 分鐘）</li>\n<li>盤前 8:30-9:00 看『今日預定發布數據／企業財報』（5 分鐘）</li>\n<li>盤中重大事件即時推播（避免被無關新聞中斷）</li>\n<li>盤後 14:00-15:00 整理『今日重大事件＋客戶持有部位影響』</li>\n<li>晚間 22:00 看『美股開盤前數據＋亞洲市場收盤總結』</li>\n</ol>\n<p>長期下來，IA 的判斷力來自<strong>『一致的訊號過濾框架』</strong>，而非『讀更多新聞』。</p>\n<details><summary>名詞定義</summary>\n<ul>\n<li><strong>標題殺人法</strong>：媒體為點擊率以聳動標題誇大內容，實際內文與標題不符。</li>\n<li><strong>反向指標</strong>：當市場一致看法極端時，反向操作往往勝率較高。例如 AAII 散戶情緒指數極端樂觀／悲觀都是反向訊號。</li>\n<li><strong>事件驅動 vs 趨勢追蹤</strong>：事件驅動依新聞做短線決策；趨勢追蹤忽略短期新聞，依長期方向操作。</li>\n</ul></details>\n<details><summary>常見錯誤</summary>\n<ul>\n<li><strong>『新聞看到就要動』</strong>：90% 新聞與投資決策無關。動作太頻繁＝交易成本與情緒成本激增。</li>\n<li><strong>『分析師說 XX』就直接照做</strong>：分析師有自身的時序與部位偏好，且歷史準確率多數 50% 左右。</li>\n<li><strong>不查證『大師預測』</strong>：媒體常引用『某大師預言 XX 崩盤』，但不報導該大師過去 10 次預測對了幾次。</li>\n</ul></details>"
     }
-  ]
+  ],
+  "description": "個體、利匯率、循環商品、新聞判讀"
 }

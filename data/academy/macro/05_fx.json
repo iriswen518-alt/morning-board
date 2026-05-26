@@ -1,7 +1,7 @@
 {
   "chapter": 5,
   "slug": "fx",
-  "title": "匯率、資本流動與外匯存底",
+  "title": "匯率資本",
   "objectives": [
     "理解匯率決定三大理論（PPP、IRP、BoP）的概念與應用",
     "掌握 Carry Trade 利差交易的機制與風險",
@@ -30,5 +30,6 @@
       "heading": "五、台幣匯率影響因素",
       "html": "<p>新台幣（TWD）匯率主要受四大因素驅動：電子業景氣（出口收入）、央行政策（干預力道）、外資動向（金融帳）、利差結構（CIP）。</p>\n<p><div class=\"mermaid\">flowchart TD\n  A[\"USD/TWD\"] --> B[\"電子業 EPS\"]\n  A --> C[\"央行干預\"]\n  A --> D[\"外資動向\"]\n  A --> E[\"美台利差\"]\n  B --> B1[\"出口收匯 增加供應\"]\n  C --> C1[\"進場熨平\"]\n  D --> D1[\"買賣台股\"]\n  E --> E1[\"利差套利 CIP\"]\n  B --> F[\"台幣升貶\"]\n  C --> F\n  D --> F\n  E --> F</div></p>\n<table>\n<thead><tr><th>驅動因素</th><th>影響方向</th><th>觀察指標</th></tr></thead>\n<tbody>\n<tr><td>半導體景氣強</td><td>台幣升值</td><td>出口、TSMC 月營收</td></tr>\n<tr><td>外資買台股</td><td>台幣升值</td><td>外資三大法人買賣超</td></tr>\n<tr><td>央行買美元</td><td>台幣貶值</td><td>外匯存底變動</td></tr>\n<tr><td>美台利差擴大</td><td>台幣貶值</td><td>Fed 利率 - 台央行利率</td></tr>\n<tr><td>地緣政治風險</td><td>台幣貶值</td><td>VIX、外資匯出</td></tr>\n</tbody>\n</table>\n<p><strong>近期 USD/TWD 走勢（2024）</strong></p>\n<ul>\n<li>2024-01：31.4（強台幣）</li>\n<li>2024-04：32.5</li>\n<li>2024-07：32.4</li>\n<li>2024-10：31.8（外資買超台股 + Fed 降息）</li>\n<li>2024-12：32.9（外資匯出、DXY 強）</li>\n</ul>\n<p><strong>美台利差結構（2024-12）</strong></p>\n<ul>\n<li>Fed Funds Rate：4.25-4.50%</li>\n<li>台灣央行重貼現率：2.00%</li>\n<li>美台利差：約 2.25-2.50%</li>\n<li>1 年期 NDF（無本金交割遠期）USD/TWD：33.4（貼水反映美元利率較高，遠期應升水才符合 CIP）</li>\n</ul>\n<p><strong>台灣 CIP（拋補利率平價）異常</strong></p>\n<ul>\n<li>理論上：F/S - 1 = (i_USD - i_TWD) / (1+i_TWD)，1 年期遠期 USD/TWD 應 ≈ 32.9 × (1+2.5%) = 33.7</li>\n<li>實際 NDF 約 33.4，反映台灣對美元的需求壓力（升值預期）。</li>\n<li>對壽險業影響：壽險海外投資對沖成本上升，2024 年對沖成本約 5-6%（包含基差），侵蝕美元投資票息。</li>\n</ul>\n<p><strong>對客戶資產配置的意涵</strong></p>\n<ul>\n<li><strong>不對沖美元資產</strong>：賺利息 + 享美元升值（風險：美元貶值）。</li>\n<li><strong>對沖美元資產</strong>：扣對沖成本後剩 0-1% 票息（無匯率風險）。</li>\n<li><strong>2024 年實務</strong>：5% 美債扣對沖成本後剩 0% → 不如 4.5% 殖利率的台幣 NCD。</li>\n<li>建議客戶：以「不對沖、長期持有」為主，搭配台幣資產分散風險。</li>\n</ul>\n<details><summary>實戰應用</summary>\n<ul>\n<li>客戶問「現在該不該換美元」：可建議分批操作（每月或每季定額），避開單一時點風險。USD/TWD 33 以下視為相對便宜、35 以上視為相對昂貴（過去 10 年區間 28-33）。</li>\n<li>客戶詢問美元定存利率高為何不全換：須提醒匯率波動。USD/TWD 從 32 跌至 30 等於 6% 損失，可吃掉一年定存利息。</li>\n<li>判斷台幣中期方向：可看 (1) TSMC ADR 走勢、(2) 外資台股買賣超、(3) DXY 方向 三者綜合。</li>\n</ul>\n</details>\n<details><summary>名詞定義</summary>\n<ul>\n<li><strong>NDF（Non-Deliverable Forward）</strong>：無本金交割遠期外匯，主要用於資本管制貨幣（如 TWD、CNY），到期不交割本金、僅交割價差。</li>\n<li><strong>對沖成本（Hedging Cost）</strong>：透過遠期或 NDF 鎖定匯率的成本，主要等於兩國利差 + 基差。</li>\n<li><strong>基差（Basis）</strong>：實際對沖成本與理論利差的差額，反映市場供需失衡。</li>\n<li><strong>金融帳（Financial Account）</strong>：BoP 中記錄資本流動的部分，含 FDI、證券投資、衍生性商品、其他投資。</li>\n</ul>\n</details>"
     }
-  ]
+  ],
+  "description": "匯率、資本流動、外匯存底"
 }

@@ -1,7 +1,7 @@
 {
   "chapter": 2,
   "slug": "cross_border",
-  "title": "跨境資產配置與投資策略稅務",
+  "title": "跨境稅務",
   "objectives": [
     "釐清『海外所得』『境外所得』『大陸來源所得』的稅務認定",
     "套用最低稅負制（基本所得稅額條例）計算海外所得稅",
@@ -26,5 +26,6 @@
       "heading": "四、HNW 客戶跨境配置的稅務最適化",
       "html": "<p>跨境配置不只看投資報酬，更要看『稅後實際報酬』。同樣 5% 報酬率，<strong>不同稅務架構可能差異 1-3%</strong>。本節提供 HNW 客戶常用的配置原則。</p>\n<div class=\"mermaid\">flowchart LR\n  A[資產類型] --> B[境內帳戶]\n  A --> C[境外帳戶]\n  B --> B1[新台幣存款]\n  B --> B2[境內基金]\n  B --> B3[台股]\n  C --> C1[USD 帳戶]\n  C --> C2[境外基金]\n  C --> C3[海外債券]\n  C --> C4[境外結構商品]</div>\n<p><strong>HNW 客戶『境內 vs 境外配置』原則</strong></p>\n<table>\n<thead><tr><th>配置面向</th><th>境內優先</th><th>境外優先</th></tr></thead>\n<tbody>\n<tr><td>稅務</td><td>本國利息 27 萬免；股利兩制</td><td>海外所得 750 萬免稅額（最低稅負制）</td></tr>\n<tr><td>遺產稅</td><td>非居住者僅課境內</td><td>居住者全球課稅</td></tr>\n<tr><td>流動性</td><td>當日 / T+1</td><td>T+3 以上、外幣轉換</td></tr>\n<tr><td>商品選擇</td><td>新台幣商品、境內基金</td><td>全球商品、外幣計價、私募</td></tr>\n<tr><td>監理保障</td><td>金管會監理、評議中心</td><td>當地監理；爭議處理較複雜</td></tr>\n<tr><td>傳承</td><td>遺產分配在台辦理</td><td>跨境繼承程序複雜</td></tr>\n</tbody></table>\n<p><strong>HNW 客戶『跨境配置』典型架構</strong>（淨值 USD 1000 萬）</p>\n<table>\n<thead><tr><th>位置</th><th>比重</th><th>主要商品</th><th>稅務考量</th></tr></thead>\n<tbody>\n<tr><td>境內銀行</td><td>30%</td><td>新台幣定存、境內基金、台股</td><td>本國正常綜所稅；股利兩制</td></tr>\n<tr><td>境內外幣帳戶</td><td>20%</td><td>USD 定存、境內外幣基金</td><td>本國綜所稅（利息）；基金資本利得免稅</td></tr>\n<tr><td>境外（香港 / 新加坡私銀）</td><td>30%</td><td>全球股票基金、海外債、結構商品</td><td>列海外所得（最低稅負）；CRS 申報</td></tr>\n<tr><td>境外保單</td><td>10%</td><td>美元壽險、年金</td><td>符合 §17-1 部分免列遺產；保險金信託</td></tr>\n<tr><td>境外不動產</td><td>10%</td><td>美國 / 歐洲不動產</td><td>當地房地產稅、美國 FIRPTA、台灣境外不動產遺產稅</td></tr>\n</tbody></table>\n<p><strong>『最常見的跨境稅務地雷』</strong></p>\n<ol>\n<li><strong>美國 ETF 遺產稅</strong>：直接持有美股 ETF 超過 USD 60,000，身故時可能課 40% 遺產稅。改用愛爾蘭 ETF 規避。</li>\n<li><strong>境外保單未申報</strong>：CRS 已涵蓋有現金價值的境外保單；未申報＝逃稅</li>\n<li><strong>香港帳戶逾 100 萬未申報</strong>：CRS 後台灣國稅局已收到資訊；查獲補稅加罰</li>\n<li><strong>透過 BVI 公司持有 ≠ 隱匿</strong>：CRS 穿透公司找到實際受益人</li>\n<li><strong>大陸地區所得當『海外所得』</strong>：大陸地區所得列『境內』綜合所得，非海外所得（依大陸地區人民關係條例 §24）</li>\n</ol>\n<p><strong>跨境稅務的『五先』原則</strong>（IA 規劃前必先確認）</p>\n<ol>\n<li>客戶稅務居民身分（是否境內居住者）</li>\n<li>客戶家族成員稅務居民身分（子女是否海外籍／長期居留）</li>\n<li>資金來源已申報（避免反洗錢警示）</li>\n<li>各國租稅協定可用條款</li>\n<li>CRS 申報義務與內容</li>\n</ol>\n<details><summary>名詞定義</summary>\n<ul>\n<li><strong>BVI 公司</strong>：British Virgin Islands 註冊的境外公司，常用於資產持有。</li>\n<li><strong>稅後實際報酬（After-tax return）</strong>：扣除所有稅費後的真實報酬率。</li>\n<li><strong>地點套利（Jurisdictional arbitrage）</strong>：在不同稅務管轄區之間配置資產，合法利用稅率差異。</li>\n</ul></details>"
     }
-  ]
+  ],
+  "description": "CRS、AMT、跨境資產配置稅務"
 }

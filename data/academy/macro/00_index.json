@@ -4,37 +4,44 @@
   "chapters": [
     {
       "slug": "growth",
-      "title": "經濟成長與 GDP",
+      "title": "經濟成長",
+      "description": "GDP、CPI、PMI、消費投資出口",
       "file": "01_growth.json"
     },
     {
       "slug": "inflation",
-      "title": "通膨指標：CPI、PPI、PCE 與核心通膨",
+      "title": "通膨指標",
+      "description": "CPI、PPI、PCE、核心通膨",
       "file": "02_inflation.json"
     },
     {
       "slug": "monetary",
-      "title": "央行貨幣政策：升降息、QE/QT 與殖利率曲線",
+      "title": "貨幣政策",
+      "description": "升降息、QE / QT、殖利率曲線",
       "file": "03_monetary.json"
     },
     {
       "slug": "fiscal",
-      "title": "財政政策與政府債務",
+      "title": "財政政策",
+      "description": "政府支出、稅收、債務上限",
       "file": "04_fiscal.json"
     },
     {
       "slug": "fx",
-      "title": "匯率、資本流動與外匯存底",
+      "title": "匯率資本",
+      "description": "匯率、資本流動、外匯存底",
       "file": "05_fx.json"
     },
     {
       "slug": "cycle",
-      "title": "景氣循環與重大事件解讀",
+      "title": "景氣循環",
+      "description": "擴張／衰退、領先／落後指標",
       "file": "06_cycle.json"
     },
     {
       "slug": "indicators",
-      "title": "景氣指標判讀與商品配置實務（個體、指標、利匯率、循環商品、新聞判讀）",
+      "title": "指標判讀",
+      "description": "個體、利匯率、循環商品、新聞判讀",
       "file": "07_indicators.json"
     }
   ]

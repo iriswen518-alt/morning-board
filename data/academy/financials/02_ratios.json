@@ -1,7 +1,7 @@
 {
   "chapter": 2,
   "slug": "ratios",
-  "title": "關鍵財務比率",
+  "title": "關鍵比率",
   "objectives": [
     "計算並判讀獲利能力四大比率（GM、OPM、NPM、ROE/ROA）",
     "運用流動性比率評估短期償債能力",
@@ -30,5 +30,6 @@
       "heading": "五、市值面比率（估值類）",
       "html": "<p>市值面比率連結股價與財報，是 IA 與客戶溝通的高頻指標。</p>\n<table>\n<thead>\n<tr><th>比率</th><th>公式</th><th>解讀</th></tr>\n</thead>\n<tbody>\n<tr><td>本益比（PE）</td><td>股價 ÷ EPS（或市值 ÷ 淨利）</td><td>每元獲利投資人願付多少</td></tr>\n<tr><td>股價淨值比（PB）</td><td>股價 ÷ 每股淨值</td><td>每元淨資產投資人願付多少</td></tr>\n<tr><td>股價營收比（PSR）</td><td>股價 ÷ 每股營收</td><td>適合虧損成長股</td></tr>\n<tr><td>EV/EBITDA</td><td>企業價值 ÷ EBITDA</td><td>跨資本結構比較</td></tr>\n<tr><td>現金股利殖利率</td><td>每股現金股利 ÷ 股價</td><td>領息報酬率</td></tr>\n<tr><td>股利發放率</td><td>每股現金股利 ÷ EPS</td><td>盈餘分配比例</td></tr>\n</tbody>\n</table>\n<p><strong>EV 企業價值計算</strong></p>\n<pre><code>EV = 市值 + 總負債 − 現金及約當現金\n   = 股權價值 + 淨負債</code></pre>\n<p><strong>案例：2330 台積電（假設 2026/05 股價 NT$1,050）</strong></p>\n<pre><code>數據：\n  股價：1,050        EPS（年化）：50\n  每股淨值：162      每股營收：112\n  市值：272,000 億   現金：19,500 億\n  總負債：24,300 億  EBITDA：18,500 億\n  現金股利：14 元\n\nPE  = 1,050 / 50 = 21 倍\nPB  = 1,050 / 162 = 6.5 倍\nPSR = 1,050 / 112 = 9.4 倍\n\nEV = 272,000 + 24,300 − 19,500 = 276,800 億\nEV/EBITDA = 276,800 / 18,500 = 14.96 倍\n\n殖利率 = 14 / 1,050 = 1.33%\n發放率 = 14 / 50 = 28%</code></pre>\n<p><strong>各產業典型 PE / PB 區間</strong></p>\n<table>\n<thead>\n<tr><th>產業</th><th>PE 區間</th><th>PB 區間</th></tr>\n</thead>\n<tbody>\n<tr><td>大型科技（如 2330、AAPL）</td><td>15–30</td><td>4–8</td></tr>\n<tr><td>傳統金融</td><td>8–14</td><td>0.8–1.5</td></tr>\n<tr><td>食品民生</td><td>15–25</td><td>2–4</td></tr>\n<tr><td>高成長 SaaS</td><td>30–80 或無 PE</td><td>8–20</td></tr>\n<tr><td>景氣循環（鋼鐵、航運）</td><td>5–15（高點 PE 低）</td><td>0.8–2</td></tr>\n<tr><td>REITs／公用事業</td><td>15–25</td><td>1–2</td></tr>\n</tbody>\n</table>\n<details><summary>常見客戶問題與話術</summary>\n<ul>\n<li><strong>Q：PE 比較低就比較便宜嗎？</strong><br>A：未必。景氣循環股（如航運、鋼鐵）通常在景氣高峰、EPS 暴增時 PE 看起來最低，但其實是賣點。低 PE 也可能反映市場對公司前景悲觀。應比較同產業、同階段公司，並參考 PEG（PE 除以 EPS 成長率）。</li>\n<li><strong>Q：高殖利率股是不是比較好？</strong><br>A：要看「殖利率高的原因」。若是股價下跌造成殖利率被動拉高，可能是公司基本面惡化。若是公司穩定獲利、配息政策清楚，則為優質存股標的。觀察「連續配息年數」與「股利發放率」（建議 40–70%）。</li>\n<li><strong>Q：本益比看 TTM 還是預估？</strong><br>A：兩種都看。TTM（過去 12 個月）為事實，預估 PE 反映市場對未來預期。成長股看預估 PE，價值股看 TTM PE。</li>\n</ul>\n</details>\n\n<details><summary>名詞定義</summary>\n<ul>\n<li><strong>PEG（PE to Growth）</strong>：本益成長比 = PE ÷ EPS 年成長率。&lt; 1 視為便宜，&gt; 2 偏貴。</li>\n<li><strong>TTM（Trailing Twelve Months）</strong>：過去 12 個月。台股以最近四季合計計算。</li>\n<li><strong>EV（Enterprise Value）</strong>：企業價值。代表「買下整家公司」所需資金。</li>\n</ul>\n</details>"
     }
-  ]
+  ],
+  "description": "獲利、效率、流動、財務結構比率"
 }

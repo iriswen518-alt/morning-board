@@ -1,7 +1,7 @@
 {
   "chapter": 3,
   "slug": "seminar",
-  "title": "講座與 webinar 規劃",
+  "title": "講座規劃",
   "objectives": [
     "區分「教育講座」與「銷售講座」的比例配置與合規邊界",
     "掌握講座規劃 6 階段流程（題目、講師、場地、報名、執行、追蹤）",
@@ -30,5 +30,6 @@
       "heading": "五、講座 ROI 計算",
       "html": "<p>講座是 IA 個人品牌的<strong>高投入活動</strong>，必須用數字檢視是否值得繼續辦。建議從<strong>成本、觸及、商機轉換</strong>三個維度計算。</p>\n<p><div class=\"mermaid\">flowchart LR\n  A[講座 ROI] --> B[成本 維度]\n  A --> C[觸及 維度]\n  A --> D[商機 維度]\n  B --> B1[場地費 餐點 講師費 行銷費]\n  C --> C1[報名數 出席數 完播率]\n  D --> D1[諮詢數 面談數 開戶數 AUM]\n  B1 --> E[單客戶成本 CPL]\n  C1 --> E\n  D1 --> F[單商機價值]\n  E --> G[ROI]\n  F --> G</div></p>\n<table>\n<thead>\n<tr><th>維度</th><th>指標</th><th>金融講座基準</th></tr>\n</thead>\n<tbody>\n<tr><td>成本</td><td>單場總成本</td><td>實體：3–10 萬；線上：5,000–3 萬</td></tr>\n<tr><td>觸及</td><td>報名數</td><td>實體 30–80 人；線上 100–500 人</td></tr>\n<tr><td>觸及</td><td>NoShow 率</td><td>實體 ≤ 30%；線上 ≤ 50%</td></tr>\n<tr><td>觸及</td><td>線上完播率</td><td>≥ 50% 算優</td></tr>\n<tr><td>商機</td><td>諮詢轉化率（諮詢 / 出席）</td><td>10–25%</td></tr>\n<tr><td>商機</td><td>面談率（面談 / 諮詢）</td><td>50–80%</td></tr>\n<tr><td>商機</td><td>成交率（成交 / 面談）</td><td>20–40%</td></tr>\n</tbody>\n</table>\n<p><strong>單一客戶取得成本（CPL）計算</strong></p>\n<pre><code>單場 CPL = 講座總成本 / 諮詢數\n\n範例：\n  線上講座成本 1.5 萬，出席 80 人，諮詢 12 人\n  CPL = 15,000 / 12 = 1,250 元/客戶\n  → 相當合理（低於 Google Ads 金融關鍵字 CPL 2,000–5,000 元）\n</code></pre>\n<p><strong>單一商機價值（LTV）估算</strong></p>\n<ul>\n<li>若諮詢客戶平均 AUM 為 500 萬，停留 5 年，年費收入率 0.5%，則 LTV ≈ 12.5 萬。</li>\n<li>對比 CPL 1,250 元 → 投報比 100 倍，講座是高效獲客通路。</li>\n</ul>\n<p><strong>檢視週期</strong></p>\n<ul>\n<li><strong>每場後</strong>：當場填寫「成本 / 出席 / 諮詢」三欄。</li>\n<li><strong>每季</strong>：彙整當季所有講座 ROI，找出題材與通路效果。</li>\n<li><strong>每年</strong>：與其他通路（社群、轉介、廣告）比較單一客戶成本。</li>\n</ul>\n<details><summary>合規檢查表 — 講座結算</summary>\n<ul>\n<li>□ 出席者名單依個資法妥善保存（紙本鎖櫃 / 數位加密）</li>\n<li>□ 後續追蹤訊息附「您可隨時回覆 N 取消後續訊息」</li>\n<li>□ 講座錄影檔保存至少 5 年（廣告與證據用途）</li>\n<li>□ 商品說明型講座的適合度評估文件完整歸檔</li>\n<li>□ 70 歲以上客戶簽到時確認「適合度評估書」已完成</li>\n</ul>\n</details>"
     }
-  ]
+  ],
+  "description": "實體 / Webinar 規劃、招生、簡報"
 }
