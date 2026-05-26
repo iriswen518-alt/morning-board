@@ -3,11 +3,41 @@
   "slug": "regulation",
   "title": "法規與監理",
   "description": "海外債券銷售規範、KYC/KYP 與系統操作要點",
-  "objectives": [],
+  "objectives": [
+    "認識台灣海外債券銷售的主要法源與主管機關",
+    "理解專業投資人（PI）認定標準與意義",
+    "掌握銷售過程的必備文件與留證義務",
+    "區分外幣計價國際債券與境外直接投資的監理差異",
+    "識別海外債券常見銷售合規缺失與罰則"
+  ],
   "sections": [
     {
-      "heading": "本章節內容建構中",
-      "html": "<p>本章節內容正在準備中，敬請期待後續更新。</p><p>主題摘要：海外債券銷售規範、KYC/KYP 與系統操作要點</p>"
+      "heading": "海外債券的法規架構",
+      "html": "<p>海外債券在台灣銷售涉及多部規範，由金管會證券期貨局與銀行局共同監理。</p><table><thead><tr><th>法規／辦法</th><th>規範重點</th></tr></thead><tbody><tr><td>銀行辦理衍生性金融商品業務內部作業制度及程序管理辦法</td><td>跨境結構性債券、複雜債券銷售</td></tr><tr><td>外幣計價國際債券作業要點（金管會核准）</td><td>在台灣櫃買中心發行之外幣國際債券</td></tr><tr><td>境外結構型商品管理規則</td><td>境外發行之結構型債券銷售</td></tr><tr><td>銀行業辦理財富管理業務應注意事項</td><td>客戶分級、商品分級、銷售程序通則</td></tr><tr><td>金融消費者保護法</td><td>適合度評估、商品說明、爭議處理</td></tr><tr><td>所得基本稅額條例</td><td>稅務申報與留證</td></tr></tbody></table><div class=\"mermaid\">graph TD\n    A[金管會] --> B[證券期貨局<br/>櫃買中心 國際債券]\n    A --> C[銀行局<br/>銀行兼營信託 銷售管道]\n    B --> D[業者]\n    C --> D\n    style A fill:#019AB3,color:#fff</div>"
+    },
+    {
+      "heading": "專業投資人（PI）認定",
+      "html": "<p>多數海外債券限「專業投資人」（Professional Investor, PI）才能購買，PI 認定有嚴格標準。</p><table><thead><tr><th>類別</th><th>認定條件</th></tr></thead><tbody><tr><td>專業機構投資人</td><td>金融業、政府機構、退休基金、共同基金等</td></tr><tr><td>法人（高淨值投資法人）</td><td>淨值達新台幣 5,000 萬元，且有專業背景之經理人，或具一定金融商品交易經驗</td></tr><tr><td>自然人 PI</td><td>同時符合以下三條件：<br/>1. 提供新台幣 3,000 萬元以上之財力證明<br/>2. 年收入新台幣 150 萬元以上<br/>3. 具備充分之金融商品交易經驗</td></tr></tbody></table><blockquote><p><strong>認定流程</strong>：客戶填寫「專業投資人聲明書」+ 銀行核驗財力證明（如不動產謄本、存款證明、扣繳憑單）+ 主管核准 + 留證 5 年以上。</p></blockquote><div class=\"mermaid\">graph TD\n    A[客戶申請承做海外債] --> B{是否為 PI}\n    B -->|否| C[拒絕複雜債券銷售]\n    C --> D[建議改基金/ETF/UST 等]\n    B -->|是| E[簽署 PI 聲明書]\n    E --> F[商品適合度評估]\n    F --> G[簽署風險預告書]\n    G --> H[完成承做]\n    style C fill:#d62828,color:#fff\n    style H fill:#019AB3,color:#fff</div>"
+    },
+    {
+      "heading": "銷售過程必備文件",
+      "html": "<p>海外債券銷售之簽署文件繁多，每一份都關係日後爭議責任歸屬。</p><table><thead><tr><th>文件</th><th>內容重點</th><th>留證期</th></tr></thead><tbody><tr><td>PI 聲明書</td><td>客戶確認符合 PI 資格</td><td>5 年</td></tr><tr><td>商品說明書 / 公開說明書</td><td>商品結構、發行人、條款、風險</td><td>5 年</td></tr><tr><td>風險預告書</td><td>逐項列示信用、利率、匯率等風險</td><td>5 年</td></tr><tr><td>客戶風險屬性問卷</td><td>客戶最新風險屬性（每年覆核）</td><td>業務關係結束後 5 年</td></tr><tr><td>商品分級對照</td><td>商品 RR 等級對應客戶屬性</td><td>5 年</td></tr><tr><td>承做申請書</td><td>面額、價格、交割日、手續費</td><td>5 年</td></tr><tr><td>錄音／錄影檔</td><td>複雜商品（次順位、結構型、永續）必備</td><td>到期後 5 年</td></tr><tr><td>逾屬性聲明書</td><td>客戶要求逾風險屬性時</td><td>5 年</td></tr></tbody></table><details><summary>實務注意事項</summary><ul><li>客戶簽署應由業務人員核對身分證</li><li>商品說明書應於銷售前 1-2 日交付，給予客戶閱讀時間（避免「現場簽即賣」）</li><li>風險預告書中之「最大可能損失」應以粗體或框線標示</li><li>錄音錄影檔應檢核時長足夠（建議 ≥ 15 分鐘）</li></ul></details>"
+    },
+    {
+      "heading": "國際債券（櫃買中心發行）vs 境外直接投資",
+      "html": "<p>「在台灣櫃買中心發行的外幣國際債券」與「境外直接投資債券」在監理上有重大差異。</p><table><thead><tr><th>比較項目</th><th>櫃買國際債券</th><th>境外直接投資</th></tr></thead><tbody><tr><td>主管機關</td><td>金管會 + 櫃買中心</td><td>銀行局（兼營信託）</td></tr><tr><td>客戶資格</td><td>原則 PI（部分公司債可一般投資人）</td><td>PI 限定</td></tr><tr><td>稅務</td><td>分離課稅 10%</td><td>海外所得最低稅負制 20%</td></tr><tr><td>結算交割</td><td>透過台灣集保結算所</td><td>透過國際結算機構（Euroclear/Clearstream）</td></tr><tr><td>商品語言</td><td>中文發行文件</td><td>英文 OC、可能無中譯</td></tr><tr><td>爭議處理</td><td>台灣法律與評議中心</td><td>跨境法律、國際仲裁</td></tr></tbody></table><p><strong>實務常見銷售類型</strong>：</p><ul><li>櫃買國際債券：IBRD、AfDB、EIB、ADB 等多邊機構債（中華信評 twAAA）</li><li>境外投資：美國公債、美元投資級公司債、新興市場債</li><li>境外結構型債券：ELN、Range Accrual、Auto-callable 等（風險最高）</li></ul>"
+    },
+    {
+      "heading": "客戶適合度匹配",
+      "html": "<p>海外債券依複雜度與風險分級，對應客戶適合度。</p><table><thead><tr><th>商品類型</th><th>RR 等級</th><th>適合客戶</th></tr></thead><tbody><tr><td>美國公債（UST）</td><td>RR2</td><td>C2 以上（甚至 C1）</td></tr><tr><td>投資級公司債</td><td>RR3</td><td>C3 以上</td></tr><tr><td>多邊機構債（MDB）</td><td>RR3</td><td>C3 以上</td></tr><tr><td>新興市場美元主權債</td><td>RR4</td><td>C4 以上</td></tr><tr><td>新興市場本幣債</td><td>RR4-RR5</td><td>C4 以上 + PI</td></tr><tr><td>高收益債</td><td>RR4-RR5</td><td>C4 以上 + PI</td></tr><tr><td>次順位 / 永續債</td><td>RR5</td><td>C5 + PI + 主管核准</td></tr><tr><td>結構型債券（ELN 等）</td><td>RR5</td><td>C5 + PI + 加強告知</td></tr></tbody></table><blockquote><p><strong>核心規則</strong>：商品風險等級不得高於客戶風險屬性。逾屬性銷售須簽署「逾屬性聲明書」+ 分行主管書面核准，且不應成為常態（金檢重點查核項目）。</p></blockquote>"
+    },
+    {
+      "heading": "常見銷售缺失與罰則",
+      "html": "<p>金管會檢查局年度檢查報告中，海外債券銷售常見缺失：</p><table><thead><tr><th>缺失類型</th><th>典型情境</th><th>罰則</th></tr></thead><tbody><tr><td>銷售予非 PI 客戶</td><td>未核驗 PI 資格、形式簽署</td><td>糾正、罰鍰、停售</td></tr><tr><td>適合度評估流於形式</td><td>業務員代填問卷、客戶簽名</td><td>糾正、罰鍰</td></tr><tr><td>商品說明書未交付</td><td>無交付證明、口頭解釋了事</td><td>罰鍰 60-200 萬</td></tr><tr><td>未做錄音錄影（複雜商品）</td><td>檔案缺漏、時長不足</td><td>每筆 30 萬以上罰鍰</td></tr><tr><td>風險揭露不充分</td><td>未揭露最大損失、條款風險</td><td>罰鍰 + 客戶可民事求償</td></tr><tr><td>逾屬性無核准</td><td>未簽聲明書或核准</td><td>糾正、停止業務</td></tr><tr><td>利益衝突</td><td>銷售自家或關係企業發行債</td><td>違反信託業法 §25</td></tr></tbody></table><details><summary>實務內控檢核表</summary><ul><li>本月新承做之海外債客戶是否 100% 為 PI？</li><li>逾屬性銷售比例是否 ≤ 行內目標（建議 &lt; 5%）？</li><li>商品說明書交付證明檔案完整？</li><li>複雜商品錄音錄影是否每筆都有？時長 ≥ 15 分鐘？</li><li>客戶風險屬性是否每年覆核？</li><li>是否有銷售自家或利害關係人債券之情形？</li><li>客戶申訴是否於 30 日內回覆？</li></ul></details>"
+    },
+    {
+      "heading": "自我檢測",
+      "html": "<details><summary>Q1：自然人 PI 的認定條件有哪些？</summary><p>答：依現行規定，自然人 PI 須同時符合：(1) 財力證明 NT$3,000 萬以上 (2) 年收入 NT$150 萬以上 (3) 具備充分之金融商品交易經驗。三條件缺一不可。</p></details><details><summary>Q2：在台灣櫃買中心發行的 IBRD 美元債券，可以賣給非 PI 客戶嗎？</summary><p>答：櫃買中心國際債券分為「專業投資人專屬」與「一般投資人可購買」兩類。IBRD 部分發行案經主管機關核准可開放一般投資人購買，但仍須完成商品適合度評估。實務上應以該檔債券之發行條件公告為準。</p></details><details><summary>Q3：客戶 C3 屬性想買 RR5 的永續債，銀行可以承做嗎？</summary><p>答：原則不應承做，因商品風險等級遠高於客戶屬性。若客戶堅持，須簽署「逾屬性聲明書」+ 風險充分揭露 + 分行主管書面核准。但永續債屬最高風險商品，建議直接拒絕並推薦其他適合商品；逾屬性銷售比例過高會被金檢列為缺失。</p></details><details><summary>Q4：複雜海外債券（如結構型債券）銷售過程必須錄音錄影嗎？</summary><p>答：是。依〈銀行辦理衍生性金融商品業務內部作業制度及程序管理辦法〉，複雜性高風險商品（含結構型債券）銷售過程應全程錄音或錄影，檔案保存至商品到期後 5 年。未做錄音錄影為金檢常見缺失，每筆罰鍰約 30 萬以上。</p></details><p><strong>資料來源：</strong></p><ul><li>銀行辦理衍生性金融商品業務內部作業制度及程序管理辦法（金管會）</li><li>外幣計價國際債券作業要點（金管會核准）</li><li>境外結構型商品管理規則（金管會）</li><li>金融消費者保護法（<a href=\"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380226\" target=\"_blank\" rel=\"noopener\">pcode G0380226</a>）</li><li>所得基本稅額條例（<a href=\"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340103\" target=\"_blank\" rel=\"noopener\">pcode G0340103</a>）</li><li>櫃買中心國際債券專區 <a href=\"https://www.tpex.org.tw/web/bond/intnatBond/\" target=\"_blank\" rel=\"noopener\">tpex.org.tw</a></li><li>金管會〈裁罰專區〉 <a href=\"https://www.fsc.gov.tw/ch/home.jsp?id=128&parentpath=0\" target=\"_blank\" rel=\"noopener\">fsc.gov.tw</a></li></ul>"
     }
   ]
 }
