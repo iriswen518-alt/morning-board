@@ -663,7 +663,18 @@ table.indices .date-col {
 .obond-perf-grid label { font-size: 12px; }
 @media (max-width: 640px) {
   .obond-meta-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-  .obond-perf-grid { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .obond-perf-grid {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+      "bid bid bid ask ask ask"
+      "w w m m q q";
+    gap: 10px 6px;
+  }
+  .obond-perf-grid > div:nth-child(1) { grid-area: bid; }
+  .obond-perf-grid > div:nth-child(2) { grid-area: ask; }
+  .obond-perf-grid > div:nth-child(3) { grid-area: w; }
+  .obond-perf-grid > div:nth-child(4) { grid-area: m; }
+  .obond-perf-grid > div:nth-child(5) { grid-area: q; }
   .obond-meta-grid label,
   .obond-perf-grid label { white-space: nowrap; }
 }
