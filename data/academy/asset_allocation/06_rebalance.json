@@ -3,11 +3,41 @@
   "slug": "rebalance",
   "title": "動態再平衡",
   "description": "閾值法、時間法、稅務考量下的再平衡執行",
-  "objectives": [],
+  "objectives": [
+    "理解再平衡的學理基礎與實證效益",
+    "比較時間法、閾值法、混合法三種再平衡規則",
+    "認識再平衡對組合風險與報酬的影響",
+    "掌握稅務帳戶與課稅帳戶的再平衡策略差異",
+    "識別常見再平衡失誤與心理偏誤"
+  ],
   "sections": [
     {
-      "heading": "本章節內容建構中",
-      "html": "<p>本章節內容正在準備中，敬請期待後續更新。</p><p>主題摘要：閾值法、時間法、稅務考量下的再平衡執行</p>"
+      "heading": "為什麼需要再平衡",
+      "html": "<p>市場波動使組合自然偏離目標配置。若不再平衡，組合風險可能逐步上升（因表現好的資產比重增加，通常是股票）。</p><div class=\"mermaid\">graph LR\n    A[原始 60/40<br/>股 60% 債 40%] -->|股票漲 30%| B[新比例]\n    B --> C[股 67% 債 33%]\n    C --> D{是否再平衡}\n    D -->|是| E[賣股買債<br/>回到 60/40]\n    D -->|否| F[組合風險升高<br/>變相提高股票曝險]\n    style E fill:#019AB3,color:#fff\n    style F fill:#d62828,color:#fff</div><table><thead><tr><th>再平衡好處</th><th>說明</th></tr></thead><tbody><tr><td>維持目標風險</td><td>避免風險隨市場「漂移」（drift）</td></tr><tr><td>強制紀律</td><td>克服「漲多不賣、跌多不買」的人性</td></tr><tr><td>系統性高賣低買</td><td>長期可貢獻 0.3-0.5% 年化超額報酬</td></tr><tr><td>降低極端風險</td><td>避免單一資產過度集中</td></tr></tbody></table>"
+    },
+    {
+      "heading": "三種再平衡規則",
+      "html": "<table><thead><tr><th>方法</th><th>觸發條件</th><th>優缺</th></tr></thead><tbody><tr><td>時間法（Calendar）</td><td>固定週期：月／季／半年／年</td><td>可預期、簡單；可能錯失短期機會或頻繁觸發</td></tr><tr><td>閾值法（Threshold / Band）</td><td>偏離超過 ±5% 或 ±10% 時觸發</td><td>因應市場波動；觸發次數不固定</td></tr><tr><td>混合法（Hybrid）</td><td>每年檢視 + 中途偏離超過閾值即觸發</td><td>平衡可預期性與靈活性</td></tr></tbody></table><div class=\"mermaid\">graph TD\n    A[再平衡規則] --> B[時間法]\n    A --> C[閾值法]\n    A --> D[混合法]\n    B --> B1[每年一次最常用]\n    C --> C1[±5% / ±10% 常見]\n    D --> D1[年度檢視 + 閾值觸發]\n    style D fill:#019AB3,color:#fff</div><p><strong>Vanguard 研究建議</strong>：</p><ul><li>「每年再平衡 + 5% 閾值」效果接近最優</li><li>過於頻繁（如每月）增加交易成本與稅負，超額報酬被吃掉</li><li>過於稀疏（如每 3 年）難維持目標風險</li><li>大多數投資人「每年一次 + 5% 閾值觸發」即足夠</li></ul>"
+    },
+    {
+      "heading": "再平衡的實證效益",
+      "html": "<table><thead><tr><th>研究</th><th>方法</th><th>發現</th></tr></thead><tbody><tr><td>Vanguard (2020)</td><td>1926-2019 美國股債組合</td><td>每年再平衡 vs 不再平衡，風險明顯降低，報酬接近</td></tr><tr><td>Buetow et al. (2002)</td><td>多資產組合比較</td><td>閾值法 5% 略優於月度再平衡</td></tr><tr><td>Tokat (2006)</td><td>不同市場環境</td><td>多空交替市場再平衡效益最大；單向趨勢市場不顯著</td></tr></tbody></table><blockquote><p><strong>核心觀點</strong>：再平衡主要功能不是提高報酬，而是「維持目標風險」。在多數情境下能小幅提高風險調整後報酬（夏普比率）。</p></blockquote><div class=\"mermaid\">graph LR\n    A[再平衡的真正價值] --> B[控制風險<br/>主效果]\n    A --> C[紀律執行<br/>克服人性]\n    A --> D[超額報酬<br/>0.3-0.5%/年]\n    style B fill:#019AB3,color:#fff</div>"
+    },
+    {
+      "heading": "稅務考量",
+      "html": "<p>再平衡產生「實現損益」，課稅帳戶下會產生資本利得稅，影響淨報酬。</p><table><thead><tr><th>帳戶類型</th><th>稅務影響</th><th>再平衡策略</th></tr></thead><tbody><tr><td>退休帳戶（如美國 401k）</td><td>免稅 / 延後課稅</td><td>自由再平衡，無稅負</td></tr><tr><td>課稅帳戶（個人證券戶）</td><td>實現利得課稅</td><td>謹慎評估稅務成本</td></tr><tr><td>信託帳戶</td><td>依信託類型而異</td><td>視信託架構</td></tr></tbody></table><p><strong>降低稅務影響的策略</strong>：</p><ul><li><strong>新進資金優先買弱勢資產</strong>：每月新投入的資金直接買比例不足的資產，自然再平衡</li><li><strong>退休帳戶優先再平衡</strong>：先在免稅帳戶內再平衡，再考慮課稅帳戶</li><li><strong>稅損收割（Tax-Loss Harvesting）</strong>：賣出虧損部位實現損失，抵銷其他資本利得</li><li><strong>分紅與配息重投</strong>：選擇「自動配置到比例不足資產」而非自動買回原券</li></ul><div class=\"mermaid\">graph TD\n    A[需要再平衡] --> B{是否有新進資金}\n    B -->|是| C[新資金買弱勢資產<br/>無稅務影響]\n    B -->|否| D{是否在免稅帳戶}\n    D -->|是| E[直接再平衡]\n    D -->|否| F[評估稅務 vs 風險偏離]\n    F -->|偏離輕微| G[暫不再平衡]\n    F -->|偏離嚴重| H[執行 + 接受稅務]\n    style C fill:#019AB3,color:#fff</div>"
+    },
+    {
+      "heading": "再平衡的方向性思考",
+      "html": "<p>再平衡看似「機械式」，但實務上需考量市場狀況與心理偏誤。</p><table><thead><tr><th>場景</th><th>常見心理偏誤</th><th>正確做法</th></tr></thead><tbody><tr><td>股票大跌後（需買股）</td><td>恐懼、損失厭惡</td><td>強制執行紀律，買入</td></tr><tr><td>股票大漲後（需賣股）</td><td>貪婪、害怕錯失（FOMO）</td><td>強制執行紀律，賣出</td></tr><tr><td>長期單邊上漲</td><td>不想賣出贏家</td><td>仍應再平衡，但可延後（如季度而非月度）</td></tr><tr><td>2022 股債齊跌</td><td>「再平衡也沒用」放棄</td><td>反而更需要：可在低點增持</td></tr></tbody></table><blockquote><p><strong>名言</strong>：「再平衡是投資紀律的標誌。沒有人喜歡賣出表現好的、買入表現差的——但這正是長期勝出的關鍵。」（改述 Vanguard 創辦人 Jack Bogle）</p></blockquote><details><summary>2022 案例：股債齊跌時的再平衡</summary><p>2022 年股債都大跌，許多投資人放棄再平衡（「都跌了還要重新分配？」）。但仔細看：</p><ul><li>若年初 60/40 → 年底比例略偏離（如 58/42）</li><li>仍應在年底買回股票至 60%（用新進資金或現金）</li><li>2023-24 股票強勢反彈，紀律執行者享受復甦</li><li>放棄再平衡者錯失反彈，組合長期偏低風險</li></ul></details>"
+    },
+    {
+      "heading": "再平衡實務 SOP",
+      "html": "<table><thead><tr><th>步驟</th><th>動作</th></tr></thead><tbody><tr><td>1. 設定規則</td><td>確定再平衡方法（時間／閾值／混合）與容忍度</td></tr><tr><td>2. 定期檢視</td><td>每月或每季記錄目標 vs 實際比例</td></tr><tr><td>3. 評估觸發</td><td>偏離超過閾值或到達觸發時點</td></tr><tr><td>4. 稅務檢核</td><td>課稅帳戶評估稅務成本</td></tr><tr><td>5. 執行交易</td><td>優先用新進資金；其次免稅帳戶；最後課稅帳戶</td></tr><tr><td>6. 文件留存</td><td>留下再平衡決策依據與交易紀錄</td></tr><tr><td>7. 持續監控</td><td>下次檢視時點繼續循環</td></tr></tbody></table><div class=\"mermaid\">graph LR\n    A[檢視] --> B[評估]\n    B --> C[執行]\n    C --> D[記錄]\n    D --> A\n    style A fill:#019AB3,color:#fff</div>"
+    },
+    {
+      "heading": "自我檢測",
+      "html": "<details><summary>Q1：再平衡的主要目的是什麼？提高報酬還是控制風險？</summary><p>答：主要目的是「控制風險」，維持目標配置不被市場漂移。次要效果是「強制高賣低買」帶來小幅超額報酬（0.3-0.5%/年）。投資人若僅關注報酬而忽視風險控制，會誤判再平衡的價值。</p></details><details><summary>Q2：每月再平衡會比每年再平衡好嗎？</summary><p>答：通常不會。Vanguard 等研究顯示「每年再平衡 + 5% 閾值」效果接近最優。過於頻繁（如每月）增加交易成本與稅務負擔，超額報酬被吃掉。多數投資人「每年一次 + 5% 閾值觸發」即足夠。</p></details><details><summary>Q3：課稅帳戶內如何降低再平衡的稅務影響？</summary><p>答：(1) 新進資金優先買弱勢資產（自然再平衡，無實現利得）(2) 退休/免稅帳戶優先執行再平衡 (3) 稅損收割：賣出虧損部位實現損失，抵銷其他利得 (4) 分紅自動配置到比例不足資產 (5) 偏離輕微時可暫不再平衡，等下次自然觸發。</p></details><details><summary>Q4：2022 年股債齊跌時，還要再平衡嗎？</summary><p>答：仍要。雖然股債都跌看似「沒什麼好平衡的」，但通常還是會有比例偏離（如年初 60/40 變 58/42）。應在低點繼續買進不足部位（用新進資金或現金），維持紀律。2023-24 股票強勢反彈，紀律執行者享受復甦，放棄者錯失機會。</p></details><p><strong>資料來源：</strong></p><ul><li>Vanguard Research "Best Practices for Portfolio Rebalancing" <a href=\"https://institutional.vanguard.com/insights-and-research/perspective/portfolio-rebalancing.html\" target=\"_blank\" rel=\"noopener\">institutional.vanguard.com</a></li><li>Buetow et al. (2002) "The Benefits of Rebalancing" <em>Journal of Portfolio Management</em></li><li>Tokat (2006) "Asset Allocation Strategies in the Presence of Transaction Costs" Vanguard Research Note</li><li>CFA Institute Portfolio Management curriculum</li></ul>"
     }
   ]
 }
