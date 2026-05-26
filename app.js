@@ -834,8 +834,8 @@ function renderThemeFundsBlock(themeKey) {
         <div>
           <label>淨值</label>
           ${fmtNum(f.nav)} ${escapeHtml(f.currency || "")}
-          ${f.nav_date ? `<div class="cell-sub">${escapeHtml(shortDate(f.nav_date))}</div>` : ""}
         </div>
+        <div><label>淨值日</label>${f.nav_date ? escapeHtml(shortDate(f.nav_date)) : "—"}</div>
         <div><label>日</label><span class="${pctClass(f.change_pct)}">${fmtPct(f.change_pct)}</span></div>
         <div><label>近1月</label><span class="${pctClass(perf['1m'])}">${perfLink(fmtPct(perf['1m']), f.source_url)}</span></div>
         <div><label>今年</label><span class="${pctClass(perf.ytd)}">${perfLink(fmtPct(perf.ytd), f.source_url)}</span></div>
