@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-05-26T13:02:36+08:00",
+  "generated_at": "2026-05-26T13:31:33+08:00",
   "source": "manual curation (targets.json)",
-  "version": 2,
+  "version": 3,
   "updated": "2026-05-26",
   "regenerated_at": "2026-05-26T08:32:18+08:00",
-  "quote_basis": "2026-05-06",
+  "quote_basis": "2026-05-22~05-25",
   "summary": {
-    "themes": 7,
-    "overweight": 5,
-    "neutral": 2
+    "themes": 12,
+    "overweight": 7,
+    "neutral": 5
   },
   "entry_sequence": [
     {
@@ -22,127 +22,106 @@
       "note": "已是核心、−5% 回檔加碼"
     },
     {
-      "key": "japan",
+      "key": "us",
       "num": 3,
+      "note": "核心戰略、SPY/QQQ 定期定額"
+    },
+    {
+      "key": "japan",
+      "num": 4,
       "note": "3–6 月 DCA、銀行優先"
     },
     {
       "key": "ai",
-      "num": 4,
+      "num": 5,
       "note": "QQQ/SOXX 核心 + 能源基建"
     },
     {
       "key": "korea",
-      "num": 5,
-      "note": "等 −10% 回檔、上限 5% NAV"
+      "num": 6,
+      "note": "等 −10% 回檔、上限 8% NAV"
+    },
+    {
+      "key": "energy",
+      "num": 7,
+      "note": "鈾/SMR 結構主題、與 AI 雙軸"
+    },
+    {
+      "key": "europe",
+      "num": 8,
+      "note": "ECB 寬鬆 + 德國財政、均衡卡位"
     },
     {
       "key": "vietnam",
-      "num": 6,
+      "num": 9,
       "note": "12–18 月慢速 DCA、上限 4%"
     },
     {
+      "key": "asean",
+      "num": 10,
+      "note": "供應鏈分散卡位、上限 3%"
+    },
+    {
       "key": "india",
-      "num": 7,
+      "num": 11,
       "note": "等待觸發、先 2% 卡位"
+    },
+    {
+      "key": "china",
+      "num": 12,
+      "note": "估值便宜但風險未解、戰術 2-3%"
     }
   ],
   "targets": [
     {
-      "key": "korea",
+      "key": "bonds",
       "num": "①",
-      "name": "韓國",
+      "name": "債券",
       "stance": "OW",
-      "alloc": "5–8% NAV",
-      "tagline": "KOSPI 7,847｜YTD +86.22%、亞洲冠軍動能延燒",
-      "ytd": "+86.22%",
+      "alloc": "15–35% NAV",
+      "tagline": "美財政赤字＋AI capex｜長端殖利率高,鎖利窗口仍具吸引力",
+      "ytd": "+positive carry",
       "stats": [
         {
-          "k": "KOSPI YTD",
-          "v": "+86.22%",
-          "sub": "今日 +0.41%"
+          "k": "新興市場債 1Y",
+          "v": "+37.97%",
+          "sub": "利差題材續行"
         },
         {
-          "k": "MTD",
-          "v": "+18.93%",
-          "sub": "五月續強領漲"
-        },
-        {
-          "k": "fwd P/E",
-          "v": "約 7x",
-          "sub": "仍折 EM 逾 3 成"
-        }
-      ],
-      "market_status": [
-        "KOSPI 收 7,847.71、YTD +86.22%、MTD +18.93%；今日 +0.41% 再寫新高",
-        "Computex 2026 黃仁勳預告 Vera CPU 與七大 AI 供應鏈,SK 海力士、三星電子記憶體循環延續",
-        "Value-Up 治理改革推進中,盈餘上修與股東回報雙引擎共振"
-      ],
-      "opportunity": [
-        "MTD 已狂飆 +18.93%,估值雖修復但盈餘上修速度更快、PEG 仍合理",
-        "記憶體缺貨延至 2028、AI 電源族群續創高,半導體景氣循環尚未過熱",
-        "急漲後追高風險升,建議等 −10% 回檔分批承接、避免單押"
-      ],
-      "pitch": [
-        "亞洲漲幅冠軍仍由治理改革與盈餘雙引擎驅動,題材未走完",
-        "五月已強漲近兩成,現階段宜耐心等回檔、不追單日急拉",
-        "部位上限控管在 8% NAV,以戰術操作參與、避免重押單一市場"
-      ],
-      "view": "亞洲最強動能＋治理改革雙引擎,續維 OW 首選。",
-      "reason": "KOSPI YTD +86.22%、MTD +18.93%,今日 +0.41% 續創新高；fwd P/E 約 7x 仍折 EM 逾 3 成,盈餘上修速度高於評價膨脹。",
-      "action": "等 −10% 回檔再加碼,部位上限 8% NAV；急漲段以韓股 ETF 戰術操作。",
-      "add_trigger": "回檔至 fwd P/E <6.5x；外資由淨賣轉淨買",
-      "trim_trigger": "外資單月淨賣 >KRW 10 兆；fwd P/E >9x"
-    },
-    {
-      "key": "japan",
-      "num": "②",
-      "name": "日本",
-      "stance": "OW",
-      "alloc": "8–12% NAV",
-      "tagline": "Nikkei 65,158｜YTD +25.82%、今日狂漲 +2.87% 全球最強",
-      "ytd": "+25.82%",
-      "stats": [
-        {
-          "k": "Nikkei YTD",
-          "v": "+25.82%",
-          "sub": "今日 +2.87%"
-        },
-        {
-          "k": "MTD",
-          "v": "+6.84%",
-          "sub": "五月動能再加速"
+          "k": "高評級美元債",
+          "v": "5%+ YTM",
+          "sub": "AAA／AA 票息錨"
         },
         {
           "k": "建議部位",
-          "v": "8–12%",
-          "sub": "戰略＋戰術"
+          "v": "15–35%",
+          "sub": "最高信心配置"
         }
       ],
       "market_status": [
-        "Nikkei 225 收 65,158.19、YTD +25.82%、MTD +6.84%；今日 +2.87% 為主要市場最強",
-        "Computex 2026 AI 供應鏈題材延伸,東京威力科創、信越受惠 Vera CPU 與 AMD 擴產循環",
-        "美伊停火樂觀情緒帶動風險偏好,日圓偏弱續支撐出口與觀光族群"
+        "美財政赤字與 AI 資本支出結構性壓力,長天期美債殖利率居高難下",
+        "美伊停火樂觀情緒帶動油價急跌 5%,通膨路徑不確定性下降、利於存續期管理",
+        "新興市場月收益基金近 1 年 +37.97%、新興市場債近 1 年 +14%,利差題材延續"
       ],
       "opportunity": [
-        "雙主軸 alpha:升息週期放大銀行利息淨收益,AI 資本支出循環推升半導體設備",
-        "MTD +6.84% 相對韓國動能溫和,回檔風險較低、適合大額穩健佈局",
-        "BoJ 升息路徑延續、企業治理改革推動股東回報強化,股利與庫藏股雙升"
+        "長端殖利率居高反成長線鎖利窗口,提早建倉者可同享票息與資本利得",
+        "AAA／AA 級美元高評級債 5%+ 殖利率,現金流穩定可錨定組合波動",
+        "新興主權債於利差走擴下相對具吸引力,公司債利差偏緊不追、選擇性參與"
       ],
       "pitch": [
-        "雙主軸題材:升息週期＋AI 資本支出循環同時運作",
-        "3–6 個月慢速分批建倉,適合大額資金穩健佈局",
-        "銀行優先卡位、半導體於 −10% 回檔加碼"
+        "先把債券核心建好,再談股票配置",
+        "高評級主權與公司債為錨,鎖定 5% 以上殖利率",
+        "利率走高反成鎖利機會,趁勢分批佈局多重債券策略"
       ],
-      "view": "升息週期＋AI 設備循環共振,動能再升溫、續維 OW。",
-      "reason": "Nikkei YTD +25.82%、MTD +6.84%,今日大漲 +2.87%；銀行受惠 BoJ 升息、半導體設備受惠 capex super-cycle,兩條獨立 alpha 同步運作。",
-      "action": "3–6 個月分批建倉,部位 8–12% NAV；銀行於弱勢加碼、半導體僅 −10% 回檔加碼。",
-      "add_trigger": "TSE 庫藏股加速；USD/JPY 維持 >150 偏弱",
-      "trim_trigger": "BoJ 意外升 >50bps；USD/JPY <140"
+      "view": "美財政赤字壓力推升殖利率,為長線鎖利窗口,仍是最高信心配置。",
+      "reason": "美財政赤字與 AI capex 結構性壓力讓長端美債殖利率居高難下,殖利率走高反推升 YTM；新興市場月收益基金近 1 年 +37.97%、新興市場債 +14%,高評級美元債仍可鎖定 5%+ 收益。",
+      "action": "立即分批建倉,以國際組織債 5%+ 為錨；UST belly 戰術操作；EM 主權債利差戰術；IG／HY 過緊不追。",
+      "add_trigger": "10Y UST ≥4.6%(長端加碼);IG OAS >150bp(信用 re-pricing)",
+      "trim_trigger": "核心 PCE >3.0% 重新加速；Fed 轉鷹；IG OAS >130bp"
     },
     {
       "key": "gold",
-      "num": "③",
+      "num": "②",
       "name": "黃金",
       "stance": "OW",
       "alloc": "5–10% NAV",
@@ -187,8 +166,100 @@
       "trim_trigger": "WGC 央行需求 <200t 連兩季；實質利率突破 3%"
     },
     {
-      "key": "ai",
+      "key": "us",
+      "num": "③",
+      "name": "美國",
+      "stance": "OW",
+      "alloc": "10–15% NAV",
+      "tagline": "S&P 500 7,473｜YTD +9.17%、Nasdaq +13.35% 全球資產定錨",
+      "ytd": "+9.17%",
+      "stats": [
+        {
+          "k": "S&P 500 YTD",
+          "v": "+9.17%",
+          "sub": "MTD +3.67%"
+        },
+        {
+          "k": "Nasdaq YTD",
+          "v": "+13.35%",
+          "sub": "MTD +5.83%"
+        },
+        {
+          "k": "建議部位",
+          "v": "10–15%",
+          "sub": "核心戰略"
+        }
+      ],
+      "market_status": [
+        "S&P 500 收 7,473.47、YTD +9.17%、MTD +3.67%；今日 +0.37% 續創高",
+        "Nasdaq 收 26,343.97、YTD +13.35%、MTD +5.83%；Dow Jones YTD +5.24%",
+        "美財政赤字 + AI capex 結構性題材延續,估值偏貴但盈餘上修速度仍快"
+      ],
+      "opportunity": [
+        "全球最大盈餘成長池與資金匯流,AI/雲端/消費龍頭題材集中",
+        "Mag 7 + AI capex super-cycle 雙引擎,股權回購規模續創高",
+        "估值偏貴需控管追高風險,以指數型 ETF + 主題基金分批佈局"
+      ],
+      "pitch": [
+        "美股是全球資產定錨,核心 ETF 不可缺",
+        "S&P 500／QQQ 為長線複利工具,分批進場、不擇時",
+        "部位上限 15% NAV,避免過度集中單一市場"
+      ],
+      "view": "全球最大盈餘池與 AI capex 震央,續維 OW、為核心戰略部位。",
+      "reason": "S&P 500 YTD +9.17%、Nasdaq +13.35%；AI／Mag 7 盈餘成長與股權回購雙引擎；美財政赤字推升殖利率但結構性 capex 題材未變。",
+      "action": "核心 SPY／QQQ 分批加碼至 10–15% NAV；高估值階段以定期定額為主、不追高。",
+      "add_trigger": "S&P 500 fwd P/E <19x；HY OAS >400bp",
+      "trim_trigger": "fwd P/E >24x 且 EPS 上修速度趨緩；Fed 意外鷹派"
+    },
+    {
+      "key": "japan",
       "num": "④",
+      "name": "日本",
+      "stance": "OW",
+      "alloc": "8–12% NAV",
+      "tagline": "Nikkei 65,158｜YTD +25.82%、今日狂漲 +2.87% 全球最強",
+      "ytd": "+25.82%",
+      "stats": [
+        {
+          "k": "Nikkei YTD",
+          "v": "+25.82%",
+          "sub": "今日 +2.87%"
+        },
+        {
+          "k": "MTD",
+          "v": "+6.84%",
+          "sub": "五月動能再加速"
+        },
+        {
+          "k": "建議部位",
+          "v": "8–12%",
+          "sub": "戰略＋戰術"
+        }
+      ],
+      "market_status": [
+        "Nikkei 225 收 65,158.19、YTD +25.82%、MTD +6.84%；今日 +2.87% 為主要市場最強",
+        "Computex 2026 AI 供應鏈題材延伸,東京威力科創、信越受惠 Vera CPU 與 AMD 擴產循環",
+        "美伊停火樂觀情緒帶動風險偏好,日圓偏弱續支撐出口與觀光族群"
+      ],
+      "opportunity": [
+        "雙主軸 alpha:升息週期放大銀行利息淨收益,AI 資本支出循環推升半導體設備",
+        "MTD +6.84% 相對韓國動能溫和,回檔風險較低、適合大額穩健佈局",
+        "BoJ 升息路徑延續、企業治理改革推動股東回報強化,股利與庫藏股雙升"
+      ],
+      "pitch": [
+        "雙主軸題材:升息週期＋AI 資本支出循環同時運作",
+        "3–6 個月慢速分批建倉,適合大額資金穩健佈局",
+        "銀行優先卡位、半導體於 −10% 回檔加碼"
+      ],
+      "view": "升息週期＋AI 設備循環共振,動能再升溫、續維 OW。",
+      "reason": "Nikkei YTD +25.82%、MTD +6.84%,今日大漲 +2.87%；銀行受惠 BoJ 升息、半導體設備受惠 capex super-cycle,兩條獨立 alpha 同步運作。",
+      "action": "3–6 個月分批建倉,部位 8–12% NAV；銀行於弱勢加碼、半導體僅 −10% 回檔加碼。",
+      "add_trigger": "TSE 庫藏股加速；USD/JPY 維持 >150 偏弱",
+      "trim_trigger": "BoJ 意外升 >50bps；USD/JPY <140"
+    },
+    {
+      "key": "ai",
+      "num": "⑤",
       "name": "AI 主題",
       "stance": "OW",
       "alloc": "8–12% NAV",
@@ -233,8 +304,146 @@
       "trim_trigger": "hyperscaler 2027 capex 指引轉平／向下；NVDA fwd P/E >35x"
     },
     {
+      "key": "korea",
+      "num": "⑥",
+      "name": "韓國",
+      "stance": "OW",
+      "alloc": "5–8% NAV",
+      "tagline": "KOSPI 7,822｜YTD +86.22%、亞洲冠軍動能延燒",
+      "ytd": "+86.22%",
+      "stats": [
+        {
+          "k": "KOSPI YTD",
+          "v": "+86.22%",
+          "sub": "今日 +0.41%"
+        },
+        {
+          "k": "MTD",
+          "v": "+18.93%",
+          "sub": "五月續強領漲"
+        },
+        {
+          "k": "fwd P/E",
+          "v": "約 7x",
+          "sub": "仍折 EM 逾 3 成"
+        }
+      ],
+      "market_status": [
+        "KOSPI 收 7,822.24、YTD +86.22%、MTD +18.93%；今日 +0.41% 再寫新高",
+        "Computex 2026 黃仁勳預告 Vera CPU 與七大 AI 供應鏈,SK 海力士、三星電子記憶體循環延續",
+        "Value-Up 治理改革推進中,盈餘上修與股東回報雙引擎共振"
+      ],
+      "opportunity": [
+        "MTD 已狂飆 +18.93%,估值雖修復但盈餘上修速度更快、PEG 仍合理",
+        "記憶體缺貨延至 2028、AI 電源族群續創高,半導體景氣循環尚未過熱",
+        "急漲後追高風險升,建議等 −10% 回檔分批承接、避免單押"
+      ],
+      "pitch": [
+        "亞洲漲幅冠軍仍由治理改革與盈餘雙引擎驅動,題材未走完",
+        "五月已強漲近兩成,現階段宜耐心等回檔、不追單日急拉",
+        "部位上限控管在 8% NAV,以戰術操作參與、避免重押單一市場"
+      ],
+      "view": "亞洲最強動能＋治理改革雙引擎,續維 OW 首選。",
+      "reason": "KOSPI YTD +86.22%、MTD +18.93%,今日 +0.41% 續創新高；fwd P/E 約 7x 仍折 EM 逾 3 成,盈餘上修速度高於評價膨脹。",
+      "action": "等 −10% 回檔再加碼,部位上限 8% NAV；急漲段以韓股 ETF 戰術操作。",
+      "add_trigger": "回檔至 fwd P/E <6.5x；外資由淨賣轉淨買",
+      "trim_trigger": "外資單月淨賣 >KRW 10 兆；fwd P/E >9x"
+    },
+    {
+      "key": "energy",
+      "num": "⑦",
+      "name": "能源",
+      "stance": "OW",
+      "alloc": "3–5% NAV",
+      "tagline": "美伊停火油價急跌 5%｜AI 電力 + 鈾礦結構循環雙主軸",
+      "ytd": "+mixed",
+      "stats": [
+        {
+          "k": "Brent 近 1 月",
+          "v": "−5%",
+          "sub": "美伊停火地緣溢酬壓縮"
+        },
+        {
+          "k": "鈾現貨 1Y",
+          "v": "+20~30%",
+          "sub": "SMR／核電 PPA 簽約熱"
+        },
+        {
+          "k": "建議部位",
+          "v": "3–5%",
+          "sub": "AI 廣度延伸"
+        }
+      ],
+      "market_status": [
+        "美伊停火樂觀情緒帶動原油急跌 5%,地緣避險溢酬短線壓縮、但結構未解",
+        "AI 資料中心電力需求結構性放大,hyperscaler 簽 SMR／核電 PPA 創高",
+        "天然氣與再生能源需求同步上修；鈾現貨循環延續多頭、SMR 設備鏈受惠"
+      ],
+      "opportunity": [
+        "AI 電力結構題材:資料中心新增容量 2025–2028 推升 ~20% 電力負載",
+        "鈾礦／核電 SMR PPA 簽約熱絡,估值仍處 5 年中位偏低",
+        "油價急跌反提供能源股低接機會,OPEC+ 減產仍為下檔保護"
+      ],
+      "pitch": [
+        "能源不只是傳統題材,AI capex 已延伸為電力與基建循環",
+        "鈾／SMR 為 5–10 年級結構主題,非短線炒作",
+        "部位 3–5% 控管,搭配 AI 主題形成「算力＋電力」雙軸佈局"
+      ],
+      "view": "AI 電力結構題材＋鈾循環,作為 AI 廣度延伸；維持 OW。",
+      "reason": "美伊停火短線壓縮油價地緣溢酬 −5%；惟 AI 資料中心 2025–2028 增 ~20% 電力負載、hyperscaler PPA 簽約創高、鈾現貨多頭延續。",
+      "action": "以 SMR／鈾礦／全球能源 ETF 分批佈局 3–5% NAV；與 AI 主題搭配運作。",
+      "add_trigger": "hyperscaler 簽核電／SMR PPA 加速；鈾現貨突破 USD 100/lb",
+      "trim_trigger": "WTI 跌破 USD 50/桶且 OPEC+ 失序減產；AI capex 2027 指引轉平"
+    },
+    {
+      "key": "europe",
+      "num": "⑧",
+      "name": "歐洲",
+      "stance": "NT",
+      "alloc": "3–5% NAV",
+      "tagline": "Euro Stoxx 6,137｜YTD +5.87%、ECB 寬鬆 + 德國財政擴張",
+      "ytd": "+5.87%",
+      "stats": [
+        {
+          "k": "Euro Stoxx YTD",
+          "v": "+5.87%",
+          "sub": "MTD +4.34%"
+        },
+        {
+          "k": "DAX YTD",
+          "v": "+1.63%",
+          "sub": "MTD +2.45%"
+        },
+        {
+          "k": "建議部位",
+          "v": "3–5%",
+          "sub": "估值折價＋政策 tailwind"
+        }
+      ],
+      "market_status": [
+        "Euro Stoxx 50 收 6,136.66、YTD +5.87%、MTD +4.34%",
+        "DAX YTD +1.63%、FTSE 100 +5.39%、CAC 40 −0.41%；估值仍折美股 30%+",
+        "ECB 降息週期續行,德國突破債務煞車推出國防＋基建擴張、十年首見財政發力"
+      ],
+      "opportunity": [
+        "ECB 寬鬆＋德國財政「雙油門」啟動,歐元區進入再通膨循環",
+        "國防／基建／再生能源族群受惠,估值仍折美股逾 30%",
+        "美歐利差收斂利好歐元,外幣資產有匯率 alpha"
+      ],
+      "pitch": [
+        "歐股估值低、ECB 寬鬆＋德國財政擴張雙引擎",
+        "國防／基建主題啟動,十年來首見財政發力",
+        "部位 3–5% NAV,分散美股集中度"
+      ],
+      "view": "ECB 寬鬆＋德國財政擴張共振,估值折價＋政策 tailwind,NT 偏 OW。",
+      "reason": "Euro Stoxx YTD +5.87%、MTD +4.34%；ECB 降息週期續行、德國突破債務煞車、國防／基建族群題材啟動；估值仍折美股 30%+。",
+      "action": "以全球均衡型基金或歐股 ETF 分批 3–5% NAV；國防／基建主動選股可加碼。",
+      "add_trigger": "德國 BVerfG 國防預算過關；ECB 降息累計 >50bps",
+      "trim_trigger": "EUR/USD 突破 1.22；DAX fwd P/E >18x"
+    },
+    {
       "key": "vietnam",
-      "num": "⑤",
+      "num": "⑨",
       "name": "越南",
       "stance": "NT",
       "alloc": "2–4% NAV",
@@ -279,12 +488,58 @@
       "trim_trigger": "USD/VND 突破 26,500；大型房企違約；HOSE ADV 腰斬"
     },
     {
+      "key": "asean",
+      "num": "⑩",
+      "name": "東協",
+      "stance": "NT",
+      "alloc": "2–3% NAV",
+      "tagline": "供應鏈中國+1 結構轉移｜印尼／泰國／新加坡多元卡位",
+      "ytd": "+mid-single",
+      "stats": [
+        {
+          "k": "代表基金 1Y",
+          "v": "+15~25%",
+          "sub": "FDI 結構題材"
+        },
+        {
+          "k": "GDP 加總",
+          "v": "已超越日本",
+          "sub": "內需＋FDI 雙引擎"
+        },
+        {
+          "k": "建議部位",
+          "v": "2–3%",
+          "sub": "與越南分流"
+        }
+      ],
+      "market_status": [
+        "FDI 中國+1 結構性轉移延續,越南、印尼、馬來、泰國同步受惠",
+        "新加坡 STI 創新高、印尼 IDX 受惠鎳業循環、泰國觀光復甦",
+        "MSCI 升等故事與 ASEAN 自由貿易協議深化"
+      ],
+      "opportunity": [
+        "ASEAN GDP 加總已超越日本,內需＋FDI 雙引擎",
+        "鎳／銅原物料國家受惠 EV 電池供應鏈",
+        "與越南差異化:東協基金分散單一國家風險、流動性更佳"
+      ],
+      "pitch": [
+        "中國+1 不是越南獨享,東協整體都在受惠",
+        "印尼／泰國／新加坡分散投資、降低單一國家波動",
+        "部位 2–3% NAV,與越南分流操作"
+      ],
+      "view": "供應鏈轉移＋內需擴張,戰略分散卡位；維持 NT。",
+      "reason": "ASEAN GDP 加總超越日本,FDI 流入＋EV 供應鏈題材；估值低於 EM 平均,但流動性與單一國家集中度仍偏高。",
+      "action": "以 ASEAN 基金或多國均衡型基金 2–3% NAV；與越南分流,避免雙重集中。",
+      "add_trigger": "印尼鎳業循環加速；新加坡 STI 突破 4,500",
+      "trim_trigger": "DXY 突破 105；ASEAN FDI 連兩季降溫"
+    },
+    {
       "key": "india",
-      "num": "⑥",
+      "num": "⑪",
       "name": "印度",
       "stance": "NT",
       "alloc": "2–5% NAV",
-      "tagline": "Nifty 23,719｜YTD −9.22%、敘事最強但時點仍不利",
+      "tagline": "Nifty 24,032｜YTD −9.22%、敘事最強但時點仍不利",
       "ytd": "−9.22%",
       "stats": [
         {
@@ -304,7 +559,7 @@
         }
       ],
       "market_status": [
-        "Nifty 50 收 23,719.30、YTD −9.22%、MTD −1.16%；今日小幅收紅 +0.27%",
+        "Nifty 50 收 24,031.70、YTD −9.22%、MTD −1.16%；今日小幅收紅 +0.27%",
         "代表性印度基金近 1 年 −16.9%、近 3 月 −10.97%、近 1 月 −3.97%,盈餘修正尚未止跌",
         "本益比仍處 5 年高位,GDP 6.5–7% 已大致定價;資金流向韓國、日本、台灣等動能市場"
       ],
@@ -325,221 +580,53 @@
       "trim_trigger": "fwd P/E >24x 且無 EPS 上修"
     },
     {
-      "key": "bonds",
-      "num": "⑦",
-      "name": "債券",
-      "stance": "OW",
-      "alloc": "15–35% NAV",
-      "tagline": "美財政赤字＋AI capex｜長端殖利率高,鎖利窗口仍具吸引力",
-      "ytd": "+positive carry",
+      "key": "china",
+      "num": "⑫",
+      "name": "中國",
+      "stance": "NT",
+      "alloc": "2–3% NAV",
+      "tagline": "恆生 26,407｜YTD −0.1%、估值便宜但結構性風險未解",
+      "ytd": "−0.10%",
       "stats": [
         {
-          "k": "新興市場債 1Y",
-          "v": "+37.97%",
-          "sub": "利差題材續行"
+          "k": "恆生 YTD",
+          "v": "−0.10%",
+          "sub": "今日 +3.13% 急彈"
         },
         {
-          "k": "高評級美元債",
-          "v": "5%+ YTM",
-          "sub": "AAA／AA 票息錨"
+          "k": "上證 YTD",
+          "v": "+3.63%",
+          "sub": "CSI 300 +4.65%"
         },
         {
-          "k": "建議部位",
-          "v": "15–35%",
-          "sub": "最高信心配置"
+          "k": "fwd P/E",
+          "v": "約 10x",
+          "sub": "折 EM 逾 30%"
         }
       ],
       "market_status": [
-        "美財政赤字與 AI 資本支出結構性壓力,長天期美債殖利率居高難下",
-        "美伊停火樂觀情緒帶動油價急跌 5%,通膨路徑不確定性下降、利於存續期管理",
-        "新興市場月收益基金近 1 年 +37.97%、新興市場債近 1 年 +14%,利差題材延續"
+        "Hang Seng 收 26,406.84、YTD −0.10%、MTD −0.66%；今日 +3.13% 急彈",
+        "上證 YTD +3.63%、CSI 300 +4.65%；估值仍處 5 年低位",
+        "房地產去化緩慢、地方政府債務＋通縮壓力未解,政策放水節奏不明"
       ],
       "opportunity": [
-        "長端殖利率居高反成長線鎖利窗口,提早建倉者可同享票息與資本利得",
-        "AAA／AA 級美元高評級債 5%+ 殖利率,現金流穩定可錨定組合波動",
-        "新興主權債於利差走擴下相對具吸引力,公司債利差偏緊不追、選擇性參與"
+        "估值便宜(fwd P/E 約 10x,折 EM 逾 30%)",
+        "AI／電商／新能源車龍頭題材回神,BABA／JD／比亞迪領漲",
+        "政策放水節奏不明,短線急漲後追高風險升"
       ],
       "pitch": [
-        "先把債券核心建好,再談股票配置",
-        "高評級主權與公司債為錨,鎖定 5% 以上殖利率",
-        "利率走高反成鎖利機會,趁勢分批佈局多重債券策略"
+        "中國估值便宜但結構性問題未解,僅 2–3% 戰術卡位",
+        "高 beta 工具或主題基金為主、不重押單一市場",
+        "待房地產去化＋通縮反轉確認再加碼"
       ],
-      "view": "美財政赤字壓力推升殖利率,為長線鎖利窗口,仍是最高信心配置。",
-      "reason": "美財政赤字與 AI capex 結構性壓力讓長端美債殖利率居高難下,殖利率走高反推升 YTM；新興市場月收益基金近 1 年 +37.97%、新興市場債 +14%,高評級美元債仍可鎖定 5%+ 收益。",
-      "action": "立即分批建倉,以國際組織債 5%+ 為錨；UST belly 戰術操作；EM 主權債利差戰術；IG／HY 過緊不追。",
-      "add_trigger": "10Y UST ≥4.6%(長端加碼);IG OAS >150bp(信用 re-pricing)",
-      "trim_trigger": "核心 PCE >3.0% 重新加速；Fed 轉鷹；IG OAS >130bp"
+      "view": "估值低位＋政策窗口,惟結構性風險未解；維持 NT、僅做戰術部位。",
+      "reason": "Hang Seng YTD −0.10%、近日急彈 +3.13%；上證／CSI 300 個位數正報酬；fwd P/E 約 10x 折 EM 30%+,但房地產去化緩、通縮壓力延續。",
+      "action": "以中國科技 ETF 或主題基金 2–3% NAV 戰術卡位；避免重押單一市場、嚴控停損。",
+      "add_trigger": "M2 連兩月 >10%；PMI 連三月 >50；房價環比止跌",
+      "trim_trigger": "地方融資平台違約事件擴散；通縮深化"
     }
   ],
   "theme_funds": [
-    {
-      "theme": "korea",
-      "code": "LI02",
-      "name_zh": "利安資金韓國基金（美元）",
-      "currency": "USD",
-      "tagline": "MSCI Korea Value-Up 改革題材；近一年 +220%",
-      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=LIC04-LI02",
-      "fund_id": "uob_korea",
-      "nav": 3.033,
-      "nav_date": "2026-05-22",
-      "change_pct": 0.7,
-      "perf": {
-        "1m": 25.54,
-        "3m": 42.39,
-        "6m": 126.68,
-        "ytd": 94.42,
-        "1y": 223.35,
-        "3y": 244.66
-      },
-      "bop_name_zh": "利安資金韓國基金(美元)"
-    },
-    {
-      "theme": "japan",
-      "code": "—",
-      "name_zh": "柏瑞日本多重資產基金",
-      "currency": "TWD",
-      "tagline": "參與日本重估行情與降低單一波動",
-      "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACAI453-YD18",
-      "fund_id": "pinebridge_japan_multi_asset",
-      "nav": 11.0715,
-      "nav_date": "2026-05-22",
-      "change_pct": 0.49,
-      "perf": {
-        "1m": 2.97,
-        "3m": -0.89,
-        "6m": 9.55,
-        "ytd": 7.46,
-        "1y": null,
-        "3y": null
-      },
-      "bop_name_zh": "柏瑞日本多重資產基金N月配息(台幣)"
-    },
-    {
-      "theme": "gold",
-      "code": "FA01",
-      "name_zh": "富蘭克林黃金基金美元 A",
-      "currency": "USD",
-      "tagline": "金礦類股佈局，抗通膨＋去美元化",
-      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLZ01-FA01",
-      "fund_id": "franklin_gold",
-      "nav": 47.28,
-      "nav_date": "2026-05-22",
-      "change_pct": -1.05,
-      "perf": {
-        "1m": -10.47,
-        "3m": -15.03,
-        "6m": 29.68,
-        "ytd": 2.47,
-        "1y": 94.35,
-        "3y": 247.82
-      },
-      "bop_name_zh": "富蘭克林黃金基金美元A"
-    },
-    {
-      "theme": "gold",
-      "code": "IG14",
-      "name_zh": "晉達環球策略-環球黃金基金 C 收益股份",
-      "currency": "USD",
-      "tagline": "黃金產業含配息收益版",
-      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=GSF17-IG14",
-      "fund_id": "investec_gold",
-      "nav": 167.35,
-      "nav_date": "2026-05-22",
-      "change_pct": -0.91,
-      "perf": {
-        "1m": -9.8,
-        "3m": -20.18,
-        "6m": 16.01,
-        "ytd": -3.88,
-        "1y": 80.65,
-        "3y": 180.98
-      },
-      "bop_name_zh": "晉達環球策略基金-環球黃金基金C收益股份"
-    },
-    {
-      "theme": "ai",
-      "code": "—",
-      "name_zh": "安聯台灣科技基金",
-      "currency": "TWD",
-      "tagline": "台股 AI 與半導體供應鏈主動選股",
-      "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACDD04-2602",
-      "fund_id": "allianz_tw_tech",
-      "nav": 789.32,
-      "nav_date": "2026-05-25",
-      "change_pct": 3.97,
-      "perf": {
-        "1m": 16.79,
-        "3m": 61.98,
-        "6m": 137.23,
-        "ytd": 103.68,
-        "1y": 292.05,
-        "3y": 527.64
-      },
-      "bop_name_zh": "安聯台灣科技基金"
-    },
-    {
-      "theme": "ai",
-      "code": "—",
-      "name_zh": "聯博-國際科技基金 A 美元",
-      "currency": "USD",
-      "tagline": "全球科技巨頭與雲端軟體應用",
-      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=ALZ03-AL08",
-      "fund_id": "ab_intl_tech",
-      "nav": 1585.33,
-      "nav_date": "2026-05-22",
-      "change_pct": 1.47,
-      "perf": {
-        "1m": 13.12,
-        "3m": 28.26,
-        "6m": 44.58,
-        "ytd": 34.86,
-        "1y": 79.76,
-        "3y": 181.26
-      },
-      "bop_name_zh": "聯博-國際科技基金A級別美元"
-    },
-    {
-      "theme": "vietnam",
-      "code": "LI01",
-      "name_zh": "利安資金越南基金 A 級別美元",
-      "currency": "USD",
-      "tagline": "FDI 轉移之長期選擇權；MSCI 升等催化",
-      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=LIC28-LI01",
-      "fund_id": "uob_vietnam",
-      "nav": 0.873,
-      "nav_date": "2026-05-22",
-      "change_pct": -1.02,
-      "perf": {
-        "1m": -1.02,
-        "3m": -0.11,
-        "6m": 6.2,
-        "ytd": 1.75,
-        "1y": 27.26,
-        "3y": 40.58
-      },
-      "bop_name_zh": "利安資金越南基金A級別美元"
-    },
-    {
-      "theme": "india",
-      "code": "FR59",
-      "name_zh": "富蘭克林坦伯頓印度基金",
-      "currency": "USD",
-      "tagline": "印度長期成長敘事",
-      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLZ79-FR59",
-      "fund_id": "franklin_india",
-      "nav": 57.12,
-      "nav_date": "2026-05-22",
-      "change_pct": 0.3,
-      "perf": {
-        "1m": -3.97,
-        "3m": -10.97,
-        "6m": -16.01,
-        "ytd": -15.48,
-        "1y": -16.9,
-        "3y": 15.63
-      },
-      "bop_name_zh": "富蘭克林坦伯頓全球投資系列印度基金美元A(acc)"
-    },
     {
       "theme": "bonds",
       "code": "—",
@@ -602,6 +689,174 @@
         "3y": null
       },
       "bop_name_zh": "東方匯理全球策略收益基金-ND月配型(美元)"
+    },
+    {
+      "theme": "gold",
+      "code": "FA01",
+      "name_zh": "富蘭克林黃金基金美元 A",
+      "currency": "USD",
+      "tagline": "金礦類股佈局，抗通膨＋去美元化",
+      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLZ01-FA01",
+      "fund_id": "franklin_gold",
+      "nav": 47.28,
+      "nav_date": "2026-05-22",
+      "change_pct": -1.05,
+      "perf": {
+        "1m": -10.47,
+        "3m": -15.03,
+        "6m": 29.68,
+        "ytd": 2.47,
+        "1y": 94.35,
+        "3y": 247.82
+      },
+      "bop_name_zh": "富蘭克林黃金基金美元A"
+    },
+    {
+      "theme": "gold",
+      "code": "IG14",
+      "name_zh": "晉達環球策略-環球黃金基金 C 收益股份",
+      "currency": "USD",
+      "tagline": "黃金產業含配息收益版",
+      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=GSF17-IG14",
+      "fund_id": "investec_gold",
+      "nav": 167.35,
+      "nav_date": "2026-05-22",
+      "change_pct": -0.91,
+      "perf": {
+        "1m": -9.8,
+        "3m": -20.18,
+        "6m": 16.01,
+        "ytd": -3.88,
+        "1y": 80.65,
+        "3y": 180.98
+      },
+      "bop_name_zh": "晉達環球策略基金-環球黃金基金C收益股份"
+    },
+    {
+      "theme": "japan",
+      "code": "—",
+      "name_zh": "柏瑞日本多重資產基金",
+      "currency": "TWD",
+      "tagline": "參與日本重估行情與降低單一波動",
+      "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACAI453-YD18",
+      "fund_id": "pinebridge_japan_multi_asset",
+      "nav": 11.0715,
+      "nav_date": "2026-05-22",
+      "change_pct": 0.49,
+      "perf": {
+        "1m": 2.97,
+        "3m": -0.89,
+        "6m": 9.55,
+        "ytd": 7.46,
+        "1y": null,
+        "3y": null
+      },
+      "bop_name_zh": "柏瑞日本多重資產基金N月配息(台幣)"
+    },
+    {
+      "theme": "ai",
+      "code": "—",
+      "name_zh": "安聯台灣科技基金",
+      "currency": "TWD",
+      "tagline": "台股 AI 與半導體供應鏈主動選股",
+      "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACDD04-2602",
+      "fund_id": "allianz_tw_tech",
+      "nav": 789.32,
+      "nav_date": "2026-05-25",
+      "change_pct": 3.97,
+      "perf": {
+        "1m": 16.79,
+        "3m": 61.98,
+        "6m": 137.23,
+        "ytd": 103.68,
+        "1y": 292.05,
+        "3y": 527.64
+      },
+      "bop_name_zh": "安聯台灣科技基金"
+    },
+    {
+      "theme": "ai",
+      "code": "—",
+      "name_zh": "聯博-國際科技基金 A 美元",
+      "currency": "USD",
+      "tagline": "全球科技巨頭與雲端軟體應用",
+      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=ALZ03-AL08",
+      "fund_id": "ab_intl_tech",
+      "nav": 1585.33,
+      "nav_date": "2026-05-22",
+      "change_pct": 1.47,
+      "perf": {
+        "1m": 13.12,
+        "3m": 28.26,
+        "6m": 44.58,
+        "ytd": 34.86,
+        "1y": 79.76,
+        "3y": 181.26
+      },
+      "bop_name_zh": "聯博-國際科技基金A級別美元"
+    },
+    {
+      "theme": "korea",
+      "code": "LI02",
+      "name_zh": "利安資金韓國基金（美元）",
+      "currency": "USD",
+      "tagline": "MSCI Korea Value-Up 改革題材；近一年 +220%",
+      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=LIC04-LI02",
+      "fund_id": "uob_korea",
+      "nav": 3.033,
+      "nav_date": "2026-05-22",
+      "change_pct": 0.7,
+      "perf": {
+        "1m": 25.54,
+        "3m": 42.39,
+        "6m": 126.68,
+        "ytd": 94.42,
+        "1y": 223.35,
+        "3y": 244.66
+      },
+      "bop_name_zh": "利安資金韓國基金(美元)"
+    },
+    {
+      "theme": "vietnam",
+      "code": "LI01",
+      "name_zh": "利安資金越南基金 A 級別美元",
+      "currency": "USD",
+      "tagline": "FDI 轉移之長期選擇權；MSCI 升等催化",
+      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=LIC28-LI01",
+      "fund_id": "uob_vietnam",
+      "nav": 0.873,
+      "nav_date": "2026-05-22",
+      "change_pct": -1.02,
+      "perf": {
+        "1m": -1.02,
+        "3m": -0.11,
+        "6m": 6.2,
+        "ytd": 1.75,
+        "1y": 27.26,
+        "3y": 40.58
+      },
+      "bop_name_zh": "利安資金越南基金A級別美元"
+    },
+    {
+      "theme": "india",
+      "code": "FR59",
+      "name_zh": "富蘭克林坦伯頓印度基金",
+      "currency": "USD",
+      "tagline": "印度長期成長敘事",
+      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLZ79-FR59",
+      "fund_id": "franklin_india",
+      "nav": 57.12,
+      "nav_date": "2026-05-22",
+      "change_pct": 0.3,
+      "perf": {
+        "1m": -3.97,
+        "3m": -10.97,
+        "6m": -16.01,
+        "ytd": -15.48,
+        "1y": -16.9,
+        "3y": 15.63
+      },
+      "bop_name_zh": "富蘭克林坦伯頓全球投資系列印度基金美元A(acc)"
     }
   ]
 }
