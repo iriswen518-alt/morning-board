@@ -412,6 +412,8 @@ table.indices .date-col {
 }
 .tabs.tabs-wrap { flex-wrap: wrap; }
 .tabs.tabs-wrap .tab { flex: 1 1 96px; min-width: 96px; }
+.tabs.tabs-wrap.tabs-left { justify-content: flex-start; }
+.tabs.tabs-wrap.tabs-left .tab { flex: 0 0 auto; }
 .tab {
   flex: 1;
   padding: 8px 12px;

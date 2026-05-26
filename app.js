@@ -971,7 +971,7 @@ function renderTargetsSheet() {
   }).join("");
 
   return `
-    <div class="tabs tabs-wrap">${tabBtns}</div>
+    <div class="tabs tabs-wrap tabs-left">${tabBtns}</div>
     <div class="t-panes">${panes}</div>
   `;
 }
