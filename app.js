@@ -4994,6 +4994,14 @@ function renderFundsSheet() {
     <div id="ftab-dca" hidden>${renderDcaFundCards()}</div>
     <div id="ftab-beatetf" hidden>${renderBeatEtfCards()}</div>
     <div id="ftab-compare" hidden>${renderFundCompare()}</div>
+    <div class="fund-card" style="margin-top:18px;text-align:center">
+      <h3 style="margin-bottom:6px">其他基金</h3>
+      <p class="tagline" style="margin-bottom:12px">瀏覽完整基金總覽（境外／國內基金龍虎榜、市場龍虎榜、快速搜尋）</p>
+      <a href="https://bopfund.moneydj.com/" target="_blank" rel="noopener"
+         style="display:inline-block;padding:10px 22px;background:#019AB3;color:#fff;border-radius:6px;text-decoration:none;font-weight:600">
+        前往基金總覽
+      </a>
+    </div>
   `;
 }
 
