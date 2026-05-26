@@ -1,8 +1,8 @@
 {
   "chapter": 1,
-  "slug": "relevant_tax_law",
-  "title": "相關稅法",
-  "description": "傳承相關稅法條文彙整：遺贈稅、所得稅、最低稅負、土增、契稅、信託",
+  "slug": "law_compendium",
+  "title": "法規彙編",
+  "description": "高資產傳承稅務 9 大主題法規條文：遺產稅／贈與稅／信託稅法／最低稅負／CFC／土增／房地合一／保險／投資／稅務新聞",
   "objectives": [
     "建立傳承規劃所涉八大稅法的完整視圖",
     "掌握遺贈稅法核心條文（§5-1 信託視為贈與、§16 不計入遺產、§17 扣除額、§19 稅率）",
@@ -13,7 +13,7 @@
   "sections": [
     {
       "heading": "傳承稅法八大支柱",
-      "html": "<div class=\"mermaid\">graph TD\n    A[傳承相關稅法] --> B[遺產及贈與稅法]\n    A --> C[所得稅法]\n    A --> D[所得基本稅額條例<br/>最低稅負]\n    A --> E[土地稅法]\n    A --> F[契稅條例]\n    A --> G[信託法]\n    A --> H[保險法]\n    A --> I[民法<br/>親屬編 / 繼承編]\n    style A fill:#019AB3,color:#fff</div><table><thead><tr><th>法規</th><th>傳承場景的角色</th></tr></thead><tbody><tr><td>遺贈稅法</td><td>身故遺產、生前贈與、信託視為贈與的課稅核心</td></tr><tr><td>所得稅法</td><td>股利、租金、信託收益、CFC、跨境所得</td></tr><tr><td>最低稅負</td><td>海外所得、大額保險、未上市櫃股票交易</td></tr><tr><td>土地稅法</td><td>土地增值稅、自用住宅優惠、配偶贈與免徵</td></tr><tr><td>契稅條例</td><td>不動產移轉之契稅（房屋稅基）</td></tr><tr><td>信託法</td><td>信託架構之私法基礎</td></tr><tr><td>保險法</td><td>保險給付歸屬、保險受益人指定</td></tr><tr><td>民法</td><td>繼承順序、應繼分、特留分、遺囑</td></tr></tbody></table>"
+      "html": "<p style=\"margin:0 0 20px;padding:14px 18px;background:linear-gradient(135deg,#e8f5f6,#def1f2);border:1px solid rgba(1,154,179,0.18);border-radius:10px;\"><strong>互動工具：</strong>本章為法規架構說明。完整 9 大主題之條文彙編（含可篩選條號／全文／資料來源）已部署在主導覽 → <a href=\"../#wealth\" target=\"_top\" style=\"display:inline-block;margin-left:8px;padding:6px 14px;background:linear-gradient(135deg,#019AB3,#17B5AD);color:#fff;text-decoration:none;border-radius:999px;font-weight:600;font-size:13px;\">前往「財富傳承」工具 →</a></p><div class=\"mermaid\">graph TD\n    A[傳承相關稅法] --> B[遺產及贈與稅法]\n    A --> C[所得稅法]\n    A --> D[所得基本稅額條例<br/>最低稅負]\n    A --> E[土地稅法]\n    A --> F[契稅條例]\n    A --> G[信託法]\n    A --> H[保險法]\n    A --> I[民法<br/>親屬編 / 繼承編]\n    style A fill:#019AB3,color:#fff</div><table><thead><tr><th>法規</th><th>傳承場景的角色</th></tr></thead><tbody><tr><td>遺贈稅法</td><td>身故遺產、生前贈與、信託視為贈與的課稅核心</td></tr><tr><td>所得稅法</td><td>股利、租金、信託收益、CFC、跨境所得</td></tr><tr><td>最低稅負</td><td>海外所得、大額保險、未上市櫃股票交易</td></tr><tr><td>土地稅法</td><td>土地增值稅、自用住宅優惠、配偶贈與免徵</td></tr><tr><td>契稅條例</td><td>不動產移轉之契稅（房屋稅基）</td></tr><tr><td>信託法</td><td>信託架構之私法基礎</td></tr><tr><td>保險法</td><td>保險給付歸屬、保險受益人指定</td></tr><tr><td>民法</td><td>繼承順序、應繼分、特留分、遺囑</td></tr></tbody></table>"
     },
     {
       "heading": "遺產及贈與稅法核心條文",

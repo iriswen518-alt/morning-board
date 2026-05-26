@@ -1,0 +1,51 @@
+{
+  "chapter": 1,
+  "slug": "succession_tools",
+  "title": "傳承工具",
+  "description": "五大傳承工具（信託／投資／保險／股權／房產）的特色、優劣與適用情境比較",
+  "objectives": [
+    "認識五大傳承工具的核心功能與法律性質",
+    "理解每種工具的稅務效率、控制力、流動性、隱私差異",
+    "建立依客戶需求選擇工具或組合的判斷框架",
+    "識別五大工具搭配運用時的綜效與衝突",
+    "熟悉各工具在高資產家庭傳承中的典型角色"
+  ],
+  "sections": [
+    {
+      "heading": "五大傳承工具總覽",
+      "html": "<div class=\"mermaid\">graph TD\n    A[高資產傳承工具] --> B[信託]\n    A --> C[投資]\n    A --> D[保險]\n    A --> E[股權]\n    A --> F[房產]\n    style A fill:#019AB3,color:#fff</div><table><thead><tr><th>工具</th><th>核心功能</th><th>法律性質</th><th>典型應用</th></tr></thead><tbody><tr><td><strong>信託</strong></td><td>財產隔離 + 跨代傳承 + 失能保障</td><td>信託法</td><td>家族信託、安養信託、保險金信託</td></tr><tr><td><strong>投資</strong></td><td>長期增值 + 抗通膨 + 流動性</td><td>金保法、投信投顧法</td><td>核心配置、退休金、教育金</td></tr><tr><td><strong>保險</strong></td><td>風險轉嫁 + 遺產稅源 + 跨代</td><td>保險法、遺贈稅法 §16</td><td>身故保障、儲蓄型、投資型</td></tr><tr><td><strong>股權</strong></td><td>家族控制 + 經營傳承 + 表決權</td><td>公司法、證交法</td><td>家族企業傳承、閉鎖性公司</td></tr><tr><td><strong>房產</strong></td><td>實質資產 + 通膨對沖 + 收租</td><td>土地法、房地合一稅</td><td>商辦、土地、自住、收租物件</td></tr></tbody></table><blockquote><p><strong>核心觀念</strong>：沒有單一最佳工具，傳承規劃通常為「多工具組合」。理財顧問的價值在於依客戶資產結構、家庭情境、稅務考量設計合適組合。</p></blockquote>"
+    },
+    {
+      "heading": "信託工具",
+      "html": "<p><strong>核心特色</strong>：透過信託法之「財產獨立性」（§10/§11/§12），實現財產與受託人個人財務隔離，搭配契約條款設計可達跨代傳承、失能保障、隱私保護等多重目的。</p><table><thead><tr><th>面向</th><th>表現</th></tr></thead><tbody><tr><td>稅務效率</td><td>★★★★（自益不課贈與稅、連續受益人僅一次性課稅）</td></tr><tr><td>控制力</td><td>★★★（信託契約可保留變更權，但避免實質課稅）</td></tr><tr><td>流動性</td><td>★★（受信託契約限制，非隨時可取）</td></tr><tr><td>隱私保護</td><td>★★★★★（受託人名義登記，公開查詢顯示信託業者）</td></tr><tr><td>跨代能力</td><td>★★★★★（連續受益人信託可跨 2-3 代）</td></tr><tr><td>設立成本</td><td>中（設立費 + 年度信託管理費 0.1-0.5%）</td></tr></tbody></table><p><strong>典型應用</strong>：</p><ul><li><strong>家族信託</strong>：將家族財產（金錢、有價證券、不動產）信託，依契約跨代傳承</li><li><strong>安養信託</strong>：本人自益信託，由銀行管理日常生活費、醫療費</li><li><strong>保險金信託</strong>：身故保險金不直接給未成年人，避免被監護人挪用</li><li><strong>員工持股信託</strong>：員工分配股票由信託統一管理表決權</li></ul><blockquote><p><strong>適用情境</strong>：資產 5,000 萬以上、家有未成年/失能子女、跨代傳承需求、隱私保護考量、企業股權集中需求。</p></blockquote>"
+    },
+    {
+      "heading": "投資工具",
+      "html": "<p><strong>核心特色</strong>：透過股票、基金、債券等金融商品實現長期增值，是大多數家庭傳承的「核心引擎」。優點是流動性高、進入門檻低；缺點是直接持有對跨代傳承的稅務優勢有限。</p><table><thead><tr><th>面向</th><th>表現</th></tr></thead><tbody><tr><td>稅務效率</td><td>★★（股利併入綜所稅或 28% 分開稅、海外所得最低稅負）</td></tr><tr><td>控制力</td><td>★★★★★（隨時可調整、買賣自由）</td></tr><tr><td>流動性</td><td>★★★★★（除非選擇結構型/長期商品，多數可立即變現）</td></tr><tr><td>隱私保護</td><td>★★（個人帳戶實名）</td></tr><tr><td>跨代能力</td><td>★★（贈與/繼承時按市值計稅，無架構優勢）</td></tr><tr><td>設立成本</td><td>低</td></tr></tbody></table><p><strong>典型應用</strong>：</p><ul><li><strong>核心配置</strong>：60/40 股債組合做為長期成長引擎</li><li><strong>退休金</strong>：定期定額累積至退休</li><li><strong>教育金</strong>：依子女年齡規劃投資期間</li><li><strong>家庭流動性</strong>：保留 6-12 個月生活費於高流動商品</li></ul><blockquote><p><strong>適用情境</strong>：所有層級的家庭都需要核心投資配置。但純粹投資無法獨自完成傳承，需搭配信託、保險、股權等工具。</p></blockquote>"
+    },
+    {
+      "heading": "保險工具",
+      "html": "<p><strong>核心特色</strong>：保險金原則上不計入遺產（《遺贈稅法》§16 第 9 款），是傳承中最強的「遺產稅源」工具。但須避免「人壽保險 8 大實質課稅態樣」。</p><table><thead><tr><th>面向</th><th>表現</th></tr></thead><tbody><tr><td>稅務效率</td><td>★★★★（不計入遺產，但實質課稅風險高）</td></tr><tr><td>控制力</td><td>★★★（要保人可變更受益人）</td></tr><tr><td>流動性</td><td>★★（解約金、保單質借）</td></tr><tr><td>隱私保護</td><td>★★★★（保險受益人直接受領，繞過遺產分割）</td></tr><tr><td>跨代能力</td><td>★★★★（搭配保險金信託可深化）</td></tr><tr><td>設立成本</td><td>低（除非高保額）</td></tr></tbody></table><p><strong>典型應用</strong>：</p><ul><li><strong>身故保障型</strong>：高保額壽險為遺產稅準備現金流</li><li><strong>儲蓄型</strong>：年金險、儲蓄險作為退休安排</li><li><strong>投資型</strong>：變額萬能壽險結合投資與保障</li><li><strong>保險金信託</strong>：身故保險金入信託，避免一次性給付被挪用</li></ul><blockquote><p><strong>實質課稅 8 大態樣（不要踩到）</strong>：重病投保、高齡投保、躉繳、舉債、巨額、短期、給付低於保費、變更要保人。符合者保險金可能被視為遺產。</p></blockquote>"
+    },
+    {
+      "heading": "股權工具",
+      "html": "<p><strong>核心特色</strong>：透過家族企業股權持有實現財富積累與經營傳承。重點工具包括閉鎖性股份有限公司、控股公司、表決權信託等架構設計。</p><table><thead><tr><th>面向</th><th>表現</th></tr></thead><tbody><tr><td>稅務效率</td><td>★★★（控股公司 §42 法人間股利免稅、未上市櫃股票交易課最低稅負）</td></tr><tr><td>控制力</td><td>★★★★★（表決權直接掌握）</td></tr><tr><td>流動性</td><td>★★（未上市櫃股權變現困難）</td></tr><tr><td>隱私保護</td><td>★★★（閉鎖性公司股權不公開）</td></tr><tr><td>跨代能力</td><td>★★★★（移轉公司股權即可，免逐筆資產過戶）</td></tr><tr><td>設立成本</td><td>中至高（公司設立、年度簽證、稅務申報）</td></tr></tbody></table><p><strong>典型應用</strong>：</p><ul><li><strong>家族企業股權集中</strong>：用閉鎖性股份有限公司架構維持家族控制</li><li><strong>投資控股</strong>：個人 → 控股公司 → 多檔投資，集中管理多筆資產</li><li><strong>表決權信託</strong>：多位股東集中表決權，避免股權分散</li><li><strong>跨代股權傳承</strong>：透過閉鎖性公司 + 信託 + 特別股設計，控制傳承彈性</li></ul><blockquote><p><strong>適用情境</strong>：家族企業 + 多筆資產 + 跨代傳承需求。特別適合資產 1 億以上、有家族企業股權的家庭。</p></blockquote>"
+    },
+    {
+      "heading": "房產工具",
+      "html": "<p><strong>核心特色</strong>：實質資產，長期抗通膨，可透過租金產生現金流。傳承面臨房地合一稅、土地增值稅、契稅等多重稅目，需仔細規劃。</p><table><thead><tr><th>面向</th><th>表現</th></tr></thead><tbody><tr><td>稅務效率</td><td>★★（繼承免土增、房地合一稅高）</td></tr><tr><td>控制力</td><td>★★★★（自主決定買賣、出租）</td></tr><tr><td>流動性</td><td>★（變現需數月至 1 年）</td></tr><tr><td>隱私保護</td><td>★★（不動產登記公開）</td></tr><tr><td>跨代能力</td><td>★★（繼承免土增稅但後續再賣計房地合一）</td></tr><tr><td>設立成本</td><td>無（已有不動產者）</td></tr></tbody></table><p><strong>典型應用</strong>：</p><ul><li><strong>自住住宅</strong>：享自用住宅優惠（地價稅 0.2%、土增稅 10%、房地合一稅 10% + 400 萬扣除）</li><li><strong>商辦／收租</strong>：產生租金現金流，搭配投資公司架構降低稅負</li><li><strong>土地投資</strong>：長期增值，繼承免土增稅</li><li><strong>都更案參與</strong>：以舊屋換新屋，搭配信託避免少數所有權人阻擋</li></ul><blockquote><p><strong>個人 vs 投資公司持有</strong>：短期持有/多筆資產/跨代 → 投資公司；長期持有/自住 → 個人。</p></blockquote>"
+    },
+    {
+      "heading": "五大工具綜合比較",
+      "html": "<table><thead><tr><th>比較項目</th><th>信託</th><th>投資</th><th>保險</th><th>股權</th><th>房產</th></tr></thead><tbody><tr><td><strong>稅務效率</strong></td><td>★★★★</td><td>★★</td><td>★★★★</td><td>★★★</td><td>★★</td></tr><tr><td><strong>控制力</strong></td><td>★★★</td><td>★★★★★</td><td>★★★</td><td>★★★★★</td><td>★★★★</td></tr><tr><td><strong>流動性</strong></td><td>★★</td><td>★★★★★</td><td>★★</td><td>★★</td><td>★</td></tr><tr><td><strong>隱私</strong></td><td>★★★★★</td><td>★★</td><td>★★★★</td><td>★★★</td><td>★★</td></tr><tr><td><strong>跨代能力</strong></td><td>★★★★★</td><td>★★</td><td>★★★★</td><td>★★★★</td><td>★★</td></tr><tr><td><strong>設立／維持成本</strong></td><td>中</td><td>低</td><td>低</td><td>中高</td><td>無（既有）</td></tr></tbody></table><div class=\"mermaid\">graph LR\n    A[需求類型] --> B{核心目的}\n    B -->|跨代傳承+隱私| C[信託]\n    B -->|長期增值| D[投資]\n    B -->|遺產稅源+保障| E[保險]\n    B -->|家族企業控制| F[股權]\n    B -->|抗通膨+租金| G[房產]\n    style A fill:#019AB3,color:#fff</div>"
+    },
+    {
+      "heading": "工具組合與選擇原則",
+      "html": "<p>單一工具難以滿足完整傳承需求，實務上多採「核心 + 補強」組合。</p><table><thead><tr><th>家庭類型</th><th>核心工具</th><th>補強工具</th></tr></thead><tbody><tr><td>大眾家庭（&lt; 3,000 萬）</td><td>保險 + 投資</td><td>—</td></tr><tr><td>大眾富裕（3,000 萬 - 1 億）</td><td>投資 + 保險 + 房產</td><td>信託（安養）</td></tr><tr><td>富裕（1 億 - 5 億）</td><td>投資 + 保險 + 信託</td><td>股權、房產分散</td></tr><tr><td>高資產（5 億 - 10 億）</td><td>信託 + 股權 + 保險</td><td>跨境配置、家族辦公室</td></tr><tr><td>超高資產（&gt; 10 億）</td><td>家族信託 + 控股公司 + 多元配置</td><td>家族治理機制、慈善信託</td></tr></tbody></table><blockquote><p><strong>選擇原則</strong>：</p><ol><li><strong>從目的出發</strong>：先確定客戶優先目標（增值/保障/傳承/控制/隱私），再選工具</li><li><strong>稅務整體考量</strong>：單看一個工具的稅優常被多稅目疊加抵銷</li><li><strong>家庭情境匹配</strong>：未成年子女、失能風險、家族企業、跨境身分都影響工具選擇</li><li><strong>合規優先</strong>：避免實質課稅、CFC、利益衝突等風險</li><li><strong>定期檢視</strong>：稅法變動、家庭事件、市場環境改變都需要重新評估</li></ol></blockquote>"
+    },
+    {
+      "heading": "自我檢測",
+      "html": "<details><summary>Q1：哪個工具的「跨代能力」最強？為什麼？</summary><p>答：信託（特別是連續受益人信託）。透過契約條款設計，信託可跨 2-3 代依條件成就移轉受益權，且後順位移轉不再課贈與稅。其他工具（投資/保險/股權/房產）跨代時都需經過贈與或繼承程序，稅務成本較高。</p></details><details><summary>Q2：客戶 70 歲、淨資產 8 億、家有 3 子女 + 5 孫輩，最適合的工具組合？</summary><p>答：高資產層級，建議「家族信託（傳承核心）+ 控股公司（股權集中）+ 保險（遺產稅源）+ 跨境配置（風險分散）」組合。信託處理跨代傳承與失能保障；控股公司集中股權避免下代分散；高保額保險為遺產稅準備現金流。建議搭配家族治理機制與會計師／律師團隊。</p></details><details><summary>Q3：為什麼說純粹投資工具無法獨自完成傳承？</summary><p>答：投資工具的「跨代能力」與「稅務效率」較低。個人帳戶持有的股票、基金，傳承時都按市值計入遺產／贈與稅，無架構優勢。而且實名持有，缺乏隱私。投資是「核心增值引擎」，但需搭配信託、保險等「傳承架構工具」才能完整。</p></details><details><summary>Q4：房產傳承選擇繼承還是生前贈與？</summary><p>答：依稅務試算，多數情境下「身故繼承」總稅負低於「生前贈與」。繼承免土增稅、遺產稅扣除額大（免稅 1,333 萬 + 配偶 553 萬等）；贈與則贈與稅+土增稅雙重課稅。但繼承的缺點是失去生前控制，且後代繼承後再賣需繳房地合一稅。實務常採「分年贈與一部分 + 身故繼承一部分」組合。</p></details><p><strong>資料來源：</strong></p><ul><li>信託法（<a href=\"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0020024\" target=\"_blank\" rel=\"noopener\">全國法規資料庫</a>）</li><li>遺產及贈與稅法（<a href=\"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340072\" target=\"_blank\" rel=\"noopener\">全國法規資料庫</a>）</li><li>保險法（<a href=\"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0390002\" target=\"_blank\" rel=\"noopener\">全國法規資料庫</a>）</li><li>公司法 §356-1（閉鎖性公司，<a href=\"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001\" target=\"_blank\" rel=\"noopener\">全國法規資料庫</a>）</li><li>所得稅法 §14-4（房地合一稅，<a href=\"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340003\" target=\"_blank\" rel=\"noopener\">全國法規資料庫</a>）</li></ul>"
+    }
+  ]
+}

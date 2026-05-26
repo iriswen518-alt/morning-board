@@ -1,6 +1,6 @@
 {
   "chapter": 2,
-  "slug": "tax_calc_module",
+  "slug": "tax_calculator",
   "title": "稅負試算",
   "description": "綜所稅／最低稅負／贈與／遺產／房地合一／土增六項試算工具，與房地、股票、基金、不動產的個人 vs 投資公司比較情境",
   "objectives": [
@@ -13,7 +13,7 @@
   "sections": [
     {
       "heading": "模組分區：單一稅目 vs 情境比較",
-      "html": "<p>稅負試算模組共 10 個 sub-tab，依設計目的分為兩區：</p><table><thead><tr><th>分區</th><th>工具數</th><th>輸入</th><th>輸出</th><th>使用情境</th></tr></thead><tbody><tr><td><strong>單一稅目試算</strong></td><td>6 項</td><td>單一金額／所得</td><td>該稅目應納稅額</td><td>客戶問『這筆錢要繳多少稅？』</td></tr><tr><td><strong>情境比較</strong></td><td>4 項</td><td>同一資產 + 多個架構選項</td><td>各架構稅負並列比較</td><td>客戶問『個人持有還是公司持有比較划算？』</td></tr></tbody></table><blockquote><p><strong>選工具決策樹</strong>：先問『有沒有架構選項？』— 沒有（單純算稅）→ 單一稅目；有（在比較兩三種做法）→ 情境比較。</p></blockquote>"
+      "html": "<p style=\"margin:0 0 20px;padding:14px 18px;background:linear-gradient(135deg,#e8f5f6,#def1f2);border:1px solid rgba(1,154,179,0.18);border-radius:10px;\"><strong>互動工具：</strong>本章為試算邏輯說明。實際 10 個 sub-tab 互動試算工具（含表單輸入、即時計算）已部署在主導覽 → <a href=\"../#calc\" target=\"_top\" style=\"display:inline-block;margin-left:8px;padding:6px 14px;background:linear-gradient(135deg,#019AB3,#17B5AD);color:#fff;text-decoration:none;border-radius:999px;font-weight:600;font-size:13px;\">前往「稅負試算」工具 →</a></p><p>稅負試算模組共 10 個 sub-tab，依設計目的分為兩區：</p><table><thead><tr><th>分區</th><th>工具數</th><th>輸入</th><th>輸出</th><th>使用情境</th></tr></thead><tbody><tr><td><strong>單一稅目試算</strong></td><td>6 項</td><td>單一金額／所得</td><td>該稅目應納稅額</td><td>客戶問『這筆錢要繳多少稅？』</td></tr><tr><td><strong>情境比較</strong></td><td>4 項</td><td>同一資產 + 多個架構選項</td><td>各架構稅負並列比較</td><td>客戶問『個人持有還是公司持有比較划算？』</td></tr></tbody></table><blockquote><p><strong>選工具決策樹</strong>：先問『有沒有架構選項？』— 沒有（單純算稅）→ 單一稅目；有（在比較兩三種做法）→ 情境比較。</p></blockquote>"
     },
     {
       "heading": "六項單一稅目試算：適用情境與計算骨架",

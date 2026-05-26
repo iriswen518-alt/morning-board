@@ -3,22 +3,16 @@
   "course_name": "財富傳承",
   "chapters": [
     {
-      "slug": "relevant_tax_law",
-      "title": "相關稅法",
-      "description": "傳承相關稅法條文彙整：遺贈稅、所得稅、最低稅負、土增、契稅、信託",
-      "file": "01_relevant_tax_law.json"
-    },
-    {
-      "slug": "tax_calc_module",
-      "title": "稅負試算",
-      "description": "綜所稅／最低稅負／贈與／遺產／房地合一／土增六項試算工具，與房地、股票、基金、不動產的個人 vs 投資公司比較情境",
-      "file": "02_tax_calc_module.json"
+      "slug": "succession_tools",
+      "title": "傳承工具",
+      "description": "五大傳承工具（信託／投資／保險／股權／房產）的特色、優劣與適用情境比較",
+      "file": "01_succession_tools.json"
     },
     {
       "slug": "tax_cases",
       "title": "稅負案例",
-      "description": "實務稅務案例集：遺贈、保險、信託、房地、跨境的常見情境分析",
-      "file": "03_tax_cases.json"
+      "description": "實務稅務案例集：遺贈、信託、房地、跨境的常見情境分析",
+      "file": "02_tax_cases.json"
     }
   ]
 }
