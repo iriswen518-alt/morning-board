@@ -1352,7 +1352,7 @@ function renderPositionPresetPane(presets) {
   const cards = presets.map(p => {
     const isSel = POSITION_SELECTED_PRESET === p.id;
     return `
-      <button class="position-preset-card ${isSel ? "selected" : ""}" data-preset="${escapeHtml(p.id)}" style="border-top-color:${p.color || "#019AB3"}">
+      <button class="position-preset-card ${isSel ? "selected" : ""}" data-preset="${escapeHtml(p.id)}">
         <div class="position-preset-name">${escapeHtml(p.name)}</div>
         <div class="position-preset-tag">${escapeHtml(p.tagline || "")}</div>
         <div class="position-preset-count">${p.items.length} 個標的</div>
