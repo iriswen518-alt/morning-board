@@ -2850,8 +2850,9 @@ function renderTwStockSearch() {
     <div class="tw-search-box">
       ${renderTwIndustryTabs()}
       <div class="tw-search-row">
-        <input id="tw-stock-input" type="text" placeholder="${escapeHtml(placeholder)}" value="${escapeHtml(TW_STOCK_QUERY)}" autocomplete="off" />
+        <input id="tw-stock-input" type="text" placeholder="${escapeHtml(placeholder)}" value="${escapeHtml(TW_STOCK_QUERY)}" autocomplete="off" role="combobox" aria-autocomplete="list" aria-controls="tw-stock-suggest" aria-expanded="false" />
         <button class="tw-search-btn" type="button" onclick="doTwStockSearch()">搜尋</button>
+        <div id="tw-stock-suggest" class="tw-suggest" role="listbox" hidden></div>
       </div>
       <div class="tw-pick-row"><span class="tw-pick-label">${TW_INDUSTRY_FILTER === "全部" ? "熱門" : TW_INDUSTRY_FILTER}：</span>${picks}</div>
       ${filterHint ? `<div class="tw-search-hint">${filterHint}</div>` : ""}
@@ -2868,6 +2869,7 @@ function doTwStockSearch(query) {
   } else {
     q = String(q).trim();
   }
+  hideTwStockSuggest();
   const result = document.getElementById("tw-stock-result");
   if (!result) return;
   if (!q) {
@@ -2911,10 +2913,44 @@ function wireTwStock() {
   const input = document.getElementById("tw-stock-input");
   if (input) {
     input.addEventListener("keydown", (e) => {
+      const box = document.getElementById("tw-stock-suggest");
+      const open = box && !box.hidden && TW_SUGGEST_STATE.items.length > 0;
+      if (e.key === "ArrowDown" && open) {
+        e.preventDefault();
+        const next = (TW_SUGGEST_STATE.active + 1) % TW_SUGGEST_STATE.items.length;
+        setTwSuggestActive(next);
+        return;
+      }
+      if (e.key === "ArrowUp" && open) {
+        e.preventDefault();
+        const n = TW_SUGGEST_STATE.items.length;
+        const prev = (TW_SUGGEST_STATE.active - 1 + n) % n;
+        setTwSuggestActive(prev);
+        return;
+      }
+      if (e.key === "Escape" && open) {
+        e.preventDefault();
+        hideTwStockSuggest();
+        return;
+      }
       if (e.key === "Enter") {
         e.preventDefault();
-        doTwStockSearch();
+        if (open && TW_SUGGEST_STATE.active >= 0) {
+          pickTwStockSuggest(TW_SUGGEST_STATE.active);
+        } else {
+          doTwStockSearch();
+        }
       }
+    });
+    input.addEventListener("input", (e) => {
+      updateTwStockSuggest(e.target.value);
+    });
+    input.addEventListener("focus", (e) => {
+      if ((e.target.value || "").trim()) updateTwStockSuggest(e.target.value);
+    });
+    input.addEventListener("blur", () => {
+      // 延遲關閉，讓 click 先觸發
+      setTimeout(hideTwStockSuggest, 150);
     });
   }
   // 切回 tab 時若有先前查詢結果，重新觸發 snapshot
@@ -2925,6 +2961,81 @@ function wireTwStock() {
       loadTwStockSnapshot(TW_STOCK_QUERY, rec?.market);
     }
   }
+}
+
+let TW_SUGGEST_STATE = { items: [], active: -1 };
+const TW_SUGGEST_LIMIT = 12;
+
+function renderTwStockSuggest(matches) {
+  return matches.map((s, i) => {
+    const marketCls = s.market === "上櫃" ? "otc" : "listed";
+    const marketChip = s.market
+      ? `<span class="tw-suggest-market tw-res-market-${marketCls}">${escapeHtml(s.market)}</span>`
+      : "";
+    return `
+      <button class="tw-suggest-item" type="button" role="option" data-index="${i}"
+        onmousedown="event.preventDefault()" onclick="pickTwStockSuggest(${i})">
+        <span class="tw-suggest-code">${escapeHtml(s.code)}</span>
+        <span class="tw-suggest-name">${escapeHtml(s.name)}</span>
+        ${marketChip}
+      </button>`;
+  }).join("");
+}
+
+function updateTwStockSuggest(value) {
+  const input = document.getElementById("tw-stock-input");
+  const box = document.getElementById("tw-stock-suggest");
+  if (!box) return;
+  const q = (value || "").trim();
+  if (!q) { hideTwStockSuggest(); return; }
+  // 代碼直查（純數字 4-6 碼 + 可選字母）也支援前綴比對
+  const list = DATA?.tw_stocks || [];
+  const upper = q.replace(/[^0-9A-Za-z]/g, "").toUpperCase();
+  let matches = [];
+  if (/^[0-9]/.test(upper) && upper.length >= 1) {
+    const inFilter = (s) => twMegaIncludes(s.industry || "其他", TW_INDUSTRY_FILTER);
+    matches = list.filter(s => inFilter(s) && (s.code || "").toUpperCase().startsWith(upper)).slice(0, TW_SUGGEST_LIMIT);
+  }
+  if (matches.length === 0) {
+    matches = twStockSearchByKeyword(q, TW_SUGGEST_LIMIT);
+  }
+  TW_SUGGEST_STATE = { items: matches, active: -1 };
+  if (!matches.length) {
+    box.hidden = false;
+    box.innerHTML = `<div class="tw-suggest-empty">找不到「${escapeHtml(q)}」相符的股票</div>`;
+    if (input) input.setAttribute("aria-expanded", "true");
+    return;
+  }
+  box.innerHTML = renderTwStockSuggest(matches);
+  box.hidden = false;
+  if (input) input.setAttribute("aria-expanded", "true");
+}
+
+function hideTwStockSuggest() {
+  const input = document.getElementById("tw-stock-input");
+  const box = document.getElementById("tw-stock-suggest");
+  if (box) { box.hidden = true; box.innerHTML = ""; }
+  if (input) input.setAttribute("aria-expanded", "false");
+  TW_SUGGEST_STATE = { items: [], active: -1 };
+}
+
+function pickTwStockSuggest(i) {
+  const rec = TW_SUGGEST_STATE.items[i];
+  if (!rec) return;
+  const input = document.getElementById("tw-stock-input");
+  if (input) input.value = rec.code;
+  hideTwStockSuggest();
+  doTwStockSearch(rec.code);
+}
+
+function setTwSuggestActive(i) {
+  const box = document.getElementById("tw-stock-suggest");
+  if (!box) return;
+  TW_SUGGEST_STATE.active = i;
+  [...box.querySelectorAll(".tw-suggest-item")].forEach((el, idx) => {
+    el.classList.toggle("active", idx === i);
+    if (idx === i) el.scrollIntoView({ block: "nearest" });
+  });
 }
 
 function renderTwStockSheet() {
