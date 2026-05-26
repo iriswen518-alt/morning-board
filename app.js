@@ -526,7 +526,7 @@ function switchTab(name) {
   else if (name === "twstock") body.innerHTML = renderTwStockSheet();
   if (name === "assist") wireAssistTab();
   if (name === "news") wireNewsTabs();
-  if (name === "market") wireMarketTabs();
+  if (name === "market") { wireMarketTabs(); wireTwStock(); }
   if (name === "funds") { wireFundsTabs(); wireFundCompare(); }
   if (name === "targets") wireTargetsTabs();
   if (name === "portfolio") wirePortfolioTabs();
@@ -1893,7 +1893,11 @@ function renderMarketSheet() {
     </table>` : `<p style="color:var(--text-mute); padding:20px 0">尚未提供匯率資料</p>`;
 
   const usTab = renderStocksTable("", usStocks) || `<p style="color:var(--text-mute); padding:20px 0">尚未提供美股資料</p>`;
-  const twTab = renderStocksTable("", twStocks) || `<p style="color:var(--text-mute); padding:20px 0">尚未提供台股資料</p>`;
+  const twPresetTable = renderStocksTable("", twStocks) || `<p style="color:var(--text-mute); padding:20px 0">尚未提供台股資料</p>`;
+  const twTab = `${twPresetTable}
+    <div style="margin-top:28px;padding-top:20px;border-top:1px solid var(--border)">
+      ${renderTwStockSheet()}
+    </div>`;
 
   return `
     ${renderMarketHighlights(m)}
