@@ -646,7 +646,8 @@ table.indices .date-col {
   margin-top: 8px;
   text-align: center;
 }
-.obond-meta-grid { grid-template-columns: repeat(4, 1fr); font-size: 15px; }
+.obond-meta-grid { grid-template-columns: repeat(5, 1fr); font-size: 15px; }
+.obond-meta-grid > .obond-meta-rating { grid-column: span 2; }
 .obond-perf-grid {
   grid-template-columns: repeat(5, 1fr);
   font-size: 14px;

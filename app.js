@@ -771,7 +771,7 @@ function renderObondsSheet() {
         <div><label>幣別</label>${escapeHtml(b.currency || "—")}</div>
         <div><label>票面利率</label>${fmtCoupon(b.coupon_pct)}</div>
         <div><label>到期日</label>${escapeHtml(b.maturity || "—")}</div>
-        <div><label>信評</label><span>${escapeHtml(b.rating || "—")}</span></div>
+        <div class="obond-meta-rating"><label>信評</label><span>${escapeHtml(b.rating || "—")}</span></div>
       </div>
       <div class="obond-perf-grid">
         <div>
