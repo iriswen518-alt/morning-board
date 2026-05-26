@@ -757,11 +757,12 @@ function renderObondsSheet() {
   const fmtPrice = p => (p === null || p === undefined) ? "—" : Number(p).toFixed(2);
   return list.map(b => {
     const url = bondUrl(b);
+    const displayName = [b.name_zh, b.issuer].filter(Boolean).map(escapeHtml).join(" ");
     const nameHtml = url
-      ? `<a href="${url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${escapeHtml(b.name_zh)}</a>`
-      : escapeHtml(b.name_zh);
+      ? `<a href="${url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${displayName}</a>`
+      : displayName;
     const chips = [currencyChip(b.currency), typeChip(b.type)].join("");
-    const meta = [b.issuer, b.code, b.isin].filter(Boolean).map(escapeHtml).join("・");
+    const meta = [b.code, b.isin].filter(Boolean).map(escapeHtml).join("・");
     const priceDate = b.price_date ? `<div style="font-size:11px;color:var(--text-mute);margin-top:2px">${escapeHtml(shortDate(b.price_date))}</div>` : "";
     return `
     <div class="fund-card">
