@@ -74,7 +74,6 @@ async function loadChapter() {
   const chapterListEl = document.getElementById('chapter-list');
   const heroEl = document.getElementById('chapter-hero');
   const content = document.getElementById('chapter-content');
-  const titleEl = document.getElementById('chapter-title');
   if (!chapterListEl || !content) return;
 
   const params = new URLSearchParams(location.search);
@@ -138,7 +137,16 @@ async function loadChapter() {
     const chRes = await fetch(`../data/academy/${course}/${target.file}`);
     if (!chRes.ok) throw new Error('chapter fetch failed');
     const ch = await chRes.json();
-    titleEl.textContent = `${idx.course_name}・${ch.title}`;
+    document.title = `${ch.title}・${idx.course_name}・理財小幫手`;
+    if (heroEl) {
+      const metaEl = heroEl.querySelector('.course-hero-meta');
+      if (metaEl && !metaEl.querySelector('.course-hero-chapter')) {
+        const crumb = document.createElement('p');
+        crumb.className = 'course-hero-chapter';
+        crumb.textContent = `目前章節：${ch.title}`;
+        metaEl.appendChild(crumb);
+      }
+    }
 
     let html = '';
     if (ch.objectives && ch.objectives.length) {
