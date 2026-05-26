@@ -243,15 +243,4 @@
   }
 }
 
-/* 手機版 academy 不用 nav-toggle，main-nav 直接顯示（覆寫主站 style.css 的 display:none） */
-@media (max-width: 640px) {
-  .main-nav {
-    position: static;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-    padding: 12px 14px;
-    background: linear-gradient(160deg, #f0f9fb 0%, #e8f5f6 50%, #def1f2 100%);
-    overflow: visible;
-  }
-}
+/* 手機版 academy 沿用主站 nav-toggle 模式：main-nav 預設收起，靠 sticky「分頁」鈕展開為 overlay */

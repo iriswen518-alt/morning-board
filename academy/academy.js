@@ -135,5 +135,22 @@ async function loadChapter() {
   }
 }
 
+function wireNavToggle() {
+  const toggle = document.getElementById("nav-toggle");
+  const nav = document.getElementById("main-nav");
+  if (!toggle || !nav) return;
+  toggle.addEventListener("click", () => {
+    const open = document.body.classList.toggle("nav-open");
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  nav.addEventListener("click", (e) => {
+    if (e.target.closest(".main-tab") && document.body.classList.contains("nav-open")) {
+      document.body.classList.remove("nav-open");
+      toggle.setAttribute("aria-expanded", "false");
+    }
+  });
+}
+
+wireNavToggle();
 loadCourses();
 loadChapter();
