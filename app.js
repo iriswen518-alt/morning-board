@@ -2095,11 +2095,38 @@ async function fetchYahooSnapshot(code, market) {
   };
 }
 
+let TPEX_QUOTES_PROMISE = null;
+function loadTpexQuotes() {
+  if (!TPEX_QUOTES_PROMISE) {
+    TPEX_QUOTES_PROMISE = fetch("data/tpex_quotes.json", { cache: "no-cache" })
+      .then(r => { if (!r.ok) throw new Error(`tpex_quotes HTTP ${r.status}`); return r.json(); })
+      .catch(e => { TPEX_QUOTES_PROMISE = null; throw e; });
+  }
+  return TPEX_QUOTES_PROMISE;
+}
+
+async function fetchTpexFromStatic(code) {
+  const data = await loadTpexQuotes();
+  const q = data?.quotes?.[code];
+  if (!q) throw new Error("TPEx 靜態檔無此檔");
+  return {
+    ok: true, source: "TPEx 證券櫃檯買賣中心",
+    price: q.close, prevClose: q.prevClose,
+    change: q.change, changePct: q.changePct,
+    open: q.open, high: q.high, low: q.low,
+    volume: q.volume,
+    dateStr: data.isoDate || "—",
+    currency: "TWD",
+    sparkPoints: [],
+    staticAsOf: data.asOf,
+  };
+}
+
 async function fetchTwStockSnapshot(code, market) {
   const key = `${code}|${market}`;
   if (TW_STOCK_SNAPSHOT_CACHE[key]) return TW_STOCK_SNAPSHOT_CACHE[key];
   const primary = market === "上櫃" ? () => fetchYahooSnapshot(code, market) : () => fetchTwseSnapshot(code);
-  const fallback = market === "上櫃" ? () => fetchTwseSnapshot(code) : () => fetchYahooSnapshot(code, market);
+  const fallback = market === "上櫃" ? () => fetchTpexFromStatic(code) : () => fetchYahooSnapshot(code, market);
   let snap;
   try {
     snap = await primary();
@@ -2164,7 +2191,7 @@ function renderTwStockSnapshot(snap, rec) {
         <div><span class="tw-snap-k">成交量</span><span class="tw-snap-v">${fmtVolume(snap.volume)}</span></div>
         <div><span class="tw-snap-k">資料日</span><span class="tw-snap-v">${escapeHtml(snap.dateStr)}</span></div>
       </div>
-      <div class="tw-snap-foot">資料源：${escapeHtml(snap.source || "Yahoo Finance")}（瀏覽器直接抓取，無中介伺服器、無 API 金鑰）${snap.fallbackFrom ? `<span class="tw-snap-fallback"> · 主源失敗已自動切換</span>` : ""}</div>
+      <div class="tw-snap-foot">資料源：${escapeHtml(snap.source || "Yahoo Finance")}${snap.staticAsOf ? `（盤後 cache，更新於 ${escapeHtml(snap.staticAsOf.slice(0,16).replace("T"," "))}）` : "（瀏覽器直接抓取，無中介伺服器、無 API 金鑰）"}${snap.fallbackFrom ? `<span class="tw-snap-fallback"> · 主源失敗已自動切換</span>` : ""}</div>
     </div>`;
 }
 
