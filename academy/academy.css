@@ -55,16 +55,36 @@
 }
 
 .chapter-list li a {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
   padding: 14px 18px;
   background: var(--academy-bg-soft);
   border: 1px solid var(--academy-border);
   border-radius: 10px;
   text-decoration: none;
   color: var(--brand-deep);
-  font-size: 15px;
-  font-weight: 600;
   transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.chapter-list li a .ch-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--brand-deep);
+  line-height: 1.35;
+}
+
+.chapter-list li a .ch-desc {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--academy-muted);
+  background: rgba(107, 119, 133, 0.08);
+  padding: 4px 8px;
+  border-radius: 6px;
+  line-height: 1.45;
+  align-self: flex-start;
+  max-width: 100%;
+  word-break: break-word;
 }
 
 .chapter-list li a:hover {
@@ -120,7 +140,9 @@
 }
 
 .chapter-sidebar li a {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
   padding: 8px 10px;
   text-decoration: none;
   color: #1a2533;
@@ -131,6 +153,22 @@
 .chapter-sidebar li a.current {
   background: var(--brand-primary);
   color: #fff;
+}
+
+.chapter-sidebar li a .ch-title {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.chapter-sidebar li a .ch-desc {
+  font-size: 11px;
+  color: var(--academy-muted);
+  line-height: 1.4;
+}
+
+.chapter-sidebar li a.current .ch-desc {
+  color: rgba(255,255,255,0.85);
 }
 
 .chapter-sidebar li a:hover:not(.current) {

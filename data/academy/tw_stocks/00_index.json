@@ -4,37 +4,44 @@
   "chapters": [
     {
       "slug": "market",
-      "title": "市場與交易制度",
+      "title": "市場制度",
+      "description": "上市櫃／興櫃、撮合、漲跌停、交易時段",
       "file": "01_market.json"
     },
     {
       "slug": "kanban",
-      "title": "看盤基礎（指數、類股、籌碼）",
+      "title": "看盤基礎",
+      "description": "五檔、量價、指數、籌碼面",
       "file": "02_kanban.json"
     },
     {
       "slug": "fundamentals",
-      "title": "基本面分析",
+      "title": "基本分析",
+      "description": "財報三表、評價指標、產業分析",
       "file": "03_fundamentals.json"
     },
     {
       "slug": "technical",
-      "title": "技術面與型態",
+      "title": "技術分析",
+      "description": "K 線、移動平均、KD/MACD、型態",
       "file": "04_technical.json"
     },
     {
       "slug": "tax",
-      "title": "稅務與成本",
+      "title": "稅務成本",
+      "description": "證交稅、§15 兩制、§42 法人、健保補充保費",
       "file": "05_tax.json"
     },
     {
       "slug": "risk",
       "title": "風險商品",
+      "description": "信用交易、權證、ETF、警示注意股",
       "file": "06_risk.json"
     },
     {
       "slug": "regulation",
-      "title": "台股法規與監理",
+      "title": "法規監理",
+      "description": "證交法 §155 §157-1、SFIPC、權證、信用交易",
       "file": "07_regulation.json"
     }
   ]

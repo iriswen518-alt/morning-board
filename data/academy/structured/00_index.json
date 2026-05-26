@@ -4,37 +4,44 @@
   "chapters": [
     {
       "slug": "overview",
-      "title": "結構型商品總論與分類",
+      "title": "總論分類",
+      "description": "保本 / 不保本、境內 / 境外、CHRP 高風險分級",
       "file": "01_overview.json"
     },
     {
       "slug": "types",
-      "title": "常見結構型商品類型",
+      "title": "常見類型",
+      "description": "PGN、ELN、Autocall、DCD、CLN",
       "file": "02_types.json"
     },
     {
       "slug": "valuation",
-      "title": "結構型商品評價邏輯",
+      "title": "評價邏輯",
+      "description": "ZCB + 選擇權拆解、Black-Scholes、Pricing Sheet",
       "file": "03_valuation.json"
     },
     {
       "slug": "fees",
-      "title": "結構型商品費用與成本",
+      "title": "費用成本",
+      "description": "內含費用、避險成本、信託管理費、回購點差",
       "file": "04_fees.json"
     },
     {
       "slug": "tax",
-      "title": "結構型商品稅務",
+      "title": "稅務處理",
+      "description": "境內利息 / 股利 / 證交、境外海外所得、健保補充",
       "file": "05_tax.json"
     },
     {
       "slug": "risk",
-      "title": "結構型商品風險與紅旗",
+      "title": "風險揭露",
+      "description": "信用 / 市場 / 流動性、KI 觸發機率、銷售紅旗",
       "file": "06_risk.json"
     },
     {
       "slug": "regulation",
-      "title": "結構型商品法規與監理",
+      "title": "法規監理",
+      "description": "境外 SP 辦法、CHRP 規範、HNW 客戶、消費評議",
       "file": "07_regulation.json"
     }
   ]

@@ -33,9 +33,13 @@ async function loadCourses() {
       if (!course.active || !idx) {
         pane.innerHTML = '<p class="course-empty">敬請期待</p>';
       } else {
-        const items = idx.chapters.map((ch, j) =>
-          `<li><a href="chapter.html?course=${encodeURIComponent(course.slug)}&chapter=${encodeURIComponent(ch.slug)}">${j + 1}. ${ch.title}</a></li>`
-        ).join('');
+        const items = idx.chapters.map((ch, j) => {
+          const href = `chapter.html?course=${encodeURIComponent(course.slug)}&chapter=${encodeURIComponent(ch.slug)}`;
+          const desc = ch.description
+            ? `<span class="ch-desc">${ch.description}</span>`
+            : '';
+          return `<li><a href="${href}"><span class="ch-title">${j + 1}. ${ch.title}</span>${desc}</a></li>`;
+        }).join('');
         pane.innerHTML = `<ol class="chapter-list">${items}</ol>`;
       }
       panesEl.appendChild(pane);
@@ -81,7 +85,16 @@ async function loadChapter() {
       const li = document.createElement('li');
       const a = document.createElement('a');
       a.href = `chapter.html?course=${course}&chapter=${ch.slug}`;
-      a.textContent = `${i + 1}. ${ch.title}`;
+      const titleSpan = document.createElement('span');
+      titleSpan.className = 'ch-title';
+      titleSpan.textContent = `${i + 1}. ${ch.title}`;
+      a.appendChild(titleSpan);
+      if (ch.description) {
+        const descSpan = document.createElement('span');
+        descSpan.className = 'ch-desc';
+        descSpan.textContent = ch.description;
+        a.appendChild(descSpan);
+      }
       if (ch.slug === chapterSlug || (!chapterSlug && i === 0)) {
         a.classList.add('current');
       }

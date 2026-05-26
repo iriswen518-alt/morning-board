@@ -4,37 +4,44 @@
   "chapters": [
     {
       "slug": "overview",
-      "title": "保險基本概念與分類",
+      "title": "概念分類",
+      "description": "四角色、人身五大類、§16 §17 保險利益、監理架構",
       "file": "01_overview.json"
     },
     {
       "slug": "protection",
-      "title": "保障型保險",
+      "title": "保障保險",
+      "description": "壽險 / 意外 / 醫療 / 重大疾病 / 長照、DIME 保額",
       "file": "02_protection.json"
     },
     {
       "slug": "savings",
-      "title": "儲蓄型保險",
+      "title": "儲蓄保險",
+      "description": "傳統型 / 利變型 / 增額終身、IRR 計算、外幣保單",
       "file": "03_savings.json"
     },
     {
       "slug": "investment",
       "title": "投資型保險",
+      "description": "分離帳戶、目標 / 超額保費、退休帳戶、適合度評估",
       "file": "04_investment.json"
     },
     {
       "slug": "tax",
-      "title": "保險稅務規劃",
+      "title": "稅務規劃",
+      "description": "§17 列舉 24K、§112 不入遺產、§12 三千萬除外、實質課稅",
       "file": "05_tax.json"
     },
     {
       "slug": "risk",
       "title": "風險揭露",
+      "description": "前 6 年解約、停效復效、外幣匯率、銷售話術紅旗",
       "file": "06_risk.json"
     },
     {
       "slug": "regulation",
-      "title": "保險法規與監理",
+      "title": "法規監理",
+      "description": "保險法核心、RBC、責任準備金、安定基金、IFRS 17",
       "file": "07_regulation.json"
     }
   ]

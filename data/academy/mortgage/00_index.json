@@ -4,37 +4,44 @@
   "chapters": [
     {
       "slug": "overview",
-      "title": "房貸總論與市場",
+      "title": "總論市場",
+      "description": "抵押權、自用 / 投資、3C 評估、政府優惠",
       "file": "01_overview.json"
     },
     {
       "slug": "types",
-      "title": "房貸類型與利率結構",
+      "title": "類型利率",
+      "description": "指數 / 固定 / 混合、寬限期、青安、利差議價",
       "file": "02_types.json"
     },
     {
       "slug": "repayment",
-      "title": "還款方式與本金攤還",
+      "title": "還款攤還",
+      "description": "本息 / 本金平均、提前還款、轉貸、加速還款",
       "file": "03_repayment.json"
     },
     {
       "slug": "application",
-      "title": "房貸申請流程與資格",
+      "title": "申請流程",
+      "description": "信用評分、聯徵、DTI / LTV、保證人、共同貸款",
       "file": "04_application.json"
     },
     {
       "slug": "tax",
-      "title": "房貸與購屋稅務",
+      "title": "購屋稅務",
+      "description": "契稅、印花稅、購屋利息 30 萬、房地合一 2.0",
       "file": "05_tax.json"
     },
     {
       "slug": "risk",
-      "title": "房貸風險與管理",
+      "title": "風險管理",
+      "description": "升息壓力測試、違約警訊、法拍、火險 / 房貸壽險",
       "file": "06_risk.json"
     },
     {
       "slug": "regulation",
-      "title": "房貸法規與監理",
+      "title": "法規監理",
+      "description": "民法抵押權、銀行法 §38、央行選擇性信用管制",
       "file": "07_regulation.json"
     }
   ]

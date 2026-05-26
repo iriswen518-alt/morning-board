@@ -4,37 +4,44 @@
   "chapters": [
     {
       "slug": "market",
-      "title": "美股市場與交易制度",
+      "title": "市場制度",
+      "description": "NYSE / NASDAQ / AMEX、夏冬令、熔斷、ADR/ETF/REIT",
       "file": "01_market.json"
     },
     {
       "slug": "kanban",
-      "title": "美股看盤基礎",
+      "title": "看盤基礎",
+      "description": "四大指數、財報季、FOMC、VIX、Short Interest",
       "file": "02_kanban.json"
     },
     {
       "slug": "fundamentals",
-      "title": "美股基本面分析",
+      "title": "基本分析",
+      "description": "10-K / 10-Q / 8-K、GAAP vs Non-GAAP、五大評價指標",
       "file": "03_fundamentals.json"
     },
     {
       "slug": "technical",
-      "title": "美股技術面與型態",
+      "title": "技術分析",
+      "description": "K 線、移動平均、RSI / MACD、ATR / 布林、VIX",
       "file": "04_technical.json"
     },
     {
       "slug": "tax",
-      "title": "美股稅務",
+      "title": "稅務規劃",
+      "description": "W-8BEN、股利 30% 預扣、AMT、NRA 遺產稅 $60K",
       "file": "05_tax.json"
     },
     {
       "slug": "risk",
-      "title": "美股風險",
+      "title": "風險揭露",
+      "description": "停牌、下市、SPAC、ADR 終止、集體訴訟、外匯",
       "file": "06_risk.json"
     },
     {
       "slug": "regulation",
-      "title": "美股法規與監理",
+      "title": "法規監理",
+      "description": "SEC / FINRA、1933 / 1934 法、Reg NMS / SHO / FD、SIPC",
       "file": "07_regulation.json"
     }
   ]

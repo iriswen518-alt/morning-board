@@ -4,37 +4,44 @@
   "chapters": [
     {
       "slug": "overview",
-      "title": "基金總論與分類",
+      "title": "總論分類",
+      "description": "共同基金 / ETF、五大資產類別、主動 vs 被動、境內境外",
       "file": "01_overview.json"
     },
     {
       "slug": "fees",
-      "title": "費用結構與真實成本",
+      "title": "費用成本",
+      "description": "五大費用、A / B / C / N 級別、TER、10 年情境試算",
       "file": "02_fees.json"
     },
     {
       "slug": "selection",
-      "title": "選基金的五個關鍵指標",
+      "title": "選基指標",
+      "description": "規模、一致性、夏普 / 索丁諾、MDD、經理人連續性",
       "file": "03_selection.json"
     },
     {
       "slug": "dca",
-      "title": "定期定額策略",
+      "title": "定期定額",
+      "description": "DCA 原理、停利機制、生命週期 + TDF、再平衡",
       "file": "04_dca.json"
     },
     {
       "slug": "tax",
-      "title": "基金贖回與配息稅務",
+      "title": "贖回稅務",
+      "description": "境內境外、§15 兩制、AMT、健保補充保費",
       "file": "05_tax.json"
     },
     {
       "slug": "risk",
-      "title": "常見風險與紅旗",
+      "title": "風險揭露",
+      "description": "債券三大風險、匯率與避險、複雜結構基金、銷售紅旗",
       "file": "06_risk.json"
     },
     {
       "slug": "regulation",
-      "title": "基金法規與監理",
+      "title": "法規監理",
+      "description": "投信投顧法 §3 §17 §50、境外基金辦法、RR1–5 分級",
       "file": "07_regulation.json"
     }
   ]

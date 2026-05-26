@@ -4,37 +4,44 @@
   "chapters": [
     {
       "slug": "overview",
-      "title": "房地產投資總論",
+      "title": "投資總論",
+      "description": "自用 / 收益 / 增值、預售 / 中古、不動產類別",
       "file": "01_overview.json"
     },
     {
       "slug": "valuation",
-      "title": "房地產評估指標",
+      "title": "評估指標",
+      "description": "單價 / 實坪、租金報酬、Cap Rate、IRR、價租比",
       "file": "02_valuation.json"
     },
     {
       "slug": "transaction",
-      "title": "不動產交易流程與法規",
+      "title": "交易流程",
+      "description": "完整流程、仲介 / 代書、履約保證、實價登錄",
       "file": "03_transaction.json"
     },
     {
       "slug": "tax",
-      "title": "房地產稅務全圖",
+      "title": "稅務全圖",
+      "description": "房地合一 2.0、土增稅、房屋稅 / 地價稅、贈與繼承",
       "file": "04_tax.json"
     },
     {
       "slug": "location",
-      "title": "區域選擇與時機判斷",
+      "title": "區域時機",
+      "description": "捷運、學區、商圈、政府計畫、市場循環",
       "file": "05_location.json"
     },
     {
       "slug": "risk",
-      "title": "房地產風險與紅旗",
+      "title": "風險揭露",
+      "description": "市場 / 流動性、漏水 / 海砂、租客、嫌惡設施",
       "file": "06_risk.json"
     },
     {
       "slug": "regulation",
-      "title": "房地產法規與監理",
+      "title": "法規監理",
+      "description": "民法 §758、實價登錄 2.0、仲介義務、預售屋規範",
       "file": "07_regulation.json"
     }
   ]
