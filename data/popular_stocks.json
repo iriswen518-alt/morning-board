@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-26T13:01:58+08:00",
+  "generated_at": "2026-05-26T15:29:20+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -27,6 +27,18 @@
       "error": null
     },
     {
+      "symbol": "RKLB",
+      "name_zh": "Rocket Lab",
+      "kind": "US",
+      "price": 135.76,
+      "change_pct": 8.22,
+      "mtd_pct": 64.54,
+      "ytd_pct": 94.61,
+      "market_date": "2026-05-22",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RKLB.US",
+      "error": null
+    },
+    {
       "symbol": "ASTS",
       "name_zh": "AST SpaceMobile",
       "kind": "US",
@@ -51,30 +63,6 @@
       "error": null
     },
     {
-      "symbol": "RKLB",
-      "name_zh": "Rocket Lab",
-      "kind": "US",
-      "price": 135.76,
-      "change_pct": 8.22,
-      "mtd_pct": 64.54,
-      "ytd_pct": 94.61,
-      "market_date": "2026-05-22",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RKLB.US",
-      "error": null
-    },
-    {
-      "symbol": "BB",
-      "name_zh": "BlackBerry",
-      "kind": "US",
-      "price": 7.91,
-      "change_pct": 18.95,
-      "mtd_pct": 46.48,
-      "ytd_pct": 108.71,
-      "market_date": "2026-05-22",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BB.US",
-      "error": null
-    },
-    {
       "symbol": "MRVL",
       "name_zh": "邁威爾",
       "kind": "US",
@@ -84,66 +72,6 @@
       "ytd_pct": 131.03,
       "market_date": "2026-05-22",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MRVL.US",
-      "error": null
-    },
-    {
-      "symbol": "INTC",
-      "name_zh": "英特爾",
-      "kind": "US",
-      "price": 119.84,
-      "change_pct": 1.13,
-      "mtd_pct": 26.84,
-      "ytd_pct": 224.77,
-      "market_date": "2026-05-22",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=INTC.US",
-      "error": null
-    },
-    {
-      "symbol": "NOK",
-      "name_zh": "Nokia Corporation Sponsored",
-      "kind": "US",
-      "price": 15.47,
-      "change_pct": 9.1,
-      "mtd_pct": 19.83,
-      "ytd_pct": 139.1,
-      "market_date": "2026-05-22",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NOK.US",
-      "error": null
-    },
-    {
-      "symbol": "NVTS",
-      "name_zh": "Navitas Semiconductor Corporati",
-      "kind": "US",
-      "price": 29.25,
-      "change_pct": 19.98,
-      "mtd_pct": 77.27,
-      "ytd_pct": 309.66,
-      "market_date": "2026-05-22",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NVTS.US",
-      "error": null
-    },
-    {
-      "symbol": "LUNR",
-      "name_zh": "Intuitive Machines",
-      "kind": "US",
-      "price": 38.26,
-      "change_pct": 11.74,
-      "mtd_pct": 50.93,
-      "ytd_pct": 135.74,
-      "market_date": "2026-05-22",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LUNR.US",
-      "error": null
-    },
-    {
-      "symbol": "DRAM",
-      "name_zh": "Roundhill Memory ETF",
-      "kind": "US",
-      "price": 52.82,
-      "change_pct": -2.8,
-      "mtd_pct": 34.3,
-      "ytd_pct": null,
-      "market_date": "2026-05-22",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DRAM.US",
       "error": null
     },
     {
@@ -159,6 +87,42 @@
       "error": null
     },
     {
+      "symbol": "SOFI",
+      "name_zh": "SoFi",
+      "kind": "US",
+      "price": 15.62,
+      "change_pct": -0.19,
+      "mtd_pct": -2.98,
+      "ytd_pct": -40.34,
+      "market_date": "2026-05-22",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOFI.US",
+      "error": null
+    },
+    {
+      "symbol": "NVTS",
+      "name_zh": "Navitas Semiconductor Corporati",
+      "kind": "US",
+      "price": 29.25,
+      "change_pct": 19.98,
+      "mtd_pct": 77.27,
+      "ytd_pct": 309.66,
+      "market_date": "2026-05-22",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NVTS.US",
+      "error": null
+    },
+    {
+      "symbol": "INTC",
+      "name_zh": "英特爾",
+      "kind": "US",
+      "price": 119.84,
+      "change_pct": 1.13,
+      "mtd_pct": 26.84,
+      "ytd_pct": 224.77,
+      "market_date": "2026-05-22",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=INTC.US",
+      "error": null
+    },
+    {
       "symbol": "SNDK",
       "name_zh": "Sandisk",
       "kind": "US",
@@ -168,6 +132,78 @@
       "ytd_pct": 522.92,
       "market_date": "2026-05-22",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SNDK.US",
+      "error": null
+    },
+    {
+      "symbol": "DRAM",
+      "name_zh": "Roundhill Memory ETF",
+      "kind": "US",
+      "price": 52.82,
+      "change_pct": -2.8,
+      "mtd_pct": 34.3,
+      "ytd_pct": null,
+      "market_date": "2026-05-22",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DRAM.US",
+      "error": null
+    },
+    {
+      "symbol": "LUNR",
+      "name_zh": "Intuitive Machines",
+      "kind": "US",
+      "price": 38.26,
+      "change_pct": 11.74,
+      "mtd_pct": 50.93,
+      "ytd_pct": 135.74,
+      "market_date": "2026-05-22",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LUNR.US",
+      "error": null
+    },
+    {
+      "symbol": "RGTI",
+      "name_zh": "Rigetti Computing",
+      "kind": "US",
+      "price": 26.42,
+      "change_pct": 19.87,
+      "mtd_pct": 51.4,
+      "ytd_pct": 19.28,
+      "market_date": "2026-05-22",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RGTI.US",
+      "error": null
+    },
+    {
+      "symbol": "NOK",
+      "name_zh": "Nokia Corporation Sponsored",
+      "kind": "US",
+      "price": 15.47,
+      "change_pct": 9.1,
+      "mtd_pct": 19.83,
+      "ytd_pct": 139.1,
+      "market_date": "2026-05-22",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NOK.US",
+      "error": null
+    },
+    {
+      "symbol": "SOXS",
+      "name_zh": "Direxion Daily Semiconductor Be",
+      "kind": "US",
+      "price": 7.73,
+      "change_pct": -6.76,
+      "mtd_pct": -41.88,
+      "ytd_pct": -87.65,
+      "market_date": "2026-05-22",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOXS.US",
+      "error": null
+    },
+    {
+      "symbol": "ORCL",
+      "name_zh": "甲骨文",
+      "kind": "US",
+      "price": 192.08,
+      "change_pct": 1.22,
+      "mtd_pct": 19.02,
+      "ytd_pct": -1.45,
+      "market_date": "2026-05-22",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ORCL.US",
       "error": null
     },
     {
@@ -183,18 +219,6 @@
       "error": null
     },
     {
-      "symbol": "NBIS",
-      "name_zh": "Nebius",
-      "kind": "US",
-      "price": 214.77,
-      "change_pct": -2.35,
-      "mtd_pct": 55.37,
-      "ytd_pct": 156.58,
-      "market_date": "2026-05-22",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NBIS.US",
-      "error": null
-    },
-    {
       "symbol": "IREN",
       "name_zh": "IREN",
       "kind": "US",
@@ -207,75 +231,15 @@
       "error": null
     },
     {
-      "symbol": "DELL",
-      "name_zh": "Dell Technologies",
+      "symbol": "APLD",
+      "name_zh": "Applied Digital",
       "kind": "US",
-      "price": 295.19,
-      "change_pct": 16.77,
-      "mtd_pct": 41.27,
-      "ytd_pct": 134.5,
+      "price": 45.87,
+      "change_pct": -4.48,
+      "mtd_pct": 33.93,
+      "ytd_pct": 87.07,
       "market_date": "2026-05-22",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DELL.US",
-      "error": null
-    },
-    {
-      "symbol": "SMCI",
-      "name_zh": "美超微",
-      "kind": "US",
-      "price": 35.58,
-      "change_pct": 6.34,
-      "mtd_pct": 29.85,
-      "ytd_pct": 21.56,
-      "market_date": "2026-05-22",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SMCI.US",
-      "error": null
-    },
-    {
-      "symbol": "CIFR",
-      "name_zh": "Cipher Digital",
-      "kind": "US",
-      "price": 21.97,
-      "change_pct": 2.09,
-      "mtd_pct": 23.84,
-      "ytd_pct": 48.85,
-      "market_date": "2026-05-22",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CIFR.US",
-      "error": null
-    },
-    {
-      "symbol": "WDC",
-      "name_zh": "Western Digital",
-      "kind": "US",
-      "price": 484.28,
-      "change_pct": -0.45,
-      "mtd_pct": 11.45,
-      "ytd_pct": 181.12,
-      "market_date": "2026-05-22",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=WDC.US",
-      "error": null
-    },
-    {
-      "symbol": "HLIT",
-      "name_zh": "Harmonic",
-      "kind": "US",
-      "price": 15.2,
-      "change_pct": 19.68,
-      "mtd_pct": 32.98,
-      "ytd_pct": 53.69,
-      "market_date": "2026-05-22",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HLIT.US",
-      "error": null
-    },
-    {
-      "symbol": "POET",
-      "name_zh": "POET Technologies",
-      "kind": "US",
-      "price": 14.59,
-      "change_pct": -1.55,
-      "mtd_pct": 104.92,
-      "ytd_pct": 130.49,
-      "market_date": "2026-05-22",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=POET.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=APLD.US",
       "error": null
     },
     {
