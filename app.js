@@ -748,26 +748,24 @@ function bondUrl(b) {
 
 function renderObondsSheet() {
   const list = (DATA.obonds && DATA.obonds.bonds) || [];
-  if (!list.length) {
-    return "<p style='color:var(--text-mute); padding:20px 0'>尚未提供海外債清單</p>";
-  }
   const fmtCoupon = c => (c === null || c === undefined) ? "—"
     : (c === 0 ? "零息" : `${c.toFixed(2)}%`);
   const fmtPctNum = p => (p === null || p === undefined) ? "—" : fmtPct(p);
   const fmtPrice = p => (p === null || p === undefined) ? "—" : Number(p).toFixed(2);
-  return list.map(b => {
-    const url = bondUrl(b);
-    const displayName = [b.name_zh, b.issuer].filter(Boolean).map(escapeHtml).join(" ");
-    const nameHtml = url
-      ? `<a href="${url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${displayName}</a>`
-      : displayName;
-    const chips = [currencyChip(b.currency), typeChip(b.type)].join("");
-    const meta = [b.code, b.isin].filter(Boolean).map(escapeHtml).join("・");
-    const priceDate = b.price_date ? `<div style="font-size:11px;color:var(--text-mute);margin-top:2px">${escapeHtml(shortDate(b.price_date))}</div>` : "";
-    return `
+  const cards = !list.length
+    ? "<p style='color:var(--text-mute); padding:20px 0'>尚未提供海外債清單</p>"
+    : list.map(b => {
+        const url = bondUrl(b);
+        const displayName = [b.name_zh, b.issuer].filter(Boolean).map(escapeHtml).join(" ");
+        const nameHtml = url
+          ? `<a href="${url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${displayName}</a>`
+          : displayName;
+        const chips = [currencyChip(b.currency), typeChip(b.type)].join("");
+        const meta = [b.code, b.isin].filter(Boolean).map(escapeHtml).join("・");
+        const priceDate = b.price_date ? `<div style="font-size:11px;color:var(--text-mute);margin-top:2px">${escapeHtml(shortDate(b.price_date))}</div>` : "";
+        return `
     <div class="fund-card">
-      <h3>${nameHtml}</h3>
-      <div style="margin-bottom:6px">${chips}</div>
+      <h3 style="display:flex;align-items:center;flex-wrap:wrap;gap:6px">${nameHtml}${chips}</h3>
       <p class="tagline">${meta}</p>
       <div class="obond-meta-grid">
         <div><label>幣別</label>${escapeHtml(b.currency || "—")}</div>
@@ -791,7 +789,20 @@ function renderObondsSheet() {
       </div>
     </div>
   `;
-  }).join("");
+      }).join("");
+
+  const moreSection = `
+    <div class="fund-card" style="margin-top:18px;text-align:center">
+      <h3 style="margin-bottom:6px">其他海外債</h3>
+      <p class="tagline" style="margin-bottom:12px">瀏覽完整債券行情表（公司債／主權債／金融債／超國際債）</p>
+      <a href="https://bopfund.moneydj.com/bond/index.html" target="_blank" rel="noopener"
+         style="display:inline-block;padding:10px 22px;background:#019AB3;color:#fff;border-radius:6px;text-decoration:none;font-weight:600">
+        前往債券行情表
+      </a>
+    </div>
+  `;
+
+  return cards + moreSection;
 }
 
 function renderBulletsOrText(content) {
@@ -4616,12 +4627,12 @@ function renderLumpFundCards() {
     return `
     <div class="fund-card">
       <h3 style="display:flex;align-items:center;flex-wrap:wrap;gap:6px">${nameHtml}${chips}</h3>
-      <div class="grid">
+      <div class="grid cols-6">
         <div>
           <label>淨值</label>
           ${fmtNum(f.nav)} ${escapeHtml(f.currency || "")}
-          ${f.nav_date ? `<div class="cell-sub">${escapeHtml(shortDate(f.nav_date))}</div>` : ""}
         </div>
+        <div><label>淨值日</label>${f.nav_date ? escapeHtml(shortDate(f.nav_date)) : "—"}</div>
         <div><label>日漲跌</label><span class="${pctClass(f.change_pct)}">${fmtPct(f.change_pct)}</span></div>
         <div><label>近1月</label><span class="${pctClass(f.perf?.['1m'])}">${perfLink(fmtPct(f.perf?.['1m']), f.source_url)}</span></div>
         <div><label>近3月</label><span class="${pctClass(f.perf?.['3m'])}">${perfLink(fmtPct(f.perf?.['3m']), f.source_url)}</span></div>
@@ -4646,12 +4657,12 @@ function renderDcaFundCards() {
     return `
     <div class="fund-card">
       <h3 style="display:flex;align-items:center;flex-wrap:wrap;gap:6px">${nameHtml}${currencyChip(f.currency)}${catChip}</h3>
-      <div class="grid">
+      <div class="grid cols-6">
         <div>
           <label>淨值</label>
           ${fmtNum(f.nav)} ${escapeHtml(f.currency || "")}
-          ${f.nav_date ? `<div class="cell-sub">${escapeHtml(shortDate(f.nav_date))}</div>` : ""}
         </div>
+        <div><label>淨值日</label>${f.nav_date ? escapeHtml(shortDate(f.nav_date)) : "—"}</div>
         <div><label>日漲跌</label><span class="${pctClass(f.change_pct)}">${fmtPct(f.change_pct)}</span></div>
         <div><label>近1月</label><span class="${pctClass(f.perf?.['1m'])}">${perfLink(fmtPct(f.perf?.['1m']), f.source_url)}</span></div>
         <div><label>近3月</label><span class="${pctClass(f.perf?.['3m'])}">${perfLink(fmtPct(f.perf?.['3m']), f.source_url)}</span></div>
