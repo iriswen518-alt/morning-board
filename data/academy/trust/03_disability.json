@@ -3,11 +3,37 @@
   "slug": "disability",
   "title": "家族信託—失能規劃",
   "description": "失能財產規劃、監護宣告與信託搭配",
-  "objectives": [],
+  "objectives": [
+    "理解我國高齡化趨勢下失能財產規劃的迫切性",
+    "區分監護宣告、輔助宣告、意定監護三制度的適用情境",
+    "掌握安養信託與意定監護契約的搭配運用",
+    "認識失智症患者財產被侵占的常見風險與防範機制",
+    "熟悉信託監察人的功能與選任原則"
+  ],
   "sections": [
     {
-      "heading": "本章節內容建構中",
-      "html": "<p>本章節內容正在準備中，敬請期待後續更新。</p><p>主題摘要：失能財產規劃、監護宣告與信託搭配</p>"
+      "heading": "失能財產規劃的社會需求",
+      "html": "<p>依國發會推估，台灣 2025 年將進入「超高齡社會」（65 歲以上人口占 20% 以上），失智症人口超過 35 萬人。失能（或失智）後的財產管理，是高齡社會核心議題。</p><table><thead><tr><th>失能類型</th><th>典型情境</th><th>財產風險</th></tr></thead><tbody><tr><td>失智症</td><td>阿茲海默症、血管型失智</td><td>易受詐騙、簽署不利契約、提款被侵占</td></tr><tr><td>意外致殘</td><td>中風、車禍腦傷</td><td>無法管理財產、家人爭奪</td></tr><tr><td>身心障礙</td><td>先天或後天身心障礙</td><td>終身需照顧、財產缺乏管理機制</td></tr><tr><td>重大疾病</td><td>癌症末期、植物人</td><td>醫療費用、財產處分困難</td></tr></tbody></table><div class=\"mermaid\">graph LR\n    A[健康時<br/>自主管理] --> B[認知功能下降<br/>判斷力減退]\n    B --> C{是否預立規劃}\n    C -->|是| D[信託 + 意定監護<br/>順利執行]\n    C -->|否| E[緊急聲請監護宣告<br/>家庭爭執、處置延誤]\n    style D fill:#019AB3,color:#fff\n    style E fill:#d62828,color:#fff</div><p><strong>關鍵時間點</strong>：規劃必須在當事人「<strong>意思能力完整時</strong>」進行。一旦進入失智或重度失能，將無法有效簽訂任何契約，只能走法定監護程序。</p>"
+    },
+    {
+      "heading": "監護宣告與輔助宣告",
+      "html": "<p>《民法》§14 與 §15-1 分別規定監護宣告與輔助宣告。</p><blockquote><p><strong>§14 第 1 項</strong>：「對於因精神障礙或其他心智缺陷，致不能為意思表示或受意思表示，或不能辨識其意思表示之效果者，法院得因本人、配偶、四親等內之親屬、最近一年有同居事實之其他親屬、檢察官、主管機關、社會福利機構、輔助人、意定監護受任人或其他利害關係人之聲請，為監護之宣告。」</p></blockquote><table><thead><tr><th>制度</th><th>條件</th><th>法律效果</th><th>適用情境</th></tr></thead><tbody><tr><td>監護宣告</td><td>不能為意思表示或不能辨識其效果</td><td>受監護人之意思表示無效（§15）</td><td>重度失智、植物人</td></tr><tr><td>輔助宣告</td><td>意思能力顯有不足</td><td>特定行為需輔助人同意（§15-2）</td><td>輕中度失智、判斷力減退</td></tr><tr><td>意定監護</td><td>本人健康時預立</td><td>未來失能時由指定者擔任監護人</td><td>預先規劃，避免家庭爭執</td></tr></tbody></table><p><strong>監護宣告流程</strong>：</p><div class=\"mermaid\">graph TD\n    A[利害關係人聲請] --> B[法院鑑定<br/>精神科或神經內科]\n    B --> C{法院裁定}\n    C -->|宣告| D[選任監護人<br/>通常為配偶或子女]\n    D --> E[監護人代為管理財產]\n    style A fill:#019AB3,color:#fff\n    style D fill:#17B5AD,color:#fff</div><p>實務上監護宣告聲請至裁定約需 3-6 個月，期間財產管理可能陷入真空狀態。</p>"
+    },
+    {
+      "heading": "意定監護制度（民法 2019 修法）",
+      "html": "<p>《民法》於 2019 年修正增訂「意定監護」制度（§1113-2 至 §1113-10），允許本人健康時預先指定未來監護人。</p><blockquote><p><strong>§1113-2 第 1 項</strong>（意定監護契約之訂立）：「稱意定監護契約者，謂本人與受任人約定，於本人受監護宣告時，受任人允為擔任監護人之契約。」</p></blockquote><table><thead><tr><th>意定監護要件</th><th>說明</th></tr></thead><tbody><tr><td>訂立時點</td><td>本人有完全行為能力時</td></tr><tr><td>訂立方式</td><td>書面契約，並須公證</td></tr><tr><td>受任人資格</td><td>成年且有行為能力</td></tr><tr><td>受任人數</td><td>得指定一人或數人</td></tr><tr><td>生效時點</td><td>本人受監護宣告時</td></tr><tr><td>得否變更</td><td>本人意思能力存在時隨時變更或撤回</td></tr></tbody></table><p><strong>意定監護 vs 法定監護優勢</strong>：</p><ul><li>避免家族爭執誰當監護人</li><li>可指定<strong>非親屬</strong>（如信賴的律師、友人）</li><li>可<strong>分權設計</strong>（人身照顧由甲、財產管理由乙）</li><li>受任人若不適任，本人可預設替代</li></ul><details><summary>意定監護契約應載事項</summary><ol><li>本人與受任人之姓名、出生年月日、身分證號</li><li>監護範圍（人身、財產、醫療決定等）</li><li>受任人權限與限制</li><li>數受任人時之分工或共同決議規則</li><li>受任人之報酬約定</li><li>變更、撤回條款</li><li>須經<strong>公證</strong>始生效</li></ol></details>"
+    },
+    {
+      "heading": "安養信託：保護自己的最後一道防線",
+      "html": "<p>安養信託是高齡者最直接的財產保護工具，由本人（委託人）將財產信託給銀行，由銀行依約定支付生活、醫療、長照費用。</p><div class=\"mermaid\">graph LR\n    A[高齡者<br/>委託人＝受益人] -->|信託契約| B[銀行<br/>受託人]\n    B -->|定期給付| C[本人生活費]\n    B -->|據實支付| D[醫療費]\n    B -->|長照機構| E[照護費]\n    B -.->|監督| F[信託監察人<br/>子女或律師]\n    style A fill:#019AB3,color:#fff\n    style F fill:#17B5AD,color:#fff</div><table><thead><tr><th>安養信託特色</th><th>實務效果</th></tr></thead><tbody><tr><td>自益信託</td><td>委託人＝受益人，不課贈與稅（§5-1 不適用）</td></tr><tr><td>本金保全</td><td>由銀行管理，避免個人遺失、被詐騙</td></tr><tr><td>用途限定</td><td>給付項目契約明定，避免不當挪用</td></tr><tr><td>監察人機制</td><td>第三方監督，防止受託人怠職</td></tr><tr><td>失能仍可執行</td><td>本人失能後，銀行依原契約繼續執行</td></tr></tbody></table><details><summary>安養信託契約必備條款</summary><ul><li>給付項目：生活費、醫療費、長照機構費、看護費</li><li>給付頻率：每月、每季、實支實付</li><li>給付對象：本人帳戶、醫療院所、長照機構</li><li>金額上限：避免一次性大額提領</li><li>變更權限：本人意思能力存在時隨時變更</li><li>失能觸發條款：經醫師證明失能時的處理方式</li><li>監察人權責：審核非常規給付、代表受益人對受託人主張權利</li><li>信託終止：本人過世後財產歸屬指定</li></ul></details>"
+    },
+    {
+      "heading": "信託監察人的設計",
+      "html": "<p>《信託法》§52 賦予委託人設立信託監察人之權利，在失能規劃中尤為關鍵。</p><blockquote><p><strong>§52 第 1 項</strong>：「受益人不特定、尚未存在或其他為保護受益人之利益認有必要時，法院得因利害關係人或檢察官之聲請，選任一人或數人為信託監察人。但<strong>信託行為定有信託監察人或其選任方法</strong>者，從其所定。」</p></blockquote><table><thead><tr><th>信託監察人功能</th><th>實務作用</th></tr></thead><tbody><tr><td>監督受託人</td><td>檢視信託事務之進行、財務報表</td></tr><tr><td>代表受益人</td><td>受益人為未成年人、失能者時，代為主張權利</td></tr><tr><td>核可特殊給付</td><td>非常規金額之給付須監察人同意</td></tr><tr><td>聲請更換受託人</td><td>受託人怠職或不當管理時聲請法院更換</td></tr><tr><td>提起損害賠償</td><td>受託人致信託財產損害時，代受益人請求</td></tr></tbody></table><p><strong>監察人選任建議</strong>：</p><ul><li>應與受託人無利害關係</li><li>應與委託人之家族成員無重大利益衝突</li><li>具備財務、法律基本知識</li><li>常見選任：律師、會計師、家族信託專業人士、長期信任之友人</li><li>可指定多人組成監察會（如 3 人多數決）</li></ul><details><summary>實例：監察人介入處理</summary><p><strong>情境</strong>：失智母親將 5000 萬交付安養信託，由 A 銀行擔任受託人，律師為信託監察人。某日子女向 A 銀行請求提領 200 萬「為母親裝修住宅」，超出契約定期給付額度。</p><p><strong>監察人處理</strong>：依契約條款，超額給付須監察人核可。律師應審查：(1) 是否符合受益人利益（母親是否能實際使用）(2) 是否為合理金額 (3) 是否有受益人意思表示。經實地訪視確認後決定核可或拒絕。</p></details>"
+    },
+    {
+      "heading": "自我檢測",
+      "html": "<details><summary>Q1：意定監護契約需要什麼形式才有效？依據？</summary><p>答：依《民法》§1113-3 規定，意定監護契約之訂立或變更<strong>應以書面為之，並經公證</strong>。未經公證者無效。</p></details><details><summary>Q2：安養信託為什麼通常設計為自益信託？</summary><p>答：自益信託委託人即為受益人，不適用《遺贈稅法》§5-1「視為贈與」，因此不需繳贈與稅。同時委託人在意思能力存在時可隨時調整契約（§63 終止權），靈活性高。</p></details><details><summary>Q3：信託監察人有什麼權限？</summary><p>答：依《信託法》§52，信託監察人可代表受益人監督受託人、核可特殊事項、必要時聲請法院更換受託人、提起損害賠償訴訟。實務上常用於受益人為未成年或失能者之信託。</p></details><details><summary>Q4：監護宣告與輔助宣告的差別？</summary><p>答：依《民法》§14、§15-1，監護宣告之對象「不能為意思表示或不能辨識其效果」，受宣告後意思表示無效；輔助宣告之對象「意思能力顯有不足」，特定行為需輔助人同意。前者為「完全無行為能力」，後者為「限制行為能力」。</p></details><p><strong>資料來源：</strong></p><ul><li>民法（全國法規資料庫 <a href=\"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001\" target=\"_blank\" rel=\"noopener\">pcode B0000001</a>）— §14、§15-1、§1113-2 至 §1113-10</li><li>信託法（<a href=\"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0020024\" target=\"_blank\" rel=\"noopener\">pcode I0020024</a>）— §52</li><li>國家發展委員會〈中華民國人口推估〉 <a href=\"https://www.ndc.gov.tw/\" target=\"_blank\" rel=\"noopener\">ndc.gov.tw</a></li><li>司法院〈意定監護專區〉 <a href=\"https://www.judicial.gov.tw/\" target=\"_blank\" rel=\"noopener\">judicial.gov.tw</a></li></ul>"
     }
   ]
 }

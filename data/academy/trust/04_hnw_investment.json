@@ -3,11 +3,37 @@
   "slug": "hnw_investment",
   "title": "家族信託—高資產投資",
   "description": "高資產投資金融商品信託架構與風險",
-  "objectives": [],
+  "objectives": [
+    "認識高資產客戶常見之投資型信託架構",
+    "掌握信託業法第 16 條之業務範圍與投資型信託的法律基礎",
+    "理解金錢信託、有價證券信託、不動產信託的功能差異",
+    "熟悉指定與不指定營運範圍金錢信託的判斷標準",
+    "識別投資型信託的稅務與風險揭露要點"
+  ],
   "sections": [
     {
-      "heading": "本章節內容建構中",
-      "html": "<p>本章節內容正在準備中，敬請期待後續更新。</p><p>主題摘要：高資產投資金融商品信託架構與風險</p>"
+      "heading": "高資產客戶投資型信託的需求",
+      "html": "<p>高資產客戶（HNW, High Net Worth）對信託的需求不只是傳承，更包括投資管理。透過信託架構，可達成下列目標：</p><table><thead><tr><th>需求</th><th>透過信託實現方式</th></tr></thead><tbody><tr><td>專業資產管理</td><td>委由信託業之投資管理團隊操作</td></tr><tr><td>跨資產類別整合</td><td>金錢、股票、不動產、海外資產綜合配置</td></tr><tr><td>稅務效率</td><td>透過信託架構優化所得稅、贈與稅</td></tr><tr><td>家族治理</td><td>家族投資決策集中化、跨代延續</td></tr><tr><td>跨境資產整合</td><td>境內外資產整合管理（搭配 OBU/OSU）</td></tr><tr><td>隱私保護</td><td>受託人為名義所有人，公開查詢顯示為信託業者</td></tr></tbody></table><div class=\"mermaid\">graph TD\n    A[高資產客戶] --> B{信託類型選擇}\n    B --> C[金錢信託<br/>含投資管理]\n    B --> D[有價證券信託<br/>股權集中管理]\n    B --> E[不動產信託<br/>商辦或土地]\n    B --> F[綜合型信託<br/>跨資產組合]\n    style A fill:#019AB3,color:#fff</div>"
+    },
+    {
+      "heading": "信託業法第 16 條：業務範圍",
+      "html": "<p>《信託業法》第 16 條明定信託業得經營之業務項目，是所有投資型信託的法律基礎。</p><blockquote><p><strong>§16</strong>：「信託業經營之業務項目如下：</p><p>一、金錢之信託。</p><p>二、金錢債權及其擔保物權之信託。</p><p>三、有價證券之信託。</p><p>四、動產之信託。</p><p>五、不動產之信託。</p><p>六、租賃權之信託。</p><p>七、地上權之信託。</p><p>八、專利權之信託。</p><p>九、著作權之信託。</p><p>十、其他財產權之信託。」</p></blockquote><table><thead><tr><th>類別</th><th>實務應用</th><th>主管機關特殊規範</th></tr></thead><tbody><tr><td>金錢信託</td><td>投資理財、安養信託、保險金信託</td><td>運用範圍揭露</td></tr><tr><td>金錢債權信託</td><td>應收帳款證券化</td><td>金融資產證券化條例</td></tr><tr><td>有價證券信託</td><td>股權集中、員工持股信託</td><td>有價證券持股申報</td></tr><tr><td>動產信託</td><td>機器設備融資租賃</td><td>較少使用</td></tr><tr><td>不動產信託</td><td>都更案、不動產證券化</td><td>不動產證券化條例</td></tr></tbody></table><p>《信託業法》§17 另列示附屬業務（如有價證券代理、遺囑執行人、信託監察人、保管箱業務等），可在主業務之外經主管機關核准辦理。</p>"
+    },
+    {
+      "heading": "金錢信託：指定與不指定營運範圍",
+      "html": "<p>金錢信託依「委託人是否指定運用範圍」分為三類，對應不同的投資彈性與風險承擔。</p><table><thead><tr><th>類型</th><th>定義</th><th>典型商品</th><th>風險歸屬</th></tr></thead><tbody><tr><td>特定金錢信託</td><td>委託人對運用方法、標的有<strong>具體指示</strong></td><td>境外基金特金、特定股票投資</td><td>委託人自負</td></tr><tr><td>指定金錢信託</td><td>委託人指定<strong>運用範圍</strong>，受託人在範圍內自由運用</td><td>共同信託基金、私募信託</td><td>委託人原則自負</td></tr><tr><td>不指定金錢信託</td><td>委託人<strong>不指定</strong>運用範圍</td><td>少見，多為設立基金母信託</td><td>受託人需特別注意義務</td></tr></tbody></table><blockquote><p><strong>《信託業辦理不指定營運範圍方法金錢信託運用準則》</strong>（金管會發布之辦法，pcode G0310039）：</p><p>不指定金錢信託之運用，限於：</p><ul><li>現金及銀行存款</li><li>投資公債、公司債、金融債券</li><li>投資短期票券</li><li>其他經主管機關核准之項目</li></ul></blockquote><p><strong>實務重點</strong>：境外基金代銷實質上多採「特定金錢信託」架構，由客戶指示購買某檔基金，銀行以信託業者身分代為買入持有。</p>"
+    },
+    {
+      "heading": "有價證券信託：股權集中管理",
+      "html": "<p>有價證券信託在高資產家族中常用於「家族股權集中」與「員工持股」兩大場景。</p><div class=\"mermaid\">graph TD\n    A[家族成員<br/>多人持股] -->|集中信託| B[家族信託<br/>受託人持名義所有權]\n    B --> C[統一行使表決權]\n    B --> D[避免股權分散]\n    B --> E[防止繼承時分割]\n    style B fill:#019AB3,color:#fff</div><table><thead><tr><th>應用情境</th><th>實務效果</th><th>注意事項</th></tr></thead><tbody><tr><td>家族控股集中</td><td>避免下代繼承時股權分散，維持家族對企業控制</td><td>受託人不得違反信託本旨之表決行使</td></tr><tr><td>員工持股信託</td><td>公司分配股票給員工，由信託統一管理</td><td>《證交法》§28-2 庫藏股相關規定</td></tr><tr><td>表決權信託</td><td>多位股東集中表決權於信託</td><td>須注意《公司法》§175-1 表決權拘束契約</td></tr><tr><td>閉鎖性公司股權</td><td>避免股權外流，維持家族閉鎖性</td><td>《公司法》§356-1 至 §356-13</td></tr></tbody></table><details><summary>實例：家族股權集中信託</summary><p><strong>情境</strong>：王老董持有家族企業 60% 股權，育有 3 子女。為避免王老董身後股權三分導致控制力分散，預先設立有價證券信託。</p><p><strong>架構</strong>：王老董生前將 60% 股權信託給銀行，3 子女為受益人（各享 1/3 信託利益），但<strong>表決權由受託人依信託本旨統一行使</strong>。子女享有股利分配但無表決權，避免家族內鬥影響公司治理。</p></details>"
+    },
+    {
+      "heading": "不動產信託：開發與證券化",
+      "html": "<p>不動產信託是大型不動產開發案的重要工具，主要應用於三類場景。</p><table><thead><tr><th>類型</th><th>應用</th><th>法源</th></tr></thead><tbody><tr><td>開發型不動產信託</td><td>建商將土地信託給銀行，由銀行擔任興建計畫之名義所有人</td><td>信託業法 §16</td></tr><tr><td>不動產投資信託（REITs）</td><td>多數投資人購買 REITs 受益證券，間接持有不動產收益</td><td>不動產證券化條例</td></tr><tr><td>不動產資產信託（REATs）</td><td>原資產持有人將不動產信託，向投資人發行受益證券</td><td>不動產證券化條例</td></tr></tbody></table><div class=\"mermaid\">graph LR\n    A[REITs 模式] --> B[投資人購買受益證券]\n    B --> C[信託持有<br/>多個不動產組合]\n    C --> D[租金收益<br/>分配給投資人]\n    style C fill:#019AB3,color:#fff</div><p><strong>家族不動產信託實務</strong>：</p><ul><li>分割繼承困難之不動產（如祖傳土地）信託集中管理</li><li>商辦租賃收益信託，由受託人定期分配給受益人</li><li>都市更新案中將老屋信託，避免少數所有權人阻擋</li><li>跨境不動產持有架構（搭配境外公司）</li></ul>"
+    },
+    {
+      "heading": "投資型信託的稅務與風險揭露",
+      "html": "<p>投資型信託的稅務處理較家族傳承信託更複雜，因涉及「信託期間收益」的歸屬。</p><blockquote><p><strong>《所得稅法》§3-2 第 1 項</strong>（信託成立時受益人為非委託人）：「該受益人應將享有信託利益之權利價值，併入成立年度之所得額，依本法規定課徵所得稅。」</p><p><strong>§3-4</strong>（信託存續期間之收益）：信託財產發生之收入，由<strong>受益人</strong>依其享有信託利益之權利價值或比例計算收益，併入受益人所得課稅。</p></blockquote><table><thead><tr><th>稅務情境</th><th>納稅義務人</th><th>依據</th></tr></thead><tbody><tr><td>信託成立時（他益）</td><td>委託人（贈與稅）+ 受益人（所得稅）</td><td>遺贈稅法 §5-1 + 所得稅法 §3-2</td></tr><tr><td>信託存續期間收益（自益）</td><td>委託人＝受益人</td><td>所得稅法 §3-4</td></tr><tr><td>信託存續期間收益（他益）</td><td>受益人</td><td>所得稅法 §3-4</td></tr><tr><td>信託消滅返還</td><td>原則不再課稅</td><td>視為信託本旨完成</td></tr></tbody></table><p><strong>《信託業營運範圍受益權轉讓限制風險揭露及行銷訂約管理辦法》</strong>（pcode G0380204）規範信託商品銷售之風險揭露：</p><ul><li>商品結構與運作機制</li><li>各種風險類型（信用、市場、流動性、匯率、利率）</li><li>費用結構（信託管理費、保管費、附加費用）</li><li>受益權轉讓限制</li><li>提前終止之費用與限制</li><li>稅務影響</li></ul><details><summary>自我檢測</summary><p><strong>Q1</strong>：信託業法第 16 條列了幾項業務？</p><p>答：10 項，從金錢信託到其他財產權信託。</p><p><strong>Q2</strong>：特定金錢信託與指定金錢信託的差別？</p><p>答：特定金錢信託委託人對運用方法、標的有具體指示；指定金錢信託只指定運用範圍，受託人在範圍內自由運用。</p><p><strong>Q3</strong>：他益信託在設立時與存續中分別課什麼稅？</p><p>答：設立時依《遺贈稅法》§5-1 課贈與稅（委託人繳）；存續期間收益依《所得稅法》§3-4 課受益人之所得稅。</p></details><p><strong>資料來源：</strong></p><ul><li>信託業法（<a href=\"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0310027\" target=\"_blank\" rel=\"noopener\">pcode G0310027</a>）</li><li>信託業辦理不指定營運範圍方法金錢信託運用準則（<a href=\"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0310039\" target=\"_blank\" rel=\"noopener\">pcode G0310039</a>）</li><li>信託業營運範圍受益權轉讓限制風險揭露及行銷訂約管理辦法（<a href=\"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380204\" target=\"_blank\" rel=\"noopener\">pcode G0380204</a>）</li><li>所得稅法 §3-2、§3-4（<a href=\"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340003\" target=\"_blank\" rel=\"noopener\">pcode G0340003</a>）</li><li>中華民國信託業商業同業公會 <a href=\"https://www.trust.org.tw/\" target=\"_blank\" rel=\"noopener\">trust.org.tw</a></li></ul>"
     }
   ]
 }
