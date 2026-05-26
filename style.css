@@ -636,6 +636,38 @@ table.indices .date-col {
 .fund-card .grid label { display: block; font-size: 13px; color: var(--text-mute); margin-bottom: 2px; }
 .fund-card .grid .cell-sub { font-size: 12px; color: var(--text-mute); margin-top: 2px; }
 
+/* 海外債卡片：分兩段網格（基本資料 4 欄、報酬 5 欄）；手機降為 2/3 欄避免擠壓 */
+.obond-meta-grid,
+.obond-perf-grid {
+  display: grid;
+  gap: 6px;
+  margin-top: 8px;
+  text-align: center;
+}
+.obond-meta-grid { grid-template-columns: repeat(4, 1fr); font-size: 15px; }
+.obond-perf-grid {
+  grid-template-columns: repeat(5, 1fr);
+  font-size: 14px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--border);
+}
+.obond-meta-grid > div,
+.obond-perf-grid > div { min-width: 0; }
+.obond-meta-grid label,
+.obond-perf-grid label {
+  display: block;
+  font-size: 13px;
+  color: var(--text-mute);
+  margin-bottom: 2px;
+}
+.obond-perf-grid label { font-size: 12px; }
+@media (max-width: 640px) {
+  .obond-meta-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .obond-perf-grid { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .obond-meta-grid label,
+  .obond-perf-grid label { white-space: nowrap; }
+}
+
 /* ===== Targets (主題市場) ===== */
 .targets-kpi {
   display: grid;

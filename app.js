@@ -768,25 +768,25 @@ function renderObondsSheet() {
       <h3>${nameHtml}</h3>
       <div style="margin-bottom:6px">${chips}</div>
       <p class="tagline">${meta}</p>
-      <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:6px; font-size:15px; margin-top:8px; text-align:center">
-        <div><label style="display:block; font-size:13px; color:var(--text-mute); margin-bottom:2px">幣別</label>${escapeHtml(b.currency || "—")}</div>
-        <div><label style="display:block; font-size:13px; color:var(--text-mute); margin-bottom:2px">票面利率</label>${fmtCoupon(b.coupon_pct)}</div>
-        <div><label style="display:block; font-size:13px; color:var(--text-mute); margin-bottom:2px">到期日</label>${escapeHtml(b.maturity || "—")}</div>
-        <div><label style="display:block; font-size:13px; color:var(--text-mute); margin-bottom:2px">信評</label><span>${escapeHtml(b.rating || "—")}</span></div>
+      <div class="obond-meta-grid">
+        <div><label>幣別</label>${escapeHtml(b.currency || "—")}</div>
+        <div><label>票面利率</label>${fmtCoupon(b.coupon_pct)}</div>
+        <div><label>到期日</label>${escapeHtml(b.maturity || "—")}</div>
+        <div><label>信評</label><span>${escapeHtml(b.rating || "—")}</span></div>
       </div>
-      <div style="display:grid; grid-template-columns:repeat(5, 1fr); gap:6px; font-size:14px; margin-top:8px; text-align:center; padding-top:8px; border-top:1px dashed var(--border)">
+      <div class="obond-perf-grid">
         <div>
-          <label style="display:block; font-size:12px; color:var(--text-mute); margin-bottom:2px">申購參考殖利率</label>
+          <label>申購參考殖利率</label>
           <span class="up">${fmtPctNum(b.bid_yield_pct)}</span>
         </div>
         <div>
-          <label style="display:block; font-size:12px; color:var(--text-mute); margin-bottom:2px">贖回參考價</label>
+          <label>贖回參考價</label>
           ${fmtPrice(b.ask_price)}
           ${priceDate}
         </div>
-        <div><label style="display:block; font-size:12px; color:var(--text-mute); margin-bottom:2px">週%</label><span class="${pctClass(b.perf_1w)}">${fmtPctNum(b.perf_1w)}</span></div>
-        <div><label style="display:block; font-size:12px; color:var(--text-mute); margin-bottom:2px">月%</label><span class="${pctClass(b.perf_1m)}">${fmtPctNum(b.perf_1m)}</span></div>
-        <div><label style="display:block; font-size:12px; color:var(--text-mute); margin-bottom:2px">季%</label><span class="${pctClass(b.perf_3m)}">${fmtPctNum(b.perf_3m)}</span></div>
+        <div><label>週%</label><span class="${pctClass(b.perf_1w)}">${fmtPctNum(b.perf_1w)}</span></div>
+        <div><label>月%</label><span class="${pctClass(b.perf_1m)}">${fmtPctNum(b.perf_1m)}</span></div>
+        <div><label>季%</label><span class="${pctClass(b.perf_3m)}">${fmtPctNum(b.perf_3m)}</span></div>
       </div>
     </div>
   `;
