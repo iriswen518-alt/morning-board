@@ -3,11 +3,45 @@
   "slug": "relevant_tax_law",
   "title": "相關稅法",
   "description": "傳承相關稅法條文彙整：遺贈稅、所得稅、最低稅負、土增、契稅、信託",
-  "objectives": [],
+  "objectives": [
+    "建立傳承規劃所涉八大稅法的完整視圖",
+    "掌握遺贈稅法核心條文（§5-1 信託視為贈與、§16 不計入遺產、§17 扣除額、§19 稅率）",
+    "理解所得稅法 §15 個人股利兩制、§42 法人間股利、§43-3 CFC",
+    "認識最低稅負制（基本所得額條例）對傳承的影響",
+    "熟悉土地稅法、契稅、信託法、民法在傳承場景的交互運用"
+  ],
   "sections": [
     {
-      "heading": "本章節內容建構中",
-      "html": "<p>本章節內容正在準備中，敬請期待後續更新。</p><p>主題摘要：傳承相關稅法條文彙整：遺贈稅、所得稅、最低稅負、土增、契稅、信託</p>"
+      "heading": "傳承稅法八大支柱",
+      "html": "<div class=\"mermaid\">graph TD\n    A[傳承相關稅法] --> B[遺產及贈與稅法]\n    A --> C[所得稅法]\n    A --> D[所得基本稅額條例<br/>最低稅負]\n    A --> E[土地稅法]\n    A --> F[契稅條例]\n    A --> G[信託法]\n    A --> H[保險法]\n    A --> I[民法<br/>親屬編 / 繼承編]\n    style A fill:#019AB3,color:#fff</div><table><thead><tr><th>法規</th><th>傳承場景的角色</th></tr></thead><tbody><tr><td>遺贈稅法</td><td>身故遺產、生前贈與、信託視為贈與的課稅核心</td></tr><tr><td>所得稅法</td><td>股利、租金、信託收益、CFC、跨境所得</td></tr><tr><td>最低稅負</td><td>海外所得、大額保險、未上市櫃股票交易</td></tr><tr><td>土地稅法</td><td>土地增值稅、自用住宅優惠、配偶贈與免徵</td></tr><tr><td>契稅條例</td><td>不動產移轉之契稅（房屋稅基）</td></tr><tr><td>信託法</td><td>信託架構之私法基礎</td></tr><tr><td>保險法</td><td>保險給付歸屬、保險受益人指定</td></tr><tr><td>民法</td><td>繼承順序、應繼分、特留分、遺囑</td></tr></tbody></table>"
+    },
+    {
+      "heading": "遺產及贈與稅法核心條文",
+      "html": "<blockquote><p><strong>§5-1 第 1 項</strong>（信託視為贈與）：「信託契約明定信託利益之全部或一部之受益人為非委託人者，視為委託人將享有信託利益之權利贈與該受益人，依本法規定，課徵贈與稅。」</p></blockquote><table><thead><tr><th>條文</th><th>主要內容</th><th>114 年度數據</th></tr></thead><tbody><tr><td>§5-1</td><td>他益信託視為贈與</td><td>—</td></tr><tr><td>§16 第 9 款</td><td>身故保險金不計入遺產（要保人＝被保險人）</td><td>—</td></tr><tr><td>§17</td><td>遺產扣除額（配偶、直系血親卑親屬、父母、喪葬等）</td><td>配偶 553 萬、直系卑親屬每人 56 萬、喪葬 138 萬</td></tr><tr><td>§18</td><td>遺產免稅額</td><td>1,333 萬</td></tr><tr><td>§19</td><td>遺產稅率（10%／15%／20%）</td><td>級距 5,621 萬／1.12 億</td></tr><tr><td>§20</td><td>不計入贈與總額（配偶相互贈與、扶養費等）</td><td>—</td></tr><tr><td>§22</td><td>贈與稅免稅額</td><td>每位贈與人 244 萬／年</td></tr></tbody></table><blockquote><p><strong>§16 第 9 款</strong>：「約定於被繼承人死亡時，給付其所指定受益人之人壽保險金額、軍、公教人員、勞工或農民保險之保險金額及互助金。」</p></blockquote><p><strong>實質課稅風險</strong>：人壽保險 8 大態樣（重病/高齡/躉繳/巨額/舉債/短期/低於保費/變更要保人）仍可能依《稅捐稽徵法》§12-1 實質課稅原則回補遺產稅。</p>"
+    },
+    {
+      "heading": "所得稅法重要條文",
+      "html": "<table><thead><tr><th>條文</th><th>內容</th><th>傳承場景</th></tr></thead><tbody><tr><td>§3-2</td><td>營利事業為委託人之信託，受益人於成立年度課所得稅</td><td>員工持股信託、企業傳承</td></tr><tr><td>§3-4</td><td>信託期間收益由受益人課所得稅（導管原則）</td><td>家族信託、安養信託</td></tr><tr><td>§14 第 1 類</td><td>營利所得分類</td><td>股利歸戶</td></tr><tr><td>§15</td><td>個人股利兩制（合併計稅或分開計稅）</td><td>大額股利傳承</td></tr><tr><td>§17</td><td>綜合所得稅扣除額（如保費 2.4 萬/人）</td><td>—</td></tr><tr><td>§42</td><td>法人間股利所得免稅</td><td>家族投資公司架構</td></tr><tr><td>§14-4</td><td>房地合一稅（個人 5 級距 15-45%）</td><td>房地產傳承</td></tr><tr><td>§43-3</td><td>營利事業 CFC（受控外國企業）</td><td>境外公司持有資產</td></tr><tr><td>§43-4</td><td>PEM（實際管理處所）</td><td>境外公司視為境內公司</td></tr></tbody></table><blockquote><p><strong>§15 個人股利兩制</strong>：</p><ul><li>合併計稅：股利併入綜合所得，享 8.5% 可抵減稅額（上限 8 萬，約對應股利 94 萬）</li><li>分開計稅：股利 28% 單一稅率分離課稅</li></ul><p>選擇對自己有利者。高股利所得者多選分開計稅。</p></blockquote>"
+    },
+    {
+      "heading": "最低稅負制（所得基本稅額條例）",
+      "html": "<p>最低稅負制專門針對「享有大量租稅優惠但綜所稅低」的個人或法人，補課最低稅負。</p><blockquote><p><strong>§12 第 1 項</strong>（個人基本所得額之計算項目）：</p><ol><li>綜合所得淨額</li><li>未計入綜所總額之非中華民國來源所得（海外所得，全戶 ≥ 100 萬）</li><li>受益人與要保人不同之人壽保險／年金保險給付（超過 3,740 萬部分）</li><li>未上市櫃股票交易所得</li><li>非現金捐贈金額</li><li>員工分紅配股可處分日股票時價</li></ol></blockquote><blockquote><p><strong>§13</strong>：「基本所得額減除新臺幣 670 萬元後，按 20% 計算之金額為基本稅額。」</p></blockquote><table><thead><tr><th>項目</th><th>114 年度</th></tr></thead><tbody><tr><td>個人扣除額</td><td>670 萬</td></tr><tr><td>稅率</td><td>20%</td></tr><tr><td>海外所得計入門檻</td><td>全戶 100 萬</td></tr><tr><td>保險給付扣除額</td><td>3,740 萬</td></tr><tr><td>CFC（§12-1）盈餘計入</td><td>持股 ≥ 50% 之低稅國公司</td></tr></tbody></table><p><strong>計算順序</strong>：基本所得額 → 減 670 萬 → ×20% = 基本稅額 → 與綜所稅取大者繳納。</p>"
+    },
+    {
+      "heading": "土地稅法與契稅條例",
+      "html": "<table><thead><tr><th>稅目</th><th>計算基礎</th><th>稅率</th><th>特殊優惠</th></tr></thead><tbody><tr><td>土地增值稅</td><td>漲價總額（現值-原始公告現值）</td><td>20%／30%／40%</td><td>自用住宅 10%（§34）、配偶贈與免徵（§39-1）、繼承免徵（§28）</td></tr><tr><td>房地合一稅（所得稅法 §14-4）</td><td>售價-取得成本-必要費用</td><td>個人 5 級距 15-45%</td><td>自住 10% + 400 萬扣除</td></tr><tr><td>契稅</td><td>房屋評定現值</td><td>買賣 6%、贈與 6%、典權 4%、交換 2%、分割 2%、占有 6%</td><td>信託、繼承免徵（契稅條例 §14-1）</td></tr></tbody></table><blockquote><p><strong>土地稅法 §28（繼承免徵）</strong>：「土地所有權移轉，因繼承而取得者，免徵土地增值稅。」</p><p><strong>§39-1（配偶贈與免徵）</strong>：「配偶相互贈與之土地，不課徵土地增值稅。」</p></blockquote><p><strong>實務</strong>：</p><ul><li>不動產傳承選擇繼承免徵土增稅，但後續再賣須繳房地合一稅</li><li>配偶間移轉常用於資產重組，免土增稅</li><li>自用住宅優惠一生一次，需特別保留給最有效益的交易</li></ul>"
+    },
+    {
+      "heading": "信託法與保險法",
+      "html": "<table><thead><tr><th>法規</th><th>條文</th><th>內容</th></tr></thead><tbody><tr><td>信託法 §1</td><td>信託定義</td><td>委託人移轉財產給受託人，依信託本旨為受益人或特定目的管理</td></tr><tr><td>信託法 §10</td><td>信託財產獨立性（遺產）</td><td>受託人死亡時信託財產不屬遺產</td></tr><tr><td>信託法 §11</td><td>信託財產獨立性（破產）</td><td>受託人破產時信託財產不屬破產財團</td></tr><tr><td>信託法 §62-64</td><td>信託消滅與終止</td><td>目的完成、契約事由、自益/他益終止規定</td></tr><tr><td>保險法 §112</td><td>保險金額不得作為被保險人遺產</td><td>「保險金額約定於被保險人死亡時給付於其所指定之受益人者，其金額不得作為被保險人之遺產。」</td></tr><tr><td>保險法 §113</td><td>未指定受益人</td><td>未指定者，保險金作為遺產</td></tr></tbody></table>"
+    },
+    {
+      "heading": "民法繼承編核心條文",
+      "html": "<table><thead><tr><th>條文</th><th>內容</th></tr></thead><tbody><tr><td>§1138</td><td>遺產繼承順序：(1) 配偶（當然）+ 直系卑親屬 (2) 父母 (3) 兄弟姊妹 (4) 祖父母</td></tr><tr><td>§1141</td><td>同一順序繼承人應繼分均等</td></tr><tr><td>§1144</td><td>配偶與其他順序之應繼分</td></tr><tr><td>§1145</td><td>喪失繼承權事由（謀殺、虐待等）</td></tr><tr><td>§1187</td><td>遺囑自由處分財產但不得違反特留分</td></tr><tr><td>§1223</td><td>特留分（直系卑親屬 1/2、配偶 1/2、父母 1/2、兄弟姊妹 1/3、祖父母 1/3）</td></tr><tr><td>§1030-1</td><td>夫妻剩餘財產差額分配請求權</td></tr></tbody></table><blockquote><p><strong>§1030-1</strong>（剩餘財產差額分配請求權）：「法定財產制關係消滅時，夫或妻現存之婚後財產，扣除婚姻關係存續所負債務後，如有剩餘，其雙方剩餘財產之差額，應平均分配。」此規定在配偶死亡時可大幅降低遺產稅，是傳承規劃必用工具。</p></blockquote>"
+    },
+    {
+      "heading": "自我檢測",
+      "html": "<details><summary>Q1：他益信託在設立時要繳什麼稅？依據？</summary><p>答：贈與稅。依《遺產及贈與稅法》§5-1 第 1 項，他益信託視為委託人將信託利益贈與受益人，由委託人為納稅義務人繳納贈與稅。</p></details><details><summary>Q2：身故保險金一定不計入遺產嗎？</summary><p>答：原則不計入，依《遺贈稅法》§16 第 9 款。但若符合財政部公告的「人壽保險實質課稅 8 大態樣」（重病/高齡/躉繳/巨額/舉債/短期/給付低於保費/變更要保人），稅捐機關可依《稅捐稽徵法》§12-1 實質課稅原則將保險金視為遺產併課。</p></details><details><summary>Q3：個人股利兩制應如何選擇？</summary><p>答：依《所得稅法》§15：(a) 合併計稅享 8.5% 可抵減（上限 8 萬，對應股利約 94 萬）(b) 分開計稅 28% 單一稅率。原則：低股利所得者選合併（享抵減）；高股利所得者選分開（28% &lt; 邊際 40%）。實務常見以股利 200 萬為界。</p></details><details><summary>Q4：夫妻剩餘財產差額分配請求權如何應用於傳承？</summary><p>答：依《民法》§1030-1，配偶死亡時，生存配偶可請求婚後財產差額分配（多者給少者一半）。此「請求得到的金額」不計入被繼承人遺產，可大幅降低遺產稅。實務上是高資產家庭最常用的傳承減稅工具之一。</p></details><p><strong>資料來源：</strong></p><ul><li>遺產及贈與稅法（<a href=\"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340072\" target=\"_blank\" rel=\"noopener\">pcode G0340072</a>）</li><li>所得稅法（<a href=\"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340003\" target=\"_blank\" rel=\"noopener\">pcode G0340003</a>）</li><li>所得基本稅額條例（<a href=\"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340103\" target=\"_blank\" rel=\"noopener\">pcode G0340103</a>）</li><li>土地稅法（<a href=\"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340012\" target=\"_blank\" rel=\"noopener\">pcode G0340012</a>）</li><li>契稅條例（<a href=\"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340022\" target=\"_blank\" rel=\"noopener\">pcode G0340022</a>）</li><li>信託法（<a href=\"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0020024\" target=\"_blank\" rel=\"noopener\">pcode I0020024</a>）</li><li>保險法（<a href=\"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0390002\" target=\"_blank\" rel=\"noopener\">pcode G0390002</a>）</li><li>民法繼承編（<a href=\"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001\" target=\"_blank\" rel=\"noopener\">pcode B0000001</a>）</li></ul>"
     }
   ]
 }
