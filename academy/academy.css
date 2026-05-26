@@ -168,72 +168,69 @@
 /* === chapter.html === */
 
 .chapter-layout {
-  display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 32px;
+  display: block;
   max-width: 1100px;
   margin: 0 auto;
   padding: 32px 24px 64px;
 }
 
-.chapter-sidebar {
-  position: sticky;
-  top: 20px;
-  align-self: start;
-  background: var(--academy-bg-soft);
-  border: 1px solid var(--academy-border);
-  border-radius: 12px;
-  padding: 16px;
-  max-height: calc(100vh - 40px);
-  overflow: auto;
+.chapter-hero-wrap {
+  margin-bottom: 16px;
+}
+.chapter-hero-wrap:empty {
+  display: none;
 }
 
-.chapter-sidebar h3 {
-  margin: 0 0 12px;
-  color: var(--brand-deep);
-  font-size: 14px;
+.chapter-topnav {
+  margin: 0 0 28px;
 }
 
-.chapter-sidebar ol {
+.chapter-topnav ol {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 8px;
 }
 
-.chapter-sidebar li a {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-  padding: 8px 10px;
+.chapter-topnav li a {
+  display: block;
+  padding: 10px 12px;
   text-decoration: none;
-  color: #1a2533;
-  border-radius: 6px;
-  font-size: 14px;
-}
-
-.chapter-sidebar li a.current {
-  background: var(--brand-primary);
-  color: #fff;
-}
-
-.chapter-sidebar li a .ch-title {
-  font-size: 14px;
+  background: var(--academy-bg-soft);
+  border: 1px solid var(--academy-border);
+  border-radius: 8px;
+  color: var(--brand-deep);
+  font-size: 13px;
   font-weight: 600;
-  line-height: 1.35;
-}
-
-.chapter-sidebar li a .ch-desc {
-  font-size: 11px;
-  color: var(--academy-muted);
   line-height: 1.4;
+  text-align: center;
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
-.chapter-sidebar li a.current .ch-desc {
-  color: rgba(255,255,255,0.85);
+.chapter-topnav li a:hover:not(.current) {
+  transform: translateY(-1px);
+  border-color: var(--brand-primary);
+  box-shadow: 0 3px 10px rgba(1, 154, 179, 0.12);
 }
 
-.chapter-sidebar li a:hover:not(.current) {
-  background: #e3f3f6;
+.chapter-topnav li a.current {
+  background: linear-gradient(135deg, var(--brand-primary), var(--brand-accent));
+  border-color: var(--brand-primary);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(1, 154, 179, 0.25);
+}
+
+@media (max-width: 640px) {
+  .chapter-topnav ol {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+  .chapter-topnav li a {
+    padding: 9px 8px;
+    font-size: 12.5px;
+  }
 }
 
 .chapter-content {
@@ -330,16 +327,6 @@
 .objectives ul {
   margin: 0;
   padding-left: 20px;
-}
-
-@media (max-width: 768px) {
-  .chapter-layout {
-    grid-template-columns: 1fr;
-  }
-  .chapter-sidebar {
-    position: static;
-    max-height: none;
-  }
 }
 
 /* 手機版 academy 沿用主站 nav-toggle 模式：main-nav 預設收起，靠 sticky「分頁」鈕展開為 overlay */

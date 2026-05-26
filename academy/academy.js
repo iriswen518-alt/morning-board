@@ -71,11 +71,11 @@ async function loadCourses() {
 }
 
 async function loadChapter() {
-  const sidebar = document.getElementById('chapter-list');
+  const chapterListEl = document.getElementById('chapter-list');
+  const heroEl = document.getElementById('chapter-hero');
   const content = document.getElementById('chapter-content');
-  const courseNameEl = document.getElementById('course-name');
   const titleEl = document.getElementById('chapter-title');
-  if (!sidebar || !content) return;
+  if (!chapterListEl || !content) return;
 
   const params = new URLSearchParams(location.search);
   const course = params.get('course');
@@ -87,31 +87,44 @@ async function loadChapter() {
   }
 
   try {
-    const idxRes = await fetch(`../data/academy/${course}/00_index.json`);
+    const [idxRes, coursesRes] = await Promise.all([
+      fetch(`../data/academy/${course}/00_index.json`),
+      fetch('../data/academy/courses.json').catch(() => null),
+    ]);
     if (!idxRes.ok) throw new Error('index fetch failed');
     const idx = await idxRes.json();
-    courseNameEl.textContent = idx.course_name;
+    const coursesData = coursesRes && coursesRes.ok ? await coursesRes.json() : null;
+    const courseMeta = coursesData?.courses?.find(c => c.slug === course) || null;
 
-    sidebar.innerHTML = '';
+    if (heroEl) {
+      const chapterCount = idx.chapters?.length || 0;
+      const iconSvg = courseMeta?.icon
+        ? `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${courseMeta.icon}</svg>`
+        : '';
+      heroEl.innerHTML = `
+        <div class="course-hero">
+          ${iconSvg ? `<div class="course-hero-icon">${iconSvg}</div>` : ''}
+          <div class="course-hero-meta">
+            <h3 class="course-hero-title">
+              ${idx.course_name}
+              ${chapterCount ? `<span class="course-hero-badge">共 ${chapterCount} 章</span>` : ''}
+            </h3>
+            ${courseMeta?.description ? `<p class="course-hero-desc">${courseMeta.description}</p>` : ''}
+          </div>
+        </div>`;
+    }
+
+    chapterListEl.innerHTML = '';
     idx.chapters.forEach((ch, i) => {
       const li = document.createElement('li');
       const a = document.createElement('a');
       a.href = `chapter.html?course=${course}&chapter=${ch.slug}`;
-      const titleSpan = document.createElement('span');
-      titleSpan.className = 'ch-title';
-      titleSpan.textContent = `${i + 1}. ${ch.title}`;
-      a.appendChild(titleSpan);
-      if (ch.description) {
-        const descSpan = document.createElement('span');
-        descSpan.className = 'ch-desc';
-        descSpan.textContent = ch.description;
-        a.appendChild(descSpan);
-      }
+      a.textContent = `${i + 1}. ${ch.title}`;
       if (ch.slug === chapterSlug || (!chapterSlug && i === 0)) {
         a.classList.add('current');
       }
       li.appendChild(a);
-      sidebar.appendChild(li);
+      chapterListEl.appendChild(li);
     });
 
     const target = chapterSlug
