@@ -2,11 +2,40 @@
   "course": "macro",
   "course_name": "總體經濟",
   "chapters": [
-    { "slug": "growth", "title": "經濟成長與 GDP", "file": "01_growth.json" },
-    { "slug": "inflation", "title": "通膨指標：CPI、PPI、PCE 與核心通膨", "file": "02_inflation.json" },
-    { "slug": "monetary", "title": "央行貨幣政策：升降息、QE/QT 與殖利率曲線", "file": "03_monetary.json" },
-    { "slug": "fiscal", "title": "財政政策與政府債務", "file": "04_fiscal.json" },
-    { "slug": "fx", "title": "匯率、資本流動與外匯存底", "file": "05_fx.json" },
-    { "slug": "cycle", "title": "景氣循環與重大事件解讀", "file": "06_cycle.json" }
+    {
+      "slug": "growth",
+      "title": "經濟成長與 GDP",
+      "file": "01_growth.json"
+    },
+    {
+      "slug": "inflation",
+      "title": "通膨指標：CPI、PPI、PCE 與核心通膨",
+      "file": "02_inflation.json"
+    },
+    {
+      "slug": "monetary",
+      "title": "央行貨幣政策：升降息、QE/QT 與殖利率曲線",
+      "file": "03_monetary.json"
+    },
+    {
+      "slug": "fiscal",
+      "title": "財政政策與政府債務",
+      "file": "04_fiscal.json"
+    },
+    {
+      "slug": "fx",
+      "title": "匯率、資本流動與外匯存底",
+      "file": "05_fx.json"
+    },
+    {
+      "slug": "cycle",
+      "title": "景氣循環與重大事件解讀",
+      "file": "06_cycle.json"
+    },
+    {
+      "slug": "indicators",
+      "title": "景氣指標判讀與商品配置實務（個體、指標、利匯率、循環商品、新聞判讀）",
+      "file": "07_indicators.json"
+    }
   ]
 }

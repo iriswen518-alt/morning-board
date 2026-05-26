@@ -2,11 +2,40 @@
   "course": "client",
   "course_name": "客戶經營",
   "chapters": [
-    { "slug": "kyc", "title": "KYC 與客戶分類", "file": "01_kyc.json" },
-    { "slug": "lifecycle", "title": "客戶生命週期管理", "file": "02_lifecycle.json" },
-    { "slug": "segmentation", "title": "客戶分群與差異化服務", "file": "03_segmentation.json" },
-    { "slug": "touchpoint", "title": "接觸頻率、聯繫策略與 CRM 系統", "file": "04_touchpoint.json" },
-    { "slug": "referral", "title": "推薦與轉介機制", "file": "05_referral.json" },
-    { "slug": "hnw", "title": "高資產客戶經營與危機處理", "file": "06_hnw.json" }
+    {
+      "slug": "kyc",
+      "title": "KYC 與客戶分類",
+      "file": "01_kyc.json"
+    },
+    {
+      "slug": "lifecycle",
+      "title": "客戶生命週期管理",
+      "file": "02_lifecycle.json"
+    },
+    {
+      "slug": "segmentation",
+      "title": "客戶分群與差異化服務",
+      "file": "03_segmentation.json"
+    },
+    {
+      "slug": "touchpoint",
+      "title": "接觸頻率、聯繫策略與 CRM 系統",
+      "file": "04_touchpoint.json"
+    },
+    {
+      "slug": "referral",
+      "title": "推薦與轉介機制",
+      "file": "05_referral.json"
+    },
+    {
+      "slug": "hnw",
+      "title": "高資產客戶經營與危機處理",
+      "file": "06_hnw.json"
+    },
+    {
+      "slug": "relationship",
+      "title": "客戶關係深耕（關係維護、反對問題、抱怨處理）",
+      "file": "07_relationship.json"
+    }
   ]
 }
