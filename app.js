@@ -1946,7 +1946,17 @@ function renderUsStocksSheet() {
     <p style="color:var(--text-mute); font-size:12px; margin:0 0 8px;">資料來源：Yahoo Finance trending（流動性過低個股已過濾），每次 build 重抓。</p>
     ${renderStocksTable("", popular)}
   ` : "";
-  return note + curatedBlock + popularBlock + renderStockBriefBlock();
+  const moreSection = `
+    <div class="fund-card" style="margin-top:18px;text-align:center">
+      <h3 style="margin-bottom:6px">其他海外股票</h3>
+      <p class="tagline" style="margin-bottom:12px">瀏覽板信完整海外股票行情表</p>
+      <a href="https://bopfund.moneydj.com/main.asp?sUrl=$etfweb$html$et081001]djhtm" target="_blank" rel="noopener"
+         style="display:inline-block;padding:10px 22px;background:#019AB3;color:#fff;border-radius:6px;text-decoration:none;font-weight:600">
+        前往海外股票行情表
+      </a>
+    </div>
+  `;
+  return note + curatedBlock + popularBlock + renderStockBriefBlock() + moreSection;
 }
 
 let TW_STOCK_QUERY = "";
