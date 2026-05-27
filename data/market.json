@@ -1,5 +1,5 @@
 {
-  "closing_date": "2026-05-26",
+  "closing_date": "2026-05-27",
   "indices": [
     {
       "name": "S&P 500",
@@ -67,56 +67,56 @@
     {
       "name": "Nikkei 225",
       "name_zh": null,
-      "close": 64996.08984375,
-      "daily_pct": -0.25,
+      "close": 64999.41015625,
+      "daily_pct": 0.01,
       "mtd_pct": 9.91,
       "ytd_pct": 29.44,
-      "closing_date": "2026-05-26"
+      "closing_date": "2026-05-27"
     },
     {
       "name": "TAIEX 加權指數",
       "name_zh": null,
-      "close": 43525.37109375,
-      "daily_pct": -0.27,
+      "close": 44256.80078125,
+      "daily_pct": 1.68,
       "mtd_pct": 12.12,
       "ytd_pct": 50.69,
-      "closing_date": "2026-05-26"
+      "closing_date": "2026-05-27"
     },
     {
       "name": "KOSPI",
       "name_zh": null,
-      "close": 8047.509765625,
-      "daily_pct": 2.55,
+      "close": 8228.7001953125,
+      "daily_pct": 2.25,
       "mtd_pct": 18.93,
       "ytd_pct": 86.22,
-      "closing_date": "2026-05-26"
+      "closing_date": "2026-05-27"
     },
     {
       "name": "Hang Seng 恆生",
       "name_zh": null,
-      "close": 25599.44921875,
-      "daily_pct": -0.03,
+      "close": 25328.23046875,
+      "daily_pct": -1.06,
       "mtd_pct": -0.66,
       "ytd_pct": -0.1,
-      "closing_date": "2026-05-26"
+      "closing_date": "2026-05-27"
     },
     {
       "name": "Shanghai 上證",
       "name_zh": null,
-      "close": 4145.373046875,
-      "daily_pct": -0.17,
+      "close": 4093.7265625,
+      "daily_pct": -1.25,
       "mtd_pct": 0.98,
       "ytd_pct": 4.63,
-      "closing_date": "2026-05-26"
+      "closing_date": "2026-05-27"
     },
     {
       "name": "CSI 300 滬深300",
       "name_zh": null,
-      "close": 4947.85009765625,
-      "daily_pct": 0.53,
+      "close": 4908.17138671875,
+      "daily_pct": -0.8,
       "mtd_pct": 2.38,
       "ytd_pct": 6.3,
-      "closing_date": "2026-05-26"
+      "closing_date": "2026-05-27"
     },
     {
       "name": "Nifty 50",
@@ -130,11 +130,11 @@
     {
       "name": "S&P/ASX 200",
       "name_zh": null,
-      "close": 8657.7998046875,
-      "daily_pct": -0.39,
+      "close": 8717.7001953125,
+      "daily_pct": 0.69,
       "mtd_pct": 0.3,
       "ytd_pct": -0.26,
-      "closing_date": "2026-05-26"
+      "closing_date": "2026-05-27"
     }
   ],
   "bonds": [
@@ -147,29 +147,29 @@
     },
     {
       "name": "US 2-Year",
-      "yield_pct": 4.03,
-      "daily_bps": -2.3,
+      "yield_pct": 4.02,
+      "daily_bps": -2.7,
       "mtd_bps": 25.0,
       "closing_date": "2026-05-27"
     },
     {
       "name": "Germany 10-Year",
-      "yield_pct": 2.98,
-      "daily_bps": 3.5,
+      "yield_pct": 2.96,
+      "daily_bps": -2.9,
       "mtd_bps": -11.0,
       "closing_date": "2026-05-27"
     },
     {
       "name": "Japan 10-Year",
-      "yield_pct": 2.72,
-      "daily_bps": -0.1,
+      "yield_pct": 2.69,
+      "daily_bps": -3.5,
       "mtd_bps": null,
       "closing_date": "2026-05-27"
     },
     {
       "name": "UK 10-Year",
-      "yield_pct": 4.88,
-      "daily_bps": -2.8,
+      "yield_pct": 4.83,
+      "daily_bps": -4.9,
       "mtd_bps": null,
       "closing_date": "2026-05-27"
     }
@@ -179,8 +179,8 @@
       "name": "DXY 美元指數",
       "close": 99.1500015258789,
       "daily_pct": -0.17,
-      "mtd_pct": 1.02,
-      "ytd_pct": 0.81,
+      "mtd_pct": 1.03,
+      "ytd_pct": 0.82,
       "closing_date": "2026-05-26"
     },
     {
@@ -224,5 +224,5 @@
       "closing_date": "2026-05-26"
     }
   ],
-  "summary": "KOSPI +2.55%、Nasdaq Composite +1.19%、Euro Stoxx 50 +0.74% 領漲；CAC 40 -1.03%、DAX -0.80% 走弱。"
+  "summary": "KOSPI +2.25%、TAIEX 加權指數 +1.68%、Nasdaq Composite +1.19% 領漲；Shanghai 上證 -1.25%、Hang Seng 恆生 -1.06% 走弱。"
 }

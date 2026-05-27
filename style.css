@@ -564,6 +564,7 @@ table.indices .date-col {
     font-size: 14px;
   }
   .fund-card .grid.cols-6 { grid-template-columns: repeat(6, 1fr); }
+  .fund-card .grid.cols-9 { grid-template-columns: repeat(9, 1fr); font-size: 13px; }
 
   .news-item h3 { font-size: 18px; }
   .news-item .summary { font-size: 15px; }
@@ -653,6 +654,7 @@ table.indices .date-col {
   font-size: 15px;
 }
 .fund-card .grid.cols-6 { grid-template-columns: repeat(6, 1fr); }
+.fund-card .grid.cols-9 { grid-template-columns: repeat(3, 1fr); }
 .fund-card .grid > div { text-align: center; }
 .fund-card .grid label { display: block; font-size: 13px; color: var(--text-mute); margin-bottom: 2px; }
 .fund-card .grid .cell-sub { font-size: 12px; color: var(--text-mute); margin-top: 2px; }
