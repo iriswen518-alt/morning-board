@@ -3383,10 +3383,14 @@ function renderStocksTable(title, list) {
     const nameCell = s.source_url
       ? `<a href="${s.source_url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline" title="${escapeHtml(srcLabel(s))}">${escapeHtml(s.name_zh)}</a>`
       : escapeHtml(s.name_zh);
-    // 台股：Yahoo TW 即時報價頁；美股維持單一連結
-    const quoteSfx = s.kind === "TW" && s.symbol
-      ? quoteSuffix(`https://tw.stock.yahoo.com/quote/${encodeURIComponent(s.symbol)}.TW`)
-      : "";
+    // 台股 → Yahoo TW 即時報價；美股 → Yahoo Finance quote 頁
+    let quoteSfx = "";
+    if (s.symbol) {
+      const qUrl = s.kind === "TW"
+        ? `https://tw.stock.yahoo.com/quote/${encodeURIComponent(s.symbol)}.TW`
+        : `https://finance.yahoo.com/quote/${encodeURIComponent(s.symbol)}`;
+      quoteSfx = quoteSuffix(qUrl);
+    }
     return `
     <tr>
       <td>${nameCell}${quoteSfx}</td>

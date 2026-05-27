@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-27T10:01:00+08:00",
+  "generated_at": "2026-05-27T12:04:30+08:00",
   "source": "finnhub (US price+daily) + Yahoo (US MTD/YTD) + TWSE (TW)",
   "us_stocks": [
     {
@@ -147,9 +147,9 @@
       "change_pct": -1.73,
       "mtd_pct": 6.32,
       "ytd_pct": 46.45,
-      "perf_1y": 139.38,
-      "perf_3y": 308.13,
-      "perf_5y": 291.53,
+      "perf_1y": 140.41,
+      "perf_3y": 309.89,
+      "perf_5y": 293.22,
       "market_date": "2026-05-26",
       "source_url": "https://tw.stock.yahoo.com/quote/2330.TW",
       "error": null
@@ -162,9 +162,9 @@
       "change_pct": -0.77,
       "mtd_pct": 18.0,
       "ytd_pct": 12.36,
-      "perf_1y": 74.01,
-      "perf_3y": 158.05,
-      "perf_5y": 138.29,
+      "perf_1y": 74.34,
+      "perf_3y": 158.54,
+      "perf_5y": 138.74,
       "market_date": "2026-05-26",
       "source_url": "https://tw.stock.yahoo.com/quote/2317.TW",
       "error": null
@@ -192,9 +192,9 @@
       "change_pct": 2.62,
       "mtd_pct": 8.55,
       "ytd_pct": 144.03,
-      "perf_1y": 595.24,
-      "perf_3y": 703.46,
-      "perf_5y": 776.5,
+      "perf_1y": 597.96,
+      "perf_3y": 706.6,
+      "perf_5y": 779.93,
       "market_date": "2026-05-26",
       "source_url": "https://tw.stock.yahoo.com/quote/2308.TW",
       "error": null
@@ -207,9 +207,9 @@
       "change_pct": 0.0,
       "mtd_pct": 1.28,
       "ytd_pct": 16.36,
-      "perf_1y": 17.67,
-      "perf_3y": 171.0,
-      "perf_5y": 256.09,
+      "perf_1y": 19.55,
+      "perf_3y": 175.32,
+      "perf_5y": 261.77,
       "market_date": "2026-05-26",
       "source_url": "https://tw.stock.yahoo.com/quote/2382.TW",
       "error": null
@@ -240,9 +240,9 @@
       "perf_1y": 28.31,
       "perf_3y": -51.28,
       "perf_5y": -55.12,
-      "market_date": "2026-05-26",
+      "market_date": "2026-05-27",
       "source_url": "https://tw.stock.yahoo.com/quote/1301.TW",
-      "error": null
+      "error": "stale"
     }
   ]
 }
