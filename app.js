@@ -75,6 +75,46 @@ function indexLink(name) {
     : label;
 }
 
+// Yahoo Finance 即時行情頁，因 MoneyDJ iQuoteChart 偶有延遲；提供使用者第二來源驗證
+const INDEX_YAHOO_SYMBOLS = {
+  "TAIEX": "^TWII",
+  "TAIEX 加權指數": "^TWII",
+  "S&P 500": "^GSPC",
+  "Nasdaq": "^IXIC",
+  "Nasdaq Composite": "^IXIC",
+  "Dow Jones": "^DJI",
+  "Nikkei 225": "^N225",
+  "Hang Seng": "^HSI",
+  "Hang Seng 恆生": "^HSI",
+  "恆生": "^HSI",
+  "KOSPI": "^KS11",
+  "Shanghai Composite": "000001.SS",
+  "Shanghai 上證": "000001.SS",
+  "上證": "000001.SS",
+  "Shenzhen": "399001.SZ",
+  "滬深300": "000300.SS",
+  "CSI 300": "000300.SS",
+  "CSI 300 滬深300": "000300.SS",
+  "Nifty 50": "^NSEI",
+  "ASX 200": "^AXJO",
+  "S&P/ASX 200": "^AXJO",
+  "Euro Stoxx 50": "^STOXX50E",
+  "DAX": "^GDAXI",
+  "FTSE 100": "^FTSE",
+  "CAC 40": "^FCHI"
+};
+
+function quoteSuffix(url) {
+  if (!url) return "";
+  return ` <a href="${url}" target="_blank" rel="noopener" class="quote-link" title="開啟即時行情頁">即時行情</a>`;
+}
+
+function indexQuoteLink(name) {
+  const sym = INDEX_YAHOO_SYMBOLS[name];
+  if (!sym) return "";
+  return quoteSuffix(`https://finance.yahoo.com/quote/${encodeURIComponent(sym)}/`);
+}
+
 function fmtInt(n) {
   if (n === null || n === undefined) return "—";
   return Math.round(n).toLocaleString("en-US");
@@ -102,6 +142,24 @@ function bondLink(name) {
     : label;
 }
 
+// CNBC 各國公債即時殖利率頁；Yahoo 對非美 10Y 覆蓋差，CNBC 含 US/DE/JP/UK 完整
+const BOND_QUOTE_URLS = {
+  "US 10Y": "https://www.cnbc.com/quotes/US10Y",
+  "US 10-Year": "https://www.cnbc.com/quotes/US10Y",
+  "US 2Y": "https://www.cnbc.com/quotes/US2Y",
+  "US 2-Year": "https://www.cnbc.com/quotes/US2Y",
+  "Germany 10Y": "https://www.cnbc.com/quotes/DE10Y-DE",
+  "Germany 10-Year": "https://www.cnbc.com/quotes/DE10Y-DE",
+  "Japan 10Y": "https://www.cnbc.com/quotes/JP10Y-JP",
+  "Japan 10-Year": "https://www.cnbc.com/quotes/JP10Y-JP",
+  "UK 10Y": "https://www.cnbc.com/quotes/GB10Y-GB",
+  "UK 10-Year": "https://www.cnbc.com/quotes/GB10Y-GB"
+};
+
+function bondQuoteLink(name) {
+  return quoteSuffix(BOND_QUOTE_URLS[name]);
+}
+
 const FX_BOP_CODES = {
   "DXY": "EI0001",
   "EUR/USD": "AX000090",
@@ -124,6 +182,27 @@ function fxLink(name) {
   return code
     ? `<a href="https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=${encodeURIComponent(code)}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${label}</a>`
     : label;
+}
+
+const FX_YAHOO_SYMBOLS = {
+  "DXY": "DX-Y.NYB",
+  "DXY 美元指數": "DX-Y.NYB",
+  "EUR/USD": "EURUSD=X",
+  "EUR/USD 歐元": "EURUSD=X",
+  "USD/JPY": "JPY=X",
+  "USD/JPY 日圓": "JPY=X",
+  "GBP/USD": "GBPUSD=X",
+  "GBP/USD 英鎊": "GBPUSD=X",
+  "USD/CNY": "CNY=X",
+  "USD/CNY 人民幣": "CNY=X",
+  "USD/TWD": "TWD=X",
+  "USD/TWD 新台幣": "TWD=X"
+};
+
+function fxQuoteLink(name) {
+  const sym = FX_YAHOO_SYMBOLS[name];
+  if (!sym) return "";
+  return quoteSuffix(`https://finance.yahoo.com/quote/${encodeURIComponent(sym)}/`);
 }
 
 function fmtBps(n) {
@@ -1820,7 +1899,7 @@ function renderMarketSheet() {
   const date = shortDate(m.closing_date);
   const rows = m.indices.map(i => `
     <tr>
-      <td>${indexLink(i.name)}</td>
+      <td>${indexLink(i.name)}${indexQuoteLink(i.name)}</td>
       <td>${fmtInt(i.close)}</td>
       <td class="${pctClass(i.daily_pct)}">${fmtPct(i.daily_pct)}</td>
       <td class="${pctClass(i.mtd_pct)}">${fmtPct(i.mtd_pct)}</td>
@@ -1843,7 +1922,7 @@ function renderMarketSheet() {
       : `<span class="${bpsClass(b.mtd_bps)}">${fmtBps(b.mtd_bps)}</span>`;
     return `
     <tr>
-      <td>${bondLink(b.name)}</td>
+      <td>${bondLink(b.name)}${bondQuoteLink(b.name)}</td>
       <td>${b.yield_pct != null ? b.yield_pct.toFixed(2) + "%" : "—"}</td>
       <td>${dailyCell}</td>
       <td>${mtdCell}</td>
@@ -1853,7 +1932,7 @@ function renderMarketSheet() {
 
   const fxRows = (m.fx || []).map(f => `
     <tr>
-      <td>${fxLink(f.name)}</td>
+      <td>${fxLink(f.name)}${fxQuoteLink(f.name)}</td>
       <td>${f.close != null ? f.close.toLocaleString("en-US", { maximumFractionDigits: 4 }) : "—"}</td>
       <td class="${pctClass(f.daily_pct)}">${fmtPct(f.daily_pct)}</td>
       <td class="${pctClass(f.mtd_pct)}">${fmtPct(f.mtd_pct)}</td>
@@ -3300,18 +3379,25 @@ function renderStocksTable(title, list) {
   const srcLabel = (s) => s.kind === "TW"
     ? "原始來源：TWSE；驗證：Yahoo TW 歷史頁"
     : "原始來源：finnhub /quote（價/日%）+ Yahoo（MTD/YTD）；驗證：Yahoo Finance 歷史頁";
-  const rows = list.map(s => `
+  const rows = list.map(s => {
+    const nameCell = s.source_url
+      ? `<a href="${s.source_url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline" title="${escapeHtml(srcLabel(s))}">${escapeHtml(s.name_zh)}</a>`
+      : escapeHtml(s.name_zh);
+    // 台股：Yahoo TW 即時報價頁；美股維持單一連結
+    const quoteSfx = s.kind === "TW" && s.symbol
+      ? quoteSuffix(`https://tw.stock.yahoo.com/quote/${encodeURIComponent(s.symbol)}.TW`)
+      : "";
+    return `
     <tr>
-      <td>${s.source_url
-        ? `<a href="${s.source_url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline" title="${escapeHtml(srcLabel(s))}">${escapeHtml(s.name_zh)}</a>`
-        : escapeHtml(s.name_zh)}</td>
+      <td>${nameCell}${quoteSfx}</td>
       <td>${fmtPrice(s.price, s.kind)}</td>
       <td class="${pctClass(s.change_pct)}">${fmtPct(s.change_pct)}</td>
       <td class="${pctClass(s.mtd_pct)}">${fmtPct(s.mtd_pct)}</td>
       <td class="${pctClass(s.ytd_pct)}">${fmtPct(s.ytd_pct)}</td>
       <td class="date-col"><a href="${verifyUrl(s)}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline; text-decoration-style:dotted;" title="${escapeHtml(srcLabel(s))}">${escapeHtml(shortDate(s.market_date))}</a></td>
     </tr>
-  `).join("");
+  `;
+  }).join("");
   return `
     ${title ? `<h3>${title}</h3>` : ""}
     <table class="indices">

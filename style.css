@@ -399,6 +399,15 @@ table.indices .date-col {
   white-space: nowrap;
   text-align: center;
 }
+.quote-link {
+  font-size: 12px;
+  color: var(--text-mute);
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  margin-left: 6px;
+  white-space: nowrap;
+}
+.quote-link:hover { color: var(--text); }
 
 .tabs {
   display: flex;

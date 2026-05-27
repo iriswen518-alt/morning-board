@@ -36,6 +36,13 @@
       "icon": "<rect x=\"4\" y=\"4\" width=\"7\" height=\"7\" rx=\"1\"/><rect x=\"13\" y=\"4\" width=\"7\" height=\"7\" rx=\"1\"/><rect x=\"4\" y=\"13\" width=\"7\" height=\"7\" rx=\"1\"/><rect x=\"13\" y=\"13\" width=\"7\" height=\"7\" rx=\"1\"/>"
     },
     {
+      "slug": "mortgage",
+      "name": "房貸",
+      "active": true,
+      "description": "從房貸類型、攤還方式、申請流程到稅務與風險，建立貸款全貌。",
+      "icon": "<path d=\"M3 12l9-9 9 9\"/><path d=\"M5 10v10h14V10\"/><path d=\"M10 14h4\"/><path d=\"M10 17h4\"/>"
+    },
+    {
       "slug": "real_estate",
       "name": "房地產",
       "active": true,
@@ -58,7 +65,7 @@
     },
     {
       "slug": "tax_rules",
-      "name": "理財稅務",
+      "name": "稅務規定",
       "active": true,
       "description": "高資產傳承稅務彙編與六項稅負試算工具，整合至小學堂查閱。",
       "icon": "<rect x=\"5\" y=\"3\" width=\"14\" height=\"18\" rx=\"2\"/><path d=\"M9 7h6M9 11h6M9 15h2M13 15h2M9 19h6\"/>"
@@ -72,7 +79,7 @@
     },
     {
       "slug": "sales",
-      "name": "行銷流程",
+      "name": "銷售與服務",
       "active": true,
       "description": "銷售流程、DISC 客戶辨識、SPIN 顧問式銷售、抱怨處理與系統操作。",
       "icon": "<circle cx=\"9\" cy=\"8\" r=\"3\"/><circle cx=\"17\" cy=\"10\" r=\"2.5\"/><path d=\"M2 21v-1c0-3 3-5 7-5s7 2 7 5v1\"/><path d=\"M14 21v-0.5c0-1.5 1.5-2.5 3-2.5s3 1 3 2.5V21\"/>"
@@ -97,6 +104,13 @@
       "active": true,
       "description": "經濟成長、通膨、貨幣與財政政策、匯率、景氣循環與重要指標。",
       "icon": "<path d=\"M3 17l6-6 4 4 8-8\"/><path d=\"M17 7h4v4\"/><path d=\"M3 21h18\"/>"
+    },
+    {
+      "slug": "accounting",
+      "name": "會計財報",
+      "active": true,
+      "description": "從 IFRS 學理到製造、科技、金融、零售、營建等產業的財報檢視重點。",
+      "icon": "<rect x=\"5\" y=\"3\" width=\"14\" height=\"18\" rx=\"1\"/><path d=\"M9 8h6\"/><path d=\"M9 11h6\"/><rect x=\"9\" y=\"14\" width=\"2\" height=\"4\"/><rect x=\"12\" y=\"14\" width=\"2\" height=\"4\"/><rect x=\"15\" y=\"14\" width=\"2\" height=\"4\"/>"
     }
   ]
 }
