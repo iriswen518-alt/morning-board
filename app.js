@@ -841,11 +841,13 @@ function renderObondsSheet() {
           : displayName;
         const chips = [currencyChip(b.currency), typeChip(b.type)].join("");
         const meta = [b.code, b.isin].filter(Boolean).map(escapeHtml).join("・");
+        const metaHtml = meta
+          ? `<span class="bond-code-meta">${meta}</span>`
+          : "";
         const priceDate = b.price_date ? `<div style="font-size:11px;color:var(--text-mute);margin-top:2px">${escapeHtml(shortDate(b.price_date))}</div>` : "";
         return `
     <div class="fund-card">
-      <h3 style="display:flex;align-items:center;flex-wrap:wrap;gap:6px">${nameHtml}${chips}</h3>
-      <p class="tagline">${meta}</p>
+      <h3 style="display:flex;align-items:center;flex-wrap:wrap;gap:6px 8px">${nameHtml}${chips}${metaHtml}</h3>
       <div class="obond-meta-grid">
         <div><label>幣別</label>${escapeHtml(b.currency || "—")}</div>
         <div><label>票面利率</label>${fmtCoupon(b.coupon_pct)}</div>
