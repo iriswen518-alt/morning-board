@@ -1,11 +1,11 @@
 {
-  "news_date": "2026-05-26",
+  "news_date": "2026-05-27",
   "tldr": [
-    "台股盤中首度衝破 44,000 點、台灣股市總市值超越印度躍居全球第五大，新台幣連四升收 31.47 元成最強亞幣。",
-    "美伊重啟荷莫茲海峽談判推升亞股，但凱投宏觀警告主要央行今年仍難降息，美債 5/30 年利差跌至一年低點，暗示高利率將持續更久。",
-    "金管會主委彭金隆喊話擴大本土資管以拚區域金融中心，華南永昌證獲准開辦財管 2.0 跨入私銀，高資產客群競爭再升溫。",
-    "財政部規劃 0–18 歲未成年子女免稅額加碼 50%（約 200 萬戶受惠），並放寬出售繼承自建房屋可併計土地持有期間，降低房地合一稅負擔。",
-    "AI 基建題材持續發酵：環球晶預告下半年漲價、台廠 PCB 業者砸 2,000 億擴產、美光示警記憶體缺貨將延續至 2026 年後，避險基金科技股多頭部位創歷史新高。"
+    "AI 需求帶動台灣工業與製造業生產指數連 26 紅，4 月零售與餐飲營業額也雙創同期新高。",
+    "賴清德總統宣示將深化台歐晶片、AI 與無人機合作，定位台灣為民主供應鏈關鍵節點。",
+    "黃仁勳於 COMPUTEX 前夕再度與台積電高層聚餐，凸顯台灣在全球 AI 供應鏈的中樞地位。",
+    "Piper Sandler 警告即便美伊達協議，荷莫茲海峽恐再封閉數月，油價衝上新高，加深煉油業營運不確定性。",
+    "潤泰集團總裁尹衍樑辭世，享壽 76 歲，落幕橫跨紡織、營建、零售、金融、生技與公益的台灣企業傳奇。"
   ],
   "sections": [
     {
@@ -13,44 +13,28 @@
       "section_zh": "股市行情",
       "items": [
         {
-          "title_zh": "台股早盤衝破 44,000 點創新高後翻黑，記憶體與 PCB 股接棒",
-          "title_en": "TAIEX breaks above 44,000 to new record before retreating, memory and PCB names lead",
-          "summary_zh": "台股 5/26 早盤在台積電與聯電領軍下一度衝上 44,097 點，漲逾 400 點再創新高，隨後台積電走弱、指數震盪翻黑，但記憶體與 PCB 股持續挺進，預估全日成交量達 1.74 兆元，凸顯 AI 主題盤資金過度集中。",
-          "summary_en": "Taiwan's benchmark TAIEX opened sharply higher on 26 May, briefly piercing 44,097 (up more than 400 points) and setting a fresh all-time high on the back of TSMC and UMC strength. The index later turned negative as TSMC weakened, but memory and PCB names continued to advance with estimated full-day turnover of NT$1.74 trillion, underscoring how concentrated the AI-driven rally has become.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6470433"
+          "title_zh": "台積電分紅溝通會今日登場 董座魏哲家親上第一線",
+          "title_en": "TSMC chairman to host annual bonus communication meeting in person",
+          "summary_zh": "台積電今（27）日舉行年度分紅溝通會，董事長魏哲家親自向員工說明 2026 年分紅方案。在 AI 半導體景氣火熱、員工酬勞議題敏感之際，市場關注魏董對下半年產能利用率、先進製程議價力，以及亞利桑那、熊本、德勒斯登廠人力布局的釋疑。",
+          "summary_en": "TSMC chairman C.C. Wei will personally chair the company's employee bonus communication meeting today, addressing staff on the 2026 profit-sharing scheme amid heightened sensitivity over compensation in the AI-fuelled semiconductor cycle. Investors will watch for any commentary on H2 capacity utilisation, advanced node pricing power and the long-term staffing plan for Arizona, Kumamoto and Dresden fabs.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/5612/9527540"
         },
         {
-          "title_zh": "台股總市值超越印度 躍升全球第五大股市",
-          "title_en": "Taiwan overtakes India to become world's fifth-largest stock market",
-          "summary_zh": "彭博資料顯示，台灣股市總市值已超越印度，躋身全球第五大，主要動能來自「護國神山」台積電的爆炸性漲勢。此排名變化既反映台灣半導體題材的強勢，也凸顯外資近期屢屢示警的指數集中度風險。",
-          "summary_en": "According to Bloomberg, Taiwan's total stock-market capitalization has surpassed India's, propelling the island to the fifth spot globally. The move is driven primarily by the explosive rally in TSMC, whose weighting now dominates TAIEX and ETF inflows worldwide. The ranking change highlights both the strength of Taiwan's semiconductor narrative and the concentration risk increasingly flagged by foreign houses.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6470116"
+          "title_zh": "環球晶董座徐秀蘭：今年市況相對好非常多 預告下半年漲價",
+          "title_en": "GlobalWafers signals H2 price hikes as semiconductor wafer market improves sharply",
+          "summary_zh": "環球晶董事長徐秀蘭指出，今年矽晶圓市況相較去年「好非常多」，並預告下半年將選擇性調漲價格，主因 12 吋產能仍緊俏、AI 伺服器需求強勁。整個上游矽晶圓供應鏈如合晶、嘉晶、台勝科等同步受惠。",
+          "summary_en": "GlobalWafers chair Doris Hsu told investors that the silicon wafer market is \"materially better\" than last year and pre-announced selective price hikes in the second half, citing tight 12-inch capacity and AI-server-driven demand. The guidance lifts the entire upstream silicon supply chain, including SAS, Wafer Works and Episil-Precision.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/11162/9525172"
         },
         {
-          "title_zh": "新台幣連四升收 31.47 元 蟬聯最強亞幣",
-          "title_en": "TWD posts fourth consecutive gain to 31.47, strongest Asian currency",
-          "summary_zh": "美伊和平協議大致談妥、荷莫茲海峽可望重啟，激勵熱錢回頭。新台幣兌美元 5/25 升值 9.8 分收 31.47 元，創近半月新高，台股單日大漲逾 1,300 點。NDF 拋售壓力下，出口商避險成本再增，但風險偏好同步回升。",
-          "summary_en": "A US-Iran peace framework around the Strait of Hormuz drove fresh hot-money inflows into Taipei. The TWD rose 9.8 cents against the USD to close at 31.47 on 25 May, a near-half-month high, while TAIEX surged more than 1,300 points. With non-deliverable forwards repricing aggressively, exporters face renewed FX-hedging pressure even as risk appetite improves.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6470022"
-        },
-        {
-          "title_zh": "金控獲利王富邦金股價暌違 30 年再現 3 位數",
-          "title_en": "Fubon Financial reclaims NT$100 share price for the first time in 30 years",
-          "summary_zh": "受首季法說會報捷激勵，市場資金移轉至金融族群，富邦金 5/26 早盤站上 100 元，為近 30 年首見。北富銀合併綜效逐步顯現、富邦人壽股市投資績效強勁，加上資本適足率穩健，是本波重要支撐。",
-          "summary_en": "Following an upbeat Q1 earnings call where management highlighted merger synergies from the Taipei Fubon Commercial Bank integration, Fubon FHC shares rallied past NT$100, a level last seen three decades ago. Strong equity-related profits at Fubon Life and a robust capital ratio were cited as the main drivers. The move makes Fubon the second financial holding to cross the symbolic threshold this cycle.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6470449"
-        },
-        {
-          "title_zh": "永豐金股東會通過歷史新高股利 1.3 元 七席董事原班人馬連任",
-          "title_en": "SinoPac Financial AGM approves record-high NT$1.3 dividend, slate of seven directors re-elected",
-          "summary_zh": "永豐金控 5/26 召開股東常會，通過配發每股現金股利 1.3 元再寫歷史新高，並完成第九屆董事會改選共七席、維持原陣容，象徵策略與治理的延續，並維持其在金控同業中具競爭力的配息率。",
-          "summary_en": "At its 2026 AGM on 26 May, SinoPac Financial (2890) passed a cash dividend of NT$1.3 per share — its highest ever — and completed re-election of all seven board seats with the existing line-up intact, signalling continuity of strategy and governance. The dividend keeps SinoPac's payout ratio competitive within the Taiwanese FHC peer group amid an AGM season focused on capital returns.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6470365"
+          "title_zh": "輝達執行長黃仁勳飯局 台積電高層到齊",
+          "title_en": "Nvidia CEO Jensen Huang dines with TSMC top brass on eve of COMPUTEX",
+          "summary_zh": "輝達執行長黃仁勳於台北私廚再度宴請台積電高層，董事長魏哲家與主要廠區主管出席。兩人在現場親自發送炒麵飲料給粉絲，象徵客戶與晶圓代工關係緊密，為 COMPUTEX 與新世代 AI 加速器藍圖鋪陳。",
+          "summary_en": "Nvidia CEO Jensen Huang once again gathered TSMC's senior leadership at a private Taipei dining venue, with chairman C.C. Wei and key fab managers reportedly in attendance. The high-profile meal — Huang and Wei personally served fried noodles to fans outside — signals tight customer–foundry alignment heading into COMPUTEX and the next-gen AI accelerator roadmap.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/5612/9527552"
         }
       ]
     },
@@ -59,36 +43,60 @@
       "section_zh": "產業動態",
       "items": [
         {
-          "title_zh": "環球晶董座徐秀蘭預告下半年矽晶圓漲價",
-          "title_en": "GlobalWafers chair Doris Hsu signals H2 silicon-wafer price hikes",
-          "summary_zh": "環球晶 5/25 股東會上，董事長徐秀蘭表示今年市況「相對去年好非常多」，並預告下半年將調漲售價，主因成本上漲與折舊攤提增加。AI 伺服器與先進封裝拉抬矽晶圓稼動率回升，台勝科、中美晶等同業可望受惠。",
-          "summary_en": "At GlobalWafers' (6488) AGM on 25 May, chair Doris Hsu said current market conditions are \"far better than last year\" and pre-announced a price hike for the second half of 2026, citing both cost inflation and higher depreciation from new capacity. Demand from AI servers and advanced packaging is pulling silicon wafer utilization back to pre-downturn levels, with peers TSC (3532) and Sino-American Silicon (5483) seen as likely beneficiaries.",
+          "title_zh": "夏普、鴻海深度整合 兩路並進 成為鴻海集團戰略藍圖一環",
+          "title_en": "Sharp deepens integration with Hon Hai, embedding \"3+3+3\" strategy into its own roadmap",
+          "summary_zh": "夏普新任社長河村哲治來台表示，將與鴻海深度整合，鴻海 3+3+3 戰略架構也納入夏普藍圖。夏普將以 AI 伺服器、電動車、機器人三大新事業並進，同時延伸家電與資訊科技本業，成為鴻海集團 AI 硬體布局的重要支柱。",
+          "summary_en": "Sharp's new president Tetsuji Kawamura said in Taipei that the Japanese consumer electronics maker will deepen integration with parent Hon Hai (Foxconn), folding the group's \"3+3+3\" strategic framework into Sharp's own roadmap. Sharp will pursue three new businesses — AI servers, EVs and robots — alongside its legacy home appliance and IT product lines, positioning it as a key pillar of Hon Hai's AI hardware push.",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/11162/9525172?from=edn_subcatelist_cate"
+          "source_url": "https://money.udn.com/money/story/5612/9527477"
         },
         {
-          "title_zh": "訂單滿、產能缺！PCB 業者揪團砸逾 2,000 億搶建產能",
-          "title_en": "Taiwan PCB makers pool NT$200B+ capex to close AI structural capacity gap",
-          "summary_zh": "面對 AI 伺服器與 800G 交換器需求爆量，但高層數板與 HDI 產能吃緊，欣興、南亞 PCB、金像電等龍頭未來兩年將合計投入逾 2,000 億元擴充國內外產能，台廠 PCB 供應鏈將鎖定 2027 年前的 AI 建置週期商機。",
-          "summary_en": "Faced with overflowing AI-server and 800G-switch orders but tight high-layer-count and HDI capacity, leading PCB houses including Unimicron, Nan Ya PCB and Gold Circuit are jointly committing more than NT$200 billion in capex over the next two years to expand domestic and overseas fabs. The capacity push positions Taiwan PCB suppliers to anchor the AI build-out cycle through 2027.",
-          "source_name": "工商時報",
-          "source_url": "https://www.ctee.com.tw/news/20260525700182-430502"
+          "title_zh": "COMPUTEX 大戲 6 月 2 日登場 30 大咖開講 展現對台灣供應鏈的高度關注",
+          "title_en": "COMPUTEX 2026 to convene 30+ keynote speakers from US$10T worth of global tech firms",
+          "summary_zh": "外貿協會董事長黃志芳表示，台北國際電腦展 6 月 2 日登場，邀請逾 30 位重量級講者，其代表企業總市值高達 10 兆美元，反映全球科技業對 AI 浪潮與台灣供應鏈的高度重視。市場可望取得 AI 伺服器、先進封裝、機器人、矽光子等明確指引。",
+          "summary_en": "TAITRA chairman James C.F. Huang said COMPUTEX, opening June 2 in Taipei, will host more than 30 keynote speakers from companies with combined market cap of US$10 trillion. The line-up reflects intensifying global focus on the AI wave and Taiwan's supply chain. Expect concrete signals on AI-server roadmaps, advanced packaging, robotics and silicon photonics throughout the week.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/5612/9527571"
         },
         {
-          "title_zh": "緯穎洪麗寗：AI 絕對不是泡沫 美廠擴產規模再加碼",
-          "title_en": "Wiwynn chair Emily Hong: \"AI is absolutely not a bubble,\" doubling down on US capacity",
-          "summary_zh": "緯穎 5/25 股東會上，董事長洪麗寗強調 AI 絕對不是泡沫，客戶對美國新廠產能需求「比想像中更好」，未來將進一步擴大美國新產能，承接 AI 基礎建設龐大商機。緯穎為主要雲端伺服器 ODM，深度連動超大型雲商資本支出。",
-          "summary_en": "Wiwynn (6669) chair Emily Hong told shareholders on 25 May that customer demand for the new US plants is \"even better than imagined\", confirming further capacity expansion in America to meet the massive AI infrastructure build-out. Hong pushed back on bubble narratives, arguing utilization rates and order visibility remain very strong. Wiwynn is a key cloud-server ODM exposed to hyperscaler capex.",
+          "title_zh": "穎崴訂單能見度看到半年 仁武新廠周五動土 今年營收再戰新高",
+          "title_en": "WIN Semi sees 5–6 months of order visibility, breaks ground on Renwu Fab Friday",
+          "summary_zh": "半導體測試介面大廠穎崴董事長王嘉煌指出，AI 帶動半導體需求超乎預期，訂單能見度已看到五、六個月以後，目前優先極大化產能；29 日仁武新廠動土，全年營收挑戰再寫新高。",
+          "summary_en": "Semiconductor test interface leader WIN Semi (Winway) chairman Wang Chia-Huang said AI-driven semiconductor demand has exceeded expectations and order visibility now stretches five to six months out. The company is fast-tracking capacity expansion, including breaking ground on the new Renwu fab on May 29, and targets a fresh annual revenue record.",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/5612/9525107?from=edn_subcatelist_cate"
+          "source_url": "https://money.udn.com/money/story/11162/9527468"
         },
         {
-          "title_zh": "半導體、資通訊強拉 主計總處：今年經濟成長坐七望八",
-          "title_en": "DGBAS: Semiconductor and ICT strength may push 2026 Taiwan GDP growth toward 7–8%",
-          "summary_zh": "主計總處最新預估，2026 年台灣 GDP 成長率可望從原先 3% 多大幅上修至「保 7」基本面，若 AI 出口動能延續最高上看 8%。動能高度集中於半導體與資通訊製造，傳統產業表現低迷，總體數據的集中度風險同步浮現。",
-          "summary_en": "Taiwan's Directorate-General of Budget, Accounting and Statistics now sees full-year 2026 GDP growth accelerating from earlier forecasts of mid-3% to a base case of around 7%, with an upside of 8% if AI export momentum continues. The revision is driven almost entirely by semiconductor and ICT-related production, while traditional sectors remain sluggish. The split highlights growing concentration risk in the macro print itself.",
+          "title_zh": "世芯 3 奈米製程晶片案本月已量產 估 6 月起迎業績爆發",
+          "title_en": "Alchip's 3nm tape-out enters mass production this month, June revenue ramp ahead",
+          "summary_zh": "世芯首件 3 奈米製程晶片案本月正式量產，預估 6 月起營收將大幅躍升，反映其在超大型雲端業者 ASIC 委託設計鏈中的關鍵地位；先進製程 AI 訓練晶片均價高，將顯著拉抬獲利。",
+          "summary_en": "Alchip Technologies' first 3nm tape-out project has entered mass production this month and is expected to drive a major revenue ramp from June onwards, the company indicated. The milestone underscores Alchip's position in the ASIC-for-hyperscaler value chain, where AI training silicon at advanced nodes commands premium ASPs.",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/10869/9521692?from=edn_subcatelist_cate"
+          "source_url": "https://money.udn.com/money/story/5612/9527789"
+        },
+        {
+          "title_zh": "鋼鐵業者瞄準 AI 基建商機；鋼市四多加持 中鋼、中鴻、燁興展望向上",
+          "title_en": "Steelmakers eye AI infrastructure as the next demand driver",
+          "summary_zh": "中鋼、中鴻、燁興等鋼廠調整產品組合切入 AI 基建——資料中心鋼構、電源設備外殼及高規不鏽鋼。全球鋼市景氣轉熱，分析師點出資本支出循環、補庫存、中國傾銷降溫、AI 需求等「四多」加持，下半年展望走升。",
+          "summary_en": "Taiwan steelmakers including China Steel, Chung Hung Steel and Yieh Hsing are pivoting product mixes toward AI infrastructure — data center steel framing, power equipment housings and high-spec stainless. Global steel sentiment has turned warmer on the AI build-out, with analysts citing \"four positive forces\" (capex cycle, restocking, lower China dumping, AI demand) lifting H2 outlook.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/10871/9525016"
+        },
+        {
+          "title_zh": "台塑化「抗戰」祭三大策略 董座曹明：今年營運會比去年好",
+          "title_en": "Formosa Petrochemical rolls out three-pronged playbook against US–Iran shockwaves",
+          "summary_zh": "台塑化董事長曹明表示，面對美伊戰爭引發油價波動與料源受阻，公司透過多元採購、調整中東運輸路線、調整製程增產高利產品三招因應，預期今年營運將優於去年；但坦言油價走勢「只有阿拉知道」。",
+          "summary_en": "FPCC chairman Tsao Ming said the refiner is countering oil-supply disruption from the US–Iran conflict via diversified procurement, re-routing Middle East shipping lanes and tweaking the production slate toward higher-margin products. Tsao expects 2026 operations to beat 2025 despite volatile crude, though he cautioned that only \"Allah knows\" where oil prices ultimately settle.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/10871/9527454"
+        },
+        {
+          "title_zh": "AI 趨勢反轉？4 月製造業生產指數年增 15% 經部：不如預期 指向這 2 因素",
+          "title_en": "April manufacturing index +15% YoY but trails forecast, Ministry flags two headwinds",
+          "summary_zh": "4 月製造業生產指數年增 15.13%，雖仍強勁但低於官方預估。經濟部解釋係去年同期基期偏高及客戶提前拉貨告一段落兩因素所致，使市場對 AI 超級循環樂觀情緒略為降溫，5、6 月數據將是後續關鍵。",
+          "summary_en": "Taiwan's April manufacturing production index posted 15.13% YoY growth — strong but below the official forecast. The Ministry of Economic Affairs pointed to two drag factors: a high comparison base and front-loaded shipments having tapered. The print tempers some of the AI-supercycle euphoria and merits close watch for May/June read-through.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/10869/9527177"
         }
       ]
     },
@@ -97,36 +105,20 @@
       "section_zh": "金融業",
       "items": [
         {
-          "title_zh": "富邦金法說會：北富銀合併綜效顯現 全年拚當「五兆元」銀行",
-          "title_en": "Fubon FHC Q1 call: Taipei Fubon Bank merger synergies push group toward NT$5 trillion banking franchise",
-          "summary_zh": "富邦金首季法說會顯示獲利由富邦人壽領軍，管理層強調北富銀合併綜效已實質貢獻交叉銷售、NIM 提升與資本效率。並提出全年衝刺「五兆元」民營商銀規模的目標，對國泰金與中信金形成壓力。",
-          "summary_en": "Fubon Financial reported strong Q1 results led by Fubon Life, with chair-level commentary emphasizing that the Taipei Fubon Bank merger is now visibly contributing through cross-sell, NIM uplift and improved capital efficiency. Management set an explicit aspirational target of becoming Taiwan's first \"NT$5 trillion\" private commercial bank by combined asset size by year-end. The framing places further pressure on peers Cathay and CTBC.",
+          "title_zh": "尹衍樑辭世！親自走工地、凡事要求極致 打造潤泰王國傳奇",
+          "title_en": "Ruentex Group founder Samuel Yin passes away at 76, leaving a financial conglomerate legacy",
+          "summary_zh": "潤泰集團總裁尹衍樑辭世享壽 76 歲。從家族紡織廠出發，打造橫跨紡織、營建、零售（全聯）、金融（南山人壽）、生技與公益的潤泰王國，是台灣企業界傳奇。後續潤泰金融、保險、地產等版圖接班布局，將是金融業關注焦點。",
+          "summary_en": "Samuel Yin Yan-Liang, founder of Ruentex Group and a towering figure in Taiwanese business, passed away at 76. From a family textile mill he built an empire spanning textiles, construction, retail (Pxmart), finance (Ruentex Financial Holdings stake in Nan Shan Life), biotech and philanthropy. The succession picture across Ruentex's banking, insurance and real-estate units becomes the immediate question for the financial industry.",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/5613/9524918?from=edn_subcatelist_cate"
+          "source_url": "https://money.udn.com/money/story/5612/9527585"
         },
         {
-          "title_zh": "富邦金羅瑋示警 AI 黑天鵝與七月關稅大限",
-          "title_en": "Fubon chief economist Lo Wei warns of AI black-swan risks and July tariff cliff",
-          "summary_zh": "富邦金首席經濟學家羅瑋在法說會上提醒，AI 多頭同時要盯緊 AI 硬體供應鏈的存貨堆積與七月初的美國關稅大限，這兩者可能成為下行催化因素。基本面需求真實存在，但漲速過快已累積戰術性風險，與賣方近期對部位過度擁擠的提醒一致。",
-          "summary_en": "At Fubon FHC's Q1 call, chief economist Lo Wei cautioned investors to watch inventory pile-ups in the AI hardware supply chain and the looming early-July US tariff deadline as potential downside catalysts. He argued underlying demand is real, but the speed of the rally has created tactical risk. Fubon's view echoes recent sell-side commentary suggesting positioning is now stretched.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6470049"
-        },
-        {
-          "title_zh": "金管會主委彭金隆：擴大本土資管規模 拚區域金融中心",
-          "title_en": "FSC chair Peng Jin-long: scale up domestic asset management to compete as regional hub",
-          "summary_zh": "彭金隆表示，台灣若有意爭取成為區域金融中心，必須擴大本土資產管理業者規模。研議方向包括擴大高資產客戶的境內基金可投資範圍、加速產品核准、提供誘因吸引外資資管設立境內主體；與財管 2.0 政策架構同步推進。",
-          "summary_en": "FSC chair Peng Jin-long said Taiwan must enlarge the AUM of its home-grown asset managers if it wants to compete with Singapore and Hong Kong as a regional financial centre. Concrete measures under discussion include broader access to onshore funds for high-net-worth individuals, faster product approvals, and incentives for foreign asset managers to set up onshore master vehicles. The push aligns with the wider WM 2.0 framework.",
+          "title_zh": "金融競爭力論壇 7 月 1 日登場／富蘭克林：私募市場 助財富傳承",
+          "title_en": "Financial Competitiveness Forum to convene July 1, with private markets and wealth succession as headline themes",
+          "summary_zh": "經濟日報年度金融競爭力論壇將於 7 月 1 日舉行，富蘭克林等資產管理業者將以「私募市場如何成為財富傳承工具」為主題開講。議程顯示金融業正全面轉向高資產解決方案、另類投資與跨世代規劃。",
+          "summary_en": "Economic Daily News' annual Financial Competitiveness Forum will be held on July 1, with Franklin Templeton among the keynote speakers focused on how private markets can serve as a vehicle for wealth succession. The agenda underlines the industry pivot toward HNW client solutions, alternatives and intergenerational planning.",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/5613/9525024?from=edn_maintab_cate"
-        },
-        {
-          "title_zh": "富邦人壽、富邦產險導入 AI 加速保險三大流程",
-          "title_en": "Fubon Life and Fubon Insurance deploy AI across underwriting, claims and onboarding",
-          "summary_zh": "富邦金旗下富邦人壽與富邦產險協同布局數位保險，運用 AI 與數位身分驗證優化「投保、核保、理賠」三大核心流程，定位為服務體驗升級與成本槓桿，管理層表示作業時程已具體下降。國泰人壽與南山人壽亦同步推進類似專案。",
-          "summary_en": "Fubon FHC's life and P&C subsidiaries announced a coordinated rollout of AI and digital-ID verification to streamline the three core insurance flows: policy issuance, underwriting and claims. The initiative is positioned as both a service-experience upgrade and a cost lever, with management citing measurable reductions in turnaround times. Peers Cathay Life and Nan Shan are running parallel projects.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6469638"
+          "source_url": "https://money.udn.com/money/story/5648/9527574"
         }
       ]
     },
@@ -135,66 +127,20 @@
       "section_zh": "財富管理",
       "items": [
         {
-          "title_zh": "華南永昌證獲准開辦財管 2.0 跨入私銀領域",
-          "title_en": "Hua Nan Yongchang Securities wins WM 2.0 approval, becomes latest house to enter private-banking arena",
-          "summary_zh": "金管會核准華南永昌證券開辦「財富管理 2.0」業務，與銀行同等資格服務高資產客戶、提供多元境內外商品。財管 2.0 由銀行延伸至券商通路，私銀 AUM 競爭再升溫；華南金集團視此為承接世代財富傳承資金的重要利器。",
-          "summary_en": "The FSC granted Hua Nan Yongchang Securities approval to launch Wealth Management 2.0 services, putting the brokerage on the same footing as banks for serving high-net-worth clients with diversified onshore and offshore product access. The approval extends WM 2.0 beyond the bank channel and tightens competition for private-banking AUM. Hua Nan group sees this as critical to capturing inter-generational wealth-transfer flow.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6469962"
-        },
-        {
-          "title_zh": "臺銀辦黃金 RWA 代幣化論壇 打造台灣鏈上經濟起點",
-          "title_en": "Bank of Taiwan hosts gold RWA tokenization forum to pioneer real-world-asset tokenization",
-          "summary_zh": "適逢 127 週年行慶，臺銀邀集近百家金融同業探討貴金屬 RWA 代幣化發展，與會者認為黃金代幣化是 RWA 切入點，但仍需建立監理框架、資產保管機制與法遵制度。公股龍頭臺銀藉此卡位台灣鏈上經濟先機。",
-          "summary_en": "On its 127th anniversary, Bank of Taiwan brought together nearly a hundred financial institutions to debate tokenized gold as the natural entry point for real-world-asset (RWA) tokenization in Taiwan. Participants flagged that meaningful adoption depends on a clear supervisory framework, custodial infrastructure and compliance systems. The discussion places state-owned BoT at the centre of Taiwan's nascent on-chain economy.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6469999"
-        },
-        {
-          "title_zh": "黃金存摺交易量較前波高峰減五成 資金轉戰股市",
-          "title_en": "Gold-passbook trading volume falls ~50% from peak as money rotates into equities",
-          "summary_zh": "金價陷入盤整，銀行業透露近期黃金存摺交易量大幅量縮，市場預估較前波高峰減少約五成。銀行直言股市熱度把可動用資金都吸走，凸顯零售資金快速由防禦性資產轉向高度集中的 AI 題材曝險。",
-          "summary_en": "As gold prices grind sideways, Taiwanese banks report gold-passbook trading volume now down around 50% from the prior peak. Bank channels openly attribute the slump to the equity-market euphoria pulling discretionary savings into the TAIEX rally. The shift highlights how quickly retail capital is rotating away from defensive assets toward concentrated AI-themed exposure.",
+          "title_zh": "富蘭克林：私募市場 助財富傳承",
+          "title_en": "Franklin Templeton makes the case for private markets as a wealth-succession tool",
+          "summary_zh": "富蘭克林於 7 月 1 日金融競爭力論壇前夕指出，私募市場（私募股權、私募債權、基礎建設）正成為高資產客戶傳承規劃中愈來愈關鍵的建構模組。此一視角呼應銀行財管 2.0 走向，另類投資、家族信託架構、稅務優化規劃，將是 AUM 成長與手續費收入的主軸。",
+          "summary_en": "Speaking ahead of the July 1 Financial Competitiveness Forum, Franklin Templeton highlights private markets — private equity, private credit and infrastructure — as increasingly important building blocks for HNW wealth transfer plans. The angle dovetails with banks' wealth-management 2.0 push, where alternatives, family-trust wrappers and tax-aware structuring underpin AUM growth and fee margins.",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/5613/9525005?from=edn_maintab_cate"
+          "source_url": "https://money.udn.com/money/story/5648/9527574"
         },
         {
-          "title_zh": "1111 調查：上班族 4 成 ETF 基金 380 萬資產才感「安全」",
-          "title_en": "Survey: 37.5% of Taiwanese office workers prefer ETFs/mutual funds; NT$3.8M is the \"safe\" net-worth threshold",
-          "summary_zh": "1111 人力銀行調查指出，台股雖頻創新高，固定薪資族投資仍偏保守：37.5% 偏好 ETF 或基金、36.1% 以存款為主、高風險操作不到 1 成；逾 4 成受訪者 2025 年靠股市獲利，但平均需擁有 380 萬元流動資產才感到「安全」，門檻較往年再上修。",
-          "summary_en": "A 1111 Job Bank survey shows that despite record TAIEX highs, salaried workers remain conservative — 37.5% prefer ETFs/mutual funds, 36.1% keep most assets in deposits, and fewer than 10% take high-risk positions. More than 40% made money in equities in 2025, but respondents on average say NT$3.8 million in liquid assets is needed before they feel financially \"safe\", a figure that has crept upward in recent surveys.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6468358"
-        }
-      ]
-    },
-    {
-      "section": "Tax & Regulations",
-      "section_zh": "稅務法規",
-      "items": [
-        {
-          "title_zh": "未成年子女免稅額擬加碼 50% 約 200 萬戶受惠 兒少 TISA 將訂專法",
-          "title_en": "MoF plans 50% additional minor-child tax exemption, benefiting ~2 million households; child TISA may get its own statute",
-          "summary_zh": "行政院本周將拍板「0–18 歲全程支持計畫」，財政部規劃提高 0–18 歲未成年子女免稅額 50%，比照 70 歲以上直系親屬。初估約 200 萬戶受惠，最快今年上路、明年 5 月報稅季適用；兒少 TISA 投資帳戶也將研議專法。",
-          "summary_en": "Under the Executive Yuan's \"0–18 Full-Stage Support Plan\" to be finalized this week, the Ministry of Finance will raise the personal exemption for children aged 0–18 by 50% (mirroring the bonus given for dependent ascendants aged 70+). It would benefit roughly 2 million households, taking effect as early as this year for the May 2026 filing season. A dedicated statute for the proposed child TISA savings account is also being studied.",
+          "title_zh": "環球晶下半年漲價預告 重塑高資產客戶半導體配置論述",
+          "title_en": "GlobalWafers H2 price-hike guidance reshapes HNW portfolio narrative on Taiwan semis",
+          "summary_zh": "環球晶預告下半年選擇性漲價，並維持產能緊俏訴求，影響不止於股市。結構商品台、投資諮詢委任及自主配置帳戶中與半導體相關（台積電、日月光、環球晶、ASIC 設計）部位，將有更清晰的基本面錨點，財管端可望重新校準結構債票息與下檔保護價位。",
+          "summary_en": "GlobalWafers' pre-announced H2 selective price hikes and bullish capacity narrative resonate beyond pure equities: structured-product desks, advisory mandates and discretionary portfolios with semiconductor tilts (TSMC, ASE, GlobalWafers and ASIC plays) now have a clearer fundamental peg for product reissues and yield enhancement structures. Wealth advisors will likely re-anchor structured-note coupon levels and barrier prices against this refreshed thesis.",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/6710/9525111?from=edn_maintab_cate"
-        },
-        {
-          "title_zh": "出售繼承自建屋課稅放寬 持有期間可併計被繼承人土地持有期間",
-          "title_en": "MoF eases capital-gains rule for sale of inherited self-built houses to include land-holding period",
-          "summary_zh": "財政部放寬個人出售繼承、受遺贈自建房屋的房地合一課稅規定：原本僅能併計被繼承人「房屋」持有期間，現放寬可併計「土地」持有期間。因該類案件多為先持有土地再自建或合建分屋，調整後總持有期間拉長，可顯著降低房地合一稅負。",
-          "summary_en": "The Ministry of Finance has relaxed the rules on selling inherited or bequeathed self-built houses. Previously, only the decedent's holding period of the *house* was tacked onto the heir's holding period; the rule now also lets heirs tack on the *land* holding period. Because such cases typically involve owning the land first then building (or joint-construction sharing), the change can materially lengthen the combined holding period and reduce the integrated land-and-house tax rate.",
-          "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/6710/9524955?from=edn_maintab_cate"
-        },
-        {
-          "title_zh": "報稅季倒數 8 天 190 萬戶搶搭末班車",
-          "title_en": "May tax-filing season: only 8 days left, 1.9 million households still need to file",
-          "summary_zh": "截至 5/24，114 年度綜所稅申報已達 508 萬件，佔去年總申報件數 698 萬件的 73%，距 6/1 截止仍有約 190 萬戶待申報。北區國稅局強調網路申報與超商繳款仍是最快選項，銀行與卡片發卡機構則祭出大額回饋搶攻末段繳稅錢包。",
-          "summary_en": "As of 24 May, 5.08 million of an expected 6.98 million returns had been filed for the 2025 tax year, leaving roughly 1.9 million households to file before the 1 June deadline. The Taipei National Taxation Bureau highlighted that the online portal and convenience-store payments remain the fastest options. Banks and card issuers are running large rebates to capture the late-filing wallet share.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6469990"
+          "source_url": "https://money.udn.com/money/story/11162/9525172"
         }
       ]
     },
@@ -203,20 +149,44 @@
       "section_zh": "總經政策",
       "items": [
         {
-          "title_zh": "凱投宏觀：縱使中東衝突落幕 多數央行今年仍難降息",
-          "title_en": "Capital Economics: even if Middle-East conflict ends, most major central banks unlikely to cut rates in 2026",
-          "summary_zh": "凱投宏觀指出，即便美伊衝突落幕、油價回歸正常，光憑這點不足以讓 G10 多數央行於 2026 年啟動降息。核心服務通膨僵固、薪資黏性與重建中的財政溢酬，使政策利率維持高位；觀點與債市已大致 price out 今年聯準會降息一致。",
-          "summary_en": "A Capital Economics note argues that a resolution of the US-Iran conflict and a normalization of oil prices would not by themselves justify rate cuts in most G10 economies this year. Persistent core services inflation, sticky wage growth and rebuilding fiscal premia are keeping policy rates anchored. The view aligns with bond markets having largely priced out Fed cuts for 2026.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6470058"
+          "title_zh": "賴總統：台扮演晶片、AI 供應鏈關鍵 將與歐深化無人機合作",
+          "title_en": "President Lai positions Taiwan as a \"key node\" in the chip and AI supply chain at Europe Day banquet",
+          "summary_zh": "賴清德總統 5 月 26 日於「2026 歐洲日晚宴」表示，半導體與 AI 是全球繁榮與民主安全的雙支柱，台灣在高階晶片與 AI 供應鏈扮演關鍵角色，並將深化與歐洲的無人機合作，顯示產業政策與國防工業同步向歐盟靠攏。",
+          "summary_en": "Speaking at the 2026 Europe Day banquet on May 26, President Lai Ching-te said semiconductors and AI are the twin pillars of global prosperity and democratic security, and Taiwan occupies a key role in advanced chip and AI supply chains. Taiwan will also deepen drone collaboration with European partners, signalling parallel industrial-policy and defence-industrial alignment with the EU.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/7307/9527429"
         },
         {
-          "title_zh": "賴清德：千億元挺中小微企與傳產 2040 年前協助百萬家智慧化",
-          "title_en": "President Lai pledges NT$100B to upgrade SMEs and traditional industries alongside \"AI New Ten Construction\" plan",
-          "summary_zh": "賴清德 5/25 接見工商團體時表示，政府將推動 1,000 億元計畫加速中小微企業及傳統產業升級轉型，搭配「AI 新十大建設」並行，目標 2040 年前協助 100 萬家中小企業導入智慧化技術。",
-          "summary_en": "Receiving business-group representatives on 25 May, President Lai Ching-te reiterated that the government will launch a NT$100 billion programme to accelerate the upgrading and transformation of small, medium and micro enterprises plus traditional industries. The plan will run alongside the broader \"AI New Ten Major Construction\" initiative, with a target of helping one million SMEs adopt smart-manufacturing technologies by 2040.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6470025"
+          "title_zh": "少子化大禮包 賴清德總統今拍板 將說明 0-18 歲成長津貼等細節",
+          "title_en": "Cabinet to roll out \"Demographic Strategy\" package: 0–18 NT$5,000 monthly subsidy, 12-week maternity leave, 14-day paternity leave",
+          "summary_zh": "賴清德總統今（27）日召開國安會議，拍板「台灣人口對策新戰略-家庭支持篇」：0-18 歲每月 5,000 元成長津貼、彈性育兒假放寬至 6 歲、產假由 8 周延長至 12 周、陪產假由 7 日延長至 14 日，延長期間薪資成本由政府補貼。",
+          "summary_en": "President Lai will today convene a National Security Council meeting to finalise the \"Taiwan Population Strategy — Family Support Chapter,\" including a NT$5,000 monthly growth subsidy for children aged 0–18, expansion of flexible parental leave to age 6, extension of maternity leave from 8 to 12 weeks and paternity leave from 7 to 14 days. Salary costs during extended leave will be subsidised by the government.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/7307/9527531"
+        },
+        {
+          "title_zh": "AI 需求旺 工業、製造業生產連 26 紅 上月指數雙創同期新高",
+          "title_en": "Taiwan's industrial and manufacturing production indices both hit fresh April records — 26 consecutive months of YoY growth",
+          "summary_zh": "經濟部公布 4 月工業生產指數 125.63、製造業生產指數 127.81，年增 14.16% 與 15.13%，雙創歷年同月新高，皆為連 26 紅。AI 伺服器、先進製程晶圓代工與零組件領漲，傳產相對落後。",
+          "summary_en": "The MOEA released April readings of 125.63 (industrial) and 127.81 (manufacturing), up 14.16% and 15.13% YoY respectively — fresh same-month highs and 26 straight months of YoY growth. AI server, advanced-node foundry and component categories led the gains, while traditional sectors lagged.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/10869/9527455"
+        },
+        {
+          "title_zh": "內需續熱！4 月零售業、餐飲業營業額皆創同月新高",
+          "title_en": "Retail and dining sales both set all-time April highs as long weekend and Mother's Day boost demand",
+          "summary_zh": "連假與母親節加持，4 月零售與餐飲營業額雙創同期新高，內需動能與 AI 出口循環同步，撐起第 2 季消費類股獲利韌性的多頭論述。",
+          "summary_en": "Taiwan's April retail and food-service sales both hit record highs for the month, supported by a long weekend and Mother's Day. The data reinforces a domestic-demand-led growth story alongside the AI export cycle, and supports the case for sticky consumer-discretionary earnings into Q2.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/10869/9527197"
+        },
+        {
+          "title_zh": "台積電投資最在乎什麼？經長透露：不是電價成本 但最在意「這一項」",
+          "title_en": "MOEA minister: TSMC's biggest investment concern isn't power costs but reliable supply",
+          "summary_zh": "經濟部長受訪表示，台積電在新投資決策上，最關注的並非電價本身，而是供電的穩定與可靠性。此一表態凸顯電網韌性與可調度容量為台灣產業政策核心議題。",
+          "summary_en": "In a closed-door interview, Taiwan's Economic Affairs Minister revealed that what TSMC cares most about when making new investments isn't the electricity cost itself, but the stability and reliability of supply. The signal underscores why grid resilience and dispatchable capacity sit at the centre of Taiwan's industrial-policy debate.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/7307/9527360"
         }
       ]
     },
@@ -225,36 +195,28 @@
       "section_zh": "國際財經",
       "items": [
         {
-          "title_zh": "Fed 降息夢碎？美債 5/30 年利差創一年新低 高利率恐更久",
-          "title_en": "Fed rate-cut hopes fade: 5y-30y UST spread hits one-year low signalling \"higher for longer\"",
-          "summary_zh": "美國 5 年期與 30 年期公債殖利率利差跌至一年低點，反映長端因財政赤字疑慮上揚，並 price in 「高利率更持久」情境。長端走勢類似「華許時代」：即便市場談論降息，結構性壓力仍使終端利率高檔，股市估值對此 re-pricing 越來越敏感。",
-          "summary_en": "The spread between US 5-year and 30-year Treasury yields has dropped to a one-year low, reflecting rising long-end yields driven by deficit concerns and the market pricing rates staying high longer. The flattening at the long end echoes \"Warsh-era\" rate dynamics: even amid talk of policy easing, structural pressures keep terminal rates elevated. Equity multiples are increasingly sensitive to this re-pricing.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6470095"
+          "title_zh": "美伊達協議？Piper Sandler 潑冷水：荷莫茲海峽恐再封數月 油價飆新高",
+          "title_en": "Piper Sandler dismisses US–Iran deal optimism: Strait of Hormuz could stay disrupted for months, oil hits new highs",
+          "summary_zh": "Piper Sandler 警告，即便美伊達成協議，荷莫茲海峽恐仍將封閉數月，原油布蘭特與西德州價格再創波段新高，後續將牽動運輸燃料、石化利差與主要經濟體 CPI 數據。",
+          "summary_en": "Piper Sandler poured cold water on speculation that a US–Iran deal would quickly normalise crude flows, warning the Strait of Hormuz could remain partially blocked for several more months. Brent and WTI extended gains to fresh cycle highs, with implications for transport fuels, petrochemical margins and headline CPI prints across major economies.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/5599/9527788"
         },
         {
-          "title_zh": "高盛：避險基金科技股多頭部位創歷史新高 AI 樂觀續燒",
-          "title_en": "Goldman: hedge-fund tech longs hit historic high, AI optimism still rising",
-          "summary_zh": "高盛指出，避險基金上週大舉加碼科技股，買盤為近 3 個月最高，半導體、晶片與 AI 相關企業最受資金追捧。全球避險基金科技股多頭部位刷新歷史紀錄，反映 AI 資本支出若稍有失望，部位風險將非常顯著。",
-          "summary_en": "Goldman Sachs reports that hedge funds aggressively added technology stocks last week, with net buying at a three-month high. Semiconductors, chip-related names and AI plays attracted the largest inflows, and global tech-sector longs across the hedge-fund complex now stand at an all-time record. The data underscores positioning risk if any AI capex disappointment materializes.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6470094"
+          "title_zh": "台塑化董事長曹明看油價…只有阿拉知道",
+          "title_en": "Formosa Petrochemical chair on oil: \"only Allah knows\"",
+          "summary_zh": "在美伊緊張情勢下被問及油價走勢，台塑化董事長曹明直言「只有阿拉知道」。此一發言搭配多元採購、改線運輸、調整製程的三招應對，反映亞洲煉油業在極端地緣不確定性下的營運心態。",
+          "summary_en": "Asked for an oil-price forecast amid the US–Iran tensions, Formosa Petrochemical chairman Tsao Ming candidly said \"only Allah knows.\" The remark, delivered with three-pronged contingency planning (diversified sourcing, alternative shipping routes, product-mix tilt), captures the operating mindset of energy-intensive Asian refiners under extreme geopolitical uncertainty.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/10871/9527459"
         },
         {
-          "title_zh": "投行示警：美光 +141%、SK 海力士 +186% 別忘記憶體景氣循環",
-          "title_en": "Investment banks warn: Micron up 141%, SK Hynix up 186% — memory cycle has not been repealed",
-          "summary_zh": "AI 與 HBM 需求帶動記憶體股近兩年漲幅驚人，美光約上漲 141%、SK 海力士上漲 186%。多家賣方提醒，記憶體產業歷史性的循環性並未消失，一旦供給回追或 AI 資本支出放緩，股價回撤幅度可能相當劇烈，為市場提供必要的反向觀點。",
-          "summary_en": "Two-year gains in memory stocks have been spectacular, with Micron up roughly 141% and SK Hynix up 186% on AI / HBM demand. But several sell-side desks now caution that the historical cyclicality of memory has not disappeared; once supply catches up or AI capex slows, share-price drawdowns can be severe. The note is a useful counterweight to the recent unbroken bull narrative.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6470081"
-        },
-        {
-          "title_zh": "押注美伊和解 韓股開盤狂飆逾 3.4% 突破 8,100 點",
-          "title_en": "Korean stocks surge 3.4% at the open on US-Iran deal bets, breaking above 8,100",
-          "summary_zh": "韓股 5/26 開盤大漲逾 3.4%，KOSPI 突破 8,100 點，市場押注美伊重啟荷莫茲海峽航運將紓解能源價格壓力並支撐風險資產。三星與 SK 海力士領漲，與台廠晶片股 AI 行情同步；本周稍早韓股表現相對平淡，今日呈現補漲格局。",
-          "summary_en": "South Korean equities rallied sharply on 26 May, with KOSPI opening up more than 3.4% and surpassing 8,100 as investors bet that a US-Iran agreement to reopen the Strait of Hormuz would relieve energy-price pressure and support risk assets. Memory leaders Samsung and SK Hynix led the charge, mirroring AI-driven gains in Taiwanese chip names. The catch-up trade follows a quieter session in Korea earlier in the week.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6470111"
+          "title_zh": "5 月 27 日重要財經行事曆",
+          "title_en": "May 27 key financial calendar: Asia data, US sentiment and Fed speak headline the day",
+          "summary_zh": "經濟日報整理今日財經重要行事曆，涵蓋亞洲總經數據、美國消費者信心、央行官員講話及台股重大公告，可作為交易室與私銀晨會的事件路徑層。",
+          "summary_en": "Economic Daily News' May 27 calendar highlights the day's notable macro events and earnings releases for Taiwanese investors — covering Asia macro releases, US consumer sentiment, central-bank speeches and Taiwan corporate announcements. Use this as a routing layer for trading-desk and PB-advisory morning briefs.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/5607/9527785"
         }
       ]
     }
