@@ -1,8 +1,8 @@
-// Network-first with cache fallback (v7)
+// Network-first with cache fallback (v8)
 // 永遠優先網路（拿最新），失敗時用上次成功的快取。
 // 兼顧「總是新」+「網路 blip 時不爆」。
-// v7（2026-05-25）：強制清掉舊版 cache，解決台股摘要 panel 因舊 JS 快取而看不到的問題。
-const CACHE = "morning-board-v7";
+// v8（2026-05-27）：新增重要新聞 stale banner（news_date != today 時顯示警示）。
+const CACHE = "morning-board-v8";
 
 self.addEventListener("install", e => {
   self.skipWaiting();

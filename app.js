@@ -3379,6 +3379,34 @@ function renderStocksTable(title, list) {
   const srcLabel = (s) => s.kind === "TW"
     ? "原始來源：TWSE；驗證：Yahoo TW 歷史頁"
     : "原始來源：finnhub /quote（價/日%）+ Yahoo（MTD/YTD）；驗證：Yahoo Finance 歷史頁";
+  // 期間區間連到 Yahoo 歷史頁，period1/period2 為 UTC 12:00 epoch（避開時區邊界）
+  const histBase = (s) => s.kind === "TW"
+    ? `https://tw.stock.yahoo.com/quote/${encodeURIComponent(s.symbol)}.TW/history`
+    : `https://finance.yahoo.com/quote/${encodeURIComponent(s.symbol)}/history`;
+  const noonUTC = (y, m, d) => Math.floor(Date.UTC(y, m, d, 12, 0, 0) / 1000);
+  const periodEpochs = (s) => {
+    const m = String(s.market_date || "").match(/^(\d{4})-(\d{2})-(\d{2})$/);
+    if (!m) return null;
+    const y = +m[1], mo = +m[2] - 1, d = +m[3];
+    const end = noonUTC(y, mo, d);
+    const prevD = new Date(Date.UTC(y, mo, d));
+    prevD.setUTCDate(prevD.getUTCDate() - 1);
+    return {
+      day: { p1: noonUTC(prevD.getUTCFullYear(), prevD.getUTCMonth(), prevD.getUTCDate()), p2: end },
+      mtd: { p1: noonUTC(y, mo, 1), p2: end },
+      ytd: { p1: noonUTC(y, 0, 1), p2: end },
+    };
+  };
+  const rangedCell = (s, val, range, label) => {
+    const html = fmtPct(val);
+    if (!s.symbol || val === null || val === undefined) return html;
+    const ep = periodEpochs(s);
+    if (!ep || !ep[range]) return html;
+    const { p1, p2 } = ep[range];
+    const url = `${histBase(s)}?period1=${p1}&period2=${p2}&frequency=1d`;
+    const title = `${label} 績效區間於 Yahoo 歷史頁驗證`;
+    return `<a href="${url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-decoration-style:dotted;" title="${escapeHtml(title)}">${html}</a>`;
+  };
   const rows = list.map(s => {
     const nameCell = s.source_url
       ? `<a href="${s.source_url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline" title="${escapeHtml(srcLabel(s))}">${escapeHtml(s.name_zh)}</a>`
@@ -3395,9 +3423,9 @@ function renderStocksTable(title, list) {
     <tr>
       <td>${nameCell}${quoteSfx}</td>
       <td>${fmtPrice(s.price, s.kind)}</td>
-      <td class="${pctClass(s.change_pct)}">${fmtPct(s.change_pct)}</td>
-      <td class="${pctClass(s.mtd_pct)}">${fmtPct(s.mtd_pct)}</td>
-      <td class="${pctClass(s.ytd_pct)}">${fmtPct(s.ytd_pct)}</td>
+      <td class="${pctClass(s.change_pct)}">${rangedCell(s, s.change_pct, "day", "日")}</td>
+      <td class="${pctClass(s.mtd_pct)}">${rangedCell(s, s.mtd_pct, "mtd", "本月")}</td>
+      <td class="${pctClass(s.ytd_pct)}">${rangedCell(s, s.ytd_pct, "ytd", "今年")}</td>
       <td class="date-col"><a href="${verifyUrl(s)}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline; text-decoration-style:dotted;" title="${escapeHtml(srcLabel(s))}">${escapeHtml(shortDate(s.market_date))}</a></td>
     </tr>
   `;
@@ -3408,9 +3436,9 @@ function renderStocksTable(title, list) {
       <thead><tr>
         <th>名稱</th>
         <th title="收盤價，來源見名稱欄連結">收盤</th>
-        <th title="日報酬率，定義：今日收盤 vs 昨日收盤；來源：finnhub /quote (US) 或 TWSE (TW)">日</th>
-        <th title="月初到今報酬率（MTD），來源：Yahoo (US) 或 TWSE (TW)">本月</th>
-        <th title="年初到今報酬率（YTD），來源：Yahoo (US) 或 TWSE (TW)">今年</th>
+        <th title="日報酬率，定義：今日收盤 vs 昨日收盤；來源：finnhub /quote (US) 或 TWSE (TW)；點選可連 Yahoo 歷史頁驗證">日</th>
+        <th title="月初到今報酬率（MTD），來源：Yahoo (US) 或 TWSE (TW)；點選可連 Yahoo 歷史頁查看本月區間">本月</th>
+        <th title="年初到今報酬率（YTD），來源：Yahoo (US) 或 TWSE (TW)；點選可連 Yahoo 歷史頁查看今年區間">今年</th>
         <th class="date-col" title="收盤日：finnhub quote 的 timestamp（ET 時區）轉日期，或 TWSE 公告日">收盤日</th>
       </tr></thead>
       <tbody>${rows}</tbody>
@@ -3446,7 +3474,16 @@ function renderMarketHighlights(m) {
 }
 
 function renderNewsSheet() {
+  const today = (DATA.meta && DATA.meta.today) || "";
+  const newsDate = (DATA.news && DATA.news.news_date) || "";
+  const isStale = today && newsDate && newsDate !== today;
+  const staleBanner = isStale ? `
+    <div style="background:#fff4e6; border:1px solid #ffb74d; border-radius:6px; padding:10px 14px; margin-bottom:12px; color:#5a3a00; font-size:14px; line-height:1.5">
+      <strong>今日新聞尚未產生</strong>　目前顯示 ${escapeHtml(newsDate)} 內容（今日 ${escapeHtml(today)}）。系統將於 08:40 / 09:30 / 11:30 / 14:00 自動補抓。
+    </div>
+  ` : "";
   return `
+    ${staleBanner}
     <div class="tabs">
       <button class="tab active" data-tab="market">市場</button>
       <button class="tab" data-tab="wm">財管</button>
