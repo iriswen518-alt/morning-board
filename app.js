@@ -3615,6 +3615,18 @@ function sectionCategory(section) {
   return SECTION_TO_CATEGORY[en] || SECTION_TO_CATEGORY[zh] || "market";
 }
 
+// 全文優先：有 body_zh 就直接顯示整篇（無圖片），否則退回短摘要。
+function newsBodyHtml(it) {
+  const body = (it.body_zh || "").trim();
+  if (body) {
+    const paras = body.split("\n")
+      .map(p => p.trim()).filter(Boolean)
+      .map(p => `<p>${escapeHtml(p)}</p>`).join("");
+    return `<div class="news-body">${paras}</div>`;
+  }
+  return `<div class="summary">${escapeHtml(it.summary_zh || "")}</div>`;
+}
+
 function renderNewsByCategory(cat) {
   const sections = (DATA.news.sections || [])
     .filter(s => sectionCategory(s) === cat);
@@ -3627,7 +3639,7 @@ function renderNewsByCategory(cat) {
       ${items.map(it => `
         <div class="news-item">
           <h3>${escapeHtml(it.title_zh)}</h3>
-          <div class="summary">${escapeHtml(it.summary_zh || "")}</div>
+          ${newsBodyHtml(it)}
           ${it.source_url ? `<a class="source" href="${it.source_url}" target="_blank" rel="noopener">${escapeHtml(it.source_name || "來源")}</a>` : ""}
         </div>
       `).join("")}

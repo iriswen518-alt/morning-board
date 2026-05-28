@@ -462,7 +462,10 @@ table.indices .date-col {
 .news-item h3 { margin: 0 0 6px; font-size: 16px; color: var(--text); padding-left: 0; }
 .news-item h3::before { display: none; }
 .news-item .summary { font-size: 14px; line-height: 1.6; color: var(--text); }
-.news-item .source { font-size: 13px; color: var(--brand-primary); margin-top: 6px; display: inline-block; }
+.news-item .news-body { font-size: 14px; line-height: 1.75; color: var(--text); }
+.news-item .news-body p { margin: 0 0 8px; }
+.news-item .news-body p:last-child { margin-bottom: 0; }
+.news-item .source { font-size: 13px; color: var(--brand-primary); margin-top: 8px; display: inline-block; }
 /* English toggle removed — site is Chinese-only */
 
 .disclaimer {
@@ -576,7 +579,7 @@ table.indices .date-col {
   .fund-card .grid.cols-9 { grid-template-columns: repeat(9, 1fr); font-size: 13px; }
 
   .news-item h3 { font-size: 18px; }
-  .news-item .summary { font-size: 15px; }
+  .news-item .summary, .news-item .news-body { font-size: 15px; }
 }
 
 /* ===== 大螢幕（>= 1280px）— 4 欄佈局 ===== */
@@ -2023,7 +2026,7 @@ table.indices .date-col {
   /* 表格內字級 */
   table.indices, .news-item, .card { font-size: 13.5px; }
   .news-item h3 { font-size: 15px; }
-  .news-item .summary { font-size: 13.5px; }
+  .news-item .summary, .news-item .news-body { font-size: 13.5px; }
   /* 一般 .tabs.tabs-wrap 在手機上更緊湊 */
   .tabs { padding: 3px; gap: 3px; }
   .tabs .tab { padding: 7px 10px; font-size: 13px; }
