@@ -257,6 +257,7 @@ let CURRENT_TAB = "market";
 let SEARCH_INDEX = [];
 let PENDING_HIGHLIGHT = null;
 let PENDING_SUBTAB = null;
+let ALLOC_SUBTAB = "targets";   // 資產配置 內的次分頁：targets（主題市場）| portfolio（投組分析）
 
 // init 時 fetch 失敗（伺服器重啟瞬間／網路 blip）的 data 名稱會被記下，
 // 使用者切到對應 tab 時背景重試一次再重畫，避免長期卡在 fallback 空狀態。
@@ -279,6 +280,7 @@ const TAB_LOAD_DEPS = {
   insurance: ["insurances"],
   targets: ["targets"],
   portfolio: ["presets", "allocation", "targets"],
+  alloc: ["targets", "presets", "allocation"],
   wealth: ["wealth_transfer", "tax"],
   twstock: ["tw_stocks"],
 };
@@ -561,6 +563,17 @@ async function init() {
   });
 }
 
+// 舊 targets / portfolio / position / allocation 分頁導向合併後的「資產配置」(alloc)
+function redirectToAlloc(body) {
+  body.innerHTML = renderAllocSheet();
+  CURRENT_TAB = "alloc";
+  body.dataset.section = "alloc";
+  document.querySelectorAll(".main-tab").forEach(b => {
+    b.classList.toggle("active", b.dataset.tab === "alloc");
+  });
+  return "alloc";
+}
+
 function switchTab(name) {
   CURRENT_TAB = name;
   document.querySelectorAll(".main-tab").forEach(b => {
@@ -585,20 +598,24 @@ function switchTab(name) {
       b.classList.toggle("active", b.dataset.tab === "funds");
     });
   }
-  else if (name === "targets") body.innerHTML = renderTargetsSheet();
-  else if (name === "position" || name === "allocation") {
-    // 舊「部位分析」「資產配置」分頁已併入「投組分析」（預設組合）
-    PORTFOLIO_SUBTAB = "preset";
-    body.innerHTML = renderPortfolioSheet();
-    PENDING_SUBTAB = "preset";
-    name = "portfolio";
-    CURRENT_TAB = "portfolio";
-    body.dataset.section = "portfolio";
-    document.querySelectorAll(".main-tab").forEach(b => {
-      b.classList.toggle("active", b.dataset.tab === "portfolio");
-    });
+  else if (name === "alloc") body.innerHTML = renderAllocSheet();
+  else if (name === "targets") {
+    // 舊「主題市場」分頁已併入「資產配置」
+    ALLOC_SUBTAB = "targets";
+    name = redirectToAlloc(body);
   }
-  else if (name === "portfolio") body.innerHTML = renderPortfolioSheet();
+  else if (name === "position" || name === "allocation") {
+    // 舊「部位分析」「資產配置」分頁已併入「資產配置 → 投組分析（預設組合）」
+    PORTFOLIO_SUBTAB = "preset";
+    ALLOC_SUBTAB = "portfolio";
+    PENDING_SUBTAB = "preset";
+    name = redirectToAlloc(body);
+  }
+  else if (name === "portfolio") {
+    // 舊「投組分析」分頁已併入「資產配置」
+    ALLOC_SUBTAB = "portfolio";
+    name = redirectToAlloc(body);
+  }
   else if (name === "wealth") body.innerHTML = renderWealthSheet();
   else if (name === "calc") body.innerHTML = renderCalcSheet();
   else if (name === "assist") body.innerHTML = renderAssistSheet();
@@ -607,8 +624,7 @@ function switchTab(name) {
   if (name === "news") wireNewsTabs();
   if (name === "market") { wireMarketTabs(); wireTwStock(); }
   if (name === "funds") { wireFundsTabs(); wireFundCompare(); }
-  if (name === "targets") wireTargetsTabs();
-  if (name === "portfolio") wirePortfolioTabs();
+  if (name === "alloc") wireAllocTabs();
   if (name === "wealth") wireWealthTabs();
   if (name === "calc") wireCalcTabs();
   if (name === "twstock") wireTwStock();
@@ -967,6 +983,49 @@ function renderThemeIndexBlock(themeKey) {
         </table>
       </div>
     </div>`;
+}
+
+// ─────────────────────────────────────────────────────────────────────────
+// 資產配置 Asset Allocation Tab（合併 主題市場 + 投組分析）
+// 上層 section 切換器在 主題市場 / 投組分析 之間切；各自再帶原本的次分頁。
+// ─────────────────────────────────────────────────────────────────────────
+function renderAllocSheet() {
+  const isTargets = ALLOC_SUBTAB !== "portfolio";
+  const inner = isTargets ? renderTargetsSheet() : renderPortfolioSheet();
+  return `
+    <div class="tabs alloc-sec-tabs">
+      <button class="tab alloc-sec-tab ${isTargets ? "active" : ""}" data-asec="targets">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/>
+        </svg>
+        <span>主題市場</span>
+      </button>
+      <button class="tab alloc-sec-tab ${!isTargets ? "active" : ""}" data-asec="portfolio">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"/><path d="M12 3v9h9"/><path d="M12 12L5.5 17"/>
+        </svg>
+        <span>投組分析</span>
+      </button>
+    </div>
+    <div class="alloc-sec-body" id="alloc-sec-body">${inner}</div>
+  `;
+}
+
+function wireAllocTabs() {
+  document.querySelectorAll(".tab[data-asec]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      ALLOC_SUBTAB = btn.dataset.asec;
+      rerenderAlloc();
+    });
+  });
+  // 連動目前選取 section 內層的次分頁事件
+  if (ALLOC_SUBTAB === "portfolio") wirePortfolioTabs();
+  else wireTargetsTabs();
+}
+
+function rerenderAlloc() {
+  $("content").innerHTML = renderAllocSheet();
+  wireAllocTabs();
 }
 
 function renderTargetsSheet() {
@@ -1727,7 +1786,9 @@ function renderPositionAnalysisPanel(items, title, isPreset) {
 }
 
 function rerenderPortfolio() {
-  $("content").innerHTML = renderPortfolioSheet();
+  // 投組分析現在內嵌於「資產配置」；只重畫內層 body，保留上層 section 切換器
+  const host = document.getElementById("alloc-sec-body") || $("content");
+  host.innerHTML = renderPortfolioSheet();
   wirePortfolioTabs();
 }
 

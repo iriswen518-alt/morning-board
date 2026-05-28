@@ -442,6 +442,15 @@ table.indices .date-col {
   background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
 }
 
+/* 資產配置 上層 section 切換器（主題市場 / 投組分析） */
+.alloc-sec-tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.alloc-sec-tab svg { width: 17px; height: 17px; flex: 0 0 17px; }
+
 .news-item {
   padding: 14px 16px;
   margin-bottom: 10px;
