@@ -616,11 +616,14 @@ function switchTab(name) {
     ALLOC_SUBTAB = "portfolio";
     name = redirectToAlloc(body);
   }
+  else if (name === "assist") {
+    // 舊「資產規劃」分頁已併入「資產配置 → 專屬規劃」
+    ALLOC_SUBTAB = "assist";
+    name = redirectToAlloc(body);
+  }
   else if (name === "wealth") body.innerHTML = renderWealthSheet();
   else if (name === "calc") body.innerHTML = renderCalcSheet();
-  else if (name === "assist") body.innerHTML = renderAssistSheet();
   else if (name === "twstock") body.innerHTML = renderTwStockSheet();
-  if (name === "assist") wireAssistTab();
   if (name === "news") wireNewsTabs();
   if (name === "market") { wireMarketTabs(); wireTwStock(); }
   if (name === "funds") { wireFundsTabs(); wireFundCompare(); }
@@ -990,8 +993,12 @@ function renderThemeIndexBlock(themeKey) {
 // 上層 section 切換器在 主題市場 / 投組分析 之間切；各自再帶原本的次分頁。
 // ─────────────────────────────────────────────────────────────────────────
 function renderAllocSheet() {
-  const isTargets = ALLOC_SUBTAB !== "portfolio";
-  const inner = isTargets ? renderTargetsSheet() : renderPortfolioSheet();
+  const isPortfolio = ALLOC_SUBTAB === "portfolio";
+  const isAssist = ALLOC_SUBTAB === "assist";
+  const isTargets = !isPortfolio && !isAssist;
+  const inner = isPortfolio ? renderPortfolioSheet()
+    : isAssist ? renderAssistSheet()
+    : renderTargetsSheet();
   return `
     <div class="tabs alloc-sec-tabs">
       <button class="tab alloc-sec-tab ${isTargets ? "active" : ""}" data-asec="targets">
@@ -1000,11 +1007,18 @@ function renderAllocSheet() {
         </svg>
         <span>主題市場</span>
       </button>
-      <button class="tab alloc-sec-tab ${!isTargets ? "active" : ""}" data-asec="portfolio">
+      <button class="tab alloc-sec-tab ${isPortfolio ? "active" : ""}" data-asec="portfolio">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <circle cx="12" cy="12" r="9"/><path d="M12 3v9h9"/><path d="M12 12L5.5 17"/>
         </svg>
         <span>投組分析</span>
+      </button>
+      <button class="tab alloc-sec-tab ${isAssist ? "active" : ""}" data-asec="assist">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12a8 8 0 0 1-11 7.4L4 21l1.6-6A8 8 0 1 1 21 12z"/>
+          <circle cx="9" cy="11" r="0.6" fill="currentColor"/><circle cx="12" cy="11" r="0.6" fill="currentColor"/><circle cx="15" cy="11" r="0.6" fill="currentColor"/>
+        </svg>
+        <span>專屬規劃</span>
       </button>
     </div>
     <div class="alloc-sec-body" id="alloc-sec-body">${inner}</div>
@@ -1020,6 +1034,7 @@ function wireAllocTabs() {
   });
   // 連動目前選取 section 內層的次分頁事件
   if (ALLOC_SUBTAB === "portfolio") wirePortfolioTabs();
+  else if (ALLOC_SUBTAB === "assist") wireAssistTab();
   else wireTargetsTabs();
 }
 
@@ -5310,7 +5325,7 @@ function renderLawCode(codeStr) {
   return out;
 }
 
-// ============ 資產規劃 (Asset Planning) ============
+// ============ 專屬規劃 (Asset Planning) ============
 // 公開部署模式：Prompt Builder — 零後端，組好 prompt 給同事貼到自己的 claude.ai 用
 // 開發模式：localStorage.assist_dev_mode === '1' → 直接打 localhost:8766（Iris 本機用）
 const ASSIST_API = "http://localhost:8766";
@@ -5421,7 +5436,7 @@ function renderAssistSheet() {
 
 <div class="assist-wrap">
   <div class="assist-banner">
-    <h2>📊 資產規劃（個人 PoC）</h2>
+    <h2>📊 專屬規劃（個人 PoC）</h2>
     <p>填表單 → 自動組合給 claude.ai 用的 Prompt → 你貼到自己的 claude.ai 跑 → 把結果貼回看美化版。</p>
   </div>
   <div class="assist-compliance">

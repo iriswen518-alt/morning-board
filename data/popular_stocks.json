@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-28T12:01:29+08:00",
+  "generated_at": "2026-05-28T12:21:32+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -12,6 +12,18 @@
       "ytd_pct": -20.1,
       "market_date": "2026-05-27",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SNOW.US",
+      "error": null
+    },
+    {
+      "symbol": "ONDS",
+      "name_zh": "Ondas",
+      "kind": "US",
+      "price": 10.8,
+      "change_pct": 10.54,
+      "mtd_pct": 7.57,
+      "ytd_pct": 10.66,
+      "market_date": "2026-05-27",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ONDS.US",
       "error": null
     },
     {
@@ -39,39 +51,15 @@
       "error": null
     },
     {
-      "symbol": "ONDS",
-      "name_zh": "Ondas",
+      "symbol": "RCAT",
+      "name_zh": "Red Cat",
       "kind": "US",
-      "price": 10.8,
-      "change_pct": 10.54,
-      "mtd_pct": 7.57,
-      "ytd_pct": 10.66,
+      "price": 10.67,
+      "change_pct": 9.21,
+      "mtd_pct": -8.96,
+      "ytd_pct": 34.55,
       "market_date": "2026-05-27",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ONDS.US",
-      "error": null
-    },
-    {
-      "symbol": "ASTC",
-      "name_zh": "Astrotech",
-      "kind": "US",
-      "price": 13.81,
-      "change_pct": 459.11,
-      "mtd_pct": 335.65,
-      "ytd_pct": 299.13,
-      "market_date": "2026-05-27",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ASTC.US",
-      "error": null
-    },
-    {
-      "symbol": "NOW",
-      "name_zh": "ServiceNow",
-      "kind": "US",
-      "price": 102.12,
-      "change_pct": 2.2,
-      "mtd_pct": 15.64,
-      "ytd_pct": -33.34,
-      "market_date": "2026-05-27",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NOW.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RCAT.US",
       "error": null
     },
     {
@@ -87,27 +75,15 @@
       "error": null
     },
     {
-      "symbol": "RCAT",
-      "name_zh": "Red Cat",
+      "symbol": "NOW",
+      "name_zh": "ServiceNow",
       "kind": "US",
-      "price": 10.67,
-      "change_pct": 9.21,
-      "mtd_pct": -8.96,
-      "ytd_pct": 34.55,
+      "price": 102.12,
+      "change_pct": 2.2,
+      "mtd_pct": 15.64,
+      "ytd_pct": -33.34,
       "market_date": "2026-05-27",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RCAT.US",
-      "error": null
-    },
-    {
-      "symbol": "MRVL",
-      "name_zh": "邁威爾",
-      "kind": "US",
-      "price": 198.7,
-      "change_pct": -4.59,
-      "mtd_pct": 20.31,
-      "ytd_pct": 133.82,
-      "market_date": "2026-05-27",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MRVL.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NOW.US",
       "error": null
     },
     {
@@ -123,18 +99,6 @@
       "error": null
     },
     {
-      "symbol": "BSX",
-      "name_zh": "Boston Scientific",
-      "kind": "US",
-      "price": 50.46,
-      "change_pct": -12.46,
-      "mtd_pct": -12.41,
-      "ytd_pct": -47.08,
-      "market_date": "2026-05-27",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BSX.US",
-      "error": null
-    },
-    {
       "symbol": "AVAV",
       "name_zh": "AeroVironment",
       "kind": "US",
@@ -144,30 +108,6 @@
       "ytd_pct": -25.06,
       "market_date": "2026-05-27",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AVAV.US",
-      "error": null
-    },
-    {
-      "symbol": "DELL",
-      "name_zh": "Dell Technologies",
-      "kind": "US",
-      "price": 305.32,
-      "change_pct": 0.08,
-      "mtd_pct": 46.12,
-      "ytd_pct": 142.55,
-      "market_date": "2026-05-27",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DELL.US",
-      "error": null
-    },
-    {
-      "symbol": "DY",
-      "name_zh": "Dycom Industries",
-      "kind": "US",
-      "price": 529.13,
-      "change_pct": 25.84,
-      "mtd_pct": 27.78,
-      "ytd_pct": 56.59,
-      "market_date": "2026-05-27",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DY.US",
       "error": null
     },
     {
@@ -183,6 +123,30 @@
       "error": null
     },
     {
+      "symbol": "DY",
+      "name_zh": "Dycom Industries",
+      "kind": "US",
+      "price": 529.13,
+      "change_pct": 25.84,
+      "mtd_pct": 27.78,
+      "ytd_pct": 56.59,
+      "market_date": "2026-05-27",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DY.US",
+      "error": null
+    },
+    {
+      "symbol": "IREN",
+      "name_zh": "IREN",
+      "kind": "US",
+      "price": 67.84,
+      "change_pct": 13.48,
+      "mtd_pct": 49.07,
+      "ytd_pct": 79.61,
+      "market_date": "2026-05-27",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IREN.US",
+      "error": null
+    },
+    {
       "symbol": "BBY",
       "name_zh": "Best Buy",
       "kind": "US",
@@ -195,6 +159,30 @@
       "error": null
     },
     {
+      "symbol": "BSX",
+      "name_zh": "Boston Scientific",
+      "kind": "US",
+      "price": 50.46,
+      "change_pct": -12.46,
+      "mtd_pct": -12.41,
+      "ytd_pct": -47.08,
+      "market_date": "2026-05-27",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BSX.US",
+      "error": null
+    },
+    {
+      "symbol": "MRVL",
+      "name_zh": "邁威爾",
+      "kind": "US",
+      "price": 198.7,
+      "change_pct": -4.59,
+      "mtd_pct": 20.31,
+      "ytd_pct": 133.82,
+      "market_date": "2026-05-27",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MRVL.US",
+      "error": null
+    },
+    {
       "symbol": "MDB",
       "name_zh": "MongoDB",
       "kind": "US",
@@ -204,6 +192,30 @@
       "ytd_pct": -29.84,
       "market_date": "2026-05-27",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MDB.US",
+      "error": null
+    },
+    {
+      "symbol": "HPQ",
+      "name_zh": "HP",
+      "kind": "US",
+      "price": 25.49,
+      "change_pct": 4.34,
+      "mtd_pct": 22.2,
+      "ytd_pct": 14.41,
+      "market_date": "2026-05-27",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HPQ.US",
+      "error": null
+    },
+    {
+      "symbol": "DPRO",
+      "name_zh": "Draganfly",
+      "kind": "US",
+      "price": 6.67,
+      "change_pct": 2.3,
+      "mtd_pct": 23.98,
+      "ytd_pct": -3.47,
+      "market_date": "2026-05-27",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DPRO.US",
       "error": null
     },
     {
