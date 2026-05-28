@@ -234,6 +234,15 @@ function pctClass(n) {
   return n > 0 ? "up" : (n < 0 ? "down" : "");
 }
 
+// 給「已格式化字串」用的正負染色：開頭帶 +（含全形＋）→ 紅（up）、
+// 開頭帶 -／−（Unicode 減號）→ 綠（down）、無正負號（如區間 15–35%）→ 中性不染。
+function signClassFromStr(v) {
+  const s = String(v == null ? "" : v).trim();
+  if (/^[+＋]/.test(s)) return "up";
+  if (/^[-−]/.test(s)) return "down";
+  return "";
+}
+
 // 把績效數字包成連到該檔績效來源頁的連結，供使用者點開驗證數值。
 // color:inherit 保留紅漲綠跌染色；無 url 或無資料（—）時回傳純文字。
 function perfLink(text, url) {
@@ -1075,13 +1084,19 @@ function renderTargetsSheet() {
       </div>
 
       <div class="t-stats">
-        ${(t.stats || []).map(s => `
+        ${(t.stats || []).map(s => {
+          const valTxt = escapeHtml(s.v);
+          const val = s.url
+            ? `<a href="${escapeHtml(s.url)}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${valTxt}</a>`
+            : valTxt;
+          return `
           <div class="t-stat">
             <div class="t-stat-k">${escapeHtml(s.k)}</div>
-            <div class="t-stat-v">${escapeHtml(s.v)}</div>
+            <div class="t-stat-v ${signClassFromStr(s.v)}">${val}</div>
             <div class="t-stat-sub">${escapeHtml(s.sub || "")}</div>
           </div>
-        `).join("")}
+        `;
+        }).join("")}
       </div>
 
       ${renderThemeIndexBlock(t.key)}

@@ -803,6 +803,8 @@ table.indices .date-col {
 }
 .t-stat-k { font-size: 12px; color: var(--text-mute); letter-spacing: 0.5px; }
 .t-stat-v { font-size: 20px; font-weight: 700; color: var(--brand-deep); margin: 4px 0 2px; }
+.t-stat-v.up { color: var(--up); }
+.t-stat-v.down { color: var(--down); }
 .t-stat-sub { font-size: 12px; color: var(--text-mute); }
 
 .t-section {
