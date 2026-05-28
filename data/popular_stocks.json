@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-28T14:12:17+08:00",
+  "generated_at": "2026-05-28T14:20:35+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -15,18 +15,6 @@
       "error": null
     },
     {
-      "symbol": "CRM",
-      "name_zh": "Salesforce",
-      "kind": "US",
-      "price": 177.51,
-      "change_pct": -0.88,
-      "mtd_pct": 0.56,
-      "ytd_pct": -32.99,
-      "market_date": "2026-05-27",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRM.US",
-      "error": null
-    },
-    {
       "symbol": "NBIS",
       "name_zh": "Nebius",
       "kind": "US",
@@ -36,6 +24,18 @@
       "ytd_pct": 148.93,
       "market_date": "2026-05-27",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NBIS.US",
+      "error": null
+    },
+    {
+      "symbol": "CRM",
+      "name_zh": "Salesforce",
+      "kind": "US",
+      "price": 177.51,
+      "change_pct": -0.88,
+      "mtd_pct": 0.56,
+      "ytd_pct": -32.99,
+      "market_date": "2026-05-27",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRM.US",
       "error": null
     },
     {
@@ -111,18 +111,6 @@
       "error": null
     },
     {
-      "symbol": "NOW",
-      "name_zh": "ServiceNow",
-      "kind": "US",
-      "price": 102.12,
-      "change_pct": 2.2,
-      "mtd_pct": 15.64,
-      "ytd_pct": -33.34,
-      "market_date": "2026-05-27",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NOW.US",
-      "error": null
-    },
-    {
       "symbol": "CRSR",
       "name_zh": "Corsair Gaming",
       "kind": "US",
@@ -135,15 +123,15 @@
       "error": null
     },
     {
-      "symbol": "BBY",
-      "name_zh": "Best Buy",
+      "symbol": "NOW",
+      "name_zh": "ServiceNow",
       "kind": "US",
-      "price": 64.54,
-      "change_pct": 2.09,
-      "mtd_pct": 6.7,
-      "ytd_pct": -3.57,
+      "price": 102.12,
+      "change_pct": 2.2,
+      "mtd_pct": 15.64,
+      "ytd_pct": -33.34,
       "market_date": "2026-05-27",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BBY.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NOW.US",
       "error": null
     },
     {
@@ -159,39 +147,15 @@
       "error": null
     },
     {
-      "symbol": "MDB",
-      "name_zh": "MongoDB",
+      "symbol": "AVAV",
+      "name_zh": "AeroVironment",
       "kind": "US",
-      "price": 294.46,
-      "change_pct": -4.19,
-      "mtd_pct": 17.39,
-      "ytd_pct": -29.84,
+      "price": 181.28,
+      "change_pct": -0.54,
+      "mtd_pct": -7.05,
+      "ytd_pct": -25.06,
       "market_date": "2026-05-27",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MDB.US",
-      "error": null
-    },
-    {
-      "symbol": "MSTR",
-      "name_zh": "MicroStrategy",
-      "kind": "US",
-      "price": 154.2,
-      "change_pct": -3.58,
-      "mtd_pct": -6.8,
-      "ytd_pct": 1.48,
-      "market_date": "2026-05-27",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MSTR.US",
-      "error": null
-    },
-    {
-      "symbol": "DPRO",
-      "name_zh": "Draganfly",
-      "kind": "US",
-      "price": 6.67,
-      "change_pct": 2.3,
-      "mtd_pct": 23.98,
-      "ytd_pct": -3.47,
-      "market_date": "2026-05-27",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DPRO.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AVAV.US",
       "error": null
     },
     {
@@ -204,6 +168,54 @@
       "ytd_pct": 14.41,
       "market_date": "2026-05-27",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HPQ.US",
+      "error": null
+    },
+    {
+      "symbol": "DELL",
+      "name_zh": "Dell Technologies",
+      "kind": "US",
+      "price": 305.32,
+      "change_pct": 0.08,
+      "mtd_pct": 46.12,
+      "ytd_pct": 142.55,
+      "market_date": "2026-05-27",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DELL.US",
+      "error": null
+    },
+    {
+      "symbol": "BBY",
+      "name_zh": "Best Buy",
+      "kind": "US",
+      "price": 64.54,
+      "change_pct": 2.09,
+      "mtd_pct": 6.7,
+      "ytd_pct": -3.57,
+      "market_date": "2026-05-27",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BBY.US",
+      "error": null
+    },
+    {
+      "symbol": "KTOS",
+      "name_zh": "Kratos Defense & Security Solut",
+      "kind": "US",
+      "price": 57.3,
+      "change_pct": 0.88,
+      "mtd_pct": -9.12,
+      "ytd_pct": -24.52,
+      "market_date": "2026-05-27",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=KTOS.US",
+      "error": null
+    },
+    {
+      "symbol": "MDB",
+      "name_zh": "MongoDB",
+      "kind": "US",
+      "price": 294.46,
+      "change_pct": -4.19,
+      "mtd_pct": 17.39,
+      "ytd_pct": -29.84,
+      "market_date": "2026-05-27",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MDB.US",
       "error": null
     },
     {

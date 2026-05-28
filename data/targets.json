@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-28T14:12:56+08:00",
+  "generated_at": "2026-05-28T14:21:22+08:00",
   "source": "manual curation (targets.json)",
   "version": 3,
   "updated": "2026-05-28",
@@ -180,13 +180,15 @@
       "stats": [
         {
           "k": "S&P 500 YTD",
-          "v": "+9.84%",
-          "sub": "MTD +4.30%、今日 +0.61%"
+          "v": "+9.86%",
+          "sub": "MTD +4.32%・今日 +0.02%・截至 05/27",
+          "url": "https://finance.yahoo.com/quote/%5EGSPC"
         },
         {
-          "k": "Nasdaq YTD",
-          "v": "+14.69%",
-          "sub": "MTD +7.09%、今日 +1.19%"
+          "k": "Nasdaq Composite YTD",
+          "v": "+14.77%",
+          "sub": "MTD +7.16%・今日 +0.07%・截至 05/27",
+          "url": "https://finance.yahoo.com/quote/%5EIXIC"
         },
         {
           "k": "建議部位",
@@ -407,14 +409,16 @@
       "ytd": "+4.62%",
       "stats": [
         {
-          "k": "Euro Stoxx YTD",
+          "k": "Euro Stoxx 50 YTD",
           "v": "+4.62%",
-          "sub": "MTD +3.11%、今日 +0.74%"
+          "sub": "MTD +3.11%・今日 +0.11%・截至 05/27",
+          "url": "https://finance.yahoo.com/quote/%5ESTOXX50E"
         },
         {
           "k": "DAX YTD",
-          "v": "+3.67%",
-          "sub": "MTD +4.51%"
+          "v": "+2.84%",
+          "sub": "MTD +3.67%・今日 -0.03%・截至 05/27",
+          "url": "https://finance.yahoo.com/quote/%5EGDAXI"
         },
         {
           "k": "建議部位",
@@ -583,14 +587,16 @@
       "ytd": "−0.10%",
       "stats": [
         {
-          "k": "恆生 YTD",
-          "v": "−0.10%",
-          "sub": "今日 −1.06%"
+          "k": "Shanghai 上證 YTD",
+          "v": "+4.45%",
+          "sub": "MTD +0.81%・今日 -1.25%・截至 05/27",
+          "url": "https://finance.yahoo.com/quote/000001.SS"
         },
         {
-          "k": "上證 YTD",
-          "v": "+4.63%",
-          "sub": "CSI 300 +6.30%"
+          "k": "CSI 300 滬深300 YTD",
+          "v": "+6.87%",
+          "sub": "MTD +2.92%・今日 -0.80%・截至 05/27",
+          "url": "https://finance.yahoo.com/quote/000300.SS"
         },
         {
           "k": "fwd P/E",

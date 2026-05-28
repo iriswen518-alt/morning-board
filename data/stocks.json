@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-28T14:11:21+08:00",
+  "generated_at": "2026-05-28T14:19:26+08:00",
   "source": "finnhub (US price+daily) + Yahoo (US MTD/YTD) + TWSE (TW)",
   "us_stocks": [
     {
@@ -105,7 +105,7 @@
       "perf_5y": 111.3,
       "market_date": "2026-05-27",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TSLA.US",
-      "error": "stale"
+      "error": null
     },
     {
       "symbol": "AVGO",
@@ -236,7 +236,7 @@
       "price": 45.05,
       "change_pct": -0.88,
       "mtd_pct": -12.52,
-      "ytd_pct": 15.0,
+      "ytd_pct": 15.51,
       "perf_1y": 26.37,
       "perf_3y": -51.71,
       "perf_5y": -55.62,
