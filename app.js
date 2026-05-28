@@ -928,7 +928,7 @@ function renderThemeFundsBlock(themeKey) {
           ${fmtNum(f.nav)} ${escapeHtml(f.currency || "")}
         </div>
         <div><label>淨值日</label>${f.nav_date ? escapeHtml(shortDate(f.nav_date)) : "—"}</div>
-        <div><label>日</label><span class="${pctClass(f.change_pct)}">${perfLink(fmtPct(f.change_pct), f.source_url)}</span></div>
+        <div><label>日</label><span class="${pctClass(f.change_pct)}">${fmtPct(f.change_pct)}</span></div>
         <div><label>近1月</label><span class="${pctClass(perf['1m'])}">${perfLink(fmtPct(perf['1m']), f.source_url)}</span></div>
         <div><label>今年</label><span class="${pctClass(perf.ytd)}">${perfLink(fmtPct(perf.ytd), f.source_url)}</span></div>
       </div>
@@ -4772,7 +4772,7 @@ function renderLumpFundCards() {
           ${fmtNum(f.nav)} ${escapeHtml(f.currency || "")}
         </div>
         <div><label>淨值日</label>${f.nav_date ? escapeHtml(shortDate(f.nav_date)) : "—"}</div>
-        <div><label>日漲跌</label><span class="${pctClass(f.change_pct)}">${perfLink(fmtPct(f.change_pct), f.source_url)}</span></div>
+        <div><label>日漲跌</label><span class="${pctClass(f.change_pct)}">${fmtPct(f.change_pct)}</span></div>
         <div><label>近1月</label><span class="${pctClass(f.perf_single?.['1m'])}">${perfLink(fmtPct(f.perf_single?.['1m']), f.source_url)}</span></div>
         <div><label>近3月</label><span class="${pctClass(f.perf_single?.['3m'])}">${perfLink(fmtPct(f.perf_single?.['3m']), f.source_url)}</span></div>
         <div><label>今年來</label><span class="${pctClass(f.perf?.ytd)}">${perfLink(fmtPct(f.perf?.ytd), f.source_url)}</span></div>
@@ -4805,7 +4805,7 @@ function renderDcaFundCards() {
           ${fmtNum(f.nav)} ${escapeHtml(f.currency || "")}
         </div>
         <div><label>淨值日</label>${f.nav_date ? escapeHtml(shortDate(f.nav_date)) : "—"}</div>
-        <div><label>日漲跌</label><span class="${pctClass(f.change_pct)}">${perfLink(fmtPct(f.change_pct), f.source_url)}</span></div>
+        <div><label>日漲跌</label><span class="${pctClass(f.change_pct)}">${fmtPct(f.change_pct)}</span></div>
         <div><label>近1月</label><span class="${pctClass(f.perf_dca?.['1m'])}">${perfLink(fmtPct(f.perf_dca?.['1m']), f.source_url)}</span></div>
         <div><label>近3月</label><span class="${pctClass(f.perf_dca?.['3m'])}">${perfLink(fmtPct(f.perf_dca?.['3m']), f.source_url)}</span></div>
         <div><label>今年來</label><span class="${pctClass(f.perf?.ytd)}">${perfLink(fmtPct(f.perf?.ytd), f.source_url)}</span></div>
