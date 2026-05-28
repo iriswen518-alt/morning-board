@@ -3466,7 +3466,6 @@ function renderMarketHighlights(m) {
     </div>
 
     ${tldr.length ? `
-      <h3>影響因素</h3>
       <div class="fund-card">
         <ul style="font-size:14px; line-height:1.7; padding-left:20px; margin:0">
           ${tldr.map(t => `<li>${escapeHtml(t)}</li>`).join("")}
