@@ -2473,7 +2473,43 @@ async function fetchYahooChart(code, market, range) {
     points.push({ t: ts[i], c, v: vols[i] ?? 0 });
   }
   if (points.length < 2) throw new Error("Yahoo 空資料");
-  const out = { ok: true, symbol, range: cfg.key, ma: cfg.ma, interval: cfg.interval, points, currency: result.meta?.currency || "TWD" };
+  const out = { ok: true, symbol, range: cfg.key, ma: cfg.ma, interval: cfg.interval, points, currency: result.meta?.currency || "TWD", source: "Yahoo Finance" };
+  TW_CHART_CACHE[cacheKey] = out;
+  return out;
+}
+
+// 上市股備援：Yahoo 掛掉時改用證交所 STOCK_DAY（每月一檔，串接成日線）
+const TWSE_CHART_MONTHS = { "1mo": 2, "3mo": 4, "6mo": 7, "1y": 13 };
+function rocDateToEpoch(s) {
+  const m = String(s || "").split("/");
+  if (m.length !== 3) return 0;
+  return Date.UTC(+m[0] + 1911, +m[1] - 1, +m[2]) / 1000;
+}
+async function fetchTwseStockDayChart(code, range) {
+  const cfg = TW_CHART_RANGES.find(r => r.key === range) || TW_CHART_RANGES[3];
+  const months = TWSE_CHART_MONTHS[range];
+  if (!months) throw new Error("此區間無證交所備援");
+  const cacheKey = `${code}.TWSE|${range}`;
+  if (TW_CHART_CACHE[cacheKey]) return TW_CHART_CACHE[cacheKey];
+  const now = new Date();
+  const yms = [];
+  for (let i = months - 1; i >= 0; i--) {
+    const d = new Date(now.getFullYear(), now.getMonth() - i, 1);
+    yms.push(`${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, "0")}01`);
+  }
+  const results = await Promise.allSettled(yms.map(ym => fetchTwseStockDay(code, ym)));
+  const points = [];
+  for (const r of results) {
+    if (r.status !== "fulfilled") continue;
+    for (const row of r.value) {
+      const c = parseTwseNum(row[6]);
+      if (c == null) continue;
+      points.push({ t: rocDateToEpoch(row[0]), c, v: parseTwseNum(row[1]) || 0 });
+    }
+  }
+  points.sort((a, b) => a.t - b.t);
+  if (points.length < 2) throw new Error("STOCK_DAY 無足夠資料");
+  const out = { ok: true, symbol: `${code}.TW`, range, ma: cfg.ma, interval: "1d", points, currency: "TWD", source: "TWSE 證交所" };
   TW_CHART_CACHE[cacheKey] = out;
   return out;
 }
@@ -2564,7 +2600,9 @@ function renderTwChartWrap(code, chart, errMsg) {
       <span><i style="background:${TW_MA_COLORS[1]}"></i>${chart.ma[1]}${unit}均</span>
       <span><i class="tw-vol-key"></i>成交量</span>
     </div>`;
-    body = legend + renderPriceChart(chart) + `<div class="tw-chart-foot">資料源：Yahoo Finance（瀏覽器直接抓取，無中介伺服器）</div>`;
+    const src = chart.source || "Yahoo Finance";
+    const fb = chart.fallbackFrom ? `<span class="tw-snap-fallback"> · 主源 Yahoo 失敗已切換證交所</span>` : "";
+    body = legend + renderPriceChart(chart) + `<div class="tw-chart-foot">資料源：${escapeHtml(src)}（瀏覽器直接抓取，無中介伺服器）${fb}</div>`;
   }
   return `<div class="tw-chart-rngs">${btns}</div><div class="tw-chart-area">${body}</div>`;
 }
@@ -2583,9 +2621,22 @@ async function loadTwStockChart(code, market) {
   try {
     chart = await fetchYahooChart(code, market, TW_CHART_RANGE);
   } catch (e) {
-    const s = document.getElementById(`tw-chart-${code}`);
-    if (s) s.innerHTML = renderTwChartWrap(code, null, String(e.message || e));
-    return;
+    const yahooErr = String(e.message || e);
+    // 上市股 1M~1Y 區間：Yahoo 失敗改用證交所 STOCK_DAY 備援
+    if (market !== "上櫃" && market !== "興櫃" && TWSE_CHART_MONTHS[TW_CHART_RANGE]) {
+      try {
+        chart = await fetchTwseStockDayChart(code, TW_CHART_RANGE);
+        chart.fallbackFrom = yahooErr;
+      } catch (e2) {
+        const s = document.getElementById(`tw-chart-${code}`);
+        if (s) s.innerHTML = renderTwChartWrap(code, null, `Yahoo：${yahooErr}；證交所備援：${String(e2.message || e2)}`);
+        return;
+      }
+    } else {
+      const s = document.getElementById(`tw-chart-${code}`);
+      if (s) s.innerHTML = renderTwChartWrap(code, null, yahooErr);
+      return;
+    }
   }
   const s2 = document.getElementById(`tw-chart-${code}`);
   if (s2) s2.innerHTML = renderTwChartWrap(code, chart, null);
@@ -2749,11 +2800,10 @@ function renderRevenueBars(series) {
     <div class="tw-rev-axis"><span>${escapeHtml(firstLbl)}</span><span>${escapeHtml(lastLbl)}</span></div>`;
 }
 
-function renderRevenueTrend(code, hist, errMsg) {
+function renderRevenueTrend(series, source, errMsg) {
   if (errMsg) return `<div class="tw-rev-msg">月營收走勢載入失敗（${escapeHtml(errMsg)}）。</div>`;
-  if (!hist) return `<div class="tw-rev-msg">載入月營收中…</div>`;
-  const series = hist.codes?.[code];
-  if (!series || !series.length) return `<div class="tw-rev-msg">查無月營收歷史（資料累積中，或此標的無月營收揭露）。</div>`;
+  if (series === null) return `<div class="tw-rev-msg">載入月營收中…</div>`;
+  if (!series || !series.length) return `<div class="tw-rev-msg">查無月營收歷史（此標的可能無月營收揭露）。</div>`;
   const latest = series[series.length - 1];
   let streak = 0;
   for (let i = series.length - 1; i >= 0; i--) {
@@ -2769,26 +2819,66 @@ function renderRevenueTrend(code, hist, errMsg) {
     </div>`;
   const body = series.length >= 2
     ? renderRevenueBars(series)
-    : `<div class="tw-rev-accum">月營收歷史累積中（目前 ${series.length} 個月，每月自動 +1）。</div>`;
+    : `<div class="tw-rev-accum">月營收歷史累積中（目前 ${series.length} 個月）。</div>`;
   return `<div class="tw-rev-trend">
       ${headline}
       ${body}
-      <div class="tw-rev-foot">紅為 YoY 正成長、綠為衰退、灰為無 YoY；單位金額已換算。資料源：TWSE／櫃買月營收，自 ${escapeHtml(fmtYyyymmFromRoc(series[0].ym))} 起逐月累積。</div>
+      <div class="tw-rev-foot">紅為 YoY 正成長、綠為衰退、灰為無 YoY；單位金額已換算。資料源：${escapeHtml(source || "—")}。原始揭露以 MOPS／TWSE 為準。</div>
     </div>`;
+}
+
+const TW_FINMIND_REV_CACHE = {};
+async function fetchFinmindRevenue(code) {
+  if (TW_FINMIND_REV_CACHE[code]) return TW_FINMIND_REV_CACHE[code];
+  const d = new Date();
+  const back = new Date(d.getFullYear(), d.getMonth() - 40, 1);
+  const start = `${back.getFullYear()}-${String(back.getMonth() + 1).padStart(2, "0")}-01`;
+  const url = `https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockMonthRevenue&data_id=${encodeURIComponent(code)}&start_date=${start}`;
+  const r = await fetch(url);
+  if (!r.ok) throw new Error(`FinMind ${r.status}`);
+  const j = await r.json();
+  if (j.status !== 200 && j.msg !== "success") throw new Error(`FinMind ${j.msg || j.status}`);
+  const rows = j.data || [];
+  if (rows.length < 2) throw new Error("FinMind 無資料");
+  const list = [];
+  for (const row of rows) {
+    const ry = row.revenue_year, rm = row.revenue_month, rev = row.revenue;
+    if (ry == null || rm == null || rev == null) continue;
+    list.push({ ym: `${ry - 1911}${String(rm).padStart(2, "0")}`, ry, rm, revNum: rev });
+  }
+  list.sort((a, b) => a.ym.localeCompare(b.ym));
+  const byYM = {};
+  for (const e of list) byYM[`${e.ry}-${e.rm}`] = e.revNum;
+  const series = list.map(e => {
+    const prev = byYM[`${e.ry - 1}-${e.rm}`];
+    const yoy = (prev && prev !== 0) ? ((e.revNum - prev) / prev * 100) : null;
+    return { ym: e.ym, rev: String(Math.round(e.revNum / 1000)), yoy: yoy == null ? null : String(yoy) };
+  }).slice(-24);
+  if (!series.length) throw new Error("FinMind 解析後為空");
+  TW_FINMIND_REV_CACHE[code] = series;
+  return series;
 }
 
 async function loadTwStockRevenueTrend(code) {
   const slot = document.getElementById(`tw-rev-trend-${code}`);
   if (!slot) return;
-  let hist;
-  try { hist = await loadTwRevenueHistory(); }
-  catch (e) {
-    const s = document.getElementById(`tw-rev-trend-${code}`);
-    if (s) s.innerHTML = renderRevenueTrend(code, null, String(e.message || e));
-    return;
+  let series = null, source = "";
+  try {
+    series = await fetchFinmindRevenue(code);  // 一次補滿近 24 個月
+    source = "FinMind（彙整 TWSE／MOPS 月營收）";
+  } catch (e1) {
+    try {
+      const hist = await loadTwRevenueHistory();  // 備援：本地逐月累積
+      series = (hist.codes && hist.codes[code]) || [];
+      source = "TWSE／櫃買月營收（本地逐月累積）";
+    } catch (e2) {
+      const s = document.getElementById(`tw-rev-trend-${code}`);
+      if (s) s.innerHTML = renderRevenueTrend(undefined, "", `FinMind：${e1.message}；本地：${e2.message}`);
+      return;
+    }
   }
   const s2 = document.getElementById(`tw-rev-trend-${code}`);
-  if (s2) s2.innerHTML = renderRevenueTrend(code, hist, null);
+  if (s2) s2.innerHTML = renderRevenueTrend(series, source, null);
 }
 
 // ============ 法人動向（近 N 個交易日三大法人趨勢，上市） ============
