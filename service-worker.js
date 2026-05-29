@@ -1,8 +1,9 @@
-// Network-first with cache fallback (v8)
+// Network-first with cache fallback (v9)
 // 永遠優先網路（拿最新），失敗時用上次成功的快取。
 // 兼顧「總是新」+「網路 blip 時不爆」。
 // v8（2026-05-27）：新增重要新聞 stale banner（news_date != today 時顯示警示）。
-const CACHE = "morning-board-v8";
+// v9（2026-05-29）：台股籌碼日期改 T86/MI_MARGN 各自獨立解析，清掉舊版鎖日的快取。
+const CACHE = "morning-board-v9";
 
 self.addEventListener("install", e => {
   self.skipWaiting();

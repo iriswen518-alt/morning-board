@@ -567,7 +567,7 @@ async function init() {
   switchTab(CURRENT_TAB);
 
   if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("service-worker.js?v=20260513-1510").catch(() => {});
+    navigator.serviceWorker.register("service-worker.js?v=20260529-2045").catch(() => {});
   }
 
   setupPullToRefresh();
@@ -2438,6 +2438,365 @@ function renderTwStockSnapshot(snap, rec) {
     </div>`;
 }
 
+// ============ 價格走勢圖 (Price Chart) ============
+const TW_CHART_CACHE = {};                 // key: `${symbol}|${range}`
+const TW_MA_COLORS = ["#2563eb", "#f59e0b"]; // 短均藍、長均橘（仿 FinLab）
+let TW_CHART_RANGE = "1y";                 // 預設一年
+const TW_CHART_RANGES = [
+  { key: "1mo", label: "1M", interval: "1d",  ma: [5, 20] },
+  { key: "3mo", label: "3M", interval: "1d",  ma: [20, 60] },
+  { key: "6mo", label: "6M", interval: "1d",  ma: [20, 60] },
+  { key: "1y",  label: "1Y", interval: "1d",  ma: [20, 60] },
+  { key: "3y",  label: "3Y", interval: "1wk", ma: [13, 26] },
+  { key: "5y",  label: "5Y", interval: "1wk", ma: [13, 26] },
+];
+
+async function fetchYahooChart(code, market, range) {
+  const symbol = `${code}${twYahooSuffix(market)}`;
+  const cfg = TW_CHART_RANGES.find(r => r.key === range) || TW_CHART_RANGES[3];
+  const cacheKey = `${symbol}|${cfg.key}`;
+  if (TW_CHART_CACHE[cacheKey]) return TW_CHART_CACHE[cacheKey];
+  const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}?range=${cfg.key}&interval=${cfg.interval}`;
+  const resp = await fetch(url, { mode: "cors" });
+  if (!resp.ok) throw new Error(`Yahoo HTTP ${resp.status}`);
+  const json = await resp.json();
+  const result = json?.chart?.result?.[0];
+  const err = json?.chart?.error;
+  if (err || !result) throw new Error(err?.description || "Yahoo 無資料");
+  const ts = result.timestamp || [];
+  const q = result.indicators?.quote?.[0] || {};
+  const closes = q.close || [], vols = q.volume || [];
+  const points = [];
+  for (let i = 0; i < ts.length; i++) {
+    const c = closes[i];
+    if (c == null) continue;
+    points.push({ t: ts[i], c, v: vols[i] ?? 0 });
+  }
+  if (points.length < 2) throw new Error("Yahoo 空資料");
+  const out = { ok: true, symbol, range: cfg.key, ma: cfg.ma, interval: cfg.interval, points, currency: result.meta?.currency || "TWD" };
+  TW_CHART_CACHE[cacheKey] = out;
+  return out;
+}
+
+function calcMA(points, period) {
+  const out = new Array(points.length).fill(null);
+  let sum = 0;
+  for (let i = 0; i < points.length; i++) {
+    sum += points[i].c;
+    if (i >= period) sum -= points[i - period].c;
+    if (i >= period - 1) out[i] = sum / period;
+  }
+  return out;
+}
+
+function renderPriceChart(chart) {
+  const pts = chart.points;
+  const n = pts.length;
+  const W = 640, H = 300, padL = 4, padR = 50, padT = 10, padB = 14;
+  const priceH = 196, gap = 16;
+  const volTop = padT + priceH + gap;
+  const volH = H - volTop - padB;
+  const closes = pts.map(p => p.c);
+  const ma1 = calcMA(pts, chart.ma[0]);
+  const ma2 = calcMA(pts, chart.ma[1]);
+  const vals = closes.concat(ma1.filter(v => v != null), ma2.filter(v => v != null));
+  let lo = Math.min(...vals), hi = Math.max(...vals);
+  const pv = (hi - lo) * 0.06 || (hi * 0.02) || 1;
+  lo -= pv; hi += pv;
+  const span = hi - lo || 1;
+  const plotW = W - padL - padR;
+  const X = i => padL + (n <= 1 ? plotW : (i / (n - 1)) * plotW);
+  const Y = v => padT + priceH - ((v - lo) / span) * priceH;
+  const path = arr => {
+    let d = "", on = false;
+    for (let i = 0; i < n; i++) {
+      const v = arr[i];
+      if (v == null) { on = false; continue; }
+      d += (on ? "L" : "M") + X(i).toFixed(1) + "," + Y(v).toFixed(1);
+      on = true;
+    }
+    return d;
+  };
+  let grid = "";
+  for (let g = 0; g <= 3; g++) {
+    const v = lo + (span * g / 3);
+    const y = Y(v).toFixed(1);
+    grid += `<line x1="${padL}" y1="${y}" x2="${(padL + plotW).toFixed(1)}" y2="${y}" stroke="#eceff3" stroke-width="1"/>`;
+    grid += `<text x="${(W - padR + 4).toFixed(1)}" y="${(+y + 3.5).toFixed(1)}" font-size="11" fill="#9aa3af">${fmtNum(v, 2)}</text>`;
+  }
+  const maxVol = Math.max(...pts.map(p => p.v || 0)) || 1;
+  const bw = Math.max(0.6, (plotW / n) * 0.72);
+  let volBars = "";
+  for (let i = 0; i < n; i++) {
+    const h = ((pts[i].v || 0) / maxVol) * volH;
+    const up = i === 0 ? true : pts[i].c >= pts[i - 1].c;
+    volBars += `<rect x="${(X(i) - bw / 2).toFixed(1)}" y="${(volTop + volH - h).toFixed(1)}" width="${bw.toFixed(1)}" height="${Math.max(0.4, h).toFixed(1)}" fill="${up ? "#d62828" : "#2a9d8f"}" opacity="0.45"/>`;
+  }
+  const last = closes[n - 1];
+  const lastY = Y(last);
+  const lastColor = last >= closes[0] ? "#d62828" : "#2a9d8f";
+  const marker = `<line x1="${padL}" y1="${lastY.toFixed(1)}" x2="${(padL + plotW).toFixed(1)}" y2="${lastY.toFixed(1)}" stroke="${lastColor}" stroke-width="1" stroke-dasharray="3 3" opacity="0.6"/>
+    <rect x="${(W - padR).toFixed(1)}" y="${(lastY - 8).toFixed(1)}" width="${padR}" height="16" rx="2" fill="${lastColor}"/>
+    <text x="${(W - padR + padR / 2).toFixed(1)}" y="${(lastY + 3.5).toFixed(1)}" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">${fmtNum(last, 2)}</text>`;
+  return `<svg class="tw-chart-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="價格走勢圖">
+    ${grid}${volBars}
+    <path d="${path(closes)}" fill="none" stroke="#111827" stroke-width="1.4"/>
+    <path d="${path(ma1)}" fill="none" stroke="${TW_MA_COLORS[0]}" stroke-width="1.2" opacity="0.95"/>
+    <path d="${path(ma2)}" fill="none" stroke="${TW_MA_COLORS[1]}" stroke-width="1.2" opacity="0.95"/>
+    ${marker}
+  </svg>`;
+}
+
+function renderTwChartWrap(code, chart, errMsg) {
+  const btns = TW_CHART_RANGES.map(r =>
+    `<button type="button" class="tw-chart-rng${r.key === TW_CHART_RANGE ? " active" : ""}" onclick="switchTwChartRange('${code}','${r.key}')">${r.label}</button>`
+  ).join("");
+  let body;
+  if (errMsg) {
+    body = `<div class="tw-chart-msg">走勢圖載入失敗（${escapeHtml(errMsg)}）。可點下方「TradingView」看完整線圖。</div>`;
+  } else if (!chart) {
+    body = `<div class="tw-chart-msg">載入走勢圖中…</div>`;
+  } else {
+    const unit = chart.interval === "1wk" ? "週" : "日";
+    const legend = `<div class="tw-chart-legend">
+      <span><i style="background:#111827"></i>收盤</span>
+      <span><i style="background:${TW_MA_COLORS[0]}"></i>${chart.ma[0]}${unit}均</span>
+      <span><i style="background:${TW_MA_COLORS[1]}"></i>${chart.ma[1]}${unit}均</span>
+      <span><i class="tw-vol-key"></i>成交量</span>
+    </div>`;
+    body = legend + renderPriceChart(chart) + `<div class="tw-chart-foot">資料源：Yahoo Finance（瀏覽器直接抓取，無中介伺服器）</div>`;
+  }
+  return `<div class="tw-chart-rngs">${btns}</div><div class="tw-chart-area">${body}</div>`;
+}
+
+function switchTwChartRange(code, range) {
+  TW_CHART_RANGE = range;
+  const rec = twStockFindByCode(code);
+  loadTwStockChart(code, rec?.market);
+}
+
+async function loadTwStockChart(code, market) {
+  const slot = document.getElementById(`tw-chart-${code}`);
+  if (!slot) return;
+  slot.innerHTML = renderTwChartWrap(code, null, null);
+  let chart;
+  try {
+    chart = await fetchYahooChart(code, market, TW_CHART_RANGE);
+  } catch (e) {
+    const s = document.getElementById(`tw-chart-${code}`);
+    if (s) s.innerHTML = renderTwChartWrap(code, null, String(e.message || e));
+    return;
+  }
+  const s2 = document.getElementById(`tw-chart-${code}`);
+  if (s2) s2.innerHTML = renderTwChartWrap(code, chart, null);
+}
+
+// ============ 基本面快覽 (Valuation grid) ============
+const TW_BWIBBU_CACHE = {};  // key: yyyymmdd -> map(code -> row)，上市估值
+let TPEX_PE_PROMISE = null;  // 上櫃估值（OpenAPI）
+
+async function fetchBwibbuMap() {
+  const today = new Date();
+  for (let i = 0; i < 5; i++) {
+    const d = new Date(today.getFullYear(), today.getMonth(), today.getDate() - i);
+    const ymd = fmtTwseDateYmd(d);
+    if (TW_BWIBBU_CACHE[ymd]) return { date: ymd, map: TW_BWIBBU_CACHE[ymd] };
+    try {
+      const url = `https://www.twse.com.tw/rwd/zh/afterTrading/BWIBBU_d?date=${ymd}&selectType=ALL&response=json`;
+      const r = await fetch(url, { mode: "cors" });
+      if (!r.ok) continue;
+      const j = await r.json();
+      if (j.stat !== "OK" || !Array.isArray(j.data) || !j.data.length) continue;
+      const map = {};
+      for (const row of j.data) map[String(row[0]).trim()] = row;
+      TW_BWIBBU_CACHE[ymd] = map;
+      return { date: ymd, map };
+    } catch (e) { /* try previous day */ }
+  }
+  throw new Error("近 5 日無估值資料");
+}
+
+function loadTpexPeMap() {
+  if (!TPEX_PE_PROMISE) {
+    TPEX_PE_PROMISE = fetch("https://www.tpex.org.tw/openapi/v1/tpex_mainboard_peratio_analysis", { mode: "cors" })
+      .then(r => { if (!r.ok) throw new Error(`TPEx PE ${r.status}`); return r.json(); })
+      .then(arr => {
+        const map = {};
+        for (const o of (arr || [])) map[String(o.SecuritiesCompanyCode).trim()] = o;
+        return map;
+      })
+      .catch(e => { TPEX_PE_PROMISE = null; throw e; });
+  }
+  return TPEX_PE_PROMISE;
+}
+
+function rocYmdToIso(s) {
+  const t = String(s || "");
+  if (t.length < 7) return "";
+  return `${parseInt(t.slice(0, 3)) + 1911}-${t.slice(3, 5)}-${t.slice(5, 7)}`;
+}
+
+async function fetchTwValuation(code, market) {
+  const out = { ok: true, code, market };
+  const isOtc = market === "上櫃";
+  try {
+    if (isOtc) {
+      const map = await loadTpexPeMap();
+      const o = map[code];
+      if (o) {
+        out.per = parseTwseNum(o.PriceEarningRatio);
+        out.pbr = parseTwseNum(o.PriceBookRatio);
+        out.yield = parseTwseNum(o.YieldRatio);
+        out.valDate = rocYmdToIso(o.Date);
+        out.valSrc = "TPEx 櫃買";
+      }
+    } else {
+      const { date, map } = await fetchBwibbuMap();
+      const row = map[code];
+      if (row) {
+        out.yield = parseTwseNum(row[3]);
+        out.per = parseTwseNum(row[5]);
+        out.pbr = parseTwseNum(row[6]);
+        out.valDate = `${date.slice(0, 4)}-${date.slice(4, 6)}-${date.slice(6)}`;
+        out.valSrc = "TWSE 證交所";
+      }
+    }
+  } catch (e) { out.valErr = e.message; }
+  try {
+    const [incArr, balArr] = await Promise.all([loadTwBulkLocal("tw_income"), loadTwBulkLocal("tw_balance")]);
+    const inc = (incArr || []).find(r => r.code === code) || null;
+    const bal = (balArr || []).find(r => r.code === code) || null;
+    if (inc) {
+      out.eps = parseTwseNum(inc.eps);
+      const rev = parseTwseNum(inc.revenue), ni = parseTwseNum(inc.net_income);
+      out.npm = (rev && ni != null) ? (ni / rev * 100) : null;
+      out.finYr = parseInt(inc.year) + 1911;
+      out.finQ = inc.quarter;
+      if (bal) {
+        const eq = parseTwseNum(bal.total_equity);
+        if (ni != null && eq) out.roe = (ni / eq) * 100;  // 單季 ROE
+      }
+    }
+  } catch (e) { out.finErr = e.message; }
+  return out;
+}
+
+function renderValuationGrid(v) {
+  if (!v) return `<div class="tw-val-msg">載入基本面中…</div>`;
+  const num = (x, suffix = "", dp = 2) => (x == null || !Number.isFinite(x)) ? "—" : `${fmtNum(x, dp)}${suffix}`;
+  const finSub = (v.finYr && v.finQ) ? `${v.finYr}Q${v.finQ} 單季` : "";
+  const valSub = v.valSrc ? `${v.valSrc}${v.valDate ? " " + v.valDate : ""}` : "";
+  const cell = (label, value, sub) => `
+    <div class="tw-val-cell">
+      <div class="tw-val-num">${value}</div>
+      <div class="tw-val-lbl">${escapeHtml(label)}</div>
+      ${sub ? `<div class="tw-val-sub">${escapeHtml(sub)}</div>` : ""}
+    </div>`;
+  const cells = [
+    cell("本益比 P/E", num(v.per), valSub),
+    cell("股價淨值比 P/B", num(v.pbr), valSub),
+    cell("殖利率", num(v.yield, "%"), valSub),
+    cell("EPS", num(v.eps, " 元"), finSub),
+    cell("ROE", num(v.roe, "%"), finSub),
+    cell("淨利率", num(v.npm, "%"), finSub),
+  ].join("");
+  const note = (v.valErr && v.per == null) ? `<div class="tw-val-note">估值（P/E·P/B·殖利率）暫無：${escapeHtml(v.valErr)}，可點下方連結至外站查。</div>` : "";
+  return `<div class="tw-val-grid">${cells}</div>${note}
+    <div class="tw-val-foot">P/E·P/B·殖利率取自${v.market === "上櫃" ? "證券櫃買中心 OpenAPI" : "證交所 BWIBBU 每日揭露"}；EPS·ROE·淨利率由 MOPS 最新季報計算${v.finYr ? `（${v.finYr}Q${v.finQ}）` : ""}。ROE、淨利率為單季數值，非近四季 TTM，與其他網站年度數可能有別。</div>`;
+}
+
+async function loadTwStockValuation(code, market) {
+  const slot = document.getElementById(`tw-val-${code}`);
+  if (!slot) return;
+  let v;
+  try { v = await fetchTwValuation(code, market); }
+  catch (e) { v = { ok: false, market, valErr: String(e.message || e) }; }
+  const s2 = document.getElementById(`tw-val-${code}`);
+  if (s2) s2.innerHTML = renderValuationGrid(v);
+}
+
+// ============ 法人動向（近 N 個交易日三大法人趨勢，上市） ============
+let TW_INST_HIST_PROMISE = null;
+function loadTwInstHistory() {
+  if (!TW_INST_HIST_PROMISE) {
+    TW_INST_HIST_PROMISE = fetch(`data/tw_inst_history.json?t=${Date.now()}`)
+      .then(r => { if (!r.ok) throw new Error(`inst_history ${r.status}`); return r.json(); })
+      .catch(e => { TW_INST_HIST_PROMISE = null; throw e; });
+  }
+  return TW_INST_HIST_PROMISE;
+}
+
+function fmtLots(n) {  // 張 → 張／萬張，帶正負號
+  if (n == null || !Number.isFinite(n)) return "—";
+  const sign = n > 0 ? "+" : n < 0 ? "−" : "";
+  const a = Math.abs(n);
+  if (a >= 10000) return `${sign}${(a / 10000).toFixed(2)} 萬張`;
+  return `${sign}${a.toLocaleString("zh-TW")} 張`;
+}
+
+function renderInstBarRow(label, arr) {
+  const a = arr || [];
+  const n = a.length || 1;
+  const sum = a.reduce((s, v) => s + (v || 0), 0);
+  const sumCls = sum > 0 ? "tw-up" : sum < 0 ? "tw-down" : "tw-flat";
+  const maxAbs = Math.max(1, ...a.map(v => Math.abs(v || 0)));
+  const W = 300, H = 44, mid = H / 2;
+  const step = W / n, bw = Math.max(1, step * 0.66);
+  const bars = a.map((v, i) => {
+    const x = (i + 0.5) * step;
+    const h = (Math.abs(v || 0) / maxAbs) * (mid - 2);
+    const up = (v || 0) >= 0;
+    const y = up ? mid - h : mid;
+    return `<rect x="${(x - bw / 2).toFixed(1)}" y="${y.toFixed(1)}" width="${bw.toFixed(1)}" height="${Math.max(0.6, h).toFixed(1)}" fill="${up ? "#d62828" : "#2a9d8f"}" opacity="0.82"/>`;
+  }).join("");
+  return `<div class="tw-inst-row">
+    <div class="tw-inst-row-head"><span class="tw-inst-row-lbl">${escapeHtml(label)}</span><span class="tw-inst-row-sum ${sumCls}">Σ ${fmtLots(sum)}</span></div>
+    <svg class="tw-inst-bars" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="${mid}" x2="${W}" y2="${mid}" stroke="#d7dde3" stroke-width="0.8"/>${bars}</svg>
+  </div>`;
+}
+
+function renderInstTrend(code, hist, errMsg, isOtc) {
+  if (isOtc) return `<div class="tw-inst-msg">上櫃／興櫃股的三大法人趨勢 TWSE T86 未涵蓋，請點下方「三大法人買賣超」連結至 Yahoo。</div>`;
+  if (errMsg) return `<div class="tw-inst-msg">法人動向載入失敗（${escapeHtml(errMsg)}）。</div>`;
+  if (!hist) return `<div class="tw-inst-msg">載入法人動向中…</div>`;
+  const c = hist.codes?.[code];
+  const dates = hist.dates || [];
+  if (!c || !dates.length) return `<div class="tw-inst-msg">查無此檔近期三大法人資料（近期可能無交易）。</div>`;
+  const fmtD = s => `${s.slice(4, 6)}/${s.slice(6, 8)}`;
+  const span = `${fmtD(dates[0])}～${fmtD(dates[dates.length - 1])}（${dates.length} 個交易日）`;
+  const totSum = (c.tot || []).reduce((s, v) => s + (v || 0), 0);
+  const totCls = totSum > 0 ? "tw-up" : totSum < 0 ? "tw-down" : "tw-flat";
+  return `
+    <div class="tw-inst-trend">
+      <div class="tw-inst-trend-head">
+        <span class="tw-inst-trend-title">三大法人合計 <span class="${totCls}">Σ ${fmtLots(totSum)}</span></span>
+        <span class="tw-inst-trend-span">${escapeHtml(span)}</span>
+      </div>
+      ${renderInstBarRow("外資", c.f)}
+      ${renderInstBarRow("投信", c.t)}
+      ${renderInstBarRow("自營商", c.d)}
+      <div class="tw-inst-trend-foot">紅為買超、綠為賣超，單位：張。資料源：TWSE 證交所 T86（每日盤後揭露），最終以官方為準。</div>
+    </div>`;
+}
+
+async function loadTwStockInstTrend(code, market) {
+  const slot = document.getElementById(`tw-inst-trend-${code}`);
+  if (!slot) return;
+  if (market === "上櫃" || market === "興櫃") {
+    slot.innerHTML = renderInstTrend(code, null, null, true);
+    return;
+  }
+  let hist;
+  try { hist = await loadTwInstHistory(); }
+  catch (e) {
+    const s = document.getElementById(`tw-inst-trend-${code}`);
+    if (s) s.innerHTML = renderInstTrend(code, null, String(e.message || e), false);
+    return;
+  }
+  const s2 = document.getElementById(`tw-inst-trend-${code}`);
+  if (s2) s2.innerHTML = renderInstTrend(code, hist, null, false);
+}
+
 async function loadTwStockSnapshot(code, market) {
   const slot = document.getElementById(`tw-snap-${code}`);
   if (!slot) {
@@ -2465,6 +2824,11 @@ async function loadTwStockSnapshot(code, market) {
   }
   // 綜合小結：snap 資料先入 cache
   if (snap && snap.ok) updateTwSummary(code, { snap });
+  // 接力載入價格走勢圖（Yahoo 日線）與基本面快覽（P/E、P/B、殖利率、EPS、ROE、淨利率）
+  loadTwStockChart(code, market);
+  loadTwStockValuation(code, market);
+  // 接力載入法人動向（近 20 個交易日三大法人趨勢）
+  loadTwStockInstTrend(code, market);
   // 接力載入籌碼摘要（三大法人 + 融資融券，僅上市股有 TWSE 籌碼 API）
   if (market !== "上櫃") loadTwStockChips(code);
   // 接力載入公司基本面（公司資料 / 月營收 / 季營益）
@@ -2742,44 +3106,49 @@ async function fetchMargnForDate(date) {
   return j;
 }
 
-async function fetchTwStockChips(code) {
-  if (TW_CHIPS_CACHE[code]) return TW_CHIPS_CACHE[code];
-  // 從 snapshot 拿到最近交易日（snapshot cache 內已記錄 dateStr）；否則退到今日
-  const snapKey = Object.keys(TW_STOCK_SNAPSHOT_CACHE).find(k => k.startsWith(`${code}|`));
-  const snap = snapKey ? TW_STOCK_SNAPSHOT_CACHE[snapKey] : null;
-  let targetDate;
-  if (snap?.dateStr && /^\d{4}-\d{2}-\d{2}$/.test(snap.dateStr)) {
-    targetDate = snap.dateStr.replace(/-/g, "");
-  } else {
-    targetDate = fmtTwseDateYmd(new Date());
-  }
-  // 嘗試 targetDate；若不存在則退到前一日（重試 3 次涵蓋週末/假日）
-  const tryDates = [targetDate];
-  let cursor = targetDate;
-  for (let i = 0; i < 3; i++) {
+function chipTryDates(startYmd, count) {
+  const dates = [startYmd];
+  let cursor = startYmd;
+  for (let i = 0; i < count; i++) {
     const y = +cursor.slice(0, 4), m = +cursor.slice(4, 6), d = +cursor.slice(6, 8);
     const prev = new Date(y, m - 1, d - 1);
     cursor = fmtTwseDateYmd(prev);
-    tryDates.push(cursor);
+    dates.push(cursor);
   }
-  let t86 = null, margn = null, usedDate = null;
+  return dates;
+}
+function ymdToIso(ymd) {
+  return `${ymd.slice(0, 4)}-${ymd.slice(4, 6)}-${ymd.slice(6, 8)}`;
+}
+// 各資料集獨立往前找最近一個有資料的交易日。
+// 三大法人(T86)與融資融券(MI_MARGN)由 TWSE 在不同時點發布，不可綁同一天，
+// 否則較慢發布的那一個會把已有最新資料的另一個一起拖回前一日。
+async function resolveLatestChip(fetcher, tryDates) {
   for (const date of tryDates) {
     try {
-      const [a, b] = await Promise.all([fetchT86ForDate(date), fetchMargnForDate(date)]);
-      t86 = a;
-      margn = b;
-      usedDate = date;
-      break;
-    } catch (e) {
-      // try previous date
-    }
+      return { date, data: await fetcher(date) };
+    } catch (e) { /* 該日無資料 → 往前一日 */ }
   }
-  if (!t86 || !margn) throw new Error("近 4 日皆無籌碼資料");
-  const t86Row = (t86.data || []).find(r => String(r[0]).trim() === code);
-  const margnRow = (margn.tables?.[1]?.data || []).find(r => String(r[0]).trim() === code);
+  return null;
+}
+async function fetchTwStockChips(code) {
+  if (TW_CHIPS_CACHE[code]) return TW_CHIPS_CACHE[code];
+  // 從今日往前回退（涵蓋週末/連假），不綁定報價快照日：
+  // STOCK_DAY 快照走「月鍵」URL，可能被 network-first service worker 快取而落後，
+  // 綁它會讓籌碼日期被一併鎖在舊日。
+  const tryDates = chipTryDates(fmtTwseDateYmd(new Date()), 7);
+  const [t86Res, margnRes] = await Promise.all([
+    resolveLatestChip(fetchT86ForDate, tryDates),
+    resolveLatestChip(fetchMargnForDate, tryDates),
+  ]);
+  if (!t86Res && !margnRes) throw new Error("近 8 日皆無籌碼資料");
+  const t86Row = t86Res ? (t86Res.data.data || []).find(r => String(r[0]).trim() === code) : null;
+  const margnRow = margnRes ? (margnRes.data.tables?.[1]?.data || []).find(r => String(r[0]).trim() === code) : null;
   const result = {
     ok: true,
-    date: `${usedDate.slice(0, 4)}-${usedDate.slice(4, 6)}-${usedDate.slice(6, 8)}`,
+    t86Date: t86Res ? ymdToIso(t86Res.date) : null,
+    margnDate: margnRes ? ymdToIso(margnRes.date) : null,
+    date: t86Res ? ymdToIso(t86Res.date) : (margnRes ? ymdToIso(margnRes.date) : null),
     t86Row,
     margnRow,
   };
@@ -2885,9 +3254,9 @@ async function loadTwStockChips(code) {
     fillCardSlot(code, "margin", `<div class="tw-data-card-hint">${escapeHtml(data?.error || "無資料")}</div>`);
     return;
   }
-  fillCardSlot(code, "inst", renderInstBody(data.date, data.t86Row));
-  fillCardSlot(code, "margin", renderMarginBody(data.date, data.margnRow));
-  updateTwSummary(code, { t86Row: data.t86Row, margnRow: data.margnRow, chipsDate: data.date });
+  fillCardSlot(code, "inst", renderInstBody(data.t86Date || data.date, data.t86Row));
+  fillCardSlot(code, "margin", renderMarginBody(data.margnDate || data.date, data.margnRow));
+  updateTwSummary(code, { t86Row: data.t86Row, margnRow: data.margnRow, chipsDate: data.t86Date || data.date });
 }
 
 function twStockFindByCode(code) {
@@ -3036,13 +3405,22 @@ function renderTwStockResults(code) {
         <a class="tw-res-quote" href="${escapeHtml(groups.realtime[0].url)}" target="_blank" rel="noopener">查即時報價 →</a>
       </div>
       <div id="tw-snap-${escapeHtml(code)}" class="tw-snap-wrap"><div class="tw-snap-loading">載入即時行情中…</div></div>
+      <div id="tw-chart-${escapeHtml(code)}" class="tw-chart-wrap"><div class="tw-chart-msg">載入走勢圖中…</div></div>
+      <div class="tw-res-section">
+        <div class="tw-res-title" style="color:#019AB3">基本面</div>
+        <div id="tw-val-${escapeHtml(code)}" class="tw-val-wrap"><div class="tw-val-msg">載入基本面中…</div></div>
+      </div>
+      <div class="tw-res-section">
+        <div class="tw-res-title" style="color:#017A8F">法人動向</div>
+        <div id="tw-inst-trend-${escapeHtml(code)}" class="tw-inst-trend-wrap"><div class="tw-inst-msg">載入法人動向中…</div></div>
+      </div>
       ${linkSection("即時報價", "#019AB3", groups.realtime)}
       <div class="tw-res-section">
         <div class="tw-res-title" style="color:#017A8F">綜合小結</div>
         <div class="tw-summary" id="tw-summary-${escapeHtml(code)}"><div class="tw-sum-loading">資料載入中…</div></div>
       </div>
       <div class="tw-res-section">
-        <div class="tw-res-title" style="color:#019AB3">1. 基本面</div>
+        <div class="tw-res-title" style="color:#019AB3">1. 財報與營運</div>
         <div class="tw-data-cards">${pass1Cards}</div>
       </div>
       <div class="tw-res-section">
