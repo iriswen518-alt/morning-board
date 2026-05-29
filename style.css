@@ -1744,6 +1744,20 @@ table.indices .date-col {
   .tw-chart-wrap { padding: 10px 10px 8px; }
 }
 
+/* 月營收走勢（逐月累積） */
+.tw-rev-trend-wrap { margin: 2px 0 4px; }
+.tw-rev-msg { font-size: 13px; color: var(--text-mute, #6b7280); padding: 10px 0; font-style: italic; }
+.tw-rev-trend { background: #fff; border: 1px solid #e5eaef; border-radius: 10px; padding: 12px 14px 10px; }
+.tw-rev-headline { display: flex; align-items: baseline; gap: 8px 14px; flex-wrap: wrap; margin-bottom: 8px; }
+.tw-rev-hl-main { font-size: 14px; color: #1a1a1a; }
+.tw-rev-hl-main b { font-size: 16px; color: var(--brand-deep, #003D91); }
+.tw-rev-hl-yoy { font-size: 13px; font-weight: 600; color: var(--text-mute, #6b7280); }
+.tw-rev-streak { font-size: 11.5px; font-weight: 700; color: var(--up); background: #fdecec; padding: 2px 8px; border-radius: 999px; }
+.tw-rev-bars { display: block; width: 100%; height: 140px; }
+.tw-rev-axis { display: flex; justify-content: space-between; font-size: 10.5px; color: var(--text-mute, #6b7280); margin-top: 2px; }
+.tw-rev-accum { font-size: 12.5px; color: var(--text-mute, #6b7280); background: #F2F8FA; border-radius: 8px; padding: 12px 14px; text-align: center; }
+.tw-rev-foot { margin-top: 10px; padding-top: 8px; border-top: 1px dashed #eef1f4; font-size: 11px; color: var(--text-mute, #6b7280); line-height: 1.5; }
+
 /* 法人動向（近 N 日三大法人趨勢） */
 .tw-inst-trend-wrap { margin: 2px 0 4px; }
 .tw-inst-msg { font-size: 13px; color: var(--text-mute, #6b7280); padding: 10px 0; font-style: italic; }

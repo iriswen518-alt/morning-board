@@ -2715,6 +2715,82 @@ async function loadTwStockValuation(code, market) {
   if (s2) s2.innerHTML = renderValuationGrid(v);
 }
 
+// ============ 月營收走勢（逐月累積） ============
+let TW_REV_HIST_PROMISE = null;
+function loadTwRevenueHistory() {
+  if (!TW_REV_HIST_PROMISE) {
+    TW_REV_HIST_PROMISE = fetch(`data/tw_revenue_history.json?t=${Date.now()}`)
+      .then(r => { if (!r.ok) throw new Error(`revenue_history ${r.status}`); return r.json(); })
+      .catch(e => { TW_REV_HIST_PROMISE = null; throw e; });
+  }
+  return TW_REV_HIST_PROMISE;
+}
+
+function renderRevenueBars(series) {
+  const n = series.length;
+  const W = 560, H = 140, padT = 6, padB = 18;
+  const plotH = H - padT - padB;
+  const revs = series.map(e => parseTwseNum(e.rev) || 0);
+  const maxR = Math.max(1, ...revs);
+  const step = W / n, bw = Math.max(2, step * 0.6);
+  const baseY = padT + plotH;
+  const bars = series.map((e, i) => {
+    const r = parseTwseNum(e.rev) || 0;
+    const h = (r / maxR) * plotH;
+    const x = (i + 0.5) * step;
+    const yoy = e.yoy == null ? null : parseTwseNum(e.yoy);
+    const color = yoy == null ? "#9aa3af" : yoy > 0 ? "#d62828" : yoy < 0 ? "#2a9d8f" : "#9aa3af";
+    return `<rect x="${(x - bw / 2).toFixed(1)}" y="${(baseY - h).toFixed(1)}" width="${bw.toFixed(1)}" height="${Math.max(0.6, h).toFixed(1)}" fill="${color}" opacity="0.85"/>`;
+  }).join("");
+  const firstLbl = fmtYyyymmFromRoc(series[0].ym);
+  const lastLbl = fmtYyyymmFromRoc(series[n - 1].ym);
+  return `<svg class="tw-rev-bars" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true">
+    <line x1="0" y1="${baseY}" x2="${W}" y2="${baseY}" stroke="#d7dde3" stroke-width="0.8"/>${bars}</svg>
+    <div class="tw-rev-axis"><span>${escapeHtml(firstLbl)}</span><span>${escapeHtml(lastLbl)}</span></div>`;
+}
+
+function renderRevenueTrend(code, hist, errMsg) {
+  if (errMsg) return `<div class="tw-rev-msg">月營收走勢載入失敗（${escapeHtml(errMsg)}）。</div>`;
+  if (!hist) return `<div class="tw-rev-msg">載入月營收中…</div>`;
+  const series = hist.codes?.[code];
+  if (!series || !series.length) return `<div class="tw-rev-msg">查無月營收歷史（資料累積中，或此標的無月營收揭露）。</div>`;
+  const latest = series[series.length - 1];
+  let streak = 0;
+  for (let i = series.length - 1; i >= 0; i--) {
+    const y = series[i].yoy == null ? null : parseTwseNum(series[i].yoy);
+    if (y != null && y > 0) streak++; else break;
+  }
+  const yoyCls = pctClass(latest.yoy);
+  const streakBadge = streak >= 2 ? `<span class="tw-rev-streak">連續 ${streak} 月 YoY 正成長</span>` : "";
+  const headline = `<div class="tw-rev-headline">
+      <span class="tw-rev-hl-main">${fmtYyyymmFromRoc(latest.ym)} 營收 <b>${fmtRevenue(latest.rev)}</b></span>
+      <span class="tw-rev-hl-yoy">YoY <span class="${yoyCls}">${fmtPct(latest.yoy)}</span></span>
+      ${streakBadge}
+    </div>`;
+  const body = series.length >= 2
+    ? renderRevenueBars(series)
+    : `<div class="tw-rev-accum">月營收歷史累積中（目前 ${series.length} 個月，每月自動 +1）。</div>`;
+  return `<div class="tw-rev-trend">
+      ${headline}
+      ${body}
+      <div class="tw-rev-foot">紅為 YoY 正成長、綠為衰退、灰為無 YoY；單位金額已換算。資料源：TWSE／櫃買月營收，自 ${escapeHtml(fmtYyyymmFromRoc(series[0].ym))} 起逐月累積。</div>
+    </div>`;
+}
+
+async function loadTwStockRevenueTrend(code) {
+  const slot = document.getElementById(`tw-rev-trend-${code}`);
+  if (!slot) return;
+  let hist;
+  try { hist = await loadTwRevenueHistory(); }
+  catch (e) {
+    const s = document.getElementById(`tw-rev-trend-${code}`);
+    if (s) s.innerHTML = renderRevenueTrend(code, null, String(e.message || e));
+    return;
+  }
+  const s2 = document.getElementById(`tw-rev-trend-${code}`);
+  if (s2) s2.innerHTML = renderRevenueTrend(code, hist, null);
+}
+
 // ============ 法人動向（近 N 個交易日三大法人趨勢，上市） ============
 let TW_INST_HIST_PROMISE = null;
 function loadTwInstHistory() {
@@ -2827,7 +2903,8 @@ async function loadTwStockSnapshot(code, market) {
   // 接力載入價格走勢圖（Yahoo 日線）與基本面快覽（P/E、P/B、殖利率、EPS、ROE、淨利率）
   loadTwStockChart(code, market);
   loadTwStockValuation(code, market);
-  // 接力載入法人動向（近 20 個交易日三大法人趨勢）
+  // 接力載入月營收走勢（逐月累積）與法人動向（近 20 個交易日三大法人趨勢）
+  loadTwStockRevenueTrend(code);
   loadTwStockInstTrend(code, market);
   // 接力載入籌碼摘要（三大法人 + 融資融券，僅上市股有 TWSE 籌碼 API）
   if (market !== "上櫃") loadTwStockChips(code);
@@ -3409,6 +3486,10 @@ function renderTwStockResults(code) {
       <div class="tw-res-section">
         <div class="tw-res-title" style="color:#019AB3">基本面</div>
         <div id="tw-val-${escapeHtml(code)}" class="tw-val-wrap"><div class="tw-val-msg">載入基本面中…</div></div>
+      </div>
+      <div class="tw-res-section">
+        <div class="tw-res-title" style="color:#019AB3">月營收</div>
+        <div id="tw-rev-trend-${escapeHtml(code)}" class="tw-rev-trend-wrap"><div class="tw-rev-msg">載入月營收中…</div></div>
       </div>
       <div class="tw-res-section">
         <div class="tw-res-title" style="color:#017A8F">法人動向</div>
