@@ -2547,12 +2547,14 @@ function fmtRevenue(s) {  // 月營收單位為千元
   return `${(val / 1e4).toFixed(0)} 萬元`;
 }
 function fmtPct(s) {
+  if (s === null || s === undefined) return "—";
   const n = parseTwseNum(s);
   if (n == null) return "—";
   const sign = n > 0 ? "+" : "";
   return `${sign}${n.toFixed(2)}%`;
 }
 function pctClass(s) {
+  if (s === null || s === undefined) return "";
   const n = parseTwseNum(s);
   return n > 0 ? "tw-up" : n < 0 ? "tw-down" : "tw-flat";
 }
