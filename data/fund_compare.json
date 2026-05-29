@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-29T10:05:30+08:00",
+  "generated_at": "2026-05-29T10:56:38+08:00",
   "static_as_of": "2026-03-31",
   "as_of_note": "風險指標及同基金報酬截至 2026-03-31；同類別平均截至 2026-04-30",
   "fx_usdtwd": 31.466,
@@ -24,18 +24,18 @@
   "funds": [
     {
       "id": "franklin_em_income",
-      "name_zh": "富蘭克林坦伯頓全球投資系列-新興市場月收益基金美元F(Mdis)股",
+      "name_zh": "富蘭克林坦伯頓全球投資系列-新興市場月收益基金美元A(acc)股",
       "category": "income",
       "morningstar_category": "環球新興市場股債混合",
       "morningstar_rating": 5,
       "rr": "RR4",
       "currency": "美元",
-      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLZL4-FF19",
+      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLH40-FR1I",
       "self": {
         "return": {
-          "1y": 41.29,
-          "3y": 71.48,
-          "5y": 30.77
+          "1y": 42.91,
+          "3y": 77.51,
+          "5y": 38.22
         },
         "std_3y": 11.33,
         "std_1y": null,
@@ -46,10 +46,10 @@
         "aum_unit": "百萬",
         "aum_ccy": "美元",
         "aum_date": "2026-03-31",
-        "inception_date": "2019-10-03",
-        "inception_years": 6.7,
+        "inception_date": "2011-04-29",
+        "inception_years": 15.1,
         "expense_ratio": 1.14,
-        "distribution_yield": 4.94,
+        "distribution_yield": null,
         "top10_concentration": null,
         "top_holdings": [],
         "sector_top3": [],
@@ -113,18 +113,18 @@
     },
     {
       "id": "franklin_corporate_bond",
-      "name_zh": "富蘭克林坦伯頓全球投資系列公司債基金美元A(Mdis)",
+      "name_zh": "富蘭克林坦伯頓全球投資系列公司債基金美元A(acc)",
       "category": "income",
       "morningstar_category": "美元高收益債券",
       "morningstar_rating": 4,
       "rr": "RR3",
       "currency": "美元",
-      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLZ41-FR14",
+      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLZA9-FR76",
       "self": {
         "return": {
           "1y": 6.86,
-          "3y": 28.49,
-          "5y": 20.82
+          "3y": 28.41,
+          "5y": 20.81
         },
         "std_3y": 4.37,
         "std_1y": null,
@@ -135,10 +135,10 @@
         "aum_unit": "百萬",
         "aum_ccy": "美元",
         "aum_date": "2026-03-31",
-        "inception_date": "1996-03-01",
-        "inception_years": 30.2,
+        "inception_date": "2001-07-02",
+        "inception_years": 24.9,
         "expense_ratio": 0.84,
-        "distribution_yield": 6.69,
+        "distribution_yield": null,
         "top10_concentration": null,
         "top_holdings": [],
         "sector_top3": [],
@@ -482,11 +482,11 @@
             "pct": 1.48
           },
           {
-            "name": "SOCIETE GENERALE SER REGS (REG) (REG S) VAR 08J",
+            "name": "ELECTRICITE DE FRANCE SA SER EMTN (BR) (REG S)",
             "pct": 1.43
           },
           {
-            "name": "ELECTRICITE DE FRANCE SA SER EMTN (BR) (REG S)",
+            "name": "SOCIETE GENERALE SER REGS (REG) (REG S) VAR 08J",
             "pct": 1.43
           }
         ],
@@ -729,18 +729,18 @@
     },
     {
       "id": "first_global_utilities",
-      "name_zh": "第一金全球水電瓦斯及基礎建設收益基金B配息(台幣)",
+      "name_zh": "第一金全球水電瓦斯及基礎建設收益基金A不配息(台幣)",
       "category": "balanced",
       "morningstar_category": "行業股票－基礎建設",
       "morningstar_rating": 3,
       "rr": "RR3",
       "currency": "台幣",
-      "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACNC74-1229",
+      "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACNC70-1228",
       "self": {
         "return": {
-          "1y": 19.94,
-          "3y": 38.86,
-          "5y": 57.35
+          "1y": 19.97,
+          "3y": 38.81,
+          "5y": 57.27
         },
         "std_3y": 11.06,
         "std_1y": null,
