@@ -3,63 +3,63 @@
     {
       "slug": "exam_trust",
       "name": "信託業務",
-      "active": false,
+      "active": true,
       "description": "信託業業務人員專業測驗，涵蓋信託法規、信託業務經營與信託商品實務。",
       "icon": "<rect x=\"4\" y=\"9\" width=\"16\" height=\"12\" rx=\"2\"/><path d=\"M8 9V6a4 4 0 0 1 8 0v3\"/><circle cx=\"12\" cy=\"15\" r=\"1.5\"/><path d=\"M12 16.5V18\"/>"
     },
     {
       "slug": "exam_internal_control",
       "name": "內控測驗",
-      "active": false,
+      "active": true,
       "description": "銀行內部控制與內部稽核法規測驗，涵蓋內控制度、三道防線與法令遵循。",
       "icon": "<path d=\"M12 3l7 3v5c0 4.2-3 7.8-7 9-4-1.2-7-4.8-7-9V6z\"/><path d=\"M9 12l2 2 4-4\"/>"
     },
     {
       "slug": "exam_financial_planning",
       "name": "理財規劃",
-      "active": false,
+      "active": true,
       "description": "理財規劃人員專業能力測驗，涵蓋理財規劃實務、金融市場常識與職業道德。",
       "icon": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M15.5 8.5l-2 5-5 2 2-5z\"/><circle cx=\"12\" cy=\"12\" r=\"1\" fill=\"currentColor\"/>"
     },
     {
       "slug": "exam_family_trust",
       "name": "家族信託",
-      "active": false,
+      "active": true,
       "description": "家族信託規劃顧問師認證，涵蓋家族治理、傳承架構與信託工具運用。",
       "icon": "<path d=\"M12 3l8 3v5c0 4.5-3.2 8.5-8 10-4.8-1.5-8-5.5-8-10V6z\"/><circle cx=\"12\" cy=\"10\" r=\"2\"/><path d=\"M8.5 16c0-2 1.5-3 3.5-3s3.5 1 3.5 3\"/>"
     },
     {
       "slug": "exam_esg",
       "name": "永續發展",
-      "active": false,
+      "active": true,
       "description": "永續發展基礎能力測驗，涵蓋 ESG、永續金融與責任投資概念。",
       "icon": "<path d=\"M5 19c0-8 6-13 14-13 0 8-6 13-14 13z\"/><path d=\"M5 19c3-4 6-6 10-8\"/>"
     },
     {
       "slug": "exam_property_insurance",
       "name": "財產保險",
-      "active": false,
+      "active": true,
       "description": "財產保險業務員資格測驗，涵蓋財產保險法規、商品與核保理賠實務。",
       "icon": "<path d=\"M4 11l8-6 8 6\"/><path d=\"M6 10v9h12v-9\"/><path d=\"M9 14h6\"/><path d=\"M12 14v5\"/>"
     },
     {
       "slug": "exam_life_insurance",
       "name": "人身保險",
-      "active": false,
+      "active": true,
       "description": "人身保險業務員資格測驗，涵蓋人身保險法規、商品與招攬實務。",
       "icon": "<path d=\"M12 3l8 3v5c0 4.5-3.2 8.5-8 10-4.8-1.5-8-5.5-8-10V6z\"/><path d=\"M12 14.5c-2-1.4-3.2-2.6-3.2-4 0-1 .8-1.8 1.8-1.8.7 0 1.1.4 1.4.8.3-.4.7-.8 1.4-.8 1 0 1.8.8 1.8 1.8 0 1.4-1.2 2.6-3.2 4z\"/>"
     },
     {
       "slug": "exam_cfp",
       "name": "CFP",
-      "active": false,
+      "active": true,
       "description": "認證理財規劃顧問（CFP）認證，涵蓋理財規劃六大模組之整合應用。",
       "icon": "<circle cx=\"12\" cy=\"9\" r=\"5\"/><path d=\"M9 13.5L7.5 21l4.5-2.5L16.5 21 15 13.5\"/><path d=\"M12 7.5v1.5l1.2.8\"/>"
     },
     {
       "slug": "exam_elderly_finance",
       "name": "高齡金融",
-      "active": false,
+      "active": true,
       "description": "高齡金融規劃顧問師認證，涵蓋高齡者金融需求、安養信託與權益保障。",
       "icon": "<circle cx=\"12\" cy=\"5.5\" r=\"2.5\"/><path d=\"M12 9v6\"/><path d=\"M9 12l3-1 3 1\"/><path d=\"M10 21l2-5 2 5\"/><path d=\"M16 11v10\"/>"
     }
