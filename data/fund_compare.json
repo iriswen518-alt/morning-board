@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-29T10:00:48+08:00",
+  "generated_at": "2026-05-29T10:05:30+08:00",
   "static_as_of": "2026-03-31",
   "as_of_note": "風險指標及同基金報酬截至 2026-03-31；同類別平均截至 2026-04-30",
   "fx_usdtwd": 31.466,
@@ -202,18 +202,18 @@
     },
     {
       "id": "franklin_sinoam_multi_asset",
-      "name_zh": "富蘭克林華美多重資產收益基金-B分配型(台幣)",
+      "name_zh": "富蘭克林華美多重資產收益基金-A累積型(台幣)",
       "category": "balanced",
       "morningstar_category": "新台幣平衡型股債混合",
       "morningstar_rating": 4,
       "rr": "RR3",
       "currency": "台幣",
-      "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACFT48-2815",
+      "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACFT47-2817",
       "self": {
         "return": {
-          "1y": 42.82,
-          "3y": 77.69,
-          "5y": 73.14
+          "1y": 42.79,
+          "3y": 77.54,
+          "5y": 73.1
         },
         "std_3y": 8.12,
         "std_1y": null,
@@ -332,18 +332,18 @@
     },
     {
       "id": "amundi_em_bond",
-      "name_zh": "東方匯理基金新興市場債券A美元(月配息)",
+      "name_zh": "東方匯理基金新興市場債券A美元",
       "category": "income",
       "morningstar_category": "環球新興市場債券",
       "morningstar_rating": 4,
       "rr": "RR3",
       "currency": "美元",
-      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=PIZA8-PI0W",
+      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=PIZA4-PI0V",
       "self": {
         "return": {
-          "1y": 14.64,
-          "3y": 40.22,
-          "5y": 14.57
+          "1y": 14.74,
+          "3y": 40.14,
+          "5y": 14.31
         },
         "std_3y": 5.94,
         "std_1y": null,
@@ -354,10 +354,10 @@
         "aum_unit": "百萬",
         "aum_ccy": "美元",
         "aum_date": "2026-03-31",
-        "inception_date": "2012-04-11",
-        "inception_years": 14.1,
+        "inception_date": "2002-05-02",
+        "inception_years": 24.1,
         "expense_ratio": 1.35,
-        "distribution_yield": 6.94,
+        "distribution_yield": null,
         "top10_concentration": null,
         "top_holdings": [],
         "sector_top3": [],
@@ -421,13 +421,13 @@
     },
     {
       "id": "amundi_global_strategic",
-      "name_zh": "東方匯理全球策略收益基金-ND月配型(美元)",
+      "name_zh": "東方匯理全球策略收益基金-A2累積型(台幣)",
       "category": "income",
       "morningstar_category": "環球多元化債券",
       "morningstar_rating": null,
       "rr": "RR2",
-      "currency": "美元",
-      "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACCF311-ZJ04",
+      "currency": "台幣",
+      "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACCF304-1813",
       "self": {
         "return": {
           "1y": null,
@@ -445,7 +445,7 @@
         "aum_date": "2026-04-30",
         "inception_date": "2026-03-23",
         "inception_years": 0.2,
-        "expense_ratio": 1.76,
+        "expense_ratio": 1.26,
         "distribution_yield": null,
         "top10_concentration": 28.5,
         "top_holdings": [
@@ -482,11 +482,11 @@
             "pct": 1.48
           },
           {
-            "name": "ELECTRICITE DE FRANCE SA SER EMTN (BR) (REG S)",
+            "name": "SOCIETE GENERALE SER REGS (REG) (REG S) VAR 08J",
             "pct": 1.43
           },
           {
-            "name": "SOCIETE GENERALE SER REGS (REG) (REG S) VAR 08J",
+            "name": "ELECTRICITE DE FRANCE SA SER EMTN (BR) (REG S)",
             "pct": 1.43
           }
         ],
@@ -551,18 +551,18 @@
     },
     {
       "id": "schroder_global_income",
-      "name_zh": "施羅德環球基金系列-環球收益成長(美元)U-月配固定",
+      "name_zh": "施羅德環球基金系列-環球收益成長(美元)A-累積",
       "category": "balanced",
       "morningstar_category": "美元平衡型股債混合",
       "morningstar_rating": 4,
       "rr": "RR3",
       "currency": "美元",
-      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=PYZT8-SB06",
+      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=PYZR9-SC88",
       "self": {
         "return": {
-          "1y": 26.65,
-          "3y": 56.69,
-          "5y": 30.73
+          "1y": 27.98,
+          "3y": 61.79,
+          "5y": 37.86
         },
         "std_3y": 9.86,
         "std_1y": null,
@@ -573,10 +573,10 @@
         "aum_unit": "百萬",
         "aum_ccy": "美元",
         "aum_date": "2026-03-31",
-        "inception_date": "2018-10-24",
-        "inception_years": 7.6,
+        "inception_date": "2015-03-11",
+        "inception_years": 11.2,
         "expense_ratio": 1.55,
-        "distribution_yield": 8.72,
+        "distribution_yield": null,
         "top10_concentration": null,
         "top_holdings": [],
         "sector_top3": [],
@@ -640,13 +640,13 @@
     },
     {
       "id": "pinebridge_japan_multi_asset",
-      "name_zh": "柏瑞日本多重資產基金N月配息(台幣)",
+      "name_zh": "柏瑞日本多重資產基金A不配息(台幣)",
       "category": "balanced",
       "morningstar_category": "新台幣平衡型股債混合",
       "morningstar_rating": null,
       "rr": "RR3",
       "currency": "台幣",
-      "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACAI453-YD18",
+      "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACAI451-WA17",
       "self": {
         "return": {
           "1y": null,
