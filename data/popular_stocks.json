@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-29T13:12:58+08:00",
+  "generated_at": "2026-05-29T15:02:04+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -15,18 +15,6 @@
       "error": null
     },
     {
-      "symbol": "ORCL",
-      "name_zh": "甲骨文",
-      "kind": "US",
-      "price": 203.7,
-      "change_pct": 6.67,
-      "mtd_pct": 26.22,
-      "ytd_pct": 4.51,
-      "market_date": "2026-05-28",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ORCL.US",
-      "error": null
-    },
-    {
       "symbol": "SMCI",
       "name_zh": "美超微",
       "kind": "US",
@@ -39,6 +27,18 @@
       "error": null
     },
     {
+      "symbol": "ORCL",
+      "name_zh": "甲骨文",
+      "kind": "US",
+      "price": 203.7,
+      "change_pct": 6.67,
+      "mtd_pct": 26.22,
+      "ytd_pct": 4.51,
+      "market_date": "2026-05-28",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ORCL.US",
+      "error": null
+    },
+    {
       "symbol": "PLTR",
       "name_zh": "Palantir",
       "kind": "US",
@@ -48,30 +48,6 @@
       "ytd_pct": -19.36,
       "market_date": "2026-05-28",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PLTR.US",
-      "error": null
-    },
-    {
-      "symbol": "COST",
-      "name_zh": "好市多",
-      "kind": "US",
-      "price": 995.2,
-      "change_pct": -0.85,
-      "mtd_pct": -1.91,
-      "ytd_pct": 15.41,
-      "market_date": "2026-05-28",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=COST.US",
-      "error": null
-    },
-    {
-      "symbol": "ASTS",
-      "name_zh": "AST SpaceMobile",
-      "kind": "US",
-      "price": 133.09,
-      "change_pct": 2.69,
-      "mtd_pct": 80.09,
-      "ytd_pct": 83.24,
-      "market_date": "2026-05-28",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ASTS.US",
       "error": null
     },
     {
@@ -99,6 +75,30 @@
       "error": null
     },
     {
+      "symbol": "ASTS",
+      "name_zh": "AST SpaceMobile",
+      "kind": "US",
+      "price": 133.09,
+      "change_pct": 2.69,
+      "mtd_pct": 80.09,
+      "ytd_pct": 83.24,
+      "market_date": "2026-05-28",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ASTS.US",
+      "error": null
+    },
+    {
+      "symbol": "NOW",
+      "name_zh": "ServiceNow",
+      "kind": "US",
+      "price": 108.73,
+      "change_pct": 6.47,
+      "mtd_pct": 23.12,
+      "ytd_pct": -29.02,
+      "market_date": "2026-05-28",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NOW.US",
+      "error": null
+    },
+    {
       "symbol": "PLAB",
       "name_zh": "Photronics",
       "kind": "US",
@@ -123,27 +123,15 @@
       "error": null
     },
     {
-      "symbol": "NTAP",
-      "name_zh": "NetApp",
+      "symbol": "PATH",
+      "name_zh": "UiPath",
       "kind": "US",
-      "price": 142.4,
-      "change_pct": -0.24,
-      "mtd_pct": 28.55,
-      "ytd_pct": 32.97,
+      "price": 11.58,
+      "change_pct": 3.76,
+      "mtd_pct": 12.43,
+      "ytd_pct": -29.35,
       "market_date": "2026-05-28",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NTAP.US",
-      "error": null
-    },
-    {
-      "symbol": "S",
-      "name_zh": "SentinelOne",
-      "kind": "US",
-      "price": 18.02,
-      "change_pct": 0.39,
-      "mtd_pct": 27.26,
-      "ytd_pct": 20.13,
-      "market_date": "2026-05-28",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=S.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PATH.US",
       "error": null
     },
     {
@@ -159,51 +147,27 @@
       "error": null
     },
     {
-      "symbol": "AMPX",
-      "name_zh": "Amprius Technologies",
+      "symbol": "COST",
+      "name_zh": "好市多",
       "kind": "US",
-      "price": 20.85,
-      "change_pct": 21.5,
-      "mtd_pct": -1.0,
-      "ytd_pct": 164.26,
+      "price": 995.2,
+      "change_pct": -0.85,
+      "mtd_pct": -1.91,
+      "ytd_pct": 15.41,
       "market_date": "2026-05-28",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AMPX.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=COST.US",
       "error": null
     },
     {
-      "symbol": "UMAC",
-      "name_zh": "Unusual Machines",
+      "symbol": "S",
+      "name_zh": "SentinelOne",
       "kind": "US",
-      "price": 29.6,
-      "change_pct": 57.2,
-      "mtd_pct": 102.88,
-      "ytd_pct": 132.34,
+      "price": 18.02,
+      "change_pct": 0.39,
+      "mtd_pct": 27.26,
+      "ytd_pct": 20.13,
       "market_date": "2026-05-28",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=UMAC.US",
-      "error": null
-    },
-    {
-      "symbol": "TSSI",
-      "name_zh": "TSS",
-      "kind": "US",
-      "price": 13.54,
-      "change_pct": 7.97,
-      "mtd_pct": -11.62,
-      "ytd_pct": 91.51,
-      "market_date": "2026-05-28",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TSSI.US",
-      "error": null
-    },
-    {
-      "symbol": "PATH",
-      "name_zh": "UiPath",
-      "kind": "US",
-      "price": 11.58,
-      "change_pct": 3.76,
-      "mtd_pct": 12.43,
-      "ytd_pct": -29.35,
-      "market_date": "2026-05-28",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PATH.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=S.US",
       "error": null
     },
     {
@@ -219,15 +183,27 @@
       "error": null
     },
     {
-      "symbol": "NOW",
-      "name_zh": "ServiceNow",
+      "symbol": "DLLL",
+      "name_zh": "GraniteShares 2x Long DELL Dail",
       "kind": "US",
-      "price": 108.73,
-      "change_pct": 6.47,
-      "mtd_pct": 23.12,
-      "ytd_pct": -29.02,
+      "price": 121.35,
+      "change_pct": 8.53,
+      "mtd_pct": 117.9,
+      "ytd_pct": 428.97,
       "market_date": "2026-05-28",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NOW.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DLLL.US",
+      "error": null
+    },
+    {
+      "symbol": "AMPX",
+      "name_zh": "Amprius Technologies",
+      "kind": "US",
+      "price": 20.85,
+      "change_pct": 21.5,
+      "mtd_pct": -1.0,
+      "ytd_pct": 164.26,
+      "market_date": "2026-05-28",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AMPX.US",
       "error": null
     },
     {
