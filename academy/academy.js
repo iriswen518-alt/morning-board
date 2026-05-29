@@ -115,7 +115,7 @@ async function loadChapter() {
       const li = document.createElement('li');
       const a = document.createElement('a');
       a.href = `chapter.html?course=${course}&chapter=${ch.slug}`;
-      a.textContent = `${i + 1}. ${ch.title}`;
+      a.textContent = ch.title;
       if (ch.slug === chapterSlug || (!chapterSlug && i === 0)) {
         a.classList.add('current');
       }
