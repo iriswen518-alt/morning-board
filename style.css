@@ -1782,6 +1782,8 @@ table.indices .date-col {
 .tw-data-card-hint { color: var(--text-mute, #6b7280); font-size: 12px; font-style: italic; padding: 2px 0; }
 .tw-data-card-link { display: inline-block; margin-top: 8px; padding-top: 6px; border-top: 1px dashed #eef1f4; font-size: 12px; font-weight: 600; color: var(--brand-primary, #019AB3); text-decoration: none; }
 .tw-data-card-link:hover { text-decoration: underline; }
+.tw-data-card-foot { margin-top: 8px; padding-top: 6px; border-top: 1px dashed #eef1f4; display: flex; flex-wrap: wrap; gap: 4px 14px; }
+.tw-data-card-foot .tw-data-card-link { margin-top: 0; padding-top: 0; border-top: none; }
 
 .tw-matches { background: #fff; border: 1px solid #e5e7eb; border-radius: 10px; padding: 14px 16px; margin-top: 14px; }
 .tw-matches-title { font-size: 13px; color: var(--text-sub, #4b5563); margin-bottom: 10px; }

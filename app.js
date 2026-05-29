@@ -2975,14 +2975,20 @@ function renderTwStockResults(code) {
       <div class="tw-res-title" style="color:${color}">${escapeHtml(title)}</div>
       <div class="tw-res-links">${items.map(linkBtn).join("")}</div>
     </div>`;
-  const dataCard = (slotId, title, sub, linkHref, linkLabel = "查詳細") => `
+  const dataCard = (slotId, title, sub, linkHref, linkLabel = "查詳細", extra = null) => {
+    const mainLink = `<a class="tw-data-card-link" href="${escapeHtml(linkHref)}" target="_blank" rel="noopener">${escapeHtml(linkLabel)} →</a>`;
+    const foot = extra
+      ? `<div class="tw-data-card-foot">${mainLink}<a class="tw-data-card-link" href="${escapeHtml(extra.href)}" target="_blank" rel="noopener">${escapeHtml(extra.label)} →</a></div>`
+      : mainLink;
+    return `
     <div class="tw-data-card">
       <div class="tw-data-card-title">${escapeHtml(title)}${sub ? ` <span class="tw-data-card-sub">${escapeHtml(sub)}</span>` : ""}</div>
       <div class="tw-data-card-body" id="${slotId}">
         <div class="tw-data-card-loading">載入中…</div>
       </div>
-      <a class="tw-data-card-link" href="${escapeHtml(linkHref)}" target="_blank" rel="noopener">${escapeHtml(linkLabel)} →</a>
+      ${foot}
     </div>`;
+  };
   const noDataCard = (title, linkHref, hint = "點下方連結至外站查") => `
     <div class="tw-data-card tw-data-card-plain">
       <div class="tw-data-card-title">${escapeHtml(title)}</div>
@@ -2999,14 +3005,12 @@ function renderTwStockResults(code) {
     : `<span class="tw-res-hint">查無此代號（仍可直接點擊下方連結試查）</span>`;
   // PASS 1 卡片：4 張 data card + 4 張 plain card
   const pass1Cards = [
-    dataCard(`tw-card-${code}-company`, "公司資料", "", `${yh}/profile`, "查 Yahoo"),
-    dataCard(`tw-card-${code}-revenue`, "月營收", "", `${yh}/revenue`, "查 Yahoo"),
+    dataCard(`tw-card-${code}-company`, "公司資料", "", `${yh}/profile`, "查 Yahoo", { href: `${mops}/t05st01?co_id=${code}`, label: "MOPS 原始揭露" }),
+    dataCard(`tw-card-${code}-revenue`, "月營收", "", `${yh}/revenue`, "查 Yahoo", { href: `${mops}/t146sb05?co_id=${code}`, label: "MOPS 原始揭露" }),
     dataCard(`tw-card-${code}-income`, "損益表（季）", "", `${yh}/income-statement`, "查 Yahoo"),
     dataCard(`tw-card-${code}-balance`, "資產負債表（季）", "", `${yh}/balance-sheet`, "查 Yahoo"),
     noDataCard("現金流量表", `${yh}/cash-flow-statement`),
     noDataCard("重大訊息／新聞", `${yh}/news`),
-    noDataCard("MOPS 公司資料（原始揭露）", `${mops}/t05st01?co_id=${code}`),
-    noDataCard("MOPS 月營收（原始揭露）", `${mops}/t146sb05?co_id=${code}`),
   ].join("");
   // PASS 2 卡片：上市才有資料
   const pass2Cards = isOtc
