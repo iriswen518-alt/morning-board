@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-29T10:02:31+08:00",
+  "generated_at": "2026-05-29T13:13:32+08:00",
   "source": "manual curation (targets.json)",
   "version": 3,
   "updated": "2026-05-28",
@@ -84,15 +84,15 @@
       "stats": [
         {
           "k": "近1年績效",
-          "v": "+14.64%",
+          "v": "+14.74%",
           "sub": "東方匯理新興市場債券・截至 05/28",
-          "url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=PIZA8-PI0W"
+          "url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=PIZA4-PI0V"
         },
         {
           "k": "近1年績效",
           "v": "+6.86%",
           "sub": "富蘭克林公司債・截至 05/28",
-          "url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLZ41-FR14"
+          "url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLZA9-FR76"
         },
         {
           "k": "建議部位",
@@ -366,8 +366,8 @@
       "stats": [
         {
           "k": "WTI 原油 YTD",
-          "v": "+53.68%",
-          "sub": "今日 -0.67%・截至 05/29",
+          "v": "+53.02%",
+          "sub": "今日 -1.34%・截至 05/29",
           "url": "https://finance.yahoo.com/quote/CL=F"
         },
         {
@@ -409,13 +409,13 @@
         {
           "k": "Euro Stoxx 50 YTD",
           "v": "+4.73%",
-          "sub": "MTD +3.21%・今日 -0.25%・截至 05/28",
+          "sub": "MTD +3.21%・今日 +0.11%・截至 05/27",
           "url": "https://finance.yahoo.com/quote/%5ESTOXX50E"
         },
         {
           "k": "DAX YTD",
           "v": "+2.81%",
-          "sub": "MTD +3.64%・今日 -0.34%・截至 05/28",
+          "sub": "MTD +3.64%・今日 -0.03%・截至 05/27",
           "url": "https://finance.yahoo.com/quote/%5EGDAXI"
         },
         {
@@ -502,8 +502,8 @@
       "stats": [
         {
           "k": "STI 海峽時報 YTD",
-          "v": "+7.80%",
-          "sub": "今日 +0.60%・截至 05/29",
+          "v": "+8.18%",
+          "sub": "今日 +0.95%・截至 05/29",
           "url": "https://finance.yahoo.com/quote/%5ESTI"
         },
         {
@@ -591,13 +591,13 @@
         {
           "k": "Shanghai 上證 YTD",
           "v": "+3.15%",
-          "sub": "MTD -0.45%・今日 +0.12%・截至 05/28",
+          "sub": "MTD -0.45%・今日 -1.25%・截至 05/27",
           "url": "https://finance.yahoo.com/quote/000001.SS"
         },
         {
           "k": "CSI 300 滬深300 YTD",
           "v": "+6.01%",
-          "sub": "MTD +2.10%・今日 +0.12%・截至 05/28",
+          "sub": "MTD +2.10%・今日 -0.80%・截至 05/27",
           "url": "https://finance.yahoo.com/quote/000300.SS"
         },
         {
@@ -635,20 +635,20 @@
       "name_zh": "東方匯理新興市場債券基金",
       "currency": "USD",
       "tagline": "捕捉新興國家主權債與公司債利差",
-      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=PIZA8-PI0W",
+      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=PIZA4-PI0V",
       "fund_id": "amundi_em_bond",
-      "nav": 44.28,
+      "nav": 24.37,
       "nav_date": "2026-05-28",
-      "change_pct": 0.18,
+      "change_pct": 0.16,
       "perf": {
-        "1m": 1.03,
-        "3m": 0.53,
-        "6m": 4.5,
-        "ytd": 3.17,
-        "1y": 14.64,
-        "3y": 40.22
+        "1m": 1.04,
+        "3m": 0.54,
+        "6m": 4.59,
+        "ytd": 3.26,
+        "1y": 14.74,
+        "3y": 40.14
       },
-      "bop_name_zh": "東方匯理基金新興市場債券A美元(月配息)"
+      "bop_name_zh": "東方匯理基金新興市場債券A美元"
     },
     {
       "theme": "bonds",
@@ -656,20 +656,20 @@
       "name_zh": "富蘭克林公司債基金",
       "currency": "USD",
       "tagline": "鎖定高評級企業債殖利率，佈局降息",
-      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLZ41-FR14",
+      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLZA9-FR76",
       "fund_id": "franklin_corporate_bond",
-      "nav": 5.23,
+      "nav": 25.54,
       "nav_date": "2026-05-28",
-      "change_pct": 0.19,
+      "change_pct": 0.04,
       "perf": {
-        "1m": 0.17,
-        "3m": 0.54,
-        "6m": 1.86,
-        "ytd": 1.31,
+        "1m": 0.16,
+        "3m": 0.39,
+        "6m": 1.87,
+        "ytd": 1.23,
         "1y": 6.86,
-        "3y": 28.49
+        "3y": 28.41
       },
-      "bop_name_zh": "富蘭克林坦伯頓全球投資系列公司債基金美元A(Mdis)"
+      "bop_name_zh": "富蘭克林坦伯頓全球投資系列公司債基金美元A(acc)"
     },
     {
       "theme": "bonds",
@@ -677,20 +677,20 @@
       "name_zh": "東方匯理全球策略收益基金",
       "currency": "USD",
       "tagline": "無指標限制之靈活彈性債券策略",
-      "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACCF311-ZJ04",
+      "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACCF304-1813",
       "fund_id": "amundi_global_strategic",
-      "nav": 10.17,
+      "nav": 9.96,
       "nav_date": "2026-05-27",
       "change_pct": 0.0,
       "perf": {
-        "1m": 0.1,
+        "1m": 0.0,
         "3m": null,
         "6m": null,
-        "ytd": 1.7,
+        "ytd": -0.4,
         "1y": null,
         "3y": null
       },
-      "bop_name_zh": "東方匯理全球策略收益基金-ND月配型(美元)"
+      "bop_name_zh": "東方匯理全球策略收益基金-A2累積型(台幣)"
     },
     {
       "theme": "gold",
@@ -716,20 +716,20 @@
       "name_zh": "柏瑞日本多重資產基金",
       "currency": "TWD",
       "tagline": "參與日本重估行情與降低單一波動",
-      "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACAI453-YD18",
+      "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACAI451-WA17",
       "fund_id": "pinebridge_japan_multi_asset",
-      "nav": 11.046,
+      "nav": 11.3728,
       "nav_date": "2026-05-27",
       "change_pct": -0.37,
       "perf": {
         "1m": 2.94,
         "3m": -0.94,
-        "6m": 7.56,
-        "ytd": 7.21,
+        "6m": 7.55,
+        "ytd": 7.2,
         "1y": null,
         "3y": null
       },
-      "bop_name_zh": "柏瑞日本多重資產基金N月配息(台幣)"
+      "bop_name_zh": "柏瑞日本多重資產基金A不配息(台幣)"
     },
     {
       "theme": "ai",
