@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#019AB3">
 <title>理財小幫手・小學堂</title>
 <link rel="stylesheet" href="../style.css?v=20260526-2">
-<link rel="stylesheet" href="academy.css?v=20260529-0000">
+<link rel="stylesheet" href="academy.css?v=20260529-1">
 <style>
   .home-fab { display: none; }
   @media (max-width: 640px) {
@@ -116,15 +116,16 @@
 </nav>
 
 <main class="academy-main">
-  <section>
-    <h2 class="section-title">課程主題</h2>
-    <div id="course-tabs" class="tabs tabs-wrap">載入中…</div>
-    <div id="course-panes"></div>
-  </section>
-  <section>
-    <h2 class="section-title">證照考試</h2>
-    <div id="cert-list" class="cert-grid">載入中…</div>
-  </section>
+  <div class="tabs academy-toptabs">
+    <button class="tab active" type="button" data-atab="courses">課程主題</button>
+    <button class="tab" type="button" data-atab="certs">證照考試</button>
+  </div>
+  <div id="atab-courses">
+    <div id="course-list" class="academy-grid">載入中…</div>
+  </div>
+  <div id="atab-certs" hidden>
+    <div id="cert-list" class="academy-grid">載入中…</div>
+  </div>
 </main>
 
 <a class="home-fab" href="../" aria-label="回首頁">
@@ -139,6 +140,6 @@
   資料僅供內部參考，不構成任何投資建議
 </footer>
 
-<script src="academy.js?v=20260529-0000"></script>
+<script src="academy.js?v=20260529-1"></script>
 </body>
 </html>

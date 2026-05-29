@@ -1,72 +1,38 @@
+function renderAcademyCards(listEl, items) {
+  listEl.innerHTML = '';
+  items.forEach(item => {
+    const inactive = item.active === false;
+    const badge = inactive ? '<span class="academy-card-badge">敬請期待</span>' : '';
+    const inner = `<div class="academy-card-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${item.icon || ''}</svg>
+      </div>
+      <div class="academy-card-meta">
+        <h3 class="academy-card-name">${item.name}${badge}</h3>
+        ${item.description ? `<p class="academy-card-desc">${item.description}</p>` : ''}
+      </div>`;
+    let node;
+    if (inactive) {
+      node = document.createElement('div');
+    } else {
+      node = document.createElement('a');
+      node.href = `chapter.html?course=${encodeURIComponent(item.slug)}`;
+    }
+    node.className = 'academy-card';
+    node.innerHTML = inner;
+    listEl.appendChild(node);
+  });
+}
+
 async function loadCourses() {
-  const tabsEl = document.getElementById('course-tabs');
-  const panesEl = document.getElementById('course-panes');
-  if (!tabsEl || !panesEl) return;
+  const listEl = document.getElementById('course-list');
+  if (!listEl) return;
   try {
     const res = await fetch('../data/academy/courses.json');
     if (!res.ok) throw new Error('fetch failed');
     const data = await res.json();
-    const courses = data.courses || [];
-
-    const indexes = await Promise.all(courses.map(c =>
-      c.active
-        ? fetch(`../data/academy/${c.slug}/00_index.json`)
-            .then(r => r.ok ? r.json() : null)
-            .catch(() => null)
-        : Promise.resolve(null)
-    ));
-
-    tabsEl.innerHTML = '';
-    panesEl.innerHTML = '';
-    courses.forEach((course, i) => {
-      const toneClass = course.tone === 'muted' ? ' tone-muted' : '';
-      const btn = document.createElement('button');
-      btn.type = 'button';
-      btn.className = 'tab' + (i === 0 ? ' active' : '') + toneClass;
-      btn.dataset.course = course.slug;
-      btn.textContent = course.name;
-      tabsEl.appendChild(btn);
-
-      const pane = document.createElement('div');
-      pane.className = 'course-pane' + (i === 0 ? ' active' : '') + toneClass;
-      pane.dataset.course = course.slug;
-      const idx = indexes[i];
-      const chapterCount = idx?.chapters?.length || 0;
-      const hero = (course.description || course.icon)
-        ? `<div class="course-hero">
-             <div class="course-hero-icon">
-               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${course.icon || ''}</svg>
-             </div>
-             <div class="course-hero-meta">
-               <h3 class="course-hero-title">${course.name}${chapterCount ? `<span class="course-hero-badge">共 ${chapterCount} 章</span>` : ''}</h3>
-               ${course.description ? `<p class="course-hero-desc">${course.description}</p>` : ''}
-             </div>
-           </div>`
-        : '';
-      if (!course.active || !idx) {
-        pane.innerHTML = hero + '<p class="course-empty">敬請期待</p>';
-      } else {
-        const items = idx.chapters.map((ch, j) => {
-          const href = `chapter.html?course=${encodeURIComponent(course.slug)}&chapter=${encodeURIComponent(ch.slug)}`;
-          const desc = ch.description
-            ? `<span class="ch-desc">${ch.description}</span>`
-            : '';
-          return `<li><a href="${href}"><span class="ch-title">${j + 1}. ${ch.title}</span>${desc}</a></li>`;
-        }).join('');
-        pane.innerHTML = hero + `<ol class="chapter-list">${items}</ol>`;
-      }
-      panesEl.appendChild(pane);
-    });
-
-    tabsEl.addEventListener('click', e => {
-      const btn = e.target.closest('button.tab');
-      if (!btn) return;
-      const slug = btn.dataset.course;
-      tabsEl.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t === btn));
-      panesEl.querySelectorAll('.course-pane').forEach(p => p.classList.toggle('active', p.dataset.course === slug));
-    });
+    renderAcademyCards(listEl, data.courses || []);
   } catch (err) {
-    tabsEl.textContent = '載入失敗，請稍後再試。';
+    listEl.textContent = '載入失敗，請稍後再試。';
     console.error(err);
   }
 }
@@ -78,32 +44,27 @@ async function loadCertifications() {
     const res = await fetch('../data/academy/certifications.json');
     if (!res.ok) throw new Error('fetch failed');
     const data = await res.json();
-    const certs = data.certifications || [];
-    listEl.innerHTML = '';
-    certs.forEach(cert => {
-      const badge = cert.active ? '' : '<span class="cert-card-badge">敬請期待</span>';
-      const inner = `<div class="cert-card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${cert.icon || ''}</svg>
-        </div>
-        <div class="cert-card-meta">
-          <h3 class="cert-card-name">${cert.name}${badge}</h3>
-          ${cert.description ? `<p class="cert-card-desc">${cert.description}</p>` : ''}
-        </div>`;
-      let node;
-      if (cert.active) {
-        node = document.createElement('a');
-        node.href = `chapter.html?course=${encodeURIComponent(cert.slug)}`;
-      } else {
-        node = document.createElement('div');
-      }
-      node.className = 'cert-card';
-      node.innerHTML = inner;
-      listEl.appendChild(node);
-    });
+    renderAcademyCards(listEl, data.certifications || []);
   } catch (err) {
     listEl.textContent = '載入失敗，請稍後再試。';
     console.error(err);
   }
+}
+
+function wireAcademyTabs() {
+  const buttons = document.querySelectorAll('.academy-toptabs .tab[data-atab]');
+  if (!buttons.length) return;
+  buttons.forEach(t => {
+    t.addEventListener('click', () => {
+      buttons.forEach(x => x.classList.remove('active'));
+      t.classList.add('active');
+      const which = t.dataset.atab;
+      const courses = document.getElementById('atab-courses');
+      const certs = document.getElementById('atab-certs');
+      if (courses) courses.hidden = which !== 'courses';
+      if (certs) certs.hidden = which !== 'certs';
+    });
+  });
 }
 
 async function loadChapter() {
@@ -234,6 +195,7 @@ function wireNavToggle() {
 }
 
 wireNavToggle();
+wireAcademyTabs();
 loadCourses();
 loadCertifications();
 loadChapter();
