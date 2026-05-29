@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-29T09:43:47+08:00",
+  "generated_at": "2026-05-29T10:00:48+08:00",
   "static_as_of": "2026-03-31",
   "as_of_note": "風險指標及同基金報酬截至 2026-03-31；同類別平均截至 2026-04-30",
   "fx_usdtwd": 31.466,
@@ -23,274 +23,55 @@
   ],
   "funds": [
     {
-      "id": "allianz_tw_tech",
-      "name_zh": "安聯台灣科技基金",
-      "category": "tech",
-      "morningstar_category": "行業股票－科技",
+      "id": "franklin_em_income",
+      "name_zh": "富蘭克林坦伯頓全球投資系列-新興市場月收益基金美元F(Mdis)股",
+      "category": "income",
+      "morningstar_category": "環球新興市場股債混合",
       "morningstar_rating": 5,
-      "rr": "RR5",
-      "currency": "台幣",
-      "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACDD04-2602",
-      "self": {
-        "return": {
-          "1y": 288.78,
-          "3y": 508.72,
-          "5y": 688.13
-        },
-        "std_3y": 24.29,
-        "std_1y": null,
-        "sharpe_3y": 2.0,
-        "max_drawdown_3y": null,
-        "beta_3y": 1.05,
-        "aum": 2072.37,
-        "aum_unit": "億元",
-        "aum_ccy": "台幣",
-        "aum_date": "2026-04-30",
-        "inception_date": "2001-04-03",
-        "inception_years": 25.2,
-        "expense_ratio": 1.75,
-        "distribution_yield": null,
-        "top10_concentration": 56.6,
-        "top_holdings": [
-          {
-            "name": "旺矽",
-            "pct": 8.54
-          },
-          {
-            "name": "穎崴",
-            "pct": 8.38
-          },
-          {
-            "name": "台積電",
-            "pct": 6.59
-          },
-          {
-            "name": "台光電",
-            "pct": 6.58
-          },
-          {
-            "name": "創意",
-            "pct": 5.34
-          },
-          {
-            "name": "台燿",
-            "pct": 4.73
-          },
-          {
-            "name": "台達電",
-            "pct": 4.49
-          },
-          {
-            "name": "信驊",
-            "pct": 4.09
-          },
-          {
-            "name": "金像電",
-            "pct": 4.07
-          },
-          {
-            "name": "威剛",
-            "pct": 3.78
-          }
-        ],
-        "sector_top3": [],
-        "aum_twd_yi": 2072.4
-      },
-      "category_avg": {
-        "return": {
-          "1y": 60.8,
-          "3y": 113.36,
-          "5y": 58.3
-        },
-        "std_3y": 20.48,
-        "sharpe_3y": 1.08
-      },
-      "category_url": "https://www.sitca.org.tw/ROC/Industry/IN2422.aspx?txtYEAR=2026&txtMONTH=03&txtGROUPID=EUCA000542",
-      "category_rank": {
-        "return_1y_pct": null,
-        "std_3y_pct": null,
-        "sharpe_3y_pct": null
-      },
-      "benchmark": {
-        "name": "元大台灣卓越50基金（0050）",
-        "return": {
-          "1y": 128.91,
-          "3y": 244.86,
-          "5y": 240.38
-        },
-        "std_3y": null,
-        "sharpe_3y": null,
-        "url": "https://www.moneydj.com/ETF/X/Basic/Basic0008.xdjhtm?etfid=0050.TW"
-      },
-      "peers": [
-        {
-          "name": "統一奔騰基金",
-          "return": {
-            "1y": 228.3,
-            "3y": 396.74,
-            "5y": 516.06
-          },
-          "std_3y": 25.03,
-          "sharpe_3y": 1.75,
-          "url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACPS10-0501"
-        },
-        {
-          "name": "景順台灣科技基金",
-          "return": {
-            "1y": 203.55,
-            "3y": 297.79,
-            "5y": 302.31
-          },
-          "std_3y": 22.45,
-          "sharpe_3y": 1.5,
-          "url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACCS07-1701"
-        }
-      ],
-      "sources": {
-        "profile": "板信基金平台",
-        "risk": "晨星台灣",
-        "as_of_risk": "2026-03-31"
-      }
-    },
-    {
-      "id": "ab_intl_tech",
-      "name_zh": "聯博-國際科技基金A級別美元",
-      "category": "tech",
-      "morningstar_category": "行業股票－科技",
-      "morningstar_rating": 4,
       "rr": "RR4",
       "currency": "美元",
-      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=ALZ03-AL08",
+      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLZL4-FF19",
       "self": {
         "return": {
-          "1y": 85.26,
-          "3y": 180.51,
-          "5y": 128.63
+          "1y": 41.29,
+          "3y": 71.48,
+          "5y": 30.77
         },
-        "std_3y": 22.05,
+        "std_3y": 11.33,
         "std_1y": null,
-        "sharpe_3y": 1.0,
+        "sharpe_3y": 0.89,
         "max_drawdown_3y": null,
-        "beta_3y": 1.17,
-        "aum": 2168.0,
+        "beta_3y": 1.04,
+        "aum": 234.0,
         "aum_unit": "百萬",
         "aum_ccy": "美元",
         "aum_date": "2026-03-31",
-        "inception_date": "1995-10-02",
-        "inception_years": 30.7,
-        "expense_ratio": 2.5,
-        "distribution_yield": null,
+        "inception_date": "2019-10-03",
+        "inception_years": 6.7,
+        "expense_ratio": 1.14,
+        "distribution_yield": 4.94,
         "top10_concentration": null,
         "top_holdings": [],
         "sector_top3": [],
-        "aum_twd_yi": 682.2
+        "aum_twd_yi": 73.6
       },
       "category_avg": {
         "return": {
-          "1y": 60.8,
-          "3y": 113.36,
-          "5y": 58.3
+          "1y": 30.61,
+          "3y": 48.86,
+          "5y": 17.18
         },
-        "std_3y": 20.48,
-        "sharpe_3y": 1.08
+        "std_3y": 12.16,
+        "sharpe_3y": 0.76
       },
-      "category_url": "https://www.sitca.org.tw/ROC/Industry/IN2422.aspx?txtYEAR=2026&txtMONTH=03&txtGROUPID=EUCA000542",
+      "category_url": "https://www.sitca.org.tw/ROC/Industry/IN2422.aspx?txtYEAR=2026&txtMONTH=03&txtGROUPID=EUCA000741",
       "category_rank": {
         "return_1y_pct": null,
         "std_3y_pct": null,
         "sharpe_3y_pct": null
       },
       "benchmark": {
-        "name": "富邦NASDAQ-100基金（00662）",
-        "return": {
-          "1y": 46.32,
-          "3y": 118.35,
-          "5y": 146.16
-        },
-        "std_3y": null,
-        "sharpe_3y": null,
-        "url": "https://www.moneydj.com/ETF/X/Basic/Basic0008.xdjhtm?etfid=00662.TW"
-      },
-      "peers": [
-        {
-          "name": "富蘭克林科技基金",
-          "return": {
-            "1y": 225.92,
-            "3y": 406.58,
-            "5y": 466.35
-          },
-          "std_3y": 27.73,
-          "sharpe_3y": 0.81,
-          "url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACFT12-2811"
-        },
-        {
-          "name": "貝萊德世界科技基金",
-          "return": {
-            "1y": 27.13,
-            "3y": 78.88,
-            "5y": 35.28
-          },
-          "std_3y": 21.6,
-          "sharpe_3y": 0.79,
-          "url": null
-        }
-      ],
-      "sources": {
-        "profile": "板信基金平台",
-        "risk": "晨星台灣",
-        "as_of_risk": "2026-03-31"
-      }
-    },
-    {
-      "id": "schroder_global_income",
-      "name_zh": "施羅德環球基金系列-環球收益成長(美元)U-月配固定",
-      "category": "balanced",
-      "morningstar_category": "美元平衡型股債混合",
-      "morningstar_rating": 4,
-      "rr": "RR3",
-      "currency": "美元",
-      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=PYZT8-SB06",
-      "self": {
-        "return": {
-          "1y": 26.65,
-          "3y": 56.69,
-          "5y": 30.73
-        },
-        "std_3y": 9.86,
-        "std_1y": null,
-        "sharpe_3y": 0.68,
-        "max_drawdown_3y": null,
-        "beta_3y": 1.24,
-        "aum": 1409.0,
-        "aum_unit": "百萬",
-        "aum_ccy": "美元",
-        "aum_date": "2026-03-31",
-        "inception_date": "2018-10-24",
-        "inception_years": 7.6,
-        "expense_ratio": 1.55,
-        "distribution_yield": 8.59,
-        "top10_concentration": null,
-        "top_holdings": [],
-        "sector_top3": [],
-        "aum_twd_yi": 443.4
-      },
-      "category_avg": {
-        "return": {
-          "1y": 15.87,
-          "3y": 32.5,
-          "5y": 22.48
-        },
-        "std_3y": null,
-        "sharpe_3y": 0.63
-      },
-      "category_url": "https://www.sitca.org.tw/ROC/Industry/IN2422.aspx?txtYEAR=2026&txtMONTH=03&txtGROUPID=EUCA000694",
-      "category_rank": {
-        "return_1y_pct": null,
-        "std_3y_pct": null,
-        "sharpe_3y_pct": null
-      },
-      "benchmark": {
-        "name": "MSCI 世界高股息指數",
+        "name": "新興市場股債混合（MSCI EM 50/EMBI 50）",
         "return": {
           "1y": null,
           "3y": null,
@@ -302,25 +83,114 @@
       },
       "peers": [
         {
-          "name": "施羅德ISF多元資產成長基金C股",
+          "name": "摩根新興雙利平衡基金",
           "return": {
-            "1y": 20.31,
-            "3y": 45.82,
-            "5y": 31.53
+            "1y": 104.42,
+            "3y": 167.31,
+            "5y": 160.65
           },
-          "std_3y": 9.87,
-          "sharpe_3y": 0.84,
-          "url": null
+          "std_3y": 10.04,
+          "sharpe_3y": 1.24,
+          "url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACJF87-0411"
         },
         {
-          "name": "安聯收益成長基金",
+          "name": "聯博新興市場多元收益基金",
           "return": {
-            "1y": 10.71,
-            "3y": 32.42,
-            "5y": 22.14
+            "1y": 24.9,
+            "3y": 59.26,
+            "5y": 25.03
           },
-          "std_3y": 8.1,
-          "sharpe_3y": 0.61,
+          "std_3y": 8.42,
+          "sharpe_3y": 0.98,
+          "url": null
+        }
+      ],
+      "sources": {
+        "profile": "板信基金平台",
+        "risk": "晨星台灣",
+        "as_of_risk": "2026-03-31"
+      }
+    },
+    {
+      "id": "franklin_corporate_bond",
+      "name_zh": "富蘭克林坦伯頓全球投資系列公司債基金美元A(Mdis)",
+      "category": "income",
+      "morningstar_category": "美元高收益債券",
+      "morningstar_rating": 4,
+      "rr": "RR3",
+      "currency": "美元",
+      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLZ41-FR14",
+      "self": {
+        "return": {
+          "1y": 6.86,
+          "3y": 28.49,
+          "5y": 20.82
+        },
+        "std_3y": 4.37,
+        "std_1y": null,
+        "sharpe_3y": 0.67,
+        "max_drawdown_3y": null,
+        "beta_3y": 0.98,
+        "aum": 1253.0,
+        "aum_unit": "百萬",
+        "aum_ccy": "美元",
+        "aum_date": "2026-03-31",
+        "inception_date": "1996-03-01",
+        "inception_years": 30.2,
+        "expense_ratio": 0.84,
+        "distribution_yield": 6.69,
+        "top10_concentration": null,
+        "top_holdings": [],
+        "sector_top3": [],
+        "aum_twd_yi": 394.3
+      },
+      "category_avg": {
+        "return": {
+          "1y": 7.88,
+          "3y": 24.42,
+          "5y": 18.85
+        },
+        "std_3y": 4.23,
+        "sharpe_3y": 0.58
+      },
+      "category_url": "https://www.sitca.org.tw/ROC/Industry/IN2422.aspx?txtYEAR=2026&txtMONTH=03&txtGROUPID=EUCA000583",
+      "category_rank": {
+        "return_1y_pct": null,
+        "std_3y_pct": null,
+        "sharpe_3y_pct": null
+      },
+      "benchmark": {
+        "name": "彭博美國公司債指數",
+        "return": {
+          "1y": null,
+          "3y": null,
+          "5y": null
+        },
+        "std_3y": null,
+        "sharpe_3y": null,
+        "url": null
+      },
+      "peers": [
+        {
+          "name": "聯博美國非投資等級債券基金",
+          "return": {
+            "1y": 6.55,
+            "3y": 25.36,
+            "5y": 17.57
+          },
+          "std_3y": null,
+          "sharpe_3y": 0.64,
+          "url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=PAZB0-FT0D"
+        },
+        {
+          "name": "PIMCO美國非投資等級債券基金",
+          "return": {
+            "1y": 6.18,
+            "3y": 23.6,
+            "5y": 15.04
+          },
+          "std_3y": null,
+          "sharpe_3y": 0.56,
           "url": null
         }
       ],
@@ -452,6 +322,314 @@
           "std_3y": null,
           "sharpe_3y": null,
           "url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=AC0001-1429"
+        }
+      ],
+      "sources": {
+        "profile": "板信基金平台",
+        "risk": "晨星台灣",
+        "as_of_risk": "2026-03-31"
+      }
+    },
+    {
+      "id": "amundi_em_bond",
+      "name_zh": "東方匯理基金新興市場債券A美元(月配息)",
+      "category": "income",
+      "morningstar_category": "環球新興市場債券",
+      "morningstar_rating": 4,
+      "rr": "RR3",
+      "currency": "美元",
+      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=PIZA8-PI0W",
+      "self": {
+        "return": {
+          "1y": 14.64,
+          "3y": 40.22,
+          "5y": 14.57
+        },
+        "std_3y": 5.94,
+        "std_1y": null,
+        "sharpe_3y": 0.78,
+        "max_drawdown_3y": null,
+        "beta_3y": 0.75,
+        "aum": 4286.0,
+        "aum_unit": "百萬",
+        "aum_ccy": "美元",
+        "aum_date": "2026-03-31",
+        "inception_date": "2012-04-11",
+        "inception_years": 14.1,
+        "expense_ratio": 1.35,
+        "distribution_yield": 6.94,
+        "top10_concentration": null,
+        "top_holdings": [],
+        "sector_top3": [],
+        "aum_twd_yi": 1348.6
+      },
+      "category_avg": {
+        "return": {
+          "1y": 11.96,
+          "3y": 30.1,
+          "5y": 10.36
+        },
+        "std_3y": 6.33,
+        "sharpe_3y": 0.61
+      },
+      "category_url": "https://www.sitca.org.tw/ROC/Industry/IN2422.aspx?txtYEAR=2026&txtMONTH=03&txtGROUPID=EUCA000586",
+      "category_rank": {
+        "return_1y_pct": null,
+        "std_3y_pct": null,
+        "sharpe_3y_pct": null
+      },
+      "benchmark": {
+        "name": "摩根新興市場債券指數（EMBI）",
+        "return": {
+          "1y": null,
+          "3y": null,
+          "5y": null
+        },
+        "std_3y": null,
+        "sharpe_3y": null,
+        "url": null
+      },
+      "peers": [
+        {
+          "name": "富蘭克林華美新興國家固定收益基金",
+          "return": {
+            "1y": 16.78,
+            "3y": 28.24,
+            "5y": 8.11
+          },
+          "std_3y": 7.56,
+          "sharpe_3y": 0.88,
+          "url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACFT93-28F6"
+        },
+        {
+          "name": "聯博新興市場債券基金",
+          "return": {
+            "1y": 13.67,
+            "3y": 39.5,
+            "5y": 11.13
+          },
+          "std_3y": 6.4,
+          "sharpe_3y": 1.0,
+          "url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=ALZR3-AL1J"
+        }
+      ],
+      "sources": {
+        "profile": "板信基金平台",
+        "risk": "晨星台灣",
+        "as_of_risk": "2026-03-31"
+      }
+    },
+    {
+      "id": "amundi_global_strategic",
+      "name_zh": "東方匯理全球策略收益基金-ND月配型(美元)",
+      "category": "income",
+      "morningstar_category": "環球多元化債券",
+      "morningstar_rating": null,
+      "rr": "RR2",
+      "currency": "美元",
+      "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACCF311-ZJ04",
+      "self": {
+        "return": {
+          "1y": null,
+          "3y": null,
+          "5y": null
+        },
+        "std_3y": null,
+        "std_1y": null,
+        "sharpe_3y": null,
+        "max_drawdown_3y": null,
+        "beta_3y": null,
+        "aum": 39.62,
+        "aum_unit": "億元",
+        "aum_ccy": "台幣",
+        "aum_date": "2026-04-30",
+        "inception_date": "2026-03-23",
+        "inception_years": 0.2,
+        "expense_ratio": 1.76,
+        "distribution_yield": null,
+        "top10_concentration": 28.5,
+        "top_holdings": [
+          {
+            "name": "BUONI POLIENNALI DEL TES SER 5Y 2.950000 % 01JU",
+            "pct": 6.97
+          },
+          {
+            "name": "US TREASURY N/B 3.875 % 31-MAR-2031",
+            "pct": 4.76
+          },
+          {
+            "name": "US TREASURY 4.375% 15MAY2034",
+            "pct": 3.86
+          },
+          {
+            "name": "UNITED MEXICAN STATES 3.500000 % 19-SEP-2029",
+            "pct": 2.74
+          },
+          {
+            "name": "ITALY (REP OF) SER 10Y (REG S) (BR) 3.45% 01FEB",
+            "pct": 2.18
+          },
+          {
+            "name": "US TREASURY BILLS 0% 22-OCT-2026",
+            "pct": 1.96
+          },
+          {
+            "name": "ROMANIA (GOVT OF) SER REGS (REG) (REG S) 6.625%",
+            "pct": 1.66
+          },
+          {
+            "name": "REPUBLIC OF POLAND 3.125000 % 07JUL2032",
+            "pct": 1.48
+          },
+          {
+            "name": "ELECTRICITE DE FRANCE SA SER EMTN (BR) (REG S)",
+            "pct": 1.43
+          },
+          {
+            "name": "SOCIETE GENERALE SER REGS (REG) (REG S) VAR 08J",
+            "pct": 1.43
+          }
+        ],
+        "sector_top3": [],
+        "aum_twd_yi": 39.6
+      },
+      "category_avg": {
+        "return": {
+          "1y": 2.4,
+          "3y": 8.58,
+          "5y": -8.74
+        },
+        "std_3y": 6.93,
+        "sharpe_3y": -0.22
+      },
+      "category_url": "https://www.sitca.org.tw/ROC/Industry/IN2422.aspx?txtYEAR=2026&txtMONTH=03&txtGROUPID=EUCA000759",
+      "category_rank": {
+        "return_1y_pct": null,
+        "std_3y_pct": null,
+        "sharpe_3y_pct": null
+      },
+      "benchmark": {
+        "name": "彭博全球綜合債券指數",
+        "return": {
+          "1y": null,
+          "3y": null,
+          "5y": null
+        },
+        "std_3y": null,
+        "sharpe_3y": null,
+        "url": null
+      },
+      "peers": [
+        {
+          "name": "施羅德環球基金－環球債券C類累積",
+          "return": {
+            "1y": 2.89,
+            "3y": 9.54,
+            "5y": -16.24
+          },
+          "std_3y": null,
+          "sharpe_3y": null,
+          "url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=PYZ46-SC16"
+        },
+        {
+          "name": "富蘭克林華美全球投資級債券基金",
+          "return": {
+            "1y": 4.97,
+            "3y": 8.73,
+            "5y": 0.56
+          },
+          "std_3y": null,
+          "sharpe_3y": null,
+          "url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACFT17-28F3"
+        }
+      ],
+      "sources": {
+        "profile": "板信基金平台",
+        "risk": "晨星台灣",
+        "as_of_risk": null
+      }
+    },
+    {
+      "id": "schroder_global_income",
+      "name_zh": "施羅德環球基金系列-環球收益成長(美元)U-月配固定",
+      "category": "balanced",
+      "morningstar_category": "美元平衡型股債混合",
+      "morningstar_rating": 4,
+      "rr": "RR3",
+      "currency": "美元",
+      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=PYZT8-SB06",
+      "self": {
+        "return": {
+          "1y": 26.65,
+          "3y": 56.69,
+          "5y": 30.73
+        },
+        "std_3y": 9.86,
+        "std_1y": null,
+        "sharpe_3y": 0.68,
+        "max_drawdown_3y": null,
+        "beta_3y": 1.24,
+        "aum": 1409.0,
+        "aum_unit": "百萬",
+        "aum_ccy": "美元",
+        "aum_date": "2026-03-31",
+        "inception_date": "2018-10-24",
+        "inception_years": 7.6,
+        "expense_ratio": 1.55,
+        "distribution_yield": 8.72,
+        "top10_concentration": null,
+        "top_holdings": [],
+        "sector_top3": [],
+        "aum_twd_yi": 443.4
+      },
+      "category_avg": {
+        "return": {
+          "1y": 15.87,
+          "3y": 32.5,
+          "5y": 22.48
+        },
+        "std_3y": null,
+        "sharpe_3y": 0.63
+      },
+      "category_url": "https://www.sitca.org.tw/ROC/Industry/IN2422.aspx?txtYEAR=2026&txtMONTH=03&txtGROUPID=EUCA000694",
+      "category_rank": {
+        "return_1y_pct": null,
+        "std_3y_pct": null,
+        "sharpe_3y_pct": null
+      },
+      "benchmark": {
+        "name": "MSCI 世界高股息指數",
+        "return": {
+          "1y": null,
+          "3y": null,
+          "5y": null
+        },
+        "std_3y": null,
+        "sharpe_3y": null,
+        "url": null
+      },
+      "peers": [
+        {
+          "name": "施羅德ISF多元資產成長基金C股",
+          "return": {
+            "1y": 20.31,
+            "3y": 45.82,
+            "5y": 31.53
+          },
+          "std_3y": 9.87,
+          "sharpe_3y": 0.84,
+          "url": null
+        },
+        {
+          "name": "安聯收益成長基金",
+          "return": {
+            "1y": 10.71,
+            "3y": 32.42,
+            "5y": 22.14
+          },
+          "std_3y": 8.1,
+          "sharpe_3y": 0.61,
+          "url": null
         }
       ],
       "sources": {
@@ -680,750 +858,127 @@
       }
     },
     {
-      "id": "franklin_em_income",
-      "name_zh": "富蘭克林坦伯頓全球投資系列-新興市場月收益基金美元F(Mdis)股",
-      "category": "income",
-      "morningstar_category": "環球新興市場股債混合",
+      "id": "allianz_tw_tech",
+      "name_zh": "安聯台灣科技基金",
+      "category": "tech",
+      "morningstar_category": "行業股票－科技",
       "morningstar_rating": 5,
-      "rr": "RR4",
-      "currency": "美元",
-      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLZL4-FF19",
+      "rr": "RR5",
+      "currency": "台幣",
+      "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACDD04-2602",
       "self": {
         "return": {
-          "1y": 41.29,
-          "3y": 71.48,
-          "5y": 30.77
+          "1y": 288.78,
+          "3y": 508.72,
+          "5y": 688.13
         },
-        "std_3y": 11.33,
+        "std_3y": 24.29,
         "std_1y": null,
-        "sharpe_3y": 0.89,
+        "sharpe_3y": 2.0,
         "max_drawdown_3y": null,
-        "beta_3y": 1.04,
-        "aum": 234.0,
-        "aum_unit": "百萬",
-        "aum_ccy": "美元",
-        "aum_date": "2026-03-31",
-        "inception_date": "2019-10-03",
-        "inception_years": 6.7,
-        "expense_ratio": 1.14,
-        "distribution_yield": 4.94,
-        "top10_concentration": null,
-        "top_holdings": [],
-        "sector_top3": [],
-        "aum_twd_yi": 73.6
-      },
-      "category_avg": {
-        "return": {
-          "1y": 30.61,
-          "3y": 48.86,
-          "5y": 17.18
-        },
-        "std_3y": 12.16,
-        "sharpe_3y": 0.76
-      },
-      "category_url": "https://www.sitca.org.tw/ROC/Industry/IN2422.aspx?txtYEAR=2026&txtMONTH=03&txtGROUPID=EUCA000741",
-      "category_rank": {
-        "return_1y_pct": null,
-        "std_3y_pct": null,
-        "sharpe_3y_pct": null
-      },
-      "benchmark": {
-        "name": "新興市場股債混合（MSCI EM 50/EMBI 50）",
-        "return": {
-          "1y": null,
-          "3y": null,
-          "5y": null
-        },
-        "std_3y": null,
-        "sharpe_3y": null,
-        "url": null
-      },
-      "peers": [
-        {
-          "name": "摩根新興雙利平衡基金",
-          "return": {
-            "1y": 104.42,
-            "3y": 167.31,
-            "5y": 160.65
-          },
-          "std_3y": 10.04,
-          "sharpe_3y": 1.24,
-          "url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACJF87-0411"
-        },
-        {
-          "name": "聯博新興市場多元收益基金",
-          "return": {
-            "1y": 24.9,
-            "3y": 59.26,
-            "5y": 25.03
-          },
-          "std_3y": 8.42,
-          "sharpe_3y": 0.98,
-          "url": null
-        }
-      ],
-      "sources": {
-        "profile": "板信基金平台",
-        "risk": "晨星台灣",
-        "as_of_risk": "2026-03-31"
-      }
-    },
-    {
-      "id": "amundi_em_bond",
-      "name_zh": "東方匯理基金新興市場債券A美元(月配息)",
-      "category": "income",
-      "morningstar_category": "環球新興市場債券",
-      "morningstar_rating": 4,
-      "rr": "RR3",
-      "currency": "美元",
-      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=PIZA8-PI0W",
-      "self": {
-        "return": {
-          "1y": 14.64,
-          "3y": 40.22,
-          "5y": 14.57
-        },
-        "std_3y": 5.94,
-        "std_1y": null,
-        "sharpe_3y": 0.78,
-        "max_drawdown_3y": null,
-        "beta_3y": 0.75,
-        "aum": 4286.0,
-        "aum_unit": "百萬",
-        "aum_ccy": "美元",
-        "aum_date": "2026-03-31",
-        "inception_date": "2012-04-11",
-        "inception_years": 14.1,
-        "expense_ratio": 1.35,
-        "distribution_yield": 6.94,
-        "top10_concentration": null,
-        "top_holdings": [],
-        "sector_top3": [],
-        "aum_twd_yi": 1348.6
-      },
-      "category_avg": {
-        "return": {
-          "1y": 11.96,
-          "3y": 30.1,
-          "5y": 10.36
-        },
-        "std_3y": 6.33,
-        "sharpe_3y": 0.61
-      },
-      "category_url": "https://www.sitca.org.tw/ROC/Industry/IN2422.aspx?txtYEAR=2026&txtMONTH=03&txtGROUPID=EUCA000586",
-      "category_rank": {
-        "return_1y_pct": null,
-        "std_3y_pct": null,
-        "sharpe_3y_pct": null
-      },
-      "benchmark": {
-        "name": "摩根新興市場債券指數（EMBI）",
-        "return": {
-          "1y": null,
-          "3y": null,
-          "5y": null
-        },
-        "std_3y": null,
-        "sharpe_3y": null,
-        "url": null
-      },
-      "peers": [
-        {
-          "name": "富蘭克林華美新興國家固定收益基金",
-          "return": {
-            "1y": 16.78,
-            "3y": 28.24,
-            "5y": 8.11
-          },
-          "std_3y": 7.56,
-          "sharpe_3y": 0.88,
-          "url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACFT93-28F6"
-        },
-        {
-          "name": "聯博新興市場債券基金",
-          "return": {
-            "1y": 13.67,
-            "3y": 39.5,
-            "5y": 11.13
-          },
-          "std_3y": 6.4,
-          "sharpe_3y": 1.0,
-          "url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=ALZR3-AL1J"
-        }
-      ],
-      "sources": {
-        "profile": "板信基金平台",
-        "risk": "晨星台灣",
-        "as_of_risk": "2026-03-31"
-      }
-    },
-    {
-      "id": "franklin_corporate_bond",
-      "name_zh": "富蘭克林坦伯頓全球投資系列公司債基金美元A(Mdis)",
-      "category": "income",
-      "morningstar_category": "美元高收益債券",
-      "morningstar_rating": 4,
-      "rr": "RR3",
-      "currency": "美元",
-      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLZ41-FR14",
-      "self": {
-        "return": {
-          "1y": 6.86,
-          "3y": 28.49,
-          "5y": 20.82
-        },
-        "std_3y": 4.37,
-        "std_1y": null,
-        "sharpe_3y": 0.67,
-        "max_drawdown_3y": null,
-        "beta_3y": 0.98,
-        "aum": 1253.0,
-        "aum_unit": "百萬",
-        "aum_ccy": "美元",
-        "aum_date": "2026-03-31",
-        "inception_date": "1996-03-01",
-        "inception_years": 30.2,
-        "expense_ratio": 0.84,
-        "distribution_yield": 6.69,
-        "top10_concentration": null,
-        "top_holdings": [],
-        "sector_top3": [],
-        "aum_twd_yi": 394.3
-      },
-      "category_avg": {
-        "return": {
-          "1y": 7.88,
-          "3y": 24.42,
-          "5y": 18.85
-        },
-        "std_3y": 4.23,
-        "sharpe_3y": 0.58
-      },
-      "category_url": "https://www.sitca.org.tw/ROC/Industry/IN2422.aspx?txtYEAR=2026&txtMONTH=03&txtGROUPID=EUCA000583",
-      "category_rank": {
-        "return_1y_pct": null,
-        "std_3y_pct": null,
-        "sharpe_3y_pct": null
-      },
-      "benchmark": {
-        "name": "彭博美國公司債指數",
-        "return": {
-          "1y": null,
-          "3y": null,
-          "5y": null
-        },
-        "std_3y": null,
-        "sharpe_3y": null,
-        "url": null
-      },
-      "peers": [
-        {
-          "name": "聯博美國非投資等級債券基金",
-          "return": {
-            "1y": 6.55,
-            "3y": 25.36,
-            "5y": 17.57
-          },
-          "std_3y": null,
-          "sharpe_3y": 0.64,
-          "url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=PAZB0-FT0D"
-        },
-        {
-          "name": "PIMCO美國非投資等級債券基金",
-          "return": {
-            "1y": 6.18,
-            "3y": 23.6,
-            "5y": 15.04
-          },
-          "std_3y": null,
-          "sharpe_3y": 0.56,
-          "url": null
-        }
-      ],
-      "sources": {
-        "profile": "板信基金平台",
-        "risk": "晨星台灣",
-        "as_of_risk": "2026-03-31"
-      }
-    },
-    {
-      "id": "amundi_global_strategic",
-      "name_zh": "東方匯理全球策略收益基金-ND月配型(美元)",
-      "category": "income",
-      "morningstar_category": "環球多元化債券",
-      "morningstar_rating": null,
-      "rr": "RR2",
-      "currency": "美元",
-      "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACCF311-ZJ04",
-      "self": {
-        "return": {
-          "1y": null,
-          "3y": null,
-          "5y": null
-        },
-        "std_3y": null,
-        "std_1y": null,
-        "sharpe_3y": null,
-        "max_drawdown_3y": null,
-        "beta_3y": null,
-        "aum": 39.62,
+        "beta_3y": 1.05,
+        "aum": 2072.37,
         "aum_unit": "億元",
         "aum_ccy": "台幣",
         "aum_date": "2026-04-30",
-        "inception_date": "2026-03-23",
-        "inception_years": 0.2,
-        "expense_ratio": 1.76,
+        "inception_date": "2001-04-03",
+        "inception_years": 25.2,
+        "expense_ratio": 1.75,
         "distribution_yield": null,
-        "top10_concentration": 28.5,
+        "top10_concentration": 56.6,
         "top_holdings": [
           {
-            "name": "BUONI POLIENNALI DEL TES SER 5Y 2.950000 % 01JU",
-            "pct": 6.97
+            "name": "旺矽",
+            "pct": 8.54
           },
           {
-            "name": "US TREASURY N/B 3.875 % 31-MAR-2031",
-            "pct": 4.76
+            "name": "穎崴",
+            "pct": 8.38
           },
           {
-            "name": "US TREASURY 4.375% 15MAY2034",
-            "pct": 3.86
+            "name": "台積電",
+            "pct": 6.59
           },
           {
-            "name": "UNITED MEXICAN STATES 3.500000 % 19-SEP-2029",
-            "pct": 2.74
+            "name": "台光電",
+            "pct": 6.58
           },
           {
-            "name": "ITALY (REP OF) SER 10Y (REG S) (BR) 3.45% 01FEB",
-            "pct": 2.18
+            "name": "創意",
+            "pct": 5.34
           },
           {
-            "name": "US TREASURY BILLS 0% 22-OCT-2026",
-            "pct": 1.96
+            "name": "台燿",
+            "pct": 4.73
           },
           {
-            "name": "ROMANIA (GOVT OF) SER REGS (REG) (REG S) 6.625%",
-            "pct": 1.66
+            "name": "台達電",
+            "pct": 4.49
           },
           {
-            "name": "REPUBLIC OF POLAND 3.125000 % 07JUL2032",
-            "pct": 1.48
+            "name": "信驊",
+            "pct": 4.09
           },
           {
-            "name": "SOCIETE GENERALE SER REGS (REG) (REG S) VAR 08J",
-            "pct": 1.43
+            "name": "金像電",
+            "pct": 4.07
           },
           {
-            "name": "ELECTRICITE DE FRANCE SA SER EMTN (BR) (REG S)",
-            "pct": 1.43
+            "name": "威剛",
+            "pct": 3.78
           }
         ],
         "sector_top3": [],
-        "aum_twd_yi": 39.6
+        "aum_twd_yi": 2072.4
       },
       "category_avg": {
         "return": {
-          "1y": 2.4,
-          "3y": 8.58,
-          "5y": -8.74
+          "1y": 60.8,
+          "3y": 113.36,
+          "5y": 58.3
         },
-        "std_3y": 6.93,
-        "sharpe_3y": -0.22
-      },
-      "category_url": "https://www.sitca.org.tw/ROC/Industry/IN2422.aspx?txtYEAR=2026&txtMONTH=03&txtGROUPID=EUCA000759",
-      "category_rank": {
-        "return_1y_pct": null,
-        "std_3y_pct": null,
-        "sharpe_3y_pct": null
-      },
-      "benchmark": {
-        "name": "彭博全球綜合債券指數",
-        "return": {
-          "1y": null,
-          "3y": null,
-          "5y": null
-        },
-        "std_3y": null,
-        "sharpe_3y": null,
-        "url": null
-      },
-      "peers": [
-        {
-          "name": "施羅德環球基金－環球債券C類累積",
-          "return": {
-            "1y": 2.89,
-            "3y": 9.54,
-            "5y": -16.24
-          },
-          "std_3y": null,
-          "sharpe_3y": null,
-          "url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=PYZ46-SC16"
-        },
-        {
-          "name": "富蘭克林華美全球投資級債券基金",
-          "return": {
-            "1y": 4.97,
-            "3y": 8.73,
-            "5y": 0.56
-          },
-          "std_3y": null,
-          "sharpe_3y": null,
-          "url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACFT17-28F3"
-        }
-      ],
-      "sources": {
-        "profile": "板信基金平台",
-        "risk": "晨星台灣",
-        "as_of_risk": null
-      }
-    },
-    {
-      "id": "uob_korea",
-      "name_zh": "利安資金韓國基金(美元)",
-      "category": "theme",
-      "morningstar_category": "韓國股票",
-      "morningstar_rating": 4,
-      "rr": "RR5",
-      "currency": "美元",
-      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=LIC04-LI02",
-      "self": {
-        "return": {
-          "1y": 226.16,
-          "3y": 258.82,
-          "5y": 179.61
-        },
-        "std_3y": 34.27,
-        "std_1y": null,
-        "sharpe_3y": 0.7,
-        "max_drawdown_3y": null,
-        "beta_3y": 0.92,
-        "aum": 36.0,
-        "aum_unit": "百萬",
-        "aum_ccy": "美元",
-        "aum_date": "2026-03-31",
-        "inception_date": "2004-08-16",
-        "inception_years": 21.8,
-        "expense_ratio": 2.15,
-        "distribution_yield": null,
-        "top10_concentration": null,
-        "top_holdings": [],
-        "sector_top3": [],
-        "aum_twd_yi": 11.3
-      },
-      "category_avg": {
-        "return": {
-          "1y": 168.91,
-          "3y": 167.95,
-          "5y": 88.99
-        },
-        "std_3y": 38.25,
-        "sharpe_3y": 0.91
-      },
-      "category_url": "https://www.sitca.org.tw/ROC/Industry/IN2422.aspx?txtYEAR=2026&txtMONTH=03&txtGROUPID=EUCA000523",
-      "category_rank": {
-        "return_1y_pct": null,
-        "std_3y_pct": null,
-        "sharpe_3y_pct": null
-      },
-      "benchmark": {
-        "name": "MSCI 韓國指數",
-        "return": {
-          "1y": null,
-          "3y": null,
-          "5y": null
-        },
-        "std_3y": null,
-        "sharpe_3y": null,
-        "url": null
-      },
-      "peers": [
-        {
-          "name": "摩根南韓基金",
-          "return": {
-            "1y": 164.28,
-            "3y": 181.07,
-            "5y": 99.37
-          },
-          "std_3y": 31.32,
-          "sharpe_3y": 0.65,
-          "url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=JFZ11-JF09"
-        },
-        {
-          "name": "霸菱韓國基金",
-          "return": {
-            "1y": 15.73,
-            "3y": 94.62,
-            "5y": null
-          },
-          "std_3y": 38.88,
-          "sharpe_3y": 0.67,
-          "url": null
-        }
-      ],
-      "sources": {
-        "profile": "板信基金平台",
-        "risk": "晨星台灣",
-        "as_of_risk": "2026-03-31"
-      }
-    },
-    {
-      "id": "uob_vietnam",
-      "name_zh": "利安資金越南基金A級別美元",
-      "category": "theme",
-      "morningstar_category": "越南股票",
-      "morningstar_rating": 4,
-      "rr": "RR5",
-      "currency": "美元",
-      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=LIC28-LI01",
-      "self": {
-        "return": {
-          "1y": 25.83,
-          "3y": 42.14,
-          "5y": 14.19
-        },
-        "std_3y": 17.46,
-        "std_1y": null,
-        "sharpe_3y": 0.32,
-        "max_drawdown_3y": null,
-        "beta_3y": 0.89,
-        "aum": 132.0,
-        "aum_unit": "百萬",
-        "aum_ccy": "美元",
-        "aum_date": "2026-03-31",
-        "inception_date": "2007-02-02",
-        "inception_years": 19.3,
-        "expense_ratio": 2.25,
-        "distribution_yield": null,
-        "top10_concentration": null,
-        "top_holdings": [],
-        "sector_top3": [],
-        "aum_twd_yi": 41.5
-      },
-      "category_avg": {
-        "return": {
-          "1y": 36.9,
-          "3y": 42.37,
-          "5y": 24.28
-        },
-        "std_3y": 19.1,
-        "sharpe_3y": 0.48
-      },
-      "category_url": "https://www.sitca.org.tw/ROC/Industry/IN2422.aspx?txtYEAR=2026&txtMONTH=03&txtGROUPID=EUCA000829",
-      "category_rank": {
-        "return_1y_pct": null,
-        "std_3y_pct": null,
-        "sharpe_3y_pct": null
-      },
-      "benchmark": {
-        "name": "富邦富時越南ETF（00885）",
-        "return": {
-          "1y": 52.41,
-          "3y": 63.77,
-          "5y": 20.84
-        },
-        "std_3y": null,
-        "sharpe_3y": null,
-        "url": "https://www.moneydj.com/ETF/X/Basic/Basic0008.xdjhtm?etfid=00885.TW"
-      },
-      "peers": [
-        {
-          "name": "富邦越南機會基金",
-          "return": {
-            "1y": 96.06,
-            "3y": 136.36,
-            "5y": 83.1
-          },
-          "std_3y": 19.7,
-          "sharpe_3y": 0.45,
-          "url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACJS24-2019"
-        },
-        {
-          "name": "中國信託越南機會基金",
-          "return": {
-            "1y": 16.47,
-            "3y": 23.83,
-            "5y": 6.07
-          },
-          "std_3y": 21.11,
-          "sharpe_3y": 0.33,
-          "url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACDS94-0920"
-        }
-      ],
-      "sources": {
-        "profile": "板信基金平台",
-        "risk": "晨星台灣",
-        "as_of_risk": "2026-03-31"
-      }
-    },
-    {
-      "id": "franklin_india",
-      "name_zh": "富蘭克林坦伯頓全球投資系列印度基金美元A(acc)",
-      "category": "theme",
-      "morningstar_category": "印度股票",
-      "morningstar_rating": 3,
-      "rr": "RR5",
-      "currency": "美元",
-      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLZ79-FR59",
-      "self": {
-        "return": {
-          "1y": -16.71,
-          "3y": 15.36,
-          "5y": 19.9
-        },
-        "std_3y": 15.28,
-        "std_1y": null,
-        "sharpe_3y": 0.12,
-        "max_drawdown_3y": null,
-        "beta_3y": 0.87,
-        "aum": 2356.0,
-        "aum_unit": "百萬",
-        "aum_ccy": "美元",
-        "aum_date": "2026-03-31",
-        "inception_date": "2005-10-25",
-        "inception_years": 20.6,
-        "expense_ratio": 1.14,
-        "distribution_yield": null,
-        "top10_concentration": null,
-        "top_holdings": [],
-        "sector_top3": [],
-        "aum_twd_yi": 741.3
-      },
-      "category_avg": {
-        "return": {
-          "1y": -10.33,
-          "3y": 20.89,
-          "5y": 28.78
-        },
-        "std_3y": 16.06,
-        "sharpe_3y": 0.18
-      },
-      "category_url": "https://www.sitca.org.tw/ROC/Industry/IN2422.aspx?txtYEAR=2026&txtMONTH=03&txtGROUPID=EUCA000520",
-      "category_rank": {
-        "return_1y_pct": null,
-        "std_3y_pct": null,
-        "sharpe_3y_pct": null
-      },
-      "benchmark": {
-        "name": "富邦印度ETF（00652）",
-        "return": {
-          "1y": -11.73,
-          "3y": 6.1,
-          "5y": 21.49
-        },
-        "std_3y": null,
-        "sharpe_3y": null,
-        "url": "https://www.moneydj.com/ETF/X/Basic/Basic0008.xdjhtm?etfid=00652.TW"
-      },
-      "peers": [
-        {
-          "name": "台新印度基金",
-          "return": {
-            "1y": -8.25,
-            "3y": 33.82,
-            "5y": 88.1
-          },
-          "std_3y": 17.03,
-          "sharpe_3y": 0.7,
-          "url": null
-        },
-        {
-          "name": "宏利環球基金－印度股票基金",
-          "return": {
-            "1y": -9.74,
-            "3y": 18.41,
-            "5y": 12.71
-          },
-          "std_3y": 14.76,
-          "sharpe_3y": 0.23,
-          "url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=AIZ49-PB07"
-        }
-      ],
-      "sources": {
-        "profile": "板信基金平台",
-        "risk": "晨星台灣",
-        "as_of_risk": "2026-03-31"
-      }
-    },
-    {
-      "id": "franklin_gold",
-      "name_zh": "富蘭克林黃金基金美元A",
-      "category": "theme",
-      "morningstar_category": "行業股票－貴金屬",
-      "morningstar_rating": 4,
-      "rr": "RR5",
-      "currency": "美元",
-      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLZ01-FA01",
-      "self": {
-        "return": {
-          "1y": 94.06,
-          "3y": 271.05,
-          "5y": 157.75
-        },
-        "std_3y": 36.28,
-        "std_1y": null,
-        "sharpe_3y": 1.19,
-        "max_drawdown_3y": null,
-        "beta_3y": 1.06,
-        "aum": 3440.0,
-        "aum_unit": "百萬",
-        "aum_ccy": "美元",
-        "aum_date": "2026-03-31",
-        "inception_date": "1969-05-19",
-        "inception_years": 57.0,
-        "expense_ratio": 0.63,
-        "distribution_yield": null,
-        "top10_concentration": null,
-        "top_holdings": [],
-        "sector_top3": [],
-        "aum_twd_yi": 1082.4
-      },
-      "category_avg": {
-        "return": {
-          "1y": 95.4,
-          "3y": 184.89,
-          "5y": 149.93
-        },
-        "std_3y": 32.89,
+        "std_3y": 20.48,
         "sharpe_3y": 1.08
       },
-      "category_url": "https://www.sitca.org.tw/ROC/Industry/IN2422.aspx?txtYEAR=2026&txtMONTH=03&txtGROUPID=EUCA000646",
+      "category_url": "https://www.sitca.org.tw/ROC/Industry/IN2422.aspx?txtYEAR=2026&txtMONTH=03&txtGROUPID=EUCA000542",
       "category_rank": {
         "return_1y_pct": null,
         "std_3y_pct": null,
         "sharpe_3y_pct": null
       },
       "benchmark": {
-        "name": "黃金現貨（倫敦金）",
+        "name": "元大台灣卓越50基金（0050）",
         "return": {
-          "1y": null,
-          "3y": null,
-          "5y": null
+          "1y": 128.91,
+          "3y": 244.86,
+          "5y": 240.38
         },
         "std_3y": null,
         "sharpe_3y": null,
-        "url": null
+        "url": "https://www.moneydj.com/ETF/X/Basic/Basic0008.xdjhtm?etfid=0050.TW"
       },
       "peers": [
         {
-          "name": "晉達環球策略基金－環球黃金基金",
+          "name": "統一奔騰基金",
           "return": {
-            "1y": 80.47,
-            "3y": 201.79,
-            "5y": 133.91
+            "1y": 228.3,
+            "3y": 396.74,
+            "5y": 516.06
           },
-          "std_3y": 36.6,
-          "sharpe_3y": 1.04,
-          "url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=GSF17-IG14"
+          "std_3y": 25.03,
+          "sharpe_3y": 1.75,
+          "url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACPS10-0501"
         },
         {
-          "name": "貝萊德世界黃金基金",
+          "name": "景順台灣科技基金",
           "return": {
-            "1y": 102.53,
-            "3y": 184.36,
-            "5y": 275.47
+            "1y": 203.55,
+            "3y": 297.79,
+            "5y": 302.31
           },
-          "std_3y": null,
-          "sharpe_3y": null,
-          "url": null
+          "std_3y": 22.45,
+          "sharpe_3y": 1.5,
+          "url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACCS07-1701"
         }
       ],
       "sources": {
@@ -1433,85 +988,85 @@
       }
     },
     {
-      "id": "investec_gold",
-      "name_zh": "晉達環球策略基金-環球黃金基金C收益股份",
-      "category": "theme",
-      "morningstar_category": "行業股票－貴金屬",
-      "morningstar_rating": 3,
-      "rr": "RR5",
+      "id": "ab_intl_tech",
+      "name_zh": "聯博-國際科技基金A級別美元",
+      "category": "tech",
+      "morningstar_category": "行業股票－科技",
+      "morningstar_rating": 4,
+      "rr": "RR4",
       "currency": "美元",
-      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=GSF17-IG14",
+      "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=ALZ03-AL08",
       "self": {
         "return": {
-          "1y": 80.47,
-          "3y": 201.79,
-          "5y": 133.91
+          "1y": 85.26,
+          "3y": 180.51,
+          "5y": 128.63
         },
-        "std_3y": 36.6,
+        "std_3y": 22.05,
         "std_1y": null,
-        "sharpe_3y": 1.04,
+        "sharpe_3y": 1.0,
         "max_drawdown_3y": null,
-        "beta_3y": 1.09,
-        "aum": 1300.0,
+        "beta_3y": 1.17,
+        "aum": 2168.0,
         "aum_unit": "百萬",
         "aum_ccy": "美元",
         "aum_date": "2026-03-31",
-        "inception_date": "2004-12-23",
-        "inception_years": 21.4,
-        "expense_ratio": 2.3,
+        "inception_date": "1995-10-02",
+        "inception_years": 30.7,
+        "expense_ratio": 2.5,
         "distribution_yield": null,
         "top10_concentration": null,
         "top_holdings": [],
         "sector_top3": [],
-        "aum_twd_yi": 409.1
+        "aum_twd_yi": 682.2
       },
       "category_avg": {
         "return": {
-          "1y": 95.4,
-          "3y": 184.89,
-          "5y": 149.93
+          "1y": 60.8,
+          "3y": 113.36,
+          "5y": 58.3
         },
-        "std_3y": 32.89,
+        "std_3y": 20.48,
         "sharpe_3y": 1.08
       },
-      "category_url": "https://www.sitca.org.tw/ROC/Industry/IN2422.aspx?txtYEAR=2026&txtMONTH=03&txtGROUPID=EUCA000646",
+      "category_url": "https://www.sitca.org.tw/ROC/Industry/IN2422.aspx?txtYEAR=2026&txtMONTH=03&txtGROUPID=EUCA000542",
       "category_rank": {
         "return_1y_pct": null,
         "std_3y_pct": null,
         "sharpe_3y_pct": null
       },
       "benchmark": {
-        "name": "黃金現貨（倫敦金）",
+        "name": "富邦NASDAQ-100基金（00662）",
         "return": {
-          "1y": null,
-          "3y": null,
-          "5y": null
+          "1y": 46.32,
+          "3y": 118.35,
+          "5y": 146.16
         },
         "std_3y": null,
         "sharpe_3y": null,
-        "url": null
+        "url": "https://www.moneydj.com/ETF/X/Basic/Basic0008.xdjhtm?etfid=00662.TW"
       },
       "peers": [
         {
-          "name": "富蘭克林黃金基金",
+          "name": "富蘭克林科技基金",
           "return": {
-            "1y": 94.06,
-            "3y": 271.05,
-            "5y": 157.75
+            "1y": 225.92,
+            "3y": 406.58,
+            "5y": 466.35
           },
-          "std_3y": 36.28,
-          "sharpe_3y": 1.19,
-          "url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLZ01-FA01"
+          "std_3y": 27.73,
+          "sharpe_3y": 0.81,
+          "url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACFT12-2811"
         },
         {
-          "name": "貝萊德世界黃金基金",
+          "name": "貝萊德世界科技基金",
           "return": {
-            "1y": 102.53,
-            "3y": 184.36,
-            "5y": 275.47
+            "1y": 27.13,
+            "3y": 78.88,
+            "5y": 35.28
           },
-          "std_3y": null,
-          "sharpe_3y": null,
+          "std_3y": 21.6,
+          "sharpe_3y": 0.79,
           "url": null
         }
       ],
