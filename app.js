@@ -4950,7 +4950,7 @@ function renderDcaFundCards() {
         <div><label>日漲跌</label><span class="${pctClass(f.change_pct)}">${fmtPct(f.change_pct)}</span></div>
         <div><label>近1月</label><span class="${pctClass(f.perf_dca?.['1m'])}">${perfLink(fmtPct(f.perf_dca?.['1m']), f.perf_url || f.source_url)}</span></div>
         <div><label>近3月</label><span class="${pctClass(f.perf_dca?.['3m'])}">${perfLink(fmtPct(f.perf_dca?.['3m']), f.perf_url || f.source_url)}</span></div>
-        <div><label>今年來</label><span class="${pctClass(f.perf?.ytd)}">${perfLink(fmtPct(f.perf?.ytd), f.perf_url || f.source_url)}</span></div>
+        <div><label>近6月</label><span class="${pctClass(f.perf_dca?.['6m'])}">${perfLink(fmtPct(f.perf_dca?.['6m']), f.perf_url || f.source_url)}</span></div>
         <div><label>近1年</label><span class="${pctClass(f.perf_dca?.['1y'])}">${perfLink(fmtPct(f.perf_dca?.['1y']), f.perf_url || f.source_url)}</span></div>
         <div><label>近3年</label><span class="${pctClass(f.perf_dca?.['3y'])}">${perfLink(fmtPct(f.perf_dca?.['3y']), f.perf_url || f.source_url)}</span></div>
         <div><label>近5年</label><span class="${pctClass(f.perf_dca?.['5y'])}">${perfLink(fmtPct(f.perf_dca?.['5y']), f.perf_url || f.source_url)}</span></div>
