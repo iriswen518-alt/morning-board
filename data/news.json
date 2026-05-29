@@ -1,11 +1,11 @@
 {
-  "news_date": "2026-05-28",
+  "news_date": "2026-05-29",
   "tldr": [
-    "輝達將台灣年度投資承諾從千億美元加碼至 1,500 億美元，黃仁勳並表態樂意入股台廠，AI 供應鏈「矽盾」進一步升級。",
-    "賴清德宣布年砸 3,800 億元、共 18 項少子化對策，其中兒少專戶採勞動基金代操模式，並對企業提供育嬰減稅優惠。",
-    "道瓊再創新高、晶片股回檔，美伊和談訊號雜亂讓多頭暫停；台積電 ADR 大漲 2.5% 創高，較台股溢價 15.4%。",
-    "金管會懲處台新銀行理專挪用客戶資金案、並修正保險業內控與稽核辦法，對私人銀行與銀保通路的行為監理明顯升級。",
-    "國稅局警告，網拍「化整為零」分散家人帳號逃漏營業稅已行不通，金流物流資料可交叉比對揭露逃稅。"
+    "AI 需求仍是市場主軸：邁威爾上調展望、戴爾財測驚艷、三星出貨 HBM4E 樣品，黃仁勳更直言台灣「不可能不成長」。",
+    "美國正式落實對台非半導體 232 關稅優惠（汽車零組件、家具、航空零件），但半導體 232 與對等關稅兩塊拼圖仍在協商。",
+    "金管會動作頻頻：普惠金融指標全達標、修正金控資本適足辦法、強化防詐遵循事項，並自 7 月調高強制車險身故失能理賠至 300 萬元。",
+    "4 月景氣燈號連亮第五顆紅燈，顯示在 AI 熱潮帶動下景氣動能穩健向上。",
+    "財管焦點：台股誕生第四檔 5,000 億元 ETF（00919），國稅局並整理遺產稅四招繳納解套，皆與高資產傳承規劃直接相關。"
   ],
   "sections": [
     {
@@ -13,37 +13,44 @@
       "section_zh": "股市行情",
       "items": [
         {
-          "title_zh": "台積電 ADR 大漲 2.5% 創新高 較台股溢價 15.4%",
-          "title_en": "TSMC ADRs jump 2.5% to record high, 15.4% premium over Taipei",
-          "summary_zh": "台積電美股存託憑證 27 日收盤再創歷史高點，較台北交易溢價擴大至 15.4%。漲勢反映美方對 AI 半導體產能再起的熱情，也為次一交易日台股相關權值股留下追價空間。",
-          "summary_en": "TSMC's US depositary receipts closed 2.5% higher at a fresh all-time peak, widening the premium over the Taipei-listed shares to 15.4%. The move tracks renewed US enthusiasm for AI-related semiconductor capacity and sets up a possible catch-up move on TWSE in the next session.",
+          "title_zh": "邁威爾上調展望反映 AI 需求暢旺　台積電受惠",
+          "title_en": "Marvell raises long-term targets as AI demand booms, lifting TSMC",
+          "summary_zh": "輝達轉投資的 ASIC 暨光通訊大廠邁威爾上季財報與本季財測雙雙優於預期，並調高中長期營運目標，反映 AI 基礎建設需求火熱。利多沿供應鏈擴散：身為其晶圓代工夥伴的台積電可望直接受惠，強化客製化晶片與高速連接訂單支撐先進製程稼動率的看法，並帶動台廠 ASIC 設計與光通訊族群買氣。",
+          "summary_en": "Nvidia-backed ASIC and optical-interconnect supplier Marvell reported last-quarter results and current-quarter guidance that both beat expectations, and raised its medium-to-long-term operating targets, citing red-hot AI infrastructure demand. The upgrade reverberates through Taiwan's supply chain: as Marvell's foundry partner, TSMC stands to benefit directly, reinforcing the view that custom-silicon and high-speed connectivity orders will keep underpinning advanced-node utilization. The read-through buoyed sentiment toward Taiwanese ASIC design houses and optical-component names tied to the AI server build-out.",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/123398/9530237"
+          "source_url": "https://money.udn.com/money/story/5612/9532281"
         },
         {
-          "title_zh": "SpaceX 奪美國防大單 零紅鏈要求 華通、燿華、昇達科受惠",
-          "title_en": "SpaceX defense contract favors zero-China supply chain, lifting Taiwan PCB/satellite plays",
-          "summary_zh": "SpaceX 取得美國太空軍衛星通訊合約，並要求供應鏈「去紅化」，訂單導向華通、燿華、昇達科等台廠。台灣在美方軍規太空供應鏈中的地位進一步穩固。",
-          "summary_en": "SpaceX has secured a US Space Force satellite-comms order with a \"no-red-chain\" clause, channeling demand to Taiwanese suppliers such as Gold Circuit (華通), Bright Circuit (燿華) and Sunmax (昇達科). The win cements Taiwan's role in US military-grade space supply chains.",
+          "title_zh": "兆元宴話題「詞元就是生意」　黃仁勳：台灣不可能不成長",
+          "title_en": "Jensen Huang: \"It's impossible for Taiwan not to grow\"",
+          "summary_zh": "輝達執行長黃仁勳在高規格聚會上表示，AI 市場規模是過去產業循環的十倍至百倍，並預言台灣供應鏈未來十年將大幅成長。談話凸顯台灣在全球 AI 算力中的結構性地位，為晶圓代工、先進封裝、伺服器、網通與散熱等本土硬體族群提供樂觀的需求背景。",
+          "summary_en": "At a high-profile gathering themed \"tokens are the business,\" Nvidia CEO Jensen Huang argued the AI market is ten to a hundred times larger than prior industry cycles, and predicted Taiwan's supply chain will expand substantially over the next decade. The remarks underscore Taiwan's structural centrality to global AI compute and offer a confident demand backdrop for local hardware names spanning foundry, advanced packaging, servers, networking and cooling.",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/5612/9529932",
-          "body_zh": "特斯拉執行長馬斯克旗下SpaceX在IPO前又傳好消息，拿下美國「太空軍」22.9億美元（約新台幣730億元）衛星通訊合約，打造「太空資料網路（SDN）骨幹」架構，是美國政府史上最大手筆衛星通訊合約。\n由於涉及美國國防軍事使用，要求「零紅鏈」，相關訂單可望由台廠統包獨吃，華通（2313）、燿華（2367）、昇達科（3491）、啓碁等SpaceX協力廠將迎來大單。\n其中，華通為全球衛星用板龍頭，已與SpaceX合作十餘年，成為擔綱這次SpaceX為美國「太空軍」打造優質SDN骨幹要角。由於航太產品毛利高，新單落袋後，助益華通獲利水漲船高。\n華通提到，低軌衛星產品線中，天上衛星用板營收動能強、占比提升，整體產能利用率位於高檔，挹注毛利率持續走高，隨著低軌衛星市場持續擴大，大廠持續投資，看好相關產品線動能續強。\n另一PCB大廠燿華也積極投入衛星市場。燿華看好，新興衛星通訊、航太級材料開啟高毛利新賽道。低軌衛星需求推升LCP／RF板材等高附加價值產品比重提升，成為未來三至五年新的獲利突破點。\n昇達科現階段供應SpaceX的衛星間雷射通訊（ISL）零組件大量提升。昇達科透露，投入衛星布局之餘，也擴大太空與國防應用，看好後續商機展開，同時投入越南及台灣產能擴充，可因應三年內高度成長需求。\n啓碁已經出貨SpaceX用戶端設備多年，越南一、二期廠房已量產，近期透過自動化及新技術開發提升生產效率，更投入第三期工程，未來低軌衛星產品可望跟著客戶一起成長。\nSpaceX主要業務包含衛星寬頻（星鏈Starlink）、火箭發射以及AIDC（xAI）等太空業務。\n綜合外媒報導，美國政府是SpaceX的大客戶，其三大核心事業都從太空總署（NASA）、國防部等聯邦部會賺進營收，占去年營收約20%。\n此次SpaceX奪下美國「太空軍」22.9億美元大單，該公司必須在2027年底前，提供完全能運作的原型系統給太空軍；這紙合約相當於太空系統司令部156億美元太空採購預算的18%。\n有別於星鏈，業界認為，SpaceX可能使用星鏈軍規版的「Starshield」衛星系統，作為美國太空軍通訊應用，與商業服務做出區隔外，擁有更高加密、抗干擾及軍事任務能力。\n業界分析，星鏈軍規版的「Starshield」將以更高標準的審視供應鏈，除SpaceX自製外，隨著規模擴大，加上台灣與美國在太空及無人機領域密切合作，也可能比照星鏈Starlink擴大外包計劃，更仰賴台灣供應鏈在「量產」及「成本優化」的兩大優勢。\n美國國防部強調，SpaceX是「強大而珍貴的夥伴」，藉以回應路透指稱SpaceX與國防部爭論星鏈（Starlink）通訊費用的報導。\n在民用領域，SpaceX也傳來好消息。明年初起，SpaceX將為美航旗下約500架空巴窄體客機，提供星鏈通訊連網服務，鞏固美國機上聯網服務市場領先地位。"
+          "source_url": "https://money.udn.com/money/story/5612/9532295"
         },
         {
-          "title_zh": "國巨陳泰銘：下半年會非常忙 AI 產業推進至「二局上半」",
-          "title_en": "Yageo chairman: H2 \"extremely busy\", AI cycle now in \"top of the second inning\"",
-          "summary_zh": "被動元件龍頭國巨董座陳泰銘指下半年訂單能見度極佳，並將 AI 投資週期比擬為「二局上半」，意味多年成長動能仍長。被動元件、AI 伺服器用料的上行循環論述再獲強化。",
-          "summary_en": "Passive-components giant Yageo's chairman Pierre Chen said order visibility into H2 is exceptionally strong and likened the AI investment cycle to \"top of the second inning,\" implying multi-year runway. The bullish tone reinforces the upcycle thesis for MLCC, resistors and AI-server-grade passives.",
+          "title_zh": "台達電：AI 趨勢非常好　三大事業體都有中長期規劃",
+          "title_en": "Delta Electronics: \"The AI trend is very strong\"",
+          "summary_zh": "台達電董事長鄭平表示 AI 趨勢非常好，集團三大事業體都已備妥中長期營運規劃。作為 AI 伺服器與資料中心電源、散熱方案的關鍵供應商，台達電的樂觀表態意味雲端業者資本支出持續，也讓投資人對其電源密度與散熱需求所支撐的獲利動能更具信心。",
+          "summary_en": "Delta chairman Cheng Ping said the AI trend is extremely positive and that all three of the group's business units have medium-to-long-term operating plans in place. As a key supplier of power and thermal-management solutions for AI servers and data centers, Delta's upbeat tone signals continued capex by hyperscalers and reassures investors that power-density and cooling demand will support its earnings trajectory.",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/5612/9529935"
+          "source_url": "https://money.udn.com/money/story/5612/9532283"
         },
         {
-          "title_zh": "證交所董座林修銘：權證市場多元靈活 拚商品制度國際化",
-          "title_en": "TWSE chairman Lin Hsiu-ming pushes warrant-market diversification and internationalization",
-          "summary_zh": "證交所董事長林修銘與金管會主委彭金隆共同推動權證市場改革，擴大標的、簡化發行規則並引入外資發行人。目標把台灣權證市場做成兼具散戶與專業投資人的國際級商品。",
-          "summary_en": "TWSE chairman Lin Hsiu-ming and FSC chair Peng Jin-lung jointly highlighted reforms to deepen Taiwan's warrant market — broader underlying assets, simpler issuance rules, and outreach to foreign issuers. The goal is to grow warrants into a credible retail-and-pro hybrid product comparable with Hong Kong's market.",
+          "title_zh": "信驊跨國合作大進擊　搶進 AI 伺服器控制層商機",
+          "title_en": "Aspeed teams up cross-border to grab AI-server control-layer share",
+          "summary_zh": "伺服器管理晶片龍頭、股王信驊與萊迪思半導體建立策略合作，共同開發輔助管理晶片，深入 AI 伺服器控制層。此合作讓信驊在既有 BMC 強項之外，擴大每台伺服器的可攻含量，隨 AI 伺服器架構日益複雜、管理晶片需求上升，可望攫取增量價值。",
+          "summary_en": "Server-management chip leader Aspeed (the \"stock king\") struck a strategic partnership with Lattice Semiconductor to co-develop auxiliary management chips, pushing deeper into the control layer of AI servers. The tie-up broadens Aspeed's addressable content per server beyond its BMC stronghold, positioning it to capture incremental value as AI server architectures grow more complex and management-silicon requirements rise.",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/5648/9529934"
+          "source_url": "https://money.udn.com/money/story/5612/9532288"
+        },
+        {
+          "title_zh": "台塑轉型衝刺半導體　同步布局綠能環保、醫療保健",
+          "title_en": "Formosa Plastics pivots toward semiconductors",
+          "summary_zh": "台塑宣布以半導體、綠能環保及醫療保健三大方向推動轉型，並投入 292 億元投資。此舉是傳統石化龍頭尋求更高附加價值成長引擎的策略轉向，也向投資人釋出訊號：老經濟集團正將資本重新配置至以科技與能源轉型為主軸的結構性成長產業。",
+          "summary_en": "Formosa Plastics announced a transformation along three axes—semiconductors, green energy/environmental protection, and healthcare—committing NT$29.2bn of investment. The move marks a strategic shift for a traditional petrochemical heavyweight seeking higher-value growth engines, and signals to investors that old-economy conglomerates are reallocating capital toward structural-growth sectors led by the technology and energy-transition themes.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/5612/9532245"
         }
       ]
     },
@@ -52,44 +59,44 @@
       "section_zh": "產業動態",
       "items": [
         {
-          "title_zh": "輝達加碼台灣投資 從千億美元上看 1,500 億美元",
-          "title_en": "Nvidia raises Taiwan investment pledge to US$150bn a year",
-          "summary_zh": "輝達執行長黃仁勳宣布將每年在台投資/採購規模由 1,000 億美元上修至 1,500 億美元，反映 AI 需求大幅成長。台積電、日月光投控、鴻海系 AI 伺服器組裝與高速連接器廠的中長期能見度同步上修。",
-          "summary_en": "Nvidia CEO Jensen Huang lifted Nvidia's annual Taiwan capex/sourcing commitment from US$100bn to US$150bn, citing surging AI demand. The upgrade implies meaningful long-term order visibility for TSMC, ASE/SPIL, Foxconn-group AI-server assembly and high-speed connectivity vendors.",
+          "title_zh": "美公告對台非半導體 232 關稅優惠　落實投資 MOU",
+          "title_en": "US finalizes non-semiconductor Section 232 tariff relief for Taiwan",
+          "summary_zh": "美方公告落實非半導體三類別（汽車零組件、木製家具、航空零件）232 關稅優惠，回溯自 5 月 1 日生效，並同步落實投資 MOU。受惠類別年度對美出口約 37 億美元，對台灣傳產與運輸設備供應鏈是實質利多，也緩解相關出口商的關稅不確定性。",
+          "summary_en": "Washington published the implementation of Section 232 tariff concessions covering three non-semiconductor categories—auto parts, wooden furniture and aircraft components—retroactive to May 1, alongside the investment MOU. The affected categories represent roughly US$3.7bn of annual exports to the US, making this a tangible win for Taiwan's traditional and transportation-equipment supply chains and easing tariff uncertainty for exporters in those segments.",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/5612/9529993"
+          "source_url": "https://money.udn.com/money/story/7307/9532616"
         },
         {
-          "title_zh": "黃仁勳：很樂意入股台企 業界點名高速網通、光通訊、先進封裝廠最有機會",
-          "title_en": "Jensen Huang signals openness to taking equity stakes in Taiwanese firms",
-          "summary_zh": "黃仁勳表態樂意直接入股台灣供應鏈廠商，業界點名高速網通、光通訊與先進封裝相關廠商最有機會。一旦成局將強化輝達對 AI 供應鏈的綁定，被入股標的有望迎來估值重評。",
-          "summary_en": "Huang said Nvidia is \"very willing\" to invest directly in select Taiwanese suppliers, with industry watchers flagging high-speed networking, optical and advanced-packaging names as the most likely targets. Direct stakes would deepen Nvidia's grip on the AI supply chain and re-rate any targeted vendors.",
-          "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/5612/9529933"
-        },
-        {
-          "title_zh": "台化轉型揮軍半導體材料、AI 運算中心能源供應 打造集團矽盾",
-          "title_en": "Formosa Plastics pivots to semiconductor materials and AI-data-center energy",
-          "summary_zh": "台化宣示資源轉向半導體材料與 AI 資料中心能源供應，定位為集團自身的「矽盾」。這是台灣傳統石化集團最明確的一次 AI 時代轉型訊號。",
-          "summary_en": "Formosa Chemicals & Fibre (台化) said it will redirect resources toward semiconductor materials and energy supply for AI compute centers, framing the move as building the group's own \"silicon shield.\" It marks the clearest signal yet that Taiwan's legacy petrochemical giants are repositioning around AI-era demand.",
-          "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/5612/9529964"
-        },
-        {
-          "title_zh": "〈財報〉邁威爾 AI 晶片需求「異常強勁」 財測超預期",
-          "title_en": "Marvell's AI-chip demand \"abnormally strong\"; guidance beats",
-          "summary_zh": "邁威爾在 AI 客製晶片與光通訊 DSP 帶動下，財測明顯上修，並形容 AI 訂單動能「異常強勁」。此一財報為 AI ASIC 與 800G/1.6T 光通訊在 2026 下半年的上行循環再添注腳。",
-          "summary_en": "Marvell delivered a guide-up driven by AI-related custom silicon and optical-DSP demand, calling order momentum \"abnormally strong.\" The print supports the cyclical bull case for AI-ASIC and 800G/1.6T optical chains running into 2H 2026.",
+          "title_zh": "性能提升逾 20%！三星全球首發 12 層 HBM4E 樣品出貨",
+          "title_en": "Samsung ships world-first 12-layer HBM4E samples",
+          "summary_zh": "三星開始出貨性能提升超過 20% 的 12 層 HBM4E 高頻寬記憶體樣品，搶占 AI 加速器次世代記憶體競賽的先機。率先送樣 HBM4E 具戰略意義，記憶體廠正爭取通過 GPU 與加速器大客戶驗證；此里程碑升高與 SK 海力士、美光的競爭，也顯示 AI 記憶體升級循環正在加速。",
+          "summary_en": "Samsung began shipping 12-layer HBM4E high-bandwidth memory samples with performance gains exceeding 20%, staking an early claim in the next-generation memory race for AI accelerators. Leading on HBM4E sampling is strategically vital as memory makers vie for qualification with key GPU and accelerator customers; the milestone intensifies competition with SK Hynix and Micron and signals that the AI memory upgrade cycle is accelerating.",
           "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6471714"
+          "source_url": "https://news.cnyes.com/news/id/6472529"
         },
         {
-          "title_zh": "美軍推動 IT 整合 戴爾拿下 97 億美元大單 包含微軟軟體服務",
-          "title_en": "Dell wins US$9.7bn US-military IT-integration deal bundling Microsoft software",
-          "summary_zh": "戴爾科技取得美國國防部 IT 整合合約，金額約 97 億美元，並搭售微軟企業軟體。戴爾在受規範政府雲端市場進一步取得優勢，也代表聯邦 IT 預算朝既有大廠集中。",
-          "summary_en": "Dell Technologies has secured a US Department of Defense IT-integration contract worth roughly US$9.7bn, with Microsoft enterprise software bundled in. The award strengthens Dell's hand in regulated government cloud and signals continued federal IT-spend rotation toward incumbents.",
+          "title_zh": "Nikon 擬以低價晶片設備挑戰 ASML",
+          "title_en": "Nikon to challenge ASML with lower-cost chip equipment",
+          "summary_zh": "Nikon 計畫推出較平價的晶片製造微影設備，與市場龍頭 ASML 競爭。雖然短期內難撼動 ASML 的 EUV 壟斷，但成熟與中階製程微影若出現有競爭力的低價替代方案，可能對價格形成壓力並提供晶圓廠第二供應來源，對整體半導體資本支出的設備成本動態值得關注。",
+          "summary_en": "Nikon plans to introduce more affordable chipmaking lithography equipment to compete with dominant player ASML. While Nikon is unlikely to threaten ASML's EUV monopoly near-term, a credible low-cost alternative in mature- and mid-node lithography could pressure pricing and offer foundries a second source, a development worth watching for equipment-cost dynamics across the broader semiconductor capex landscape.",
           "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6471707"
+          "source_url": "https://news.cnyes.com/news/id/6472505"
+        },
+        {
+          "title_zh": "AI 伺服器需求爆發　戴爾財測驚艷",
+          "title_en": "Dell stuns with AI-server-driven forecast",
+          "summary_zh": "戴爾因 AI 伺服器需求激增，公布優於預期的財測。亮眼展望是整條 AI 伺服器價值鏈的強勁需求訊號——從 ODM 組裝、GPU 基板到電源、網通與散熱——並再次確認企業與雲端 AI 基建支出仍處上行循環，台廠伺服器 ODM 與零組件供應商可望受惠。",
+          "summary_en": "Dell issued guidance that surprised to the upside, propelled by surging AI server demand. The blowout outlook is a strong demand signal for the entire AI server value chain—from ODM assemblers and GPU baseboards to power, networking and cooling—and reinforces that enterprise and cloud AI infrastructure spending remains in an upcycle, benefiting Taiwan's server ODMs and component suppliers.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/123398/9532635"
+        },
+        {
+          "title_zh": "〈COMPUTEX〉緯穎視 CPO 為未來發展重點　攜生態系夥伴展示 CPO 光互連技術",
+          "title_en": "Wiwynn highlights CPO as a future priority at COMPUTEX",
+          "summary_zh": "緯穎在 COMPUTEX 將共同封裝光學（CPO）定位為重點發展方向，並偕生態系夥伴展示 CPO 光互連技術。CPO 被視為突破次世代 AI 資料中心頻寬與能效瓶頸的關鍵，緯穎以生態系為主的展示意味光互連正從概念邁向可部署的 AI 基礎建設。",
+          "summary_en": "At COMPUTEX, Wiwynn positioned co-packaged optics (CPO) as a key development focus and showcased CPO optical-interconnect technology with ecosystem partners. CPO is increasingly seen as essential to overcoming bandwidth and power-efficiency bottlenecks in next-generation AI data centers, and Wiwynn's ecosystem-led demonstration signals that optical interconnect is moving from concept toward deployable AI infrastructure.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6471350"
         }
       ]
     },
@@ -98,45 +105,36 @@
       "section_zh": "金融業",
       "items": [
         {
-          "title_zh": "金管會主委彭金隆談權證市場 拚制度商品國際化",
-          "title_en": "FSC chair Peng Jin-lung outlines roadmap to internationalize Taiwan's warrant market",
-          "summary_zh": "彭金隆表示，金管會將推動權證市場朝向商品多元、發行制度更具彈性、並引進跨境參與。本案是金管會「資本市場 2.0」深化台灣商品鏈、不再只靠現貨與 ETF 的一環。",
-          "summary_en": "FSC chairman Peng Jin-lung said the regulator will push the warrant market toward more diverse products, more flexible issuance rules and cross-border participation. The agenda is part of FSC's broader \"Capital Market 2.0\" push to deepen Taiwan's product mix beyond cash equities and ETFs.",
-          "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/5648/9529998",
-          "body_zh": "金管會主委彭金隆昨（27）日表示，台灣權證市場走過30年，儘管發展過程歷經不少挑戰，但如今權證交易量在全球市場已名列前茅。隨台股逐步成為國際級資本市場，下一步將持續推動市場制度與商品國際化，提升台灣資本市場競爭力。\n經濟日報昨日舉辦「第16屆權民搶百萬」頒獎典禮，彭金隆出席致詞時表示，這是他上任後第三度參加該活動，自己第一次參加則是在第14屆，也見證權證市場持續成長。\n他回憶，1997年自己還在財政部服務時，就曾在部長辦公室參與推動台灣第一檔權證上市。當時政府推動權證制度，背後的重要背景，就是1995年至1996年間，台灣推動「亞洲金融中心」政策，而權證正是其中重要的一環。\n彭金隆表示，30年後回頭看，現在政府也正在推動台灣成為亞洲資產管理中心，某種程度上，與當年推動亞洲金融中心有相似脈絡。\n他坦言，權證市場一路走來「風雨困難非常多」，但經過30年發展，如今台灣權證市場不論成交量或市場活絡度，在全球市場都已具一定地位，未來仍有很大發展空間。\n他指出，台灣資本市場如今已成為「國際級資本市場」，金管會期勉臺灣證券交易所與櫃檯買賣中心要扮演更積極角色，讓資本市場制度更健全、更國際化、更具前瞻性，也更符合國際級資本市場的條件與要素。\n談到權證功能，彭金隆表示，當年引進權證時，市場普遍認為這是高風險、高槓桿的衍生性商品；但也正因具備這些特性，權證在資本市場中扮演重要角色。\n他指出，權證除了能提升市場效率與流動性，也是重要避險工具，更具備價格發現功能，這些都是國際級資本市場不可或缺的一部分，也會伴隨資本市場持續成長。\n彭金隆特別感謝券商長期投入權證發行與造市。他表示，「沒有券商的努力，就沒有今天的市場規模」，顯示市場發展有賴整體產業共同投入。\n他強調，未來台灣若要成為真正的國際級資本市場，仍需要更多元金融商品與服務加入；期待權證市場與整體資本市場持續向前發展，讓市場更加健全成熟。"
+          "title_zh": "金管會公布我國普惠金融指標 114 年結果，全數達標且多項優於國際平均",
+          "title_en": "FSC: all 2025 financial-inclusion targets met, beating global averages",
+          "summary_zh": "金管會宣布台灣 2025 年普惠金融指標全數達標，多項指標優於國際平均值，並將於 2026 年新增 5 項指標，同步推動「全齡金融」政策與金融友善服務。結果顯示主管機關重視普及且公平的金融近用，並為銀行業以普惠為導向的商品與服務發展定調政策方向。",
+          "summary_en": "The Financial Supervisory Commission announced that Taiwan's financial-inclusion indicators for 2025 were all achieved, with several measures outperforming international averages. The FSC will add five new indicators in 2026 and advance an \"all-ages finance\" agenda alongside financial-friendly services. The result signals regulatory emphasis on broad, equitable access and sets the policy direction for inclusion-oriented product and service development across banks.",
+          "source_name": "金管會",
+          "source_url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2&mcustomize=news_view.jsp&dataserno=202605280004&dtable=News"
         },
         {
-          "title_zh": "金管會對台新銀行前理專挪用客戶款項案核處",
-          "title_en": "FSC sanctions Taishin Bank for ex-RM's misappropriation of client funds",
-          "summary_zh": "金管會對台新國際商業銀行作出行政處分，緣由為前理財專員挪用客戶資金，認定客戶資產隔離與理專控管存在缺失。預期將帶動同業在 KYC、雙簽與理專輪調機制再度收緊。",
-          "summary_en": "FSC handed down an administrative sanction against Taishin International Bank after a former wealth-management relationship manager misappropriated client funds, citing control weaknesses in client-asset segregation and RM supervision. The case will likely tighten KYC, dual-control and RM rotation requirements across the industry.",
+          "title_zh": "配合保險業清償能力制度調整　預告「金融控股公司合併資本適足性管理辦法」修正草案",
+          "title_en": "FSC pre-announces revised financial-holding capital-adequacy rules",
+          "summary_zh": "銀行局預告修正金控合併資本適足性管理辦法，以因應保險業清償能力制度的調整。此修正對旗下擁有大型保險子公司的金控集團尤為重要，因其重新校準集團資本的衡量方式，可能影響金控業的資本規劃、配息能力與併購彈性。",
+          "summary_en": "The Banking Bureau pre-announced amendments to the consolidated capital-adequacy regulations for financial-holding companies, aligning them with adjustments to the insurance industry's solvency regime. The change matters for financial-holding groups with large insurance subsidiaries, as it recalibrates how group capital is measured—potentially affecting capital planning, dividend capacity and M&A flexibility across the FHC sector.",
           "source_name": "金管會",
-          "source_url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2&mcustomize=news_view.jsp&dataserno=202605260001&dtable=News"
+          "source_url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2&mcustomize=news_view.jsp&dataserno=202605280003&dtable=News"
         },
         {
-          "title_zh": "金管會修正發布「保險業內部控制及稽核制度實施辦法」",
-          "title_en": "FSC tightens insurers' internal-control and audit-system rules",
-          "summary_zh": "金管會強化保險業資訊安全相關規定。壽險與產險公司需要升級治理、資安與稽核留存控制，預期帶動一波合規與資訊系統投資。",
-          "summary_en": "FSC revised the \"Regulations Governing Implementation of Internal Control and Audit System of Insurance Enterprises,\" with strengthened information-security provisions. Insurers will need to upgrade governance, cyber and audit-trail controls — a likely catalyst for incremental compliance and IT spend.",
+          "title_zh": "預告修正「金融機構及提供虛擬資產服務之事業或人員防制詐欺犯罪危害應遵循事項辦法」",
+          "title_en": "FSC tightens anti-fraud compliance duties, including for virtual-asset providers",
+          "summary_zh": "銀行局預告修正防詐遵循事項辦法，完備跨業合作機制以強化金融防詐網絡。此舉將防詐義務延伸至傳統金融與虛擬資產服務業者，提高合規要求，反映主管機關持續將消費者反詐保護列為優先。",
+          "summary_en": "The Banking Bureau pre-announced amendments to the compliance rules on preventing fraud for financial institutions and virtual-asset service providers, completing cross-industry cooperation mechanisms to strengthen the anti-fraud network. The move extends fraud-prevention obligations across traditional finance and crypto service providers, raising compliance expectations and reflecting regulators' continued prioritization of consumer protection against scams.",
           "source_name": "金管會",
-          "source_url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2&mcustomize=news_view.jsp&dataserno=202605260002&dtable=News"
+          "source_url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2&mcustomize=news_view.jsp&dataserno=202605280002&dtable=News"
         },
         {
-          "title_zh": "上市櫃公司公告申報 115 年第 1 季財報情形",
-          "title_en": "FSC publishes Q1 2026 financial-reporting compliance status for listed companies",
-          "summary_zh": "金管會公布上市櫃公司 115 年 Q1 財報申報情形，逾期或不完整者列為後續追蹤對象。此一揭露有助於市場在除權息季前辨識治理落後個股。",
-          "summary_en": "FSC released the filing status of Q1 2026 financial reports by TWSE/OTC-listed companies, flagging late or incomplete filers for follow-up. The disclosure helps the market identify governance laggards ahead of dividend season.",
+          "title_zh": "強制車險保障升級！7 月起身故及失能理賠最高 300 萬元",
+          "title_en": "Compulsory auto-insurance payouts rise to NT$3mn from July",
+          "summary_zh": "保險局宣布自 7 月起調高強制汽車責任保險的身故及失能理賠額度，最高達 300 萬元。此升級強化全國事故受害人與保戶的基本保障；保險業者須在定價與準備金提存上反映較高的保額上限，是對強制險業務的一項消費者保護升級。",
+          "summary_en": "The Insurance Bureau announced that compulsory automobile liability insurance death and disability payouts will be raised to a maximum of NT$3mn starting in July. The upgrade strengthens baseline protection for accident victims and policyholders nationwide; insurers will need to reflect the higher coverage ceiling in pricing and reserving, marking a consumer-protection enhancement to a mandatory line of business.",
           "source_name": "金管會",
-          "source_url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2&mcustomize=news_view.jsp&dataserno=202605260004&dtable=News"
-        },
-        {
-          "title_zh": "金管會督導期交所規劃國外成分證券 ETF 期貨及選擇權三階段漲跌幅機制",
-          "title_en": "FSC oversees TAIFEX plan to phase in price-limit mechanism on foreign-component ETF futures/options",
-          "summary_zh": "金管會督導期交所為含國外成分的 ETF 期權商品設計「三階段漲跌幅」機制，兼顧波動管控與和國際市場價格接軌。",
-          "summary_en": "FSC is overseeing TAIFEX's design of a three-stage daily price-limit mechanism for ETF futures and options whose underlying baskets contain foreign components. The framework aims to balance volatility containment with international price-discovery linkage.",
-          "source_name": "金管會",
-          "source_url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2&mcustomize=news_view.jsp&dataserno=202605210001&dtable=News"
+          "source_url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2&mcustomize=news_view.jsp&dataserno=202605280001&dtable=News"
         }
       ]
     },
@@ -145,36 +143,20 @@
       "section_zh": "財富管理",
       "items": [
         {
-          "title_zh": "壽險業 115 年截至 3 月底外幣保險商品銷售情形",
-          "title_en": "FX-denominated insurance sales by Taiwan life insurers — end-March 2026 update",
-          "summary_zh": "金管會公布壽險業外幣保險商品銷售數據，包括美元保單占比，為投資型與高資產退休配置的觀察指標。亦是銀保通路手續費與台幣／美元產品 AUM 輪動的領先訊號。",
-          "summary_en": "FSC released sales data for FX-denominated life-insurance products through end-March 2026, including the USD-policy mix that drives investment-linked and high-net-worth retirement allocation. The numbers are a leading indicator for bancassurance fee income and AUM rotation between TWD and USD products.",
-          "source_name": "金管會",
-          "source_url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2&mcustomize=news_view.jsp&dataserno=202605260003&dtable=News"
+          "title_zh": "台股 ETF 規模創高　第四檔 5,000 億元 ETF 誕生",
+          "title_en": "Taiwan's fourth NT$500bn ETF is born as ETF assets hit a record",
+          "summary_zh": "台股 ETF 總規模達 6.57 兆元新高，群益台灣精選高息 ETF（00919）於 5 月 27 日股價創高後規模首破 5,000 億元（5,030.94 億元），成為市場第四檔達此規模的台股 ETF。自 2022 年 10 月上市以來含息累積報酬 172.94%、今年來 33.13%。經理人建議分批布局、勿追高，並強調高息 ETF 易漲抗跌、適合長期存股族，對偏好現金流的客戶資產配置具參考價值。",
+          "summary_en": "Total Taiwan equity ETF assets reached a record NT$6.57tn, and Capital Taiwan Select High Dividend ETF (00919) topped NT$500bn (NT$503.09bn) on May 27 after its price hit a new high—becoming the market's fourth ETF to reach that scale. Since listing in October 2022, 00919 has delivered a 172.94% cumulative total return (33.13% year-to-date). The manager favors phased entry over chasing highs and stresses high-dividend ETFs' \"rise-easily, fall-resistant\" profile for long-term holders—relevant for income-oriented client portfolios.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/5618/9531007"
         },
         {
-          "title_zh": "115 年 3 月底本國銀行數位存款帳戶業務辦理情形",
-          "title_en": "Digital-deposit account growth at domestic banks, end-March 2026",
-          "summary_zh": "金管會公布本國銀行數位存款帳戶業務季度數據，包括戶數與存款餘額成長。此資料是數位開戶滲透率的風向球，也是線上財管平台的潛在客戶池。",
-          "summary_en": "FSC released its quarterly snapshot of digital-deposit-account business at domestic banks, including account count and balance growth. The dataset is a barometer of digital-onboarding traction and a feeder pool for online wealth-management platforms.",
-          "source_name": "金管會",
-          "source_url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2&mcustomize=news_view.jsp&dataserno=202605190001&dtable=News"
-        },
-        {
-          "title_zh": "協助企業接軌 IFRS 永續揭露準則 金管會提供多項資源並舉辦實作工作坊",
-          "title_en": "FSC backs corporate adoption of IFRS Sustainability Disclosure Standards with workshops and toolkits",
-          "summary_zh": "金管會為協助上市櫃公司導入 IFRS 永續揭露準則，提供資源並舉辦實作工作坊。揭露品質提升是高資產與機構資金擴大台灣永續商品配置的前提。",
-          "summary_en": "To help listed companies meet the new IFRS sustainability disclosure standards, FSC is providing resources and running implementation workshops. Better ESG disclosure is a precondition for HNW and institutional money to scale Taiwan-issued sustainable-investment products.",
-          "source_name": "金管會",
-          "source_url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2&mcustomize=news_view.jsp&dataserno=202605210002&dtable=News"
-        },
-        {
-          "title_zh": "金管會提醒民眾防範信用卡遭詐騙盜刷",
-          "title_en": "FSC alert: consumers reminded to guard against credit-card fraud and unauthorized charges",
-          "summary_zh": "金管會發布消費者警示，提醒注意信用卡釣魚與盜刷風險。對財富管理客戶而言，凸顯銀行端詐欺偵測與高端卡跨境交易即時告警的重要性。",
-          "summary_en": "FSC issued an advisory urging consumers to stay alert to credit-card phishing and unauthorized charges. For wealth-management clients, the reminder reinforces the importance of bank-side fraud monitoring and 24/7 cross-border transaction alerts on premium cards.",
-          "source_name": "金管會",
-          "source_url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2&mcustomize=news_view.jsp&dataserno=202605190002&dtable=News"
+          "title_zh": "繳不出遺產稅　四招解套",
+          "title_en": "Four ways to settle an estate-tax bill you can't pay in cash",
+          "summary_zh": "財政部高雄國稅局整理遺產稅四大繳納解套方式：延期繳納、分期繳納、實物抵繳，以及以被繼承人存款繳納，供納稅人於期限內申請。此指引對高資產傳承規劃極具實務價值——龐大但缺乏流動性的遺產常造成資金壓力，掌握這些機制可協助家族避免罰則並安排有序的跨代移轉。",
+          "summary_en": "The Kaohsiung National Taxation Bureau outlined four routes for heirs unable to pay estate tax in cash within the deadline: deferred payment, installment payment, payment-in-kind, and settlement via the decedent's bank deposits. The guidance is practical for high-net-worth succession planning, where large but illiquid estates can create liquidity strain; understanding these mechanisms helps families avoid penalties and structure orderly intergenerational transfers.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/6710/9532042"
         }
       ]
     },
@@ -183,45 +165,28 @@
       "section_zh": "稅務法規",
       "items": [
         {
-          "title_zh": "網拍「化整為零」避稅 行不通",
-          "title_en": "NTBT cracks down on online-sales \"income-splitting\" tax dodge",
-          "summary_zh": "國稅局指出，將網拍收入分散到配偶與子女多平台帳號以規避營業稅已不可行，金流與物流資料可交叉比對揭露逃稅。多帳號操作的賣家恐面臨補稅與罰鍰風險。",
-          "summary_en": "The National Taxation Bureau warned that splitting online-sales revenue across spouse and children's accounts on multiple platforms no longer evades VAT, as cross-platform money-flow and logistics data are now cross-matched. Sellers running multi-account setups should expect retroactive assessment and penalty risk.",
+          "title_zh": "就保投保薪資上限擬調升",
+          "title_en": "Employment-insurance insured-salary ceiling set to rise",
+          "summary_zh": "主管機關規劃調升就業保險投保薪資上限。提高上限將同時拉高保費與失業等給付的計算基礎，影響實領薪資的計算與雇主提繳；薪資接近現行上限的高薪族，在提繳與潛在給付權益上所受的直接影響最大。",
+          "summary_en": "Authorities are planning to raise the insured-salary ceiling for employment insurance. Lifting the cap would increase both premiums and the benefit base for unemployment and related allowances, affecting take-home pay calculations and employer contributions; higher earners near the current ceiling would see the most direct impact on contributions and potential benefit entitlements.",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/6710/9529722",
-          "body_zh": "財政部北區國稅局表示，近年電子商務盛行，部分賣家利用配偶、子女或親友名義，在不同平台設立多個賣場帳號，企圖「化整為零」，分散營業額、規避營業稅，不過國稅局會透過金流、物流及資訊流等資料交叉比對，相關逃漏稅行為仍可能被查獲。\n北區國稅局指出，只要以營利為目的，透過網路持續性銷售貨物或勞務，且銷售額達到起徵標準，就應依法辦理稅籍登記並報繳營業稅。\n自2025年1月1日起，若屬販售商品等「銷售貨物」業別，每月銷售額達10萬元以上即達營業稅起徵點。\n若營業人同時透過多個平台帳號、不同賣場或社群媒體銷售商品，所有帳號銷售額都必須合併計算。若每月銷售額合計達20萬元以上，國稅局將依法核定使用統一發票，並按5%稅率課徵營業稅。\n國稅局日前查到一名賣家小銘（化名）自2024年起，在知名電商平台經營多個賣場販售電子產品，並利用配偶及子女名義申請不同帳號，藉此分散營業收入。國稅局蒐集相關資料交叉分析後，發現這些帳號的交易紀錄、收款金流及實際經營情況均與小銘有關，認定小銘才是實際經營者。\n國稅局查核後，發現短漏報銷售額超過3,000萬元，除補徵營業稅150萬餘元，並依營業稅法及稅捐稽徵法規定裁處罰鍰。"
+          "source_url": "https://money.udn.com/money/story/6710/9532044"
         },
         {
-          "title_zh": "2026 報稅／醫療輔具租賃費 可列扣",
-          "title_en": "2026 tax filing: rental fees for medical assistive devices now deductible",
-          "summary_zh": "2026 年報稅年度起，符合條件的醫療輔具（如輪椅、呼吸器）租賃費，可列入綜所稅醫療費用列舉扣除額。照顧長輩或身障家屬的家庭應留存租賃發票與醫師證明。",
-          "summary_en": "For the 2026 filing year, rental fees for qualifying medical assistive devices (such as wheelchairs and respirators) can be claimed under the itemized medical-expense deduction. Households caring for elderly or disabled members should retain rental invoices and physician certificates.",
+          "title_zh": "2026 報稅／列報扶養親戚小孩　有條件",
+          "title_en": "2026 filing: claiming relatives' children as dependents has conditions",
+          "summary_zh": "報稅季進行中，國稅局說明列報扶養親戚子女須符合特定條件。納稅人必須符合既定的扶養事實與親屬關係要件才能列報免稅額；誤用規定恐遭補稅，計畫列報非直系受扶養親屬的家庭，申報前應先確認資格。",
+          "summary_en": "As the 2026 income-tax filing season runs, the tax authority clarified that listing a relative's child as a dependent is allowed only under specific conditions. Taxpayers must meet defined support and relationship criteria to claim the exemption; misapplying the rule risks reassessment, so households planning to claim non-direct dependents should confirm eligibility before filing.",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/6710/9529724"
+          "source_url": "https://money.udn.com/money/story/6710/9532048"
         },
         {
-          "title_zh": "低價屋免稅 設限三戶",
-          "title_en": "Low-value-home tax break capped at three units",
-          "summary_zh": "財政部明確規定，低價屋免稅優惠每戶最多以三戶為上限，目的在堵塞多屋族取巧空間。持有多間小坪數收租物件的高資產客戶須重新確認資格。",
-          "summary_en": "The MOF clarified that the low-value-home property-tax preference is capped at a maximum of three units per household, designed to close a loophole used by multi-property owners. Wealth-tier clients holding several small units for rental income should re-check qualification under the new cap.",
+          "title_zh": "承租商辦裝修　不適用優稅",
+          "title_en": "Office-lease fit-out costs do not qualify for preferential tax treatment",
+          "summary_zh": "國稅局說明，承租商用辦公空間的裝修支出不適用優惠稅率。企業在編列租賃裝潢成本時，不應假設能享優惠稅務待遇，因該支出不在適用範圍內——這對企業稅務規劃與租賃相關資本支出決策是重要提醒。",
+          "summary_en": "The tax authority clarified that renovation and fit-out expenditures on leased commercial-office space do not qualify for preferential tax rates. Businesses budgeting tenant-improvement costs should not assume favorable tax treatment, as the expenses fall outside the qualifying scope—an important point for corporate tax planning and lease-related capital expenditure decisions.",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/6710/9529726"
-        },
-        {
-          "title_zh": "想讓地價稅打 2 折？全家遷戶籍前先做這件事",
-          "title_en": "Cut land-value tax to 20%? Move the whole family's household registration first",
-          "summary_zh": "國稅局提醒，要享有自用住宅 0.2% 地價稅率（vs. 一般 1%），須全家戶籍都遷入該房屋。「只遷一人」是被退件、失去優惠的最常見原因。",
-          "summary_en": "Tax officials reminded homeowners that to qualify for the self-use 0.2% land-value tax rate (vs the base 1%), the entire family must register the property as their household registration address, not just one member. Failing to consolidate registration is the most common reason for losing the preferential rate.",
-          "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/6710/9529115"
-        },
-        {
-          "title_zh": "獨家／美妝業變革 食藥署 7 月起全面要求「身分證」 部分產品恐退出市場",
-          "title_en": "TFDA to require \"product passport\" for all cosmetics from July; some SKUs may exit market",
-          "summary_zh": "自 2026 年 7 月起，台灣販售化妝品須完成食藥署產品資訊檔案 (PIF) 登錄，等同「商品身分證」。業界估部分進口與小品牌品項將直接退出市場。",
-          "summary_en": "From July 2026, all cosmetics sold in Taiwan must complete product-information-file (PIF) registration with TFDA, effectively a \"product ID.\" Industry estimates some imported and small-brand SKUs will quit the market rather than complete certification.",
-          "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/7307/9528762"
+          "source_url": "https://money.udn.com/money/story/6710/9532050"
         }
       ]
     },
@@ -230,48 +195,20 @@
       "section_zh": "總經政策",
       "items": [
         {
-          "title_zh": "搶救少子化年砸 3,800 億元 總統端出 18 項措施 兒少專戶採勞動基金模式",
-          "title_en": "President Lai unveils NT$380bn-a-year, 18-point pro-natalist package",
-          "summary_zh": "賴清德宣布「人口對策新戰略」，年支出規模約 3,800 億元、共 18 項措施，估超過 2,770 萬人次受益。亮點包括兒少投資專戶採勞動基金代操、育嬰留停補貼擴大、企業配套減稅優惠。",
-          "summary_en": "President Lai Ching-te announced a \"New Population Strategy\" worth roughly NT$380bn a year and covering 18 measures, projected to reach 27.7m person-times. Highlights include a child/youth investment account managed under labor-fund logic, expanded parental leave subsidies and corporate tax credits.",
+          "title_zh": "景氣熱絡　連亮五顆紅燈　經濟動能穩健向上",
+          "title_en": "Monitoring indicator flashes red for a fifth straight month",
+          "summary_zh": "台灣 4 月景氣燈號連續第五個月亮紅燈，綜合判斷分數維持 39 分，AI 應用熱潮持續推升經濟。連續紅燈代表動能強勁、接近偏熱；此數據強化國內景氣樂觀基調，同時讓政策當局留意 AI 帶動的強勢能否擴散至出口科技以外的部門。",
+          "summary_en": "Taiwan's April business-cycle monitoring indicator stayed red for the fifth consecutive month, with the composite score holding at 39, as the AI application boom continues to lift the economy. A run of red lights signals robust momentum and overheating-adjacent conditions; the reading reinforces an upbeat domestic backdrop while keeping policymakers attentive to whether AI-driven strength broadens beyond export-tech sectors.",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/7307/9529962",
-          "body_zh": "賴清德總統昨（27）日端出「人口對策新戰略」共18項措施，合計年度預算達3,800億元，政院預估將有逾2,770萬人次受益，從生育、養育、教育全程加碼支持，今日將於行政院會通過相關法案。\n少子女化已是國安問題，賴總統昨日召開國安會議，會後並率領行政團隊召開記者會，18項政策一次上菜。賴總統表示，這是台灣邁向新公共化關鍵一步，把養兒育女責任提升為國家、社會、企業共同分擔，讓工作與家庭不再是單選題。\n3,800億元預算包含新增預算2,050億元。其中最受關注的兒少成長津貼，18歲以下每人每月5,000元，滿6歲後半數存入專戶，採「勞動基金」模式，委外代操，並保底2年期定存利率。\n賴總統指出，每月2,500元存入專戶，政府將委託專業金融團隊管理投資，政府操作收益較高，保底機制跟勞保基金設計一致，當孩子滿18歲，專戶資金就能領出，成為國家送給青年的「成年禮」。\n另也包括生育補助加碼，無論任何社會保險，一律補足至每胎10萬元；人工生殖也加碼補助，未滿40歲，第一至三次做人工生殖補助15萬元，第四至六次補助6萬元。40歲至未滿45歲，第一至三次做人工生殖補助13萬元。\n除了加碼補助，政府也祭出減稅。財政部長莊翠雲說，養育0至18歲未成年子女，每人免稅額增50%，拚明年報稅適用，減稅利益80億元；育兒宅房屋稅、地價稅最低可免稅，減稅利益約50億至75億元。三稅減免的減稅利益合計達155億元。\n在居住方面，賴總統說明，將大力提供婚育宅，包括擴大提供40%社宅作為婚育宅，及透過容積獎勵鼓勵民間合作，取得婚育宅。學齡前幼兒租期最長可達12年，新婚二年內家庭租金補貼加碼到1.5倍，每生一個孩子再加0.5倍。\n賴總統提到，居住減壓的確是這次政策中非常重要的一環。有些年輕人面對高房價或租屋壓力，所以在結婚生子時產生疑慮。政府在減輕租屋壓力方面特別著力，希望政府角色是讓家庭成為最溫暖的堡壘，而不是經濟負擔。"
+          "source_url": "https://money.udn.com/money/story/10869/9532206"
         },
         {
-          "title_zh": "婚假產假補貼政府加碼 呼籲企業支持育兒 祭減稅優惠、職代津貼",
-          "title_en": "Marriage/maternity-leave subsidies expanded; corporate tax breaks and replacement-staff stipends added",
-          "summary_zh": "政府加碼婚假與產假補貼，並對支持員工育嬰留停的企業提供減稅優惠與職務代理人津貼。工商團體肯定支持力道，但提醒中小企業人力調度仍是大挑戰。",
-          "summary_en": "The government will top up marriage and maternity-leave subsidies and offer tax credits plus replacement-staff stipends to firms supporting parental leave. Business groups welcomed the support but warned that staffing flexibility, especially in SMEs, remains a constraint.",
+          "title_zh": "台美關稅優惠　差兩塊拼圖　301 調查爭取優稅不變",
+          "title_en": "Taiwan-US tariff deal still missing two pieces; 301 probe seeks to preserve preferential rates",
+          "summary_zh": "在非半導體優惠落實後，台美關稅方案仍就半導體 232 與對等關稅兩項持續協商，台灣並透過 301 調查爭取維持優惠稅率不變。未決項目使關稅政策對科技供應鏈仍是現實風險，結果將影響台灣最具戰略敏感性出口品的競爭力。",
+          "summary_en": "Negotiations continue on the remaining elements of the Taiwan-US tariff package—semiconductor Section 232 and reciprocal tariffs—even after non-semiconductor relief was finalized. Taiwan is also working through a Section 301 investigation to secure unchanged preferential rates. The outstanding items keep tariff policy a live risk for the tech supply chain, and the outcome will shape competitiveness for Taiwan's most strategically sensitive exports.",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/7307/9529946",
-          "body_zh": "賴清德總統昨（27）日宣布18項人口新政，其中在友善職場方面，婚假、產假、陪產假同步擴大；育兒家長可申請提早一小時下班，對企業人力調度形成挑戰。為協助企業因應，政府也祭出補貼、減稅優惠，呼籲企業共同支持育兒。\n根據規劃，婚假將從現行八天擴大至14天；產假將從現行八周，擴大至12周，增加的四周，媽媽們可視自身恢復狀況與意願，申請提前銷假；陪產假從七天擴大至14天。上述新增天數工資，經雇主給付工資後，都可向勞動部申請補助。\n同時也將育嬰家升級為育兒假，適用年齡從3歲增加至6歲，留停可以日為單位申請，以「日」請假的天數，從30天，提高為60天。\n為讓爸爸分攤照顧，政府推出「育兒留停津貼6+3」方案。只要雙親「都」請滿六個月留職停薪，可各自再多請領三個月津貼，等於雙親合計最多可領18個月。\n另外，未來也將同時提高就保投保薪資上限，每月最高可領超過4萬元。\n政府也推動「彈性減工時」制度，讓有照顧需求的父母，可以提早一小時下班，或在總工時不變的狀況下，用彈性上下班的方式去接送小孩。減少工時而少掉的薪水，由政府「全額補助」。這項措施，台北市先前已率先試辦。\n企業支持方面，勞動部長洪申翰表示，補貼企業加給職代津貼，每名員工每日補助800元。200人以下企業建立職務代理津貼制度或新聘替代人力，定額獎補助2萬元。\n另外，企業設置托兒設施或提供托育服務支出，將提供租稅優惠，可就支出金額的200%，自營利事業所得額中減除，例如支出10萬元，可自所得減除20萬元。"
-        },
-        {
-          "title_zh": "核電重啟再邁一步 核安會完成核三再運轉現場勘查",
-          "title_en": "Nuclear restart edges closer: NSC completes on-site inspection of Nuclear-3 restart",
-          "summary_zh": "核安會完成核三廠再運轉審查現場勘查，是核電政策轉向中的關鍵程序里程碑。資料中心 AI 電力需求是政策轉彎背後的核心驅動。",
-          "summary_en": "Taiwan's Nuclear Safety Commission has completed an on-site inspection of the Maanshan (Nuclear-3) plant for restart review, a procedural milestone in the policy U-turn on nuclear power. AI-driven electricity demand from data centers is the central driver behind the political pivot.",
-          "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/7307/9529172",
-          "body_zh": "核電重啟再邁一步。核安會表示，核安會已於26、27日邀集核安會核三廠再運轉計畫外部審查委員與核安會各組相關同仁，赴台電公司核三廠進行現場勘查，實地瞭解核三廠再運轉相關設施現況與作業規劃，以增進審查作業周延性。\n核安會表示，審查團隊於5月26、27日至主控制室、圍阻體、用過燃料池、海水泵室、緊急柴油發電機、主汽機、主發電機及低放射性廢棄物貯存庫等區域實地勘查，了解現場相關設備狀況。現場勘查結束後，審查團隊並就本次勘查情形及再運轉作業之規劃等，與台電公司進行意見交流與討論，這次現場勘查活動於27日中午左右結束。\n核安會表示，核安會作為核能安全主管機關，將持續本於專業與職責，依法規及參照國際標準與作法，嚴格審查台電公司送審文件，並執行現場查證。也會持續依審查進程，將審查資訊公布於「核電廠再運轉審查管制」專區網頁，供大眾參閱。"
-        },
-        {
-          "title_zh": "北市府／台電完成協調 北士科永久型變電站定案「變壓器地下型」",
-          "title_en": "Taipei and Taipower agree on permanent underground substation for Beishike (Nvidia campus)",
-          "summary_zh": "北市府與台電完成協調，北士科永久型變電站確定採「變壓器地下型」設計，掃除輝達進駐的供電瓶頸。這也是輝達—北市投資案中政治敏感度最高的關卡。",
-          "summary_en": "Taipei City and Taipower finalized plans for a permanent \"underground-transformer\" substation to power the Beishike (Nvidia) campus, removing a key bottleneck for the deal. The agreement clears the most politically sensitive piece of the Nvidia–Taipei investment puzzle.",
-          "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/7307/9529384",
-          "body_zh": "台北市政府27日跨局處與台電完成協調，確定短中長期供電精進方案，在雙方的協調下，台電調整規劃，將永久型變電站定案為「變壓器地下型」。對此，北市府表達感謝之意，同時也將繼續積極提供輝達（NVIDIA）各項行政協助、攜手中央推動相關工程進展。\n台北市政府產業局說明，產業發展一直是重要市政議題，積極推動北士科發展為市府核心策略，為確保電力供給量能充裕，自從去年6月台電首次提出申請之後，包含交通局、產業局、公運處等跨局處就已與台電積極研議，雙方歷經超過7個版本的討論，已於27日確立短、中、長期解決方案。\n短期部分，以仙渡及百齡變電站跨區支援，預計明年底就能完成，屆時新增的供電量能，將能提前滿足興建工程的用電申請；而台電相關管線延伸工程將由產業局作為窗口，綜整並積極提供所需行政協助事項。\n中期的臨時變電所，則由產業局跨局處協調完成行政作業，而台電也表示工期能於20個月內，也就是輝達啟用北士科總部前完成，提供包含輝達與園區內其餘科專用地之廠商充裕電力。\n至於長期的永久變電所，台電將市府反應納入考量，以「變壓器地下型」方案規劃設置，符合都市計畫原則，也避免地上型可能造成周遭校園電磁波干擾等疑慮。\n北市府說明，市府一直秉持專業推動產業發展，民國98年公告實施的北士科都市計畫中已載明，將該交通用地規劃為「本計畫區所需之變電設施使用」並「以地下化設置為原則」；同時，北士科是以200年防洪頻率完成的高保護範圍，排水標準也高於臺北市其他地區；事實上，目前所有北市在建或規劃中的變電站都不是地上型。北市府也感謝台電從善如流，新方案符合都市計畫原則與現行趨勢，市府也會積極配合細化執行方案、提供相關行政協助。"
-        },
-        {
-          "title_zh": "Fed 最新研究：糧食不安全加劇美經濟 K 型分化 拖累低收入家庭信心",
-          "title_en": "Fed research: food insecurity is widening the US K-shaped recovery",
-          "summary_zh": "聯準會最新研究指糧食不安全惡化加深美國 K 型復甦的兩端落差，並打擊低收入家庭信心。此一研究為 FOMC 鴿派支持更早降息的論述再增籌碼。",
-          "summary_en": "A new Federal Reserve research note finds rising food insecurity is deepening the K-shaped split in the US economy and weighing on low-income household confidence. The work strengthens the case for the dovish-leaning FOMC camp pushing for earlier rate cuts.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6471650"
+          "source_url": "https://money.udn.com/money/story/7307/9532279"
         }
       ]
     },
@@ -280,52 +217,44 @@
       "section_zh": "國際財經",
       "items": [
         {
-          "title_zh": "美股收盤／道指再創新高 晶片股回落 美伊和談訊號雜亂市場暫歇",
-          "title_en": "US close: Dow at new high, chip stocks slip as US–Iran peace signals stay mixed",
-          "summary_zh": "道瓊工業指數再度收高、晶片類股回檔，美伊降溫訊號反覆讓多空陷入拉鋸。能源與國防股隨地緣訊號變化雙向震盪。",
-          "summary_en": "The Dow Jones Industrial Average closed at another record while semiconductor names retreated, as conflicting headlines on US–Iran de-escalation kept risk sentiment choppy. Energy and defense names traded both sides of the day on shifting geopolitical signals.",
+          "title_zh": "美股重點新聞摘要 2026 年 5 月 29 日",
+          "title_en": "US stocks: daily highlights for May 29, 2026",
+          "summary_zh": "當日美股重點概述，盤面情緒受美伊談判進展與晶片類股（含美光的明顯波動）牽動。地緣政治頭條與 AI 記憶體動態仍是左右風險偏好的主要交叉訊號，並為亞洲市場及台灣以出口與科技為重的指數開盤定調。",
+          "summary_en": "A roundup of the session's key US market developments, with sentiment shaped by ongoing US-Iran negotiations and chip-sector moves including notable action in Micron. Geopolitical headlines and AI-memory dynamics remained the dominant cross-currents for risk appetite, setting the tone for Asian markets and Taiwan's export-heavy, tech-concentrated index at the open.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6472362"
+        },
+        {
+          "title_zh": "特斯拉 Robotaxi 德州僅 42 輛　不到 Waymo 十分之一",
+          "title_en": "Tesla's Texas Robotaxi fleet only 42 vehicles—under a tenth of Waymo's",
+          "summary_zh": "特斯拉在德州的自動駕駛計程車部署僅 42 輛，遠低於對手 Waymo 的車隊規模。此差距凸顯特斯拉在實際規模上仍大幅落後自駕共乘龍頭，壓抑其 Robotaxi 野心的短期預期，也突顯無人駕駛服務規模化的營運與法規門檻。",
+          "summary_en": "Tesla's autonomous robotaxi deployment in Texas numbers just 42 vehicles, far below rival Waymo's fleet. The gap underscores how far Tesla still trails the autonomous-ride leader in real-world scale, tempering near-term expectations for its robotaxi ambitions and highlighting the operational and regulatory hurdles of scaling driverless services.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6472539"
+        },
+        {
+          "title_zh": "美國財長：阿曼保證不會收荷姆茲海峽過路費",
+          "title_en": "Oman pledges no toll on the Strait of Hormuz, US Treasury says",
+          "summary_zh": "美國財長表示，阿曼已保證不對通過荷姆茲海峽的船隻收取過路費。此保證有利全球能源供應穩定，在中東緊張與美伊談判使原油市場敏感之際，緩解了通過此關鍵咽喉要道的油運成本尾部風險。",
+          "summary_en": "The US Treasury Secretary said Oman has guaranteed it will not charge passage tolls on vessels transiting the Strait of Hormuz. The assurance is positive for global energy-supply stability, easing one tail risk for oil-shipping costs through the critical chokepoint at a time when Middle East tensions and US-Iran talks are keeping crude markets sensitive.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6472519"
+        },
+        {
+          "title_zh": "川普肖像 250 美元紀念鈔設計完成　美國財長：需眾議院修改規定",
+          "title_en": "Trump $250 commemorative note design finished; Treasury says House must amend rules",
+          "summary_zh": "美國財長宣布印有川普肖像的 250 美元紀念鈔設計已完成，但發行須經眾議院修改相關規定。該事件對市場多屬象徵意義，反映政府的財政與政治訊號；實際發行取決於立法行動，而非財政部單方決定。",
+          "summary_en": "The US Treasury Secretary said the design of a US$250 commemorative note bearing Trump's portrait is complete, but issuance requires the House of Representatives to amend the relevant rules. The item is largely symbolic for markets but reflects the administration's fiscal-and-political signaling; actual issuance hinges on legislative action rather than Treasury alone.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6472530"
+        },
+        {
+          "title_zh": "Anthropic 估值飆 9,650 億美元　登 AI 新創王座",
+          "title_en": "Anthropic valuation soars to US$965bn, crowning it the top AI startup",
+          "summary_zh": "Anthropic 估值飆升至約 9,650 億美元，成為估值最高的 AI 新創。此數字反映湧入前沿模型開發商的龐大資本，以及市場對生成式 AI 長期經濟價值的信心——並強化台灣硬體業者所服務之算力、晶片與基礎建設供應鏈的需求能見度。",
+          "summary_en": "Anthropic's valuation surged to roughly US$965bn, making it the most valuable AI startup. The figure illustrates the extraordinary capital flowing into frontier-model developers and the market's conviction in generative-AI's long-run economics—reinforcing demand visibility for the compute, chip and infrastructure supply chains that Taiwan's hardware makers serve.",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/123398/9530227"
-        },
-        {
-          "title_zh": "中東局勢突然升溫 美軍：再襲伊朗軍事設施",
-          "title_en": "Middle East flares up again: US strikes Iranian military sites",
-          "summary_zh": "美軍對伊朗軍事設施再度動武，與本週「和談」敘事自相矛盾。市場聚焦原油供給衝擊與荷莫茲海峽中斷風險。",
-          "summary_en": "Tensions escalated as US forces struck Iranian military facilities, complicating the same week's peace-talk narrative. Markets are watching for crude-oil supply impact and Strait-of-Hormuz disruption risk.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6471717"
-        },
-        {
-          "title_zh": "川普：伊朗想用拖字訣沒用 因我不在乎期中選舉",
-          "title_en": "Trump on Iran: stalling won't work because I \"don't care about the midterms\"",
-          "summary_zh": "川普對伊朗喊話，拖延策略沒用，因為他不在乎期中選舉結果，暗示在沒有協議前願意升級對抗。談話對德黑蘭施壓，但也推升能源市場尾端風險。",
-          "summary_en": "President Trump publicly told Iran that delay tactics will fail because he is unconcerned with the upcoming US midterm elections — a signal he is willing to escalate in the absence of a deal. The remarks pressure Tehran but raise tail risk for energy markets.",
-          "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/5599/9530197"
-        },
-        {
-          "title_zh": "SpaceX 與 OpenAI 拚兆元市值 專家：火箭壟斷讓 SpaceX 在 IPO 競賽中更具優勢",
-          "title_en": "SpaceX and OpenAI race toward trillion-dollar IPOs — analysts give SpaceX the edge",
-          "summary_zh": "分析師認為 SpaceX 在商用重型運載市場接近壟斷，相較 OpenAI 在即將到來的兆元級 IPO 競賽中結構優勢更明顯。也凸顯護城河差異如何反映在上市前估值上。",
-          "summary_en": "Analysts argue SpaceX's near-monopoly in commercial heavy-lift launch gives it a structural advantage over OpenAI in the looming IPO competition between the two private \"trillion-dollar\" candidates. The contrast highlights how moat differences translate into different pre-IPO valuations.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6471718"
-        },
-        {
-          "title_zh": "歐洲車市 4 月成長 5% 特斯拉銷量大增 67% 與中國車廠同步搶市",
-          "title_en": "European auto market grew 5% in April; Tesla sales surge 67% alongside Chinese OEMs",
-          "summary_zh": "歐洲 4 月新車掛牌年增 5%，特斯拉交車量年增 67%，與中國車廠同步擴張市佔。數據打臉「特斯拉失守歐洲」的說法，但中國品牌的結構性動能仍是更大故事。",
-          "summary_en": "European new-car registrations grew 5% YoY in April, with Tesla deliveries jumping 67% as both Tesla and Chinese OEMs aggressively expanded share. The data point cuts against narratives that Tesla is losing Europe, though Chinese-brand momentum remains the bigger structural story.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6471705"
-        },
-        {
-          "title_zh": "英特爾領軍 晶片股今年漲勢超越網路泡沫高峰",
-          "title_en": "Intel-led chip stocks' 2026 rally already exceeds dot-com peak",
-          "summary_zh": "以英特爾為首的晶片股漲幅已超越 1990 年代末網路泡沫高峰，市場對部位擁擠與估值持續性提出疑問。長線基金經理人之間的風險管理對話明顯升溫。",
-          "summary_en": "A semi-sector composite tracking Intel and other major chip names has rallied to a magnitude exceeding the late-1990s dot-com peak run, raising questions about positioning crowding and valuation sustainability. Risk-management discussions are intensifying among long-only managers.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6471697"
+          "source_url": "https://money.udn.com/money/story/5599/9532674"
         }
       ]
     }
