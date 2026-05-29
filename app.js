@@ -79,6 +79,7 @@ function indexLink(name) {
 const INDEX_YAHOO_SYMBOLS = {
   "TAIEX": "^TWII",
   "TAIEX 加權指數": "^TWII",
+  "OTC 櫃買加權": "^TWOII",
   "S&P 500": "^GSPC",
   "Nasdaq": "^IXIC",
   "Nasdaq Composite": "^IXIC",
@@ -196,7 +197,8 @@ const FX_YAHOO_SYMBOLS = {
   "USD/CNY": "CNY=X",
   "USD/CNY 人民幣": "CNY=X",
   "USD/TWD": "TWD=X",
-  "USD/TWD 新台幣": "TWD=X"
+  "USD/TWD 新台幣": "TWD=X",
+  "JPY/TWD 日圓兌台幣": "JPYTWD=X"
 };
 
 function fxQuoteLink(name) {
@@ -2037,6 +2039,41 @@ function renderMarketSheet() {
   const usStocks = DATA.stocks?.us_stocks || [];
   const twStocks = DATA.stocks?.tw_stocks || [];
 
+  // 商品期貨：取用戶指定的三檔（倫敦布蘭特 / 紐約 WTI / 現貨黃金）
+  const COMMODITY_DISPLAY = [
+    { match: "布蘭特", label: "倫敦原油期貨", sub: "Brent (USD/bbl)" },
+    { match: "WTI", label: "紐約原油期貨", sub: "WTI (USD/bbl)" },
+    { match: "黃金", label: "現貨黃金", sub: "Gold (USD/oz)" },
+  ];
+  const commodities = m.commodities || [];
+  const commodityRows = COMMODITY_DISPLAY.map(cd => {
+    const c = commodities.find(x => x.name && x.name.includes(cd.match));
+    if (!c) return "";
+    return `
+      <tr>
+        <td>${cd.label}<span style="color:var(--text-mute);font-size:12px;margin-left:6px">${cd.sub}</span></td>
+        <td>${c.close != null ? c.close.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : "—"}</td>
+        <td class="${pctClass(c.daily_pct)}">${fmtPct(c.daily_pct)}</td>
+        <td class="${pctClass(c.mtd_pct)}">${fmtPct(c.mtd_pct)}</td>
+        <td class="${pctClass(c.ytd_pct)}">${fmtPct(c.ytd_pct)}</td>
+        <td class="date-col">${escapeHtml(shortDate(c.closing_date) || date)}</td>
+      </tr>`;
+  }).filter(Boolean).join("");
+
+  const commoditiesBlock = commodityRows ? `
+    <h2 style="font-size:16px; margin:24px 0 8px;">商品期貨</h2>
+    <table class="indices">
+      <thead><tr>
+        <th title="商品名稱">商品</th>
+        <th title="收盤價（來源：Yahoo Finance）">收盤</th>
+        <th title="日報酬率｜今日收盤 vs 昨日收盤｜來源：Yahoo Finance">日</th>
+        <th title="MTD｜當月首交易日收盤 → 最新收盤">本月</th>
+        <th title="YTD｜去年最後交易日收盤 → 最新收盤">今年</th>
+        <th class="date-col" title="收盤日：最新交易日">收盤日</th>
+      </tr></thead>
+      <tbody>${commodityRows}</tbody>
+    </table>` : "";
+
   const stocksTab = `
     <table class="indices">
       <thead><tr>
@@ -2048,7 +2085,8 @@ function renderMarketSheet() {
         <th class="date-col" title="收盤日：最新交易日；US ET 收盤後 build；TW TWSE 公告日">收盤日</th>
       </tr></thead>
       <tbody>${rows}</tbody>
-    </table>`;
+    </table>
+    ${commoditiesBlock}`;
 
   const bondsTab = bondRows ? `
     <table class="indices">

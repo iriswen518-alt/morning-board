@@ -71,6 +71,41 @@ async function loadCourses() {
   }
 }
 
+async function loadCertifications() {
+  const listEl = document.getElementById('cert-list');
+  if (!listEl) return;
+  try {
+    const res = await fetch('../data/academy/certifications.json');
+    if (!res.ok) throw new Error('fetch failed');
+    const data = await res.json();
+    const certs = data.certifications || [];
+    listEl.innerHTML = '';
+    certs.forEach(cert => {
+      const badge = cert.active ? '' : '<span class="cert-card-badge">敬請期待</span>';
+      const inner = `<div class="cert-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${cert.icon || ''}</svg>
+        </div>
+        <div class="cert-card-meta">
+          <h3 class="cert-card-name">${cert.name}${badge}</h3>
+          ${cert.description ? `<p class="cert-card-desc">${cert.description}</p>` : ''}
+        </div>`;
+      let node;
+      if (cert.active) {
+        node = document.createElement('a');
+        node.href = `chapter.html?course=${encodeURIComponent(cert.slug)}`;
+      } else {
+        node = document.createElement('div');
+      }
+      node.className = 'cert-card';
+      node.innerHTML = inner;
+      listEl.appendChild(node);
+    });
+  } catch (err) {
+    listEl.textContent = '載入失敗，請稍後再試。';
+    console.error(err);
+  }
+}
+
 async function loadChapter() {
   const chapterListEl = document.getElementById('chapter-list');
   const heroEl = document.getElementById('chapter-hero');
@@ -200,4 +235,5 @@ function wireNavToggle() {
 
 wireNavToggle();
 loadCourses();
+loadCertifications();
 loadChapter();
