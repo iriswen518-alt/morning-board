@@ -110,7 +110,14 @@ function quoteSuffix(url) {
   return ` <a href="${url}" target="_blank" rel="noopener" class="quote-link" title="開啟即時行情頁">即時行情</a>`;
 }
 
+// 部分指數 Yahoo 無對應商品，改用其他即時來源（完整 URL）
+const INDEX_QUOTE_URL_OVERRIDES = {
+  "台指期(近月)": "https://www.tradingview.com/symbols/TAIFEX-TXF1!/",  // TAIFEX TX 近月，Yahoo 無此商品
+};
+
 function indexQuoteLink(name) {
+  const override = INDEX_QUOTE_URL_OVERRIDES[name];
+  if (override) return quoteSuffix(override);
   const sym = INDEX_YAHOO_SYMBOLS[name];
   if (!sym) return "";
   return quoteSuffix(`https://finance.yahoo.com/quote/${encodeURIComponent(sym)}/`);
