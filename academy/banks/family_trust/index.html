@@ -1,0 +1,80 @@
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>家族信託規劃顧問師 自編模擬練習題</title><style>
+:root{--brand:#019AB3;--brand2:#17B5AD;--deep:#003D91;--ink:#1f2a30;--muted:#5b6b73;--line:#e3eaed;--bg:#f4f7f8;--card:#fff;--ok:#17876b;--okbg:#e7f5f0;--wrong:#8a6d3b;--wrongbg:#f3ecdd}
+*{box-sizing:border-box}body{margin:0;font-family:"PingFang TC","Microsoft JhengHei","Noto Sans TC",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+.wrap{max-width:880px;margin:0 auto;padding:0 16px}
+header.hero{background:linear-gradient(135deg,var(--brand),var(--brand2) 70%,#0bbfb0);color:#fff;padding:26px 0 22px}
+header.hero h1{margin:0 0 6px;font-size:1.4rem}
+header.hero p{margin:3px 0;opacity:.95;font-size:.9rem}
+.hero-actions{margin-top:13px;display:flex;gap:9px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:6px;border:none;border-radius:9px;padding:9px 15px;font-size:.9rem;font-weight:600;cursor:pointer;text-decoration:none}
+.btn-pdf{background:#fff;color:var(--brand)}.btn-ghost{background:rgba(255,255,255,.16);color:#fff;border:1px solid rgba(255,255,255,.5)}
+.toolbar{position:sticky;top:0;z-index:9;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:10px 0}
+.toolbar .wrap{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg button{border:1px solid var(--line);background:#fff;color:var(--muted);padding:5px 11px;border-radius:20px;cursor:pointer;font-size:.82rem;font-weight:600}
+.seg button.active{background:var(--brand);color:#fff;border-color:var(--brand)}
+.search{flex:1;min-width:150px}.search input{width:100%;padding:8px 11px;border:1px solid var(--line);border-radius:9px;font-size:.9rem;outline:none}
+.search input:focus{border-color:var(--brand)}
+.count{color:var(--muted);font-size:.82rem;margin:12px 0 2px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:16px 16px 12px;margin:12px 0}
+.meta{display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
+.qnum{font-weight:800;color:var(--brand);font-size:.9rem}
+.tag{font-size:.72rem;font-weight:700;padding:2px 9px;border-radius:20px;background:#eaf6f8;color:var(--brand)}
+.stem{font-size:1rem;font-weight:600;margin:2px 0 11px}
+.opts{list-style:none;margin:0;padding:0;display:grid;gap:7px}
+.opt{display:flex;gap:9px;align-items:flex-start;border:1px solid var(--line);border-radius:10px;padding:8px 11px;cursor:pointer;background:#fff;transition:.12s}
+.opt:hover{border-color:var(--brand);background:#f7fdfe}
+.opt .k{flex:0 0 21px;height:21px;border-radius:50%;background:#eef3f5;color:var(--muted);display:flex;align-items:center;justify-content:center;font-size:.78rem;font-weight:700;margin-top:1px}
+.opt .t{flex:1}
+.opt.correct{border-color:var(--ok);background:var(--okbg)}.opt.correct .k{background:var(--ok);color:#fff}
+.opt.chosen-wrong{border-color:var(--wrong);background:var(--wrongbg)}.opt.chosen-wrong .k{background:var(--wrong);color:#fff}
+.reveal{margin-top:11px;border-top:1px dashed var(--line);padding-top:10px;display:none}.reveal.show{display:block}
+.ans-line{font-weight:700;color:var(--ok);margin-bottom:5px;font-size:.92rem}
+.expl{color:#2c3a41;font-size:.92rem}.expl .lab{font-weight:700;color:var(--brand)}
+.toggle{margin-top:10px;background:none;border:1px solid var(--brand);color:var(--brand);border-radius:9px;padding:6px 12px;font-size:.84rem;font-weight:600;cursor:pointer}
+.toggle:hover{background:var(--brand);color:#fff}
+footer{margin:30px 0 50px;color:var(--muted);font-size:.8rem;text-align:center;line-height:1.9}
+@media(max-width:560px){header.hero h1{font-size:1.2rem}}
+</style></head><body>
+<header class="hero"><div class="wrap">
+<h1>家族信託規劃顧問師　自編模擬練習題</h1>
+<p>依公開考試範圍自編之練習題，涵蓋家族治理、傳承工具、信託當事人、信託本旨、遺產贈與稅與跨境傳承等高頻考點</p>
+<p>點選選項即時對答；或按「顯示答案與解析」逐題研讀</p>
+<div class="hero-actions">
+<a class="btn btn-pdf" href="家族信託_自編模擬練習題.pdf" download>下載練習題 PDF</a>
+</div></div></header>
+<div class="toolbar"><div class="wrap">
+<div class="seg"><button data-topic="all" class="active">全部主題</button><button data-topic="家族治理">家族治理</button><button data-topic="傳承工具">傳承工具</button><button data-topic="信託當事人">信託當事人</button><button data-topic="信託本旨">信託本旨</button><button data-topic="贈與稅">贈與稅</button><button data-topic="遺產稅">遺產稅</button><button data-topic="特留分">特留分</button><button data-topic="遺囑信託">遺囑信託</button><button data-topic="跨境傳承">跨境傳承</button><button data-topic="綜合情境">綜合情境</button><button data-topic="信託法基礎">信託法基礎</button></div>
+<div class="search"><input id="kw" type="text" placeholder="搜尋關鍵字（例：特留分、信託監察人、贈與稅）"></div>
+</div></div>
+<div class="wrap"><div class="count" id="count"></div><div id="list"></div>
+<footer>
+<div>本練習題為依公開考試範圍自編，<strong>非歷屆原題</strong>，僅供觀念演練。</div>
+<div>歷屆原始試題與最新測驗資訊請以主辦單位官方公告為準：台灣金融研訓院、中華民國信託業商業同業公會。法規與數字以主管機關最新規定為準。</div>
+</footer></div>
+<script>
+const DATA=[{"topic":"家族治理","stem":"某家族希望以一份綱領性文件，凝聚成員對家族價值、財富使用原則與接班規範的共識，作為日後家族會議與傳承決策的依循。下列何者最適合扮演此一角色？","options":["個人遺囑","家族憲章","不動產買賣契約","個人傷害保險保單"],"answer":2,"expl":"家族憲章是表達家族願景、價值觀、治理與傳承原則的綱領性文件，用於凝聚共識、規範成員行為，並作為家族會議與傳承決策的依循。遺囑為死亡時生效的單方法律行為、買賣契約與保單各有特定法律功能，皆非家族整體治理的綱領，故選家族憲章。","num":1},{"topic":"家族治理","stem":"關於「家族憲章」之法律效力，下列敘述何者較為正確？","options":["家族憲章一經簽署即具有與法律同等的強制執行力","家族憲章本身原則上屬道德與共識性文件，須再透過信託、股東協議、公司章程等具法律拘束力之工具落實","家族憲章可取代公司法、民法之強制規定","家族憲章僅能由家族最年長者單方制定"],"answer":2,"expl":"家族憲章多屬宣示性、共識性文件，本身通常不具強制執行力；要真正落實其精神，須再透過信託契約、股東協議、公司章程、遺囑等具法律拘束力的工具加以承接。它不能凌駕強行法規，也不應由單一成員片面決定，故選項2正確。","num":2},{"topic":"家族治理","stem":"家族企業安排接班時，下列何種做法最能兼顧「經營權穩定」與「所有權傳承」？","options":["將全部股權於生前一次平均贈與所有子女，不做任何治理安排","透過閉鎖性股權設計、表決權信託或家族控股架構，區分經營決策權與受益權","僅以遺囑指定單一繼承人取得全部股權，其餘子女完全不予安排","等到創辦人過世後，再由子女自行協商分配經營權"],"answer":2,"expl":"以閉鎖性公司、表決權信託或家族控股公司等架構，可將「經營決策權」與「經濟受益權」適度分離，使經營權集中而所有權得分散傳承，兼顧穩定與公平。平均分配股權而無治理安排易生僵局，獨厚單一繼承人或事後協商則埋下爭產風險。","num":3},{"topic":"傳承工具","stem":"相較於單純以遺囑安排身後財產分配，運用「信託」進行財富傳承的主要特點為何？","options":["信託僅能於委託人死亡後始生效","信託可於委託人生前即成立並持續管理財產，依信託本旨於約定條件下分配給受益人","信託無法指定任何人監督受託人","信託與遺囑功能完全相同，可任意互換"],"answer":2,"expl":"信託可於委託人生前成立、即時管理財產，並依信託本旨在約定條件（如受益人達一定年齡）下分配，具跨期管理與條件給付的彈性；遺囑則於死亡時始生效。信託得設信託監察人監督受託人，故選項2正確，其餘敘述皆誤。","num":4},{"topic":"傳承工具","stem":"下列關於人壽保險在財富傳承中功能的敘述，何者最不適當？","options":["可透過指定受益人，使保險給付不經遺產分割程序直接給付受益人","可創造身後現金流，協助繼承人支應遺產稅與相關費用","只要投保人壽保險，保險給付即一律免納所有稅捐、且絕不列入遺產","可搭配信託，將保險金交付信託管理，避免受益人一次領取後揮霍"],"answer":3,"expl":"人壽保險具指定受益人、創造身後流動性、可搭配保險金信託等傳承功能，但「保險給付一律免稅、絕不列入遺產」的說法錯誤——實務上有實質課稅原則與最低稅負（基本所得額）等規範，特定情形仍可能被認定應課稅或計入遺產，故選項3最不適當。","num":5},{"topic":"傳承工具","stem":"高資產家庭欲將一棟收租不動產傳承給未成年子女，並希望在子女成年前由專業機構代為管理、收益專款專用於子女教育，下列何種工具最為貼切？","options":["將不動產直接登記於未成年子女名下，由其自行管理","成立不動產信託，由受託人管理並依信託本旨支應子女教育費用","以口頭約定方式委請親戚代管","僅以遺囑表明希望將不動產留給子女"],"answer":2,"expl":"成立不動產信託，由受託人依信託本旨管理、收益專款用於子女教育，可在子女成年前提供專業且持續的管理與保護。直接登記於未成年人名下難以管理且風險高，口頭委託缺乏拘束力，遺囑於生前無法即時管理，故選項2最貼切。","num":6},{"topic":"信託當事人","stem":"在信託法律關係中，將財產權移轉或為其他處分，使受託人依信託本旨為受益人利益或特定目的管理該財產之人，稱為？","options":["受益人","委託人","信託監察人","遺囑執行人"],"answer":2,"expl":"委託人是設定信託、將財產權移轉或處分予受託人之人；受託人依信託本旨管理處分；受益人享有信託利益；信託監察人監督受託人。題意描述「移轉財產、設定信託」之人，即為委託人。","num":7},{"topic":"信託當事人","stem":"為保護受益人利益、監督受託人是否依信託本旨管理信託財產，尤其於受益人為未成年人或尚不特定時可設置者，通常為下列何者？","options":["信託監察人","保險受益人","公司監察人","遺囑見證人"],"answer":1,"expl":"信託監察人之功能在於監督受託人、保護受益人（特別是未成年、意思能力不足或尚不特定之受益人）之利益。保險受益人、公司監察人、遺囑見證人分屬不同法律關係之角色，故選信託監察人。","num":8},{"topic":"信託當事人","stem":"關於受託人之義務，下列敘述何者錯誤？","options":["受託人應依信託本旨，以善良管理人之注意義務管理信託財產","受託人應將信託財產與其自有財產分別管理","受託人得任意以信託財產為自己謀取私人利益","受託人原則上負有忠實義務，不得使自己利益與信託利益相衝突"],"answer":3,"expl":"受託人負有善良管理人注意義務、分別管理義務與忠實義務，不得以信託財產為自己謀取私利或使利益衝突。選項3「得任意為自己謀利」違反忠實義務，敘述錯誤。","num":9},{"topic":"信託本旨","stem":"受託人管理家族信託財產時，其管理與處分行為應以何者為最高準據？","options":["受託人個人之投資偏好","信託本旨，亦即信託行為所定之目的與意旨","受益人臨時之口頭指示","家族中出資最多成員之要求"],"answer":2,"expl":"受託人應依「信託本旨」——即信託行為所定之目的——為受益人利益或特定目的管理處分信託財產。受託人個人偏好、單一成員要求或臨時口頭指示均不得凌駕信託本旨，故選項2正確。","num":10},{"topic":"信託本旨","stem":"下列何者並非信託財產「獨立性（破產隔離）」的典型效果？","options":["信託財產原則上不屬於受託人之自有財產，受託人之債權人原則上不得對之強制執行","信託財產原則上獨立於委託人嗣後之一般債權人求償範圍（須非為脫產等不法目的）","信託成立後，委託人之債權人對於合法信託財產一律可任意追償","受託人死亡時，信託財產原則上不列入受託人之遺產"],"answer":3,"expl":"信託財產具獨立性：原則上不屬受託人自有財產、不列入其遺產，受託人之債權人不得對之執行；合法設立且非為脫產之信託，亦與委託人一般債權求償相隔離。選項3稱委託人債權人「一律可任意追償」與破產隔離效果相反，故為非典型效果。","num":11},{"topic":"贈與稅","stem":"關於現行贈與稅之「每年贈與稅免稅額」，下列敘述何者正確？（金額以主管機關最新公告為準）","options":["免稅額係按每位受贈人分別計算，與贈與人無關","免稅額係以「每一贈與人」每年累計贈與總額計算，全年合計在免稅額內者免稅","贈與一旦發生即須課稅，並無任何免稅額","夫妻間相互贈與須與一般贈與合併計算免稅額"],"answer":2,"expl":"贈與稅免稅額係以「每一贈與人」每年（曆年制）對外贈與的累計總額計算，全年合計在免稅額（現行每年新臺幣244萬元，以最新公告為準）以內者免稅；並非按受贈人分別計算。夫妻相互贈與另有免稅規定，不與一般贈與合併，故選項2正確。","num":12},{"topic":"贈與稅","stem":"夫妻之間相互贈與財產，於現行遺產及贈與稅法下原則上之課稅效果為何？","options":["一律課徵贈與稅，無任何優惠","原則上免徵贈與稅","須先課贈與稅，配偶死亡時再退稅","僅限不動產之夫妻贈與免稅，其餘財產仍課稅"],"answer":2,"expl":"依現行遺產及贈與稅法，配偶相互贈與之財產原則上不計入贈與總額，免徵贈與稅，且不以財產種類為限。此為夫妻間財產移轉常用之規劃工具之一，故選項2正確。","num":13},{"topic":"贈與稅","stem":"運用「分年贈與」進行財富傳承的核心邏輯，下列敘述何者最為正確？","options":["將大額財產集中於某一年一次贈與，以簡化流程","善用每年免稅額分年逐步移轉財產，長期累積可降低未來遺產稅基","只要分年贈與，所有金額一律免稅，無上限","分年贈與須於受贈人成年後始得辦理"],"answer":2,"expl":"分年贈與的核心是善用「每年」贈與稅免稅額，逐年將財產移轉給下一代，長期累積可有效縮減未來的遺產稅基。集中一次贈與可能超過免稅額而須課稅；分年並非「一律免稅無上限」，亦無「受贈人須成年」之限制，故選項2正確。","num":14},{"topic":"遺產稅","stem":"下列何者通常「不」會增加被繼承人之遺產稅負擔（或屬可自遺產總額中減除／不計入之項目）？（以現行法令為準）","options":["被繼承人死亡前依規定享有之配偶剩餘財產差額分配請求權金額","被繼承人遺留之上市公司股票","被繼承人名下之銀行存款","被繼承人所有之自用住宅以外之投資不動產"],"answer":1,"expl":"配偶剩餘財產差額分配請求權之金額，依規定得自遺產總額中扣除，可降低遺產稅基；而股票、存款、投資性不動產均屬遺產而計入遺產總額。故選項1為可減除項目，不增加稅負。","num":15},{"topic":"特留分","stem":"關於民法之「特留分」，下列敘述何者正確？","options":["被繼承人得以遺囑完全剝奪所有繼承人之特留分","特留分受侵害時，該遺囑全部當然無效","特留分係法律為保障一定範圍繼承人所保留之最低限度應得部分，受侵害者得行使扣減權","兄弟姊妹之特留分與直系血親卑親屬相同，均為其應繼分二分之一"],"answer":3,"expl":"特留分是法律為保障特定繼承人所保留之最低限度應得部分；遺囑若侵害特留分，並非全部當然無效，而是受侵害之繼承人得就侵害部分行使扣減權。直系血親卑親屬、父母、配偶之特留分為應繼分1/2，兄弟姊妹、祖父母則為1/3，二者不同，故選項3正確。","num":16},{"topic":"特留分","stem":"被繼承人之遺囑將大部分遺產指定給單一子女，致其他繼承人之特留分受侵害。其他受侵害繼承人之適當救濟方式為何？","options":["主張遺囑無效，遺產全部回歸法定繼承","向受有超過部分之人行使扣減權，請求補足其特留分","只能放棄繼承","向法院請求撤銷被繼承人之死亡"],"answer":2,"expl":"特留分受侵害時，受侵害之繼承人得對受有超過特留分部分之受遺贈人或受益繼承人行使扣減權，請求補足其特留分，而非使遺囑全部無效。放棄繼承無從救濟，撤銷死亡更無此制度，故選項2正確。","num":17},{"topic":"遺囑信託","stem":"委託人以遺囑設立信託（遺囑信託），於委託人死亡時始生效。關於其課稅，下列敘述何者較為正確？","options":["遺囑信託之信託財產於委託人死亡時不列入遺產，完全免稅","遺囑信託之財產原則上仍屬被繼承人之遺產，應依規定計入遺產總額課遺產稅","遺囑信託成立後永遠不發生任何稅負","遺囑信託僅課贈與稅，不課遺產稅"],"answer":2,"expl":"遺囑信託於委託人死亡時生效，其交付信託之財產原本即屬被繼承人之遺產，原則上仍應計入遺產總額課徵遺產稅，並非因採信託形式而免稅。故選項2較為正確。","num":18},{"topic":"跨境傳承","stem":"關於「境外信託」運用於跨境財富傳承，下列敘述何者最不適當？","options":["可達一定之財產風險阻隔效果","應留意委託人與受益人之稅務居民身分及各地反避稅、資訊交換規範","只要設立境外信託，即可完全規避所有國家之稅負且毋須申報","不同法域對保留權力信託、全權信託之認定與效果可能不同"],"answer":3,"expl":"境外信託可提供風險阻隔，但須留意稅務居民身分、CFC/受控外國企業、CRS資訊交換與各國反避稅規範，並非「設立即可完全免稅且免申報」。各法域對保留權力、全權信託之認定不同，故選項3最不適當。","num":19},{"topic":"跨境傳承","stem":"高資產客戶詢問跨境傳承架構，理財顧問最適當的態度為何？","options":["直接保證某境外架構可百分之百節稅、零風險","強調整體合規、誠實申報，並建議結合會計師、律師等專業意見評估稅務與法律風險","鼓勵客戶以隱匿資產為目標規避申報","僅以節稅為唯一考量，忽略受益人保護與法令遵循"],"answer":2,"expl":"跨境傳承涉及多法域稅務與法律，顧問應強調合規與誠實申報，結合會計師、律師等專業意見綜合評估，並兼顧受益人保護。保證零風險、鼓勵隱匿或只重節稅皆不當，故選項2正確。","num":20},{"topic":"綜合情境","stem":"某企業主希望（1）生前即逐步移轉財富、（2）確保未成年子女受益但不致一次取得大筆現金、（3）整體檢視稅務與家族治理。下列規劃方向何者最符合「及早、分散、整合」原則？","options":["等過世後一次處理所有財產移轉","結合分年贈與、家族信託與保險，並整體檢視稅務與家族治理安排","僅用單一工具完成所有傳承需求","只追求最大節稅，不考慮受益人保護與家族共識"],"answer":2,"expl":"跨世代傳承宜及早規劃、分散運用多種工具（分年贈與、信託、保險等）並整合稅務與治理面向。事後一次處理、單一工具、或只重節稅而忽略受益人保護與共識，均非妥適，故選項2正確。","num":21},{"topic":"綜合情境","stem":"理財顧問為高資產家庭設計傳承方案時，下列何種作法最為妥適？","options":["先辨識家族需求與風險，再對應合適工具，並提醒法令與稅務由專業人士確認","直接套用他人方案，毋須評估個別家庭狀況","以單一商品銷售為目的設計方案","僅憑客戶口頭描述即定案，不留存任何書面"],"answer":1,"expl":"妥適的傳承規劃應先釐清家族需求與風險，再以「需求—工具—風險」邏輯對應合適工具，並提醒涉及法令與稅務之細節須由律師、會計師等專業人士確認、留存必要文件。套用他人方案、以銷售為唯一目的或不留書面均不當，故選項1正確。","num":22},{"topic":"信託法基礎","stem":"下列何者較符合信託法上對「信託」之基本描述？","options":["委託人保留財產所有權，僅委請他人代為保管","委託人將財產權移轉或為其他處分，使受託人依信託本旨為受益人之利益或特定目的，管理或處分信託財產","受託人取得財產後得自由作為己用，不受任何拘束","信託一旦成立，委託人之任何意願均不得於契約中事先約定"],"answer":2,"expl":"信託係委託人將財產權移轉或處分予受託人，使其依信託本旨為受益人利益或特定目的管理處分財產。單純代為保管非信託；受託人不得自由作為己用；委託人之意願得於信託契約中事先約定（於合法範圍內），故選項2正確。","num":23},{"topic":"信託法基礎","stem":"關於「自益信託」與「他益信託」，下列敘述何者正確？","options":["自益信託之委託人與受益人為同一人；他益信託之受益人為委託人以外之人","自益信託一定要課贈與稅","他益信託之受益人必為受託人本人","自益與他益信託在稅務上完全相同，無須區分"],"answer":1,"expl":"自益信託指委託人即為受益人；他益信託則以委託人以外之人為受益人。是否課贈與稅、課稅時點與計價，須視自益或他益、本金或孳息等而定，二者稅務效果並不相同，故選項1正確。","num":24}];let fTopic='all',fKw='';
+const el=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e};
+const esc=s=>(s==null?'':String(s)).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+function matches(q){if(fTopic!=='all'&&q.topic!==fTopic)return false;if(fKw){const s=(q.stem+q.options.join(' ')+q.expl+q.topic).toLowerCase();if(!s.includes(fKw.toLowerCase()))return false}return true}
+function render(){const list=document.getElementById('list');list.innerHTML='';const rows=DATA.filter(matches);
+ document.getElementById('count').textContent='共 '+rows.length+' 題';
+ if(!rows.length){list.appendChild(el('div','count','沒有符合條件的題目'));return}
+ rows.forEach(q=>{const card=el('div','card');const meta=el('div','meta');
+  meta.appendChild(el('span','qnum','第'+q.num+'題'));meta.appendChild(el('span','tag',q.topic));card.appendChild(meta);
+  card.appendChild(el('div','stem',esc(q.stem)));const ul=el('ul','opts');
+  q.options.forEach((o,i)=>{const k=i+1;const li=el('li','opt');li.dataset.k=k;li.appendChild(el('span','k',k));li.appendChild(el('span','t',esc(o)));li.onclick=()=>choose(card,q,k);ul.appendChild(li)});
+  card.appendChild(ul);const rev=el('div','reveal');rev.appendChild(el('div','ans-line','正解：('+q.answer+')'));
+  rev.appendChild(el('div','expl','<span class="lab">解析　</span>'+esc(q.expl)));card.appendChild(rev);
+  const tg=el('button','toggle','顯示答案與解析');tg.onclick=()=>{const sh=rev.classList.toggle('show');tg.textContent=sh?'隱藏答案與解析':'顯示答案與解析';if(sh)mark(card,q)};
+  card.appendChild(tg);list.appendChild(card)})}
+function mark(card,q){card.querySelectorAll('.opt').forEach(li=>{if(+li.dataset.k===q.answer)li.classList.add('correct')})}
+function choose(card,q,k){card.querySelectorAll('.opt').forEach(li=>li.classList.remove('chosen-wrong'));mark(card,q);
+ if(k!==q.answer){const li=[...card.querySelectorAll('.opt')].find(x=>+x.dataset.k===k);if(li)li.classList.add('chosen-wrong')}
+ const rev=card.querySelector('.reveal');rev.classList.add('show');card.querySelector('.toggle').textContent='隱藏答案與解析'}
+document.addEventListener('DOMContentLoaded',()=>{render();
+ document.querySelectorAll('[data-topic]').forEach(b=>b.onclick=()=>{fTopic=b.dataset.topic;document.querySelectorAll('[data-topic]').forEach(x=>x.classList.toggle('active',x===b));render()});
+ document.getElementById('kw').oninput=e=>{fKw=e.target.value.trim();render()}});
+</script></body></html>
