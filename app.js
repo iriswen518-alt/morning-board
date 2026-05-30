@@ -4180,14 +4180,16 @@ function renderNewsSheet() {
       <button class="tab active" data-tab="market">市場</button>
       <button class="tab" data-tab="wm">財管</button>
       <button class="tab" data-tab="tax">稅務</button>
+      <button class="tab" data-tab="intl">國際</button>
     </div>
     <div id="tab-market">${renderNewsByCategory("market")}</div>
     <div id="tab-wm" hidden>${renderNewsByCategory("wm")}</div>
     <div id="tab-tax" hidden>${renderNewsByCategory("tax")}</div>
+    <div id="tab-intl" hidden>${renderNewsByCategory("intl")}</div>
   `;
 }
 
-// 把 news.json 的 sections 名稱對應到 3 大類
+// 把 news.json 的 sections 名稱對應到 4 大類（市場/財管/稅務/國際）
 const SECTION_TO_CATEGORY = {
   "Taiwan Equities": "market",
   "股市行情": "market",
@@ -4207,6 +4209,8 @@ const SECTION_TO_CATEGORY = {
   "Tax & Regulations": "tax",
   "稅務法規": "tax",
   "稅務": "tax",
+  "International": "intl",
+  "國際": "intl",
 };
 
 function sectionCategory(section) {
@@ -5874,7 +5878,7 @@ function wireFundsTabs() {
 }
 
 function wireNewsTabs() {
-  const tabIds = ["tab-market", "tab-wm", "tab-tax"];
+  const tabIds = ["tab-market", "tab-wm", "tab-tax", "tab-intl"];
   document.querySelectorAll(".tab").forEach(t => {
     t.addEventListener("click", () => {
       document.querySelectorAll(".tab").forEach(x => x.classList.remove("active"));
