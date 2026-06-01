@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T13:01:43+08:00",
+  "generated_at": "2026-06-01T15:02:15+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -27,6 +27,18 @@
       "error": null
     },
     {
+      "symbol": "ADBE",
+      "name_zh": "Adobe",
+      "kind": "US",
+      "price": 259.21,
+      "change_pct": 7.36,
+      "mtd_pct": 5.33,
+      "ytd_pct": -25.94,
+      "market_date": "2026-05-29",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ADBE.US",
+      "error": null
+    },
+    {
       "symbol": "RVMD",
       "name_zh": "Revolution Medicines",
       "kind": "US",
@@ -51,30 +63,6 @@
       "error": null
     },
     {
-      "symbol": "FLNC",
-      "name_zh": "Fluence Energy",
-      "kind": "US",
-      "price": 18.88,
-      "change_pct": -11.61,
-      "mtd_pct": 55.01,
-      "ytd_pct": -4.55,
-      "market_date": "2026-05-29",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FLNC.US",
-      "error": null
-    },
-    {
-      "symbol": "ZETA",
-      "name_zh": "Zeta Global",
-      "kind": "US",
-      "price": 22.89,
-      "change_pct": 13.43,
-      "mtd_pct": 24.27,
-      "ytd_pct": 12.48,
-      "market_date": "2026-05-29",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ZETA.US",
-      "error": null
-    },
-    {
       "symbol": "TMHC",
       "name_zh": "Taylor Morrison Home Corporatio",
       "kind": "US",
@@ -87,51 +75,15 @@
       "error": null
     },
     {
-      "symbol": "CRWV",
-      "name_zh": "CoreWeave",
+      "symbol": "FLNC",
+      "name_zh": "Fluence Energy",
       "kind": "US",
-      "price": 109.53,
-      "change_pct": 2.5,
-      "mtd_pct": -1.85,
-      "ytd_pct": 52.95,
+      "price": 18.88,
+      "change_pct": -11.61,
+      "mtd_pct": 55.01,
+      "ytd_pct": -4.55,
       "market_date": "2026-05-29",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRWV.US",
-      "error": null
-    },
-    {
-      "symbol": "ADBE",
-      "name_zh": "Adobe",
-      "kind": "US",
-      "price": 259.21,
-      "change_pct": 7.36,
-      "mtd_pct": 5.33,
-      "ytd_pct": -25.94,
-      "market_date": "2026-05-29",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ADBE.US",
-      "error": null
-    },
-    {
-      "symbol": "DRAM",
-      "name_zh": "Roundhill Memory ETF",
-      "kind": "US",
-      "price": 63.2,
-      "change_pct": 1.01,
-      "mtd_pct": 60.69,
-      "ytd_pct": null,
-      "market_date": "2026-05-29",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DRAM.US",
-      "error": null
-    },
-    {
-      "symbol": "REPL",
-      "name_zh": "Replimune",
-      "kind": "US",
-      "price": 8.69,
-      "change_pct": 85.68,
-      "mtd_pct": 238.13,
-      "ytd_pct": -10.6,
-      "market_date": "2026-05-29",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=REPL.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FLNC.US",
       "error": null
     },
     {
@@ -147,6 +99,30 @@
       "error": null
     },
     {
+      "symbol": "CDNS",
+      "name_zh": "Cadence Design Systems",
+      "kind": "US",
+      "price": 374.93,
+      "change_pct": 0.29,
+      "mtd_pct": 13.76,
+      "ytd_pct": 19.95,
+      "market_date": "2026-05-29",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CDNS.US",
+      "error": null
+    },
+    {
+      "symbol": "ZETA",
+      "name_zh": "Zeta Global",
+      "kind": "US",
+      "price": 22.89,
+      "change_pct": 13.43,
+      "mtd_pct": 24.27,
+      "ytd_pct": 12.48,
+      "market_date": "2026-05-29",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ZETA.US",
+      "error": null
+    },
+    {
       "symbol": "TEAM",
       "name_zh": "Atlassian",
       "kind": "US",
@@ -159,39 +135,63 @@
       "error": null
     },
     {
-      "symbol": "KRMN",
-      "name_zh": "Karman",
+      "symbol": "DRAM",
+      "name_zh": "Roundhill Memory ETF",
       "kind": "US",
-      "price": 57.5,
-      "change_pct": -12.69,
-      "mtd_pct": -15.42,
-      "ytd_pct": -21.42,
+      "price": 63.2,
+      "change_pct": 1.01,
+      "mtd_pct": 60.69,
+      "ytd_pct": null,
       "market_date": "2026-05-29",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=KRMN.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DRAM.US",
       "error": null
     },
     {
-      "symbol": "ABCL",
-      "name_zh": "AbCellera Biologics",
+      "symbol": "CRWV",
+      "name_zh": "CoreWeave",
       "kind": "US",
-      "price": 6.17,
-      "change_pct": 7.68,
-      "mtd_pct": 48.67,
-      "ytd_pct": 80.41,
+      "price": 109.53,
+      "change_pct": 2.5,
+      "mtd_pct": -1.85,
+      "ytd_pct": 52.95,
       "market_date": "2026-05-29",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ABCL.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRWV.US",
       "error": null
     },
     {
-      "symbol": "SNDK",
-      "name_zh": "Sandisk",
+      "symbol": "REPL",
+      "name_zh": "Replimune",
       "kind": "US",
-      "price": 1694.98,
-      "change_pct": 3.25,
-      "mtd_pct": 54.58,
-      "ytd_pct": 614.04,
+      "price": 8.69,
+      "change_pct": 85.68,
+      "mtd_pct": 238.13,
+      "ytd_pct": -10.6,
       "market_date": "2026-05-29",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SNDK.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=REPL.US",
+      "error": null
+    },
+    {
+      "symbol": "ARM",
+      "name_zh": "Arm",
+      "kind": "US",
+      "price": 353.29,
+      "change_pct": 5.37,
+      "mtd_pct": 67.98,
+      "ytd_pct": 223.2,
+      "market_date": "2026-05-29",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ARM.US",
+      "error": null
+    },
+    {
+      "symbol": "CMPS",
+      "name_zh": "COMPASS Pathways Plc - American",
+      "kind": "US",
+      "price": 13.06,
+      "change_pct": 9.56,
+      "mtd_pct": 44.15,
+      "ytd_pct": 89.28,
+      "market_date": "2026-05-29",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CMPS.US",
       "error": null
     },
     {
