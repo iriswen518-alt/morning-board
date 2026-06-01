@@ -36,6 +36,7 @@ function indexLabel(name) {
 const INDEX_BOP_CODES = {
   "TAIEX": "EB09999",
   "TAIEX 加權指數": "EB09999",
+  "OTC 櫃買加權": "EB18888",
   "S&P 500": "SPY.US",
   "Nasdaq": "AI000020",
   "Nasdaq Composite": "AI000020",
@@ -68,7 +69,8 @@ function indexUrl(name) {
 }
 
 function indexLink(name) {
-  const url = indexUrl(name);
+  // 名稱連結優先用 MoneyDJ 走勢圖；無對應代碼者（如台指期）退回即時行情來源，確保仍可點擊
+  const url = indexUrl(name) || indexQuoteUrl(name);
   const label = escapeHtml(indexLabel(name));
   return url
     ? `<a href="${url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${label}</a>`
@@ -115,12 +117,16 @@ const INDEX_QUOTE_URL_OVERRIDES = {
   "台指期(近月)": "https://www.tradingview.com/symbols/TAIFEX-TXF1!/",  // TAIFEX TX 近月，Yahoo 無此商品
 };
 
-function indexQuoteLink(name) {
+// 即時行情頁的原始 URL（override 優先，否則用 Yahoo symbol）；無對應者回 null
+function indexQuoteUrl(name) {
   const override = INDEX_QUOTE_URL_OVERRIDES[name];
-  if (override) return quoteSuffix(override);
+  if (override) return override;
   const sym = INDEX_YAHOO_SYMBOLS[name];
-  if (!sym) return "";
-  return quoteSuffix(`https://finance.yahoo.com/quote/${encodeURIComponent(sym)}/`);
+  return sym ? `https://finance.yahoo.com/quote/${encodeURIComponent(sym)}/` : null;
+}
+
+function indexQuoteLink(name) {
+  return quoteSuffix(indexQuoteUrl(name));
 }
 
 function fmtInt(n) {
