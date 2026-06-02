@@ -2128,12 +2128,14 @@ function renderMarketSheet() {
       <tbody>${fxRows}</tbody>
     </table>` : `<p style="color:var(--text-mute); padding:20px 0">尚未提供匯率資料</p>`;
 
-  const usTab = renderStocksTable("", usStocks) || `<p style="color:var(--text-mute); padding:20px 0">尚未提供美股資料</p>`;
+  const usTab = (renderStocksTable("", usStocks) || `<p style="color:var(--text-mute); padding:20px 0">尚未提供美股資料</p>`)
+    + renderRankingsBlock("us");
   const twPresetTable = renderStocksTable("", twStocks) || `<p style="color:var(--text-mute); padding:20px 0">尚未提供台股資料</p>`;
   const twTab = `${twPresetTable}
     <div style="margin-top:28px;padding-top:20px;border-top:1px solid var(--border)">
       ${renderTwStockSheet()}
-    </div>`;
+    </div>
+    ${renderRankingsBlock("tw")}`;
 
   return `
     ${renderMarketHighlights(m)}
@@ -4145,6 +4147,59 @@ function renderStocksTable(title, list) {
       <tbody>${rows}</tbody>
     </table>
   `;
+}
+
+function renderRankingTable(items, opts) {
+  const showCap = opts && opts.showMarketCap;
+  if (!items || !items.length)
+    return `<p style="color:var(--text-mute);padding:12px 0">尚未提供排行資料</p>`;
+  const rows = items.map((r, i) => `
+    <tr>
+      <td style="text-align:center">${i + 1}</td>
+      <td>${r.source_url
+        ? `<a href="${escapeHtml(r.source_url)}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-decoration-style:dotted">${escapeHtml(r.name || r.symbol)}</a>`
+        : escapeHtml(r.name || r.symbol)}</td>
+      <td>${r.price == null ? "—" : Number(r.price).toLocaleString("en-US", { maximumFractionDigits: 2 })}</td>
+      <td class="${pctClass(r.daily_pct)}">${fmtPct(r.daily_pct)}</td>
+      <td class="${pctClass(r.mtd_pct)}">${fmtPct(r.mtd_pct)}</td>
+      <td class="${pctClass(r.ytd_pct)}">${fmtPct(r.ytd_pct)}</td>
+      ${showCap ? `<td>${fmtMarketCapZh(r.market_cap)}</td>` : ""}
+    </tr>`).join("");
+  return `
+    <table class="indices">
+      <thead><tr>
+        <th style="text-align:center">排名</th><th>名稱</th><th>收盤</th>
+        <th title="當日漲跌">日</th><th title="本月至今(MTD)">本月</th><th title="今年至今(YTD)">本年</th>
+        ${showCap ? "<th>市值</th>" : ""}
+      </tr></thead>
+      <tbody>${rows}</tbody>
+    </table>`;
+}
+
+function fmtMarketCapZh(v) {
+  if (v == null) return "—";
+  if (v >= 1e12) return (v / 1e12).toFixed(2) + " 兆";
+  if (v >= 1e8) return (v / 1e8).toFixed(2) + " 億";
+  return Number(v).toLocaleString("en-US");
+}
+
+function renderRankingsBlock(market) {
+  const sec = (DATA.rankings && DATA.rankings[market]) || {};
+  const blocks = [
+    ["市值前十大", sec.top_marketcap, true],
+    ["最大漲幅", sec.top_gainers, false],
+    ["最大跌幅", sec.top_losers, false],
+    ["ETF 排行榜", sec.top_etf, false],
+  ];
+  return `
+    <div style="margin-top:28px;padding-top:20px;border-top:1px solid var(--border)">
+      ${blocks.map(([title, items, cap]) => `
+        <h2 style="font-size:16px;margin:18px 0 8px">${title}</h2>
+        ${renderRankingTable(items, { showMarketCap: cap })}
+      `).join("")}
+      <p style="color:var(--text-mute);font-size:12px;margin:10px 0 0">
+        當日全市場掃描；點名稱可至 Yahoo／TWSE 驗證。本月=MTD，本年=YTD。</p>
+    </div>`;
 }
 
 function renderMarketHighlights(m) {
