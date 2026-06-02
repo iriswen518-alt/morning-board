@@ -293,10 +293,10 @@ const LOAD_NAME_TO_DATA_KEY = {
   overseas_bonds: "obonds", targets: "targets",
   allocation: "allocation", dca: "dca", wealth_transfer: "wealth",
   beatetf: "beatetf", presets: "presets", fund_compare: "fund_compare",
-  tw_stocks: "tw_stocks",
+  tw_stocks: "tw_stocks", rankings: "rankings",
 };
 const TAB_LOAD_DEPS = {
-  market: ["market", "stocks"],
+  market: ["market", "stocks", "rankings"],
   news: ["news"],
   funds: ["funds", "dca", "beatetf", "fund_compare"],
   obonds: ["overseas_bonds"],
@@ -531,7 +531,7 @@ async function init() {
   // 每個來源各自有 fallback：一個壞不拖垮全頁
   // 失敗時記到 FAILED_LOADS，使用者切到對應 tab 時會背景重試
   const safe = (name, fallback) => load(name).catch(() => { FAILED_LOADS.add(name); return fallback; });
-  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
@@ -550,8 +550,9 @@ async function init() {
     safe("presets", { presets: [] }),
     safe("fund_compare", { funds: [], categories: [] }),
     safe("tw_stocks", []),
+    safe("rankings", { tw: {}, us: {} }),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks };
+  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings };
   if (!meta.built_at) {
     $("updated").textContent = `載入部分失敗（顯示快取資料）`;
   } else {
@@ -834,7 +835,7 @@ async function refreshData() {
     FAILED_LOADS.add(name);
     return DATA[name === "insurances" ? "insurance" : name] || fallback;
   });
-  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
@@ -853,8 +854,9 @@ async function refreshData() {
     safe("presets", { presets: [] }),
     safe("fund_compare", { funds: [], categories: [] }),
     safe("tw_stocks", []),
+    safe("rankings", { tw: {}, us: {} }),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks };
+  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings };
   SEARCH_INDEX = buildSearchIndex();
   if (DATA.meta && DATA.meta.built_at) {
     $("updated").textContent =
