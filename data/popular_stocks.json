@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T10:01:33+08:00",
+  "generated_at": "2026-06-02T12:01:37+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -15,18 +15,6 @@
       "error": null
     },
     {
-      "symbol": "FLNC",
-      "name_zh": "Fluence Energy",
-      "kind": "US",
-      "price": 27.15,
-      "change_pct": 43.8,
-      "mtd_pct": 43.8,
-      "ytd_pct": 37.26,
-      "market_date": "2026-06-01",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FLNC.US",
-      "error": null
-    },
-    {
       "symbol": "LAC",
       "name_zh": "Lithium Americas",
       "kind": "US",
@@ -39,15 +27,39 @@
       "error": null
     },
     {
-      "symbol": "GOOG",
-      "name_zh": "谷歌 C",
+      "symbol": "FLNC",
+      "name_zh": "Fluence Energy",
       "kind": "US",
-      "price": 372.58,
-      "change_pct": -1.02,
-      "mtd_pct": -1.02,
-      "ytd_pct": 18.73,
+      "price": 27.15,
+      "change_pct": 43.8,
+      "mtd_pct": 43.8,
+      "ytd_pct": 37.26,
       "market_date": "2026-06-01",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GOOG.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FLNC.US",
+      "error": null
+    },
+    {
+      "symbol": "ABVX",
+      "name_zh": "Abivax SA",
+      "kind": "US",
+      "price": 129.69,
+      "change_pct": -2.22,
+      "mtd_pct": -2.22,
+      "ytd_pct": -3.83,
+      "market_date": "2026-06-01",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ABVX.US",
+      "error": null
+    },
+    {
+      "symbol": "BABA",
+      "name_zh": "阿里巴巴",
+      "kind": "US",
+      "price": 125.4,
+      "change_pct": 0.95,
+      "mtd_pct": 0.95,
+      "ytd_pct": -14.45,
+      "market_date": "2026-06-01",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BABA.US",
       "error": null
     },
     {
@@ -63,15 +75,15 @@
       "error": null
     },
     {
-      "symbol": "ABVX",
-      "name_zh": "Abivax SA",
+      "symbol": "MGM",
+      "name_zh": "MGM Resorts International",
       "kind": "US",
-      "price": 129.69,
-      "change_pct": -2.22,
-      "mtd_pct": -2.22,
-      "ytd_pct": -3.83,
+      "price": 50.69,
+      "change_pct": 16.08,
+      "mtd_pct": 16.08,
+      "ytd_pct": 38.91,
       "market_date": "2026-06-01",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ABVX.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MGM.US",
       "error": null
     },
     {
@@ -111,39 +123,15 @@
       "error": null
     },
     {
-      "symbol": "MGM",
-      "name_zh": "MGM Resorts International",
+      "symbol": "DG",
+      "name_zh": "Dollar General",
       "kind": "US",
-      "price": 50.69,
-      "change_pct": 16.08,
-      "mtd_pct": 16.08,
-      "ytd_pct": 38.91,
+      "price": 109.93,
+      "change_pct": -0.61,
+      "mtd_pct": -0.61,
+      "ytd_pct": -17.2,
       "market_date": "2026-06-01",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MGM.US",
-      "error": null
-    },
-    {
-      "symbol": "MCHP",
-      "name_zh": "Microchip Technology Incorporat",
-      "kind": "US",
-      "price": 91.52,
-      "change_pct": -3.31,
-      "mtd_pct": -3.31,
-      "ytd_pct": 43.63,
-      "market_date": "2026-06-01",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MCHP.US",
-      "error": null
-    },
-    {
-      "symbol": "FDX",
-      "name_zh": "FedEx",
-      "kind": "US",
-      "price": 338.49,
-      "change_pct": -17.79,
-      "mtd_pct": 2.02,
-      "ytd_pct": 45.42,
-      "market_date": "2026-06-01",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FDX.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DG.US",
       "error": null
     },
     {
