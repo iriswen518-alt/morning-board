@@ -4184,6 +4184,7 @@ function fmtMarketCapZh(v) {
 }
 
 function renderRankingsBlock(market) {
+  if (FAILED_LOADS.has("rankings")) return "";
   const sec = (DATA.rankings && DATA.rankings[market]) || {};
   const blocks = [
     ["市值前十大", sec.top_marketcap, true],
@@ -4194,7 +4195,7 @@ function renderRankingsBlock(market) {
   return `
     <div style="margin-top:28px;padding-top:20px;border-top:1px solid var(--border)">
       ${blocks.map(([title, items, cap]) => `
-        <h2 style="font-size:16px;margin:18px 0 8px">${title}</h2>
+        <h3 style="font-size:16px;margin:18px 0 8px">${title}</h3>
         ${renderRankingTable(items, { showMarketCap: cap })}
       `).join("")}
       <p style="color:var(--text-mute);font-size:12px;margin:10px 0 0">
