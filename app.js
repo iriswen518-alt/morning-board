@@ -281,10 +281,6 @@ let CURRENT_TAB = "market";
 let SEARCH_INDEX = [];
 let PENDING_HIGHLIGHT = null;
 let PENDING_SUBTAB = null;
-// 排行榜各表的當前排序狀態；key = "market:listKey"（如 "tw:top_gainers"）
-// 值 = { col: string, dir: "asc"|"desc" }
-// tab 切換後重新 render 時狀態自動歸預設（符合規格）
-const RANK_SORT = {};
 let ALLOC_SUBTAB = "targets";   // 資產配置 內的次分頁：targets（主題市場）| portfolio（投組分析）
 
 // init 時 fetch 失敗（伺服器重啟瞬間／網路 blip）的 data 名稱會被記下，
@@ -581,7 +577,7 @@ async function init() {
     navigator.serviceWorker.register("service-worker.js?v=20260529-2045").catch(() => {});
   }
 
-  wireRankingSort();
+  wireSortableTables();
   setupPullToRefresh();
 
   // 進入畫面/從背景回到前景時自動檢查新版
@@ -1004,7 +1000,7 @@ function renderThemeIndexBlock(themeKey) {
       <div class="t-section-body">
         <table class="indices" style="margin-top:6px">
           <thead><tr>
-            <th>指數</th><th>收盤</th><th>日</th><th>本月</th><th>今年</th><th class="date-col">收盤日</th>
+            <th>指數</th><th>收盤</th><th class="sortable-th">日</th><th class="sortable-th">本月</th><th class="sortable-th">今年</th><th class="date-col">收盤日</th>
           </tr></thead>
           <tbody><tr>
             <td>${indexLink(ix.name)}</td>
@@ -2085,10 +2081,10 @@ function renderMarketSheet() {
     <table class="indices">
       <thead><tr>
         <th title="商品名稱">商品</th>
-        <th title="收盤價（來源：Yahoo Finance）">收盤</th>
-        <th title="日報酬率｜今日收盤 vs 昨日收盤｜來源：Yahoo Finance">日</th>
-        <th title="MTD｜當月首交易日收盤 → 最新收盤">本月</th>
-        <th title="YTD｜去年最後交易日收盤 → 最新收盤">今年</th>
+        <th class="sortable-th" title="收盤價（來源：Yahoo Finance）；點選排序">收盤</th>
+        <th class="sortable-th" title="日報酬率｜今日收盤 vs 昨日收盤｜來源：Yahoo Finance；點選排序">日</th>
+        <th class="sortable-th" title="MTD｜當月首交易日收盤 → 最新收盤；點選排序">本月</th>
+        <th class="sortable-th" title="YTD｜去年最後交易日收盤 → 最新收盤；點選排序">今年</th>
         <th class="date-col" title="收盤日：最新交易日">收盤日</th>
       </tr></thead>
       <tbody>${commodityRows}</tbody>
@@ -2098,10 +2094,10 @@ function renderMarketSheet() {
     <table class="indices">
       <thead><tr>
         <th title="點名稱可開 MoneyDJ 圖表頁驗證">指數</th>
-        <th title="收盤價（來源：Yahoo Finance）">收盤</th>
-        <th title="日報酬率｜定義：今日收盤 vs 昨日收盤｜來源：Yahoo Finance / FRED">日</th>
-        <th title="MTD｜定義：當月首交易日收盤 → 最新收盤｜來源：Yahoo Finance">本月</th>
-        <th title="YTD｜定義：去年最後交易日收盤 → 最新收盤｜來源：Yahoo Finance">今年</th>
+        <th class="sortable-th" title="收盤價（來源：Yahoo Finance）；點選排序">收盤</th>
+        <th class="sortable-th" title="日報酬率｜定義：今日收盤 vs 昨日收盤｜來源：Yahoo Finance / FRED；點選排序">日</th>
+        <th class="sortable-th" title="MTD｜定義：當月首交易日收盤 → 最新收盤｜來源：Yahoo Finance；點選排序">本月</th>
+        <th class="sortable-th" title="YTD｜定義：去年最後交易日收盤 → 最新收盤｜來源：Yahoo Finance；點選排序">今年</th>
         <th class="date-col" title="收盤日：最新交易日；US ET 收盤後 build；TW TWSE 公告日">收盤日</th>
       </tr></thead>
       <tbody>${rows}</tbody>
@@ -2112,9 +2108,9 @@ function renderMarketSheet() {
     <table class="indices">
       <thead><tr>
         <th title="點名稱可開 MoneyDJ 圖表頁驗證">債別</th>
-        <th title="到期殖利率（YTM, %）｜來源：FRED (US) / 各國央行 / Yahoo Finance">殖利率</th>
-        <th title="日變動 bps｜定義：今日 yield − 昨日 yield｜來源：FRED">日變動</th>
-        <th title="MTD 變動 bps｜定義：當月首交易日 yield → 最新 yield｜來源：FRED">本月變動</th>
+        <th class="sortable-th" title="到期殖利率（YTM, %）｜來源：FRED (US) / 各國央行 / Yahoo Finance；點選排序">殖利率</th>
+        <th class="sortable-th" title="日變動 bps｜定義：今日 yield − 昨日 yield｜來源：FRED；點選排序">日變動</th>
+        <th class="sortable-th" title="MTD 變動 bps｜定義：當月首交易日 yield → 最新 yield｜來源：FRED；點選排序">本月變動</th>
         <th class="date-col" title="債券殖利率公告日">收盤日</th>
       </tr></thead>
       <tbody>${bondRows}</tbody>
@@ -2124,10 +2120,10 @@ function renderMarketSheet() {
     <table class="indices">
       <thead><tr>
         <th title="點名稱可開 MoneyDJ 圖表頁驗證">幣別</th>
-        <th title="收盤匯率｜來源：Yahoo Finance">收盤</th>
-        <th title="日報酬率｜定義：今日收盤 vs 昨日收盤｜來源：Yahoo Finance">日</th>
-        <th title="MTD｜定義：當月首交易日收盤 → 最新收盤｜來源：Yahoo Finance">本月</th>
-        <th title="YTD｜定義：去年最後交易日收盤 → 最新收盤｜來源：Yahoo Finance">今年</th>
+        <th class="sortable-th" title="收盤匯率｜來源：Yahoo Finance；點選排序">收盤</th>
+        <th class="sortable-th" title="日報酬率｜定義：今日收盤 vs 昨日收盤｜來源：Yahoo Finance；點選排序">日</th>
+        <th class="sortable-th" title="MTD｜定義：當月首交易日收盤 → 最新收盤｜來源：Yahoo Finance；點選排序">本月</th>
+        <th class="sortable-th" title="YTD｜定義：去年最後交易日收盤 → 最新收盤｜來源：Yahoo Finance；點選排序">今年</th>
         <th class="date-col" title="收盤日：最新交易日 ET 收盤後 build">收盤日</th>
       </tr></thead>
       <tbody>${fxRows}</tbody>
@@ -4143,10 +4139,10 @@ function renderStocksTable(title, list) {
     <table class="indices">
       <thead><tr>
         <th>名稱</th>
-        <th title="收盤價，來源見名稱欄連結">收盤</th>
-        <th title="日報酬率，定義：今日收盤 vs 昨日收盤；來源：finnhub /quote (US) 或 TWSE (TW)；點選可連 Yahoo 歷史頁驗證">日</th>
-        <th title="月初到今報酬率（MTD），來源：Yahoo (US) 或 TWSE (TW)；點選可連 Yahoo 歷史頁查看本月區間">本月</th>
-        <th title="年初到今報酬率（YTD），來源：Yahoo (US) 或 TWSE (TW)；點選可連 Yahoo 歷史頁查看今年區間">今年</th>
+        <th class="sortable-th" title="收盤價，來源見名稱欄連結；點選排序">收盤</th>
+        <th class="sortable-th" title="日報酬率，定義：今日收盤 vs 昨日收盤；來源：finnhub /quote (US) 或 TWSE (TW)；點選排序">日</th>
+        <th class="sortable-th" title="月初到今報酬率（MTD），來源：Yahoo (US) 或 TWSE (TW)；點選排序">本月</th>
+        <th class="sortable-th" title="年初到今報酬率（YTD），來源：Yahoo (US) 或 TWSE (TW)；點選排序">今年</th>
         <th class="date-col" title="收盤日：finnhub quote 的 timestamp（ET 時區）轉日期，或 TWSE 公告日">收盤日</th>
       </tr></thead>
       <tbody>${rows}</tbody>
@@ -4154,25 +4150,108 @@ function renderStocksTable(title, list) {
   `;
 }
 
-// 排行榜排序比較器（可獨立測試）
-// null/undefined 永遠排到最底，不論升降序
-function rankSortComparator(col, dir) {
-  return function(a, b) {
-    const av = a[col];
-    const bv = b[col];
-    const aNull = av == null;
-    const bNull = bv == null;
-    if (aNull && bNull) return 0;
-    if (aNull) return 1;
-    if (bNull) return -1;
-    return dir === "asc" ? av - bv : bv - av;
-  };
+// ─────────────────────────────────────────────────────────────────────────
+// 通用欄位排序（parseSortValue + wireSortableTables）
+// 任何帶有 class="sortable-th" 的 <th> 點擊即可排序所在 <table>
+// ─────────────────────────────────────────────────────────────────────────
+
+// 將儲存格文字轉成可排序的數值；無法解析 → null（null 永遠排底）
+function parseSortValue(text) {
+  if (text == null) return null;
+  const s = String(text).trim();
+  // 空字串 / 破折號類 / N/A
+  if (!s || /^[—–\-]+$/.test(s) || /^n\/a$/i.test(s)) return null;
+  // 兆／億 市值格式（如 "61.07 兆"、"5.00 億"）
+  const zhCap = s.match(/^([+\-＋－]?\d[\d,.]*)[\s ]*(兆|億)$/u);
+  if (zhCap) {
+    const n = parseFloat(zhCap[1].replace(/,/g, ""));
+    if (isNaN(n)) return null;
+    return zhCap[2] === "兆" ? n * 1e12 : n * 1e8;
+  }
+  // 剝掉 %、＋/+（保留負號），去掉逗號與空白，處理全形負號 −
+  let clean = s
+    .replace(/%/g, "")
+    .replace(/[＋+]/g, "")
+    .replace(/[−]/g, "-")   // U+2212 MINUS SIGN → ASCII -
+    .replace(/,/g, "")
+    .trim();
+  // 移除前綴 ▲/▼ 指示符（排序後 th 文字可能含此符號）
+  clean = clean.replace(/^[▲▼]\s*/, "");
+  const n = parseFloat(clean);
+  return isNaN(n) ? null : n;
 }
 
-// 依 sortState 排序後產出 tbody 的 <tr> 字串（含重新排名）
-function renderRankingTableRows(items, showCap, sortState) {
-  const sorted = items.slice().sort(rankSortComparator(sortState.col, sortState.dir));
-  return sorted.map((r, i) => `
+// 單一委派點擊監聽器；init() 呼叫一次即可，re-render 後繼續有效
+function wireSortableTables() {
+  // 各 table 的當前排序狀態：WeakMap<HTMLTableElement, {colIdx, dir}>
+  const sortState = new WeakMap();
+
+  document.body.addEventListener("click", (e) => {
+    const th = e.target.closest("th.sortable-th");
+    if (!th) return;
+    const table = th.closest("table");
+    if (!table) return;
+    const thead = table.tHead;
+    if (!thead) return;
+    const headerRow = thead.rows[0];
+    if (!headerRow) return;
+
+    const colIdx = th.cellIndex;
+
+    // 決定排序方向
+    const prev = sortState.get(table) || {};
+    const dir = (prev.colIdx === colIdx && prev.dir === "desc") ? "asc" : "desc";
+    sortState.set(table, { colIdx, dir });
+
+    // 收集 tbody 所有 <tr>
+    const tbody = table.tBodies[0];
+    if (!tbody) return;
+    const rows = Array.from(tbody.rows);
+
+    // 排序：null 永遠在底部
+    rows.sort((a, b) => {
+      const av = parseSortValue(a.cells[colIdx] ? a.cells[colIdx].textContent : null);
+      const bv = parseSortValue(b.cells[colIdx] ? b.cells[colIdx].textContent : null);
+      const aNull = av === null;
+      const bNull = bv === null;
+      if (aNull && bNull) return 0;
+      if (aNull) return 1;
+      if (bNull) return -1;
+      return dir === "asc" ? av - bv : bv - av;
+    });
+
+    // 重新插入排序後的列
+    rows.forEach(tr => tbody.appendChild(tr));
+
+    // 若第一欄標題為「排名」，重新編號
+    const firstHeader = headerRow.cells[0];
+    if (firstHeader && firstHeader.textContent.trim() === "排名") {
+      Array.from(tbody.rows).forEach((tr, i) => {
+        if (tr.cells[0]) tr.cells[0].textContent = i + 1;
+      });
+    }
+
+    // 更新 ▲/▼ 指示符與樣式
+    Array.from(headerRow.cells).forEach(h => {
+      if (!h.classList.contains("sortable-th")) return;
+      // 去掉舊指示符（末尾的 ▲ 或 ▼ 及前置空格）
+      h.textContent = h.textContent.replace(/\s*[▲▼]$/, "");
+      if (h.cellIndex === colIdx) {
+        h.textContent += (dir === "desc" ? " ▼" : " ▲");
+        h.style.cssText = "cursor:pointer;text-decoration:underline;text-decoration-style:dotted;font-weight:700";
+      } else {
+        h.style.cssText = "cursor:pointer;text-decoration:underline;text-decoration-style:dotted;opacity:0.75";
+      }
+    });
+  });
+}
+
+function renderRankingTable(items, opts) {
+  const showCap = opts && opts.showMarketCap;
+  if (!items || !items.length)
+    return `<p style="color:var(--text-mute);padding:12px 0">尚未提供排行資料</p>`;
+
+  const rows = items.map((r, i) => `
     <tr>
       <td style="text-align:center">${i + 1}</td>
       <td>${r.source_url
@@ -4184,41 +4263,16 @@ function renderRankingTableRows(items, showCap, sortState) {
       <td class="${pctClass(r.ytd_pct)}">${fmtPct(r.ytd_pct)}</td>
       ${showCap ? `<td>${fmtMarketCapZh(r.market_cap)}</td>` : ""}
     </tr>`).join("");
-}
-
-// 可排序欄位的 th 樣式輔助
-function _rankThStyle(col, sortState) {
-  const isActive = sortState.col === col;
-  const indicator = isActive ? (sortState.dir === "desc" ? " ▼" : " ▲") : "";
-  // 所有可排序欄：cursor:pointer + dotted underline；active 欄加粗
-  const style = isActive
-    ? "cursor:pointer;text-decoration:underline;text-decoration-style:dotted;font-weight:700"
-    : "cursor:pointer;text-decoration:underline;text-decoration-style:dotted;opacity:0.75";
-  return { indicator, style };
-}
-
-function renderRankingTable(items, opts) {
-  const showCap = opts && opts.showMarketCap;
-  const tableKey = opts && opts.tableKey;
-  const sortState = opts && opts.sortState;
-  if (!items || !items.length)
-    return `<p style="color:var(--text-mute);padding:12px 0">尚未提供排行資料</p>`;
-
-  const rows = renderRankingTableRows(items, showCap, sortState);
-
-  const thDaily = _rankThStyle("daily_pct", sortState);
-  const thMtd   = _rankThStyle("mtd_pct",   sortState);
-  const thYtd   = _rankThStyle("ytd_pct",   sortState);
-  const thCap   = showCap ? _rankThStyle("market_cap", sortState) : null;
 
   return `
-    <table class="indices" data-rank-table="${escapeHtml(tableKey)}">
+    <table class="indices">
       <thead><tr>
-        <th style="text-align:center">排名</th><th>名稱</th><th>收盤</th>
-        <th data-rank-col="daily_pct" title="當日漲跌；點選排序" style="${thDaily.style}">日${thDaily.indicator}</th>
-        <th data-rank-col="mtd_pct"   title="本月至今(MTD)；點選排序" style="${thMtd.style}">本月${thMtd.indicator}</th>
-        <th data-rank-col="ytd_pct"   title="今年至今(YTD)；點選排序" style="${thYtd.style}">本年${thYtd.indicator}</th>
-        ${showCap ? `<th data-rank-col="market_cap" title="市值；點選排序" style="${thCap.style}">市值${thCap.indicator}</th>` : ""}
+        <th style="text-align:center">排名</th><th>名稱</th>
+        <th class="sortable-th" title="收盤價；點選排序">收盤</th>
+        <th class="sortable-th" title="當日漲跌；點選排序">日</th>
+        <th class="sortable-th" title="本月至今(MTD)；點選排序">本月</th>
+        <th class="sortable-th" title="今年至今(YTD)；點選排序">本年</th>
+        ${showCap ? `<th class="sortable-th" title="市值；點選排序">市值</th>` : ""}
       </tr></thead>
       <tbody>${rows}</tbody>
     </table>`;
@@ -4231,73 +4285,24 @@ function fmtMarketCapZh(v) {
   return Number(v).toLocaleString("en-US");
 }
 
-// 各表的預設排序（初始狀態）
-const RANK_DEFAULT_SORT = {
-  top_marketcap: { col: "market_cap", dir: "desc" },
-  top_gainers:   { col: "daily_pct",  dir: "desc" },
-  top_losers:    { col: "daily_pct",  dir: "asc"  },
-  top_etf:       { col: "daily_pct",  dir: "desc" },
-};
-
 function renderRankingsBlock(market) {
   if (FAILED_LOADS.has("rankings")) return "";
   const sec = (DATA.rankings && DATA.rankings[market]) || {};
   const blocks = [
-    ["市值前十大", sec.top_marketcap, true,  "top_marketcap"],
-    ["最大漲幅",   sec.top_gainers,   false, "top_gainers"],
-    ["最大跌幅",   sec.top_losers,    false, "top_losers"],
-    ["ETF 排行榜", sec.top_etf,       false, "top_etf"],
+    ["市值前十大", sec.top_marketcap, true],
+    ["最大漲幅",   sec.top_gainers,   false],
+    ["最大跌幅",   sec.top_losers,    false],
+    ["ETF 排行榜", sec.top_etf,       false],
   ];
   return `
     <div style="margin-top:28px;padding-top:20px;border-top:1px solid var(--border)">
-      ${blocks.map(([title, items, cap, listKey]) => {
-        const tableKey = `${market}:${listKey}`;
-        // tab 重新 render 時若狀態已清，使用預設
-        const sortState = RANK_SORT[tableKey] || RANK_DEFAULT_SORT[listKey];
-        return `
+      ${blocks.map(([title, items, cap]) => `
           <h3 style="font-size:16px;margin:18px 0 8px">${title}</h3>
-          ${renderRankingTable(items, { showMarketCap: cap, tableKey, sortState })}
-        `;
-      }).join("")}
+          ${renderRankingTable(items, { showMarketCap: cap })}
+        `).join("")}
       <p style="color:var(--text-mute);font-size:12px;margin:10px 0 0">
         當日全市場掃描；點名稱可至 Yahoo／TWSE 驗證。本月=MTD，本年=YTD。</p>
     </div>`;
-}
-
-// 排行榜欄位排序的委派點擊處理器（一次性，掛在 document.body）
-function wireRankingSort() {
-  document.body.addEventListener("click", (e) => {
-    const th = e.target.closest("th[data-rank-col]");
-    if (!th) return;
-    const table = th.closest("table[data-rank-table]");
-    if (!table) return;
-    const tableKey = table.dataset.rankTable;
-    const col = th.dataset.rankCol;
-    // tableKey 格式: "market:listKey"（如 "tw:top_gainers"）
-    const parts = tableKey.split(":");
-    if (parts.length !== 2) return;
-    const [market, listKey] = parts;
-    const items = (DATA.rankings && DATA.rankings[market] && DATA.rankings[market][listKey]) || [];
-    if (!items.length) return;
-    const defaultSort = RANK_DEFAULT_SORT[listKey] || { col: "daily_pct", dir: "desc" };
-    const prev = RANK_SORT[tableKey] || defaultSort;
-    // 點擊已 active 欄 → 切換升降序；點擊其他欄 → 該欄降序
-    const newDir = (prev.col === col && prev.dir === "desc") ? "asc" : "desc";
-    RANK_SORT[tableKey] = { col, dir: newDir };
-    const showCap = listKey === "top_marketcap";
-    // 只重建 tbody（避免整個 block 重繪）
-    const tbody = table.querySelector("tbody");
-    if (tbody) tbody.innerHTML = renderRankingTableRows(items, showCap, RANK_SORT[tableKey]);
-    // 更新所有可排序 th 的文字與樣式
-    table.querySelectorAll("th[data-rank-col]").forEach(h => {
-      const hCol = h.dataset.rankCol;
-      const { indicator, style } = _rankThStyle(hCol, RANK_SORT[tableKey]);
-      // 重設文字（去掉舊指示符，加上新的）
-      const labels = { daily_pct: "日", mtd_pct: "本月", ytd_pct: "本年", market_cap: "市值" };
-      h.textContent = (labels[hCol] || hCol) + indicator;
-      h.style.cssText = style;
-    });
-  });
 }
 
 function renderMarketHighlights(m) {

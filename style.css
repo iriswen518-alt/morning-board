@@ -399,6 +399,14 @@ table.indices .date-col {
   white-space: nowrap;
   text-align: center;
 }
+/* 通用可排序欄標題 — 基礎樣式；active 狀態由 wireSortableTables() 以 inline style 覆寫 */
+table.indices th.sortable-th {
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  opacity: 0.75;
+  user-select: none;
+}
 .quote-link {
   font-size: 12px;
   color: var(--text-mute);
