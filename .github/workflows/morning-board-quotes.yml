@@ -1,0 +1,47 @@
+name: Morning Board — quotes (numbers)
+on:
+  schedule:
+    - cron: '0 0-15,22,23 * * *'   # hourly 06:00-23:00 Asia/Taipei (cron is UTC)
+  workflow_dispatch: {}
+permissions:
+  contents: write
+concurrency:
+  group: morning-board-quotes
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install deps
+        run: pip install --quiet requests
+      - name: Prepare working layout
+        run: |
+          mkdir -p ~/scripts/logs work
+          cp build/*.py work/
+          ln -sfn "$GITHUB_WORKSPACE" work/repo
+      - name: Fetch numbers
+        env:
+          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+        run: |
+          cd work
+          python3 fetch_market_data.py
+          python3 build_market_json.py
+          python3 refresh_taiex.py
+          python3 fetch_stocks.py
+          python3 fetch_popular_stocks.py
+          python3 fetch_tpex_quotes.py
+      - name: Gate
+        run: cd work && python3 validate_quotes.py
+      - name: Commit & push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/market.json data/stocks.json data/tpex_quotes.json data/popular_stocks.json
+          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
+          git commit -m "data(actions): $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push
