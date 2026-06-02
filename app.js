@@ -281,6 +281,10 @@ let CURRENT_TAB = "market";
 let SEARCH_INDEX = [];
 let PENDING_HIGHLIGHT = null;
 let PENDING_SUBTAB = null;
+// 排行榜各表的當前排序狀態；key = "market:listKey"（如 "tw:top_gainers"）
+// 值 = { col: string, dir: "asc"|"desc" }
+// tab 切換後重新 render 時狀態自動歸預設（符合規格）
+const RANK_SORT = {};
 let ALLOC_SUBTAB = "targets";   // 資產配置 內的次分頁：targets（主題市場）| portfolio（投組分析）
 
 // init 時 fetch 失敗（伺服器重啟瞬間／網路 blip）的 data 名稱會被記下，
@@ -577,6 +581,7 @@ async function init() {
     navigator.serviceWorker.register("service-worker.js?v=20260529-2045").catch(() => {});
   }
 
+  wireRankingSort();
   setupPullToRefresh();
 
   // 進入畫面/從背景回到前景時自動檢查新版
@@ -4149,11 +4154,25 @@ function renderStocksTable(title, list) {
   `;
 }
 
-function renderRankingTable(items, opts) {
-  const showCap = opts && opts.showMarketCap;
-  if (!items || !items.length)
-    return `<p style="color:var(--text-mute);padding:12px 0">尚未提供排行資料</p>`;
-  const rows = items.map((r, i) => `
+// 排行榜排序比較器（可獨立測試）
+// null/undefined 永遠排到最底，不論升降序
+function rankSortComparator(col, dir) {
+  return function(a, b) {
+    const av = a[col];
+    const bv = b[col];
+    const aNull = av == null;
+    const bNull = bv == null;
+    if (aNull && bNull) return 0;
+    if (aNull) return 1;
+    if (bNull) return -1;
+    return dir === "asc" ? av - bv : bv - av;
+  };
+}
+
+// 依 sortState 排序後產出 tbody 的 <tr> 字串（含重新排名）
+function renderRankingTableRows(items, showCap, sortState) {
+  const sorted = items.slice().sort(rankSortComparator(sortState.col, sortState.dir));
+  return sorted.map((r, i) => `
     <tr>
       <td style="text-align:center">${i + 1}</td>
       <td>${r.source_url
@@ -4165,12 +4184,41 @@ function renderRankingTable(items, opts) {
       <td class="${pctClass(r.ytd_pct)}">${fmtPct(r.ytd_pct)}</td>
       ${showCap ? `<td>${fmtMarketCapZh(r.market_cap)}</td>` : ""}
     </tr>`).join("");
+}
+
+// 可排序欄位的 th 樣式輔助
+function _rankThStyle(col, sortState) {
+  const isActive = sortState.col === col;
+  const indicator = isActive ? (sortState.dir === "desc" ? " ▼" : " ▲") : "";
+  // 所有可排序欄：cursor:pointer + dotted underline；active 欄加粗
+  const style = isActive
+    ? "cursor:pointer;text-decoration:underline;text-decoration-style:dotted;font-weight:700"
+    : "cursor:pointer;text-decoration:underline;text-decoration-style:dotted;opacity:0.75";
+  return { indicator, style };
+}
+
+function renderRankingTable(items, opts) {
+  const showCap = opts && opts.showMarketCap;
+  const tableKey = opts && opts.tableKey;
+  const sortState = opts && opts.sortState;
+  if (!items || !items.length)
+    return `<p style="color:var(--text-mute);padding:12px 0">尚未提供排行資料</p>`;
+
+  const rows = renderRankingTableRows(items, showCap, sortState);
+
+  const thDaily = _rankThStyle("daily_pct", sortState);
+  const thMtd   = _rankThStyle("mtd_pct",   sortState);
+  const thYtd   = _rankThStyle("ytd_pct",   sortState);
+  const thCap   = showCap ? _rankThStyle("market_cap", sortState) : null;
+
   return `
-    <table class="indices">
+    <table class="indices" data-rank-table="${escapeHtml(tableKey)}">
       <thead><tr>
         <th style="text-align:center">排名</th><th>名稱</th><th>收盤</th>
-        <th title="當日漲跌">日</th><th title="本月至今(MTD)">本月</th><th title="今年至今(YTD)">本年</th>
-        ${showCap ? "<th>市值</th>" : ""}
+        <th data-rank-col="daily_pct" title="當日漲跌；點選排序" style="${thDaily.style}">日${thDaily.indicator}</th>
+        <th data-rank-col="mtd_pct"   title="本月至今(MTD)；點選排序" style="${thMtd.style}">本月${thMtd.indicator}</th>
+        <th data-rank-col="ytd_pct"   title="今年至今(YTD)；點選排序" style="${thYtd.style}">本年${thYtd.indicator}</th>
+        ${showCap ? `<th data-rank-col="market_cap" title="市值；點選排序" style="${thCap.style}">市值${thCap.indicator}</th>` : ""}
       </tr></thead>
       <tbody>${rows}</tbody>
     </table>`;
@@ -4183,24 +4231,73 @@ function fmtMarketCapZh(v) {
   return Number(v).toLocaleString("en-US");
 }
 
+// 各表的預設排序（初始狀態）
+const RANK_DEFAULT_SORT = {
+  top_marketcap: { col: "market_cap", dir: "desc" },
+  top_gainers:   { col: "daily_pct",  dir: "desc" },
+  top_losers:    { col: "daily_pct",  dir: "asc"  },
+  top_etf:       { col: "daily_pct",  dir: "desc" },
+};
+
 function renderRankingsBlock(market) {
   if (FAILED_LOADS.has("rankings")) return "";
   const sec = (DATA.rankings && DATA.rankings[market]) || {};
   const blocks = [
-    ["市值前十大", sec.top_marketcap, true],
-    ["最大漲幅", sec.top_gainers, false],
-    ["最大跌幅", sec.top_losers, false],
-    ["ETF 排行榜", sec.top_etf, false],
+    ["市值前十大", sec.top_marketcap, true,  "top_marketcap"],
+    ["最大漲幅",   sec.top_gainers,   false, "top_gainers"],
+    ["最大跌幅",   sec.top_losers,    false, "top_losers"],
+    ["ETF 排行榜", sec.top_etf,       false, "top_etf"],
   ];
   return `
     <div style="margin-top:28px;padding-top:20px;border-top:1px solid var(--border)">
-      ${blocks.map(([title, items, cap]) => `
-        <h3 style="font-size:16px;margin:18px 0 8px">${title}</h3>
-        ${renderRankingTable(items, { showMarketCap: cap })}
-      `).join("")}
+      ${blocks.map(([title, items, cap, listKey]) => {
+        const tableKey = `${market}:${listKey}`;
+        // tab 重新 render 時若狀態已清，使用預設
+        const sortState = RANK_SORT[tableKey] || RANK_DEFAULT_SORT[listKey];
+        return `
+          <h3 style="font-size:16px;margin:18px 0 8px">${title}</h3>
+          ${renderRankingTable(items, { showMarketCap: cap, tableKey, sortState })}
+        `;
+      }).join("")}
       <p style="color:var(--text-mute);font-size:12px;margin:10px 0 0">
         當日全市場掃描；點名稱可至 Yahoo／TWSE 驗證。本月=MTD，本年=YTD。</p>
     </div>`;
+}
+
+// 排行榜欄位排序的委派點擊處理器（一次性，掛在 document.body）
+function wireRankingSort() {
+  document.body.addEventListener("click", (e) => {
+    const th = e.target.closest("th[data-rank-col]");
+    if (!th) return;
+    const table = th.closest("table[data-rank-table]");
+    if (!table) return;
+    const tableKey = table.dataset.rankTable;
+    const col = th.dataset.rankCol;
+    // tableKey 格式: "market:listKey"（如 "tw:top_gainers"）
+    const parts = tableKey.split(":");
+    if (parts.length !== 2) return;
+    const [market, listKey] = parts;
+    const items = (DATA.rankings && DATA.rankings[market] && DATA.rankings[market][listKey]) || [];
+    if (!items.length) return;
+    const defaultSort = RANK_DEFAULT_SORT[listKey] || { col: "daily_pct", dir: "desc" };
+    const prev = RANK_SORT[tableKey] || defaultSort;
+    // 點擊已 active 欄 → 切換升降序；點擊其他欄 → 該欄降序
+    const newDir = (prev.col === col && prev.dir === "desc") ? "asc" : "desc";
+    RANK_SORT[tableKey] = { col, dir: newDir };
+    const showCap = listKey === "top_marketcap";
+    // 只重建 tbody（避免整個 block 重繪）
+    const tbody = table.querySelector("tbody");
+    if (tbody) tbody.innerHTML = renderRankingTableRows(items, showCap, RANK_SORT[tableKey]);
+    // 更新所有可排序 th 的文字與樣式
+    table.querySelectorAll("th[data-rank-col]").forEach(h => {
+      const hCol = h.dataset.rankCol;
+      const { indicator, style } = _rankThStyle(hCol, RANK_SORT[tableKey]);
+      // 重設文字（去掉舊指示符，加上新的）
+      const labels = { daily_pct: "日", mtd_pct: "本月", ytd_pct: "本年", market_cap: "市值" };
+      h.textContent = (labels[hCol] || hCol) + indicator;
+      h.style.cssText = style;
+    });
+  });
 }
 
 function renderMarketHighlights(m) {
