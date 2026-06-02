@@ -4254,7 +4254,7 @@ function renderRankingTable(items, opts) {
   const rows = items.map((r, i) => `
     <tr>
       <td style="text-align:center">${i + 1}</td>
-      <td>${r.source_url
+      <td style="text-align:left">${r.source_url
         ? `<a href="${escapeHtml(r.source_url)}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-decoration-style:dotted">${escapeHtml(r.name || r.symbol)}</a>`
         : escapeHtml(r.name || r.symbol)}</td>
       <td>${r.price == null ? "—" : Number(r.price).toLocaleString("en-US", { maximumFractionDigits: 2 })}</td>
@@ -4267,7 +4267,7 @@ function renderRankingTable(items, opts) {
   return `
     <table class="indices">
       <thead><tr>
-        <th style="text-align:center">排名</th><th>名稱</th>
+        <th style="text-align:center">排名</th><th style="text-align:left">名稱</th>
         <th class="sortable-th" title="收盤價；點選排序">收盤</th>
         <th class="sortable-th" title="當日漲跌；點選排序">日</th>
         <th class="sortable-th" title="本月至今(MTD)；點選排序">本月</th>
