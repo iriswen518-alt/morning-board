@@ -4257,7 +4257,7 @@ function renderRankingTable(items, opts) {
       <td style="text-align:left">${r.source_url
         ? `<a href="${escapeHtml(r.source_url)}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-decoration-style:dotted">${escapeHtml(r.name || r.symbol)}</a>`
         : escapeHtml(r.name || r.symbol)}</td>
-      <td>${r.price == null ? "—" : Number(r.price).toLocaleString("en-US", { maximumFractionDigits: 2 })}</td>
+      <td>${r.price == null ? "—" : Number(r.price).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>
       <td class="${pctClass(r.daily_pct)}">${fmtPct(r.daily_pct)}</td>
       <td class="${pctClass(r.mtd_pct)}">${fmtPct(r.mtd_pct)}</td>
       <td class="${pctClass(r.ytd_pct)}">${fmtPct(r.ytd_pct)}</td>
@@ -4290,8 +4290,8 @@ function renderRankingsBlock(market) {
   const sec = (DATA.rankings && DATA.rankings[market]) || {};
   const blocks = [
     ["市值前十大", sec.top_marketcap, true],
-    ["最大漲幅",   sec.top_gainers,   false],
-    ["最大跌幅",   sec.top_losers,    false],
+    ["最大漲幅",   sec.top_gainers,   true],
+    ["最大跌幅",   sec.top_losers,    true],
     ["ETF 排行榜", sec.top_etf,       false],
   ];
   return `
