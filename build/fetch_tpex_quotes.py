@@ -21,11 +21,13 @@
     }
   }
 """
+
 from __future__ import annotations
 
 import json
 import re
 import sys
+import time
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
@@ -62,11 +64,45 @@ def roc_to_iso(roc: str) -> str | None:
         return None
 
 
+def fetch_raw(url: str, attempts: int = 4):
+    """GET with retry + backoff. Returns parsed JSON, or None if every attempt
+    fails. A transient upstream error (e.g. TPEx Cloudflare 520) must NOT abort
+    the whole build — callers keep the last good tpex_quotes.json instead."""
+    last = None
+    for i in range(1, attempts + 1):
+        try:
+            resp = requests.get(
+                url, timeout=30, headers={"User-Agent": "morning-board-prefetch/1.0"}
+            )
+            if resp.status_code >= 500:
+                raise requests.HTTPError(f"{resp.status_code} server error")
+            resp.raise_for_status()
+            return resp.json()
+        except Exception as e:  # noqa: BLE001 — network/HTTP/JSON all retryable
+            last = e
+            wait = i * 5
+            print(
+                f"[warn] TPEx fetch attempt {i}/{attempts} failed: {e}"
+                + (f"; retry in {wait}s" if i < attempts else ""),
+                file=sys.stderr,
+            )
+            if i < attempts:
+                time.sleep(wait)
+    print(
+        f"[warn] TPEx fetch failed after {attempts} attempts ({last}); "
+        "keeping existing tpex_quotes.json, build continues",
+        file=sys.stderr,
+    )
+    return None
+
+
 def main() -> int:
     print(f"[fetch] {SOURCE_URL}")
-    resp = requests.get(SOURCE_URL, timeout=30, headers={"User-Agent": "morning-board-prefetch/1.0"})
-    resp.raise_for_status()
-    raw = resp.json()
+    raw = fetch_raw(SOURCE_URL)
+    if raw is None:
+        # Transient upstream failure: do not overwrite or delete the last good
+        # file, and exit 0 so the rest of the hourly build still publishes.
+        return 0
     if not isinstance(raw, list):
         print(f"[err] 預期 list，收到 {type(raw).__name__}", file=sys.stderr)
         return 1
@@ -85,7 +121,11 @@ def main() -> int:
         if close is None:
             continue
         prev_close = round(close - change, 4) if change is not None else None
-        change_pct = round((change / prev_close) * 100, 4) if (change is not None and prev_close) else None
+        change_pct = (
+            round((change / prev_close) * 100, 4)
+            if (change is not None and prev_close)
+            else None
+        )
         quotes[code] = {
             "code": code,
             "name": (row.get("CompanyName") or "").strip(),
@@ -110,10 +150,16 @@ def main() -> int:
         "quotes": quotes,
     }
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT.write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")), "utf-8")
-    print(f"[done] {len(quotes)} 檔 → {OUTPUT}  ({OUTPUT.stat().st_size/1024:.1f} KB)")
+    OUTPUT.write_text(
+        json.dumps(out, ensure_ascii=False, separators=(",", ":")), "utf-8"
+    )
+    print(
+        f"[done] {len(quotes)} 檔 → {OUTPUT}  ({OUTPUT.stat().st_size / 1024:.1f} KB)"
+    )
     if "4174" in quotes:
-        print(f"[spot] 4174 浩鼎 收盤 {quotes['4174']['close']} 漲跌 {quotes['4174']['change']:+}")
+        print(
+            f"[spot] 4174 浩鼎 收盤 {quotes['4174']['close']} 漲跌 {quotes['4174']['change']:+}"
+        )
     return 0
 
 
