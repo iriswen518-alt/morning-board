@@ -1487,7 +1487,7 @@ function positionBarsHtml(data, color = "#019AB3") {
       <div class="position-bar-track">
         <div class="position-bar-fill" style="width:${(v / max * 100).toFixed(1)}%;background:${ASSET_CLASS_COLOR[label] || color}"></div>
       </div>
-      <div class="position-bar-val">${v.toFixed(1)}%</div>
+      <div class="position-bar-val">${v.toFixed(2)}%</div>
     </div>
   `).join("");
 }
@@ -1707,7 +1707,7 @@ function renderPositionAnalysisPanel(items, title, isPreset) {
             ${positionPieSvg(alloc.byClass)}
             <div class="position-alloc-legend">
               ${Object.entries(alloc.byClass).map(([k, v]) => `
-                <div><span class="position-legend-dot" style="background:${ASSET_CLASS_COLOR[k] || "#7ec5d4"}"></span>${escapeHtml(k)} ${v.toFixed(1)}%</div>
+                <div><span class="position-legend-dot" style="background:${ASSET_CLASS_COLOR[k] || "#7ec5d4"}"></span>${escapeHtml(k)} ${v.toFixed(2)}%</div>
               `).join("")}
             </div>
           </div>
@@ -1768,7 +1768,7 @@ function renderPositionAnalysisPanel(items, title, isPreset) {
               return `<tr>
                 <td>${label}</td>
                 <td class="${pctClass(v)}">${v === null ? "—" : fmtPct(v)}</td>
-                <td class="${covCls}">${cov.toFixed(0)}%${cov < 100 ? "（其餘以 0 計入）" : ""}</td>
+                <td class="${covCls}">${cov.toFixed(2)}%${cov < 100 ? "（其餘以 0 計入）" : ""}</td>
               </tr>`;
             }).join("")}
           </tbody>
@@ -1783,7 +1783,7 @@ function renderPositionAnalysisPanel(items, title, isPreset) {
         <div class="position-metric-grid">
           <div class="position-metric">
             <div class="position-metric-label">年化波動度</div>
-            <div class="position-metric-val">${risk.volProxy.toFixed(1)}%</div>
+            <div class="position-metric-val">${risk.volProxy.toFixed(2)}%</div>
             <div class="position-metric-note">採資產類別 benchmark 加權（粗估）</div>
           </div>
         </div>
@@ -1802,7 +1802,7 @@ function renderPositionAnalysisPanel(items, title, isPreset) {
           <summary>⑥ 配息現金流</summary>
           ${income.avgYield !== null ? `
             <p>配息部位加權平均殖利率：<b>${income.avgYield.toFixed(2)}%</b>（佔組合 ${income.yWeight}%）</p>
-            <p>估算 1 年配息（以該部位 NT$ 100 萬本金）：<b>${Math.round(income.avgYield * 10000).toLocaleString("en-US")} 元</b></p>
+            <p>估算 1 年配息（以該部位 NT$ 100 萬本金）：<b>${Number(income.avgYield * 10000).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })} 元</b></p>
             <table class="position-perf" style="margin-top:8px">
               <thead><tr><th>標的</th><th>類別</th><th style="text-align:right">權重</th><th style="text-align:right">年化殖利率</th></tr></thead>
               <tbody>
@@ -2044,7 +2044,7 @@ function renderMarketSheet() {
   const fxRows = (m.fx || []).map(f => `
     <tr>
       <td>${fxLink(f.name)}${fxQuoteLink(f.name)}</td>
-      <td>${f.close != null ? f.close.toLocaleString("en-US", { maximumFractionDigits: 4 }) : "—"}</td>
+      <td>${f.close != null ? f.close.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : "—"}</td>
       <td class="${pctClass(f.daily_pct)}">${fmtPct(f.daily_pct)}</td>
       <td class="${pctClass(f.mtd_pct)}">${fmtPct(f.mtd_pct)}</td>
       <td class="${pctClass(f.ytd_pct)}">${fmtPct(f.ytd_pct)}</td>
@@ -3042,9 +3042,9 @@ function renderTwSummaryBody(c) {
     const gp = parseTwseNum(c.inc.gross_profit);
     const op = parseTwseNum(c.inc.op_income);
     const ni = parseTwseNum(c.inc.net_income);
-    const gpm = (rev && gp != null) ? (gp / rev * 100).toFixed(1) : "—";
-    const opm = (rev && op != null) ? (op / rev * 100).toFixed(1) : "—";
-    const npm = (rev && ni != null) ? (ni / rev * 100).toFixed(1) : "—";
+    const gpm = (rev && gp != null) ? (gp / rev * 100).toFixed(2) : "—";
+    const opm = (rev && op != null) ? (op / rev * 100).toFixed(2) : "—";
+    const npm = (rev && ni != null) ? (ni / rev * 100).toFixed(2) : "—";
     bits.push(`<div class="tw-sum-row"><span class="tw-sum-k">${yr}Q${c.inc.quarter} 獲利</span><span class="tw-sum-v">毛 ${gpm}%　營益 ${opm}%　純益 ${npm}%　EPS ${c.inc.eps || "—"}</span></div>`);
   }
   if (c.bal && c.bal.bvps) {
@@ -3085,15 +3085,15 @@ function fmtTwMoney(s) {  // 整數元 → 億/萬元
   const n = parseTwseNum(s);
   if (n == null) return "—";
   if (Math.abs(n) >= 1e8) return `${(n / 1e8).toFixed(2)} 億元`;
-  if (Math.abs(n) >= 1e4) return `${(n / 1e4).toFixed(0)} 萬元`;
-  return `${n.toLocaleString("zh-TW")} 元`;
+  if (Math.abs(n) >= 1e4) return `${(n / 1e4).toFixed(2)} 萬元`;
+  return `${Number(n).toLocaleString("zh-TW", { minimumFractionDigits: 2, maximumFractionDigits: 2 })} 元`;
 }
 function fmtRevenue(s) {  // 月營收單位為千元
   const n = parseTwseNum(s);
   if (n == null) return "—";
   const val = n * 1000;
   if (Math.abs(val) >= 1e8) return `${(val / 1e8).toFixed(2)} 億元`;
-  return `${(val / 1e4).toFixed(0)} 萬元`;
+  return `${(val / 1e4).toFixed(2)} 萬元`;
 }
 function fmtPct(s) {
   if (s === null || s === undefined) return "—";
@@ -3187,8 +3187,8 @@ function fmtBigKyuan(s) {  // 損益/資負原始值單位為千元，>=兆級�
   const yuan = n * 1000;
   if (Math.abs(yuan) >= 1e12) return `${(yuan / 1e12).toFixed(2)} 兆元`;
   if (Math.abs(yuan) >= 1e8) return `${(yuan / 1e8).toFixed(2)} 億元`;
-  if (Math.abs(yuan) >= 1e4) return `${(yuan / 1e4).toFixed(0)} 萬元`;
-  return `${yuan.toLocaleString("zh-TW")} 元`;
+  if (Math.abs(yuan) >= 1e4) return `${(yuan / 1e4).toFixed(2)} 萬元`;
+  return `${Number(yuan).toLocaleString("zh-TW", { minimumFractionDigits: 2, maximumFractionDigits: 2 })} 元`;
 }
 
 function renderIncomeBody(inc) {
@@ -3221,7 +3221,7 @@ function renderBalanceBody(bal) {
     <div><span class="tw-basic-k">資產總額</span><span class="tw-basic-v">${fmtBigKyuan(bal.total_assets)}</span></div>
     <div><span class="tw-basic-k">負債總額</span><span class="tw-basic-v">${fmtBigKyuan(bal.total_liab)}</span></div>
     <div><span class="tw-basic-k">權益總額</span><span class="tw-basic-v">${fmtBigKyuan(bal.total_equity)}</span></div>
-    <div><span class="tw-basic-k">負債比率</span><span class="tw-basic-v">${debtRatio != null ? debtRatio.toFixed(1) + "%" : "—"}</span></div>
+    <div><span class="tw-basic-k">負債比率</span><span class="tw-basic-v">${debtRatio != null ? debtRatio.toFixed(2) + "%" : "—"}</span></div>
     <div><span class="tw-basic-k">每股淨值</span><span class="tw-basic-v">${escapeHtml(bal.bvps || "—")} 元</span></div>`;
 }
 
@@ -4073,7 +4073,7 @@ function renderStocksTable(title, list) {
   const fmtPrice = (p, kind) => {
     if (p === null || p === undefined) return "—";
     const prefix = kind === "TW" ? "" : "$";
-    return prefix + p.toLocaleString("en-US", { maximumFractionDigits: 2 });
+    return prefix + p.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   };
   // 來源驗證 URL：美股優先 Yahoo Finance 歷史頁（使用者偏好），台股優先 Yahoo TW
   const verifyUrl = (s) => {
@@ -4282,7 +4282,7 @@ function fmtMarketCapZh(v) {
   if (v == null) return "—";
   if (v >= 1e12) return (v / 1e12).toFixed(2) + " 兆";
   if (v >= 1e8) return (v / 1e8).toFixed(2) + " 億";
-  return Number(v).toLocaleString("en-US");
+  return Number(v).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 }
 
 function renderRankingsBlock(market) {
@@ -4532,7 +4532,7 @@ const CALC_TABS = [
 
 function fmtMoney(n) {
   if (n === null || n === undefined || isNaN(n)) return "—";
-  return "NT$ " + Math.round(n).toLocaleString("en-US");
+  return "NT$ " + Number(n).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 }
 
 // 綜所稅試算（114 年度）
@@ -5704,7 +5704,7 @@ function renderBeatEtfCards() {
     { key: "3y", label: "近3年" },
     { key: "5y", label: "近5年" }
   ];
-  const fmtR = v => (v === null || v === undefined) ? "—" : `${Number(v).toFixed(1)}%`;
+  const fmtR = v => (v === null || v === undefined) ? "—" : `${Number(v).toFixed(2)}%`;
   const cellClass = v => (v === null || v === undefined) ? "" : (v > 0 ? "up" : (v < 0 ? "down" : ""));
 
   const tdBase = "padding:6px 8px;border-bottom:1px solid var(--border)";
@@ -5816,7 +5816,7 @@ function renderBasicsBlock(f) {
   const inc = s.inception_date || "—";
   const aum = (s.aum_twd_yi === null || s.aum_twd_yi === undefined)
     ? "—"
-    : `${Number(s.aum_twd_yi).toLocaleString("zh-TW", { maximumFractionDigits: 0 })} 億元`;
+    : `${Number(s.aum_twd_yi).toLocaleString("zh-TW", { minimumFractionDigits: 2, maximumFractionDigits: 2 })} 億元`;
   const foreignNote = (s.aum_twd_yi != null && s.aum_ccy && s.aum_ccy !== "台幣" && s.aum_ccy !== "新台幣")
     ? `<span class="cmp-basics-note">（${escapeHtml(s.aum_ccy)}規模匯率換算）</span>` : "";
   const aumDate = s.aum_date ? `<span class="cmp-basics-note">${escapeHtml(s.aum_date)}</span>` : "";
@@ -5861,7 +5861,7 @@ function renderCompareCard(f, asOf) {
 }
 
 function renderCompareTable(f, asOf) {
-  const fmtR = v => (v === null || v === undefined) ? "—" : `${Number(v).toFixed(1)}%`;
+  const fmtR = v => (v === null || v === undefined) ? "—" : `${Number(v).toFixed(2)}%`;
   const cls = v => (v === null || v === undefined) ? "" : (v > 0 ? "up" : (v < 0 ? "down" : ""));
   const fmtV = (v, suffix) => (v === null || v === undefined) ? "—" : `${Number(v).toFixed(2)}${suffix || ""}`;
 
@@ -5960,10 +5960,10 @@ function renderRiskReturnScatter(f) {
 
 function renderHoldingsBlock(s) {
   const conc = s.top10_concentration;
-  const concTxt = (conc === null || conc === undefined) ? "—" : `${Number(conc).toFixed(1)}%`;
+  const concTxt = (conc === null || conc === undefined) ? "—" : `${Number(conc).toFixed(2)}%`;
   const holds = (s.top_holdings || []).slice(0, 10);
   const holdTxt = holds.length
-    ? holds.map(h => `${escapeHtml(h.name)} ${Number(h.pct).toFixed(1)}%`).join("、")
+    ? holds.map(h => `${escapeHtml(h.name)} ${Number(h.pct).toFixed(2)}%`).join("、")
     : "—";
   const secs = (s.sector_top3 || []);
   const maxPct = secs.length ? Math.max(...secs.map(x => x.pct || 0)) : 1;
@@ -5972,7 +5972,7 @@ function renderHoldingsBlock(s) {
         <div class="cmp-bar-row">
           <span class="cmp-bar-label">${escapeHtml(x.name)}</span>
           <span class="cmp-bar-track"><span class="cmp-bar-fill" style="width:${Math.round((x.pct || 0) / maxPct * 100)}%"></span></span>
-          <span class="cmp-bar-val">${Number(x.pct || 0).toFixed(1)}%</span>
+          <span class="cmp-bar-val">${Number(x.pct || 0).toFixed(2)}%</span>
         </div>`).join("")
     : "<div class='cmp-bar-row' style='color:var(--text-mute)'>產業分布:—</div>";
   return `
