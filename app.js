@@ -2158,7 +2158,7 @@ function renderMarketSheet() {
     </table>` : "";
 
   const stocksTab = `
-    <table class="indices has-cards">
+    <table class="indices freeze-col1">
       <thead><tr>
         <th title="點名稱可開 MoneyDJ 圖表頁驗證">指數</th>
         <th class="sortable-th" title="收盤價（來源：Yahoo Finance）；點選排序">收盤</th>
@@ -2169,11 +2169,10 @@ function renderMarketSheet() {
       </tr></thead>
       <tbody>${rows}</tbody>
     </table>
-    ${indexCards}
     ${commoditiesBlock}`;
 
   const bondsTab = bondRows ? `
-    <table class="indices has-cards">
+    <table class="indices freeze-col1">
       <thead><tr>
         <th title="點名稱可開 MoneyDJ 圖表頁驗證">債別</th>
         <th class="sortable-th" title="到期殖利率（YTM, %）｜來源：FRED (US) / 各國央行 / Yahoo Finance；點選排序">殖利率</th>
@@ -2182,11 +2181,10 @@ function renderMarketSheet() {
         <th class="date-col" title="債券殖利率公告日">收盤日</th>
       </tr></thead>
       <tbody>${bondRows}</tbody>
-    </table>
-    ${bondCards}` : `<p style="color:var(--text-mute); padding:20px 0">尚未提供公債資料</p>`;
+    </table>` : `<p style="color:var(--text-mute); padding:20px 0">尚未提供公債資料</p>`;
 
   const fxTab = fxRows ? `
-    <table class="indices has-cards">
+    <table class="indices freeze-col1">
       <thead><tr>
         <th title="點名稱可開 MoneyDJ 圖表頁驗證">幣別</th>
         <th class="sortable-th" title="收盤匯率｜來源：Yahoo Finance；點選排序">收盤</th>
@@ -2196,8 +2194,7 @@ function renderMarketSheet() {
         <th class="date-col" title="收盤日：最新交易日 ET 收盤後 build">收盤日</th>
       </tr></thead>
       <tbody>${fxRows}</tbody>
-    </table>
-    ${fxCards}` : `<p style="color:var(--text-mute); padding:20px 0">尚未提供匯率資料</p>`;
+    </table>` : `<p style="color:var(--text-mute); padding:20px 0">尚未提供匯率資料</p>`;
 
   const usTab = (renderStocksTable("", usStocks) || `<p style="color:var(--text-mute); padding:20px 0">尚未提供美股資料</p>`)
     + renderRankingsBlock("us");
@@ -5746,7 +5743,7 @@ function renderLumpFundCards() {
 
   return `
     <div style="overflow-x:auto">
-      <table style="width:100%;border-collapse:collapse;font-size:13px">
+      <table class="freeze-col1" style="width:100%;border-collapse:collapse;font-size:13px">
         <thead>
           <tr>
             <th style="${thBase};text-align:left">名稱</th>
@@ -5798,7 +5795,7 @@ function renderDcaFundCards() {
 
   return `
     <div style="overflow-x:auto">
-      <table style="width:100%;border-collapse:collapse;font-size:13px">
+      <table class="freeze-col1" style="width:100%;border-collapse:collapse;font-size:13px">
         <thead>
           <tr>
             <th style="${thBase};text-align:left">名稱</th>
@@ -5870,7 +5867,7 @@ function renderBeatEtfCards() {
 
   return `
     <div style="overflow-x:auto">
-      <table style="width:100%;border-collapse:collapse;font-size:13px">
+      <table class="freeze-col1" style="width:100%;border-collapse:collapse;font-size:13px">
         <thead>
           <tr>
             <th style="${thBase};text-align:left">名稱</th>
