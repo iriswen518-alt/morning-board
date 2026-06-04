@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-04T10:30:36+08:00",
+  "generated_at": "2026-06-04T13:40:06+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -31,34 +31,6 @@
       "error": null
     },
     {
-      "symbol": "SNDK",
-      "name_zh": "Sandisk",
-      "kind": "US",
-      "price": 1831.5,
-      "change_pct": 6.71,
-      "mtd_pct": 8.05,
-      "ytd_pct": 671.55,
-      "market_date": "2026-06-03",
-      "per": 56.3957,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SNDK.US",
-      "error": null
-    },
-    {
-      "symbol": "XOS",
-      "name_zh": "Xos",
-      "kind": "US",
-      "price": 7.46,
-      "change_pct": 234.53,
-      "mtd_pct": 227.19,
-      "ytd_pct": 312.15,
-      "market_date": "2026-06-03",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=XOS.US",
-      "error": null
-    },
-    {
       "symbol": "SDOT",
       "name_zh": "Sadot",
       "kind": "US",
@@ -70,34 +42,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SDOT.US",
-      "error": null
-    },
-    {
-      "symbol": "FIVE",
-      "name_zh": "Five Below",
-      "kind": "US",
-      "price": 222.89,
-      "change_pct": 1.14,
-      "mtd_pct": -1.97,
-      "ytd_pct": 18.33,
-      "market_date": "2026-06-03",
-      "per": 33.9764,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FIVE.US",
-      "error": null
-    },
-    {
-      "symbol": "MSTR",
-      "name_zh": "MicroStrategy",
-      "kind": "US",
-      "price": 126.55,
-      "change_pct": -7.01,
-      "mtd_pct": -20.46,
-      "ytd_pct": -16.72,
-      "market_date": "2026-06-03",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MSTR.US",
       "error": null
     },
     {
@@ -115,20 +59,6 @@
       "error": null
     },
     {
-      "symbol": "HON",
-      "name_zh": "Honeywell International",
-      "kind": "US",
-      "price": 223.26,
-      "change_pct": -5.09,
-      "mtd_pct": -6.14,
-      "ytd_pct": 14.44,
-      "market_date": "2026-06-03",
-      "per": 31.361,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HON.US",
-      "error": null
-    },
-    {
       "symbol": "T",
       "name_zh": "AT&T",
       "kind": "US",
@@ -140,48 +70,6 @@
       "per": 7.825,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=T.US",
-      "error": null
-    },
-    {
-      "symbol": "IBIT",
-      "name_zh": "iShares Bitcoin Trust ETF",
-      "kind": "US",
-      "price": 37,
-      "change_pct": -2.76,
-      "mtd_pct": -11.12,
-      "ytd_pct": -25.48,
-      "market_date": "2026-06-03",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IBIT.US",
-      "error": null
-    },
-    {
-      "symbol": "VEEV",
-      "name_zh": "Veeva Systems",
-      "kind": "US",
-      "price": 178.72,
-      "change_pct": -2.31,
-      "mtd_pct": 2.51,
-      "ytd_pct": -19.94,
-      "market_date": "2026-06-03",
-      "per": 32.0901,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VEEV.US",
-      "error": null
-    },
-    {
-      "symbol": "NTSK",
-      "name_zh": "Netskope",
-      "kind": "US",
-      "price": 12.4,
-      "change_pct": 2.56,
-      "mtd_pct": 2.14,
-      "ytd_pct": -29.3,
-      "market_date": "2026-06-03",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NTSK.US",
       "error": null
     },
     {
@@ -199,6 +87,76 @@
       "error": null
     },
     {
+      "symbol": "MRNA",
+      "name_zh": "莫德納",
+      "kind": "US",
+      "price": 49.06,
+      "change_pct": 7.49,
+      "mtd_pct": 3.96,
+      "ytd_pct": 66.36,
+      "market_date": "2026-06-03",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MRNA.US",
+      "error": null
+    },
+    {
+      "symbol": "FIVE",
+      "name_zh": "Five Below",
+      "kind": "US",
+      "price": 222.89,
+      "change_pct": 1.14,
+      "mtd_pct": -1.97,
+      "ytd_pct": 18.33,
+      "market_date": "2026-06-03",
+      "per": 33.9764,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FIVE.US",
+      "error": null
+    },
+    {
+      "symbol": "HON",
+      "name_zh": "Honeywell International",
+      "kind": "US",
+      "price": 223.26,
+      "change_pct": -5.09,
+      "mtd_pct": -6.14,
+      "ytd_pct": 14.44,
+      "market_date": "2026-06-03",
+      "per": 31.361,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HON.US",
+      "error": null
+    },
+    {
+      "symbol": "CRCL",
+      "name_zh": "Circle Internet",
+      "kind": "US",
+      "price": 90.13,
+      "change_pct": -10.63,
+      "mtd_pct": -20.24,
+      "ytd_pct": 13.66,
+      "market_date": "2026-06-03",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRCL.US",
+      "error": null
+    },
+    {
+      "symbol": "VEEV",
+      "name_zh": "Veeva Systems",
+      "kind": "US",
+      "price": 178.72,
+      "change_pct": -2.31,
+      "mtd_pct": 2.51,
+      "ytd_pct": -19.94,
+      "market_date": "2026-06-03",
+      "per": 32.0901,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VEEV.US",
+      "error": null
+    },
+    {
       "symbol": "AI",
       "name_zh": "C3.ai",
       "kind": "US",
@@ -210,6 +168,34 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AI.US",
+      "error": null
+    },
+    {
+      "symbol": "MSTR",
+      "name_zh": "MicroStrategy",
+      "kind": "US",
+      "price": 126.55,
+      "change_pct": -7.01,
+      "mtd_pct": -20.45,
+      "ytd_pct": -16.72,
+      "market_date": "2026-06-03",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MSTR.US",
+      "error": null
+    },
+    {
+      "symbol": "DXYZ",
+      "name_zh": "Destiny Tech100",
+      "kind": "US",
+      "price": 40.43,
+      "change_pct": -14.4,
+      "mtd_pct": -22.99,
+      "ytd_pct": 31.99,
+      "market_date": "2026-06-03",
+      "per": 20.7325,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DXYZ.US",
       "error": null
     },
     {

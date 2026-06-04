@@ -1,5 +1,5 @@
 {
-  "closing_date": "2026-06-03",
+  "closing_date": "2026-06-04",
   "indices": [
     {
       "name": "S&P 500",
@@ -13,7 +13,7 @@
     {
       "name": "Nasdaq Composite",
       "name_zh": null,
-      "close": 26853.9765625,
+      "close": 26853.98046875,
       "daily_pct": -0.89,
       "mtd_pct": -0.44,
       "ytd_pct": 15.54,
@@ -76,11 +76,11 @@
     {
       "name": "TAIEX 加權指數",
       "name_zh": null,
-      "close": 46459.16015625,
-      "daily_pct": 1.98,
+      "close": 45886.0390625,
+      "daily_pct": -1.23,
       "mtd_pct": 3.86,
       "ytd_pct": 60.41,
-      "closing_date": "2026-06-03"
+      "closing_date": "2026-06-04"
     },
     {
       "name": "OTC 櫃買加權",
@@ -197,8 +197,8 @@
       "name": "DXY 美元指數",
       "close": 99.52999877929688,
       "daily_pct": 0.31,
-      "mtd_pct": 0.56,
-      "ytd_pct": 1.2,
+      "mtd_pct": 0.57,
+      "ytd_pct": 1.22,
       "closing_date": "2026-06-03"
     },
     {
@@ -253,34 +253,34 @@
   "commodities": [
     {
       "name": "黃金 (USD/oz)",
-      "close": 4488.2998046875,
-      "daily_pct": 1.16,
-      "mtd_pct": -1.58,
-      "ytd_pct": 3.76,
+      "close": 4436.7001953125,
+      "daily_pct": -1.17,
+      "mtd_pct": -2.71,
+      "ytd_pct": 2.57,
       "closing_date": "2026-06-03"
     },
     {
       "name": "白銀 (USD/oz)",
-      "close": 73.30999755859375,
-      "daily_pct": -0.23,
-      "mtd_pct": -3.05,
-      "ytd_pct": 4.53,
+      "close": 73.47599792480469,
+      "daily_pct": -2.44,
+      "mtd_pct": -2.83,
+      "ytd_pct": 4.77,
       "closing_date": "2026-06-03"
     },
     {
       "name": "WTI 原油 (USD/bbl)",
-      "close": 94.9800033569336,
-      "daily_pct": -1.08,
-      "mtd_pct": 8.72,
-      "ytd_pct": 65.41,
+      "close": 96.0199966430664,
+      "daily_pct": 2.41,
+      "mtd_pct": 9.91,
+      "ytd_pct": 67.22,
       "closing_date": "2026-06-03"
     },
     {
       "name": "布蘭特原油 (USD/bbl)",
-      "close": 96.72000122070312,
-      "daily_pct": -1.11,
-      "mtd_pct": 5.07,
-      "ytd_pct": 58.95,
+      "close": 97.80999755859375,
+      "daily_pct": 1.89,
+      "mtd_pct": 6.26,
+      "ytd_pct": 60.74,
       "closing_date": "2026-06-03"
     },
     {
@@ -292,5 +292,5 @@
       "closing_date": "2026-06-02"
     }
   ],
-  "summary": "Nikkei 225 +2.50%、TAIEX 加權指數 +1.98%、台指期(近月) +1.66% 領漲；Hang Seng 恆生 -1.56%、DAX -1.31% 走弱。"
+  "summary": "Nikkei 225 +2.50%、台指期(近月) +1.66%、OTC 櫃買加權 +1.40% 領漲；Hang Seng 恆生 -1.56%、DAX -1.31% 走弱。"
 }
