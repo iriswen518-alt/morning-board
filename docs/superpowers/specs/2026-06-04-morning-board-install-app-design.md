@@ -10,11 +10,13 @@
 Make it easy for RM colleagues to install the existing 理財小幫手 PWA on their
 own phones (iPhone **and** Android). The app is already a complete, installable
 PWA (manifest.json with `display: standalone`, service-worker.js, icons). No
-rebuild is needed — the work is to (1) guide installation from inside the app and
-(2) provide a forwardable share kit.
+rebuild is needed — the work is to (1) provide a **dedicated 安裝 page styled like
+the 小學堂 (academy) page** that guides installation, and (2) provide a
+forwardable share kit (QR + message) that points to that page.
 
 讓理專同事能輕鬆把現有的 理財小幫手 PWA 裝到自己手機（iPhone 和 Android）。
-App 本身已是完整、可安裝的 PWA，不需重做；要做的是「App 內引導安裝」＋「對外分享包」。
+App 本身已是完整、可安裝的 PWA，不需重做；要做的是：(1) 做一個版型仿照 小學堂
+的「安裝頁」引導安裝；(2) 做一份對外分享包（QR＋訊息）指向這個安裝頁。
 
 ## Users / 使用者
 
@@ -28,7 +30,8 @@ App 本身已是完整、可安裝的 PWA，不需重做；要做的是「App �
 | App type | Installable PWA (Add to Home Screen), **not** App Store |
 | Access control | **Public link, no lock** — anyone with the link can open |
 | Platforms | **Both iPhone and Android** |
-| Approach | **A — in-app Install button + share kit** |
+| Approach | **A — guided install + share kit** |
+| Layout | **Dedicated install page styled like 小學堂 (academy)** — topbar + main-nav + cards + home-fab + footer |
 
 ## Non-goals / 範圍外 (YAGNI)
 
@@ -36,101 +39,121 @@ App 本身已是完整、可安裝的 PWA，不需重做；要做的是「App �
 - No login, password, or any access gating.
 - No push notifications.
 - No backend / accounts — everything is client-side and static.
+- No nav-toggle JS on the install page (academy uses the simpler mobile pattern:
+  hide `.main-nav`, show a floating `.home-fab`).
 
-## Part 1 — In-app Install helper / App 內安裝幫手 (front-end)
+## Part 1 — Dedicated 安裝 page / 安裝頁 (styled like 小學堂)
 
-A self-service install prompt inside the existing PWA (`index.html` + `app.js` +
-`style.css`).
+A new standalone page at `install/index.html`, mirroring the structure of
+`academy/index.html` so it matches the 小學堂 look the owner likes.
 
-### Behavior
+### Page structure (reused from academy)
 
-- **Banner:** a slim dismissible top banner — `📲 把理財小幫手裝到手機` with an
-  **安裝** button and a **✕** close.
-- **Visibility rules:**
-  - Hidden if the app is already installed / running standalone
-    (`window.matchMedia('(display-mode: standalone)').matches` **or**
-    `navigator.standalone === true` on iOS).
-  - Hidden on desktop (no install value for colleagues' phones). Detect via
-    coarse pointer / UA; when unsure, prefer hiding on clear desktop only.
-  - Hidden permanently once the user taps ✕ (persist a flag in `localStorage`,
-    e.g. `mb_install_dismissed=1`).
-- **Tap "安裝" — platform-specific:**
-  - **Android / Chromium:** capture the `beforeinstallprompt` event on load
-    (call `preventDefault()` and stash it). On tap, call `prompt()` to show the
-    native one-tap install dialog. After the choice resolves, hide the banner.
-  - **iOS Safari:** no install API exists. On tap, open an illustrated bottom
-    sheet with the steps:
+- `<header class="topbar"><h1>理財小幫手</h1></header>`
+- `<nav class="main-nav">` — the same 8 nav links as academy, plus a 9th
+  **安裝** tab marked `active`; on this page it points to `index.html` (self).
+- `<main class="install-main">` — the install content (see below).
+- `<a class="home-fab" href="../">` — floating 首頁 button (mobile).
+- `<footer class="disclaimer">資料僅供內部參考，不構成任何投資建議</footer>`
+- Loads `../style.css` + a new `install.css`; runs `install.js`.
+- Same inline `<style>` block academy uses to hide `.main-nav` and show
+  `.home-fab` on screens ≤640px.
+
+### Install content (academy card style)
+
+- A `course-hero`-style header: icon + 「📲 安裝 理財小幫手」+ one-line subtitle.
+- **Two platform sections — the owner's「兩個版本」:**
+  - **iPhone（Safari）card:** numbered illustrated steps
     `① 點下方的「分享」圖示 → ② 往下捲 → ③ 點「加入主畫面」→ ④ 右上角「加入」`,
-    including the iOS Share-icon glyph for clarity.
-  - **iOS but not Safari (e.g. Chrome/LINE in-app browser):** show a hint
-    `請改用 Safari 開啟才能安裝` (Chrome/in-app browsers on iOS cannot install PWAs).
-  - **Android where `beforeinstallprompt` never fired** (already installed, or
-    unsupported browser): fall back to a manual-steps sheet
-    (`選單 ⋮ → 安裝應用程式／加入主畫面`).
+    including the iOS Share-icon glyph.
+  - **Android（Chrome）card:** a real **「一鍵安裝」** button driven by the
+    `beforeinstallprompt` event, plus written fallback steps
+    `選單 ⋮ → 安裝應用程式／加入主畫面`.
+- **Auto-highlight** the card matching the visitor's device (iPhone vs Android);
+  the other stays visible but de-emphasized.
+- **QR card:** shows the QR image (`install/qr.png`) pointing to this page, so the
+  owner can open the page on a laptop/screen and let colleagues scan.
 
-### Placement & style
+### Behavior (install.js)
 
-- Banner injected at the top of the app shell, above the existing content, using
-  the existing theme color (`#019AB3`). Must not overlap or break existing tabs.
-- Follow existing front-end patterns in `app.js` / `style.css` (e.g. the existing
-  cache-bust and render structure). Add a focused, well-named module/section
-  rather than scattering logic.
+- **iOS detection:** `/iP(hone|ad|od)/.test(navigator.userAgent)` or
+  `navigator.platform`/`maxTouchPoints` for iPadOS; highlight the iPhone card.
+- **iOS but not Safari** (Chrome/LINE in-app browser): show a hint
+  `請改用 Safari 開啟才能安裝` on the iPhone card.
+- **Android / Chromium:** capture `beforeinstallprompt` on load
+  (`preventDefault()` + stash); the「一鍵安裝」button calls `prompt()`; after the
+  choice resolves, swap the button to「已安裝／可從主畫面開啟」. If the event
+  never fired, the button is hidden and only the fallback steps show.
+- **Already installed / standalone** (`display-mode: standalone` or
+  `navigator.standalone`): show a short「你已經安裝好了 ✅」note instead of steps.
+- Mobile nav handled purely by the academy CSS pattern (no toggle JS needed).
 
-## Part 2 — Share kit / 對外分享包 (forwardable files)
+## Part 2 — Share kit / 對外分享包 (forwardable)
 
-Static artifacts the owner can forward; no hosting required beyond the existing
-GitHub Pages URL.
+Generated by a small **local** helper script (not published in the app):
+`/Users/iriswen/scripts/morning_board/make_install_qr.py` (uses the installed
+`qrcode` Python lib).
 
-1. **QR code** (PNG) pointing to https://iriswen518-alt.github.io/morning-board/.
-2. **Forwardable message** (plain text for LINE / email): one-line intro + link +
-   `iPhone 用 Safari 開、Android 用 Chrome 開`.
-3. **Two one-page illustrated install guides** (PNG, LINE-friendly): one for
-   **iPhone (Safari)**, one for **Android (Chrome)**. These are the "兩個版本."
+1. **QR code** PNG pointing to
+   `https://iriswen518-alt.github.io/morning-board/install/`. Written to BOTH:
+   - `repo/install/qr.png` (shown on the install page), and
+   - `~/Downloads/理財小幫手_安裝分享包/qr.png` (for the owner to forward).
+2. **Forwardable message** `~/Downloads/理財小幫手_安裝分享包/分享訊息.txt`:
+   one-line intro + the install-page link + `iPhone 用 Safari 開、Android 用 Chrome 開`.
+
+The install page's two platform sections serve as the live, always-current
+illustrated guide, so no separate per-platform PNG guides are produced (YAGNI).
 
 ### How Part 1 and Part 2 fit together
 
-Colleague scans the QR → board opens → the in-app banner pops the install guide
-itself. The PNG guides are a backup for anyone who wants to read the steps first.
-No backend, no accounts, zero ongoing maintenance.
+Colleague scans the QR (or taps the forwarded link) → lands on the branded 安裝
+page → the page auto-highlights their phone's steps and (on Android) offers
+one-tap install. No backend, no accounts, zero ongoing maintenance.
+
+## Entry point from the board / 站內入口
+
+Add one **安裝** item to the home page `index.html` main-nav (same `.main-tab`
+style as the 小學堂 tab) linking to `install/`, so existing users can find it.
+(Adding the same tab to academy/chapter navs is optional polish, not in scope.)
 
 ## Data flow / 資料流
 
-All client-side. Install state derives from `display-mode`, `navigator.standalone`,
-and the `beforeinstallprompt` event. No network calls, no storage beyond a single
-`localStorage` dismissal flag.
+All client-side. Install state derives from `display-mode`,
+`navigator.standalone`, and the `beforeinstallprompt` event. No network calls; no
+storage needed.
 
 ## Edge cases / 邊界情況
 
-- Already installed → no banner (both platforms).
-- iOS non-Safari browser → "open in Safari" hint, not the Add-to-Home steps.
-- Android `beforeinstallprompt` absent → manual-steps fallback.
-- Desktop → banner hidden.
-- Dismissed → stays hidden across sessions via `localStorage`.
+- Already installed → 「已安裝」note, no steps.
+- iOS non-Safari browser → 「請用 Safari 開啟」hint on the iPhone card.
+- Android `beforeinstallprompt` absent → hide one-tap button, show manual steps.
+- Desktop visitor → page still renders (QR + both cards); no device highlight, or
+  highlight none.
 
 ## Testing / verification / 測試驗證
 
-Manual on real devices + light checks:
-
-- iPhone Safari: banner shows; tapping 安裝 shows correct illustrated steps.
-- Android Chrome: `beforeinstallprompt` captured; tap → native install succeeds.
-- Already-installed (standalone): no banner on either platform.
-- Desktop browser: no banner.
-- Existing board functionality unaffected (tabs, tables, sort all still work).
-- Bump the `?v=` cache-bust on `app.js` / `style.css` so colleagues get the new
-  build immediately; confirm the live files serve the new version after deploy.
+- `node --check install/install.js` → no syntax errors.
+- Playwright smoke test (Playwright already used in this repo): serve `repo/`
+  locally, open `/install/`, assert the hero、both platform cards、and the QR
+  `<img>` exist; emulate an iPhone UA and assert the iPhone card gets the
+  highlight class; emulate an Android UA and assert the Android card does.
+- Manual device check: iPhone Safari shows correct steps; Android Chrome one-tap
+  install works; already-installed shows the 「已安裝」note.
+- Existing board functionality unaffected; bump `?v=` cache-bust on changed
+  files so colleagues get the new build; confirm live files after deploy.
 
 ## Deliverables & locations / 產出與位置
 
-- Front-end changes in `repo/index.html`, `repo/app.js`, `repo/style.css`.
-- Share kit files (QR PNG, message text, two guide PNGs) saved to a folder the
-  owner can reach and forward (exact path decided at build time; default to a
-  clearly named folder under Downloads or the Obsidian vault per the owner's
-  "store locally" preference).
+- New: `repo/install/index.html`, `repo/install/install.css`,
+  `repo/install/install.js`, `repo/install/qr.png`.
+- Modify: `repo/index.html` (add 安裝 nav item + cache-bust).
+- Local helper: `/Users/iriswen/scripts/morning_board/make_install_qr.py`.
+- Share kit output: `~/Downloads/理財小幫手_安裝分享包/` (qr.png + 分享訊息.txt).
 
 ## Rollout / 上線
 
-1. Implement front-end helper; verify on devices.
-2. Generate share-kit artifacts.
-3. Bump cache-bust, commit only the touched front-end files, push to deploy via
-   GitHub Pages; confirm live.
-4. Hand the QR + guides to the owner to forward.
+1. Build install page + install.js; verify (`node --check` + Playwright + device).
+2. Generate QR + share kit via `make_install_qr.py`.
+3. Bump cache-bust, commit touched files, push to deploy via GitHub Pages; confirm
+   the live `/install/` page and `qr.png` load.
+4. Hand the QR + message to the owner to forward.
