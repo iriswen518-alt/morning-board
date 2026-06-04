@@ -123,22 +123,6 @@
   margin: 0 0 10px;
 }
 
-.qr-card {
-  padding: 18px 20px;
-  background: var(--install-bg-soft);
-  border: 1px solid var(--install-border);
-  border-radius: 12px;
-  text-align: center;
-}
-.qr-img {
-  width: 220px;
-  height: 220px;
-  margin-top: 8px;
-  background: #fff;
-  border-radius: 8px;
-  padding: 8px;
-}
-
 @media (max-width: 640px) {
   .install-main { padding: 24px 16px 64px; }
   .install-hero { padding: 14px 16px; gap: 12px; }
