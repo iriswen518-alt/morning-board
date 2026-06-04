@@ -931,7 +931,7 @@ function renderObondsSheet() {
         <td class="${pctClass(b.perf_3m)}">${fmtPctNum(b.perf_3m)}</td>
       </tr>`;
     }).join("");
-    cards = `<div class="cmp-table-wrap"><table class="cmp-table">
+    cards = `<div class="cmp-table-wrap"><table class="indices">
       <thead>${head}</thead><tbody>${body}</tbody></table></div>`;
   }
 

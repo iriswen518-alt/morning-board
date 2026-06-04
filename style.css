@@ -2394,3 +2394,16 @@ table.indices.stock-cols col.c-num { width: 11%; }
     box-shadow: 2px 0 6px rgba(0, 0, 0, 0.45);
   }
 }
+
+/* === 全站表格表頭統一白底（對齊 股市／債券 等 indices 表格）===
+   把基金績效比較表(cmp-table)的青色表頭、以及持股／績效(position-*)的
+   藍底白字表頭，全部改成與 indices 表格相同的 var(--bg) 白底＋一般文字色，
+   深色模式下自動對應深底淺字。 */
+.cmp-table th,
+.position-list th,
+.position-constituents th,
+.position-perf th,
+.position-perf-each th {
+  background: var(--bg);
+  color: var(--text);
+}
