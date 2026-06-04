@@ -388,6 +388,9 @@ table.indices th, table.indices td {
   border-bottom: 1px solid var(--border);
 }
 table.indices th:first-child, table.indices td:first-child { text-align: left; }
+/* 排行榜：固定欄寬，讓「市值前十大／最大漲幅／最大跌幅」三表上下對齊 */
+table.ranking-table { table-layout: fixed; }
+table.ranking-table td:nth-child(2) { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 table.indices thead th {
   position: sticky; top: 0;
   background: var(--bg);

@@ -4265,7 +4265,10 @@ function renderRankingTable(items, opts) {
     </tr>`).join("");
 
   return `
-    <table class="indices">
+    <table class="indices ranking-table">
+      ${showCap
+        ? `<colgroup><col style="width:7%"><col style="width:25%"><col style="width:16%"><col style="width:12%"><col style="width:12%"><col style="width:12%"><col style="width:16%"></colgroup>`
+        : `<colgroup><col style="width:8%"><col style="width:30%"><col style="width:18%"><col style="width:14%"><col style="width:14%"><col style="width:16%"></colgroup>`}
       <thead><tr>
         <th style="text-align:center">排名</th><th style="text-align:left">名稱</th>
         <th class="sortable-th" title="收盤價；點選排序">收盤</th>
