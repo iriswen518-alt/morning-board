@@ -4127,6 +4127,7 @@ function renderStocksTable(title, list) {
     <tr>
       <td>${nameCell}${quoteSfx}</td>
       <td>${fmtPrice(s.price, s.kind)}</td>
+      <td>${fmtPE(s.per, s.per_kind)}</td>
       <td class="${pctClass(s.change_pct)}">${rangedCell(s, s.change_pct, "day", "日")}</td>
       <td class="${pctClass(s.mtd_pct)}">${rangedCell(s, s.mtd_pct, "mtd", "本月")}</td>
       <td class="${pctClass(s.ytd_pct)}">${rangedCell(s, s.ytd_pct, "ytd", "今年")}</td>
@@ -4144,6 +4145,7 @@ function renderStocksTable(title, list) {
       <thead><tr>
         <th>名稱</th>
         <th class="sortable-th" title="收盤價，來源見名稱欄連結；點選排序">收盤</th>
+        <th class="sortable-th" title="本益比（近四季 trailing，來源：finnhub）；點選排序">本益比</th>
         <th class="sortable-th" title="日報酬率，定義：今日收盤 vs 昨日收盤；來源：finnhub /quote (US) 或 TWSE (TW)；點選排序">日</th>
         <th class="sortable-th" title="月初到今報酬率（MTD），來源：Yahoo (US) 或 TWSE (TW)；點選排序">本月</th>
         <th class="sortable-th" title="年初到今報酬率（YTD），來源：Yahoo (US) 或 TWSE (TW)；點選排序">今年</th>
