@@ -4138,7 +4138,7 @@ function renderStocksTable(title, list) {
   if (!list || !list.length) return "";
   const fmtPrice = (p, kind) => {
     if (p === null || p === undefined) return "—";
-    const prefix = kind === "TW" ? "" : "$";
+    const prefix = "";  // 價格一律不顯示 $ 符號（含美股）
     return prefix + p.toLocaleString("en-US", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
   };
   // 來源驗證 URL：美股優先 Yahoo Finance 歷史頁（使用者偏好），台股優先 Yahoo TW
