@@ -574,7 +574,7 @@ async function init() {
   switchTab(CURRENT_TAB);
 
   if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("service-worker.js?v=20260604-v10").catch(() => {});
+    navigator.serviceWorker.register("service-worker.js?v=20260604-v11").catch(() => {});
   }
 
   wireSortableTables();
@@ -895,46 +895,45 @@ function renderObondsSheet() {
     : (c === 0 ? "零息" : `${c.toFixed(1)}%`);
   const fmtPctNum = p => (p === null || p === undefined) ? "—" : fmtPct(p);
   const fmtPrice = p => (p === null || p === undefined) ? "—" : Number(p).toFixed(1);
-  const cards = !list.length
-    ? "<p style='color:var(--text-mute); padding:20px 0'>尚未提供海外債清單</p>"
-    : list.map(b => {
-        const url = bondUrl(b);
-        const displayName = [b.name_zh, b.issuer].filter(Boolean).map(escapeHtml).join(" ");
-        const nameHtml = url
-          ? `<a href="${url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${displayName}</a>`
-          : displayName;
-        const chips = [currencyChip(b.currency), typeChip(b.type)].join("");
-        const meta = [b.code, b.isin].filter(Boolean).map(escapeHtml).join("・");
-        const metaHtml = meta
-          ? `<span class="bond-code-meta">${meta}</span>`
-          : "";
-        const priceDate = b.price_date ? `<div style="font-size:11px;color:var(--text-mute);margin-top:2px">${escapeHtml(shortDate(b.price_date))}</div>` : "";
-        return `
-    <div class="fund-card">
-      <h3 style="display:flex;align-items:center;flex-wrap:wrap;gap:6px 8px">${nameHtml}${chips}${metaHtml}</h3>
-      <div class="obond-meta-grid">
-        <div><label>幣別</label>${escapeHtml(b.currency || "—")}</div>
-        <div><label>票面利率</label>${fmtCoupon(b.coupon_pct)}</div>
-        <div><label>到期日</label>${escapeHtml(b.maturity || "—")}</div>
-        <div class="obond-meta-rating"><label>信評</label><span>${escapeHtml(b.rating || "—")}</span></div>
-      </div>
-      <div class="obond-perf-grid">
-        <div>
-          <label>申購參考殖利率</label>
-          <span class="up">${fmtPctNum(b.bid_yield_pct)}</span>
-        </div>
-        <div>
-          <label>贖回參考價</label>
-          ${fmtPrice(b.ask_price)}
-          ${priceDate}
-        </div>
-        <div><label>週%</label><span class="${pctClass(b.perf_1w)}">${fmtPctNum(b.perf_1w)}</span></div>
-        <div><label>月%</label><span class="${pctClass(b.perf_1m)}">${fmtPctNum(b.perf_1m)}</span></div>
-        <div><label>季%</label><span class="${pctClass(b.perf_3m)}">${fmtPctNum(b.perf_3m)}</span></div>
-      </div>
-    </div>
-  `;
-      }).join("");
+  const priceCell = b => {
+    const px = fmtPrice(b.ask_price);
+    const d = b.price_date ? `<div style="font-size:11px;color:var(--text-mute);margin-top:2px">${escapeHtml(shortDate(b.price_date))}</div>` : "";
+    return `${px}${d}`;
+  };
+
+  let cards;
+  if (!list.length) {
+    cards = "<p style='color:var(--text-mute); padding:20px 0'>尚未提供海外債清單</p>";
+  } else {
+    const head = `<tr>
+      <th class="cmp-th-l">債券名稱</th>
+      <th>幣別</th><th>票面利率</th><th>到期日</th><th>信評</th>
+      <th>申購參考殖利率</th><th>贖回參考價</th>
+      <th>週%</th><th>月%</th><th>季%</th>
+    </tr>`;
+    const body = list.map(b => {
+      const url = bondUrl(b);
+      const displayName = [b.name_zh, b.issuer].filter(Boolean).map(escapeHtml).join(" ");
+      const nameHtml = url
+        ? `<a href="${url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${displayName}</a>`
+        : displayName;
+      return `
+      <tr>
+        <td class="cmp-td-l">${nameHtml}</td>
+        <td>${escapeHtml(b.currency || "—")}</td>
+        <td>${fmtCoupon(b.coupon_pct)}</td>
+        <td>${escapeHtml(b.maturity || "—")}</td>
+        <td>${escapeHtml(b.rating || "—")}</td>
+        <td><span class="up">${fmtPctNum(b.bid_yield_pct)}</span></td>
+        <td>${priceCell(b)}</td>
+        <td class="${pctClass(b.perf_1w)}">${fmtPctNum(b.perf_1w)}</td>
+        <td class="${pctClass(b.perf_1m)}">${fmtPctNum(b.perf_1m)}</td>
+        <td class="${pctClass(b.perf_3m)}">${fmtPctNum(b.perf_3m)}</td>
+      </tr>`;
+    }).join("");
+    cards = `<div class="cmp-table-wrap"><table class="cmp-table">
+      <thead>${head}</thead><tbody>${body}</tbody></table></div>`;
+  }
 
   const moreSection = `
     <div class="fund-card" style="margin-top:18px;text-align:center">
@@ -4333,7 +4332,7 @@ function renderRankingTable(items, opts) {
       <td class="${pctClass(r.daily_pct)}">${fmtPct(r.daily_pct)}</td>
       <td class="${pctClass(r.mtd_pct)}">${fmtPct(r.mtd_pct)}</td>
       <td class="${pctClass(r.ytd_pct)}">${fmtPct(r.ytd_pct)}</td>
-      ${showCap ? `<td>${fmtMarketCapZh(r.market_cap)}</td>` : ""}
+      ${showCap ? `<td class="mcap">${fmtMarketCapZh(r.market_cap)}</td>` : ""}
     </tr>`).join("");
 
   return `
@@ -4348,7 +4347,7 @@ function renderRankingTable(items, opts) {
         <th class="sortable-th" title="當日漲跌；點選排序">日</th>
         <th class="sortable-th" title="本月至今(MTD)；點選排序">本月</th>
         <th class="sortable-th" title="今年至今(YTD)；點選排序">本年</th>
-        ${showCap ? `<th class="sortable-th" title="市值；點選排序">市值</th>` : ""}
+        ${showCap ? `<th class="sortable-th mcap" title="市值；點選排序">市值</th>` : ""}
       </tr></thead>
       <tbody>${rows}</tbody>
     </table>`;
@@ -4356,9 +4355,10 @@ function renderRankingTable(items, opts) {
 
 function fmtMarketCapZh(v) {
   if (v == null) return "—";
+  // 兆級保留 1 位小數（避免 1.6 兆 退化成 2 兆），億級以下一律取整數
   if (v >= 1e12) return (v / 1e12).toFixed(1) + " 兆";
-  if (v >= 1e8) return (v / 1e8).toFixed(1) + " 億";
-  return Number(v).toLocaleString("en-US", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+  if (v >= 1e8) return Math.round(v / 1e8).toLocaleString("en-US") + " 億";
+  return Math.round(Number(v)).toLocaleString("en-US");
 }
 
 function fmtPE(pe, kind) {

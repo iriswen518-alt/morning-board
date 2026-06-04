@@ -404,6 +404,8 @@ table.indices th:first-child, table.indices td:first-child { text-align: left; }
 /* 排行榜：固定欄寬，讓「市值前十大／最大漲幅／最大跌幅」三表上下對齊 */
 table.ranking-table { table-layout: fixed; }
 table.ranking-table td:nth-child(2) { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+/* 市值欄：數字與單位（億/兆）不換行，整站適用 */
+table.indices td.mcap, table.indices th.mcap { white-space: nowrap; }
 table.indices thead th {
   position: sticky; top: 0;
   background: var(--bg);
@@ -2133,6 +2135,11 @@ table.indices th.sortable-th {
   #content table td,
   #content table th {
     white-space: normal;
+  }
+  /* 但市值欄即使在手機也不換行 */
+  #content table td.mcap,
+  #content table th.mcap {
+    white-space: nowrap;
   }
   /* 內文字級稍降 */
   #content { padding: 16px 14px 28px; font-size: 14px; }

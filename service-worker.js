@@ -1,4 +1,4 @@
-// Network-first with cache fallback (v10)
+// Network-first with cache fallback (v11)
 // 永遠優先網路（拿最新），失敗時用上次成功的快取。
 // 兼顧「總是新」+「網路 blip 時不爆」。
 // v8（2026-05-27）：新增重要新聞 stale banner（news_date != today 時顯示警示）。
@@ -7,7 +7,8 @@
 //   舊版 caches.match(req) 連 ?t= 一起比對，永遠對不上上次存的那筆，於是退路失效、整頁空。
 //   改成 data/*.json 用「去掉 ?t= 的固定 key」存取，瞬斷時才能退回上次成功抓到的資料
 //   （真正做到「顯示快取資料」），順帶解決舊版每抓一次就多存一筆、快取無限長大的問題。
-const CACHE = "morning-board-v10";
+// v11（2026-06-04）：市值欄取整數顯示（億整數、兆保留 1 位小數）＋不換行（.mcap nowrap，含手機）。
+const CACHE = "morning-board-v11";
 
 self.addEventListener("install", e => {
   self.skipWaiting();
