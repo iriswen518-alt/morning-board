@@ -2005,6 +2005,22 @@ function renderInsuranceSheet() {
   }).join("");
 }
 
+// 指數卡：手機版取代擁擠的 .indices 表。stats = [{k, v, cls}]
+function renderIndexCard({ nameHtml, priceHtml, stats }) {
+  const st = stats.map(s =>
+    `<div class="idx-st"><div class="k">${s.k}</div><div class="v ${s.cls || ""}">${s.v}</div></div>`
+  ).join("");
+  return `
+    <div class="idx-card">
+      <div class="idx-top"><span class="idx-nm">${nameHtml}</span><span class="idx-px">${priceHtml}</span></div>
+      <div class="idx-stats">${st}</div>
+    </div>`;
+}
+function renderIndexCards(cards) {
+  if (!cards.length) return "";
+  return `<div class="idx-cards">${cards.map(renderIndexCard).join("")}</div>`;
+}
+
 function renderMarketSheet() {
   const m = DATA.market;
   const date = shortDate(m.closing_date);
@@ -2018,6 +2034,15 @@ function renderMarketSheet() {
       <td class="date-col">${escapeHtml(shortDate(i.closing_date) || date)}</td>
     </tr>
   `).join("");
+  const indexCards = renderIndexCards(m.indices.map(i => ({
+    nameHtml: `${indexLink(i.name)}${indexQuoteLink(i.name)}`,
+    priceHtml: fmtInt(i.close),
+    stats: [
+      { k: "日", v: fmtPct(i.daily_pct), cls: pctClass(i.daily_pct) },
+      { k: "本月", v: fmtPct(i.mtd_pct), cls: pctClass(i.mtd_pct) },
+      { k: "今年", v: fmtPct(i.ytd_pct), cls: pctClass(i.ytd_pct) },
+    ],
+  })));
   // 2026-05-25：Japan / UK 10Y 無免費日頻率資料源，daily/MTD bps 顯式標 n/a* + tooltip
   const spotOnlyBonds = new Set(["Japan 10Y", "Japan 10-Year", "UK 10Y", "UK 10-Year"]);
   const bondRows = (m.bonds || []).map(b => {
@@ -2040,6 +2065,21 @@ function renderMarketSheet() {
       <td class="date-col">${escapeHtml(shortDate(b.closing_date) || date)}</td>
     </tr>
   `;}).join("");
+  const bondCards = renderIndexCards((m.bonds || []).map(b => {
+    const isSpotOnly = spotOnlyBonds.has(b.name);
+    const tip = isSpotOnly ? '無免費日頻率資料源（Yahoo/FRED/ECB 均無），僅取即時殖利率' : '';
+    const dailyV = (isSpotOnly && b.daily_bps == null)
+      ? `<span title="${tip}" style="color:#94a3b8;cursor:help">n/a*</span>`
+      : `<span class="${bpsClass(b.daily_bps)}">${fmtBps(b.daily_bps)}</span>`;
+    const mtdV = (isSpotOnly && b.mtd_bps == null)
+      ? `<span title="${tip}" style="color:#94a3b8;cursor:help">n/a*</span>`
+      : `<span class="${bpsClass(b.mtd_bps)}">${fmtBps(b.mtd_bps)}</span>`;
+    return {
+      nameHtml: `${bondLink(b.name)}${bondQuoteLink(b.name)}`,
+      priceHtml: b.yield_pct != null ? b.yield_pct.toFixed(2) + "%" : "—",
+      stats: [ { k: "日變動", v: dailyV }, { k: "本月變動", v: mtdV } ],
+    };
+  }));
 
   const fxRows = (m.fx || []).map(f => `
     <tr>
@@ -2051,6 +2091,15 @@ function renderMarketSheet() {
       <td class="date-col">${escapeHtml(shortDate(f.closing_date) || date)}</td>
     </tr>
   `).join("");
+  const fxCards = renderIndexCards((m.fx || []).map(f => ({
+    nameHtml: `${fxLink(f.name)}${fxQuoteLink(f.name)}`,
+    priceHtml: f.close != null ? f.close.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : "—",
+    stats: [
+      { k: "日", v: fmtPct(f.daily_pct), cls: pctClass(f.daily_pct) },
+      { k: "本月", v: fmtPct(f.mtd_pct), cls: pctClass(f.mtd_pct) },
+      { k: "今年", v: fmtPct(f.ytd_pct), cls: pctClass(f.ytd_pct) },
+    ],
+  })));
 
   const usStocks = DATA.stocks?.us_stocks || [];
   const twStocks = DATA.stocks?.tw_stocks || [];
@@ -2091,7 +2140,7 @@ function renderMarketSheet() {
     </table>` : "";
 
   const stocksTab = `
-    <table class="indices">
+    <table class="indices has-cards">
       <thead><tr>
         <th title="點名稱可開 MoneyDJ 圖表頁驗證">指數</th>
         <th class="sortable-th" title="收盤價（來源：Yahoo Finance）；點選排序">收盤</th>
@@ -2102,10 +2151,11 @@ function renderMarketSheet() {
       </tr></thead>
       <tbody>${rows}</tbody>
     </table>
+    ${indexCards}
     ${commoditiesBlock}`;
 
   const bondsTab = bondRows ? `
-    <table class="indices">
+    <table class="indices has-cards">
       <thead><tr>
         <th title="點名稱可開 MoneyDJ 圖表頁驗證">債別</th>
         <th class="sortable-th" title="到期殖利率（YTM, %）｜來源：FRED (US) / 各國央行 / Yahoo Finance；點選排序">殖利率</th>
@@ -2114,10 +2164,11 @@ function renderMarketSheet() {
         <th class="date-col" title="債券殖利率公告日">收盤日</th>
       </tr></thead>
       <tbody>${bondRows}</tbody>
-    </table>` : `<p style="color:var(--text-mute); padding:20px 0">尚未提供公債資料</p>`;
+    </table>
+    ${bondCards}` : `<p style="color:var(--text-mute); padding:20px 0">尚未提供公債資料</p>`;
 
   const fxTab = fxRows ? `
-    <table class="indices">
+    <table class="indices has-cards">
       <thead><tr>
         <th title="點名稱可開 MoneyDJ 圖表頁驗證">幣別</th>
         <th class="sortable-th" title="收盤匯率｜來源：Yahoo Finance；點選排序">收盤</th>
@@ -2127,7 +2178,8 @@ function renderMarketSheet() {
         <th class="date-col" title="收盤日：最新交易日 ET 收盤後 build">收盤日</th>
       </tr></thead>
       <tbody>${fxRows}</tbody>
-    </table>` : `<p style="color:var(--text-mute); padding:20px 0">尚未提供匯率資料</p>`;
+    </table>
+    ${fxCards}` : `<p style="color:var(--text-mute); padding:20px 0">尚未提供匯率資料</p>`;
 
   const usTab = (renderStocksTable("", usStocks) || `<p style="color:var(--text-mute); padding:20px 0">尚未提供美股資料</p>`)
     + renderRankingsBlock("us");
