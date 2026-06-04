@@ -2325,3 +2325,35 @@ table.indices.stock-cols th:first-child, table.indices.stock-cols td:first-child
 }
 table.indices.stock-cols col.c-name { width: 34%; }
 table.indices.stock-cols col.c-num { width: 11%; }
+
+/* === 凍結第一欄（名稱／標籤）：寬表格橫滑時保持第一欄可見 ===
+   套用：美股/台股行情(stock-cols / tw-quote-table)、基金績效比較(cmp-table)。
+   第一欄改 sticky 釘在左邊、不透明底＋右緣細陰影提示已凍結。 */
+#content table.stock-cols th:first-child,
+#content table.stock-cols td:first-child,
+#content table.cmp-table th:first-child,
+#content table.cmp-table td:first-child,
+#content table.tw-quote-table th:first-child,
+#content table.tw-quote-table td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background: var(--bg);
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.08);
+}
+/* 表頭左上角格同時 sticky top+left，需疊更高 */
+#content table.stock-cols thead th:first-child,
+#content table.cmp-table thead th:first-child,
+#content table.tw-quote-table thead th:first-child {
+  z-index: 3;
+}
+@media (prefers-color-scheme: dark) {
+  #content table.stock-cols th:first-child,
+  #content table.stock-cols td:first-child,
+  #content table.cmp-table th:first-child,
+  #content table.cmp-table td:first-child,
+  #content table.tw-quote-table th:first-child,
+  #content table.tw-quote-table td:first-child {
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.45);
+  }
+}

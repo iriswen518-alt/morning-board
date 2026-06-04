@@ -3957,7 +3957,7 @@ function renderTwStockSheet() {
       入口：<b>${lnk("https://mops.twse.com.tw", "mops.twse.com.tw")}</b> → 上方搜尋輸入股票代號或公司名
     </div>
     <div style="overflow-x:auto">
-    <table style="width:100%;border-collapse:collapse;font-size:13.5px;min-width:520px">
+    <table class="tw-quote-table" style="width:100%;border-collapse:collapse;font-size:13.5px;min-width:520px">
       <tr style="background:#019AB3;color:#fff">
         <th style="padding:10px;text-align:left;width:40%">項目</th>
         <th style="padding:10px;text-align:left">內容</th>
@@ -3975,7 +3975,7 @@ function renderTwStockSheet() {
       入口：<b>${lnk("https://www.twse.com.tw", "www.twse.com.tw")}</b> → 交易資訊
     </div>
     <div style="overflow-x:auto">
-    <table style="width:100%;border-collapse:collapse;font-size:13.5px;min-width:520px">
+    <table class="tw-quote-table" style="width:100%;border-collapse:collapse;font-size:13.5px;min-width:520px">
       <tr style="background:#017A8F;color:#fff">
         <th style="padding:10px;text-align:left;width:40%">項目</th>
         <th style="padding:10px;text-align:left">內容</th>
@@ -3988,7 +3988,7 @@ function renderTwStockSheet() {
 
     <h3 style="font-size:16px;margin:24px 0 8px">3. 產業／競爭</h3>
     <div style="overflow-x:auto">
-    <table style="width:100%;border-collapse:collapse;font-size:13.5px;min-width:520px">
+    <table class="tw-quote-table" style="width:100%;border-collapse:collapse;font-size:13.5px;min-width:520px">
       <tr style="background:#17B5AD;color:#fff">
         <th style="padding:10px;text-align:left;width:40%">項目</th>
         <th style="padding:10px;text-align:left">內容</th>
@@ -4026,7 +4026,7 @@ function renderTwStockSheet() {
 
     <h3 style="font-size:16px;margin:28px 0 8px">工具備忘</h3>
     <div style="overflow-x:auto">
-    <table style="width:100%;border-collapse:collapse;font-size:13.5px;min-width:520px">
+    <table class="tw-quote-table" style="width:100%;border-collapse:collapse;font-size:13.5px;min-width:520px">
       <tr style="background:#F2F8FA"><td style="padding:8px 12px;width:30%"><b>MOPS</b></td><td style="padding:8px 12px">${lnk("https://mops.twse.com.tw", "mops.twse.com.tw")} — 第一手揭露</td></tr>
       <tr><td style="padding:8px 12px"><b>TWSE</b></td><td style="padding:8px 12px">${lnk("https://www.twse.com.tw", "www.twse.com.tw")} — 行情、籌碼</td></tr>
       <tr style="background:#F2F8FA"><td style="padding:8px 12px"><b>Goodinfo!</b></td><td style="padding:8px 12px">${lnk("https://goodinfo.tw", "goodinfo.tw")} — 個股資料總覽（二手，僅供發現）</td></tr>
