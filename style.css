@@ -10,6 +10,12 @@
   --text-mute: #6b7280;
   --border: #e5e7eb;
   --shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  /* === academy (小學堂) design tokens === */
+  --soft: #f5fafb;
+  --soft-border: #e2e8ee;
+  --muted: #6b7785;
+  --radius-card: 16px;
+  --tap: 44px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,6 +26,9 @@
     --text-mute: #9ca3af;
     --border: #2d3748;
     --shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    --soft: #18212b;
+    --soft-border: #2d3748;
+    --muted: #9ca3af;
   }
 }
 
@@ -37,6 +46,8 @@ body {
     var(--bg-alt);
   background-attachment: fixed;
   color: var(--text);
+  font-size: 16px;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overscroll-behavior-y: contain;
 }
@@ -77,7 +88,9 @@ body {
 
 .topbar {
   position: relative;
-  padding: 14px 18px 12px;
+  padding: calc(env(safe-area-inset-top, 0px) + 16px) 20px 18px;
+  border-radius: 0 0 22px 22px;
+  box-shadow: 0 6px 18px rgba(1, 154, 179, 0.22);
   background:
     radial-gradient(circle at 90% -20%, rgba(255, 255, 255, 0.22), transparent 55%),
     radial-gradient(ellipse at -10% 110%, rgba(23, 181, 173, 0.55), transparent 60%),
@@ -125,9 +138,9 @@ body {
 .search-wrap { position: relative; margin-top: 10px; z-index: 100; }
 .search-wrap input {
   width: 100%;
-  padding: 9px 12px;
+  padding: 11px 14px;
   border: 1px solid rgba(255,255,255,0.4);
-  border-radius: 8px;
+  border-radius: 14px;
   font-size: 15px;
   background: rgba(255,255,255,0.95);
   color: #1a1a1a;
@@ -410,6 +423,33 @@ table.indices th.sortable-th {
   opacity: 0.75;
   user-select: none;
 }
+/* === 指數卡（取代手機上擁擠的 indices 表）=== */
+.idx-cards { display: flex; flex-direction: column; gap: 11px; margin-top: 4px; }
+.idx-card {
+  background: var(--soft);
+  border: 1px solid var(--soft-border);
+  border-radius: var(--radius-card);
+  padding: 14px 16px;
+}
+.idx-card .idx-top {
+  display: flex; justify-content: space-between; align-items: baseline;
+  gap: 10px; margin-bottom: 10px;
+}
+.idx-card .idx-nm { font-size: 16px; font-weight: 700; color: var(--brand-deep); }
+.idx-card .idx-nm a { color: inherit; text-decoration: none; }
+.idx-card .idx-px { font-size: 18px; font-weight: 800; font-variant-numeric: tabular-nums; }
+.idx-card .idx-stats { display: flex; }
+.idx-card .idx-st { flex: 1; text-align: center; min-width: 0; }
+.idx-card .idx-st + .idx-st { border-left: 1px solid var(--soft-border); }
+.idx-card .idx-st .k { font-size: 11.5px; color: var(--muted); font-weight: 600; margin-bottom: 2px; }
+.idx-card .idx-st .v { font-size: 15px; font-weight: 700; font-variant-numeric: tabular-nums; }
+/* 桌面維持表格；手機才用卡片 */
+@media (min-width: 769px) { .idx-cards { display: none; } }
+@media (max-width: 768px) { table.indices.has-cards { display: none !important; } }
+/* 深色模式：--brand-deep（深藍）在近黑卡片上對比不足，改用亮青色標題 */
+@media (prefers-color-scheme: dark) {
+  .idx-card .idx-nm, .fund-card h3 { color: #5cc8da; }
+}
 .quote-link {
   font-size: 12px;
   color: var(--text-mute);
@@ -606,10 +646,10 @@ table.indices th.sortable-th {
   position: relative;
   padding: 14px 16px;
   margin-bottom: 10px;
-  background: var(--bg);
-  border: 1px solid var(--border) !important;
-  border-left: 1px solid var(--border) !important;
-  border-radius: 12px;
+  background: var(--soft);
+  border: 1px solid var(--soft-border) !important;
+  border-left: 1px solid var(--soft-border) !important;
+  border-radius: var(--radius-card);
   box-shadow: var(--shadow);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
@@ -2242,3 +2282,46 @@ table.indices th.sortable-th {
     font-weight: 600;
   }
 }
+
+/* === 底部分頁列（手機限定）=== */
+.tabbar { display: none; }
+@media (max-width: 768px) {
+  .tabbar {
+    display: flex;
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 95;
+    background: rgba(255,255,255,0.96);
+    -webkit-backdrop-filter: saturate(180%) blur(12px);
+    backdrop-filter: saturate(180%) blur(12px);
+    border-top: 1px solid var(--soft-border);
+    padding: 6px 4px calc(env(safe-area-inset-bottom, 0px) + 6px);
+    box-shadow: 0 -3px 14px rgba(0,0,0,0.05);
+  }
+  .tabbar-item {
+    flex: 1; min-height: var(--tap);
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
+    background: none; border: 0; font-family: inherit; cursor: pointer;
+    color: var(--muted); font-size: 10.5px; font-weight: 600; padding: 4px 0;
+  }
+  .tabbar-item svg { width: 23px; height: 23px; }
+  .tabbar-item.active { color: var(--brand-primary); }
+  /* 內容區底部留白，避免被底部列遮住 */
+  #content { padding-bottom: calc(var(--tap) + 44px + env(safe-area-inset-bottom, 0px)); }
+  /* 舊的頂部下拉鈕與回首頁 FAB 由底部列取代 */
+  .nav-toggle { display: none !important; }
+  body.show-home-fab .home-fab { display: none !important; }
+}
+@media (prefers-color-scheme: dark) and (max-width: 768px) {
+  .tabbar { background: rgba(26,33,42,0.96); border-top-color: var(--soft-border); }
+}
+
+/* === 股票表格欄寬對齊（美股/台股；含本益比欄）=== */
+table.indices.stock-cols { table-layout: fixed; width: 100%; }
+table.indices.stock-cols th, table.indices.stock-cols td {
+  text-align: right; font-variant-numeric: tabular-nums;
+  overflow: hidden; text-overflow: ellipsis;
+}
+table.indices.stock-cols th:first-child, table.indices.stock-cols td:first-child {
+  text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+table.indices.stock-cols col.c-name { width: 34%; }
+table.indices.stock-cols col.c-num { width: 11%; }
