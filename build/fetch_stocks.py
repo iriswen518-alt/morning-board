@@ -114,6 +114,48 @@ def fetch_finnhub_pe(symbol):
         return None
 
 
+# === TW: trailing P/E via TWSE BWIBBU_ALL (finnhub is US-only) ===
+TWSE_BWIBBU = "https://openapi.twse.com.tw/v1/exchangeReport/BWIBBU_ALL"
+
+
+def clean_tw_pe(val):
+    """TWSE BWIBBU PEratio (e.g. '32.60', '0.00', '-') → float P/E or None.
+
+    Rejects non-numeric ('-', '') and non-positive (0/負, 即無盈餘) values.
+    """
+    try:
+        f = float(val)
+    except (ValueError, TypeError):
+        return None
+    return f if f > 0 else None
+
+
+def tw_pe_map_from_bwibbu(rows):
+    """TWSE BWIBBU_ALL rows → {code: trailing P/E float}, dropping invalid."""
+    out = {}
+    if not isinstance(rows, list):
+        return out
+    for r in rows:
+        if not isinstance(r, dict):
+            continue
+        code = str(r.get("Code", "")).strip()
+        pe = clean_tw_pe(r.get("PEratio"))
+        if code and pe is not None:
+            out[code] = pe
+    return out
+
+
+def fetch_tw_pe_map():
+    """Fetch TWSE BWIBBU_ALL → {code: trailing P/E}. Returns {} on failure."""
+    try:
+        r = requests.get(TWSE_BWIBBU, timeout=15)
+        r.raise_for_status()
+        return tw_pe_map_from_bwibbu(r.json())
+    except Exception as e:  # noqa: BLE001
+        print(f"   ! TWSE BWIBBU P/E: {e}")
+        return {}
+
+
 def fetch_yahoo_history(symbol, exchange_tz_offset_hours=None, range_str="5y"):
     """Yahoo v8 chart (default 5y). Returns list of (date_iso, close) using
     market's local timezone (so US close at 16:00 ET shows as 5/11, not 5/12
@@ -445,6 +487,7 @@ def main():
     # === TW ===
     print("[fetch] TW stocks (TWSE) ...", flush=True)
     tw_data = fetch_twse_realtime(TW_STOCKS)
+    tw_pe_map = fetch_tw_pe_map()  # 本益比：TWSE BWIBBU_ALL（上市）
     for sym, name in TW_STOCKS:
         d = tw_data.get(sym, {})
         price = d.get("price")
@@ -528,6 +571,8 @@ def main():
             "error": None if price is not None else "no_data",
         }
         rec = merge_with_previous(rec, previous.get(("TW", sym)))
+        rec["per"] = tw_pe_map.get(sym)
+        rec["per_kind"] = "trailing" if rec["per"] is not None else None
         out["tw_stocks"].append(rec)
         if rec.get("price") is None:
             print(f"   ! {sym}: no data")
