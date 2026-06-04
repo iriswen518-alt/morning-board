@@ -108,6 +108,8 @@ COMMODITIES = [
 #   yahoo    → Yahoo chart API(殖利率指數)
 #   ecb      → ECB SDW CSV
 #   treasury → 美國財政部每日公債殖利率曲線 CSV(官方、免金鑰、雲端可達)
+#   mof      → 日本財務省 JGB 殖利率 CSV(歷史 data/jgbcm_all.csv + 當月 jgbcm.csv 合併)
+#   boe      → 英格蘭銀行 IADB 每日殖利率 CSV
 #   fred     → FRED CSV(已棄用:2026-06 起 FRED 對非瀏覽器/資料中心 IP 連線 tarpitting,改用 treasury)
 #   none     → 無免費日資料源,下游 websearch 補當前殖利率一格
 BONDS = [
@@ -116,9 +118,9 @@ BONDS = [
     ("US 2-Year", "treasury", "2 Yr"),
     # 2026-05-25：Germany 10Y 改用 ECB SDW（日頻率公開資料），可算 daily/MTD bps
     ("Germany 10-Year", "ecb", "YC.B.U2.EUR.4F.G_N_A.SV_C_YM.SR_10Y"),
-    # Japan/UK 10Y 目前無免費日頻率資料源；保留 yahoo websearch 補當前殖利率（單格）
-    ("Japan 10-Year", "none", ""),
-    ("UK 10-Year", "none", ""),
+    # 2026-06-04：Japan/UK 10Y 改用各國官方每日 CSV（MOF / BoE），可算 daily/MTD bps、雲端可達
+    ("Japan 10-Year", "mof", "10年"),
+    ("UK 10-Year", "boe", "IUDMNZC"),
 ]
 
 
@@ -259,6 +261,90 @@ def treasury_series(tenor: str, run_date: dt.date) -> list[tuple[dt.date, float]
     if not merged:
         raise RuntimeError(f"Treasury fetch failed for {tenor!r}: {last_err}")
     return sorted(merged.items())
+
+
+# 日本和曆紀年 → 西元年:基準年 = 元年的前一年(例 令和元年=2019 → base 2018)
+_JP_ERA_BASE = {"M": 1867, "T": 1911, "S": 1925, "H": 1988, "R": 2018}
+
+
+def _jp_era_to_date(s: str) -> dt.date:
+    """日本財務省日期 'R8.6.3' / 'S49.9.24' → date。"""
+    s = s.strip()
+    base = _JP_ERA_BASE.get(s[:1].upper())
+    if base is None:
+        raise ValueError(f"unknown JP era: {s!r}")
+    y, m, d = s[1:].split(".")
+    return dt.date(base + int(y), int(m), int(d))
+
+
+def _mof_parse(raw: bytes, tenor_col: str) -> list[tuple[dt.date, float]]:
+    """財務省 JGB CSV(CP932)→ [(date, value)]。缺值 '-' 略過。"""
+    text = raw.decode("cp932", "replace")
+    out: list[tuple[dt.date, float]] = []
+    col: Optional[int] = None
+    for row in csv.reader(io.StringIO(text)):
+        if not row:
+            continue
+        first = row[0].strip()
+        if col is None:
+            if first == "基準日":
+                col = [c.strip() for c in row].index(tenor_col)
+            continue
+        if not re.match(r"^[MTSHR]\d", first):
+            continue  # 跳過標題/註記列
+        if len(row) <= col:
+            continue
+        cell = row[col].strip()
+        if cell in ("", "-"):
+            continue
+        try:
+            out.append((_jp_era_to_date(first), float(cell)))
+        except ValueError:
+            continue
+    return out
+
+
+def mof_jgb_series(tenor_col: str) -> list[tuple[dt.date, float]]:
+    """日本財務省 JGB 殖利率:歷史(jgbcm_all)+ 當月(jgbcm)合併 → 升冪。
+    jgbcm_all 落後數日,jgbcm 補當月最新;兩者合併確保 daily/MTD 基準齊備。"""
+    base = "https://www.mof.go.jp/jgbs/reference/interest_rate/"
+    merged: dict[dt.date, float] = {}
+    last_err: Optional[Exception] = None
+    for path in ("data/jgbcm_all.csv", "jgbcm.csv"):
+        try:
+            for d, v in _mof_parse(http_get(base + path), tenor_col):
+                merged[d] = v
+        except Exception as e:  # noqa: BLE001
+            last_err = e
+    if not merged:
+        raise RuntimeError(f"MOF JGB fetch failed for {tenor_col!r}: {last_err}")
+    return sorted(merged.items())
+
+
+def boe_series(series_code: str, run_date: dt.date) -> list[tuple[dt.date, float]]:
+    """英格蘭銀行 IADB 每日殖利率 CSV → [(date, value)] 升冪。
+    series_code 如 IUDMNZC(英國 10Y 名目 par yield)。抓前一年初至今,確保 MTD 基準。"""
+    date_from = f"01/Jan/{run_date.year - 1}"
+    url = (
+        "https://www.bankofengland.co.uk/boeapps/database/_iadb-fromshowcolumns.asp"
+        f"?csv.x=yes&Datefrom={date_from}&Dateto=now&SeriesCodes={series_code}"
+        "&CSVF=TN&UsingCodes=Y&VPD=Y&VFD=N"
+    )
+    raw = http_get(url).decode("utf-8", "replace")
+    out: list[tuple[dt.date, float]] = []
+    for row in csv.reader(io.StringIO(raw)):
+        if len(row) < 2:
+            continue
+        try:
+            d = dt.datetime.strptime(row[0].strip(), "%d %b %Y").date()
+            v = float(row[1].strip())
+        except (ValueError, IndexError):
+            continue
+        out.append((d, v))
+    out.sort(key=lambda x: x[0])
+    if not out:
+        raise RuntimeError(f"BoE fetch failed for {series_code}")
+    return out
 
 
 # ----------------------------------------------------------------------
@@ -422,6 +508,10 @@ def build_bond_rows(run_date, warnings) -> list[dict]:
                 series = ecb_series(code)
             elif kind == "treasury":
                 series = treasury_series(code, run_date)
+            elif kind == "mof":
+                series = mof_jgb_series(code)
+            elif kind == "boe":
+                series = boe_series(code, run_date)
             else:
                 series = fred_series(code)
             c = compute(series, run_date)
@@ -609,7 +699,10 @@ def validate(payload: dict, prev: Optional[dict]) -> dict:
     # 4. 公債:US 兩檔核心殖利率缺失。資料源「暫時」抓取失敗 → 降級為 warning
     #    (誠實顯示 n/a,整份報告照常發佈);非抓取失敗的缺值才視為 error。
     for r in payload["bonds"]:
-        if r["source"] in ("yahoo", "fred", "treasury", "ecb") and r["yield"] is None:
+        if (
+            r["source"] in ("yahoo", "fred", "treasury", "ecb", "mof", "boe")
+            and r["yield"] is None
+        ):
             if str(r.get("note", "")).startswith("fetch failed"):
                 warnings.append(f"[bonds] {r['name']} 殖利率暫缺(資料源失敗,顯示 n/a)")
             else:
