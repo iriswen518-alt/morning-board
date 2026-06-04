@@ -391,6 +391,9 @@ table.indices th:first-child, table.indices td:first-child { text-align: left; }
 /* 排行榜：固定欄寬，讓「市值前十大／最大漲幅／最大跌幅」三表上下對齊 */
 table.ranking-table { table-layout: fixed; }
 table.ranking-table td:nth-child(2) { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+/* 個股表：固定欄寬（搭配 <colgroup>），讓「精選海外股票／熱門海外股票」等上下表欄位對齊 */
+table.stock-table { table-layout: fixed; }
+table.stock-table td:first-child { overflow-wrap: anywhere; }
 table.indices thead th {
   position: sticky; top: 0;
   background: var(--bg);
