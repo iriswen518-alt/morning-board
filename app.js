@@ -4137,11 +4137,7 @@ function renderStocksTable(title, list) {
   }).join("");
   return `
     ${title ? `<h3>${title}</h3>` : ""}
-    <table class="indices stock-table">
-      <colgroup>
-        <col style="width:32%"><col style="width:16%"><col style="width:12%">
-        <col style="width:13%"><col style="width:13%"><col style="width:14%">
-      </colgroup>
+    <table class="indices">
       <thead><tr>
         <th>名稱</th>
         <th class="sortable-th" title="收盤價，來源見名稱欄連結；點選排序">收盤</th>
