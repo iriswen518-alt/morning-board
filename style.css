@@ -642,10 +642,10 @@ table.indices th.sortable-th {
   position: relative;
   padding: 14px 16px;
   margin-bottom: 10px;
-  background: var(--bg);
-  border: 1px solid var(--border) !important;
-  border-left: 1px solid var(--border) !important;
-  border-radius: 12px;
+  background: var(--soft);
+  border: 1px solid var(--soft-border) !important;
+  border-left: 1px solid var(--soft-border) !important;
+  border-radius: var(--radius-card);
   box-shadow: var(--shadow);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
