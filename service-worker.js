@@ -8,7 +8,8 @@
 //   改成 data/*.json 用「去掉 ?t= 的固定 key」存取，瞬斷時才能退回上次成功抓到的資料
 //   （真正做到「顯示快取資料」），順帶解決舊版每抓一次就多存一筆、快取無限長大的問題。
 // v11（2026-06-04）：市值欄取整數顯示（億整數、兆保留 1 位小數）＋不換行（.mcap nowrap，含手機）。
-const CACHE = "morning-board-v11";
+// v12（2026-06-04）：手機數據表（指數／股票／排行）整列不換行，靠水平捲動，避免表頭與日期被折成兩行。
+const CACHE = "morning-board-v12";
 
 self.addEventListener("install", e => {
   self.skipWaiting();

@@ -2141,6 +2141,12 @@ table.indices th.sortable-th {
   #content table th.mcap {
     white-space: nowrap;
   }
+  /* 數據表（指數／股票／排行）所有欄位不換行——靠水平捲動，
+     避免「本益比」「收盤日」表頭或「06-04」日期被折成兩行（第一欄維持截斷省略號） */
+  #content table.indices th,
+  #content table.indices td {
+    white-space: nowrap;
+  }
   /* 內文字級稍降 */
   #content { padding: 16px 14px 28px; font-size: 14px; }
   #content > h3, #content h3.section-title { font-size: 15px; margin: 18px 0 8px; }
