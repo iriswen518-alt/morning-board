@@ -2351,6 +2351,16 @@ table.indices.stock-cols col.c-num { width: 11%; }
 #content table.freeze-col1 thead th:first-child {
   z-index: 3;
 }
+/* 凍結欄不能寬過螢幕，否則資料欄全被擋住：限寬＋截斷（長基金名尤其需要） */
+#content table.freeze-col1 th:first-child,
+#content table.freeze-col1 td:first-child,
+#content table.cmp-table th:first-child,
+#content table.cmp-table td:first-child {
+  max-width: 42vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 @media (prefers-color-scheme: dark) {
   #content table.stock-cols th:first-child,
   #content table.stock-cols td:first-child,
