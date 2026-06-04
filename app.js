@@ -605,6 +605,9 @@ function switchTab(name) {
   document.querySelectorAll(".main-tab").forEach(b => {
     b.classList.toggle("active", b.dataset.tab === name);
   });
+  document.querySelectorAll(".tabbar-item[data-tab]").forEach(b => {
+    b.classList.toggle("active", b.dataset.tab === name);
+  });
   const body = $("content");
   body.dataset.section = name;
   if (name === "market") body.innerHTML = renderMarketSheet();
@@ -701,6 +704,21 @@ function wireNavToggle() {
       toggle.setAttribute("aria-expanded", "false");
     }
   });
+  const tabbar = document.getElementById("tabbar");
+  if (tabbar) {
+    tabbar.addEventListener("click", (e) => {
+      const item = e.target.closest(".tabbar-item");
+      if (!item) return;
+      if (item.dataset.action === "more") {
+        const open = document.body.classList.toggle("nav-open");
+        item.setAttribute("aria-expanded", open ? "true" : "false");
+        if (toggle) toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      } else if (item.dataset.tab) {
+        if (document.body.classList.contains("nav-open")) document.body.classList.remove("nav-open");
+        switchTab(item.dataset.tab);
+      }
+    });
+  }
 }
 
 function wireHomeFab() {
