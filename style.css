@@ -10,6 +10,12 @@
   --text-mute: #6b7280;
   --border: #e5e7eb;
   --shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  /* === academy (小學堂) design tokens === */
+  --soft: #f5fafb;
+  --soft-border: #e2e8ee;
+  --muted: #6b7785;
+  --radius-card: 16px;
+  --tap: 44px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,6 +26,9 @@
     --text-mute: #9ca3af;
     --border: #2d3748;
     --shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    --soft: #18212b;
+    --soft-border: #2d3748;
+    --muted: #9ca3af;
   }
 }
 
@@ -37,6 +46,8 @@ body {
     var(--bg-alt);
   background-attachment: fixed;
   color: var(--text);
+  font-size: 16px;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overscroll-behavior-y: contain;
 }
@@ -77,7 +88,9 @@ body {
 
 .topbar {
   position: relative;
-  padding: 14px 18px 12px;
+  padding: calc(env(safe-area-inset-top, 0px) + 16px) 20px 18px;
+  border-radius: 0 0 22px 22px;
+  box-shadow: 0 6px 18px rgba(1, 154, 179, 0.22);
   background:
     radial-gradient(circle at 90% -20%, rgba(255, 255, 255, 0.22), transparent 55%),
     radial-gradient(ellipse at -10% 110%, rgba(23, 181, 173, 0.55), transparent 60%),
@@ -125,9 +138,9 @@ body {
 .search-wrap { position: relative; margin-top: 10px; z-index: 100; }
 .search-wrap input {
   width: 100%;
-  padding: 9px 12px;
+  padding: 11px 14px;
   border: 1px solid rgba(255,255,255,0.4);
-  border-radius: 8px;
+  border-radius: 14px;
   font-size: 15px;
   background: rgba(255,255,255,0.95);
   color: #1a1a1a;
