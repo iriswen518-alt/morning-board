@@ -5633,30 +5633,48 @@ function renderLumpFundCards() {
   if (!funds.length) {
     return "<p style='color:var(--text-mute); padding:20px 0'>尚未提供精選基金清單</p>";
   }
-  return funds.map(f => {
+  const periods = [
+    { label: "近1月", get: f => f.perf_single?.['1m'] },
+    { label: "近3月", get: f => f.perf_single?.['3m'] },
+    { label: "今年來", get: f => f.perf?.ytd },
+    { label: "近1年", get: f => f.perf_single?.['1y'] },
+    { label: "近3年", get: f => f.perf_single?.['3y'] },
+    { label: "近5年", get: f => f.perf_single?.['5y'] }
+  ];
+  const fmtR = v => (v === null || v === undefined) ? "—" : `${Number(v).toFixed(2)}%`;
+  const cellClass = v => (v === null || v === undefined) ? "" : (v > 0 ? "up" : (v < 0 ? "down" : ""));
+  const tdBase = "padding:6px 8px;border-bottom:1px solid var(--border)";
+  const thBase = "padding:6px 8px;border-bottom:1px solid var(--border);background:#CCE8ED";
+
+  const headerCells = periods.map(p =>
+    `<th style="${thBase};text-align:right">${p.label}</th>`
+  ).join("");
+
+  const rows = funds.map(f => {
     const nameHtml = f.source_url
       ? `<a href="${f.source_url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${escapeHtml(f.name_zh)}</a>`
       : escapeHtml(f.name_zh);
-    const chips = currencyChip(f.currency);
-    return `
-    <div class="fund-card">
-      <h3 style="display:flex;align-items:center;flex-wrap:wrap;gap:6px">${nameHtml}${chips}</h3>
-      <div class="grid cols-9">
-        <div>
-          <label>淨值</label>
-          ${fmtNum(f.nav)} ${escapeHtml(f.currency || "")}
-        </div>
-        <div><label>淨值日</label>${f.nav_date ? escapeHtml(shortDate(f.nav_date)) : "—"}</div>
-        <div><label>日漲跌</label><span class="${pctClass(f.change_pct)}">${fmtPct(f.change_pct)}</span></div>
-        <div><label>近1月</label><span class="${pctClass(f.perf_single?.['1m'])}">${perfLink(fmtPct(f.perf_single?.['1m']), f.perf_url || f.source_url)}</span></div>
-        <div><label>近3月</label><span class="${pctClass(f.perf_single?.['3m'])}">${perfLink(fmtPct(f.perf_single?.['3m']), f.perf_url || f.source_url)}</span></div>
-        <div><label>今年來</label><span class="${pctClass(f.perf?.ytd)}">${perfLink(fmtPct(f.perf?.ytd), f.perf_url || f.source_url)}</span></div>
-        <div><label>近1年</label><span class="${pctClass(f.perf_single?.['1y'])}">${perfLink(fmtPct(f.perf_single?.['1y']), f.perf_url || f.source_url)}</span></div>
-        <div><label>近3年</label><span class="${pctClass(f.perf_single?.['3y'])}">${perfLink(fmtPct(f.perf_single?.['3y']), f.perf_url || f.source_url)}</span></div>
-        <div><label>近5年</label><span class="${pctClass(f.perf_single?.['5y'])}">${perfLink(fmtPct(f.perf_single?.['5y']), f.perf_url || f.source_url)}</span></div>
-      </div>
-    </div>`;
+    const chip = f.currency ? `<span style="margin-left:6px">${currencyChip(f.currency)}</span>` : "";
+    const cells = periods.map(p => {
+      const v = p.get(f);
+      return `<td style="${tdBase};text-align:right" class="${cellClass(v)}">${perfLink(fmtR(v), f.perf_url || f.source_url)}</td>`;
+    }).join("");
+    return `<tr><td style="${tdBase};white-space:nowrap">${nameHtml}${chip}</td>${cells}</tr>`;
   }).join("");
+
+  return `
+    <div style="overflow-x:auto">
+      <table style="width:100%;border-collapse:collapse;font-size:13px">
+        <thead>
+          <tr>
+            <th style="${thBase};text-align:left">名稱</th>
+            ${headerCells}
+          </tr>
+        </thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>
+  `;
 }
 
 function renderDcaFundCards() {
@@ -5664,32 +5682,51 @@ function renderDcaFundCards() {
   if (!list.length) {
     return "<p style='color:var(--text-mute); padding:20px 0'>尚未提供定期定額清單</p>";
   }
-  return list.map(f => {
+  const periods = [
+    { key: "1m", label: "近1月" },
+    { key: "3m", label: "近3月" },
+    { key: "6m", label: "近6月" },
+    { key: "1y", label: "近1年" },
+    { key: "3y", label: "近3年" },
+    { key: "5y", label: "近5年" }
+  ];
+  const fmtR = v => (v === null || v === undefined) ? "—" : `${Number(v).toFixed(2)}%`;
+  const cellClass = v => (v === null || v === undefined) ? "" : (v > 0 ? "up" : (v < 0 ? "down" : ""));
+  const tdBase = "padding:6px 8px;border-bottom:1px solid var(--border)";
+  const thBase = "padding:6px 8px;border-bottom:1px solid var(--border);background:#CCE8ED";
+
+  const headerCells = periods.map(p =>
+    `<th style="${thBase};text-align:right">${p.label}</th>`
+  ).join("");
+
+  const rows = list.map(f => {
     const nameHtml = f.source_url
-      ? `<a href="${f.source_url}" target="_blank" rel="noopener">${escapeHtml(f.name_zh)}</a>`
+      ? `<a href="${f.source_url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${escapeHtml(f.name_zh)}</a>`
       : escapeHtml(f.name_zh);
+    const curChip = f.currency ? `<span style="margin-left:6px">${currencyChip(f.currency)}</span>` : "";
     const catChip = f.category
-      ? `<span class="chip chip-default" style="background:#E5F2F5;color:var(--brand-deep)">${escapeHtml(f.category)}</span>`
+      ? `<span class="chip chip-default" style="background:#E5F2F5;color:var(--brand-deep);margin-left:6px;font-size:11px">${escapeHtml(f.category)}</span>`
       : "";
-    return `
-    <div class="fund-card">
-      <h3 style="display:flex;align-items:center;flex-wrap:wrap;gap:6px">${nameHtml}${currencyChip(f.currency)}${catChip}</h3>
-      <div class="grid cols-9">
-        <div>
-          <label>淨值</label>
-          ${fmtNum(f.nav)} ${escapeHtml(f.currency || "")}
-        </div>
-        <div><label>淨值日</label>${f.nav_date ? escapeHtml(shortDate(f.nav_date)) : "—"}</div>
-        <div><label>日漲跌</label><span class="${pctClass(f.change_pct)}">${fmtPct(f.change_pct)}</span></div>
-        <div><label>近1月</label><span class="${pctClass(f.perf_dca?.['1m'])}">${perfLink(fmtPct(f.perf_dca?.['1m']), f.perf_url || f.source_url)}</span></div>
-        <div><label>近3月</label><span class="${pctClass(f.perf_dca?.['3m'])}">${perfLink(fmtPct(f.perf_dca?.['3m']), f.perf_url || f.source_url)}</span></div>
-        <div><label>近6月</label><span class="${pctClass(f.perf_dca?.['6m'])}">${perfLink(fmtPct(f.perf_dca?.['6m']), f.perf_url || f.source_url)}</span></div>
-        <div><label>近1年</label><span class="${pctClass(f.perf_dca?.['1y'])}">${perfLink(fmtPct(f.perf_dca?.['1y']), f.perf_url || f.source_url)}</span></div>
-        <div><label>近3年</label><span class="${pctClass(f.perf_dca?.['3y'])}">${perfLink(fmtPct(f.perf_dca?.['3y']), f.perf_url || f.source_url)}</span></div>
-        <div><label>近5年</label><span class="${pctClass(f.perf_dca?.['5y'])}">${perfLink(fmtPct(f.perf_dca?.['5y']), f.perf_url || f.source_url)}</span></div>
-      </div>
-    </div>`;
+    const cells = periods.map(p => {
+      const v = f.perf_dca?.[p.key];
+      return `<td style="${tdBase};text-align:right" class="${cellClass(v)}">${perfLink(fmtR(v), f.perf_url || f.source_url)}</td>`;
+    }).join("");
+    return `<tr><td style="${tdBase};white-space:nowrap">${nameHtml}${curChip}${catChip}</td>${cells}</tr>`;
   }).join("");
+
+  return `
+    <div style="overflow-x:auto">
+      <table style="width:100%;border-collapse:collapse;font-size:13px">
+        <thead>
+          <tr>
+            <th style="${thBase};text-align:left">名稱</th>
+            ${headerCells}
+          </tr>
+        </thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>
+  `;
 }
 
 function renderBeatEtfCards() {
