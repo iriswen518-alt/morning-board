@@ -11,7 +11,8 @@
 // v12（2026-06-04）：手機數據表（指數／股票／排行）整列不換行，靠水平捲動，避免表頭與日期被折成兩行。
 // v13（2026-06-04）：海外債改為 indices 表格（白底表頭、整列不換行），並把基金比較／持股表頭統一白底；
 //   bump 快取版本強制清掉舊的 cmp-table（青色表頭＋換行）快取。
-const CACHE = "morning-board-v13";
+// v14（2026-06-04）：海外債表格全欄位強制單行不換行（obond-table，含價格欄日期子元素），任何螢幕寬度皆不折行。
+const CACHE = "morning-board-v14";
 
 self.addEventListener("install", e => {
   self.skipWaiting();
