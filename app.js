@@ -4252,6 +4252,7 @@ function wireSortableTables() {
 
 function renderRankingTable(items, opts) {
   const showCap = opts && opts.showMarketCap;
+  const showPE = opts && opts.showPE;
   if (!items || !items.length)
     return `<p style="color:var(--text-mute);padding:12px 0">尚未提供排行資料</p>`;
 
@@ -4262,6 +4263,7 @@ function renderRankingTable(items, opts) {
         ? `<a href="${escapeHtml(r.source_url)}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-decoration-style:dotted">${escapeHtml(r.name || r.symbol)}</a>`
         : escapeHtml(r.name || r.symbol)}</td>
       <td>${r.price == null ? "—" : Number(r.price).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>
+      ${showPE ? `<td>${fmtPE(r.pe, r.pe_kind)}</td>` : ""}
       <td class="${pctClass(r.daily_pct)}">${fmtPct(r.daily_pct)}</td>
       <td class="${pctClass(r.mtd_pct)}">${fmtPct(r.mtd_pct)}</td>
       <td class="${pctClass(r.ytd_pct)}">${fmtPct(r.ytd_pct)}</td>
@@ -4270,12 +4272,13 @@ function renderRankingTable(items, opts) {
 
   return `
     <table class="indices ranking-table">
-      ${showCap
-        ? `<colgroup><col style="width:7%"><col style="width:25%"><col style="width:16%"><col style="width:12%"><col style="width:12%"><col style="width:12%"><col style="width:16%"></colgroup>`
+      ${showPE
+        ? `<colgroup><col style="width:7%"><col style="width:22%"><col style="width:14%"><col style="width:11%"><col style="width:11%"><col style="width:11%"><col style="width:11%"><col style="width:13%"></colgroup>`
         : `<colgroup><col style="width:8%"><col style="width:30%"><col style="width:18%"><col style="width:14%"><col style="width:14%"><col style="width:16%"></colgroup>`}
       <thead><tr>
         <th style="text-align:center">排名</th><th style="text-align:left">名稱</th>
         <th class="sortable-th" title="收盤價；點選排序">收盤</th>
+        ${showPE ? `<th class="sortable-th" title="本益比（近四季 trailing；「預」=預估 forward）；點選排序">本益比</th>` : ""}
         <th class="sortable-th" title="當日漲跌；點選排序">日</th>
         <th class="sortable-th" title="本月至今(MTD)；點選排序">本月</th>
         <th class="sortable-th" title="今年至今(YTD)；點選排序">本年</th>
@@ -4292,23 +4295,29 @@ function fmtMarketCapZh(v) {
   return Number(v).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 }
 
+function fmtPE(pe, kind) {
+  if (pe == null) return "—";
+  const s = Number(pe).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  return kind === "forward" ? `${s} 預` : s;
+}
+
 function renderRankingsBlock(market) {
   if (FAILED_LOADS.has("rankings")) return "";
   const sec = (DATA.rankings && DATA.rankings[market]) || {};
   const blocks = [
-    ["市值前十大", sec.top_marketcap, true],
-    ["最大漲幅",   sec.top_gainers,   true],
-    ["最大跌幅",   sec.top_losers,    true],
-    ["ETF 排行榜", sec.top_etf,       false],
+    ["市值前十大", sec.top_marketcap, true,  true],
+    ["最大漲幅",   sec.top_gainers,   true,  true],
+    ["最大跌幅",   sec.top_losers,    true,  true],
+    ["ETF 排行榜", sec.top_etf,       false, false],
   ];
   return `
     <div style="margin-top:28px;padding-top:20px;border-top:1px solid var(--border)">
-      ${blocks.map(([title, items, cap]) => `
+      ${blocks.map(([title, items, cap, pe]) => `
           <h3 style="font-size:16px;margin:18px 0 8px">${title}</h3>
-          ${renderRankingTable(items, { showMarketCap: cap })}
+          ${renderRankingTable(items, { showMarketCap: cap, showPE: pe })}
         `).join("")}
       <p style="color:var(--text-mute);font-size:12px;margin:10px 0 0">
-        當日全市場掃描；點名稱可至 Yahoo／TWSE 驗證。本月=MTD，本年=YTD。</p>
+        當日全市場掃描；點名稱可至 Yahoo／TWSE 驗證。本月=MTD，本年=YTD。本益比為近四季（trailing），「預」=預估值（forward）。</p>
     </div>`;
 }
 
