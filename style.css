@@ -2309,3 +2309,15 @@ table.indices th.sortable-th {
 @media (prefers-color-scheme: dark) and (max-width: 768px) {
   .tabbar { background: rgba(26,33,42,0.96); border-top-color: var(--soft-border); }
 }
+
+/* === 股票表格欄寬對齊（美股/台股；含本益比欄）=== */
+table.indices.stock-cols { table-layout: fixed; width: 100%; }
+table.indices.stock-cols th, table.indices.stock-cols td {
+  text-align: right; font-variant-numeric: tabular-nums;
+  overflow: hidden; text-overflow: ellipsis;
+}
+table.indices.stock-cols th:first-child, table.indices.stock-cols td:first-child {
+  text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+table.indices.stock-cols col.c-name { width: 34%; }
+table.indices.stock-cols col.c-num { width: 11%; }

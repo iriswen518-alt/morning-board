@@ -4207,7 +4207,8 @@ function renderStocksTable(title, list) {
   }).join("");
   return `
     ${title ? `<h3>${title}</h3>` : ""}
-    <table class="indices">
+    <table class="indices stock-cols">
+      <colgroup><col class="c-name"><col class="c-num"><col class="c-num"><col class="c-num"><col class="c-num"><col class="c-num"><col class="c-num"></colgroup>
       <thead><tr>
         <th>名稱</th>
         <th class="sortable-th" title="收盤價，來源見名稱欄連結；點選排序">收盤</th>
