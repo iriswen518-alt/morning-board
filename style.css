@@ -2416,3 +2416,16 @@ table.indices.stock-cols col.c-num { width: 11%; }
 #content table.obond-table td * {
   white-space: nowrap;
 }
+
+/* === 基金表格(freeze-col1)凍結名稱欄：可換行顯示「商品全名」===
+   原本全站凍結第一欄是 nowrap + max-width:42vw + 省略號截斷，基金名稱太長被切掉。
+   這裡針對基金表格把名稱欄改成可換行（!important 蓋過 inline 的 white-space:nowrap），
+   名稱往下折行、完整呈現；欄位仍凍結釘左，數字欄照常水平捲動。 */
+#content table.freeze-col1 th:first-child,
+#content table.freeze-col1 td:first-child {
+  white-space: normal !important;
+  overflow: visible;
+  text-overflow: clip;
+  max-width: 46vw;
+  vertical-align: top;
+}
