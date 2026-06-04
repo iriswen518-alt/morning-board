@@ -9,7 +9,9 @@
 //   （真正做到「顯示快取資料」），順帶解決舊版每抓一次就多存一筆、快取無限長大的問題。
 // v11（2026-06-04）：市值欄取整數顯示（億整數、兆保留 1 位小數）＋不換行（.mcap nowrap，含手機）。
 // v12（2026-06-04）：手機數據表（指數／股票／排行）整列不換行，靠水平捲動，避免表頭與日期被折成兩行。
-const CACHE = "morning-board-v12";
+// v13（2026-06-04）：海外債改為 indices 表格（白底表頭、整列不換行），並把基金比較／持股表頭統一白底；
+//   bump 快取版本強制清掉舊的 cmp-table（青色表頭＋換行）快取。
+const CACHE = "morning-board-v13";
 
 self.addEventListener("install", e => {
   self.skipWaiting();
