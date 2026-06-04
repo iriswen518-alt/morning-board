@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#019AB3">
+<title>理財小幫手・安裝到手機</title>
+<link rel="stylesheet" href="../style.css?v=20260604-0918">
+<link rel="stylesheet" href="install.css?v=20260604-1">
+<style>
+  .home-fab { display: none; }
+  @media (max-width: 640px) {
+    .nav-toggle,
+    .main-nav { display: none !important; }
+    .home-fab {
+      display: inline-flex;
+      position: fixed;
+      right: 18px;
+      bottom: calc(18px + env(safe-area-inset-bottom, 0px));
+      z-index: 90;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #019AB3, #17B5AD);
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      box-shadow: 0 6px 18px rgba(1, 154, 179, 0.32);
+    }
+    .home-fab svg { width: 18px; height: 18px; flex: 0 0 18px; stroke: currentColor; }
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <h1>理財小幫手</h1>
+</header>
+
+<nav class="main-nav">
+  <a class="main-tab" href="../#market"><svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a13 13 0 0 1 0 18M12 3a13 13 0 0 0 0 18"/></svg><span>全球市場</span></a>
+  <a class="main-tab" href="../#news"><svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h13a2 2 0 0 1 2 2v11a2 2 0 0 0 2-2V8"/><path d="M4 5v13a2 2 0 0 0 2 2h13"/><path d="M8 9h7M8 13h7M8 17h5"/></svg><span>重要新聞</span></a>
+  <a class="main-tab" href="../#funds"><svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18"/><rect x="5" y="13" width="3" height="7" rx="0.5"/><rect x="10.5" y="9" width="3" height="11" rx="0.5"/><rect x="16" y="5" width="3" height="15" rx="0.5"/></svg><span>精選基金</span></a>
+  <a class="main-tab" href="../#obonds"><svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h9l4 4v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M14 3v5h5"/><path d="M8 13h8M8 17h5"/><circle cx="15.5" cy="17" r="1.7"/></svg><span>精選海外債</span></a>
+  <a class="main-tab" href="../#usstocks"><svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 14l3-3 3 3 3-5"/><path d="M14 9h3v3"/></svg><span>海外股票</span></a>
+  <a class="main-tab" href="../#insurance"><svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v5c0 4.5-3.2 8.5-8 10-4.8-1.5-8-5.5-8-10V6l8-3z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg><span>精選保險</span></a>
+  <a class="main-tab" href="../#alloc"><svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v9h9"/><path d="M12 12L5.5 17"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/></svg><span>資產配置</span></a>
+  <a class="main-tab" href="../academy/"><svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6a2 2 0 0 1 2-2h11l3 3v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M8 8h7M8 12h7M8 16h5"/></svg><span>小學堂</span></a>
+  <a class="main-tab active" href="index.html"><svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v10"/><path d="M8 11l4 4 4-4"/><path d="M5 21h14"/></svg><span>安裝</span></a>
+</nav>
+
+<main class="install-main">
+  <div class="install-hero">
+    <div class="install-hero-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M11 18h2"/></svg>
+    </div>
+    <div class="install-hero-meta">
+      <h2 class="install-hero-title">📲 安裝 理財小幫手到手機</h2>
+      <p class="install-hero-desc">把它加到手機主畫面，之後一點圖示就能打開，全螢幕、像一個真正的 App。免下載、免帳號。</p>
+    </div>
+  </div>
+
+  <p id="installed-note" class="install-installed" hidden>✅ 你已經安裝好了，可以直接從主畫面打開。</p>
+
+  <div id="install-grid" class="install-grid">
+    <section id="ios-card" class="install-card">
+      <h3 class="install-card-title">iPhone（請用 Safari 開啟）</h3>
+      <p id="ios-non-safari-hint" class="install-hint" hidden>⚠️ 目前不是用 Safari 開啟，請改用 Safari 開這個頁面才能安裝。</p>
+      <ol class="install-steps">
+        <li>點畫面下方的「分享」<span class="ios-share-glyph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13"/><path d="M8 7l4-4 4 4"/><path d="M5 12v7a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-7"/></svg></span>圖示</li>
+        <li>在選單往下捲動</li>
+        <li>點「加入主畫面」</li>
+        <li>右上角點「加入」即完成</li>
+      </ol>
+    </section>
+
+    <section id="android-card" class="install-card">
+      <h3 class="install-card-title">Android（請用 Chrome 開啟）</h3>
+      <button id="android-install-btn" class="install-btn" type="button" hidden>一鍵安裝</button>
+      <p id="android-installed-msg" class="install-installed" hidden>✅ 已安裝，可從主畫面打開。</p>
+      <p class="install-hint">若沒看到「一鍵安裝」按鈕，請手動安裝：</p>
+      <ol class="install-steps">
+        <li>點右上角選單「⋮」</li>
+        <li>點「安裝應用程式」或「加入主畫面」</li>
+        <li>點「安裝」即完成</li>
+      </ol>
+    </section>
+  </div>
+
+  <section class="qr-card">
+    <h3 class="install-card-title">用手機掃描安裝</h3>
+    <p class="install-hint">同事用手機相機掃這個 QR code，就會打開這一頁。</p>
+    <img class="qr-img" src="qr.png" alt="安裝頁 QR code" width="220" height="220">
+  </section>
+</main>
+
+<a class="home-fab" href="../" aria-label="回首頁">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12l9-9 9 9"/><path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"/></svg>
+  <span>首頁</span>
+</a>
+
+<footer class="disclaimer">
+  資料僅供內部參考，不構成任何投資建議
+</footer>
+
+<script src="install.js?v=20260604-1"></script>
+</body>
+</html>
