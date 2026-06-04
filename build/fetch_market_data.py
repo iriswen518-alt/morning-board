@@ -105,12 +105,15 @@ COMMODITIES = [
 ]
 
 # 公債:(顯示名稱, 取得方式, 來源代碼)
-#   yahoo  → Yahoo chart API(殖利率指數)
-#   fred   → FRED CSV
-#   none   → 無免費日資料源,下游 websearch 補當前殖利率一格
+#   yahoo    → Yahoo chart API(殖利率指數)
+#   ecb      → ECB SDW CSV
+#   treasury → 美國財政部每日公債殖利率曲線 CSV(官方、免金鑰、雲端可達)
+#   fred     → FRED CSV(已棄用:2026-06 起 FRED 對非瀏覽器/資料中心 IP 連線 tarpitting,改用 treasury)
+#   none     → 無免費日資料源,下游 websearch 補當前殖利率一格
 BONDS = [
     ("US 10-Year", "yahoo", "^TNX"),
-    ("US 2-Year", "fred", "DGS2"),
+    # 2026-06-04：FRED DGS2 連線被 tarpit(雲端與本機皆 timeout)→ 改用財政部官方殖利率曲線 "2 Yr"
+    ("US 2-Year", "treasury", "2 Yr"),
     # 2026-05-25：Germany 10Y 改用 ECB SDW（日頻率公開資料），可算 daily/MTD bps
     ("Germany 10-Year", "ecb", "YC.B.U2.EUR.4F.G_N_A.SV_C_YM.SR_10Y"),
     # Japan/UK 10Y 目前無免費日頻率資料源；保留 yahoo websearch 補當前殖利率（單格）
@@ -208,6 +211,54 @@ def fred_series(series_id: str) -> list[tuple[dt.date, float]]:
     if not out:
         raise RuntimeError(f"FRED fetch failed for {series_id}")
     return out
+
+
+def _treasury_year_csv(tenor: str, year: int) -> list[tuple[dt.date, float]]:
+    """單一年度的財政部每日公債殖利率曲線 → [(date, value)]。tenor = 表頭欄名(如 '2 Yr')。"""
+    url = (
+        "https://home.treasury.gov/resource-center/data-chart-center/"
+        f"interest-rates/daily-treasury-rates.csv/{year}/all"
+        f"?type=daily_treasury_yield_curve&field_tdr_date_value={year}"
+        "&page&_format=csv"
+    )
+    raw = http_get(url).decode("utf-8", "replace")
+    reader = csv.reader(io.StringIO(raw))
+    rows = list(reader)
+    if not rows:
+        return []
+    header = [h.strip() for h in rows[0]]
+    try:
+        col = header.index(tenor)
+    except ValueError:
+        raise RuntimeError(f"Treasury CSV missing column {tenor!r}; got {header}")
+    out: list[tuple[dt.date, float]] = []
+    for row in rows[1:]:
+        if len(row) <= col:
+            continue
+        try:
+            d = dt.datetime.strptime(row[0].strip(), "%m/%d/%Y").date()
+            v = float(row[col].strip())
+        except (ValueError, IndexError):
+            continue
+        out.append((d, v))
+    return out
+
+
+def treasury_series(tenor: str, run_date: dt.date) -> list[tuple[dt.date, float]]:
+    """美國財政部每日公債殖利率曲線(par yield)→ [(date, value)] 升冪。
+    抓取收盤年與前一年,確保月初/年初基準(含 1 月跨年)齊備。FRED 替代源。"""
+    years = sorted({run_date.year, run_date.year - 1})
+    merged: dict[dt.date, float] = {}
+    last_err: Optional[Exception] = None
+    for y in years:
+        try:
+            for d, v in _treasury_year_csv(tenor, y):
+                merged[d] = v
+        except Exception as e:  # noqa: BLE001
+            last_err = e
+    if not merged:
+        raise RuntimeError(f"Treasury fetch failed for {tenor!r}: {last_err}")
+    return sorted(merged.items())
 
 
 # ----------------------------------------------------------------------
@@ -369,6 +420,8 @@ def build_bond_rows(run_date, warnings) -> list[dict]:
                 series = yahoo_series(code)
             elif kind == "ecb":
                 series = ecb_series(code)
+            elif kind == "treasury":
+                series = treasury_series(code, run_date)
             else:
                 series = fred_series(code)
             c = compute(series, run_date)
@@ -556,7 +609,7 @@ def validate(payload: dict, prev: Optional[dict]) -> dict:
     # 4. 公債:US 兩檔核心殖利率缺失。資料源「暫時」抓取失敗 → 降級為 warning
     #    (誠實顯示 n/a,整份報告照常發佈);非抓取失敗的缺值才視為 error。
     for r in payload["bonds"]:
-        if r["source"] in ("yahoo", "fred") and r["yield"] is None:
+        if r["source"] in ("yahoo", "fred", "treasury", "ecb") and r["yield"] is None:
             if str(r.get("note", "")).startswith("fetch failed"):
                 warnings.append(f"[bonds] {r['name']} 殖利率暫缺(資料源失敗,顯示 n/a)")
             else:
