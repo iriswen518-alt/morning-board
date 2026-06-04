@@ -1,9 +1,13 @@
-// Network-first with cache fallback (v9)
+// Network-first with cache fallback (v10)
 // 永遠優先網路（拿最新），失敗時用上次成功的快取。
 // 兼顧「總是新」+「網路 blip 時不爆」。
 // v8（2026-05-27）：新增重要新聞 stale banner（news_date != today 時顯示警示）。
 // v9（2026-05-29）：台股籌碼日期改 T86/MI_MARGN 各自獨立解析，清掉舊版鎖日的快取。
-const CACHE = "morning-board-v9";
+// v10（2026-06-04）：修「網路瞬斷整頁空白」— app.js 抓 data/*.json 時帶 ?t=<時間戳> 破壞快取，
+//   舊版 caches.match(req) 連 ?t= 一起比對，永遠對不上上次存的那筆，於是退路失效、整頁空。
+//   改成 data/*.json 用「去掉 ?t= 的固定 key」存取，瞬斷時才能退回上次成功抓到的資料
+//   （真正做到「顯示快取資料」），順帶解決舊版每抓一次就多存一筆、快取無限長大的問題。
+const CACHE = "morning-board-v10";
 
 self.addEventListener("install", e => {
   self.skipWaiting();
@@ -19,18 +23,32 @@ self.addEventListener("activate", e => {
   })());
 });
 
+// 自家 data/*.json 的快取 key：去掉 ?t= 破壞快取參數，固定成同一個 key。
+// 這樣每次抓成功都覆蓋同一筆（不會無限長大），網路失敗時也能比對到上次那筆。
+// 其他請求（app shell、跨網域 API）維持原樣，避免誤把帶參數的 API 回應張冠李戴。
+function cacheKeyFor(request) {
+  const url = new URL(request.url);
+  if (url.origin === self.location.origin
+      && url.pathname.includes("/data/")
+      && url.pathname.endsWith(".json")) {
+    return new Request(url.origin + url.pathname); // 不含 query
+  }
+  return request;
+}
+
 self.addEventListener("fetch", e => {
   const req = e.request;
+  const key = cacheKeyFor(req);
   e.respondWith((async () => {
     try {
       const fresh = await fetch(req, { cache: "no-store" });
       if (fresh && fresh.ok) {
         const clone = fresh.clone();
-        caches.open(CACHE).then(c => c.put(req, clone)).catch(() => {});
+        caches.open(CACHE).then(c => c.put(key, clone)).catch(() => {});
       }
       return fresh;
     } catch (err) {
-      const cached = await caches.match(req);
+      const cached = await caches.match(key);
       if (cached) return cached;
       return new Response("offline", { status: 503 });
     }

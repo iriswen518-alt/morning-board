@@ -574,7 +574,7 @@ async function init() {
   switchTab(CURRENT_TAB);
 
   if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("service-worker.js?v=20260529-2045").catch(() => {});
+    navigator.serviceWorker.register("service-worker.js?v=20260604-v10").catch(() => {});
   }
 
   wireSortableTables();
