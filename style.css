@@ -446,6 +446,10 @@ table.indices th.sortable-th {
 /* 桌面維持表格；手機才用卡片 */
 @media (min-width: 769px) { .idx-cards { display: none; } }
 @media (max-width: 768px) { table.indices.has-cards { display: none !important; } }
+/* 深色模式：--brand-deep（深藍）在近黑卡片上對比不足，改用亮青色標題 */
+@media (prefers-color-scheme: dark) {
+  .idx-card .idx-nm, .fund-card h3 { color: #5cc8da; }
+}
 .quote-link {
   font-size: 12px;
   color: var(--text-mute);
