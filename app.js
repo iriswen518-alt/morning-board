@@ -1200,10 +1200,10 @@ function _recalcSwap(root) {
     </tbody></table>`;
 
   const pnlCls = v => (v == null || isNaN(v)) ? "" : (v >= 0 ? "up" : "down");
-  const scen = [-2, -1, 1, 2].map(d => {
+  const scen = [-2, -1, 0, 1, 2].map(d => {
     const o = scenarioPnl(oldB, face, d);
     const n = scenarioPnl(newB, newFace, d);
-    const tag = d < 0 ? "降息" : "升息";
+    const tag = d < 0 ? "降息" : (d > 0 ? "升息" : "利率不變");
     return `<tr><td class="cmp-td-l">${d>0?"+":""}${d.toFixed(1)}%（${tag}）</td>
       <td class="${pnlCls(o)}">${_swapMoney(o)}</td><td class="${pnlCls(n)}">${_swapMoney(n)}</td></tr>`;
   }).join("");

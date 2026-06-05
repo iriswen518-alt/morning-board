@@ -19,7 +19,8 @@
 // v19（2026-06-05）：標頭加「僅測試使用」警語標示。
 // v20（2026-06-05）：換券試算選券卡片加走勢示意圖（依週/月/季報酬推估）。
 // v21（2026-06-05）：走勢圖滑過/點選顯示各時點價格＋換券比較加兩檔重訂基準走勢對照。
-const CACHE = "morning-board-v21";
+// v22（2026-06-05）：雙向利率情境加「0%（利率不變）」列。
+const CACHE = "morning-board-v22";
 
 self.addEventListener("install", e => {
   self.skipWaiting();
