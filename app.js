@@ -1117,13 +1117,13 @@ function _recalcSwap(root) {
       <tr><td class="cmp-td-l">信用評等</td><td>${escapeHtml(oldB.rating||"—")}</td><td>${escapeHtml(newB.rating||"—")}</td><td>—</td></tr>
     </tbody></table>`;
 
+  const pnlCls = v => (v == null || isNaN(v)) ? "" : (v >= 0 ? "up" : "down");
   const scen = [-2, -1, 1, 2].map(d => {
     const o = scenarioPnl(oldB, face, d);
     const n = scenarioPnl(newB, newFace, d);
-    const cls = d < 0 ? "up" : "down";
     const tag = d < 0 ? "降息" : "升息";
     return `<tr><td class="cmp-td-l">${d>0?"+":""}${d.toFixed(1)}%（${tag}）</td>
-      <td class="${cls}">${_swapMoney(o)}</td><td class="${cls}">${_swapMoney(n)}</td></tr>`;
+      <td class="${pnlCls(o)}">${_swapMoney(o)}</td><td class="${pnlCls(n)}">${_swapMoney(n)}</td></tr>`;
   }).join("");
 
   out.innerHTML = `

@@ -15,7 +15,8 @@
 // v15（2026-06-04）：基金表格凍結名稱欄改為可換行，完整顯示基金商品全名。
 // v16（2026-06-04）：股票價格欄一律不顯示 $ 符號（含美股），與台股一致。
 // v17（2026-06-05）：配色還原回原本的青藍主題（撤掉 06-05 早上誤併入的暖色改版），bump 強制清掉暖色 CSS 快取。
-const CACHE = "morning-board-v17";
+// v18（2026-06-05）：海外債新增「換券試算」子分頁＋全清單資料 overseas_bonds_all.json。
+const CACHE = "morning-board-v18";
 
 self.addEventListener("install", e => {
   self.skipWaiting();
