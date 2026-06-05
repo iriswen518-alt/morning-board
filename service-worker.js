@@ -14,7 +14,8 @@
 // v14（2026-06-04）：海外債表格全欄位強制單行不換行（obond-table，含價格欄日期子元素），任何螢幕寬度皆不折行。
 // v15（2026-06-04）：基金表格凍結名稱欄改為可換行，完整顯示基金商品全名。
 // v16（2026-06-04）：股票價格欄一律不顯示 $ 符號（含美股），與台股一致。
-const CACHE = "morning-board-v16";
+// v17（2026-06-05）：配色還原回原本的青藍主題（撤掉 06-05 早上誤併入的暖色改版），bump 強制清掉暖色 CSS 快取。
+const CACHE = "morning-board-v17";
 
 self.addEventListener("install", e => {
   self.skipWaiting();
