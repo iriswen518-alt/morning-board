@@ -5729,16 +5729,35 @@ function renderLumpFundCards() {
     `<th style="${thBase};text-align:right">${p.label}</th>`
   ).join("");
 
+  // 商品屬性中文標籤：以基金 id 對照（精準），未知者退回 category 代碼對照
+  const LUMP_CAT = {
+    franklin_em_income: "新興市場債",
+    franklin_corporate_bond: "公司債",
+    franklin_sinoam_multi_asset: "多重資產",
+    amundi_em_bond: "新興市場債",
+    amundi_global_strategic: "全球股債",
+    schroder_global_income: "全球股債",
+    pinebridge_japan_multi_asset: "日本多重資產",
+    first_global_utilities: "基建／公用",
+    allianz_tw_tech: "台股科技",
+    ab_intl_tech: "科技"
+  };
+  const LUMP_CAT_CODE = { tech: "科技", income: "月收益", balanced: "多重資產", bond: "債券" };
+
   const rows = funds.map(f => {
     const nameHtml = f.source_url
       ? `<a href="${f.source_url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${escapeHtml(f.name_zh)}</a>`
       : escapeHtml(f.name_zh);
     const chip = f.currency ? `<span style="margin-left:6px">${currencyChip(f.currency)}</span>` : "";
+    const catLabel = LUMP_CAT[f.id] || LUMP_CAT_CODE[f.category] || "";
+    const catChip = catLabel
+      ? `<span class="chip chip-default" style="background:#E5F2F5;color:var(--brand-deep);margin-left:6px;font-size:11px">${escapeHtml(catLabel)}</span>`
+      : "";
     const cells = periods.map(p => {
       const v = p.get(f);
       return `<td style="${tdBase};text-align:right" class="${cellClass(v)}">${perfLink(fmtR(v), f.perf_url || f.source_url)}</td>`;
     }).join("");
-    return `<tr><td style="${tdBase};white-space:nowrap">${nameHtml}${chip}</td>${cells}</tr>`;
+    return `<tr><td style="${tdBase};white-space:nowrap">${nameHtml}${chip}${catChip}</td>${cells}</tr>`;
   }).join("");
 
   return `
