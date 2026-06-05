@@ -2,33 +2,44 @@
   --brand-primary: #019AB3;
   --brand-secondary: #17B5AD;
   --brand-deep: #003D91;
+  /* === 幸福暖色 accents（人生四季・財富同行） === */
+  --warm-gold: #F0B445;
+  --warm-gold-deep: #C8841A;
+  --warm-pink: #F2849A;
+  --warm-pink-deep: #D9577A;
+  --warm-green: #8FBF6A;
+  --warm-green-deep: #5FA05A;
+  --warm-coral: #E86A52;
+  --cream: #FCEFD9;
   --up: #d62828;
   --down: #2a9d8f;
   --bg: #ffffff;
-  --bg-alt: #f5f8fa;
-  --text: #1a1a1a;
-  --text-mute: #6b7280;
-  --border: #e5e7eb;
-  --shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --bg-alt: #FBEAD0;
+  --card-bg: #FFF8EA;
+  --text: #241f17;
+  --text-mute: #7a7060;
+  --border: #ece2d2;
+  --shadow: 0 4px 14px rgba(176, 132, 60, 0.10);
   /* === academy (小學堂) design tokens === */
-  --soft: #f5fafb;
-  --soft-border: #e2e8ee;
-  --muted: #6b7785;
-  --radius-card: 16px;
+  --soft: #FBF7F0;
+  --soft-border: #ece2d2;
+  --muted: #7a7060;
+  --radius-card: 18px;
   --tap: 44px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #0f1419;
-    --bg-alt: #1a212a;
-    --text: #f3f4f6;
-    --text-mute: #9ca3af;
-    --border: #2d3748;
-    --shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-    --soft: #18212b;
-    --soft-border: #2d3748;
-    --muted: #9ca3af;
+    --bg: #16110b;
+    --bg-alt: #1d170f;
+    --card-bg: #231c13;
+    --text: #f5efe5;
+    --text-mute: #b8ab97;
+    --border: #3a3024;
+    --shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+    --soft: #211a11;
+    --soft-border: #3a3024;
+    --muted: #b8ab97;
   }
 }
 
@@ -40,9 +51,10 @@ body {
   margin: 0;
   font-family: -apple-system, "Noto Sans CJK TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
   background:
-    radial-gradient(ellipse 80% 60% at 0% 0%, rgba(1, 154, 179, 0.08), transparent 60%),
-    radial-gradient(ellipse 60% 50% at 100% 0%, rgba(23, 181, 173, 0.09), transparent 60%),
-    radial-gradient(ellipse 70% 40% at 50% 100%, rgba(0, 61, 145, 0.05), transparent 70%),
+    radial-gradient(ellipse 90% 55% at -5% -2%, rgba(240, 180, 69, 0.42), transparent 58%),
+    radial-gradient(ellipse 80% 55% at 105% 3%, rgba(242, 132, 154, 0.38), transparent 60%),
+    radial-gradient(ellipse 95% 45% at 50% 104%, rgba(143, 191, 106, 0.34), transparent 66%),
+    radial-gradient(ellipse 70% 45% at 100% 100%, rgba(1, 154, 179, 0.18), transparent 68%),
     var(--bg-alt);
   background-attachment: fixed;
   color: var(--text);
@@ -92,8 +104,9 @@ body {
   border-radius: 0 0 22px 22px;
   box-shadow: 0 6px 18px rgba(1, 154, 179, 0.22);
   background:
-    radial-gradient(circle at 90% -20%, rgba(255, 255, 255, 0.22), transparent 55%),
-    radial-gradient(ellipse at -10% 110%, rgba(23, 181, 173, 0.55), transparent 60%),
+    radial-gradient(circle at 90% -12%, rgba(255, 205, 110, 0.62), transparent 52%),
+    radial-gradient(circle at 8% -22%, rgba(242, 122, 150, 0.58), transparent 54%),
+    radial-gradient(ellipse at -10% 118%, rgba(143, 191, 106, 0.50), transparent 60%),
     linear-gradient(135deg, #003D91 0%, #019AB3 55%, #17B5AD 100%);
   color: white;
   overflow: hidden;
@@ -103,7 +116,7 @@ body {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 70% 130%, rgba(255, 217, 107, 0.18), transparent 45%);
+    radial-gradient(circle at 70% 130%, rgba(255, 217, 107, 0.32), transparent 48%);
   pointer-events: none;
 }
 .topbar::after {
@@ -240,6 +253,11 @@ body {
   color: var(--brand-deep);
   font-weight: 700;
 }
+/* 人生四季：各分頁的當頁季節色 */
+.main-tab[data-tab="funds"].active    { color: var(--warm-gold-deep); }
+.main-tab[data-tab="obonds"].active   { color: var(--warm-green-deep); }
+.main-tab[data-tab="usstocks"].active { color: #C24A30; }
+.main-tab[data-tab="insurance"].active{ color: var(--warm-pink-deep); }
 
 @media (prefers-color-scheme: dark) {
   .main-nav {
@@ -267,10 +285,18 @@ body {
 #content > h3:first-child,
 #content h3.section-title:first-child { margin-top: 4px; }
 #content h3.section-title::before,
-#content > h3::before { display: none; }
+#content > h3::before {
+  display: inline-block;
+  content: "";
+  width: 9px; height: 9px;
+  margin-right: 9px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--warm-gold), var(--warm-pink-deep));
+  vertical-align: middle;
+}
 
 #content table.indices {
-  background: var(--bg);
+  background: var(--card-bg);
   border-radius: 12px;
   padding: 4px 12px;
   box-shadow: var(--shadow);
@@ -289,13 +315,35 @@ body {
 }
 
 .card {
-  background: var(--bg);
-  border-radius: 14px;
+  position: relative;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
   padding: 16px;
   box-shadow: var(--shadow);
   opacity: 0;
   transform: translateY(20px);
   animation: cardIn 0.4s ease-out forwards;
+  overflow: hidden;
+}
+/* 幸福暖色：卡片頂端柔和四季光條 */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--warm-gold) 0%, var(--warm-pink) 38%, var(--brand-primary) 72%, var(--warm-green) 100%);
+  opacity: 1;
+}
+/* 卡片右下角的柔和暖色光暈，讓卡片更有色彩 */
+.card::after {
+  content: "";
+  position: absolute;
+  right: -30px; bottom: -30px;
+  width: 130px; height: 130px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(240, 180, 69, 0.16), transparent 70%);
+  pointer-events: none;
 }
 
 .card:nth-child(1) { animation-delay: 0ms; }
@@ -2294,6 +2342,11 @@ table.indices th.sortable-th {
     border-color: var(--brand-primary);
     font-weight: 600;
   }
+  .main-tab[data-tab="news"].active     { background: linear-gradient(135deg, #2E5BC0, var(--brand-deep)); border-color: var(--brand-deep); }
+  .main-tab[data-tab="funds"].active    { background: linear-gradient(135deg, var(--warm-gold), #E29A2A); border-color: var(--warm-gold-deep); }
+  .main-tab[data-tab="obonds"].active   { background: linear-gradient(135deg, var(--warm-green), var(--warm-green-deep)); border-color: var(--warm-green-deep); }
+  .main-tab[data-tab="usstocks"].active { background: linear-gradient(135deg, var(--warm-coral), #D9573C); border-color: #C24A30; }
+  .main-tab[data-tab="insurance"].active{ background: linear-gradient(135deg, var(--warm-pink), var(--warm-pink-deep)); border-color: var(--warm-pink-deep); }
 }
 
 /* === 底部分頁列（手機限定）=== */
@@ -2317,6 +2370,9 @@ table.indices th.sortable-th {
   }
   .tabbar-item svg { width: 23px; height: 23px; }
   .tabbar-item.active { color: var(--brand-primary); }
+  .tabbar-item[data-tab="news"].active   { color: var(--brand-deep); }
+  .tabbar-item[data-tab="funds"].active  { color: var(--warm-gold-deep); }
+  .tabbar-item[data-tab="obonds"].active { color: var(--warm-green-deep); }
   /* 內容區底部留白，避免被底部列遮住 */
   #content { padding-bottom: calc(var(--tap) + 44px + env(safe-area-inset-bottom, 0px)); }
   /* 舊的頂部下拉鈕與回首頁 FAB 由底部列取代 */
