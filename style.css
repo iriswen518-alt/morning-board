@@ -2430,6 +2430,18 @@ table.indices.stock-cols col.c-num { width: 11%; }
   vertical-align: top;
 }
 
+/* ===== 僅測試使用 標示 ===== */
+.test-badge {
+  display: inline-block; vertical-align: middle; margin-left: 8px;
+  padding: 2px 10px; border-radius: 999px;
+  background: #d9534f; color: #fff;
+  font-size: 13px; font-weight: 700; letter-spacing: .5px;
+}
+.test-note {
+  margin: 4px 0 0; font-size: 12px; line-height: 1.5;
+  color: rgba(255, 255, 255, .9);
+}
+
 /* ===== 換券試算 ===== */
 .swap-disclaimer { font-size: 12px; color: var(--text-mute); line-height: 1.6; margin: 8px 0 14px; }
 .swap-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
