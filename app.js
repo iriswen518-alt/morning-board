@@ -661,10 +661,11 @@ function switchTab(name) {
   if (name === "wealth") wireWealthTabs();
   if (name === "calc") wireCalcTabs();
   if (name === "twstock") wireTwStock();
+  if (name === "obonds") { SWAP_PICK = { old: null, new: null }; wireObondsTabs(); }
   if (PENDING_SUBTAB) {
     const sub = PENDING_SUBTAB;
     PENDING_SUBTAB = null;
-    const sel = ["mtab", "atab", "ttab", "ctab", "wtab", "ntab", "ftab", "prtab"]
+    const sel = ["mtab", "atab", "ttab", "ctab", "wtab", "ntab", "ftab", "prtab", "otab"]
       .map(a => `.tab[data-${a}="${sub}"]`).join(",");
     const subBtn = document.querySelector(sel);
     if (subBtn) subBtn.click();
@@ -992,7 +993,192 @@ function renderObondsSheet() {
     </div>
   `;
 
-  return cards + moreSection;
+  const listView = cards + moreSection;
+  return `
+    <div class="tabs tabs-wrap" role="tablist">
+      <button class="tab active" data-otab="list" role="tab">精選海外債</button>
+      <button class="tab" data-otab="swap" role="tab">換券試算</button>
+    </div>
+    <div class="otab-panel" data-otab-panel="list">${listView}</div>
+    <div class="otab-panel" data-otab-panel="swap" hidden>${renderSwapCalc()}</div>
+  `;
+}
+
+function renderSwapCalc() {
+  const qb = (DATA.obonds_all && DATA.obonds_all.quote_basis) || "";
+  const dateNote = qb ? `（報價基準日：${escapeHtml(shortDate(qb))}）` : "";
+  return `
+  <p class="swap-disclaimer">本工具僅為試算參考，非投資建議或要約；數據為每日報價${dateNote}，實際損益依市場成交為準。</p>
+
+  <div class="swap-grid">
+    <div class="fund-card swap-side" data-side="old">
+      <h3>① 舊券（你的庫存）</h3>
+      <div class="swap-search">
+        <input type="text" class="swap-q" data-side="old" placeholder="輸入代碼或名稱關鍵字，例：FECB 或 蘋果" autocomplete="off">
+        <div class="swap-results" data-side="old" hidden></div>
+      </div>
+      <div class="swap-picked" data-side="old" hidden></div>
+      <label class="swap-field">庫存面額（原幣）
+        <input type="number" class="swap-face" data-side="old" min="0" step="1000" placeholder="例：200000">
+      </label>
+    </div>
+
+    <div class="fund-card swap-side" data-side="new">
+      <h3>② 新券（想換的）</h3>
+      <div class="swap-search">
+        <input type="text" class="swap-q" data-side="new" placeholder="輸入代碼或名稱關鍵字" autocomplete="off">
+        <div class="swap-results" data-side="new" hidden></div>
+      </div>
+      <div class="swap-picked" data-side="new" hidden></div>
+      <div class="swap-field swap-auto" data-auto="new">自動換算申購面額：<b data-auto-face>—</b>　交易後剩餘現金：<b data-auto-cash>—</b></div>
+    </div>
+  </div>
+
+  <div class="swap-riskgate fund-card">
+    <h3>看試算結果前，請先了解風險</h3>
+    <ul class="swap-risklist">
+      <li><b>利率風險：</b>利率上升時債券價格下跌，年期（存續期）越長，跌得越多。</li>
+      <li><b>信用風險：</b>發行人財務惡化或違約，可能影響利息與本金。</li>
+      <li><b>流動性／賣出價差：</b>買價與賣價有價差，提前賣出可能不利。</li>
+      <li><b>匯率風險：</b>外幣計價，換回台幣可能因匯率產生損益。</li>
+      <li><b>提前買回（Callable）：</b>發行人可能提前買回，影響預期報酬。</li>
+      <li><b>再投資風險：</b>未來配息或到期資金，再投資利率可能較低。</li>
+    </ul>
+    <label class="swap-ack"><input type="checkbox" class="swap-ack-box"> 我已了解上述風險</label>
+  </div>
+
+  <div class="swap-output" hidden></div>
+  `;
+}
+
+let SWAP_PICK = { old: null, new: null };
+
+function _swapBondLabel(b) {
+  return `${b.code || ""} ${b.name_zh || ""}`.trim() + (b.currency ? `（${b.currency}）` : "");
+}
+function _searchBonds(q) {
+  const list = (DATA.obonds_all && DATA.obonds_all.bonds) || [];
+  const s = (q || "").trim().toUpperCase();
+  if (!s) return [];
+  return list.filter(b =>
+    (b.code || "").toUpperCase().includes(s) ||
+    (b.name_zh || "").toUpperCase().includes(s) ||
+    (b.isin || "").toUpperCase().includes(s)
+  ).slice(0, 20);
+}
+function _swapMoney(n) {
+  if (n == null || isNaN(n)) return "—";
+  return Math.round(n).toLocaleString("en-US");
+}
+function _swapPickedHtml(b) {
+  const f = (v, suf = "") => (v == null ? "—" : v + suf);
+  const url = bondUrl(b);
+  const link = url ? ` · <a href="${url}" target="_blank" rel="noopener">債券明細頁</a>` : "";
+  return `<div class="swap-picked-name">${escapeHtml(_swapBondLabel(b))}${link}</div>
+    <div class="swap-picked-meta">票面 ${f(b.coupon_pct, "%")} · 到期 ${escapeHtml(b.maturity || "—")} · 剩餘 ${f(b.years_to_maturity, " 年")} · 申購殖利率 ${f(b.bid_yield_pct, "%")} · 申購價 ${f(b.bid_price)} · 贖回價 ${f(b.ask_price)} · 信評 ${escapeHtml(b.rating || "—")}</div>`;
+}
+
+function _recalcSwap(root) {
+  const out = root.querySelector(".swap-output");
+  const ack = root.querySelector(".swap-ack-box");
+  const oldB = SWAP_PICK.old, newB = SWAP_PICK.new;
+  const faceEl = root.querySelector('.swap-face[data-side="old"]');
+  const face = parseFloat(faceEl && faceEl.value) || 0;
+
+  const autoFace = root.querySelector('[data-auto-face]');
+  const autoCash = root.querySelector('[data-auto-cash]');
+  let newFace = 0, proceeds = 0;
+  if (oldB && face > 0 && oldB.ask_price) {
+    proceeds = face * oldB.ask_price / 100;
+  }
+  if (newB && newB.bid_price && proceeds > 0) {
+    newFace = Math.floor(proceeds / (newB.bid_price / 100) / 1000) * 1000;
+    const cost = newFace * newB.bid_price / 100;
+    if (autoFace) autoFace.textContent = _swapMoney(newFace);
+    if (autoCash) autoCash.textContent = _swapMoney(proceeds - cost);
+  } else {
+    if (autoFace) autoFace.textContent = "—";
+    if (autoCash) autoCash.textContent = "—";
+  }
+
+  if (!oldB || !newB || face <= 0 || !ack.checked) {
+    out.hidden = true; out.innerHTML = ""; return;
+  }
+
+  const oldCoupon = face * (oldB.coupon_pct || 0) / 100;
+  const newCoupon = newFace * (newB.coupon_pct || 0) / 100;
+  const cmp = `
+    <table class="indices swap-table"><thead><tr>
+      <th class="cmp-th-l">項目</th><th>舊券</th><th>新券</th><th>差異</th>
+    </tr></thead><tbody>
+      <tr><td class="cmp-td-l">殖利率</td><td>${oldB.bid_yield_pct ?? "—"}%</td><td>${newB.bid_yield_pct ?? "—"}%</td><td>${((newB.bid_yield_pct||0)-(oldB.bid_yield_pct||0)).toFixed(2)}%</td></tr>
+      <tr><td class="cmp-td-l">年領利息</td><td>${_swapMoney(oldCoupon)}</td><td>${_swapMoney(newCoupon)}</td><td>${_swapMoney(newCoupon-oldCoupon)}</td></tr>
+      <tr><td class="cmp-td-l">剩餘年期</td><td>${oldB.years_to_maturity ?? "—"} 年</td><td>${newB.years_to_maturity ?? "—"} 年</td><td>${(((newB.years_to_maturity||0)-(oldB.years_to_maturity||0))).toFixed(2)} 年</td></tr>
+      <tr><td class="cmp-td-l">信用評等</td><td>${escapeHtml(oldB.rating||"—")}</td><td>${escapeHtml(newB.rating||"—")}</td><td>—</td></tr>
+    </tbody></table>`;
+
+  const scen = [-2, -1, 1, 2].map(d => {
+    const o = scenarioPnl(oldB, face, d);
+    const n = scenarioPnl(newB, newFace, d);
+    const cls = d < 0 ? "up" : "down";
+    const tag = d < 0 ? "降息" : "升息";
+    return `<tr><td class="cmp-td-l">${d>0?"+":""}${d.toFixed(1)}%（${tag}）</td>
+      <td class="${cls}">${_swapMoney(o)}</td><td class="${cls}">${_swapMoney(n)}</td></tr>`;
+  }).join("");
+
+  out.innerHTML = `
+    <h3 style="margin-top:18px">換券比較</h3>${cmp}
+    <h3 style="margin-top:18px">雙向利率情境（含一年利息之估計損益）</h3>
+    <table class="indices swap-table"><thead><tr>
+      <th class="cmp-th-l">殖利率變動</th><th>舊券</th><th>新券</th>
+    </tr></thead><tbody>${scen}</tbody></table>
+    <p class="swap-disclaimer">情境為以理論定價之簡化估計；年期越長，升息時跌幅越大。申購前請評估自身適合度並詳閱公開說明書與風險預告書。</p>`;
+  out.hidden = false;
+}
+
+function wireObondsTabs() {
+  const root = $("content");
+  if (!root) return;
+  root.querySelectorAll('.tab[data-otab]').forEach(btn => {
+    btn.addEventListener("click", () => {
+      const sel = btn.dataset.otab;
+      root.querySelectorAll('.tab[data-otab]').forEach(b => b.classList.toggle("active", b === btn));
+      root.querySelectorAll('.otab-panel').forEach(p => { p.hidden = p.dataset.otabPanel !== sel; });
+    });
+  });
+  root.querySelectorAll('.swap-q').forEach(inp => {
+    const side = inp.dataset.side;
+    const box = root.querySelector(`.swap-results[data-side="${side}"]`);
+    inp.addEventListener("input", () => {
+      const matches = _searchBonds(inp.value);
+      if (!matches.length) { box.hidden = true; box.innerHTML = ""; return; }
+      box.innerHTML = matches.map(b =>
+        `<button type="button" class="swap-opt" data-isin="${escapeHtml(b.isin)}">${escapeHtml(_swapBondLabel(b))}</button>`
+      ).join("");
+      box.hidden = false;
+    });
+  });
+  root.querySelectorAll('.swap-results').forEach(box => {
+    const side = box.dataset.side;
+    box.addEventListener("click", e => {
+      const opt = e.target.closest(".swap-opt");
+      if (!opt) return;
+      const list = (DATA.obonds_all && DATA.obonds_all.bonds) || [];
+      const b = list.find(x => x.isin === opt.dataset.isin);
+      if (!b) return;
+      SWAP_PICK[side] = b;
+      const picked = root.querySelector(`.swap-picked[data-side="${side}"]`);
+      picked.innerHTML = _swapPickedHtml(b); picked.hidden = false;
+      box.hidden = true; box.innerHTML = "";
+      const inp = root.querySelector(`.swap-q[data-side="${side}"]`);
+      if (inp) inp.value = _swapBondLabel(b);
+      _recalcSwap(root);
+    });
+  });
+  root.querySelectorAll('.swap-face, .swap-ack-box').forEach(el => {
+    el.addEventListener("input", () => _recalcSwap(root));
+    el.addEventListener("change", () => _recalcSwap(root));
+  });
 }
 
 function renderBulletsOrText(content) {
