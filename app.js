@@ -954,7 +954,7 @@ function renderObondsSheet() {
   } else {
     const head = `<tr>
       <th class="cmp-th-l">債券名稱</th>
-      <th>幣別</th><th>票面利率</th><th>到期日</th><th>信評</th>
+      <th>幣別</th><th>票面利率</th><th>到期日</th>
       <th>申購參考殖利率</th><th>贖回參考價</th>
       <th>週%</th><th>月%</th><th>季%</th>
     </tr>`;
@@ -970,7 +970,6 @@ function renderObondsSheet() {
         <td>${escapeHtml(b.currency || "—")}</td>
         <td>${fmtCoupon(b.coupon_pct)}</td>
         <td>${escapeHtml(b.maturity || "—")}</td>
-        <td>${escapeHtml(b.rating || "—")}</td>
         <td><span class="up">${fmtPctNum(b.bid_yield_pct)}</span></td>
         <td>${priceCell(b)}</td>
         <td class="${pctClass(b.perf_1w)}">${fmtPctNum(b.perf_1w)}</td>

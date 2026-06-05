@@ -21,7 +21,8 @@
 // v21（2026-06-05）：走勢圖滑過/點選顯示各時點價格＋換券比較加兩檔重訂基準走勢對照。
 // v22（2026-06-05）：雙向利率情境加「0%（利率不變）」列。
 // v23（2026-06-05）：移除信評欄位（資料源無評等）。
-const CACHE = "morning-board-v23";
+// v24（2026-06-05）：精選海外債清單也移除信評欄。
+const CACHE = "morning-board-v24";
 
 self.addEventListener("install", e => {
   self.skipWaiting();
