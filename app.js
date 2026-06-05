@@ -886,6 +886,50 @@ async function refreshData() {
   switchTab(CURRENT_TAB);
 }
 
+// ===== 換券試算：債券定價數學（純前端，每百元面額） =====
+function _freqPerYear(freq) {
+  if (!freq) return 2;
+  if (freq.includes("月")) return 12;
+  if (freq.includes("季")) return 4;
+  if (freq.includes("半")) return 2;
+  if (freq.includes("年")) return 1;
+  return 0; // 無配息/零息
+}
+// 以殖利率求理論價（每百元）。零息債走折現到期。
+function bondPriceFromYield(couponPct, freq, years, yieldPct) {
+  const y = yieldPct / 100;
+  const m = _freqPerYear(freq);
+  if (years <= 0) return 100;
+  if (m === 0 || !couponPct) {
+    return 100 / Math.pow(1 + y, years); // 零息：年複利折現
+  }
+  const n = Math.max(1, Math.round(years * m));
+  const c = (couponPct / 100) * 100 / m; // 每期票息
+  const r = y / m;
+  let pv = 0;
+  for (let t = 1; t <= n; t++) pv += c / Math.pow(1 + r, t);
+  pv += 100 / Math.pow(1 + r, n);
+  return pv;
+}
+// 價格變動（每百元）：殖利率變動 dYieldPct 時的理論價差
+function priceChangePer100(couponPct, freq, years, yieldPct, dYieldPct) {
+  const p0 = bondPriceFromYield(couponPct, freq, years, yieldPct);
+  const p1 = bondPriceFromYield(couponPct, freq, years, yieldPct + dYieldPct);
+  return p1 - p0;
+}
+// 單一情境：含一年票息的估計損益（本幣金額）
+function scenarioPnl(bond, faceValue, dYieldPct) {
+  const coupon = bond.coupon_pct || 0;
+  const freq = bond.coupon_freq || "";
+  const years = bond.years_to_maturity || 0;
+  const y = (bond.bid_yield_pct != null ? bond.bid_yield_pct
+            : bond.redeem_yield_pct) || 0;
+  const dPrice100 = priceChangePer100(coupon, freq, years, y, dYieldPct);
+  const pricePnl = faceValue * dPrice100 / 100;
+  const annualCoupon = faceValue * coupon / 100;
+  return pricePnl + annualCoupon;
+}
+
 function bondUrl(b) {
   if (!b.isin || !b.code) return null;
   return `https://bopfund.moneydj.com/b2bbond/BondBasic/Basic01?id=${encodeURIComponent(b.isin)}&bid=${encodeURIComponent(b.code)}`;
