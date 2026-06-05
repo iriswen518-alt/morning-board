@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T15:00:43+08:00",
+  "generated_at": "2026-06-05T17:00:38+08:00",
   "static_as_of": "2026-03-31",
   "as_of_note": "風險指標及同基金報酬截至 2026-03-31；同類別平均截至 2026-04-30",
   "fx_usdtwd": 31.478200912475586,
@@ -315,9 +315,9 @@
         {
           "name": "野村鴻利基金",
           "return": {
-            "1y": 282.02,
-            "3y": 437.6,
-            "5y": 593.53
+            "1y": 273.9,
+            "3y": 427.81,
+            "5y": 584.18
           },
           "std_3y": null,
           "sharpe_3y": null,
@@ -666,8 +666,49 @@
         "inception_years": 0.8,
         "expense_ratio": 1.97,
         "distribution_yield": null,
-        "top10_concentration": null,
-        "top_holdings": [],
+        "top10_concentration": 29.6,
+        "top_holdings": [
+          {
+            "name": "NEXT FUNDS TOPIX ETF",
+            "pct": 6.04
+          },
+          {
+            "name": "MIZUHO 4.711 07/08/31",
+            "pct": 3.82
+          },
+          {
+            "name": "MUFG 5.159 04/24/31",
+            "pct": 2.96
+          },
+          {
+            "name": "MITSUBISHI UFJ FINANCIAL GRO",
+            "pct": 2.81
+          },
+          {
+            "name": "ITOCHU CORP",
+            "pct": 2.6
+          },
+          {
+            "name": "Toyota Motor Corp",
+            "pct": 2.58
+          },
+          {
+            "name": "JBIC 4 3/8 01/23/36",
+            "pct": 2.38
+          },
+          {
+            "name": "NIPPON TELEGRAPH & TELEPHONE",
+            "pct": 2.14
+          },
+          {
+            "name": "SUMIBK 4.66 07/08/31",
+            "pct": 2.14
+          },
+          {
+            "name": "SUMITOMO MITSUI FINANCIAL GR",
+            "pct": 2.12
+          }
+        ],
         "sector_top3": [],
         "aum_twd_yi": 45.6
       },
@@ -738,9 +779,9 @@
       "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACNC70-1228",
       "self": {
         "return": {
-          "1y": 16.62,
-          "3y": 34.01,
-          "5y": 53.69
+          "1y": 17.97,
+          "3y": 34.88,
+          "5y": 54.05
         },
         "std_3y": 11.06,
         "std_1y": null,
@@ -961,9 +1002,9 @@
         {
           "name": "統一奔騰基金",
           "return": {
-            "1y": 223.92,
-            "3y": 393.99,
-            "5y": 501.73
+            "1y": 216.76,
+            "3y": 381.23,
+            "5y": 491.53
           },
           "std_3y": 25.03,
           "sharpe_3y": 1.75,
