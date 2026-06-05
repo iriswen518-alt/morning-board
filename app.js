@@ -1156,7 +1156,7 @@ function _swapPickedHtml(b) {
   const url = bondUrl(b);
   const link = url ? ` · <a href="${url}" target="_blank" rel="noopener">債券明細頁</a>` : "";
   return `<div class="swap-picked-name">${escapeHtml(_swapBondLabel(b))}${link}</div>
-    <div class="swap-picked-meta">票面 ${f(b.coupon_pct, "%")} · 到期 ${escapeHtml(b.maturity || "—")} · 剩餘 ${f(b.years_to_maturity, " 年")} · 申購殖利率 ${f(b.bid_yield_pct, "%")} · 申購價 ${f(b.bid_price)} · 贖回價 ${f(b.ask_price)} · 信評 ${escapeHtml(b.rating || "—")}</div>
+    <div class="swap-picked-meta">票面 ${f(b.coupon_pct, "%")} · 到期 ${escapeHtml(b.maturity || "—")} · 剩餘 ${f(b.years_to_maturity, " 年")} · 申購殖利率 ${f(b.bid_yield_pct, "%")} · 申購價 ${f(b.bid_price)} · 贖回價 ${f(b.ask_price)}</div>
     ${_swapSparkline(b)}`;
 }
 
@@ -1196,7 +1196,6 @@ function _recalcSwap(root) {
       <tr><td class="cmp-td-l">殖利率</td><td>${oldB.bid_yield_pct ?? "—"}%</td><td>${newB.bid_yield_pct ?? "—"}%</td><td>${((newB.bid_yield_pct||0)-(oldB.bid_yield_pct||0)).toFixed(2)}%</td></tr>
       <tr><td class="cmp-td-l">年領利息</td><td>${_swapMoney(oldCoupon)}</td><td>${_swapMoney(newCoupon)}</td><td>${_swapMoney(newCoupon-oldCoupon)}</td></tr>
       <tr><td class="cmp-td-l">剩餘年期</td><td>${oldB.years_to_maturity ?? "—"} 年</td><td>${newB.years_to_maturity ?? "—"} 年</td><td>${(((newB.years_to_maturity||0)-(oldB.years_to_maturity||0))).toFixed(2)} 年</td></tr>
-      <tr><td class="cmp-td-l">信用評等</td><td>${escapeHtml(oldB.rating||"—")}</td><td>${escapeHtml(newB.rating||"—")}</td><td>—</td></tr>
     </tbody></table>`;
 
   const pnlCls = v => (v == null || isNaN(v)) ? "" : (v >= 0 ? "up" : "down");

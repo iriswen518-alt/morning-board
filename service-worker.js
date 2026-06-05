@@ -20,7 +20,8 @@
 // v20（2026-06-05）：換券試算選券卡片加走勢示意圖（依週/月/季報酬推估）。
 // v21（2026-06-05）：走勢圖滑過/點選顯示各時點價格＋換券比較加兩檔重訂基準走勢對照。
 // v22（2026-06-05）：雙向利率情境加「0%（利率不變）」列。
-const CACHE = "morning-board-v22";
+// v23（2026-06-05）：移除信評欄位（資料源無評等）。
+const CACHE = "morning-board-v23";
 
 self.addEventListener("install", e => {
   self.skipWaiting();
