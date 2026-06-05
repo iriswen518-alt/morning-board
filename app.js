@@ -1070,12 +1070,44 @@ function _swapMoney(n) {
   if (n == null || isNaN(n)) return "—";
   return Math.round(n).toLocaleString("en-US");
 }
+// 走勢示意圖：以現價(贖回參考價)＋週/月/季報酬反推 4 點，純 SVG，非每日真實價格
+function _swapSparkline(b) {
+  const price = b.ask_price;
+  if (price == null) return `<div class="swap-spark-note">走勢資料不足</div>`;
+  const defs = [
+    { d: 90, perf: b.perf_3m },
+    { d: 30, perf: b.perf_1m },
+    { d: 7, perf: b.perf_1w },
+    { d: 0, perf: 0 },
+  ];
+  const pts = defs
+    .filter(p => p.d === 0 || p.perf != null)
+    .map(p => ({ x: (90 - p.d) / 90, price: p.d === 0 ? price : price / (1 + p.perf / 100) }));
+  if (pts.length < 2) return `<div class="swap-spark-note">走勢資料不足</div>`;
+  const ys = pts.map(p => p.price);
+  const lo = Math.min(...ys), hi = Math.max(...ys), span = (hi - lo) || 1;
+  const W = 170, H = 44, pad = 4;
+  const X = x => pad + x * (W - 2 * pad);
+  const Y = v => pad + (1 - (v - lo) / span) * (H - 2 * pad);
+  const coords = pts.map(p => `${X(p.x).toFixed(1)},${Y(p.price).toFixed(1)}`).join(" ");
+  const first = pts[0].price, last = pts[pts.length - 1].price;
+  const stroke = last >= first ? "#d9534f" : "#2e9e5b"; // 台股紅漲綠跌
+  const fmtP = v => (v == null ? "—" : v + "%");
+  return `
+    <svg class="swap-spark" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" preserveAspectRatio="none" aria-hidden="true">
+      <polyline points="${coords}" fill="none" stroke="${stroke}" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="${X(pts[pts.length - 1].x).toFixed(1)}" cy="${Y(last).toFixed(1)}" r="2.5" fill="${stroke}"/>
+    </svg>
+    <div class="swap-spark-note">走勢示意（近 3 月）·依報酬推估，非每日真實價格 ｜ 週 ${fmtP(b.perf_1w)} 月 ${fmtP(b.perf_1m)} 季 ${fmtP(b.perf_3m)}</div>`;
+}
+
 function _swapPickedHtml(b) {
   const f = (v, suf = "") => (v == null ? "—" : v + suf);
   const url = bondUrl(b);
   const link = url ? ` · <a href="${url}" target="_blank" rel="noopener">債券明細頁</a>` : "";
   return `<div class="swap-picked-name">${escapeHtml(_swapBondLabel(b))}${link}</div>
-    <div class="swap-picked-meta">票面 ${f(b.coupon_pct, "%")} · 到期 ${escapeHtml(b.maturity || "—")} · 剩餘 ${f(b.years_to_maturity, " 年")} · 申購殖利率 ${f(b.bid_yield_pct, "%")} · 申購價 ${f(b.bid_price)} · 贖回價 ${f(b.ask_price)} · 信評 ${escapeHtml(b.rating || "—")}</div>`;
+    <div class="swap-picked-meta">票面 ${f(b.coupon_pct, "%")} · 到期 ${escapeHtml(b.maturity || "—")} · 剩餘 ${f(b.years_to_maturity, " 年")} · 申購殖利率 ${f(b.bid_yield_pct, "%")} · 申購價 ${f(b.bid_price)} · 贖回價 ${f(b.ask_price)} · 信評 ${escapeHtml(b.rating || "—")}</div>
+    ${_swapSparkline(b)}`;
 }
 
 function _recalcSwap(root) {
@@ -1152,8 +1184,9 @@ function wireObondsTabs() {
     inp.addEventListener("input", () => {
       const matches = _searchBonds(inp.value);
       if (!matches.length) { box.hidden = true; box.innerHTML = ""; return; }
+      const all = (DATA.obonds_all && DATA.obonds_all.bonds) || [];
       box.innerHTML = matches.map(b =>
-        `<button type="button" class="swap-opt" data-isin="${escapeHtml(b.isin)}">${escapeHtml(_swapBondLabel(b))}</button>`
+        `<button type="button" class="swap-opt" data-idx="${all.indexOf(b)}">${escapeHtml(_swapBondLabel(b))}</button>`
       ).join("");
       box.hidden = false;
     });
@@ -1164,7 +1197,7 @@ function wireObondsTabs() {
       const opt = e.target.closest(".swap-opt");
       if (!opt) return;
       const list = (DATA.obonds_all && DATA.obonds_all.bonds) || [];
-      const b = list.find(x => x.isin === opt.dataset.isin);
+      const b = list[parseInt(opt.dataset.idx, 10)];
       if (!b) return;
       SWAP_PICK[side] = b;
       const picked = root.querySelector(`.swap-picked[data-side="${side}"]`);
