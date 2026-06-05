@@ -5856,6 +5856,28 @@ function renderBeatEtfCards() {
     <td colspan="${periods.length + 1}" style="padding:10px 8px;font-weight:600;color:var(--brand-deep);background:${bg};border-bottom:1px solid var(--border)">${escapeHtml(title)}</td>
   </tr>`;
 
+  // 商品屬性中文標籤：以基金名稱（去空白）對照
+  const BEAT_FUND_CAT = {
+    "安聯台灣科技基金": "台股科技",
+    "安聯台灣大壩基金": "台股",
+    "野村中小基金": "台股中小",
+    "野村高科技基金": "台股科技",
+    "野村e科技基金": "台股科技",
+    "元大新主流基金": "台股",
+    "路博邁台灣5G股票基金": "台股科技",
+    "摩根新興科技基金": "科技",
+    "統一奔騰基金": "台股",
+    "元大卓越基金": "台股",
+    "國泰小龍基金": "台股中小",
+    "統一全天候基金": "台股"
+  };
+  const beatCatChip = name => {
+    const lab = BEAT_FUND_CAT[(name || "").replace(/\s/g, "")];
+    return lab
+      ? `<span class="chip chip-default" style="background:#E5F2F5;color:var(--brand-deep);margin-left:6px;font-size:11px">${escapeHtml(lab)}</span>`
+      : "";
+  };
+
   const fundRows = fundItems.map(f => {
     if (f.unlisted) {
       return `<tr>
@@ -5870,7 +5892,7 @@ function renderBeatEtfCards() {
       const v = f.perf?.[p.key];
       return `<td style="${tdBase};text-align:right" class="${cellClass(v)}">${perfLink(fmtR(v), f.source_url)}</td>`;
     }).join("");
-    return `<tr><td style="${tdBase};white-space:nowrap">${nameHtml}</td>${cells}</tr>`;
+    return `<tr><td style="${tdBase};white-space:nowrap">${nameHtml}${beatCatChip(f.name_zh)}</td>${cells}</tr>`;
   }).join("");
 
   const etfRows = etfItems.map(e => {
