@@ -1070,35 +1070,85 @@ function _swapMoney(n) {
   if (n == null || isNaN(n)) return "—";
   return Math.round(n).toLocaleString("en-US");
 }
-// 走勢示意圖：以現價(贖回參考價)＋週/月/季報酬反推 4 點，純 SVG，非每日真實價格
-function _swapSparkline(b) {
+// 走勢示意：以現價(贖回參考價)＋週/月/季報酬反推 4 點（近3月→今日），非每日真實價格。
+// 回傳 [{x, price, date}]，date 為報價基準日往前推 90/30/7 天（標「約」）。
+function _swapSeries(b) {
   const price = b.ask_price;
-  if (price == null) return `<div class="swap-spark-note">走勢資料不足</div>`;
+  if (price == null) return [];
+  const base = b.price_date ? new Date(b.price_date) : null;
+  const hasBase = base && !isNaN(base.getTime());
+  const fmtD = (ms, d) => {
+    if (!hasBase) return d === 0 ? "今日" : `約 ${d} 天前`;
+    const dt = new Date(ms), p = n => String(n).padStart(2, "0");
+    return `約 ${dt.getFullYear()}/${p(dt.getMonth() + 1)}/${p(dt.getDate())}`;
+  };
   const defs = [
     { d: 90, perf: b.perf_3m },
     { d: 30, perf: b.perf_1m },
     { d: 7, perf: b.perf_1w },
     { d: 0, perf: 0 },
   ];
-  const pts = defs
+  return defs
     .filter(p => p.d === 0 || p.perf != null)
-    .map(p => ({ x: (90 - p.d) / 90, price: p.d === 0 ? price : price / (1 + p.perf / 100) }));
-  if (pts.length < 2) return `<div class="swap-spark-note">走勢資料不足</div>`;
-  const ys = pts.map(p => p.price);
+    .map(p => ({
+      x: (90 - p.d) / 90,
+      price: p.d === 0 ? price : price / (1 + p.perf / 100),
+      date: fmtD(hasBase ? base.getTime() - p.d * 86400000 : 0, p.d),
+    }));
+}
+
+// 把一組點渲染成 SVG（含可滑過/點選的隱形大點，data-date/data-price 供 tooltip）
+function _sparkSvg(pts, opts) {
+  const o = opts || {};
+  const W = o.W || 170, H = o.H || 44, pad = o.pad || 5;
+  const stroke = o.stroke || "#2456b8", valKey = o.valKey || "price";
+  if (pts.length < 2) return "";
+  const ys = pts.map(p => p[valKey]);
   const lo = Math.min(...ys), hi = Math.max(...ys), span = (hi - lo) || 1;
-  const W = 170, H = 44, pad = 4;
   const X = x => pad + x * (W - 2 * pad);
   const Y = v => pad + (1 - (v - lo) / span) * (H - 2 * pad);
-  const coords = pts.map(p => `${X(p.x).toFixed(1)},${Y(p.price).toFixed(1)}`).join(" ");
-  const first = pts[0].price, last = pts[pts.length - 1].price;
-  const stroke = last >= first ? "#d9534f" : "#2e9e5b"; // 台股紅漲綠跌
+  const coords = pts.map(p => `${X(p.x).toFixed(1)},${Y(p[valKey]).toFixed(1)}`).join(" ");
+  const dots = pts.map(p => {
+    const cx = X(p.x).toFixed(1), cy = Y(p[valKey]).toFixed(1);
+    return `<circle cx="${cx}" cy="${cy}" r="2.6" fill="${stroke}"/>`
+      + `<circle class="swap-dot" cx="${cx}" cy="${cy}" r="9" fill="transparent" pointer-events="all" data-date="${escapeHtml(p.date)}" data-price="${p.price.toFixed(2)}"/>`;
+  }).join("");
+  return `<svg class="${o.cls || "swap-spark"}" viewBox="0 0 ${W} ${H}" width="${o.fullWidth ? "100%" : W}" height="${H}">`
+    + `<polyline points="${coords}" fill="none" stroke="${stroke}" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/>${dots}</svg>`;
+}
+
+function _swapSparkline(b) {
+  const pts = _swapSeries(b);
+  if (pts.length < 2) return `<div class="swap-spark-note">走勢資料不足</div>`;
+  const stroke = pts[pts.length - 1].price >= pts[0].price ? "#d9534f" : "#2e9e5b"; // 台股紅漲綠跌
   const fmtP = v => (v == null ? "—" : v + "%");
-  return `
-    <svg class="swap-spark" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" preserveAspectRatio="none" aria-hidden="true">
-      <polyline points="${coords}" fill="none" stroke="${stroke}" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
-      <circle cx="${X(pts[pts.length - 1].x).toFixed(1)}" cy="${Y(last).toFixed(1)}" r="2.5" fill="${stroke}"/>
-    </svg>
+  return `${_sparkSvg(pts, { stroke })}
     <div class="swap-spark-note">走勢示意（近 3 月）·依報酬推估，非每日真實價格 ｜ 週 ${fmtP(b.perf_1w)} 月 ${fmtP(b.perf_1m)} 季 ${fmtP(b.perf_3m)}</div>`;
+}
+
+// 兩檔近 3 月走勢對照：各自以 3 月前 = 100 重訂基準，疊在同一張圖
+function _swapCompareSvg(oldB, newB) {
+  const os = _swapSeries(oldB), ns = _swapSeries(newB);
+  if (os.length < 2 || ns.length < 2) return "";
+  const reb = s => { const b0 = s[0].price; return s.map(p => ({ x: p.x, v: p.price / b0 * 100, price: p.price, date: p.date })); };
+  const ro = reb(os), rn = reb(ns);
+  const all = [...ro, ...rn].map(p => p.v);
+  const lo = Math.min(...all), hi = Math.max(...all), span = (hi - lo) || 1;
+  const W = 300, H = 90, pad = 8;
+  const X = x => pad + x * (W - 2 * pad);
+  const Y = v => pad + (1 - (v - lo) / span) * (H - 2 * pad);
+  const line = (s, color) => {
+    const c = s.map(p => `${X(p.x).toFixed(1)},${Y(p.v).toFixed(1)}`).join(" ");
+    const dots = s.map(p => `<circle cx="${X(p.x).toFixed(1)}" cy="${Y(p.v).toFixed(1)}" r="2.4" fill="${color}"/>`
+      + `<circle class="swap-dot" cx="${X(p.x).toFixed(1)}" cy="${Y(p.v).toFixed(1)}" r="9" fill="transparent" pointer-events="all" data-date="${escapeHtml(p.date)}" data-price="${p.price.toFixed(2)}"/>`).join("");
+    return `<polyline points="${c}" fill="none" stroke="${color}" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/>${dots}`;
+  };
+  const OLD = "#2456b8", NEW = "#e08a00";
+  return `
+    <h3 style="margin-top:18px">兩檔近 3 月走勢對照</h3>
+    <div class="swap-legend"><span><i style="background:${OLD}"></i>舊券</span><span><i style="background:${NEW}"></i>新券</span><span class="swap-legend-note">以 3 月前 = 100 重訂基準</span></div>
+    <svg class="swap-compare" viewBox="0 0 ${W} ${H}" width="100%" height="${H}">${line(ro, OLD)}${line(rn, NEW)}</svg>
+    <div class="swap-spark-note">依報酬推估，非每日真實價格；已重訂基準以利比較漲跌幅。滑過或點選圓點可看各時點價格。</div>`;
 }
 
 function _swapPickedHtml(b) {
@@ -1160,6 +1210,7 @@ function _recalcSwap(root) {
 
   out.innerHTML = `
     <h3 style="margin-top:18px">換券比較</h3>${cmp}
+    ${_swapCompareSvg(oldB, newB)}
     <h3 style="margin-top:18px">雙向利率情境（含一年利息之估計損益）</h3>
     <table class="indices swap-table"><thead><tr>
       <th class="cmp-th-l">殖利率變動</th><th>舊券</th><th>新券</th>
@@ -1168,9 +1219,37 @@ function _recalcSwap(root) {
   out.hidden = false;
 }
 
+function _ensureSwapTip() {
+  let t = document.getElementById("swap-tip");
+  if (!t) {
+    t = document.createElement("div");
+    t.id = "swap-tip"; t.className = "swap-tip"; t.hidden = true;
+    document.body.appendChild(t);
+  }
+  return t;
+}
+
 function wireObondsTabs() {
   const root = $("content");
   if (!root) return;
+  // 走勢圖時點 tooltip：滑過（桌機）＋點選（手機）。#content 為常駐元素，避免重複綁定。
+  if (!root._swapTipWired) {
+    root._swapTipWired = true;
+    const tip = _ensureSwapTip();
+    const show = (dot, x, y) => {
+      tip.textContent = `${dot.dataset.date} ｜ ${dot.dataset.price}`;
+      tip.style.left = x + "px"; tip.style.top = (y - 10) + "px";
+      tip.hidden = false;
+    };
+    const findDot = e => (e.target && e.target.closest) ? e.target.closest(".swap-dot") : null;
+    root.addEventListener("mousemove", e => { const d = findDot(e); if (d) show(d, e.clientX, e.clientY); });
+    root.addEventListener("mouseout", e => { if (findDot(e)) tip.hidden = true; });
+    root.addEventListener("click", e => {
+      const d = findDot(e);
+      if (d) { const r = d.getBoundingClientRect(); show(d, r.left + r.width / 2, r.top); }
+      else tip.hidden = true;
+    });
+  }
   root.querySelectorAll('.tab[data-otab]').forEach(btn => {
     btn.addEventListener("click", () => {
       const sel = btn.dataset.otab;

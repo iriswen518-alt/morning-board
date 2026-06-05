@@ -2456,7 +2456,13 @@ table.indices.stock-cols col.c-num { width: 11%; }
 .swap-picked-name { font-weight: 600; margin-bottom: 4px; }
 .swap-picked-meta { font-size: 12px; color: var(--text-mute); line-height: 1.6; }
 .swap-spark { display: block; width: 170px; height: 44px; margin-top: 8px; }
+.swap-compare { display: block; width: 100%; max-width: 340px; height: 90px; margin-top: 6px; }
+.swap-dot { cursor: pointer; }
 .swap-spark-note { font-size: 11px; color: var(--text-mute); margin-top: 2px; line-height: 1.5; }
+.swap-legend { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; font-size: 12px; color: var(--text-mute); margin-top: 8px; }
+.swap-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px; vertical-align: middle; }
+.swap-legend-note { margin-left: auto; }
+.swap-tip { position: fixed; z-index: 1000; transform: translate(-50%, -100%); background: #1b2a4a; color: #fff; font-size: 12px; padding: 4px 8px; border-radius: 6px; pointer-events: none; white-space: nowrap; box-shadow: 0 4px 12px rgba(0,0,0,.25); }
 .swap-field { display: block; margin-top: 10px; font-size: 13px; }
 .swap-field input { display: block; width: 100%; box-sizing: border-box; margin-top: 4px; padding: 8px 10px; border: 1px solid var(--line, #d4dbe6); border-radius: 8px; font-size: 14px; }
 .swap-auto { color: var(--text-mute); }

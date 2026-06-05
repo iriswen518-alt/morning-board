@@ -18,7 +18,8 @@
 // v18（2026-06-05）：海外債新增「換券試算」子分頁＋全清單資料 overseas_bonds_all.json。
 // v19（2026-06-05）：標頭加「僅測試使用」警語標示。
 // v20（2026-06-05）：換券試算選券卡片加走勢示意圖（依週/月/季報酬推估）。
-const CACHE = "morning-board-v20";
+// v21（2026-06-05）：走勢圖滑過/點選顯示各時點價格＋換券比較加兩檔重訂基準走勢對照。
+const CACHE = "morning-board-v21";
 
 self.addEventListener("install", e => {
   self.skipWaiting();
