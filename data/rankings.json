@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-08T09:01:59+08:00",
+  "generated_at": "2026-06-08T10:02:14+08:00",
   "tw": {
     "as_of": "2026-06-08",
     "top_marketcap": [
@@ -984,6 +984,19 @@
         "source_url": "https://finance.yahoo.com/quote/XLE"
       },
       {
+        "symbol": "XLF",
+        "name": "State Street Financial Select S",
+        "price": 52.3,
+        "daily_pct": 1.4,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": 1.4,
+        "ytd_pct": -4.51,
+        "yahoo": "XLF",
+        "source_url": "https://finance.yahoo.com/quote/XLF"
+      },
+      {
         "symbol": "DIA",
         "name": "State Street SPDR Dow Jones Ind",
         "price": 509.7,
@@ -995,6 +1008,19 @@
         "ytd_pct": 6.06,
         "yahoo": "DIA",
         "source_url": "https://finance.yahoo.com/quote/DIA"
+      },
+      {
+        "symbol": "TLT",
+        "name": "iShares 20+ Year Treasury Bond ",
+        "price": 85.06,
+        "daily_pct": -0.82,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": -0.82,
+        "ytd_pct": -2.41,
+        "yahoo": "TLT",
+        "source_url": "https://finance.yahoo.com/quote/TLT"
       },
       {
         "symbol": "HYG",
@@ -1073,32 +1099,6 @@
         "ytd_pct": 7.94,
         "yahoo": "VWO",
         "source_url": "https://finance.yahoo.com/quote/VWO"
-      },
-      {
-        "symbol": "VEA",
-        "name": "Vanguard FTSE Developed Markets",
-        "price": 69.17,
-        "daily_pct": -3.62,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": -3.62,
-        "ytd_pct": 10.73,
-        "yahoo": "VEA",
-        "source_url": "https://finance.yahoo.com/quote/VEA"
-      },
-      {
-        "symbol": "QQQ",
-        "name": "Invesco QQQ Trust, Series 1",
-        "price": 705.06,
-        "daily_pct": -4.5,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": -4.5,
-        "ytd_pct": 14.77,
-        "yahoo": "QQQ",
-        "source_url": "https://finance.yahoo.com/quote/QQQ"
       }
     ]
   }
