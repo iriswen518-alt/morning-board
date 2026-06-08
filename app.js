@@ -42,6 +42,7 @@ const INDEX_BOP_CODES = {
   "Nasdaq": "AI000020",
   "Nasdaq Composite": "AI000020",
   "Dow Jones": "AI000010",
+  "PHLX Semiconductor": "AI000140",
   "Nikkei 225": "AI000030",
   "KOSPI": "AI000070",
   "Hang Seng": "AI000040",
