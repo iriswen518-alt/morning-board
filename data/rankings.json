@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-07T17:01:03+08:00",
+  "generated_at": "2026-06-08T08:42:26+08:00",
   "tw": {
-    "as_of": "2026-06-07",
+    "as_of": "2026-06-08",
     "top_marketcap": [
       {
         "symbol": "2330",
@@ -572,7 +572,7 @@
     ]
   },
   "us": {
-    "as_of": "2026-06-07",
+    "as_of": "2026-06-08",
     "top_marketcap": [
       {
         "symbol": "NVDA",
@@ -599,6 +599,19 @@
         "ytd_pct": 13.05,
         "yahoo": "AAPL",
         "source_url": "https://finance.yahoo.com/quote/AAPL"
+      },
+      {
+        "symbol": "GOOGL",
+        "name": "Alphabet Inc.",
+        "price": 368.53,
+        "daily_pct": -0.98,
+        "market_cap": 4494199357440,
+        "pe": 28.089176,
+        "pe_kind": "trailing",
+        "mtd_pct": -3.11,
+        "ytd_pct": 17.74,
+        "yahoo": "GOOGL",
+        "source_url": "https://finance.yahoo.com/quote/GOOGL"
       },
       {
         "symbol": "AMZN",
@@ -690,19 +703,6 @@
         "ytd_pct": 168.75,
         "yahoo": "INTC",
         "source_url": "https://finance.yahoo.com/quote/INTC"
-      },
-      {
-        "symbol": "NFLX",
-        "name": "Netflix, Inc.",
-        "price": 82.18,
-        "daily_pct": 0.76,
-        "market_cap": 346043416576,
-        "pe": 26.509678,
-        "pe_kind": "trailing",
-        "mtd_pct": -4.46,
-        "ytd_pct": -12.35,
-        "yahoo": "NFLX",
-        "source_url": "https://finance.yahoo.com/quote/NFLX"
       }
     ],
     "top_gainers": [
@@ -997,19 +997,6 @@
         "source_url": "https://finance.yahoo.com/quote/XLF"
       },
       {
-        "symbol": "DIA",
-        "name": "State Street SPDR Dow Jones Ind",
-        "price": 509.7,
-        "daily_pct": -0.21,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": -0.21,
-        "ytd_pct": 6.06,
-        "yahoo": "DIA",
-        "source_url": "https://finance.yahoo.com/quote/DIA"
-      },
-      {
         "symbol": "TLT",
         "name": "iShares 20+ Year Treasury Bond ",
         "price": 85.06,
@@ -1099,6 +1086,19 @@
         "ytd_pct": 7.94,
         "yahoo": "VWO",
         "source_url": "https://finance.yahoo.com/quote/VWO"
+      },
+      {
+        "symbol": "VEA",
+        "name": "Vanguard FTSE Developed Markets",
+        "price": 69.17,
+        "daily_pct": -3.62,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": -3.62,
+        "ytd_pct": 10.73,
+        "yahoo": "VEA",
+        "source_url": "https://finance.yahoo.com/quote/VEA"
       }
     ]
   }
