@@ -71,6 +71,7 @@ EQUITIES = [
     ("S&P 500", "^GSPC", 2),
     ("Nasdaq Composite", "^IXIC", 2),
     ("Dow Jones", "^DJI", 2),
+    ("PHLX Semiconductor", "^SOX", 2),
     ("Euro Stoxx 50", "^STOXX50E", 2),
     ("DAX", "^GDAXI", 2),
     ("FTSE 100", "^FTSE", 2),

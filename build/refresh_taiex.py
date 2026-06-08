@@ -6,6 +6,7 @@
 
 Run after parse_market.py to ensure these have the latest available close.
 """
+
 from __future__ import annotations
 
 import json
@@ -35,8 +36,10 @@ def _sane_override(name, old_close, new_close, max_dev) -> bool:
         return False
     dev = abs(new_close - old_close) / old_close
     if dev > max_dev:
-        print(f"  ⚠️ refresh skip {name}: realtime {new_close} 偏離既有 "
-              f"{old_close} 達 {dev*100:.1f}% (>{max_dev*100:.0f}%),疑似壞值,保留原值")
+        print(
+            f"  ⚠️ refresh skip {name}: realtime {new_close} 偏離既有 "
+            f"{old_close} 達 {dev * 100:.1f}% (>{max_dev * 100:.0f}%),疑似壞值,保留原值"
+        )
         return False
     return True
 
@@ -63,13 +66,14 @@ def fetch_yahoo_quote(symbol):
     If market is currently open (now < regular.end on a bar that's today),
     returns yesterday's close instead of today's intraday partial."""
     import time as _time
+
     hosts = ["query2.finance.yahoo.com", "query1.finance.yahoo.com"]
     for host in hosts:
         try:
             r = requests.get(
-                f"https://{host}/v8/finance/chart/"
-                f"{symbol}?interval=1d&range=10d",
-                headers={"User-Agent": UA}, timeout=8,
+                f"https://{host}/v8/finance/chart/{symbol}?interval=1d&range=10d",
+                headers={"User-Agent": UA},
+                timeout=8,
             )
             if r.status_code == 429:
                 continue
@@ -78,11 +82,13 @@ def fetch_yahoo_quote(symbol):
             result = d["chart"]["result"][0]
             meta = result.get("meta", {})
             gmtoff = meta.get("gmtoffset")
-            market_tz = (timezone(timedelta(seconds=gmtoff))
-                         if gmtoff is not None else TPE)
+            market_tz = (
+                timezone(timedelta(seconds=gmtoff)) if gmtoff is not None else TPE
+            )
             ts = result.get("timestamp") or []
-            closes = (result.get("indicators", {}).get("quote", [{}])[0]
-                      .get("close") or [])
+            closes = (
+                result.get("indicators", {}).get("quote", [{}])[0].get("close") or []
+            )
             history = [(t, c) for t, c in zip(ts, closes) if c is not None]
             if not history:
                 return None, None, None
@@ -92,10 +98,12 @@ def fetch_yahoo_quote(symbol):
             regular_start = regular.get("start")
             regular_end = regular.get("end")
             last_t = history[-1][0]
-            last_date_market = datetime.fromtimestamp(
-                last_t, tz=market_tz).strftime("%Y-%m-%d")
-            today_market = datetime.fromtimestamp(
-                now_utc, tz=market_tz).strftime("%Y-%m-%d")
+            last_date_market = datetime.fromtimestamp(last_t, tz=market_tz).strftime(
+                "%Y-%m-%d"
+            )
+            today_market = datetime.fromtimestamp(now_utc, tz=market_tz).strftime(
+                "%Y-%m-%d"
+            )
             last_is_today_open = (
                 last_date_market == today_market
                 and regular_end is not None
@@ -106,8 +114,9 @@ def fetch_yahoo_quote(symbol):
             else:
                 idx = -1
             last_t, last_close = history[idx]
-            prev_close = (history[idx - 1][1]
-                          if len(history) >= abs(idx - 1) + 1 else None)
+            prev_close = (
+                history[idx - 1][1] if len(history) >= abs(idx - 1) + 1 else None
+            )
             date_iso = datetime.fromtimestamp(last_t, tz=market_tz).strftime("%Y-%m-%d")
 
             # Asian indices: Yahoo sometimes leaves yesterday's daily bar as None
@@ -118,12 +127,14 @@ def fetch_yahoo_quote(symbol):
             rmp = meta.get("regularMarketPrice")
             cpc = meta.get("chartPreviousClose")
             in_session_now = (
-                regular_start is not None and regular_end is not None
+                regular_start is not None
+                and regular_end is not None
                 and regular_start <= now_utc < regular_end
             )
-            if (rmt and rmp and not in_session_now and rmt > last_t):
-                rmt_date_iso = datetime.fromtimestamp(
-                    rmt, tz=market_tz).strftime("%Y-%m-%d")
+            if rmt and rmp and not in_session_now and rmt > last_t:
+                rmt_date_iso = datetime.fromtimestamp(rmt, tz=market_tz).strftime(
+                    "%Y-%m-%d"
+                )
                 if rmt_date_iso != date_iso:
                     return rmp, last_close, rmt_date_iso
 
@@ -136,8 +147,7 @@ def fetch_yahoo_quote(symbol):
                 prev_dt = today_dt - timedelta(days=1)
                 while prev_dt.weekday() >= 5:  # 跳過 Sat/Sun
                     prev_dt -= timedelta(days=1)
-                chosen_date = datetime.fromtimestamp(
-                    last_t, tz=market_tz).date()
+                chosen_date = datetime.fromtimestamp(last_t, tz=market_tz).date()
                 if chosen_date < prev_dt and abs(cpc - last_close) > 1e-6:
                     # last_close 是我們原本要回傳的「stale 完整收盤」（如 5/15），
                     # 它正好可以當「再前一個交易日收盤」用來算 daily_pct。
@@ -154,6 +164,7 @@ US_INDEX_SYMBOLS = {
     "Nasdaq": "^IXIC",
     "Nasdaq Composite": "^IXIC",
     "Dow Jones": "^DJI",
+    "PHLX Semiconductor": "^SOX",
     "Nikkei 225": "^N225",
     "Hang Seng": "^HSI",
     "Hang Seng 恆生": "^HSI",
@@ -225,6 +236,7 @@ def fetch_investing_bond(url: str):
     Returns (yield_pct, daily_change_pp, date_iso) or (None, None, None)."""
     import re as _re
     import time as _time
+
     browser_ua = (
         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
         "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36"
@@ -235,10 +247,10 @@ def fetch_investing_bond(url: str):
             r = requests.get(url, headers=headers, timeout=10)
             r.raise_for_status()
             html = r.text
-            m = _re.search(
-                r'data-test="instrument-price-last"[^>]*>([\d.]+)', html)
+            m = _re.search(r'data-test="instrument-price-last"[^>]*>([\d.]+)', html)
             m2 = _re.search(
-                r'data-test="instrument-price-change"[^>]*>([+\-\d.]+)', html)
+                r'data-test="instrument-price-change"[^>]*>([+\-\d.]+)', html
+            )
             if m:
                 y = float(m.group(1))
                 dch = float(m2.group(1)) if m2 else None
@@ -274,9 +286,11 @@ def refresh_bonds(market):
                         month_base = c
                 if month_base:
                     b["mtd_bps"] = round((close - month_base) * 100, 1)
-            print(f"refresh_bond: ✓ {name} y={b['yield_pct']}% "
-                  f"d_bps={b.get('daily_bps')} mtd_bps={b.get('mtd_bps')} "
-                  f"{date_iso} [yahoo]")
+            print(
+                f"refresh_bond: ✓ {name} y={b['yield_pct']}% "
+                f"d_bps={b.get('daily_bps')} mtd_bps={b.get('mtd_bps')} "
+                f"{date_iso} [yahoo]"
+            )
             continue
         inv_url = BOND_INVESTING.get(name)
         if inv_url:
@@ -288,8 +302,10 @@ def refresh_bonds(market):
             b["daily_bps"] = round(dch * 100, 1) if dch is not None else None
             b["closing_date"] = date_iso
             # MTD not available without paid history; leave as-is (likely None)
-            print(f"refresh_bond: ✓ {name} y={b['yield_pct']}% "
-                  f"d_bps={b.get('daily_bps')} {date_iso} [investing]")
+            print(
+                f"refresh_bond: ✓ {name} y={b['yield_pct']}% "
+                f"d_bps={b.get('daily_bps')} {date_iso} [investing]"
+            )
 
 
 def refresh_fx(market):
@@ -315,8 +331,10 @@ def refresh_fx(market):
                 f["mtd_pct"] = mtd
             if ytd is not None:
                 f["ytd_pct"] = ytd
-        print(f"refresh_fx: ✓ {name} {close} ({f.get('daily_pct')}%) "
-              f"M={f.get('mtd_pct')} Y={f.get('ytd_pct')} {date_iso}")
+        print(
+            f"refresh_fx: ✓ {name} {close} ({f.get('daily_pct')}%) "
+            f"M={f.get('mtd_pct')} Y={f.get('ytd_pct')} {date_iso}"
+        )
 
 
 def fetch_yahoo_history_full(symbol):
@@ -326,7 +344,8 @@ def fetch_yahoo_history_full(symbol):
         try:
             r = requests.get(
                 f"https://{host}/v8/finance/chart/{symbol}?interval=1d&range=1y",
-                headers={"User-Agent": UA}, timeout=8,
+                headers={"User-Agent": UA},
+                timeout=8,
             )
             if r.status_code == 429:
                 continue
@@ -334,8 +353,9 @@ def fetch_yahoo_history_full(symbol):
             d = r.json()
             result = d["chart"]["result"][0]
             ts = result.get("timestamp") or []
-            closes = (result.get("indicators", {}).get("quote", [{}])[0]
-                      .get("close") or [])
+            closes = (
+                result.get("indicators", {}).get("quote", [{}])[0].get("close") or []
+            )
             out = []
             for t, c in zip(ts, closes):
                 if c is None:
@@ -362,18 +382,19 @@ def compute_mtd_ytd(history):
             month_base = close
         if date_iso < year_start_iso:
             year_base = close
-    mtd = (round((last_close - month_base) / month_base * 100, 2)
-           if month_base else None)
-    ytd = (round((last_close - year_base) / year_base * 100, 2)
-           if year_base else None)
+    mtd = round((last_close - month_base) / month_base * 100, 2) if month_base else None
+    ytd = round((last_close - year_base) / year_base * 100, 2) if year_base else None
     return mtd, ytd
 
 
 def regenerate_summary(market):
     # parse_market 從 .md 散文讀 summary，但 refresh_*() 之後 indices 數字已換新；
     # 不重寫的話 summary 會跟表格對不上（前一日的觀點配當日數字）。
-    indices = [i for i in market.get("indices", [])
-               if isinstance(i.get("daily_pct"), (int, float))]
+    indices = [
+        i
+        for i in market.get("indices", [])
+        if isinstance(i.get("daily_pct"), (int, float))
+    ]
     if len(indices) < 3:
         return
 
@@ -406,8 +427,11 @@ def main():
     # Update top-level closing_date to the MAX of all indices' per-row dates,
     # so the card preview shows the latest available trading day instead of
     # stale .md frontmatter.
-    dates = [i.get("closing_date") for i in market.get("indices", [])
-             if i.get("closing_date")]
+    dates = [
+        i.get("closing_date")
+        for i in market.get("indices", [])
+        if i.get("closing_date")
+    ]
     if dates:
         market["closing_date"] = max(dates)
         print(f"market.closing_date set to {market['closing_date']}")

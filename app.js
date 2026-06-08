@@ -8,6 +8,7 @@ const INDEX_NAMES = {
   "Nasdaq": "那斯達克",
   "Nasdaq Composite": "那斯達克",
   "Dow Jones": "道瓊",
+  "PHLX Semiconductor": "費城半導體",
   "Nikkei 225": "日經 225",
   "Hang Seng": "恆生指數",
   "Hang Seng 恆生": "恆生指數",
@@ -86,6 +87,7 @@ const INDEX_YAHOO_SYMBOLS = {
   "Nasdaq": "^IXIC",
   "Nasdaq Composite": "^IXIC",
   "Dow Jones": "^DJI",
+  "PHLX Semiconductor": "^SOX",
   "Nikkei 225": "^N225",
   "Hang Seng": "^HSI",
   "Hang Seng 恆生": "^HSI",
@@ -2464,18 +2466,23 @@ function renderMarketSheet() {
   const twStocks = DATA.stocks?.tw_stocks || [];
 
   // 商品期貨：取用戶指定的三檔（倫敦布蘭特 / 紐約 WTI / 現貨黃金）
+  // sym = Yahoo Finance 代碼，供名稱連結＋即時行情頁（與指數列同一套點擊行為）
   const COMMODITY_DISPLAY = [
-    { match: "布蘭特", label: "倫敦原油期貨", sub: "Brent (USD/bbl)" },
-    { match: "WTI", label: "紐約原油期貨", sub: "WTI (USD/bbl)" },
-    { match: "黃金", label: "現貨黃金", sub: "Gold (USD/oz)" },
+    { match: "布蘭特", label: "倫敦原油期貨", sub: "Brent (USD/bbl)", sym: "BZ=F" },
+    { match: "WTI", label: "紐約原油期貨", sub: "WTI (USD/bbl)", sym: "CL=F" },
+    { match: "黃金", label: "現貨黃金", sub: "Gold (USD/oz)", sym: "GC=F" },
   ];
+  const commodityLink = (cd) => {
+    const url = `https://finance.yahoo.com/quote/${encodeURIComponent(cd.sym)}/`;
+    return `<a href="${url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${escapeHtml(cd.label)}</a>${quoteSuffix(url)}`;
+  };
   const commodities = m.commodities || [];
   const commodityRows = COMMODITY_DISPLAY.map(cd => {
     const c = commodities.find(x => x.name && x.name.includes(cd.match));
     if (!c) return "";
     return `
       <tr>
-        <td>${cd.label}<span style="color:var(--text-mute);font-size:12px;margin-left:6px">${cd.sub}</span></td>
+        <td>${commodityLink(cd)}<span style="color:var(--text-mute);font-size:12px;margin-left:6px">${cd.sub}</span></td>
         <td>${c.close != null ? c.close.toLocaleString("en-US", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) : "—"}</td>
         <td class="${pctClass(c.daily_pct)}">${fmtPct(c.daily_pct)}</td>
         <td class="${pctClass(c.mtd_pct)}">${fmtPct(c.mtd_pct)}</td>

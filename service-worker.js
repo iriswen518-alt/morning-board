@@ -22,7 +22,8 @@
 // v22（2026-06-05）：雙向利率情境加「0%（利率不變）」列。
 // v23（2026-06-05）：移除信評欄位（資料源無評等）。
 // v24（2026-06-05）：精選海外債清單也移除信評欄。
-const CACHE = "morning-board-v24";
+// v25（2026-06-08）：股市新增「費城半導體」(^SOX) 指數列；商品期貨名稱加 Yahoo 連結＋即時行情。
+const CACHE = "morning-board-v25";
 
 self.addEventListener("install", e => {
   self.skipWaiting();
