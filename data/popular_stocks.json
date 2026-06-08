@@ -1,7 +1,35 @@
 {
-  "generated_at": "2026-06-08T07:14:36+08:00",
+  "generated_at": "2026-06-08T08:39:51+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
+    {
+      "symbol": "MU",
+      "name_zh": "美光",
+      "kind": "US",
+      "price": 864.01,
+      "change_pct": -13.25,
+      "mtd_pct": -11.02,
+      "ytd_pct": 202.73,
+      "market_date": "2026-06-05",
+      "per": 40.412,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MU.US",
+      "error": null
+    },
+    {
+      "symbol": "SOXL",
+      "name_zh": "Direxion Daily Semiconductor Bu",
+      "kind": "US",
+      "price": 182.54,
+      "change_pct": -30.51,
+      "mtd_pct": -18.63,
+      "ytd_pct": 334.31,
+      "market_date": "2026-06-05",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOXL.US",
+      "error": null
+    },
     {
       "symbol": "SPY",
       "name_zh": "SPDR S&P 500 ETF",
