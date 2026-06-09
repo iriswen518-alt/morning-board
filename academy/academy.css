@@ -804,12 +804,15 @@ a.academy-card:hover {
 }
 
 .cards-list-chapter h3 {
-  font-size: 18.5px;
-  font-weight: 750;
+  font-size: 21px;
+  font-weight: 700;
   color: #1a2733;
-  margin: 0 0 14px 0;
-  border-bottom: 1.5px solid #f1f5f9;
-  padding-bottom: 6px;
+  margin: 28px 0 14px 0;
+  padding-bottom: 0;
+}
+
+.cards-list-chapter:first-child h3 {
+  margin-top: 0;
 }
 
 .cards-list-chapter ul {
@@ -820,13 +823,13 @@ a.academy-card:hover {
 
 .cards-list-chapter li {
   font-size: 14.5px;
-  color: #475569;
+  color: #cbd5e1; /* Light grey bullet dot */
   margin-bottom: 8px;
   line-height: 1.6;
 }
 
 .cards-list-id {
-  background: #f1f5f9;
+  background: #f8fafc;
   color: #334155;
   padding: 2px 6px;
   border-radius: 4px;
@@ -835,6 +838,7 @@ a.academy-card:hover {
   font-weight: 600;
   margin-right: 8px;
   display: inline-block;
+  border: 1px solid #e2e8ee;
 }
 
 .cards-list-link {
@@ -846,7 +850,7 @@ a.academy-card:hover {
 }
 
 .cards-list-link:hover {
-  color: var(--brand-deep);
+  color: var(--brand-primary);
 }
 
 @media (max-width: 640px) {
