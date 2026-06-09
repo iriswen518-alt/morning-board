@@ -1,11 +1,12 @@
 {
-  "news_date": "2026-06-08",
+  "news_date": "2026-06-09",
   "tldr": [
-    "上週五全球晶片股崩跌重創華爾街，那斯達克指數重挫 4.18%、費城半導體指數狂瀉逾 10%，單日市值蒸發約 1.3 兆美元。",
-    "台股嚴陣以待，台指期夜盤狂瀉 3,006 點創史上最大單日跌點，法人示警週一現貨恐大幅開低、下探四萬點整數關卡。",
-    "美國 5 月非農新增 17.2 萬人、遠高於市場預期約 8 萬人，令聯準會年底前升息機率回升至約七成，十年期美債殖利率衝破 4.54%。",
-    "博通未上修 AI 晶片財測點燃賣壓，原油則在美伊以緊張升溫下飆向每桶 96 美元。",
-    "國內方面，台積電股東會重申 2026 年美元營收成長逾 30%，金管會則出手緩衝壽險型金控接軌新制的資本壓力。"
+    "美國5月非農爆表澆熄降息預期，費半單日重挫逾10%，台股開盤一度爆出史上最大盤中跌點。",
+    "台指期夜盤崩跌後，期交所自6/9起辦說明會，宣導7/6上路的兩大避險新制。",
+    "Biotech became the week's safe haven as AI and chip names pulled back, with 藥華藥 and 保瑞 both posting record monthly revenue.",
+    "AI與晶片股漲多回檔，生醫族群成本周避風港，藥華藥、保瑞5月營收同創新高。",
+    "金管會同步收緊壽險海外垃圾債部位，並盯緊社群平台兜售的境外地下保單。",
+    "以色列再襲伊朗石化廠，布蘭特原油勁揚近5%，地緣政治風險升溫。"
   ],
   "sections": [
     {
@@ -13,28 +14,28 @@
       "section_zh": "股市行情",
       "items": [
         {
-          "title_zh": "台指期夜盤崩 3,006 點創紀錄，台股週一恐迎恐慌殺盤",
-          "title_en": "Taiwan futures crash a record 3,006 points overnight; cash market braces for a brutal Monday",
-          "summary_zh": "受上週五美股重挫拖累，台指期夜盤一度狂瀉 3,006 點、改寫史上最大單日跌點紀錄，盤中一度逼近跌停。台股上週五在美股賣壓前收在約 45,070 點高檔，法人警告週一現貨將大幅跳空開低；若月線失守，指數恐進一步下探四萬點整數大關。融資水位偏高的散戶與槓桿型 ETF 被點名為最脆弱的一群，市場憂心一旦觸發「多殺多」雪球效應，賣壓恐自我強化、加深跌勢。後續須緊盯外資期現貨同步動向與融資追繳情形。",
-          "summary_en": "Following Friday's Wall Street rout, the night session of TAIEX futures collapsed by as much as 3,006 points — the largest single-session point drop on record — with the contract briefly limit-down. Institutional desks warn that the cash index, which closed Friday near 45,070 before the US sell-off, faces a violent gap-down at Monday's open. If the monthly moving average fails to hold, strategists see the index sliding toward the psychologically critical 40,000 level. Margin-heavy retail positions and leveraged ETFs are flagged as the most vulnerable, raising the risk of a self-reinforcing \"long-killing-long\" cascade.",
-          "source_name": "聯合新聞網",
-          "source_url": "https://udn.com/news/story/7238/9550473"
+          "title_zh": "台股爆2,694點史上最大盤中跌點，台積電開盤秒殺",
+          "title_en": "Taiwan stocks post record intraday point loss as TSMC tumbles",
+          "summary_zh": "受美股上週五費半暴跌10.26%衝擊，台股6月8日開盤跌破45,000點，盤中一度重挫2,694點，創下史上最大盤中跌點紀錄；台指期夜盤更已先行崩跌逾3,000點。權值王台積電開盤直接跌至約2,230元、跌幅超過一根停板，旺矽、弘塑、聯亞等多檔千金股同步亮燈跌停，市場恐慌情緒濃厚。統一投顧提醒投資人此刻應優先做好風險控管、提高現金部位，不宜貿然搶進承接，待外部利空鈍化、量能回穩後再評估布局，避免在急殺段被洗出場。",
+          "summary_en": "Taiwan's benchmark TAIEX cratered as much as 2,694 points intraday on June 8, its largest-ever intraday point decline, after Friday's 10.26% plunge in the Philadelphia Semiconductor Index. The index broke below 45,000, while TAIFEX night-session futures had already crashed more than 3,000 points. TSMC opened sharply lower at around NT$2,230, down more than a full daily limit move, and a string of \"thousand-dollar\" stocks including 旺矽, 弘塑 and 聯亞 hit limit-down. President Securities Investment Consulting urged investors to prioritise risk control and raise cash positions rather than bottom-fish into the panic.",
+          "source_name": "工商時報",
+          "source_url": "https://www.ctee.com.tw/news/20260608700515-430201"
         },
         {
-          "title_zh": "雙重曝險：台積電 ADR 重挫 6.69%，晶片大逃殺直擊台灣散戶荷包",
-          "title_en": "Double exposure: TSMC ADR tumbles 6.69% as chip carnage hits Taiwanese retail wallets",
-          "summary_zh": "台灣權值高度集中於半導體，使台股對全球晶片賣壓「雙重曝險」。台積電 ADR 上週五重挫 6.69%、費城半導體指數同步跌逾 10%，預示週一台股權值股將承受沉重賣壓。許多散戶同時重押台股晶片股，又透過 ETF 與複委託大量持有美國科技股，這波回檔等於兩面夾擊、同步侵蝕資產，對重壓 AI 題材的家庭帳面衝擊尤深。法人提醒，分散配置與控制槓桿是當前自保關鍵，短線應避免在恐慌中追殺殺低。",
-          "summary_en": "Taiwan's outsized weighting in semiconductors makes it doubly exposed to the global chip sell-off. TSMC's US-listed ADR slumped 6.69% on Friday and the SOX dropped more than 10%, pointing to heavy pressure on the island's index heavyweights at Monday's open. With local investors holding large positions in both Taiwan-listed chip names and US tech via ETFs and sub-brokerage (複委託) accounts, the drawdown threatens portfolios on two fronts simultaneously, amplifying paper losses for households heavily concentrated in the AI theme.",
-          "source_name": "聯合新聞網",
-          "source_url": "https://udn.com/news/story/7251/9551787"
+          "title_zh": "台股殺盤襲來，17檔法人逆勢狂掃貨",
+          "title_en": "Foreign and institutional money keeps buying 17 names into the selloff",
+          "summary_zh": "台股6月8日跳空回檔之際，外資與投信法人仍逆勢加碼一籃子撐盤股，由倍微（6270）、玉晶光（3406）領軍的17檔個股可望成為盤面穩定要角，其中玉晶光更獲法人連續買超15個交易日，籌碼面相對穩固。不過整體利空仍不容小覷，台指期夜盤大幅跳空下跌、記憶體族群盤中閃崩，顯示法人選擇性承接是在大盤明顯偏空的氛圍下進行；投資人宜留意法人鎖定的逆勢買超標的與基本面是否相符，作為急跌段觀察名單，而非全面進場訊號。",
+          "summary_en": "As the TAIEX gapped lower on June 8, institutional investors were still accumulating a basket of 17 supporting stocks led by 倍微 (6270) and 玉晶光 (3406), positioning them as potential stabilising anchors during the rout. 玉晶光 in particular drew a 15-straight-session institutional buying streak. The market still faced heavy headwinds, however, with the night-session futures gapping sharply lower and memory-related names flash-crashing, underscoring that selective institutional support was running against a broadly risk-off tape.",
+          "source_name": "工商時報",
+          "source_url": "https://www.ctee.com.tw/news/20260608700363-430201"
         },
         {
-          "title_zh": "法人示警恐慌殺盤，關鍵技術防守點成焦點",
-          "title_en": "Institutions warn of panic selling; key technical levels in focus",
-          "summary_zh": "券商策略分析師提醒，週一台股恐出現非理性的全面恐慌殺盤而非有秩序的修正，建議投資人週末先設好防守點位。法人點名的觀察重點包括：外資是否期貨、現貨同步調節，月線與季線能否守穩，以及 AI 供應鏈權值龍頭開盤後的表現。若大盤全面失守，部分具防禦性、殖利率較高的傳產與內需族群，可能成為相對抗跌的避風港。整體而言，控制部位、留意融資追繳與停損紀律，是因應這波系統性風險的核心原則。",
-          "summary_en": "Brokerage strategists caution that Monday could bring an indiscriminate panic sell-off rather than an orderly correction, urging investors to pre-set defensive levels over the weekend. Watch-points flagged include whether foreign investors dump futures and cash equities in tandem, whether the monthly and quarterly moving averages hold, and how AI-linked supply-chain leaders behave at the open. Defensive, higher-yield traditional sectors are tipped as potential relative outperformers if the broad market capitulates.",
-          "source_name": "聯合新聞網",
-          "source_url": "https://udn.com/news/story/7251/9551139"
+          "title_zh": "3檔主動式ETF 6/9掛牌，全市場ETF達223檔",
+          "title_en": "Three active ETFs list on June 9, lifting market count to 223",
+          "summary_zh": "主動安聯美國科技（00402A）、主動聯博動能50（00404A）、主動富邦台灣龍耀（00405A）三檔主動式ETF於6月9日同步在集中市場掛牌，自掛牌首日起即可進行融資融券交易。三檔上市後，台灣集中市場ETF總數達223檔，其中被動型195檔、主動型28檔，顯示主動式ETF版圖在大盤波動之際仍持續擴張。對投資人而言，主動式ETF結合經理人選股與ETF交易便利性，但內扣費用與追蹤策略各異，布局前仍須留意其投資範疇、波動度與費用結構，避免僅以「主動」名號作為進場依據。",
+          "summary_en": "Three actively managed ETFs debut on the Taiwan exchange on June 9: 主動安聯美國科技 (00402A), 主動聯博動能50 (00404A) and 主動富邦台灣龍耀 (00405A), all eligible for margin trading and short selling from their first trading day. Their listing brings the total number of exchange-listed ETFs to 223, comprising 195 passive and 28 active products, and marks continued momentum for Taiwan's fast-growing active ETF segment even as the broader market sells off.",
+          "source_name": "工商時報",
+          "source_url": "https://www.ctee.com.tw/news/20260608700193-439901"
         }
       ]
     },
@@ -43,36 +44,36 @@
       "section_zh": "產業動態",
       "items": [
         {
-          "title_zh": "台積電股東會重申 2026 美元營收成長逾 30%，AI 需求仍屬「根本性」",
-          "title_en": "TSMC AGM reaffirms 2026 USD revenue growth above 30% as AI demand stays \"fundamental\"",
-          "summary_zh": "台積電 6 月 4 日股東常會上，董事長魏哲家向股東強調 AI 仍是根本性、結構性需求，並正由資料中心向個人電腦、智慧型手機、汽車與物聯網擴散，重申 2026 年全年以美元計營收成長逾 30% 的展望。先進製程已占整體晶圓銷售金額 74%，公司並建置新一代 CoPoS 先進封裝試產線，預計兩到三年後進入大規模量產。魏哲家同時釋出現金股利至少 24 元、美國亞利桑那廠量產進度等訊息。儘管股東會釋出正向展望，惟適逢全球晶片股劇烈回檔，市場對 AI 投資循環是否過熱的疑慮升溫，台積電後續訂單能見度與資本支出節奏將是觀察重點。",
-          "summary_en": "At its June 4 annual general meeting, TSMC chairman C.C. Wei told shareholders that AI remains a fundamental, structural source of demand now spreading from data centers into PCs, smartphones, autos and IoT, and reiterated guidance for full-year 2026 revenue growth in excess of 30% in US-dollar terms. Advanced nodes already account for 74% of total wafer sales, and the company is building a next-generation CoPoS advanced-packaging pilot line targeting mass production in two to three years. Management also signaled a cash dividend of at least NT$24 and progress at its Arizona fabs.",
-          "source_name": "風傳媒",
-          "source_url": "https://www.storm.mg/article/11138362"
-        },
-        {
-          "title_zh": "聯電 5 月營收年增 17.78%",
-          "title_en": "UMC May revenue rises 17.78% year-on-year",
-          "summary_zh": "晶圓代工廠聯電公布 5 月營收約新台幣 229.4 億元，年增 17.78%，顯示在 AI 帶動先進製程循環成為市場焦點之際，成熟製程與特殊製程需求仍具韌性。穩健的營收成長，為市場對先進製程以外的半導體整體需求提供一定程度的信心支撐；不過在全球晶片股劇烈回檔、評價快速重估之下，投資人仍將審慎評估基本面能否撐住股價。法人指出，成熟製程報價與車用、工控等終端需求復甦力道，將是後續觀察聯電動能的重點指標。",
-          "summary_en": "Foundry UMC reported May revenue of about NT$22.94 billion, up 17.78% from a year earlier, signaling resilient mature-node and specialty demand even as the AI-driven advanced-node cycle dominates headlines. The steady top-line growth offers a measure of reassurance about broader semiconductor demand beyond the leading-edge, though investors will weigh it against the sharp re-rating of chip valuations following the global sell-off.",
-          "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/cate/5591"
-        },
-        {
-          "title_zh": "蘋果 WWDC 2026 台灣時間 6 月 9 日登場，AI 整合成焦點",
-          "title_en": "Apple's WWDC 2026 opens June 9 (Taiwan time) with AI integration in focus",
-          "summary_zh": "蘋果年度全球開發者大會將於台灣時間 6 月 9 日揭幕，市場關注其如何將 AI 服務更深度整合進硬體與作業系統。這場盛會是台灣蘋果供應鏈的重要催化劑，若裝置端 AI 功能進一步深化，可望帶動先進處理器、封裝與零組件需求，對在地供應商而言是潛在利多。在全球晶片交易承壓、市場情緒脆弱之際，WWDC 的軟硬整合進展與新品節奏，或能為蘋果鏈個股提供題材支撐，後續須觀察實際發表內容與供應鏈拉貨動能是否同步轉強。",
-          "summary_en": "Apple's annual Worldwide Developers Conference kicks off on June 9 Taiwan time, with markets watching how deeply the company embeds AI services across its hardware and operating systems. The event is a key catalyst for Taiwan's Apple supply chain, as deeper on-device AI features could lift demand for advanced processors, packaging and components — a potentially supportive narrative for local suppliers at a moment when the broader chip trade is under pressure.",
-          "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/5607/9544706"
-        },
-        {
-          "title_zh": "政府「健康台灣」生醫計畫進入採購高峰",
-          "title_en": "Government \"Healthy Taiwan\" biomedical push enters peak procurement phase",
-          "summary_zh": "以千億元級「健康台灣深耕計畫」為主軸、並重押 AI 醫療的台灣旗艦生醫政策，6 月起進入密集採購階段。該計畫旨在加速 AI 賦能醫療、強化國內生技與醫材生態系，為相關產業提供由政策撐腰、且相對不受全球科技股循環波動影響的中長期需求動能。對布局生醫、智慧醫療的廠商而言，政府採購挹注可望帶來實質訂單與營運能見度；惟執行進度、預算到位與標案落地節奏，仍是決定題材能否轉化為實質業績的關鍵，須持續追蹤。",
-          "summary_en": "Taiwan's flagship biomedical initiatives, anchored by the multi-hundred-billion-NT \"Healthy Taiwan Deep Cultivation Plan\" with a heavy AI-healthcare component, are entering an intensive procurement phase in June. The program aims to accelerate AI-enabled medical care and strengthen the domestic biotech and medical-device ecosystem, offering a longer-term, policy-backed demand driver that is relatively insulated from the swings of the global tech-stock cycle.",
+          "title_zh": "WWDC登場，蘋果新品傳亮相、台積電受惠",
+          "title_en": "WWDC in focus: new Apple hardware seen benefiting TSMC",
+          "summary_zh": "蘋果全球開發者大會（WWDC）6月9日登場，市場預期搭載M5 Ultra晶片的新款Mac Studio有望成為亮點之一。供應鏈看法認為，新品將帶動台積電N3P先進製程與SoIC-mH先進封裝需求看升；同時macOS 27強化觸控操作的方向，預期推升OLED驅動IC規格升級，連帶使台積電16奈米特殊製程受惠。對台股而言，蘋果新品週期向來是先進製程與封裝供應鏈的重要催化劑，惟實際拉貨力道仍須觀察新品定價、市場接受度與後續備貨節奏，短線股價也易受大盤系統性風險干擾，宜分辨題材與基本面落差。",
+          "summary_en": "Apple's Worldwide Developers Conference opens June 9, with the market anticipating a new Mac Studio powered by the M5 Ultra chip among the headline reveals. Supply-chain watchers expect demand to firm for TSMC's N3P advanced node and SoIC-mH packaging, while a macOS 27 push toward enhanced touch capability is seen driving upgrades in OLED driver ICs, benefiting TSMC's 16nm specialty process. The event reinforces Apple's role as a key swing factor for Taiwan's advanced-process and packaging supply chain.",
           "source_name": "工商時報",
-          "source_url": "https://www.ctee.com.tw/"
+          "source_url": "https://www.ctee.com.tw/news/20260608700056-439901"
+        },
+        {
+          "title_zh": "緯致5月營收年增29.2%，續創同期新高",
+          "title_en": "緯致 May revenue up 29.2%, a fresh same-period high",
+          "summary_zh": "緯致（原緯創軟體）公告自結5月合併營收11.49億元，續創歷年同期新高。受新台幣升值及工作天數較少影響，營收月減7.4%，但年增達29.2%；累計今年前5月合併營收57.89億元、年增29.7%，動能維持強勁。公司並連續六年獲評為上櫃公司治理評鑑前5%，顯示營運成長與治理品質兼具。對投資人而言，軟體與資訊服務類股營收受匯率與工作天數的短期擾動屬常態，重點仍在年增趨勢與專案動能是否延續；在大盤回檔之際，基本面穩健、年增雙位數的中小型成長股，較具相對抗跌韌性，惟仍須留意整體市場資金情緒。",
+          "summary_en": "緯致 (formerly 緯創軟體) reported self-compiled May consolidated revenue of NT$1.149 billion, a record for the month. Revenue slipped 7.4% month-on-month on the stronger New Taiwan dollar and fewer working days, but rose 29.2% year-on-year, taking cumulative January-May revenue to NT$5.789 billion, up 29.7%. The company has been rated among the top 5% in corporate governance among OTC-listed firms for six consecutive years, underscoring steady operational and governance momentum.",
+          "source_name": "經濟日報",
+          "source_url": "https://udn.com/news/story/7253/9551112"
+        },
+        {
+          "title_zh": "保瑞5月營收21.14億元創新高，併購綜效顯現",
+          "title_en": "保瑞 May revenue hits record on US brand acquisition",
+          "summary_zh": "保瑞（6472）公告5月自結合併營收21.14億元，年增40.19%、月增42.46%，雙雙改寫歷史新高。成長主要來自旗下晨暉於5月以5,000萬美元現金完成收購美國運動保健品牌Weider Global Nutrition（WGN），併購綜效逐步反映於營收，推升單月表現大幅跳升。保瑞長期以「併購＋CDMO（委託開發暨製造）」雙引擎驅動成長，此次跨入運動營養保健領域，進一步擴大消費保健版圖。對投資人而言，併購題材帶動營收高基期成長，後續仍須觀察整併效益、毛利結構與財務槓桿變化，評估成長動能是否能延續至下半年。",
+          "summary_en": "Pharma group 保瑞 (6472) posted self-compiled May consolidated revenue of NT$2.114 billion, up 40.19% year-on-year and 42.46% month-on-month, an all-time high. The jump was driven by its 晨暉 unit completing a US$50 million cash acquisition of US sports-nutrition brand Weider Global Nutrition (WGN) in May, with merger synergies feeding through to top-line growth. The result underlines 保瑞's acquisition-led growth model in pharmaceuticals and consumer health.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/5710/9552071"
+        },
+        {
+          "title_zh": "生醫概念股成本周資金避風港",
+          "title_en": "Biotech becomes the week's safe haven as chips pull back",
+          "summary_zh": "在AI、半導體族群漲多承壓之際，法人點名生醫族群有望成為本周資金避風港。藥華藥5月營收24.6億元、月增19.1%、年增108.5%，創歷史新高；今年有逾11家上市櫃及興櫃公司設定新藥授權目標，題材延續。7月中旬生技月即將啟動，預估媒合場次上看破萬場、攤位達2,200個，可望帶動族群人氣。法人並看好保瑞、美時等藥廠下半年營運表現。生醫股具防禦與題材雙重特性，在系統性風險升高時相對抗跌，惟個股基本面與新藥進度差異大，投資人宜聚焦營收動能明確、授權或產品線具體者，避免追逐純題材、缺乏獲利支撐的標的。",
+          "summary_en": "With AI and semiconductor names overbought and under pressure, institutions flagged the biomedical sector as this week's likely safe harbour. 藥華藥 posted record May revenue of NT$2.46 billion, up 19.1% month-on-month and 108.5% year-on-year. More than 11 listed, OTC and emerging-board firms are targeting new-drug licensing deals this year, and the mid-July biotech month is expected to host over 10,000 matchmaking sessions across 2,200 booths. 保瑞 and 美時 are seen as having promising second-half operations.",
+          "source_name": "經濟日報",
+          "source_url": "https://udn.com/news/story/7251/9551737"
         }
       ]
     },
@@ -81,36 +82,28 @@
       "section_zh": "金融業",
       "items": [
         {
-          "title_zh": "金管會修法緩衝壽險型金控 TIS 接軌，紓解資本壓力",
-          "title_en": "FSC eases capital rules to cushion life-insurance-led financial holdings ahead of TIS transition",
-          "summary_zh": "為降低 2026 年保險業會計接軌（TIS）對母金控的資本衝擊，金管會修法，自今年半年報起，8 家壽險型金控在計算資本適足率時，可比照旗下壽險子公司採 15 年過渡措施，把資本壓力「分年慢慢還」。此舉等於讓相關金控集團將資本負擔分期攤提，有效紓解短期清償能力比率壓力，並支撐其配息能力。市場解讀此為對壽險型金控的及時利多，有助穩定母金控資本與股利政策；不過在全球市場劇烈波動、評價損益恐再生變數之際，壽險業接軌新制與資產負債管理的長期挑戰仍未消除，後續仍須觀察各家資本補強進度。",
-          "summary_en": "To soften the capital impact of the 2026 insurance-accounting transition (TIS) on parent financial holding companies, the FSC has amended its rules so that, starting with this year's half-year reports, eight life-insurance-led FHCs can apply the same 15-year transitional measure as their insurance subsidiaries when calculating capital adequacy. The change effectively lets these groups spread the capital burden over time, easing near-term pressure on solvency ratios and supporting dividend capacity.",
+          "title_zh": "期交所6/9起辦說明會，宣導兩大避險新制",
+          "title_en": "TAIFEX rolls out briefings from June 9 ahead of two new rules",
+          "summary_zh": "台指期夜盤重挫3,006點（跌幅6.65%），創期交所盤後交易最大單日跌點紀錄，凸顯極端行情下的價格保護需求。期交所將自6月9日至6月26日於台北、台中、高雄、新竹巡迴舉辦6場說明會，宣導7月6日上路的兩大新制：一是股票期貨最小升降單位調整，將1元最小單位擴大適用至500至2,500元級距的股期；二是國外ETF期貨及選擇權改採三階段漲跌幅機制，提供更細緻的價格保護，避免恐慌性超跌或超漲。對交易人而言，新制將影響下單成本、跳動值與停損規劃，建議於正式上路前完整了解規則細節，重新檢視部位與風險控管參數。",
+          "summary_en": "After the night session saw TAIEX futures crash 3,006 points (down 6.65%), the largest single-day after-hours point drop on record, the Taiwan Futures Exchange will hold six briefing sessions from June 9 to June 26 across Taipei, Taichung, Kaohsiung and Hsinchu. The sessions explain two rules taking effect July 6: an adjustment to the minimum tick size for single-stock futures (the NT$1 minimum extended to the NT$500-2,500 price band) and a three-stage daily price-limit mechanism for foreign-ETF futures and options, aimed at cushioning panic-driven overshoots.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6485869"
+        },
+        {
+          "title_zh": "金管會設壽險海外公債BBB-門檻，3,744億踩線",
+          "title_en": "Regulator sets BBB- floor for insurers' foreign sovereign bonds",
+          "summary_zh": "金管會6月2日預告修法，未來壽險業投資海外政府公債及國庫券，信用評等須達BBB-投資等級以上；若既有部位遭降評至非投資等級，則禁止再加碼。截至今年3月底，保險業持有外國政府公債約2.88兆元，其中評等低於BBB-的部位約3,744億元、占比約13%，落入警戒區。既有部位給予6個月調整期、不強制處分，屆期未改善者須提出改善計畫與風險管理機制，新制最快8月底上路。全案起因於哥倫比亞主權債遭降評，引發各界關注壽險業重押新興市場主權債的信用風險，金管會因此啟動制度檢討，強化海外固定收益部位的信評把關。",
+          "summary_en": "The Financial Supervisory Commission has pre-announced rules requiring life insurers' holdings of foreign government bonds and treasury bills to carry at least a BBB- investment-grade rating; positions downgraded to junk cannot be added to. As of end-March insurers held about NT$2.88 trillion of foreign sovereign debt, of which roughly NT$374.4 billion (about 13%) sat below BBB-, now in the warning zone. Existing positions get a six-month adjustment window without forced sales, with the rule set to take effect as early as end-August. The review was triggered by a downgrade of Colombian sovereign debt.",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/5613/9532077"
+          "source_url": "https://money.udn.com/money/story/5613/9541799"
         },
         {
-          "title_zh": "金控首季淨值衝 5.5 兆元新高，銀行勝壽險",
-          "title_en": "Financial holdings' Q1 net worth hits record NT$5.5 trillion; banks outshine insurers",
-          "summary_zh": "台灣金控業首季合計淨值攀升至新台幣 5.5 兆元、創歷史新高。銀行型金控憑藉穩定獲利與較低的評價波動，首季淨值平均成長逾 4%，優於壽險型金控，支撐其後續配息實力；壽險型金控則因評價損益波動加劇，未來股利的穩定性與配息力道仍待觀察。這項「銀行勝壽險」的分化，在這波全球市場劇烈震盪下恐進一步擴大——壽險型金控的金融資產評價恐再受衝擊，而銀行型金控相對穩健的體質，可能使其在不確定環境中更受存股與存息資金青睞。投資人選擇金融股時，宜留意獲利結構與評價敏感度差異。",
-          "summary_en": "Combined net worth across Taiwan's financial holding companies climbed to a record NT$5.5 trillion in the first quarter. Bank-led FHCs, helped by stable earnings and lower valuation volatility, posted average net-worth growth of more than 4%, outpacing insurance-led peers and underpinning their dividend-paying strength. Insurance-led FHCs, by contrast, saw greater swings in mark-to-market gains and losses, leaving the stability of their future payouts more uncertain — a divergence likely to widen amid the latest market turbulence.",
-          "source_name": "聯合新聞網",
-          "source_url": "https://udn.com/news/story/7239/9539320"
-        },
-        {
-          "title_zh": "金管會放寬全委代操限制，79 家業者受惠",
-          "title_en": "FSC relaxes discretionary-management rules, benefiting 79 operators",
-          "summary_zh": "金管會放寬全權委託代操（全委）業務限制，新制可望嘉惠 79 家業者，並擴大金控集團內部資源整合空間。在新架構下，以壽險業為例，未來可委託同集團投信代操資產，再由同集團券商承作店頭衍生性商品避險，強化保險、資產管理與證券業務間的集團綜效。此一鬆綁有助業者提升資金運用效率與商品設計彈性，對財富管理與資產管理業務具正面意義；不過監理單位也將同步關注集團內利益衝突、風險集中與防火牆機制是否到位，後續實務操作與內控落實情形值得追蹤。",
-          "summary_en": "The FSC has loosened restrictions on discretionary asset-management (full-mandate) business, a change set to benefit 79 operators and expand room for resource integration within financial groups. Under the new framework, an insurer, for example, may mandate a sister investment-trust arm to manage assets and then have a sister brokerage execute OTC derivatives for hedging — tightening intra-group synergies across insurance, asset management and securities.",
-          "source_name": "大紀元",
-          "source_url": "https://www.epochtimes.com/b5/26/5/17/n14766511.htm"
-        },
-        {
-          "title_zh": "強制車險保障升級，7 月起身故、失能理賠最高 300 萬元",
-          "title_en": "Compulsory auto-insurance payouts to rise to NT$3 million from July",
-          "summary_zh": "自 7 月起，台灣強制汽車責任保險將身故及失能理賠上限調高至新台幣 300 萬元，強化交通事故受害人保障。此次調升反映主管機關推動強制險保障與時俱進、跟上醫療與賠償成本上揚的政策方向。隨著新上限上路，保險業者須將提高後的理賠額度反映於費率與責任準備金計提，相關精算與商品調整成為必要工作。對民眾而言，基本保障同步提升；對產險業者而言，理賠成本結構亦將隨之變動，後續費率是否連動調整及對承保損益的影響，值得持續關注。",
-          "summary_en": "From July, Taiwan's compulsory automobile liability insurance will raise its maximum death-and-disability benefit to NT$3 million, strengthening protection for accident victims. The upgrade reflects the regulator's push to keep mandatory coverage in step with rising medical and compensation costs, and insurers will need to factor the higher limits into pricing and reserving as the new ceiling takes effect.",
-          "source_name": "金融監督管理委員會",
-          "source_url": "https://www.fsc.gov.tw/"
+          "title_zh": "金管會盯境外地下保單，鎖定IG、LINE兜售香港保單",
+          "title_en": "FSC steps up scrutiny of offshore policies sold on social media",
+          "summary_zh": "金管會保險局指出，近期檢舉案件多與香港保單有關，主要透過Instagram、Facebook、LINE等社群平台招攬，近兩個月已接獲2件檢舉，明顯高於過去約每半年1件的頻率，顯示違規招攬有上升趨勢。金管會示警未經核准的境外保單潛藏五大風險：爭議難解、資訊不對稱、法律保障不足、詐騙風險，以及無法適用保險相關稅負優惠。境外地下保單常見四大特徵：以英文標示保險公司名稱、保單條款為英文、保費多以外幣收取，且缺乏台灣合法保險公司核准文號。依保險法規定，未經許可在境內代理、經紀或招攬境外保單，最重可處三年以下有期徒刑，並得併科罰金，民眾切勿購買。",
+          "summary_en": "The FSC's Insurance Bureau says recent complaints have centred on Hong Kong insurance policies promoted via Instagram, Facebook and LINE, with two complaint cases in the past two months versus a prior pace of about one every six months. The regulator flagged five major risks of unapproved offshore policies — hard-to-resolve disputes, information asymmetry, weak legal protection, fraud risk and ineligibility for tax incentives — and warned that illegally representing, broking or soliciting such policies domestically can carry up to three years' imprisonment.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/5613/9546844"
         }
       ]
     },
@@ -119,58 +112,20 @@
       "section_zh": "財富管理",
       "items": [
         {
-          "title_zh": "千億級高股息 ETF 首納台積電，改寫換股紀錄",
-          "title_en": "Trillion-NT high-dividend ETF adds TSMC in landmark reshuffle",
-          "summary_zh": "在最新一次指數換股中，千億級高股息 ETF 00929 新增 11 檔非年配息成分股，其中包括季配息的台積電，以及半年配的聯發科、大立光等重量級指標股，創下千億級高股息 ETF 首度納入台積電的先例。此舉將成長型權值龍頭納入以領息為導向的商品，重塑存息族參與台灣 AI 旗艦個股的方式。對投資人而言，高股息 ETF 同時兼顧息收與成長動能的趨勢更為明顯；惟在全球晶片股劇烈回檔之際，納入高波動權值股是否會放大淨值震盪，以及對配息穩定度的影響，將是存股族後續須審慎評估的重點。",
-          "summary_en": "In a first for a trillion-NT-class high-dividend ETF, 00929 added 11 non-annual-payout constituents in its latest index reshuffle, including quarterly-paying TSMC alongside semi-annual payers such as MediaTek and Largan. The move marks the first time a giant high-dividend product has folded in TSMC, blending growth heavyweights into an income-oriented vehicle and reshaping how dividend-focused investors gain exposure to Taiwan's marquee AI names.",
+          "title_zh": "指數連結型保單年底前開放，金管會畫定五大遊戲規則",
+          "title_en": "FSC maps out five rules for index-linked policies due to open by year-end",
+          "summary_zh": "金管會規劃在今年底前開放指數連結型保單在台銷售，並訂出五大規範：一是連結指數須為IOSCO會員國中「先進國家」的指數；二是該指數須已有三年以上市場交易紀錄；三是銷售人員須具備三年以上投資型保單銷售經驗；四是每張投資型保單最多僅能連結5個指數；五是須具保本機制。金管會願意開放，主因包括配合亞洲資產管理中心高雄專區成立、須有更多元商品，以及觀察美國、新加坡、香港經驗，此類商品在高淨值資產客群相當熱銷。對財管與高資產客群而言，保本＋指數參與的設計兼顧防禦與成長，惟連結標的、參與率、保本條件與費用結構差異大，規劃前仍須回到客戶風險屬性與資產配置全局評估，避免僅看「保本」二字。",
+          "summary_en": "Regulators are preparing to allow index-linked insurance policies to be sold in Taiwan by the end of this year, setting five guardrails: the linked index must come from an \"advanced\" IOSCO-member jurisdiction; it must have at least three years of trading history; sales staff must have three years' investment-linked policy experience; each policy may link to a maximum of five indices; and principal must be protected. The move responds to the Kaohsiung asset-management hub initiative and to strong high-net-worth demand seen in the US, Singapore and Hong Kong.",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/5636/9361632"
+          "source_url": "https://money.udn.com/money/story/5613/9510808"
         },
         {
-          "title_zh": "0050、00919、00878 蟬聯 2026 存股族最愛 ETF",
-          "title_en": "0050, 00919, 00878 top the income-investor favorites list for 2026",
-          "summary_zh": "市值型與高股息 ETF 仍是台灣日益壯大的存股族核心配置工具。旗艦的 0050 採半年配（1 月、7 月），0056 則已轉為季配息制度、受益人逾 154 萬人，選股聚焦預測未來一年現金股利率最高的前 50 檔股票。最新排行凸顯，息收型 ETF 已成為散戶長期累積財富的預設配置工具。財富管理實務上，顧問多建議以市值型 ETF 掌握長線資本利得、搭配高股息 ETF 提供現金流，並依風險屬性適度納入債券平衡科技股波動。在當前市場劇烈震盪下，定期定額、分散配置與長期紀律，仍是穩健累積資產的關鍵原則。",
-          "summary_en": "Market-cap and high-dividend ETFs remain the core building blocks for Taiwan's growing army of dividend-focused savers. Flagship 0050 pays semi-annually (January and July), while 0056 has shifted to quarterly distributions and now serves more than 1.54 million beneficiaries, screening for the 50 stocks with the highest forecast dividend yields. The rankings underscore how income ETFs have become the default long-term allocation tool for retail wealth-building.",
-          "source_name": "元富證券豐雲學堂",
-          "source_url": "https://www.sinotrade.com.tw/richclub/hotstock/0050-00919-00878%E2%8B%AF2026%E5%B9%B4%E5%AD%98%E8%82%A1%E6%97%8F%E6%9C%80%E6%84%9B10%E6%AA%94ETF%E6%8E%92%E8%A1%8C%E6%8F%AD%E6%9B%89-%E9%85%8D%E6%81%AF-%E6%88%90%E5%88%86%E8%82%A1-%E6%AE%96%E5%88%A9%E7%8E%87%E4%B8%80%E6%96%87%E6%8E%8C%E6%8F%A1-657aa75dfc95f66b8c098433"
-        },
-        {
-          "title_zh": "全委代操鬆綁，為財富管理商品設計開新局",
-          "title_en": "Discretionary-mandate easing opens new room for wealth-management product design",
-          "summary_zh": "金管會放寬全權委託代操業務，讓財富管理業務在整合集團資源、為高資產客戶設計商品上擁有更大彈性。透過開放集團內資產代操與衍生性商品避險，新制可望擴大銀行與券商能提供予富裕客群的結構型與全委解決方案菜單，提升商品多元性與客製化空間。對私人銀行與財管 2.0 業務而言，這是強化產品線、深化客戶關係的契機；惟與此同時，利益衝突防範、商品適合度與資訊揭露等治理要求也同步升高。業者如何在創新與合規間取得平衡、確保客戶利益優先，將是新制能否真正深化財管價值的關鍵。",
-          "summary_en": "The FSC's relaxation of full-mandate discretionary management gives wealth-management franchises greater latitude to integrate group resources and structure products for high-net-worth clients. By allowing intra-group asset management and derivatives hedging, the change could broaden the menu of structured and discretionary solutions banks and securities firms can offer affluent investors, while raising the bar on conflict-of-interest controls and suitability governance.",
-          "source_name": "大紀元",
-          "source_url": "https://www.epochtimes.com/b5/26/5/17/n14766511.htm"
-        }
-      ]
-    },
-    {
-      "section": "Tax & Regulations",
-      "section_zh": "稅務法規",
-      "items": [
-        {
-          "title_zh": "2026 綜所稅申報結束，首批退稅 7 月 31 日入帳",
-          "title_en": "2026 individual income-tax filing season wraps; first refunds land July 31",
-          "summary_zh": "台灣 2025 年度（114 年度）綜合所得稅申報期間為 5 月 1 日至 6 月 1 日。今年減稅措施包括：免稅額調高至 10.1 萬元（扶養 70 歲以上者為 15.15 萬元）、基本生活費調高至每人 21.3 萬元、長期照顧特別扣除額提高至 18 萬元，並將租屋支出改列特別扣除額。第一批退稅鎖定網路申報（含手機報稅）及稅額試算經線上或電話確認之案件，預計 7 月 31 日入帳。財政部提醒，符合資格者若於規定期限前完成確認，可望最早一批拿到退稅；未完成申報者仍應儘速補辦，以免衍生滯納金與利息。整體而言，今年減稅幅度擴大，對薪資族與扶養負擔較重家庭較為有感。",
-          "summary_en": "Taiwan's individual income-tax filing window for 2025 income ran from May 1 to June 1. The year's relief measures raised the personal exemption to NT$101,000 (NT$151,500 for dependents aged 70+), lifted the basic living expense to NT$213,000 per person and the long-term-care special deduction to NT$180,000, and reclassified rental spending as a special deduction. The first batch of refunds — covering online and pre-calculation-confirmed filings — is scheduled for July 31.",
-          "source_name": "聯合新聞網",
-          "source_url": "https://topic.udn.com/newstopic/tax_2026/245"
-        },
-        {
-          "title_zh": "網紅課稅新制上路，6 月 30 日前為輔導期",
-          "title_en": "New tax rules for online influencers; guidance period runs to June 30",
-          "summary_zh": "財政部針對免辦稅籍登記、且未課徵營業稅之個人網紅，就其於社群媒體或影音平臺取得的收入，明確規範課稅性質與費用認定方式。新制設有輔導（緩衝）期至 2026 年 6 月 30 日，讓創作者在更嚴格稽徵前有時間了解自身義務，反映稅捐機關將快速成長的創作者經濟更明確納入稅網的政策方向。對網紅與自媒體工作者而言，務必留意收入歸類（如執行業務所得或其他所得）、可減除之必要費用與憑證保存；及早建立收支與帳務紀錄，方能在輔導期結束後正確申報、降低補稅與裁罰風險。",
-          "summary_en": "The Ministry of Finance has clarified how income earned by individual online influencers — those without business-tax registration who are not subject to business tax — from social-media and video platforms should be characterized and how related expenses are recognized. A guidance (grace) period runs through June 30, 2026, giving creators time to understand their obligations before stricter enforcement, as the authorities move to bring the fast-growing creator economy more firmly into the tax net.",
-          "source_name": "經理人",
-          "source_url": "https://www.managertoday.com.tw/articles/view/70232"
-        },
-        {
-          "title_zh": "遺贈稅免稅額採 CPI 連動調整機制",
-          "title_en": "Estate and gift tax thresholds tied to CPI-linked indexation",
-          "summary_zh": "依台灣《遺產及贈與稅法》規定，遺贈稅之免稅額、課稅級距及各項扣除額，每遇消費者物價指數較上次調整之指數累計上漲達 10% 以上時，自次年起按上漲程度調整。此一機制使各項門檻能隨通膨長期校準，雖然今年遺贈稅稅率與級距維持不變，但對高資產家庭而言，這是規劃長期傳承與贈與時應納入考量的結構性特徵。實務上，善用每年贈與免稅額、分年規劃、搭配信託與保單等工具，有助於在合法節稅與資產傳承間取得平衡。建議高資產客戶定期檢視家族財富傳承架構，並留意未來門檻調整對稅負試算的影響。",
-          "summary_en": "Under Taiwan's Estate and Gift Tax Act, exemption amounts, tax brackets and various deductions are adjusted whenever the cumulative rise in the consumer price index reaches 10% or more since the last adjustment, taking effect the following year. The mechanism keeps thresholds aligned with inflation over time — a structural feature high-net-worth families should factor into long-term succession and gifting plans, even though headline rates remain unchanged this year.",
-          "source_name": "財政部賦稅署",
-          "source_url": "https://www.dot.gov.tw/singlehtml/ch26?cntId=4c40feb43876418f94ac0cb8dbe4ea86"
+          "title_zh": "凱基投信：AI台鏈迎結構性機遇",
+          "title_en": "凱基投信: AI Taiwan supply chain faces structural opportunity",
+          "summary_zh": "凱基投信指出，受惠AI浪潮的台灣科技供應鏈，正進入「結構性」而非僅「景氣循環」的成長機遇期；即便近期晶片與AI股大幅回檔，背後的長線投資主軸並未改變。投信認為，當前波動主要來自降息預期重新定價與部位過度擁擠所致，屬於長期結構性多頭趨勢中的修正，而非趨勢反轉；AI基礎建設投資、先進封裝與伺服器需求仍是中長期支撐。對財管客戶與基金投資人而言，此觀點提供在急殺段「危機入市」的思考框架，但仍須留意評價是否合理、產業地位是否穩固，並透過分批布局與資產配置分散單一題材風險，避免在高波動環境中過度集中押注單一族群。",
+          "summary_en": "凱基投信 argues the AI-driven Taiwan technology supply chain is entering a phase of structural, rather than merely cyclical, opportunity, even after the recent sharp pullback in chip and AI names. The fund house frames near-term volatility — driven by rate-cut repricing and crowded positioning — as a reset within a longer structural uptrend tied to AI infrastructure build-out, advanced packaging and server demand, suggesting longer-horizon investors treat sharp corrections as allocation opportunities rather than trend reversals.",
+          "source_name": "中時新聞網",
+          "source_url": "https://www.chinatimes.com/newspapers/20260609000417-260209"
         }
       ]
     },
@@ -179,28 +134,12 @@
       "section_zh": "總經政策",
       "items": [
         {
-          "title_zh": "美 5 月非農強勁，重燃聯準會升息預期",
-          "title_en": "Hot May payrolls revive Fed rate-hike bets",
-          "summary_zh": "美國 5 月新增非農就業 17.2 萬人，約為市場預期約 8 萬人的兩倍，顯示勞動市場仍具韌性，並澆熄降息期待。根據 CME FedWatch 工具，市場目前預估聯準會在 2026 年底前升息的機率約達七成；不過儘管川普總統施壓要求降低借貸成本，市場普遍預期聯準會將在 6 月 16 至 17 日的會議上維持利率不變。對台灣而言，美國利率走向牽動新台幣匯率、外資動向與輸入性通膨壓力，央行後續政策與匯率調節將是觀察重點，亦影響國內資金面與股市評價。",
-          "summary_en": "The US economy added 172,000 jobs in May, roughly double the consensus near 80,000, signaling a resilient labor market and dampening hopes for rate cuts. Markets now price about a 70% chance the Federal Reserve hikes by the end of 2026, according to the CME FedWatch tool, even as policymakers are widely expected to hold rates steady at the June 16–17 meeting despite pressure from President Trump to ease.",
-          "source_name": "CNBC",
-          "source_url": "https://www.cnbc.com/2026/06/05/treasury-yields-ease-as-traders-await-key-labor-market-data-.html"
-        },
-        {
-          "title_zh": "美債殖利率飆至數週至數月高點",
-          "title_en": "Treasury yields surge to multi-week and multi-month highs",
-          "summary_zh": "在強勁就業數據後，美國公債殖利率全面跳升：指標十年期上揚逾 6 個基點至 4.544%、創 5 月 21 日以來新高；對政策最敏感的兩年期勁揚逾 11 個基點至 4.162%、創 2025 年 2 月 25 日以來最高；三十年期亦升近 3 個基點至 5.007%。殖利率急升收緊金融環境，並成為觸發股市賣壓的推手——折現率走高直接壓縮評價偏高的成長股與 AI 股。對台灣而言，美債殖利率走升將牽動壽險業避險成本、債券型資產評價與資金流向，亦使全球風險性資產的評價基準同步上移，後市須密切留意利率與匯率的連動效應。",
-          "summary_en": "US Treasury yields jumped after the strong jobs data: the benchmark 10-year rose more than 6 basis points to 4.544%, its highest since May 21; the policy-sensitive 2-year climbed over 11 basis points to 4.162%, the highest since February 25, 2025; and the 30-year added nearly 3 basis points to 5.007%. The sharp back-up in yields tightened financial conditions and helped trigger the equity sell-off, with higher discount rates pressuring richly valued growth and AI stocks.",
-          "source_name": "CNBC",
-          "source_url": "https://www.cnbc.com/2026/06/05/treasury-yields-ease-as-traders-await-key-labor-market-data-.html"
-        },
-        {
-          "title_zh": "立法院財委會 6 月 8 日審查 2026 年度預算",
-          "title_en": "Legislature's Finance Committee reviews 2026 budget on June 8",
-          "summary_zh": "台灣立法院財政委員會預定於 6 月 8 日審查各政府部門 2026 年度預算，將財政資源配置與政策優先順序——從產業扶植到社會支出——攤在國會檢視之下。此次審議適逢全球市場劇烈波動之際，政府的財政立場與公共投資計畫，對國內需求與市場信心更顯關鍵。市場關注重點包括重大公共建設、產業政策（如生醫、AI、能源）與社福支出的規模與排序，以及在外部不確定升高下，財政政策能否扮演穩定內需的角色。預算審查進度與朝野攻防，亦將牽動相關受惠族群題材。",
-          "summary_en": "Taiwan's Legislative Yuan Finance Committee is slated to review the 2026 budget for various government agencies on June 8, putting fiscal allocations and policy priorities — from industrial support to social spending — under legislative scrutiny. The deliberations come against a backdrop of heightened market volatility, where fiscal posture and government investment plans take on added significance for domestic demand and confidence.",
+          "title_zh": "科技股最危險時刻？美銀示警CPI、Fed、SpaceX三重夾殺",
+          "title_en": "BofA warns of a \"most dangerous moment\" for tech on triple threat",
+          "summary_zh": "美銀策略師Hartnett警告科技股面臨三大風險交織。其一，6月10日將公布的5月CPI：歷史經驗顯示，當通膨年增率突破4%時，標普500指數其後三個月平均下跌約4%。其二，全球央行可能進一步緊縮，推升公債殖利率，對評價偏高的成長股形成壓力。其三，SpaceX、Anthropic、OpenAI等重量級新股可能掀起IPO熱潮，抽走市場流動性，使資金從既有龍頭股分流，對原已擁擠的科技股交易形成雪上加霜的壓力。對投資人而言，此提醒呼應近期費半與台股的劇烈震盪，短線須留意CPI數據、殖利率走向與資金板塊輪動，在科技股漲多階段適度控管部位、預留現金以因應波動。",
+          "summary_en": "Bank of America strategist Michael Hartnett flagged three converging risks for technology stocks. First, the May CPI due June 10: historically, when annual inflation runs above 4%, the S&P 500 has averaged a roughly 4% decline over the following three months. Second, central banks may tighten further, pushing bond yields higher and pressuring richly valued growth names. Third, a wave of high-profile IPOs from the likes of SpaceX, Anthropic and OpenAI threatens to drain market liquidity away from incumbents, compounding the squeeze on an already crowded tech trade.",
           "source_name": "工商時報",
-          "source_url": "https://www.ctee.com.tw/"
+          "source_url": "https://www.ctee.com.tw/news/20260608700589-430702"
         }
       ]
     },
@@ -209,20 +148,12 @@
       "section_zh": "國際財經",
       "items": [
         {
-          "title_zh": "晶片股大逃殺，單日蒸發 1.3 兆美元",
-          "title_en": "Chip stocks suffer a stampede as US$1.3 trillion vanishes in a day",
-          "summary_zh": "費城半導體指數上週五重挫逾 10%，創 2020 年 3 月以來最大單日跌幅，晶片股遭遇猛烈賣壓，單一交易日市值蒸發約 1.3 兆美元。台灣媒體強調，這場「晶片大逃殺」對半導體權重極高的台股具直接外溢效應，週一開盤權值龍頭恐首當其衝。市場分析，此波重挫源於 AI 投資循環過熱疑慮、博通財測不如預期，以及強勁就業數據推升升息預期等多重利空交織。對台股投資人而言，須留意美系科技股賣壓是否延續，以及外資對台股晶片權值股的調節力道，短線波動恐加大。",
-          "summary_en": "The Philadelphia Semiconductor Index plunged more than 10% on Friday — its biggest single-day drop since March 2020 — as a violent sell-off swept through chip names and roughly US$1.3 trillion in market value evaporated in a single session. Taiwan media highlighted the carnage as a direct read-through to the island's semiconductor-heavy market, with index heavyweights set to bear the brunt at Monday's open.",
-          "source_name": "ETtoday 財經雲",
-          "source_url": "https://finance.ettoday.net/news/3178673"
-        },
-        {
-          "title_zh": "美股科技股重摔，台積電 ADR 下挫 6.69%、費半跌逾 10%",
-          "title_en": "US tech tumbles; TSMC ADR sinks 6.69%, SOX off more than 10%",
-          "summary_zh": "台灣媒體報導，美股科技股上週五遭重摔，費城半導體指數狂瀉逾 10%、台積電 ADR 下跌 6.69%。報導將這波賣壓定調為亞洲科技供應鏈的警訊，強調美國半導體市場情緒與台灣出口導向晶片龍頭股價之間的高度連動，預示新交易週台股科技權值股壓力沉重。法人提醒，台積電等權值股在台股指數中占比極高，其 ADR 與費半走勢往往是台股隔日開盤的重要領先指標；投資人宜留意美股後續是否止穩，以及恐慌情緒會否進一步擴散至非科技類股。",
-          "summary_en": "Taiwanese outlets reported that US technology stocks were hammered on Friday, with the Philadelphia Semiconductor Index slumping over 10% and TSMC's ADR falling 6.69%. The coverage framed the rout as a warning shot for Asian tech supply chains, emphasizing the close linkage between US semiconductor sentiment and the share prices of Taiwan's export-driven chip leaders heading into the new trading week.",
-          "source_name": "自由財經",
-          "source_url": "https://ec.ltn.com.tw/article/breakingnews/5462537"
+          "title_zh": "〈美股盤後〉非農爆表重創降息夢，費半狂瀉超10%、台積電ADR摔逾6%",
+          "title_en": "Blowout US payrolls torch rate-cut hopes; chips lead Wall Street rout",
+          "summary_zh": "美國5月新增非農就業17.2萬人，遠超市場預估的約8萬人，重新點燃Fed維持緊縮、甚至進一步升息的疑慮，風險性資產全面承壓。費半指數崩跌10.26%，那斯達克指數重挫4.2%、創去年4月以來最大單日跌幅，標普500指數下跌2.6%、終止連九週上漲，道瓊則跌1.35%。台積電ADR大跌6.69%，10年期美債殖利率同步突破4.5%，顯示強勁就業數據同時衝擊股、債兩市。這波由就業數據觸發的修正，是引爆台股6月8日盤中歷史性急殺的關鍵外部利空；投資人後續須緊盯6月10日CPI與Fed官員談話，研判降息預期能否重建。",
+          "summary_en": "US nonfarm payrolls rose 172,000 in May, far above the roughly 80,000 expected, reigniting fears the Fed will stay tight or even tighten further. The Philadelphia Semiconductor Index plunged 10.26%, the Nasdaq fell 4.2% (its worst day since April last year), the S&P 500 dropped 2.6% to end a nine-week winning streak, and the Dow lost 1.35%. TSMC's ADR sank 6.69%, while the 10-year US Treasury yield pushed above 4.5%, underscoring how a hot labour market jolted both equities and bonds.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6486593"
         }
       ]
     },
@@ -231,52 +162,36 @@
       "section_zh": "國際",
       "items": [
         {
-          "title_zh": "晶片股崩跌拖累美股，創 10 月以來最慘一日（2026-06-05）",
-          "title_en": "Wall Street suffers worst day since October as chip rout drags markets down (2026-06-05)",
-          "summary_zh": "美股上週五在半導體股猛烈賣壓下重挫，那斯達克指數跌 4.18% 至 25,709.43 點，為 2025 年 4 月以來最大跌幅；標普 500 跌 2.64% 至 7,383.74 點，道瓊跌 695 點（1.35%）至 50,866.78 點。強勁的 5 月就業數據加深市場對聯準會今年稍晚恐被迫升息的憂慮。",
-          "summary_en": "US equities tumbled Friday as a violent semiconductor sell-off weighed on the broad market. The Nasdaq Composite lost 4.18% to 25,709.43 — its biggest drop since April 2025 — while the S&P 500 fell 2.64% to 7,383.74 and the Dow dropped 695 points (1.35%) to 50,866.78. A strong May jobs report stoked fears the Fed could be forced to hike rates later this year.",
-          "source_name": "Bloomberg (BNN)",
-          "source_url": "https://www.bnnbloomberg.ca/markets/2026/06/05/stocks-slip-on-wall-street-big-tech-falls/"
-        },
-        {
-          "title_zh": "就業數據強勁澆熄降息希望，美債殖利率飆升（2026-06-05）",
-          "title_en": "Treasury yields surge as hot jobs report dents rate-cut hopes (2026-06-05)",
-          "summary_zh": "美債殖利率上週五在 5 月非農遠優於預期後跳升，強化勞動市場依然強韌的看法。十年期殖利率升破 4.54%、創 5 月 21 日以來新高，兩年期升至 4.162%；CME FedWatch 工具顯示，聯準會年底前升息機率升至約七成。",
-          "summary_en": "Treasury yields jumped Friday after May payrolls came in far stronger than expected, reinforcing the view that the labor market remains resilient. The 10-year yield rose above 4.54% to its highest since May 21, the 2-year climbed to 4.162%, and odds of a Fed hike by year-end rose to about 70% on the CME FedWatch tool.",
-          "source_name": "CNBC",
-          "source_url": "https://www.cnbc.com/2026/06/05/treasury-yields-ease-as-traders-await-key-labor-market-data-.html"
-        },
-        {
-          "title_zh": "半導體崩跌抹去 1 兆美元市值，那斯達克狂瀉 4%（2026-06-05）",
-          "title_en": "Nasdaq plunges 4% as semiconductor slide wipes US$1 trillion from markets (2026-06-05)",
-          "summary_zh": "全面的晶片股賣壓上週五拖累以科技股為主的那斯達克下挫約 4%，在投資人重新評估過度延伸的 AI 評價之際抹去約 1 兆美元市值。此波重挫接續博通不如預期的 AI 展望，以及推升升息預期的強勁就業數據，為今年最劇烈的單日跌幅之一。",
-          "summary_en": "A broad chip-stock rout drove the tech-heavy Nasdaq down about 4% on Friday, erasing roughly US$1 trillion in value as investors reassessed stretched AI valuations. The drop followed Broadcom's underwhelming AI outlook and a strong jobs print that lifted rate-hike expectations, marking one of the steepest single-day declines of the year.",
+          "title_zh": "美股反彈、晶片股回穩，英特爾、特斯拉領漲",
+          "title_en": "US stocks rebound as chips recover; Intel and Tesla lead gainers",
+          "summary_zh": "美股週一收高，晶片股自上週五重挫中反彈，標普500上漲0.30%至7,405.73點、那指漲0.86%至25,929.66點，道瓊小跌0.16%至50,786點。英特爾因傳出Alphabet下單委由其於2028年製造逾300萬顆TPU，股價大漲約10%至109.03美元；特斯拉受惠5月中國零售銷售年增22.5%，上漲約2.8%。",
+          "summary_en": "The S&P 500 and Nasdaq closed higher Monday as chip stocks bounced from Friday's rout, while the Dow slipped 0.16% to 50,786. The S&P added 0.30% to 7,405.73 and the Nasdaq rose 0.86% to 25,929.66. Intel surged about 10% to $109.03 on reports Alphabet ordered it to manufacture more than three million TPUs in 2028, and Tesla rose about 2.8% as China retail sales climbed 22.5% year-on-year in May.",
           "source_name": "TheStreet",
-          "source_url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-05-2026"
+          "source_url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-08-2026"
         },
         {
-          "title_zh": "博通軟體營收疲弱、AI 晶片財測未上修，股價重挫（2026-06-03）",
-          "title_en": "Broadcom shares plunge on weak software sales and unchanged AI-chip forecast (2026-06-03)",
-          "summary_zh": "博通股價重挫逾 12%，主因公司將 2026 年 AI 半導體營收展望維持在逾 1,000 億美元、而非上修，令市場過高的期待落空。這家客製晶片客戶涵蓋 Anthropic、Google、Meta 與 OpenAI 的晶片大廠，成為 AI 晶片族群全面賣壓的引爆點。",
-          "summary_en": "Broadcom stock sank more than 12% after the company kept its 2026 AI-semiconductor revenue guidance unchanged at above US$100 billion rather than raising it, disappointing lofty investor expectations. The chipmaker — whose custom-silicon customers include Anthropic, Google, Meta and OpenAI — became the catalyst for a broad sell-off across the AI-chip complex.",
-          "source_name": "CNBC",
-          "source_url": "https://www.cnbc.com/2026/06/03/broadcom-avgo-earnings-report-q2-2026.html"
+          "title_zh": "以色列襲伊朗石化廠，油價勁揚近5%",
+          "title_en": "Israel strikes Iranian petrochemical plant; oil jumps nearly 5%",
+          "summary_zh": "以色列空襲伊朗西南部Mahshahr石化園區，為4月8日停火以來首度攻擊伊朗能源設施，並稱該廠生產伊朗飛彈計畫所需原料。此舉使布蘭特原油期貨重返每桶97美元之上、勁揚近5%。據報導，美國總統川普稍早曾敦促以色列總理納坦雅胡暫緩進一步攻擊，但情勢仍升溫，市場對荷莫茲海峽供應中斷的疑慮再起。",
+          "summary_en": "Israel struck the Mahshahr petrochemical complex in southwestern Iran, its first hit on an Iranian energy site since the April 8 ceasefire, saying it produces materials for Iran's missile programme. The escalation pushed Brent crude futures back above $97 a barrel, up nearly 5%, after President Trump reportedly urged Prime Minister Netanyahu to hold off on further attacks.",
+          "source_name": "Rappler",
+          "source_url": "https://www.rappler.com/world/middle-east/usa-israel-iran-war-updates-june-8-2026/"
         },
         {
-          "title_zh": "AI 晶片財測令人失望，博通盤後股價下挫（2026-06-03）",
-          "title_en": "Broadcom stock sinks in after-hours as AI chip forecast disappoints (2026-06-03)",
-          "summary_zh": "博通股價在盤後交易大幅下滑，因其 AI 晶片財測不如預期，引發市場重新質疑火熱的 AI 交易是否已超前基本面。此一反應凸顯評價偏高的 AI 個股，對任何需求成長可能趨緩的跡象都已變得極度敏感。",
-          "summary_en": "Broadcom shares slid sharply in extended trading after its AI chip forecast fell short of expectations, raising fresh questions about whether the booming AI trade has run ahead of fundamentals. The reaction underscored how sensitive richly valued AI names have become to any hint that demand growth may be plateauing.",
-          "source_name": "Yahoo Finance",
-          "source_url": "https://finance.yahoo.com/markets/article/broadcom-stock-sinks-in-after-hours-as-ai-chip-forecast-disappoints-165602504.html"
+          "title_zh": "以色列與伊朗互射飛彈後各自收手",
+          "title_en": "Israel and Iran pull back after trading missile fire",
+          "summary_zh": "以色列與伊朗週末互射飛彈後雙方暫時收手，葉門青年運動（Houthi）武裝也向以色列發射飛彈。這波交火一度使停滯數月的衝突有重燃為全面戰爭之虞，令能源與股市的地緣政治風險維持高檔，投資人持續關注停火能否守住。",
+          "summary_en": "Israel and Iran traded missile fire over the weekend before pulling back, with Yemen's Houthi rebels also firing at Israel. The exchanges threatened to drag the region back toward full-scale war after months of a stalled conflict, keeping geopolitical risk elevated for energy and equity markets.",
+          "source_name": "NPR",
+          "source_url": "https://www.npr.org/2026/06/08/g-s1-126844/iran-war-updates"
         },
         {
-          "title_zh": "美伊以緊張升溫，油價飆向每桶 96 美元（2026-06-05）",
-          "title_en": "Oil roars back toward US$96 as US–Iran–Israel tensions escalate (2026-06-05)",
-          "summary_zh": "原油在地緣政治緊張加劇下整週走高，有報導指伊朗已中斷與美國的溝通，推升西德州中級原油（WTI）週初一度上漲 5.5% 至每桶 92.19 美元，隨後在軍事打擊的消息再起下攀升至 96.08 美元。油價走揚為本已神經緊繃的市場再添通膨變數。",
-          "summary_en": "Crude oil surged through the week as geopolitical tensions intensified, with reports that Iran had halted communications with the US sending West Texas Intermediate up 5.5% to US$92.19 a barrel early in the week before climbing to US$96.08 amid renewed reports of military strikes. The rally added an inflationary complication to an already jittery market.",
-          "source_name": "Financial Sense",
-          "source_url": "https://www.financialsense.com/blog/21683/weeks-market-wrap-ai-ups-and-downs-oil-roars-back-and-strong-data"
+          "title_zh": "以色列在川普勸阻後仍襲伊朗軍事與能源目標",
+          "title_en": "Israel hits Iranian military and energy targets after Trump reprimand",
+          "summary_zh": "以色列在區域緊張升高之際對伊朗軍事目標展開報復，除石化廠外亦攻擊其他據點。此波再度動武發生於有報導指出川普已要求納坦雅胡克制進一步攻擊之後，市場對荷莫茲海峽潛在供應中斷的疑慮再度升高，地緣風險溢價支撐油價。",
+          "summary_en": "Israel retaliated against Iranian military targets amid rising tensions, striking a petrochemical plant alongside other sites. The renewed strikes followed reports that President Trump had told PM Netanyahu to refrain from further attacks, raising fresh concerns about potential supply disruptions through the Strait of Hormuz.",
+          "source_name": "Business Standard",
+          "source_url": "https://www.business-standard.com/world-news/israel-retaliates-strikes-military-targets-in-iran-amid-rising-tensions-126060800077_1.html"
         }
       ]
     }
