@@ -80,9 +80,37 @@
     {
       "slug": "sales",
       "name": "銷售服務",
-      "active": true,
+      "active": false,
       "description": "銷售流程、DISC 客戶辨識、SPIN 顧問式銷售、抱怨處理與系統操作。",
       "icon": "<circle cx=\"9\" cy=\"8\" r=\"3\"/><circle cx=\"17\" cy=\"10\" r=\"2.5\"/><path d=\"M2 21v-1c0-3 3-5 7-5s7 2 7 5v1\"/><path d=\"M14 21v-0.5c0-1.5 1.5-2.5 3-2.5s3 1 3 2.5V21\"/>"
+    },
+    {
+      "slug": "family_trust",
+      "name": "家族信託",
+      "active": true,
+      "description": "信託概念、架構設計、自益他益稅務、跨境信託與家族傳承實務案例。",
+      "icon": "<path d=\"M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>"
+    },
+    {
+      "slug": "marketing",
+      "name": "行銷技巧",
+      "active": true,
+      "description": "個人形象與社群經營、內容行銷、講座規劃、合規要求與銷售案例運用。",
+      "icon": "<path d=\"M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z\" stroke=\"currentColor\" stroke-width=\"1.8\"/><circle cx=\"12\" cy=\"12\" r=\"3\" stroke=\"currentColor\" stroke-width=\"1.8\"/>"
+    },
+    {
+      "slug": "client",
+      "name": "客戶經營",
+      "active": true,
+      "description": "KYC 分類、生命週期策略、分群服務、聯繫策略與客戶關係深耕。",
+      "icon": "<path d=\"M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><circle cx=\"9\" cy=\"7\" r=\"4\" stroke=\"currentColor\" stroke-width=\"1.8\"/><path d=\"M23 21v-2a4 4 0 0 0-3-3.87\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><path d=\"M16 3.13a4 4 0 0 1 0 7.75\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\"/>"
+    },
+    {
+      "slug": "wealth_mgmt",
+      "name": "財富管理",
+      "active": true,
+      "description": "財富管理業務全景、客戶分群、配置方法、績效衡量與監理合規。",
+      "icon": "<rect x=\"2\" y=\"7\" width=\"20\" height=\"14\" rx=\"2\" ry=\"2\" stroke=\"currentColor\" stroke-width=\"1.8\"/><path d=\"M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>"
     },
     {
       "slug": "asset_allocation",
