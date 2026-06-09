@@ -750,3 +750,113 @@ a.academy-card:hover {
     padding: 16px 20px;
   }
 }
+
+/* === Toggle View Buttons === */
+.cards-view-toggle {
+  display: inline-flex;
+  background: var(--academy-bg-soft);
+  border: 1px solid var(--academy-border);
+  border-radius: 20px;
+  padding: 2px;
+  margin-left: auto;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 18px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--academy-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.toggle-btn:hover {
+  color: var(--brand-deep);
+}
+
+.toggle-btn.active {
+  background: linear-gradient(135deg, var(--brand-primary), var(--brand-accent));
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(1, 154, 179, 0.2);
+}
+
+/* === List View Layout === */
+.cards-list-container {
+  background: #fff;
+  border: 1px solid var(--academy-border);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 31, 77, 0.05);
+  padding: 32px 40px;
+  margin-top: 12px;
+  min-height: 480px;
+  text-align: left;
+}
+
+.cards-list-chapter {
+  margin-bottom: 28px;
+}
+
+.cards-list-chapter:last-child {
+  margin-bottom: 0;
+}
+
+.cards-list-chapter h3 {
+  font-size: 18.5px;
+  font-weight: 750;
+  color: #1a2733;
+  margin: 0 0 14px 0;
+  border-bottom: 1.5px solid #f1f5f9;
+  padding-bottom: 6px;
+}
+
+.cards-list-chapter ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.cards-list-chapter li {
+  font-size: 14.5px;
+  color: #475569;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.cards-list-id {
+  background: #f1f5f9;
+  color: #334155;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-family: monospace;
+  font-weight: 600;
+  margin-right: 8px;
+  display: inline-block;
+}
+
+.cards-list-link {
+  color: #6366f1; /* Purple-blue link color */
+  text-decoration: underline;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.cards-list-link:hover {
+  color: var(--brand-deep);
+}
+
+@media (max-width: 640px) {
+  .cards-list-container {
+    padding: 20px 24px;
+  }
+  .cards-list-chapter h3 {
+    font-size: 16.5px;
+  }
+  .cards-list-chapter li {
+    font-size: 13.5px;
+  }
+}

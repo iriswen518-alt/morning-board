@@ -127,8 +127,13 @@
           返回分類
         </button>
         <h2 id="cards-view-title" class="cards-view-title">卡片筆記</h2>
+        <div class="cards-view-toggle">
+          <button id="toggle-list-btn" class="toggle-btn active" type="button">清單</button>
+          <button id="toggle-graph-btn" class="toggle-btn" type="button">關係圖</button>
+        </div>
       </div>
-      <div class="cards-canvas-container">
+      <div id="cards-list-container" class="cards-list-container"></div>
+      <div id="cards-canvas-container" class="cards-canvas-container" hidden>
         <div id="cards-canvas" class="cards-canvas"></div>
       </div>
     </div>

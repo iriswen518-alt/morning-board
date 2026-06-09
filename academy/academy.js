@@ -270,22 +270,91 @@ function renderCardsCategories(categories) {
 
 let activeSimulation = null;
 
+function renderCardsList(container, chapters) {
+  if (!chapters || !chapters.length) {
+    container.innerHTML = '<div class="folder-empty">（此主題目前無卡片筆記）</div>';
+    return;
+  }
+  
+  let html = '';
+  chapters.forEach(ch => {
+    html += `<div class="cards-list-chapter">`;
+    html += `<h3>${ch.title}</h3>`;
+    html += `<ul>`;
+    ch.cards.forEach(card => {
+      const idHtml = card.id ? `<span class="cards-list-id">${card.id}</span>` : '';
+      html += `<li>${idHtml}<a class="cards-list-link" data-path="${card.path}">${card.name}</a></li>`;
+    });
+    html += `</ul>`;
+    html += `</div>`;
+  });
+  container.innerHTML = html;
+  
+  container.querySelectorAll('.cards-list-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      openCardNoteModal(link.getAttribute('data-path'));
+    });
+  });
+}
+
 function showCategoryGraph(category) {
   const listEl = document.getElementById('cards-cat-list');
   const graphView = document.getElementById('cards-graph-view');
   const titleEl = document.getElementById('cards-view-title');
   const canvasEl = document.getElementById('cards-canvas');
+  const listContainer = document.getElementById('cards-list-container');
+  const canvasContainer = document.getElementById('cards-canvas-container');
+  const toggleListBtn = document.getElementById('toggle-list-btn');
+  const toggleGraphBtn = document.getElementById('toggle-graph-btn');
   
   if (listEl) listEl.hidden = true;
   if (graphView) graphView.hidden = false;
-  if (titleEl) titleEl.textContent = `卡片筆記關聯圖・${category.name}`;
+  if (titleEl) titleEl.textContent = `卡片筆記・${category.name}`;
+  
+  // Set default view to List View
+  if (listContainer) listContainer.hidden = false;
+  if (canvasContainer) canvasContainer.hidden = true;
+  if (toggleListBtn) toggleListBtn.classList.add('active');
+  if (toggleGraphBtn) toggleGraphBtn.classList.remove('active');
   
   if (activeSimulation) {
     activeSimulation.stop();
     activeSimulation = null;
   }
+  if (canvasEl) canvasEl.innerHTML = '';
   
-  renderD3Graph(canvasEl, category.graph, category.name);
+  // Render list view
+  if (listContainer) {
+    renderCardsList(listContainer, category.graph.chapters);
+  }
+  
+  // Setup toggle button click handlers
+  if (toggleListBtn && toggleGraphBtn) {
+    toggleListBtn.onclick = () => {
+      toggleListBtn.classList.add('active');
+      toggleGraphBtn.classList.remove('active');
+      if (listContainer) listContainer.hidden = false;
+      if (canvasContainer) canvasContainer.hidden = true;
+      if (activeSimulation) {
+        activeSimulation.stop();
+      }
+    };
+    
+    toggleGraphBtn.onclick = () => {
+      toggleListBtn.classList.remove('active');
+      toggleGraphBtn.classList.add('active');
+      if (listContainer) listContainer.hidden = true;
+      if (canvasContainer) canvasContainer.hidden = false;
+      
+      // Render the force-directed graph on demand
+      if (canvasEl && !canvasEl.innerHTML) {
+        renderD3Graph(canvasEl, category.graph, category.name);
+      } else if (activeSimulation) {
+        activeSimulation.alpha(0.3).restart();
+      }
+    };
+  }
   
   const backBtn = document.getElementById('cards-back-btn');
   if (backBtn) {
@@ -296,7 +365,8 @@ function showCategoryGraph(category) {
         activeSimulation.stop();
         activeSimulation = null;
       }
-      canvasEl.innerHTML = '';
+      if (canvasEl) canvasEl.innerHTML = '';
+      if (listContainer) listContainer.innerHTML = '';
       if (graphView) graphView.hidden = true;
       if (listEl) listEl.hidden = false;
     });
