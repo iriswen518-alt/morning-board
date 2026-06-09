@@ -246,8 +246,16 @@ function renderCardsCategories(categories) {
   if (graphView) graphView.hidden = true;
   
   categories.forEach(cat => {
-    const node = document.createElement('a');
-    node.href = '#';
+    const inactive = cat.active === false;
+    const badge = inactive ? '<span class="academy-card-badge">敬請期待</span>' : '';
+    
+    let node;
+    if (inactive) {
+      node = document.createElement('div');
+    } else {
+      node = document.createElement('a');
+      node.href = '#';
+    }
     node.className = 'academy-card';
     node.innerHTML = `
       <div class="academy-card-icon">
@@ -256,14 +264,16 @@ function renderCardsCategories(categories) {
         </svg>
       </div>
       <div class="academy-card-meta">
-        <h3 class="academy-card-name">${cat.name}</h3>
-        <p class="academy-card-desc">點擊查看「${cat.name}」關聯圖與卡片筆記。</p>
+        <h3 class="academy-card-name">${cat.name}${badge}</h3>
+        <p class="academy-card-desc">${inactive ? '內容建置中，敬請期待。' : `點擊查看「${cat.name}」關聯圖與卡片筆記。`}</p>
       </div>
     `;
-    node.addEventListener('click', (e) => {
-      e.preventDefault();
-      showCategoryGraph(cat);
-    });
+    if (!inactive) {
+      node.addEventListener('click', (e) => {
+        e.preventDefault();
+        showCategoryGraph(cat);
+      });
+    }
     listEl.appendChild(node);
   });
 }
