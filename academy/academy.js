@@ -1,4 +1,4 @@
-function renderAcademyCards(listEl, items) {
+function renderAcademyCards(listEl, items, tabName) {
   listEl.innerHTML = '';
   items.forEach(item => {
     const inactive = item.active === false;
@@ -15,7 +15,7 @@ function renderAcademyCards(listEl, items) {
       node = document.createElement('div');
     } else {
       node = document.createElement('a');
-      node.href = `chapter.html?course=${encodeURIComponent(item.slug)}`;
+      node.href = `chapter.html?course=${encodeURIComponent(item.slug)}&tab=${tabName || 'courses'}`;
     }
     node.className = 'academy-card';
     node.innerHTML = inner;
@@ -30,7 +30,7 @@ async function loadCourses() {
     const res = await fetch('../data/academy/courses.json');
     if (!res.ok) throw new Error('fetch failed');
     const data = await res.json();
-    renderAcademyCards(listEl, data.courses || []);
+    renderAcademyCards(listEl, data.courses || [], 'courses');
   } catch (err) {
     listEl.textContent = '載入失敗，請稍後再試。';
     console.error(err);
@@ -44,7 +44,7 @@ async function loadCertifications() {
     const res = await fetch('../data/academy/certifications.json');
     if (!res.ok) throw new Error('fetch failed');
     const data = await res.json();
-    renderAcademyCards(listEl, data.certifications || []);
+    renderAcademyCards(listEl, data.certifications || [], 'certs');
   } catch (err) {
     listEl.textContent = '載入失敗，請稍後再試。';
     console.error(err);
@@ -102,7 +102,14 @@ async function loadChapter() {
       const iconSvg = courseMeta?.icon
         ? `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${courseMeta.icon}</svg>`
         : '';
+      const fromTab = params.get('tab') || 'courses';
       heroEl.innerHTML = `
+        <div style="margin-bottom: 20px;">
+          <a class="cards-back-btn" href="index.html?tab=${fromTab}" style="text-decoration: none;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            返回分類
+          </a>
+        </div>
         <div class="course-hero">
           ${iconSvg ? `<div class="course-hero-icon">${iconSvg}</div>` : ''}
           <div class="course-hero-meta">
@@ -199,11 +206,23 @@ function wireNavToggle() {
   });
 }
 
+function selectTabFromUrl() {
+  const params = new URLSearchParams(location.search);
+  const tab = params.get('tab');
+  if (tab) {
+    const btn = document.querySelector(`.academy-toptabs .tab[data-atab="${tab}"]`);
+    if (btn) {
+      btn.click();
+    }
+  }
+}
+
 wireNavToggle();
 wireAcademyTabs();
 loadCourses();
 loadCertifications();
 loadChapter();
+selectTabFromUrl();
 
 // ==========================================
 // Zettelkasten Card Notes Graph Interaction
