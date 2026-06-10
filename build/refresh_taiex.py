@@ -114,9 +114,16 @@ def fetch_yahoo_quote(symbol):
             else:
                 idx = -1
             last_t, last_close = history[idx]
-            prev_close = (
-                history[idx - 1][1] if len(history) >= abs(idx - 1) + 1 else None
-            )
+            # Gap-aware prev close: use the IMMEDIATELY preceding daily bar in the
+            # RAW arrays (not the None-filtered history). If Yahoo dropped that day
+            # (close is None — e.g. the 2026-06-09 Asia-wide outage), prev is
+            # genuinely unknown. We must NOT silently reach two days back, which
+            # would compute the daily move against the wrong trading day.
+            try:
+                _p = ts.index(last_t)
+            except ValueError:
+                _p = -1
+            prev_close = closes[_p - 1] if _p >= 1 else None
             date_iso = datetime.fromtimestamp(last_t, tz=market_tz).strftime("%Y-%m-%d")
 
             # Asian indices: Yahoo sometimes leaves yesterday's daily bar as None
@@ -202,6 +209,13 @@ def refresh_other_indices(market):
         idx["close"] = close
         if prev:
             idx["daily_pct"] = round((close - prev) / prev * 100, 2)
+        else:
+            # 前一交易日 bar 缺漏(Yahoo gap)→ 日漲跌不可知。寧可顯示「—」,
+            # 也不要拿「前天」當昨收算出一個自信卻錯誤的數字;Yahoo 回補後自癒。
+            idx["daily_pct"] = None
+            print(
+                f"refresh_idx: ⚠️ {name} 前一交易日資料缺漏,daily 設「—」(待 Yahoo 回補)"
+            )
         idx["closing_date"] = date_iso
         print(f"refresh_idx: ✓ {name} {close} ({idx.get('daily_pct')}%) {date_iso}")
 
