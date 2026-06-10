@@ -206,14 +206,20 @@ def refresh_other_indices(market):
         print(f"refresh_idx: ✓ {name} {close} ({idx.get('daily_pct')}%) {date_iso}")
 
 
-# 櫃買加權(OTC 指數, o00) 的 Yahoo daily 序列(^TWOII)長期落後 1~2 個交易日
-# 且常整天回 None,而它又沒有像 TAIEX 那樣的 realtime 覆寫退路 → 永遠卡在舊收盤。
-# 改用 TWSE MIS 即時 API(同時供 t00/o00,官方、雲端可達)抓「已完成的當日收盤」。
-# 盤中(13:35 前)只會回 intraday 部分價,故只在收盤後採用,盤中則保留既有好值
-# (carry-forward,不拿盤中浮動值蓋掉昨日確定收盤)。
-TPEX_MIS_URL = (
-    "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=otc_o00.tw&json=1"
+# 台股兩大指數(TAIEX t00 / 櫃買加權 o00)改用 TWSE MIS 即時 API(官方、雲端可達)。
+# 為何不用 Yahoo:
+#  1) 櫃買(^TWOII) daily 長期落後 1~2 交易日、常整天 None,且原本沒有 realtime 退路。
+#  2) TAIEX(^TWII) 雖有 Yahoo 退路,但 Yahoo 偶爾漏掉某一交易日的 bar(例:06-09 回
+#     None)→ fetch_yahoo_quote 把 None 濾掉後,「昨收」會誤抓成「前天」收盤,使單日
+#     漲跌% 算錯(06-10 實際 -3.31% 被算成 -0.64%)。
+# MIS 的 y 欄位 = 該指數「真正的前一交易日收盤」(官方參考價),不會有這個 gap 問題。
+# 盤中(13:35 前)z 只是 intraday 部分價,故只在收盤後採用;盤中保留既有確定收盤
+# (carry-forward,不拿浮動值蓋掉昨日終值)。
+TW_MIS_URL = (
+    "https://mis.twse.com.tw/stock/api/getStockInfo.jsp"
+    "?ex_ch=tse_t00.tw|otc_o00.tw&json=1"
 )
+TW_MIS_INDICES = {"t00": "TAIEX 加權指數", "o00": "OTC 櫃買加權"}
 TW_SESSION_FINAL_HHMM = (13, 35)  # 13:30 收盤,留幾分鐘讓 MIS 落定終值
 
 
@@ -225,68 +231,71 @@ def _float_or_none(v):
         return None
 
 
-def refresh_tpex_index(market):
-    """Overwrite 'OTC 櫃買加權' with TWSE MIS o00 completed close.
+def refresh_tw_indices(market):
+    """Overwrite TAIEX + OTC 櫃買加權 from the TWSE MIS realtime API.
 
-    Skips (carry-forward) while today's session is still open, so the row
-    only ever holds a finished daily close — same semantics as TAIEX.
+    Uses MIS `y` (official prior-session close) for the daily %, avoiding the
+    Yahoo missing-bar gap that mis-computed the change against two days ago.
+    Skips (carry-forward) while a session is still open so each row only ever
+    holds a finished daily close.
     """
-    row = next(
-        (i for i in market.get("indices", []) if i.get("name") == "OTC 櫃買加權"),
-        None,
-    )
-    if row is None:
-        return
     try:
         r = requests.get(
-            TPEX_MIS_URL,
+            TW_MIS_URL,
             headers={"User-Agent": UA, "Referer": "https://mis.twse.com.tw/"},
             timeout=8,
         )
         r.raise_for_status()
         arr = r.json().get("msgArray") or []
-        q = next((m for m in arr if m.get("c") == "o00"), None)
     except (requests.RequestException, ValueError) as e:
-        print(f"refresh_tpex_index: ⚠️ MIS fetch failed ({e}); 保留既有值")
-        return
-    if not q:
-        print("refresh_tpex_index: ⚠️ MIS 無 o00 資料; 保留既有值")
+        print(f"refresh_tw_indices: ⚠️ MIS fetch failed ({e}); 保留既有值")
         return
 
-    close = _float_or_none(q.get("z"))  # 最新成交(收盤後=當日終值)
-    prev = _float_or_none(q.get("y"))  # 昨收
-    date_raw = q.get("d") or ""  # YYYYMMDD
-    if close is None or len(date_raw) != 8:
-        print("refresh_tpex_index: ⚠️ MIS z/d 缺值; 保留既有值")
-        return
-
-    # 只在「該交易日已收盤」時採用 z 為收盤;盤中保留既有確定收盤(carry-forward)。
     now = datetime.now(TPE)
-    quote_date = date_raw
     today = now.strftime("%Y%m%d")
-    session_done = quote_date < today or (
-        quote_date == today and (now.hour, now.minute) >= TW_SESSION_FINAL_HHMM
-    )
-    if not session_done:
-        print(
-            f"refresh_tpex_index: ⏸ {quote_date} 盤中尚未收盤,保留既有 "
-            f"{row.get('close')} ({row.get('closing_date')})"
+    by_code = {m.get("c"): m for m in arr}
+
+    for code, name in TW_MIS_INDICES.items():
+        row = next(
+            (i for i in market.get("indices", []) if i.get("name") == name), None
         )
-        return
+        if row is None:
+            continue
+        q = by_code.get(code)
+        if not q:
+            print(f"refresh_tw_indices: ⚠️ MIS 無 {code} 資料; 保留 {name} 既有值")
+            continue
 
-    if not _sane_override("OTC 櫃買加權", row.get("close"), close, MAX_DEV_INDEX):
-        return
+        close = _float_or_none(q.get("z"))  # 最新成交(收盤後=當日終值)
+        prev = _float_or_none(q.get("y"))  # 真正的前一交易日收盤
+        date_raw = q.get("d") or ""  # YYYYMMDD
+        if close is None or len(date_raw) != 8:
+            print(f"refresh_tw_indices: ⚠️ {name} MIS z/d 缺值; 保留既有值")
+            continue
 
-    row["close"] = close
-    if prev:
-        row["daily_pct"] = round((close - prev) / prev * 100, 2)
-    row["closing_date"] = f"{date_raw[:4]}-{date_raw[4:6]}-{date_raw[6:]}"
-    # 註:mtd_pct/ytd_pct 仍沿用 parse_market 由 markdown 帶入的基準值
-    #    (MIS 即時 API 無歷史序列,無法在此重算月初/年初基準) — 已知小幅不一致。
-    print(
-        f"refresh_tpex_index: ✓ OTC 櫃買加權 {close} "
-        f"({row.get('daily_pct')}%) {row['closing_date']}"
-    )
+        session_done = date_raw < today or (
+            date_raw == today and (now.hour, now.minute) >= TW_SESSION_FINAL_HHMM
+        )
+        if not session_done:
+            print(
+                f"refresh_tw_indices: ⏸ {name} {date_raw} 盤中尚未收盤,保留既有 "
+                f"{row.get('close')} ({row.get('closing_date')})"
+            )
+            continue
+
+        if not _sane_override(name, row.get("close"), close, MAX_DEV_INDEX):
+            continue
+
+        row["close"] = close
+        if prev:
+            row["daily_pct"] = round((close - prev) / prev * 100, 2)
+        row["closing_date"] = f"{date_raw[:4]}-{date_raw[4:6]}-{date_raw[6:]}"
+        # 註:mtd_pct/ytd_pct 仍沿用 parse_market 由 markdown 帶入的基準值
+        #    (MIS 即時 API 無歷史序列,無法在此重算月初/年初基準) — 已知小幅不一致。
+        print(
+            f"refresh_tw_indices: ✓ {name} {close} "
+            f"({row.get('daily_pct')}%) {row['closing_date']}"
+        )
 
 
 # FX symbols on Yahoo — keys must match market.json `name` field exactly
@@ -503,9 +512,8 @@ def main():
         print("market.json not found")
         return
     market = json.loads(MARKET.read_text("utf-8"))
-    refresh_taiex(market)
+    refresh_tw_indices(market)  # TAIEX + 櫃買加權,官方 MIS,正確昨收
     refresh_other_indices(market)
-    refresh_tpex_index(market)
     refresh_fx(market)
     refresh_bonds(market)
     # Update top-level closing_date to the MAX of all indices' per-row dates,
