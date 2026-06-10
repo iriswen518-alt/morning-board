@@ -1,5 +1,5 @@
 {
-  "closing_date": "2026-06-09",
+  "closing_date": "2026-06-10",
   "indices": [
     {
       "name": "S&P 500",
@@ -76,29 +76,29 @@
     {
       "name": "Nikkei 225",
       "name_zh": null,
-      "close": 64693.12,
-      "daily_pct": 1.04,
+      "close": 64179.26953125,
+      "daily_pct": 0.24,
       "mtd_pct": -3.47,
       "ytd_pct": 27.19,
-      "closing_date": "2026-06-09"
+      "closing_date": "2026-06-10"
     },
     {
       "name": "TAIEX 加權指數",
       "name_zh": null,
-      "close": 43636.44,
-      "daily_pct": 0.31,
+      "close": 43225.5390625,
+      "daily_pct": -0.64,
       "mtd_pct": -2.75,
       "ytd_pct": 50.2,
-      "closing_date": "2026-06-09"
+      "closing_date": "2026-06-10"
     },
     {
       "name": "OTC 櫃買加權",
       "name_zh": null,
-      "close": 412.57000732421875,
-      "daily_pct": -4.29,
+      "close": 405.91,
+      "daily_pct": -4.43,
       "mtd_pct": -7.0,
       "ytd_pct": 49.35,
-      "closing_date": "2026-06-08"
+      "closing_date": "2026-06-10"
     },
     {
       "name": "台指期(近月)",
@@ -112,11 +112,11 @@
     {
       "name": "KOSPI",
       "name_zh": null,
-      "close": 7484.41015625,
-      "daily_pct": -8.29,
+      "close": 7730.81982421875,
+      "daily_pct": 3.29,
       "mtd_pct": -11.7,
       "ytd_pct": 77.6,
-      "closing_date": "2026-06-08"
+      "closing_date": "2026-06-10"
     },
     {
       "name": "Hang Seng 恆生",
@@ -157,11 +157,11 @@
     {
       "name": "S&P/ASX 200",
       "name_zh": null,
-      "close": 8657.8,
-      "daily_pct": 0.38,
+      "close": 8653.2998046875,
+      "daily_pct": 0.33,
       "mtd_pct": -1.22,
       "ytd_pct": -1.02,
-      "closing_date": "2026-06-09"
+      "closing_date": "2026-06-10"
     }
   ],
   "bonds": [
@@ -206,8 +206,8 @@
       "name": "DXY 美元指數",
       "close": 99.2,
       "daily_pct": -0.85,
-      "mtd_pct": 1.04,
-      "ytd_pct": 1.68,
+      "mtd_pct": 0.97,
+      "ytd_pct": 1.61,
       "closing_date": "2026-06-09"
     },
     {
@@ -294,12 +294,12 @@
     },
     {
       "name": "比特幣 (USD)",
-      "close": 63090.58984375,
-      "daily_pct": -0.24,
-      "mtd_pct": -14.26,
-      "ytd_pct": -27.9,
-      "closing_date": "2026-06-08"
+      "close": 61643.78125,
+      "daily_pct": -2.29,
+      "mtd_pct": -16.22,
+      "ytd_pct": -29.56,
+      "closing_date": "2026-06-09"
     }
   ],
-  "summary": "CSI 300 滬深300 +4.26%、台指期(近月) +3.67%、Shanghai 上證 +3.52% 領漲；KOSPI -8.29%、OTC 櫃買加權 -4.29% 走弱。"
+  "summary": "CSI 300 滬深300 +4.26%、台指期(近月) +3.67%、Shanghai 上證 +3.52% 領漲；OTC 櫃買加權 -4.43%、PHLX Semiconductor -1.93% 走弱。"
 }

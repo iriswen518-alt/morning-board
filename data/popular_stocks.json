@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-10T12:27:34+08:00",
+  "generated_at": "2026-06-10T14:58:09+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -17,20 +17,6 @@
       "error": null
     },
     {
-      "symbol": "CASY",
-      "name_zh": "Caseys General Stores",
-      "kind": "US",
-      "price": 761.18,
-      "change_pct": 1.27,
-      "mtd_pct": -2.02,
-      "ytd_pct": 35.99,
-      "market_date": "2026-06-08",
-      "per": 42.8172,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CASY.US",
-      "error": null
-    },
-    {
       "symbol": "DKNG",
       "name_zh": "DraftKings",
       "kind": "US",
@@ -39,37 +25,9 @@
       "mtd_pct": 1.18,
       "ytd_pct": -28.09,
       "market_date": "2026-06-08",
-      "per": 209.639,
+      "per": 233.4117,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DKNG.US",
-      "error": null
-    },
-    {
-      "symbol": "CBRL",
-      "name_zh": "Cracker Barrel Old Country Stor",
-      "kind": "US",
-      "price": 36.3,
-      "change_pct": 6.11,
-      "mtd_pct": 1.15,
-      "ytd_pct": 34.69,
-      "market_date": "2026-06-08",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CBRL.US",
-      "error": null
-    },
-    {
-      "symbol": "ORCL",
-      "name_zh": "甲骨文",
-      "kind": "US",
-      "price": 205.81,
-      "change_pct": -2.84,
-      "mtd_pct": -6.18,
-      "ytd_pct": 8.68,
-      "market_date": "2026-06-08",
-      "per": 38.3981,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ORCL.US",
       "error": null
     },
     {
@@ -87,17 +45,45 @@
       "error": null
     },
     {
-      "symbol": "SLV",
-      "name_zh": "iShares Silver Trust",
+      "symbol": "SOXS",
+      "name_zh": "Direxion Daily Semiconductor Be",
       "kind": "US",
-      "price": 59.01,
-      "change_pct": -4.17,
-      "mtd_pct": -9.88,
-      "ytd_pct": -4.41,
+      "price": 5.93,
+      "change_pct": 4.22,
+      "mtd_pct": -10.11,
+      "ytd_pct": -90.91,
       "market_date": "2026-06-08",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SLV.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOXS.US",
+      "error": null
+    },
+    {
+      "symbol": "SQQQ",
+      "name_zh": "ProShares UltraPro Short QQQ",
+      "kind": "US",
+      "price": 42.67,
+      "change_pct": 3.42,
+      "mtd_pct": 8.35,
+      "ytd_pct": -39.77,
+      "market_date": "2026-06-08",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SQQQ.US",
+      "error": null
+    },
+    {
+      "symbol": "ORCL",
+      "name_zh": "甲骨文",
+      "kind": "US",
+      "price": 205.81,
+      "change_pct": -2.84,
+      "mtd_pct": -6.18,
+      "ytd_pct": 8.68,
+      "market_date": "2026-06-08",
+      "per": 38.3981,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ORCL.US",
       "error": null
     },
     {
@@ -115,17 +101,31 @@
       "error": null
     },
     {
-      "symbol": "CHWY",
-      "name_zh": "Chewy",
+      "symbol": "GLD",
+      "name_zh": "SPDR Gold Shares",
       "kind": "US",
-      "price": 20.4,
-      "change_pct": 1.24,
-      "mtd_pct": -10.6,
-      "ytd_pct": -39.03,
+      "price": 390.78,
+      "change_pct": -1.63,
+      "mtd_pct": -4.76,
+      "ytd_pct": 0.24,
       "market_date": "2026-06-08",
-      "per": 37.4473,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CHWY.US",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GLD.US",
+      "error": null
+    },
+    {
+      "symbol": "UEC",
+      "name_zh": "Uranium Energy",
+      "kind": "US",
+      "price": 10.65,
+      "change_pct": -15.54,
+      "mtd_pct": -8.42,
+      "ytd_pct": 7.96,
+      "market_date": "2026-06-08",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=UEC.US",
       "error": null
     },
     {
