@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-10T17:15:32+08:00",
+  "generated_at": "2026-06-10T20:34:27+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -17,6 +17,34 @@
       "error": null
     },
     {
+      "symbol": "CHWY",
+      "name_zh": "Chewy",
+      "kind": "US",
+      "price": 20.4,
+      "change_pct": 1.24,
+      "mtd_pct": -10.6,
+      "ytd_pct": -39.03,
+      "market_date": "2026-06-08",
+      "per": 37.4473,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CHWY.US",
+      "error": null
+    },
+    {
+      "symbol": "SPY",
+      "name_zh": "State Street SPDR S&P 500 ETF T",
+      "kind": "US",
+      "price": 737.05,
+      "change_pct": -0.29,
+      "mtd_pct": -2.28,
+      "ytd_pct": 8.4,
+      "market_date": "2026-06-08",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPY.US",
+      "error": null
+    },
+    {
       "symbol": "DKNG",
       "name_zh": "DraftKings",
       "kind": "US",
@@ -28,6 +56,34 @@
       "per": 233.4117,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DKNG.US",
+      "error": null
+    },
+    {
+      "symbol": "SOXS",
+      "name_zh": "Direxion Daily Semiconductor Be",
+      "kind": "US",
+      "price": 5.93,
+      "change_pct": 4.22,
+      "mtd_pct": -10.11,
+      "ytd_pct": -90.91,
+      "market_date": "2026-06-08",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOXS.US",
+      "error": null
+    },
+    {
+      "symbol": "SQQQ",
+      "name_zh": "ProShares UltraPro Short QQQ",
+      "kind": "US",
+      "price": 42.67,
+      "change_pct": 3.42,
+      "mtd_pct": 8.35,
+      "ytd_pct": -39.77,
+      "market_date": "2026-06-08",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SQQQ.US",
       "error": null
     },
     {
@@ -45,22 +101,8 @@
       "error": null
     },
     {
-      "symbol": "SPY",
-      "name_zh": "SPDR S&P 500 ETF",
-      "kind": "US",
-      "price": 737.05,
-      "change_pct": -0.29,
-      "mtd_pct": -2.28,
-      "ytd_pct": 8.4,
-      "market_date": "2026-06-08",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPY.US",
-      "error": null
-    },
-    {
       "symbol": "QQQ",
-      "name_zh": "Invesco 那斯達克 100 ETF",
+      "name_zh": "Invesco QQQ Trust, Series 1",
       "kind": "US",
       "price": 707.83,
       "change_pct": -1.15,
