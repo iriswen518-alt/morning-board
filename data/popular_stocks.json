@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-10T14:58:09+08:00",
+  "generated_at": "2026-06-10T16:52:24+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -31,48 +31,6 @@
       "error": null
     },
     {
-      "symbol": "BABA",
-      "name_zh": "阿里巴巴",
-      "kind": "US",
-      "price": 119.7,
-      "change_pct": -0.31,
-      "mtd_pct": -3.34,
-      "ytd_pct": -18.09,
-      "market_date": "2026-06-08",
-      "per": 18.5978,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BABA.US",
-      "error": null
-    },
-    {
-      "symbol": "SOXS",
-      "name_zh": "Direxion Daily Semiconductor Be",
-      "kind": "US",
-      "price": 5.93,
-      "change_pct": 4.22,
-      "mtd_pct": -10.11,
-      "ytd_pct": -90.91,
-      "market_date": "2026-06-08",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOXS.US",
-      "error": null
-    },
-    {
-      "symbol": "SQQQ",
-      "name_zh": "ProShares UltraPro Short QQQ",
-      "kind": "US",
-      "price": 42.67,
-      "change_pct": 3.42,
-      "mtd_pct": 8.35,
-      "ytd_pct": -39.77,
-      "market_date": "2026-06-08",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SQQQ.US",
-      "error": null
-    },
-    {
       "symbol": "ORCL",
       "name_zh": "甲骨文",
       "kind": "US",
@@ -84,48 +42,6 @@
       "per": 38.3981,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ORCL.US",
-      "error": null
-    },
-    {
-      "symbol": "NUVL",
-      "name_zh": "Nuvalent",
-      "kind": "US",
-      "price": 123.25,
-      "change_pct": 39.28,
-      "mtd_pct": -19.84,
-      "ytd_pct": -12.03,
-      "market_date": "2026-06-08",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NUVL.US",
-      "error": null
-    },
-    {
-      "symbol": "GLD",
-      "name_zh": "SPDR Gold Shares",
-      "kind": "US",
-      "price": 390.78,
-      "change_pct": -1.63,
-      "mtd_pct": -4.76,
-      "ytd_pct": 0.24,
-      "market_date": "2026-06-08",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GLD.US",
-      "error": null
-    },
-    {
-      "symbol": "UEC",
-      "name_zh": "Uranium Energy",
-      "kind": "US",
-      "price": 10.65,
-      "change_pct": -15.54,
-      "mtd_pct": -8.42,
-      "ytd_pct": 7.96,
-      "market_date": "2026-06-08",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=UEC.US",
       "error": null
     },
     {
@@ -252,6 +168,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOXX.US",
+      "error": null
+    },
+    {
+      "symbol": "GLD",
+      "name_zh": "SPDR 黃金 ETF",
+      "kind": "US",
+      "price": 390.78,
+      "change_pct": -1.63,
+      "mtd_pct": -4.76,
+      "ytd_pct": 0.24,
+      "market_date": "2026-06-08",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GLD.US",
       "error": null
     },
     {
