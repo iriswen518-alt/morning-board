@@ -77,7 +77,7 @@
       "name": "Nikkei 225",
       "name_zh": null,
       "close": 64179.26953125,
-      "daily_pct": 0.24,
+      "daily_pct": null,
       "mtd_pct": -3.47,
       "ytd_pct": 27.19,
       "closing_date": "2026-06-10"
@@ -85,20 +85,20 @@
     {
       "name": "TAIEX 加權指數",
       "name_zh": null,
-      "close": 43225.54,
-      "daily_pct": -3.31,
+      "close": 43502.78125,
+      "daily_pct": -3.48,
       "mtd_pct": -2.75,
       "ytd_pct": 50.2,
-      "closing_date": "2026-06-10"
+      "closing_date": "2026-06-08"
     },
     {
       "name": "OTC 櫃買加權",
       "name_zh": null,
-      "close": 405.91,
-      "daily_pct": -4.43,
+      "close": 412.57000732421875,
+      "daily_pct": -4.29,
       "mtd_pct": -7.0,
       "ytd_pct": 49.35,
-      "closing_date": "2026-06-10"
+      "closing_date": "2026-06-08"
     },
     {
       "name": "台指期(近月)",
@@ -113,7 +113,7 @@
       "name": "KOSPI",
       "name_zh": null,
       "close": 7730.81982421875,
-      "daily_pct": 3.29,
+      "daily_pct": null,
       "mtd_pct": -11.7,
       "ytd_pct": 77.6,
       "closing_date": "2026-06-10"
@@ -122,7 +122,7 @@
       "name": "Hang Seng 恆生",
       "name_zh": null,
       "close": 24407.9609375,
-      "daily_pct": -1.01,
+      "daily_pct": null,
       "mtd_pct": -2.09,
       "ytd_pct": -3.8,
       "closing_date": "2026-06-10"
@@ -131,7 +131,7 @@
       "name": "Shanghai 上證",
       "name_zh": null,
       "close": 3993.225830078125,
-      "daily_pct": 0.86,
+      "daily_pct": null,
       "mtd_pct": -2.68,
       "ytd_pct": -0.24,
       "closing_date": "2026-06-10"
@@ -140,7 +140,7 @@
       "name": "CSI 300 滬深300",
       "name_zh": null,
       "close": 4748.59326171875,
-      "daily_pct": 0.74,
+      "daily_pct": null,
       "mtd_pct": -3.65,
       "ytd_pct": 1.81,
       "closing_date": "2026-06-10"
@@ -158,7 +158,7 @@
       "name": "S&P/ASX 200",
       "name_zh": null,
       "close": 8653.2998046875,
-      "daily_pct": 0.33,
+      "daily_pct": null,
       "mtd_pct": -1.22,
       "ytd_pct": -1.02,
       "closing_date": "2026-06-10"
@@ -206,8 +206,8 @@
       "name": "DXY 美元指數",
       "close": 99.2,
       "daily_pct": -0.85,
-      "mtd_pct": 1.02,
-      "ytd_pct": 1.67,
+      "mtd_pct": 1.01,
+      "ytd_pct": 1.66,
       "closing_date": "2026-06-09"
     },
     {
@@ -301,5 +301,5 @@
       "closing_date": "2026-06-09"
     }
   ],
-  "summary": "台指期(近月) +3.67%、KOSPI +3.29%、DAX +2.28% 領漲；OTC 櫃買加權 -4.43%、TAIEX 加權指數 -3.31% 走弱。"
+  "summary": "台指期(近月) +3.67%、DAX +2.28%、Nifty 50 +1.84% 領漲；OTC 櫃買加權 -4.29%、TAIEX 加權指數 -3.48% 走弱。"
 }
