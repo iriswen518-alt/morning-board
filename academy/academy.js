@@ -107,7 +107,7 @@ async function loadChapter() {
         <div style="margin-bottom: 20px;">
           <a class="cards-back-btn" href="index.html?tab=${fromTab}" style="text-decoration: none;">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-            返回分類
+            返回上頁
           </a>
         </div>
         <div class="course-hero">
