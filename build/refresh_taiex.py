@@ -234,6 +234,8 @@ TW_MIS_URL = (
     "?ex_ch=tse_t00.tw|otc_o00.tw&json=1"
 )
 TW_MIS_INDICES = {"t00": "TAIEX 加權指數", "o00": "OTC 櫃買加權"}
+# MIS 偶爾 502/超時(雲端尤甚)→ 退回 gap-aware Yahoo,至少更新收盤;昨收缺則 daily「—」。
+TW_YAHOO_FALLBACK = {"t00": "^TWII", "o00": "^TWOII"}
 TW_SESSION_FINAL_HHMM = (13, 35)  # 13:30 收盤,留幾分鐘讓 MIS 落定終值
 
 
@@ -245,71 +247,99 @@ def _float_or_none(v):
         return None
 
 
+def _fetch_mis(attempts: int = 4):
+    """GET the MIS index quotes with retries (rides through transient 502s).
+
+    Returns msgArray (list) on success, or None if all attempts fail.
+    """
+    import time as _time
+
+    for a in range(attempts):
+        try:
+            r = requests.get(
+                TW_MIS_URL,
+                headers={"User-Agent": UA, "Referer": "https://mis.twse.com.tw/"},
+                timeout=8,
+            )
+            r.raise_for_status()
+            return r.json().get("msgArray") or []
+        except (requests.RequestException, ValueError) as e:
+            if a == attempts - 1:
+                print(f"refresh_tw_indices: ⚠️ MIS fetch failed after {attempts}x ({e})")
+                return None
+            _time.sleep(2 * (a + 1))
+    return None
+
+
+def _apply_tw_row(market, name, close, prev, date_iso, src):
+    """Overwrite a TW index row, guarding sanity + never moving the date backward."""
+    row = next((i for i in market.get("indices", []) if i.get("name") == name), None)
+    if row is None or close is None:
+        return False
+    cur_date = row.get("closing_date")
+    if cur_date and date_iso < cur_date:
+        print(
+            f"refresh_tw_indices[{src}]: ⏭ {name} {date_iso} 比既有 {cur_date} 舊,不回退"
+        )
+        return False
+    if not _sane_override(name, row.get("close"), close, MAX_DEV_INDEX):
+        return False
+    row["close"] = close
+    # 有真正昨收 → 算 daily;缺(Yahoo gap)→ 設 None 顯示「—」,不拿前天硬算錯數字。
+    row["daily_pct"] = round((close - prev) / prev * 100, 2) if prev else None
+    row["closing_date"] = date_iso
+    # 註:mtd_pct/ytd_pct 仍沿用 parse_market 由 markdown 帶入的基準(MIS 無歷史序列)。
+    tag = "" if prev else "(daily「—」:前一交易日缺)"
+    print(
+        f"refresh_tw_indices[{src}]: ✓ {name} {close} "
+        f"({row.get('daily_pct')}%) {date_iso} {tag}"
+    )
+    return True
+
+
 def refresh_tw_indices(market):
     """Overwrite TAIEX + OTC 櫃買加權 from the TWSE MIS realtime API.
 
     Uses MIS `y` (official prior-session close) for the daily %, avoiding the
     Yahoo missing-bar gap that mis-computed the change against two days ago.
     Skips (carry-forward) while a session is still open so each row only ever
-    holds a finished daily close.
+    holds a finished daily close. On MIS failure, falls back to gap-aware Yahoo.
     """
-    try:
-        r = requests.get(
-            TW_MIS_URL,
-            headers={"User-Agent": UA, "Referer": "https://mis.twse.com.tw/"},
-            timeout=8,
-        )
-        r.raise_for_status()
-        arr = r.json().get("msgArray") or []
-    except (requests.RequestException, ValueError) as e:
-        print(f"refresh_tw_indices: ⚠️ MIS fetch failed ({e}); 保留既有值")
-        return
-
+    arr = _fetch_mis()
     now = datetime.now(TPE)
     today = now.strftime("%Y%m%d")
-    by_code = {m.get("c"): m for m in arr}
+    by_code = {m.get("c"): m for m in (arr or [])}
 
     for code, name in TW_MIS_INDICES.items():
-        row = next(
-            (i for i in market.get("indices", []) if i.get("name") == name), None
-        )
-        if row is None:
-            continue
         q = by_code.get(code)
-        if not q:
-            print(f"refresh_tw_indices: ⚠️ MIS 無 {code} 資料; 保留 {name} 既有值")
-            continue
+        applied = False
+        if q:
+            close = _float_or_none(q.get("z"))  # 最新成交(收盤後=當日終值)
+            prev = _float_or_none(q.get("y"))  # 真正的前一交易日收盤
+            date_raw = q.get("d") or ""  # YYYYMMDD
+            if close is not None and len(date_raw) == 8:
+                session_done = date_raw < today or (
+                    date_raw == today
+                    and (now.hour, now.minute) >= TW_SESSION_FINAL_HHMM
+                )
+                if not session_done:
+                    # 盤中:carry-forward 既有確定收盤(不採 intraday、也不退回 Yahoo)。
+                    print(
+                        f"refresh_tw_indices: ⏸ {name} {date_raw} 盤中尚未收盤,保留既有值"
+                    )
+                    continue
+                date_iso = f"{date_raw[:4]}-{date_raw[4:6]}-{date_raw[6:]}"
+                applied = _apply_tw_row(market, name, close, prev, date_iso, "MIS")
 
-        close = _float_or_none(q.get("z"))  # 最新成交(收盤後=當日終值)
-        prev = _float_or_none(q.get("y"))  # 真正的前一交易日收盤
-        date_raw = q.get("d") or ""  # YYYYMMDD
-        if close is None or len(date_raw) != 8:
-            print(f"refresh_tw_indices: ⚠️ {name} MIS z/d 缺值; 保留既有值")
-            continue
-
-        session_done = date_raw < today or (
-            date_raw == today and (now.hour, now.minute) >= TW_SESSION_FINAL_HHMM
-        )
-        if not session_done:
-            print(
-                f"refresh_tw_indices: ⏸ {name} {date_raw} 盤中尚未收盤,保留既有 "
-                f"{row.get('close')} ({row.get('closing_date')})"
-            )
-            continue
-
-        if not _sane_override(name, row.get("close"), close, MAX_DEV_INDEX):
-            continue
-
-        row["close"] = close
-        if prev:
-            row["daily_pct"] = round((close - prev) / prev * 100, 2)
-        row["closing_date"] = f"{date_raw[:4]}-{date_raw[4:6]}-{date_raw[6:]}"
-        # 註:mtd_pct/ytd_pct 仍沿用 parse_market 由 markdown 帶入的基準值
-        #    (MIS 即時 API 無歷史序列,無法在此重算月初/年初基準) — 已知小幅不一致。
-        print(
-            f"refresh_tw_indices: ✓ {name} {close} "
-            f"({row.get('daily_pct')}%) {row['closing_date']}"
-        )
+        if not applied:
+            # MIS 不可用(502/缺值)→ gap-aware Yahoo 退路:至少更新收盤,
+            # 昨收缺則 daily「—」,勝過卡在更舊的 markdown 值;_apply 內含不回退守門。
+            sym = TW_YAHOO_FALLBACK.get(code)
+            yc, yp, yd = fetch_yahoo_quote(sym) if sym else (None, None, None)
+            if yc is not None:
+                _apply_tw_row(market, name, yc, yp, yd, "Yahoo-fallback")
+            else:
+                print(f"refresh_tw_indices: ⚠️ {name} MIS+Yahoo 皆失敗,保留既有值")
 
 
 # FX symbols on Yahoo — keys must match market.json `name` field exactly
