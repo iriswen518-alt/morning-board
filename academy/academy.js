@@ -305,14 +305,16 @@ function renderCardsList(container, chapters) {
     return;
   }
   
+  // 卡片筆記精神：不顯示階層式編號（zk_id 仍保留於資料層供排序，僅隱藏於畫面）
+  const stripNum = (s) => (s || '').replace(/^\d+(?:\.\d+)*\s+/, '');
+
   let html = '';
   chapters.forEach(ch => {
     html += `<div class="cards-list-chapter">`;
-    html += `<h3>${ch.title}</h3>`;
+    html += `<h3>${stripNum(ch.title)}</h3>`;
     html += `<ul>`;
     ch.cards.forEach(card => {
-      const idHtml = card.id ? `<span class="cards-list-id">${card.id}</span>` : '';
-      html += `<li>${idHtml}<a class="cards-list-link" data-path="${card.path}">${card.name}</a></li>`;
+      html += `<li><a class="cards-list-link" data-path="${card.path}">${card.name}</a></li>`;
     });
     html += `</ul>`;
     html += `</div>`;
