@@ -40,43 +40,43 @@
     {
       "name": "Euro Stoxx 50",
       "name_zh": null,
-      "close": 6009.9501953125,
-      "daily_pct": -0.66,
+      "close": 6056.9599609375,
+      "daily_pct": 0.78,
       "mtd_pct": -0.67,
       "ytd_pct": 3.69,
-      "closing_date": "2026-06-10"
+      "closing_date": "2026-06-11"
     },
     {
       "name": "DAX",
       "name_zh": null,
-      "close": 24195.310546875,
-      "daily_pct": -0.97,
+      "close": 24209.7109375,
+      "daily_pct": 0.06,
       "mtd_pct": -3.62,
       "ytd_pct": -1.2,
-      "closing_date": "2026-06-10"
+      "closing_date": "2026-06-11"
     },
     {
       "name": "FTSE 100",
       "name_zh": null,
-      "close": 10254.7998046875,
-      "daily_pct": 0.27,
+      "close": 10303.8798828125,
+      "daily_pct": 0.48,
       "mtd_pct": -1.48,
       "ytd_pct": 3.26,
-      "closing_date": "2026-06-10"
+      "closing_date": "2026-06-11"
     },
     {
       "name": "CAC 40",
       "name_zh": null,
-      "close": 8161.830078125,
-      "daily_pct": -0.51,
+      "close": 8200.7998046875,
+      "daily_pct": 0.48,
       "mtd_pct": -0.26,
       "ytd_pct": 0.15,
-      "closing_date": "2026-06-10"
+      "closing_date": "2026-06-11"
     },
     {
       "name": "Nikkei 225",
       "name_zh": null,
-      "close": 64217.26953125,
+      "close": 64217.27,
       "daily_pct": 0.06,
       "mtd_pct": -3.24,
       "ytd_pct": 27.49,
@@ -112,7 +112,7 @@
     {
       "name": "KOSPI",
       "name_zh": null,
-      "close": 7763.9501953125,
+      "close": 7763.95,
       "daily_pct": 0.43,
       "mtd_pct": -8.79,
       "ytd_pct": 83.45,
@@ -121,7 +121,7 @@
     {
       "name": "Hang Seng 恆生",
       "name_zh": null,
-      "close": 24249.2890625,
+      "close": 24249.29,
       "daily_pct": -0.65,
       "mtd_pct": -3.08,
       "ytd_pct": -4.77,
@@ -130,7 +130,7 @@
     {
       "name": "Shanghai 上證",
       "name_zh": null,
-      "close": 3987.0146484375,
+      "close": 3987.015,
       "daily_pct": -0.16,
       "mtd_pct": -1.85,
       "ytd_pct": 0.61,
@@ -139,7 +139,7 @@
     {
       "name": "CSI 300 滬深300",
       "name_zh": null,
-      "close": 4722.412109375,
+      "close": 4722.412,
       "daily_pct": -0.55,
       "mtd_pct": -2.93,
       "ytd_pct": 2.56,
@@ -174,31 +174,31 @@
     },
     {
       "name": "US 2-Year",
-      "yield_pct": 4.13,
-      "daily_bps": 0.0,
+      "yield_pct": 4.06,
+      "daily_bps": -6.3,
       "mtd_bps": 15.0,
-      "closing_date": "2026-06-10"
+      "closing_date": "2026-06-12"
     },
     {
       "name": "Germany 10-Year",
-      "yield_pct": 3.12,
-      "daily_bps": 1.7,
+      "yield_pct": 3.03,
+      "daily_bps": 0.8,
       "mtd_bps": 9.97,
-      "closing_date": "2026-06-10"
+      "closing_date": "2026-06-12"
     },
     {
       "name": "Japan 10-Year",
       "yield_pct": 2.68,
-      "daily_bps": 1.2,
+      "daily_bps": -0.7,
       "mtd_bps": 2.4,
-      "closing_date": "2026-06-10"
+      "closing_date": "2026-06-12"
     },
     {
       "name": "UK 10-Year",
-      "yield_pct": 4.96,
-      "daily_bps": -2.49,
+      "yield_pct": 4.91,
+      "daily_bps": 0.3,
       "mtd_bps": 10.3,
-      "closing_date": "2026-06-09"
+      "closing_date": "2026-06-12"
     }
   ],
   "fx": [
@@ -206,8 +206,8 @@
       "name": "DXY 美元指數",
       "close": 99.94999694824219,
       "daily_pct": 0.04,
-      "mtd_pct": 1.19,
-      "ytd_pct": 1.84,
+      "mtd_pct": 1.02,
+      "ytd_pct": 1.67,
       "closing_date": "2026-06-10"
     },
     {
@@ -301,5 +301,5 @@
       "closing_date": "2026-06-10"
     }
   ],
-  "summary": "KOSPI +0.43%、OTC 櫃買加權 +0.29%、FTSE 100 +0.27% 領漲；PHLX Semiconductor -3.57%、台指期(近月) -2.81% 走弱。"
+  "summary": "Euro Stoxx 50 +0.78%、FTSE 100 +0.48%、CAC 40 +0.48% 領漲；PHLX Semiconductor -3.57%、台指期(近月) -2.81% 走弱。"
 }
