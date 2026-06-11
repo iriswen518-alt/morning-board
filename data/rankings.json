@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11T08:41:57+08:00",
+  "generated_at": "2026-06-11T09:02:11+08:00",
   "tw": {
     "as_of": "2026-06-11",
     "top_marketcap": [
@@ -593,7 +593,7 @@
         "price": 356.38,
         "daily_pct": -2.16,
         "market_cap": 4346030850048,
-        "pe": 27.18383,
+        "pe": 27.777086,
         "pe_kind": "trailing",
         "mtd_pct": -6.3,
         "ytd_pct": 13.86,
@@ -606,7 +606,7 @@
         "price": 291.58,
         "daily_pct": 0.35,
         "market_cap": 4282539048960,
-        "pe": 35.34303,
+        "pe": 35.214977,
         "pe_kind": "trailing",
         "mtd_pct": -6.56,
         "ytd_pct": 7.25,
@@ -645,7 +645,7 @@
         "price": 381.59,
         "daily_pct": -3.8,
         "market_cap": 1433146621952,
-        "pe": 356.62616,
+        "pe": 370.47574,
         "pe_kind": "trailing",
         "mtd_pct": -12.44,
         "ytd_pct": -15.15,
@@ -697,7 +697,7 @@
         "price": 54.54,
         "daily_pct": 0.22,
         "market_cap": 387048079360,
-        "pe": 13.533498,
+        "pe": 13.5,
         "pe_kind": "trailing",
         "mtd_pct": 5.7,
         "ytd_pct": -0.84,
@@ -896,7 +896,7 @@
         "price": 16.23,
         "daily_pct": -11.17,
         "market_cap": 2830932480,
-        "pe": 85.42105,
+        "pe": 95.47058,
         "pe_kind": "trailing",
         "mtd_pct": -21.1,
         "ytd_pct": 98.17,
@@ -1075,6 +1075,19 @@
         "source_url": "https://finance.yahoo.com/quote/VOO"
       },
       {
+        "symbol": "SPY",
+        "name": "State Street SPDR S&P 500 ETF T",
+        "price": 725.43,
+        "daily_pct": -3.82,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": -4.1,
+        "ytd_pct": 6.38,
+        "yahoo": "SPY",
+        "source_url": "https://finance.yahoo.com/quote/SPY"
+      },
+      {
         "symbol": "VEA",
         "name": "Vanguard FTSE Developed Markets",
         "price": 68.81,
@@ -1086,19 +1099,6 @@
         "ytd_pct": 10.15,
         "yahoo": "VEA",
         "source_url": "https://finance.yahoo.com/quote/VEA"
-      },
-      {
-        "symbol": "VWO",
-        "name": "Vanguard FTSE Emerging Markets ",
-        "price": 57.72,
-        "daily_pct": -4.33,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": -3.61,
-        "ytd_pct": 7.37,
-        "yahoo": "VWO",
-        "source_url": "https://finance.yahoo.com/quote/VWO"
       }
     ]
   }
