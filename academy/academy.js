@@ -700,6 +700,12 @@ function openCardNoteModal(path) {
     bodyEl.innerHTML = htmlContent;
     modal.classList.add('show');
     document.body.style.overflow = 'hidden';
+    if (window.mermaid) {
+      const diagrams = bodyEl.querySelectorAll('.mermaid');
+      if (diagrams.length) {
+        window.mermaid.run({ nodes: diagrams }).catch(err => console.error('mermaid render failed', err));
+      }
+    }
   }
 }
 
