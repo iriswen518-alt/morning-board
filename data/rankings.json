@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11T09:02:11+08:00",
+  "generated_at": "2026-06-11T10:02:05+08:00",
   "tw": {
     "as_of": "2026-06-11",
     "top_marketcap": [
@@ -632,7 +632,7 @@
         "price": 372.1,
         "daily_pct": -5.12,
         "market_cap": 1770295656448,
-        "pe": 62.016666,
+        "pe": 61.708126,
         "pe_kind": "trailing",
         "mtd_pct": -16.71,
         "ytd_pct": 7.51,
@@ -844,7 +844,7 @@
         "price": 29.27,
         "daily_pct": -27.98,
         "market_cap": 17603520512,
-        "pe": 15.405264,
+        "pe": 21.364964,
         "pe_kind": "trailing",
         "mtd_pct": -36.49,
         "ytd_pct": 0.0,
@@ -1075,19 +1075,6 @@
         "source_url": "https://finance.yahoo.com/quote/VOO"
       },
       {
-        "symbol": "SPY",
-        "name": "State Street SPDR S&P 500 ETF T",
-        "price": 725.43,
-        "daily_pct": -3.82,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": -4.1,
-        "ytd_pct": 6.38,
-        "yahoo": "SPY",
-        "source_url": "https://finance.yahoo.com/quote/SPY"
-      },
-      {
         "symbol": "VEA",
         "name": "Vanguard FTSE Developed Markets",
         "price": 68.81,
@@ -1099,6 +1086,19 @@
         "ytd_pct": 10.15,
         "yahoo": "VEA",
         "source_url": "https://finance.yahoo.com/quote/VEA"
+      },
+      {
+        "symbol": "VWO",
+        "name": "Vanguard FTSE Emerging Markets ",
+        "price": 57.72,
+        "daily_pct": -4.33,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": -3.61,
+        "ytd_pct": 7.37,
+        "yahoo": "VWO",
+        "source_url": "https://finance.yahoo.com/quote/VWO"
       }
     ]
   }
