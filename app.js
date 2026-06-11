@@ -530,11 +530,20 @@ function wireSearch() {
   window.addEventListener("scroll", repositionIfOpen, true);
 }
 
+// 上次更新時間：取「本機 build (meta.built_at)」與「雲端報價 (quotes_built_at)」較新的一個。
+// 雲端 workflow 在 Mac 關著時仍會刷新數字並蓋 quotes_built_at，避免標籤卡在上次本機 build。
+// 兩者皆為 +08:00 ISO 字串，可直接字典序比較。
+function latestBuiltAt() {
+  const a = (DATA.meta && DATA.meta.built_at) || "";
+  const b = (DATA.quotes_built_at && DATA.quotes_built_at.built_at) || "";
+  return a > b ? a : b;
+}
+
 async function init() {
   // 每個來源各自有 fallback：一個壞不拖垮全頁
   // 失敗時記到 FAILED_LOADS，使用者切到對應 tab 時會背景重試
   const safe = (name, fallback) => load(name).catch(() => { FAILED_LOADS.add(name); return fallback; });
-  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
@@ -555,12 +564,14 @@ async function init() {
     safe("fund_compare", { funds: [], categories: [] }),
     safe("tw_stocks", []),
     safe("rankings", { tw: {}, us: {} }),
+    safe("quotes_built_at", { built_at: "" }),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings };
-  if (!meta.built_at) {
+  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at };
+  const _updatedAt = latestBuiltAt();
+  if (!_updatedAt) {
     $("updated").textContent = `載入部分失敗（顯示快取資料）`;
   } else {
-    $("updated").textContent = `上次更新：${DATA.meta.built_at.replace("T", " ").slice(0, 16)}`;
+    $("updated").textContent = `上次更新：${_updatedAt.replace("T", " ").slice(0, 16)}`;
   }
 
   document.querySelectorAll(".main-tab").forEach(btn => {
@@ -859,7 +870,7 @@ async function refreshData() {
     FAILED_LOADS.add(name);
     return DATA[name === "insurances" ? "insurance" : name] || fallback;
   });
-  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
@@ -880,12 +891,14 @@ async function refreshData() {
     safe("fund_compare", { funds: [], categories: [] }),
     safe("tw_stocks", []),
     safe("rankings", { tw: {}, us: {} }),
+    safe("quotes_built_at", { built_at: "" }),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings };
+  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at };
   SEARCH_INDEX = buildSearchIndex();
-  if (DATA.meta && DATA.meta.built_at) {
+  const _updatedAt = latestBuiltAt();
+  if (_updatedAt) {
     $("updated").textContent =
-      `上次更新：${DATA.meta.built_at.replace("T", " ").slice(0, 16)}`;
+      `上次更新：${_updatedAt.replace("T", " ").slice(0, 16)}`;
   }
   switchTab(CURRENT_TAB);
 }
