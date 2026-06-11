@@ -1,7 +1,14 @@
 name: Morning Board — quotes (numbers)
 on:
   schedule:
-    - cron: '0 0-15,22,23 * * *'   # hourly 06:00-23:00 Asia/Taipei (cron is UTC)
+    - cron: '0 0-15,22,23 * * *'   # hourly 08:00-23:00 + 06:00,07:00 Asia/Taipei (cron is UTC)
+    # 收盤後密集補打:TW 13:30 收盤(05:30 UTC)、~13:35 落定終值。GitHub 排程是 best-effort、
+    # 高負載時常跳過或延遲,所以在收盤後窗口(13:40–16:45 Taipei = 05:40–08:45 UTC)多排幾次,
+    # 只要有一次真的跑到就會抓到當日終值;anti-regression 守門(refresh_taiex.py)會把它黏住。
+    - cron: '40,55 5 * * *'        # 13:40, 13:55 Taipei
+    - cron: '15,30,45 6 * * *'     # 14:15, 14:30, 14:45 Taipei
+    - cron: '15,30,45 7 * * *'     # 15:15, 15:30, 15:45 Taipei
+    - cron: '15,45 8 * * *'        # 16:15, 16:45 Taipei
   workflow_dispatch: {}
 permissions:
   contents: write
