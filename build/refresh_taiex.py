@@ -297,6 +297,65 @@ def _apply_tw_row(market, name, close, prev, date_iso, src):
     return True
 
 
+def _committed_market():
+    """data/market.json as of git HEAD — the last *committed* numbers, captured
+    BEFORE build_market_json.py rebuilt the on-disk file from the Yahoo upstream.
+
+    Why we need it: every run rebuilds market.json fresh, which resets the two TW
+    indices to the Yahoo base. Yahoo intermittently drops a TW daily bar, so that
+    base is often a day or two stale. When this run can't fetch a newer *completed*
+    session (pre-close, or MIS+Yahoo both fail), carry-forward would otherwise keep
+    that stale rebuilt base and REGRESS past a good value a previous run already
+    committed. This lets _guard_tw_no_regress() restore the last good value instead.
+    Returns the parsed dict, or None if unavailable (degrades safely).
+    """
+    import subprocess
+
+    root = MARKET.resolve().parent.parent  # .../<repo>/data/market.json → repo root
+    try:
+        out = subprocess.run(
+            ["git", "show", "HEAD:data/market.json"],
+            cwd=str(root),
+            capture_output=True,
+            text=True,
+            timeout=10,
+        )
+        if out.returncode == 0 and out.stdout.strip():
+            return json.loads(out.stdout)
+    except Exception as e:  # noqa: BLE001
+        print(f"refresh_tw_indices: ℹ️ 讀取上次 committed market.json 失敗 ({e})")
+    return None
+
+
+def _guard_tw_no_regress(market, committed):
+    """Never let a TW index row end this run OLDER than the last committed close.
+
+    If this run's value for a TW index is dated earlier than what git HEAD holds
+    (i.e. the Yahoo rebuild regressed it and nothing newer landed), restore the
+    committed close/daily/date/MTD/YTD so a good value, once captured, sticks
+    until a later run advances it to a genuinely newer completed session.
+    """
+    if not committed:
+        return
+    prev_rows = {i.get("name"): i for i in committed.get("indices", [])}
+    for name in TW_MIS_INDICES.values():
+        cur = next(
+            (i for i in market.get("indices", []) if i.get("name") == name), None
+        )
+        old = prev_rows.get(name)
+        if not cur or not old:
+            continue
+        cd, od = cur.get("closing_date"), old.get("closing_date")
+        if cd and od and cd < od:
+            for k in ("close", "daily_pct", "closing_date", "mtd_pct", "ytd_pct"):
+                if k in old:
+                    cur[k] = old[k]
+            print(
+                f"refresh_tw_indices: ↩️ {name} 還原上次 committed {od}"
+                f"(本次重建退化到 {cd},無更新完整收盤)"
+            )
+
+
 def refresh_tw_indices(market):
     """Overwrite TAIEX + OTC 櫃買加權 from the TWSE MIS realtime API.
 
@@ -304,7 +363,9 @@ def refresh_tw_indices(market):
     Yahoo missing-bar gap that mis-computed the change against two days ago.
     Skips (carry-forward) while a session is still open so each row only ever
     holds a finished daily close. On MIS failure, falls back to gap-aware Yahoo.
+    Finally guards against regressing past the last committed close.
     """
+    committed = _committed_market()
     arr = _fetch_mis()
     now = datetime.now(TPE)
     today = now.strftime("%Y%m%d")
@@ -340,6 +401,9 @@ def refresh_tw_indices(market):
                 _apply_tw_row(market, name, yc, yp, yd, "Yahoo-fallback")
             else:
                 print(f"refresh_tw_indices: ⚠️ {name} MIS+Yahoo 皆失敗,保留既有值")
+
+    # 收尾守門:本次若沒抓到更新的完整收盤,別讓 Yahoo 重建把已 committed 的好值洗回更舊。
+    _guard_tw_no_regress(market, committed)
 
 
 # FX symbols on Yahoo — keys must match market.json `name` field exactly
