@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#019AB3">
+<title>理財小幫手・小學堂｜資產配置學習之旅</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#003D91;
+    --teal:#019AB3;
+    --teal-soft:#E2F4F7;
+    --ink:#1A2B49;
+    --muted:#6B7A93;
+    --line:#D6DEE9;
+    --bg:#F6F9FB;
+    --card:#FFFFFF;
+    --gold:#C9A227;
+    --radius:18px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    font-family:"Noto Sans TC",-apple-system,"PingFang TC","Microsoft JhengHei",sans-serif;
+    background:var(--bg);color:var(--ink);line-height:1.7;
+  }
+  .wrap{max-width:480px;margin:0 auto;min-height:100vh;background:var(--bg);position:relative}
+
+  /* ---------- sticky progress header ---------- */
+  .topbar{
+    position:sticky;top:0;z-index:30;
+    background:rgba(246,249,251,.92);backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+    padding:10px 20px 12px;
+  }
+  .topbar .row{display:flex;justify-content:space-between;align-items:baseline}
+  .topbar .brand{font-size:12px;letter-spacing:.12em;color:var(--teal);font-weight:700}
+  .topbar .count{font-size:13px;color:var(--muted)}
+  .topbar .count b{color:var(--navy);font-size:16px}
+  .meter{height:5px;border-radius:99px;background:var(--line);margin-top:8px;overflow:hidden}
+  .meter i{display:block;height:100%;width:0%;border-radius:99px;
+    background:linear-gradient(90deg,var(--teal),var(--navy));
+    transition:width .6s cubic-bezier(.4,0,.2,1)}
+
+  /* ---------- hero ---------- */
+  .hero{padding:36px 24px 8px;text-align:left}
+  .eyebrow{font-size:11px;letter-spacing:.22em;color:var(--teal);font-weight:700;margin-bottom:10px}
+  .hero h1{
+    font-family:"Noto Serif TC",serif;font-weight:900;
+    font-size:30px;line-height:1.35;color:var(--navy);margin-bottom:12px;
+  }
+  .hero p{font-size:14.5px;color:var(--muted);max-width:38ch}
+
+  /* ---------- journey map ---------- */
+  .map{position:relative;padding:8px 0 0}
+  .map svg{display:block;width:100%;height:auto}
+  .seg-bg{fill:none;stroke:var(--line);stroke-width:3;stroke-dasharray:2 8;stroke-linecap:round}
+  .seg-on{fill:none;stroke:var(--teal);stroke-width:3.5;stroke-linecap:round;
+    transition:stroke-dashoffset 1s cubic-bezier(.4,0,.2,1)}
+
+  .node{position:absolute;transform:translate(-50%,-50%);width:120px;text-align:center;
+    -webkit-tap-highlight-color:transparent;cursor:pointer;border:none;background:none;font-family:inherit}
+  .node .dot{
+    width:54px;height:54px;border-radius:50%;margin:0 auto 6px;
+    display:flex;align-items:center;justify-content:center;
+    font-family:"Noto Serif TC",serif;font-weight:700;font-size:19px;
+    border:2.5px solid var(--line);background:#fff;color:var(--muted);
+    transition:all .35s ease;position:relative;
+  }
+  .node .tag{font-size:9.5px;letter-spacing:.18em;color:var(--muted);font-weight:700}
+  .node .name{font-size:14px;font-weight:700;color:var(--ink);line-height:1.4}
+
+  .node.locked .dot{color:#B9C3D2}
+  .node.locked .name{color:#9AA7BA}
+  .node.open .dot{
+    border-color:var(--navy);color:var(--navy);
+    box-shadow:0 0 0 0 rgba(0,61,145,.35);
+    animation:pulse 2.2s infinite;
+  }
+  .node.open .tag{color:var(--navy)}
+  .node.done .dot{background:var(--teal);border-color:var(--teal);color:#fff}
+  .node.done .name{color:var(--teal)}
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(0,61,145,.30)}
+    70%{box-shadow:0 0 0 14px rgba(0,61,145,0)}
+    100%{box-shadow:0 0 0 0 rgba(0,61,145,0)}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .node.open .dot{animation:none}
+    .seg-on{transition:none}
+    .meter i{transition:none}
+  }
+
+  /* ---------- epilogue ---------- */
+  .epilogue{display:none;margin:8px 20px 40px;padding:28px 24px;border-radius:var(--radius);
+    background:var(--navy);color:#fff;text-align:center}
+  .epilogue.show{display:block}
+  .epilogue .eyebrow{color:#7FD6E4}
+  .epilogue h2{font-family:"Noto Serif TC",serif;font-size:22px;margin-bottom:10px}
+  .epilogue p{font-size:14px;color:#C8D6EC;margin-bottom:18px}
+  .epilogue button{
+    font-family:inherit;font-size:14px;font-weight:700;letter-spacing:.08em;
+    padding:11px 26px;border-radius:99px;border:1.5px solid #7FD6E4;
+    background:transparent;color:#7FD6E4;cursor:pointer;
+  }
+
+  footer{padding:18px 24px 40px;text-align:center;font-size:11.5px;color:#9AA7BA}
+
+  /* ---------- bottom sheet ---------- */
+  .scrim{position:fixed;inset:0;background:rgba(10,25,50,.45);opacity:0;pointer-events:none;
+    transition:opacity .3s ease;z-index:40}
+  .scrim.show{opacity:1;pointer-events:auto}
+  .sheet{
+    position:fixed;left:50%;bottom:0;transform:translate(-50%,105%);
+    width:100%;max-width:480px;max-height:86vh;overflow-y:auto;
+    background:var(--card);border-radius:22px 22px 0 0;z-index:50;
+    box-shadow:0 -12px 40px rgba(10,25,50,.18);
+    transition:transform .38s cubic-bezier(.32,.72,.25,1);
+    padding:14px 24px calc(28px + env(safe-area-inset-bottom));
+  }
+  .sheet.show{transform:translate(-50%,0)}
+  .grab{width:42px;height:4.5px;border-radius:99px;background:var(--line);margin:0 auto 18px}
+  .sheet .eyebrow{margin-bottom:6px}
+  .sheet h2{font-family:"Noto Serif TC",serif;font-size:23px;color:var(--navy);margin-bottom:12px}
+  .sheet .concept{font-size:14.5px;color:var(--ink);margin-bottom:18px}
+
+  .keynum{background:var(--navy);border-radius:14px;padding:16px 18px;margin-bottom:22px;color:#fff}
+  .keynum .kn-label{font-size:10px;letter-spacing:.2em;color:#7FD6E4;font-weight:700;margin-bottom:4px}
+  .keynum .kn-value{font-family:"Noto Serif TC",serif;font-size:26px;font-weight:900;line-height:1.3}
+  .keynum .kn-note{font-size:12.5px;color:#C8D6EC;margin-top:4px}
+
+  .quiz-label{font-size:10px;letter-spacing:.2em;color:var(--teal);font-weight:700;margin-bottom:6px}
+  .quiz-q{font-size:15px;font-weight:700;margin-bottom:12px}
+  .opt{
+    display:block;width:100%;text-align:left;font-family:inherit;font-size:14.5px;
+    padding:13px 16px;margin-bottom:10px;border-radius:12px;cursor:pointer;
+    border:1.5px solid var(--line);background:#fff;color:var(--ink);
+    transition:all .2s ease;-webkit-tap-highlight-color:transparent;
+  }
+  .opt:active{transform:scale(.985)}
+  .opt.correct{border-color:var(--teal);background:var(--teal-soft);color:var(--navy);font-weight:700}
+  .opt.wrong{border-color:#E0696B;background:#FCEEEE;color:#B3393C}
+  .opt:disabled{cursor:default;opacity:.92}
+  .feedback{font-size:13.5px;margin:4px 0 14px;min-height:1.4em}
+  .feedback.good{color:var(--teal);font-weight:700}
+  .feedback.bad{color:#B3393C}
+
+  .cta{
+    display:block;width:100%;font-family:inherit;font-size:15px;font-weight:700;
+    letter-spacing:.1em;padding:14px;border-radius:99px;border:none;cursor:pointer;
+    background:var(--teal);color:#fff;opacity:.4;pointer-events:none;transition:opacity .25s;
+  }
+  .cta.ready{opacity:1;pointer-events:auto}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <div class="row">
+      <span class="brand">ACADEMY · 小學堂</span>
+      <span class="count">已完成 <b id="doneCount">0</b> / 6 站</span>
+    </div>
+    <div class="meter"><i id="meterFill"></i></div>
+  </div>
+
+  <section class="hero">
+    <div class="eyebrow">LEARNING JOURNEY · 學習旅程</div>
+    <h1>資產配置<br>六站之旅</h1>
+    <p>從一筆現金出發，沿著風險與報酬的階梯，一站一站認識每種資產扮演的角色。點擊亮起的站點，完成小測驗，點亮整條路線。</p>
+  </section>
+
+  <section class="map" id="map">
+    <svg id="routeSvg" viewBox="0 0 360 940" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <!-- background dotted route -->
+      <path class="seg-bg" d="M 80 100 C 210 130, 295 165, 270 245"/>
+      <path class="seg-bg" d="M 270 245 C 245 325, 130 315, 92 388"/>
+      <path class="seg-bg" d="M 92 388 C 58 455, 235 460, 268 530"/>
+      <path class="seg-bg" d="M 268 530 C 300 598, 128 600, 92 672"/>
+      <path class="seg-bg" d="M 92 672 C 58 740, 235 745, 268 815"/>
+      <!-- progress overlays (revealed segment by segment) -->
+      <path class="seg-on" id="seg0" d="M 80 100 C 210 130, 295 165, 270 245"/>
+      <path class="seg-on" id="seg1" d="M 270 245 C 245 325, 130 315, 92 388"/>
+      <path class="seg-on" id="seg2" d="M 92 388 C 58 455, 235 460, 268 530"/>
+      <path class="seg-on" id="seg3" d="M 268 530 C 300 598, 128 600, 92 672"/>
+      <path class="seg-on" id="seg4" d="M 92 672 C 58 740, 235 745, 268 815"/>
+    </svg>
+    <!-- station buttons are injected here by JS -->
+  </section>
+
+  <section class="epilogue" id="epilogue">
+    <div class="eyebrow">EPILOGUE · 旅程終點</div>
+    <h2>你走完了資產配置之旅</h2>
+    <p>六種資產，沒有哪一種永遠最好——真正重要的，是讓它們在你的人生階段裡各司其職。下一步，把這張地圖帶進你的理財規劃。</p>
+    <button id="resetBtn" type="button">重新走一遍</button>
+  </section>
+
+  <footer>本內容僅供教學參考，所有數據為示意，不構成投資建議。</footer>
+</div>
+
+<!-- bottom sheet -->
+<div class="scrim" id="scrim"></div>
+<div class="sheet" id="sheet" role="dialog" aria-modal="true">
+  <div class="grab"></div>
+  <div class="eyebrow" id="shEyebrow"></div>
+  <h2 id="shTitle"></h2>
+  <p class="concept" id="shConcept"></p>
+  <div class="keynum">
+    <div class="kn-label">KEY NUMBER · 關鍵數字</div>
+    <div class="kn-value" id="shKnValue"></div>
+    <div class="kn-note" id="shKnNote"></div>
+  </div>
+  <div class="quiz-label">CHECKPOINT · 過站小測驗</div>
+  <div class="quiz-q" id="shQuestion"></div>
+  <div id="shOptions"></div>
+  <div class="feedback" id="shFeedback"></div>
+  <button class="cta" id="shCta" type="button">完成本站，前往下一站 →</button>
+</div>
+
+<script>
+const STATIONS = [
+  {
+    name:"現金與流動性", tag:"STATION 01",
+    pos:[80,100],
+    concept:"所有配置的起點是「留得住的錢」。緊急預備金讓你在突發狀況時不必賤賣資產；但現金留太多，購買力會被通膨慢慢侵蝕——流動性是保險，不是投資。",
+    kn:"6 個月", knNote:"一般建議的緊急預備金：約 3–6 個月生活費。",
+    q:"緊急預備金一般建議準備多少？",
+    opts:["約 1 個月生活費","約 3–6 個月生活費","愈多愈好，最好 5 年"],
+    ans:1,
+    why:"3–6 個月生活費足以應付多數突發狀況，又不會讓太多資金閒置。"
+  },
+  {
+    name:"債券", tag:"STATION 02",
+    pos:[270,245],
+    concept:"債券是「借錢給政府或企業，收取利息」。它的價格和市場利率呈反向：利率上升，既有債券價格下跌。存續期間（Duration）愈長，對利率變動愈敏感。",
+    kn:"反向關係", knNote:"利率升 1%，存續期間 7 年的債券價格約跌 7%。",
+    q:"市場利率上升時，既有債券的價格通常會？",
+    opts:["上漲","下跌","不受影響"],
+    ans:1,
+    why:"新債利息更高，舊債相對沒吸引力，價格只能下跌來補償。"
+  },
+  {
+    name:"基金", tag:"STATION 03",
+    pos:[92,388],
+    concept:"基金把眾人的錢交給經理人，一次買進一籃子標的，用小資金做到分散。搭配定期定額，可以在高點少買、低點多買，平均持有成本。",
+    kn:"平均成本法", knNote:"定期定額的核心：分散「進場時點」的風險。",
+    q:"定期定額投資基金，最主要的功能是？",
+    opts:["保證獲利不會虧損","分散進場時點、平均成本","省下全部手續費"],
+    ans:1,
+    why:"定期定額不保證獲利，但能避免一次重押在高點的風險。"
+  },
+  {
+    name:"股票", tag:"STATION 04",
+    pos:[268,530],
+    concept:"股票是參與企業成長的所有權，長期報酬潛力最高，但波動也最大。「72 法則」可以快速估算翻倍時間：72 ÷ 年化報酬率 ≈ 本金翻倍所需年數。",
+    kn:"72 法則", knNote:"年化 8%：72 ÷ 8 ≈ 9 年，本金約翻一倍。",
+    q:"依 72 法則，年化報酬 8% 時，本金約幾年翻倍？",
+    opts:["約 5 年","約 9 年","約 15 年"],
+    ans:1,
+    why:"72 ÷ 8 = 9。這是估算複利效果最快的心算工具。"
+  },
+  {
+    name:"保險", tag:"STATION 05",
+    pos:[92,672],
+    concept:"保險的本質是用小錢轉嫁「賠不起」的大風險，順序上保障優先於儲蓄。「雙十原則」是常見的檢視基準：保額約年收入 10 倍、總保費不超過年收入 1/10。",
+    kn:"雙十原則", knNote:"保額 ≈ 年收入 ×10；保費 ≤ 年收入 ×1/10。",
+    q:"依雙十原則，壽險保額建議約為年收入的幾倍？",
+    opts:["2 倍","10 倍","30 倍"],
+    ans:1,
+    why:"約 10 倍年收入，能讓家庭在失去收入後維持多年的生活與責任支出。"
+  },
+  {
+    name:"信託", tag:"STATION 06",
+    pos:[268,815],
+    concept:"信託是資產的「守護與傳承」工具：委託人把財產交給受託人，由受託人依信託本旨管理處分，利益歸於受益人。專款專用、防止資產被挪用，是高齡與傳承規劃的核心。",
+    kn:"三方關係", knNote:"委託人 → 受託人 → 受益人，各司其職。",
+    q:"信託架構中，依信託本旨「管理處分信託財產」的是？",
+    opts:["委託人","受託人","受益人"],
+    ans:1,
+    why:"受託人（如銀行）負責管理與執行；受益人享有信託利益。"
+  }
+];
+
+const KEY="academy-journey-v1";
+let done = load();
+let current = -1;
+
+function load(){
+  try{
+    const raw = localStorage.getItem(KEY);
+    if(raw){ const a = JSON.parse(raw); if(Array.isArray(a)) return a; }
+  }catch(e){}
+  return STATIONS.map(()=>false);
+}
+function save(){
+  try{ localStorage.setItem(KEY, JSON.stringify(done)); }catch(e){}
+}
+
+/* ---- build station nodes ---- */
+const map = document.getElementById("map");
+const svg = document.getElementById("routeSvg");
+const VB_W = 360, VB_H = 940;
+
+STATIONS.forEach((s,i)=>{
+  const btn = document.createElement("button");
+  btn.className = "node";
+  btn.id = "node"+i;
+  btn.type = "button";
+  btn.innerHTML =
+    '<div class="dot" id="dot'+i+'">'+(i+1)+'</div>'+
+    '<div class="tag">'+s.tag+'</div>'+
+    '<div class="name">'+s.name+'</div>';
+  btn.addEventListener("click", ()=>openStation(i));
+  map.appendChild(btn);
+});
+
+function placeNodes(){
+  const r = svg.getBoundingClientRect();
+  STATIONS.forEach((s,i)=>{
+    const el = document.getElementById("node"+i);
+    el.style.left = (s.pos[0]/VB_W*r.width) + "px";
+    el.style.top  = (s.pos[1]/VB_H*r.height) + "px";
+  });
+}
+window.addEventListener("resize", placeNodes);
+
+/* ---- progress segments ---- */
+const segs = [0,1,2,3,4].map(i=>{
+  const p = document.getElementById("seg"+i);
+  const L = p.getTotalLength();
+  p.style.strokeDasharray = L;
+  p.style.strokeDashoffset = L;
+  return p;
+});
+
+function render(animate){
+  let count = 0;
+  STATIONS.forEach((s,i)=>{
+    const node = document.getElementById("node"+i);
+    const dot  = document.getElementById("dot"+i);
+    node.classList.remove("locked","open","done");
+    if(done[i]){
+      count++;
+      node.classList.add("done");
+      dot.textContent = "✓";
+    }else if(i===0 || done[i-1]){
+      node.classList.add("open");
+      dot.textContent = i+1;
+    }else{
+      node.classList.add("locked");
+      dot.textContent = "🔒";
+    }
+  });
+  // segment i connects station i and i+1; it lights up when both are done
+  segs.forEach((p,i)=>{
+    p.style.strokeDashoffset = (done[i] && done[i+1]) ? 0 : p.getTotalLength();
+  });
+  document.getElementById("doneCount").textContent = count;
+  document.getElementById("meterFill").style.width = (count/6*100)+"%";
+  document.getElementById("epilogue").classList.toggle("show", count===6);
+}
+
+/* ---- bottom sheet ---- */
+const sheet = document.getElementById("sheet");
+const scrim = document.getElementById("scrim");
+const cta = document.getElementById("shCta");
+
+function openStation(i){
+  const unlocked = (i===0 || done[i-1]);
+  if(!unlocked) return;
+  current = i;
+  const s = STATIONS[i];
+  document.getElementById("shEyebrow").textContent = s.tag+" · 第 "+(i+1)+" 站";
+  document.getElementById("shTitle").textContent = s.name;
+  document.getElementById("shConcept").textContent = s.concept;
+  document.getElementById("shKnValue").textContent = s.kn;
+  document.getElementById("shKnNote").textContent = s.knNote;
+  document.getElementById("shQuestion").textContent = s.q;
+  const fb = document.getElementById("shFeedback");
+  fb.textContent = ""; fb.className = "feedback";
+  const box = document.getElementById("shOptions");
+  box.innerHTML = "";
+  const already = done[i];
+  s.opts.forEach((t,oi)=>{
+    const b = document.createElement("button");
+    b.className = "opt"; b.type="button"; b.textContent = t;
+    if(already && oi===s.ans){ b.classList.add("correct"); b.disabled = true; }
+    else if(already){ b.disabled = true; }
+    b.addEventListener("click", ()=>answer(oi, b));
+    box.appendChild(b);
+  });
+  cta.textContent = already ? "已完成本站 ✓" : (i===5 ? "完成最後一站 →" : "完成本站，前往下一站 →");
+  cta.classList.toggle("ready", already);
+  if(already){ cta.onclick = closeSheet; }
+  sheet.classList.add("show");
+  scrim.classList.add("show");
+}
+
+function answer(oi, btnEl){
+  const s = STATIONS[current];
+  const fb = document.getElementById("shFeedback");
+  const opts = document.querySelectorAll("#shOptions .opt");
+  if(oi === s.ans){
+    opts.forEach(b=>b.disabled = true);
+    btnEl.classList.add("correct");
+    fb.textContent = "答對了！"+s.why;
+    fb.className = "feedback good";
+    cta.classList.add("ready");
+    cta.onclick = ()=>{
+      done[current] = true;
+      save();
+      closeSheet();
+      setTimeout(()=>render(true), 350);
+    };
+  }else{
+    btnEl.classList.add("wrong");
+    btnEl.disabled = true;
+    fb.textContent = "再想想看——提示：回頭看一下關鍵數字。";
+    fb.className = "feedback bad";
+  }
+}
+
+function closeSheet(){
+  sheet.classList.remove("show");
+  scrim.classList.remove("show");
+}
+scrim.addEventListener("click", closeSheet);
+
+document.getElementById("resetBtn").addEventListener("click", ()=>{
+  done = STATIONS.map(()=>false);
+  save();
+  render(false);
+  window.scrollTo({top:0, behavior:"smooth"});
+});
+
+/* ---- init ---- */
+placeNodes();
+render(false);
+setTimeout(placeNodes, 300); // after fonts load
+</script>
+</body>
+</html>
