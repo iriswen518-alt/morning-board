@@ -10,6 +10,10 @@
   --text-mute: #6b7280;
   --border: #e5e7eb;
   --shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  /* === surface tokens（卡片/彈層/列背景，深色模式自動切換）=== */
+  --surface: #ffffff;
+  --surface-hover: #f5f9fb;
+  --surface-glass: rgba(255, 255, 255, 0.96);
   /* === academy (小學堂) design tokens === */
   --soft: #f5fafb;
   --soft-border: #e2e8ee;
@@ -26,6 +30,11 @@
     --text-mute: #9ca3af;
     --border: #2d3748;
     --shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    --surface: #1a212a;
+    --surface-hover: #232c38;
+    --surface-glass: rgba(26, 33, 42, 0.96);
+    /* 深藍文字色在深色底上對比不足，改用亮藍（漸層背景用的是寫死 hex，不受影響）*/
+    --brand-deep: #7cb3f0;
     --soft: #18212b;
     --soft-border: #2d3748;
     --muted: #9ca3af;
@@ -39,17 +48,35 @@
 body {
   margin: 0;
   font-family: -apple-system, "Noto Sans CJK TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
-  background:
-    radial-gradient(ellipse 80% 60% at 0% 0%, rgba(1, 154, 179, 0.08), transparent 60%),
-    radial-gradient(ellipse 60% 50% at 100% 0%, rgba(23, 181, 173, 0.09), transparent 60%),
-    radial-gradient(ellipse 70% 40% at 50% 100%, rgba(0, 61, 145, 0.05), transparent 70%),
-    var(--bg-alt);
-  background-attachment: fixed;
+  background: var(--bg-alt);
   color: var(--text);
   font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overscroll-behavior-y: contain;
+}
+
+/* 固定漸層背景層：取代 body 上的 background-attachment: fixed，
+   避免 iOS Safari 捲動時整頁重繪造成卡頓 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 80% 60% at 0% 0%, rgba(1, 154, 179, 0.08), transparent 60%),
+    radial-gradient(ellipse 60% 50% at 100% 0%, rgba(23, 181, 173, 0.09), transparent 60%),
+    radial-gradient(ellipse 70% 40% at 50% 100%, rgba(0, 61, 145, 0.05), transparent 70%);
+}
+
+/* 尊重使用者的減少動態設定 */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 #pull-indicator {
@@ -141,7 +168,7 @@ body {
   padding: 11px 14px;
   border: 1px solid rgba(255,255,255,0.4);
   border-radius: 14px;
-  font-size: 15px;
+  font-size: 16px; /* ≥16px 避免 iOS 點擊輸入框時自動縮放頁面 */
   background: rgba(255,255,255,0.95);
   color: #1a1a1a;
   -webkit-appearance: none;
@@ -151,9 +178,30 @@ body {
 .search-wrap input::placeholder { color: #888; font-size: 14px; }
 .search-wrap input:focus { outline: 2px solid rgba(255,255,255,0.7); }
 
+/* === 手機頁首收合：壓縮整體高度，內容可視區域更大 === */
+@media (max-width: 768px) {
+  .topbar {
+    padding: calc(env(safe-area-inset-top, 0px) + 10px) 16px 12px;
+    border-radius: 0 0 18px 18px;
+  }
+  .topbar h1 { font-size: 19px; margin-bottom: 2px; }
+  .test-badge { font-size: 11px; padding: 1px 8px; margin-left: 6px; }
+  .topbar .updated { margin-top: 3px; font-size: 12px; }
+  .test-note {
+    margin-top: 3px;
+    font-size: 11px;
+    opacity: 0.85;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .search-wrap { margin-top: 8px; }
+  .search-wrap input { padding: 9px 13px; border-radius: 12px; }
+}
+
 #search-results {
   position: fixed;
-  background: #fff;
+  background: var(--surface);
   border: 1px solid var(--border, #e1e4e8);
   border-radius: 10px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.15);
@@ -167,18 +215,18 @@ body {
   width: 100%;
   text-align: left;
   padding: 10px 14px;
-  background: #fff;
+  background: var(--surface);
   border: none;
-  border-bottom: 1px solid #f0f2f5;
+  border-bottom: 1px solid var(--border);
   cursor: pointer;
   font: inherit;
 }
 .search-result:last-child { border-bottom: none; }
-.search-result:hover, .search-result:focus { background: #f5f9fb; outline: none; }
-.sr-title { font-weight: 600; font-size: 14px; color: #1a1a1a; line-height: 1.4; }
+.search-result:hover, .search-result:focus { background: var(--surface-hover); outline: none; }
+.sr-title { font-weight: 600; font-size: 14px; color: var(--text); line-height: 1.4; }
 .sr-meta { font-size: 11px; color: var(--brand-primary, #019AB3); margin: 3px 0; font-weight: 600; }
-.sr-snippet { font-size: 12px; color: #666; line-height: 1.4; }
-.search-result-empty { padding: 18px; text-align: center; color: #888; font-size: 14px; }
+.sr-snippet { font-size: 12px; color: var(--text-mute); line-height: 1.4; }
+.search-result-empty { padding: 18px; text-align: center; color: var(--text-mute); font-size: 14px; }
 
 .main-nav {
   position: sticky;
@@ -191,7 +239,7 @@ body {
   padding: 0 16px;
   max-width: 1400px;
   margin: 0 auto;
-  background: #fff;
+  background: var(--surface);
   border-bottom: 4px solid var(--brand-secondary);
   box-shadow: 0 2px 8px rgba(0, 31, 77, 0.06);
   overflow-x: auto;
@@ -239,14 +287,6 @@ body {
 .main-tab.active {
   color: var(--brand-deep);
   font-weight: 700;
-}
-
-@media (prefers-color-scheme: dark) {
-  .main-nav {
-    background: #1a212a;
-    border-bottom-color: var(--brand-secondary);
-  }
-  .main-tab + .main-tab::before { background: var(--border); }
 }
 
 #content {
@@ -642,6 +682,25 @@ table.indices th.sortable-th {
     max-width: 1400px;
   }
   .card { min-height: 240px; }
+}
+
+/* ===== 桌面排版升級（>= 1024px）===== */
+@media (min-width: 1024px) {
+  /* 新聞長文限制行寬，提升中文長段落可讀性 */
+  .news-item { max-width: 880px; }
+  .news-item .news-body { line-height: 1.85; }
+
+  /* 區塊標題 */
+  #content > h3, #content h3.section-title { font-size: 19px; }
+
+  /* 表格列 hover 高亮，便於橫向追蹤數據 */
+  #content table.indices tbody tr:hover td { background: var(--surface-hover); }
+
+  /* 基金/債券卡片 hover 浮起回饋 */
+  .fund-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 31, 77, 0.10);
+  }
 }
 
 .fund-card {
@@ -2302,7 +2361,7 @@ table.indices th.sortable-th {
   .tabbar {
     display: flex;
     position: fixed; left: 0; right: 0; bottom: 0; z-index: 95;
-    background: rgba(255,255,255,0.96);
+    background: var(--surface-glass);
     -webkit-backdrop-filter: saturate(180%) blur(12px);
     backdrop-filter: saturate(180%) blur(12px);
     border-top: 1px solid var(--soft-border);
@@ -2323,10 +2382,6 @@ table.indices th.sortable-th {
   .nav-toggle { display: none !important; }
   body.show-home-fab .home-fab { display: none !important; }
 }
-@media (prefers-color-scheme: dark) and (max-width: 768px) {
-  .tabbar { background: rgba(26,33,42,0.96); border-top-color: var(--soft-border); }
-}
-
 /* === 股票表格欄寬對齊（美股/台股；含本益比欄）=== */
 table.indices.stock-cols { table-layout: fixed; width: 100%; }
 table.indices.stock-cols th, table.indices.stock-cols td {
