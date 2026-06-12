@@ -19,7 +19,7 @@ function renderAcademyCards(listEl, items, tabName, opts) {
       node.addEventListener('click', () => opts.onClick(item));
     } else {
       node = document.createElement('a');
-      node.href = `chapter.html?course=${encodeURIComponent(item.slug)}&tab=${tabName || 'courses'}`;
+      node.href = item.url || `chapter.html?course=${encodeURIComponent(item.slug)}&tab=${tabName || 'courses'}`;
     }
     node.className = 'academy-card';
     node.innerHTML = inner;
