@@ -686,8 +686,6 @@ table.indices th.sortable-th {
 
 /* ===== 桌面排版升級（>= 1024px）===== */
 @media (min-width: 1024px) {
-  /* 新聞長文限制行寬，提升中文長段落可讀性 */
-  .news-item { max-width: 880px; }
   .news-item .news-body { line-height: 1.85; }
 
   /* 區塊標題 */
