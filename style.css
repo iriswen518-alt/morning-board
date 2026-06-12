@@ -2403,7 +2403,7 @@ table.indices.stock-cols col.c-num { width: 11%; }
   padding: 6px 8px !important;
 }
 #content table.indices.stock-cols thead th {
-  background: #CCE8ED !important;
+  background: #fff !important;
   color: var(--brand-deep, #015870);
   font-weight: 600;
   position: sticky;
@@ -2489,7 +2489,7 @@ table.indices.stock-cols col.c-num { width: 11%; }
   white-space: nowrap;
 }
 #content table.obond-table thead th {
-  background: #CCE8ED !important;
+  background: #fff !important;
   color: var(--brand-deep, #015870);
   font-weight: 600;
   position: sticky;

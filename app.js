@@ -6098,7 +6098,7 @@ function renderLumpFundCards() {
   const fmtR = v => (v === null || v === undefined) ? "—" : `${Number(v).toFixed(1)}%`;
   const cellClass = v => (v === null || v === undefined) ? "" : (v > 0 ? "up" : (v < 0 ? "down" : ""));
   const tdBase = "padding:6px 8px;border-bottom:1px solid var(--border)";
-  const thBase = "padding:6px 8px;border-bottom:1px solid var(--border);background:#CCE8ED";
+  const thBase = "padding:6px 8px;border-bottom:1px solid var(--border);background:#fff";
 
   const headerCells = periods.map(p =>
     `<th style="${thBase};text-align:right">${p.label}</th>`
@@ -6166,7 +6166,7 @@ function renderDcaFundCards() {
   const fmtR = v => (v === null || v === undefined) ? "—" : `${Number(v).toFixed(1)}%`;
   const cellClass = v => (v === null || v === undefined) ? "" : (v > 0 ? "up" : (v < 0 ? "down" : ""));
   const tdBase = "padding:6px 8px;border-bottom:1px solid var(--border)";
-  const thBase = "padding:6px 8px;border-bottom:1px solid var(--border);background:#CCE8ED";
+  const thBase = "padding:6px 8px;border-bottom:1px solid var(--border);background:#fff";
 
   const headerCells = periods.map(p =>
     `<th style="${thBase};text-align:right">${p.label}</th>`
@@ -6221,7 +6221,7 @@ function renderBeatEtfCards() {
   const cellClass = v => (v === null || v === undefined) ? "" : (v > 0 ? "up" : (v < 0 ? "down" : ""));
 
   const tdBase = "padding:6px 8px;border-bottom:1px solid var(--border)";
-  const thBase = "padding:6px 8px;border-bottom:1px solid var(--border);background:#CCE8ED";
+  const thBase = "padding:6px 8px;border-bottom:1px solid var(--border);background:#fff";
 
   const headerCells = periods.map(p =>
     `<th style="${thBase};text-align:right">${p.label}</th>`
