@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T19:11:42+08:00",
+  "generated_at": "2026-06-12T19:54:31+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -101,6 +101,20 @@
       "error": null
     },
     {
+      "symbol": "ALAB",
+      "name_zh": "Astera Labs",
+      "kind": "US",
+      "price": 367.47,
+      "change_pct": 11.07,
+      "mtd_pct": 7.18,
+      "ytd_pct": 120.89,
+      "market_date": "2026-06-11",
+      "per": 235.3565,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ALAB.US",
+      "error": null
+    },
+    {
       "symbol": "CRWV",
       "name_zh": "CoreWeave",
       "kind": "US",
@@ -112,6 +126,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRWV.US",
+      "error": null
+    },
+    {
+      "symbol": "YSS",
+      "name_zh": "York Space Systems",
+      "kind": "US",
+      "price": 33.72,
+      "change_pct": 22.09,
+      "mtd_pct": 3.31,
+      "ytd_pct": null,
+      "market_date": "2026-06-11",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=YSS.US",
       "error": null
     },
     {
@@ -143,20 +171,6 @@
       "error": null
     },
     {
-      "symbol": "ALAB",
-      "name_zh": "Astera Labs",
-      "kind": "US",
-      "price": 367.47,
-      "change_pct": 11.07,
-      "mtd_pct": 7.18,
-      "ytd_pct": 120.89,
-      "market_date": "2026-06-11",
-      "per": 235.3565,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ALAB.US",
-      "error": null
-    },
-    {
       "symbol": "VSAT",
       "name_zh": "ViaSat",
       "kind": "US",
@@ -171,45 +185,31 @@
       "error": null
     },
     {
-      "symbol": "YSS",
-      "name_zh": "York Space Systems",
+      "symbol": "ADPT",
+      "name_zh": "Adaptive Biotechnologies Corpor",
       "kind": "US",
-      "price": 33.72,
-      "change_pct": 22.09,
-      "mtd_pct": 3.31,
-      "ytd_pct": null,
+      "price": 18.73,
+      "change_pct": 9.72,
+      "mtd_pct": 23.63,
+      "ytd_pct": 15.33,
       "market_date": "2026-06-11",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=YSS.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ADPT.US",
       "error": null
     },
     {
-      "symbol": "ADSK",
-      "name_zh": "Autodesk",
+      "symbol": "FLY",
+      "name_zh": "Firefly Aerospace",
       "kind": "US",
-      "price": 205.57,
-      "change_pct": -7.1,
-      "mtd_pct": -11.13,
-      "ytd_pct": -30.55,
+      "price": 39.37,
+      "change_pct": 17.8,
+      "mtd_pct": -15.32,
+      "ytd_pct": 75.99,
       "market_date": "2026-06-11",
-      "per": 31.4142,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ADSK.US",
-      "error": null
-    },
-    {
-      "symbol": "KLAC",
-      "name_zh": "科磊",
-      "kind": "US",
-      "price": 2411.64,
-      "change_pct": 12.92,
-      "mtd_pct": 25.49,
-      "ytd_pct": 98.48,
-      "market_date": "2026-06-11",
-      "per": 67.4494,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=KLAC.US",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FLY.US",
       "error": null
     },
     {
