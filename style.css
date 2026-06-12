@@ -2394,6 +2394,22 @@ table.indices.stock-cols th:first-child, table.indices.stock-cols td:first-child
 table.indices.stock-cols col.c-name { width: 34%; }
 table.indices.stock-cols col.c-num { width: 11%; }
 
+/* === 股票表格：比照精選基金樣式（字號 13px、緊湊 padding、水藍表頭）=== */
+#content table.indices.stock-cols {
+  font-size: 13px !important;
+}
+#content table.indices.stock-cols th,
+#content table.indices.stock-cols td {
+  padding: 6px 8px !important;
+}
+#content table.indices.stock-cols thead th {
+  background: #CCE8ED !important;
+  color: var(--brand-deep, #015870);
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+}
+
 /* === 凍結第一欄（名稱／標籤）：全站所有表格橫滑時保持第一欄可見 ===
    通用套用到 #content 內每一個 table 的第一欄：sticky 釘左、不透明底、
    限寬 42vw 截斷（避免長名稱寬過螢幕擋住資料欄）、右緣細陰影。
