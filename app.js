@@ -972,11 +972,8 @@ function renderObondsSheet() {
     : (c === 0 ? "零息" : `${c.toFixed(1)}%`);
   const fmtPctNum = p => (p === null || p === undefined) ? "—" : fmtPct(p);
   const fmtPrice = p => (p === null || p === undefined) ? "—" : Number(p).toFixed(1);
-  const priceCell = b => {
-    const px = fmtPrice(b.ask_price);
-    const d = b.price_date ? `<div style="font-size:11px;color:var(--text-mute);margin-top:2px">${escapeHtml(shortDate(b.price_date))}</div>` : "";
-    return `${px}${d}`;
-  };
+  const priceCell = b => fmtPrice(b.ask_price);
+  const priceDateCell = b => b.price_date ? `<span style="font-size:11px;color:var(--text-mute)">${escapeHtml(shortDate(b.price_date))}</span>` : "—";
 
   let cards;
   if (!list.length) {
@@ -985,7 +982,7 @@ function renderObondsSheet() {
     const head = `<tr>
       <th class="cmp-th-l">債券名稱</th>
       <th>幣別</th><th>票面利率</th><th>到期日</th>
-      <th>申購參考殖利率</th><th>贖回參考價</th>
+      <th>申購參考殖利率</th><th>贖回參考價</th><th>報價日</th>
       <th>週%</th><th>月%</th><th>季%</th>
     </tr>`;
     const body = list.map(b => {
@@ -1002,6 +999,7 @@ function renderObondsSheet() {
         <td>${escapeHtml(b.maturity || "—")}</td>
         <td><span class="up">${fmtPctNum(b.bid_yield_pct)}</span></td>
         <td>${priceCell(b)}</td>
+        <td>${priceDateCell(b)}</td>
         <td class="${pctClass(b.perf_1w)}">${fmtPctNum(b.perf_1w)}</td>
         <td class="${pctClass(b.perf_1m)}">${fmtPctNum(b.perf_1m)}</td>
         <td class="${pctClass(b.perf_3m)}">${fmtPctNum(b.perf_3m)}</td>
