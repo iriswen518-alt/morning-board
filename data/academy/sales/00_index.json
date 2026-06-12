@@ -1,48 +1,36 @@
 {
   "course": "sales",
-  "course_name": "行銷流程",
+  "course_name": "銷售服務",
   "chapters": [
     {
-      "slug": "process",
-      "title": "銷售流程",
-      "description": "整體銷售七階段、表單填寫與系統登打",
-      "file": "01_process.json"
-    },
-    {
-      "slug": "relationship",
-      "title": "客戶關係維護",
-      "description": "關係經營策略、反對問題處理與後續服務",
-      "file": "02_relationship.json"
-    },
-    {
-      "slug": "complaint",
-      "title": "客戶抱怨處理",
-      "description": "抱怨分級、SOP、補救措施與案例",
-      "file": "03_complaint.json"
+      "slug": "flow",
+      "title": "銷售流程全貌",
+      "description": "六大階段、顧問式銷售 vs 商品推銷、30/30/30 面談結構",
+      "file": "01_flow.json"
     },
     {
       "slug": "disc",
-      "title": "客戶辨識 DISC",
-      "description": "DISC 與人格特質分析、依特質調整溝通",
-      "file": "04_disc.json"
+      "title": "DISC 客戶辨識",
+      "description": "四型特徵、判斷線索、溝通策略與商品切入",
+      "file": "02_disc.json"
     },
     {
       "slug": "spin",
-      "title": "顧問式銷售 SPIN",
-      "description": "Situation／Problem／Implication／Need-payoff 四式提問",
-      "file": "05_spin.json"
+      "title": "SPIN 顧問式銷售",
+      "description": "S/P/I/N 四類提問、心理學原理、完整對話範例",
+      "file": "03_spin.json"
     },
     {
-      "slug": "operation",
-      "title": "系統與下單流程",
-      "description": "財管系統、保險 e 點通、投資／保險下單表單",
-      "file": "06_operation.json"
+      "slug": "skills",
+      "title": "開場挖掘與結案技巧",
+      "description": "開場三元素、開放式問題、反對處理四類、結案信號與話術",
+      "file": "04_skills.json"
     },
     {
-      "slug": "regulation",
-      "title": "法規與監理",
-      "description": "銷售七階段法定揭露、契約解約權與留證義務",
-      "file": "07_regulation.json"
+      "slug": "crm",
+      "title": "抱怨處理與 CRM 操作",
+      "description": "LEARN 五步驟、金消法 §30 申訴流程、CRM 四大功能與商機漏斗",
+      "file": "05_crm.json"
     }
   ]
 }

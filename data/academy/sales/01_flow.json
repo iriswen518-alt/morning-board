@@ -1,0 +1,34 @@
+{
+  "chapter": 1,
+  "slug": "flow",
+  "title": "銷售流程全貌",
+  "description": "六大階段、顧問式銷售 vs 商品推銷、30/30/30 面談結構",
+  "objectives": [
+    "掌握財富管理銷售的六大階段與每階段核心任務",
+    "理解顧問式銷售與商品推銷的本質差異",
+    "熟悉首次面談的 30/30/30 時間結構",
+    "能設計一段合規的 Cold Contact 開場話術"
+  ],
+  "sections": [
+    {
+      "heading": "一、銷售流程六大階段",
+      "html": "<p>財富管理銷售不是「一次見面就成交」，而是一個需要持續信任建立的旅程。</p>\n<table>\n<thead>\n<tr>\n<th>階段</th>\n<th>核心任務</th>\n<th>常見卡點</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1. 接觸（Contact）</td>\n<td>建立第一印象、約到面談</td>\n<td>客戶不接電話、無法切入話題</td>\n</tr>\n<tr>\n<td>2. 開場（Opening）</td>\n<td>暖場、建立關係、設定期待</td>\n<td>說太多、忘了聽</td>\n</tr>\n<tr>\n<td>3. 需求挖掘（Needs）</td>\n<td>用 SPIN 問出痛點</td>\n<td>跳過問題直接推商品</td>\n</tr>\n<tr>\n<td>4. 提案（Proposal）</td>\n<td>提供符合 KYC 的適合商品</td>\n<td>方案與客戶需求脫節</td>\n</tr>\n<tr>\n<td>5. 反對處理（Objection）</td>\n<td>化解疑慮，推進決策</td>\n<td>辯解而非理解</td>\n</tr>\n<tr>\n<td>6. 結案（Close）</td>\n<td>引導決策，完成簽署</td>\n<td>時機掌握不當，猶豫期拖太長</td>\n</tr>\n</tbody>\n</table>\n<p><div class=\"mermaid\">flowchart LR\n  A[接觸 Contact] --> B[開場 Opening]\n  B --> C[需求挖掘 Needs]\n  C --> D[提案 Proposal]\n  D --> E[反對處理 Objection]\n  E --> F[結案 Close]\n  F --> G[售後經營 CRM]\n  G -->|轉介| A</div></p>"
+    },
+    {
+      "heading": "二、顧問式銷售 vs 商品推銷",
+      "html": "<table>\n<thead>\n<tr>\n<th>維度</th>\n<th>商品推銷</th>\n<th>顧問式銷售</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>出發點</td>\n<td>今天有什麼要推</td>\n<td>客戶現在最需要什麼</td>\n</tr>\n<tr>\n<td>話語比例</td>\n<td>RM 說 70%，客戶說 30%</td>\n<td>RM 說 30%，客戶說 70%</td>\n</tr>\n<tr>\n<td>工具</td>\n<td>產品簡介、費率表</td>\n<td>KYC + SPIN + DISC</td>\n</tr>\n<tr>\n<td>客戶感受</td>\n<td>被推銷</td>\n<td>被幫助</td>\n</tr>\n<tr>\n<td>成交後</td>\n<td>客戶懷疑，退保率高</td>\n<td>客戶滿意，轉介意願高</td>\n</tr>\n</tbody>\n</table>\n<blockquote class=\"callout callout-important\">\n  <div class=\"callout-title\">核心轉換</div>\n  <div class=\"callout-content\"><p>把每次面談的目標從「賣出商品」改成「解決客戶問題」。當 RM 真的在幫客戶，成交是自然的結果。</p></div>\n</blockquote>"
+    },
+    {
+      "heading": "三、首次面談：30/30/30 結構",
+      "html": "<p>首次面談時間控制在 60 分鐘以內，三段各有目標：</p>\n<ul>\n<li><strong>前 30 分鐘</strong>：暖場 + 挖需求（SPIN 問問題）→ 目標：客戶主動說出痛點</li>\n<li><strong>中 30 分鐘</strong>：提案 + 商品說明 → 目標：客戶理解方案，知道下一步</li>\n<li><strong>後 30 分鐘（或下次見面）</strong>：反對處理 + 結案 → 目標：確認意願或取得明確 timeline</li>\n</ul>\n<p>常見錯誤：開場就拿出商品簡介，導致客戶防備心升高，面談陷入「看價格」模式。</p>"
+    },
+    {
+      "heading": "四、開場話術與合規邊界",
+      "html": "<p><strong>Cold Contact 範本</strong></p>\n<blockquote>\n<p>「○○先生您好，我是板信財富管理的○○。您之前曾使用過我們的外幣定存服務。最近市場變化比較大，想跟您分享一個對資產配置很有幫助的觀點，您這週有沒有方便 15 分鐘的時間？」</p>\n</blockquote>\n<p><strong>設定面談期待</strong></p>\n<blockquote>\n<p>「今天主要是想多了解一下您目前的財務目標，不會直接推薦任何商品。如果我了解之後有合適的方向，再跟您進一步說明。」</p>\n</blockquote>\n<p><strong>合規提醒</strong></p>\n<ul>\n<li>Cold Call 話術不得在電話中直接推薦個股或承諾報酬。</li>\n<li>首次面談後應立即更新 CRM，記錄客戶表達的需求與態度。</li>\n</ul>"
+    },
+    {
+      "heading": "五、客戶常見反應與回應",
+      "html": "<table>\n<thead>\n<tr>\n<th>客戶反應</th>\n<th>回應策略</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>「你只是要賣我東西」</td>\n<td>強調「先聽後推」，今天目標是了解。</td>\n</tr>\n<tr>\n<td>「我已經有在投資了」</td>\n<td>「那很好，可以順便看看是否有優化空間。」</td>\n</tr>\n<tr>\n<td>「我沒有時間」</td>\n<td>縮短到 10 分鐘電訪，或改為 LINE 分享一篇市場觀點文。</td>\n</tr>\n<tr>\n<td>「我問一下家人再說」</td>\n<td>提出下次邀請家人一起來的可能性。</td>\n</tr>\n</tbody>\n</table>"
+    }
+  ]
+}
