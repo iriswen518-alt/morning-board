@@ -2463,13 +2463,21 @@ table.indices.stock-cols col.c-num { width: 11%; }
   color: var(--text);
 }
 
-/* === 海外債表格：所有欄位強制單行、永不換行（任何螢幕寬度）===
-   id 選擇器拉高權重，蓋過手機 ≤640px 的 `#content table td/th{normal}`；
-   `td *` 連價格欄裡的日期(06-04)子元素一起鎖單行，靠水平捲動查看。 */
+/* === 海外債表格：比照精選基金樣式（字號 13px、緊湊 padding、水藍表頭）=== */
+#content table.obond-table {
+  font-size: 13px !important;
+}
 #content table.obond-table th,
-#content table.obond-table td,
-#content table.obond-table td * {
+#content table.obond-table td {
+  padding: 6px 8px !important;
   white-space: nowrap;
+}
+#content table.obond-table thead th {
+  background: #CCE8ED !important;
+  color: var(--brand-deep, #015870);
+  font-weight: 600;
+  position: sticky;
+  top: 0;
 }
 
 /* === 基金表格(freeze-col1)凍結名稱欄：可換行顯示「商品全名」===
