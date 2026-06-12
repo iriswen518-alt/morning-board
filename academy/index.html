@@ -109,7 +109,6 @@
 <main class="academy-main">
   <div class="tabs academy-toptabs">
     <button class="tab active" type="button" data-atab="courses">主題課程</button>
-    <button class="tab" type="button" data-atab="cards">卡片筆記</button>
     <button class="tab" type="button" data-atab="certs">證照考試</button>
   </div>
   <div id="atab-courses">
@@ -117,26 +116,6 @@
   </div>
   <div id="atab-certs" hidden>
     <div id="cert-list" class="academy-grid">載入中…</div>
-  </div>
-  <div id="atab-cards" hidden>
-    <div id="cards-cat-list" class="academy-grid">載入中…</div>
-    <div id="cards-graph-view" hidden>
-      <div class="cards-view-header">
-        <button id="cards-back-btn" class="cards-back-btn">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-          返回上頁
-        </button>
-        <h2 id="cards-view-title" class="cards-view-title">卡片筆記</h2>
-        <div class="cards-view-toggle">
-          <button id="toggle-list-btn" class="toggle-btn active" type="button">清單</button>
-          <button id="toggle-graph-btn" class="toggle-btn" type="button">關係圖</button>
-        </div>
-      </div>
-      <div id="cards-list-container" class="cards-list-container"></div>
-      <div id="cards-canvas-container" class="cards-canvas-container" hidden>
-        <div id="cards-canvas" class="cards-canvas"></div>
-      </div>
-    </div>
   </div>
 </main>
 
@@ -152,22 +131,6 @@
   資料僅供內部參考，不構成任何投資建議
 </footer>
 
-<!-- Card Note Viewer Modal -->
-<div id="card-note-modal" class="zk-modal" role="dialog" aria-modal="true">
-  <div class="zk-modal-card">
-    <div class="zk-modal-head">
-      <span id="zk-modal-title">卡片內容</span>
-      <button id="zk-modal-close" aria-label="關閉">✕</button>
-    </div>
-    <div id="zk-modal-body" class="zk-modal-body"></div>
-  </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
-<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-<script>
-  mermaid.initialize({ startOnLoad: false, theme: 'neutral', securityLevel: 'loose' });
-</script>
-<script src="academy.js?v=20260612-3"></script>
+<script src="academy.js?v=20260612-4"></script>
 </body>
 </html>
