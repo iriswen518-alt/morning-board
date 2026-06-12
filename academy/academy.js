@@ -72,6 +72,89 @@ function wireAcademyTabs() {
   });
 }
 
+function renderQuiz(container, ch, course, prev, next) {
+  const qs = ch.questions || [];
+  let current = 0;
+  let score = 0;
+  let answered = false;
+
+  function navHtml() {
+    let h = '<div class="chapter-nav">';
+    h += prev ? `<a href="chapter.html?course=${course}&chapter=${prev.slug}">← ${prev.title}</a>` : '<span></span>';
+    h += next ? `<a href="chapter.html?course=${course}&chapter=${next.slug}">${next.title} →</a>` : '<span></span>';
+    h += '</div>';
+    return h;
+  }
+
+  function showQuestion() {
+    answered = false;
+    const q = qs[current];
+    const total = qs.length;
+    container.innerHTML = `
+      <div class="quiz-wrap">
+        <div class="quiz-progress">
+          <div class="quiz-progress-bar" style="width:${Math.round(current / total * 100)}%"></div>
+        </div>
+        <p class="quiz-counter">第 ${current + 1} 題 / 共 ${total} 題</p>
+        <p class="quiz-question">${q.text}</p>
+        <ul class="quiz-options">
+          ${q.options.map((opt, i) => `<li><button class="quiz-opt-btn" data-idx="${i}">${opt}</button></li>`).join('')}
+        </ul>
+        <div class="quiz-feedback" id="quiz-feedback" style="display:none"></div>
+        <div class="quiz-actions" id="quiz-actions" style="display:none">
+          <button class="quiz-next-btn" id="quiz-next">${current + 1 < total ? '下一題 →' : '查看結果'}</button>
+        </div>
+      </div>`;
+
+    container.querySelectorAll('.quiz-opt-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (answered) return;
+        answered = true;
+        const chosen = parseInt(btn.dataset.idx, 10);
+        const correct = q.answer;
+        container.querySelectorAll('.quiz-opt-btn').forEach((b, i) => {
+          b.disabled = true;
+          if (i === correct) b.classList.add('quiz-correct');
+          else if (i === chosen) b.classList.add('quiz-wrong');
+        });
+        if (chosen === correct) score++;
+        const fb = document.getElementById('quiz-feedback');
+        fb.style.display = '';
+        fb.innerHTML = chosen === correct
+          ? `<span class="quiz-fb-right">✓ 正確！</span> ${q.explanation || ''}`
+          : `<span class="quiz-fb-wrong">✗ 答錯了。</span> 正確答案：${q.options[correct]}。${q.explanation ? ' ' + q.explanation : ''}`;
+        document.getElementById('quiz-actions').style.display = '';
+      });
+    });
+
+    document.getElementById('quiz-next').addEventListener('click', () => {
+      current++;
+      if (current < qs.length) showQuestion();
+      else showResult();
+    });
+  }
+
+  function showResult() {
+    const total = qs.length;
+    const pct = Math.round(score / total * 100);
+    let grade = pct >= 90 ? '🏆 優秀' : pct >= 70 ? '👍 良好' : pct >= 60 ? '📘 及格' : '📖 需加強';
+    container.innerHTML = `
+      <div class="quiz-wrap quiz-result">
+        <h2>測驗結果</h2>
+        <div class="quiz-score-circle">${score}<span>/${total}</span></div>
+        <p class="quiz-grade">${grade}　${pct}%</p>
+        <p class="quiz-result-msg">${pct >= 70 ? '恭喜完成美股投資課程測驗！' : '建議再複習一次課程內容，加油！'}</p>
+        <button class="quiz-restart-btn">重新作答</button>
+      </div>
+      ${navHtml()}`;
+    container.querySelector('.quiz-restart-btn').addEventListener('click', () => {
+      current = 0; score = 0; showQuestion();
+    });
+  }
+
+  showQuestion();
+}
+
 async function loadChapter() {
   const chapterListEl = document.getElementById('chapter-list');
   const heroEl = document.getElementById('chapter-hero');
@@ -157,6 +240,15 @@ async function loadChapter() {
       }
     }
 
+    const curIdx = idx.chapters.findIndex(c => c.slug === target.slug);
+    const prev = idx.chapters[curIdx - 1];
+    const next = idx.chapters[curIdx + 1];
+
+    if (ch.type === 'quiz') {
+      renderQuiz(content, ch, course, prev, next);
+      return;
+    }
+
     let html = '';
     if (ch.objectives && ch.objectives.length) {
       html += '<div class="objectives"><h3>學習目標</h3><ul>';
@@ -167,9 +259,6 @@ async function loadChapter() {
       html += `<h2>${sec.heading}</h2>${sec.html}`;
     }
 
-    const curIdx = idx.chapters.findIndex(c => c.slug === target.slug);
-    const prev = idx.chapters[curIdx - 1];
-    const next = idx.chapters[curIdx + 1];
     html += '<div class="chapter-nav">';
     html += prev
       ? `<a href="chapter.html?course=${course}&chapter=${prev.slug}">← ${prev.title}</a>`
