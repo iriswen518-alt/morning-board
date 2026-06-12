@@ -252,6 +252,20 @@ function pctClass(n) {
   return n > 0 ? "up" : (n < 0 ? "down" : "");
 }
 
+// 期貨每月換倉：近月合約逐月更換，單一合約的 MTD/YTD 會混入換倉缺口而失真，故刻意不計算。
+// MTD/YTD 為 null 且為台指期 → 顯示「—*」並附 tooltip 說明，避免被誤判為「抓不到資料」。
+const ROLLOVER_FUT_NOTE = "台指期近月每月換倉，單一合約的月初/年初漲跌會混入換倉缺口而失真，故不計算。要看台股本月/今年漲跌請參考現貨加權指數 TAIEX。";
+function isRolloverFut(row) {
+  return !!row && typeof row.name === "string" && row.name.startsWith("台指期");
+}
+// 指數用：null 一般顯示「—」；台指期的 MTD/YTD null 則加說明 tooltip
+function fmtPctIdx(n, row) {
+  if ((n === null || n === undefined) && isRolloverFut(row)) {
+    return `<span title="${ROLLOVER_FUT_NOTE}" style="color:#94a3b8;cursor:help">—*</span>`;
+  }
+  return fmtPct(n);
+}
+
 // 給「已格式化字串」用的正負染色：開頭帶 +（含全形＋）→ 紅（up）、
 // 開頭帶 -／−（Unicode 減號）→ 綠（down）、無正負號（如區間 15–35%）→ 中性不染。
 function signClassFromStr(v) {
@@ -2404,8 +2418,8 @@ function renderMarketSheet() {
       <td>${indexLink(i.name)}${indexQuoteLink(i.name)}</td>
       <td>${fmtInt(i.close)}</td>
       <td class="${pctClass(i.daily_pct)}">${fmtPct(i.daily_pct)}</td>
-      <td class="${pctClass(i.mtd_pct)}">${fmtPct(i.mtd_pct)}</td>
-      <td class="${pctClass(i.ytd_pct)}">${fmtPct(i.ytd_pct)}</td>
+      <td class="${pctClass(i.mtd_pct)}">${fmtPctIdx(i.mtd_pct, i)}</td>
+      <td class="${pctClass(i.ytd_pct)}">${fmtPctIdx(i.ytd_pct, i)}</td>
       <td class="date-col">${escapeHtml(shortDate(i.closing_date) || date)}</td>
     </tr>
   `).join("");
@@ -2414,8 +2428,8 @@ function renderMarketSheet() {
     priceHtml: fmtInt(i.close),
     stats: [
       { k: "日", v: fmtPct(i.daily_pct), cls: pctClass(i.daily_pct) },
-      { k: "本月", v: fmtPct(i.mtd_pct), cls: pctClass(i.mtd_pct) },
-      { k: "今年", v: fmtPct(i.ytd_pct), cls: pctClass(i.ytd_pct) },
+      { k: "本月", v: fmtPctIdx(i.mtd_pct, i), cls: pctClass(i.mtd_pct) },
+      { k: "今年", v: fmtPctIdx(i.ytd_pct, i), cls: pctClass(i.ytd_pct) },
     ],
   })));
   // 2026-05-25：Japan / UK 10Y 無免費日頻率資料源，daily/MTD bps 顯式標 n/a* + tooltip
