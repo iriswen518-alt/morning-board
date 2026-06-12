@@ -60,6 +60,24 @@ button.academy-card {
   padding-bottom: 6px;
   border-bottom: 1px solid var(--academy-border);
 }
+.drilldown-note-icon {
+  background: linear-gradient(135deg, #5b8fa8, #7cb9d1);
+}
+.drilldown-note-badge {
+  background: rgba(1,154,179,0.12);
+  color: var(--brand-primary);
+}
+button.academy-card.drilldown-card-note-btn.active {
+  border-color: var(--brand-primary);
+  box-shadow: 0 4px 12px rgba(1, 154, 179, 0.18);
+}
+.drilldown-inline-cards {
+  margin-top: 16px;
+  padding: 20px;
+  background: var(--academy-bg-soft);
+  border: 1px solid var(--academy-border);
+  border-radius: 12px;
+}
 .academy-card-icon {
   width: 42px;
   height: 42px;

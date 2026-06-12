@@ -786,6 +786,9 @@ async function ensureCardsLoaded() {
   window.cardsData = await res.json();
 }
 
+const _STRIP_NUM_RE = /^\d+(?:\.\d+)*\s+/;
+function stripMocNum(s) { return (s || '').replace(_STRIP_NUM_RE, ''); }
+
 async function showCourseDrilldown(course) {
   const courseListEl = document.getElementById('course-list');
   const drilldownEl = document.getElementById('course-drilldown');
@@ -803,8 +806,9 @@ async function showCourseDrilldown(course) {
     const idx = idxRes && idxRes.ok ? await idxRes.json() : null;
     const cardCategory = (window.cardsData?.categories || []).find(c => c.name === course.name);
     const hasChapters = idx && idx.chapters && idx.chapters.length;
-    const hasCards = cardCategory && cardCategory.graph && cardCategory.graph.chapters && cardCategory.graph.chapters.length;
+    const cardGroups = (cardCategory?.graph?.chapters || []);
 
+    // Hero + back button
     let html = `
       <div class="cards-view-header">
         <button id="course-drilldown-back" class="cards-back-btn" type="button">
@@ -824,8 +828,18 @@ async function showCourseDrilldown(course) {
         </div>
       </div>`;
 
+    if (!hasChapters && !cardGroups.length) {
+      html += `<div style="padding:32px 0;text-align:center;color:var(--academy-muted)">此課程尚無內容</div>`;
+      drilldownEl.innerHTML = html;
+      document.getElementById('course-drilldown-back').addEventListener('click', hideDrilldown);
+      return;
+    }
+
+    // Unified grid: chapters + card note groups together
+    html += `<div class="drilldown-section-title">課程內容</div>
+             <div class="academy-grid" id="drilldown-unified-grid">`;
+
     if (hasChapters) {
-      html += `<div class="drilldown-section-title">課程章節</div><div class="academy-grid">`;
       idx.chapters.forEach(ch => {
         html += `
           <a class="academy-card" href="chapter.html?course=${encodeURIComponent(course.slug)}&chapter=${encodeURIComponent(ch.slug)}">
@@ -835,25 +849,59 @@ async function showCourseDrilldown(course) {
             </div>
           </a>`;
       });
-      html += `</div>`;
     }
 
-    if (hasCards) {
-      html += `<div class="drilldown-section-title" style="margin-top:32px">相關卡片筆記</div>
-               <div id="drilldown-cards-list" class="cards-list-container"></div>`;
-    }
+    // Card note group cards mixed into the same grid
+    cardGroups.forEach((grp, i) => {
+      const label = stripMocNum(grp.title);
+      const count = grp.cards ? grp.cards.length : 0;
+      html += `
+        <button class="academy-card drilldown-card-note-btn" type="button" data-grp="${i}">
+          <div class="academy-card-icon drilldown-note-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="14 3 14 9 20 9"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="13" y2="17"/>
+            </svg>
+          </div>
+          <div class="academy-card-meta">
+            <h3 class="academy-card-name">${label}<span class="academy-card-badge drilldown-note-badge">${count} 張卡片</span></h3>
+            <p class="academy-card-desc">點擊查看相關知識卡片</p>
+          </div>
+        </button>`;
+    });
 
-    if (!hasChapters && !hasCards) {
-      html += `<div style="padding:32px 0;text-align:center;color:var(--academy-muted)">此課程尚無內容</div>`;
-    }
+    html += `</div>`;
+    // Inline expanded card list panel (hidden by default)
+    html += `<div id="drilldown-inline-cards" class="drilldown-inline-cards" hidden></div>`;
 
     drilldownEl.innerHTML = html;
 
     document.getElementById('course-drilldown-back').addEventListener('click', hideDrilldown);
 
-    if (hasCards) {
-      renderCardsList(document.getElementById('drilldown-cards-list'), cardCategory.graph.chapters);
-    }
+    // Wire card note group card clicks
+    let activeGrpIdx = null;
+    drilldownEl.querySelectorAll('.drilldown-card-note-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const i = parseInt(btn.getAttribute('data-grp'), 10);
+        const inlineEl = document.getElementById('drilldown-inline-cards');
+        if (!inlineEl) return;
+
+        if (activeGrpIdx === i) {
+          // Toggle off
+          inlineEl.hidden = true;
+          inlineEl.innerHTML = '';
+          btn.classList.remove('active');
+          activeGrpIdx = null;
+        } else {
+          drilldownEl.querySelectorAll('.drilldown-card-note-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          activeGrpIdx = i;
+          inlineEl.hidden = false;
+          // Position panel after the grid
+          renderCardsList(inlineEl, [cardGroups[i]]);
+          inlineEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      });
+    });
   } catch (err) {
     drilldownEl.innerHTML = '<div style="padding:24px;color:var(--academy-muted)">載入失敗，請稍後再試。</div>';
     console.error(err);
