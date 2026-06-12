@@ -1,4 +1,4 @@
-function renderAcademyCards(listEl, items, tabName) {
+function renderAcademyCards(listEl, items, tabName, opts) {
   listEl.innerHTML = '';
   items.forEach(item => {
     const inactive = item.active === false;
@@ -13,6 +13,10 @@ function renderAcademyCards(listEl, items, tabName) {
     let node;
     if (inactive) {
       node = document.createElement('div');
+    } else if (opts && opts.onClick) {
+      node = document.createElement('button');
+      node.type = 'button';
+      node.addEventListener('click', () => opts.onClick(item));
     } else {
       node = document.createElement('a');
       node.href = `chapter.html?course=${encodeURIComponent(item.slug)}&tab=${tabName || 'courses'}`;
@@ -30,7 +34,10 @@ async function loadCourses() {
     const res = await fetch('../data/academy/courses.json');
     if (!res.ok) throw new Error('fetch failed');
     const data = await res.json();
-    renderAcademyCards(listEl, data.courses || [], 'courses');
+    window.coursesData = data.courses || [];
+    renderAcademyCards(listEl, window.coursesData, 'courses', {
+      onClick: (course) => showCourseDrilldown(course),
+    });
   } catch (err) {
     listEl.textContent = '載入失敗，請稍後再試。';
     console.error(err);
@@ -766,6 +773,98 @@ function wireZkModalEvents() {
       closeCardNoteModal();
     }
   });
+}
+
+// ==========================================
+// Course Drilldown (課程 → 章節 + 卡片筆記)
+// ==========================================
+
+async function ensureCardsLoaded() {
+  if (window.cardsData) return;
+  const res = await fetch('../data/academy/cards.json');
+  if (!res.ok) throw new Error('cards fetch failed');
+  window.cardsData = await res.json();
+}
+
+async function showCourseDrilldown(course) {
+  const courseListEl = document.getElementById('course-list');
+  const drilldownEl = document.getElementById('course-drilldown');
+  if (!courseListEl || !drilldownEl) return;
+
+  courseListEl.hidden = true;
+  drilldownEl.hidden = false;
+  drilldownEl.innerHTML = '<div style="padding:24px;color:var(--academy-muted)">載入中…</div>';
+
+  try {
+    const [idxRes] = await Promise.all([
+      fetch(`../data/academy/${course.slug}/00_index.json`).catch(() => null),
+      ensureCardsLoaded(),
+    ]);
+    const idx = idxRes && idxRes.ok ? await idxRes.json() : null;
+    const cardCategory = (window.cardsData?.categories || []).find(c => c.name === course.name);
+    const hasChapters = idx && idx.chapters && idx.chapters.length;
+    const hasCards = cardCategory && cardCategory.graph && cardCategory.graph.chapters && cardCategory.graph.chapters.length;
+
+    let html = `
+      <div class="cards-view-header">
+        <button id="course-drilldown-back" class="cards-back-btn" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+          返回課程列表
+        </button>
+        <h2 class="cards-view-title" style="flex:1"></h2>
+        <div></div>
+      </div>
+      <div class="course-hero" style="margin:4px 0 24px">
+        <div class="course-hero-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${course.icon || ''}</svg>
+        </div>
+        <div class="course-hero-meta">
+          <h3 class="course-hero-title">${course.name}${hasChapters ? `<span class="course-hero-badge">共 ${idx.chapters.length} 章</span>` : ''}</h3>
+          ${course.description ? `<p class="course-hero-desc">${course.description}</p>` : ''}
+        </div>
+      </div>`;
+
+    if (hasChapters) {
+      html += `<div class="drilldown-section-title">課程章節</div><div class="academy-grid">`;
+      idx.chapters.forEach(ch => {
+        html += `
+          <a class="academy-card" href="chapter.html?course=${encodeURIComponent(course.slug)}&chapter=${encodeURIComponent(ch.slug)}">
+            <div class="academy-card-meta" style="padding-left:0">
+              <h3 class="academy-card-name">${ch.title}</h3>
+              ${ch.description ? `<p class="academy-card-desc">${ch.description}</p>` : ''}
+            </div>
+          </a>`;
+      });
+      html += `</div>`;
+    }
+
+    if (hasCards) {
+      html += `<div class="drilldown-section-title" style="margin-top:32px">相關卡片筆記</div>
+               <div id="drilldown-cards-list" class="cards-list-container"></div>`;
+    }
+
+    if (!hasChapters && !hasCards) {
+      html += `<div style="padding:32px 0;text-align:center;color:var(--academy-muted)">此課程尚無內容</div>`;
+    }
+
+    drilldownEl.innerHTML = html;
+
+    document.getElementById('course-drilldown-back').addEventListener('click', hideDrilldown);
+
+    if (hasCards) {
+      renderCardsList(document.getElementById('drilldown-cards-list'), cardCategory.graph.chapters);
+    }
+  } catch (err) {
+    drilldownEl.innerHTML = '<div style="padding:24px;color:var(--academy-muted)">載入失敗，請稍後再試。</div>';
+    console.error(err);
+  }
+}
+
+function hideDrilldown() {
+  const courseListEl = document.getElementById('course-list');
+  const drilldownEl = document.getElementById('course-drilldown');
+  if (courseListEl) courseListEl.hidden = false;
+  if (drilldownEl) { drilldownEl.hidden = true; drilldownEl.innerHTML = ''; }
 }
 
 wireZkModalEvents();

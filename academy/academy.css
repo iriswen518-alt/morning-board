@@ -38,10 +38,27 @@
   color: var(--brand-deep);
   transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
 }
-a.academy-card:hover {
+a.academy-card:hover,
+button.academy-card:hover {
   transform: translateY(-1px);
   border-color: var(--brand-primary);
   box-shadow: 0 4px 12px rgba(1, 154, 179, 0.12);
+}
+button.academy-card {
+  text-align: left;
+  background: var(--academy-bg-soft);
+  width: 100%;
+  cursor: pointer;
+}
+.drilldown-section-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--brand-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--academy-border);
 }
 .academy-card-icon {
   width: 42px;
