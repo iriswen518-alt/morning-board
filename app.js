@@ -4805,9 +4805,10 @@ function renderPremarketBlock() {
       (pct >= 0 ? `▲ +${pct.toFixed(2)}%` : `▼ ${pct.toFixed(2)}%`);
     const cls = pct == null ? "" : pct >= 0 ? "up" : "down";
     return `
-      <div class="idx-card">
-        <div class="idx-top"><span class="idx-nm">${escapeHtml(ind.label)}</span><span class="idx-px">${escapeHtml(priceStr)}</span></div>
-        <div class="idx-stats"><div class="idx-st"><div class="k">日</div><div class="v ${cls}">${escapeHtml(pctStr)}</div></div></div>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:10px 12px">
+        <div style="font-size:12px;color:var(--text-mute);margin-bottom:4px;font-weight:500">${escapeHtml(ind.label)}</div>
+        <div style="font-size:16px;font-weight:800;font-variant-numeric:tabular-nums;line-height:1.2">${escapeHtml(priceStr)}</div>
+        <div style="font-size:13px;font-weight:600;margin-top:3px" class="${cls}">${escapeHtml(pctStr)}</div>
       </div>`;
   }).join("");
 
@@ -4816,17 +4817,19 @@ function renderPremarketBlock() {
     .map(l => {
       if (l.startsWith("【") && l.includes("】")) {
         const end = l.indexOf("】") + 1;
-        return `<p style="margin:4px 0;font-size:13px;line-height:1.7"><strong style="color:var(--brand)">${escapeHtml(l.slice(0, end))}</strong> ${escapeHtml(l.slice(end).trim())}</p>`;
+        return `<p style="margin:4px 0;line-height:1.7"><strong style="color:var(--brand)">${escapeHtml(l.slice(0, end))}</strong> ${escapeHtml(l.slice(end).trim())}</p>`;
       }
-      return `<p style="margin:4px 0;font-size:13px;line-height:1.7">${escapeHtml(l)}</p>`;
+      return `<p style="margin:4px 0;line-height:1.7">${escapeHtml(l)}</p>`;
     }).join("");
 
   return `
     <div style="display:flex;justify-content:flex-end;margin-bottom:8px">
       <span style="color:var(--text-mute);font-size:11px">${escapeHtml(p.generated_at || "")}</span>
     </div>
-    <div class="idx-cards">${indicatorCards}</div>
-    ${analysisHtml ? `<div class="fund-card" style="margin-top:16px">${analysisHtml}</div>` : ""}
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:8px;margin-bottom:16px">
+      ${indicatorCards}
+    </div>
+    ${analysisHtml ? `<div class="fund-card">${analysisHtml}</div>` : ""}
   `;
 }
 
