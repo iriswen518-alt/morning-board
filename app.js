@@ -4826,7 +4826,7 @@ function renderPremarketBlock() {
     <div style="display:flex;justify-content:flex-end;margin-bottom:8px">
       <span style="color:var(--text-mute);font-size:11px">${escapeHtml(p.generated_at || "")}</span>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:8px;margin-bottom:16px">
+    <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-bottom:16px">
       ${indicatorCards}
     </div>
     ${analysisHtml ? `<div class="fund-card">${analysisHtml}</div>` : ""}
