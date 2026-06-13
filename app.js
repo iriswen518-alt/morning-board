@@ -2583,6 +2583,7 @@ function renderMarketSheet() {
     ${renderRankingsBlock("tw")}`;
 
   return `
+    ${renderPremarketBlock()}
     ${renderMarketHighlights(m)}
 
     <div class="tabs">
@@ -4762,6 +4763,49 @@ function renderRankingsBlock(market) {
         `).join("")}
       <p style="color:var(--text-mute);font-size:12px;margin:10px 0 0">
         當日全市場掃描；點名稱可至 Yahoo／TWSE 驗證。本月=MTD，本年=YTD。本益比為近四季（trailing），「預」=預估值（forward）。</p>
+    </div>`;
+}
+
+function renderPremarketBlock() {
+  const p = DATA.premarket;
+  if (!p) return "";
+
+  const rows = (p.indicators || []).map(ind => {
+    const price = ind.price;
+    const pct   = ind.pct;
+    const priceStr = price == null ? "—"
+      : ind.label === "VIX"                              ? price.toFixed(1)
+      : ind.label === "DXY" || ind.label === "USD/TWD"  ? price.toFixed(2)
+      : Math.round(price).toLocaleString("en-US");
+    const pctStr = pct == null ? "" :
+      (pct >= 0 ? `▲ +${pct.toFixed(2)}%` : `▼ ${pct.toFixed(2)}%`);
+    const cls = pct == null ? "" : pct >= 0 ? "up" : "down";
+    return `<tr>
+      <td style="color:var(--text-mute);padding:2px 12px 2px 0;font-size:13px">${escapeHtml(ind.label)}</td>
+      <td class="${cls}" style="font-weight:600;font-size:13px;padding:2px 0">${escapeHtml(priceStr)}${pctStr ? ` ${escapeHtml(pctStr)}` : ""}</td>
+    </tr>`;
+  }).join("");
+
+  const analysisHtml = (p.analysis || "").split("\n")
+    .filter(l => l.trim())
+    .map(l => {
+      if (l.startsWith("【") && l.includes("】")) {
+        const end = l.indexOf("】") + 1;
+        return `<p style="margin:4px 0;font-size:13px;line-height:1.7"><strong style="color:var(--brand)">${escapeHtml(l.slice(0, end))}</strong> ${escapeHtml(l.slice(end).trim())}</p>`;
+      }
+      return `<p style="margin:4px 0;font-size:13px;line-height:1.7">${escapeHtml(l)}</p>`;
+    }).join("");
+
+  return `
+    <div style="margin-bottom:16px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+        <h3 style="margin:0">盤前分析</h3>
+        <span style="color:var(--text-mute);font-size:11px">${escapeHtml(p.generated_at || "")}</span>
+      </div>
+      <div class="fund-card" style="display:grid;grid-template-columns:auto 1fr;gap:12px 24px;align-items:start">
+        <table style="border-collapse:collapse"><tbody>${rows}</tbody></table>
+        <div>${analysisHtml}</div>
+      </div>
     </div>`;
 }
 
