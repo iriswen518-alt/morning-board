@@ -2610,17 +2610,19 @@ function renderMarketSheet() {
       ${renderMarketHighlights(m)}
 
       <div class="tabs">
-        <button class="tab active" data-mtab="indices">股市</button>
+        <button class="tab active" data-mtab="indices">全球</button>
         <button class="tab" data-mtab="bonds">債券</button>
         <button class="tab" data-mtab="fx">匯率</button>
         <button class="tab" data-mtab="us">美股</button>
         <button class="tab" data-mtab="tw">台股</button>
+        <button class="tab" data-mtab="twstock">台股（個股）</button>
       </div>
       <div id="mtab-indices">${stocksTab}</div>
       <div id="mtab-bonds" hidden>${bondsTab}</div>
       <div id="mtab-fx" hidden>${fxTab}</div>
       <div id="mtab-us" hidden>${usTab}</div>
-      <div id="mtab-tw" hidden>${twTab}</div>
+      <div id="mtab-tw" hidden>${twPresetTable}</div>
+      <div id="mtab-twstock" hidden>${renderTwStockSheet()}${renderRankingsBlock("tw")}</div>
     </div>
   `;
 }
