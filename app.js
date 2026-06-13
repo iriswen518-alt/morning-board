@@ -4827,7 +4827,7 @@ function renderPremarketBlock() {
           bodyLines.push(lines[i].trim());
         }
         const body = bodyLines.filter(Boolean).join("　");
-        out.push(`<p style="margin:6px 0;line-height:1.8"><strong style="color:var(--brand)">${tag}</strong>${body ? " " + escapeHtml(body) : ""}</p>`);
+        out.push(`<p style="margin:10px 0 2px;line-height:1.8"><strong style="color:var(--brand)">${tag}</strong></p>${body ? `<p style="margin:0 0 6px;line-height:1.8">${escapeHtml(body)}</p>` : ""}`);
       } else {
         out.push(`<p style="margin:6px 0;line-height:1.8">${escapeHtml(l)}</p>`);
       }
