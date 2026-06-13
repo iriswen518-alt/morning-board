@@ -4820,7 +4820,7 @@ function renderPremarketBlock() {
       const l = lines[i];
       if (l.startsWith("【") && l.includes("】")) {
         const end = l.indexOf("】") + 1;
-        const tag = escapeHtml(l.slice(0, end));
+        const tag = escapeHtml(l.slice(1, end - 1));
         const bodyLines = [l.slice(end).trim()];
         while (i + 1 < lines.length && !(lines[i + 1].startsWith("【") && lines[i + 1].includes("】"))) {
           i++;
