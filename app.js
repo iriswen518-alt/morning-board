@@ -4813,7 +4813,7 @@ function renderPremarketBlock() {
   }).join("");
 
   const analysisHtml = (p.analysis || "").split("\n")
-    .filter(l => l.trim())
+    .filter(l => l.trim() && l.trim() !== "---")
     .map(l => {
       if (l.startsWith("【") && l.includes("】")) {
         const end = l.indexOf("】") + 1;
