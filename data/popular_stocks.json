@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T18:40:12+08:00",
+  "generated_at": "2026-06-13T19:23:22+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -45,20 +45,6 @@
       "error": null
     },
     {
-      "symbol": "ACN",
-      "name_zh": "Accenture",
-      "kind": "US",
-      "price": 170.28,
-      "change_pct": 1.65,
-      "mtd_pct": -8.98,
-      "ytd_pct": -36.53,
-      "market_date": "2026-06-12",
-      "per": 13.7393,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ACN.US",
-      "error": null
-    },
-    {
       "symbol": "O",
       "name_zh": "Realty Income",
       "kind": "US",
@@ -70,6 +56,20 @@
       "per": 52.1944,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=O.US",
+      "error": null
+    },
+    {
+      "symbol": "ACN",
+      "name_zh": "Accenture",
+      "kind": "US",
+      "price": 170.28,
+      "change_pct": 1.65,
+      "mtd_pct": -8.98,
+      "ytd_pct": -36.53,
+      "market_date": "2026-06-12",
+      "per": 13.7393,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ACN.US",
       "error": null
     },
     {
@@ -87,20 +87,6 @@
       "error": null
     },
     {
-      "symbol": "T",
-      "name_zh": "AT&T",
-      "kind": "US",
-      "price": 23.58,
-      "change_pct": 2.52,
-      "mtd_pct": -4.92,
-      "ytd_pct": -5.07,
-      "market_date": "2026-06-12",
-      "per": 7.6013,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=T.US",
-      "error": null
-    },
-    {
       "symbol": "RIVN",
       "name_zh": "Rivian",
       "kind": "US",
@@ -115,17 +101,59 @@
       "error": null
     },
     {
-      "symbol": "SCHD",
-      "name_zh": "Schwab US Dividend Equity ETF",
+      "symbol": "DJT",
+      "name_zh": "Trump Media & Technology",
       "kind": "US",
-      "price": 32.82,
-      "change_pct": 0.89,
-      "mtd_pct": 0.98,
-      "ytd_pct": 19.65,
+      "price": 7.8,
+      "change_pct": -5.45,
+      "mtd_pct": -16.22,
+      "ytd_pct": -41.09,
       "market_date": "2026-06-12",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SCHD.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DJT.US",
+      "error": null
+    },
+    {
+      "symbol": "DIS",
+      "name_zh": "迪士尼",
+      "kind": "US",
+      "price": 100.04,
+      "change_pct": -0.3,
+      "mtd_pct": -1.76,
+      "ytd_pct": -12.07,
+      "market_date": "2026-06-12",
+      "per": 15.4343,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DIS.US",
+      "error": null
+    },
+    {
+      "symbol": "PYPL",
+      "name_zh": "PayPal",
+      "kind": "US",
+      "price": 41.53,
+      "change_pct": 0.7,
+      "mtd_pct": -7.2,
+      "ytd_pct": -28.86,
+      "market_date": "2026-06-12",
+      "per": 7.2413,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PYPL.US",
+      "error": null
+    },
+    {
+      "symbol": "CEG",
+      "name_zh": "Constellation Energy Corporatio",
+      "kind": "US",
+      "price": 253.76,
+      "change_pct": 2.86,
+      "mtd_pct": -11.81,
+      "ytd_pct": -28.17,
+      "market_date": "2026-06-12",
+      "per": 24.1772,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CEG.US",
       "error": null
     },
     {
