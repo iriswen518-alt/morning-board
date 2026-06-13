@@ -997,7 +997,7 @@ function renderObondsSheet() {
         <td>${escapeHtml(b.currency || "—")}</td>
         <td>${fmtCoupon(b.coupon_pct)}</td>
         <td>${escapeHtml(b.maturity || "—")}</td>
-        <td><span class="up">${fmtPctNum(b.bid_yield_pct)}</span></td>
+        <td><span class="up">${b.bid_yield_pct != null ? b.bid_yield_pct.toFixed(1) + "%" : "—"}</span></td>
         <td>${priceCell(b)}</td>
         <td>${priceDateCell(b)}</td>
         <td class="${pctClass(b.perf_1w)}">${fmtPctNum(b.perf_1w)}</td>
@@ -6136,7 +6136,7 @@ function renderLumpFundCards() {
   }).join("");
 
   return `
-    <div style="overflow-x:auto">
+    <div style="overflow-x:auto;background:#fff;border-radius:8px">
       <table class="freeze-col1" style="width:100%;border-collapse:collapse;font-size:13px">
         <thead>
           <tr>
@@ -6188,7 +6188,7 @@ function renderDcaFundCards() {
   }).join("");
 
   return `
-    <div style="overflow-x:auto">
+    <div style="overflow-x:auto;background:#fff;border-radius:8px">
       <table class="freeze-col1" style="width:100%;border-collapse:collapse;font-size:13px">
         <thead>
           <tr>
@@ -6282,7 +6282,7 @@ function renderBeatEtfCards() {
   }).join("");
 
   return `
-    <div style="overflow-x:auto">
+    <div style="overflow-x:auto;background:#fff;border-radius:8px">
       <table class="freeze-col1" style="width:100%;border-collapse:collapse;font-size:13px">
         <thead>
           <tr>
