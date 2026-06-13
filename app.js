@@ -4812,15 +4812,29 @@ function renderPremarketBlock() {
       </div>`;
   }).join("");
 
-  const analysisHtml = (p.analysis || "").split("\n")
-    .filter(l => l.trim() && l.trim() !== "---")
-    .map(l => {
+  const analysisHtml = (() => {
+    const lines = (p.analysis || "").split("\n").filter(l => l.trim() && l.trim() !== "---");
+    const out = [];
+    let i = 0;
+    while (i < lines.length) {
+      const l = lines[i];
       if (l.startsWith("【") && l.includes("】")) {
         const end = l.indexOf("】") + 1;
-        return `<p style="margin:4px 0;line-height:1.7"><strong style="color:var(--brand)">${escapeHtml(l.slice(0, end))}</strong> ${escapeHtml(l.slice(end).trim())}</p>`;
+        const tag = escapeHtml(l.slice(0, end));
+        const bodyLines = [l.slice(end).trim()];
+        while (i + 1 < lines.length && !(lines[i + 1].startsWith("【") && lines[i + 1].includes("】"))) {
+          i++;
+          bodyLines.push(lines[i].trim());
+        }
+        const body = bodyLines.filter(Boolean).join("　");
+        out.push(`<p style="margin:6px 0;line-height:1.8"><strong style="color:var(--brand)">${tag}</strong>${body ? " " + escapeHtml(body) : ""}</p>`);
+      } else {
+        out.push(`<p style="margin:6px 0;line-height:1.8">${escapeHtml(l)}</p>`);
       }
-      return `<p style="margin:4px 0;line-height:1.7">${escapeHtml(l)}</p>`;
-    }).join("");
+      i++;
+    }
+    return out.join("");
+  })();
 
   return `
     <div style="display:flex;justify-content:flex-end;margin-bottom:8px">
