@@ -685,7 +685,7 @@ function switchTab(name) {
   else if (name === "calc") body.innerHTML = renderCalcSheet();
   else if (name === "twstock") body.innerHTML = renderTwStockSheet();
   if (name === "news") wireNewsTabs();
-  if (name === "market") { wireMarketTabs(); wireTwStock(); }
+  if (name === "market") { wireMarketViewTabs(); wireMarketTabs(); wireTwStock(); }
   if (name === "funds") { wireFundsTabs(); wireFundCompare(); }
   if (name === "alloc") wireAllocTabs();
   if (name === "wealth") wireWealthTabs();
@@ -795,6 +795,22 @@ function wireMarketTabs() {
       const which = "mtab-" + t.dataset.mtab;
       ids.forEach(id => {
         const el = $(id);
+        if (el) el.hidden = id !== which;
+      });
+    });
+  });
+}
+
+function wireMarketViewTabs() {
+  const buttons = document.querySelectorAll(".tab[data-mvtab]");
+  const ids = Array.from(buttons).map(b => "mvtab-" + b.dataset.mvtab);
+  buttons.forEach(t => {
+    t.addEventListener("click", () => {
+      buttons.forEach(x => x.classList.remove("active"));
+      t.classList.add("active");
+      const which = "mvtab-" + t.dataset.mvtab;
+      ids.forEach(id => {
+        const el = document.getElementById(id);
         if (el) el.hidden = id !== which;
       });
     });
@@ -2583,21 +2599,29 @@ function renderMarketSheet() {
     ${renderRankingsBlock("tw")}`;
 
   return `
-    ${renderPremarketBlock()}
-    ${renderMarketHighlights(m)}
-
     <div class="tabs">
-      <button class="tab active" data-mtab="indices">股市</button>
-      <button class="tab" data-mtab="bonds">債券</button>
-      <button class="tab" data-mtab="fx">匯率</button>
-      <button class="tab" data-mtab="us">美股</button>
-      <button class="tab" data-mtab="tw">台股</button>
+      <button class="tab active" data-mvtab="premarket">盤前分析</button>
+      <button class="tab" data-mvtab="overview">市場一覽</button>
     </div>
-    <div id="mtab-indices">${stocksTab}</div>
-    <div id="mtab-bonds" hidden>${bondsTab}</div>
-    <div id="mtab-fx" hidden>${fxTab}</div>
-    <div id="mtab-us" hidden>${usTab}</div>
-    <div id="mtab-tw" hidden>${twTab}</div>
+    <div id="mvtab-premarket">
+      ${renderPremarketBlock()}
+    </div>
+    <div id="mvtab-overview" hidden>
+      ${renderMarketHighlights(m)}
+
+      <div class="tabs">
+        <button class="tab active" data-mtab="indices">股市</button>
+        <button class="tab" data-mtab="bonds">債券</button>
+        <button class="tab" data-mtab="fx">匯率</button>
+        <button class="tab" data-mtab="us">美股</button>
+        <button class="tab" data-mtab="tw">台股</button>
+      </div>
+      <div id="mtab-indices">${stocksTab}</div>
+      <div id="mtab-bonds" hidden>${bondsTab}</div>
+      <div id="mtab-fx" hidden>${fxTab}</div>
+      <div id="mtab-us" hidden>${usTab}</div>
+      <div id="mtab-tw" hidden>${twTab}</div>
+    </div>
   `;
 }
 
@@ -4768,22 +4792,23 @@ function renderRankingsBlock(market) {
 
 function renderPremarketBlock() {
   const p = DATA.premarket;
-  if (!p) return "";
+  if (!p) return `<p style="color:var(--text-mute);padding:32px 0;text-align:center">今日尚無盤前分析資料</p>`;
 
-  const rows = (p.indicators || []).map(ind => {
+  const indicatorCards = (p.indicators || []).map(ind => {
     const price = ind.price;
     const pct   = ind.pct;
     const priceStr = price == null ? "—"
       : ind.label === "VIX"                              ? price.toFixed(1)
       : ind.label === "DXY" || ind.label === "USD/TWD"  ? price.toFixed(2)
       : Math.round(price).toLocaleString("en-US");
-    const pctStr = pct == null ? "" :
+    const pctStr = pct == null ? "—" :
       (pct >= 0 ? `▲ +${pct.toFixed(2)}%` : `▼ ${pct.toFixed(2)}%`);
     const cls = pct == null ? "" : pct >= 0 ? "up" : "down";
-    return `<tr>
-      <td style="color:var(--text-mute);padding:2px 12px 2px 0;font-size:13px">${escapeHtml(ind.label)}</td>
-      <td class="${cls}" style="font-weight:600;font-size:13px;padding:2px 0">${escapeHtml(priceStr)}${pctStr ? ` ${escapeHtml(pctStr)}` : ""}</td>
-    </tr>`;
+    return `
+      <div class="idx-card">
+        <div class="idx-top"><span class="idx-nm">${escapeHtml(ind.label)}</span><span class="idx-px">${escapeHtml(priceStr)}</span></div>
+        <div class="idx-stats"><div class="idx-st"><div class="k">日</div><div class="v ${cls}">${escapeHtml(pctStr)}</div></div></div>
+      </div>`;
   }).join("");
 
   const analysisHtml = (p.analysis || "").split("\n")
@@ -4797,16 +4822,12 @@ function renderPremarketBlock() {
     }).join("");
 
   return `
-    <div style="margin-bottom:16px">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
-        <h3 style="margin:0">盤前分析</h3>
-        <span style="color:var(--text-mute);font-size:11px">${escapeHtml(p.generated_at || "")}</span>
-      </div>
-      <div class="fund-card" style="display:grid;grid-template-columns:auto 1fr;gap:12px 24px;align-items:start">
-        <table style="border-collapse:collapse"><tbody>${rows}</tbody></table>
-        <div>${analysisHtml}</div>
-      </div>
-    </div>`;
+    <div style="display:flex;justify-content:flex-end;margin-bottom:8px">
+      <span style="color:var(--text-mute);font-size:11px">${escapeHtml(p.generated_at || "")}</span>
+    </div>
+    <div class="idx-cards">${indicatorCards}</div>
+    ${analysisHtml ? `<div class="fund-card" style="margin-top:16px">${analysisHtml}</div>` : ""}
+  `;
 }
 
 function renderMarketHighlights(m) {
