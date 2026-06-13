@@ -4805,7 +4805,7 @@ function renderPremarketBlock() {
       (pct >= 0 ? `▲ +${pct.toFixed(2)}%` : `▼ ${pct.toFixed(2)}%`);
     const cls = pct == null ? "" : pct >= 0 ? "up" : "down";
     return `
-      <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:10px 12px">
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:10px 12px;text-align:center">
         <div style="font-size:12px;color:var(--text-mute);margin-bottom:4px;font-weight:500">${escapeHtml(ind.label)}</div>
         <div style="font-size:16px;font-weight:800;font-variant-numeric:tabular-nums;line-height:1.2">${escapeHtml(priceStr)}</div>
         <div style="font-size:13px;font-weight:600;margin-top:3px" class="${cls}">${escapeHtml(pctStr)}</div>
