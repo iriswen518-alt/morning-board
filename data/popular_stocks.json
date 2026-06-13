@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T22:19:34+08:00",
+  "generated_at": "2026-06-14T00:23:23+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -17,20 +17,6 @@
       "error": null
     },
     {
-      "symbol": "SPCX",
-      "name_zh": "Space Exploration Technologies Corp. Class A Common Stock",
-      "kind": "US",
-      "price": 160.97,
-      "change_pct": null,
-      "mtd_pct": null,
-      "ytd_pct": null,
-      "market_date": "2026-06-12",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPCX.US",
-      "error": null
-    },
-    {
       "symbol": "O",
       "name_zh": "Realty Income",
       "kind": "US",
@@ -42,20 +28,6 @@
       "per": 52.1944,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=O.US",
-      "error": null
-    },
-    {
-      "symbol": "SPCL",
-      "name_zh": "Defiance Pure Space Daily 2X St",
-      "kind": "US",
-      "price": 51.28,
-      "change_pct": 56.62,
-      "mtd_pct": 26.82,
-      "ytd_pct": null,
-      "market_date": "2026-06-12",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPCL.US",
       "error": null
     },
     {
@@ -73,6 +45,34 @@
       "error": null
     },
     {
+      "symbol": "HON",
+      "name_zh": "Honeywell International",
+      "kind": "US",
+      "price": 220.33,
+      "change_pct": 0.55,
+      "mtd_pct": -7.38,
+      "ytd_pct": 12.93,
+      "market_date": "2026-06-12",
+      "per": 30.9466,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HON.US",
+      "error": null
+    },
+    {
+      "symbol": "SBUX",
+      "name_zh": "星巴克",
+      "kind": "US",
+      "price": 103.06,
+      "change_pct": 0.76,
+      "mtd_pct": 3.91,
+      "ytd_pct": 22.36,
+      "market_date": "2026-06-12",
+      "per": 78.2939,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SBUX.US",
+      "error": null
+    },
+    {
       "symbol": "PSKY",
       "name_zh": "Paramount Skydance",
       "kind": "US",
@@ -87,31 +87,31 @@
       "error": null
     },
     {
-      "symbol": "AMKR",
-      "name_zh": "Amkor Technology",
+      "symbol": "RIVN",
+      "name_zh": "Rivian",
       "kind": "US",
-      "price": 82.8,
-      "change_pct": 8.73,
-      "mtd_pct": 19.01,
-      "ytd_pct": 109.68,
+      "price": 16.77,
+      "change_pct": 7.92,
+      "mtd_pct": 2.82,
+      "ytd_pct": -14.97,
       "market_date": "2026-06-12",
-      "per": 46.9409,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AMKR.US",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RIVN.US",
       "error": null
     },
     {
-      "symbol": "DIS",
-      "name_zh": "迪士尼",
+      "symbol": "PYPL",
+      "name_zh": "PayPal",
       "kind": "US",
-      "price": 100.06,
-      "change_pct": -0.28,
-      "mtd_pct": -1.76,
-      "ytd_pct": -12.07,
+      "price": 41.54,
+      "change_pct": 0.73,
+      "mtd_pct": -7.2,
+      "ytd_pct": -28.86,
       "market_date": "2026-06-12",
-      "per": 15.4343,
+      "per": 7.2413,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DIS.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PYPL.US",
       "error": null
     },
     {
@@ -129,20 +129,6 @@
       "error": null
     },
     {
-      "symbol": "SCHD",
-      "name_zh": "Schwab US Dividend Equity ETF",
-      "kind": "US",
-      "price": 32.83,
-      "change_pct": 0.92,
-      "mtd_pct": 0.98,
-      "ytd_pct": 19.65,
-      "market_date": "2026-06-12",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SCHD.US",
-      "error": null
-    },
-    {
       "symbol": "DJT",
       "name_zh": "Trump Media & Technology",
       "kind": "US",
@@ -154,6 +140,48 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DJT.US",
+      "error": null
+    },
+    {
+      "symbol": "CEG",
+      "name_zh": "Constellation Energy Corporatio",
+      "kind": "US",
+      "price": 253.78,
+      "change_pct": 2.87,
+      "mtd_pct": -11.81,
+      "ytd_pct": -28.17,
+      "market_date": "2026-06-12",
+      "per": 24.1772,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CEG.US",
+      "error": null
+    },
+    {
+      "symbol": "MMM",
+      "name_zh": "3M",
+      "kind": "US",
+      "price": 158.34,
+      "change_pct": 0.27,
+      "mtd_pct": 3.39,
+      "ytd_pct": -1.11,
+      "market_date": "2026-06-12",
+      "per": 29.6949,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MMM.US",
+      "error": null
+    },
+    {
+      "symbol": "MO",
+      "name_zh": "Altria",
+      "kind": "US",
+      "price": 71.96,
+      "change_pct": 0.77,
+      "mtd_pct": 3.39,
+      "ytd_pct": 24.77,
+      "market_date": "2026-06-12",
+      "per": 14.8492,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MO.US",
       "error": null
     },
     {
