@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-14T07:15:12+08:00",
+  "generated_at": "2026-06-14T12:58:08+08:00",
   "source": "finnhub (US price+daily) + Yahoo (US MTD/YTD) + TWSE (TW)",
   "us_stocks": [
     {
@@ -84,8 +84,8 @@
       "market_date": "2026-06-12",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AMZN.US",
       "error": null,
-      "per": null,
-      "per_kind": null
+      "per": 28.2617,
+      "per_kind": "trailing"
     },
     {
       "symbol": "META",
@@ -171,8 +171,8 @@
       "market_date": "2026-06-12",
       "source_url": "https://tw.stock.yahoo.com/quote/2330.TW",
       "error": null,
-      "per": null,
-      "per_kind": null
+      "per": 31.06,
+      "per_kind": "trailing"
     },
     {
       "symbol": "2317",
@@ -187,9 +187,9 @@
       "perf_5y": 127.75,
       "market_date": "2026-06-12",
       "source_url": "https://tw.stock.yahoo.com/quote/2317.TW",
-      "error": "stale",
-      "per": null,
-      "per_kind": null
+      "error": null,
+      "per": 18.5,
+      "per_kind": "trailing"
     },
     {
       "symbol": "2454",
@@ -205,8 +205,8 @@
       "market_date": "2026-06-12",
       "source_url": "https://tw.stock.yahoo.com/quote/2454.TW",
       "error": null,
-      "per": null,
-      "per_kind": null
+      "per": 66.61,
+      "per_kind": "trailing"
     },
     {
       "symbol": "2308",
@@ -222,8 +222,8 @@
       "market_date": "2026-06-12",
       "source_url": "https://tw.stock.yahoo.com/quote/2308.TW",
       "error": null,
-      "per": null,
-      "per_kind": null
+      "per": 81.67,
+      "per_kind": "trailing"
     },
     {
       "symbol": "2382",
@@ -238,9 +238,9 @@
       "perf_5y": 330.23,
       "market_date": "2026-06-12",
       "source_url": "https://tw.stock.yahoo.com/quote/2382.TW",
-      "error": "stale",
-      "per": null,
-      "per_kind": null
+      "error": null,
+      "per": 18.7,
+      "per_kind": "trailing"
     },
     {
       "symbol": "2891",
@@ -255,9 +255,9 @@
       "perf_5y": 200.0,
       "market_date": "2026-06-12",
       "source_url": "https://tw.stock.yahoo.com/quote/2891.TW",
-      "error": "stale",
-      "per": null,
-      "per_kind": null
+      "error": null,
+      "per": 16.29,
+      "per_kind": "trailing"
     },
     {
       "symbol": "1301",
@@ -272,7 +272,7 @@
       "perf_5y": -57.68,
       "market_date": "2026-06-12",
       "source_url": "https://tw.stock.yahoo.com/quote/1301.TW",
-      "error": "stale",
+      "error": null,
       "per": null,
       "per_kind": null
     }
