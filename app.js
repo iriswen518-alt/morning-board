@@ -4814,8 +4814,19 @@ function renderPremarketBlock() {
       </div>`;
   }).join("");
 
-  const analysisHtml = (() => {
+
+  // Split analysis: first paragraph = 今日判斷 summary, rest = detail
+  const analysisParts = (() => {
     const lines = (p.analysis || "").split("\n").filter(l => l.trim() && l.trim() !== "---");
+    let summaryEnd = 0;
+    for (let i = 0; i < lines.length; i++) {
+      if (i > 0 && lines[i].startsWith("【") && lines[i].includes("】")) { summaryEnd = i; break; }
+      summaryEnd = i + 1;
+    }
+    return { summary: lines.slice(0, summaryEnd), detail: lines.slice(summaryEnd) };
+  })();
+
+  const renderLines = lines => {
     const out = [];
     let i = 0;
     while (i < lines.length) {
@@ -4836,16 +4847,24 @@ function renderPremarketBlock() {
       i++;
     }
     return out.join("");
-  })();
+  };
+
+  const summaryHtml = renderLines(analysisParts.summary);
+  const detailHtml = analysisParts.detail.length ? renderLines(analysisParts.detail) : "";
 
   return `
     <div style="display:flex;justify-content:flex-end;margin-bottom:8px">
       <span style="color:var(--text-mute);font-size:11px">${escapeHtml(p.generated_at || "")}</span>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-bottom:16px">
+    <div class="premarket-ticker">
       ${indicatorCards}
     </div>
-    ${analysisHtml ? `<div class="fund-card">${analysisHtml}</div>` : ""}
+    ${summaryHtml ? `<div class="fund-card" style="margin-bottom:8px">${summaryHtml}</div>` : ""}
+    ${detailHtml ? `
+    <details class="premarket-detail">
+      <summary>展開完整分析</summary>
+      <div class="fund-card" style="margin-top:8px">${detailHtml}</div>
+    </details>` : ""}
   `;
 }
 
