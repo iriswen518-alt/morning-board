@@ -4796,23 +4796,35 @@ function renderPremarketBlock() {
   const p = DATA.premarket;
   if (!p) return `<p style="color:var(--text-mute);padding:32px 0;text-align:center">今日尚無盤前分析資料</p>`;
 
-  const indicatorCards = (p.indicators || []).map(ind => {
+  const pmDate = shortDate((p.generated_at || "").slice(0, 10));
+  const indicatorRows = (p.indicators || []).map(ind => {
     const price = ind.price;
     const pct   = ind.pct;
-    const priceStr = price == null ? "—"
+    const priceStr = price == null || isNaN(price) ? "—"
       : ind.label === "VIX"                              ? price.toFixed(1)
       : ind.label === "DXY" || ind.label === "USD/TWD"  ? price.toFixed(2)
       : Math.round(price).toLocaleString("en-US");
-    const pctStr = pct == null ? "—" :
-      (pct >= 0 ? `▲ +${pct.toFixed(2)}%` : `▼ ${pct.toFixed(2)}%`);
+    const pctStr = pct == null || isNaN(pct) ? "—" :
+      (pct >= 0 ? `+${pct.toFixed(2)}%` : `${pct.toFixed(2)}%`);
     const cls = pct == null ? "" : pct >= 0 ? "up" : "down";
     return `
-      <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:10px 12px;text-align:center">
-        <div style="font-size:12px;color:var(--text-mute);margin-bottom:4px;font-weight:500">${escapeHtml(ind.label)}</div>
-        <div style="font-size:16px;font-weight:800;font-variant-numeric:tabular-nums;line-height:1.2">${escapeHtml(priceStr)}</div>
-        <div style="font-size:13px;font-weight:600;margin-top:3px" class="${cls}">${escapeHtml(pctStr)}</div>
-      </div>`;
+      <tr>
+        <td>${escapeHtml(ind.label)}</td>
+        <td style="font-variant-numeric:tabular-nums">${escapeHtml(priceStr)}</td>
+        <td class="${cls}" style="font-variant-numeric:tabular-nums">${escapeHtml(pctStr)}</td>
+        <td class="date-col">${escapeHtml(ind.date ? shortDate(ind.date) : pmDate)}</td>
+      </tr>`;
   }).join("");
+  const indicatorTable = `
+    <table class="indices" style="margin-top:4px">
+      <thead><tr>
+        <th>指數</th>
+        <th>收盤</th>
+        <th>日漲跌</th>
+        <th class="date-col">收盤日</th>
+      </tr></thead>
+      <tbody>${indicatorRows}</tbody>
+    </table>`;
 
 
   // Split analysis: first paragraph = 今日判斷 summary, rest = detail
@@ -4857,9 +4869,7 @@ function renderPremarketBlock() {
       <span style="color:var(--text-mute);font-size:11px">${escapeHtml(p.generated_at || "")}</span>
     </div>
     <div class="fund-card" style="padding:12px 14px;margin-bottom:8px">
-      <div class="premarket-ticker" style="margin-bottom:0;padding-bottom:0">
-        ${indicatorCards}
-      </div>
+      ${indicatorTable}
     </div>
     ${summaryHtml ? `<div class="fund-card" style="margin-bottom:8px">${summaryHtml}</div>` : ""}
     ${detailHtml ? `<div class="fund-card">${detailHtml}</div>` : ""}
