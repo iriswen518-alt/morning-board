@@ -4856,15 +4856,13 @@ function renderPremarketBlock() {
     <div style="display:flex;justify-content:flex-end;margin-bottom:8px">
       <span style="color:var(--text-mute);font-size:11px">${escapeHtml(p.generated_at || "")}</span>
     </div>
-    <div class="premarket-ticker">
-      ${indicatorCards}
+    <div class="fund-card" style="padding:12px 14px;margin-bottom:8px">
+      <div class="premarket-ticker" style="margin-bottom:0;padding-bottom:0">
+        ${indicatorCards}
+      </div>
     </div>
     ${summaryHtml ? `<div class="fund-card" style="margin-bottom:8px">${summaryHtml}</div>` : ""}
-    ${detailHtml ? `
-    <details class="premarket-detail">
-      <summary>展開完整分析</summary>
-      <div class="fund-card" style="margin-top:8px">${detailHtml}</div>
-    </details>` : ""}
+    ${detailHtml ? `<div class="fund-card">${detailHtml}</div>` : ""}
   `;
 }
 

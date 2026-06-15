@@ -2556,29 +2556,9 @@ table.indices.stock-cols col.c-num { width: 11%; }
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  margin-bottom: 14px;
-  padding-bottom: 4px;
 }
 .premarket-ticker::-webkit-scrollbar { display: none; }
 .premarket-ticker > div {
   flex: 0 0 88px;
   min-width: 88px;
 }
-.premarket-detail > summary {
-  cursor: pointer;
-  font-size: 14px;
-  color: var(--brand-primary, #003D91);
-  font-weight: 600;
-  padding: 6px 0;
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.premarket-detail > summary::before {
-  content: "▸";
-  transition: transform 0.2s;
-  display: inline-block;
-}
-.premarket-detail[open] > summary::before { transform: rotate(90deg); }
-.premarket-detail > summary::-webkit-details-marker { display: none; }
