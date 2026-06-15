@@ -107,7 +107,8 @@ const INDEX_YAHOO_SYMBOLS = {
   "Euro Stoxx 50": "^STOXX50E",
   "DAX": "^GDAXI",
   "FTSE 100": "^FTSE",
-  "CAC 40": "^FCHI"
+  "CAC 40": "^FCHI",
+  "VIX": "^VIX"
 };
 
 function quoteSuffix(url) {
@@ -4798,23 +4799,23 @@ function renderPremarketBlock() {
 
   const pmDate = shortDate((p.generated_at || "").slice(0, 10));
 
-  // Build mtd lookup: premarket label → mtd_pct from market.indices / market.fx
-  const PM_MTD_MAP = {
-    "S&P 500":  { src: "indices", name: "S&P 500" },
-    "NASDAQ":   { src: "indices", name: "Nasdaq Composite" },
-    "道瓊":     { src: "indices", name: "Dow Jones" },
-    "台股加權": { src: "indices", name: "TAIEX 加權指數" },
-    "DXY":      { src: "fx",      name: "DXY 美元指數" },
-    "USD/TWD":  { src: "fx",      name: "USD/TWD 新台幣" },
+  // 盤前分析 label → market.json 對應列（供 MTD / YTD 查找）+ 連結生成函式
+  const PM_MARKET_MAP = {
+    "S&P 500":  { src: "indices", marketName: "S&P 500",         nameHtml: indexLink("S&P 500")         + indexQuoteLink("S&P 500") },
+    "NASDAQ":   { src: "indices", marketName: "Nasdaq Composite", nameHtml: indexLink("Nasdaq Composite") + indexQuoteLink("Nasdaq Composite") },
+    "道瓊":     { src: "indices", marketName: "Dow Jones",        nameHtml: indexLink("Dow Jones")        + indexQuoteLink("Dow Jones") },
+    "台股加權": { src: "indices", marketName: "TAIEX 加權指數",   nameHtml: indexLink("TAIEX 加權指數")   + indexQuoteLink("TAIEX 加權指數") },
+    "VIX":      { src: null,      marketName: null,               nameHtml: indexLink("VIX")              + indexQuoteLink("VIX") },
+    "DXY":      { src: "fx",      marketName: "DXY 美元指數",     nameHtml: fxLink("DXY")                 + fxQuoteLink("DXY") },
+    "USD/TWD":  { src: "fx",      marketName: "USD/TWD 新台幣",   nameHtml: fxLink("USD/TWD")             + fxQuoteLink("USD/TWD") },
   };
   const mktIndices = (DATA.market && DATA.market.indices) || [];
   const mktFx      = (DATA.market && DATA.market.fx)      || [];
-  function pmMtd(label) {
-    const ref = PM_MTD_MAP[label];
-    if (!ref) return null;
+  function pmMarketRow(label) {
+    const ref = PM_MARKET_MAP[label];
+    if (!ref || !ref.marketName) return null;
     const arr = ref.src === "fx" ? mktFx : mktIndices;
-    const row = arr.find(r => r.name === ref.name);
-    return row ? row.mtd_pct : null;
+    return arr.find(r => r.name === ref.marketName) || null;
   }
 
   const indicatorRows = (p.indicators || []).map(ind => {
@@ -4824,35 +4825,37 @@ function renderPremarketBlock() {
       : ind.label === "VIX"                              ? price.toFixed(1)
       : ind.label === "DXY" || ind.label === "USD/TWD"  ? price.toFixed(2)
       : Math.round(price).toLocaleString("en-US");
-    const pctStr = pct == null || isNaN(pct) ? "—" :
-      (pct >= 0 ? `+${pct.toFixed(2)}%` : `${pct.toFixed(2)}%`);
-    const cls = pct == null ? "" : pct >= 0 ? "up" : "down";
-    const mtd = pmMtd(ind.label);
-    const mtdStr = mtd == null ? "—" : (mtd >= 0 ? `+${mtd.toFixed(2)}%` : `${mtd.toFixed(2)}%`);
-    const mtdCls = mtd == null ? "" : mtd >= 0 ? "up" : "down";
+    const mrow = pmMarketRow(ind.label);
+    const mtd = mrow ? mrow.mtd_pct : null;
+    const ytd = mrow ? mrow.ytd_pct : null;
+    const info = PM_MARKET_MAP[ind.label];
+    const nameHtml = info ? info.nameHtml : escapeHtml(ind.label);
     return `
       <tr>
-        <td>${escapeHtml(ind.label)}</td>
+        <td>${nameHtml}</td>
         <td style="font-variant-numeric:tabular-nums">${escapeHtml(priceStr)}</td>
-        <td class="${cls}" style="font-variant-numeric:tabular-nums">${escapeHtml(pctStr)}</td>
-        <td class="${mtdCls}" style="font-variant-numeric:tabular-nums">${escapeHtml(mtdStr)}</td>
+        <td class="${pctClass(pct)}" style="font-variant-numeric:tabular-nums">${fmtPct(pct)}</td>
+        <td class="${pctClass(mtd)}" style="font-variant-numeric:tabular-nums">${fmtPct(mtd)}</td>
+        <td class="${pctClass(ytd)}" style="font-variant-numeric:tabular-nums">${fmtPct(ytd)}</td>
         <td class="date-col">${escapeHtml(ind.date ? shortDate(ind.date) : pmDate)}</td>
       </tr>`;
   }).join("");
   const indicatorTable = `
     <table class="indices" style="margin-top:4px;table-layout:fixed;width:100%">
       <colgroup>
-        <col style="width:32%">
-        <col style="width:18%">
-        <col style="width:18%">
-        <col style="width:18%">
-        <col style="width:14%">
+        <col style="width:30%">
+        <col style="width:15%">
+        <col style="width:13%">
+        <col style="width:13%">
+        <col style="width:13%">
+        <col style="width:16%">
       </colgroup>
       <thead><tr>
         <th>指數</th>
         <th>收盤</th>
-        <th>日漲跌</th>
-        <th>月漲跌</th>
+        <th>日</th>
+        <th>本月</th>
+        <th>今年</th>
         <th class="date-col">收盤日</th>
       </tr></thead>
       <tbody>${indicatorRows}</tbody>
