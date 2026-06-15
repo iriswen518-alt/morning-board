@@ -4,29 +4,29 @@
     {
       "name": "S&P 500",
       "name_zh": null,
-      "close": 7431.4599609375,
-      "daily_pct": 0.5,
+      "close": 7554.2900390625,
+      "daily_pct": 1.65,
       "mtd_pct": -1.96,
       "ytd_pct": 8.56,
-      "closing_date": "2026-06-12"
+      "closing_date": "2026-06-15"
     },
     {
       "name": "Nasdaq Composite",
       "name_zh": null,
-      "close": 25888.83984375,
-      "daily_pct": 0.31,
+      "close": 26683.94140625,
+      "daily_pct": 3.07,
       "mtd_pct": -4.02,
       "ytd_pct": 11.39,
-      "closing_date": "2026-06-12"
+      "closing_date": "2026-06-15"
     },
     {
       "name": "Dow Jones",
       "name_zh": null,
-      "close": 51202.26171875,
-      "daily_pct": 0.7,
+      "close": 51671.03125,
+      "daily_pct": 0.92,
       "mtd_pct": 0.33,
       "ytd_pct": 6.53,
-      "closing_date": "2026-06-12"
+      "closing_date": "2026-06-15"
     },
     {
       "name": "PHLX Semiconductor",
@@ -40,7 +40,7 @@
     {
       "name": "Euro Stoxx 50",
       "name_zh": null,
-      "close": 6229.43017578125,
+      "close": 6229.43,
       "daily_pct": 0.68,
       "mtd_pct": 2.27,
       "ytd_pct": 6.75,
@@ -49,7 +49,7 @@
     {
       "name": "DAX",
       "name_zh": null,
-      "close": 24894.009765625,
+      "close": 24894.01,
       "daily_pct": 1.05,
       "mtd_pct": -1.87,
       "ytd_pct": 0.59,
@@ -58,7 +58,7 @@
     {
       "name": "FTSE 100",
       "name_zh": null,
-      "close": 10430.6201171875,
+      "close": 10430.62,
       "daily_pct": -0.39,
       "mtd_pct": 0.6,
       "ytd_pct": 5.44,
@@ -67,7 +67,7 @@
     {
       "name": "CAC 40",
       "name_zh": null,
-      "close": 8384.009765625,
+      "close": 8384.01,
       "daily_pct": 0.4,
       "mtd_pct": 2.05,
       "ytd_pct": 2.47,
@@ -148,7 +148,7 @@
     {
       "name": "Nifty 50",
       "name_zh": null,
-      "close": 23853.900390625,
+      "close": 23853.9,
       "daily_pct": 0.98,
       "mtd_pct": 0.32,
       "ytd_pct": -9.59,
@@ -167,10 +167,10 @@
   "bonds": [
     {
       "name": "US 10-Year",
-      "yield_pct": 4.49,
-      "daily_bps": 2.4,
-      "mtd_bps": 3.4,
-      "closing_date": "2026-06-12"
+      "yield_pct": 4.47,
+      "daily_bps": -1.8,
+      "mtd_bps": 1.6,
+      "closing_date": "2026-06-15"
     },
     {
       "name": "US 2-Year",
@@ -206,8 +206,8 @@
       "name": "DXY 美元指數",
       "close": 99.75,
       "daily_pct": -0.11,
-      "mtd_pct": 0.68,
-      "ytd_pct": 1.33,
+      "mtd_pct": 0.76,
+      "ytd_pct": 1.41,
       "closing_date": "2026-06-12"
     },
     {
@@ -301,5 +301,5 @@
       "closing_date": "2026-06-14"
     }
   ],
-  "summary": "Nikkei 225 +4.99%、KOSPI +4.63%、TAIEX 加權指數 +2.78% 領漲；FTSE 100 -0.39% 走弱。"
+  "summary": "Nikkei 225 +4.99%、KOSPI +4.63%、Nasdaq Composite +3.07% 領漲；FTSE 100 -0.39% 走弱。"
 }
