@@ -4836,26 +4836,23 @@ function renderPremarketBlock() {
         <td style="font-variant-numeric:tabular-nums">${escapeHtml(priceStr)}</td>
         <td class="${pctClass(pct)}" style="font-variant-numeric:tabular-nums">${fmtPct(pct)}</td>
         <td class="${pctClass(mtd)}" style="font-variant-numeric:tabular-nums">${fmtPct(mtd)}</td>
-        <td class="${pctClass(ytd)}" style="font-variant-numeric:tabular-nums">${fmtPct(ytd)}</td>
         <td class="date-col">${escapeHtml(ind.date ? shortDate(ind.date) : pmDate)}</td>
       </tr>`;
   }).join("");
   const indicatorTable = `
     <table class="indices" style="margin-top:4px;table-layout:fixed;width:100%">
       <colgroup>
-        <col style="width:30%">
+        <col style="width:34%">
+        <col style="width:17%">
         <col style="width:15%">
-        <col style="width:13%">
-        <col style="width:13%">
-        <col style="width:13%">
-        <col style="width:16%">
+        <col style="width:15%">
+        <col style="width:19%">
       </colgroup>
       <thead><tr>
         <th>指數</th>
         <th>收盤</th>
         <th>日</th>
         <th>本月</th>
-        <th>今年</th>
         <th class="date-col">收盤日</th>
       </tr></thead>
       <tbody>${indicatorRows}</tbody>
