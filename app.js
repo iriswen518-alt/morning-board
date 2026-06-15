@@ -4797,6 +4797,26 @@ function renderPremarketBlock() {
   if (!p) return `<p style="color:var(--text-mute);padding:32px 0;text-align:center">今日尚無盤前分析資料</p>`;
 
   const pmDate = shortDate((p.generated_at || "").slice(0, 10));
+
+  // Build mtd lookup: premarket label → mtd_pct from market.indices / market.fx
+  const PM_MTD_MAP = {
+    "S&P 500":  { src: "indices", name: "S&P 500" },
+    "NASDAQ":   { src: "indices", name: "Nasdaq Composite" },
+    "道瓊":     { src: "indices", name: "Dow Jones" },
+    "台股加權": { src: "indices", name: "TAIEX 加權指數" },
+    "DXY":      { src: "fx",      name: "DXY 美元指數" },
+    "USD/TWD":  { src: "fx",      name: "USD/TWD 新台幣" },
+  };
+  const mktIndices = (DATA.market && DATA.market.indices) || [];
+  const mktFx      = (DATA.market && DATA.market.fx)      || [];
+  function pmMtd(label) {
+    const ref = PM_MTD_MAP[label];
+    if (!ref) return null;
+    const arr = ref.src === "fx" ? mktFx : mktIndices;
+    const row = arr.find(r => r.name === ref.name);
+    return row ? row.mtd_pct : null;
+  }
+
   const indicatorRows = (p.indicators || []).map(ind => {
     const price = ind.price;
     const pct   = ind.pct;
@@ -4807,26 +4827,32 @@ function renderPremarketBlock() {
     const pctStr = pct == null || isNaN(pct) ? "—" :
       (pct >= 0 ? `+${pct.toFixed(2)}%` : `${pct.toFixed(2)}%`);
     const cls = pct == null ? "" : pct >= 0 ? "up" : "down";
+    const mtd = pmMtd(ind.label);
+    const mtdStr = mtd == null ? "—" : (mtd >= 0 ? `+${mtd.toFixed(2)}%` : `${mtd.toFixed(2)}%`);
+    const mtdCls = mtd == null ? "" : mtd >= 0 ? "up" : "down";
     return `
       <tr>
         <td>${escapeHtml(ind.label)}</td>
         <td style="font-variant-numeric:tabular-nums">${escapeHtml(priceStr)}</td>
         <td class="${cls}" style="font-variant-numeric:tabular-nums">${escapeHtml(pctStr)}</td>
+        <td class="${mtdCls}" style="font-variant-numeric:tabular-nums">${escapeHtml(mtdStr)}</td>
         <td class="date-col">${escapeHtml(ind.date ? shortDate(ind.date) : pmDate)}</td>
       </tr>`;
   }).join("");
   const indicatorTable = `
     <table class="indices" style="margin-top:4px;table-layout:fixed;width:100%">
       <colgroup>
-        <col style="width:38%">
-        <col style="width:24%">
-        <col style="width:22%">
-        <col style="width:16%">
+        <col style="width:32%">
+        <col style="width:18%">
+        <col style="width:18%">
+        <col style="width:18%">
+        <col style="width:14%">
       </colgroup>
       <thead><tr>
         <th>指數</th>
         <th>收盤</th>
         <th>日漲跌</th>
+        <th>月漲跌</th>
         <th class="date-col">收盤日</th>
       </tr></thead>
       <tbody>${indicatorRows}</tbody>
