@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-15T13:17:44+08:00",
+  "generated_at": "2026-06-15T13:46:31+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -59,20 +59,6 @@
       "error": null
     },
     {
-      "symbol": "PLTR",
-      "name_zh": "Palantir",
-      "kind": "US",
-      "price": 127.99,
-      "change_pct": -2.36,
-      "mtd_pct": -18.24,
-      "ytd_pct": -27.99,
-      "market_date": "2026-06-12",
-      "per": 134.4853,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PLTR.US",
-      "error": null
-    },
-    {
       "symbol": "MSTR",
       "name_zh": "MicroStrategy",
       "kind": "US",
@@ -87,31 +73,31 @@
       "error": null
     },
     {
-      "symbol": "IONQ",
-      "name_zh": "IonQ",
+      "symbol": "AXTI",
+      "name_zh": "AXT",
       "kind": "US",
-      "price": 57.85,
-      "change_pct": -0.24,
-      "mtd_pct": -19.73,
-      "ytd_pct": 28.93,
-      "market_date": "2026-06-12",
-      "per": 65.9885,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IONQ.US",
-      "error": null
-    },
-    {
-      "symbol": "SCO",
-      "name_zh": "ProShares UltraShort Bloomberg",
-      "kind": "US",
-      "price": 28.03,
-      "change_pct": 5.46,
-      "mtd_pct": 1.96,
-      "ytd_pct": -64.27,
+      "price": 97.18,
+      "change_pct": 10.01,
+      "mtd_pct": -5.8,
+      "ytd_pct": 494.37,
       "market_date": "2026-06-12",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SCO.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AXTI.US",
+      "error": null
+    },
+    {
+      "symbol": "PLTR",
+      "name_zh": "Palantir",
+      "kind": "US",
+      "price": 127.99,
+      "change_pct": -2.36,
+      "mtd_pct": -18.24,
+      "ytd_pct": -27.99,
+      "market_date": "2026-06-12",
+      "per": 134.4853,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PLTR.US",
       "error": null
     },
     {
@@ -129,17 +115,31 @@
       "error": null
     },
     {
-      "symbol": "ARM",
-      "name_zh": "Arm",
+      "symbol": "WOLF",
+      "name_zh": "Wolfspeed",
       "kind": "US",
-      "price": 380.81,
-      "change_pct": 11.27,
-      "mtd_pct": 7.79,
-      "ytd_pct": 248.38,
+      "price": 43.14,
+      "change_pct": -5.27,
+      "mtd_pct": -27.23,
+      "ytd_pct": 147.79,
       "market_date": "2026-06-12",
-      "per": 402.8017,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ARM.US",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=WOLF.US",
+      "error": null
+    },
+    {
+      "symbol": "BMNR",
+      "name_zh": "BitMine Immersion Technologies,",
+      "kind": "US",
+      "price": 16.11,
+      "change_pct": -2.48,
+      "mtd_pct": -16.4,
+      "ytd_pct": -40.66,
+      "market_date": "2026-06-12",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BMNR.US",
       "error": null
     },
     {
@@ -154,6 +154,34 @@
       "per": 24.0716,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=XOM.US",
+      "error": null
+    },
+    {
+      "symbol": "COIN",
+      "name_zh": "Coinbase",
+      "kind": "US",
+      "price": 159.78,
+      "change_pct": -0.41,
+      "mtd_pct": -15.47,
+      "ytd_pct": -29.34,
+      "market_date": "2026-06-12",
+      "per": 52.5802,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=COIN.US",
+      "error": null
+    },
+    {
+      "symbol": "QCOM",
+      "name_zh": "高通",
+      "kind": "US",
+      "price": 211.72,
+      "change_pct": 4.32,
+      "mtd_pct": -15.66,
+      "ytd_pct": 23.78,
+      "market_date": "2026-06-12",
+      "per": 22.4885,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QCOM.US",
       "error": null
     },
     {
