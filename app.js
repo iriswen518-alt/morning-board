@@ -4816,7 +4816,13 @@ function renderPremarketBlock() {
       </tr>`;
   }).join("");
   const indicatorTable = `
-    <table class="indices" style="margin-top:4px">
+    <table class="indices" style="margin-top:4px;table-layout:fixed;width:100%">
+      <colgroup>
+        <col style="width:38%">
+        <col style="width:24%">
+        <col style="width:22%">
+        <col style="width:16%">
+      </colgroup>
       <thead><tr>
         <th>指數</th>
         <th>收盤</th>
@@ -4865,10 +4871,7 @@ function renderPremarketBlock() {
   const detailHtml = analysisParts.detail.length ? renderLines(analysisParts.detail) : "";
 
   return `
-    <div style="display:flex;justify-content:flex-end;margin-bottom:8px">
-      <span style="color:var(--text-mute);font-size:11px">${escapeHtml(p.generated_at || "")}</span>
-    </div>
-    <div class="fund-card" style="padding:12px 14px;margin-bottom:8px">
+    <div class="fund-card" style="margin-bottom:8px">
       ${indicatorTable}
     </div>
     ${summaryHtml ? `<div class="fund-card" style="margin-bottom:8px">${summaryHtml}</div>` : ""}
