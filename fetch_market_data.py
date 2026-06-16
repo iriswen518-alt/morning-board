@@ -103,6 +103,7 @@ COMMODITIES = [
     ("WTI 原油 (USD/bbl)", "CL=F", 2),
     ("布蘭特原油 (USD/bbl)", "BZ=F", 2),
     ("比特幣 (USD)", "BTC-USD", 0),
+    ("VIX", "^VIX", 2),
 ]
 
 # 公債:(顯示名稱, 取得方式, 來源代碼)
