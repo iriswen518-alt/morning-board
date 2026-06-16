@@ -2658,7 +2658,7 @@ function renderMarketSheet() {
     <div style="margin-bottom:16px;padding:14px 16px;background:var(--card-bg,#f8fafc);border:1px solid var(--border);border-radius:10px;">
       <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;flex-wrap:wrap;">
         <span style="font-weight:600;font-size:14px;">升息押注指標</span>
-        ${_curveLabel ? `<span style="font-size:12px;padding:2px 9px;border-radius:20px;font-weight:500;background:${_curveBg};color:${_curveColor};">${_curveLabel}</span>` : ""}
+        ${_curveLabel && _curveLabel !== "正斜率" ? `<span style="font-size:12px;padding:2px 9px;border-radius:20px;font-weight:500;background:${_curveBg};color:${_curveColor};">${_curveLabel}</span>` : ""}
         ${_fwDecisions.length === 0 ? `<a href="https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html" target="_blank" rel="noopener"
            style="margin-left:auto;font-size:12px;color:#3b82f6;text-decoration:none;white-space:nowrap;">CME FedWatch ↗</a>` : ""}
       </div>

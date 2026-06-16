@@ -113,6 +113,18 @@ COMMODITIES = [
 #   boe      → 英格蘭銀行 IADB 每日殖利率 CSV
 #   fred     → FRED CSV(已棄用:2026-06 起 FRED 對非瀏覽器/資料中心 IP 連線 tarpitting,改用 treasury)
 #   none     → 無免費日資料源,下游 websearch 補當前殖利率一格
+# Fed Funds Futures — ZQ contracts on CME (Yahoo suffix .CBT)
+# Symbol convention: ZQ + month_code + 2-digit_year + .CBT
+# Month codes: F=Jan G=Feb H=Mar J=Apr K=May M=Jun N=Jul Q=Aug U=Sep V=Oct X=Nov Z=Dec
+# FOMC meeting dates listed for context; implied rate = 100 - price
+FED_FUNDS_FUTURES = [
+    ("ZQM26.CBT", "Jun 2026", "2026-06-18"),
+    ("ZQN26.CBT", "Jul 2026", "2026-07-30"),
+    ("ZQU26.CBT", "Sep 2026", "2026-09-17"),
+    ("ZQV26.CBT", "Nov 2026", "2026-11-05"),
+    ("ZQZ26.CBT", "Dec 2026", "2026-12-16"),
+]
+
 BONDS = [
     ("US 10-Year", "yahoo", "^TNX"),
     # 2026-06-04：FRED DGS2 連線被 tarpit(雲端與本機皆 timeout)→ 改用財政部官方殖利率曲線 "2 Yr"
@@ -122,6 +134,8 @@ BONDS = [
     # 2026-06-04：Japan/UK 10Y 改用各國官方每日 CSV（MOF / BoE），可算 daily/MTD bps、雲端可達
     ("Japan 10-Year", "mof", "10年"),
     ("UK 10-Year", "boe", "IUDMNZC"),
+    # 2026-06-16：TW 10Y 無免費日頻率公開 API（TWSE/TPEx/CBC 均無可存取端點）→ 標 none；待找到源
+    ("TW 10-Year", "none", ""),
 ]
 
 
@@ -714,6 +728,48 @@ def validate(payload: dict, prev: Optional[dict]) -> dict:
 
 
 # ----------------------------------------------------------------------
+# Fed Funds Futures → 隱含利率（CME FedWatch 底層數據）
+# ----------------------------------------------------------------------
+
+
+def build_fed_funds_futures(warnings: list) -> list[dict]:
+    """抓取 ZQ 系列 Fed Funds Futures，回傳隱含利率 list。"""
+    rows = []
+    for sym, label, fomc_date in FED_FUNDS_FUTURES:
+        try:
+            series = yahoo_series(sym)
+            # yahoo_series 回傳升冪 [(date, price)]，取最新收盤
+            latest_price = series[-1][1] if series else None
+            implied_rate = (
+                round(100 - latest_price, 3) if latest_price is not None else None
+            )
+            rows.append(
+                {
+                    "symbol": sym,
+                    "label": label,
+                    "fomc_date": fomc_date,
+                    "price": round(latest_price, 3)
+                    if latest_price is not None
+                    else None,
+                    "implied_rate": implied_rate,
+                }
+            )
+        except Exception as e:  # noqa: BLE001
+            warnings.append(f"Fed Funds Futures {sym}: {e}")
+            rows.append(
+                {
+                    "symbol": sym,
+                    "label": label,
+                    "fomc_date": fomc_date,
+                    "price": None,
+                    "implied_rate": None,
+                }
+            )
+        time.sleep(0.3)
+    return rows
+
+
+# ----------------------------------------------------------------------
 # main
 # ----------------------------------------------------------------------
 def main() -> int:
@@ -756,6 +812,7 @@ def main() -> int:
         "fx": fx,
         "commodities": commodities,
         "bonds": bonds,
+        "fed_funds_futures": build_fed_funds_futures(fetch_warnings),
         "_fetch_warnings": fetch_warnings,
     }
     payload["markdown"] = {
