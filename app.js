@@ -686,7 +686,7 @@ function switchTab(name) {
   else if (name === "calc") body.innerHTML = renderCalcSheet();
   else if (name === "twstock") body.innerHTML = renderTwStockSheet();
   if (name === "news") wireNewsTabs();
-  if (name === "market") { wireMarketViewTabs(); wireMarketTabs(); wireTwStock(); }
+  if (name === "market") { wireMarketViewTabs(); wireMarketTabs(); wireTwStock(); wireNewsTabs(); }
   if (name === "funds") { wireFundsTabs(); wireFundCompare(); }
   if (name === "alloc") wireAllocTabs();
   if (name === "wealth") wireWealthTabs();
@@ -6725,9 +6725,10 @@ function wireFundsTabs() {
 
 function wireNewsTabs() {
   const tabIds = ["tab-market", "tab-wm", "tab-tax", "tab-intl"];
-  document.querySelectorAll(".tab").forEach(t => {
+  const buttons = document.querySelectorAll(".tab[data-tab]");
+  buttons.forEach(t => {
     t.addEventListener("click", () => {
-      document.querySelectorAll(".tab").forEach(x => x.classList.remove("active"));
+      buttons.forEach(x => x.classList.remove("active"));
       t.classList.add("active");
       const which = "tab-" + t.dataset.tab;
       tabIds.forEach(id => {
