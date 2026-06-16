@@ -61,21 +61,59 @@ def map_commodity(c):
     }
 
 
+def build_rate_outlook(bonds_src: list, fx_src: list) -> dict:
+    """Compute rate-hike-expectation indicators from raw fetch data."""
+    us10y_rec = next((b for b in bonds_src if b.get("name") == "US 10-Year"), {})
+    us2y_rec = next((b for b in bonds_src if b.get("name") == "US 2-Year"), {})
+    dxy_rec = next((f for f in fx_src if "DXY" in (f.get("name") or "")), {})
+
+    y10 = us10y_rec.get("yield")
+    y2 = us2y_rec.get("yield")
+    spread = r2(y2 - y10) if y2 is not None and y10 is not None else None
+    spread_bps = round(spread * 100) if spread is not None else None
+
+    if spread is not None:
+        if spread > 0.3:
+            curve_shape = "正斜率"
+        elif spread < -0.1:
+            curve_shape = "倒掛"
+        else:
+            curve_shape = "平坦"
+    else:
+        curve_shape = None
+
+    return {
+        "us2y": r2(y2),
+        "us10y": r2(y10),
+        "yield_curve_2y10y": spread,
+        "yield_curve_2y10y_bps": spread_bps,
+        "curve_shape": curve_shape,
+        "dxy": dxy_rec.get("close"),
+        "dxy_daily_pct": r2(dxy_rec.get("daily_pct")),
+        "closing_date": us10y_rec.get("closing_date"),
+    }
+
+
 def main():
     src = json.load(open(SRC, encoding="utf-8"))
+    bonds_src = src.get("bonds", [])
+    fx_src = src.get("fx", [])
     out = {
         "closing_date": src.get("primary_closing_date"),
         "indices": [map_index(e) for e in src.get("equity", [])],
-        "bonds": [map_bond(b) for b in src.get("bonds", [])],
-        "fx": [map_fx(f) for f in src.get("fx", [])],
+        "bonds": [map_bond(b) for b in bonds_src],
+        "fx": [map_fx(f) for f in fx_src],
         "commodities": [map_commodity(c) for c in src.get("commodities", [])],
+        "rate_outlook": build_rate_outlook(bonds_src, fx_src),
         "summary": None,
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
     json.dump(out, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+    ro = out["rate_outlook"]
     print(
         f"[build_market_json] indices={len(out['indices'])} bonds={len(out['bonds'])} "
-        f"fx={len(out['fx'])} commodities={len(out['commodities'])}"
+        f"fx={len(out['fx'])} commodities={len(out['commodities'])} "
+        f"rate_outlook: 2Y={ro['us2y']} 10Y={ro['us10y']} spread={ro['yield_curve_2y10y_bps']}bps ({ro['curve_shape']})"
     )
 
 
