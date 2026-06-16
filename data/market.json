@@ -165,10 +165,10 @@
     },
     {
       "name": "US 2-Year",
-      "yield_pct": null,
-      "daily_bps": null,
-      "mtd_bps": null,
-      "closing_date": null
+      "yield_pct": 4.07,
+      "daily_bps": -2.0,
+      "mtd_bps": 2.0,
+      "closing_date": "2026-06-15"
     },
     {
       "name": "Germany 10-Year",
@@ -301,11 +301,11 @@
     }
   ],
   "rate_outlook": {
-    "us2y": null,
+    "us2y": 4.07,
     "us10y": 4.47,
-    "yield_curve_2y10y": null,
-    "yield_curve_2y10y_bps": null,
-    "curve_shape": null,
+    "yield_curve_2y10y": -0.4,
+    "yield_curve_2y10y_bps": -40,
+    "curve_shape": "倒掛",
     "dxy": 99.66899871826172,
     "dxy_daily_pct": -0.08,
     "closing_date": "2026-06-15"
