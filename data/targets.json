@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-16T08:41:58+08:00",
+  "generated_at": "2026-06-16T09:01:30+08:00",
   "source": "manual curation (targets.json)",
   "version": 3,
   "updated": "2026-06-16",
@@ -181,14 +181,17 @@
         {
           "k": "S&P 500 YTD",
           "v": "+8.56%",
-          "sub": "MTD -1.96%・今日 +0.50%・截至 06/12",
-          "url": "https://finance.yahoo.com/quote/%5EGSPC"
+          "sub": "今日+0.5%、MTD−1.96%、CPI創高後震盪"
         },
         {
-          "k": "Nasdaq Composite YTD",
+          "k": "Nasdaq YTD",
           "v": "+11.39%",
-          "sub": "MTD -4.02%・今日 +0.31%・截至 06/12",
-          "url": "https://finance.yahoo.com/quote/%5EIXIC"
+          "sub": "今日+0.31%、MTD−4.02%、月內科技回檔較深"
+        },
+        {
+          "k": "費半 PHLX YTD",
+          "v": "+88.78%",
+          "sub": "今日+1.52%、MTD+4.23%、AI晶片領漲"
         }
       ],
       "market_status": [
@@ -359,8 +362,8 @@
       "stats": [
         {
           "k": "WTI 原油 YTD",
-          "v": "+41.71%",
-          "sub": "今日 -4.30%・截至 06/16",
+          "v": "+41.92%",
+          "sub": "今日 -4.16%・截至 06/16",
           "url": "https://finance.yahoo.com/quote/CL=F"
         },
         {
@@ -400,16 +403,14 @@
       "ytd": "+6.75%",
       "stats": [
         {
-          "k": "Euro Stoxx 50 YTD",
+          "k": "Euro Stoxx YTD",
           "v": "+6.75%",
-          "sub": "MTD +2.27%・今日 +2.16%・截至 06/12",
-          "url": "https://finance.yahoo.com/quote/%5ESTOXX50E"
+          "sub": "今日+2.16%、MTD+2.27%"
         },
         {
-          "k": "DAX YTD",
-          "v": "+0.59%",
-          "sub": "MTD -1.87%・今日 +1.76%・截至 06/12",
-          "url": "https://finance.yahoo.com/quote/%5EGDAXI"
+          "k": "DAX/FTSE YTD",
+          "v": "+0.59%/+5.44%",
+          "sub": "今日DAX+1.76%、FTSE+1.63%"
         },
         {
           "k": "建議部位",
@@ -574,16 +575,14 @@
       "ytd": "−3.56%",
       "stats": [
         {
-          "k": "Shanghai 上證 YTD",
-          "v": "+1.58%",
-          "sub": "MTD -0.91%・今日 +1.12%・截至 06/12",
-          "url": "https://finance.yahoo.com/quote/000001.SS"
+          "k": "恆生 YTD",
+          "v": "−3.56%",
+          "sub": "今日+1.93%、MTD−1.84%"
         },
         {
-          "k": "CSI 300 滬深300 YTD",
-          "v": "+3.18%",
-          "sub": "MTD -2.35%・今日 +1.16%・截至 06/12",
-          "url": "https://finance.yahoo.com/quote/000300.SS"
+          "k": "上證/CSI300 YTD",
+          "v": "+1.58%/+3.18%",
+          "sub": "今日上證+1.12%、CSI300+1.16%"
         },
         {
           "k": "fwd P/E",
