@@ -4799,35 +4799,37 @@ function renderPremarketBlock() {
 
   const pmDate = shortDate((p.generated_at || "").slice(0, 10));
 
-  // 盤前分析 label → market.json 對應列（供 MTD / YTD 查找）+ 連結生成函式
+  // 盤前分析 label → market.json 對應列（供 price/MTD fallback）+ 連結生成函式
   const PM_MARKET_MAP = {
-    "S&P 500":  { src: "indices", marketName: "S&P 500",         nameHtml: indexLink("S&P 500")         + indexQuoteLink("S&P 500") },
-    "NASDAQ":   { src: "indices", marketName: "Nasdaq Composite", nameHtml: indexLink("Nasdaq Composite") + indexQuoteLink("Nasdaq Composite") },
-    "道瓊":     { src: "indices", marketName: "Dow Jones",        nameHtml: indexLink("Dow Jones")        + indexQuoteLink("Dow Jones") },
-    "台股加權": { src: "indices", marketName: "TAIEX 加權指數",   nameHtml: indexLink("TAIEX 加權指數")   + indexQuoteLink("TAIEX 加權指數") },
-    "VIX":      { src: null,      marketName: null,               nameHtml: indexLink("VIX")              + indexQuoteLink("VIX") },
-    "DXY":      { src: "fx",      marketName: "DXY 美元指數",     nameHtml: fxLink("DXY")                 + fxQuoteLink("DXY") },
-    "USD/TWD":  { src: "fx",      marketName: "USD/TWD 新台幣",   nameHtml: fxLink("USD/TWD")             + fxQuoteLink("USD/TWD") },
+    "S&P 500":  { src: "indices",    marketName: "S&P 500",         nameHtml: indexLink("S&P 500")         + indexQuoteLink("S&P 500") },
+    "NASDAQ":   { src: "indices",    marketName: "Nasdaq Composite", nameHtml: indexLink("Nasdaq Composite") + indexQuoteLink("Nasdaq Composite") },
+    "道瓊":     { src: "indices",    marketName: "Dow Jones",        nameHtml: indexLink("Dow Jones")        + indexQuoteLink("Dow Jones") },
+    "台股加權": { src: "indices",    marketName: "TAIEX 加權指數",   nameHtml: indexLink("TAIEX 加權指數")   + indexQuoteLink("TAIEX 加權指數") },
+    "VIX":      { src: "commodities",marketName: "VIX",              nameHtml: indexLink("VIX")              + indexQuoteLink("VIX") },
+    "DXY":      { src: "fx",         marketName: "DXY 美元指數",     nameHtml: fxLink("DXY")                 + fxQuoteLink("DXY") },
+    "USD/TWD":  { src: "fx",         marketName: "USD/TWD 新台幣",   nameHtml: fxLink("USD/TWD")             + fxQuoteLink("USD/TWD") },
   };
-  const mktIndices = (DATA.market && DATA.market.indices) || [];
-  const mktFx      = (DATA.market && DATA.market.fx)      || [];
+  const mktIndices    = (DATA.market && DATA.market.indices)    || [];
+  const mktFx         = (DATA.market && DATA.market.fx)         || [];
+  const mktCommodities= (DATA.market && DATA.market.commodities)|| [];
   function pmMarketRow(label) {
     const ref = PM_MARKET_MAP[label];
     if (!ref || !ref.marketName) return null;
-    const arr = ref.src === "fx" ? mktFx : mktIndices;
+    const arr = ref.src === "fx" ? mktFx : ref.src === "commodities" ? mktCommodities : mktIndices;
     return arr.find(r => r.name === ref.marketName) || null;
   }
 
   const indicatorRows = (p.indicators || []).map(ind => {
-    const price = ind.price;
-    const pct   = ind.pct;
+    const mrow = pmMarketRow(ind.label);
+    // 若 premarket price 為 null，fallback 到 market.json 最新收盤（邏輯同市場一覽）
+    const price   = ind.price != null ? ind.price : (mrow ? mrow.close : null);
+    const pct     = ind.pct   != null ? ind.pct   : (mrow ? mrow.daily_pct : null);
+    const indDate = ind.date  || (mrow ? mrow.closing_date : null);
     const priceStr = price == null || isNaN(price) ? "—"
       : ind.label === "VIX"                              ? price.toFixed(1)
       : ind.label === "DXY" || ind.label === "USD/TWD"  ? price.toFixed(2)
       : Math.round(price).toLocaleString("en-US");
-    const mrow = pmMarketRow(ind.label);
     const mtd = mrow ? mrow.mtd_pct : null;
-    const ytd = mrow ? mrow.ytd_pct : null;
     const info = PM_MARKET_MAP[ind.label];
     const nameHtml = info ? info.nameHtml : escapeHtml(ind.label);
     return `
@@ -4836,7 +4838,7 @@ function renderPremarketBlock() {
         <td style="font-variant-numeric:tabular-nums">${escapeHtml(priceStr)}</td>
         <td class="${pctClass(pct)}" style="font-variant-numeric:tabular-nums">${fmtPct(pct)}</td>
         <td class="${pctClass(mtd)}" style="font-variant-numeric:tabular-nums">${fmtPct(mtd)}</td>
-        <td class="date-col">${escapeHtml(ind.date ? shortDate(ind.date) : pmDate)}</td>
+        <td class="date-col">${escapeHtml(indDate ? shortDate(indDate) : pmDate)}</td>
       </tr>`;
   }).join("");
   const indicatorTable = `
