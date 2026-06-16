@@ -61,6 +61,55 @@ def map_commodity(c):
     }
 
 
+def build_fedwatch(futures_src: list) -> list:
+    """Compute per-FOMC-meeting hike/hold/cut probability from Fed Funds Futures.
+    P(hike at meeting X) = (implied_X - implied_prev) / 0.25, clamped [0,1].
+    First entry is the reference meeting (Jun); subsequent entries are FOMC decisions.
+    """
+    if not futures_src:
+        return []
+    meetings = []
+    prev_rate = None
+    for entry in futures_src:
+        rate = entry.get("implied_rate")
+        label = entry.get("label", "")
+        fomc_date = entry.get("fomc_date", "")
+        if rate is None:
+            continue
+        if prev_rate is None:
+            meetings.append(
+                {
+                    "label": label,
+                    "fomc_date": fomc_date,
+                    "implied_rate": r2(rate),
+                    "delta_rate": None,
+                    "p_hike": None,
+                    "p_cut": None,
+                    "is_reference": True,
+                }
+            )
+        else:
+            delta = r2(rate - prev_rate)
+            p_hike = round(min(max(delta / 0.25, 0), 1) * 100, 1)
+            p_cut = round(min(max(-delta / 0.25, 0), 1) * 100, 1)
+            p_hold = round(max(100 - p_hike - p_cut, 0), 1)
+            meetings.append(
+                {
+                    "label": label,
+                    "fomc_date": fomc_date,
+                    "implied_rate": r2(rate),
+                    "delta_rate": delta,
+                    "delta_bps": round(delta * 100, 1),
+                    "p_hike": p_hike,
+                    "p_hold": p_hold,
+                    "p_cut": p_cut,
+                    "is_reference": False,
+                }
+            )
+        prev_rate = rate
+    return meetings
+
+
 def build_rate_outlook(bonds_src: list, fx_src: list) -> dict:
     """Compute rate-hike-expectation indicators from raw fetch data."""
     us10y_rec = next((b for b in bonds_src if b.get("name") == "US 10-Year"), {})
@@ -99,6 +148,7 @@ def main():
     src = json.load(open(SRC, encoding="utf-8"))
     bonds_src = src.get("bonds", [])
     fx_src = src.get("fx", [])
+    futures_src = src.get("fed_funds_futures", [])
     out = {
         "closing_date": src.get("primary_closing_date"),
         "indices": [map_index(e) for e in src.get("equity", [])],
@@ -106,15 +156,18 @@ def main():
         "fx": [map_fx(f) for f in fx_src],
         "commodities": [map_commodity(c) for c in src.get("commodities", [])],
         "rate_outlook": build_rate_outlook(bonds_src, fx_src),
+        "fedwatch": build_fedwatch(futures_src),
         "summary": None,
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
     json.dump(out, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
     ro = out["rate_outlook"]
+    fw = out["fedwatch"]
     print(
         f"[build_market_json] indices={len(out['indices'])} bonds={len(out['bonds'])} "
         f"fx={len(out['fx'])} commodities={len(out['commodities'])} "
-        f"rate_outlook: 2Y={ro['us2y']} 10Y={ro['us10y']} spread={ro['yield_curve_2y10y_bps']}bps ({ro['curve_shape']})"
+        f"rate_outlook: 2Y={ro['us2y']} 10Y={ro['us10y']} spread={ro['yield_curve_10y2y_bps']}bps ({ro['curve_shape']}) "
+        f"fedwatch: {len(fw)} meetings"
     )
 
 

@@ -310,5 +310,49 @@
     "yield_curve_10y2y": 0.4,
     "yield_curve_10y2y_bps": 40
   },
+  "fedwatch": [
+    {
+      "label": "Jun 2026",
+      "fomc_date": "2026-06-18",
+      "implied_rate": 3.622,
+      "delta_rate": null,
+      "p_hike": null,
+      "p_cut": null,
+      "is_reference": true
+    },
+    {
+      "label": "Jul 2026",
+      "fomc_date": "2026-07-30",
+      "implied_rate": 3.63,
+      "delta_rate": 0.008,
+      "delta_bps": 0.8,
+      "p_hike": 3.2,
+      "p_hold": 96.8,
+      "p_cut": 0.0,
+      "is_reference": false
+    },
+    {
+      "label": "Sep 2026",
+      "fomc_date": "2026-09-17",
+      "implied_rate": 3.67,
+      "delta_rate": 0.04,
+      "delta_bps": 4.0,
+      "p_hike": 16.0,
+      "p_hold": 84.0,
+      "p_cut": 0.0,
+      "is_reference": false
+    },
+    {
+      "label": "Nov 2026",
+      "fomc_date": "2026-11-05",
+      "implied_rate": 3.705,
+      "delta_rate": 0.035,
+      "delta_bps": 3.5,
+      "p_hike": 14.0,
+      "p_hold": 86.0,
+      "p_cut": 0.0,
+      "is_reference": false
+    }
+  ],
   "summary": null
 }

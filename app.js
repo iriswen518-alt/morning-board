@@ -2608,13 +2608,59 @@ function renderMarketSheet() {
     ? `<span style="color:${_spreadBps < -10 ? '#dc2626' : _spreadBps > 10 ? '#16a34a' : '#92400e'}">${_spreadBps > 0 ? '+' : ''}${_spreadBps} bps</span>`
     : "—";
 
+  // FedWatch FOMC meeting probability panel
+  const _fedwatch = (m.fedwatch || []);
+  const _fwDecisions = _fedwatch.filter(fw => !fw.is_reference);
+  const _fwRef = _fedwatch.find(fw => fw.is_reference);
+  const _fwRows = _fwDecisions.map(fw => {
+    const bps = fw.delta_bps != null ? fw.delta_bps : 0;
+    const pHike = fw.p_hike ?? 0;
+    const pHold = fw.p_hold ?? 0;
+    const pCut  = fw.p_cut  ?? 0;
+    const hikeBar  = pHike > 0  ? `<div style="height:8px;width:${pHike}%;background:#dc2626;border-radius:2px 0 0 2px;min-width:${pHike > 0 ? 2 : 0}px;"></div>` : "";
+    const holdBar  = pHold > 0  ? `<div style="height:8px;width:${pHold}%;background:#94a3b8;"></div>` : "";
+    const cutBar   = pCut  > 0  ? `<div style="height:8px;width:${pCut}%;background:#2563eb;border-radius:0 2px 2px 0;min-width:${pCut > 0 ? 2 : 0}px;"></div>` : "";
+    const deltaStr = bps > 0 ? `<span style="color:#dc2626">+${bps.toFixed(1)}bps</span>` : bps < 0 ? `<span style="color:#2563eb">${bps.toFixed(1)}bps</span>` : `<span style="color:#64748b">0bps</span>`;
+    const hikeLabel = pHike >= 5 ? `<span style="color:#dc2626;font-weight:600">${pHike.toFixed(0)}%升</span>` : "";
+    const cutLabel  = pCut  >= 5 ? `<span style="color:#2563eb;font-weight:600">${pCut.toFixed(0)}%降</span>` : "";
+    return `<div style="margin-bottom:8px;">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;font-size:12px;margin-bottom:3px;">
+        <span style="font-weight:600;">${fw.label}</span>
+        <span style="color:var(--text-mute);font-size:11px;">${fw.fomc_date}</span>
+        <span style="margin-left:auto;font-size:11px;">implied ${fw.implied_rate != null ? fw.implied_rate.toFixed(3) + "%" : "—"} ${deltaStr}</span>
+      </div>
+      <div style="display:flex;width:100%;border-radius:3px;overflow:hidden;background:#e2e8f0;">${hikeBar}${holdBar}${cutBar}</div>
+      <div style="display:flex;gap:8px;font-size:10px;margin-top:2px;color:var(--text-mute);">
+        ${hikeLabel || cutLabel ? (hikeLabel + " " + cutLabel).trim() : `<span>持平機率${pHold.toFixed(0)}%</span>`}
+        <span style="margin-left:auto;">升${pHike.toFixed(0)}% 持${pHold.toFixed(0)}% 降${pCut.toFixed(0)}%</span>
+      </div>
+    </div>`;
+  }).join("");
+
+  const _fedwatchSection = _fwDecisions.length > 0 ? `
+    <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--border);">
+      <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px;">
+        <span style="font-size:12px;font-weight:600;">CME FedWatch — FOMC 升息機率</span>
+        <a href="https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html" target="_blank" rel="noopener"
+           style="font-size:11px;color:#3b82f6;text-decoration:none;margin-left:auto;">詳細 ↗</a>
+      </div>
+      ${_fwRef ? `<div style="font-size:11px;color:var(--text-mute);margin-bottom:8px;">基準：${_fwRef.label} implied ${_fwRef.implied_rate != null ? _fwRef.implied_rate.toFixed(3) + "%" : "—"}（目前有效利率）</div>` : ""}
+      <div style="display:flex;gap:6px;font-size:10px;margin-bottom:6px;">
+        <span style="display:flex;align-items:center;gap:3px;"><span style="display:inline-block;width:10px;height:8px;background:#dc2626;border-radius:1px;"></span>升息</span>
+        <span style="display:flex;align-items:center;gap:3px;"><span style="display:inline-block;width:10px;height:8px;background:#94a3b8;border-radius:1px;"></span>持平</span>
+        <span style="display:flex;align-items:center;gap:3px;"><span style="display:inline-block;width:10px;height:8px;background:#2563eb;border-radius:1px;"></span>降息</span>
+      </div>
+      ${_fwRows}
+      <p style="font-size:10px;color:var(--text-mute);margin:4px 0 0;">各欄獨立計算：以相鄰兩次 FOMC implied rate 差值 ÷ 0.25% 估算單次會議升降息機率。</p>
+    </div>` : "";
+
   const _rateOutlookPanel = `
     <div style="margin-bottom:16px;padding:14px 16px;background:var(--card-bg,#f8fafc);border:1px solid var(--border);border-radius:10px;">
       <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;flex-wrap:wrap;">
         <span style="font-weight:600;font-size:14px;">升息押注指標</span>
         ${_curveLabel ? `<span style="font-size:12px;padding:2px 9px;border-radius:20px;font-weight:500;background:${_curveBg};color:${_curveColor};">${_curveLabel}</span>` : ""}
-        <a href="https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html" target="_blank" rel="noopener"
-           style="margin-left:auto;font-size:12px;color:#3b82f6;text-decoration:none;white-space:nowrap;">CME FedWatch ↗</a>
+        ${_fwDecisions.length === 0 ? `<a href="https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html" target="_blank" rel="noopener"
+           style="margin-left:auto;font-size:12px;color:#3b82f6;text-decoration:none;white-space:nowrap;">CME FedWatch ↗</a>` : ""}
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:8px;">
         <div style="padding:8px 10px;background:var(--bg,#fff);border:1px solid var(--border);border-radius:8px;">
@@ -2639,9 +2685,8 @@ function renderMarketSheet() {
             ${_dxyDaily != null ? fmtPct(_dxyDaily) + " 日" : "升息→美元強"}</div>
         </div>
       </div>
-      <p style="font-size:11px;color:var(--text-mute);margin:10px 0 0;">
-        2Y 殖利率對政策利率預期最敏感；2Y-10Y 倒掛（負值）表示市場預期降息或衰退；SOFR 期貨 / CME FedWatch 顯示各 FOMC 會議升降息機率（需點外連結查詢）。
-      </p>
+      ${_fedwatchSection}
+      ${_fwDecisions.length === 0 ? `<p style="font-size:11px;color:var(--text-mute);margin:10px 0 0;">2Y 殖利率對政策利率預期最敏感；10Y−2Y 倒掛（負值）表示市場預期降息或衰退；CME FedWatch 顯示各 FOMC 會議升降息機率。</p>` : ""}
     </div>`;
 
   const bondsTab = _rateOutlookPanel + (bondRows ? `
