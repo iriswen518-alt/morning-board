@@ -69,11 +69,12 @@ def build_rate_outlook(bonds_src: list, fx_src: list) -> dict:
 
     y10 = us10y_rec.get("yield")
     y2 = us2y_rec.get("yield")
-    spread = r2(y2 - y10) if y2 is not None and y10 is not None else None
+    # 慣例 10Y − 2Y：正值 = 正斜率，負值 = 倒掛（短債 > 長債）
+    spread = r2(y10 - y2) if y2 is not None and y10 is not None else None
     spread_bps = round(spread * 100) if spread is not None else None
 
     if spread is not None:
-        if spread > 0.3:
+        if spread > 0.1:
             curve_shape = "正斜率"
         elif spread < -0.1:
             curve_shape = "倒掛"
@@ -85,8 +86,8 @@ def build_rate_outlook(bonds_src: list, fx_src: list) -> dict:
     return {
         "us2y": r2(y2),
         "us10y": r2(y10),
-        "yield_curve_2y10y": spread,
-        "yield_curve_2y10y_bps": spread_bps,
+        "yield_curve_10y2y": spread,
+        "yield_curve_10y2y_bps": spread_bps,
         "curve_shape": curve_shape,
         "dxy": dxy_rec.get("close"),
         "dxy_daily_pct": r2(dxy_rec.get("daily_pct")),

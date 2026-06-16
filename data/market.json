@@ -303,12 +303,12 @@
   "rate_outlook": {
     "us2y": 4.07,
     "us10y": 4.47,
-    "yield_curve_2y10y": -0.4,
-    "yield_curve_2y10y_bps": -40,
-    "curve_shape": "倒掛",
+    "curve_shape": "正斜率",
     "dxy": 99.66899871826172,
     "dxy_daily_pct": -0.08,
-    "closing_date": "2026-06-15"
+    "closing_date": "2026-06-15",
+    "yield_curve_10y2y": 0.4,
+    "yield_curve_10y2y_bps": 40
   },
   "summary": null
 }

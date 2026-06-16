@@ -2584,19 +2584,20 @@ function renderMarketSheet() {
   const _dxyFx     = (m.fx || []).find(f => f.name && f.name.includes("DXY"));
   const _us10y = _us10yBond?.yield_pct ?? null;
   const _us2y  = _us2yBond?.yield_pct  ?? null;
-  const _spread2y10y = (_us2y != null && _us10y != null) ? +(_us2y - _us10y).toFixed(2) : null;
+  // 慣例用 10Y − 2Y：正值 = 正斜率（正常），負值 = 倒掛（2Y > 10Y）
+  const _spread10y2y = (_us2y != null && _us10y != null) ? +(_us10y - _us2y).toFixed(2) : null;
   const _dxyClose    = _dxyFx?.close        ?? null;
   const _dxyDaily    = _dxyFx?.daily_pct    ?? null;
-  const _spreadBps   = _spread2y10y != null ? Math.round(_spread2y10y * 100) : null;
+  const _spreadBps   = _spread10y2y != null ? Math.round(_spread10y2y * 100) : null;
 
   let _curveLabel = "", _curveBg = "", _curveColor = "", _curveDesc = "";
-  if (_spread2y10y != null) {
-    if (_spread2y10y > 0.3) {
+  if (_spread10y2y != null) {
+    if (_spread10y2y > 0.1) {
       _curveLabel = "正斜率"; _curveBg = "#d1fae5"; _curveColor = "#065f46";
-      _curveDesc = "市場預期景氣持續，升息壓力相對低";
-    } else if (_spread2y10y < -0.1) {
+      _curveDesc = "長債殖利率高於短債，市場預期景氣擴張";
+    } else if (_spread10y2y < -0.1) {
       _curveLabel = "倒掛"; _curveBg = "#fee2e2"; _curveColor = "#991b1b";
-      _curveDesc = "升息預期偏高或衰退擔憂，殖利率曲線歷史上常先行衰退";
+      _curveDesc = "短債殖利率高於長債，歷史上常先行衰退訊號";
     } else {
       _curveLabel = "平坦"; _curveBg = "#fef9c3"; _curveColor = "#854d0e";
       _curveDesc = "市場對利率走向猶豫，升降息預期接近五五波";
@@ -2604,7 +2605,7 @@ function renderMarketSheet() {
   }
 
   const _spreadHtml = _spreadBps != null
-    ? `<span style="color:${_spreadBps < 0 ? '#dc2626' : _spreadBps > 30 ? '#16a34a' : '#92400e'}">${_spreadBps > 0 ? '+' : ''}${_spreadBps} bps</span>`
+    ? `<span style="color:${_spreadBps < -10 ? '#dc2626' : _spreadBps > 10 ? '#16a34a' : '#92400e'}">${_spreadBps > 0 ? '+' : ''}${_spreadBps} bps</span>`
     : "—";
 
   const _rateOutlookPanel = `
@@ -2627,7 +2628,7 @@ function renderMarketSheet() {
           <div style="font-size:10px;color:var(--text-mute);">通膨／景氣長期預期</div>
         </div>
         <div style="padding:8px 10px;background:var(--bg,#fff);border:1px solid var(--border);border-radius:8px;">
-          <div style="font-size:11px;color:var(--text-mute);margin-bottom:3px;">2Y−10Y 利差</div>
+          <div style="font-size:11px;color:var(--text-mute);margin-bottom:3px;">10Y−2Y 利差</div>
           <div style="font-size:17px;font-weight:700;">${_spreadHtml}</div>
           <div style="font-size:10px;color:var(--text-mute);">${_curveLabel ? _curveLabel + "：" + _curveDesc.split("，")[0] : "殖利率曲線形狀"}</div>
         </div>
