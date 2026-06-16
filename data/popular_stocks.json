@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-16T18:29:52+08:00",
+  "generated_at": "2026-06-16T19:28:59+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -31,20 +31,6 @@
       "error": null
     },
     {
-      "symbol": "SPCX",
-      "name_zh": "Space Exploration Technologies",
-      "kind": "US",
-      "price": 192.5,
-      "change_pct": 19.6,
-      "mtd_pct": null,
-      "ytd_pct": null,
-      "market_date": "2026-06-12",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPCX.US",
-      "error": null
-    },
-    {
       "symbol": "FISV",
       "name_zh": "Fiserv",
       "kind": "US",
@@ -56,6 +42,20 @@
       "per": 8.0663,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FISV.US",
+      "error": null
+    },
+    {
+      "symbol": "SPCX",
+      "name_zh": "Space Exploration Technologies",
+      "kind": "US",
+      "price": 192.5,
+      "change_pct": 19.6,
+      "mtd_pct": null,
+      "ytd_pct": null,
+      "market_date": "2026-06-12",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPCX.US",
       "error": null
     },
     {
@@ -87,17 +87,17 @@
       "error": null
     },
     {
-      "symbol": "TDIC",
-      "name_zh": "Dreamland",
+      "symbol": "SSPC",
+      "name_zh": "Themes ETF Trust - Leverage Shares 2X Short SPCX Daily ETF",
       "kind": "US",
-      "price": 5.43,
-      "change_pct": -5.44,
-      "mtd_pct": 1363.1,
-      "ytd_pct": 518.28,
-      "market_date": "2026-06-12",
+      "price": 9.15,
+      "change_pct": null,
+      "mtd_pct": null,
+      "ytd_pct": null,
+      "market_date": "2026-06-15",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TDIC.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SSPC.US",
       "error": null
     },
     {
@@ -115,17 +115,45 @@
       "error": null
     },
     {
-      "symbol": "SSPC",
-      "name_zh": "Themes ETF Trust - Leverage Shares 2X Short SPCX Daily ETF",
+      "symbol": "FOXA",
+      "name_zh": "Fox",
       "kind": "US",
-      "price": 9.15,
+      "price": 54.76,
+      "change_pct": -16.84,
+      "mtd_pct": -14.33,
+      "ytd_pct": -25.06,
+      "market_date": "2026-06-15",
+      "per": 12.7046,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FOXA.US",
+      "error": null
+    },
+    {
+      "symbol": "TDIC",
+      "name_zh": "Dreamland",
+      "kind": "US",
+      "price": 5.43,
+      "change_pct": -5.44,
+      "mtd_pct": 1363.1,
+      "ytd_pct": 518.28,
+      "market_date": "2026-06-12",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TDIC.US",
+      "error": null
+    },
+    {
+      "symbol": "SPCU",
+      "name_zh": "Defiance Daily Target 2X Long SpaceX ETF",
+      "kind": "US",
+      "price": 27.83,
       "change_pct": null,
       "mtd_pct": null,
       "ytd_pct": null,
       "market_date": "2026-06-15",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SSPC.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPCU.US",
       "error": null
     },
     {
