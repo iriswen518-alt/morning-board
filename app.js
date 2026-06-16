@@ -2429,7 +2429,20 @@ function renderIndexCards(cards) {
 }
 
 function renderMarketSheet() {
-  const m = DATA.market;
+  // Normalize: handle both built format (indices/yield_pct) and raw fetch format (equity/yield)
+  const _raw = DATA.market || {};
+  const m = {
+    ..._raw,
+    closing_date: _raw.closing_date || _raw.primary_closing_date,
+    indices: _raw.indices || _raw.equity || [],
+    bonds: (_raw.bonds || []).map(b => ({
+      ...b,
+      yield_pct: b.yield_pct != null ? b.yield_pct : b.yield,
+    })),
+    fx: _raw.fx || [],
+    commodities: _raw.commodities || [],
+    summary: _raw.summary || null,
+  };
   const date = shortDate(m.closing_date);
   const rows = m.indices.map(i => `
     <tr>
