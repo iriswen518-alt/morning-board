@@ -2694,7 +2694,7 @@ function renderMarketSheet() {
         <button class="tab" data-mtab="fx">匯率</button>
         <button class="tab" data-mtab="us">美股</button>
         <button class="tab" data-mtab="tw">台股</button>
-        <button class="tab" data-mtab="twstock">台股（個股）</button>
+        <button class="tab" data-mtab="twstock">個股</button>
       </div>
       <div id="mtab-indices">${stocksTab}</div>
       <div id="mtab-bonds" hidden>${bondsTab}</div>
