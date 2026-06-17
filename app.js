@@ -5138,7 +5138,7 @@ function renderNewsByCategory(cat) {
       ${items.map(it => `
         <div class="news-item">
           <details>
-            <summary>${dateFmt ? `<span class="news-date">${escapeHtml(dateFmt)}</span>` : ""}${escapeHtml(it.title_zh)}</summary>
+            <summary>${escapeHtml(it.title_zh)}${dateFmt ? `<span class="news-date">${escapeHtml(dateFmt)}</span>` : ""}</summary>
             ${newsBodyHtml(it)}
             ${it.source_url ? `<a class="source" href="${it.source_url}" target="_blank" rel="noopener">${escapeHtml(it.source_name || "來源")}</a>` : ""}
           </details>
@@ -5156,7 +5156,7 @@ function renderNewsByCategory(cat) {
         ${taxItems.map(it => `
           <div class="news-item">
             <details>
-              <summary>${dateFmt ? `<span class="news-date">${escapeHtml(dateFmt)}</span>` : ""}${escapeHtml(it.title)}</summary>
+              <summary>${escapeHtml(it.title)}${dateFmt ? `<span class="news-date">${escapeHtml(dateFmt)}</span>` : ""}</summary>
               <div class="summary">${escapeHtml(it.summary)}</div>
               ${it.source_url ? `<a class="source" href="${it.source_url}" target="_blank" rel="noopener">${escapeHtml(it.source_name || "來源")}</a>` : ""}
             </details>

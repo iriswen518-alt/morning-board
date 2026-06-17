@@ -556,7 +556,7 @@ table.indices th.sortable-th {
 .news-item h3::before { display: none; }
 .news-item details summary { list-style: none; cursor: pointer; font-size: 16px; font-weight: 600; color: var(--text); line-height: 1.4; display: flex; align-items: baseline; gap: 6px; }
 .news-item details summary::-webkit-details-marker { display: none; }
-.news-item details summary::after { content: "▸"; font-size: 12px; color: var(--text-mute); margin-left: auto; flex-shrink: 0; transition: transform .2s; }
+.news-item details summary::after { content: "▸"; font-size: 12px; color: var(--text-mute); flex-shrink: 0; margin-left: auto; transition: transform .2s; }
 .news-item details[open] summary::after { transform: rotate(90deg); }
 .news-item details .summary, .news-item details .news-body { margin-top: 10px; }
 .news-date { font-size: 11px; font-weight: 500; color: var(--brand-primary); background: rgba(0,102,179,0.1); border-radius: 4px; padding: 1px 6px; flex-shrink: 0; white-space: nowrap; }

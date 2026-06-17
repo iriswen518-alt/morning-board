@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T15:01:33+08:00",
+  "generated_at": "2026-06-17T17:02:34+08:00",
   "tw": {
     "as_of": "2026-06-17",
     "top_marketcap": [
@@ -658,7 +658,7 @@
         "price": 117.05,
         "daily_pct": -8.45,
         "market_cap": 588293275648,
-        "pe": 75.92662,
+        "pe": 75.73748,
         "pe_kind": "forward",
         "mtd_pct": 2.07,
         "ytd_pct": 217.21,
@@ -984,19 +984,6 @@
         "source_url": "https://finance.yahoo.com/quote/ARKK"
       },
       {
-        "symbol": "SOXX",
-        "name": "iShares PHLX SOX Semiconductor ",
-        "price": 591.24,
-        "daily_pct": 5.18,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": 3.89,
-        "ytd_pct": 96.33,
-        "yahoo": "SOXX",
-        "source_url": "https://finance.yahoo.com/quote/SOXX"
-      },
-      {
         "symbol": "EEM",
         "name": "iShares MSCI Emerging Index Fun",
         "price": 68.64,
@@ -1075,19 +1062,6 @@
         "source_url": "https://finance.yahoo.com/quote/QQQ"
       },
       {
-        "symbol": "VWO",
-        "name": "Vanguard FTSE Emerging Markets ",
-        "price": 60.16,
-        "daily_pct": 2.93,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": 0.47,
-        "ytd_pct": 11.9,
-        "yahoo": "VWO",
-        "source_url": "https://finance.yahoo.com/quote/VWO"
-      },
-      {
         "symbol": "IWM",
         "name": "iShares Russell 2000 Index Fund",
         "price": 292.08,
@@ -1099,6 +1073,32 @@
         "ytd_pct": 18.65,
         "yahoo": "IWM",
         "source_url": "https://finance.yahoo.com/quote/IWM"
+      },
+      {
+        "symbol": "DIA",
+        "name": "State Street SPDR Dow Jones Ind",
+        "price": 521.44,
+        "daily_pct": 2.36,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": 2.09,
+        "ytd_pct": 8.5,
+        "yahoo": "DIA",
+        "source_url": "https://finance.yahoo.com/quote/DIA"
+      },
+      {
+        "symbol": "VTI",
+        "name": "Vanguard Total Stock Market ETF",
+        "price": 370.37,
+        "daily_pct": 1.84,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": -0.58,
+        "ytd_pct": 10.47,
+        "yahoo": "VTI",
+        "source_url": "https://finance.yahoo.com/quote/VTI"
       }
     ]
   }
