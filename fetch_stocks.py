@@ -53,6 +53,8 @@ US_STOCKS = [
     ("TSLA", "特斯拉"),
     ("AVGO", "博通"),
     ("TSM", "台積電ADR"),
+    ("AMD", "超微"),
+    ("MU", "美光"),
 ]
 
 TW_STOCKS = [

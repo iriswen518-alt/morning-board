@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T13:01:35+08:00",
+  "generated_at": "2026-06-17T15:01:33+08:00",
   "tw": {
     "as_of": "2026-06-17",
     "top_marketcap": [
@@ -645,7 +645,7 @@
         "price": 1020.76,
         "daily_pct": -6.18,
         "market_cap": 1151145738240,
-        "pe": 48.10368,
+        "pe": 48.08102,
         "pe_kind": "trailing",
         "mtd_pct": 5.12,
         "ytd_pct": 257.65,
@@ -697,7 +697,7 @@
         "price": 133.25,
         "daily_pct": -1.08,
         "market_cap": 319441829888,
-        "pe": 151.42046,
+        "pe": 149.7191,
         "pe_kind": "trailing",
         "mtd_pct": -13.95,
         "ytd_pct": -24.21,
@@ -714,8 +714,8 @@
         "market_cap": 4754765824,
         "pe": 40.9,
         "pe_kind": "forward",
-        "mtd_pct": 14.01,
-        "ytd_pct": 79.19,
+        "mtd_pct": 0.14,
+        "ytd_pct": 57.39,
         "yahoo": "LION",
         "source_url": "https://finance.yahoo.com/quote/LION"
       },
@@ -727,8 +727,8 @@
         "market_cap": 2656638208,
         "pe": 17.666666,
         "pe_kind": "trailing",
-        "mtd_pct": 29.45,
-        "ytd_pct": 14.29,
+        "mtd_pct": 16.89,
+        "ytd_pct": 3.2,
         "yahoo": "MGNI",
         "source_url": "https://finance.yahoo.com/quote/MGNI"
       },
@@ -909,7 +909,7 @@
         "price": 278.67,
         "daily_pct": -9.78,
         "market_cap": 243780534272,
-        "pe": 106.3626,
+        "pe": 96.0931,
         "pe_kind": "trailing",
         "mtd_pct": 35.94,
         "ytd_pct": 227.92,
@@ -982,6 +982,19 @@
         "ytd_pct": 3.52,
         "yahoo": "ARKK",
         "source_url": "https://finance.yahoo.com/quote/ARKK"
+      },
+      {
+        "symbol": "SOXX",
+        "name": "iShares PHLX SOX Semiconductor ",
+        "price": 591.24,
+        "daily_pct": 5.18,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": 3.89,
+        "ytd_pct": 96.33,
+        "yahoo": "SOXX",
+        "source_url": "https://finance.yahoo.com/quote/SOXX"
       },
       {
         "symbol": "EEM",
@@ -1062,6 +1075,19 @@
         "source_url": "https://finance.yahoo.com/quote/QQQ"
       },
       {
+        "symbol": "VWO",
+        "name": "Vanguard FTSE Emerging Markets ",
+        "price": 60.16,
+        "daily_pct": 2.93,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": 0.47,
+        "ytd_pct": 11.9,
+        "yahoo": "VWO",
+        "source_url": "https://finance.yahoo.com/quote/VWO"
+      },
+      {
         "symbol": "IWM",
         "name": "iShares Russell 2000 Index Fund",
         "price": 292.08,
@@ -1073,32 +1099,6 @@
         "ytd_pct": 18.65,
         "yahoo": "IWM",
         "source_url": "https://finance.yahoo.com/quote/IWM"
-      },
-      {
-        "symbol": "DIA",
-        "name": "State Street SPDR Dow Jones Ind",
-        "price": 521.44,
-        "daily_pct": 2.36,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": 2.09,
-        "ytd_pct": 8.5,
-        "yahoo": "DIA",
-        "source_url": "https://finance.yahoo.com/quote/DIA"
-      },
-      {
-        "symbol": "VTI",
-        "name": "Vanguard Total Stock Market ETF",
-        "price": 370.37,
-        "daily_pct": 1.84,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": -0.58,
-        "ytd_pct": 10.47,
-        "yahoo": "VTI",
-        "source_url": "https://finance.yahoo.com/quote/VTI"
       }
     ]
   }
