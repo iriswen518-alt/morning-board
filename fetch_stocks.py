@@ -11,6 +11,7 @@ Sources:
 API key: read from ~/scripts/.env  (FINNHUB_API_KEY=xxx)
 Output:  repo/data/stocks.json
 """
+
 from __future__ import annotations
 
 import json
@@ -42,6 +43,7 @@ FINNHUB_KEY = load_finnhub_key()
 
 
 US_STOCKS = [
+    ("SPY", "S&P 500 ETF"),
     ("NVDA", "輝達"),
     ("AAPL", "蘋果"),
     ("MSFT", "微軟"),
@@ -65,6 +67,7 @@ TW_STOCKS = [
 
 
 # === US: finnhub for price + daily; Yahoo (best-effort) for MTD/YTD ===
+
 
 def fetch_finnhub_quote(symbol):
     """Returns dict with c, dp, t (current, change%, timestamp)."""
@@ -93,7 +96,8 @@ def fetch_yahoo_history(symbol, exchange_tz_offset_hours=None, range_str="5y"):
             r = requests.get(
                 f"https://{host}/v8/finance/chart/"
                 f"{symbol}?interval=1d&range={range_str}",
-                headers={"User-Agent": UA}, timeout=8,
+                headers={"User-Agent": UA},
+                timeout=8,
             )
             if r.status_code == 429:
                 continue
@@ -111,8 +115,9 @@ def fetch_yahoo_history(symbol, exchange_tz_offset_hours=None, range_str="5y"):
                     tz_offset = 8  # default TPE
             market_tz = timezone(timedelta(hours=tz_offset))
             ts = result.get("timestamp") or []
-            closes = (result.get("indicators", {}).get("quote", [{}])[0]
-                      .get("close") or [])
+            closes = (
+                result.get("indicators", {}).get("quote", [{}])[0].get("close") or []
+            )
             out = []
             for t, c in zip(ts, closes):
                 if c is None:
@@ -139,10 +144,8 @@ def compute_mtd_ytd(history):
             month_base = close
         if date_iso < year_start_iso:
             year_base = close
-    mtd = (round((last_close - month_base) / month_base * 100, 2)
-           if month_base else None)
-    ytd = (round((last_close - year_base) / year_base * 100, 2)
-           if year_base else None)
+    mtd = round((last_close - month_base) / month_base * 100, 2) if month_base else None
+    ytd = round((last_close - year_base) / year_base * 100, 2) if year_base else None
     return mtd, ytd
 
 
@@ -178,6 +181,7 @@ def compute_long_perf(history):
 
 # === TW: TWSE realtime + STOCK_DAY for history ===
 
+
 def fetch_twse_realtime(symbols):
     ex_ch = "|".join(f"tse_{c}.tw" for c, _ in symbols)
     try:
@@ -212,8 +216,10 @@ def fetch_twse_realtime(symbols):
         # is_realtime = 當下成交價（z）有值；盤前 z="-" 時為 False
         is_realtime = last is not None
         out[code] = {
-            "price": last, "prev_close": prev,
-            "change_pct": chg_pct, "market_date": date,
+            "price": last,
+            "prev_close": prev,
+            "change_pct": chg_pct,
+            "market_date": date,
             "is_realtime": is_realtime,
         }
     return out
@@ -249,7 +255,8 @@ def fetch_twse_stock_day(stock_no, yyyymmdd):
         r = requests.get(
             "https://www.twse.com.tw/exchangeReport/STOCK_DAY",
             params={"response": "json", "date": yyyymmdd, "stockNo": stock_no},
-            headers={"User-Agent": UA}, timeout=10,
+            headers={"User-Agent": UA},
+            timeout=10,
         )
         r.raise_for_status()
         d = r.json()
@@ -288,7 +295,9 @@ def compute_tw_mtd_ytd(stock_no, today_date_iso, today_close):
     mtd = None
     if prev_month_data:
         prev_month_end_close = prev_month_data[-1][1]
-        mtd = round((today_close - prev_month_end_close) / prev_month_end_close * 100, 2)
+        mtd = round(
+            (today_close - prev_month_end_close) / prev_month_end_close * 100, 2
+        )
 
     # YTD: last trading day close of last December (year-end)
     dec_data = fetch_twse_stock_day(stock_no, f"{year - 1:04d}1201")
@@ -361,14 +370,18 @@ def main():
         long_perf = {"1y": None, "3y": None, "5y": None}
         if price:
             try:
-                hist = fetch_yahoo_history(sym, exchange_tz_offset_hours=-4, range_str="5y")
+                hist = fetch_yahoo_history(
+                    sym, exchange_tz_offset_hours=-4, range_str="5y"
+                )
                 if hist:
                     mtd_pct, ytd_pct = compute_mtd_ytd(hist)
                     long_perf = compute_long_perf(hist)
             except Exception:
                 pass
         rec = {
-            "symbol": sym, "name_zh": name, "kind": "US",
+            "symbol": sym,
+            "name_zh": name,
+            "kind": "US",
             "price": price if price else None,
             "change_pct": round(chg_pct, 2) if chg_pct is not None else None,
             "mtd_pct": mtd_pct,
@@ -388,11 +401,13 @@ def main():
             print(f"   ! {sym}: no data")
         else:
             badge = " [stale]" if rec.get("error") == "stale" else ""
-            print(f"   ✓ {sym:6s} {name:8s} ${rec['price']:>10.2f}  "
-                  f"({(rec.get('change_pct') or 0):+.2f}%)  "
-                  f"M={(rec.get('mtd_pct') or 0):+.2f}% "
-                  f"Y={(rec.get('ytd_pct') or 0):+.2f}%  "
-                  f"{rec['market_date']}{badge}")
+            print(
+                f"   ✓ {sym:6s} {name:8s} ${rec['price']:>10.2f}  "
+                f"({(rec.get('change_pct') or 0):+.2f}%)  "
+                f"M={(rec.get('mtd_pct') or 0):+.2f}% "
+                f"Y={(rec.get('ytd_pct') or 0):+.2f}%  "
+                f"{rec['market_date']}{badge}"
+            )
         time.sleep(0.5)
 
     # === TW ===
@@ -410,8 +425,11 @@ def main():
             # 2026-05-25 修：直接抓本月 STOCK_DAY 拿最近兩個收盤計算 change_pct
             # 避免「盤前台股 7 檔全部缺日%」的問題
             from datetime import datetime as _dt
+
             now_tpe = _dt.now(TPE)
-            month_data = fetch_twse_stock_day(sym, f"{now_tpe.year:04d}{now_tpe.month:02d}01")
+            month_data = fetch_twse_stock_day(
+                sym, f"{now_tpe.year:04d}{now_tpe.month:02d}01"
+            )
             time.sleep(0.3)
             if not month_data:
                 # 月初 fallback：抓上月
@@ -427,7 +445,9 @@ def main():
                 if len(month_data) >= 2:
                     prev_dt, prev_close = month_data[-2]
                     if prev_close and prev_close != 0:
-                        change_pct = round((last_close - prev_close) / prev_close * 100, 2)
+                        change_pct = round(
+                            (last_close - prev_close) / prev_close * 100, 2
+                        )
                     else:
                         change_pct = None
                 else:
@@ -439,7 +459,9 @@ def main():
                     if prev_month_data:
                         _, prev_close = prev_month_data[-1]
                         if prev_close and prev_close != 0:
-                            change_pct = round((last_close - prev_close) / prev_close * 100, 2)
+                            change_pct = round(
+                                (last_close - prev_close) / prev_close * 100, 2
+                            )
 
         mtd_pct, ytd_pct = None, None
         if price is not None and market_date:
@@ -451,13 +473,17 @@ def main():
         long_perf = {"1y": None, "3y": None, "5y": None}
         if price is not None:
             try:
-                hist = fetch_yahoo_history(f"{sym}.TW", exchange_tz_offset_hours=8, range_str="5y")
+                hist = fetch_yahoo_history(
+                    f"{sym}.TW", exchange_tz_offset_hours=8, range_str="5y"
+                )
                 if hist:
                     long_perf = compute_long_perf(hist)
             except Exception as e:
                 print(f"   ! {sym} long perf fail: {e}")
         rec = {
-            "symbol": sym, "name_zh": name, "kind": "TW",
+            "symbol": sym,
+            "name_zh": name,
+            "kind": "TW",
             "price": price,
             "change_pct": change_pct,
             "mtd_pct": mtd_pct,
@@ -478,18 +504,20 @@ def main():
             chg = rec.get("change_pct") or 0
             mtd = rec.get("mtd_pct") or 0
             ytd = rec.get("ytd_pct") or 0
-            print(f"   ✓ {sym:6s} {name:6s} NT${rec['price']:>8.2f}  "
-                  f"({chg:+.2f}%)  M={mtd:+.2f}% Y={ytd:+.2f}%  "
-                  f"{rec['market_date']}{badge}")
+            print(
+                f"   ✓ {sym:6s} {name:6s} NT${rec['price']:>8.2f}  "
+                f"({chg:+.2f}%)  M={mtd:+.2f}% Y={ytd:+.2f}%  "
+                f"{rec['market_date']}{badge}"
+            )
 
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT_FILE.write_text(
-        json.dumps(out, ensure_ascii=False, indent=2), "utf-8"
-    )
+    OUTPUT_FILE.write_text(json.dumps(out, ensure_ascii=False, indent=2), "utf-8")
     us_ok = sum(1 for r in out["us_stocks"] if r["price"] is not None)
     tw_ok = sum(1 for r in out["tw_stocks"] if r["price"] is not None)
-    print(f"[done] US {us_ok}/{len(out['us_stocks'])}  "
-          f"TW {tw_ok}/{len(out['tw_stocks'])} → {OUTPUT_FILE}")
+    print(
+        f"[done] US {us_ok}/{len(out['us_stocks'])}  "
+        f"TW {tw_ok}/{len(out['tw_stocks'])} → {OUTPUT_FILE}"
+    )
 
 
 if __name__ == "__main__":
