@@ -2763,12 +2763,12 @@ function renderUsStocksSheet() {
   const note = `<p style="color:var(--text-mute); font-size:13px; padding:6px 0 12px">資料來源：板信商銀網路銀行 iQuote。點選名稱可至板信即時報價頁。</p>`;
   const curatedBlock = curated.length ? `
     <h2 style="font-size:16px; margin:12px 0 8px;">精選海外股票</h2>
-    ${renderStocksTable("", curated)}
+    ${renderStocksTable("", curated, { showPE: false })}
   ` : "";
   const popularBlock = popular.length ? `
     <h2 style="font-size:16px; margin:18px 0 8px;">熱門海外股票</h2>
     <p style="color:var(--text-mute); font-size:12px; margin:0 0 8px;">資料來源：Yahoo Finance trending（流動性過低個股已過濾），每次 build 重抓。</p>
-    ${renderStocksTable("", popular)}
+    ${renderStocksTable("", popular, { showPE: false })}
   ` : "";
   const moreSection = `
     <div class="fund-card" style="margin-top:18px;text-align:center">
@@ -4664,7 +4664,8 @@ function renderBriefCard(st, wkStart, wkEnd) {
   `;
 }
 
-function renderStocksTable(title, list) {
+function renderStocksTable(title, list, opts = {}) {
+  const showPE = opts.showPE !== false;  // default true; pass { showPE: false } to hide
   if (!list || !list.length) return "";
   const fmtPrice = (p, kind) => {
     if (p === null || p === undefined) return "—";
@@ -4723,7 +4724,7 @@ function renderStocksTable(title, list) {
     <tr>
       <td>${nameCell}${quoteSfx}</td>
       <td>${fmtPrice(s.price, s.kind)}</td>
-      <td>${fmtPE(s.per, s.per_kind)}</td>
+      ${showPE ? `<td>${fmtPE(s.per, s.per_kind)}</td>` : ""}
       <td class="${pctClass(s.change_pct)}">${rangedCell(s, s.change_pct, "day", "日")}</td>
       <td class="${pctClass(s.mtd_pct)}">${rangedCell(s, s.mtd_pct, "mtd", "本月")}</td>
       <td class="${pctClass(s.ytd_pct)}">${rangedCell(s, s.ytd_pct, "ytd", "今年")}</td>
@@ -4734,11 +4735,11 @@ function renderStocksTable(title, list) {
   return `
     ${title ? `<h3>${title}</h3>` : ""}
     <table class="indices stock-cols">
-      <colgroup><col class="c-name"><col class="c-num"><col class="c-num"><col class="c-num"><col class="c-num"><col class="c-num"><col class="c-num"></colgroup>
+      <colgroup><col class="c-name"><col class="c-num">${showPE ? `<col class="c-num">` : ""}<col class="c-num"><col class="c-num"><col class="c-num"><col class="c-num"></colgroup>
       <thead><tr>
         <th>名稱</th>
         <th class="sortable-th" title="收盤價，來源見名稱欄連結；點選排序">收盤</th>
-        <th class="sortable-th" title="本益比（近四季 trailing，來源：finnhub）；點選排序">本益比</th>
+        ${showPE ? `<th class="sortable-th" title="本益比（近四季 trailing，來源：finnhub）；點選排序">本益比</th>` : ""}
         <th class="sortable-th" title="日報酬率，定義：今日收盤 vs 昨日收盤；來源：finnhub /quote (US) 或 TWSE (TW)；點選排序">日</th>
         <th class="sortable-th" title="月初到今報酬率（MTD），來源：Yahoo (US) 或 TWSE (TW)；點選排序">本月</th>
         <th class="sortable-th" title="年初到今報酬率（YTD），來源：Yahoo (US) 或 TWSE (TW)；點選排序">今年</th>
