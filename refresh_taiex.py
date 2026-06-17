@@ -390,6 +390,56 @@ def compute_mtd_ytd(history):
     return mtd, ytd
 
 
+TAIFEX_FUT_URL = "https://openapi.taifex.com.tw/v1/DailyMarketReportFut"
+
+
+def refresh_taifex_futures(market):
+    """Update 台指期(近月) from TAIFEX open API. Always wins over stale markdown."""
+    import re as _re
+
+    try:
+        r = requests.get(TAIFEX_FUT_URL, headers={"User-Agent": UA}, timeout=10)
+        r.raise_for_status()
+        data = r.json()
+        tx = [
+            row
+            for row in data
+            if row.get("Contract") == "TX"
+            and row.get("TradingSession") == "一般"
+            and _re.fullmatch(r"\d{6}", row.get("ContractMonth(Week)", ""))
+            and row.get("Last") not in (None, "", "NULL", "-")
+        ]
+        if not tx:
+            print("refresh_taifex_futures: 無 TX 近月資料")
+            return
+        near = min(tx, key=lambda row: row["ContractMonth(Week)"])
+        last = float(str(near["Last"]).replace(",", ""))
+        pct_txt = str(near.get("%", "")).replace("%", "").replace("+", "").strip()
+        daily_pct = float(pct_txt) if pct_txt not in ("", "NULL", "-") else None
+        d = near.get("Date", "")
+        date_iso = f"{d[:4]}-{d[4:6]}-{d[6:]}" if _re.fullmatch(r"\d{8}", d) else None
+        for idx in market.get("indices", []):
+            if idx.get("name") == "台指期(近月)":
+                date_advanced = date_iso and date_iso > (idx.get("closing_date") or "")
+                if not date_advanced and not _sane_override(
+                    "台指期", idx.get("close"), last, MAX_DEV_INDEX
+                ):
+                    return
+                idx["close"] = last
+                if daily_pct is not None:
+                    idx["daily_pct"] = daily_pct
+                if date_iso:
+                    idx["closing_date"] = date_iso
+                idx["note"] = f"近月 {near['ContractMonth(Week)']}"
+                print(
+                    f"refresh_taifex_futures: ✓ 台指期 {last} ({daily_pct}%) {date_iso}"
+                )
+                return
+        print("refresh_taifex_futures: market.json 中找不到 台指期(近月) 欄位")
+    except Exception as e:
+        print(f"refresh_taifex_futures: ⚠️ {e}")
+
+
 def regenerate_summary(market):
     # parse_market 從 .md 散文讀 summary，但 refresh_*() 之後 indices 數字已換新；
     # 不重寫的話 summary 會跟表格對不上（前一日的觀點配當日數字）。
@@ -425,6 +475,7 @@ def main():
     market = json.loads(MARKET.read_text("utf-8"))
     refresh_taiex(market)
     refresh_other_indices(market)
+    refresh_taifex_futures(market)
     refresh_fx(market)
     refresh_bonds(market)
     # Update top-level closing_date to the MAX of all indices' per-row dates,
