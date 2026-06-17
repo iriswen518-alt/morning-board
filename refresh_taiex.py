@@ -197,7 +197,10 @@ def refresh_other_indices(market):
         close, prev, date_iso = fetch_yahoo_quote(sym)
         if close is None:
             continue
-        if not _sane_override(name, idx.get("close"), close, MAX_DEV_INDEX):
+        date_advanced = date_iso and date_iso > (idx.get("closing_date") or "")
+        if not date_advanced and not _sane_override(
+            name, idx.get("close"), close, MAX_DEV_INDEX
+        ):
             continue
         idx["close"] = close
         if prev:
