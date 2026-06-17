@@ -554,6 +554,12 @@ table.indices th.sortable-th {
 }
 .news-item h3 { margin: 0 0 6px; font-size: 16px; color: var(--text); padding-left: 0; }
 .news-item h3::before { display: none; }
+.news-item details summary { list-style: none; cursor: pointer; font-size: 16px; font-weight: 600; color: var(--text); line-height: 1.4; display: flex; align-items: baseline; gap: 6px; }
+.news-item details summary::-webkit-details-marker { display: none; }
+.news-item details summary::after { content: "▸"; font-size: 12px; color: var(--text-mute); margin-left: auto; flex-shrink: 0; transition: transform .2s; }
+.news-item details[open] summary::after { transform: rotate(90deg); }
+.news-item details .summary, .news-item details .news-body { margin-top: 10px; }
+.news-date { font-size: 11px; font-weight: 500; color: var(--brand-primary); background: rgba(0,102,179,0.1); border-radius: 4px; padding: 1px 6px; flex-shrink: 0; white-space: nowrap; }
 .news-item .summary { font-size: 14px; line-height: 1.6; color: var(--text); }
 .news-item .news-body { font-size: 14px; line-height: 1.75; color: var(--text); }
 .news-item .news-body p { margin: 0 0 8px; }
@@ -672,6 +678,7 @@ table.indices th.sortable-th {
   .fund-card .grid.cols-9 { grid-template-columns: repeat(9, 1fr); font-size: 13px; }
 
   .news-item h3 { font-size: 18px; }
+  .news-item details summary { font-size: 18px; }
   .news-item .summary, .news-item .news-body { font-size: 15px; }
 }
 
@@ -2210,6 +2217,7 @@ table.indices th.sortable-th {
   /* 表格內字級 */
   table.indices, .news-item, .card { font-size: 13.5px; }
   .news-item h3 { font-size: 15px; }
+  .news-item details summary { font-size: 15px; }
   .news-item .summary, .news-item .news-body { font-size: 13.5px; }
   /* 一般 .tabs.tabs-wrap 在手機上更緊湊 */
   .tabs { padding: 3px; gap: 3px; }

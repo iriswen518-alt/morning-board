@@ -5124,6 +5124,8 @@ function newsBodyHtml(it) {
 }
 
 function renderNewsByCategory(cat) {
+  const newsDate = (DATA.news && DATA.news.news_date) || "";
+  const dateFmt = newsDate ? newsDate.slice(5).replace("-", "/") : ""; // "06/16"
   const sections = (DATA.news.sections || [])
     .filter(s => sectionCategory(s) === cat);
   let html = sections.map(s => {
@@ -5134,9 +5136,11 @@ function renderNewsByCategory(cat) {
       <h3 style="color:var(--brand-deep); margin-top:18px">${escapeHtml(sectionTitle)}</h3>
       ${items.map(it => `
         <div class="news-item">
-          <h3>${escapeHtml(it.title_zh)}</h3>
-          ${newsBodyHtml(it)}
-          ${it.source_url ? `<a class="source" href="${it.source_url}" target="_blank" rel="noopener">${escapeHtml(it.source_name || "來源")}</a>` : ""}
+          <details>
+            <summary>${dateFmt ? `<span class="news-date">${escapeHtml(dateFmt)}</span>` : ""}${escapeHtml(it.title_zh)}</summary>
+            ${newsBodyHtml(it)}
+            ${it.source_url ? `<a class="source" href="${it.source_url}" target="_blank" rel="noopener">${escapeHtml(it.source_name || "來源")}</a>` : ""}
+          </details>
         </div>
       `).join("")}
     `;
@@ -5150,9 +5154,11 @@ function renderNewsByCategory(cat) {
         <h3 style="color:var(--brand-deep); margin-top:18px">稅務深度</h3>
         ${taxItems.map(it => `
           <div class="news-item">
-            <h3>${escapeHtml(it.title)}</h3>
-            <div class="summary">${escapeHtml(it.summary)}</div>
-            ${it.source_url ? `<a class="source" href="${it.source_url}" target="_blank" rel="noopener">${escapeHtml(it.source_name || "來源")}</a>` : ""}
+            <details>
+              <summary>${dateFmt ? `<span class="news-date">${escapeHtml(dateFmt)}</span>` : ""}${escapeHtml(it.title)}</summary>
+              <div class="summary">${escapeHtml(it.summary)}</div>
+              ${it.source_url ? `<a class="source" href="${it.source_url}" target="_blank" rel="noopener">${escapeHtml(it.source_name || "來源")}</a>` : ""}
+            </details>
           </div>
         `).join("")}
       `;
