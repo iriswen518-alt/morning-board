@@ -2724,9 +2724,11 @@ function renderMarketSheet() {
     ${renderRankingsBlock("tw")}`;
 
   return `
-    <div class="tabs">
+    <div class="tabs tabs-wrap">
       <button class="tab active" data-mvtab="premarket">盤前分析</button>
       <button class="tab" data-mvtab="overview">市場一覽</button>
+      <button class="tab" data-mvtab="us-analysis">美股分析</button>
+      <button class="tab" data-mvtab="tw-analysis">台股分析</button>
     </div>
     <div id="mvtab-premarket">
       ${renderPremarketBlock()}
@@ -2738,8 +2740,6 @@ function renderMarketSheet() {
         <button class="tab active" data-mtab="indices">全球</button>
         <button class="tab" data-mtab="bonds">債券</button>
         <button class="tab" data-mtab="fx">匯率</button>
-        <button class="tab" data-mtab="us-analysis">美股分析</button>
-        <button class="tab" data-mtab="tw-analysis">台股分析</button>
         <button class="tab" data-mtab="us">美股行情</button>
         <button class="tab" data-mtab="tw">台股行情</button>
         <button class="tab" data-mtab="twstock">個股</button>
@@ -2747,11 +2747,15 @@ function renderMarketSheet() {
       <div id="mtab-indices">${stocksTab}</div>
       <div id="mtab-bonds" hidden>${bondsTab}</div>
       <div id="mtab-fx" hidden>${fxTab}</div>
-      <div id="mtab-us-analysis" hidden>${renderUsMarketAnalysis()}</div>
-      <div id="mtab-tw-analysis" hidden>${renderTwMarketAnalysis()}</div>
       <div id="mtab-us" hidden>${usTab}</div>
       <div id="mtab-tw" hidden>${twPresetTable}</div>
       <div id="mtab-twstock" hidden>${renderTwStockSheet()}${renderRankingsBlock("tw")}</div>
+    </div>
+    <div id="mvtab-us-analysis" hidden>
+      ${renderUsMarketAnalysis()}
+    </div>
+    <div id="mvtab-tw-analysis" hidden>
+      ${renderTwMarketAnalysis()}
     </div>
   `;
 }
