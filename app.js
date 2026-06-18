@@ -3076,7 +3076,16 @@ function renderTwMarketAnalysis() {
   const indexBlock = keyIndices.length ? `
     <h3 style="font-size:14px; margin:0 0 6px; color:var(--text-mute); text-transform:uppercase; letter-spacing:.05em">主要指數</h3>
     <div style="overflow-x:auto; -webkit-overflow-scrolling:touch; margin-bottom:16px">
-      <table class="indices" style="width:100%">${indexRows}</table>
+      <table class="indices" style="width:100%">
+        <thead><tr>
+          <th></th>
+          <th class="sortable-th">最新</th>
+          <th class="sortable-th">日</th>
+          <th class="sortable-th">月</th>
+          <th class="sortable-th">年</th>
+        </tr></thead>
+        <tbody>${indexRows}</tbody>
+      </table>
     </div>` : "";
 
   // 類股表現熱力圖
@@ -3090,7 +3099,7 @@ function renderTwMarketAnalysis() {
     const txtColor = dp != null && Math.abs(dp) >= 1 ? "#fff" : "#374151";
     const pStr = dp == null ? "—" : (dp >= 0 ? "+" : "") + dp.toFixed(2) + "%";
     return `<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;
-        background:${bg};color:${txtColor};border-radius:5px;padding:8px 4px;min-width:60px;flex:1;
+        background:${bg};color:${txtColor};border-radius:5px;padding:8px 4px;min-width:64px;flex:1;
         font-size:13px;line-height:1.4;text-align:center">
       <span style="font-weight:700">${s.name_zh || s.symbol}</span>
       <span style="font-weight:700;margin-top:3px">${pStr}</span>
@@ -3137,7 +3146,7 @@ function renderTwMarketAnalysis() {
     const href = s.source_url ? ` href="${s.source_url}" target="_blank" rel="noopener"` : "";
     return `<tr>
       <td><a${href} style="color:inherit;text-decoration:none">${s.symbol}</a></td>
-      <td style="color:var(--text-mute); max-width:80px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap">${(s.name || "").slice(0, 6)}</td>
+      <td style="color:var(--text-mute); max-width:100px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap">${(s.name || "").slice(0, 8)}</td>
       <td style="text-align:right; font-weight:700; color:${color}">${pStr}</td>
       <td style="text-align:right; color:var(--text-mute)">${s.price != null ? s.price.toFixed(1) : "—"}</td>
     </tr>`;
@@ -3248,7 +3257,7 @@ function renderUsMarketAnalysis() {
     const href = s.source_url ? ` href="${s.source_url}" target="_blank" rel="noopener"` : "";
     return `<tr>
       <td><a${href} style="color:inherit;text-decoration:none">${s.symbol}</a></td>
-      <td style="color:var(--text-mute); max-width:120px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap">${(s.name || "").slice(0, 18)}</td>
+      <td style="color:var(--text-mute); max-width:100px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap">${(s.name || "").slice(0, 14)}</td>
       <td style="text-align:right; font-weight:700; color:${color}">${pStr}</td>
       <td style="text-align:right; color:var(--text-mute)">${s.price != null ? s.price.toFixed(2) : "—"}</td>
     </tr>`;
@@ -5569,23 +5578,23 @@ function renderMarketHighlights(m) {
   const ups = ix.slice().sort((a, b) => b.daily_pct - a.daily_pct).filter(i => i.daily_pct > 0).slice(0, 3);
   const downs = ix.slice().sort((a, b) => a.daily_pct - b.daily_pct).filter(i => i.daily_pct < 0).slice(0, 3);
   const tldr = (DATA.news && DATA.news.tldr) ? DATA.news.tldr.slice(0, 5) : [];
+  const newsDate = (DATA.news && DATA.news.news_date) ? DATA.news.news_date : "";
+  const dateLabel = newsDate ? `<span style="font-size:11px;color:var(--text-mute);margin-left:8px">${newsDate}</span>` : "";
 
+  const liStyle = `margin-bottom:6px;line-height:1.65;font-size:14px`;
+  const items = [];
+  if (ups.length) items.push(`<li style="${liStyle}"><strong style="color:#d62828">領漲</strong>：${ups.map(fmt).join("、")}</li>`);
+  if (downs.length) items.push(`<li style="${liStyle}"><strong style="color:#2a9d8f">領跌</strong>：${downs.map(fmt).join("、")}</li>`);
+  tldr.forEach(t => items.push(`<li style="${liStyle}">${escapeHtml(t)}</li>`));
+
+  if (!items.length) return "";
   return `
-    <h3>今日重點</h3>
-    <div class="fund-card">
-      <ul style="font-size:14px; line-height:1.8; padding-left:20px; margin:0">
-        ${ups.length ? `<li><strong class="up">領漲</strong>：${ups.map(fmt).join("、")}</li>` : ""}
-        ${downs.length ? `<li><strong class="down">領跌</strong>：${downs.map(fmt).join("、")}</li>` : ""}
-      </ul>
-    </div>
-
-    ${tldr.length ? `
-      <div class="fund-card">
-        <ul style="font-size:14px; line-height:1.7; padding-left:20px; margin:0">
-          ${tldr.map(t => `<li>${escapeHtml(t)}</li>`).join("")}
-        </ul>
-      </div>` : ""}
-  `;
+    <div style="border:1px solid var(--border,#e5e7eb);border-radius:10px;padding:14px 16px;margin-bottom:16px;background:var(--card-bg,#fff)">
+      <div style="display:flex;align-items:baseline;margin-bottom:10px">
+        <h2 style="font-size:15px;margin:0;font-weight:700">今日重點</h2>${dateLabel}
+      </div>
+      <ul style="margin:0;padding-left:18px">${items.join("")}</ul>
+    </div>`;
 }
 
 function renderNewsSheet() {
