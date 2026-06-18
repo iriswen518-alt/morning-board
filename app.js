@@ -2752,6 +2752,112 @@ function renderMarketSheet() {
   `;
 }
 
+// ── 最新美股盤勢分析 ────────────────────────────────────────────────────────
+function renderUsMarketAnalysis() {
+  const market = DATA.market || {};
+  const rankings = DATA.rankings || {};
+  const usRankings = rankings.us || {};
+
+  // 主要指數 — 從 market.json indices 抓四檔
+  const INDEX_KEYS = ["S&P 500", "Nasdaq Composite", "Dow Jones", "PHLX Semiconductor"];
+  const INDEX_LABELS = { "S&P 500": "S&P 500", "Nasdaq Composite": "Nasdaq", "Dow Jones": "Dow Jones", "PHLX Semiconductor": "SOX 半導體" };
+  const allIndices = market.indices || [];
+  const keyIndices = INDEX_KEYS.map(k => allIndices.find(i => i.name === k)).filter(Boolean);
+
+  const fmtClose = (v) => v == null ? "—" : v >= 1000 ? v.toLocaleString("en-US", { maximumFractionDigits: 0 }) : v.toFixed(2);
+  const fmtP = (v) => v == null ? "—" : (v >= 0 ? "+" : "") + v.toFixed(2) + "%";
+  const pColor = (v) => v == null ? "var(--text-mute)" : v > 0 ? "#d62828" : v < 0 ? "#2a9d8f" : "var(--text-mute)";
+
+  const indexRows = keyIndices.map(idx => {
+    const label = INDEX_LABELS[idx.name] || idx.name;
+    const dp = idx.daily_pct;
+    const arrow = dp == null ? "" : dp > 0 ? "▲" : dp < 0 ? "▼" : "─";
+    return `
+      <tr>
+        <td style="padding:6px 8px; font-size:13px; font-weight:600; white-space:nowrap">${label}</td>
+        <td style="padding:6px 8px; text-align:right; font-size:13px; font-variant-numeric:tabular-nums">${fmtClose(idx.close)}</td>
+        <td style="padding:6px 4px; text-align:right; font-size:13px; font-weight:700; color:${pColor(dp)}; white-space:nowrap">${arrow} ${fmtP(dp)}</td>
+        <td style="padding:6px 4px; text-align:right; font-size:12px; color:${pColor(idx.mtd_pct)}; white-space:nowrap">月 ${fmtP(idx.mtd_pct)}</td>
+        <td style="padding:6px 8px 6px 4px; text-align:right; font-size:12px; color:${pColor(idx.ytd_pct)}; white-space:nowrap">年 ${fmtP(idx.ytd_pct)}</td>
+      </tr>`;
+  }).join("");
+
+  const indexBlock = keyIndices.length ? `
+    <h3 style="font-size:14px; margin:0 0 6px; color:var(--text-mute); text-transform:uppercase; letter-spacing:.05em">主要指數</h3>
+    <div style="overflow-x:auto; -webkit-overflow-scrolling:touch; margin-bottom:16px">
+      <table style="width:100%; border-collapse:collapse; border-top:1px solid var(--border,#e5e7eb)">
+        ${indexRows}
+      </table>
+    </div>` : "";
+
+  // 類股 ETF 熱力圖
+  const sectors = usRankings.sectors || [];
+  const sectorBars = sectors.map(s => {
+    const dp = s.daily_pct;
+    const bg = dp == null ? "#e5e7eb"
+      : dp >= 2 ? "#c0392b" : dp >= 0.5 ? "#e07070" : dp >= 0 ? "#f5b8b8"
+      : dp >= -0.5 ? "#b8ddd9" : dp >= -2 ? "#6abcb5" : "#2a9d8f";
+    const txtColor = dp != null && Math.abs(dp) >= 0.5 ? "#fff" : "#374151";
+    const pStr = dp == null ? "—" : (dp >= 0 ? "+" : "") + dp.toFixed(2) + "%";
+    return `<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;
+        background:${bg};color:${txtColor};border-radius:5px;padding:8px 4px;min-width:64px;flex:1;
+        font-size:11px;line-height:1.4;text-align:center">
+      <span style="font-weight:700;font-size:12px">${s.name_zh || s.symbol}</span>
+      <span style="font-size:10px;opacity:.85">${s.symbol}</span>
+      <span style="font-weight:700;margin-top:2px">${pStr}</span>
+    </div>`;
+  }).join("");
+
+  const sectorBlock = sectors.length ? `
+    <h3 style="font-size:14px; margin:0 0 6px; color:var(--text-mute); text-transform:uppercase; letter-spacing:.05em">類股 ETF 表現（SPDR 11 大類）</h3>
+    <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:16px">${sectorBars}</div>
+    <p style="color:var(--text-mute);font-size:11px;margin:-10px 0 16px">顏色深紅＝漲幅大、深綠＝跌幅大；資料來源：Yahoo Finance</p>
+  ` : "";
+
+  // 個股排行 — 前 5 漲 / 前 5 跌
+  const gainers = (usRankings.top_gainers || []).slice(0, 5);
+  const losers  = (usRankings.top_losers  || []).slice(0, 5);
+  const stockRow = (s, isGainer) => {
+    const dp = s.daily_pct;
+    const color = isGainer ? "#d62828" : "#2a9d8f";
+    const pStr = dp == null ? "—" : (dp >= 0 ? "+" : "") + dp.toFixed(2) + "%";
+    const href = s.source_url ? ` href="${s.source_url}" target="_blank" rel="noopener"` : "";
+    return `<tr>
+      <td style="padding:5px 6px; font-size:13px"><a${href} style="color:inherit;text-decoration:none">${s.symbol}</a></td>
+      <td style="padding:5px 6px; font-size:12px; color:var(--text-mute); max-width:120px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap">${(s.name || "").slice(0, 18)}</td>
+      <td style="padding:5px 6px; text-align:right; font-size:13px; font-weight:700; color:${color}">${pStr}</td>
+      <td style="padding:5px 6px; text-align:right; font-size:12px; color:var(--text-mute)">${s.price != null ? s.price.toFixed(2) : "—"}</td>
+    </tr>`;
+  };
+
+  const rankBlock = (gainers.length || losers.length) ? `
+    <h3 style="font-size:14px; margin:0 0 8px; color:var(--text-mute); text-transform:uppercase; letter-spacing:.05em">個股排行</h3>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:8px">
+      <div>
+        <div style="font-size:12px;font-weight:700;color:#d62828;margin-bottom:4px">▲ 漲幅前五</div>
+        <table style="width:100%;border-collapse:collapse">${gainers.map(s => stockRow(s, true)).join("")}</table>
+      </div>
+      <div>
+        <div style="font-size:12px;font-weight:700;color:#2a9d8f;margin-bottom:4px">▼ 跌幅前五</div>
+        <table style="width:100%;border-collapse:collapse">${losers.map(s => stockRow(s, false)).join("")}</table>
+      </div>
+    </div>
+    <p style="color:var(--text-mute);font-size:11px;margin:0 0 8px">資料來源：Yahoo Finance Screener；非投資建議</p>
+  ` : "";
+
+  const asOf = usRankings.as_of || market.closing_date || "";
+  if (!indexBlock && !sectorBlock && !rankBlock) return "";
+
+  return `
+    <div style="border:1px solid var(--border,#e5e7eb);border-radius:10px;padding:14px 16px;margin-bottom:18px;background:var(--card-bg,#fff)">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px">
+        <h2 style="font-size:16px;margin:0;font-weight:700">最新美股盤勢分析</h2>
+        ${asOf ? `<span style="font-size:12px;color:var(--text-mute)">${asOf}</span>` : ""}
+      </div>
+      ${indexBlock}${sectorBlock}${rankBlock}
+    </div>`;
+}
+
 function renderUsStocksSheet() {
   const curated = DATA.stocks?.us_stocks || [];
   const popular = DATA.popular?.stocks || [];
@@ -2780,7 +2886,7 @@ function renderUsStocksSheet() {
       </a>
     </div>
   `;
-  return note + curatedBlock + popularBlock + renderStockBriefBlock() + moreSection;
+  return renderUsMarketAnalysis() + note + curatedBlock + popularBlock + renderStockBriefBlock() + moreSection;
 }
 
 let TW_STOCK_QUERY = "";
