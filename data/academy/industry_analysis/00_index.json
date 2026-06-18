@@ -1,0 +1,42 @@
+{
+  "course": "industry_analysis",
+  "course_name": "產業分析",
+  "chapters": [
+    {
+      "slug": "framework",
+      "title": "產業分析框架",
+      "description": "波特五力、產業生命週期、TAM/SAM/SOM 市場規模估算",
+      "file": "01_framework.json"
+    },
+    {
+      "slug": "semiconductor",
+      "title": "半導體供應鏈",
+      "description": "IC 設計→晶圓代工→封測，台積電護城河，景氣週期",
+      "file": "02_semiconductor.json"
+    },
+    {
+      "slug": "ai_server",
+      "title": "AI 與伺服器供應鏈",
+      "description": "AI 算力鏈、台廠地圖、廣達/雙鴻/台積電 CoWoS、泡沫風險",
+      "file": "03_ai_server.json"
+    },
+    {
+      "slug": "biotech",
+      "title": "生技醫療",
+      "description": "三大次產業、臨床試驗三期、現金跑道等替代估值指標",
+      "file": "04_biotech.json"
+    },
+    {
+      "slug": "manufacturing",
+      "title": "傳統製造轉型",
+      "description": "精密機械、電動車零件、碳費雙面影響",
+      "file": "05_manufacturing.json"
+    },
+    {
+      "slug": "esg",
+      "title": "能源轉型與 ESG",
+      "description": "離岸風電、RE100 壓力鏈、ESG 基金 vs 傳統指數型",
+      "file": "06_esg.json"
+    }
+  ]
+}
