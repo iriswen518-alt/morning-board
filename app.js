@@ -2846,7 +2846,7 @@ function renderTwMarketAnalysis() {
     const dp = idx.daily_pct;
     const arrow = dp == null ? "" : dp > 0 ? "▲" : dp < 0 ? "▼" : "─";
     return `<tr>
-      <td style="padding:6px 8px; font-size:13px; font-weight:600; white-space:nowrap">${label}</td>
+      <td style="padding:6px 8px; font-size:13px; white-space:nowrap">${label}</td>
       <td style="padding:6px 8px; text-align:right; font-size:13px; font-variant-numeric:tabular-nums">${fmtClose(idx.close)}</td>
       <td style="padding:6px 4px; text-align:right; font-size:13px; font-weight:700; color:${pColor(dp)}; white-space:nowrap">${arrow} ${fmtP(dp)}</td>
       <td style="padding:6px 4px; text-align:right; font-size:12px; color:${pColor(idx.mtd_pct)}; white-space:nowrap">月 ${fmtP(idx.mtd_pct)}</td>
@@ -2973,7 +2973,7 @@ function renderUsMarketAnalysis() {
     const arrow = dp == null ? "" : dp > 0 ? "▲" : dp < 0 ? "▼" : "─";
     return `
       <tr>
-        <td style="padding:6px 8px; font-size:13px; font-weight:600; white-space:nowrap">${label}</td>
+        <td style="padding:6px 8px; font-size:13px; white-space:nowrap">${label}</td>
         <td style="padding:6px 8px; text-align:right; font-size:13px; font-variant-numeric:tabular-nums">${fmtClose(idx.close)}</td>
         <td style="padding:6px 4px; text-align:right; font-size:13px; font-weight:700; color:${pColor(dp)}; white-space:nowrap">${arrow} ${fmtP(dp)}</td>
         <td style="padding:6px 4px; text-align:right; font-size:12px; color:${pColor(idx.mtd_pct)}; white-space:nowrap">月 ${fmtP(idx.mtd_pct)}</td>
