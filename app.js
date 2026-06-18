@@ -2760,6 +2760,48 @@ function renderMarketSheet() {
   `;
 }
 
+// ── 盤勢說明區塊（美股/台股共用） ────────────────────────────────────────────
+function renderMarketCommentaryBlock(opts = {}) {
+  // opts: { focus: "us"|"tw", sectors: [...] }
+  const news = DATA.news || {};
+  const market = DATA.market || {};
+  const tldr = news.tldr || [];
+  const newsDate = news.news_date || "";
+  const summary = market.summary || "";
+
+  // 類股輪動摘要（僅美股有 sectors 資料）
+  let sectorNote = "";
+  const sectors = opts.sectors || [];
+  if (sectors.length) {
+    const top = sectors[0];
+    const bot = sectors[sectors.length - 1];
+    const fmtS = (s) => `${s.name_zh || s.symbol} ${s.daily_pct != null ? (s.daily_pct >= 0 ? "+" : "") + s.daily_pct.toFixed(2) + "%" : "—"}`;
+    sectorNote = `<p style="font-size:13px;line-height:1.7;margin:0 0 8px;color:#374151">
+      類股輪動：<span style="color:#d62828;font-weight:600">${fmtS(top)}</span> 領漲，
+      <span style="color:#2a9d8f;font-weight:600">${fmtS(bot)}</span> 跌最深。
+    </p>`;
+  }
+
+  const summaryHtml = summary ? `
+    <p style="font-size:13px;line-height:1.7;margin:0 0 8px;color:#374151">${escapeHtml(summary)}</p>` : "";
+
+  const bullets = tldr.map(t =>
+    `<li style="margin-bottom:6px;line-height:1.65;font-size:13px">${escapeHtml(t)}</li>`
+  ).join("");
+  const bulletsHtml = bullets ? `<ul style="margin:0;padding-left:18px">${bullets}</ul>` : "";
+
+  const dateLabel = newsDate ? `<span style="font-size:11px;color:var(--text-mute);margin-left:8px">${newsDate}</span>` : "";
+
+  if (!summaryHtml && !sectorNote && !bulletsHtml) return "";
+  return `
+    <div style="border:1px solid var(--border,#e5e7eb);border-radius:10px;padding:14px 16px;margin-bottom:16px;background:var(--card-bg,#fff)">
+      <div style="display:flex;align-items:baseline;margin-bottom:10px">
+        <h2 style="font-size:15px;margin:0;font-weight:700">盤勢說明</h2>${dateLabel}
+      </div>
+      ${summaryHtml}${sectorNote}${bulletsHtml}
+    </div>`;
+}
+
 // ── 台股盤勢分析 ─────────────────────────────────────────────────────────────
 function renderTwMarketAnalysis() {
   const market = DATA.market || {};
@@ -2853,7 +2895,7 @@ function renderTwMarketAnalysis() {
 
   const asOf = twRankings.as_of || market.closing_date || "";
   if (!indexBlock && !etfBlock && !rankBlock) return "";
-  return `
+  return renderMarketCommentaryBlock({ focus: "tw" }) + `
     <div style="border:1px solid var(--border,#e5e7eb);border-radius:10px;padding:14px 16px;margin-bottom:18px;background:var(--card-bg,#fff)">
       <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px">
         <h2 style="font-size:16px;margin:0;font-weight:700">最新台股盤勢分析</h2>
@@ -2959,7 +3001,7 @@ function renderUsMarketAnalysis() {
   const asOf = usRankings.as_of || market.closing_date || "";
   if (!indexBlock && !sectorBlock && !rankBlock) return "";
 
-  return `
+  return renderMarketCommentaryBlock({ focus: "us", sectors }) + `
     <div style="border:1px solid var(--border,#e5e7eb);border-radius:10px;padding:14px 16px;margin-bottom:18px;background:var(--card-bg,#fff)">
       <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px">
         <h2 style="font-size:16px;margin:0;font-weight:700">最新美股盤勢分析</h2>
