@@ -2655,7 +2655,7 @@ function renderMarketSheet() {
     </div>` : "";
 
   const _rateOutlookPanel = `
-    <div style="margin-bottom:16px;padding:14px 16px;background:var(--card-bg,#f8fafc);border:1px solid var(--border);border-radius:10px;">
+    <div style="margin-bottom:16px;padding:14px 16px;background:var(--card-bg,#fff);border:1px solid var(--border);border-radius:10px;">
       <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;flex-wrap:wrap;">
         <span style="font-weight:600;font-size:14px;">升息押注指標</span>
         ${_curveLabel && _curveLabel !== "正斜率" ? `<span style="font-size:12px;padding:2px 9px;border-radius:20px;font-weight:500;background:${_curveBg};color:${_curveColor};">${_curveLabel}</span>` : ""}
@@ -2725,13 +2725,9 @@ function renderMarketSheet() {
 
   return `
     <div class="tabs tabs-wrap">
-      <button class="tab active" data-mvtab="premarket">盤前分析</button>
       <button class="tab" data-mvtab="overview">市場一覽</button>
       <button class="tab" data-mvtab="us-analysis">美股分析</button>
-      <button class="tab" data-mvtab="tw-analysis">台股分析</button>
-    </div>
-    <div id="mvtab-premarket">
-      ${renderPremarketBlock()}
+      <button class="tab active" data-mvtab="tw-analysis">台股分析</button>
     </div>
     <div id="mvtab-overview" hidden>
       ${renderMarketHighlights(m)}
@@ -2750,7 +2746,8 @@ function renderMarketSheet() {
       ${renderStocksTable("", usStocks) || ""}
       ${renderRankingsBlock("us")}
     </div>
-    <div id="mvtab-tw-analysis" hidden>
+    <div id="mvtab-tw-analysis">
+      ${renderPremarketBlock()}
       ${renderTwMarketAnalysis()}
       ${twPresetTable}
       ${renderTwStockSheet()}${renderRankingsBlock("tw")}
@@ -5338,11 +5335,11 @@ function renderPremarketBlock() {
   const detailHtml = analysisParts.detail.length ? renderLines(analysisParts.detail) : "";
 
   return `
+    ${summaryHtml ? `<div class="fund-card" style="margin-bottom:8px">${summaryHtml}</div>` : ""}
+    ${detailHtml ? `<div class="fund-card" style="margin-bottom:8px">${detailHtml}</div>` : ""}
     <div class="fund-card" style="margin-bottom:8px">
       ${indicatorTable}
     </div>
-    ${summaryHtml ? `<div class="fund-card" style="margin-bottom:8px">${summaryHtml}</div>` : ""}
-    ${detailHtml ? `<div class="fund-card">${detailHtml}</div>` : ""}
   `;
 }
 
