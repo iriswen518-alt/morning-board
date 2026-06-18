@@ -2767,7 +2767,24 @@ function renderMarketCommentaryBlock(opts = {}) {
   const market = DATA.market || {};
   const tldr = news.tldr || [];
   const newsDate = news.news_date || "";
-  const summary = market.summary || "";
+
+  // 美股分析只顯示美股四大指數，排除中國/韓國等非美指數
+  let summary = market.summary || "";
+  if (opts.focus === "us") {
+    const US_KEYS = new Set(["S&P 500", "Nasdaq", "Nasdaq Composite", "Dow Jones", "PHLX Semiconductor"]);
+    const allIndices = market.indices || [];
+    const usIndices = allIndices.filter(i => US_KEYS.has(i.name) && typeof i.daily_pct === "number");
+    if (usIndices.length >= 2) {
+      const ranked = [...usIndices].sort((a, b) => b.daily_pct - a.daily_pct);
+      const gainers = ranked.filter(i => i.daily_pct > 0).slice(0, 3);
+      const losers = ranked.filter(i => i.daily_pct < 0).reverse().slice(0, 2);
+      const fmt = i => `${i.name} ${i.daily_pct >= 0 ? "+" : ""}${i.daily_pct.toFixed(2)}%`;
+      const parts = [];
+      if (gainers.length) parts.push(gainers.map(fmt).join("、") + " 領漲");
+      if (losers.length) parts.push(losers.map(fmt).join("、") + " 走弱");
+      summary = parts.length ? parts.join("；") + "。" : "";
+    }
+  }
 
   // 類股輪動摘要（僅美股有 sectors 資料）
   let sectorNote = "";
