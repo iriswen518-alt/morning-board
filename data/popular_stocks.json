@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T18:49:37+08:00",
+  "generated_at": "2026-06-18T19:19:32+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -31,20 +31,6 @@
       "error": null
     },
     {
-      "symbol": "HOOD",
-      "name_zh": "Robinhood",
-      "kind": "US",
-      "price": 105.2,
-      "change_pct": 8.78,
-      "mtd_pct": 11.56,
-      "ytd_pct": -6.98,
-      "market_date": "2026-06-17",
-      "per": 49.9828,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HOOD.US",
-      "error": null
-    },
-    {
       "symbol": "NBIS",
       "name_zh": "Nebius",
       "kind": "US",
@@ -59,6 +45,20 @@
       "error": null
     },
     {
+      "symbol": "HOOD",
+      "name_zh": "Robinhood",
+      "kind": "US",
+      "price": 105.2,
+      "change_pct": 8.78,
+      "mtd_pct": 11.56,
+      "ytd_pct": -6.98,
+      "market_date": "2026-06-17",
+      "per": 49.9828,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HOOD.US",
+      "error": null
+    },
+    {
       "symbol": "CAST",
       "name_zh": "FreeCast",
       "kind": "US",
@@ -70,6 +70,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CAST.US",
+      "error": null
+    },
+    {
+      "symbol": "ACN",
+      "name_zh": "Accenture",
+      "kind": "US",
+      "price": 156.01,
+      "change_pct": -5.75,
+      "mtd_pct": -16.6,
+      "ytd_pct": -41.85,
+      "market_date": "2026-06-17",
+      "per": 13.1902,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ACN.US",
       "error": null
     },
     {
@@ -101,34 +115,6 @@
       "error": null
     },
     {
-      "symbol": "ARM",
-      "name_zh": "Arm",
-      "kind": "US",
-      "price": 418.88,
-      "change_pct": 5.69,
-      "mtd_pct": 18.57,
-      "ytd_pct": 283.2,
-      "market_date": "2026-06-17",
-      "per": 466.4887,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ARM.US",
-      "error": null
-    },
-    {
-      "symbol": "ACN",
-      "name_zh": "Accenture",
-      "kind": "US",
-      "price": 156.01,
-      "change_pct": -5.75,
-      "mtd_pct": -16.6,
-      "ytd_pct": -41.85,
-      "market_date": "2026-06-17",
-      "per": 13.1902,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ACN.US",
-      "error": null
-    },
-    {
       "symbol": "RUM",
       "name_zh": "Rumble",
       "kind": "US",
@@ -143,31 +129,31 @@
       "error": null
     },
     {
-      "symbol": "AMAT",
-      "name_zh": "應材",
+      "symbol": "NOW",
+      "name_zh": "ServiceNow",
       "kind": "US",
-      "price": 592.92,
-      "change_pct": 4.35,
-      "mtd_pct": 31.74,
-      "ytd_pct": 130.72,
+      "price": 95.48,
+      "change_pct": -5.77,
+      "mtd_pct": -23.23,
+      "ytd_pct": -37.67,
       "market_date": "2026-06-17",
-      "per": 57.7865,
+      "per": 59.4778,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AMAT.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NOW.US",
       "error": null
     },
     {
-      "symbol": "CVNA",
-      "name_zh": "Carvana",
+      "symbol": "KR",
+      "name_zh": "Kroger Company (The)",
       "kind": "US",
-      "price": 62.86,
-      "change_pct": -10.25,
-      "mtd_pct": -13.89,
-      "ytd_pct": -25.52,
+      "price": 61.82,
+      "change_pct": -3.6,
+      "mtd_pct": -0.53,
+      "ytd_pct": -1.06,
       "market_date": "2026-06-17",
-      "per": 47.9609,
+      "per": 37.4002,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CVNA.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=KR.US",
       "error": null
     },
     {
@@ -182,6 +168,34 @@
       "per": 78.276,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VRT.US",
+      "error": null
+    },
+    {
+      "symbol": "ARM",
+      "name_zh": "Arm",
+      "kind": "US",
+      "price": 418.88,
+      "change_pct": 5.69,
+      "mtd_pct": 18.57,
+      "ytd_pct": 283.2,
+      "market_date": "2026-06-17",
+      "per": 466.4887,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ARM.US",
+      "error": null
+    },
+    {
+      "symbol": "AMAT",
+      "name_zh": "應材",
+      "kind": "US",
+      "price": 592.92,
+      "change_pct": 4.35,
+      "mtd_pct": 31.74,
+      "ytd_pct": 130.72,
+      "market_date": "2026-06-17",
+      "per": 57.7865,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AMAT.US",
       "error": null
     },
     {
