@@ -3064,13 +3064,12 @@ function renderTwMarketAnalysis() {
   const indexRows = keyIndices.map(idx => {
     const label = TW_INDEX_LABELS[idx.name] || idx.name;
     const dp = idx.daily_pct;
-    const arrow = dp == null ? "" : dp > 0 ? "▲" : dp < 0 ? "▼" : "─";
     return `<tr>
       <td style="white-space:nowrap">${label}</td>
       <td style="text-align:right; font-variant-numeric:tabular-nums">${fmtClose(idx.close)}</td>
-      <td class="${pctClass(dp)}" style="text-align:right; white-space:nowrap">${arrow} ${fmtP(dp)}</td>
-      <td class="${pctClass(idx.mtd_pct)}" style="text-align:right; white-space:nowrap">月 ${fmtP(idx.mtd_pct)}</td>
-      <td class="${pctClass(idx.ytd_pct)}" style="text-align:right; white-space:nowrap">年 ${fmtP(idx.ytd_pct)}</td>
+      <td class="${pctClass(dp)}" style="text-align:right; white-space:nowrap">${fmtP(dp)}</td>
+      <td class="${pctClass(idx.mtd_pct)}" style="text-align:right; white-space:nowrap">${fmtP(idx.mtd_pct)}</td>
+      <td class="${pctClass(idx.ytd_pct)}" style="text-align:right; white-space:nowrap">${fmtP(idx.ytd_pct)}</td>
     </tr>`;
   }).join("");
 
@@ -3190,14 +3189,13 @@ function renderUsMarketAnalysis() {
   const indexRows = keyIndices.map(idx => {
     const label = INDEX_LABELS[idx.name] || idx.name;
     const dp = idx.daily_pct;
-    const arrow = dp == null ? "" : dp > 0 ? "▲" : dp < 0 ? "▼" : "─";
     return `
       <tr>
         <td style="white-space:nowrap">${label}</td>
         <td style="text-align:right; font-variant-numeric:tabular-nums">${fmtClose(idx.close)}</td>
-        <td class="${pctClass(dp)}" style="text-align:right; white-space:nowrap">${arrow} ${fmtP(dp)}</td>
-        <td class="${pctClass(idx.mtd_pct)}" style="text-align:right; white-space:nowrap">月 ${fmtP(idx.mtd_pct)}</td>
-        <td class="${pctClass(idx.ytd_pct)}" style="text-align:right; white-space:nowrap">年 ${fmtP(idx.ytd_pct)}</td>
+        <td class="${pctClass(dp)}" style="text-align:right; white-space:nowrap">${fmtP(dp)}</td>
+        <td class="${pctClass(idx.mtd_pct)}" style="text-align:right; white-space:nowrap">${fmtP(idx.mtd_pct)}</td>
+        <td class="${pctClass(idx.ytd_pct)}" style="text-align:right; white-space:nowrap">${fmtP(idx.ytd_pct)}</td>
       </tr>`;
   }).join("");
 
