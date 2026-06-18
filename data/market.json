@@ -167,9 +167,9 @@
   "bonds": [
     {
       "name": "US 10-Year",
-      "yield_pct": 4.46,
-      "daily_bps": -2.4,
-      "mtd_bps": 1.0,
+      "yield_pct": 4.54,
+      "daily_bps": 4.9,
+      "mtd_bps": 8.3,
       "closing_date": "2026-06-17"
     },
     {
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 100.08999633789062,
       "daily_pct": 0.55,
-      "mtd_pct": 1.88,
-      "ytd_pct": 2.53,
+      "mtd_pct": 1.82,
+      "ytd_pct": 2.47,
       "closing_date": "2026-06-17"
     },
     {
@@ -301,11 +301,11 @@
     },
     {
       "name": "比特幣 (USD)",
-      "close": 65600.640625,
-      "daily_pct": -1.04,
-      "mtd_pct": -10.84,
-      "ytd_pct": -25.04,
-      "closing_date": "2026-06-16"
+      "close": 64418.4453125,
+      "daily_pct": -1.8,
+      "mtd_pct": -12.45,
+      "ytd_pct": -26.39,
+      "closing_date": "2026-06-17"
     }
   ],
   "bond_etfs": [],
@@ -323,7 +323,7 @@
     {
       "label": "Jun 2026",
       "fomc_date": "2026-06-18",
-      "implied_rate": 3.63,
+      "implied_rate": 3.62,
       "delta_rate": null,
       "p_hike": null,
       "p_cut": null,
@@ -332,7 +332,7 @@
     {
       "label": "Jul 2026",
       "fomc_date": "2026-07-30",
-      "implied_rate": 3.64,
+      "implied_rate": 3.63,
       "delta_rate": 0.01,
       "delta_bps": 1.0,
       "p_hike": 4.0,
@@ -343,33 +343,33 @@
     {
       "label": "Sep 2026",
       "fomc_date": "2026-09-17",
-      "implied_rate": 3.79,
-      "delta_rate": 0.15,
-      "delta_bps": 15.0,
-      "p_hike": 60.0,
-      "p_hold": 40.0,
+      "implied_rate": 3.77,
+      "delta_rate": 0.14,
+      "delta_bps": 14.0,
+      "p_hike": 56.0,
+      "p_hold": 44.0,
       "p_cut": 0,
       "is_reference": false
     },
     {
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
-      "implied_rate": 3.86,
-      "delta_rate": 0.07,
-      "delta_bps": 7.0,
-      "p_hike": 28.0,
-      "p_hold": 72.0,
+      "implied_rate": 3.85,
+      "delta_rate": 0.08,
+      "delta_bps": 8.0,
+      "p_hike": 32.0,
+      "p_hold": 68.0,
       "p_cut": 0,
       "is_reference": false
     },
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 4.0,
-      "delta_rate": 0.14,
-      "delta_bps": 14.0,
-      "p_hike": 56.0,
-      "p_hold": 44.0,
+      "implied_rate": 3.98,
+      "delta_rate": 0.13,
+      "delta_bps": 13.0,
+      "p_hike": 52.0,
+      "p_hold": 48.0,
       "p_cut": 0,
       "is_reference": false
     }
