@@ -2872,15 +2872,15 @@ function renderTwMarketAnalysis() {
     const pStr = dp == null ? "—" : (dp >= 0 ? "+" : "") + dp.toFixed(2) + "%";
     return `<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;
         background:${bg};color:${txtColor};border-radius:5px;padding:8px 4px;min-width:60px;flex:1;
-        font-size:11px;line-height:1.4;text-align:center">
-      <span style="font-weight:700;font-size:12px">${s.name_zh || s.symbol}</span>
+        font-size:13px;line-height:1.4;text-align:center">
+      <span style="font-weight:700">${s.name_zh || s.symbol}</span>
       <span style="font-weight:700;margin-top:3px">${pStr}</span>
     </div>`;
   }).join("");
   const twSectorBlock = twSectors.length ? `
     <h3 style="font-size:14px; margin:0 0 6px; color:var(--text-mute); text-transform:uppercase; letter-spacing:.05em">類股表現</h3>
     <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:4px">${twSectorBars}</div>
-    <p style="color:var(--text-mute);font-size:11px;margin:4px 0 16px">依今日漲幅排序；資料來源：TWSE 類股指數</p>
+    <p style="color:var(--text-mute);font-size:12px;margin:4px 0 16px">依今日漲幅排序；資料來源：TWSE 類股指數</p>
   ` : "";
 
   // 今日熱門 ETF — top_etf 前 8 名，色塊熱力圖
@@ -2895,9 +2895,9 @@ function renderTwMarketAnalysis() {
     const href = s.source_url ? ` href="${s.source_url}" target="_blank" rel="noopener"` : "";
     return `<a${href} style="display:flex;flex-direction:column;align-items:center;justify-content:center;
         background:${bg};color:${txtColor};border-radius:5px;padding:8px 4px;min-width:72px;flex:1;
-        font-size:11px;line-height:1.4;text-align:center;text-decoration:none">
-      <span style="font-weight:700;font-size:11px;max-width:68px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${s.name || s.symbol}</span>
-      <span style="font-size:10px;opacity:.85">${s.symbol}</span>
+        font-size:13px;line-height:1.4;text-align:center;text-decoration:none">
+      <span style="font-weight:700;max-width:68px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${s.name || s.symbol}</span>
+      <span style="font-size:12px;opacity:.85">${s.symbol}</span>
       <span style="font-weight:700;margin-top:2px">${pStr}</span>
     </a>`;
   }).join("");
@@ -2905,7 +2905,7 @@ function renderTwMarketAnalysis() {
   const etfBlock = etfs.length ? `
     <h3 style="font-size:14px; margin:0 0 6px; color:var(--text-mute); text-transform:uppercase; letter-spacing:.05em">今日熱門 ETF</h3>
     <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:16px">${etfBars}</div>
-    <p style="color:var(--text-mute);font-size:11px;margin:-10px 0 16px">依今日漲幅排序；資料來源：TWSE</p>
+    <p style="color:var(--text-mute);font-size:12px;margin:-10px 0 16px">依今日漲幅排序；資料來源：TWSE</p>
   ` : "";
 
   // 個股排行
@@ -2918,9 +2918,9 @@ function renderTwMarketAnalysis() {
     const href = s.source_url ? ` href="${s.source_url}" target="_blank" rel="noopener"` : "";
     return `<tr>
       <td style="padding:5px 6px; font-size:13px"><a${href} style="color:inherit;text-decoration:none">${s.symbol}</a></td>
-      <td style="padding:5px 6px; font-size:12px; color:var(--text-mute); max-width:80px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap">${(s.name || "").slice(0, 6)}</td>
+      <td style="padding:5px 6px; font-size:13px; color:var(--text-mute); max-width:80px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap">${(s.name || "").slice(0, 6)}</td>
       <td style="padding:5px 6px; text-align:right; font-size:13px; font-weight:700; color:${color}">${pStr}</td>
-      <td style="padding:5px 6px; text-align:right; font-size:12px; color:var(--text-mute)">${s.price != null ? s.price.toFixed(1) : "—"}</td>
+      <td style="padding:5px 6px; text-align:right; font-size:13px; color:var(--text-mute)">${s.price != null ? s.price.toFixed(1) : "—"}</td>
     </tr>`;
   };
 
@@ -2928,15 +2928,15 @@ function renderTwMarketAnalysis() {
     <h3 style="font-size:14px; margin:0 0 8px; color:var(--text-mute); text-transform:uppercase; letter-spacing:.05em">個股排行</h3>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:8px">
       <div>
-        <div style="font-size:12px;font-weight:700;color:#d62828;margin-bottom:4px">▲ 漲幅前五</div>
+        <div style="font-size:13px;font-weight:700;color:#d62828;margin-bottom:4px">▲ 漲幅前五</div>
         <table style="width:100%;border-collapse:collapse">${gainers.map(s => stockRow(s, true)).join("")}</table>
       </div>
       <div>
-        <div style="font-size:12px;font-weight:700;color:#2a9d8f;margin-bottom:4px">▼ 跌幅前五</div>
+        <div style="font-size:13px;font-weight:700;color:#2a9d8f;margin-bottom:4px">▼ 跌幅前五</div>
         <table style="width:100%;border-collapse:collapse">${losers.map(s => stockRow(s, false)).join("")}</table>
       </div>
     </div>
-    <p style="color:var(--text-mute);font-size:11px;margin:0 0 8px">資料來源：TWSE；非投資建議</p>
+    <p style="color:var(--text-mute);font-size:12px;margin:0 0 8px">資料來源：TWSE；非投資建議</p>
   ` : "";
 
   const asOf = twRankings.as_of || market.closing_date || "";
@@ -3000,9 +3000,9 @@ function renderUsMarketAnalysis() {
     const pStr = dp == null ? "—" : (dp >= 0 ? "+" : "") + dp.toFixed(2) + "%";
     return `<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;
         background:${bg};color:${txtColor};border-radius:5px;padding:8px 4px;min-width:64px;flex:1;
-        font-size:11px;line-height:1.4;text-align:center">
-      <span style="font-weight:700;font-size:12px">${s.name_zh || s.symbol}</span>
-      <span style="font-size:10px;opacity:.85">${s.symbol}</span>
+        font-size:13px;line-height:1.4;text-align:center">
+      <span style="font-weight:700">${s.name_zh || s.symbol}</span>
+      <span style="font-size:12px;opacity:.85">${s.symbol}</span>
       <span style="font-weight:700;margin-top:2px">${pStr}</span>
     </div>`;
   }).join("");
@@ -3010,7 +3010,7 @@ function renderUsMarketAnalysis() {
   const sectorBlock = sectors.length ? `
     <h3 style="font-size:14px; margin:0 0 6px; color:var(--text-mute); text-transform:uppercase; letter-spacing:.05em">類股 ETF 表現（SPDR 11 大類）</h3>
     <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:16px">${sectorBars}</div>
-    <p style="color:var(--text-mute);font-size:11px;margin:-10px 0 16px">顏色深紅＝漲幅大、深綠＝跌幅大；資料來源：Yahoo Finance</p>
+    <p style="color:var(--text-mute);font-size:12px;margin:-10px 0 16px">顏色深紅＝漲幅大、深綠＝跌幅大；資料來源：Yahoo Finance</p>
   ` : "";
 
   // 個股排行 — 前 5 漲 / 前 5 跌
@@ -3023,9 +3023,9 @@ function renderUsMarketAnalysis() {
     const href = s.source_url ? ` href="${s.source_url}" target="_blank" rel="noopener"` : "";
     return `<tr>
       <td style="padding:5px 6px; font-size:13px"><a${href} style="color:inherit;text-decoration:none">${s.symbol}</a></td>
-      <td style="padding:5px 6px; font-size:12px; color:var(--text-mute); max-width:120px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap">${(s.name || "").slice(0, 18)}</td>
+      <td style="padding:5px 6px; font-size:13px; color:var(--text-mute); max-width:120px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap">${(s.name || "").slice(0, 18)}</td>
       <td style="padding:5px 6px; text-align:right; font-size:13px; font-weight:700; color:${color}">${pStr}</td>
-      <td style="padding:5px 6px; text-align:right; font-size:12px; color:var(--text-mute)">${s.price != null ? s.price.toFixed(2) : "—"}</td>
+      <td style="padding:5px 6px; text-align:right; font-size:13px; color:var(--text-mute)">${s.price != null ? s.price.toFixed(2) : "—"}</td>
     </tr>`;
   };
 
@@ -3033,15 +3033,15 @@ function renderUsMarketAnalysis() {
     <h3 style="font-size:14px; margin:0 0 8px; color:var(--text-mute); text-transform:uppercase; letter-spacing:.05em">個股排行</h3>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:8px">
       <div>
-        <div style="font-size:12px;font-weight:700;color:#d62828;margin-bottom:4px">▲ 漲幅前五</div>
+        <div style="font-size:13px;font-weight:700;color:#d62828;margin-bottom:4px">▲ 漲幅前五</div>
         <table style="width:100%;border-collapse:collapse">${gainers.map(s => stockRow(s, true)).join("")}</table>
       </div>
       <div>
-        <div style="font-size:12px;font-weight:700;color:#2a9d8f;margin-bottom:4px">▼ 跌幅前五</div>
+        <div style="font-size:13px;font-weight:700;color:#2a9d8f;margin-bottom:4px">▼ 跌幅前五</div>
         <table style="width:100%;border-collapse:collapse">${losers.map(s => stockRow(s, false)).join("")}</table>
       </div>
     </div>
-    <p style="color:var(--text-mute);font-size:11px;margin:0 0 8px">資料來源：Yahoo Finance Screener；非投資建議</p>
+    <p style="color:var(--text-mute);font-size:12px;margin:0 0 8px">資料來源：Yahoo Finance Screener；非投資建議</p>
   ` : "";
 
   const asOf = usRankings.as_of || market.closing_date || "";
