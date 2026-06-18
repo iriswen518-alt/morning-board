@@ -2797,7 +2797,7 @@ function renderMarketCommentaryBlock(opts = {}) {
     : tldr;
 
   // 統一格式：summary、sectorNote、tldr 全部用 <ul><li> 點號呈現
-  const liStyle = `margin-bottom:6px;line-height:1.65;font-size:13px`;
+  const liStyle = `margin-bottom:6px;line-height:1.65;font-size:14px`;
   const allItems = [];
   if (summary) allItems.push(`<li style="${liStyle}">${escapeHtml(summary)}</li>`);
   if (sectors.length) {
@@ -2843,18 +2843,18 @@ function renderTwMarketAnalysis() {
     const dp = idx.daily_pct;
     const arrow = dp == null ? "" : dp > 0 ? "▲" : dp < 0 ? "▼" : "─";
     return `<tr>
-      <td style="padding:6px 8px; font-size:13px; white-space:nowrap">${label}</td>
-      <td style="padding:6px 8px; text-align:right; font-size:13px; font-variant-numeric:tabular-nums">${fmtClose(idx.close)}</td>
-      <td style="padding:6px 4px; text-align:right; font-size:13px; font-weight:700; color:${pColor(dp)}; white-space:nowrap">${arrow} ${fmtP(dp)}</td>
-      <td style="padding:6px 4px; text-align:right; font-size:12px; color:${pColor(idx.mtd_pct)}; white-space:nowrap">月 ${fmtP(idx.mtd_pct)}</td>
-      <td style="padding:6px 8px 6px 4px; text-align:right; font-size:12px; color:${pColor(idx.ytd_pct)}; white-space:nowrap">年 ${fmtP(idx.ytd_pct)}</td>
+      <td style="white-space:nowrap">${label}</td>
+      <td style="text-align:right; font-variant-numeric:tabular-nums">${fmtClose(idx.close)}</td>
+      <td class="${pctClass(dp)}" style="text-align:right; white-space:nowrap">${arrow} ${fmtP(dp)}</td>
+      <td class="${pctClass(idx.mtd_pct)}" style="text-align:right; white-space:nowrap">月 ${fmtP(idx.mtd_pct)}</td>
+      <td class="${pctClass(idx.ytd_pct)}" style="text-align:right; white-space:nowrap">年 ${fmtP(idx.ytd_pct)}</td>
     </tr>`;
   }).join("");
 
   const indexBlock = keyIndices.length ? `
     <h3 style="font-size:14px; margin:0 0 6px; color:var(--text-mute); text-transform:uppercase; letter-spacing:.05em">主要指數</h3>
     <div style="overflow-x:auto; -webkit-overflow-scrolling:touch; margin-bottom:16px">
-      <table style="width:100%; border-collapse:collapse; border-top:1px solid var(--border,#e5e7eb)">${indexRows}</table>
+      <table class="indices" style="width:100%">${indexRows}</table>
     </div>` : "";
 
   // 類股表現熱力圖
@@ -2914,10 +2914,10 @@ function renderTwMarketAnalysis() {
     const pStr = dp == null ? "—" : (dp >= 0 ? "+" : "") + dp.toFixed(2) + "%";
     const href = s.source_url ? ` href="${s.source_url}" target="_blank" rel="noopener"` : "";
     return `<tr>
-      <td style="padding:5px 6px; font-size:13px"><a${href} style="color:inherit;text-decoration:none">${s.symbol}</a></td>
-      <td style="padding:5px 6px; font-size:13px; color:var(--text-mute); max-width:80px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap">${(s.name || "").slice(0, 6)}</td>
-      <td style="padding:5px 6px; text-align:right; font-size:13px; font-weight:700; color:${color}">${pStr}</td>
-      <td style="padding:5px 6px; text-align:right; font-size:13px; color:var(--text-mute)">${s.price != null ? s.price.toFixed(1) : "—"}</td>
+      <td><a${href} style="color:inherit;text-decoration:none">${s.symbol}</a></td>
+      <td style="color:var(--text-mute); max-width:80px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap">${(s.name || "").slice(0, 6)}</td>
+      <td style="text-align:right; font-weight:700; color:${color}">${pStr}</td>
+      <td style="text-align:right; color:var(--text-mute)">${s.price != null ? s.price.toFixed(1) : "—"}</td>
     </tr>`;
   };
 
@@ -2925,12 +2925,12 @@ function renderTwMarketAnalysis() {
     <h3 style="font-size:14px; margin:0 0 8px; color:var(--text-mute); text-transform:uppercase; letter-spacing:.05em">個股排行</h3>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:8px">
       <div>
-        <div style="font-size:13px;font-weight:700;color:#d62828;margin-bottom:4px">▲ 漲幅前五</div>
-        <table style="width:100%;border-collapse:collapse">${gainers.map(s => stockRow(s, true)).join("")}</table>
+        <div style="font-size:14px;font-weight:700;color:#d62828;margin-bottom:4px">▲ 漲幅前五</div>
+        <table class="indices" style="width:100%">${gainers.map(s => stockRow(s, true)).join("")}</table>
       </div>
       <div>
-        <div style="font-size:13px;font-weight:700;color:#2a9d8f;margin-bottom:4px">▼ 跌幅前五</div>
-        <table style="width:100%;border-collapse:collapse">${losers.map(s => stockRow(s, false)).join("")}</table>
+        <div style="font-size:14px;font-weight:700;color:#2a9d8f;margin-bottom:4px">▼ 跌幅前五</div>
+        <table class="indices" style="width:100%">${losers.map(s => stockRow(s, false)).join("")}</table>
       </div>
     </div>
     <p style="color:var(--text-mute);font-size:12px;margin:0 0 8px">資料來源：TWSE；非投資建議</p>
@@ -2970,27 +2970,25 @@ function renderUsMarketAnalysis() {
     const arrow = dp == null ? "" : dp > 0 ? "▲" : dp < 0 ? "▼" : "─";
     return `
       <tr>
-        <td style="padding:6px 8px; font-size:13px; white-space:nowrap">${label}</td>
-        <td style="padding:6px 8px; text-align:right; font-size:13px; font-variant-numeric:tabular-nums">${fmtClose(idx.close)}</td>
-        <td style="padding:6px 4px; text-align:right; font-size:13px; font-weight:700; color:${pColor(dp)}; white-space:nowrap">${arrow} ${fmtP(dp)}</td>
-        <td style="padding:6px 4px; text-align:right; font-size:12px; color:${pColor(idx.mtd_pct)}; white-space:nowrap">月 ${fmtP(idx.mtd_pct)}</td>
-        <td style="padding:6px 8px 6px 4px; text-align:right; font-size:12px; color:${pColor(idx.ytd_pct)}; white-space:nowrap">年 ${fmtP(idx.ytd_pct)}</td>
+        <td style="white-space:nowrap">${label}</td>
+        <td style="text-align:right; font-variant-numeric:tabular-nums">${fmtClose(idx.close)}</td>
+        <td class="${pctClass(dp)}" style="text-align:right; white-space:nowrap">${arrow} ${fmtP(dp)}</td>
+        <td class="${pctClass(idx.mtd_pct)}" style="text-align:right; white-space:nowrap">月 ${fmtP(idx.mtd_pct)}</td>
+        <td class="${pctClass(idx.ytd_pct)}" style="text-align:right; white-space:nowrap">年 ${fmtP(idx.ytd_pct)}</td>
       </tr>`;
   }).join("");
 
   const indexBlock = keyIndices.length ? `
     <h3 style="font-size:14px; margin:0 0 6px; color:var(--text-mute); text-transform:uppercase; letter-spacing:.05em">主要指數</h3>
     <div style="overflow-x:auto; -webkit-overflow-scrolling:touch; margin-bottom:16px">
-      <table style="width:100%; border-collapse:collapse; border-top:1px solid var(--border,#e5e7eb)">
-        <thead>
-          <tr style="border-bottom:1px solid var(--border,#e5e7eb)">
-            <th style="padding:4px 8px; text-align:left; font-size:11px; color:var(--text-mute); font-weight:500"></th>
-            <th style="padding:4px 8px; text-align:right; font-size:11px; color:var(--text-mute); font-weight:500">最新</th>
-            <th style="padding:4px 4px; text-align:right; font-size:11px; color:var(--text-mute); font-weight:500">日</th>
-            <th style="padding:4px 4px; text-align:right; font-size:11px; color:var(--text-mute); font-weight:500">月</th>
-            <th style="padding:4px 8px 4px 4px; text-align:right; font-size:11px; color:var(--text-mute); font-weight:500">年</th>
-          </tr>
-        </thead>
+      <table class="indices" style="width:100%">
+        <thead><tr>
+          <th></th>
+          <th class="sortable-th">最新</th>
+          <th class="sortable-th">日</th>
+          <th class="sortable-th">月</th>
+          <th class="sortable-th">年</th>
+        </tr></thead>
         <tbody>${indexRows}</tbody>
       </table>
     </div>` : "";
@@ -3028,10 +3026,10 @@ function renderUsMarketAnalysis() {
     const pStr = dp == null ? "—" : (dp >= 0 ? "+" : "") + dp.toFixed(2) + "%";
     const href = s.source_url ? ` href="${s.source_url}" target="_blank" rel="noopener"` : "";
     return `<tr>
-      <td style="padding:5px 6px; font-size:13px"><a${href} style="color:inherit;text-decoration:none">${s.symbol}</a></td>
-      <td style="padding:5px 6px; font-size:13px; color:var(--text-mute); max-width:120px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap">${(s.name || "").slice(0, 18)}</td>
-      <td style="padding:5px 6px; text-align:right; font-size:13px; font-weight:700; color:${color}">${pStr}</td>
-      <td style="padding:5px 6px; text-align:right; font-size:13px; color:var(--text-mute)">${s.price != null ? s.price.toFixed(2) : "—"}</td>
+      <td><a${href} style="color:inherit;text-decoration:none">${s.symbol}</a></td>
+      <td style="color:var(--text-mute); max-width:120px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap">${(s.name || "").slice(0, 18)}</td>
+      <td style="text-align:right; font-weight:700; color:${color}">${pStr}</td>
+      <td style="text-align:right; color:var(--text-mute)">${s.price != null ? s.price.toFixed(2) : "—"}</td>
     </tr>`;
   };
 
@@ -3039,12 +3037,12 @@ function renderUsMarketAnalysis() {
     <h3 style="font-size:14px; margin:0 0 8px; color:var(--text-mute); text-transform:uppercase; letter-spacing:.05em">個股排行</h3>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:8px">
       <div>
-        <div style="font-size:13px;font-weight:700;color:#d62828;margin-bottom:4px">▲ 漲幅前五</div>
-        <table style="width:100%;border-collapse:collapse">${gainers.map(s => stockRow(s, true)).join("")}</table>
+        <div style="font-size:14px;font-weight:700;color:#d62828;margin-bottom:4px">▲ 漲幅前五</div>
+        <table class="indices" style="width:100%">${gainers.map(s => stockRow(s, true)).join("")}</table>
       </div>
       <div>
-        <div style="font-size:13px;font-weight:700;color:#2a9d8f;margin-bottom:4px">▼ 跌幅前五</div>
-        <table style="width:100%;border-collapse:collapse">${losers.map(s => stockRow(s, false)).join("")}</table>
+        <div style="font-size:14px;font-weight:700;color:#2a9d8f;margin-bottom:4px">▼ 跌幅前五</div>
+        <table class="indices" style="width:100%">${losers.map(s => stockRow(s, false)).join("")}</table>
       </div>
     </div>
     <p style="color:var(--text-mute);font-size:12px;margin:0 0 8px">資料來源：Yahoo Finance Screener；非投資建議</p>
