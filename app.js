@@ -2867,6 +2867,29 @@ function renderTwMarketAnalysis() {
       <table style="width:100%; border-collapse:collapse; border-top:1px solid var(--border,#e5e7eb)">${indexRows}</table>
     </div>` : "";
 
+  // 類股表現熱力圖
+  const twSectors = twRankings.sectors || [];
+  const sectorBgColor = (dp) => dp == null ? "#e5e7eb"
+    : dp >= 3 ? "#c0392b" : dp >= 1 ? "#e07070" : dp >= 0 ? "#f5b8b8"
+    : dp >= -1 ? "#b8ddd9" : dp >= -3 ? "#6abcb5" : "#2a9d8f";
+  const twSectorBars = twSectors.map(s => {
+    const dp = s.daily_pct;
+    const bg = sectorBgColor(dp);
+    const txtColor = dp != null && Math.abs(dp) >= 1 ? "#fff" : "#374151";
+    const pStr = dp == null ? "—" : (dp >= 0 ? "+" : "") + dp.toFixed(2) + "%";
+    return `<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;
+        background:${bg};color:${txtColor};border-radius:5px;padding:8px 4px;min-width:60px;flex:1;
+        font-size:11px;line-height:1.4;text-align:center">
+      <span style="font-weight:700;font-size:12px">${s.name_zh || s.symbol}</span>
+      <span style="font-weight:700;margin-top:3px">${pStr}</span>
+    </div>`;
+  }).join("");
+  const twSectorBlock = twSectors.length ? `
+    <h3 style="font-size:14px; margin:0 0 6px; color:var(--text-mute); text-transform:uppercase; letter-spacing:.05em">類股表現</h3>
+    <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:4px">${twSectorBars}</div>
+    <p style="color:var(--text-mute);font-size:11px;margin:4px 0 16px">依今日漲幅排序；資料來源：TWSE 類股指數</p>
+  ` : "";
+
   // 今日熱門 ETF — top_etf 前 8 名，色塊熱力圖
   const etfs = (twRankings.top_etf || []).slice(0, 8);
   const etfBars = etfs.map(s => {
@@ -2924,14 +2947,14 @@ function renderTwMarketAnalysis() {
   ` : "";
 
   const asOf = twRankings.as_of || market.closing_date || "";
-  if (!indexBlock && !etfBlock && !rankBlock) return "";
+  if (!indexBlock && !twSectorBlock && !etfBlock && !rankBlock) return "";
   return renderMarketCommentaryBlock({ focus: "tw" }) + `
     <div style="border:1px solid var(--border,#e5e7eb);border-radius:10px;padding:14px 16px;margin-bottom:18px;background:var(--card-bg,#fff)">
       <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px">
         <h2 style="font-size:16px;margin:0;font-weight:700">最新台股盤勢分析</h2>
         ${asOf ? `<span style="font-size:12px;color:var(--text-mute)">${asOf}</span>` : ""}
       </div>
-      ${indexBlock}${etfBlock}${rankBlock}
+      ${indexBlock}${twSectorBlock}${etfBlock}${rankBlock}
     </div>`;
 }
 
