@@ -148,11 +148,11 @@
     {
       "name": "Nifty 50",
       "name_zh": null,
-      "close": 24085.69921875,
-      "daily_pct": 0.4,
+      "close": 24168.0,
+      "daily_pct": 0.34,
       "mtd_pct": 2.28,
       "ytd_pct": -7.82,
-      "closing_date": "2026-06-17"
+      "closing_date": "2026-06-18"
     },
     {
       "name": "S&P/ASX 200",
@@ -182,9 +182,9 @@
     {
       "name": "Germany 10-Year",
       "yield_pct": 2.99,
-      "daily_bps": -1.65,
-      "mtd_bps": -2.42,
-      "closing_date": "2026-06-16"
+      "daily_bps": -0.69,
+      "mtd_bps": -3.11,
+      "closing_date": "2026-06-17"
     },
     {
       "name": "Japan 10-Year",
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 100.08999633789062,
       "daily_pct": 0.55,
-      "mtd_pct": 1.68,
-      "ytd_pct": 2.34,
+      "mtd_pct": 1.82,
+      "ytd_pct": 2.47,
       "closing_date": "2026-06-17"
     },
     {
@@ -343,33 +343,33 @@
     {
       "label": "Sep 2026",
       "fomc_date": "2026-09-17",
-      "implied_rate": 3.77,
-      "delta_rate": 0.13,
-      "delta_bps": 13.0,
-      "p_hike": 52.0,
-      "p_hold": 48.0,
+      "implied_rate": 3.79,
+      "delta_rate": 0.15,
+      "delta_bps": 15.0,
+      "p_hike": 60.0,
+      "p_hold": 40.0,
       "p_cut": 0,
       "is_reference": false
     },
     {
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
-      "implied_rate": 3.85,
-      "delta_rate": 0.08,
-      "delta_bps": 8.0,
-      "p_hike": 32.0,
-      "p_hold": 68.0,
+      "implied_rate": 3.86,
+      "delta_rate": 0.07,
+      "delta_bps": 7.0,
+      "p_hike": 28.0,
+      "p_hold": 72.0,
       "p_cut": 0,
       "is_reference": false
     },
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 3.98,
-      "delta_rate": 0.13,
-      "delta_bps": 13.0,
-      "p_hike": 52.0,
-      "p_hold": 48.0,
+      "implied_rate": 4.0,
+      "delta_rate": 0.14,
+      "delta_bps": 14.0,
+      "p_hike": 56.0,
+      "p_hold": 44.0,
       "p_cut": 0,
       "is_reference": false
     }
