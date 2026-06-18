@@ -40,43 +40,43 @@
     {
       "name": "Euro Stoxx 50",
       "name_zh": null,
-      "close": 6300.06982421875,
-      "daily_pct": 0.68,
+      "close": 6323.27001953125,
+      "daily_pct": 0.37,
       "mtd_pct": 4.12,
       "ytd_pct": 8.69,
-      "closing_date": "2026-06-17"
+      "closing_date": "2026-06-18"
     },
     {
       "name": "DAX",
       "name_zh": null,
-      "close": 24934.669921875,
-      "daily_pct": 0.1,
+      "close": 25026.80078125,
+      "daily_pct": 0.37,
       "mtd_pct": -0.68,
       "ytd_pct": 1.81,
-      "closing_date": "2026-06-17"
+      "closing_date": "2026-06-18"
     },
     {
       "name": "FTSE 100",
       "name_zh": null,
-      "close": 10508.599609375,
-      "daily_pct": 0.14,
+      "close": 10399.7001953125,
+      "daily_pct": -1.04,
       "mtd_pct": 0.95,
       "ytd_pct": 5.81,
-      "closing_date": "2026-06-17"
+      "closing_date": "2026-06-18"
     },
     {
       "name": "CAC 40",
       "name_zh": null,
-      "close": 8430.7900390625,
-      "daily_pct": -0.2,
+      "close": 8467.98046875,
+      "daily_pct": 0.44,
       "mtd_pct": 3.02,
       "ytd_pct": 3.45,
-      "closing_date": "2026-06-17"
+      "closing_date": "2026-06-18"
     },
     {
       "name": "Nikkei 225",
       "name_zh": null,
-      "close": 71053.4921875,
+      "close": 71053.49,
       "daily_pct": 1.65,
       "mtd_pct": 5.39,
       "ytd_pct": 38.86,
@@ -112,7 +112,7 @@
     {
       "name": "KOSPI",
       "name_zh": null,
-      "close": 9063.83984375,
+      "close": 9063.84,
       "daily_pct": 2.25,
       "mtd_pct": 4.58,
       "ytd_pct": 110.34,
@@ -121,7 +121,7 @@
     {
       "name": "Hang Seng 恆生",
       "name_zh": null,
-      "close": 23924.810546875,
+      "close": 23924.81,
       "daily_pct": -1.59,
       "mtd_pct": -3.46,
       "ytd_pct": -5.14,
@@ -130,7 +130,7 @@
     {
       "name": "Shanghai 上證",
       "name_zh": null,
-      "close": 4090.481201171875,
+      "close": 4090.481,
       "daily_pct": -0.43,
       "mtd_pct": 0.97,
       "ytd_pct": 3.51,
@@ -139,8 +139,8 @@
     {
       "name": "CSI 300 滬深300",
       "name_zh": null,
-      "close": 4941.5986328125,
-      "daily_pct": null,
+      "close": 4941.599,
+      "daily_pct": 3.44,
       "mtd_pct": -2.35,
       "ytd_pct": 3.18,
       "closing_date": "2026-06-18"
@@ -157,7 +157,7 @@
     {
       "name": "S&P/ASX 200",
       "name_zh": null,
-      "close": 8911.099609375,
+      "close": 8911.1,
       "daily_pct": -0.62,
       "mtd_pct": 2.69,
       "ytd_pct": 2.89,
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 100.08999633789062,
       "daily_pct": 0.55,
-      "mtd_pct": 1.82,
-      "ytd_pct": 2.47,
+      "mtd_pct": 1.86,
+      "ytd_pct": 2.51,
       "closing_date": "2026-06-17"
     },
     {
@@ -343,11 +343,11 @@
     {
       "label": "Sep 2026",
       "fomc_date": "2026-09-17",
-      "implied_rate": 3.77,
-      "delta_rate": 0.14,
-      "delta_bps": 14.0,
-      "p_hike": 56.0,
-      "p_hold": 44.0,
+      "implied_rate": 3.78,
+      "delta_rate": 0.15,
+      "delta_bps": 15.0,
+      "p_hike": 60.0,
+      "p_hold": 40.0,
       "p_cut": 0,
       "is_reference": false
     },
@@ -355,10 +355,10 @@
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
       "implied_rate": 3.85,
-      "delta_rate": 0.08,
-      "delta_bps": 8.0,
-      "p_hike": 32.0,
-      "p_hold": 68.0,
+      "delta_rate": 0.07,
+      "delta_bps": 7.0,
+      "p_hike": 28.0,
+      "p_hold": 72.0,
       "p_cut": 0,
       "is_reference": false
     },
@@ -366,13 +366,13 @@
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
       "implied_rate": 3.98,
-      "delta_rate": 0.13,
-      "delta_bps": 13.0,
-      "p_hike": 52.0,
-      "p_hold": 48.0,
+      "delta_rate": 0.12,
+      "delta_bps": 12.0,
+      "p_hike": 48.0,
+      "p_hold": 52.0,
       "p_cut": 0,
       "is_reference": false
     }
   ],
-  "summary": "OTC 櫃買加權 +2.70%、KOSPI +2.25%、Nikkei 225 +1.65% 領漲；Hang Seng 恆生 -1.59%、Nasdaq Composite -1.34% 走弱。"
+  "summary": "CSI 300 滬深300 +3.44%、OTC 櫃買加權 +2.70%、KOSPI +2.25% 領漲；Hang Seng 恆生 -1.59%、Nasdaq Composite -1.34% 走弱。"
 }
