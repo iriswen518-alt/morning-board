@@ -2734,22 +2734,129 @@ function renderMarketSheet() {
     <div id="mvtab-overview" hidden>
       ${renderMarketHighlights(m)}
 
-      <div class="tabs">
+      <div class="tabs tabs-wrap">
         <button class="tab active" data-mtab="indices">全球</button>
         <button class="tab" data-mtab="bonds">債券</button>
         <button class="tab" data-mtab="fx">匯率</button>
-        <button class="tab" data-mtab="us">美股</button>
-        <button class="tab" data-mtab="tw">台股</button>
+        <button class="tab" data-mtab="us-analysis">美股分析</button>
+        <button class="tab" data-mtab="tw-analysis">台股分析</button>
+        <button class="tab" data-mtab="us">美股行情</button>
+        <button class="tab" data-mtab="tw">台股行情</button>
         <button class="tab" data-mtab="twstock">個股</button>
       </div>
       <div id="mtab-indices">${stocksTab}</div>
       <div id="mtab-bonds" hidden>${bondsTab}</div>
       <div id="mtab-fx" hidden>${fxTab}</div>
+      <div id="mtab-us-analysis" hidden>${renderUsMarketAnalysis()}</div>
+      <div id="mtab-tw-analysis" hidden>${renderTwMarketAnalysis()}</div>
       <div id="mtab-us" hidden>${usTab}</div>
       <div id="mtab-tw" hidden>${twPresetTable}</div>
       <div id="mtab-twstock" hidden>${renderTwStockSheet()}${renderRankingsBlock("tw")}</div>
     </div>
   `;
+}
+
+// ── 台股盤勢分析 ─────────────────────────────────────────────────────────────
+function renderTwMarketAnalysis() {
+  const market = DATA.market || {};
+  const rankings = DATA.rankings || {};
+  const twRankings = rankings.tw || {};
+
+  const fmtClose = (v) => v == null ? "—" : v >= 1000 ? v.toLocaleString("zh-TW", { maximumFractionDigits: 2 }) : v.toFixed(2);
+  const fmtP = (v) => v == null ? "—" : (v >= 0 ? "+" : "") + v.toFixed(2) + "%";
+  const pColor = (v) => v == null ? "var(--text-mute)" : v > 0 ? "#d62828" : v < 0 ? "#2a9d8f" : "var(--text-mute)";
+
+  // 主要指數 — TAIEX, OTC
+  const TW_INDEX_KEYS = ["TAIEX 加權指數", "OTC 櫃買加權"];
+  const TW_INDEX_LABELS = { "TAIEX 加權指數": "台股加權", "OTC 櫃買加權": "OTC 櫃買" };
+  const allIndices = market.indices || [];
+  const keyIndices = TW_INDEX_KEYS.map(k => allIndices.find(i => i.name === k)).filter(Boolean);
+
+  const indexRows = keyIndices.map(idx => {
+    const label = TW_INDEX_LABELS[idx.name] || idx.name;
+    const dp = idx.daily_pct;
+    const arrow = dp == null ? "" : dp > 0 ? "▲" : dp < 0 ? "▼" : "─";
+    return `<tr>
+      <td style="padding:6px 8px; font-size:13px; font-weight:600; white-space:nowrap">${label}</td>
+      <td style="padding:6px 8px; text-align:right; font-size:13px; font-variant-numeric:tabular-nums">${fmtClose(idx.close)}</td>
+      <td style="padding:6px 4px; text-align:right; font-size:13px; font-weight:700; color:${pColor(dp)}; white-space:nowrap">${arrow} ${fmtP(dp)}</td>
+      <td style="padding:6px 4px; text-align:right; font-size:12px; color:${pColor(idx.mtd_pct)}; white-space:nowrap">月 ${fmtP(idx.mtd_pct)}</td>
+      <td style="padding:6px 8px 6px 4px; text-align:right; font-size:12px; color:${pColor(idx.ytd_pct)}; white-space:nowrap">年 ${fmtP(idx.ytd_pct)}</td>
+    </tr>`;
+  }).join("");
+
+  const indexBlock = keyIndices.length ? `
+    <h3 style="font-size:14px; margin:0 0 6px; color:var(--text-mute); text-transform:uppercase; letter-spacing:.05em">主要指數</h3>
+    <div style="overflow-x:auto; -webkit-overflow-scrolling:touch; margin-bottom:16px">
+      <table style="width:100%; border-collapse:collapse; border-top:1px solid var(--border,#e5e7eb)">${indexRows}</table>
+    </div>` : "";
+
+  // 今日熱門 ETF — top_etf 前 8 名，色塊熱力圖
+  const etfs = (twRankings.top_etf || []).slice(0, 8);
+  const etfBars = etfs.map(s => {
+    const dp = s.daily_pct;
+    const bg = dp == null ? "#e5e7eb"
+      : dp >= 2 ? "#c0392b" : dp >= 0.5 ? "#e07070" : dp >= 0 ? "#f5b8b8"
+      : dp >= -0.5 ? "#b8ddd9" : dp >= -2 ? "#6abcb5" : "#2a9d8f";
+    const txtColor = dp != null && Math.abs(dp) >= 0.5 ? "#fff" : "#374151";
+    const pStr = dp == null ? "—" : (dp >= 0 ? "+" : "") + dp.toFixed(2) + "%";
+    const href = s.source_url ? ` href="${s.source_url}" target="_blank" rel="noopener"` : "";
+    return `<a${href} style="display:flex;flex-direction:column;align-items:center;justify-content:center;
+        background:${bg};color:${txtColor};border-radius:5px;padding:8px 4px;min-width:72px;flex:1;
+        font-size:11px;line-height:1.4;text-align:center;text-decoration:none">
+      <span style="font-weight:700;font-size:11px;max-width:68px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${s.name || s.symbol}</span>
+      <span style="font-size:10px;opacity:.85">${s.symbol}</span>
+      <span style="font-weight:700;margin-top:2px">${pStr}</span>
+    </a>`;
+  }).join("");
+
+  const etfBlock = etfs.length ? `
+    <h3 style="font-size:14px; margin:0 0 6px; color:var(--text-mute); text-transform:uppercase; letter-spacing:.05em">今日熱門 ETF</h3>
+    <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:16px">${etfBars}</div>
+    <p style="color:var(--text-mute);font-size:11px;margin:-10px 0 16px">依今日漲幅排序；資料來源：TWSE</p>
+  ` : "";
+
+  // 個股排行
+  const gainers = (twRankings.top_gainers || []).slice(0, 5);
+  const losers  = (twRankings.top_losers  || []).slice(0, 5);
+  const stockRow = (s, isGainer) => {
+    const dp = s.daily_pct;
+    const color = isGainer ? "#d62828" : "#2a9d8f";
+    const pStr = dp == null ? "—" : (dp >= 0 ? "+" : "") + dp.toFixed(2) + "%";
+    const href = s.source_url ? ` href="${s.source_url}" target="_blank" rel="noopener"` : "";
+    return `<tr>
+      <td style="padding:5px 6px; font-size:13px"><a${href} style="color:inherit;text-decoration:none">${s.symbol}</a></td>
+      <td style="padding:5px 6px; font-size:12px; color:var(--text-mute); max-width:80px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap">${(s.name || "").slice(0, 6)}</td>
+      <td style="padding:5px 6px; text-align:right; font-size:13px; font-weight:700; color:${color}">${pStr}</td>
+      <td style="padding:5px 6px; text-align:right; font-size:12px; color:var(--text-mute)">${s.price != null ? s.price.toFixed(1) : "—"}</td>
+    </tr>`;
+  };
+
+  const rankBlock = (gainers.length || losers.length) ? `
+    <h3 style="font-size:14px; margin:0 0 8px; color:var(--text-mute); text-transform:uppercase; letter-spacing:.05em">個股排行</h3>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:8px">
+      <div>
+        <div style="font-size:12px;font-weight:700;color:#d62828;margin-bottom:4px">▲ 漲幅前五</div>
+        <table style="width:100%;border-collapse:collapse">${gainers.map(s => stockRow(s, true)).join("")}</table>
+      </div>
+      <div>
+        <div style="font-size:12px;font-weight:700;color:#2a9d8f;margin-bottom:4px">▼ 跌幅前五</div>
+        <table style="width:100%;border-collapse:collapse">${losers.map(s => stockRow(s, false)).join("")}</table>
+      </div>
+    </div>
+    <p style="color:var(--text-mute);font-size:11px;margin:0 0 8px">資料來源：TWSE；非投資建議</p>
+  ` : "";
+
+  const asOf = twRankings.as_of || market.closing_date || "";
+  if (!indexBlock && !etfBlock && !rankBlock) return "";
+  return `
+    <div style="border:1px solid var(--border,#e5e7eb);border-radius:10px;padding:14px 16px;margin-bottom:18px;background:var(--card-bg,#fff)">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px">
+        <h2 style="font-size:16px;margin:0;font-weight:700">最新台股盤勢分析</h2>
+        ${asOf ? `<span style="font-size:12px;color:var(--text-mute)">${asOf}</span>` : ""}
+      </div>
+      ${indexBlock}${etfBlock}${rankBlock}
+    </div>`;
 }
 
 // ── 最新美股盤勢分析 ────────────────────────────────────────────────────────
