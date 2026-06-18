@@ -2443,6 +2443,15 @@ table.indices.stock-cols col.c-num { width: 11%; }
   }
 }
 
+/* 排行榜：字號與 stock-cols 一致 */
+#content table.indices.ranking-table {
+  font-size: 13px !important;
+}
+#content table.indices.ranking-table th,
+#content table.indices.ranking-table td {
+  padding: 6px 8px !important;
+}
+
 /* 排行榜：凍結前兩欄（排名 + 名稱），橫滑時仍知道是哪一檔 */
 #content table.ranking-table th:first-child,
 #content table.ranking-table td:first-child {

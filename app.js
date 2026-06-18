@@ -2985,7 +2985,16 @@ function renderUsMarketAnalysis() {
     <h3 style="font-size:14px; margin:0 0 6px; color:var(--text-mute); text-transform:uppercase; letter-spacing:.05em">主要指數</h3>
     <div style="overflow-x:auto; -webkit-overflow-scrolling:touch; margin-bottom:16px">
       <table style="width:100%; border-collapse:collapse; border-top:1px solid var(--border,#e5e7eb)">
-        ${indexRows}
+        <thead>
+          <tr style="border-bottom:1px solid var(--border,#e5e7eb)">
+            <th style="padding:4px 8px; text-align:left; font-size:11px; color:var(--text-mute); font-weight:500"></th>
+            <th style="padding:4px 8px; text-align:right; font-size:11px; color:var(--text-mute); font-weight:500">最新</th>
+            <th style="padding:4px 4px; text-align:right; font-size:11px; color:var(--text-mute); font-weight:500">日</th>
+            <th style="padding:4px 4px; text-align:right; font-size:11px; color:var(--text-mute); font-weight:500">月</th>
+            <th style="padding:4px 8px 4px 4px; text-align:right; font-size:11px; color:var(--text-mute); font-weight:500">年</th>
+          </tr>
+        </thead>
+        <tbody>${indexRows}</tbody>
       </table>
     </div>` : "";
 
