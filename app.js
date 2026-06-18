@@ -319,6 +319,7 @@ const TAB_LOAD_DEPS = {
   news: ["news"],
   funds: ["funds", "dca", "beatetf", "fund_compare"],
   obonds: ["overseas_bonds", "overseas_bonds_all"],
+  bondmkt: ["market"],
   usstocks: ["stocks", "popular_stocks", "stock_brief"],
   insurance: ["insurances"],
   targets: ["targets"],
@@ -647,6 +648,7 @@ function switchTab(name) {
   else if (name === "funds") body.innerHTML = renderFundsSheet();
   else if (name === "insurance") body.innerHTML = renderInsuranceSheet();
   else if (name === "obonds") body.innerHTML = renderObondsSheet();
+  else if (name === "bondmkt") body.innerHTML = renderBondMarket();
   else if (name === "usstocks") body.innerHTML = renderUsStocksSheet();
   else if (name === "dca") {
     // dca 已併入 funds 的次分頁；舊的 hash 連結轉到 funds#dca
@@ -693,6 +695,7 @@ function switchTab(name) {
   if (name === "calc") wireCalcTabs();
   if (name === "twstock") wireTwStock();
   if (name === "obonds") { SWAP_PICK = { old: null, new: null }; wireObondsTabs(); }
+  if (name === "bondmkt") wireBondMarketTabs();
   if (PENDING_SUBTAB) {
     const sub = PENDING_SUBTAB;
     PENDING_SUBTAB = null;
@@ -985,6 +988,226 @@ function bondUrl(b) {
   if (!b.isin || !b.code) return null;
   return `https://bopfund.moneydj.com/b2bbond/BondBasic/Basic01?id=${encodeURIComponent(b.isin)}&bid=${encodeURIComponent(b.code)}`;
 }
+
+// ── 債券市場概況 ─────────────────────────────────────────────────────────────
+function renderBondMarket() {
+  const m = DATA.market || {};
+  const govBonds = m.bonds || [];
+  const bondEtfs = m.bond_etfs || [];
+  const ro = m.rate_outlook || {};
+  const date = m.closing_date || "";
+
+  // ETF ticker helper: 取名稱第一段大寫英文字母群
+  function etfTicker(name) {
+    return (name || "").match(/\b([A-Z]{2,5})\b/)?.[1] || "";
+  }
+
+  // 產生 Yahoo Finance 連結
+  function etfLink(e) {
+    const tk = etfTicker(e.name || "");
+    if (!tk) return escapeHtml(e.name || "");
+    const url = `https://finance.yahoo.com/quote/${tk}/`;
+    return `<a href="${url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${escapeHtml(e.name)}</a>`;
+  }
+
+  // ETF 表格（可排序）
+  function renderEtfTable(etfs, emptyMsg) {
+    if (!etfs.length) return `<p style="color:var(--text-mute);padding:20px 0">${emptyMsg || "尚無資料"}</p>`;
+    const rows = etfs.map(e => `
+      <tr>
+        <td>${etfLink(e)}</td>
+        <td>${e.close != null ? e.close.toFixed(2) : "—"}</td>
+        <td class="${pctClass(e.daily_pct)}">${fmtPct(e.daily_pct)}</td>
+        <td class="${pctClass(e.mtd_pct)}">${fmtPct(e.mtd_pct)}</td>
+        <td class="${pctClass(e.ytd_pct)}">${fmtPct(e.ytd_pct)}</td>
+        <td class="date-col">${escapeHtml(shortDate(e.closing_date) || date)}</td>
+      </tr>`).join("");
+    return `<table class="indices freeze-col1">
+      <thead><tr>
+        <th>ETF 名稱</th>
+        <th class="sortable-th" title="最新收盤價（美元）；來源：Yahoo Finance；點選排序">收盤</th>
+        <th class="sortable-th" title="日報酬率｜今日收盤 vs 昨日收盤；點選排序">日</th>
+        <th class="sortable-th" title="本月至今報酬率（MTD）；點選排序">本月</th>
+        <th class="sortable-th" title="年初至今報酬率（YTD）；點選排序">今年</th>
+        <th class="date-col">收盤日</th>
+      </tr></thead>
+      <tbody>${rows}</tbody>
+    </table>`;
+  }
+
+  // 公債殖利率表（重用市場資料中的 bonds）
+  function renderGovBondTable() {
+    if (!govBonds.length) return `<p style="color:var(--text-mute);padding:20px 0">尚未提供公債殖利率資料</p>`;
+    const rows = govBonds.map(b => {
+      const dailyCell = `<span class="${bpsClass(b.daily_bps)}">${fmtBps(b.daily_bps)}</span>`;
+      const mtdCell   = `<span class="${bpsClass(b.mtd_bps)}">${fmtBps(b.mtd_bps)}</span>`;
+      return `<tr>
+        <td>${escapeHtml(b.name || "")}</td>
+        <td>${b.yield_pct != null ? b.yield_pct.toFixed(2) + "%" : "—"}</td>
+        <td>${dailyCell}</td>
+        <td>${mtdCell}</td>
+        <td class="date-col">${escapeHtml(shortDate(b.closing_date) || date)}</td>
+      </tr>`;
+    }).join("");
+    return `<table class="indices freeze-col1">
+      <thead><tr>
+        <th title="殖利率來源：美國財政部/英格蘭銀行/ECB/日本財務省/Yahoo Finance">公債</th>
+        <th class="sortable-th" title="到期殖利率（YTM, %）；點選排序">殖利率</th>
+        <th class="sortable-th" title="日變動（bps）｜今日 yield − 昨日 yield；點選排序">日變動</th>
+        <th class="sortable-th" title="本月變動（bps）｜月初首交易日 yield → 最新 yield；點選排序">本月變動</th>
+        <th class="date-col">更新日</th>
+      </tr></thead>
+      <tbody>${rows}</tbody>
+    </table>`;
+  }
+
+  // 殖利率曲線利差卡片
+  const y2  = ro.us2y   ?? null;
+  const y10 = ro.us10y  ?? null;
+  const spreadBps = ro.yield_curve_10y2y_bps ?? null;
+  const curveShape = ro.curve_shape || "";
+  let curveBg = "#f8fafc", curveColor = "var(--text)";
+  if (curveShape === "倒掛")  { curveBg = "#fee2e2"; curveColor = "#991b1b"; }
+  else if (curveShape === "正斜率") { curveBg = "#d1fae5"; curveColor = "#065f46"; }
+  else if (curveShape === "平坦")  { curveBg = "#fef9c3"; curveColor = "#854d0e"; }
+
+  const spreadCard = `
+    <div style="margin-bottom:16px;padding:14px 16px;background:var(--card-bg,#fff);border:1px solid var(--border);border-radius:10px;">
+      <div style="font-weight:600;font-size:14px;margin-bottom:10px;">美國殖利率曲線利差
+        <a href="https://fred.stlouisfed.org/series/T10Y2Y" target="_blank" rel="noopener"
+           style="font-size:11px;color:#3b82f6;text-decoration:none;margin-left:8px;">FRED T10Y2Y ↗</a>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:8px;">
+        <div style="padding:8px 10px;background:var(--bg,#fff);border:1px solid var(--border);border-radius:8px;">
+          <div style="font-size:11px;color:var(--text-mute);margin-bottom:3px;">US 2Y 殖利率</div>
+          <div style="font-size:17px;font-weight:700;">${y2 != null ? y2.toFixed(2) + "%" : "—"}</div>
+          <div style="font-size:10px;color:var(--text-mute);">升息預期指標</div>
+        </div>
+        <div style="padding:8px 10px;background:var(--bg,#fff);border:1px solid var(--border);border-radius:8px;">
+          <div style="font-size:11px;color:var(--text-mute);margin-bottom:3px;">US 10Y 殖利率</div>
+          <div style="font-size:17px;font-weight:700;">${y10 != null ? y10.toFixed(2) + "%" : "—"}</div>
+          <div style="font-size:10px;color:var(--text-mute);">長期通膨/景氣預期</div>
+        </div>
+        <div style="padding:8px 10px;background:${curveBg};border:1px solid var(--border);border-radius:8px;">
+          <div style="font-size:11px;color:var(--text-mute);margin-bottom:3px;">10Y−2Y 利差</div>
+          <div style="font-size:17px;font-weight:700;color:${curveColor};">
+            ${spreadBps != null ? (spreadBps >= 0 ? "+" : "") + spreadBps + " bps" : "—"}
+          </div>
+          <div style="font-size:10px;color:${curveColor};font-weight:500;">${curveShape || "殖利率曲線"}</div>
+        </div>
+      </div>
+      <p style="font-size:11px;color:var(--text-mute);margin:10px 0 0;">
+        10Y−2Y 正值=正斜率（景氣擴張預期）；負值=倒掛（歷史上常先行衰退訊號）。
+        資料來源：美國財政部/Yahoo Finance。
+      </p>
+    </div>`;
+
+  // 分類 ETF
+  const igEtfs   = bondEtfs.filter(e => (e.name || "").includes("投資等級"));
+  const hyEtfs   = bondEtfs.filter(e => (e.name || "").includes("高收益"));
+  const emEtfs   = bondEtfs.filter(e => (e.name || "").includes("新興市場"));
+  const govEtfs  = bondEtfs.filter(e => (e.name || "").includes("公債") && !(e.name || "").includes("綜合"));
+  const aggEtfs  = bondEtfs.filter(e => (e.name || "").includes("綜合"));
+
+  // 利差總覽：各分類 ETF 今年表現橫排比較
+  function spreadSummaryRow(label, etfs) {
+    if (!etfs.length) return "";
+    const e = etfs[0];
+    const dv = fmtPct(e.daily_pct);
+    const mv = fmtPct(e.mtd_pct);
+    const yv = fmtPct(e.ytd_pct);
+    return `<tr>
+      <td style="font-weight:500;">${escapeHtml(label)}</td>
+      <td style="font-size:11px;color:var(--text-mute);">${etfLink(e)}</td>
+      <td class="${pctClass(e.daily_pct)}">${dv}</td>
+      <td class="${pctClass(e.mtd_pct)}">${mv}</td>
+      <td class="${pctClass(e.ytd_pct)}">${yv}</td>
+    </tr>`;
+  }
+
+  const allCatsForSpread = [
+    ["長天期公債", govEtfs.filter(e => (e.name||"").includes("長天期"))],
+    ["中期公債",   govEtfs.filter(e => (e.name||"").includes("中期"))],
+    ["綜合債市",   aggEtfs],
+    ["投資等級債", igEtfs.filter(e => (e.name||"").includes("LQD") || (e.name||"").match(/\bLQD\b/))],
+    ["短期投資等級", igEtfs.filter(e => (e.name||"").includes("短期"))],
+    ["高收益債",   hyEtfs.filter(e => (e.name||"").includes("HYG") || (e.name||"").match(/\bHYG\b/))],
+    ["新興市場債", emEtfs],
+  ];
+  const spreadRows = allCatsForSpread.map(([label, etfs]) => spreadSummaryRow(label, etfs)).filter(Boolean).join("");
+  const spreadTab = spreadCard + (spreadRows ? `
+    <h2 style="font-size:15px;margin:20px 0 8px;">各類債券市場表現比較</h2>
+    <p style="font-size:11px;color:var(--text-mute);margin-bottom:10px;">
+      以 ETF 收盤價報酬率代理各類債市走勢；點擊 ETF 名稱可查 Yahoo Finance 詳情。
+      實際信用利差（OAS）請參閱
+      <a href="https://fred.stlouisfed.org/series/BAMLH0A0HYM2" target="_blank" rel="noopener" style="color:#3b82f6;">FRED BAMLH0A0HYM2（高收益 OAS）</a> 及
+      <a href="https://fred.stlouisfed.org/series/BAMLC0A0CM" target="_blank" rel="noopener" style="color:#3b82f6;">BAMLC0A0CM（投資等級 OAS）</a>。
+    </p>
+    <table class="indices">
+      <thead><tr>
+        <th>類別</th>
+        <th style="font-size:11px;color:var(--text-mute);">代表 ETF</th>
+        <th class="sortable-th">日</th>
+        <th class="sortable-th">本月</th>
+        <th class="sortable-th">今年</th>
+      </tr></thead>
+      <tbody>${spreadRows}</tbody>
+    </table>` : `<p style="color:var(--text-mute);padding:16px 0">ETF 資料尚未載入，請等待每日 build 後刷新。</p>`);
+
+  const noEtfNote = `<p style="font-size:11px;color:var(--text-mute);margin-top:10px;">
+    資料來源：Yahoo Finance ETF 收盤價報酬率（每日 build 後更新）。非買賣建議。
+  </p>`;
+
+  return `
+    <div class="tabs tabs-wrap">
+      <button class="tab active" data-bmtab="govbond">公債</button>
+      <button class="tab" data-bmtab="ig">投資等級債</button>
+      <button class="tab" data-bmtab="hy">非投資等級債</button>
+      <button class="tab" data-bmtab="em">新興市場債</button>
+      <button class="tab" data-bmtab="spread">利差總覽</button>
+    </div>
+    <div id="bmtab-govbond">
+      <p style="font-size:11px;color:var(--text-mute);margin-bottom:10px;">
+        各國 10 年期（及美國 2 年期）公債殖利率（到期殖利率 YTM）。
+        來源：美國財政部 / 英格蘭銀行 / 歐洲央行 / 日本財務省 / Yahoo Finance。
+      </p>
+      ${renderGovBondTable()}
+    </div>
+    <div id="bmtab-ig" hidden>
+      <p style="font-size:11px;color:var(--text-mute);margin-bottom:10px;">
+        投資等級公司債市場（信評 BBB− 以上）。以 LQD（綜合投資等級）及 VCSH（短期投資等級）ETF 報酬率代理走勢。
+      </p>
+      ${renderEtfTable(igEtfs, "尚無投資等級債 ETF 資料")}
+      ${igEtfs.length ? noEtfNote : ""}
+    </div>
+    <div id="bmtab-hy" hidden>
+      <p style="font-size:11px;color:var(--text-mute);margin-bottom:10px;">
+        非投資等級債（高收益債 / 信評 BB+ 以下）。以 HYG 及 JNK ETF 報酬率代理走勢；兩檔成分債相近，可交叉驗證。
+      </p>
+      ${renderEtfTable(hyEtfs, "尚無高收益債 ETF 資料")}
+      ${hyEtfs.length ? noEtfNote : ""}
+    </div>
+    <div id="bmtab-em" hidden>
+      <p style="font-size:11px;color:var(--text-mute);margin-bottom:10px;">
+        新興市場主權債與公司債（美元計價）。以 EMB ETF（摩根大通新興市場美元債指數）報酬率代理走勢。
+      </p>
+      ${renderEtfTable(emEtfs, "尚無新興市場債 ETF 資料")}
+      ${emEtfs.length ? noEtfNote : ""}
+    </div>
+    <div id="bmtab-spread" hidden>
+      ${spreadTab}
+    </div>`;
+}
+
+function wireBondMarketTabs() {
+  wireTabs("[data-bmtab]", id => {
+    ["govbond","ig","hy","em","spread"].forEach(k => {
+      const el = document.getElementById("bmtab-" + k);
+      if (el) el.hidden = (k !== id);
+    });
+  });
+}
+
 
 function renderObondsSheet() {
   const list = (DATA.obonds && DATA.obonds.bonds) || [];

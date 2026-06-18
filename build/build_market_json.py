@@ -155,6 +155,7 @@ def main():
         "bonds": [map_bond(b) for b in bonds_src],
         "fx": [map_fx(f) for f in fx_src],
         "commodities": [map_commodity(c) for c in src.get("commodities", [])],
+        "bond_etfs": [map_index(e) for e in src.get("bond_etfs", [])],
         "rate_outlook": build_rate_outlook(bonds_src, fx_src),
         "fedwatch": build_fedwatch(futures_src),
         "summary": None,
