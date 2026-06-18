@@ -1,0 +1,54 @@
+{
+  "course": "corporate_credit",
+  "course_name": "企業授信",
+  "chapters": [
+    {
+      "slug": "glossary",
+      "title": "專有名詞",
+      "description": "授信五P、DBR、DSCR、LTV、徵信、擔保品等核心詞彙對照",
+      "file": "00_glossary.json"
+    },
+    {
+      "slug": "overview",
+      "title": "授信概論",
+      "description": "授信種類、銀行授信流程、法規框架、RM 在授信中的角色",
+      "file": "01_overview.json"
+    },
+    {
+      "slug": "financials",
+      "title": "財報分析",
+      "description": "三大報表解讀、財務比率、現金流分析、財報紅旗",
+      "file": "02_financials.json"
+    },
+    {
+      "slug": "five_p",
+      "title": "授信五P",
+      "description": "借款人、資金用途、還款來源、債權確保、授信展望",
+      "file": "03_five_p.json"
+    },
+    {
+      "slug": "collateral",
+      "title": "擔保與風控",
+      "description": "不動產擔保、動產擔保、保證人、LTV、風險集中度",
+      "file": "04_collateral.json"
+    },
+    {
+      "slug": "post_approval",
+      "title": "授信後管理",
+      "description": "定期覆審、逾放預警指標、催收 SOP、轉銷與呆帳",
+      "file": "05_post_approval.json"
+    },
+    {
+      "slug": "cross_sell",
+      "title": "跨售整合",
+      "description": "授信客戶導入財管、傳承話題切入、交叉銷售合規框架",
+      "file": "06_cross_sell.json"
+    },
+    {
+      "slug": "legal_sources",
+      "title": "法源彙整",
+      "description": "銀行法、民法擔保、公司法、金融機構合併法等核心法條",
+      "file": "07_legal_sources.json"
+    }
+  ]
+}
