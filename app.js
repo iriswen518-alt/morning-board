@@ -2742,20 +2742,19 @@ function renderMarketSheet() {
         <button class="tab" data-mtab="fx">匯率</button>
         <button class="tab" data-mtab="us">美股行情</button>
         <button class="tab" data-mtab="tw">台股行情</button>
-        <button class="tab" data-mtab="twstock">個股</button>
       </div>
       <div id="mtab-indices">${stocksTab}</div>
       <div id="mtab-bonds" hidden>${bondsTab}</div>
       <div id="mtab-fx" hidden>${fxTab}</div>
       <div id="mtab-us" hidden>${usTab}</div>
       <div id="mtab-tw" hidden>${twPresetTable}</div>
-      <div id="mtab-twstock" hidden>${renderTwStockSheet()}${renderRankingsBlock("tw")}</div>
     </div>
     <div id="mvtab-us-analysis" hidden>
       ${renderUsMarketAnalysis()}
     </div>
     <div id="mvtab-tw-analysis" hidden>
       ${renderTwMarketAnalysis()}
+      ${renderTwStockSheet()}${renderRankingsBlock("tw")}
     </div>
   `;
 }
