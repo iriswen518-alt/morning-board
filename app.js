@@ -2802,7 +2802,20 @@ function renderMarketCommentaryBlock(opts = {}) {
   const summaryHtml = summary ? `
     <p style="font-size:13px;line-height:1.7;margin:0 0 8px;color:#374151">${escapeHtml(summary)}</p>` : "";
 
-  const bullets = tldr.map(t =>
+  // 美股分析過濾純台灣議題（台股目標價、台灣GDP、台灣財管產品等）
+  const TW_ONLY_PATTERNS = [
+    /元目標價/,        // 台股TWD目標價
+    /財經雙首長/,      // 台灣財政部長/主計長
+    /以房養老/,        // 台灣特有金融商品
+    /財管需求.*保單/,  // 台灣財富管理脈絡
+    /台股提防/,        // 純台股警示
+    /連假前賣壓/,      // 台灣連假
+  ];
+  const filteredTldr = opts.focus === "us"
+    ? tldr.filter(t => !TW_ONLY_PATTERNS.some(re => re.test(t)))
+    : tldr;
+
+  const bullets = filteredTldr.map(t =>
     `<li style="margin-bottom:6px;line-height:1.65;font-size:13px">${escapeHtml(t)}</li>`
   ).join("");
   const bulletsHtml = bullets ? `<ul style="margin:0;padding-left:18px">${bullets}</ul>` : "";
