@@ -98,7 +98,7 @@ button.academy-card {
   border-radius: 999px;
 }
 .academy-card-desc {
-  font-size: 12.5px;
+  font-size: 12px;
   color: var(--academy-muted);
   margin: 0;
   line-height: 1.55;
@@ -140,7 +140,7 @@ button.academy-card {
   line-height: 1.3;
 }
 .course-hero-badge {
-  font-size: 11.5px;
+  font-size: 11px;
   font-weight: 500;
   color: #fff;
   background: var(--brand-primary);
@@ -149,13 +149,13 @@ button.academy-card {
   letter-spacing: 0.02em;
 }
 .course-hero-desc {
-  font-size: 13px;
+  font-size: 15px;
   color: var(--academy-muted);
   margin: 0;
   line-height: 1.55;
 }
 .course-hero-chapter {
-  font-size: 13.5px;
+  font-size: 15px;
   font-weight: 600;
   color: var(--brand-deep);
   margin: 6px 0 0;
@@ -167,9 +167,9 @@ button.academy-card {
   }
   .course-hero-icon { width: 40px; height: 40px; flex: 0 0 40px; }
   .course-hero-icon svg { width: 22px; height: 22px; }
-  .course-hero-title { font-size: 16px; }
-  .course-hero-desc { font-size: 12.5px; }
-  .course-hero-chapter { font-size: 12.5px; }
+  .course-hero-title { font-size: 18px; }
+  .course-hero-desc { font-size: 15px; }
+  .course-hero-chapter { font-size: 15px; }
 }
 
 /* === chapter.html === */
@@ -236,7 +236,7 @@ button.academy-card {
   }
   .chapter-topnav li a {
     padding: 9px 8px;
-    font-size: 12.5px;
+    font-size: 12px;
   }
 }
 
@@ -311,7 +311,7 @@ button.academy-card {
 .chapter-nav a {
   color: var(--brand-primary);
   text-decoration: none;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .chapter-nav a:hover {
@@ -356,7 +356,7 @@ button.academy-card {
   background: var(--academy-bg-soft);
   border: 1px solid var(--academy-border);
   color: var(--brand-deep);
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -497,7 +497,7 @@ button.academy-card {
   border: none;
   border-radius: 8px;
   padding: 6px 12px;
-  font-size: 12.5px;
+  font-size: 12px;
   font-weight: 700;
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(1, 154, 179, 0.2);
@@ -567,7 +567,7 @@ button.academy-card {
 
 .zk-graph-legend-count {
   margin-left: auto;
-  font-size: 10.5px;
+  font-size: 11px;
   color: var(--academy-muted);
 }
 
@@ -645,7 +645,7 @@ button.academy-card {
 
 .zk-modal-body {
   padding: 24px 28px;
-  font-size: 14.5px;
+  font-size: 15px;
   color: #1a2733;
   line-height: 1.7;
 }
@@ -666,7 +666,7 @@ button.academy-card {
 }
 
 .zk-modal-body h3 {
-  font-size: 15.5px;
+  font-size: 16px;
   margin-top: 18px;
   color: var(--brand-deep);
 }
@@ -710,7 +710,7 @@ button.academy-card {
   background: none;
   color: inherit;
   padding: 0;
-  font-size: 12.5px;
+  font-size: 12px;
 }
 
 .zk-modal-body blockquote {
@@ -731,7 +731,7 @@ button.academy-card {
   font-weight: 600;
   color: #1e293b;
   margin-bottom: 6px;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .zk-modal-body blockquote.callout .callout-content {
@@ -885,7 +885,7 @@ button.academy-card {
 }
 
 .cards-list-chapter li {
-  font-size: 14.5px;
+  font-size: 15px;
   color: #cbd5e1; /* Light grey bullet dot */
   margin-bottom: 8px;
   line-height: 1.6;
@@ -921,10 +921,10 @@ button.academy-card {
     padding: 20px 24px;
   }
   .cards-list-chapter h3 {
-    font-size: 16.5px;
+    font-size: 18px;
   }
   .cards-list-chapter li {
-    font-size: 13.5px;
+    font-size: 13px;
   }
 }
 
@@ -933,7 +933,7 @@ button.academy-card {
 .quiz-progress { height: 6px; background: #e8edf4; border-radius: 3px; margin-bottom: 18px; }
 .quiz-progress-bar { height: 6px; background: var(--brand-primary, #003D91); border-radius: 3px; transition: width 0.3s; }
 .quiz-counter { font-size: 13px; color: #7a8aa0; margin-bottom: 10px; }
-.quiz-question { font-size: 17px; font-weight: 600; color: #1a2a3a; line-height: 1.6; margin-bottom: 20px; }
+.quiz-question { font-size: 16px; font-weight: 600; color: #1a2a3a; line-height: 1.6; margin-bottom: 20px; }
 .quiz-options { list-style: none; padding: 0; margin: 0 0 20px; display: flex; flex-direction: column; gap: 10px; }
 .quiz-opt-btn {
   width: 100%; text-align: left; padding: 12px 16px;
@@ -945,7 +945,7 @@ button.academy-card {
 .quiz-opt-btn.quiz-correct { border-color: #17a65e; background: #eafaf2; color: #0e6b40; font-weight: 600; }
 .quiz-opt-btn.quiz-wrong   { border-color: #d9534f; background: #fdf2f2; color: #a02020; }
 .quiz-opt-btn:disabled { cursor: default; }
-.quiz-feedback { padding: 12px 16px; border-radius: 8px; background: #f5f8ff; font-size: 14px; line-height: 1.6; color: #2a3a4a; margin-bottom: 16px; }
+.quiz-feedback { padding: 12px 16px; border-radius: 8px; background: #f5f8ff; font-size: 15px; line-height: 1.6; color: #2a3a4a; margin-bottom: 16px; }
 .quiz-fb-right { color: #17a65e; font-weight: 700; }
 .quiz-fb-wrong { color: #d9534f; font-weight: 700; }
 .quiz-next-btn {
@@ -973,6 +973,6 @@ button.academy-card {
 }
 .quiz-restart-btn:hover { background: #e0e8f8; }
 @media (max-width: 640px) {
-  .quiz-question { font-size: 15px; }
-  .quiz-opt-btn { font-size: 14px; padding: 11px 14px; }
+  .quiz-question { font-size: 16px; }
+  .quiz-opt-btn { font-size: 15px; padding: 11px 14px; }
 }
