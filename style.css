@@ -2278,7 +2278,7 @@ table.indices th.sortable-th {
   body.nav-open .home-fab { display: none; }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .nav-toggle {
     display: flex;
     align-items: center;
