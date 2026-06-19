@@ -2994,7 +2994,7 @@ function renderMarketCommentaryBlock(opts = {}) {
 
   const sectors = opts.sectors || [];
 
-  // 美股分析過濾純台灣議題（台股目標價、台灣GDP、台灣財管產品等）
+  // 美股分析過濾台灣議題（只留美國市場新聞）
   const TW_ONLY_PATTERNS = [
     /元目標價/,        // 台股TWD目標價
     /財經雙首長/,      // 台灣財政部長/主計長
@@ -3002,6 +3002,11 @@ function renderMarketCommentaryBlock(opts = {}) {
     /財管需求.*保單/,  // 台灣財富管理脈絡
     /台股提防/,        // 純台股警示
     /連假前賣壓/,      // 台灣連假
+    /台股/,            // 台股大漲/下跌等
+    /金管會/,          // 台灣金管會監理新聞
+    /外資由賣轉買|外資回補/,  // 台股外資進出
+    /台灣央行|央行理事/,      // 台灣央行
+    /加權指數|TAIEX/,         // 台灣加權指數
   ];
   const filteredTldr = opts.focus === "us"
     ? tldr.filter(t => !TW_ONLY_PATTERNS.some(re => re.test(t)))
