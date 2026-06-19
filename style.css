@@ -2394,9 +2394,9 @@ table.indices.stock-cols th, table.indices.stock-cols td {
   overflow: hidden; text-overflow: ellipsis;
 }
 table.indices.stock-cols th:first-child, table.indices.stock-cols td:first-child {
-  text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: normal;
 }
-table.indices.stock-cols col.c-name { width: 34%; }
+table.indices.stock-cols col.c-name { width: 22%; }
 table.indices.stock-cols col.c-num { width: 11%; }
 
 /* === 股票表格：比照精選基金樣式（字號 13px、緊湊 padding、水藍表頭）=== */

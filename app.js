@@ -1143,7 +1143,7 @@ function renderBondMarket() {
   ];
   const spreadRows = allCatsForSpread.map(([label, etfs]) => spreadSummaryRow(label, etfs)).filter(Boolean).join("");
   const spreadTab = spreadCard + (spreadRows ? `
-    <h2 style="font-size:15px;margin:20px 0 8px;">各類債券市場表現比較</h2>
+    <h2 style="font-size:16px;margin:20px 0 8px;">各類債券市場表現比較</h2>
     <p style="font-size:11px;color:var(--text-mute);margin-bottom:10px;">
       以 ETF 收盤價報酬率代理各類債市走勢；點擊 ETF 名稱可查 Yahoo Finance 詳情。
       實際信用利差（OAS）請參閱
@@ -3039,7 +3039,7 @@ function renderMarketCommentaryBlock(opts = {}) {
   return `
     <div style="border:1px solid var(--border,#e5e7eb);border-radius:10px;padding:14px 16px;margin-bottom:16px;background:var(--card-bg,#fff)">
       <div style="display:flex;align-items:baseline;margin-bottom:10px">
-        <h2 style="font-size:15px;margin:0;font-weight:700">盤勢說明</h2>${dateLabel}
+        <h2 style="font-size:16px;margin:0;font-weight:700">盤勢說明</h2>${dateLabel}
       </div>
       ${bulletsHtml}
     </div>`;
@@ -3101,8 +3101,8 @@ function renderTwMarketAnalysis() {
     return `<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;
         background:${bg};color:${txtColor};border-radius:5px;padding:8px 4px;min-width:64px;flex:1;
         font-size:13px;line-height:1.4;text-align:center">
-      <span style="font-weight:700">${s.name_zh || s.symbol}</span>
-      <span style="font-weight:700;margin-top:3px">${pStr}</span>
+      <span>${s.name_zh || s.symbol}</span>
+      <span style="margin-top:3px">${pStr}</span>
     </div>`;
   }).join("");
   const twSectorBlock = twSectors.length ? `
@@ -3238,9 +3238,9 @@ function renderUsMarketAnalysis() {
     return `<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;
         background:${bg};color:${txtColor};border-radius:5px;padding:8px 4px;min-width:64px;flex:1;
         font-size:13px;line-height:1.4;text-align:center">
-      <span style="font-weight:700">${s.name_zh || s.symbol}</span>
+      <span>${s.name_zh || s.symbol}</span>
       <span style="font-size:12px;opacity:.85">${s.symbol}</span>
-      <span style="font-weight:700;margin-top:2px">${pStr}</span>
+      <span style="margin-top:2px">${pStr}</span>
     </div>`;
   }).join("");
 
@@ -5604,7 +5604,7 @@ function renderMarketHighlights(m) {
   return `
     <div style="border:1px solid var(--border,#e5e7eb);border-radius:10px;padding:14px 16px;margin-bottom:16px;background:var(--card-bg,#fff)">
       <div style="display:flex;align-items:baseline;margin-bottom:10px">
-        <h2 style="font-size:15px;margin:0;font-weight:700">今日重點</h2>${dateLabel}
+        <h2 style="font-size:16px;margin:0;font-weight:700">今日重點</h2>${dateLabel}
       </div>
       <ul style="margin:0;padding-left:18px">${items.join("")}</ul>
     </div>`;
