@@ -545,12 +545,8 @@ table.indices th.sortable-th {
 .alloc-sec-tab svg { width: 17px; height: 17px; flex: 0 0 17px; }
 
 .news-item {
-  padding: 14px 16px;
-  margin-bottom: 10px;
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  box-shadow: var(--shadow);
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
 }
 .news-item h3 { margin: 0 0 6px; font-size: 14px; font-weight: 400; color: var(--text); padding-left: 0; }
 .news-item h3::before { display: none; }
