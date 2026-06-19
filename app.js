@@ -3036,6 +3036,9 @@ function renderMarketCommentaryBlock(opts = {}) {
 
   const dateLabel = newsDate ? `<span style="font-size:11px;color:var(--text-mute);margin-left:8px">${newsDate}</span>` : "";
 
+  // bare mode: return only the bullets (to embed inside another card)
+  if (opts.bare) return bulletsHtml;
+
   if (!bulletsHtml) return "";
   return `
     <div style="border:1px solid var(--border,#e5e7eb);border-radius:10px;padding:14px 16px;margin-bottom:16px;background:var(--card-bg,#fff)">
@@ -3280,14 +3283,16 @@ function renderUsMarketAnalysis() {
   ` : "";
 
   const asOf = usRankings.as_of || market.closing_date || "";
-  if (!indexBlock && !sectorBlock && !rankBlock) return "";
+  const commentaryBullets = renderMarketCommentaryBlock({ focus: "us", sectors, bare: true });
+  if (!indexBlock && !sectorBlock && !rankBlock && !commentaryBullets) return "";
 
-  return renderMarketCommentaryBlock({ focus: "us", sectors }) + `
+  return `
     <div style="border:1px solid var(--border,#e5e7eb);border-radius:10px;padding:14px 16px;margin-bottom:18px;background:var(--card-bg,#fff)">
       <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px">
-        <h2 style="font-size:16px;margin:0;font-weight:700">最新美股盤勢分析</h2>
+        <h2 style="font-size:16px;margin:0;font-weight:700">美股盤勢</h2>
         ${asOf ? `<span style="font-size:12px;color:var(--text-mute)">${asOf}</span>` : ""}
       </div>
+      ${commentaryBullets ? `<div style="margin-bottom:14px">${commentaryBullets}</div>` : ""}
       ${indexBlock}${sectorBlock}${rankBlock}
     </div>`;
 }
