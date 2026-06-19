@@ -5521,15 +5521,17 @@ function renderPremarketBlock() {
     </table>`;
 
 
-  // Split analysis: first paragraph = 今日判斷 summary, rest = detail
+  // Parse analysis, skip 【今日判斷】 block
   const analysisParts = (() => {
-    const lines = (p.analysis || "").split("\n").filter(l => l.trim() && l.trim() !== "---");
-    let summaryEnd = 0;
-    for (let i = 0; i < lines.length; i++) {
-      if (i > 0 && lines[i].startsWith("【") && lines[i].includes("】")) { summaryEnd = i; break; }
-      summaryEnd = i + 1;
+    const raw = (p.analysis || "").split("\n").filter(l => l.trim() && l.trim() !== "---");
+    const lines = [];
+    let skip = false;
+    for (const l of raw) {
+      if (l.startsWith("【今日判斷】")) { skip = true; continue; }
+      if (skip && l.startsWith("【") && l.includes("】")) skip = false;
+      if (!skip) lines.push(l);
     }
-    return { summary: lines.slice(0, summaryEnd), detail: lines.slice(summaryEnd) };
+    return { summary: [], detail: lines };
   })();
 
   const renderLines = lines => {
