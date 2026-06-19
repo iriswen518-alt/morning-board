@@ -2527,6 +2527,13 @@ table.indices.stock-cols col.c-num { width: 11%; }
   vertical-align: top;
 }
 
+/* 指數表第一欄：限寬 + 置中 */
+#content table.indices.freeze-col1 th:first-child,
+#content table.indices.freeze-col1 td:first-child {
+  max-width: 28vw;
+  text-align: center !important;
+}
+
 /* ===== 僅測試使用 標示 ===== */
 .test-badge {
   display: inline-block; vertical-align: middle; margin-left: 8px;

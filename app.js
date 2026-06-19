@@ -5546,6 +5546,12 @@ function renderPremarketBlock() {
   const renderLines = lines => {
     const out = [];
     let i = 0;
+    // Strip leading warning emoji and convert **bold** markdown to <strong>
+    const cleanText = raw => {
+      const stripped = raw.replace(/^[⚠️⚠\s]+/, "").trim();
+      const bolded = escapeHtml(stripped).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+      return bolded;
+    };
     while (i < lines.length) {
       const l = lines[i];
       if (l.startsWith("【") && l.includes("】")) {
@@ -5557,9 +5563,9 @@ function renderPremarketBlock() {
           bodyLines.push(lines[i].trim());
         }
         const body = bodyLines.filter(Boolean).join("　");
-        out.push(`<p style="margin:10px 0 2px;line-height:1.8"><strong style="color:var(--brand)">${tag}</strong></p>${body ? `<p style="margin:0 0 6px;line-height:1.8">${escapeHtml(body)}</p>` : ""}`);
+        out.push(`<p style="margin:10px 0 2px;line-height:1.8"><strong style="color:var(--brand)">${tag}</strong></p>${body ? `<p style="margin:0 0 6px;line-height:1.8">${cleanText(body)}</p>` : ""}`);
       } else {
-        out.push(`<p style="margin:6px 0;line-height:1.8">${escapeHtml(l)}</p>`);
+        out.push(`<p style="margin:6px 0;line-height:1.8">${cleanText(l)}</p>`);
       }
       i++;
     }
