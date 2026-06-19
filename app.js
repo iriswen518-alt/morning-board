@@ -479,14 +479,16 @@ function wireSearch() {
   let timer;
   const positionPanel = () => {
     const r = input.getBoundingClientRect();
-    panel.style.top = (r.bottom + 4) + "px";
-    panel.style.left = r.left + "px";
+    const vv = window.visualViewport;
+    const scrollY = vv ? vv.offsetTop : 0;
+    const scrollX = vv ? vv.offsetLeft : 0;
+    panel.style.top = (r.bottom + 4 - scrollY) + "px";
+    panel.style.left = (r.left - scrollX) + "px";
     panel.style.width = r.width + "px";
   };
   const doSearch = (q) => {
     if (!q.trim()) { panel.hidden = true; panel.innerHTML = ""; return; }
     if (!SEARCH_INDEX || !SEARCH_INDEX.length) {
-      // 首次輸入時若 index 還空，現場建一次
       try { SEARCH_INDEX = buildSearchIndex(); } catch(e) { console.error("[search] build idx fail:", e); }
     }
     const results = runSearch(q);
@@ -541,10 +543,11 @@ function wireSearch() {
   document.addEventListener("click", e => {
     if (!input.contains(e.target) && !panel.contains(e.target)) panel.hidden = true;
   });
-  // 視窗/捲動時若面板開著就重算位置
+  // 視窗/捲動/手機鍵盤開收時重算位置
   const repositionIfOpen = () => { if (!panel.hidden) positionPanel(); };
   window.addEventListener("resize", repositionIfOpen);
   window.addEventListener("scroll", repositionIfOpen, true);
+  if (window.visualViewport) window.visualViewport.addEventListener("resize", repositionIfOpen);
 }
 
 // 上次更新時間：取「本機 build (meta.built_at)」與「雲端報價 (quotes_built_at)」較新的一個。
@@ -1729,22 +1732,6 @@ function renderTargetsSheet() {
           <div class="t-name">${escapeHtml(t.name)}</div>
           <div class="t-tagline">${escapeHtml(t.tagline || "")}</div>
         </div>
-      </div>
-
-      <div class="t-stats">
-        ${(t.stats || []).map(s => {
-          const valTxt = escapeHtml(s.v);
-          const val = s.url
-            ? `<a href="${escapeHtml(s.url)}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${valTxt}</a>`
-            : valTxt;
-          return `
-          <div class="t-stat">
-            <div class="t-stat-k">${escapeHtml(s.k)}</div>
-            <div class="t-stat-v ${signClassFromStr(s.v)}">${val}</div>
-            <div class="t-stat-sub">${escapeHtml(s.sub || "")}</div>
-          </div>
-        `;
-        }).join("")}
       </div>
 
       ${renderThemeIndexBlock(t.key)}
