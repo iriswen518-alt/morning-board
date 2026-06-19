@@ -3251,32 +3251,32 @@ function renderUsMarketAnalysis() {
   // 個股排行 — 前 5 漲 / 前 5 跌
   const gainers = (usRankings.top_gainers || []).slice(0, 5);
   const losers  = (usRankings.top_losers  || []).slice(0, 5);
-  const stockRow = (s, isGainer) => {
+  const stockFlexRow = (s, isGainer) => {
     const dp = s.daily_pct;
     const color = isGainer ? "#d62828" : "#2a9d8f";
     const pStr = dp == null ? "—" : (dp >= 0 ? "+" : "") + dp.toFixed(2) + "%";
     const href = s.source_url ? ` href="${s.source_url}" target="_blank" rel="noopener"` : "";
-    return `<tr>
-      <td><a${href} style="color:inherit;text-decoration:none">${s.symbol}</a></td>
-      <td style="color:var(--text-mute); max-width:100px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap">${(s.name || "").slice(0, 14)}</td>
-      <td style="text-align:right; font-weight:700; color:${color}">${pStr}</td>
-      <td style="text-align:right; color:var(--text-mute)">${s.price != null ? s.price.toFixed(2) : "—"}</td>
-    </tr>`;
+    return `<a${href} style="display:flex;align-items:center;padding:6px 0;border-bottom:1px solid var(--border,#e5e7eb);text-decoration:none;color:inherit;gap:6px">
+      <span style="min-width:44px;font-size:12px;color:var(--text-mute);font-weight:600">${s.symbol}</span>
+      <span style="flex:1;font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${s.name || ""}</span>
+      <span style="font-weight:700;color:${color};min-width:64px;text-align:right;font-size:14px">${pStr}</span>
+      <span style="min-width:48px;text-align:right;color:var(--text-mute);font-size:12px">${s.price != null ? s.price.toFixed(2) : "—"}</span>
+    </a>`;
   };
 
   const rankBlock = (gainers.length || losers.length) ? `
-    <h3 style="font-size:14px; margin:0 0 8px; color:var(--text-mute); text-transform:uppercase; letter-spacing:.05em">個股排行</h3>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:8px">
-      <div>
-        <div style="font-size:14px;font-weight:700;color:#d62828;margin-bottom:4px">▲ 漲幅前五</div>
-        <table class="indices" style="width:100%">${gainers.map(s => stockRow(s, true)).join("")}</table>
-      </div>
-      <div>
-        <div style="font-size:14px;font-weight:700;color:#2a9d8f;margin-bottom:4px">▼ 跌幅前五</div>
-        <table class="indices" style="width:100%">${losers.map(s => stockRow(s, false)).join("")}</table>
-      </div>
-    </div>
-    <p style="color:var(--text-mute);font-size:12px;margin:0 0 8px">資料來源：Yahoo Finance Screener；非投資建議</p>
+    <h3 style="font-size:14px; margin:0 0 10px; color:var(--text-mute); text-transform:uppercase; letter-spacing:.05em">個股排行</h3>
+    ${gainers.length ? `
+    <div style="margin-bottom:14px">
+      <div style="font-size:13px;font-weight:700;color:#d62828;margin-bottom:4px">▲ 漲幅前五</div>
+      ${gainers.map(s => stockFlexRow(s, true)).join("")}
+    </div>` : ""}
+    ${losers.length ? `
+    <div style="margin-bottom:8px">
+      <div style="font-size:13px;font-weight:700;color:#2a9d8f;margin-bottom:4px">▼ 跌幅前五</div>
+      ${losers.map(s => stockFlexRow(s, false)).join("")}
+    </div>` : ""}
+    <p style="color:var(--text-mute);font-size:12px;margin:4px 0 8px">資料來源：Yahoo Finance Screener；非投資建議</p>
   ` : "";
 
   const asOf = usRankings.as_of || market.closing_date || "";
