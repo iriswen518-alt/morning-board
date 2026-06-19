@@ -244,13 +244,43 @@ button.academy-card {
   min-width: 0;
 }
 
+.chapter-content h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--brand-deep);
+  margin-top: 36px;
+  margin-bottom: 12px;
+}
+
 .chapter-content h2 {
+  font-size: 17px;
+  font-weight: 700;
   color: var(--brand-deep);
   border-bottom: 2px solid var(--brand-primary);
   padding-bottom: 6px;
-  margin-top: 36px;
+  margin-top: 32px;
+  margin-bottom: 10px;
 }
 
+.chapter-content h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--brand-deep);
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.chapter-content h4,
+.chapter-content h5,
+.chapter-content h6 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--brand-deep);
+  margin-top: 16px;
+  margin-bottom: 6px;
+}
+
+.chapter-content h1:first-child,
 .chapter-content h2:first-child {
   margin-top: 0;
 }
