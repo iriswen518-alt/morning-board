@@ -264,6 +264,16 @@ async function loadChapter() {
 
     content.innerHTML = html;
 
+    // Wrap tables for mobile horizontal scroll
+    content.querySelectorAll('table').forEach(tbl => {
+      if (!tbl.parentElement.classList.contains('table-scroll')) {
+        const wrap = document.createElement('div');
+        wrap.className = 'table-scroll';
+        tbl.parentNode.insertBefore(wrap, tbl);
+        wrap.appendChild(tbl);
+      }
+    });
+
     if (window.mermaid) {
       window.mermaid.run({ querySelector: '.mermaid' });
     }
