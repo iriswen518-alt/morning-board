@@ -123,8 +123,11 @@
   margin: 0 0 10px;
 }
 
+@media (max-width: 768px) {
+  .install-main { padding-bottom: calc(var(--tap, 44px) + 44px + env(safe-area-inset-bottom, 0px)); }
+}
 @media (max-width: 640px) {
-  .install-main { padding: 24px 16px 64px; }
+  .install-main { padding: 24px 16px calc(var(--tap, 44px) + 44px + env(safe-area-inset-bottom, 0px)); }
   .install-hero { padding: 14px 16px; gap: 12px; }
   .install-hero-icon { width: 40px; height: 40px; flex: 0 0 40px; }
   .install-hero-title { font-size: 16px; }
