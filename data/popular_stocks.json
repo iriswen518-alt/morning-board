@@ -1,21 +1,7 @@
 {
-  "generated_at": "2026-06-19T13:46:25+08:00",
+  "generated_at": "2026-06-19T18:05:33+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
-    {
-      "symbol": "QS",
-      "name_zh": "QuantumScape",
-      "kind": "US",
-      "price": 8.04,
-      "change_pct": 16.52,
-      "mtd_pct": -10.47,
-      "ytd_pct": -22.84,
-      "market_date": "2026-06-18",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QS.US",
-      "error": null
-    },
     {
       "symbol": "ACN",
       "name_zh": "Accenture",
@@ -28,6 +14,20 @@
       "per": 10.3643,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ACN.US",
+      "error": null
+    },
+    {
+      "symbol": "QS",
+      "name_zh": "QuantumScape",
+      "kind": "US",
+      "price": 8.04,
+      "change_pct": 16.52,
+      "mtd_pct": -10.47,
+      "ytd_pct": -22.84,
+      "market_date": "2026-06-18",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QS.US",
       "error": null
     },
     {
@@ -45,20 +45,6 @@
       "error": null
     },
     {
-      "symbol": "BE",
-      "name_zh": "Bloom Energy",
-      "kind": "US",
-      "price": 328.91,
-      "change_pct": 15.41,
-      "mtd_pct": 15.41,
-      "ytd_pct": 278.54,
-      "market_date": "2026-06-18",
-      "per": 15339.6005,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BE.US",
-      "error": null
-    },
-    {
       "symbol": "TTWO",
       "name_zh": "Take-Two Interactive Software,",
       "kind": "US",
@@ -70,76 +56,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TTWO.US",
-      "error": null
-    },
-    {
-      "symbol": "Q",
-      "name_zh": "Qnity Electronics",
-      "kind": "US",
-      "price": 168.98,
-      "change_pct": 7.82,
-      "mtd_pct": 8.32,
-      "ytd_pct": 106.96,
-      "market_date": "2026-06-18",
-      "per": 71.0122,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=Q.US",
-      "error": null
-    },
-    {
-      "symbol": "INFY",
-      "name_zh": "Infosys",
-      "kind": "US",
-      "price": 10.57,
-      "change_pct": -9.66,
-      "mtd_pct": -16.44,
-      "ytd_pct": -40.68,
-      "market_date": "2026-06-18",
-      "per": 15.9603,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=INFY.US",
-      "error": null
-    },
-    {
-      "symbol": "TXN",
-      "name_zh": "Texas Instruments Incorporated",
-      "kind": "US",
-      "price": 322.86,
-      "change_pct": 6.95,
-      "mtd_pct": 5.62,
-      "ytd_pct": 86.1,
-      "market_date": "2026-06-18",
-      "per": 53.2151,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TXN.US",
-      "error": null
-    },
-    {
-      "symbol": "EPAM",
-      "name_zh": "EPAM Systems",
-      "kind": "US",
-      "price": 76.64,
-      "change_pct": -12.61,
-      "mtd_pct": -25.2,
-      "ytd_pct": -62.59,
-      "market_date": "2026-06-18",
-      "per": 11.848,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=EPAM.US",
-      "error": null
-    },
-    {
-      "symbol": "CAST",
-      "name_zh": "FreeCast",
-      "kind": "US",
-      "price": 8.07,
-      "change_pct": 56.7,
-      "mtd_pct": 872.29,
-      "ytd_pct": null,
-      "market_date": "2026-06-18",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CAST.US",
       "error": null
     },
     {
