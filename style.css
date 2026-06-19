@@ -2398,7 +2398,7 @@ table.indices.stock-cols th, table.indices.stock-cols td {
   overflow: hidden; text-overflow: ellipsis;
 }
 table.indices.stock-cols th:first-child, table.indices.stock-cols td:first-child {
-  text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 table.indices.stock-cols col.c-name { width: 34%; }
 table.indices.stock-cols col.c-num { width: 11%; }
