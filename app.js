@@ -3091,12 +3091,12 @@ function renderTwMarketAnalysis() {
   // 類股表現熱力圖
   const twSectors = twRankings.sectors || [];
   const sectorBgColor = (dp) => dp == null ? "#e5e7eb"
-    : dp >= 3 ? "#c0392b" : dp >= 1 ? "#e07070" : dp >= 0 ? "#f5b8b8"
-    : dp >= -1 ? "#b8ddd9" : dp >= -3 ? "#6abcb5" : "#2a9d8f";
+    : dp >= 3 ? "#f5a0a0" : dp >= 1 ? "#f9c0c0" : dp >= 0 ? "#fde5e5"
+    : dp >= -1 ? "#d9eeec" : dp >= -3 ? "#aedbd7" : "#80cdc7";
   const twSectorBars = twSectors.map(s => {
     const dp = s.daily_pct;
     const bg = sectorBgColor(dp);
-    const txtColor = dp != null && Math.abs(dp) >= 1 ? "#fff" : "#374151";
+    const txtColor = "#374151";
     const pStr = dp == null ? "—" : (dp >= 0 ? "+" : "") + dp.toFixed(2) + "%";
     return `<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;
         background:${bg};color:${txtColor};border-radius:5px;padding:8px 4px;min-width:64px;flex:1;
@@ -3116,9 +3116,9 @@ function renderTwMarketAnalysis() {
   const etfBars = etfs.map(s => {
     const dp = s.daily_pct;
     const bg = dp == null ? "#e5e7eb"
-      : dp >= 2 ? "#c0392b" : dp >= 0.5 ? "#e07070" : dp >= 0 ? "#f5b8b8"
-      : dp >= -0.5 ? "#b8ddd9" : dp >= -2 ? "#6abcb5" : "#2a9d8f";
-    const txtColor = dp != null && Math.abs(dp) >= 0.5 ? "#fff" : "#374151";
+      : dp >= 2 ? "#f5a0a0" : dp >= 0.5 ? "#f9c0c0" : dp >= 0 ? "#fde5e5"
+      : dp >= -0.5 ? "#d9eeec" : dp >= -2 ? "#aedbd7" : "#80cdc7";
+    const txtColor = "#374151";
     const pStr = dp == null ? "—" : (dp >= 0 ? "+" : "") + dp.toFixed(2) + "%";
     const href = s.source_url ? ` href="${s.source_url}" target="_blank" rel="noopener"` : "";
     return `<a${href} style="display:flex;flex-direction:column;align-items:center;justify-content:center;
@@ -3231,9 +3231,9 @@ function renderUsMarketAnalysis() {
   const sectorBars = sectors.map(s => {
     const dp = s.daily_pct;
     const bg = dp == null ? "#e5e7eb"
-      : dp >= 2 ? "#c0392b" : dp >= 0.5 ? "#e07070" : dp >= 0 ? "#f5b8b8"
-      : dp >= -0.5 ? "#b8ddd9" : dp >= -2 ? "#6abcb5" : "#2a9d8f";
-    const txtColor = dp != null && Math.abs(dp) >= 0.5 ? "#fff" : "#374151";
+      : dp >= 2 ? "#f5a0a0" : dp >= 0.5 ? "#f9c0c0" : dp >= 0 ? "#fde5e5"
+      : dp >= -0.5 ? "#d9eeec" : dp >= -2 ? "#aedbd7" : "#80cdc7";
+    const txtColor = "#374151";
     const pStr = dp == null ? "—" : (dp >= 0 ? "+" : "") + dp.toFixed(2) + "%";
     return `<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;
         background:${bg};color:${txtColor};border-radius:5px;padding:8px 4px;min-width:64px;flex:1;
