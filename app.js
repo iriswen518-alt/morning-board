@@ -7356,7 +7356,7 @@ function renderFundsSheet() {
       <button class="tab active" data-ftab="lump">單筆投資</button>
       <button class="tab" data-ftab="dca">定期定額</button>
       <button class="tab" data-ftab="beatetf">超越ETF</button>
-      <button class="tab" data-ftab="compare">基金績效比較</button>
+      <button class="tab" data-ftab="compare">績效比較</button>
     </div>
     <div id="ftab-lump">${renderLumpFundCards()}</div>
     <div id="ftab-dca" hidden>${renderDcaFundCards()}</div>
