@@ -234,30 +234,32 @@ button.academy-card {
   box-shadow: 0 4px 12px rgba(1, 154, 179, 0.25);
 }
 
+/* 手機下拉選單：預設隱藏，手機才顯示 */
+.chapter-select-mobile {
+  display: none;
+}
+
 @media (max-width: 640px) {
-  .chapter-topnav {
-    margin: 0 -14px 20px;
-    padding: 0 14px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-  .chapter-topnav::-webkit-scrollbar { display: none; }
-  .chapter-topnav ol {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 6px;
-    width: max-content;
-    padding-bottom: 4px;
-  }
-  .chapter-topnav li {
-    flex: 0 0 auto;
-  }
-  .chapter-topnav li a {
-    padding: 8px 14px;
-    font-size: 13px;
-    white-space: nowrap;
-    border-radius: 20px;
+  /* 手機：隱藏 pill 格線，改用 select */
+  .chapter-topnav ol { display: none; }
+  .chapter-select-mobile {
+    display: block;
+    width: 100%;
+    margin: 0 0 20px;
+    padding: 11px 14px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--brand-deep);
+    background: var(--academy-bg-soft);
+    border: 1px solid var(--academy-border);
+    border-radius: 10px;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23019AB3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 36px;
+    cursor: pointer;
   }
 }
 

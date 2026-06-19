@@ -200,6 +200,24 @@ async function loadChapter() {
     }
 
     chapterListEl.innerHTML = '';
+
+    // 手機下拉選單（章節多時比橫向捲動好用）
+    const existingSelect = document.getElementById('chapter-select-mobile');
+    if (existingSelect) existingSelect.remove();
+    const sel = document.createElement('select');
+    sel.id = 'chapter-select-mobile';
+    sel.className = 'chapter-select-mobile';
+    sel.setAttribute('aria-label', '選擇章節');
+    idx.chapters.forEach((ch, i) => {
+      const opt = document.createElement('option');
+      opt.value = `chapter.html?course=${encodeURIComponent(course)}&chapter=${ch.slug}`;
+      opt.textContent = ch.title;
+      if (ch.slug === chapterSlug || (!chapterSlug && i === 0)) opt.selected = true;
+      sel.appendChild(opt);
+    });
+    sel.addEventListener('change', () => { location.href = sel.value; });
+    chapterListEl.parentElement.insertBefore(sel, chapterListEl);
+
     idx.chapters.forEach((ch, i) => {
       const li = document.createElement('li');
       const a = document.createElement('a');
