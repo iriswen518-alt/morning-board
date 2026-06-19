@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T07:53:05+08:00",
+  "generated_at": "2026-06-19T12:04:27+08:00",
   "source": "finnhub (US price+daily) + Yahoo (US MTD/YTD) + TWSE (TW)",
   "us_stocks": [
     {
@@ -59,10 +59,10 @@
       "kind": "US",
       "price": 368.03,
       "change_pct": 1.17,
-      "mtd_pct": -3.24,
-      "ytd_pct": 17.58,
-      "perf_1y": 112.34,
-      "perf_3y": 197.93,
+      "mtd_pct": -4.35,
+      "ytd_pct": 16.23,
+      "perf_1y": 106.76,
+      "perf_3y": 194.5,
       "perf_5y": 205.45,
       "market_date": "2026-06-18",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GOOGL.US",
@@ -76,10 +76,10 @@
       "kind": "US",
       "price": 244.39,
       "change_pct": 2.9,
-      "mtd_pct": -9.7,
-      "ytd_pct": 5.88,
-      "perf_1y": 15.0,
-      "perf_3y": 94.75,
+      "mtd_pct": -12.25,
+      "ytd_pct": 2.89,
+      "perf_1y": 10.56,
+      "perf_3y": 89.26,
       "perf_5y": 40.51,
       "market_date": "2026-06-18",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AMZN.US",
@@ -118,7 +118,7 @@
       "market_date": "2026-06-18",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TSLA.US",
       "error": null,
-      "per": 385.4722,
+      "per": 389.4691,
       "per_kind": "trailing"
     },
     {
@@ -171,8 +171,8 @@
       "market_date": "2026-06-18",
       "source_url": "https://tw.stock.yahoo.com/quote/2330.TW",
       "error": null,
-      "per": 32.4,
-      "per_kind": "trailing"
+      "per": null,
+      "per_kind": null
     },
     {
       "symbol": "2317",
@@ -188,8 +188,8 @@
       "market_date": "2026-06-18",
       "source_url": "https://tw.stock.yahoo.com/quote/2317.TW",
       "error": null,
-      "per": 19.07,
-      "per_kind": "trailing"
+      "per": null,
+      "per_kind": null
     },
     {
       "symbol": "2454",
@@ -205,8 +205,8 @@
       "market_date": "2026-06-18",
       "source_url": "https://tw.stock.yahoo.com/quote/2454.TW",
       "error": null,
-      "per": 69.96,
-      "per_kind": "trailing"
+      "per": null,
+      "per_kind": null
     },
     {
       "symbol": "2308",
@@ -222,8 +222,8 @@
       "market_date": "2026-06-18",
       "source_url": "https://tw.stock.yahoo.com/quote/2308.TW",
       "error": null,
-      "per": 79.28,
-      "per_kind": "trailing"
+      "per": null,
+      "per_kind": null
     },
     {
       "symbol": "2382",
@@ -239,8 +239,8 @@
       "market_date": "2026-06-18",
       "source_url": "https://tw.stock.yahoo.com/quote/2382.TW",
       "error": null,
-      "per": 18.9,
-      "per_kind": "trailing"
+      "per": null,
+      "per_kind": null
     },
     {
       "symbol": "2891",
@@ -256,8 +256,8 @@
       "market_date": "2026-06-18",
       "source_url": "https://tw.stock.yahoo.com/quote/2891.TW",
       "error": null,
-      "per": 17.33,
-      "per_kind": "trailing"
+      "per": null,
+      "per_kind": null
     },
     {
       "symbol": "1301",
