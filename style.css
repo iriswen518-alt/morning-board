@@ -2336,6 +2336,8 @@ table.indices th.sortable-th {
   }
   body.nav-open .main-nav { display: grid; }
   body.nav-open { overflow: hidden; }
+  body.nav-open .tabbar { display: none !important; }
+  .main-nav { padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 24px); }
 
   .main-tab {
     flex: none;
