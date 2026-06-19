@@ -3172,7 +3172,7 @@ function renderTwMarketAnalysis() {
   return renderMarketCommentaryBlock({ focus: "tw" }) + `
     <div style="border:1px solid var(--border,#e5e7eb);border-radius:10px;padding:14px 16px;margin-bottom:18px;background:var(--card-bg,#fff)">
       <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px">
-        <h2 style="font-size:16px;margin:0;font-weight:700">最新台股盤勢分析</h2>
+        <h2 style="font-size:16px;margin:0;font-weight:700">台股盤勢</h2>
         ${asOf ? `<span style="font-size:12px;color:var(--text-mute)">${asOf}</span>` : ""}
       </div>
       ${indexBlock}${twSectorBlock}${etfBlock}${rankBlock}
