@@ -1,13 +1,12 @@
 /* 理財小學堂 —— 主站 style.css 已負責 topbar / main-nav / footer，
    此檔只覆寫 academy 專屬的 layout 與內容區塊。 */
 
+/* academy-specific aliases → reuse main style.css variables */
 :root {
-  --brand-primary: #019AB3;
-  --brand-accent: #17B5AD;
-  --brand-deep: #003D91;
-  --academy-bg-soft: #f5fafb;
-  --academy-border: #e2e8ee;
-  --academy-muted: #6b7785;
+  --academy-bg-soft: var(--soft);
+  --academy-border: var(--soft-border);
+  --academy-muted: var(--muted);
+  --brand-accent: var(--brand-secondary);
 }
 
 .academy-main {

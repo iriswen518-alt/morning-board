@@ -1,13 +1,12 @@
 /* 安裝頁 —— 主站 style.css 已負責 topbar / main-nav / footer；
    此檔只負責安裝頁專屬版型，沿用 academy 的卡片風格。 */
 
+/* install-specific aliases → reuse main style.css variables */
 :root {
-  --brand-primary: #019AB3;
-  --brand-accent: #17B5AD;
-  --brand-deep: #003D91;
-  --install-bg-soft: #f5fafb;
-  --install-border: #e2e8ee;
-  --install-muted: #6b7785;
+  --install-bg-soft: var(--soft);
+  --install-border: var(--soft-border);
+  --install-muted: var(--muted);
+  --brand-accent: var(--brand-secondary);
 }
 
 .install-main {
