@@ -738,7 +738,11 @@ function wireNavToggle() {
     toggle.setAttribute("aria-expanded", open ? "true" : "false");
   });
   nav.addEventListener("click", (e) => {
-    if (e.target.closest(".main-tab") && document.body.classList.contains("nav-open")) {
+    if (!document.body.classList.contains("nav-open")) return;
+    if (e.target.closest(".main-tab")) {
+      document.body.classList.remove("nav-open");
+      toggle.setAttribute("aria-expanded", "false");
+    } else if (e.target === nav) {
       document.body.classList.remove("nav-open");
       toggle.setAttribute("aria-expanded", "false");
     }
