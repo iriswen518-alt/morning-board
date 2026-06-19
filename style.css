@@ -436,11 +436,11 @@ table.indices {
   font-size: 14px;
 }
 table.indices th, table.indices td {
-  text-align: right;
+  text-align: center;
   padding: 8px 6px;
   border-bottom: 1px solid var(--border);
 }
-table.indices th:first-child, table.indices td:first-child { text-align: left; }
+table.indices th:first-child, table.indices td:first-child { text-align: center; }
 /* 排行榜：固定欄寬，讓「市值前十大／最大漲幅／最大跌幅」三表上下對齊 */
 table.ranking-table { table-layout: fixed; }
 table.ranking-table td:nth-child(2) { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -1706,7 +1706,7 @@ table.indices th.sortable-th {
 .cmp-table-wrap { overflow-x: auto; margin: 10px 0; }
 .cmp-table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
 .cmp-table th, .cmp-table td {
-  padding: 6px 8px; border-bottom: 1px solid var(--border, #e5e7eb); text-align: right;
+  padding: 6px 8px; border-bottom: 1px solid var(--border, #e5e7eb); text-align: center;
 }
 .cmp-table th { background: #CCE8ED; color: var(--brand-deep, #003D91); }
 .cmp-th-l, .cmp-td-l { text-align: left !important; white-space: nowrap; }

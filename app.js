@@ -8,7 +8,7 @@ const INDEX_NAMES = {
   "Nasdaq": "那斯達克",
   "Nasdaq Composite": "那斯達克",
   "Dow Jones": "道瓊",
-  "PHLX Semiconductor": "費城半導體",
+  "PHLX Semiconductor": "費半",
   "Nikkei 225": "日經 225",
   "Hang Seng": "恆生指數",
   "Hang Seng 恆生": "恆生指數",
@@ -113,7 +113,7 @@ const INDEX_YAHOO_SYMBOLS = {
 
 function quoteSuffix(url) {
   if (!url) return "";
-  return ` <a href="${url}" target="_blank" rel="noopener" class="quote-link" title="開啟即時行情頁">即時行情</a>`;
+  return `<br><a href="${url}" target="_blank" rel="noopener" class="quote-link" title="開啟即時行情頁">即時行情</a>`;
 }
 
 // 部分指數 Yahoo 無對應商品，改用其他即時來源（完整 URL）
@@ -376,11 +376,11 @@ function buildSearchIndex() {
   for (const t of (DATA.targets?.targets || [])) {
     const txt = [t.market_status, t.opportunity, t.pitch, t.view, t.reason, t.action, t.add_trigger, t.trim_trigger]
       .map(v => Array.isArray(v) ? v.join(" ") : (v || "")).join(" ");
-    idx.push({ tab: "targets", tabLabel: "主題市場", title: t.name || t.key, text: txt });
+    idx.push({ tab: "targets", subtab: t.key, tabLabel: "主題市場", title: t.name || t.key, text: txt });
   }
   // 主題相關基金
   for (const f of (DATA.targets?.theme_funds || [])) {
-    idx.push({ tab: "targets", tabLabel: `主題市場 · ${f.theme || ""}`, title: f.bop_name_zh || f.name_zh || "", text: f.tagline || "" });
+    idx.push({ tab: "targets", subtab: f.theme, tabLabel: `主題市場 · ${f.theme || ""}`, title: f.bop_name_zh || f.name_zh || "", text: f.tagline || "" });
   }
   // 財富傳承（含 fund_tax 等所有法規條目；過濾凱基）
   for (const t of (DATA.wealth?.topics || [])) {
