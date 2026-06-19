@@ -12,27 +12,27 @@
   "sections": [
     {
       "heading": "一、開場白的三個關鍵元素",
-      "html": "<details open class=\"det-core\"><summary>核心說明</summary>\n<p>一個好的開場白，要在 2 分鐘內完成三件事：</p>\n<ol>\n<li><strong>建立共鳴</strong>：用客戶關心的事切入（市場行情、稅務、子女、退休……）</li>\n<li><strong>設定期待</strong>：「今天我們來聊一個方向，不是要馬上做決定。」</li>\n<li><strong>給對方主導感</strong>：「我先聽聽您的情況，再看看有沒有我能幫上忙的地方。」</li>\n</ol>\n</details>\n"
+      "html": "<p>一個好的開場白，要在 2 分鐘內完成三件事：</p>\n<ol>\n<li><strong>建立共鳴</strong>：用客戶關心的事切入（市場行情、稅務、子女、退休……）</li>\n<li><strong>設定期待</strong>：「今天我們來聊一個方向，不是要馬上做決定。」</li>\n<li><strong>給對方主導感</strong>：「我先聽聽您的情況，再看看有沒有我能幫上忙的地方。」</li>\n</ol>"
     },
     {
       "heading": "二、開放式問題技巧",
-      "html": "<details open class=\"det-core\"><summary>核心說明</summary>\n<p>開放式問題讓客戶多說，封閉式問題讓話題停下來。</p>\n<table>\n<thead>\n<tr>\n<th>問法</th>\n<th>類型</th>\n<th>效果</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>「您最近有在投資嗎？」</td>\n<td>封閉（是/否）</td>\n<td>話題結束</td>\n</tr>\n<tr>\n<td>「您最近在關注哪些投資機會？」</td>\n<td>開放</td>\n<td>話題延伸</td>\n</tr>\n<tr>\n<td>「您對現在的配置滿意嗎？」</td>\n<td>封閉</td>\n<td>容易說「還好」結束</td>\n</tr>\n<tr>\n<td>「您對現在的配置，哪個部分最想調整？」</td>\n<td>開放</td>\n<td>引導客戶說出具體痛點</td>\n</tr>\n</tbody>\n</table>\n<p><strong>黃金開放問句：</strong></p>\n<ul>\n<li>「您目前最希望這部分的資產達到什麼樣的目標？」</li>\n<li>「如果可以改變一件事，您希望是什麼？」</li>\n<li>「您對現在這樣的安排，有沒有哪裡還不太確定？」</li>\n</ul>\n</details>\n"
+      "html": "<p>開放式問題讓客戶多說，封閉式問題讓話題停下來。</p>\n<table>\n<thead>\n<tr>\n<th>問法</th>\n<th>類型</th>\n<th>效果</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>「您最近有在投資嗎？」</td>\n<td>封閉（是/否）</td>\n<td>話題結束</td>\n</tr>\n<tr>\n<td>「您最近在關注哪些投資機會？」</td>\n<td>開放</td>\n<td>話題延伸</td>\n</tr>\n<tr>\n<td>「您對現在的配置滿意嗎？」</td>\n<td>封閉</td>\n<td>容易說「還好」結束</td>\n</tr>\n<tr>\n<td>「您對現在的配置，哪個部分最想調整？」</td>\n<td>開放</td>\n<td>引導客戶說出具體痛點</td>\n</tr>\n</tbody>\n</table>\n<p><strong>黃金開放問句：</strong></p>\n<ul>\n<li>「您目前最希望這部分的資產達到什麼樣的目標？」</li>\n<li>「如果可以改變一件事，您希望是什麼？」</li>\n<li>「您對現在這樣的安排，有沒有哪裡還不太確定？」</li>\n</ul>"
     },
     {
       "heading": "三、反對問題處理",
-      "html": "<details open class=\"det-core\"><summary>核心說明</summary>\n<p>反對不是拒絕，而是客戶在告訴你他還有疑慮。</p>\n<table>\n<thead>\n<tr>\n<th>反對類型</th>\n<th>本質</th>\n<th>回應策略</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>「太貴了」</td>\n<td>感覺不值得</td>\n<td>量化效益：「一年費用約 X 元，對應的是……」</td>\n</tr>\n<tr>\n<td>「我再想想」</td>\n<td>擔心、不夠安心</td>\n<td>問出真正顧慮：「您主要還在考慮哪個方向？」</td>\n</tr>\n<tr>\n<td>「我已經有在做了」</td>\n<td>無感需求</td>\n<td>用 SPIN I 問題放大現有方案的潛在風險</td>\n</tr>\n<tr>\n<td>「我問一下家人」</td>\n<td>決策者不在場</td>\n<td>邀請下次一起面談：「我們安排一次，讓您跟家人一起聽？」</td>\n</tr>\n</tbody>\n</table>\n<p><div class=\"mermaid\">flowchart TD\n  A[客戶提出反對] --> B{反對類型}\n  B --> C[太貴了 → 量化效益]\n  B --> D[再想想 → 問出顧慮]\n  B --> E[已在做 → I 問題放大差異]\n  B --> F[問家人 → 邀請共同面談]\n  C & D & E & F --> G[更新 CRM 商機階段]</div></p>\n</details>\n"
+      "html": "<p>反對不是拒絕，而是客戶在告訴你他還有疑慮。</p>\n<table>\n<thead>\n<tr>\n<th>反對類型</th>\n<th>本質</th>\n<th>回應策略</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>「太貴了」</td>\n<td>感覺不值得</td>\n<td>量化效益：「一年費用約 X 元，對應的是……」</td>\n</tr>\n<tr>\n<td>「我再想想」</td>\n<td>擔心、不夠安心</td>\n<td>問出真正顧慮：「您主要還在考慮哪個方向？」</td>\n</tr>\n<tr>\n<td>「我已經有在做了」</td>\n<td>無感需求</td>\n<td>用 SPIN I 問題放大現有方案的潛在風險</td>\n</tr>\n<tr>\n<td>「我問一下家人」</td>\n<td>決策者不在場</td>\n<td>邀請下次一起面談：「我們安排一次，讓您跟家人一起聽？」</td>\n</tr>\n</tbody>\n</table>\n<p><div class=\"mermaid\">flowchart TD\n  A[客戶提出反對] --> B{反對類型}\n  B --> C[太貴了 → 量化效益]\n  B --> D[再想想 → 問出顧慮]\n  B --> E[已在做 → I 問題放大差異]\n  B --> F[問家人 → 邀請共同面談]\n  C & D & E & F --> G[更新 CRM 商機階段]</div></p>"
     },
     {
       "heading": "四、結案信號與話術",
-      "html": "<details open class=\"det-core\"><summary>核心說明</summary>\n<p>結案不是「催客戶」，而是識別信號、給客戶一個容易說「好」的台階。</p>\n<p><strong>四種結案信號：</strong></p>\n<ol>\n<li><strong>語言信號</strong>：「這個好像不錯……」「如果我做的話……」</li>\n<li><strong>行動信號</strong>：主動翻看商品說明書、拿出計算機試算</li>\n<li><strong>問細節</strong>：「手續費多少？」「最少要投多少？」「什麼時候扣款？」</li>\n<li><strong>看時間</strong>：客戶反覆看錶 → 直接確認意願，不要再延伸說明</li>\n</ol>\n<p><strong>結案話術對照：</strong></p>\n<table>\n<thead>\n<tr>\n<th>情境</th>\n<th>話術</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>信號出現，直接確認</td>\n<td>「您聽起來對這個方向蠻感興趣的，要不要我幫您試算一個方案？」</td>\n</tr>\n<tr>\n<td>客戶猶豫中</td>\n<td>「我了解您需要多一點時間，我們下週○號再確認，我會準備好完整說明。」</td>\n</tr>\n<tr>\n<td>客戶說「再看看」</td>\n<td>「好，那我先幫您保留這個方向，三天後我聯繫您確認？」（給具體時間點）</td>\n</tr>\n<tr>\n<td>推進失敗</td>\n<td>記入 CRM 商機「猶豫」階段，設定追蹤日期</td>\n</tr>\n</tbody>\n</table>\n<blockquote class=\"callout callout-tip\">\n  <div class=\"callout-title\">每次面談都要有下一步</div>\n  <div class=\"callout-content\"><p>避免以「您有空再聯繫我」結尾。每次面談要有一個明確的下一個行動：「我下週四傳給您一份試算表」或「週三上午我打給您確認」。</p></div>\n</blockquote>\n</details>\n"
+      "html": "<p>結案不是「催客戶」，而是識別信號、給客戶一個容易說「好」的台階。</p>\n<p><strong>四種結案信號：</strong></p>\n<ol>\n<li><strong>語言信號</strong>：「這個好像不錯……」「如果我做的話……」</li>\n<li><strong>行動信號</strong>：主動翻看商品說明書、拿出計算機試算</li>\n<li><strong>問細節</strong>：「手續費多少？」「最少要投多少？」「什麼時候扣款？」</li>\n<li><strong>看時間</strong>：客戶反覆看錶 → 直接確認意願，不要再延伸說明</li>\n</ol>\n<p><strong>結案話術對照：</strong></p>\n<table>\n<thead>\n<tr>\n<th>情境</th>\n<th>話術</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>信號出現，直接確認</td>\n<td>「您聽起來對這個方向蠻感興趣的，要不要我幫您試算一個方案？」</td>\n</tr>\n<tr>\n<td>客戶猶豫中</td>\n<td>「我了解您需要多一點時間，我們下週○號再確認，我會準備好完整說明。」</td>\n</tr>\n<tr>\n<td>客戶說「再看看」</td>\n<td>「好，那我先幫您保留這個方向，三天後我聯繫您確認？」（給具體時間點）</td>\n</tr>\n<tr>\n<td>推進失敗</td>\n<td>記入 CRM 商機「猶豫」階段，設定追蹤日期</td>\n</tr>\n</tbody>\n</table>\n<blockquote class=\"callout callout-tip\">\n  <div class=\"callout-title\">每次面談都要有下一步</div>\n  <div class=\"callout-content\"><p>避免以「您有空再聯繫我」結尾。每次面談要有一個明確的下一個行動：「我下週四傳給您一份試算表」或「週三上午我打給您確認」。</p></div>\n</blockquote>"
     },
     {
       "heading": "五、售後黃金 48 小時",
-      "html": "<details open class=\"det-core\"><summary>核心說明</summary>\n<p>成交後 48 小時內主動聯繫，確認客戶滿意度。這是轉介的黃金視窗：客戶對服務印象最深刻的時候，最願意推薦親友。</p>\n</details>\n"
+      "html": "<p>成交後 48 小時內主動聯繫，確認客戶滿意度。這是轉介的黃金視窗：客戶對服務印象最深刻的時候，最願意推薦親友。</p>"
     },
     {
       "heading": "六、合規提醒",
-      "html": "<details open class=\"det-core\"><summary>核心說明</summary>\n<ul>\n<li>「限時優惠」話術若不存在實際優惠，不可捏造時間壓力（違反金消法 §10 誠信原則）。</li>\n<li>結案後仍須完成書面適合度評估，口頭成交不具法律效力。</li>\n<li>不得以誘導、威脅或不實陳述方式促成交易。</li>\n</ul>\n</details>\n"
+      "html": "<ul>\n<li>「限時優惠」話術若不存在實際優惠，不可捏造時間壓力（違反金消法 §10 誠信原則）。</li>\n<li>結案後仍須完成書面適合度評估，口頭成交不具法律效力。</li>\n<li>不得以誘導、威脅或不實陳述方式促成交易。</li>\n</ul>"
     }
   ]
 }

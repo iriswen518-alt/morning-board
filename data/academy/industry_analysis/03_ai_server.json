@@ -12,19 +12,19 @@
   "sections": [
     {
       "heading": "一、AI 算力鏈三層架構",
-      "html": "<details open class=\"det-core\"><summary>核心說明</summary>\n<table><thead><tr><th>層次</th><th>硬體需求</th><th>台廠機會</th></tr></thead><tbody><tr><td>模型訓練</td><td>大量 H100 GPU、液冷散熱、高頻寬記憶體（HBM）</td><td>廣達、緯穎（伺服器 ODM）；雙鴻、奇鋐（散熱）</td></tr><tr><td>推論部署</td><td>低功耗 AI 晶片、CoWoS 先進封裝</td><td>台積電 CoWoS；聯發科 on-device AI SoC</td></tr><tr><td>應用層</td><td>軟體、API、雲端服務</td><td>台灣廠商較弱，主要是美國平台（OpenAI、Google、Microsoft）</td></tr></tbody></table>\n</details>\n"
+      "html": "<table><thead><tr><th>層次</th><th>硬體需求</th><th>台廠機會</th></tr></thead><tbody><tr><td>模型訓練</td><td>大量 H100 GPU、液冷散熱、高頻寬記憶體（HBM）</td><td>廣達、緯穎（伺服器 ODM）；雙鴻、奇鋐（散熱）</td></tr><tr><td>推論部署</td><td>低功耗 AI 晶片、CoWoS 先進封裝</td><td>台積電 CoWoS；聯發科 on-device AI SoC</td></tr><tr><td>應用層</td><td>軟體、API、雲端服務</td><td>台灣廠商較弱，主要是美國平台（OpenAI、Google、Microsoft）</td></tr></tbody></table>"
     },
     {
       "heading": "二、AI 伺服器 vs 一般伺服器",
-      "html": "<details open class=\"det-core\"><summary>核心說明</summary>\n<table><thead><tr><th>規格</th><th>一般伺服器</th><th>AI 伺服器（GPU Server）</th></tr></thead><tbody><tr><td>每機架功耗</td><td>5–10 kW</td><td>50–100 kW（高達 10 倍以上）</td></tr><tr><td>散熱方式</td><td>氣冷（風扇）</td><td>液冷（CDU、浸沒式冷卻）</td></tr><tr><td>核心元件</td><td>CPU</td><td>GPU（NVIDIA H100 / B200）</td></tr><tr><td>參考售價</td><td>數萬美元</td><td>200–400 萬美元 / 架</td></tr></tbody></table><blockquote class=\"callout callout-tip\"><div class=\"callout-title\">RM 話術</div><div class=\"callout-content\"><p>「AI 伺服器的單價是普通伺服器的 50 倍，廣達這些台廠雖然毛利率不高，但訂單量和 ASP 提升，營收規模完全不一樣了。這就是為什麼市場對 AI 供應鏈廠商這麼興奮。」</p></div></blockquote>\n</details>\n"
+      "html": "<table><thead><tr><th>規格</th><th>一般伺服器</th><th>AI 伺服器（GPU Server）</th></tr></thead><tbody><tr><td>每機架功耗</td><td>5–10 kW</td><td>50–100 kW（高達 10 倍以上）</td></tr><tr><td>散熱方式</td><td>氣冷（風扇）</td><td>液冷（CDU、浸沒式冷卻）</td></tr><tr><td>核心元件</td><td>CPU</td><td>GPU（NVIDIA H100 / B200）</td></tr><tr><td>參考售價</td><td>數萬美元</td><td>200–400 萬美元 / 架</td></tr></tbody></table><blockquote class=\"callout callout-tip\"><div class=\"callout-title\">RM 話術</div><div class=\"callout-content\"><p>「AI 伺服器的單價是普通伺服器的 50 倍，廣達這些台廠雖然毛利率不高，但訂單量和 ASP 提升，營收規模完全不一樣了。這就是為什麼市場對 AI 供應鏈廠商這麼興奮。」</p></div></blockquote>"
     },
     {
       "heading": "三、台灣 AI 供應鏈地圖",
-      "html": "<details open class=\"det-core\"><summary>核心說明</summary>\n<table><thead><tr><th>次產業</th><th>代表廠商</th><th>角色定位</th></tr></thead><tbody><tr><td>AI 伺服器組裝</td><td>廣達、緯穎、英業達</td><td>全球 AI 伺服器 ODM 主力</td></tr><tr><td>散熱模組</td><td>雙鴻、奇鋐、超眾</td><td>液冷 / 熱管關鍵零件</td></tr><tr><td>電源供應</td><td>台達電、光寶</td><td>AI 機架高功率電源</td></tr><tr><td>先進封裝</td><td>台積電（CoWoS）、日月光</td><td>GPU 與 HBM 整合封裝</td></tr><tr><td>PCB / CCL</td><td>臻鼎-KY、金像電、台光電</td><td>AI 伺服器高層數 PCB</td></tr></tbody></table>\n</details>\n"
+      "html": "<table><thead><tr><th>次產業</th><th>代表廠商</th><th>角色定位</th></tr></thead><tbody><tr><td>AI 伺服器組裝</td><td>廣達、緯穎、英業達</td><td>全球 AI 伺服器 ODM 主力</td></tr><tr><td>散熱模組</td><td>雙鴻、奇鋐、超眾</td><td>液冷 / 熱管關鍵零件</td></tr><tr><td>電源供應</td><td>台達電、光寶</td><td>AI 機架高功率電源</td></tr><tr><td>先進封裝</td><td>台積電（CoWoS）、日月光</td><td>GPU 與 HBM 整合封裝</td></tr><tr><td>PCB / CCL</td><td>臻鼎-KY、金像電、台光電</td><td>AI 伺服器高層數 PCB</td></tr></tbody></table>"
     },
     {
       "heading": "四、AI 投資的風險——不能只說好話",
-      "html": "<details open class=\"det-core\"><summary>核心說明</summary>\n<p>RM 需誠實告知客戶，AI 主題不是只有上漲：</p><ul><li><strong>本益比過高</strong>：部分 AI 概念股 P/E &gt; 50x，隱含高成長預期，一旦訂單低於預期就可能大幅修正。</li><li><strong>訂單能見度短</strong>：超大型科技公司 capex 計畫每季調整，下游台廠出貨能見度僅 1–2 季。</li><li><strong>競爭加劇</strong>：中國廠商加速追趕；Google TPU、Amazon Trainium 等自研 AI 晶片侵蝕 NVIDIA 市佔。</li></ul><blockquote class=\"callout callout-important\"><div class=\"callout-title\">合規提醒</div><div class=\"callout-content\"><p>AI 主題基金屬 RR4 以上高風險商品，須依客戶 KYC 風險屬性評估適合度。不得向穩健型以下客戶推薦，也不得保證任何題材的獲利。</p></div></blockquote>\n</details>\n"
+      "html": "<p>RM 需誠實告知客戶，AI 主題不是只有上漲：</p><ul><li><strong>本益比過高</strong>：部分 AI 概念股 P/E &gt; 50x，隱含高成長預期，一旦訂單低於預期就可能大幅修正。</li><li><strong>訂單能見度短</strong>：超大型科技公司 capex 計畫每季調整，下游台廠出貨能見度僅 1–2 季。</li><li><strong>競爭加劇</strong>：中國廠商加速追趕；Google TPU、Amazon Trainium 等自研 AI 晶片侵蝕 NVIDIA 市佔。</li></ul><blockquote class=\"callout callout-important\"><div class=\"callout-title\">合規提醒</div><div class=\"callout-content\"><p>AI 主題基金屬 RR4 以上高風險商品，須依客戶 KYC 風險屬性評估適合度。不得向穩健型以下客戶推薦，也不得保證任何題材的獲利。</p></div></blockquote>"
     }
   ]
 }

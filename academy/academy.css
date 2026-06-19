@@ -388,63 +388,32 @@ button.academy-card {
   text-decoration: underline;
 }
 
-.chapter-content details {
-  background: var(--academy-bg-soft);
-  border-left: 4px solid var(--brand-primary);
-  border-radius: 0 8px 8px 0;
-  padding: 12px 16px;
-  margin: 12px 0;
+/* 四種折疊 callout —— 無左側裝飾線，輕底色區分 */
+.chapter-content details:not(.section-accordion) {
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin: 10px 0;
 }
-
-/* 核心說明：比四個 callout 視覺層次稍高 */
-.chapter-content details.det-core {
-  background: #fff;
-  border-left-color: var(--brand-deep);
-  border: 1px solid rgba(1,154,179,0.18);
-  border-left: 4px solid var(--brand-deep);
-}
-.chapter-content details.det-core summary {
-  font-size: 14px;
-  color: var(--brand-deep);
-}
-
 .chapter-content details:not(.section-accordion) summary {
   cursor: pointer;
-  color: var(--brand-deep);
   font-weight: 700;
   font-size: 13px;
   letter-spacing: .04em;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  user-select: none;
   list-style: none;
+  user-select: none;
 }
 .chapter-content details:not(.section-accordion) summary::-webkit-details-marker { display: none; }
 
-/* 四種語意色 */
-.chapter-content details.det-def {
-  background: #eaf5f8;
-  border-left-color: var(--brand-primary);
-}
+.chapter-content details.det-def { background: #eaf5f8; }
 .chapter-content details.det-def summary { color: #005f78; }
 
-.chapter-content details.det-law {
-  background: #fdf7ed;
-  border-left-color: #b8860b;
-}
+.chapter-content details.det-law { background: #fdf7ed; }
 .chapter-content details.det-law summary { color: #7a5c00; }
 
-.chapter-content details.det-qa {
-  background: #edf8f0;
-  border-left-color: #3d9a58;
-}
+.chapter-content details.det-qa { background: #edf8f0; }
 .chapter-content details.det-qa summary { color: #1f6b37; }
 
-.chapter-content details.det-err {
-  background: #fdf0f0;
-  border-left-color: #c0534f;
-}
+.chapter-content details.det-err { background: #fdf0f0; }
 .chapter-content details.det-err summary { color: #8b2f2c; }
 
 .chapter-content .mermaid {
