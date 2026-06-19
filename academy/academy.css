@@ -301,7 +301,6 @@ button.academy-card {
   font-weight: 700;
   color: var(--brand-deep);
   cursor: pointer;
-  border-bottom: 2px solid var(--brand-primary);
   user-select: none;
   -webkit-tap-highlight-color: transparent;
 }
@@ -317,9 +316,6 @@ button.academy-card {
 }
 .section-accordion[open] summary::after {
   transform: rotate(45deg);
-}
-.section-accordion[open] summary {
-  border-bottom: 1px solid rgba(1, 154, 179, 0.15);
 }
 .section-body {
   padding: 16px 16px 20px;
