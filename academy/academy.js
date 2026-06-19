@@ -250,7 +250,7 @@ async function loadChapter() {
       html += '</ul></div>';
     }
     for (const sec of ch.sections) {
-      html += `<h2>${sec.heading}</h2>${sec.html}`;
+      html += `<details class="section-accordion"><summary>${sec.heading}</summary><div class="section-body">${sec.html}</div></details>`;
     }
 
     html += '<div class="chapter-nav">';
