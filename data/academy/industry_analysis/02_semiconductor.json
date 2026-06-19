@@ -12,15 +12,15 @@
   "sections": [
     {
       "heading": "一、半導體產業鏈四大環節",
-      "html": "<p>半導體產業鏈可以拆成四個環節，台灣在其中三個環節都是全球領先地位：</p><table><thead><tr><th>環節</th><th>核心技術</th><th>台灣代表廠商</th><th>全球市佔</th></tr></thead><tbody><tr><td>IC 設計</td><td>電路設計、EDA 工具</td><td>聯發科（全球 SoC 第一）、瑞昱、聯詠</td><td>台廠約佔全球 20%+</td></tr><tr><td>晶圓代工</td><td>光刻、蝕刻、薄膜沉積</td><td><strong>台積電（約 62%）</strong>、聯電（約 7%）</td><td>台積電主宰先進製程（來源：TrendForce 2024Q2）</td></tr><tr><td>封裝測試</td><td>CoWoS、SoIC、先進封裝</td><td>日月光（OSAT 市佔約 30%）、京元電</td><td>全球領先</td></tr><tr><td>設備材料</td><td>EUV 光刻機、矽晶圓</td><td>主要依賴 ASML（荷）、信越（日）</td><td>台灣依賴進口</td></tr></tbody></table>"
+      "html": "<details open class=\"det-core\"><summary>核心說明</summary>\n<p>半導體產業鏈可以拆成四個環節，台灣在其中三個環節都是全球領先地位：</p><table><thead><tr><th>環節</th><th>核心技術</th><th>台灣代表廠商</th><th>全球市佔</th></tr></thead><tbody><tr><td>IC 設計</td><td>電路設計、EDA 工具</td><td>聯發科（全球 SoC 第一）、瑞昱、聯詠</td><td>台廠約佔全球 20%+</td></tr><tr><td>晶圓代工</td><td>光刻、蝕刻、薄膜沉積</td><td><strong>台積電（約 62%）</strong>、聯電（約 7%）</td><td>台積電主宰先進製程（來源：TrendForce 2024Q2）</td></tr><tr><td>封裝測試</td><td>CoWoS、SoIC、先進封裝</td><td>日月光（OSAT 市佔約 30%）、京元電</td><td>全球領先</td></tr><tr><td>設備材料</td><td>EUV 光刻機、矽晶圓</td><td>主要依賴 ASML（荷）、信越（日）</td><td>台灣依賴進口</td></tr></tbody></table>\n</details>\n"
     },
     {
       "heading": "二、台積電的護城河",
-      "html": "<p>台積電之所以難以被取代，原因不只是製程技術，而是四重鎖定：</p><ol><li><strong>良率工程</strong>：同一製程節點，台積電良率通常比競爭對手高 15–20%，客戶不敢轉廠。</li><li><strong>設計生態系（PDK）</strong>：所有 IC 設計公司的 IP 電路庫都針對台積電製程優化，切換代工廠等於重做全部 IP。</li><li><strong>客戶集中但分散</strong>：前十大客戶集中度高，但橫跨 AI / 手機 / 車用 / HPC，景氣週期風險被稀釋。</li><li><strong>地緣不可或缺性</strong>：美、歐、日都搶著要台積電設廠，地緣政治反而成為台積電的談判籌碼。</li></ol><blockquote class=\"callout callout-tip\"><div class=\"callout-title\">RM 話術</div><div class=\"callout-content\"><p>「台積電的護城河不是一條，是四條護城河疊在一起——技術、生態、客戶結構、地緣政治缺一不可，這就是為什麼全球沒有人能在 5 年內複製它。」</p></div></blockquote>"
+      "html": "<details open class=\"det-core\"><summary>核心說明</summary>\n<p>台積電之所以難以被取代，原因不只是製程技術，而是四重鎖定：</p><ol><li><strong>良率工程</strong>：同一製程節點，台積電良率通常比競爭對手高 15–20%，客戶不敢轉廠。</li><li><strong>設計生態系（PDK）</strong>：所有 IC 設計公司的 IP 電路庫都針對台積電製程優化，切換代工廠等於重做全部 IP。</li><li><strong>客戶集中但分散</strong>：前十大客戶集中度高，但橫跨 AI / 手機 / 車用 / HPC，景氣週期風險被稀釋。</li><li><strong>地緣不可或缺性</strong>：美、歐、日都搶著要台積電設廠，地緣政治反而成為台積電的談判籌碼。</li></ol><blockquote class=\"callout callout-tip\"><div class=\"callout-title\">RM 話術</div><div class=\"callout-content\"><p>「台積電的護城河不是一條，是四條護城河疊在一起——技術、生態、客戶結構、地緣政治缺一不可，這就是為什麼全球沒有人能在 5 年內複製它。」</p></div></blockquote>\n</details>\n"
     },
     {
       "heading": "三、半導體景氣週期（Silicon Cycle）",
-      "html": "<p>半導體有約 3–4 年的景氣週期，RM 需掌握週期訊號：</p><table><thead><tr><th>市場訊號</th><th>景氣位置</th><th>RM 操作提示</th></tr></thead><tbody><tr><td>庫存持續攀升、訂單下調</td><td>景氣高峰 → 衰退</td><td>提示客戶逐步減碼、轉防禦型配置</td></tr><tr><td>庫存去化完成、出貨回升</td><td>景氣谷底 → 復甦</td><td>逢低布局時機，可介紹半導體主題基金</td></tr><tr><td>先進製程滿載、CoWoS 缺貨</td><td>景氣擴張期</td><td>維持持股，留意本益比是否過高</td></tr></tbody></table><p><em>合規提醒：景氣週期判斷屬市場觀點分享，不構成買賣建議。實際操作須依客戶 KYC 適合度評估。</em></p>"
+      "html": "<details open class=\"det-core\"><summary>核心說明</summary>\n<p>半導體有約 3–4 年的景氣週期，RM 需掌握週期訊號：</p><table><thead><tr><th>市場訊號</th><th>景氣位置</th><th>RM 操作提示</th></tr></thead><tbody><tr><td>庫存持續攀升、訂單下調</td><td>景氣高峰 → 衰退</td><td>提示客戶逐步減碼、轉防禦型配置</td></tr><tr><td>庫存去化完成、出貨回升</td><td>景氣谷底 → 復甦</td><td>逢低布局時機，可介紹半導體主題基金</td></tr><tr><td>先進製程滿載、CoWoS 缺貨</td><td>景氣擴張期</td><td>維持持股，留意本益比是否過高</td></tr></tbody></table><p><em>合規提醒：景氣週期判斷屬市場觀點分享，不構成買賣建議。實際操作須依客戶 KYC 適合度評估。</em></p>\n</details>\n"
     }
   ]
 }

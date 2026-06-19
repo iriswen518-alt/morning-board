@@ -12,15 +12,15 @@
   "sections": [
     {
       "heading": "一、台灣生技醫療三大次產業",
-      "html": "<table><thead><tr><th>次產業</th><th>代表廠商</th><th>投資特性</th></tr></thead><tbody><tr><td>新藥開發</td><td>中裕、台灣浩鼎、北極星藥業</td><td>高風險、非線性報酬（臨床失敗即腰斬）</td></tr><tr><td>醫療器材</td><td>愛普（隱形眼鏡）、必翔（電動輪椅）</td><td>較穩定，技術規格門檻中等</td></tr><tr><td>健康照護服務</td><td>各大醫院體系、慧誠智醫（醫療 AI）</td><td>與人口老化高度相關，成長確定性較高</td></tr></tbody></table>"
+      "html": "<details open class=\"det-core\"><summary>核心說明</summary>\n<table><thead><tr><th>次產業</th><th>代表廠商</th><th>投資特性</th></tr></thead><tbody><tr><td>新藥開發</td><td>中裕、台灣浩鼎、北極星藥業</td><td>高風險、非線性報酬（臨床失敗即腰斬）</td></tr><tr><td>醫療器材</td><td>愛普（隱形眼鏡）、必翔（電動輪椅）</td><td>較穩定，技術規格門檻中等</td></tr><tr><td>健康照護服務</td><td>各大醫院體系、慧誠智醫（醫療 AI）</td><td>與人口老化高度相關，成長確定性較高</td></tr></tbody></table>\n</details>\n"
     },
     {
       "heading": "二、新藥開發臨床試驗階段",
-      "html": "<p>新藥從發現到上市平均需要 10–15 年，整體成功率約 10%（來源：BIO / CSDD《Clinical Development Success Rates 2011–2020》，跨領域平均值）：</p><table><thead><tr><th>階段</th><th>受試人數</th><th>整體成功率</th><th>RM 投資涵義</th></tr></thead><tbody><tr><td>Phase I → II</td><td>20–80 人（安全性）</td><td>約 60%</td><td>失敗仍常見，宣布失敗股價跌 30–50%+</td></tr><tr><td>Phase II → III</td><td>100–300 人（療效初探）</td><td>約 40%</td><td>關鍵催化劑，進 Phase III 常見股價大漲</td></tr><tr><td>Phase III → 送審</td><td>1,000 人以上</td><td>約 60%</td><td>送審即已相當確定，市場通常提前反映</td></tr></tbody></table><blockquote class=\"callout callout-important\"><div class=\"callout-title\">合規提醒</div><div class=\"callout-content\"><p>新藥股是高度投機性投資，整體 Phase I 到上市成功率約 10%。RM 不得以「就快成功」為由引導客戶加碼，任何商品均不保證獲利。</p></div></blockquote>"
+      "html": "<details open class=\"det-core\"><summary>核心說明</summary>\n<p>新藥從發現到上市平均需要 10–15 年，整體成功率約 10%（來源：BIO / CSDD《Clinical Development Success Rates 2011–2020》，跨領域平均值）：</p><table><thead><tr><th>階段</th><th>受試人數</th><th>整體成功率</th><th>RM 投資涵義</th></tr></thead><tbody><tr><td>Phase I → II</td><td>20–80 人（安全性）</td><td>約 60%</td><td>失敗仍常見，宣布失敗股價跌 30–50%+</td></tr><tr><td>Phase II → III</td><td>100–300 人（療效初探）</td><td>約 40%</td><td>關鍵催化劑，進 Phase III 常見股價大漲</td></tr><tr><td>Phase III → 送審</td><td>1,000 人以上</td><td>約 60%</td><td>送審即已相當確定，市場通常提前反映</td></tr></tbody></table><blockquote class=\"callout callout-important\"><div class=\"callout-title\">合規提醒</div><div class=\"callout-content\"><p>新藥股是高度投機性投資，整體 Phase I 到上市成功率約 10%。RM 不得以「就快成功」為由引導客戶加碼，任何商品均不保證獲利。</p></div></blockquote>\n</details>\n"
     },
     {
       "heading": "三、生技股替代估值指標",
-      "html": "<p>傳統本益比（P/E）對尚未獲利的新藥股無效，應改用以下指標：</p><table><thead><tr><th>指標</th><th>說明</th></tr></thead><tbody><tr><td>現金跑道（Cash Runway）</td><td>公司現金能支撐幾年研發，決定是否需要增資稀釋股東</td></tr><tr><td>管線數量與階段分布</td><td>多個不同階段的管線 → 風險較分散</td></tr><tr><td>License Out 授權金</td><td>授權給國際大廠是技術被認可的信號，可提供現金流</td></tr><tr><td>技術平台 vs 單一藥</td><td>平台型公司可衍生多個應用，估值溢價更合理</td></tr></tbody></table>"
+      "html": "<details open class=\"det-core\"><summary>核心說明</summary>\n<p>傳統本益比（P/E）對尚未獲利的新藥股無效，應改用以下指標：</p><table><thead><tr><th>指標</th><th>說明</th></tr></thead><tbody><tr><td>現金跑道（Cash Runway）</td><td>公司現金能支撐幾年研發，決定是否需要增資稀釋股東</td></tr><tr><td>管線數量與階段分布</td><td>多個不同階段的管線 → 風險較分散</td></tr><tr><td>License Out 授權金</td><td>授權給國際大廠是技術被認可的信號，可提供現金流</td></tr><tr><td>技術平台 vs 單一藥</td><td>平台型公司可衍生多個應用，估值溢價更合理</td></tr></tbody></table>\n</details>\n"
     }
   ]
 }

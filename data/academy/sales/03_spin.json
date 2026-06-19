@@ -12,23 +12,23 @@
   "sections": [
     {
       "heading": "一、SPIN 模型與核心原理",
-      "html": "<p>由 Neil Rackham 研究 35,000 場 B2B 銷售後提出。核心洞察：<strong>客戶不會被「說服」，只會被「自己說服」。</strong></p>\n<p><div class=\"mermaid\">flowchart LR\n  S[S 情境問題\\n了解現況] --> P[P 難題問題\\n找出痛點]\n  P --> I[I 暗示問題\\n放大後果]\n  I --> N[N 價值問題\\n描述理想]\n  N --> C[客戶主動要求方案]\n  C --> R[RM 提案]</div></p>"
+      "html": "<details open class=\"det-core\"><summary>核心說明</summary>\n<p>由 Neil Rackham 研究 35,000 場 B2B 銷售後提出。核心洞察：<strong>客戶不會被「說服」，只會被「自己說服」。</strong></p>\n<p><div class=\"mermaid\">flowchart LR\n  S[S 情境問題\\n了解現況] --> P[P 難題問題\\n找出痛點]\n  P --> I[I 暗示問題\\n放大後果]\n  I --> N[N 價值問題\\n描述理想]\n  N --> C[客戶主動要求方案]\n  C --> R[RM 提案]</div></p>\n</details>\n"
     },
     {
       "heading": "二、四類提問詳解",
-      "html": "<table>\n<thead>\n<tr>\n<th>類型</th>\n<th>目的</th>\n<th>數量建議</th>\n<th>財富管理話術範例</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>S 情境問題</strong></td>\n<td>了解現況，建立背景</td>\n<td>2–3 題（不問 KYC 已有的）</td>\n<td>「您目前資產主要分布在哪幾類？」「定存佔多少比重？」</td>\n</tr>\n<tr>\n<td><strong>P 難題問題</strong></td>\n<td>找出不滿足或擔憂</td>\n<td>2–3 題</td>\n<td>「定存利率跟通膨比起來，您覺得夠嗎？」「有沒有哪個部分讓您不放心？」</td>\n</tr>\n<tr>\n<td><strong>I 暗示問題</strong></td>\n<td>放大後果，增強改變動機</td>\n<td>2–3 題（最關鍵）</td>\n<td>「如果這個配置維持 10 年，購買力會怎樣？」「萬一匯率反向，影響大嗎？」</td>\n</tr>\n<tr>\n<td><strong>N 價值問題</strong></td>\n<td>讓客戶說出解決後的好處</td>\n<td>1–2 題</td>\n<td>「如果有個方式讓部分資金每年固定領息，對您的退休規劃有什麼幫助？」</td>\n</tr>\n</tbody>\n</table>\n<blockquote class=\"callout callout-important\">\n  <div class=\"callout-title\">提案時機</div>\n  <div class=\"callout-content\"><p>當客戶回答 N 問題後<strong>主動問「那你有什麼方案？」</strong>，這才是提案的時機。在這之前不推商品。</p></div>\n</blockquote>"
+      "html": "<details open class=\"det-core\"><summary>核心說明</summary>\n<table>\n<thead>\n<tr>\n<th>類型</th>\n<th>目的</th>\n<th>數量建議</th>\n<th>財富管理話術範例</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>S 情境問題</strong></td>\n<td>了解現況，建立背景</td>\n<td>2–3 題（不問 KYC 已有的）</td>\n<td>「您目前資產主要分布在哪幾類？」「定存佔多少比重？」</td>\n</tr>\n<tr>\n<td><strong>P 難題問題</strong></td>\n<td>找出不滿足或擔憂</td>\n<td>2–3 題</td>\n<td>「定存利率跟通膨比起來，您覺得夠嗎？」「有沒有哪個部分讓您不放心？」</td>\n</tr>\n<tr>\n<td><strong>I 暗示問題</strong></td>\n<td>放大後果，增強改變動機</td>\n<td>2–3 題（最關鍵）</td>\n<td>「如果這個配置維持 10 年，購買力會怎樣？」「萬一匯率反向，影響大嗎？」</td>\n</tr>\n<tr>\n<td><strong>N 價值問題</strong></td>\n<td>讓客戶說出解決後的好處</td>\n<td>1–2 題</td>\n<td>「如果有個方式讓部分資金每年固定領息，對您的退休規劃有什麼幫助？」</td>\n</tr>\n</tbody>\n</table>\n<blockquote class=\"callout callout-important\">\n  <div class=\"callout-title\">提案時機</div>\n  <div class=\"callout-content\"><p>當客戶回答 N 問題後<strong>主動問「那你有什麼方案？」</strong>，這才是提案的時機。在這之前不推商品。</p></div>\n</blockquote>\n</details>\n"
     },
     {
       "heading": "三、常見錯誤",
-      "html": "<table>\n<thead>\n<tr>\n<th>錯誤</th>\n<th>後果</th>\n<th>正確做法</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>S 問太多（超過 3 題）</td>\n<td>客戶感覺在填問卷，失去耐心</td>\n<td>從 KYC 已有資料補問，最多 3 題</td>\n</tr>\n<tr>\n<td>跳過 I 直接提案</td>\n<td>痛點未放大，客戶覺得不需要</td>\n<td>至少問 2 題 I，確認客戶說出後果</td>\n</tr>\n<tr>\n<td>I 問太尖銳</td>\n<td>客戶防備，關閉對話</td>\n<td>用「您覺得…」開放語氣，不用恐嚇式措辭</td>\n</tr>\n<tr>\n<td>N 問成封閉題</td>\n<td>客戶只說「是」，沒有深度承諾</td>\n<td>N 題要開放式：「您覺得會帶來什麼改變？」</td>\n</tr>\n<tr>\n<td>客戶問問題就開始推</td>\n<td>需求未鎖定就推方案，客戶防備</td>\n<td>先用 N 問題確認需求，再介紹方案</td>\n</tr>\n</tbody>\n</table>"
+      "html": "<details open class=\"det-core\"><summary>核心說明</summary>\n<table>\n<thead>\n<tr>\n<th>錯誤</th>\n<th>後果</th>\n<th>正確做法</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>S 問太多（超過 3 題）</td>\n<td>客戶感覺在填問卷，失去耐心</td>\n<td>從 KYC 已有資料補問，最多 3 題</td>\n</tr>\n<tr>\n<td>跳過 I 直接提案</td>\n<td>痛點未放大，客戶覺得不需要</td>\n<td>至少問 2 題 I，確認客戶說出後果</td>\n</tr>\n<tr>\n<td>I 問太尖銳</td>\n<td>客戶防備，關閉對話</td>\n<td>用「您覺得…」開放語氣，不用恐嚇式措辭</td>\n</tr>\n<tr>\n<td>N 問成封閉題</td>\n<td>客戶只說「是」，沒有深度承諾</td>\n<td>N 題要開放式：「您覺得會帶來什麼改變？」</td>\n</tr>\n<tr>\n<td>客戶問問題就開始推</td>\n<td>需求未鎖定就推方案，客戶防備</td>\n<td>先用 N 問題確認需求，再介紹方案</td>\n</tr>\n</tbody>\n</table>\n</details>\n"
     },
     {
       "heading": "四、完整對話範例（退休規劃情境）",
-      "html": "<blockquote>\n<p>[S] RM：「您目前資產的配置，定存、基金、保險大概各佔多少比重？」\n客戶：「定存大概 60%，基金 20%，保險 20%。」</p>\n<p>[S] RM：「您預計幾年後退休？退休後每月的生活費大概需要多少？」\n客戶：「大概 10 年後，每月需要 8 萬。」</p>\n<p>[P] RM：「您覺得現在這個配置，到退休時能支撐每月 8 萬的生活費嗎？」\n客戶：「應該差不多，但不確定。」</p>\n<p>[P] RM：「通膨這幾年跑得比定存快，您有注意到購買力的差異嗎？」\n客戶：「有，感覺錢愈來愈不夠用。」</p>\n<p>[I] RM：「如果這個趨勢持續 10 年，退休時 8 萬的購買力，實際上可能只剩多少？」\n客戶：「可能 6 萬？那就不夠了。」</p>\n<p>[I] RM：「如果那時缺口出現，您有沒有其他備用的現金流來源？」\n客戶：「目前沒有，這讓我有點擔心。」</p>\n<p>[N] RM：「如果有一個方法，能讓您用部分定存資金每年固定領到配息，同步對抗通膨，您覺得對退休規劃有什麼幫助？」\n客戶：「那當然好，你說的是什麼商品？」</p>\n<p>→ <strong>此刻才開始提案。</strong></p>\n</blockquote>\n<p>備註：以上對話為訓練示範，實際面談涉及具體商品介紹時須依適合度評估流程辦理。</p>"
+      "html": "<details open class=\"det-core\"><summary>核心說明</summary>\n<blockquote>\n<p>[S] RM：「您目前資產的配置，定存、基金、保險大概各佔多少比重？」\n客戶：「定存大概 60%，基金 20%，保險 20%。」</p>\n<p>[S] RM：「您預計幾年後退休？退休後每月的生活費大概需要多少？」\n客戶：「大概 10 年後，每月需要 8 萬。」</p>\n<p>[P] RM：「您覺得現在這個配置，到退休時能支撐每月 8 萬的生活費嗎？」\n客戶：「應該差不多，但不確定。」</p>\n<p>[P] RM：「通膨這幾年跑得比定存快，您有注意到購買力的差異嗎？」\n客戶：「有，感覺錢愈來愈不夠用。」</p>\n<p>[I] RM：「如果這個趨勢持續 10 年，退休時 8 萬的購買力，實際上可能只剩多少？」\n客戶：「可能 6 萬？那就不夠了。」</p>\n<p>[I] RM：「如果那時缺口出現，您有沒有其他備用的現金流來源？」\n客戶：「目前沒有，這讓我有點擔心。」</p>\n<p>[N] RM：「如果有一個方法，能讓您用部分定存資金每年固定領到配息，同步對抗通膨，您覺得對退休規劃有什麼幫助？」\n客戶：「那當然好，你說的是什麼商品？」</p>\n<p>→ <strong>此刻才開始提案。</strong></p>\n</blockquote>\n<p>備註：以上對話為訓練示範，實際面談涉及具體商品介紹時須依適合度評估流程辦理。</p>\n</details>\n"
     },
     {
       "heading": "五、合規提醒",
-      "html": "<ul>\n<li>客戶口頭說想要，仍須完成書面適合度評估，才能進入正式銷售流程。</li>\n<li>I 問題不得使用恐嚇性語言，例如「您如果沒買，將來一定虧」，違反誠信銷售原則。</li>\n<li>SPIN 是「需求確認」工具，不是繞過合規流程的說服術。</li>\n</ul>"
+      "html": "<details open class=\"det-core\"><summary>核心說明</summary>\n<ul>\n<li>客戶口頭說想要，仍須完成書面適合度評估，才能進入正式銷售流程。</li>\n<li>I 問題不得使用恐嚇性語言，例如「您如果沒買，將來一定虧」，違反誠信銷售原則。</li>\n<li>SPIN 是「需求確認」工具，不是繞過合規流程的說服術。</li>\n</ul>\n</details>\n"
     }
   ]
 }

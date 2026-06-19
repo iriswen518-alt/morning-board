@@ -12,31 +12,31 @@
   "sections": [
     {
       "heading": "一、抱怨 vs 反對：本質差異",
-      "html": "<table>\n<thead>\n<tr>\n<th>維度</th>\n<th>反對（Objection）</th>\n<th>抱怨（Complaint）</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>時機</td>\n<td>成交前</td>\n<td>成交後</td>\n</tr>\n<tr>\n<td>目標</td>\n<td>推進決策</td>\n<td>修復關係</td>\n</tr>\n<tr>\n<td>處理工具</td>\n<td>SPIN + 反對處理</td>\n<td>LEARN 框架</td>\n</tr>\n<tr>\n<td>若處理失當</td>\n<td>失去一次成交</td>\n<td>失去整個客戶，甚至被申訴</td>\n</tr>\n</tbody>\n</table>\n<p>研究顯示：處理得當的抱怨，反而會強化客戶忠誠度（Service Recovery Paradox）——從不滿轉為忠誠的客戶，其 NPS 推薦意願甚至高於從未抱怨過的客戶。</p>"
+      "html": "<details open class=\"det-core\"><summary>核心說明</summary>\n<table>\n<thead>\n<tr>\n<th>維度</th>\n<th>反對（Objection）</th>\n<th>抱怨（Complaint）</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>時機</td>\n<td>成交前</td>\n<td>成交後</td>\n</tr>\n<tr>\n<td>目標</td>\n<td>推進決策</td>\n<td>修復關係</td>\n</tr>\n<tr>\n<td>處理工具</td>\n<td>SPIN + 反對處理</td>\n<td>LEARN 框架</td>\n</tr>\n<tr>\n<td>若處理失當</td>\n<td>失去一次成交</td>\n<td>失去整個客戶，甚至被申訴</td>\n</tr>\n</tbody>\n</table>\n<p>研究顯示：處理得當的抱怨，反而會強化客戶忠誠度（Service Recovery Paradox）——從不滿轉為忠誠的客戶，其 NPS 推薦意願甚至高於從未抱怨過的客戶。</p>\n</details>\n"
     },
     {
       "heading": "二、LEARN 五步驟",
-      "html": "<p><div class=\"mermaid\">flowchart LR\n  L[L 傾聽\\n讓客戶說完] --> E[E 同理\\n理解感受]\n  E --> A[A 道歉\\n對不便道歉]\n  A --> R[R 解決\\n具體方案時程]\n  R --> N[N 追蹤\\n主動回報進度]</div></p>\n<table>\n<thead>\n<tr>\n<th>步驟</th>\n<th>動作</th>\n<th>關鍵提醒</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>L</strong> — Listen 傾聽</td>\n<td>讓客戶完整說完，不打斷</td>\n<td>多數客戶「被認真聽」後情緒就降低一半</td>\n</tr>\n<tr>\n<td><strong>E</strong> — Empathize 同理</td>\n<td>「我了解您的感受」</td>\n<td>不要說「但是」「不過」「其實」</td>\n</tr>\n<tr>\n<td><strong>A</strong> — Apologize 道歉</td>\n<td>對「讓客戶感到不便」道歉，非對事實認錯</td>\n<td>「讓您有這樣的感受，我們深感抱歉」</td>\n</tr>\n<tr>\n<td><strong>R</strong> — Resolve 解決</td>\n<td>提出具體方案與時程</td>\n<td>「今天下班前回報主管，3 天內書面回覆您」</td>\n</tr>\n<tr>\n<td><strong>N</strong> — Notify 追蹤</td>\n<td>承諾時點主動聯繫，不等客戶來追</td>\n<td>無進展也要回報，讓客戶感受到被重視</td>\n</tr>\n</tbody>\n</table>"
+      "html": "<details open class=\"det-core\"><summary>核心說明</summary>\n<p><div class=\"mermaid\">flowchart LR\n  L[L 傾聽\\n讓客戶說完] --> E[E 同理\\n理解感受]\n  E --> A[A 道歉\\n對不便道歉]\n  A --> R[R 解決\\n具體方案時程]\n  R --> N[N 追蹤\\n主動回報進度]</div></p>\n<table>\n<thead>\n<tr>\n<th>步驟</th>\n<th>動作</th>\n<th>關鍵提醒</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>L</strong> — Listen 傾聽</td>\n<td>讓客戶完整說完，不打斷</td>\n<td>多數客戶「被認真聽」後情緒就降低一半</td>\n</tr>\n<tr>\n<td><strong>E</strong> — Empathize 同理</td>\n<td>「我了解您的感受」</td>\n<td>不要說「但是」「不過」「其實」</td>\n</tr>\n<tr>\n<td><strong>A</strong> — Apologize 道歉</td>\n<td>對「讓客戶感到不便」道歉，非對事實認錯</td>\n<td>「讓您有這樣的感受，我們深感抱歉」</td>\n</tr>\n<tr>\n<td><strong>R</strong> — Resolve 解決</td>\n<td>提出具體方案與時程</td>\n<td>「今天下班前回報主管，3 天內書面回覆您」</td>\n</tr>\n<tr>\n<td><strong>N</strong> — Notify 追蹤</td>\n<td>承諾時點主動聯繫，不等客戶來追</td>\n<td>無進展也要回報，讓客戶感受到被重視</td>\n</tr>\n</tbody>\n</table>\n</details>\n"
     },
     {
       "heading": "三、RM 角色邊界（四不可）",
-      "html": "<table>\n<thead>\n<tr>\n<th>❌ 不可做</th>\n<th>原因</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>承諾賠償金額</td>\n<td>RM 無此權限</td>\n</tr>\n<tr>\n<td>私下個人和解（自費賠客戶）</td>\n<td>違反理專十大紀律，可被懲處</td>\n</tr>\n<tr>\n<td>隱匿抱怨不回報主管</td>\n<td>可能演變為正式申訴，更難處理</td>\n</tr>\n<tr>\n<td>阻止客戶進入申訴流程</td>\n<td>客戶有法定申訴權，阻止本身即違規</td>\n</tr>\n</tbody>\n</table>"
+      "html": "<details open class=\"det-core\"><summary>核心說明</summary>\n<table>\n<thead>\n<tr>\n<th>❌ 不可做</th>\n<th>原因</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>承諾賠償金額</td>\n<td>RM 無此權限</td>\n</tr>\n<tr>\n<td>私下個人和解（自費賠客戶）</td>\n<td>違反理專十大紀律，可被懲處</td>\n</tr>\n<tr>\n<td>隱匿抱怨不回報主管</td>\n<td>可能演變為正式申訴，更難處理</td>\n</tr>\n<tr>\n<td>阻止客戶進入申訴流程</td>\n<td>客戶有法定申訴權，阻止本身即違規</td>\n</tr>\n</tbody>\n</table>\n</details>\n"
     },
     {
       "heading": "四、申訴升級流程（金融消費者保護法 §30）",
-      "html": "<p><div class=\"mermaid\">flowchart TD\n  A[客戶抱怨] --> B[向銀行提出申訴]\n  B --> C{銀行 30 日內回覆}\n  C -->|客戶滿意| D[結案，CRM 紀錄]\n  C -->|客戶不滿意| E[向金融消費評議中心申請評議]\n  E --> F[評議中心 3 個月內決定]\n  F --> G{投資型商品爭議\\n100 萬以下}\n  G -->|是| H[銀行應遵守評議決定]\n  G -->|否| I[可另循司法途徑]</div></p>\n<p>三大話術範本：</p>\n<ul>\n<li>「你當初保證會賺錢的！」→「我理解您現在很不舒服，請讓我先查詢銷售文件，今天稍晚請主管一起說明。」</li>\n<li>「我要去金管會檢舉！」→「這是您的權利，我們完全尊重。請您也給我們一個機會先處理，我在 X 日前給您書面回覆。」</li>\n<li>「虧這麼多，賠我！」→「我了解您的損失讓您難受。關於賠償，我必須依公司程序處理，無法當場承諾，30 日內書面回覆正式立場。」</li>\n</ul>"
+      "html": "<details open class=\"det-core\"><summary>核心說明</summary>\n<p><div class=\"mermaid\">flowchart TD\n  A[客戶抱怨] --> B[向銀行提出申訴]\n  B --> C{銀行 30 日內回覆}\n  C -->|客戶滿意| D[結案，CRM 紀錄]\n  C -->|客戶不滿意| E[向金融消費評議中心申請評議]\n  E --> F[評議中心 3 個月內決定]\n  F --> G{投資型商品爭議\\n100 萬以下}\n  G -->|是| H[銀行應遵守評議決定]\n  G -->|否| I[可另循司法途徑]</div></p>\n<p>三大話術範本：</p>\n<ul>\n<li>「你當初保證會賺錢的！」→「我理解您現在很不舒服，請讓我先查詢銷售文件，今天稍晚請主管一起說明。」</li>\n<li>「我要去金管會檢舉！」→「這是您的權利，我們完全尊重。請您也給我們一個機會先處理，我在 X 日前給您書面回覆。」</li>\n<li>「虧這麼多，賠我！」→「我了解您的損失讓您難受。關於賠償，我必須依公司程序處理，無法當場承諾，30 日內書面回覆正式立場。」</li>\n</ul>\n</details>\n"
     },
     {
       "heading": "五、CRM 四大功能",
-      "html": "<table>\n<thead>\n<tr>\n<th>功能</th>\n<th>用途</th>\n<th>執行重點</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>行程提醒</strong></td>\n<td>KYC 到期、商品到期、生日、年度會議</td>\n<td>系統自動派工，RM 提前 1 個月準備</td>\n</tr>\n<tr>\n<td><strong>商機追蹤</strong></td>\n<td>5 段漏斗：萌芽→確認→提案→猶豫→成交</td>\n<td>每週更新；萌芽到成交平均 6–12 個月</td>\n</tr>\n<tr>\n<td><strong>聯繫紀錄</strong></td>\n<td>時間、形式、主題、客戶反應、後續動作</td>\n<td>每次互動均須留存，主管每月抽查 5 筆</td>\n</tr>\n<tr>\n<td><strong>客戶健康指數</strong></td>\n<td>AUM + 聯繫頻率 + 滿意度綜合評分</td>\n<td>主管依此檢核，非單一業績指標</td>\n</tr>\n</tbody>\n</table>"
+      "html": "<details open class=\"det-core\"><summary>核心說明</summary>\n<table>\n<thead>\n<tr>\n<th>功能</th>\n<th>用途</th>\n<th>執行重點</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>行程提醒</strong></td>\n<td>KYC 到期、商品到期、生日、年度會議</td>\n<td>系統自動派工，RM 提前 1 個月準備</td>\n</tr>\n<tr>\n<td><strong>商機追蹤</strong></td>\n<td>5 段漏斗：萌芽→確認→提案→猶豫→成交</td>\n<td>每週更新；萌芽到成交平均 6–12 個月</td>\n</tr>\n<tr>\n<td><strong>聯繫紀錄</strong></td>\n<td>時間、形式、主題、客戶反應、後續動作</td>\n<td>每次互動均須留存，主管每月抽查 5 筆</td>\n</tr>\n<tr>\n<td><strong>客戶健康指數</strong></td>\n<td>AUM + 聯繫頻率 + 滿意度綜合評分</td>\n<td>主管依此檢核，非單一業績指標</td>\n</tr>\n</tbody>\n</table>\n</details>\n"
     },
     {
       "heading": "六、CRM 紀錄品質標準",
-      "html": "<table>\n<thead>\n<tr>\n<th>等級</th>\n<th>範例</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>❌ 不合格</td>\n<td>「致電客戶，了解部位。」（無主題、無結果、無後續）</td>\n</tr>\n<tr>\n<td>✅ 合格</td>\n<td>「致電王先生，討論 8/15 升息對美元定存影響；客戶決定到期續存 USD 5 萬；下次聯繫 7/30 確認意願。」</td>\n</tr>\n</tbody>\n</table>\n<p>合格紀錄必須包含：<strong>時間 + 形式 + 主題 + 客戶反應 + 後續動作</strong>。</p>"
+      "html": "<details open class=\"det-core\"><summary>核心說明</summary>\n<table>\n<thead>\n<tr>\n<th>等級</th>\n<th>範例</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>❌ 不合格</td>\n<td>「致電客戶，了解部位。」（無主題、無結果、無後續）</td>\n</tr>\n<tr>\n<td>✅ 合格</td>\n<td>「致電王先生，討論 8/15 升息對美元定存影響；客戶決定到期續存 USD 5 萬；下次聯繫 7/30 確認意願。」</td>\n</tr>\n</tbody>\n</table>\n<p>合格紀錄必須包含：<strong>時間 + 形式 + 主題 + 客戶反應 + 後續動作</strong>。</p>\n</details>\n"
     },
     {
       "heading": "七、合規提醒",
-      "html": "<ul>\n<li>抱怨發生後，立即保留所有原始銷售文件、KYC、錄音，<strong>不得銷毀</strong>。</li>\n<li>私下個人和解（RM 自費賠客戶）違反理專十大紀律，可能受懲處。</li>\n<li>CRM 完整記錄抱怨全程：若升級至評議，是最有力的書面證明。</li>\n<li>金消法 §30 申訴時限（30 日）不可任意縮短，但可積極推進；初步回應應在 3 日內給出。</li>\n</ul>"
+      "html": "<details open class=\"det-core\"><summary>核心說明</summary>\n<ul>\n<li>抱怨發生後，立即保留所有原始銷售文件、KYC、錄音，<strong>不得銷毀</strong>。</li>\n<li>私下個人和解（RM 自費賠客戶）違反理專十大紀律，可能受懲處。</li>\n<li>CRM 完整記錄抱怨全程：若升級至評議，是最有力的書面證明。</li>\n<li>金消法 §30 申訴時限（30 日）不可任意縮短，但可積極推進；初步回應應在 3 日內給出。</li>\n</ul>\n</details>\n"
     }
   ]
 }
