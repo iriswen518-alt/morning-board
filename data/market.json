@@ -211,10 +211,10 @@
   "fx": [
     {
       "name": "DXY 美元指數",
-      "close": 100.80899810791016,
-      "daily_pct": -0.04,
-      "mtd_pct": 1.92,
-      "ytd_pct": 2.57,
+      "close": 100.77300262451172,
+      "daily_pct": -0.08,
+      "mtd_pct": 1.88,
+      "ytd_pct": 2.54,
       "closing_date": "2026-06-19"
     },
     {
@@ -323,7 +323,7 @@
     {
       "label": "Jun 2026",
       "fomc_date": "2026-06-18",
-      "implied_rate": 3.63,
+      "implied_rate": 3.62,
       "delta_rate": null,
       "p_hike": null,
       "p_cut": null,
@@ -333,10 +333,10 @@
       "label": "Jul 2026",
       "fomc_date": "2026-07-30",
       "implied_rate": 3.64,
-      "delta_rate": 0.01,
-      "delta_bps": 1.0,
-      "p_hike": 4.0,
-      "p_hold": 96.0,
+      "delta_rate": 0.02,
+      "delta_bps": 2.0,
+      "p_hike": 8.0,
+      "p_hold": 92.0,
       "p_cut": 0,
       "is_reference": false
     },
@@ -354,7 +354,7 @@
     {
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
-      "implied_rate": 3.87,
+      "implied_rate": 3.88,
       "delta_rate": 0.08,
       "delta_bps": 8.0,
       "p_hike": 32.0,
@@ -365,7 +365,7 @@
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 4.0,
+      "implied_rate": 4.01,
       "delta_rate": 0.13,
       "delta_bps": 13.0,
       "p_hike": 52.0,
