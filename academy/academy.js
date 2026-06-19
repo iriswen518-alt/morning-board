@@ -264,6 +264,15 @@ async function loadChapter() {
 
     content.innerHTML = html;
 
+    // 自動為子折疊區標上語意 class，讓 CSS 上色
+    content.querySelectorAll('.section-body details').forEach(det => {
+      const label = det.querySelector('summary')?.textContent?.trim() || '';
+      if (/定義|名詞/.test(label)) det.classList.add('det-def');
+      else if (/法源|法規|全文/.test(label)) det.classList.add('det-law');
+      else if (/問答|話術|問題/.test(label)) det.classList.add('det-qa');
+      else if (/錯誤|陷阱/.test(label)) det.classList.add('det-err');
+    });
+
     // Wrap tables for mobile horizontal scroll
     content.querySelectorAll('table').forEach(tbl => {
       if (!tbl.parentElement.classList.contains('table-scroll')) {
