@@ -115,7 +115,7 @@
     {
       "slug": "asset_allocation",
       "name": "資產配置",
-      "active": true,
+      "active": false,
       "description": "基礎與進階配置、跨商品整合提案、國際資產配置與動態再平衡。",
       "icon": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 3v9l8 4\"/><path d=\"M12 12L4 16\"/>"
     },
@@ -125,13 +125,6 @@
       "active": true,
       "description": "經濟成長、通膨、貨幣與財政政策、匯率、景氣循環與重要指標。",
       "icon": "<path d=\"M3 17l6-6 4 4 8-8\"/><path d=\"M17 7h4v4\"/><path d=\"M3 21h18\"/>"
-    },
-    {
-      "slug": "industry_analysis",
-      "name": "產業分析",
-      "active": true,
-      "description": "台灣關鍵產業圖鑑：半導體、AI 供應鏈、生技、製造與能源轉型，幫助 RM 與客戶說上話。",
-      "icon": "<path d=\"M2 20h20\"/><path d=\"M6 20V10l6-7 6 7v10\"/><path d=\"M10 20v-5h4v5\"/><path d=\"M9 10h6\"/>"
     },
     {
       "slug": "accounting",
@@ -148,11 +141,11 @@
       "icon": "<path d=\"M12 3v18\"/><path d=\"M5 7h14\"/><path d=\"M5 7l-2 6h4z\"/><path d=\"M19 7l-2 6h4z\"/><path d=\"M9 21h6\"/>"
     },
     {
-      "slug": "corporate_credit",
-      "name": "企業授信",
-      "active": true,
-      "description": "從授信五P、財報分析、擔保風控到授信後管理，建立企業授信完整知識體系，並與財管業務連結。",
-      "icon": "<path d=\"M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/><polyline points=\"9 22 9 12 15 12 15 22\"/>"
+      "slug": "ai",
+      "name": "AI 應用",
+      "active": false,
+      "description": "生成式 AI、LLM、RAG、MCP 核心概念，AI 安全治理，以及台灣金融業 AI 落地案例。",
+      "icon": "<rect x=\"4\" y=\"4\" width=\"16\" height=\"16\" rx=\"2\" stroke=\"currentColor\" stroke-width=\"1.8\"/><path d=\"M9 9h6v6H9z\" fill=\"currentColor\"/><path d=\"M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3\" stroke=\"currentColor\" stroke-width=\"1.8\"/>"
     }
   ]
 }
