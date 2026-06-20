@@ -3124,9 +3124,9 @@ function renderTwMarketAnalysis() {
     return `<a${href} style="display:flex;flex-direction:column;align-items:center;justify-content:center;
         background:${bg};color:${txtColor};border-radius:5px;padding:8px 4px;min-width:72px;flex:1;
         font-size:13px;line-height:1.4;text-align:center;text-decoration:none">
-      <span style="font-weight:700;max-width:68px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${s.name || s.symbol}</span>
+      <span style="max-width:68px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${s.name || s.symbol}</span>
       <span style="font-size:12px;opacity:.85">${s.symbol}</span>
-      <span style="font-weight:700;margin-top:2px">${pStr}</span>
+      <span style="margin-top:2px">${pStr}</span>
     </a>`;
   }).join("");
 
@@ -3169,7 +3169,8 @@ function renderTwMarketAnalysis() {
 
   const asOf = twRankings.as_of || market.closing_date || "";
   if (!indexBlock && !twSectorBlock && !etfBlock && !rankBlock) return "";
-  return renderMarketCommentaryBlock({ focus: "tw" }) + `
+  const commentaryCard = DATA.premarket ? "" : renderMarketCommentaryBlock({ focus: "tw" });
+  return commentaryCard + `
     <div style="border:1px solid var(--border,#e5e7eb);border-radius:10px;padding:14px 16px;margin-bottom:18px;background:var(--card-bg,#fff)">
       <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px">
         <h2 style="font-size:16px;margin:0;font-weight:700">台股盤勢</h2>
@@ -5575,9 +5576,14 @@ function renderPremarketBlock() {
   const summaryHtml = renderLines(analysisParts.summary);
   const detailHtml = analysisParts.detail.length ? renderLines(analysisParts.detail) : "";
 
+  const commentaryBullets = renderMarketCommentaryBlock({ focus: "tw", bare: true });
+  const commentaryAppend = commentaryBullets
+    ? `<div style="border-top:1px solid var(--border,#e5e7eb);margin-top:14px;padding-top:12px">${commentaryBullets}</div>`
+    : "";
+
   return `
     ${summaryHtml ? `<div class="fund-card" style="margin-bottom:8px">${summaryHtml}</div>` : ""}
-    ${detailHtml ? `<div class="fund-card" style="margin-bottom:8px">${detailHtml}</div>` : ""}
+    ${(detailHtml || commentaryAppend) ? `<div class="fund-card" style="margin-bottom:8px">${detailHtml}${commentaryAppend}</div>` : ""}
     <div class="fund-card" style="margin-bottom:8px">
       ${indicatorTable}
     </div>
