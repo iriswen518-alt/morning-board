@@ -263,9 +263,9 @@ async function loadChapter() {
 
     let html = '';
     if (ch.objectives && ch.objectives.length) {
-      html += '<div class="objectives"><h3>學習目標</h3><ul>';
+      html += '<details class="section-accordion objectives-accordion"><summary>學習目標</summary><div class="section-body"><ul>';
       for (const obj of ch.objectives) html += `<li>${obj}</li>`;
-      html += '</ul></div>';
+      html += '</ul></div></details>';
     }
     for (const sec of ch.sections) {
       html += `<details class="section-accordion"><summary>${sec.heading}</summary><div class="section-body">${sec.html}</div></details>`;
