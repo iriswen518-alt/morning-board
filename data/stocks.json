@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-20T18:14:37+08:00",
+  "generated_at": "2026-06-20T18:41:52+08:00",
   "source": "finnhub (US price+daily) + Yahoo (US MTD/YTD) + TWSE (TW)",
   "us_stocks": [
     {
@@ -171,8 +171,8 @@
       "market_date": "2026-06-18",
       "source_url": "https://tw.stock.yahoo.com/quote/2330.TW",
       "error": null,
-      "per": 32.4,
-      "per_kind": "trailing"
+      "per": null,
+      "per_kind": null
     },
     {
       "symbol": "2317",
@@ -188,8 +188,8 @@
       "market_date": "2026-06-18",
       "source_url": "https://tw.stock.yahoo.com/quote/2317.TW",
       "error": null,
-      "per": 19.07,
-      "per_kind": "trailing"
+      "per": null,
+      "per_kind": null
     },
     {
       "symbol": "2454",
@@ -205,25 +205,25 @@
       "market_date": "2026-06-18",
       "source_url": "https://tw.stock.yahoo.com/quote/2454.TW",
       "error": null,
-      "per": 69.96,
-      "per_kind": "trailing"
+      "per": null,
+      "per_kind": null
     },
     {
       "symbol": "2308",
       "name_zh": "台達電",
       "kind": "TW",
-      "price": 2150.0,
-      "change_pct": -0.23,
-      "mtd_pct": -12.07,
+      "price": 2445.0,
+      "change_pct": 2.3,
+      "mtd_pct": 12.93,
       "ytd_pct": 123.26,
       "perf_1y": 436.83,
       "perf_3y": 472.57,
       "perf_5y": 617.86,
-      "market_date": "2026-06-18",
+      "market_date": "2026-05-29",
       "source_url": "https://tw.stock.yahoo.com/quote/2308.TW",
       "error": null,
-      "per": 79.28,
-      "per_kind": "trailing"
+      "per": null,
+      "per_kind": null
     },
     {
       "symbol": "2382",
@@ -239,25 +239,25 @@
       "market_date": "2026-06-18",
       "source_url": "https://tw.stock.yahoo.com/quote/2382.TW",
       "error": null,
-      "per": 18.9,
-      "per_kind": "trailing"
+      "per": null,
+      "per_kind": null
     },
     {
       "symbol": "2891",
       "name_zh": "中信金",
       "kind": "TW",
-      "price": 71.9,
-      "change_pct": 1.27,
-      "mtd_pct": 18.84,
+      "price": 60.5,
+      "change_pct": 2.02,
+      "mtd_pct": 15.68,
       "ytd_pct": 43.23,
       "perf_1y": 66.82,
       "perf_3y": 187.03,
       "perf_5y": 224.6,
-      "market_date": "2026-06-18",
+      "market_date": "2026-05-29",
       "source_url": "https://tw.stock.yahoo.com/quote/2891.TW",
       "error": null,
-      "per": 17.33,
-      "per_kind": "trailing"
+      "per": null,
+      "per_kind": null
     },
     {
       "symbol": "1301",
