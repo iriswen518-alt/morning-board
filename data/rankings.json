@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-20T17:01:06+08:00",
+  "generated_at": "2026-06-21T09:01:16+08:00",
   "tw": {
-    "as_of": "2026-06-20",
+    "as_of": "2026-06-21",
     "top_marketcap": [
       {
         "symbol": "2330",
@@ -646,7 +646,7 @@
     ]
   },
   "us": {
-    "as_of": "2026-06-20",
+    "as_of": "2026-06-21",
     "top_marketcap": [
       {
         "symbol": "NVDA",
@@ -667,7 +667,7 @@
         "price": 298.01,
         "daily_pct": 0.7,
         "market_cap": 4376979046400,
-        "pe": 36.078693,
+        "pe": 36.122425,
         "pe_kind": "trailing",
         "mtd_pct": -4.5,
         "ytd_pct": 9.62,
@@ -680,7 +680,7 @@
         "price": 379.4,
         "daily_pct": 0.13,
         "market_cap": 2818348154880,
-        "pe": 22.610249,
+        "pe": 22.569899,
         "pe_kind": "trailing",
         "mtd_pct": -15.73,
         "ytd_pct": -21.55,
@@ -693,7 +693,7 @@
         "price": 244.39,
         "daily_pct": 2.9,
         "market_cap": 2628929978368,
-        "pe": 31.453024,
+        "pe": 31.656736,
         "pe_kind": "trailing",
         "mtd_pct": -9.7,
         "ytd_pct": 5.88,
@@ -706,8 +706,8 @@
         "price": 185.0,
         "daily_pct": -3.56,
         "market_cap": 2437224595456,
-        "pe": null,
-        "pe_kind": null,
+        "pe": 711.5385,
+        "pe_kind": "forward",
         "mtd_pct": null,
         "ytd_pct": null,
         "yahoo": "SPCX",
@@ -719,7 +719,7 @@
         "price": 400.49,
         "daily_pct": 1.04,
         "market_cap": 1504129843200,
-        "pe": 367.422,
+        "pe": 370.82404,
         "pe_kind": "trailing",
         "mtd_pct": -8.1,
         "ytd_pct": -10.95,
@@ -732,7 +732,7 @@
         "price": 1133.99,
         "daily_pct": 8.7,
         "market_cap": 1278839095296,
-        "pe": 53.41451,
+        "pe": 53.464878,
         "pe_kind": "trailing",
         "mtd_pct": 16.79,
         "ytd_pct": 297.32,
@@ -864,7 +864,7 @@
         "price": 178.77,
         "daily_pct": 13.62,
         "market_cap": 27226671104,
-        "pe": 111.03727,
+        "pe": 103.33526,
         "pe_kind": "trailing",
         "mtd_pct": 28.81,
         "ytd_pct": 112.19,
@@ -902,8 +902,8 @@
         "name": "CarMax Inc",
         "price": 53.66,
         "daily_pct": 13.14,
-        "market_cap": 7610099712,
-        "pe": 31.940477,
+        "market_cap": 7614842368,
+        "pe": 33.329193,
         "pe_kind": "trailing",
         "mtd_pct": 20.26,
         "ytd_pct": 38.87,
@@ -930,8 +930,8 @@
         "name": "Accenture plc",
         "price": 127.98,
         "daily_pct": -17.97,
-        "market_cap": 78763393024,
-        "pe": 10.490165,
+        "market_cap": 78316347392,
+        "pe": 10.222045,
         "pe_kind": "trailing",
         "mtd_pct": -31.59,
         "ytd_pct": -52.3,
@@ -978,6 +978,19 @@
         "source_url": "https://finance.yahoo.com/quote/EPAM"
       },
       {
+        "symbol": "NVA",
+        "name": "Nova Minerals Limited",
+        "price": 5.76,
+        "daily_pct": -11.38,
+        "market_cap": 2627218944,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": -14.29,
+        "ytd_pct": -5.65,
+        "yahoo": "NVA",
+        "source_url": "https://finance.yahoo.com/quote/NVA"
+      },
+      {
         "symbol": "CTSH",
         "name": "Cognizant Technology Solutions ",
         "price": 43.7,
@@ -1008,7 +1021,7 @@
         "name": "SL Science Holding Limited Ordinary Shares",
         "price": 5.79,
         "daily_pct": -9.25,
-        "market_cap": 3242150656,
+        "market_cap": 3246798848,
         "pe": null,
         "pe_kind": null,
         "mtd_pct": -40.06,
@@ -1028,19 +1041,6 @@
         "ytd_pct": 59.89,
         "yahoo": "AAMI",
         "source_url": "https://finance.yahoo.com/quote/AAMI"
-      },
-      {
-        "symbol": "KR",
-        "name": "Kroger Company (The)",
-        "price": 56.61,
-        "daily_pct": -8.43,
-        "market_cap": 34903502848,
-        "pe": 36.759743,
-        "pe_kind": "trailing",
-        "mtd_pct": -8.91,
-        "ytd_pct": -9.4,
-        "yahoo": "KR",
-        "source_url": "https://finance.yahoo.com/quote/KR"
       }
     ],
     "top_etf": [

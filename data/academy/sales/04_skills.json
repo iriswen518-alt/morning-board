@@ -20,7 +20,7 @@
     },
     {
       "heading": "三、反對問題處理",
-      "html": "<p>反對不是拒絕，而是客戶在告訴你他還有疑慮。</p>\n<table>\n<thead>\n<tr>\n<th>反對類型</th>\n<th>本質</th>\n<th>回應策略</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>「太貴了」</td>\n<td>感覺不值得</td>\n<td>量化效益：「一年費用約 X 元，對應的是……」</td>\n</tr>\n<tr>\n<td>「我再想想」</td>\n<td>擔心、不夠安心</td>\n<td>問出真正顧慮：「您主要還在考慮哪個方向？」</td>\n</tr>\n<tr>\n<td>「我已經有在做了」</td>\n<td>無感需求</td>\n<td>用 SPIN I 問題放大現有方案的潛在風險</td>\n</tr>\n<tr>\n<td>「我問一下家人」</td>\n<td>決策者不在場</td>\n<td>邀請下次一起面談：「我們安排一次，讓您跟家人一起聽？」</td>\n</tr>\n</tbody>\n</table>\n<p><div class=\"mermaid\">flowchart TD\n  A[客戶提出反對] --> B{反對類型}\n  B --> C[太貴了 → 量化效益]\n  B --> D[再想想 → 問出顧慮]\n  B --> E[已在做 → I 問題放大差異]\n  B --> F[問家人 → 邀請共同面談]\n  C & D & E & F --> G[更新 CRM 商機階段]</div></p>"
+      "html": "<p>反對不是拒絕，而是客戶在告訴你他還有疑慮。</p>\n<table>\n<thead>\n<tr>\n<th>反對類型</th>\n<th>本質</th>\n<th>回應策略</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>「太貴了」</td>\n<td>感覺不值得</td>\n<td>量化效益：「一年費用約 X 元，對應的是……」</td>\n</tr>\n<tr>\n<td>「我再想想」</td>\n<td>擔心、不夠安心</td>\n<td>問出真正顧慮：「您主要還在考慮哪個方向？」</td>\n</tr>\n<tr>\n<td>「我已經有在做了」</td>\n<td>無感需求</td>\n<td>用 SPIN I 問題放大現有方案的潛在風險</td>\n</tr>\n<tr>\n<td>「我問一下家人」</td>\n<td>決策者不在場</td>\n<td>邀請下次一起面談：「我們安排一次，讓您跟家人一起聽？」</td>\n</tr>\n</tbody>\n</table>\n<p><div class=\"mermaid\">flowchart TD\n  A[客戶提出反對] --&gt; B{反對類型}\n  B --&gt; C[太貴了 → 量化效益]\n  B --&gt; D[再想想 → 問出顧慮]\n  B --&gt; E[已在做 → I 問題放大差異]\n  B --&gt; F[問家人 → 邀請共同面談]\n  C &amp; D &amp; E &amp; F --&gt; G[更新 CRM 商機階段]</div></p>"
     },
     {
       "heading": "四、結案信號與話術",
