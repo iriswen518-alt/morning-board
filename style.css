@@ -557,8 +557,8 @@ table.indices th.sortable-th {
 .news-item details[open] summary::after { transform: rotate(90deg); }
 .news-item details .summary, .news-item details .news-body { margin-top: 10px; }
 .news-date { font-size: 11px; font-weight: 500; color: var(--brand-primary); background: rgba(0,102,179,0.1); border-radius: 4px; padding: 1px 6px; flex-shrink: 0; white-space: nowrap; margin-left: auto; }
-.news-item .summary { font-size: 15px; line-height: 1.6; color: var(--text); }
-.news-item .news-body { font-size: 15px; line-height: 1.75; color: var(--text); }
+.news-item .summary { font-size: 14px; line-height: 1.6; color: var(--text); }
+.news-item .news-body { font-size: 14px; line-height: 1.75; color: var(--text); }
 .news-item .news-body p { margin: 0 0 8px; }
 .news-item .news-body p:last-child { margin-bottom: 0; }
 .news-item .source { font-size: 13px; color: var(--brand-primary); margin-top: 8px; display: inline-block; }
@@ -676,7 +676,7 @@ table.indices th.sortable-th {
 
   .news-item h3 { font-size: 14px; }
   .news-item details summary { font-size: 14px; }
-  .news-item .summary, .news-item .news-body { font-size: 15px; }
+  .news-item .summary, .news-item .news-body { font-size: 14px; }
 }
 
 /* ===== 大螢幕（>= 1280px）— 4 欄佈局 ===== */
@@ -2215,7 +2215,7 @@ table.indices th.sortable-th {
   table.indices, .card { font-size: 13px; }
   .news-item h3 { font-size: 14px; }
   .news-item details summary { font-size: 14px; }
-  .news-item .summary, .news-item .news-body { font-size: 15px; }
+  .news-item .summary, .news-item .news-body { font-size: 14px; }
   /* 一般 .tabs.tabs-wrap 在手機上更緊湊 */
   .tabs { padding: 3px; gap: 3px; }
   .tabs .tab { padding: 7px 10px; font-size: 13px; }

@@ -3030,7 +3030,7 @@ function renderMarketCommentaryBlock(opts = {}) {
 
   const bulletsHtml = allItems.length ? `<ul style="margin:0;padding-left:18px">${allItems.join("")}</ul>` : "";
 
-  const dateLabel = newsDate ? `<span style="font-size:11px;color:var(--text-mute);margin-left:8px">${newsDate}</span>` : "";
+  const dateLabel = newsDate ? `<span style="font-size:12px;color:var(--text-mute)">${newsDate}</span>` : "";
 
   // bare mode: return only the bullets (to embed inside another card)
   if (opts.bare) return bulletsHtml;
@@ -3038,7 +3038,7 @@ function renderMarketCommentaryBlock(opts = {}) {
   if (!bulletsHtml) return "";
   return `
     <div style="border:1px solid var(--border,#e5e7eb);border-radius:10px;padding:14px 16px;margin-bottom:16px;background:var(--card-bg,#fff)">
-      <div style="display:flex;align-items:baseline;margin-bottom:10px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px">
         <h2 style="font-size:16px;margin:0;font-weight:700">盤勢說明</h2>${dateLabel}
       </div>
       ${bulletsHtml}
@@ -3167,7 +3167,7 @@ function renderTwMarketAnalysis() {
     <p style="color:var(--text-mute);font-size:12px;margin:4px 0 8px">資料來源：TWSE；非投資建議</p>
   ` : "";
 
-  const asOf = twRankings.as_of || market.closing_date || "";
+  const asOf = twRankings.as_of || market.closing_date || keyIndices[0]?.closing_date || "";
   if (!indexBlock && !twSectorBlock && !etfBlock && !rankBlock) return "";
   const commentaryCard = DATA.premarket ? "" : renderMarketCommentaryBlock({ focus: "tw" });
   return commentaryCard + `
@@ -5598,7 +5598,7 @@ function renderMarketHighlights(m) {
   const downs = ix.slice().sort((a, b) => a.daily_pct - b.daily_pct).filter(i => i.daily_pct < 0).slice(0, 3);
   const tldr = (DATA.news && DATA.news.tldr) ? DATA.news.tldr.slice(0, 5) : [];
   const newsDate = (DATA.news && DATA.news.news_date) ? DATA.news.news_date : "";
-  const dateLabel = newsDate ? `<span style="font-size:11px;color:var(--text-mute);margin-left:8px">${newsDate}</span>` : "";
+  const dateLabel = newsDate ? `<span style="font-size:12px;color:var(--text-mute)">${newsDate}</span>` : "";
 
   const liStyle = `margin-bottom:6px;line-height:1.65;font-size:15px`;
   const items = [];
@@ -5609,7 +5609,7 @@ function renderMarketHighlights(m) {
   if (!items.length) return "";
   return `
     <div style="border:1px solid var(--border,#e5e7eb);border-radius:10px;padding:14px 16px;margin-bottom:16px;background:var(--card-bg,#fff)">
-      <div style="display:flex;align-items:baseline;margin-bottom:10px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px">
         <h2 style="font-size:16px;margin:0;font-weight:700">今日重點</h2>${dateLabel}
       </div>
       <ul style="margin:0;padding-left:18px">${items.join("")}</ul>

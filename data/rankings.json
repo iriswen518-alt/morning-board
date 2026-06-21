@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-21T09:01:16+08:00",
+  "generated_at": "2026-06-21T17:15:43+08:00",
   "tw": {
     "as_of": "2026-06-21",
     "top_marketcap": [
@@ -753,6 +753,19 @@
         "source_url": "https://finance.yahoo.com/quote/INTC"
       },
       {
+        "symbol": "XOM",
+        "name": "Exxon Mobil Corporation",
+        "price": 137.81,
+        "daily_pct": -2.08,
+        "market_cap": 571215183872,
+        "pe": 23.200336,
+        "pe_kind": "trailing",
+        "mtd_pct": -5.13,
+        "ytd_pct": 14.52,
+        "yahoo": "XOM",
+        "source_url": "https://finance.yahoo.com/quote/XOM"
+      },
+      {
         "symbol": "CSCO",
         "name": "Cisco Systems, Inc.",
         "price": 119.54,
@@ -764,19 +777,6 @@
         "ytd_pct": 55.19,
         "yahoo": "CSCO",
         "source_url": "https://finance.yahoo.com/quote/CSCO"
-      },
-      {
-        "symbol": "BAC",
-        "name": "Bank of America Corporation",
-        "price": 56.2,
-        "daily_pct": -0.58,
-        "market_cap": 398828404736,
-        "pe": 13.945409,
-        "pe_kind": "trailing",
-        "mtd_pct": 8.91,
-        "ytd_pct": 2.18,
-        "yahoo": "BAC",
-        "source_url": "https://finance.yahoo.com/quote/BAC"
       }
     ],
     "top_gainers": [
@@ -979,7 +979,7 @@
       },
       {
         "symbol": "NVA",
-        "name": "Nova Minerals Limited",
+        "name": "Nova Minerals Corp",
         "price": 5.76,
         "daily_pct": -11.38,
         "market_cap": 2627218944,
@@ -1018,7 +1018,7 @@
       },
       {
         "symbol": "SLBT",
-        "name": "SL Science Holding Limited Ordinary Shares",
+        "name": "SL Science Holding Limited",
         "price": 5.79,
         "daily_pct": -9.25,
         "market_cap": 3246798848,
