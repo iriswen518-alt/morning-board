@@ -4,43 +4,43 @@
     {
       "name": "S&P 500",
       "name_zh": null,
-      "close": 7383.74,
-      "daily_pct": -1.56,
+      "close": 7472.7900390625,
+      "daily_pct": -0.37,
       "mtd_pct": -1.05,
       "ytd_pct": 9.57,
-      "closing_date": "2026-06-19"
+      "closing_date": "2026-06-22"
     },
     {
       "name": "Nasdaq Composite",
       "name_zh": null,
-      "close": 25709.43,
-      "daily_pct": -3.05,
+      "close": 26166.6015625,
+      "daily_pct": -1.32,
       "mtd_pct": -1.69,
       "ytd_pct": 14.09,
-      "closing_date": "2026-06-19"
+      "closing_date": "2026-06-22"
     },
     {
       "name": "Dow Jones",
       "name_zh": null,
-      "close": 50866.78,
-      "daily_pct": -1.35,
+      "close": 51712.7109375,
+      "daily_pct": 0.29,
       "mtd_pct": 1.04,
       "ytd_pct": 7.28,
-      "closing_date": "2026-06-19"
+      "closing_date": "2026-06-22"
     },
     {
       "name": "PHLX Semiconductor",
       "name_zh": null,
-      "close": 12220.76,
-      "daily_pct": -14.79,
+      "close": 14634.72265625,
+      "daily_pct": 2.04,
       "mtd_pct": 11.79,
       "ytd_pct": 102.48,
-      "closing_date": "2026-06-19"
+      "closing_date": "2026-06-22"
     },
     {
       "name": "Euro Stoxx 50",
       "name_zh": null,
-      "close": 6311.31982421875,
+      "close": 6311.32,
       "daily_pct": 0.29,
       "mtd_pct": 4.01,
       "ytd_pct": 8.57,
@@ -49,7 +49,7 @@
     {
       "name": "DAX",
       "name_zh": null,
-      "close": 25139.689453125,
+      "close": 25139.69,
       "daily_pct": 0.62,
       "mtd_pct": -0.47,
       "ytd_pct": 2.02,
@@ -58,7 +58,7 @@
     {
       "name": "FTSE 100",
       "name_zh": null,
-      "close": 10437.849609375,
+      "close": 10437.85,
       "daily_pct": 0.72,
       "mtd_pct": -0.44,
       "ytd_pct": 4.35,
@@ -67,7 +67,7 @@
     {
       "name": "CAC 40",
       "name_zh": null,
-      "close": 8400.1103515625,
+      "close": 8400.11,
       "daily_pct": -0.25,
       "mtd_pct": 2.91,
       "ytd_pct": 3.33,
@@ -148,7 +148,7 @@
     {
       "name": "Nifty 50",
       "name_zh": null,
-      "close": 24102.900390625,
+      "close": 24102.9,
       "daily_pct": 0.37,
       "mtd_pct": 1.98,
       "ytd_pct": -8.1,
@@ -167,10 +167,10 @@
   "bonds": [
     {
       "name": "US 10-Year",
-      "yield_pct": 4.53,
-      "daily_bps": 7.7,
-      "mtd_bps": 7.5,
-      "closing_date": "2026-06-19"
+      "yield_pct": 4.51,
+      "daily_bps": -1.2,
+      "mtd_bps": 5.6,
+      "closing_date": "2026-06-22"
     },
     {
       "name": "US 2-Year",
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 99.95,
       "daily_pct": -0.89,
-      "mtd_pct": 2.12,
-      "ytd_pct": 2.78,
+      "mtd_pct": 2.11,
+      "ytd_pct": 2.76,
       "closing_date": "2026-06-19"
     },
     {
@@ -365,7 +365,7 @@
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 4.02,
+      "implied_rate": 4.01,
       "delta_rate": 0.14,
       "delta_bps": 14.0,
       "p_hike": 56.0,
@@ -374,5 +374,5 @@
       "is_reference": false
     }
   ],
-  "summary": "TAIEX 加權指數 +2.75%、CSI 300 滬深300 +2.39%、Shanghai 上證 +1.78% 領漲；PHLX Semiconductor -14.79%、Nasdaq Composite -3.05% 走弱。"
+  "summary": "TAIEX 加權指數 +2.75%、CSI 300 滬深300 +2.39%、PHLX Semiconductor +2.04% 領漲；Nasdaq Composite -1.32%、Hang Seng 恆生 -0.65% 走弱。"
 }
