@@ -7565,181 +7565,137 @@ function renderAssistSheet() {
   const opt = (vals) => vals.map(v => `<option value="${escapeHtml(v)}">${escapeHtml(v)}</option>`).join("");
   return `
 <style>
-.assist-wrap { max-width: 1100px; margin: 0 auto; padding: 16px; }
-.assist-banner {
-  background: linear-gradient(90deg, #019AB3, #17B5AD);
-  color: white; padding: 14px 18px; border-radius: 8px; margin-bottom: 16px;
+.ast-field { margin-bottom: 10px; }
+.ast-field label { display: block; font-size: 12px; color: var(--text-mute); margin-bottom: 4px; font-weight: 500; }
+.ast-field select, .ast-field input[type=text], .ast-field textarea {
+  width: 100%; padding: 7px 10px; border: 1px solid var(--border); border-radius: 4px;
+  font-size: 13px; font-family: inherit; box-sizing: border-box;
+  background: var(--bg); color: var(--text);
 }
-.assist-banner h2 { margin: 0 0 4px; font-size: 17px; font-weight: 600; }
-.assist-banner p { margin: 0; font-size: 12px; opacity: 0.9; }
-.assist-compliance {
-  background: #fff7ed; border-left: 4px solid #f97316;
-  padding: 12px 16px; margin-bottom: 16px; border-radius: 6px;
-  font-size: 12px; color: #7c2d12;
-}
-.assist-compliance strong { display: block; margin-bottom: 6px; color: #c2410c; font-size: 13px; }
-.assist-compliance ul { margin: 0; padding-left: 18px; line-height: 1.7; }
-.assist-prompt-out {
-  background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 6px;
+.ast-field textarea { resize: vertical; min-height: 60px; }
+.ast-existing { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; }
+.ast-existing label { display: flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 400; cursor: pointer; color: var(--text); }
+.ast-submit { background: var(--brand-primary); color: white; border: 0; padding: 9px 16px; border-radius: 6px;
+  font-size: 13px; font-weight: 600; cursor: pointer; width: 100%; margin-top: 10px; }
+.ast-submit:hover { opacity: .88; }
+.ast-submit:disabled { opacity: .5; cursor: wait; }
+.ast-sec { font-size: 10px; font-weight: 700; color: var(--text-mute); text-transform: uppercase;
+  letter-spacing: .06em; margin: 14px 0 8px; padding-bottom: 3px; border-bottom: 1px solid var(--border); }
+.ast-notice { background: var(--bg-alt); border-left: 3px solid #f97316;
+  padding: 10px 14px; margin-bottom: 12px; border-radius: 0 6px 6px 0; font-size: 12px; color: var(--text-mute); }
+.ast-notice strong { display: block; margin-bottom: 4px; color: var(--text); font-size: 12px; }
+.ast-notice ul { margin: 0; padding-left: 16px; line-height: 1.7; }
+.ast-prompt-out { background: var(--bg-alt); border: 1px solid var(--border); border-radius: 6px;
   padding: 12px; font-family: ui-monospace, "SF Mono", Consolas, monospace;
   font-size: 11px; line-height: 1.5; white-space: pre-wrap; word-break: break-word;
-  max-height: 240px; overflow-y: auto; margin: 8px 0;
-}
-.assist-btn-row { display: flex; gap: 8px; flex-wrap: wrap; margin: 8px 0; }
-.assist-btn-row button, .assist-btn-row a {
-  padding: 10px 14px; border-radius: 4px; font-size: 13px; font-weight: 600;
-  cursor: pointer; border: 0; text-decoration: none; text-align: center; display: inline-block;
-}
-.assist-btn-primary { background: #019AB3; color: white; flex: 1; }
-.assist-btn-primary:hover { background: #017d92; }
-.assist-btn-secondary { background: white; color: #019AB3; border: 1px solid #019AB3 !important; flex: 1; }
-.assist-btn-secondary:hover { background: #f0fdfa; }
-.assist-step-num {
-  display: inline-block; background: #019AB3; color: white;
-  width: 22px; height: 22px; line-height: 22px; text-align: center;
-  border-radius: 50%; font-size: 12px; margin-right: 6px; font-weight: 600;
-}
-.assist-step-title { font-size: 13px; font-weight: 600; color: #1e293b; margin: 14px 0 6px; }
-.assist-paste-area {
-  width: 100%; min-height: 140px; padding: 10px; border: 1px solid #cbd5e1;
+  max-height: 220px; overflow-y: auto; margin: 8px 0; color: var(--text); }
+.ast-btn-row { display: flex; gap: 8px; flex-wrap: wrap; margin: 8px 0; }
+.ast-btn-row button, .ast-btn-row a {
+  padding: 9px 14px; border-radius: 4px; font-size: 13px; font-weight: 600;
+  cursor: pointer; text-decoration: none; text-align: center; display: inline-block; flex: 1; }
+.ast-btn-p { background: var(--brand-primary); color: white; border: 0; }
+.ast-btn-p:hover { opacity: .88; }
+.ast-btn-s { background: var(--bg); color: var(--brand-primary); border: 1px solid var(--brand-primary) !important; }
+.ast-btn-s:hover { background: var(--bg-alt); }
+.ast-step-num { display: inline-flex; align-items: center; justify-content: center;
+  background: var(--brand-primary); color: white; width: 20px; height: 20px;
+  border-radius: 50%; font-size: 11px; margin-right: 6px; font-weight: 700; flex-shrink: 0; }
+.ast-step-title { font-size: 13px; font-weight: 600; color: var(--text); margin: 14px 0 6px; display: flex; align-items: center; }
+.ast-paste { width: 100%; min-height: 120px; padding: 10px; border: 1px solid var(--border);
   border-radius: 4px; font-family: ui-monospace, "SF Mono", Consolas, monospace;
   font-size: 11px; line-height: 1.5; box-sizing: border-box; resize: vertical;
-}
-.assist-dev-badge {
-  display: inline-block; background: #fbbf24; color: #78350f; padding: 2px 8px;
-  border-radius: 3px; font-size: 10px; margin-left: 8px; font-weight: 600;
-}
-.assist-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 16px; }
-@media (max-width: 900px) { .assist-grid { grid-template-columns: 1fr; } }
-.assist-card { background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px; }
-.assist-card h3 { margin: 0 0 12px; font-size: 14px; color: #019AB3; border-bottom: 2px solid #019AB3; padding-bottom: 6px; }
-.assist-field { margin-bottom: 10px; }
-.assist-field label { display: block; font-size: 12px; color: #475569; margin-bottom: 4px; font-weight: 500; }
-.assist-field select, .assist-field input, .assist-field textarea {
-  width: 100%; padding: 7px 10px; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 13px; font-family: inherit; box-sizing: border-box;
-}
-.assist-field textarea { resize: vertical; min-height: 60px; }
-.assist-existing { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; }
-.assist-existing label { display: flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 400; cursor: pointer; }
-.assist-submit {
-  background: #019AB3; color: white; border: 0; padding: 10px 18px; border-radius: 4px;
-  font-size: 14px; font-weight: 600; cursor: pointer; width: 100%; margin-top: 8px;
-}
-.assist-submit:hover { background: #017d92; }
-.assist-submit:disabled { background: #94a3b8; cursor: wait; }
-.assist-status { text-align: center; padding: 20px; color: #64748b; font-size: 13px; }
-.assist-status .spinner { font-size: 24px; animation: spin 1.5s linear infinite; display: inline-block; }
-@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-.assist-section { margin-bottom: 16px; }
-.assist-section h4 { margin: 0 0 6px; font-size: 13px; color: #1e293b; }
-.assist-section p { margin: 4px 0; font-size: 12px; line-height: 1.6; }
-.assist-product { border-left: 3px solid #019AB3; padding: 6px 10px; margin: 6px 0; background: #f8fafc; font-size: 12px; }
-.assist-product .name { font-weight: 600; }
-.assist-product .reason { color: #475569; margin-top: 2px; }
-.assist-script-block { background: #f1f5f9; padding: 8px 12px; border-radius: 4px; margin: 6px 0; font-size: 12px; line-height: 1.6; }
-.assist-script-block .label { font-weight: 600; color: #019AB3; font-size: 11px; margin-bottom: 2px; }
-.assist-list { margin: 0; padding-left: 18px; font-size: 12px; line-height: 1.7; }
-.assist-disclaimer { background: #fffbe6; border-left: 3px solid #ffc107; padding: 8px 12px; margin: 12px 0; font-size: 11px; color: #856404; }
-.assist-feedback { margin-top: 16px; padding-top: 12px; border-top: 1px dashed #cbd5e1; }
-.assist-feedback button { margin-right: 8px; padding: 6px 14px; border: 1px solid #cbd5e1; background: white; border-radius: 4px; cursor: pointer; font-size: 12px; }
-.assist-feedback button:hover { background: #f1f5f9; }
-.assist-feedback button.adopted { background: #d1fae5; border-color: #2a9d8f; }
-.assist-feedback button.modified { background: #fef3c7; border-color: #f59e0b; }
-.assist-feedback button.rejected { background: #fee2e2; border-color: #d62828; }
-.assist-error { color: #d62828; background: #fee2e2; padding: 10px; border-radius: 4px; font-size: 12px; }
-.assist-meta { font-size: 10px; color: #94a3b8; margin-top: 8px; }
+  background: var(--bg); color: var(--text); }
+.ast-status { text-align: center; padding: 20px; color: var(--text-mute); font-size: 13px; }
+.ast-status .spinner { font-size: 24px; animation: spin 1.5s linear infinite; display: inline-block; }
+.ast-product { border-left: 3px solid var(--brand-primary); padding: 6px 10px; margin: 6px 0;
+  background: var(--bg-alt); font-size: 12px; }
+.ast-product .name { font-weight: 600; color: var(--text); }
+.ast-product .reason { color: var(--text-mute); margin-top: 2px; }
+.ast-script { background: var(--bg-alt); padding: 8px 12px; border-radius: 4px; margin: 6px 0; font-size: 12px; line-height: 1.6; }
+.ast-script .lbl { font-weight: 600; color: var(--brand-primary); font-size: 11px; margin-bottom: 2px; }
+.ast-list { margin: 0; padding-left: 18px; font-size: 12px; line-height: 1.7; color: var(--text); }
+.ast-disclaimer { background: var(--bg-alt); border-left: 3px solid #f59e0b; padding: 8px 12px; margin: 12px 0; font-size: 11px; color: var(--text-mute); }
+.ast-feedback { margin-top: 16px; padding-top: 12px; border-top: 1px dashed var(--border); }
+.ast-feedback button { margin-right: 8px; padding: 6px 14px; border: 1px solid var(--border);
+  background: var(--bg); color: var(--text); border-radius: 4px; cursor: pointer; font-size: 12px; }
+.ast-feedback button:hover { background: var(--bg-alt); }
+.ast-feedback button.adopted { background: #d1fae5; border-color: #2a9d8f; }
+.ast-feedback button.modified { background: #fef3c7; border-color: #f59e0b; }
+.ast-feedback button.rejected { background: #fee2e2; border-color: #d62828; }
+.ast-error { color: #d62828; background: #fee2e2; padding: 10px; border-radius: 4px; font-size: 12px; }
+.ast-meta { font-size: 10px; color: var(--text-mute); margin-top: 8px; }
+.ast-section { margin-bottom: 16px; }
+.ast-section h4 { margin: 0 0 6px; font-size: 13px; color: var(--text); font-weight: 600; }
+.ast-section p { margin: 4px 0; font-size: 12px; line-height: 1.6; color: var(--text); }
 </style>
 
-<div class="assist-wrap">
-  <div class="assist-banner">
-    <h2>📊 專屬規劃（個人 PoC）</h2>
-    <p>填表單 → 自動組合給 claude.ai 用的 Prompt → 你貼到自己的 claude.ai 跑 → 把結果貼回看美化版。</p>
-  </div>
-  <div class="assist-compliance">
-    <strong>⚠️ 使用須知</strong>
-    <ul>
-      <li>此為個人試作工具，僅供工作流概念驗證；正式上線需走機構 IT/法遵程序</li>
-      <li><strong>禁止輸入客戶實名、身分證、帳號、地址等任何 PII</strong>；只填代稱與結構化欄位</li>
-      <li>輸出僅為理財顧問參考草稿，正式商品銷售須完成 KYC、適合度評估、商品說明書揭露等法定程序</li>
-      <li>商品建議只給通用類別（如「投資等級債」），實際選品請依任職機構商品池與適合度評估</li>
-    </ul>
-  </div>
+<div style="display:grid;grid-template-columns:1fr 1.4fr;gap:16px;align-items:start">
+  <div class="card" style="animation:none;opacity:1;transform:none">
+    <div class="tcalc-h">專屬規劃</div>
 
-  <div class="assist-grid">
-    <!-- 左：input form -->
-    <div class="assist-card">
-      <h3>客戶情境輸入</h3>
-      <form id="assist-form">
-        <div class="assist-field">
-          <label>客戶代稱（永不填本名）</label>
-          <input type="text" name="client_code" value="A" maxlength="20" required>
-        </div>
-
-        <div class="assist-field">
-          <label>年齡區間</label>
-          <select name="age_band" required>
-            ${opt(["<40", "40-55", "55-65", "65-75", ">75"])}
-          </select>
-        </div>
-
-        <div class="assist-field">
-          <label>總資產區間</label>
-          <select name="asset_band" required>
-            ${opt(["<500萬", "500-3000萬", "3000萬-1億", ">1億"])}
-          </select>
-        </div>
-
-        <div class="assist-field">
-          <label>月可投資額</label>
-          <select name="investable_monthly" required>
-            ${opt(["<5萬", "5-20萬", "20-50萬", ">50萬"])}
-          </select>
-        </div>
-
-        <div class="assist-field">
-          <label>風險承受度</label>
-          <select name="risk_tolerance" required>
-            ${opt(["保守", "穩健", "積極"])}
-          </select>
-        </div>
-
-        <div class="assist-field">
-          <label>投資年期</label>
-          <select name="horizon" required>
-            ${opt(["<3年", "3-5年", "5-10年", ">10年"])}
-          </select>
-        </div>
-
-        <div class="assist-field">
-          <label>主要目標</label>
-          <select name="goal" required>
-            ${opt(["退休", "教育金", "傳承", "增值", "保本"])}
-          </select>
-        </div>
-
-        <div class="assist-field">
-          <label>既有部位類型（複選）</label>
-          <div class="assist-existing">
-            ${["定存","股票","基金","保險","信託","海外債","房產","其他"].map(v =>
-              `<label><input type="checkbox" name="existing" value="${v}"> ${v}</label>`).join("")}
-          </div>
-        </div>
-
-        <div class="assist-field">
-          <label>自由補充（選填）</label>
-          <textarea name="free_text" placeholder="例：客戶剛賣掉一間公寓..." maxlength="500"></textarea>
-        </div>
-
-        <button type="submit" class="assist-submit" id="assist-submit-btn">${ASSIST_DEV_MODE ? "本機 API 跑（dev）" : "組 Prompt"}</button>
-      </form>
+    <div class="ast-notice">
+      <strong>使用須知</strong>
+      <ul>
+        <li><strong>禁止輸入客戶實名、身分證、帳號等 PII</strong>；只填代稱</li>
+        <li>輸出為顧問參考草稿，正式銷售須完成 KYC 與適合度評估</li>
+      </ul>
     </div>
 
-    <!-- 右：output area -->
-    <div class="assist-card">
-      <h3>輸出${ASSIST_DEV_MODE ? `<span class="assist-dev-badge">DEV MODE → localhost:8766</span>` : ""}</h3>
-      <div id="assist-output">
-        <div class="assist-status">${ASSIST_DEV_MODE ? "填左側 → 按「本機 API 跑」直接出結果" : "填左側 → 按「組 Prompt」→ 拿到完整 prompt → 自己貼到 claude.ai 跑"}</div>
+    <form id="assist-form">
+      <div class="ast-field">
+        <label>客戶代稱（永不填本名）</label>
+        <input type="text" name="client_code" value="A" maxlength="20" required>
       </div>
+
+      <div class="ast-sec">基本條件</div>
+      <div class="ast-field">
+        <label>年齡區間</label>
+        <select name="age_band" required>${opt(["<40", "40-55", "55-65", "65-75", ">75"])}</select>
+      </div>
+      <div class="ast-field">
+        <label>總資產區間</label>
+        <select name="asset_band" required>${opt(["<500萬", "500-3000萬", "3000萬-1億", ">1億"])}</select>
+      </div>
+      <div class="ast-field">
+        <label>月可投資額</label>
+        <select name="investable_monthly" required>${opt(["<5萬", "5-20萬", "20-50萬", ">50萬"])}</select>
+      </div>
+
+      <div class="ast-sec">投資偏好</div>
+      <div class="ast-field">
+        <label>風險承受度</label>
+        <select name="risk_tolerance" required>${opt(["保守", "穩健", "積極"])}</select>
+      </div>
+      <div class="ast-field">
+        <label>投資年期</label>
+        <select name="horizon" required>${opt(["<3年", "3-5年", "5-10年", ">10年"])}</select>
+      </div>
+      <div class="ast-field">
+        <label>主要目標</label>
+        <select name="goal" required>${opt(["退休", "教育金", "傳承", "增值", "保本"])}</select>
+      </div>
+
+      <div class="ast-sec">既有部位</div>
+      <div class="ast-field">
+        <div class="ast-existing">
+          ${["定存","股票","基金","保險","信託","海外債","房產","其他"].map(v =>
+            `<label><input type="checkbox" name="existing" value="${v}"> ${v}</label>`).join("")}
+        </div>
+      </div>
+
+      <div class="ast-field" style="margin-top:10px">
+        <label>自由補充（選填）</label>
+        <textarea name="free_text" placeholder="例：客戶剛賣掉一間公寓..." maxlength="500"></textarea>
+      </div>
+
+      <button type="submit" class="ast-submit" id="assist-submit-btn">組 Prompt</button>
+    </form>
+  </div>
+
+  <div class="card" style="animation:none;opacity:1;transform:none">
+    <div class="tcalc-h">輸出</div>
+    <div id="assist-output">
+      <div class="ast-status">填左側 → 按「組 Prompt」→ 拿到完整 prompt → 自己貼到 claude.ai 跑</div>
     </div>
   </div>
 </div>
@@ -7785,7 +7741,7 @@ async function assistBuildPrompt(form) {
   // PII 防呆：自由補充欄位含明顯姓名/身分證/電話 patterns 就攔
   const pii = detectPII(payload.free_text);
   if (pii.length) {
-    out.innerHTML = `<div class="assist-error">
+    out.innerHTML = `<div class="ast-error">
       自由補充欄位疑似含 PII（${pii.join("、")}）。請改用代稱、移除電話/身分證號後再試。
     </div>`;
     return;
@@ -7800,7 +7756,7 @@ async function assistBuildPrompt(form) {
     out.innerHTML = renderAssistPromptBuilder(fullPrompt);
     wireAssistPromptActions(fullPrompt);
   } catch (e) {
-    out.innerHTML = `<div class="assist-error">載入 system prompt 失敗：${escapeHtml(e.message)}</div>`;
+    out.innerHTML = `<div class="ast-error">載入 system prompt 失敗：${escapeHtml(e.message)}</div>`;
   } finally {
     btn.disabled = false;
     btn.textContent = "重新組 Prompt";
@@ -7821,26 +7777,26 @@ function detectPII(text) {
 function renderAssistPromptBuilder(fullPrompt) {
   const chars = fullPrompt.length;
   return `
-<div class="assist-step-title"><span class="assist-step-num">1</span>複製下面這段 Prompt</div>
-<div class="assist-prompt-out" id="assist-prompt-text">${escapeHtml(fullPrompt)}</div>
-<div class="assist-meta">總長 ${chars.toLocaleString()} 字</div>
+<div class="ast-step-title"><span class="ast-step-num">1</span>複製下面這段 Prompt</div>
+<div class="ast-prompt-out" id="assist-prompt-text">${escapeHtml(fullPrompt)}</div>
+<div class="ast-meta">總長 ${chars.toLocaleString()} 字</div>
 
-<div class="assist-btn-row">
-  <button class="assist-btn-primary" id="assist-copy-btn">📋 複製 Prompt 到剪貼簿</button>
-  <a class="assist-btn-secondary" href="https://claude.ai/new" target="_blank" rel="noopener">在新分頁開啟 claude.ai →</a>
+<div class="ast-btn-row">
+  <button class="ast-btn-p" id="assist-copy-btn">複製 Prompt 到剪貼簿</button>
+  <a class="ast-btn-s" href="https://claude.ai/new" target="_blank" rel="noopener">開啟 claude.ai →</a>
 </div>
 
-<div class="assist-step-title"><span class="assist-step-num">2</span>到 claude.ai 貼上送出 → 把回傳 JSON 貼回下面</div>
-<textarea class="assist-paste-area" id="assist-response-paste" placeholder="把 claude.ai 回應的 JSON 整段貼這裡（含 { } 大括號）"></textarea>
+<div class="ast-step-title"><span class="ast-step-num">2</span>到 claude.ai 貼上送出 → 把回傳 JSON 貼回下面</div>
+<textarea class="ast-paste" id="assist-response-paste" placeholder="把 claude.ai 回應的 JSON 整段貼這裡（含 { } 大括號）"></textarea>
 
-<div class="assist-btn-row">
-  <button class="assist-btn-primary" id="assist-parse-btn">解析顯示美化版 ↓</button>
+<div class="ast-btn-row">
+  <button class="ast-btn-p" id="assist-parse-btn">解析顯示美化版 ↓</button>
 </div>
 
 <div id="assist-parsed-output"></div>
 
-<div class="assist-meta" style="margin-top:16px;">
-  💡 使用提示：claude.ai 免費版每日有訊息額度；若超量可改用 Pro 或其他 AI。Prompt 也適用於 ChatGPT、Gemini。
+<div class="ast-meta" style="margin-top:12px;">
+  Prompt 也適用於 ChatGPT、Gemini。
 </div>
 `;
 }
@@ -7872,7 +7828,7 @@ function wireAssistPromptActions(fullPrompt) {
       const raw = document.getElementById("assist-response-paste").value.trim();
       const target = document.getElementById("assist-parsed-output");
       if (!raw) {
-        target.innerHTML = `<div class="assist-error">請先貼上 JSON 內容</div>`;
+        target.innerHTML = `<div class="ast-error">請先貼上 JSON 內容</div>`;
         return;
       }
       // 嘗試剝除 ```json ... ``` 包裝
@@ -7886,7 +7842,7 @@ function wireAssistPromptActions(fullPrompt) {
       try {
         data = JSON.parse(cleaned);
       } catch (e) {
-        target.innerHTML = `<div class="assist-error">
+        target.innerHTML = `<div class="ast-error">
           JSON 解析失敗：${escapeHtml(e.message)}<br>
           請確認貼上的內容是純 JSON（含 { 與 }）。
         </div>`;
@@ -7908,7 +7864,7 @@ async function assistSubmitDev(form) {
   let elapsed = 0;
   const timer = setInterval(() => {
     elapsed = Math.floor((Date.now() - startedAt) / 1000);
-    out.innerHTML = `<div class="assist-status">
+    out.innerHTML = `<div class="ast-status">
       <div class="spinner">⏳</div>
       <p>本機 API 跑中… 已等 ${elapsed} 秒</p>
     </div>`;
@@ -7924,13 +7880,13 @@ async function assistSubmitDev(form) {
 
     if (!r.ok) {
       const err = await r.json().catch(() => ({}));
-      out.innerHTML = `<div class="assist-error">伺服器回應 ${r.status}：${escapeHtml(err.error || "未知錯誤")}</div>`;
+      out.innerHTML = `<div class="ast-error">伺服器回應 ${r.status}：${escapeHtml(err.error || "未知錯誤")}</div>`;
       return;
     }
 
     const data = await r.json();
     if (data.error) {
-      out.innerHTML = `<div class="assist-error">
+      out.innerHTML = `<div class="ast-error">
         <strong>LLM 回應錯誤：</strong>${escapeHtml(data.error)}
         ${data.raw_preview ? `<details style="margin-top:8px;"><summary>raw preview</summary><pre style="font-size:10px;white-space:pre-wrap;">${escapeHtml(data.raw_preview)}</pre></details>` : ""}
       </div>`;
@@ -7942,7 +7898,7 @@ async function assistSubmitDev(form) {
     wireAssistFeedback();
   } catch (err) {
     clearInterval(timer);
-    out.innerHTML = `<div class="assist-error">
+    out.innerHTML = `<div class="ast-error">
       無法連到本機 server：${escapeHtml(String(err))}<br>
       請確認 <code>~/scripts/client_assist_server.py</code> 已啟動（port 8766）。
     </div>`;
@@ -7954,38 +7910,38 @@ async function assistSubmitDev(form) {
 
 function renderAssistResult(d) {
   const products = (d.products || []).map(p => `
-    <div class="assist-product">
+    <div class="ast-product">
       <div class="name">${escapeHtml(p.rating || "")} ${escapeHtml(p.name || "")}</div>
       <div class="reason">${escapeHtml(p.reason || "")}</div>
     </div>`).join("");
 
   const scripts = d.scripts || {};
   const scriptBlock = (label, text) => text ? `
-    <div class="assist-script-block">
+    <div class="ast-script">
       <div class="label">${escapeHtml(label)}</div>
       ${escapeHtml(text)}
     </div>` : "";
 
-  const list = (items) => `<ul class="assist-list">${(items || []).map(x => `<li>${escapeHtml(x)}</li>`).join("")}</ul>`;
+  const list = (items) => `<ul class="ast-list">${(items || []).map(x => `<li>${escapeHtml(x)}</li>`).join("")}</ul>`;
 
   const warn = d._post_audit_warning
-    ? `<div class="assist-error">⚠️ 後置稽核警告：${escapeHtml(d._post_audit_warning)}</div>`
+    ? `<div class="ast-error">⚠️ 後置稽核警告：${escapeHtml(d._post_audit_warning)}</div>`
     : "";
 
   return `
 ${warn}
 
-<div class="assist-section">
+<div class="ast-section">
   <h4>① 適合度評估</h4>
   <p>${escapeHtml(d.suitability || "")}</p>
 </div>
 
-<div class="assist-section">
+<div class="ast-section">
   <h4>② 商品配適</h4>
   ${products}
 </div>
 
-<div class="assist-section">
+<div class="ast-section">
   <h4>③ 話術建議</h4>
   ${scriptBlock("開場", scripts.opening)}
   ${scriptBlock("痛點", scripts.pain_point)}
@@ -7993,29 +7949,29 @@ ${warn}
   ${scriptBlock("收尾", scripts.closing)}
 </div>
 
-<div class="assist-section">
+<div class="ast-section">
   <h4>④ 風險警示</h4>
   ${list(d.risks)}
 </div>
 
-<div class="assist-section">
+<div class="ast-section">
   <h4>⑤ 法規提醒</h4>
   ${list(d.regulations)}
 </div>
 
-<div class="assist-section">
+<div class="ast-section">
   <h4>⑥ 後續追問</h4>
   ${list(d.followup_questions)}
 </div>
 
-<div class="assist-disclaimer">${escapeHtml(d.disclaimer || "本建議由 AI 依輸入情境產出，僅供理財顧問參考。")}</div>
+<div class="ast-disclaimer">${escapeHtml(d.disclaimer || "本建議由 AI 依輸入情境產出，僅供理財顧問參考。")}</div>
 
 ${ASSIST_DEV_MODE ? `
-<div class="assist-feedback">
+<div class="ast-feedback">
   <strong style="font-size:12px;">這次回應你會：</strong><br><br>
-  <button class="assist-fb-btn" data-verdict="採用">✅ 採用</button>
-  <button class="assist-fb-btn" data-verdict="修改後採用">✏️ 修改後採用</button>
-  <button class="assist-fb-btn" data-verdict="不採用">❌ 不採用</button>
+  <button class="ast-fb-btn" data-verdict="採用">✅ 採用</button>
+  <button class="ast-fb-btn" data-verdict="修改後採用">✏️ 修改後採用</button>
+  <button class="ast-fb-btn" data-verdict="不採用">❌ 不採用</button>
   <span id="assist-fb-status" style="margin-left:12px; font-size:11px; color:#64748b;"></span>
 </div>
 
@@ -8023,7 +7979,7 @@ ${ASSIST_DEV_MODE ? `
   request_id: ${escapeHtml(d.request_id || "")} · latency: ${d.latency_ms || 0}ms
 </div>
 ` : `
-<div class="assist-feedback" style="border-top: 1px dashed #cbd5e1; padding-top: 10px; margin-top: 12px;">
+<div class="ast-feedback" style="border-top: 1px dashed var(--border); padding-top: 10px; margin-top: 12px;">
   <strong style="font-size:11px; color:#64748b;">💡 使用後請記得：</strong>
   <ul style="margin: 6px 0 0; padding-left: 18px; font-size: 11px; color:#64748b; line-height: 1.6;">
     <li>到 claude.ai 對話列表 → 刪除這則對話（避免留底）</li>
@@ -8035,7 +7991,7 @@ ${ASSIST_DEV_MODE ? `
 }
 
 function wireAssistFeedback() {
-  document.querySelectorAll(".assist-fb-btn").forEach(btn => {
+  document.querySelectorAll(".ast-fb-btn").forEach(btn => {
     btn.addEventListener("click", async () => {
       const verdict = btn.dataset.verdict;
       let reject_reason = null;
