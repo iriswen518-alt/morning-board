@@ -5394,6 +5394,7 @@ function wireSortableTables() {
 function renderRankingTable(items, opts) {
   const showCap = opts && opts.showMarketCap;
   const showPE = opts && opts.showPE;
+  const asOf = opts && opts.asOf ? shortDate(opts.asOf) : "—";
   if (!items || !items.length)
     return `<p style="color:var(--text-mute);padding:12px 0">尚未提供排行資料</p>`;
 
@@ -5409,13 +5410,14 @@ function renderRankingTable(items, opts) {
       <td class="${pctClass(r.mtd_pct)}">${fmtPct(r.mtd_pct)}</td>
       <td class="${pctClass(r.ytd_pct)}">${fmtPct(r.ytd_pct)}</td>
       ${showCap ? `<td class="mcap">${fmtMarketCapZh(r.market_cap)}</td>` : ""}
+      <td class="date-col">${escapeHtml(r.closing_date ? shortDate(r.closing_date) : asOf)}</td>
     </tr>`).join("");
 
   return `
     <table class="indices ranking-table">
       ${showPE
-        ? `<colgroup><col style="width:7%"><col style="width:22%"><col style="width:14%"><col style="width:11%"><col style="width:11%"><col style="width:11%"><col style="width:11%"><col style="width:13%"></colgroup>`
-        : `<colgroup><col style="width:8%"><col style="width:30%"><col style="width:18%"><col style="width:14%"><col style="width:14%"><col style="width:16%"></colgroup>`}
+        ? `<colgroup><col style="width:6%"><col style="width:20%"><col style="width:12%"><col style="width:10%"><col style="width:10%"><col style="width:10%"><col style="width:10%"><col style="width:11%"><col style="width:11%"></colgroup>`
+        : `<colgroup><col style="width:7%"><col style="width:26%"><col style="width:16%"><col style="width:13%"><col style="width:13%"><col style="width:13%"><col style="width:12%"></colgroup>`}
       <thead><tr>
         <th style="text-align:center">排名</th><th style="text-align:left">名稱</th>
         <th class="sortable-th" title="收盤價；點選排序">收盤</th>
@@ -5424,6 +5426,7 @@ function renderRankingTable(items, opts) {
         <th class="sortable-th" title="本月至今(MTD)；點選排序">本月</th>
         <th class="sortable-th" title="今年至今(YTD)；點選排序">本年</th>
         ${showCap ? `<th class="sortable-th mcap" title="市值；點選排序">市值</th>` : ""}
+        <th class="date-col" title="收盤日：最新交易日">收盤日</th>
       </tr></thead>
       <tbody>${rows}</tbody>
     </table>`;
@@ -5446,6 +5449,7 @@ function fmtPE(pe, kind) {
 function renderRankingsBlock(market) {
   if (FAILED_LOADS.has("rankings")) return "";
   const sec = (DATA.rankings && DATA.rankings[market]) || {};
+  const asOf = sec.as_of || null;
   const blocks = [
     ["市值前十大", sec.top_marketcap, true,  true],
     ["最大漲幅",   sec.top_gainers,   true,  true],
@@ -5456,7 +5460,7 @@ function renderRankingsBlock(market) {
     <div style="margin-top:28px;padding-top:20px;border-top:1px solid var(--border)">
       ${blocks.map(([title, items, cap, pe]) => `
           <h3 style="font-size:16px;margin:18px 0 8px">${title}</h3>
-          ${renderRankingTable(items, { showMarketCap: cap, showPE: pe })}
+          ${renderRankingTable(items, { showMarketCap: cap, showPE: pe, asOf })}
         `).join("")}
       <p style="color:var(--text-mute);font-size:12px;margin:10px 0 0">
         當日全市場掃描；點名稱可至 Yahoo／TWSE 驗證。本月=MTD，本年=YTD。本益比為近四季（trailing），「預」=預估值（forward）。</p>
