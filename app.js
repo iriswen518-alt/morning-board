@@ -7688,7 +7688,7 @@ function renderAssistSheet() {
         <textarea name="free_text" placeholder="例：客戶剛賣掉一間公寓..." maxlength="500"></textarea>
       </div>
 
-      <button type="submit" class="ast-submit" id="assist-submit-btn">組 Prompt</button>
+      <button type="submit" class="ast-submit" id="assist-submit-btn">產出建議</button>
     </form>
   </div>
 
@@ -7702,334 +7702,116 @@ function renderAssistSheet() {
 `;
 }
 
-let ASSIST_CURRENT_REQUEST_ID = null;
-
 function wireAssistTab() {
   const form = document.getElementById("assist-form");
   if (!form) return;
-  form.addEventListener("submit", async (e) => {
+  form.addEventListener("submit", (e) => {
     e.preventDefault();
-    if (ASSIST_DEV_MODE) {
-      await assistSubmitDev(form);
-    } else {
-      await assistBuildPrompt(form);
-    }
+    const fd = new FormData(form);
+    const p = {
+      client_code: fd.get("client_code") || "A",
+      age_band: fd.get("age_band"),
+      asset_band: fd.get("asset_band"),
+      investable_monthly: fd.get("investable_monthly"),
+      risk_tolerance: fd.get("risk_tolerance"),
+      horizon: fd.get("horizon"),
+      goal: fd.get("goal"),
+      existing: fd.getAll("existing"),
+      free_text: (fd.get("free_text") || "").trim(),
+    };
+    document.getElementById("assist-output").innerHTML = renderAssistRuleResult(p);
   });
 }
 
-function collectAssistPayload(form) {
-  const fd = new FormData(form);
-  return {
-    client_code: fd.get("client_code") || "A",
-    age_band: fd.get("age_band"),
-    asset_band: fd.get("asset_band"),
-    investable_monthly: fd.get("investable_monthly"),
-    risk_tolerance: fd.get("risk_tolerance"),
-    horizon: fd.get("horizon"),
-    goal: fd.get("goal"),
-    existing: fd.getAll("existing"),
-    free_text: (fd.get("free_text") || "").trim(),
-  };
-}
+function renderAssistRuleResult(p) {
+  const risk = p.risk_tolerance;
+  const goal = p.goal;
+  const horizon = p.horizon;
+  const age = p.age_band;
+  const assets = p.asset_band;
+  const existing = p.existing || [];
 
-// === 公開模式：組 prompt 給同事自己用 ===
-async function assistBuildPrompt(form) {
-  const payload = collectAssistPayload(form);
-  const out = document.getElementById("assist-output");
-  const btn = document.getElementById("assist-submit-btn");
+  // --- 資產配置建議 ---
+  const alloc = {
+    "保守": { "股票型": 10, "債券 / 固定收益": 50, "平衡 / 多元資產": 20, "現金 / 定存": 20 },
+    "穩健": { "股票型": 30, "債券 / 固定收益": 35, "平衡 / 多元資產": 25, "現金 / 定存": 10 },
+    "積極": { "股票型": 60, "債券 / 固定收益": 20, "平衡 / 多元資產": 15, "現金 / 定存": 5 },
+  }[risk] || { "平衡 / 多元資產": 60, "現金 / 定存": 40 };
 
-  // PII 防呆：自由補充欄位含明顯姓名/身分證/電話 patterns 就攔
-  const pii = detectPII(payload.free_text);
-  if (pii.length) {
-    out.innerHTML = `<div class="ast-error">
-      自由補充欄位疑似含 PII（${pii.join("、")}）。請改用代稱、移除電話/身分證號後再試。
-    </div>`;
-    return;
-  }
+  // 目標微調
+  if (goal === "傳承") { alloc["債券 / 固定收益"] = (alloc["債券 / 固定收益"] || 0) + 10; alloc["股票型"] = Math.max(0, (alloc["股票型"] || 0) - 10); }
+  if (goal === "保本") { alloc["現金 / 定存"] = (alloc["現金 / 定存"] || 0) + 15; alloc["股票型"] = Math.max(0, (alloc["股票型"] || 0) - 15); }
+  if (goal === "增值" && risk === "積極") { alloc["股票型"] = Math.min(75, (alloc["股票型"] || 0) + 5); }
 
-  btn.disabled = true;
-  btn.textContent = "組合中…";
-  try {
-    const systemPrompt = await loadAssistSystemPrompt();
-    const userMsg = `客戶情境輸入：\n\`\`\`json\n${JSON.stringify(payload, null, 2)}\n\`\`\`\n\n請直接輸出 JSON。`;
-    const fullPrompt = `${systemPrompt}\n\n---\n\n${userMsg}`;
-    out.innerHTML = renderAssistPromptBuilder(fullPrompt);
-    wireAssistPromptActions(fullPrompt);
-  } catch (e) {
-    out.innerHTML = `<div class="ast-error">載入 system prompt 失敗：${escapeHtml(e.message)}</div>`;
-  } finally {
-    btn.disabled = false;
-    btn.textContent = "重新組 Prompt";
-  }
-}
-
-// 偵測自由文字裡常見 PII pattern（粗略防呆，不是完整 DLP）
-function detectPII(text) {
-  if (!text) return [];
-  const hits = [];
-  if (/[A-Z]\d{9}/.test(text)) hits.push("身分證號");
-  if (/09\d{2}[\s-]?\d{3}[\s-]?\d{3}/.test(text)) hits.push("手機");
-  if (/0\d{1,2}[\s-]?\d{6,8}/.test(text)) hits.push("市話");
-  if (/\d{10,16}/.test(text)) hits.push("疑似帳號");
-  return hits;
-}
-
-function renderAssistPromptBuilder(fullPrompt) {
-  const chars = fullPrompt.length;
-  return `
-<div class="ast-step-title"><span class="ast-step-num">1</span>複製下面這段 Prompt</div>
-<div class="ast-prompt-out" id="assist-prompt-text">${escapeHtml(fullPrompt)}</div>
-<div class="ast-meta">總長 ${chars.toLocaleString()} 字</div>
-
-<div class="ast-btn-row">
-  <button class="ast-btn-p" id="assist-copy-btn">複製 Prompt 到剪貼簿</button>
-  <a class="ast-btn-s" href="https://claude.ai/new" target="_blank" rel="noopener">開啟 claude.ai →</a>
-</div>
-
-<div class="ast-step-title"><span class="ast-step-num">2</span>到 claude.ai 貼上送出 → 把回傳 JSON 貼回下面</div>
-<textarea class="ast-paste" id="assist-response-paste" placeholder="把 claude.ai 回應的 JSON 整段貼這裡（含 { } 大括號）"></textarea>
-
-<div class="ast-btn-row">
-  <button class="ast-btn-p" id="assist-parse-btn">解析顯示美化版 ↓</button>
-</div>
-
-<div id="assist-parsed-output"></div>
-
-<div class="ast-meta" style="margin-top:12px;">
-  Prompt 也適用於 ChatGPT、Gemini。
-</div>
-`;
-}
-
-function wireAssistPromptActions(fullPrompt) {
-  const copyBtn = document.getElementById("assist-copy-btn");
-  const parseBtn = document.getElementById("assist-parse-btn");
-  if (copyBtn) {
-    copyBtn.addEventListener("click", async () => {
-      try {
-        await navigator.clipboard.writeText(fullPrompt);
-        copyBtn.textContent = "✓ 已複製";
-        setTimeout(() => { copyBtn.textContent = "📋 複製 Prompt 到剪貼簿"; }, 2000);
-      } catch (e) {
-        // fallback：選取 textarea 內容讓使用者手動複製
-        const ta = document.createElement("textarea");
-        ta.value = fullPrompt;
-        document.body.appendChild(ta);
-        ta.select();
-        document.execCommand("copy");
-        document.body.removeChild(ta);
-        copyBtn.textContent = "✓ 已複製（fallback）";
-        setTimeout(() => { copyBtn.textContent = "📋 複製 Prompt 到剪貼簿"; }, 2000);
-      }
-    });
-  }
-  if (parseBtn) {
-    parseBtn.addEventListener("click", () => {
-      const raw = document.getElementById("assist-response-paste").value.trim();
-      const target = document.getElementById("assist-parsed-output");
-      if (!raw) {
-        target.innerHTML = `<div class="ast-error">請先貼上 JSON 內容</div>`;
-        return;
-      }
-      // 嘗試剝除 ```json ... ``` 包裝
-      let cleaned = raw;
-      if (cleaned.startsWith("```")) {
-        cleaned = cleaned.split("\n").slice(1).join("\n");
-        if (cleaned.endsWith("```")) cleaned = cleaned.slice(0, cleaned.lastIndexOf("```"));
-        cleaned = cleaned.trim();
-      }
-      let data;
-      try {
-        data = JSON.parse(cleaned);
-      } catch (e) {
-        target.innerHTML = `<div class="ast-error">
-          JSON 解析失敗：${escapeHtml(e.message)}<br>
-          請確認貼上的內容是純 JSON（含 { 與 }）。
-        </div>`;
-        return;
-      }
-      target.innerHTML = renderAssistResult(data);
-    });
-  }
-}
-
-// === Dev 模式：直接打本機 server（Iris 自己用）===
-async function assistSubmitDev(form) {
-  const payload = collectAssistPayload(form);
-  const btn = document.getElementById("assist-submit-btn");
-  const out = document.getElementById("assist-output");
-  btn.disabled = true;
-  btn.textContent = "生成中…";
-  const startedAt = Date.now();
-  let elapsed = 0;
-  const timer = setInterval(() => {
-    elapsed = Math.floor((Date.now() - startedAt) / 1000);
-    out.innerHTML = `<div class="ast-status">
-      <div class="spinner">⏳</div>
-      <p>本機 API 跑中… 已等 ${elapsed} 秒</p>
-    </div>`;
-  }, 1000);
-
-  try {
-    const r = await fetch(`${ASSIST_API}/api/assist`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    });
-    clearInterval(timer);
-
-    if (!r.ok) {
-      const err = await r.json().catch(() => ({}));
-      out.innerHTML = `<div class="ast-error">伺服器回應 ${r.status}：${escapeHtml(err.error || "未知錯誤")}</div>`;
-      return;
-    }
-
-    const data = await r.json();
-    if (data.error) {
-      out.innerHTML = `<div class="ast-error">
-        <strong>LLM 回應錯誤：</strong>${escapeHtml(data.error)}
-        ${data.raw_preview ? `<details style="margin-top:8px;"><summary>raw preview</summary><pre style="font-size:10px;white-space:pre-wrap;">${escapeHtml(data.raw_preview)}</pre></details>` : ""}
-      </div>`;
-      return;
-    }
-
-    ASSIST_CURRENT_REQUEST_ID = data.request_id;
-    out.innerHTML = renderAssistResult(data);
-    wireAssistFeedback();
-  } catch (err) {
-    clearInterval(timer);
-    out.innerHTML = `<div class="ast-error">
-      無法連到本機 server：${escapeHtml(String(err))}<br>
-      請確認 <code>~/scripts/client_assist_server.py</code> 已啟動（port 8766）。
-    </div>`;
-  } finally {
-    btn.disabled = false;
-    btn.textContent = "本機 API 跑（dev）";
-  }
-}
-
-function renderAssistResult(d) {
-  const products = (d.products || []).map(p => `
-    <div class="ast-product">
-      <div class="name">${escapeHtml(p.rating || "")} ${escapeHtml(p.name || "")}</div>
-      <div class="reason">${escapeHtml(p.reason || "")}</div>
+  const allocRows = Object.entries(alloc).map(([k, v]) => `
+    <div style="margin-bottom:6px">
+      <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:2px">
+        <span style="color:var(--text-mute)">${k}</span><span style="font-weight:600;color:var(--text)">${v}%</span>
+      </div>
+      <div style="background:var(--border);border-radius:3px;height:6px;overflow:hidden">
+        <div style="background:var(--brand-primary);width:${v}%;height:100%;border-radius:3px"></div>
+      </div>
     </div>`).join("");
 
-  const scripts = d.scripts || {};
-  const scriptBlock = (label, text) => text ? `
-    <div class="ast-script">
-      <div class="label">${escapeHtml(label)}</div>
-      ${escapeHtml(text)}
-    </div>` : "";
+  // --- 商品類別建議 ---
+  const PRODUCTS = {
+    "保守": ["投資等級債基金", "短期債券 ETF", "配息型保險", "定存連動商品"],
+    "穩健": ["全球平衡型基金", "多元資產基金", "投資等級債", "高評級配息基金"],
+    "積極": ["全球股票型基金", "科技 / 主題型 ETF", "海外股票", "新興市場基金"],
+  };
+  const goalAddons = {
+    "退休": ["目標日期基金", "月配息基金"],
+    "教育金": ["定期定額股票型基金", "兒童目標儲蓄計畫"],
+    "傳承": ["海外債券（信託架構）", "人壽保險（傳承規劃）"],
+    "增值": ["主動型成長基金", "主題型 ETF"],
+    "保本": ["保本型結構商品", "國債 / 貨幣市場基金"],
+  };
+  const baseProds = (PRODUCTS[risk] || []).slice(0, 3);
+  const goalProds = (goalAddons[goal] || []).slice(0, 2);
+  const allProds = [...new Set([...baseProds, ...goalProds])];
+  const prodRows = allProds.map(name => `
+    <div style="border-left:3px solid var(--brand-primary);padding:5px 10px;margin:5px 0;background:var(--bg-alt);font-size:12px;color:var(--text)">${name}</div>`).join("");
 
-  const list = (items) => `<ul class="ast-list">${(items || []).map(x => `<li>${escapeHtml(x)}</li>`).join("")}</ul>`;
+  // --- 缺口提示 ---
+  const gaps = [];
+  if (!existing.includes("保險")) gaps.push("尚無保險部位，建議評估壽險與醫療保障缺口");
+  if (!existing.includes("基金") && !existing.includes("海外債") && !existing.includes("股票")) gaps.push("目前以傳統資產為主，可考慮增加多元化配置");
+  if (existing.includes("定存") && risk !== "保守") gaps.push("定存比重偏高，依風險屬性可適度往投資型商品移動");
+  if (age === "55-65" || age === "65-75" || age === ">75") gaps.push("接近或已達退休年齡，建議優先確保流動性與定期收益");
+  if (horizon === "<3年" && risk === "積極") gaps.push("短年期搭配積極風險，需留意市場波動對贖回時點的影響");
 
-  const warn = d._post_audit_warning
-    ? `<div class="ast-error">⚠️ 後置稽核警告：${escapeHtml(d._post_audit_warning)}</div>`
-    : "";
+  // --- 追問清單 ---
+  const followups = [
+    "客戶目前每月固定支出約多少？退休後預計維持同等生活水準嗎？",
+    goal === "傳承" ? "有無指定受益人規劃或遺囑安排？" : "未來 3 年有無大額支出計畫（購車、換屋、醫療）？",
+    "投資組合中有無已虧損部位需要整理？",
+    risk === "積極" ? "是否能接受單年最大回撤 20% 以上？" : "是否曾有因市場下跌而贖回的經驗？",
+  ];
 
   return `
-${warn}
-
-<div class="ast-section">
-  <h4>① 適合度評估</h4>
-  <p>${escapeHtml(d.suitability || "")}</p>
+<div style="background:var(--bg-alt);border:1px solid var(--border);border-radius:8px;padding:12px;margin-bottom:10px">
+  <div style="font-size:11px;font-weight:700;color:var(--text-mute);margin-bottom:8px">建議配置方向（${risk} · ${goal} · ${horizon}）</div>
+  ${allocRows}
 </div>
 
 <div class="ast-section">
-  <h4>② 商品配適</h4>
-  ${products}
+  <h4>適合商品類別</h4>
+  ${prodRows}
 </div>
+
+${gaps.length ? `
+<div class="ast-section">
+  <h4>注意 / 缺口提示</h4>
+  <ul class="ast-list">${gaps.map(g => `<li>${g}</li>`).join("")}</ul>
+</div>` : ""}
 
 <div class="ast-section">
-  <h4>③ 話術建議</h4>
-  ${scriptBlock("開場", scripts.opening)}
-  ${scriptBlock("痛點", scripts.pain_point)}
-  ${scriptBlock("解方", scripts.solution)}
-  ${scriptBlock("收尾", scripts.closing)}
+  <h4>建議追問</h4>
+  <ul class="ast-list">${followups.map(q => `<li>${q}</li>`).join("")}</ul>
 </div>
 
-<div class="ast-section">
-  <h4>④ 風險警示</h4>
-  ${list(d.risks)}
-</div>
-
-<div class="ast-section">
-  <h4>⑤ 法規提醒</h4>
-  ${list(d.regulations)}
-</div>
-
-<div class="ast-section">
-  <h4>⑥ 後續追問</h4>
-  ${list(d.followup_questions)}
-</div>
-
-<div class="ast-disclaimer">${escapeHtml(d.disclaimer || "本建議由 AI 依輸入情境產出，僅供理財顧問參考。")}</div>
-
-${ASSIST_DEV_MODE ? `
-<div class="ast-feedback">
-  <strong style="font-size:12px;">這次回應你會：</strong><br><br>
-  <button class="ast-fb-btn" data-verdict="採用">✅ 採用</button>
-  <button class="ast-fb-btn" data-verdict="修改後採用">✏️ 修改後採用</button>
-  <button class="ast-fb-btn" data-verdict="不採用">❌ 不採用</button>
-  <span id="assist-fb-status" style="margin-left:12px; font-size:11px; color:#64748b;"></span>
-</div>
-
-<div class="assist-meta">
-  request_id: ${escapeHtml(d.request_id || "")} · latency: ${d.latency_ms || 0}ms
-</div>
-` : `
-<div class="ast-feedback" style="border-top: 1px dashed var(--border); padding-top: 10px; margin-top: 12px;">
-  <strong style="font-size:11px; color:#64748b;">💡 使用後請記得：</strong>
-  <ul style="margin: 6px 0 0; padding-left: 18px; font-size: 11px; color:#64748b; line-height: 1.6;">
-    <li>到 claude.ai 對話列表 → 刪除這則對話（避免留底）</li>
-    <li>若採用建議，請依任職機構商品池 + KYC + 適合度評估再次確認</li>
-  </ul>
-</div>
-`}
+<div class="ast-disclaimer">本建議依輸入條件自動產出，僅供顧問參考架構；正式銷售須完成 KYC、適合度評估及商品說明書揭露。</div>
 `;
-}
-
-function wireAssistFeedback() {
-  document.querySelectorAll(".ast-fb-btn").forEach(btn => {
-    btn.addEventListener("click", async () => {
-      const verdict = btn.dataset.verdict;
-      let reject_reason = null;
-      let modified_version = null;
-      if (verdict === "不採用") {
-        reject_reason = prompt("不採用原因（資訊錯誤 / 不適合場景 / 話術不自然 / 法規偏差 / 其他）：", "其他");
-        if (reject_reason === null) return;
-      }
-      if (verdict === "修改後採用") {
-        modified_version = prompt("貼修改後的版本（給未來迭代參考）：", "");
-        if (modified_version === null) return;
-      }
-      const status = document.getElementById("assist-fb-status");
-      try {
-        const r = await fetch(`${ASSIST_API}/api/feedback`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            request_id: ASSIST_CURRENT_REQUEST_ID,
-            verdict,
-            reject_reason,
-            modified_version,
-          }),
-        });
-        if (r.ok) {
-          status.textContent = "✓ 已記錄";
-          btn.classList.add(
-            verdict === "採用" ? "adopted" :
-            verdict === "修改後採用" ? "modified" : "rejected"
-          );
-        } else {
-          status.textContent = "記錄失敗";
-        }
-      } catch (e) {
-        status.textContent = "記錄失敗：" + e.message;
-      }
-    });
-  });
 }
 
 // ============ 退休金試算 ============
