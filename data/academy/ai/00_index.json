@@ -1,0 +1,54 @@
+{
+  "course": "ai",
+  "course_name": "AI 應用",
+  "chapters": [
+    {
+      "slug": "genai_basics",
+      "title": "生成式 AI 與 LLM 基礎",
+      "description": "生成式 AI 與大型語言模型的原理、能力與限制",
+      "file": "01_genai_basics.json"
+    },
+    {
+      "slug": "prompting",
+      "title": "提示工程與有效運用",
+      "description": "好提示五要素、實用技巧、金融場景範例與合規紅線",
+      "file": "02_prompting.json"
+    },
+    {
+      "slug": "rag",
+      "title": "RAG 檢索增強生成",
+      "description": "先檢索再生成，讓 AI 回答有依據、可附出處",
+      "file": "03_rag.json"
+    },
+    {
+      "slug": "agents_mcp",
+      "title": "AI 代理與 MCP",
+      "description": "AI 代理、工具使用與連接外部資料的開放標準 MCP",
+      "file": "04_agents_mcp.json"
+    },
+    {
+      "slug": "safety_governance",
+      "title": "AI 安全與治理",
+      "description": "幻覺、偏誤、隱私、資安風險與員工使用守則",
+      "file": "05_safety_governance.json"
+    },
+    {
+      "slug": "finance_regulation",
+      "title": "金融業 AI 法規與合規",
+      "description": "金管會 AI 指引六大原則、個資法、金保法與合規檢核",
+      "file": "06_finance_regulation.json"
+    },
+    {
+      "slug": "finance_cases",
+      "title": "台灣金融業 AI 落地案例",
+      "description": "智能客服、反洗錢、財管理專小幫手等六大應用場景",
+      "file": "07_finance_cases.json"
+    },
+    {
+      "slug": "quiz",
+      "title": "課後測驗",
+      "description": "20 題選擇題，測驗你的 AI 應用知識",
+      "file": "08_quiz.json"
+    }
+  ]
+}

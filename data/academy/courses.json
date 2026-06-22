@@ -115,7 +115,7 @@
     {
       "slug": "asset_allocation",
       "name": "資產配置",
-      "active": false,
+      "active": true,
       "description": "基礎與進階配置、跨商品整合提案、國際資產配置與動態再平衡。",
       "icon": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 3v9l8 4\"/><path d=\"M12 12L4 16\"/>"
     },
@@ -143,7 +143,7 @@
     {
       "slug": "ai",
       "name": "AI 應用",
-      "active": false,
+      "active": true,
       "description": "生成式 AI、LLM、RAG、MCP 核心概念，AI 安全治理，以及台灣金融業 AI 落地案例。",
       "icon": "<rect x=\"4\" y=\"4\" width=\"16\" height=\"16\" rx=\"2\" stroke=\"currentColor\" stroke-width=\"1.8\"/><path d=\"M9 9h6v6H9z\" fill=\"currentColor\"/><path d=\"M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3\" stroke=\"currentColor\" stroke-width=\"1.8\"/>"
     }

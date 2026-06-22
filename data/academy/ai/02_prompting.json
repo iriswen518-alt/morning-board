@@ -1,0 +1,43 @@
+{
+  "chapter": 2,
+  "slug": "prompting",
+  "title": "提示工程與有效運用",
+  "description": "提示工程基本功、好提示五要素、金融場景範例與合規紅線",
+  "objectives": [
+    "理解提示工程的本質：同一模型、不同提示，輸出品質天差地遠",
+    "掌握好提示的五大結構：角色、任務、脈絡、格式、限制，並懂得加範例（few-shot）",
+    "運用思維鏈、結構化輸出、指定語氣受眾、要求引用來源等實用技巧",
+    "套用金融場景提示範本：投資建議草稿、月報重點、客戶白話化、會議摘要",
+    "辨識常見反模式與合規紅線：勿放客戶個資、輸出須經人工查核才可對外"
+  ],
+  "sections": [
+    {
+      "heading": "一、什麼是提示工程，為何重要",
+      "html": "<p>「提示（Prompt）」就是你給 AI 的指令。「提示工程（Prompt Engineering）」則是把這道指令寫得更精準、更有結構，讓 AI 產出你真正要的結果。重點觀念：<strong>同一個模型，給不同的提示，結果會天差地遠</strong>。AI 不會讀心，它只能依你寫下的字句來判斷你要什麼；提示越含糊，它越要用「猜」的補空白，品質就越不穩定。</p>\n<div class=\"mermaid\">graph TD\n    A[同一個 AI 模型] --> B[弱提示: 幫我寫個基金說明]\n    A --> C[強提示: 角色+任務+脈絡+格式+限制]\n    B --> D[空泛 籠統 要反覆重來]\n    C --> E[精準 可直接使用]\n    style C fill:#019AB3,color:#fff\n    style E fill:#2a9d8f,color:#fff\n    style D fill:#d62828,color:#fff</div>\n<p>對理財專員而言，提示工程不是工程師的專利，而是一種「把工作交辦清楚」的能力。你過去怎麼帶新進同仁、怎麼跟後勤交辦，就怎麼跟 AI 交辦——交辦得越清楚，回來的成品越好用。差別只在於：AI 是一位反應極快、但完全照字面理解、且需要你提供完整脈絡的助理。</p>\n<blockquote><strong>核心心法</strong>：好提示 ＝ 把你腦中的「隱性條件」全部寫出來。你心裡知道這份建議是給保守型退休客戶看的、要附風險警語、要 300 字以內——但若沒寫進提示，AI 不會知道。</blockquote>"
+    },
+    {
+      "heading": "二、好提示的五大結構",
+      "html": "<p>一個好提示通常包含五個要素，可用「角色—任務—脈絡—格式—限制」來記。不一定每次都五項到齊，但越重要的工作，越該補齊。</p>\n<div class=\"mermaid\">graph LR\n    A[好提示] --> B[角色 Role]\n    A --> C[任務 Task]\n    A --> D[脈絡 Context]\n    A --> E[格式 Format]\n    A --> F[限制 Constraints]\n    style A fill:#019AB3,color:#fff</div>\n<table>\n<thead><tr><th>要素</th><th>說明</th><th>金融範例寫法</th></tr></thead>\n<tbody>\n<tr><td><strong>角色 Role</strong></td><td>讓 AI 用特定身分思考</td><td>「你是一位資深財富管理理財顧問」</td></tr>\n<tr><td><strong>任務 Task</strong></td><td>明確要做什麼</td><td>「幫我整理這份基金月報的三個重點」</td></tr>\n<tr><td><strong>脈絡 Context</strong></td><td>背景、對象、目的</td><td>「對象是 60 歲保守型退休客戶，目的是面談前的開場」</td></tr>\n<tr><td><strong>格式 Format</strong></td><td>輸出長什麼樣</td><td>「用三個條列，每點 30 字內，最後附一句白話總結」</td></tr>\n<tr><td><strong>限制 Constraints</strong></td><td>不可做什麼、邊界</td><td>「不得保證報酬、不得提具體買賣建議、需加註風險警語」</td></tr>\n</tbody></table>\n<p><strong>加範例（Few-shot）</strong>：如果你對輸出的風格有特定要求，最有效的做法是直接「給一個範例」。例如你想要的客戶訊息語氣，就先貼一段你過去寫過、滿意的訊息，再說「請照這個語氣與長度，改寫成下面這檔商品」。AI 模仿範例的能力，遠勝於你用形容詞描述（「親切一點」「專業一點」往往不夠精準）。</p>\n<details><summary>名詞定義</summary>\n<ul>\n<li><strong>Few-shot（少樣本提示）</strong>：在提示裡放入一到數個「輸入→輸出」範例，讓 AI 照樣模仿。相對地，完全不給範例叫 Zero-shot。</li>\n<li><strong>系統提示 vs 使用者提示</strong>：部分工具可設定固定的「系統角色」（例如永遠扮演合規嚴謹的理顧），再逐次輸入任務，省去每次重打角色。</li>\n</ul></details>"
+    },
+    {
+      "heading": "三、四個實用技巧",
+      "html": "<p>掌握五大結構後，再加上以下四招，輸出品質會明顯提升。</p>\n<p><strong>1. 思維鏈（Chain-of-Thought）——「請逐步思考」</strong><br>面對需要推理的任務（試算、比較、判斷適合度），在提示尾端加一句「<strong>請逐步思考、先列出推理過程再給結論</strong>」，能大幅減少跳步出錯。AI 一旦把步驟攤開，你也更容易檢查它哪一步算錯。</p>\n<div class=\"mermaid\">graph LR\n    A[提問] --> B[請逐步思考]\n    B --> C[步驟1 列出條件]\n    C --> D[步驟2 逐項計算]\n    D --> E[步驟3 結論]\n    style B fill:#17B5AD,color:#fff\n    style E fill:#2a9d8f,color:#fff</div>\n<p><strong>2. 要求結構化輸出</strong><br>明確指定「用表格」「用 JSON」「用三欄條列」，AI 就會整齊輸出，方便你直接貼進報告或系統，不必再手動排版。例如：「請以表格輸出，欄位為：基金名稱、近一年報酬、風險等級、適合客群」。</p>\n<p><strong>3. 指定語氣與受眾</strong><br>同一份內容，給客戶看和給主管看寫法不同。明白告訴 AI：「對象是非金融背景的客戶，請用白話、避免專業術語、語氣親切」，或「對象是風控主管，請精簡、重點化、用專業用語」。</p>\n<p><strong>4. 要求引用來源</strong><br>處理數據、法規、市場資訊時，加一句「<strong>請標明每項數據的來源，無法確認來源者請註明『需查證』，不要編造</strong>」。這能降低 AI「一本正經說錯話」（俗稱幻覺 Hallucination）的風險，也方便你後續查核。</p>\n<blockquote><strong>提醒</strong>：即使要求了引用，AI 仍可能編造看似真實的來源。所有對外數據與法條，務必回到官方原始出處（如基金月報 PDF、全國法規資料庫）人工核對。</blockquote>"
+    },
+    {
+      "heading": "四、金融場景提示範例（弱 vs 強對照）",
+      "html": "<p>以下用實際工作場景，示範「弱提示」與「強提示」的差別。請特別感受：強提示只是多花了 30 秒把條件講清楚，省下的卻是反覆重來與事後修改的時間。</p>\n<p><strong>場景 A：撰寫客戶投資建議草稿</strong></p>\n<table>\n<thead><tr><th>弱提示</th><th>強提示</th></tr></thead>\n<tbody>\n<tr><td>幫我寫一段基金投資建議。</td><td>你是資深理財顧問。請為一位 55 歲、風險屬性穩健型、目標是退休現金流的客戶，撰寫一段約 200 字的全球非投資等級債券基金建議草稿。語氣專業但好懂，需說明適合理由與主要風險，結尾加註「本內容僅供參考，不保證獲利，投資人申購前應詳閱公開說明書」。不要提具體買賣時點。</td></tr>\n</tbody></table>\n<p><strong>場景 B：整理基金月報重點</strong></p>\n<table>\n<thead><tr><th>弱提示</th><th>強提示</th></tr></thead>\n<tbody>\n<tr><td>幫我看這份月報。</td><td>你是投資研究人員。請從我貼上的這份基金月報，整理出三個對客戶最重要的重點：近期績效變化、經理人後市看法、主要持債或產業配置調整。每點 40 字內、條列呈現，最後用一句白話總結這檔基金「現在適不適合進場觀察」。數據請標明出自月報第幾頁。</td></tr>\n</tbody></table>\n<p><strong>場景 C：把專業內容轉成客戶看得懂的說法</strong></p>\n<table>\n<thead><tr><th>弱提示</th><th>強提示</th></tr></thead>\n<tbody>\n<tr><td>把這段講白一點。</td><td>請把下面這段關於「存續期間（Duration）與利率風險」的專業說明，改寫成對 65 歲、無金融背景客戶的白話解釋。用一個生活化比喻、控制在 80 字內、不使用任何英文術語。</td></tr>\n</tbody></table>\n<p><strong>場景 D：會議記錄摘要</strong></p>\n<table>\n<thead><tr><th>弱提示</th><th>強提示</th></tr></thead>\n<tbody>\n<tr><td>幫我整理會議記錄。</td><td>你是會議記錄助理。請將我貼上的逐字稿整理為三部分：（1）決議事項、（2）待辦事項（含負責人與期限）、（3）待釐清問題。用條列、每項一行。逐字稿中若出現客戶姓名或帳號，一律以「客戶 A」「帳號末四碼」代稱，不要保留完整個資。</td></tr>\n</tbody></table>\n<details><summary>為什麼強提示更好用</summary>\n<ul>\n<li><strong>有角色</strong>：AI 用對的專業視角思考。</li>\n<li><strong>有對象與目的</strong>：語氣、深淺、長度都對得上。</li>\n<li><strong>有格式與字數</strong>：拿到就能用，不必重排。</li>\n<li><strong>有合規限制</strong>：自動帶警語、去個資，降低事後風險。</li>\n</ul></details>"
+    },
+    {
+      "heading": "五、常見錯誤與反模式",
+      "html": "<p>提示寫不好，問題多半出在以下幾種反模式。對照檢查，能快速改善。</p>\n<div class=\"mermaid\">graph TD\n    A[提示反模式] --> B[太模糊]\n    A --> C[一次塞太多任務]\n    A --> D[未提供脈絡]\n    A --> E[盲信輸出]\n    style A fill:#d62828,color:#fff</div>\n<table>\n<thead><tr><th>反模式</th><th>症狀</th><th>改善做法</th></tr></thead>\n<tbody>\n<tr><td><strong>提示太模糊</strong></td><td>「幫我分析一下」「寫得好一點」，AI 只能亂猜</td><td>講明對象、目的、長度、格式</td></tr>\n<tr><td><strong>一次塞太多任務</strong></td><td>要它同時做摘要、翻譯、試算、寫文案，結果樣樣半吊子</td><td>拆成多輪，一次一個任務</td></tr>\n<tr><td><strong>未提供脈絡</strong></td><td>沒貼資料就要它「整理月報」，它只能憑印象編</td><td>把原始資料、背景一起貼上</td></tr>\n<tr><td><strong>盲信輸出</strong></td><td>數據、法條、報酬率照單全收就對外</td><td>所有事實一律回官方來源查核</td></tr>\n</tbody></table>\n<p><strong>特別小心「一本正經地說錯」</strong>：AI 產出的文字流暢、語氣自信，但內容可能是錯的（幻覺）。報酬率、配息率、法規條號、基金代碼這類「一個數字錯就出事」的資訊，AI 給的只能當草稿線索，正確值一定要你親自從官方文件確認。</p>\n<blockquote><strong>實務節奏</strong>：用 AI 做「初稿與整理」，用你的專業做「查核與定稿」。AI 負責省時間，你負責對結果負責。</blockquote>"
+    },
+    {
+      "heading": "六、合規紅線與使用守則",
+      "html": "<p>在銀行財富管理場景使用 AI，合規優先於效率。以下兩條紅線務必牢記。</p>\n<div class=\"mermaid\">graph TD\n    A[使用 AI] --> B{提示內含客戶個資?}\n    B -->|是| C[禁止! 去識別化後再用]\n    B -->|否| D[可使用]\n    D --> E{輸出要對外?}\n    E -->|是| F[須經人工查核才可發出]\n    E -->|否| G[內部參考]\n    style C fill:#d62828,color:#fff\n    style F fill:#019AB3,color:#fff</div>\n<p><strong>紅線一：提示中勿放客戶個資與帳號。</strong>姓名、身分證字號、帳號、電話、住址、持有部位明細等，都不應直接貼進外部 AI 工具，以免違反個資法與銀行資安規範。需要時請先「去識別化」——以「客戶 A」「帳號末四碼」「約 X 百萬」等代稱替換，再請 AI 處理。</p>\n<p><strong>紅線二：AI 輸出須經人工查核，才可對外。</strong>任何要給客戶、要對外發布、要寫進正式文件的內容，AI 產出的只是草稿。理財專員必須逐項查核數據、確認語意正確、補齊法定警語（不保證獲利、詳閱公開說明書、風險預告），確認無誤後才能使用。對外責任仍在「人」，不在 AI。</p>\n<table>\n<thead><tr><th>情境</th><th>可以</th><th>不可以</th></tr></thead>\n<tbody>\n<tr><td>整理公開月報重點</td><td>貼公開資料請 AI 摘要</td><td>未查核就轉發給客戶</td></tr>\n<tr><td>草擬客戶訊息</td><td>用代稱描述客戶類型</td><td>貼上客戶真實姓名與帳號</td></tr>\n<tr><td>白話化商品說明</td><td>請 AI 改寫初稿</td><td>省略風險警語直接對外</td></tr>\n</tbody></table>\n<blockquote><strong>一句話守則</strong>：個資不出門、輸出必查核、警語不可少、責任在於人。</blockquote>"
+    },
+    {
+      "heading": "自我檢測",
+      "html": "<details><summary>Q1：為什麼說「同一個模型也需要提示工程」？</summary><p>答：因為 AI 只依你寫下的字句來判斷需求，無法讀心。提示越含糊，它越要靠「猜」補空白，輸出就越不穩定；把對象、目的、格式、限制寫清楚，等於把工作交辦明確，成品自然更可用。同一模型，弱提示與強提示的結果可以天差地遠。</p></details>\n<details><summary>Q2：好提示的五大結構是哪五項？「請逐步思考」屬於哪一招？</summary><p>答：五大結構為角色（Role）、任務（Task）、脈絡（Context）、格式（Format）、限制（Constraints）。「請逐步思考、先列推理再給結論」屬於思維鏈（Chain-of-Thought）技巧，用於需要推理或試算的任務，可減少跳步出錯，也方便你檢查每一步。</p></details>\n<details><summary>Q3：列舉至少三種提示反模式，並各給一個改善做法。</summary><p>答：（1）提示太模糊→講明對象、目的、長度、格式；（2）一次塞太多任務→拆成多輪、一次一件；（3）未提供脈絡→把原始資料與背景一起貼上；（4）盲信輸出→所有事實回官方來源查核。</p></details>\n<details><summary>Q4：在銀行場景使用 AI 的兩條合規紅線是什麼？</summary><p>答：一、提示中勿放客戶個資與帳號，需先去識別化（以「客戶 A」「帳號末四碼」代稱）再使用；二、AI 輸出須經人工查核並補齊法定警語後，才可對外，對外責任仍在人不在 AI。一句話：個資不出門、輸出必查核、警語不可少、責任在於人。</p></details>\n<p><strong>資料來源：</strong></p>\n<ul>\n<li>OpenAI, Prompt engineering guide（https://platform.openai.com/docs/guides/prompt-engineering）</li>\n<li>Anthropic, Prompt engineering overview（https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview）</li>\n<li>Google Cloud, Prompt design strategies（https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompt-best-practices）</li>\n<li>個人資料保護法，全國法規資料庫（https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021）</li>\n<li>金融服務業運用人工智慧（AI）指引，金管會（https://www.fsc.gov.tw）</li>\n</ul>"
+    }
+  ]
+}

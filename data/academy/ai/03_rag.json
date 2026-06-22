@@ -1,0 +1,39 @@
+{
+  "chapter": 3,
+  "slug": "rag",
+  "title": "RAG 檢索增強生成",
+  "description": "用「先檢索、再生成」讓 AI 回答有依據、可附出處，補足 LLM 不懂公司內部知識與會幻覺的弱點。",
+  "objectives": [
+    "理解為何單靠 LLM 不夠，以及 RAG 如何補足時效性與內部知識的缺口",
+    "認識嵌入向量、向量資料庫、語意檢索與文件切塊（chunking）等核心概念",
+    "看懂 RAG 的完整流程：文件入庫到查詢生成有依據的答案",
+    "舉出財富管理實務中可導入 RAG 的具體應用情境",
+    "判別 RAG 的品質關鍵與限制，並理解何時用 RAG、何時用微調"
+  ],
+  "sections": [
+    {
+      "heading": "為什麼需要 RAG？",
+      "html": "<p>大型語言模型（LLM）很會講話，但它有三個先天限制，剛好都是金融場景最在意的地方：</p><ul><li><strong>訓練資料有時效</strong>：模型只學到某個時間點以前的資料，今天的利率、最新法規修正、上週上架的新商品，它都不知道。</li><li><strong>不懂公司內部知識</strong>：你們行內的商品說明書、作業手冊、客戶往來記錄，從來沒進過模型的訓練資料，它當然答不出來。</li><li><strong>會幻覺（hallucination）</strong>：當它不知道答案時，仍可能「一本正經地編造」看似合理卻錯誤的內容——這在合規與客訴上是大忌。</li></ul><p><strong>RAG（Retrieval-Augmented Generation，檢索增強生成）</strong>的解法很直覺：<strong>先去資料庫裡「檢索」相關片段，再把這些片段連同問題一起交給 LLM「生成」答案。</strong>等於先給模型一份「開卷考的小抄」，讓它根據你提供的真實資料來回答，而不是憑記憶亂掰。</p><blockquote>一句話記住：<strong>LLM 是「會寫作文的人」，RAG 是「先讓他翻過你的檔案櫃再寫」。</strong></blockquote>"
+    },
+    {
+      "heading": "核心概念：嵌入向量、向量資料庫、語意檢索",
+      "html": "<p>RAG 背後有幾個關鍵名詞，用財管的方式來理解：</p><ul><li><strong>嵌入向量（embedding）</strong>：把一段文字轉換成一串數字（向量），讓「意思相近」的文字在數學空間裡距離也相近。例如「贖回」「賣出」「解約」會被放在彼此附近。</li><li><strong>向量資料庫（vector database）</strong>：專門儲存這些向量的倉庫，能在幾毫秒內找出「語意最接近」查詢的片段。常見的有 Pinecone、Weaviate、pgvector 等。</li><li><strong>語意檢索 vs 關鍵字檢索</strong>：傳統關鍵字搜尋要「字面命中」，你打「提前解約」就只找含這四個字的段落；語意檢索看的是「意思」，就算文件寫的是「未到期贖回之費用」，也找得到。</li><li><strong>切塊（chunking）</strong>：文件通常太長，不能整份丟進去。要先切成一段一段（例如每 300～500 字一塊），分別向量化。切得好不好，直接影響檢索品質——切太大會混入雜訊，切太小會失去上下文。</li></ul><table border=\"1\" cellpadding=\"6\" cellspacing=\"0\"><thead><tr><th>比較項目</th><th>關鍵字檢索</th><th>語意檢索（RAG 用）</th></tr></thead><tbody><tr><td>命中依據</td><td>字面相同</td><td>意思相近</td></tr><tr><td>同義詞處理</td><td>抓不到</td><td>抓得到</td></tr><tr><td>例子</td><td>「贖回」找不到「賣出」</td><td>「贖回」可找到「賣出/解約」</td></tr></tbody></table>"
+    },
+    {
+      "heading": "RAG 的完整流程",
+      "html": "<p>RAG 分兩個階段：<strong>「建庫」（離線、事先準備）</strong>和<strong>「查詢」（即時、使用者提問時）</strong>。</p><p><strong>階段一：把文件變成可檢索的向量庫</strong></p><div class=\"mermaid\">graph LR\n    A[內部文件<br/>商品書/手冊/法規] --> B[切塊 chunking]\n    B --> C[向量化 embedding]\n    C --> D[(向量資料庫)]\n    style D fill:#019AB3,color:#fff</div><p><strong>階段二：使用者提問時，先檢索再生成</strong></p><div class=\"mermaid\">graph LR\n    Q[使用者問題] --> E[向量化問題]\n    E --> F[到向量庫<br/>語意檢索]\n    F --> G[取出最相關片段]\n    G --> H[片段+問題<br/>一起給 LLM]\n    H --> I[生成有依據的答案<br/>可附出處]\n    style F fill:#17B5AD,color:#fff\n    style I fill:#019AB3,color:#fff</div><p>關鍵在最後一步：因為答案是「根據檢索到的片段」產生的，所以可以同時標出<strong>出處</strong>（來自哪份文件、哪一頁），讓使用者能回頭查核，這正是 RAG 大幅降低幻覺的原因。</p>"
+    },
+    {
+      "heading": "金融與財管的應用情境",
+      "html": "<p>RAG 特別適合「資料散在很多文件、答案必須有依據」的場景，這正是財富管理的日常：</p><ul><li><strong>內部商品文件問答</strong>：理專問「這檔境外債的最低申購金額和計息方式？」系統直接從產品說明書檢索並附頁碼回答，不用自己翻 PDF。</li><li><strong>法規／作業手冊查詢</strong>：「KYC 重新評估的觸發條件有哪些？」從合規手冊找出對應段落，附出處，降低口頭傳話的誤差。</li><li><strong>KYC／客戶往來記錄整理</strong>：把某客戶歷次面談記錄、交易摘要餵入，快速彙整「這位客戶的風險偏好與關注點」。</li><li><strong>研究報告摘要庫</strong>：把券商研究、總經報告建成知識庫，問「最近對美債殖利率的主流看法？」即可跨報告彙整觀點。</li></ul><blockquote><strong>合規重點：</strong>RAG 讓答案「可附出處」，理專能向客戶說明依據、主管能回溯查核，這比讓 AI 憑空作答安全得多。但它是<strong>輔助工具</strong>，對外說法仍需理專確認後負責。</blockquote>"
+    },
+    {
+      "heading": "限制與品質關鍵",
+      "html": "<p>RAG 不是萬靈丹。導入前要認清幾個關鍵，否則容易「看起來很厲害、實際常出錯」：</p><ul><li><strong>檢索品質決定答案品質</strong>：如果第一步沒撈到對的片段，LLM 再強也只是「根據錯誤資料認真作答」。切塊策略、檢索數量都要調校。</li><li><strong>文件需要治理與更新</strong>：商品下架、費率調整、法規修正，向量庫若沒同步更新，就會給出過期答案。必須有人負責維護。</li><li><strong>權限控管</strong>：不是每個人都能查所有資料。客戶個資、特定商品條件，要做到「誰能查到哪些資料」的分層控管，避免越權存取。</li><li><strong>仍需人工查核</strong>：尤其涉及金額、費率、法律效果的內容，務必人工複核後才對客戶使用。</li></ul><p><strong>RAG vs 微調（fine-tuning）的簡要比較：</strong></p><table border=\"1\" cellpadding=\"6\" cellspacing=\"0\"><thead><tr><th>面向</th><th>RAG 檢索增強</th><th>微調 fine-tuning</th></tr></thead><tbody><tr><td>解決什麼</td><td>讓模型「知道」最新／內部知識</td><td>讓模型「學會」特定風格或任務</td></tr><tr><td>資料更新</td><td>更新文件即可，無需重訓</td><td>資料變了要重新訓練</td></tr><tr><td>可附出處</td><td>可以（降低幻覺）</td><td>不行（知識融進參數）</td></tr><tr><td>成本與門檻</td><td>相對低、上線快</td><td>較高、需技術與算力</td></tr><tr><td>適合場景</td><td>知識常變、需引用來源</td><td>固定格式／語氣、量大穩定</td></tr></tbody></table><p>實務上兩者可並用，但對「商品與法規常更新、且要附出處」的財管場景，<strong>多數情況優先選 RAG</strong>。</p>"
+    },
+    {
+      "heading": "自我檢測",
+      "html": "<details><summary>Q1：為什麼說 RAG 能「降低幻覺」？</summary><p>因為 RAG 先從真實文件檢索相關片段，再要求 LLM「根據這些片段」作答，而不是憑記憶自由發揮；同時答案可標註出處，使用者能回頭查核，因此大幅降低模型憑空編造的機率。</p></details><details><summary>Q2：語意檢索和關鍵字檢索差在哪？舉個財管例子。</summary><p>關鍵字檢索要字面命中，打「提前解約」就只找含這四字的段落；語意檢索看意思，即使文件寫「未到期贖回之費用」也能被找到。RAG 用的是語意檢索，較不會因用詞不同而漏找。</p></details><details><summary>Q3：什麼情況該用 RAG，什麼情況該用微調？</summary><p>知識常更新、需要引用來源（如商品文件、法規查詢）優先用 RAG，更新文件即可、且可附出處；若要讓模型固定學會某種輸出風格或格式、資料量大又穩定，則考慮微調。兩者也可並用。</p></details><details><summary>Q4：導入 RAG 後就不用人工查核了嗎？</summary><p>不是。檢索品質、文件是否即時更新都會影響答案，尤其涉及金額、費率、法律效果的內容，務必人工複核後才對客戶使用；RAG 是輔助工具，最終仍由理專確認並負責。</p></details><p><strong>資料來源：</strong></p><ul><li>Lewis et al., 2020, “Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks” — https://arxiv.org/abs/2005.11401</li><li>Anthropic, Retrieval Augmented Generation 說明 — https://docs.anthropic.com/en/docs/build-with-claude/retrieval</li><li>AWS, What is RAG? — https://aws.amazon.com/what-is/retrieval-augmented-generation/</li><li>Pinecone Learn, Vector Embeddings 與向量資料庫教學 — https://www.pinecone.io/learn/vector-embeddings/</li></ul>"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "chapter": 4,
+  "slug": "agents_mcp",
+  "title": "AI 代理與 MCP",
+  "description": "從聊天機器人到能規劃、用工具、執行多步任務的 AI 代理（Agent），以及讓 AI 連接外部資料的開放標準 MCP，並認識金融應用與治理風險。",
+  "objectives": [
+    "區分「聊天機器人」與「AI 代理（Agent）」：代理能規劃、呼叫工具、執行多步驟任務並依結果修正",
+    "理解「工具使用（tool use / function calling）」如何讓 LLM 查資料庫、算數、呼叫 API、取得即時行情",
+    "說明 MCP（Model Context Protocol）是什麼、由誰提出、為何被稱為「AI 的 USB-C」，以及它如何解決 N×M 整合問題",
+    "描繪 AI 代理的工作迴圈：規劃→行動→觀察→修正，並理解「人在迴路（human-in-the-loop）」的審核角色",
+    "辨識金融場景的代理應用與其特有風險，並掌握權限最小化、稽核軌跡、審批關卡等治理原則"
+  ],
+  "sections": [
+    {
+      "heading": "一、從「聊天機器人」到「AI 代理」",
+      "html": "<p>前幾章的 AI 比較像「會聊天、會寫字的助理」：你問一句，它答一句，所有資訊都得你自己貼給它，所有後續動作都得你自己去做。這是<strong>聊天機器人（Chatbot）</strong>。而「<strong>AI 代理（AI Agent）</strong>」是更進一步的型態——它不只回答，還能<strong>自己規劃步驟、主動呼叫工具、執行多步驟任務、看到結果後再決定下一步</strong>。</p>\n<p>打個比方：聊天機器人像一位「知識淵博但只能動嘴」的顧問，你問它「這三檔基金近一年績效怎樣」，它只能憑記憶回答（而且可能過時或記錯）。AI 代理則像一位「能動手」的助理——它會自己去查行情系統、抓出最新數字、算好報酬率、再整理成一段話回你；如果中途某個系統查不到，它還會換個方式再試。</p>\n<table>\n<thead><tr><th>面向</th><th>聊天機器人</th><th>AI 代理</th></tr></thead>\n<tbody>\n<tr><td>能力</td><td>只回答、生成文字</td><td>規劃＋呼叫工具＋執行＋觀察修正</td></tr>\n<tr><td>資料來源</td><td>只靠訓練知識＋你貼的內容</td><td>可即時連外部系統、資料庫、API</td></tr>\n<tr><td>步驟</td><td>單回合一問一答</td><td>多步驟、會自我迭代直到完成</td></tr>\n<tr><td>動作權</td><td>無（只出字）</td><td>有（可實際觸發查詢、寫檔、送出）</td></tr>\n</tbody></table>\n<p>關鍵差異在最後一列：<strong>代理擁有「行動權」</strong>。這既是它強大之處，也是它風險所在——本章最後會專門談治理。</p>"
+    },
+    {
+      "heading": "二、工具使用（Tool Use / Function Calling）",
+      "html": "<p>代理之所以能「動手」，核心機制叫做<strong>工具使用（tool use）</strong>，又稱<strong>函式呼叫（function calling）</strong>。原理很單純：開發者事先告訴 LLM「你身邊有這些工具可用」，並描述每個工具能做什麼、需要哪些參數。當 LLM 判斷需要時，它不會自己硬掰答案，而是輸出一段「我要呼叫『查基金淨值』這個工具，參數是基金代碼 XXXX」的指令，由系統實際去執行，再把結果回填給 LLM 繼續處理。</p>\n<p>常見的工具類型：</p>\n<ul>\n<li><strong>查資料庫</strong>：撈出某客戶的持倉、某商品的費率。</li>\n<li><strong>算數／執行程式</strong>：LLM 本身不擅長精算，交給計算工具算報酬率、IRR、稅額更可靠。</li>\n<li><strong>呼叫 API</strong>：串接行情商、匯率、新聞、行內系統。</li>\n<li><strong>查即時行情</strong>：取得「此刻」的股價、淨值、利率，補足模型「知識有截止日」的弱點。</li>\n</ul>\n<p>這點對財管特別重要：LLM 的內建知識有<strong>截止日（knowledge cutoff）</strong>，問它「今天台積電收盤多少」它本來無從得知；但給它一個「查即時行情」的工具，它就能取得真實當下數字。<strong>工具使用是把「會講話的模型」變成「能做事的代理」的橋樑。</strong></p>\n<details><summary>名詞定義</summary>\n<ul>\n<li><strong>Tool use / Function calling</strong>：讓 LLM 在需要時「呼叫外部功能」的能力。模型輸出的是「要呼叫哪個工具、帶什麼參數」，實際執行由系統完成。</li>\n<li><strong>Knowledge cutoff（知識截止日）</strong>：模型訓練資料的時間上限，之後發生的事它不知道，需靠工具補即時資訊。</li>\n</ul></details>"
+    },
+    {
+      "heading": "三、MCP 是什麼：AI 的 USB-C 介面",
+      "html": "<p>有了工具使用後，新問題來了：<strong>每接一個新系統、新資料源，工程師都要重寫一套接法</strong>。行情系統一套、客戶資料庫一套、合規文件庫一套……而且每換一個 AI 模型或平台，又得全部重接。系統一多，整合工作量爆炸。</p>\n<p><strong>MCP（Model Context Protocol，模型情境協定）</strong>就是來解這個痛點。它是 <strong>Anthropic 於 2024 年底提出的開放標準</strong>，後續被業界廣泛採用。你可以把它想成「<strong>AI 的 USB-C 介面</strong>」——以前各種裝置充電孔各不相同，USB-C 出現後一個介面通吃；MCP 同理，讓 AI 連接外部資料源與工具的方式<strong>統一成一套標準</strong>。資料源那方只要實作一次 MCP「伺服器（server）」，任何支援 MCP 的 AI（客戶端）都能接上。</p>\n<p><strong>它解決的是「N×M 整合問題」</strong>：N 個 AI 應用要接 M 個資料源，若點對點各接各的，理論上要做 N×M 條客製連線；改用 MCP 標準後，雙方各自對接「同一個標準」，連線數降為 N＋M 量級。</p>\n<p>沒有 MCP（點對點，每條線都要客製）：</p>\n<div class=\"mermaid\">graph TD\n    A1[AI 助理 A] --> S1[行情系統]\n    A1 --> S2[客戶資料庫]\n    A1 --> S3[合規文件庫]\n    A2[AI 助理 B] --> S1\n    A2 --> S2\n    A2 --> S3\n    style A1 fill:#019AB3,color:#fff\n    style A2 fill:#019AB3,color:#fff\n    style S1 fill:#d62828,color:#fff\n    style S2 fill:#d62828,color:#fff\n    style S3 fill:#d62828,color:#fff</div>\n<p>有 MCP（各自對接同一標準，連線大幅減少）：</p>\n<div class=\"mermaid\">graph TD\n    A1[AI 助理 A] --> M{{MCP 標準介面}}\n    A2[AI 助理 B] --> M\n    M --> S1[行情系統 MCP server]\n    M --> S2[客戶資料庫 MCP server]\n    M --> S3[合規文件庫 MCP server]\n    style A1 fill:#019AB3,color:#fff\n    style A2 fill:#019AB3,color:#fff\n    style M fill:#17B5AD,color:#fff\n    style S1 fill:#2a9d8f,color:#fff\n    style S2 fill:#2a9d8f,color:#fff\n    style S3 fill:#2a9d8f,color:#fff</div>\n<p>對銀行的意義：行內若把「客戶資料」「商品費率」「合規規範」各自包成 MCP 伺服器，未來不論換哪家 AI 工具，都能用同一套標準安全地接上，不必每次重做整合。<strong>MCP 不是一個產品，而是一套讓 AI 與資料「以同一種語言溝通」的開放規範。</strong></p>"
+    },
+    {
+      "heading": "四、AI 代理的工作迴圈：規劃→行動→觀察→修正",
+      "html": "<p>代理執行任務不是「一步到位」，而是一個<strong>循環（agent loop）</strong>：先<strong>規劃</strong>該怎麼做，接著<strong>行動</strong>（呼叫工具），然後<strong>觀察</strong>結果，再判斷任務是否完成——沒完成就<strong>修正</strong>計畫、再跑一輪，直到達標或交回人類審核。</p>\n<div class=\"mermaid\">graph TD\n    A[接收任務] --> B[規劃 拆解步驟]\n    B --> C[行動 呼叫工具]\n    C --> D[觀察 取得結果]\n    D --> E{任務完成?}\n    E -->|否 需修正| B\n    E -->|是| F[人在迴路 審核]\n    F --> G[交付結果]\n    style B fill:#019AB3,color:#fff\n    style C fill:#17B5AD,color:#fff\n    style D fill:#17B5AD,color:#fff\n    style F fill:#d62828,color:#fff\n    style G fill:#2a9d8f,color:#fff</div>\n<p>舉個財管實例——任務是「彙整今天的每日市場報告」：</p>\n<ol>\n<li><strong>規劃</strong>：要拿美股、台股收盤、匯率、重要新聞，再整理成段落。</li>\n<li><strong>行動</strong>：呼叫行情工具抓美股與台股指數。</li>\n<li><strong>觀察</strong>：台股數字拿到了，但美股 API 回了錯誤。</li>\n<li><strong>修正</strong>：改用備援來源重抓美股，成功。</li>\n<li>湊齊資料後生成報告草稿，<strong>交人審核</strong>後發布。</li>\n</ol>\n<p>注意流程圖中標紅的「<strong>人在迴路（human-in-the-loop）</strong>」關卡：在金融場景，代理產出的結果在對外發布、或觸發任何有後果的動作前，通常都應該由人類複核。<strong>代理負責跑腿與草稿，最終把關仍在人。</strong></p>"
+    },
+    {
+      "heading": "五、金融場景的代理應用",
+      "html": "<p>把上述能力放到財富管理的日常，代理能承接不少「重複、跨系統、要彙整」的苦工，讓理專把時間留給「面對客戶」。常見情境：</p>\n<table>\n<thead><tr><th>情境</th><th>代理做什麼</th><th>用到的工具</th></tr></thead>\n<tbody>\n<tr><td>每日市場報告</td><td>自動抓行情＋新聞，產出中英市場彙整草稿</td><td>行情 API、新聞、生成</td></tr>\n<tr><td>跨系統查客戶</td><td>一句話查出某客戶持倉、保單、信託狀態</td><td>多個內部資料庫</td></tr>\n<tr><td>合規文件比對</td><td>把商品說明書與合規規範逐條比對、標出疑點</td><td>文件庫、檢索</td></tr>\n<tr><td>報表自動生成</td><td>依模板自動填數據、出月報／績效表</td><td>資料庫、試算、文件生成</td></tr>\n</tbody></table>\n<p>這些情境的共同特徵：<strong>步驟固定、要跨好幾個系統、資料量大但判斷相對單純</strong>——正是代理的甜蜜點。但別誤會「代理＝全自動取代理專」。它擅長的是<strong>把資料備齊、把草稿做好</strong>；至於「這個配置適不適合這位客戶」「這段話對客戶講合不合宜」的判斷與責任，仍在理專身上。</p>\n<p>務實的導入順序，建議從「<strong>讀取與彙整</strong>」這類低風險任務開始（查資料、做草稿、做比對），先讓代理當「<strong>第二雙手</strong>」，再逐步、審慎地擴大授權範圍。</p>"
+    },
+    {
+      "heading": "六、風險與治理：代理握有「行動權」",
+      "html": "<p>聊天機器人講錯話，頂多是資訊有誤；但代理<strong>能實際採取行動</strong>，一旦出錯後果更嚴重——它可能誤觸某筆交易、把不該外流的客戶資料送到外部、或在沒人複核下產出錯誤合規結論。<strong>能力越大，治理要求越高</strong>，這是導入代理前必須先想清楚的事。</p>\n<p>三項核心治理原則：</p>\n<ul>\n<li><strong>權限最小化（least privilege）</strong>：代理只給「完成這項任務剛好需要」的權限。彙整報告的代理只需「讀取行情」，就不該給它「下單」或「改客戶資料」的權限。</li>\n<li><strong>稽核軌跡（audit trail）</strong>：代理每一步呼叫了什麼工具、拿到什麼結果、做了什麼動作，都要完整留痕，事後可追、可查、可究責。</li>\n<li><strong>審批關卡（approval gate / human-in-the-loop）</strong>：凡是有實質後果的動作（對外發布、觸發交易、寄送客戶文件），都應設「人類按下確認」這道關，不讓代理自己一路跑到底。</li>\n</ul>\n<div class=\"mermaid\">graph LR\n    A[代理規劃動作] --> B{有實質後果?}\n    B -->|是| C[停下 等人審批]\n    B -->|否 純讀取| D[可自動執行]\n    C --> E[人類確認]\n    E --> D\n    style C fill:#d62828,color:#fff\n    style E fill:#019AB3,color:#fff\n    style D fill:#2a9d8f,color:#fff</div>\n<p>對銀行而言，這些原則並不陌生——它們本質上就是把行內既有的「<strong>內控、職責分離、覆核、留痕</strong>」精神，套用到 AI 代理身上。<strong>導入代理不是放掉控制，而是把控制設計進流程裡。</strong>記住三句話：<strong>權限給到剛好、每步都留痕、有後果先審批。</strong></p>"
+    },
+    {
+      "heading": "自我檢測",
+      "html": "<details><summary>Q1：「聊天機器人」與「AI 代理」最關鍵的差別是什麼？</summary><p>代理擁有<strong>行動權</strong>：它能自己規劃步驟、呼叫工具、執行多步驟任務並依結果修正，能實際採取動作（如查系統、出報告）；聊天機器人只會一問一答地生成文字，無法主動連外部系統或執行動作。也因為代理能「動手」，治理要求比聊天機器人更高。</p></details>\n<details><summary>Q2：MCP 是什麼？為什麼說它像「USB-C」、它解決什麼問題？</summary><p>MCP（Model Context Protocol，模型情境協定）是 <strong>Anthropic 於 2024 年底提出的開放標準</strong>，用來統一 AI 連接外部資料源與工具的方式，後續被業界廣泛採用。像 USB-C 一樣「一個介面通吃」，讓資料源只要實作一次，任何支援 MCP 的 AI 都能接上。它解決<strong>N×M 整合問題</strong>：原本 N 個 AI 接 M 個資料源要做 N×M 條客製連線，改用標準後降為 N＋M 量級。</p></details>\n<details><summary>Q3：請說明 AI 代理的工作迴圈，以及「人在迴路」的角色。</summary><p>迴圈為<strong>規劃→行動（呼叫工具）→觀察（看結果）→修正</strong>，未完成就回去重新規劃再跑一輪，直到達標。<strong>人在迴路（human-in-the-loop）</strong>是在代理產出結果、或要觸發有後果的動作前，由人類複核把關——代理負責跑腿與做草稿，最終責任與決定仍在人。</p></details>\n<details><summary>Q4：導入金融代理時，有哪三項核心治理原則？</summary><p>一、<strong>權限最小化</strong>：只給完成任務剛好需要的權限（彙整報告就別給下單權）。二、<strong>稽核軌跡</strong>：每一步呼叫與動作完整留痕，可追可查可究責。三、<strong>審批關卡</strong>：凡有實質後果的動作（發布、交易、寄送文件）都設人類確認這道關。本質就是把行內既有的內控、職責分離、覆核、留痕精神套用到代理上。</p></details>\n<p><strong>資料來源：</strong></p>\n<ul>\n<li>Anthropic，《Model Context Protocol》官方文件與介紹，https://modelcontextprotocol.io</li>\n<li>Anthropic，《Introducing the Model Context Protocol》（2024 年 11 月發布公告）</li>\n<li>Anthropic，《Building effective agents》工程部落格（代理工作迴圈與工具使用設計原則）</li>\n<li>金融監督管理委員會，金融業運用人工智慧（AI）指引（治理、人為監督與可問責原則）</li>\n</ul>"
+    }
+  ]
+}
