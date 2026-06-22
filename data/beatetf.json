@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-06-22T15:01:15+08:00",
+  "generated_at": "2026-06-22T17:00:42+08:00",
   "metric": "lump_sum_cumulative_return_pct",
   "metric_label": "單筆投資累積報酬率",
   "tagline": "同樣單筆持有，多檔老牌主動式台股基金多年期表現勝過代表性台股 ETF",
   "funds": {
     "source": "板信基金理財網（bopfund.moneydj.com）",
     "source_url": "https://bopfund.moneydj.com/W/HTML/bopSelect0.htm",
-    "stat_date": "2026-06-18",
+    "stat_date": "2026-06-22",
     "items": [
       {
         "name_zh": "安聯台灣科技基金",
@@ -157,15 +157,15 @@
         "bop_code": "ACPS10-0501",
         "bop_full_name": "統一奔騰基金",
         "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACPS10-0501",
-        "nav": 796.47,
-        "nav_date": "2026-06-18",
+        "nav": 810.6,
+        "nav_date": "2026-06-22",
         "perf": {
-          "1m": 12.81,
-          "3m": 50.4,
-          "6m": 105.74,
-          "1y": 213.32,
-          "3y": 369.89,
-          "5y": 492.48
+          "1m": 8.0,
+          "3m": 50.59,
+          "6m": 100.76,
+          "1y": 223.75,
+          "3y": 373.9,
+          "5y": 507.37
         },
         "unlisted": false,
         "note": null
@@ -211,15 +211,15 @@
         "bop_code": "ACPS01-0508",
         "bop_full_name": "統一全天候基金",
         "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACPS01-0508",
-        "nav": 993.04,
-        "nav_date": "2026-06-18",
+        "nav": 1014.32,
+        "nav_date": "2026-06-22",
         "perf": {
-          "1m": 14.64,
-          "3m": 51.42,
-          "6m": 117.14,
-          "1y": 237.83,
-          "3y": 324.23,
-          "5y": 355.06
+          "1m": 9.17,
+          "3m": 53.81,
+          "6m": 112.07,
+          "1y": 250.87,
+          "3y": 329.38,
+          "5y": 369.31
         },
         "unlisted": false,
         "note": null
@@ -229,7 +229,7 @@
   "etfs": {
     "source": "MoneyDJ 理財網 ETF 中心",
     "source_url": "https://www.moneydj.com/etf/",
-    "stat_date": "2026-06-18",
+    "stat_date": "2026-06-22",
     "items": [
       {
         "symbol": "0050",
@@ -266,14 +266,14 @@
         "name_zh": "元大高股息（0056）",
         "category": "高股息",
         "perf": {
-          "1m": 18.65,
-          "3m": 37.16,
-          "6m": 53.21,
-          "1y": 67.24,
-          "3y": 120.69,
-          "5y": 138.83
+          "1m": 16.61,
+          "3m": 42.76,
+          "6m": 54.23,
+          "1y": 73.65,
+          "3y": 125.57,
+          "5y": 147.89
         },
-        "market_date": "2026-06-18",
+        "market_date": "2026-06-22",
         "source_url": "https://www.moneydj.com/ETF/X/Basic/Basic0008.xdjhtm?etfid=0056.TW"
       },
       {
@@ -281,14 +281,14 @@
         "name_zh": "群益台灣精選高息（00919）",
         "category": "高股息",
         "perf": {
-          "1m": 24.21,
-          "3m": 36.33,
-          "6m": 48.63,
-          "1y": 59.45,
-          "3y": 120.09,
+          "1m": 19.11,
+          "3m": 38.6,
+          "6m": 46.01,
+          "1y": 62.24,
+          "3y": 123.65,
           "5y": null
         },
-        "market_date": "2026-06-18",
+        "market_date": "2026-06-22",
         "source_url": "https://www.moneydj.com/ETF/X/Basic/Basic0008.xdjhtm?etfid=00919.TW"
       },
       {
@@ -296,14 +296,14 @@
         "name_zh": "統一台灣高息動能（00981A）",
         "category": "主動型",
         "perf": {
-          "1m": 13.82,
-          "3m": 53.72,
-          "6m": 108.96,
-          "1y": 204.9,
+          "1m": 9.81,
+          "3m": 56.46,
+          "6m": 106.57,
+          "1y": 215.19,
           "3y": null,
           "5y": null
         },
-        "market_date": "2026-06-18",
+        "market_date": "2026-06-22",
         "source_url": "https://www.moneydj.com/ETF/X/Basic/Basic0008.xdjhtm?etfid=00981A.TW"
       }
     ]
