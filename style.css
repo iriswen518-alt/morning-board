@@ -2249,6 +2249,19 @@ table.indices th.sortable-th {
   #content table.indices td {
     white-space: nowrap;
   }
+  /* 盤前指數表：不走水平捲動，5 欄依 colgroup 比例塞滿螢幕寬（名稱可折行） */
+  #content table.indices.pm-fit {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    white-space: normal;
+  }
+  #content table.indices.pm-fit th,
+  #content table.indices.pm-fit td {
+    white-space: normal;
+    padding: 8px 3px;
+    font-size: 12px;
+  }
   /* 內文字級稍降 */
   #content { padding: 16px 14px 28px; font-size: 14px; }
   #content > h3, #content h3.section-title { font-size: 16px; margin: 18px 0 8px; }

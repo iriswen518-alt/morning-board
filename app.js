@@ -5539,7 +5539,7 @@ function renderPremarketBlock() {
       </tr>`;
   }).join("");
   const indicatorTable = `
-    <table class="indices" style="margin-top:4px;table-layout:fixed;width:100%">
+    <table class="indices pm-fit" style="margin-top:4px;table-layout:fixed;width:100%">
       <colgroup>
         <col style="width:34%">
         <col style="width:17%">
