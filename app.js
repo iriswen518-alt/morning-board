@@ -1720,15 +1720,21 @@ function renderTargetsSheet() {
   const byKey = {};
   list.forEach(t => { byKey[t.key] = t; });
 
-  // Tab buttons（不顯示編號）
-  const tabBtns = list.map((t, i) => `
-    <button class="tab ${i === 0 ? "active" : ""}" data-ttab="${escapeHtml(t.key)}">
-      ${escapeHtml(t.name)}
-    </button>
-  `).join("");
+  // 下拉選單依「市場重要性」排序：全球市場規模／配置權重
+  const IMPORTANCE_ORDER = ["us", "ai", "bonds", "china", "europe", "japan", "gold", "india", "korea", "energy", "asean", "vietnam"];
+  const orderIdx = k => { const i = IMPORTANCE_ORDER.indexOf(k); return i === -1 ? IMPORTANCE_ORDER.length : i; };
+  const ordered = list.slice().sort((a, b) => orderIdx(a.key) - orderIdx(b.key));
+
+  // 下拉選單（取代原本主題方格按鈕）
+  const themeSelect = `
+    <div class="t-select-wrap">
+      <select class="t-select" id="t-select">
+        ${ordered.map((t, i) => `<option value="${escapeHtml(t.key)}"${i === 0 ? " selected" : ""}>${escapeHtml(t.name)}</option>`).join("")}
+      </select>
+    </div>`;
 
   // Tab panes（不顯示編號）
-  const panes = list.map((t, i) => {
+  const panes = ordered.map((t, i) => {
     return `
     <div class="t-pane ${i === 0 ? "active" : ""}" id="t-pane-${escapeHtml(t.key)}">
       <div class="t-head">
@@ -1780,7 +1786,7 @@ function renderTargetsSheet() {
   }).join("");
 
   return `
-    <div class="tabs tabs-wrap tabs-left">${tabBtns}</div>
+    ${themeSelect}
     <div class="t-panes">${panes}</div>
   `;
 }
@@ -2584,14 +2590,12 @@ function wirePortfolioTabs() {
 }
 
 function wireTargetsTabs() {
-  const buttons = document.querySelectorAll(".tab[data-ttab]");
-  buttons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      const key = btn.dataset.ttab;
-      buttons.forEach(b => b.classList.toggle("active", b.dataset.ttab === key));
-      document.querySelectorAll(".t-pane").forEach(p => {
-        p.classList.toggle("active", p.id === `t-pane-${key}`);
-      });
+  const sel = document.getElementById("t-select");
+  if (!sel) return;
+  sel.addEventListener("change", () => {
+    const key = sel.value;
+    document.querySelectorAll(".t-pane").forEach(p => {
+      p.classList.toggle("active", p.id === `t-pane-${key}`);
     });
   });
 }
@@ -3011,9 +3015,28 @@ function renderMarketCommentaryBlock(opts = {}) {
     /外資由賣轉買|外資回補/,  // 台股外資進出
     /台灣央行|央行理事/,      // 台灣央行
     /加權指數|TAIEX/,         // 台灣加權指數
+    /長照/,            // 台灣長照政策/長照基金
+    /遺贈稅|遺產稅/,   // 台灣遺贈稅政策數據
+    /財政部.*公告|財政部.*稅/,  // 台灣財政部稅務公告
+    /健保|勞保|勞退/,  // 台灣社會保險
+    /內政部|行政院/,   // 台灣政府機構
   ];
+
+  // 台股分析過濾純美國議題（只留台灣市場相關新聞）
+  const US_ONLY_PATTERNS = [
+    /華爾街/,          // 華爾街市場討論
+    /美股.*(創高|大漲|急跌|崩跌|破位)/,  // 美股特定走勢
+    /Nasdaq .*(創|破|衝)/,  // Nasdaq 指數突破
+    /S&P 500 .*(創|破|衝)/,  // S&P 指數突破
+    /道瓊.*(創|破|衝|大漲|急跌)/,  // 道瓊指數走勢
+    /SEC .*(裁罰|公告|規定)/,   // 美國 SEC 監理
+    /美國財政部.*(拍賣|公債)/,  // 美國公債拍賣
+  ];
+
   const filteredTldr = opts.focus === "us"
     ? tldr.filter(t => !TW_ONLY_PATTERNS.some(re => re.test(t)))
+    : opts.focus === "tw"
+    ? tldr.filter(t => !US_ONLY_PATTERNS.some(re => re.test(t)))
     : tldr;
 
   // 統一格式：summary、sectorNote、tldr 全部用 <ul><li> 點號呈現
@@ -5697,15 +5720,18 @@ function renderNewsByCategory(cat) {
     const sectionTitle = s.section_zh || s.section;
     return `
       <h3 style="color:var(--brand-deep); margin-top:18px">${escapeHtml(sectionTitle)}</h3>
-      ${items.map(it => `
+      ${items.map(it => {
+        const titleDateM = it.title_zh && it.title_zh.match(/[（(](\d{4}-(\d{2}-\d{2}))[）)]/);
+        const itemDateFmt = titleDateM ? titleDateM[2].replace("-", "/") : dateFmt;
+        return `
         <div class="news-item">
           <details>
-            <summary>${escapeHtml(it.title_zh)}${dateFmt ? `<span class="news-date">${escapeHtml(dateFmt)}</span>` : ""}</summary>
+            <summary>${escapeHtml(it.title_zh)}${itemDateFmt ? `<span class="news-date">${escapeHtml(itemDateFmt)}</span>` : ""}</summary>
             ${newsBodyHtml(it)}
             ${it.source_url ? `<a class="source" href="${it.source_url}" target="_blank" rel="noopener">${escapeHtml(it.source_name || "來源")}</a>` : ""}
           </details>
         </div>
-      `).join("")}
+      `}).join("")}
     `;
   }).join("");
 

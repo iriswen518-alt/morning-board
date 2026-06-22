@@ -512,6 +512,41 @@ table.indices th.sortable-th {
 }
 .quote-link:hover { color: var(--text); }
 
+/* 主題市場下拉選單（依市場重要性排序） */
+.t-select-wrap {
+  position: relative;
+  margin-bottom: 16px;
+}
+.t-select-wrap::after {
+  content: "▾";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--brand-primary);
+  font-size: 14px;
+}
+.t-select {
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 12px 40px 12px 16px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  color: var(--brand-deep);
+  font-size: 16px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+}
+.t-select:focus {
+  outline: none;
+  border-color: var(--brand-primary);
+}
+
 .tabs {
   display: flex;
   background: var(--bg);
