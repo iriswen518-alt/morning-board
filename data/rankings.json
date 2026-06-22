@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-22T13:02:31+08:00",
+  "generated_at": "2026-06-22T15:04:13+08:00",
   "tw": {
     "as_of": "2026-06-22",
     "top_marketcap": [
@@ -1084,19 +1084,6 @@
         "source_url": "https://finance.yahoo.com/quote/ARKK"
       },
       {
-        "symbol": "EEM",
-        "name": "iShares MSCI Emerging Index Fun",
-        "price": 70.79,
-        "daily_pct": 4.87,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": 3.19,
-        "ytd_pct": 29.39,
-        "yahoo": "EEM",
-        "source_url": "https://finance.yahoo.com/quote/EEM"
-      },
-      {
         "symbol": "XLK",
         "name": "State Street Technology Select ",
         "price": 191.44,
@@ -1173,6 +1160,19 @@
         "ytd_pct": 20.08,
         "yahoo": "IWM",
         "source_url": "https://finance.yahoo.com/quote/IWM"
+      },
+      {
+        "symbol": "XLU",
+        "name": "State Street Utilities Select S",
+        "price": 44.76,
+        "daily_pct": 1.61,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": 0.77,
+        "ytd_pct": 4.85,
+        "yahoo": "XLU",
+        "source_url": "https://finance.yahoo.com/quote/XLU"
       }
     ],
     "sectors": [
@@ -1289,18 +1289,18 @@
         "name_zh": "房地產"
       },
       {
-        "symbol": "XLC",
-        "name": "State Street Communication Serv",
-        "price": 109.45,
-        "daily_pct": -2.38,
+        "symbol": "XLV",
+        "name": "State Street Health Care Select",
+        "price": 149.4,
+        "daily_pct": -3.04,
         "market_cap": null,
         "pe": null,
         "pe_kind": null,
-        "mtd_pct": -5.39,
-        "ytd_pct": -7.03,
-        "yahoo": "XLC",
-        "source_url": "https://finance.yahoo.com/quote/XLC",
-        "name_zh": "通訊"
+        "mtd_pct": -0.05,
+        "ytd_pct": -3.49,
+        "yahoo": "XLV",
+        "source_url": "https://finance.yahoo.com/quote/XLV",
+        "name_zh": "醫療"
       },
       {
         "symbol": "XLE",
