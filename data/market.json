@@ -40,43 +40,43 @@
     {
       "name": "Euro Stoxx 50",
       "name_zh": null,
-      "close": 6293.1298828125,
-      "daily_pct": -0.48,
+      "close": 6311.31982421875,
+      "daily_pct": 0.29,
       "mtd_pct": 4.01,
       "ytd_pct": 8.57,
-      "closing_date": "2026-06-19"
+      "closing_date": "2026-06-22"
     },
     {
       "name": "DAX",
       "name_zh": null,
-      "close": 24985.8203125,
-      "daily_pct": -0.16,
+      "close": 25139.689453125,
+      "daily_pct": 0.62,
       "mtd_pct": -0.47,
       "ytd_pct": 2.02,
-      "closing_date": "2026-06-19"
+      "closing_date": "2026-06-22"
     },
     {
       "name": "FTSE 100",
       "name_zh": null,
-      "close": 10363.2998046875,
-      "daily_pct": -0.35,
+      "close": 10437.849609375,
+      "daily_pct": 0.72,
       "mtd_pct": -0.44,
       "ytd_pct": 4.35,
-      "closing_date": "2026-06-19"
+      "closing_date": "2026-06-22"
     },
     {
       "name": "CAC 40",
       "name_zh": null,
-      "close": 8421.1396484375,
-      "daily_pct": -0.55,
+      "close": 8400.1103515625,
+      "daily_pct": -0.25,
       "mtd_pct": 2.91,
       "ytd_pct": 3.33,
-      "closing_date": "2026-06-19"
+      "closing_date": "2026-06-22"
     },
     {
       "name": "Nikkei 225",
       "name_zh": null,
-      "close": 72353.9609375,
+      "close": 72353.96,
       "daily_pct": 1.55,
       "mtd_pct": 7.42,
       "ytd_pct": 41.54,
@@ -112,7 +112,7 @@
     {
       "name": "KOSPI",
       "name_zh": null,
-      "close": 9114.5498046875,
+      "close": 9114.55,
       "daily_pct": 0.69,
       "mtd_pct": 6.8,
       "ytd_pct": 114.81,
@@ -121,7 +121,7 @@
     {
       "name": "Hang Seng 恆生",
       "name_zh": null,
-      "close": 23768.51953125,
+      "close": 23768.52,
       "daily_pct": -0.65,
       "mtd_pct": -4.99,
       "ytd_pct": -6.66,
@@ -130,7 +130,7 @@
     {
       "name": "Shanghai 上證",
       "name_zh": null,
-      "close": 4163.0966796875,
+      "close": 4163.0967,
       "daily_pct": 1.78,
       "mtd_pct": 0.54,
       "ytd_pct": 3.06,
@@ -139,7 +139,7 @@
     {
       "name": "CSI 300 滬深300",
       "name_zh": null,
-      "close": 5059.658203125,
+      "close": 5059.658,
       "daily_pct": 2.39,
       "mtd_pct": 1.01,
       "ytd_pct": 6.73,
@@ -157,7 +157,7 @@
     {
       "name": "S&P/ASX 200",
       "name_zh": null,
-      "close": 8816.099609375,
+      "close": 8816.1,
       "daily_pct": -0.14,
       "mtd_pct": 1.11,
       "ytd_pct": 1.31,
@@ -174,31 +174,31 @@
     },
     {
       "name": "US 2-Year",
-      "yield_pct": 4.22,
-      "daily_bps": 4.0,
+      "yield_pct": 4.19,
+      "daily_bps": -1.0,
       "mtd_bps": 21.0,
-      "closing_date": "2026-06-22"
+      "closing_date": "2026-06-18"
     },
     {
       "name": "Germany 10-Year",
-      "yield_pct": 2.95,
-      "daily_bps": -3.5,
+      "yield_pct": 3.04,
+      "daily_bps": 5.14,
       "mtd_bps": 2.01,
-      "closing_date": "2026-06-22"
+      "closing_date": "2026-06-19"
     },
     {
       "name": "Japan 10-Year",
-      "yield_pct": 2.67,
-      "daily_bps": 2.9,
+      "yield_pct": 2.66,
+      "daily_bps": 2.8,
       "mtd_bps": -0.1,
-      "closing_date": "2026-06-22"
+      "closing_date": "2026-06-19"
     },
     {
       "name": "UK 10-Year",
-      "yield_pct": 4.79,
-      "daily_bps": -4.7,
+      "yield_pct": 4.8,
+      "daily_bps": -2.34,
       "mtd_bps": -6.03,
-      "closing_date": "2026-06-22"
+      "closing_date": "2026-06-18"
     },
     {
       "name": "TW 10-Year",
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 99.95,
       "daily_pct": -0.89,
-      "mtd_pct": 2.09,
-      "ytd_pct": 2.74,
+      "mtd_pct": 2.12,
+      "ytd_pct": 2.78,
       "closing_date": "2026-06-19"
     },
     {
@@ -343,18 +343,18 @@
     {
       "label": "Sep 2026",
       "fomc_date": "2026-09-17",
-      "implied_rate": 3.79,
-      "delta_rate": 0.15,
-      "delta_bps": 15.0,
-      "p_hike": 60.0,
-      "p_hold": 40.0,
+      "implied_rate": 3.8,
+      "delta_rate": 0.16,
+      "delta_bps": 16.0,
+      "p_hike": 64.0,
+      "p_hold": 36.0,
       "p_cut": 0,
       "is_reference": false
     },
     {
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
-      "implied_rate": 3.87,
+      "implied_rate": 3.88,
       "delta_rate": 0.08,
       "delta_bps": 8.0,
       "p_hike": 32.0,
@@ -365,7 +365,7 @@
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 4.01,
+      "implied_rate": 4.02,
       "delta_rate": 0.14,
       "delta_bps": 14.0,
       "p_hike": 56.0,
