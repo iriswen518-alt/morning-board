@@ -167,36 +167,36 @@
   "bonds": [
     {
       "name": "US 10-Year",
-      "yield_pct": 4.45,
-      "daily_bps": -1.2,
-      "mtd_bps": -0.2,
-      "closing_date": "2026-06-18"
+      "yield_pct": 4.53,
+      "daily_bps": 7.7,
+      "mtd_bps": 7.5,
+      "closing_date": "2026-06-19"
     },
     {
       "name": "US 2-Year",
-      "yield_pct": 4.21,
-      "daily_bps": 3.4,
+      "yield_pct": 4.22,
+      "daily_bps": 4.2,
       "mtd_bps": 21.0,
       "closing_date": "2026-06-22"
     },
     {
       "name": "Germany 10-Year",
       "yield_pct": 2.96,
-      "daily_bps": -2.0,
+      "daily_bps": -2.2,
       "mtd_bps": 2.01,
       "closing_date": "2026-06-22"
     },
     {
       "name": "Japan 10-Year",
       "yield_pct": 2.67,
-      "daily_bps": 2.7,
+      "daily_bps": 2.9,
       "mtd_bps": -0.1,
       "closing_date": "2026-06-22"
     },
     {
       "name": "UK 10-Year",
       "yield_pct": 4.81,
-      "daily_bps": -2.9,
+      "daily_bps": -3.0,
       "mtd_bps": -6.03,
       "closing_date": "2026-06-22"
     },
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 99.95,
       "daily_pct": -0.89,
-      "mtd_pct": 1.99,
-      "ytd_pct": 2.65,
+      "mtd_pct": 1.98,
+      "ytd_pct": 2.63,
       "closing_date": "2026-06-19"
     },
     {
@@ -354,7 +354,7 @@
     {
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
-      "implied_rate": 3.87,
+      "implied_rate": 3.88,
       "delta_rate": 0.08,
       "delta_bps": 8.0,
       "p_hike": 32.0,
@@ -365,7 +365,7 @@
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 4.01,
+      "implied_rate": 4.02,
       "delta_rate": 0.14,
       "delta_bps": 14.0,
       "p_hike": 56.0,
