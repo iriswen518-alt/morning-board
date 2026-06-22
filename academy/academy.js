@@ -208,14 +208,20 @@ async function loadChapter() {
     sel.id = 'chapter-select-mobile';
     sel.className = 'chapter-select-mobile';
     sel.setAttribute('aria-label', '選擇章節');
-    idx.chapters.forEach((ch, i) => {
+    // 永遠顯示「選擇章節」提示（切換章節會整頁重載，故提示會復原）
+    const placeholder = document.createElement('option');
+    placeholder.value = '';
+    placeholder.textContent = '選擇章節';
+    placeholder.disabled = true;
+    placeholder.selected = true;
+    sel.appendChild(placeholder);
+    idx.chapters.forEach((ch) => {
       const opt = document.createElement('option');
       opt.value = `chapter.html?course=${encodeURIComponent(course)}&chapter=${ch.slug}`;
       opt.textContent = ch.title;
-      if (ch.slug === chapterSlug || (!chapterSlug && i === 0)) opt.selected = true;
       sel.appendChild(opt);
     });
-    sel.addEventListener('change', () => { location.href = sel.value; });
+    sel.addEventListener('change', () => { if (sel.value) location.href = sel.value; });
     chapterListEl.parentElement.insertBefore(sel, chapterListEl);
 
     idx.chapters.forEach((ch, i) => {
