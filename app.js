@@ -1659,12 +1659,16 @@ function renderThemeIndexBlock(themeKey) {
 function renderAllocSheet() {
   const isPortfolio = ALLOC_SUBTAB === "portfolio";
   const isAssist = ALLOC_SUBTAB === "assist";
-  const isTargets = !isPortfolio && !isAssist;
+  const isRetirement = ALLOC_SUBTAB === "retirement";
+  const isInsGap = ALLOC_SUBTAB === "ins_gap";
+  const isTargets = !isPortfolio && !isAssist && !isRetirement && !isInsGap;
   const inner = isPortfolio ? renderPortfolioSheet()
     : isAssist ? renderAssistSheet()
+    : isRetirement ? renderRetirementSheet()
+    : isInsGap ? renderInsuranceGapSheet()
     : renderTargetsSheet();
   return `
-    <div class="tabs alloc-sec-tabs">
+    <div class="tabs alloc-sec-tabs tabs-wrap">
       <button class="tab alloc-sec-tab ${isTargets ? "active" : ""}" data-asec="targets">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/>
@@ -1676,6 +1680,20 @@ function renderAllocSheet() {
           <circle cx="12" cy="12" r="9"/><path d="M12 3v9h9"/><path d="M12 12L5.5 17"/>
         </svg>
         <span>投組分析</span>
+      </button>
+      <button class="tab alloc-sec-tab ${isRetirement ? "active" : ""}" data-asec="retirement">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 9l9-6 9 6v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        <span>退休試算</span>
+      </button>
+      <button class="tab alloc-sec-tab ${isInsGap ? "active" : ""}" data-asec="ins_gap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+        <span>保障缺口</span>
       </button>
       <button class="tab alloc-sec-tab ${isAssist ? "active" : ""}" data-asec="assist">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -1696,9 +1714,10 @@ function wireAllocTabs() {
       rerenderAlloc();
     });
   });
-  // 連動目前選取 section 內層的次分頁事件
   if (ALLOC_SUBTAB === "portfolio") wirePortfolioTabs();
   else if (ALLOC_SUBTAB === "assist") wireAssistTab();
+  else if (ALLOC_SUBTAB === "retirement") wireRetirementTab();
+  else if (ALLOC_SUBTAB === "ins_gap") wireInsuranceGapTab();
   else wireTargetsTabs();
 }
 
@@ -8054,6 +8073,418 @@ function wireAssistFeedback() {
         status.textContent = "記錄失敗：" + e.message;
       }
     });
+  });
+}
+
+// ============ 退休金試算 ============
+function renderRetirementSheet() {
+  return `
+<style>
+.tcalc-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 16px; align-items: start; }
+@media (max-width: 800px) { .tcalc-grid { grid-template-columns: 1fr; } }
+.tcalc-field { margin-bottom: 10px; }
+.tcalc-field label { display: flex; justify-content: space-between; font-size: 12px; color: var(--text-mute); margin-bottom: 3px; font-weight: 500; }
+.tcalc-field label .val { color: var(--brand-primary); font-weight: 600; }
+.tcalc-field input[type=range] { width: 100%; accent-color: var(--brand-primary); }
+.tcalc-field input[type=number] { width: 100%; padding: 6px 10px; border: 1px solid var(--border); border-radius: 4px; font-size: 13px; box-sizing: border-box; background: var(--bg); color: var(--text); }
+.tcalc-sec { font-size: 10px; font-weight: 700; color: var(--text-mute); text-transform: uppercase; letter-spacing: .06em; margin: 14px 0 8px; padding-bottom: 3px; border-bottom: 1px solid var(--border); }
+.tcalc-btn { background: var(--brand-primary); color: white; border: 0; padding: 9px 16px; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; width: 100%; margin-top: 10px; }
+.tcalc-btn:hover { opacity: .88; }
+.tcalc-result-sec { padding: 8px 0; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; font-size: 13px; }
+.tcalc-result-sec:last-of-type { border-bottom: none; }
+.tcalc-result-sec .lbl { color: var(--text-mute); }
+.tcalc-result-sec .val { font-weight: 600; color: var(--text); }
+.tcalc-gap { border: 2px solid; border-radius: 8px; padding: 12px 16px; margin: 12px 0; text-align: center; }
+.tcalc-gap .gnum { font-size: 22px; font-weight: 700; }
+.tcalc-gap .glbl { font-size: 12px; color: var(--text-mute); margin-top: 3px; }
+.tcalc-subgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 10px; }
+.tcalc-subbox { background: var(--bg-alt); border: 1px solid var(--border); border-radius: 6px; padding: 10px; text-align: center; }
+.tcalc-subbox .sv { font-size: 16px; font-weight: 700; color: var(--brand-deep); }
+.tcalc-subbox .sl { font-size: 11px; color: var(--text-mute); margin-top: 2px; line-height: 1.4; }
+.tcalc-note { font-size: 11px; color: var(--text-mute); margin-top: 12px; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 8px; }
+.tcalc-h { font-size: 14px; font-weight: 700; color: var(--brand-deep); margin: 0 0 12px; }
+</style>
+
+<div style="display:grid;grid-template-columns:1fr 1.3fr;gap:16px;align-items:start">
+  <div class="card" style="animation:none;opacity:1;transform:none">
+    <div class="tcalc-h">退休金試算</div>
+    <div class="tcalc-sec">個人資訊</div>
+
+    <div class="tcalc-field">
+      <label>目前年齡<span class="val"><span id="ret-age-val">45</span> 歲</span></label>
+      <input type="range" id="ret-age" min="25" max="64" value="45">
+    </div>
+    <div class="tcalc-field">
+      <label>預計退休年齡<span class="val"><span id="ret-retire-val">65</span> 歲</span></label>
+      <input type="range" id="ret-retire" min="50" max="75" value="65">
+    </div>
+    <div class="tcalc-field">
+      <label>預計壽命<span class="val"><span id="ret-life-val">85</span> 歲</span></label>
+      <input type="range" id="ret-life" min="70" max="100" value="85">
+    </div>
+
+    <div class="tcalc-sec">收入與儲蓄</div>
+    <div class="tcalc-field">
+      <label>目前月薪<span class="val"><span id="ret-salary-val">6.0</span> 萬</span></label>
+      <input type="range" id="ret-salary" min="3" max="50" value="6" step="0.5">
+    </div>
+    <div class="tcalc-field">
+      <label>勞保現有年資<span class="val"><span id="ret-labins-val">20</span> 年</span></label>
+      <input type="range" id="ret-labins" min="0" max="45" value="20">
+    </div>
+    <div class="tcalc-field">
+      <label>勞退自提比例<span class="val"><span id="ret-self-val">0</span>%</span></label>
+      <input type="range" id="ret-self" min="0" max="6" value="0" step="1">
+    </div>
+    <div class="tcalc-field">
+      <label>目前退休儲蓄（萬元）</label>
+      <input type="number" id="ret-savings" value="200" min="0" step="10">
+    </div>
+
+    <div class="tcalc-sec">退休後規劃</div>
+    <div class="tcalc-field">
+      <label>退休後月支出<span class="val"><span id="ret-exp-val">4.0</span> 萬</span></label>
+      <input type="range" id="ret-exp" min="1" max="20" value="4" step="0.5">
+    </div>
+    <div class="tcalc-field">
+      <label>預計投資報酬率<span class="val"><span id="ret-ret-val">5.0</span>%／年</span></label>
+      <input type="range" id="ret-ret" min="1" max="12" value="5" step="0.5">
+    </div>
+    <div class="tcalc-field">
+      <label>通膨率<span class="val"><span id="ret-inf-val">2.0</span>%／年</span></label>
+      <input type="range" id="ret-inf" min="0" max="5" value="2" step="0.5">
+    </div>
+
+    <button class="tcalc-btn" id="ret-calc-btn">試算退休缺口</button>
+  </div>
+
+  <div class="card" style="animation:none;opacity:1;transform:none">
+    <div class="tcalc-h">試算結果</div>
+    <div id="ret-result" style="color:var(--text-mute);font-size:13px;padding:20px 0;text-align:center">填入資料後按「試算退休缺口」</div>
+  </div>
+</div>
+`;
+}
+
+function wireRetirementTab() {
+  const sliders = [
+    ["ret-age", "ret-age-val", v => v],
+    ["ret-retire", "ret-retire-val", v => v],
+    ["ret-life", "ret-life-val", v => v],
+    ["ret-salary", "ret-salary-val", v => parseFloat(v).toFixed(1)],
+    ["ret-labins", "ret-labins-val", v => v],
+    ["ret-self", "ret-self-val", v => v],
+    ["ret-exp", "ret-exp-val", v => parseFloat(v).toFixed(1)],
+    ["ret-ret", "ret-ret-val", v => parseFloat(v).toFixed(1)],
+    ["ret-inf", "ret-inf-val", v => parseFloat(v).toFixed(1)],
+  ];
+  sliders.forEach(([id, valId, fmt]) => {
+    const el = document.getElementById(id);
+    const val = document.getElementById(valId);
+    if (!el || !val) return;
+    el.addEventListener("input", () => { val.textContent = fmt(el.value); });
+  });
+
+  const btn = document.getElementById("ret-calc-btn");
+  if (btn) btn.addEventListener("click", () => {
+    const g = id => parseFloat(document.getElementById(id)?.value || 0);
+    const age = g("ret-age");
+    const retireAge = g("ret-retire");
+    const lifeAge = g("ret-life");
+    const salaryWan = g("ret-salary");
+    const labInsYears = g("ret-labins");
+    const selfPct = g("ret-self") / 100;
+    const currentSavingsWan = g("ret-savings");
+    const monthExpWan = g("ret-exp");
+    const annualReturn = g("ret-ret") / 100;
+    const inflation = g("ret-inf") / 100;
+
+    const n1 = Math.max(retireAge - age, 1);  // years to retirement
+    const n2 = Math.max(lifeAge - retireAge, 1);  // retirement duration years
+
+    const monthlyReturn = annualReturn / 12;
+    const monthlyInflation = inflation / 12;
+
+    // --- 勞保老年年金 ---
+    // 公式：平均月投保薪資 × (勞保年資) × 1.55%
+    const totalLabInsYears = Math.min(labInsYears + n1, 45);
+    // 月投保薪資上限 45,800（2024），依薪資級距取最近值
+    const labInsSalary = Math.min(salaryWan * 10000, 45800);
+    const monthlyLabIns = (labInsSalary * totalLabInsYears * 0.0155);
+
+    // --- 勞退新制 ---
+    // 雇主提撥6% + 自提，複利累積到退休
+    const monthlyLabRetire = salaryWan * 10000 * (0.06 + selfPct);
+    // 勞退基金長期報酬率約2-3%（保守用2.5%）
+    const labRetireReturn = 0.025 / 12;
+    const labRetireFV = monthlyLabRetire * ((Math.pow(1 + labRetireReturn, n1 * 12) - 1) / labRetireReturn);
+    // 分25年領（300個月）
+    const labRetireMonthly = labRetireFV / (n2 * 12);
+
+    // --- 個人儲蓄 ---
+    const savingsFV = currentSavingsWan * 10000 * Math.pow(1 + annualReturn, n1);
+    // 退休後月領（等額分配，退休後報酬率保守取一半）
+    const retireMonthlyReturn = (annualReturn / 2) / 12;
+    let savingsMonthly;
+    if (retireMonthlyReturn > 0) {
+      const pvFactor = (1 - Math.pow(1 + retireMonthlyReturn, -(n2 * 12))) / retireMonthlyReturn;
+      savingsMonthly = savingsFV / pvFactor;
+    } else {
+      savingsMonthly = savingsFV / (n2 * 12);
+    }
+
+    // --- 退休後月支出（通膨調整）---
+    const futureMonthExp = monthExpWan * 10000 * Math.pow(1 + inflation, n1);
+
+    // --- 現有收入合計 ---
+    const totalMonthlyIncome = monthlyLabIns + labRetireMonthly + savingsMonthly;
+    const monthlyGap = futureMonthExp - totalMonthlyIncome;
+
+    // --- 補足缺口需每月多存多少 ---
+    let extraMonthly = 0;
+    if (monthlyGap > 0) {
+      // 需在退休前再累積多少本金以填補缺口
+      let pvFactor2;
+      if (retireMonthlyReturn > 0) {
+        pvFactor2 = (1 - Math.pow(1 + retireMonthlyReturn, -(n2 * 12))) / retireMonthlyReturn;
+      } else {
+        pvFactor2 = n2 * 12;
+      }
+      const extraCorpus = monthlyGap * pvFactor2;
+      const fvFactor = (Math.pow(1 + monthlyReturn, n1 * 12) - 1) / monthlyReturn;
+      extraMonthly = fvFactor > 0 ? extraCorpus / fvFactor : 0;
+    }
+
+    const fmt = v => `${(v / 10000).toFixed(1)} 萬`;
+    const gapClass = monthlyGap <= 0 ? "gap-ok" : monthlyGap < 20000 ? "gap-warn" : "gap-bad";
+    const gapIcon = monthlyGap <= 0 ? "✓" : "△";
+    const gapText = monthlyGap <= 0
+      ? `每月盈餘 ${fmt(-monthlyGap)}`
+      : `每月缺口 ${fmt(monthlyGap)}`;
+
+    document.getElementById("ret-result").innerHTML = `
+<div style="background:var(--bg-alt);border:1px solid var(--border);border-radius:8px;padding:12px;margin-bottom:10px">
+  <div style="font-size:11px;font-weight:700;color:var(--text-mute);margin-bottom:6px">退休後每月收支預估（退休年齡 ${retireAge} 歲）</div>
+  ${[
+    ["退休後月支出（通膨後）", fmt(futureMonthExp), false],
+    ["勞保老年年金", fmt(monthlyLabIns), true],
+    ["勞退新制月領", fmt(labRetireMonthly), true],
+    ["個人儲蓄月領", fmt(savingsMonthly), true],
+    ["每月可用收入合計", fmt(totalMonthlyIncome), true],
+  ].map(([lbl, val, green]) => `
+  <div class="tcalc-result-sec">
+    <span class="lbl">${lbl}</span>
+    <span class="val" style="${green ? 'color:var(--down)' : ''}">${val}</span>
+  </div>`).join("")}
+</div>
+<div style="border:2px solid ${monthlyGap <= 0 ? 'var(--down)' : monthlyGap < 20000 ? '#f59e0b' : 'var(--up)'};border-radius:8px;padding:12px;text-align:center;margin:0 0 10px">
+  <div style="font-size:22px;font-weight:700;color:${monthlyGap <= 0 ? 'var(--down)' : monthlyGap < 20000 ? '#d97706' : 'var(--up)'}">${gapIcon} ${gapText}</div>
+  <div style="font-size:12px;color:var(--text-mute);margin-top:3px">${monthlyGap <= 0 ? '目前規劃充足，建議定期檢視' : `建議每月再多存 ${fmt(extraMonthly)}（到退休前）`}</div>
+</div>
+<div class="tcalc-subgrid">
+  <div class="tcalc-subbox"><div class="sv">${(labRetireFV / 10000).toFixed(0)} 萬</div><div class="sl">勞退累積本金<br>（退休時）</div></div>
+  <div class="tcalc-subbox"><div class="sv">${(savingsFV / 10000).toFixed(0)} 萬</div><div class="sl">個人儲蓄本金<br>（退休時）</div></div>
+  <div class="tcalc-subbox"><div class="sv">${totalLabInsYears.toFixed(0)} 年</div><div class="sl">勞保投保年資<br>（退休時）</div></div>
+  <div class="tcalc-subbox"><div class="sv">${n2} 年</div><div class="sl">退休後預計<br>需支應年數</div></div>
+</div>
+<p class="tcalc-note"><strong>計算基礎：</strong>勞保年金 = 月投保薪資 × 年資 × 1.55%（月投保薪資上限 45,800 元，依 2024 勞保局規定）；勞退新制採雇主 6%＋自提，長期報酬率假設 2.5%；退休後個人儲蓄月領以複利年金公式計算，報酬率取投資報酬率之半（保守假設）。此工具僅供估算參考，實際請洽勞動部勞工保險局查詢個人紀錄。</p>
+`;
+  });
+}
+
+// ============ 保障缺口試算 ============
+function renderInsuranceGapSheet() {
+  return `
+<style>
+.tins-field { margin-bottom: 10px; }
+.tins-field label { display: flex; justify-content: space-between; font-size: 12px; color: var(--text-mute); margin-bottom: 3px; font-weight: 500; }
+.tins-field label .val { color: var(--brand-primary); font-weight: 600; }
+.tins-field input[type=range] { width: 100%; accent-color: var(--brand-primary); }
+.tins-field input[type=number] { width: 100%; padding: 6px 10px; border: 1px solid var(--border); border-radius: 4px; font-size: 13px; box-sizing: border-box; background: var(--bg); color: var(--text); }
+.tins-sec { font-size: 10px; font-weight: 700; color: var(--text-mute); text-transform: uppercase; letter-spacing: .06em; margin: 14px 0 8px; padding-bottom: 3px; border-bottom: 1px solid var(--border); }
+.tins-btn { background: var(--brand-primary); color: white; border: 0; padding: 9px 16px; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; width: 100%; margin-top: 10px; }
+.tins-btn:hover { opacity: .88; }
+.tins-gsec { background: var(--bg-alt); border: 1px solid var(--border); border-radius: 8px; padding: 12px; margin-bottom: 10px; }
+.tins-gsec h4 { margin: 0 0 8px; font-size: 13px; color: var(--brand-deep); font-weight: 700; }
+.tins-grow { display: flex; justify-content: space-between; font-size: 12px; padding: 4px 0; border-bottom: 1px solid var(--border); color: var(--text-mute); }
+.tins-grow:last-child { border-bottom: none; }
+.tins-gtotal { display: flex; justify-content: space-between; font-size: 14px; font-weight: 700; padding: 8px 0; border-top: 2px solid var(--brand-primary); margin-top: 6px; color: var(--text); }
+.tins-badge { display: inline-block; padding: 1px 7px; border-radius: 10px; font-size: 10px; font-weight: 600; }
+.tins-badge.high { background: #fee2e2; color: #991b1b; }
+.tins-badge.mid { background: #fef3c7; color: #92400e; }
+.tins-badge.low { background: #d1fae5; color: #065f46; }
+.tins-pitem { font-size: 12px; padding: 4px 0; display: flex; gap: 8px; align-items: center; color: var(--text); }
+.tins-note { font-size: 11px; color: var(--text-mute); margin-top: 12px; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 8px; }
+</style>
+
+<div style="display:grid;grid-template-columns:1fr 1.3fr;gap:16px;align-items:start">
+  <div class="card" style="animation:none;opacity:1;transform:none">
+    <div class="tcalc-h">保障缺口試算</div>
+    <div class="tins-sec">個人資訊</div>
+
+    <div class="tins-field">
+      <label>年齡<span class="val"><span id="ins-age-val">45</span> 歲</span></label>
+      <input type="range" id="ins-age" min="20" max="70" value="45">
+    </div>
+    <div class="tins-field">
+      <label>年收入<span class="val"><span id="ins-income-val">120</span> 萬</span></label>
+      <input type="range" id="ins-income" min="30" max="1000" value="120" step="10">
+    </div>
+    <div class="tins-field">
+      <label>保障需求年數<span class="val"><span id="ins-years-val">20</span> 年</span></label>
+      <input type="range" id="ins-years" min="5" max="40" value="20">
+    </div>
+
+    <div class="tins-sec">家庭負債與需求</div>
+    <div class="tins-field">
+      <label>未償債務（萬元）</label>
+      <input type="number" id="ins-debt" value="500" min="0" step="50">
+    </div>
+    <div class="tins-field">
+      <label>子女教育基金需求（萬元）</label>
+      <input type="number" id="ins-edu" value="200" min="0" step="50">
+    </div>
+    <div class="tins-field">
+      <label>喪葬費用準備（萬元）</label>
+      <input type="number" id="ins-funeral" value="100" min="0" step="10">
+    </div>
+
+    <div class="tins-sec">現有壽險保障</div>
+    <div class="tins-field">
+      <label>現有壽險保額（萬元）</label>
+      <input type="number" id="ins-life-cur" value="300" min="0" step="100">
+    </div>
+    <div class="tins-field">
+      <label>勞保死亡給付（萬元）</label>
+      <input type="number" id="ins-labor-death" value="50" min="0" step="10">
+    </div>
+
+    <div class="tins-sec">醫療保障</div>
+    <div class="tins-field">
+      <label>目標醫療準備（萬元）</label>
+      <input type="number" id="ins-med-target" value="500" min="100" step="50">
+    </div>
+    <div class="tins-field">
+      <label>現有醫療險估計給付（萬元）</label>
+      <input type="number" id="ins-med-cur" value="150" min="0" step="50">
+    </div>
+
+    <div class="tins-sec">失能保障</div>
+    <div class="tins-field">
+      <label>失能保障需求年數<span class="val"><span id="ins-dis-yrs-val">5</span> 年</span></label>
+      <input type="range" id="ins-dis-yrs" min="1" max="15" value="5">
+    </div>
+    <div class="tins-field">
+      <label>現有失能/長照保險年給付（萬元）</label>
+      <input type="number" id="ins-dis-cur" value="0" min="0" step="10">
+    </div>
+
+    <button class="tins-btn" id="ins-calc-btn">試算保障缺口</button>
+  </div>
+
+  <div class="card" style="animation:none;opacity:1;transform:none">
+    <div class="tcalc-h">試算結果</div>
+    <div id="ins-result" style="color:var(--text-mute);font-size:13px;padding:20px 0;text-align:center">填入資料後按「試算保障缺口」</div>
+  </div>
+</div>
+`;
+}
+
+function wireInsuranceGapTab() {
+  const sliders = [
+    ["ins-age", "ins-age-val", v => v],
+    ["ins-income", "ins-income-val", v => v],
+    ["ins-years", "ins-years-val", v => v],
+    ["ins-dis-yrs", "ins-dis-yrs-val", v => v],
+  ];
+  sliders.forEach(([id, valId, fmt]) => {
+    const el = document.getElementById(id);
+    const val = document.getElementById(valId);
+    if (!el || !val) return;
+    el.addEventListener("input", () => { val.textContent = fmt(el.value); });
+  });
+
+  const btn = document.getElementById("ins-calc-btn");
+  if (btn) btn.addEventListener("click", () => {
+    const g = id => parseFloat(document.getElementById(id)?.value || 0);
+
+    const age = g("ins-age");
+    const annualIncomeWan = g("ins-income");
+    const protectYears = g("ins-years");
+    const debtWan = g("ins-debt");
+    const eduWan = g("ins-edu");
+    const funeralWan = g("ins-funeral");
+    const lifeCurWan = g("ins-life-cur");
+    const laborDeathWan = g("ins-labor-death");
+    const medTargetWan = g("ins-med-target");
+    const medCurWan = g("ins-med-cur");
+    const disYrs = g("ins-dis-yrs");
+    const disCurWan = g("ins-dis-cur");
+
+    // --- 壽險缺口（遺族需求法）---
+    // 需求 = 收入替代 + 未償債務 + 教育費 + 喪葬費
+    const incomeReplaceWan = annualIncomeWan * protectYears * 0.7;  // 70% 替代率
+    const lifeNeedWan = incomeReplaceWan + debtWan + eduWan + funeralWan;
+    const lifeHaveWan = lifeCurWan + laborDeathWan;
+    const lifeGapWan = Math.max(0, lifeNeedWan - lifeHaveWan);
+
+    // --- 醫療缺口（重大疾病準備）---
+    const medGapWan = Math.max(0, medTargetWan - medCurWan);
+
+    // --- 失能缺口（薪資替代）---
+    const monthlyIncomeWan = annualIncomeWan / 12;
+    const disNeedWan = monthlyIncomeWan * disYrs * 12;
+    const disGapWan = Math.max(0, disNeedWan - disCurWan);
+
+    // --- 總缺口 ---
+    const totalGapWan = lifeGapWan + medGapWan + disGapWan;
+
+    // --- 優先順序 ---
+    const priorities = [];
+    if (lifeGapWan > 0) priorities.push({ label: `壽險補足 ${lifeGapWan.toFixed(0)} 萬`, level: "high", reason: "身故風險影響遺族生活最大" });
+    if (medGapWan > 0) priorities.push({ label: `醫療準備補足 ${medGapWan.toFixed(0)} 萬`, level: "high", reason: "重大疾病自費支出高" });
+    if (disGapWan > 0) priorities.push({ label: `失能/長照保障補足 ${disGapWan.toFixed(0)} 萬`, level: age >= 50 ? "high" : "mid", reason: "長期失能致收入中斷風險" });
+    if (!priorities.length) priorities.push({ label: "各項保障均已充足", level: "low", reason: "建議每3年定期複審" });
+
+    const fmtW = v => `${v.toFixed(0)} 萬`;
+    const gapColor = v => v <= 0 ? "pos" : "neg";
+
+    document.getElementById("ins-result").innerHTML = `
+<div class="tins-gsec">
+  <h4>壽險缺口（遺族需求法）</h4>
+  <div class="tins-grow"><span>收入替代需求（年收 × ${protectYears}年 × 70%）</span><span>${fmtW(incomeReplaceWan)}</span></div>
+  <div class="tins-grow"><span>未償債務</span><span>${fmtW(debtWan)}</span></div>
+  <div class="tins-grow"><span>教育費 + 喪葬費</span><span>${fmtW(eduWan + funeralWan)}</span></div>
+  <div class="tins-grow" style="font-weight:600;color:var(--text)"><span>壽險總需求</span><span>${fmtW(lifeNeedWan)}</span></div>
+  <div class="tins-grow"><span>現有壽險 + 勞保給付</span><span style="color:var(--down)">− ${fmtW(lifeHaveWan)}</span></div>
+  <div class="tins-gtotal"><span>壽險缺口</span><span style="color:${lifeGapWan > 0 ? 'var(--up)' : 'var(--down)'}">${lifeGapWan > 0 ? '缺 ' + fmtW(lifeGapWan) : '充足 ✓'}</span></div>
+</div>
+<div class="tins-gsec">
+  <h4>醫療缺口（重大疾病準備）</h4>
+  <div class="tins-grow"><span>目標醫療準備</span><span>${fmtW(medTargetWan)}</span></div>
+  <div class="tins-grow"><span>現有醫療保障估值</span><span style="color:var(--down)">− ${fmtW(medCurWan)}</span></div>
+  <div class="tins-gtotal"><span>醫療缺口</span><span style="color:${medGapWan > 0 ? 'var(--up)' : 'var(--down)'}">${medGapWan > 0 ? '缺 ' + fmtW(medGapWan) : '充足 ✓'}</span></div>
+</div>
+<div class="tins-gsec">
+  <h4>失能 / 長照缺口</h4>
+  <div class="tins-grow"><span>失能收入替代需求（${disYrs}年）</span><span>${fmtW(disNeedWan)}</span></div>
+  <div class="tins-grow"><span>現有失能 / 長照年給付</span><span style="color:var(--down)">− ${fmtW(disCurWan)}</span></div>
+  <div class="tins-gtotal"><span>失能缺口</span><span style="color:${disGapWan > 0 ? 'var(--up)' : 'var(--down)'}">${disGapWan > 0 ? '缺 ' + fmtW(disGapWan) : '充足 ✓'}</span></div>
+</div>
+<div style="background:var(--brand-primary);color:white;border-radius:8px;padding:12px;text-align:center;margin:8px 0">
+  <div style="font-size:12px;opacity:.85">三大保障總缺口</div>
+  <div style="font-size:24px;font-weight:700;margin:4px 0">${totalGapWan > 0 ? '缺 ' + fmtW(totalGapWan) : '各項均充足 ✓'}</div>
+</div>
+<div style="background:var(--bg-alt);border:1px solid var(--border);border-radius:6px;padding:10px;margin-top:8px">
+  <div style="font-size:11px;font-weight:700;color:var(--text-mute);margin-bottom:6px">補強優先順序</div>
+  ${priorities.map((p, i) => `
+  <div class="tins-pitem">
+    <span class="tins-badge ${p.level}">${p.level === 'high' ? '優先' : p.level === 'mid' ? '次優先' : '充足'}</span>
+    <span>${i + 1}. ${p.label}（${p.reason}）</span>
+  </div>`).join("")}
+</div>
+<p class="tins-note"><strong>計算基礎：</strong>壽險缺口採「遺族需求法」，以年收入 × 年數 × 70% 替代率為基礎；醫療缺口參照台灣重大疾病平均自費 300–500 萬，建議目標 500 萬；失能缺口以月薪替代計算需求年數。勞保死亡給付（一次金）依年資實際不同，此處以輸入值為準。本工具僅供規劃參考，實際保額建議請洽持牌保險業務員進行完整需求分析。</p>
+`;
   });
 }
 
