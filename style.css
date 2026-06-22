@@ -151,14 +151,24 @@ body::before {
   letter-spacing: 0.5px;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
+.topbar-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2px;
+}
+.topbar-title-row h1 { margin: 0; }
 .topbar .updated {
-  margin: 8px 0 0;
+  margin: 0;
   padding: 0;
   background: none;
   border: none;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
   opacity: 0.92;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-left: 10px;
 }
 
 /* === 搜尋框 === */
@@ -184,9 +194,9 @@ body::before {
     padding: calc(env(safe-area-inset-top, 0px) + 10px) 16px 12px;
     border-radius: 0 0 18px 18px;
   }
-  .topbar h1 { font-size: 19px; margin-bottom: 2px; }
+  .topbar h1 { font-size: 19px; }
   .test-badge { font-size: 11px; padding: 1px 8px; margin-left: 6px; }
-  .topbar .updated { margin-top: 3px; font-size: 12px; }
+  .topbar .updated { font-size: 11px; }
   .test-note {
     margin-top: 3px;
     font-size: 11px;
@@ -578,13 +588,9 @@ table.indices th.sortable-th {
   }
   .topbar h1 {
     font-size: 32px;
-    max-width: 1200px;
-    margin: 0 auto 6px;
   }
   .topbar .updated {
-    max-width: 1200px;
-    margin: 0 auto;
-    font-size: 15px;
+    font-size: 13px;
   }
 
   #cards {
