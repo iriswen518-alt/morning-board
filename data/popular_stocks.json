@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-23T16:46:36+08:00",
+  "generated_at": "2026-06-23T18:04:22+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -87,34 +87,6 @@
       "error": null
     },
     {
-      "symbol": "QBTS",
-      "name_zh": "D-Wave Quantum",
-      "kind": "US",
-      "price": 24.47,
-      "change_pct": -0.89,
-      "mtd_pct": -18.81,
-      "ytd_pct": -6.42,
-      "market_date": "2026-06-22",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QBTS.US",
-      "error": null
-    },
-    {
-      "symbol": "SPY",
-      "name_zh": "State Street SPDR S&P 500 ETF T",
-      "kind": "US",
-      "price": 744.39,
-      "change_pct": -0.31,
-      "mtd_pct": -1.6,
-      "ytd_pct": 9.16,
-      "market_date": "2026-06-22",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPY.US",
-      "error": null
-    },
-    {
       "symbol": "QQQ",
       "name_zh": "Invesco QQQ Trust, Series 1",
       "kind": "US",
@@ -143,17 +115,17 @@
       "error": null
     },
     {
-      "symbol": "NXTS",
-      "name_zh": "Nexentis Technologies",
+      "symbol": "SOXL",
+      "name_zh": "Direxion Daily Semiconductor Bu",
       "kind": "US",
-      "price": 13,
-      "change_pct": 155.91,
-      "mtd_pct": 132.97,
-      "ytd_pct": 10.54,
+      "price": 300.77,
+      "change_pct": 7.69,
+      "mtd_pct": 34.07,
+      "ytd_pct": 615.61,
       "market_date": "2026-06-22",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NXTS.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOXL.US",
       "error": null
     },
     {
@@ -171,17 +143,31 @@
       "error": null
     },
     {
-      "symbol": "WEN",
-      "name_zh": "Wendy's Company (The)",
+      "symbol": "ASML",
+      "name_zh": "ASML",
       "kind": "US",
-      "price": 6.17,
-      "change_pct": -9.26,
-      "mtd_pct": -19.87,
-      "ytd_pct": -25.93,
+      "price": 1929.25,
+      "change_pct": -0.02,
+      "mtd_pct": 19.62,
+      "ytd_pct": 80.33,
       "market_date": "2026-06-22",
-      "per": 8.7191,
+      "per": 62.0047,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=WEN.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ASML.US",
+      "error": null
+    },
+    {
+      "symbol": "SPY",
+      "name_zh": "SPDR S&P 500 ETF",
+      "kind": "US",
+      "price": 744.39,
+      "change_pct": -0.31,
+      "mtd_pct": -1.6,
+      "ytd_pct": 9.16,
+      "market_date": "2026-06-22",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPY.US",
       "error": null
     },
     {
