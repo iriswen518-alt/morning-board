@@ -317,7 +317,7 @@ const LOAD_NAME_TO_DATA_KEY = {
 const TAB_LOAD_DEPS = {
   market: ["market", "stocks", "rankings", "premarket"],
   news: ["news"],
-  funds: ["funds", "dca", "beatetf", "fund_compare"],
+  funds: ["funds", "dca", "beatetf", "fund_compare", "popular_funds"],
   obonds: ["overseas_bonds", "overseas_bonds_all"],
   bondmkt: ["market"],
   usstocks: ["stocks", "popular_stocks", "stock_brief"],
@@ -403,6 +403,10 @@ function buildSearchIndex() {
   }
   for (const e of (DATA.beatetf?.etfs?.items || [])) {
     idx.push({ tab: "funds", subtab: "beatetf", tabLabel: "精選基金 · 超越ETF", title: `${e.symbol || ""} ${e.name_zh || ""}`.trim(), text: e.category || "" });
+  }
+  // 精選基金 · 熱銷基金
+  for (const f of (DATA.popular_funds?.funds || [])) {
+    idx.push({ tab: "funds", subtab: "popular", tabLabel: "精選基金 · 熱銷基金", title: f.name_zh || "", text: f.tagline || "" });
   }
   // 精選基金 · 基金績效比較
   for (const f of (DATA.fund_compare?.funds || [])) {
@@ -563,7 +567,7 @@ async function init() {
   // 每個來源各自有 fallback：一個壞不拖垮全頁
   // 失敗時記到 FAILED_LOADS，使用者切到對應 tab 時會背景重試
   const safe = (name, fallback) => load(name).catch(() => { FAILED_LOADS.add(name); return fallback; });
-  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
@@ -586,8 +590,9 @@ async function init() {
     safe("rankings", { tw: {}, us: {} }),
     safe("quotes_built_at", { built_at: "" }),
     safe("premarket", null),
+    safe("popular_funds", { funds: [] }),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket };
+  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds };
   const _updatedAt = latestBuiltAt();
   if (!_updatedAt) {
     $("updated").textContent = `載入部分失敗（顯示快取資料）`;
@@ -913,7 +918,7 @@ async function refreshData() {
     FAILED_LOADS.add(name);
     return DATA[name === "insurances" ? "insurance" : name] || fallback;
   });
-  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
@@ -936,8 +941,9 @@ async function refreshData() {
     safe("rankings", { tw: {}, us: {} }),
     safe("quotes_built_at", { built_at: "" }),
     safe("premarket", null),
+    safe("popular_funds", { funds: [] }),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket };
+  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds };
   SEARCH_INDEX = buildSearchIndex();
   const _updatedAt = latestBuiltAt();
   if (_updatedAt) {
@@ -7424,11 +7430,13 @@ function renderFundsSheet() {
       <button class="tab" data-ftab="dca">定期定額</button>
       <button class="tab" data-ftab="beatetf">超越ETF</button>
       <button class="tab" data-ftab="compare">績效比較</button>
+      <button class="tab" data-ftab="popular">熱銷基金</button>
     </div>
     <div id="ftab-lump">${renderLumpFundCards()}</div>
     <div id="ftab-dca" hidden>${renderDcaFundCards()}</div>
     <div id="ftab-beatetf" hidden>${renderBeatEtfCards()}</div>
     <div id="ftab-compare" hidden>${renderFundCompare()}</div>
+    <div id="ftab-popular" hidden>${renderPopularFundCards()}</div>
     <div class="fund-card" style="margin-top:18px;text-align:center">
       <h3 style="margin-bottom:6px">其他基金</h3>
       <p class="tagline" style="margin-bottom:12px">瀏覽完整基金總覽（境外／國內基金龍虎榜、市場龍虎榜、快速搜尋）</p>
@@ -7437,6 +7445,68 @@ function renderFundsSheet() {
         前往基金總覽
       </a>
     </div>
+  `;
+}
+
+function renderPopularFundCards() {
+  const funds = (DATA.popular_funds || {}).funds || [];
+  if (!funds.length) {
+    return "<p style='color:var(--text-mute); padding:20px 0'>尚未提供熱銷基金清單</p>";
+  }
+  const periods = [
+    { label: "近1月", key: "1m" },
+    { label: "近3月", key: "3m" },
+    { label: "近6月", key: "6m" },
+    { label: "近1年", key: "1y" },
+    { label: "近3年", key: "3y" },
+    { label: "近5年", key: "5y" },
+  ];
+  const fmtR = v => (v === null || v === undefined) ? "—" : `${Number(v).toFixed(1)}%`;
+  const cellClass = v => (v === null || v === undefined) ? "" : (v > 0 ? "up" : (v < 0 ? "down" : ""));
+  const tdBase = "padding:6px 8px;border-bottom:1px solid var(--border)";
+  const thBase = "padding:6px 8px;border-bottom:1px solid var(--border);background:#fff";
+
+  const headerCells = periods.map(p =>
+    `<th style="${thBase};text-align:right">${p.label}</th>`
+  ).join("");
+
+  const CAT_COLOR = {
+    bond: "#E5F2F5", equity: "#EEF5E5", balanced: "#F5F0E5", income: "#F5E5EE",
+  };
+
+  const rows = funds.map(f => {
+    const nameHtml = f.source_url
+      ? `<a href="${f.source_url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${escapeHtml(f.name_zh)}</a>`
+      : escapeHtml(f.name_zh);
+    const chip = f.currency ? `<span style="margin-left:6px">${currencyChip(f.currency)}</span>` : "";
+    const catLabel = f.cat_label || "";
+    const catBg = CAT_COLOR[f.category] || "#E5F2F5";
+    const catChip = catLabel
+      ? `<span class="chip chip-default" style="background:${catBg};color:var(--brand-deep);margin-left:6px;font-size:11px">${escapeHtml(catLabel)}</span>`
+      : "";
+    const cells = periods.map(p => {
+      const v = f.perf_single?.[p.key];
+      return `<td style="${tdBase};text-align:right" class="${cellClass(v)}">${perfLink(fmtR(v), f.perf_url || f.source_url)}</td>`;
+    }).join("");
+    return `<tr><td style="${tdBase};white-space:nowrap">${nameHtml}${chip}${catChip}</td>${cells}</tr>`;
+  }).join("");
+
+  const asOf = funds.find(f => f.perf_date)?.perf_date || "";
+  const note = asOf ? `<p style="font-size:11px;color:var(--text-mute);margin:8px 0 0">績效截至 ${asOf}，資料來源：板信基金平台（MoneyDJ），不構成投資建議。</p>` : "";
+
+  return `
+    <div style="overflow-x:auto;background:#fff;border-radius:8px">
+      <table class="freeze-col1" style="width:100%;border-collapse:collapse;font-size:13px">
+        <thead>
+          <tr>
+            <th style="${thBase};text-align:left">名稱</th>
+            ${headerCells}
+          </tr>
+        </thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>
+    ${note}
   `;
 }
 
