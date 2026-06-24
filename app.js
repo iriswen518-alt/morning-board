@@ -8362,14 +8362,18 @@ function licaiReply(text) {
 function renderChatSheet() {
   return `
 <style>
-  .lc-chat-wrap { max-width: 640px; margin: 0 auto; display: flex; flex-direction: column; border: 1px solid var(--border); border-radius: var(--radius-card); overflow: hidden; box-shadow: var(--shadow); background: var(--surface); }
-  .lc-chat-header { padding: 14px 16px; background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary)); color: #fff; display: flex; align-items: center; gap: 10px; }
+  .lc-chat-wrap { max-width: 640px; margin: 0 auto; display: flex; flex-direction: column; background: transparent; }
+  .lc-chat-header { padding: 12px 4px 14px; background: transparent; color: var(--text); display: flex; align-items: center; gap: 10px; border-bottom: 1px solid var(--border); }
+  .lc-chat-avatar { background: linear-gradient(135deg, #2aa6d6, var(--brand-deep)) !important; color: #fff; font-weight: 800; font-size: 22px; }
+  .lc-chat-hname { color: var(--text) !important; }
+  .lc-chat-hsub { color: var(--text-mute) !important; opacity: 1 !important; }
+  .lc-chat-reset { background: var(--bg-alt) !important; color: var(--brand-deep) !important; border: 1px solid var(--border) !important; }
   .lc-chat-avatar { width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,.22); display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
   .lc-chat-hinfo { flex: 1; min-width: 0; }
   .lc-chat-hname { font-weight: 700; font-size: 15px; }
   .lc-chat-hsub { font-size: 12px; opacity: .9; }
   .lc-chat-reset { background: rgba(255,255,255,.25); border: none; border-radius: 18px; padding: 6px 12px; color: #fff; font-size: 12px; cursor: pointer; white-space: nowrap; }
-  .lc-chat-msgs { flex: 1; overflow-y: auto; padding: 16px 12px; display: flex; flex-direction: column; gap: 12px; background: var(--bg-alt); min-height: 320px; max-height: 56vh; }
+  .lc-chat-msgs { flex: 1; overflow-y: auto; padding: 16px 2px; display: flex; flex-direction: column; gap: 12px; background: transparent; min-height: 320px; max-height: 56vh; }
   .lc-row { display: flex; flex-direction: column; }
   .lc-row.me { align-items: flex-end; }
   .lc-row.bot { align-items: flex-start; }
@@ -8377,10 +8381,10 @@ function renderChatSheet() {
   .lc-bubble { max-width: 80%; padding: 11px 14px; border-radius: 16px; font-size: 14px; line-height: 1.7; word-break: break-word; white-space: normal; }
   .lc-bubble.me { background: var(--brand-primary); color: #fff; border-bottom-right-radius: 4px; }
   .lc-bubble.bot { background: var(--surface); color: var(--text); border: 1px solid var(--border); border-bottom-left-radius: 4px; }
-  .lc-suggest { display: flex; flex-wrap: wrap; gap: 8px; padding: 12px; background: var(--bg-alt); border-top: 1px solid var(--border); }
+  .lc-suggest { display: flex; flex-wrap: wrap; gap: 8px; padding: 12px 2px; background: transparent; border-top: 1px solid var(--border); }
   .lc-chip { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 6px 12px; font-size: 12px; color: var(--brand-deep); cursor: pointer; }
   .lc-chip:active { background: var(--surface-hover); }
-  .lc-input-row { display: flex; gap: 8px; padding: 12px; border-top: 1px solid var(--border); background: var(--surface); }
+  .lc-input-row { display: flex; gap: 8px; padding: 12px 2px 4px; border-top: 1px solid var(--border); background: transparent; }
   .lc-input { flex: 1; border: 1.5px solid var(--border); border-radius: 20px; padding: 9px 14px; font-size: 14px; font-family: inherit; outline: none; background: var(--bg); color: var(--text); }
   .lc-input:focus { border-color: var(--brand-primary); }
   .lc-voice { background: var(--bg); border: 1.5px solid var(--border); border-radius: 50%; width: 40px; height: 40px; font-size: 18px; cursor: pointer; flex-shrink: 0; }
@@ -8396,7 +8400,7 @@ function renderChatSheet() {
 </style>
 <div class="lc-chat-wrap">
   <div class="lc-chat-header">
-    <div class="lc-chat-avatar">💰</div>
+    <div class="lc-chat-avatar">$</div>
     <div class="lc-chat-hinfo">
       <div class="lc-chat-hname">小幫手</div>
       <div class="lc-chat-hsub">理財觀念、App 用法、傳承稅務都可以問我</div>
