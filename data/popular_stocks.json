@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-24T16:41:47+08:00",
+  "generated_at": "2026-06-24T17:52:08+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -73,6 +73,20 @@
       "error": null
     },
     {
+      "symbol": "VZ",
+      "name_zh": "威訊",
+      "kind": "US",
+      "price": 46.73,
+      "change_pct": 3.02,
+      "mtd_pct": -2.26,
+      "ytd_pct": 14.73,
+      "market_date": "2026-06-23",
+      "per": 10.9229,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VZ.US",
+      "error": null
+    },
+    {
       "symbol": "ARQQ",
       "name_zh": "Arqit Quantum",
       "kind": "US",
@@ -87,17 +101,17 @@
       "error": null
     },
     {
-      "symbol": "VZ",
-      "name_zh": "威訊",
+      "symbol": "MAAS",
+      "name_zh": "Maase",
       "kind": "US",
-      "price": 46.73,
-      "change_pct": 3.02,
-      "mtd_pct": -2.26,
-      "ytd_pct": 14.73,
+      "price": 21.24,
+      "change_pct": 18.99,
+      "mtd_pct": 78.64,
+      "ytd_pct": 293.33,
       "market_date": "2026-06-23",
-      "per": 10.9229,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VZ.US",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MAAS.US",
       "error": null
     },
     {
@@ -115,6 +129,20 @@
       "error": null
     },
     {
+      "symbol": "QURE",
+      "name_zh": "uniQure",
+      "kind": "US",
+      "price": 49.04,
+      "change_pct": 10.48,
+      "mtd_pct": 71.89,
+      "ytd_pct": 104.93,
+      "market_date": "2026-06-23",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QURE.US",
+      "error": null
+    },
+    {
       "symbol": "VKTX",
       "name_zh": "Viking Therapeutics",
       "kind": "US",
@@ -126,6 +154,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VKTX.US",
+      "error": null
+    },
+    {
+      "symbol": "SLS",
+      "name_zh": "SELLAS Life Sciences",
+      "kind": "US",
+      "price": 9.07,
+      "change_pct": 6.33,
+      "mtd_pct": -2.58,
+      "ytd_pct": 140.58,
+      "market_date": "2026-06-23",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SLS.US",
       "error": null
     },
     {
@@ -143,45 +185,17 @@
       "error": null
     },
     {
-      "symbol": "QURE",
-      "name_zh": "uniQure",
+      "symbol": "ZETA",
+      "name_zh": "Zeta Global",
       "kind": "US",
-      "price": 49.04,
-      "change_pct": 10.48,
-      "mtd_pct": 71.89,
-      "ytd_pct": 104.93,
+      "price": 19.51,
+      "change_pct": 5.63,
+      "mtd_pct": -14.77,
+      "ytd_pct": -4.13,
       "market_date": "2026-06-23",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QURE.US",
-      "error": null
-    },
-    {
-      "symbol": "DUOL",
-      "name_zh": "Duolingo",
-      "kind": "US",
-      "price": 132.18,
-      "change_pct": 3.87,
-      "mtd_pct": 18.7,
-      "ytd_pct": -24.68,
-      "market_date": "2026-06-23",
-      "per": 14.5806,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DUOL.US",
-      "error": null
-    },
-    {
-      "symbol": "IBRX",
-      "name_zh": "ImmunityBio",
-      "kind": "US",
-      "price": 7.32,
-      "change_pct": 1.39,
-      "mtd_pct": -2.66,
-      "ytd_pct": 269.7,
-      "market_date": "2026-06-23",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IBRX.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ZETA.US",
       "error": null
     },
     {
