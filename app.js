@@ -8405,14 +8405,6 @@ function renderChatSheet() {
   .lc-foot { flex: 0 0 auto; margin: 6px 2px 0; font-size: 10px; color: var(--text-mute); line-height: 1.5; text-align: center; }
 </style>
 <div class="lc-chat-wrap">
-  <div class="lc-chat-header">
-    <div class="lc-chat-avatar">$</div>
-    <div class="lc-chat-hinfo">
-      <div class="lc-chat-hname">小幫手</div>
-      <div class="lc-chat-hsub">理財觀念、App 用法、傳承稅務都可以問我</div>
-    </div>
-    <button class="lc-chat-reset" id="lcReset" type="button">⟳ 重置</button>
-  </div>
   <div class="lc-chat-msgs" id="lcMsgs">
     <div class="lc-row bot">
       <div class="lc-label">小幫手</div>
