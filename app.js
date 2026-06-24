@@ -693,6 +693,7 @@ function switchTab(name) {
     name = redirectToAlloc(body);
   }
   else if (name === "wealth") body.innerHTML = renderWealthSheet();
+  else if (name === "chat") body.innerHTML = renderChatSheet();
   else if (name === "calc") body.innerHTML = renderCalcSheet();
   else if (name === "twstock") body.innerHTML = renderTwStockSheet();
   if (name === "news") wireNewsTabs();
@@ -700,6 +701,7 @@ function switchTab(name) {
   if (name === "funds") { wireFundsTabs(); wireFundCompare(); }
   if (name === "alloc") wireAllocTabs();
   if (name === "wealth") wireWealthTabs();
+  if (name === "chat") wireChat();
   if (name === "calc") wireCalcTabs();
   if (name === "twstock") wireTwStock();
   if (name === "obonds") { SWAP_PICK = { old: null, new: null }; wireObondsTabs(); }
@@ -8297,6 +8299,224 @@ function wireInsuranceGapTab() {
 <p class="tins-note"><strong>計算基礎：</strong>壽險缺口採「遺族需求法」，以年收入 × 年數 × 70% 替代率為基礎；醫療缺口參照台灣重大疾病平均自費 300–500 萬，建議目標 500 萬；失能缺口以月薪替代計算需求年數。勞保死亡給付（一次金）依年資實際不同，此處以輸入值為準。本工具僅供規劃參考，實際保額建議請洽持牌保險業務員進行完整需求分析。</p>
 `;
   });
+}
+
+// ===== 理財聊聊（關鍵字智慧回應，不需 API Key、可離線）=====
+// 人設：小幫手。知識庫四類：理財觀念 / App導覽 / 傳承稅務 / 市場名詞。
+const LICAI_KB = [
+  // ── 理財觀念教學 ──
+  { keys: ["複利", "利滾利", "複利效果"], reply: "複利就是「利息再賺利息」🌱\n\n本金產生的利息，下一期會一起再生利息，時間越久滾得越快。\n\n例：100 萬、年報酬 6%\n• 第 1 年 → 106 萬\n• 第 12 年 → 約 200 萬（翻倍）\n\n口訣「72 法則」：72 ÷ 年報酬率 ≈ 翻倍年數（72÷6=12 年）。複利最大的朋友是「時間」，越早開始越有利。" },
+  { keys: ["定期定額", "定額", "扣款", "微笑曲線"], reply: "定期定額＝每月固定金額買進同一標的 📅\n\n好處：\n• 自動分散買進時點，不用猜高低點\n• 下跌時買到更多單位，平均成本降低（微笑曲線）\n• 強迫儲蓄、紀律投資\n\n適合長期、波動較大的標的（如股票型基金、ETF）。重點是「不要中途因為下跌就停扣」，跌的時候正是累積便宜單位的時候。" },
+  { keys: ["etf", "指數型", "被動"], reply: "ETF＝指數股票型基金 📊\n\n一籃子股票打包成一檔，在證交所像股票一樣買賣。\n\n特色：\n• 分散風險（一次買進整個指數）\n• 費用低（被動追蹤，不用養經理人）\n• 透明、好交易\n\n常見：追蹤大盤的市值型、追高股息的高股息型、追產業的主題型。適合想長期參與市場、又不想選個股的人。" },
+  { keys: ["資產配置", "配置", "股債", "再平衡"], reply: "資產配置＝把錢分散到不同性質的資產 🧩\n\n核心是「不要把雞蛋放同一個籃子」：\n• 股票：追求成長，但波動大\n• 債券：相對穩、領息，降低整體波動\n• 現金：保留彈性與安全感\n\n比例看年齡與風險承受度（年輕可多股、近退休多債）。每年「再平衡」一次，把漲多的賣一點、補進跌的，自動高賣低買。\n\n👉 App 的「資產配置」分頁有試算工具可以玩玩看。" },
+  { keys: ["風險分散", "分散風險", "雞蛋"], reply: "分散風險有三個方向 🎯\n\n1️⃣ 標的分散：不同公司、不同產業\n2️⃣ 地區分散：台股、美股、新興市場\n3️⃣ 時間分散：定期定額分批買進\n\n分散不會讓報酬變高，但能讓「波動」變小、避免單一事件重傷。穩穩走比較久遠 🌿" },
+  { keys: ["停利", "停損", "獲利了結"], reply: "停利停損是紀律，不是預測 ⚖️\n\n• 停利：漲到設定目標就分批落袋，落袋為安\n• 停損：跌破設定點就認賠出場，保住本金\n\n重點是「事先設好、確實執行」，避免被情緒綁架（賺了想再多賺、賠了凹單）。長期投資（如定期定額 ETF）則可不設停損，靠時間與紀律。" },
+  { keys: ["緊急預備金", "預備金", "急用金", "備用金"], reply: "緊急預備金＝先存好的「安全氣囊」🛟\n\n建議準備 3～6 個月的生活費，放在隨時可動用的地方（活存、貨幣基金）。\n\n用途：失業、生病、突發大支出時不用被迫賣股、不用借錢。\n\n先把這筆存夠，再開始投資，心理會穩很多。投資的錢應該是「短期內用不到」的閒錢。" },
+  { keys: ["通膨怎麼辦", "對抗通膨", "錢變薄"], reply: "對抗通膨，重點是讓錢「會長大」💰\n\n錢放定存，利率常追不上通膨，購買力會悄悄縮水。\n\n抗通膨方向：\n• 股票 / 股票型 ETF（長期報酬通常勝通膨）\n• 部分配置抗通膨資產（如不動產、原物料）\n\n不是要你冒大風險，而是「至少別讓錢躺著貶值」。穩健配置＋長期持有是常見解法。" },
+  // ── App 功能導覽 ──
+  { keys: ["怎麼用", "功能", "有什麼", "教學", "導覽", "怎麼看"], reply: "理財小幫手主要分頁 🧭\n\n• 全球市場：台美股、匯率、債券行情\n• 重要新聞：每日財經重點 TLDR\n• 精選基金：單筆 / 定期定額 / 績效比較\n• 精選海外債：債券清單與換券試算\n• 海外股票：精選與熱門美股\n• 資產配置：投組分析、配置試算\n• 精選保險：保障缺口試算\n• 小學堂：理財知識課程\n\n想了解哪一個？直接問我「基金在哪」「投組分析怎麼用」都可以 🌸" },
+  { keys: ["基金在哪", "看基金", "基金", "申購"], reply: "基金資訊在「精選基金」分頁 📊\n\n裡面有三個次分頁：\n• 單筆投資：精選一次買進的基金\n• 定期定額：適合月扣的標的\n• 績效比較：把幾檔基金擺一起比報酬\n\n每檔都有一句話重點（tagline）。記得：基金有手續費與風險，過去績效不代表未來喔。" },
+  { keys: ["海外債", "債券在哪", "換券"], reply: "海外債在「精選海外債」分頁 📑\n\n可以看到債券清單、發行人、殖利率、重點摘要，還有「換券試算」可以比較兩檔債券。\n\n小提醒：不同申購代碼多半代表不同債券，少數舊碼對現行檔為同一檔，試算時兩碼都留、用 index 比對最保險。" },
+  { keys: ["投組", "投組分析", "組合分析", "配置試算"], reply: "投組分析在「資產配置」分頁裡 🧩\n\n你可以選預設組合、或自訂組合，系統會算出：\n• 配置比例、集中度（HHI）\n• 標的重疊、配息、風險、費用\n\n屬於教育示範用途，幫你「看懂」一個組合的體質，不是買賣建議。" },
+  { keys: ["保險在哪", "保障", "保額", "缺口"], reply: "保險在「精選保險」分頁 🛡️\n\n有「保障缺口試算」：輸入收入、年數等，會算出壽險／醫療／失能三大缺口，給補強優先順序。\n\n計算僅供規劃參考，正式保額建議請洽持牌保險業務員做完整需求分析。" },
+  { keys: ["小學堂", "課程", "想學", "學習"], reply: "想打基礎就去「小學堂」📚\n\n那裡有理財知識課程（含財富傳承等主題），用比較有系統的方式帶你認識觀念。\n\n當然，臨時有疑問也可以直接問我，我先幫你白話解釋一輪 🌸" },
+  { keys: ["安裝", "加到主畫面", "下載", "app"], reply: "想把理財小幫手放到手機主畫面？📲\n\n點導覽列的「安裝」分頁，照著步驟做：\n• iPhone：用 Safari 開 → 分享 → 加入主畫面\n• Android：Chrome 會跳出安裝提示\n\n裝好之後就像一般 App，可離線看，開啟更快。" },
+  // ── 傳承 / 稅務常識 ──
+  { keys: ["贈與稅", "贈與", "免稅額"], reply: "贈與稅重點（台灣現行）🎁\n\n• 每人每年贈與「免稅額」244 萬元（贈與人計算）\n• 超過部分課贈與稅，採累進稅率 10%～20%\n\n善用每年免稅額、夫妻間贈與免稅等規劃，可分年移轉資產。\n\n⚠️ 金額級距與規定可能調整，實際以個案及現行法令、國稅局公告為準，正式規劃建議洽專業人員。" },
+  { keys: ["遺產稅", "繼承", "遺產"], reply: "遺產稅重點（台灣現行）⚖️\n\n• 有免稅額與多項扣除額（配偶、直系血親、喪葬費等）\n• 課稅級距採累進 10%～20%\n\n常見規劃工具：保險、信託、分年贈與、預立遺囑等，搭配運用可讓傳承更有秩序。\n\n⚠️ 各項金額與規定可能調整，實際以個案及現行法令為準。完整方案建議找傳承顧問評估。" },
+  { keys: ["信託", "安養信託", "他益"], reply: "信託＝把財產交給受託人，按你的意願管理運用 🤝\n\n常見用途：\n• 安養信託：保障自己晚年照護金流\n• 子女教育金、特定目的給付\n• 預防失智、避免一次給付被揮霍\n\n優點是「照你設定的條件、時間分配」，多一層保護與彈性。實際架構與稅務影響需個案規劃，建議洽專業評估。" },
+  { keys: ["保單規劃", "保險傳承", "保單"], reply: "保單在傳承裡常扮演「指定、即時、有槓桿」的角色 💡\n\n• 可指定受益人，理賠相對快速\n• 提供現金流支應稅源或遺族生活\n• 規劃得當有資產移轉效果\n\n但要注意實質課稅原則與相關規定，並非「買保單就一定免稅」。完整傳承架構建議搭配顧問做整體評估。" },
+  { keys: ["二代健保", "補充保費"], reply: "二代健保補充保費小提醒 🏥\n\n單筆「股利、利息、租金」等所得達一定金額時，會被扣補充保費。\n\n領大額股息、配息前可留意門檻與級距，做基本的試算與安排。實際費率與門檻以健保署現行公告為準。" },
+  // ── 市場名詞解釋 ──
+  { keys: ["殖利率", "yield", "債券殖利率"], reply: "殖利率＝投資這筆錢，一年大約能領回多少比例 📈\n\n• 股票殖利率＝現金股利 ÷ 股價\n• 債券殖利率＝考慮票息與買進價格後的年化報酬\n\n債券價格漲，殖利率就降；價格跌，殖利率就升（兩者反向）。殖利率高不一定好，要一起看風險與品質。" },
+  { keys: ["本益比", "pe", "p/e", "本益比是"], reply: "本益比（P/E）＝股價 ÷ 每股盈餘（EPS）💹\n\n白話：用現在股價買，幾年的獲利能回本。\n\n• 本益比高：市場願意給較高評價（期待成長）或偏貴\n• 本益比低：相對便宜，或市場不看好\n\n要跟「同產業」比才有意義，單看數字高低不準。" },
+  { keys: ["通膨", "通貨膨脹", "cpi"], reply: "通膨＝物價普遍上漲、錢變薄 📉\n\n常用指標 CPI（消費者物價指數）。通膨溫和（約 2%）是健康的；太高則傷購買力。\n\n影響：\n• 央行可能升息抑制通膨\n• 現金、定存的實質購買力下降\n\n所以理財要讓資產「跑得贏通膨」。" },
+  { keys: ["升息", "降息", "利率", "fed", "聯準會"], reply: "升降息是央行調控經濟的方向盤 🎚️\n\n• 升息：借錢變貴 → 抑制過熱與通膨；對股市、債券價格通常偏壓力\n• 降息：借錢變便宜 → 刺激景氣；對股市、債券價格通常偏利多\n\n美國由聯準會（Fed）決定，全球都會盯著。利率走向會影響股、債、匯各種資產。" },
+  { keys: ["殖利率倒掛", "倒掛"], reply: "殖利率倒掛＝短天期利率比長天期還高 🔄\n\n正常情況是「借越久利率越高」。一旦短期反而比長期高（倒掛），常被視為市場擔心未來景氣的訊號，歷史上有時領先於經濟衰退。\n\n但它是「參考訊號」不是水晶球，倒掛後到實際衰退常有時間差，仍要綜合判斷。" },
+  { keys: ["gdp", "國內生產毛額", "經濟成長"], reply: "GDP＝國內生產毛額，衡量一國一年的經濟產出 🏭\n\nGDP 成長率↑代表經濟擴張、↓代表趨緩。\n\n它是判斷景氣大方向的核心指標之一，常和就業、通膨一起看。投資時了解大環境，有助於設定合理的期待。" },
+  // ── 鼓勵 / 通用 ──
+  { keys: ["謝謝", "感謝", "你好棒", "厲害"], reply: "不客氣～能幫上忙我很開心 😊\n理財是長期的事，慢慢累積觀念就會越來越上手。有任何問題隨時來問我 🌸" },
+  { keys: ["你好", "嗨", "哈囉", "hi", "hello"], reply: "嗨！我是你的理財小幫手 🌸\n可以問我理財觀念（複利、定期定額、ETF…）、App 怎麼用、傳承稅務常識，或財經名詞解釋。\n想從哪個開始呢？" },
+];
+
+function licaiReply(text) {
+  const t = (text || "").toLowerCase();
+  for (const item of LICAI_KB) {
+    if (item.keys.some(k => t.includes(k.toLowerCase()))) return item.reply;
+  }
+  // 主題偵測 fallback
+  if (t.includes("基金")) return "想了解基金的話，可以去「精選基金」分頁看單筆、定期定額與績效比較。也可以問我「定期定額怎麼做」「ETF 是什麼」🌸";
+  if (t.includes("債") ) return "債券相關可以看「精選海外債」分頁，或問我「殖利率是什麼」「殖利率倒掛」，我來白話解釋 📑";
+  if (t.includes("股") || t.includes("股票")) return "股票相關可以問我「本益比是什麼」「ETF」「資產配置」，或去「海外股票」「全球市場」分頁看行情 📈";
+  if (t.includes("稅") || t.includes("傳承") || t.includes("贈與") || t.includes("遺產")) return "傳承稅務的問題我可以幫你白話說明，例如「贈與稅免稅額」「遺產稅」「信託」「保單規劃」。詳細方案建議再找傳承顧問評估 ⚖️";
+  if (t.includes("保險") || t.includes("保障")) return "保險可以去「精選保險」分頁做保障缺口試算，或問我相關概念。正式保額建議洽持牌業務員 🛡️";
+  // 預設引導語
+  const defaults = [
+    "我可以幫你解釋理財觀念、App 功能、傳承稅務與財經名詞 🌸\n例如：「複利是什麼」「定期定額怎麼做」「殖利率是什麼」「贈與稅免稅額」。",
+    "想問哪方面呢？理財觀念、怎麼用這個 App、或財經名詞，我都可以白話說給你聽 💪",
+    "把問題說出來吧～例如「ETF 是什麼」「資產配置怎麼分」「升息對股市的影響」，我來幫你拆解 ✨",
+  ];
+  return defaults[Math.floor(Math.random() * defaults.length)];
+}
+
+function renderChatSheet() {
+  return `
+<style>
+  .lc-chat-wrap { max-width: 640px; margin: 0 auto; display: flex; flex-direction: column; border: 1px solid var(--border); border-radius: var(--radius-card); overflow: hidden; box-shadow: var(--shadow); background: var(--surface); }
+  .lc-chat-header { padding: 14px 16px; background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary)); color: #fff; display: flex; align-items: center; gap: 10px; }
+  .lc-chat-avatar { width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,.22); display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+  .lc-chat-hinfo { flex: 1; min-width: 0; }
+  .lc-chat-hname { font-weight: 700; font-size: 15px; }
+  .lc-chat-hsub { font-size: 12px; opacity: .9; }
+  .lc-chat-reset { background: rgba(255,255,255,.25); border: none; border-radius: 18px; padding: 6px 12px; color: #fff; font-size: 12px; cursor: pointer; white-space: nowrap; }
+  .lc-chat-msgs { flex: 1; overflow-y: auto; padding: 16px 12px; display: flex; flex-direction: column; gap: 12px; background: var(--bg-alt); min-height: 320px; max-height: 56vh; }
+  .lc-row { display: flex; flex-direction: column; }
+  .lc-row.me { align-items: flex-end; }
+  .lc-row.bot { align-items: flex-start; }
+  .lc-label { font-size: 11px; font-weight: 600; color: var(--text-mute); margin-bottom: 3px; }
+  .lc-bubble { max-width: 80%; padding: 11px 14px; border-radius: 16px; font-size: 14px; line-height: 1.7; word-break: break-word; white-space: normal; }
+  .lc-bubble.me { background: var(--brand-primary); color: #fff; border-bottom-right-radius: 4px; }
+  .lc-bubble.bot { background: var(--surface); color: var(--text); border: 1px solid var(--border); border-bottom-left-radius: 4px; }
+  .lc-suggest { display: flex; flex-wrap: wrap; gap: 8px; padding: 12px; background: var(--bg-alt); border-top: 1px solid var(--border); }
+  .lc-chip { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 6px 12px; font-size: 12px; color: var(--brand-deep); cursor: pointer; }
+  .lc-chip:active { background: var(--surface-hover); }
+  .lc-input-row { display: flex; gap: 8px; padding: 12px; border-top: 1px solid var(--border); background: var(--surface); }
+  .lc-input { flex: 1; border: 1.5px solid var(--border); border-radius: 20px; padding: 9px 14px; font-size: 14px; font-family: inherit; outline: none; background: var(--bg); color: var(--text); }
+  .lc-input:focus { border-color: var(--brand-primary); }
+  .lc-voice { background: var(--bg); border: 1.5px solid var(--border); border-radius: 50%; width: 40px; height: 40px; font-size: 18px; cursor: pointer; flex-shrink: 0; }
+  .lc-voice.listening { border-color: var(--brand-primary); animation: lcpulse 1s infinite; }
+  @keyframes lcpulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.08)} }
+  .lc-send { background: var(--brand-primary); color: #fff; border: none; border-radius: 20px; padding: 9px 18px; font-size: 14px; font-weight: 600; cursor: pointer; white-space: nowrap; }
+  .lc-send:disabled { opacity: .45; cursor: not-allowed; }
+  .lc-typing { display: flex; gap: 4px; padding: 11px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; border-bottom-left-radius: 4px; width: fit-content; }
+  .lc-typing span { width: 7px; height: 7px; background: var(--brand-secondary); border-radius: 50%; animation: lcbounce 1.2s infinite; }
+  .lc-typing span:nth-child(2){animation-delay:.2s} .lc-typing span:nth-child(3){animation-delay:.4s}
+  @keyframes lcbounce { 0%,60%,100%{transform:translateY(0)} 30%{transform:translateY(-6px)} }
+  .lc-foot { max-width: 640px; margin: 10px auto 0; font-size: 11px; color: var(--text-mute); line-height: 1.6; text-align: center; }
+</style>
+<div class="lc-chat-wrap">
+  <div class="lc-chat-header">
+    <div class="lc-chat-avatar">🌸</div>
+    <div class="lc-chat-hinfo">
+      <div class="lc-chat-hname">小幫手</div>
+      <div class="lc-chat-hsub">理財觀念、App 用法、傳承稅務都可以問我</div>
+    </div>
+    <button class="lc-chat-reset" id="lcReset" type="button">⟳ 重置</button>
+  </div>
+  <div class="lc-chat-msgs" id="lcMsgs">
+    <div class="lc-row bot">
+      <div class="lc-label">小幫手</div>
+      <div class="lc-bubble bot">嗨！我是你的理財小幫手 🌸<br>可以問我理財觀念（複利、定期定額、ETF…）、這個 App 怎麼用、傳承稅務常識，或財經名詞解釋。<br>下面點一下，或直接打字問我都行！</div>
+    </div>
+  </div>
+  <div class="lc-suggest" id="lcSuggest">
+    <button class="lc-chip" type="button">複利是什麼</button>
+    <button class="lc-chip" type="button">定期定額怎麼做</button>
+    <button class="lc-chip" type="button">ETF 是什麼</button>
+    <button class="lc-chip" type="button">殖利率是什麼</button>
+    <button class="lc-chip" type="button">贈與稅免稅額</button>
+    <button class="lc-chip" type="button">基金在哪</button>
+  </div>
+  <div class="lc-input-row">
+    <button class="lc-voice" id="lcVoice" type="button" title="語音輸入">🎤</button>
+    <input class="lc-input" id="lcInput" type="text" placeholder="問我理財問題…" autocomplete="off">
+    <button class="lc-send" id="lcSend" type="button">送出</button>
+  </div>
+</div>
+<p class="lc-foot">本問答僅供理財教育與工具導覽參考，不構成投資建議；傳承稅務內容請以個案及現行法令為準。</p>
+`;
+}
+
+function chatAppendMsg(role, text) {
+  const msgs = $("lcMsgs");
+  if (!msgs) return;
+  const isBot = role === "bot";
+  const row = document.createElement("div");
+  row.className = "lc-row " + (isBot ? "bot" : "me");
+  const label = document.createElement("div");
+  label.className = "lc-label";
+  label.textContent = isBot ? "小幫手" : "我";
+  const bubble = document.createElement("div");
+  bubble.className = "lc-bubble " + (isBot ? "bot" : "me");
+  bubble.innerHTML = escapeHtml(text).replace(/\n/g, "<br>");
+  row.appendChild(label);
+  row.appendChild(bubble);
+  msgs.appendChild(row);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+
+function chatShowTyping() {
+  const msgs = $("lcMsgs");
+  if (!msgs) return;
+  const row = document.createElement("div");
+  row.className = "lc-row bot";
+  row.id = "lcTyping";
+  row.innerHTML = '<div class="lc-label">小幫手</div><div class="lc-typing"><span></span><span></span><span></span></div>';
+  msgs.appendChild(row);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+
+function chatRemoveTyping() {
+  const t = $("lcTyping");
+  if (t) t.remove();
+}
+
+function chatSend(textArg) {
+  const input = $("lcInput");
+  const btn = $("lcSend");
+  const text = (textArg != null ? textArg : (input ? input.value : "")).trim();
+  if (!text) return;
+  if (input) input.value = "";
+  if (btn) btn.disabled = true;
+  chatAppendMsg("me", text);
+  chatShowTyping();
+  const delay = 600 + Math.floor(Math.random() * 500);
+  setTimeout(() => {
+    chatRemoveTyping();
+    chatAppendMsg("bot", licaiReply(text));
+    if (btn) btn.disabled = false;
+    if (input) input.focus();
+  }, delay);
+}
+
+function chatStartVoice() {
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  const btn = $("lcVoice");
+  if (!SR) {
+    chatAppendMsg("bot", "這個瀏覽器不支援語音輸入，請改用文字輸入 🌸（建議用 Safari 或 Chrome）");
+    return;
+  }
+  if (btn && btn.classList.contains("listening")) return;
+  const recog = new SR();
+  recog.lang = "zh-TW";
+  recog.interimResults = false;
+  recog.maxAlternatives = 1;
+  if (btn) btn.classList.add("listening");
+  recog.start();
+  recog.onresult = (e) => {
+    const text = e.results[0][0].transcript;
+    if (btn) btn.classList.remove("listening");
+    chatSend(text);
+  };
+  recog.onerror = () => { if (btn) btn.classList.remove("listening"); };
+  recog.onend = () => { if (btn) btn.classList.remove("listening"); };
+}
+
+function wireChat() {
+  const send = $("lcSend");
+  const input = $("lcInput");
+  const voice = $("lcVoice");
+  const reset = $("lcReset");
+  const suggest = $("lcSuggest");
+  if (send) send.addEventListener("click", () => chatSend());
+  if (input) input.addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); chatSend(); } });
+  if (voice) voice.addEventListener("click", chatStartVoice);
+  if (reset) reset.addEventListener("click", () => switchTab("chat"));
+  if (suggest) suggest.addEventListener("click", (e) => {
+    const chip = e.target.closest(".lc-chip");
+    if (chip) chatSend(chip.textContent);
+  });
+  if (input) setTimeout(() => input.focus(), 80);
 }
 
 init();
