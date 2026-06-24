@@ -1,5 +1,5 @@
 {
-  "closing_date": "2026-06-23",
+  "closing_date": "2026-06-24",
   "indices": [
     {
       "name": "S&P 500",
@@ -85,20 +85,20 @@
     {
       "name": "TAIEX 加權指數",
       "name_zh": null,
-      "close": 47100.6484375,
-      "daily_pct": -1.34,
+      "close": 46043.6,
+      "daily_pct": -2.24,
       "mtd_pct": 5.29,
       "ytd_pct": 62.62,
-      "closing_date": "2026-06-23"
+      "closing_date": "2026-06-24"
     },
     {
       "name": "OTC 櫃買加權",
       "name_zh": null,
-      "close": 440.81,
-      "daily_pct": -2.8,
+      "close": 442.09,
+      "daily_pct": 0.29,
       "mtd_pct": 0.77,
       "ytd_pct": 61.84,
-      "closing_date": "2026-06-23"
+      "closing_date": "2026-06-24"
     },
     {
       "name": "台指期(近月)",
@@ -195,10 +195,10 @@
     },
     {
       "name": "UK 10-Year",
-      "yield_pct": 4.9,
-      "daily_bps": 9.83,
-      "mtd_bps": 3.8,
-      "closing_date": "2026-06-19"
+      "yield_pct": null,
+      "daily_bps": null,
+      "mtd_bps": null,
+      "closing_date": null
     },
     {
       "name": "TW 10-Year",
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 101.41000366210938,
       "daily_pct": 0.39,
-      "mtd_pct": 2.6,
-      "ytd_pct": 3.26,
+      "mtd_pct": 2.59,
+      "ytd_pct": 3.24,
       "closing_date": "2026-06-23"
     },
     {
@@ -311,19 +311,19 @@
   "bond_etfs": [],
   "rate_outlook": {
     "us2y": 4.16,
-    "us10y": 4.49,
-    "yield_curve_10y2y": 0.33,
-    "yield_curve_10y2y_bps": 33,
+    "us10y": 4.45,
+    "yield_curve_10y2y": 0.29,
+    "yield_curve_10y2y_bps": 29,
     "curve_shape": "正斜率",
     "dxy": 101.41000366210938,
     "dxy_daily_pct": 0.39,
-    "closing_date": "2026-06-23"
+    "closing_date": "2026-06-18"
   },
   "fedwatch": [
     {
       "label": "Jun 2026",
       "fomc_date": "2026-06-18",
-      "implied_rate": 3.63,
+      "implied_rate": 3.62,
       "delta_rate": null,
       "p_hike": null,
       "p_cut": null,
@@ -333,10 +333,10 @@
       "label": "Jul 2026",
       "fomc_date": "2026-07-30",
       "implied_rate": 3.64,
-      "delta_rate": 0.01,
-      "delta_bps": 1.0,
-      "p_hike": 4.0,
-      "p_hold": 96.0,
+      "delta_rate": 0.02,
+      "delta_bps": 2.0,
+      "p_hike": 8.0,
+      "p_hold": 92.0,
       "p_cut": 0,
       "is_reference": false
     },
@@ -354,18 +354,18 @@
     {
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
-      "implied_rate": 3.86,
-      "delta_rate": 0.07,
-      "delta_bps": 7.0,
-      "p_hike": 28.0,
-      "p_hold": 72.0,
+      "implied_rate": 3.87,
+      "delta_rate": 0.08,
+      "delta_bps": 8.0,
+      "p_hike": 32.0,
+      "p_hold": 68.0,
       "p_cut": 0,
       "is_reference": false
     },
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 3.98,
+      "implied_rate": 3.99,
       "delta_rate": 0.12,
       "delta_bps": 12.0,
       "p_hike": 48.0,
@@ -374,5 +374,5 @@
       "is_reference": false
     }
   ],
-  "summary": "KOSPI -9.99%、PHLX Semiconductor -7.87% 走弱。"
+  "summary": "OTC 櫃買加權 +0.29% 領漲；KOSPI -9.99%、PHLX Semiconductor -7.87% 走弱。"
 }
