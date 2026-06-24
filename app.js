@@ -606,6 +606,7 @@ async function init() {
 
   wireNavToggle();
   wireHomeFab();
+  wireChatFab();
 
   SEARCH_INDEX = buildSearchIndex();
   wireSearch();
@@ -777,6 +778,33 @@ function wireHomeFab() {
   fab.addEventListener("click", () => {
     switchTab("market");
     window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
+
+// 理財聊聊：右下角浮動 logo，點了才把聊天掛進彈出視窗（只掛一次）
+function wireChatFab() {
+  const fab = document.getElementById("chat-fab");
+  const popup = document.getElementById("chat-popup");
+  const body = document.getElementById("chat-popup-body");
+  const closeBtn = document.getElementById("chat-popup-close");
+  if (!fab || !popup || !body) return;
+  let mounted = false;
+  const openChat = () => {
+    if (!mounted) { body.innerHTML = renderChatSheet(); wireChat(); mounted = true; }
+    popup.classList.add("open");
+    fab.setAttribute("aria-expanded", "true");
+    setTimeout(() => { const i = document.getElementById("lcInput"); if (i) i.focus(); }, 80);
+  };
+  const closeChat = () => {
+    popup.classList.remove("open");
+    fab.setAttribute("aria-expanded", "false");
+  };
+  fab.addEventListener("click", () => {
+    popup.classList.contains("open") ? closeChat() : openChat();
+  });
+  if (closeBtn) closeBtn.addEventListener("click", closeChat);
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && popup.classList.contains("open")) closeChat();
   });
 }
 

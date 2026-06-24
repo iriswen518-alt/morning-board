@@ -2328,6 +2328,72 @@ table.indices th.sortable-th {
   body.nav-open .home-fab { display: none; }
 }
 
+/* ===== 理財聊聊：右下角浮動 logo + 彈出視窗 ===== */
+.chat-fab {
+  position: fixed;
+  right: 20px;
+  bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+  z-index: 96;
+  width: 58px; height: 58px;
+  border: none; border-radius: 50%;
+  background: linear-gradient(135deg, #2aa6d6, var(--brand-deep));
+  color: #fff; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 8px 22px rgba(0, 154, 179, 0.40);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.chat-fab:hover { transform: translateY(-2px) scale(1.04); box-shadow: 0 12px 28px rgba(0, 154, 179, 0.46); }
+.chat-fab:active { transform: scale(0.96); }
+.chat-fab svg { width: 26px; height: 26px; }
+
+.chat-popup {
+  position: fixed;
+  right: 20px;
+  bottom: calc(88px + env(safe-area-inset-bottom, 0px));
+  z-index: 97;
+  width: 380px;
+  max-width: calc(100vw - 32px);
+  height: 560px;
+  max-height: calc(100dvh - 150px);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.22);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+}
+.chat-popup.open { display: flex; animation: chatPopIn .18s ease-out; }
+@keyframes chatPopIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+.chat-popup-bar {
+  flex: 0 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 11px 14px;
+  background: linear-gradient(135deg, #2aa6d6, var(--brand-deep));
+  color: #fff;
+}
+.chat-popup-title { font-weight: 700; font-size: 15px; letter-spacing: .5px; }
+.chat-popup-close {
+  background: rgba(255, 255, 255, .22); border: none; color: #fff;
+  width: 28px; height: 28px; border-radius: 50%; cursor: pointer;
+  font-size: 14px; line-height: 1; display: flex; align-items: center; justify-content: center;
+}
+.chat-popup-close:hover { background: rgba(255, 255, 255, .35); }
+.chat-popup-body { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; padding: 0 12px 10px; }
+.chat-popup-body .lc-chat-wrap { max-width: none; height: 100%; }
+
+@media (max-width: 768px) {
+  /* 抬高，避開底部導覽列 */
+  .chat-fab { bottom: calc(var(--tap) + 50px + env(safe-area-inset-bottom, 0px)); right: 16px; }
+  .chat-popup {
+    right: 12px; left: 12px; width: auto; max-width: none;
+    top: 70px; height: auto;
+    bottom: calc(var(--tap) + 118px + env(safe-area-inset-bottom, 0px));
+    max-height: none;
+  }
+  body.nav-open .chat-fab, body.nav-open .chat-popup { display: none; }
+}
+
 @media (max-width: 768px) {
   .nav-toggle {
     display: flex;

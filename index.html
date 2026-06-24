@@ -8,7 +8,7 @@
 <link rel="manifest" href="manifest.json">
 <link rel="icon" type="image/png" href="icon-192.png">
 <link rel="apple-touch-icon" href="icon-192.png">
-<link rel="stylesheet" href="style.css?v=20260624-2231topbar-right">
+<link rel="stylesheet" href="style.css?v=20260624-2240topbar-right">
 </head>
 <body>
 
@@ -89,13 +89,6 @@
     </svg>
     <span>資產配置</span>
   </button>
-  <button class="main-tab" data-tab="chat">
-    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="M4 5h16a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H9l-4 4v-4H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"/>
-      <path d="M8 9h8M8 12h5"/>
-    </svg>
-    <span>理財聊聊</span>
-  </button>
   <a class="main-tab" href="academy/" id="academy-link" style="text-decoration:none;">
     <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
       <path d="M4 6a2 2 0 0 1 2-2h11l3 3v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/>
@@ -122,6 +115,21 @@
   </svg>
   <span>首頁</span>
 </button>
+
+<!-- 理財聊聊：右下角浮動 logo，點了才開啟聊天 -->
+<button class="chat-fab" id="chat-fab" type="button" aria-label="理財聊聊" aria-expanded="false">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M4 5h16a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H9l-4 4v-4H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"/>
+    <path d="M8 9h8M8 12h5"/>
+  </svg>
+</button>
+<div class="chat-popup" id="chat-popup" role="dialog" aria-label="理財聊聊" aria-modal="false">
+  <div class="chat-popup-bar">
+    <span class="chat-popup-title">理財聊聊</span>
+    <button class="chat-popup-close" id="chat-popup-close" type="button" aria-label="關閉">✕</button>
+  </div>
+  <div class="chat-popup-body" id="chat-popup-body"></div>
+</div>
 
 <nav class="tabbar" id="tabbar" aria-label="主導覽">
   <button class="tabbar-item active" data-tab="market" type="button">
@@ -154,6 +162,6 @@
   資料僅供內部參考，不構成任何投資建議
 </footer>
 
-<script src="app.js?v=20260624-2231licai-pin"></script>
+<script src="app.js?v=20260624-2240licai-pin"></script>
 </body>
 </html>
