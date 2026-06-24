@@ -8362,7 +8362,11 @@ function licaiReply(text) {
 function renderChatSheet() {
   return `
 <style>
-  .lc-chat-wrap { max-width: 640px; margin: 0 auto; display: flex; flex-direction: column; background: transparent; }
+  #content[data-section="chat"] { height: calc(100dvh - var(--chat-top, 150px) - var(--chat-tabbar, 72px)); overflow: hidden; padding-bottom: 0; display: flex; flex-direction: column; }
+  #content[data-section="chat"] ~ .home-fab { display: none !important; }
+  .lc-chat-wrap { max-width: 640px; width: 100%; margin: 0 auto; height: 100%; display: flex; flex-direction: column; background: transparent; min-height: 0; }
+  .lc-chat-header { flex: 0 0 auto; }
+  .lc-suggest, .lc-input-row { flex: 0 0 auto; }
   .lc-chat-header { padding: 12px 4px 14px; background: transparent; color: var(--text); display: flex; align-items: center; gap: 10px; border-bottom: 1px solid var(--border); }
   .lc-chat-avatar { background: linear-gradient(135deg, #2aa6d6, var(--brand-deep)) !important; color: #fff; font-weight: 800; font-size: 22px; }
   .lc-chat-hname { color: var(--text) !important; }
@@ -8373,7 +8377,7 @@ function renderChatSheet() {
   .lc-chat-hname { font-weight: 700; font-size: 15px; }
   .lc-chat-hsub { font-size: 12px; opacity: .9; }
   .lc-chat-reset { background: rgba(255,255,255,.25); border: none; border-radius: 18px; padding: 6px 12px; color: #fff; font-size: 12px; cursor: pointer; white-space: nowrap; }
-  .lc-chat-msgs { flex: 1; overflow-y: auto; padding: 16px 2px; display: flex; flex-direction: column; gap: 12px; background: transparent; min-height: 320px; max-height: 56vh; }
+  .lc-chat-msgs { flex: 1 1 auto; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; padding: 16px 2px; display: flex; flex-direction: column; gap: 12px; background: transparent; }
   .lc-row { display: flex; flex-direction: column; }
   .lc-row.me { align-items: flex-end; }
   .lc-row.bot { align-items: flex-start; }
@@ -8396,7 +8400,7 @@ function renderChatSheet() {
   .lc-typing span { width: 7px; height: 7px; background: var(--brand-secondary); border-radius: 50%; animation: lcbounce 1.2s infinite; }
   .lc-typing span:nth-child(2){animation-delay:.2s} .lc-typing span:nth-child(3){animation-delay:.4s}
   @keyframes lcbounce { 0%,60%,100%{transform:translateY(0)} 30%{transform:translateY(-6px)} }
-  .lc-foot { max-width: 640px; margin: 10px auto 0; font-size: 11px; color: var(--text-mute); line-height: 1.6; text-align: center; }
+  .lc-foot { flex: 0 0 auto; margin: 6px 2px 0; font-size: 10px; color: var(--text-mute); line-height: 1.5; text-align: center; }
 </style>
 <div class="lc-chat-wrap">
   <div class="lc-chat-header">
@@ -8426,8 +8430,8 @@ function renderChatSheet() {
     <input class="lc-input" id="lcInput" type="text" placeholder="問我理財問題…" autocomplete="off">
     <button class="lc-send" id="lcSend" type="button">送出</button>
   </div>
+  <p class="lc-foot">本問答僅供理財教育與工具導覽參考，不構成投資建議；傳承稅務內容請以個案及現行法令為準。</p>
 </div>
-<p class="lc-foot">本問答僅供理財教育與工具導覽參考，不構成投資建議；傳承稅務內容請以個案及現行法令為準。</p>
 `;
 }
 
@@ -8506,7 +8510,23 @@ function chatStartVoice() {
   recog.onend = () => { if (btn) btn.classList.remove("listening"); };
 }
 
+function chatLayout() {
+  const c = $("content");
+  if (!c || c.dataset.section !== "chat") return;
+  const top = Math.max(0, Math.round(c.getBoundingClientRect().top));
+  const tb = document.getElementById("tabbar");
+  const tbh = (tb && getComputedStyle(tb).display !== "none") ? tb.offsetHeight : 0;
+  c.style.setProperty("--chat-top", top + "px");
+  c.style.setProperty("--chat-tabbar", (tbh + 10) + "px");
+}
+
 function wireChat() {
+  chatLayout();
+  if (!window._lcLayoutBound) {
+    window._lcLayoutBound = true;
+    window.addEventListener("resize", chatLayout);
+    window.addEventListener("orientationchange", () => setTimeout(chatLayout, 200));
+  }
   const send = $("lcSend");
   const input = $("lcInput");
   const voice = $("lcVoice");
