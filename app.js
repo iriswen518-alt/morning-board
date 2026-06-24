@@ -8396,7 +8396,7 @@ function renderChatSheet() {
 </style>
 <div class="lc-chat-wrap">
   <div class="lc-chat-header">
-    <div class="lc-chat-avatar">🌸</div>
+    <div class="lc-chat-avatar">💰</div>
     <div class="lc-chat-hinfo">
       <div class="lc-chat-hname">小幫手</div>
       <div class="lc-chat-hsub">理財觀念、App 用法、傳承稅務都可以問我</div>
