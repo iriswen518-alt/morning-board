@@ -7484,11 +7484,14 @@ function renderPopularFundCards() {
     const catChip = catLabel
       ? `<span class="chip chip-default" style="background:${catBg};color:var(--brand-deep);margin-left:6px;font-size:11px">${escapeHtml(catLabel)}</span>`
       : "";
+    const listedChip = f.panhsin_listed === true
+      ? `<span class="chip chip-default" style="background:#E5F5EC;color:#1a7a42;margin-left:6px;font-size:11px">板信上架</span>`
+      : `<span class="chip chip-default" style="background:#F5F0E5;color:#7a5a1a;margin-left:6px;font-size:11px">板信未上架</span>`;
     const cells = periods.map(p => {
       const v = f.perf_single?.[p.key];
       return `<td style="${tdBase};text-align:right" class="${cellClass(v)}">${perfLink(fmtR(v), f.perf_url || f.source_url)}</td>`;
     }).join("");
-    return `<tr><td style="${tdBase};white-space:nowrap">${nameHtml}${chip}${catChip}</td>${cells}</tr>`;
+    return `<tr><td style="${tdBase};white-space:nowrap">${nameHtml}${chip}${catChip}${listedChip}</td>${cells}</tr>`;
   }).join("");
 
   const asOf = funds.find(f => f.perf_date)?.perf_date || "";
