@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-24T18:29:35+08:00",
+  "generated_at": "2026-06-24T19:18:43+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -73,48 +73,6 @@
       "error": null
     },
     {
-      "symbol": "VZ",
-      "name_zh": "威訊",
-      "kind": "US",
-      "price": 46.73,
-      "change_pct": 3.02,
-      "mtd_pct": -2.26,
-      "ytd_pct": 14.73,
-      "market_date": "2026-06-23",
-      "per": 10.9229,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VZ.US",
-      "error": null
-    },
-    {
-      "symbol": "ARQQ",
-      "name_zh": "Arqit Quantum",
-      "kind": "US",
-      "price": 29.04,
-      "change_pct": 35.57,
-      "mtd_pct": 75.89,
-      "ytd_pct": 32.72,
-      "market_date": "2026-06-23",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ARQQ.US",
-      "error": null
-    },
-    {
-      "symbol": "TWLO",
-      "name_zh": "Twilio",
-      "kind": "US",
-      "price": 184.04,
-      "change_pct": 0.22,
-      "mtd_pct": -3.46,
-      "ytd_pct": 29.39,
-      "market_date": "2026-06-23",
-      "per": 274.4182,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TWLO.US",
-      "error": null
-    },
-    {
       "symbol": "DD",
       "name_zh": "DuPont de Nemours",
       "kind": "US",
@@ -126,6 +84,34 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DD.US",
+      "error": null
+    },
+    {
+      "symbol": "MAAS",
+      "name_zh": "Maase",
+      "kind": "US",
+      "price": 21.24,
+      "change_pct": 18.99,
+      "mtd_pct": 78.64,
+      "ytd_pct": 293.33,
+      "market_date": "2026-06-23",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MAAS.US",
+      "error": null
+    },
+    {
+      "symbol": "VZ",
+      "name_zh": "威訊",
+      "kind": "US",
+      "price": 46.73,
+      "change_pct": 3.02,
+      "mtd_pct": -2.26,
+      "ytd_pct": 14.73,
+      "market_date": "2026-06-23",
+      "per": 10.9229,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VZ.US",
       "error": null
     },
     {
@@ -143,31 +129,17 @@
       "error": null
     },
     {
-      "symbol": "SCO",
-      "name_zh": "ProShares UltraShort Bloomberg",
+      "symbol": "ARQQ",
+      "name_zh": "Arqit Quantum",
       "kind": "US",
-      "price": 33.15,
-      "change_pct": 1.31,
-      "mtd_pct": 20.59,
-      "ytd_pct": -57.74,
+      "price": 29.04,
+      "change_pct": 35.57,
+      "mtd_pct": 75.89,
+      "ytd_pct": 32.72,
       "market_date": "2026-06-23",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SCO.US",
-      "error": null
-    },
-    {
-      "symbol": "GRRR",
-      "name_zh": "Gorilla Technology",
-      "kind": "US",
-      "price": 17.1,
-      "change_pct": 3.51,
-      "mtd_pct": -16.5,
-      "ytd_pct": 56.59,
-      "market_date": "2026-06-23",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GRRR.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ARQQ.US",
       "error": null
     },
     {
@@ -182,6 +154,48 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BTQ.US",
+      "error": null
+    },
+    {
+      "symbol": "ABSI",
+      "name_zh": "Absci",
+      "kind": "US",
+      "price": 7.41,
+      "change_pct": -11.79,
+      "mtd_pct": 9.78,
+      "ytd_pct": 112.32,
+      "market_date": "2026-06-23",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ABSI.US",
+      "error": null
+    },
+    {
+      "symbol": "DKS",
+      "name_zh": "Dick's Sporting Goods",
+      "kind": "US",
+      "price": 236.75,
+      "change_pct": -0.76,
+      "mtd_pct": 4.03,
+      "ytd_pct": 19.59,
+      "market_date": "2026-06-23",
+      "per": 23.5971,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DKS.US",
+      "error": null
+    },
+    {
+      "symbol": "TTWO",
+      "name_zh": "Take-Two Interactive Software,",
+      "kind": "US",
+      "price": 242.64,
+      "change_pct": 1.28,
+      "mtd_pct": 8.24,
+      "ytd_pct": -5.23,
+      "market_date": "2026-06-23",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TTWO.US",
       "error": null
     },
     {
