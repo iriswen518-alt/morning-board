@@ -5598,8 +5598,10 @@ function renderPremarketBlock() {
     return { summary: [], detail: lines };
   })();
 
+  // 統一格式：盤前分析全部用 <ul><li> 點號呈現（與下方盤勢說明一致，不混段落／列點兩種格式）
   const renderLines = lines => {
-    const out = [];
+    const liStyle = `margin-bottom:6px;line-height:1.65;font-size:15px`;
+    const items = [];
     let i = 0;
     // Strip leading warning emoji and convert **bold** markdown to <strong>
     const cleanText = raw => {
@@ -5618,13 +5620,13 @@ function renderPremarketBlock() {
           bodyLines.push(lines[i].trim());
         }
         const body = bodyLines.filter(Boolean).join("　");
-        out.push(`<p style="margin:10px 0 2px;line-height:1.8"><strong style="color:var(--brand)">${tag}</strong></p>${body ? `<p style="margin:0 0 6px;line-height:1.8">${cleanText(body)}</p>` : ""}`);
+        items.push(`<li style="${liStyle}"><strong style="color:var(--brand)">${tag}</strong>${body ? `：${cleanText(body)}` : ""}</li>`);
       } else {
-        out.push(`<p style="margin:6px 0;line-height:1.8">${cleanText(l)}</p>`);
+        items.push(`<li style="${liStyle}">${cleanText(l)}</li>`);
       }
       i++;
     }
-    return out.join("");
+    return items.length ? `<ul style="margin:0;padding-left:18px">${items.join("")}</ul>` : "";
   };
 
   const summaryHtml = renderLines(analysisParts.summary);
