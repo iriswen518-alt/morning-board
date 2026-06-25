@@ -5662,7 +5662,8 @@ function renderPremarketBlock() {
   };
 
   const summaryHtml = renderLines(analysisParts.summary);
-  const detailHtml = analysisParts.detail.length ? renderLines(analysisParts.detail) : "";
+  // 不再顯示 美股摘要／台股展望／今日注意 等盤前敘述，只保留下方「重點股市及新聞列表」
+  const detailHtml = "";
 
   const commentaryBullets = renderMarketCommentaryBlock({ focus: "tw", bare: true });
   const commentaryAppend = commentaryBullets
