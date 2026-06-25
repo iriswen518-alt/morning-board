@@ -626,7 +626,10 @@ async function init() {
 
   // 進入畫面/從背景回到前景時自動檢查新版
   document.addEventListener("visibilitychange", () => {
-    if (document.visibilityState === "visible") checkForNewVersion();
+    if (document.visibilityState === "visible") {
+      checkForNewVersion();
+      if (CURRENT_TAB === "live") refreshLiveData();
+    }
   });
   window.addEventListener("pageshow", (e) => {
     if (e.persisted) checkForNewVersion();
@@ -700,6 +703,7 @@ function switchTab(name) {
   else if (name === "chat") body.innerHTML = renderChatSheet();
   else if (name === "calc") body.innerHTML = renderCalcSheet();
   else if (name === "twstock") body.innerHTML = renderTwStockSheet();
+  if (name === "live") { startLiveAutoRefresh(); refreshLiveData(); } else stopLiveAutoRefresh();
   if (name === "news") wireNewsTabs();
   if (name === "market") { wireMarketViewTabs(); wireMarketTabs(); wireTwStock(); wireNewsTabs(); }
   if (name === "funds") { wireFundsTabs(); wireFundCompare(); }
@@ -2898,6 +2902,32 @@ function rerenderLive() {
 function openLiveDetail(sym) { LIVE_DETAIL_SYM = sym; rerenderLive(); }
 function closeLiveDetail() { LIVE_DETAIL_SYM = null; rerenderLive(); }
 
+// 即時行情自動刷新：停在本分頁時每 60 秒重抓 live_indices.json，資料有變才重畫
+// （不重置捲動位置）。離開分頁就停止；回到前景也補抓一次。
+let LIVE_REFRESH_TIMER = null;
+async function refreshLiveData() {
+  if (CURRENT_TAB !== "live") { stopLiveAutoRefresh(); return; }
+  let fresh;
+  try { fresh = await load("live_indices"); } catch (_) { return; }
+  const changed = !DATA.live || fresh.built_at !== DATA.live.built_at;
+  DATA.live = fresh;
+  if (changed && CURRENT_TAB === "live") {
+    const body = $("content");
+    if (body) {
+      const sc = window.scrollY;
+      body.innerHTML = renderLiveSheet();
+      window.scrollTo({ top: sc });
+    }
+  }
+}
+function startLiveAutoRefresh() {
+  stopLiveAutoRefresh();
+  LIVE_REFRESH_TIMER = setInterval(refreshLiveData, 60000);
+}
+function stopLiveAutoRefresh() {
+  if (LIVE_REFRESH_TIMER) { clearInterval(LIVE_REFRESH_TIMER); LIVE_REFRESH_TIMER = null; }
+}
+
 function renderLiveSheet() {
   const live = DATA.live || {};
   const bySym = {};
@@ -2912,7 +2942,7 @@ function renderLiveSheet() {
   const updatedNote = builtAt ? `更新於 ${escapeHtml(builtAt)}` : "資料準備中";
   return `
     <section class="sheet live-sheet">
-      <p class="live-intro">全球主要指數盤中走勢（${updatedNote}）。點任一指數可看放大走勢；各市場依當地交易時段顯示，紅漲綠跌、虛線為昨收。</p>
+      <p class="live-intro">全球主要指數盤中走勢（${updatedNote}，本頁自動更新）。點任一指數可看放大走勢；各市場依當地交易時段顯示，紅漲綠跌、虛線為昨收。</p>
       <div class="live-grid">${cards}</div>
       <p class="live-credit">資料來源 Yahoo Finance、鉅亨網（台指期），盤中定時更新；數值僅供參考，非投資建議或要約。</p>
     </section>`;
