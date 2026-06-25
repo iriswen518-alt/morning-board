@@ -2888,7 +2888,7 @@ function renderLiveDetail(idx, rec) {
   const name = `<h2 class="live-detail-name">${escapeHtml(idx.zh)}</h2>`;
   if (!rec || !rec.ok || !rec.points || rec.points.length < 2) {
     return `
-      <section class="sheet live-detail">
+      <section class="live-detail">
         ${back}
         <div class="live-detail-head">${name}</div>
         <p class="live-detail-empty">此指數目前沒有盤中資料來源，暫時無法顯示走勢。</p>
@@ -2902,7 +2902,7 @@ function renderLiveDetail(idx, rec) {
   const dayHi = Math.max(...rec.points), dayLo = Math.min(...rec.points);
   const stat = (k, v) => `<div class="live-stat"><span class="live-stat-k">${k}</span><span class="live-stat-v">${v}</span></div>`;
   return `
-    <section class="sheet live-detail">
+    <section class="live-detail">
       ${back}
       <div class="live-detail-head">
         ${name}
@@ -3059,8 +3059,7 @@ function renderLiveSheet() {
   const builtAt = live.built_at ? live.built_at.replace("T", " ") : "";
   const updatedNote = builtAt ? `更新於 ${escapeHtml(builtAt)}` : "資料準備中";
   return `
-    <section class="sheet live-sheet">
-      <p class="live-intro">全球主要指數盤中走勢（${updatedNote}，本頁自動更新）。點任一指數可看放大走勢；各市場依當地交易時段顯示，紅漲綠跌、虛線為昨收。</p>
+    <section class="live-sheet">
       <div class="live-grid">${cards}</div>
       <p class="live-credit">資料來源 鉅亨網（cnyes）、Yahoo Finance，盤中定時更新；數值僅供參考，非投資建議或要約。</p>
     </section>`;
@@ -8832,6 +8831,26 @@ function licaiFindStock(t) {
   }
   return licaiFindScored(list, t);
 }
+// 個股文字簡評（純客觀描述數據，不做投資建議）
+function licaiStockComment(x) {
+  const bits = [];
+  const y = x.ytd_pct, c = x.change_pct, y1 = x.perf_1y;
+  if (y != null) {
+    if (y >= 20) bits.push(`今年來走勢強勢（${licaiFmtPct(y)}）`);
+    else if (y >= 5) bits.push(`今年來穩步上揚（${licaiFmtPct(y)}）`);
+    else if (y >= -5) bits.push(`今年來大致持平（${licaiFmtPct(y)}）`);
+    else bits.push(`今年來走勢偏弱（${licaiFmtPct(y)}）`);
+  }
+  if (c != null) {
+    if (c >= 2) bits.push("今日明顯上漲");
+    else if (c <= -2) bits.push("今日回檔較深");
+    else bits.push("今日變動不大");
+  }
+  if (y1 != null && y1 >= 50) bits.push(`近一年漲幅可觀（${licaiFmtPct(y1)}）`);
+  else if (y1 != null && y1 <= -20) bits.push(`近一年明顯下跌（${licaiFmtPct(y1)}）`);
+  if (!bits.length) return "";
+  return `📝 簡評：${bits.join("、")}。波動有風險，僅供參考、非投資建議。`;
+}
 function licaiStockDetail(x) {
   const isTW = /^\d/.test(x.symbol || "");
   const arrow = x.change_pct > 0 ? "📈" : (x.change_pct < 0 ? "📉" : "➡️");
@@ -8842,6 +8861,8 @@ function licaiStockDetail(x) {
   if (x.ytd_pct != null) s += `• 今年來：${licaiFmtPct(x.ytd_pct)}\n`;
   if (x.perf_1y != null) s += `• 近1年：${licaiFmtPct(x.perf_1y)}\n`;
   if (x.per != null) s += `• 本益比：${Number(x.per).toFixed(1)}\n`;
+  const cmt = licaiStockComment(x);
+  if (cmt) s += `\n${cmt}\n`;
   let refs = [isTW ? LICAI_REF.twstock : LICAI_REF.usstocks];
   if (x.source_url) refs.push(`[🔗 個股報價來源](${x.source_url})`);
   return licaiWithRefs(s + `\n數據為最近收盤，僅供參考、非投資建議 🌸`, refs);
@@ -8889,9 +8910,9 @@ function licaiMetric(e, t) {
   if (k === "stock" || k === "index") return { label: "今年來", val: it.ytd_pct, ...P };
   return { label: "—", val: null, unit: "" };
 }
-// 比較型問答：「A 和 B 哪個…高」
+// 比較型問答：「A 和 B（和 C…）哪個…高」，支援三檔以上
 function licaiCompareReply(t) {
-  const hasCmpWord = /哪個|哪一個|哪檔|哪支|哪邊|誰比較|誰較|比較|相比|對比|vs|還是/.test(t);
+  const hasCmpWord = /哪個|哪一個|哪檔|哪支|哪邊|誰比較|誰較|比較|相比|對比|vs|還是|誰高|誰低|排名/.test(t);
   const hasConj = /和|跟|與|、/.test(t);
   if (!hasCmpWord && !hasConj) return null;
   const parts = t.split(/和|跟|與|、|vs|對比|相比|比一比|比較|還是/).map(s => s.trim()).filter(Boolean);
@@ -8900,24 +8921,20 @@ function licaiCompareReply(t) {
   for (const p of parts) {
     const e = licaiUnifiedLookup(p, t);
     if (e && !found.find(x => x.name === e.name)) found.push(e);
-    if (found.length >= 2) break;
+    if (found.length >= 4) break;
   }
   if (found.length < 2) return null;
-  const a = found[0], b = found[1];
-  const ma = licaiMetric(a, t), mb = licaiMetric(b, t);
-  if (ma.val == null || mb.val == null) return null;
+  const rows = found.map(e => ({ e, m: licaiMetric(e, t) })).filter(r => r.m.val != null);
+  if (rows.length < 2) return null;
   const lower = /低|便宜|小|少/.test(t) && !/高|多|大/.test(t);
-  let verdict;
-  if (Number(ma.val) === Number(mb.val)) verdict = `兩者${ma.label}相同`;
-  else {
-    const aWin = lower ? Number(ma.val) < Number(mb.val) : Number(ma.val) > Number(mb.val);
-    const w = aWin ? a : b, mw = aWin ? ma : mb;
-    verdict = `→ ${w.name} 的 ${mw.label} 較${lower ? "低" : "高"}（${licaiFmtNum(mw.val)}${mw.unit}）`;
-  }
-  let s = `📊 比較：${a.name} vs ${b.name}\n\n`;
-  s += `• ${a.name}｜${ma.label} ${licaiFmtNum(ma.val)}${ma.unit}\n`;
-  s += `• ${b.name}｜${mb.label} ${licaiFmtNum(mb.val)}${mb.unit}\n\n`;
-  s += verdict + `\n\n數據為最近收盤/報價，僅供參考、非投資建議 🌸`;
+  rows.sort((x, y) => lower ? Number(x.m.val) - Number(y.m.val) : Number(y.m.val) - Number(x.m.val));
+  const sup = rows.length > 2 ? "最" : "較";
+  let s = `📊 比較（依${lower ? "低到高" : "高到低"}排序）\n\n`;
+  rows.forEach((r, i) => { s += `${i + 1}. ${r.e.name}｜${r.m.label} ${licaiFmtNum(r.m.val)}${r.m.unit}\n`; });
+  const w = rows[0];
+  const tie = Number(rows[0].m.val) === Number(rows[1].m.val);
+  s += `\n${tie ? `→ 前兩名 ${w.m.label} 相同` : `→ ${w.e.name} 的 ${w.m.label} ${sup}${lower ? "低" : "高"}（${licaiFmtNum(w.m.val)}${w.m.unit}）`}`;
+  s += `\n\n數據為最近收盤/報價，僅供參考、非投資建議 🌸`;
   return s;
 }
 // 今日數據回應：命中才回字串，否則回 null（讓後面的知識庫接手）
