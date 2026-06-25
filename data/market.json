@@ -76,11 +76,11 @@
     {
       "name": "Nikkei 225",
       "name_zh": null,
-      "close": 69174.96875,
-      "daily_pct": -0.88,
+      "close": 72366.34375,
+      "daily_pct": 4.61,
       "mtd_pct": 4.29,
       "ytd_pct": 37.42,
-      "closing_date": "2026-06-24"
+      "closing_date": "2026-06-25"
     },
     {
       "name": "TAIEX 加權指數",
@@ -112,38 +112,38 @@
     {
       "name": "KOSPI",
       "name_zh": null,
-      "close": 8471.01953125,
-      "daily_pct": 3.26,
+      "close": 8930.2998046875,
+      "daily_pct": 5.42,
       "mtd_pct": -0.06,
       "ytd_pct": 101.01,
-      "closing_date": "2026-06-24"
+      "closing_date": "2026-06-25"
     },
     {
       "name": "Hang Seng 恆生",
       "name_zh": null,
-      "close": 23412.1796875,
-      "daily_pct": 0.33,
+      "close": 23076.91015625,
+      "daily_pct": -1.43,
       "mtd_pct": -7.03,
       "ytd_pct": -8.66,
-      "closing_date": "2026-06-24"
+      "closing_date": "2026-06-25"
     },
     {
       "name": "Shanghai 上證",
       "name_zh": null,
-      "close": 4110.81298828125,
-      "daily_pct": 0.11,
+      "close": 4120.28076171875,
+      "daily_pct": 0.23,
       "mtd_pct": 1.04,
       "ytd_pct": 3.58,
-      "closing_date": "2026-06-24"
+      "closing_date": "2026-06-25"
     },
     {
       "name": "CSI 300 滬深300",
       "name_zh": null,
-      "close": 4722.41,
-      "daily_pct": -4.44,
+      "close": 5020.10400390625,
+      "daily_pct": null,
       "mtd_pct": 1.01,
       "ytd_pct": 6.73,
-      "closing_date": "2026-06-24"
+      "closing_date": "2026-06-25"
     },
     {
       "name": "Nifty 50",
@@ -157,11 +157,11 @@
     {
       "name": "S&P/ASX 200",
       "name_zh": null,
-      "close": 8808.400390625,
-      "daily_pct": 0.24,
+      "close": 8748.7001953125,
+      "daily_pct": -0.68,
       "mtd_pct": 0.88,
       "ytd_pct": 1.08,
-      "closing_date": "2026-06-24"
+      "closing_date": "2026-06-25"
     }
   ],
   "bonds": [
@@ -195,10 +195,10 @@
     },
     {
       "name": "UK 10-Year",
-      "yield_pct": 4.86,
-      "daily_bps": -3.64,
-      "mtd_bps": 0.16,
-      "closing_date": "2026-06-22"
+      "yield_pct": null,
+      "daily_bps": null,
+      "mtd_bps": null,
+      "closing_date": null
     },
     {
       "name": "TW 10-Year",
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 101.61000061035156,
       "daily_pct": 0.2,
-      "mtd_pct": 2.64,
-      "ytd_pct": 3.3,
+      "mtd_pct": 2.63,
+      "ytd_pct": 3.29,
       "closing_date": "2026-06-24"
     },
     {
@@ -301,11 +301,11 @@
     },
     {
       "name": "比特幣 (USD)",
-      "close": 62668.01953125,
-      "daily_pct": -2.01,
-      "mtd_pct": -14.83,
-      "ytd_pct": -28.39,
-      "closing_date": "2026-06-23"
+      "close": 60995.1328125,
+      "daily_pct": -2.67,
+      "mtd_pct": -17.1,
+      "ytd_pct": -30.3,
+      "closing_date": "2026-06-24"
     }
   ],
   "bond_etfs": [
@@ -405,7 +405,7 @@
     {
       "label": "Jul 2026",
       "fomc_date": "2026-07-30",
-      "implied_rate": 3.63,
+      "implied_rate": 3.64,
       "delta_rate": 0.01,
       "delta_bps": 1.0,
       "p_hike": 4.0,
@@ -416,7 +416,7 @@
     {
       "label": "Sep 2026",
       "fomc_date": "2026-09-17",
-      "implied_rate": 3.77,
+      "implied_rate": 3.78,
       "delta_rate": 0.14,
       "delta_bps": 14.0,
       "p_hike": 56.0,
@@ -427,18 +427,18 @@
     {
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
-      "implied_rate": 3.83,
-      "delta_rate": 0.06,
-      "delta_bps": 6.0,
-      "p_hike": 24.0,
-      "p_hold": 76.0,
+      "implied_rate": 3.85,
+      "delta_rate": 0.07,
+      "delta_bps": 7.0,
+      "p_hike": 28.0,
+      "p_hold": 72.0,
       "p_cut": 0,
       "is_reference": false
     },
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 3.96,
+      "implied_rate": 3.97,
       "delta_rate": 0.12,
       "delta_bps": 12.0,
       "p_hike": 48.0,
@@ -447,5 +447,5 @@
       "is_reference": false
     }
   ],
-  "summary": "6/24 KOSPI +3.26%、6/24 Nifty 50 +0.83%、6/24 CAC 40 +0.54% 領漲；6/24 CSI 300 滬深300 -4.44%、6/24 台指期(近月) -2.21% 走弱。"
+  "summary": "6/25 KOSPI +5.42%、6/25 Nikkei 225 +4.61%、6/24 Nifty 50 +0.83% 領漲；6/24 台指期(近月) -2.21%、6/25 Hang Seng 恆生 -1.43% 走弱。"
 }
