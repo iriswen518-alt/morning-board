@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-06-25T14:26",
+  "built_at": "2026-06-25T14:29",
   "indices": [
     {
       "ok": true,
@@ -752,10 +752,10 @@
     {
       "ok": true,
       "symbol": "^N225",
-      "last": 72517.07,
+      "last": 72554.51,
       "prev_close": 69174.97,
-      "change": 3342.1,
-      "change_pct": 4.83,
+      "change": 3379.54,
+      "change_pct": 4.89,
       "points": [
         70556.2,
         70725.88,
@@ -821,11 +821,11 @@
         72372.93,
         72393.09,
         72481.19,
-        72521.35,
-        72517.07
+        72555.91,
+        72554.51
       ],
       "market_state": "REGULAR",
-      "asof": "06/25 15:11",
+      "asof": "06/25 15:14",
       "tz": "Asia/Tokyo",
       "name_zh": "日經225"
     },
@@ -902,9 +902,9 @@
       "ok": true,
       "symbol": "^TWOII",
       "last": 439.84,
-      "prev_close": null,
-      "change": null,
-      "change_pct": null,
+      "prev_close": 442.09,
+      "change": -2.25,
+      "change_pct": -0.51,
       "points": [
         444.6,
         444.26,
@@ -1044,10 +1044,10 @@
     {
       "ok": true,
       "symbol": "^KS11",
-      "last": 8984.04,
+      "last": 9010.28,
       "prev_close": 8471.02,
-      "change": 513.02,
-      "change_pct": 6.06,
+      "change": 539.26,
+      "change_pct": 6.37,
       "points": [
         8968.53,
         8886.8,
@@ -1121,20 +1121,20 @@
         9019.51,
         8981.28,
         8973.58,
-        8984.04
+        9010.28
       ],
       "market_state": "CLOSED",
-      "asof": "06/25 15:06",
+      "asof": "06/25 15:09",
       "tz": "Asia/Seoul",
       "name_zh": "韓國綜合"
     },
     {
       "ok": true,
       "symbol": "^HSI",
-      "last": 23035.31,
+      "last": 23027.41,
       "prev_close": 23412.18,
-      "change": -376.87,
-      "change_pct": -1.61,
+      "change": -384.77,
+      "change_pct": -1.64,
       "points": [
         23227.64,
         23154.56,
@@ -1182,21 +1182,21 @@
         23012.68,
         23033.08,
         23038.29,
-        23036.26,
-        23035.31
+        23026.84,
+        23027.41
       ],
       "market_state": "REGULAR",
-      "asof": "06/25 14:11",
+      "asof": "06/25 14:14",
       "tz": "Asia/Hong_Kong",
       "name_zh": "恆生指數"
     },
     {
       "ok": true,
       "symbol": "000001.SS",
-      "last": 4115.47,
+      "last": 4114.15,
       "prev_close": 4106.25,
-      "change": 9.22,
-      "change_pct": 0.22,
+      "change": 7.9,
+      "change_pct": 0.19,
       "points": [
         4097.93,
         4099.43,
@@ -1237,21 +1237,21 @@
         4102.32,
         4106.33,
         4113.79,
-        4115.55,
-        4115.47
+        4115.13,
+        4114.15
       ],
       "market_state": "REGULAR",
-      "asof": "06/25 14:11",
+      "asof": "06/25 14:14",
       "tz": "Asia/Shanghai",
       "name_zh": "上證指數"
     },
     {
       "ok": true,
       "symbol": "000300.SS",
-      "last": 5011.16,
+      "last": 5009.39,
       "prev_close": 4943.02,
-      "change": 68.14,
-      "change_pct": 1.38,
+      "change": 66.37,
+      "change_pct": 1.34,
       "points": [
         4966.4,
         4967.63,
@@ -1292,21 +1292,21 @@
         4986.49,
         4994.91,
         5006.11,
-        5009.81,
-        5011.16
+        5011.04,
+        5009.39
       ],
       "market_state": "REGULAR",
-      "asof": "06/25 14:11",
+      "asof": "06/25 14:14",
       "tz": "Asia/Shanghai",
       "name_zh": "滬深300"
     },
     {
       "ok": true,
       "symbol": "^NSEI",
-      "last": 24211.8,
+      "last": 24236.6,
       "prev_close": 24021.65,
-      "change": 190.15,
-      "change_pct": 0.79,
+      "change": 214.95,
+      "change_pct": 0.89,
       "points": [
         24129.95,
         24156.35,
@@ -1340,11 +1340,11 @@
         24195.9,
         24204.4,
         24208.25,
-        24210.4,
-        24211.8
+        24235.35,
+        24236.6
       ],
       "market_state": "REGULAR",
-      "asof": "06/25 11:56",
+      "asof": "06/25 11:59",
       "tz": "Asia/Kolkata",
       "name_zh": "印度Nifty"
     },
@@ -1432,7 +1432,7 @@
         8749.6
       ],
       "market_state": "CLOSED",
-      "asof": "06/25 16:06",
+      "asof": "06/25 16:08",
       "tz": "Australia/Sydney",
       "name_zh": "澳洲200"
     }
