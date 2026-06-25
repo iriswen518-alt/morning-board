@@ -3,43 +3,58 @@
 日期：2026-06-25
 
 ## 目標
-在理財小幫手新增「即時行情」分頁，以迷你圖卡網格顯示全球主要指數的**即時**走勢圖。
+在理財小幫手新增「即時行情」分頁，以迷你圖卡網格顯示全球主要指數的盤中走勢圖。
 
 ## 背景與限制
-理財小幫手是 GitHub Pages 靜態網站，資料由排程 Python 腳本抓取後存成 JSON 提交。沒有即時後端。
-因此「即時」走勢圖採用 **TradingView 免費 widget（iframe）嵌入**，圖在使用者瀏覽器自行即時更新，無需後端或新排程。
+理財小幫手是 GitHub Pages 靜態網站，無即時後端。市場數值已由雲端 GitHub Actions
+（morning-board-quotes.yml）定時抓取後提交 JSON，前端讀同源 JSON 顯示。
+
+## 方案演進（重要）
+原構想為「嵌 TradingView 即時 widget」。**實測證實 TradingView 免費嵌入無法顯示主要
+指數圖表**（SPX、NI225、台股 2330 等皆回「此商品僅在 TradingView 上可用」，僅美股
+ETF 如 SPY 可用）。瀏覽器端直接抓 Yahoo 又被 CORS／429 擋。
+
+故改採**自繪準即時**：伺服器端（雲端 Actions）定時抓 Yahoo intraday → 提交
+`data/live_indices.json` → 前端自繪 SVG 走勢圖。顯示的是指數本人、跨時區皆正確、
+風格與全站一致。更新頻率為排程節奏（準即時，非秒級）。
 
 ## 範圍
 
 ### 1. 分頁
-- 新增 `data-tab="live"`，名稱「即時行情」。
-- 加入上方 `main-nav` 與底部 `tabbar` 的「更多」選單可達。
-- 圖示沿用線圖風格 SVG。
+- `data-tab="live"`，名稱「即時行情」，置於「全球市場」之後，並可由底部「更多」進入。
 
-### 2. 資料來源
-- 每個指數嵌入一個 TradingView mini-symbol-overview widget。
-- 真・即時：widget 在瀏覽器自更新，網站不抓資料、不需後端。
+### 2. 資料抓取 — `fetch_live_indices.py`
+- 來源：Yahoo Finance chart API（range=1d, interval=5m），與 fetch_market_data 同端點/UA。
+- 17 檔指數（順序對齊 market.json）。每檔輸出：中文名、最新值、昨收、漲跌、漲跌%、
+  盤中點位序列（≤80 點）、市場狀態（由 currentTradingPeriod 推算 盤中/盤前/收盤）、
+  當地資料時間。
+- 韌性：單檔失敗只標 ok=False（前端顯示後備連結）；全失敗（多為限流）不覆蓋舊檔、回非零碼。
+- 雲端版置於 `build/fetch_live_indices.py`（輸出寫 repo/data），與既有 build/ 慣例一致。
 
-### 3. 版面
-- 迷你圖卡網格：每張卡 = 指數名稱 + 即時現價 + 即時走勢線（widget 內含）。
-- 響應式：手機 1 欄、平板 2 欄、桌面 3 欄；沿用現有 1200px 內容寬與卡片樣式。
-- 指數順序對齊「全球市場」分頁的 `market.json` indices：
-  S&P 500、Nasdaq、Dow、PHLX 費半、Euro Stoxx 50、DAX、FTSE 100、CAC 40、
-  Nikkei 225、台股加權、櫃買、台指期、KOSPI、恆生、上證、滬深300、Nifty 50、ASX 200。
+### 3. 前端渲染
+- `renderLiveSheet` 讀 `DATA.live`，迷你圖卡網格（手機 1 欄、平板 2、桌面 3）。
+- 每卡：中文名 + 狀態標籤 + 最新值 + 漲跌%（紅漲綠跌）+ 自繪面積走勢圖（含昨收虛線）+ 資料時間。
+- 無資料/抓取失敗 → 後備「點此看即時行情」連結（Yahoo 個股頁）。
+- 整合進 init 與下拉刷新的 JSON 載入（safe load，壞一個不拖垮全頁）。
 
-### 4. TradingView 代碼對應（取捨）
-- TradingView 用自家 symbol（exchange:ticker），與現有 Yahoo 代碼不同，需建一份對應表。
-- 冷門指數（上證、滬深、台指期、KOSPI 等）代碼於實作時逐一在瀏覽器驗證。
-- 無法載入者：該卡降級為「點此看即時行情」外部連結（沿用既有 indexQuoteUrl / TradingView 頁）。
+### 4. 排程 — `.github/workflows/morning-board-live.yml`
+- 雲端 cron 平日每 20 分鐘跑 fetch_live_indices.py，提交 data/live_indices.json。
+- 電腦關機也會更新（符合上雲方向）。GitHub 排程 best-effort，高負載會延遲。
+- 頻率可調；待用戶確認後才推送啟用。
 
 ### 5. 合規
-- 沿用既有測試／免責語。
-- 圖卡區下方加一行「行情由 TradingView 提供，僅供參考」。
+- 沿用既有測試／免責語；圖卡區下加「資料來源 Yahoo Finance，盤中定時更新；僅供參考」。
 
 ## 不做（YAGNI）
 - 不加自選清單。
-- 不加新的 Python 抓取腳本。
 - 不改現有「全球市場」分頁。
+- 不做秒級即時（靜態站不可行）。
+
+## 已知限制
+- 尚未開盤市場（如歐洲/印度於台北早上）顯示「盤前」+ 前一段走勢，漲跌%為前一交易日；
+  狀態標籤與資料時間已揭露。
+- 櫃買加權（^TWOII）Yahoo 無 intraday → 顯示後備連結。
 
 ## 驗證
-- 本機開啟，逐一確認每個 widget 是否正確顯示指數與走勢；抓不到的確認降級連結生效。
+- 本機 http server + Playwright：17 卡渲染、無 console error、桌機/手機版面正常。
+- 真資料抽驗：美股收盤值與 market.json 一致；亞洲顯今日盤中；狀態標籤正確。

@@ -2722,25 +2722,69 @@ table.indices.stock-cols col.c-num { width: 11%; }
   padding: 12px 14px 10px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
+}
+.live-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .live-name {
   margin: 0;
   font-size: 16px;
   color: var(--brand-deep);
 }
+.live-state {
+  font-size: 11px;
+  padding: 1px 7px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+.live-state-open { background: #fde8e8; color: #d62828; }
+.live-state-closed { background: #eef1f4; color: #8a93a0; }
+.live-state-pre, .live-state-post { background: #fff3e0; color: #c77700; }
+.live-quote {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.live-last {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+.live-chg {
+  font-size: 14px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
 .live-chart {
-  height: 150px;
+  height: 92px;
   width: 100%;
   overflow: hidden;
-  border-radius: 10px;
 }
-.live-fallback {
-  height: 150px;
+.live-chart-svg { width: 100%; height: 100%; display: block; }
+.live-chart-msg {
+  height: 92px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--bg-soft, #f4f7f9);
+  color: var(--text-mute);
+}
+.live-asof {
+  font-size: 11px;
+  color: var(--text-mute);
+  text-align: right;
+  min-height: 14px;
+}
+.live-fallback {
+  height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f7f9;
   border-radius: 10px;
 }
 .live-fallback-link {

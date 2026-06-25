@@ -128,7 +128,8 @@ def fetch_one(symbol: str) -> dict:
 
 def main() -> int:
     here = os.path.dirname(os.path.abspath(__file__))
-    out_path = os.path.join(here, "data", "live_indices.json")
+    # 雲端 GitHub Actions：腳本在 work/，work/repo symlink 到 workspace；寫 repo/data。
+    out_path = os.path.join(here, "repo", "data", "live_indices.json")
     items = []
     for zh, sym in INDICES:
         rec = fetch_one(sym)

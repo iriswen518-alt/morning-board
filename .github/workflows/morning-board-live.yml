@@ -1,0 +1,36 @@
+name: Morning Board — live indices (即時行情)
+on:
+  schedule:
+    # 全球指數橫跨時區（亞洲早上、歐洲下午、美股深夜 Taipei time），故平日近全日每 20 分鐘刷新一次。
+    # GitHub 排程為 best-effort，高負載時會延遲或跳過；準即時、非秒級。
+    - cron: '*/20 * * * 1-5'
+  workflow_dispatch: {}
+permissions:
+  contents: write
+concurrency:
+  group: morning-board-live
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Prepare working layout
+        run: |
+          mkdir -p work
+          cp build/fetch_live_indices.py work/
+          ln -sfn "$GITHUB_WORKSPACE" work/repo
+      - name: Fetch live indices
+        run: cd work && python3 fetch_live_indices.py
+      - name: Commit & push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/live_indices.json
+          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
+          git commit -m "data(live): $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push
