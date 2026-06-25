@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-25T10:04:03+08:00",
+  "generated_at": "2026-06-25T12:01:36+08:00",
   "tw": {
     "as_of": "2026-06-25",
     "top_marketcap": [
@@ -680,7 +680,7 @@
         "price": 345.29,
         "daily_pct": -0.23,
         "market_cap": 4213426356224,
-        "pe": 26.37815,
+        "pe": 26.317837,
         "pe_kind": "trailing",
         "mtd_pct": -9.22,
         "ytd_pct": 10.32,
@@ -693,7 +693,7 @@
         "price": 365.46,
         "daily_pct": -2.27,
         "market_cap": 2714795769856,
-        "pe": 22.270567,
+        "pe": 21.792486,
         "pe_kind": "trailing",
         "mtd_pct": -18.83,
         "ytd_pct": -24.43,
@@ -786,7 +786,7 @@
         "price": 61.51,
         "daily_pct": 16.65,
         "market_cap": 3850525952,
-        "pe": 10.183775,
+        "pe": 11.874517,
         "pe_kind": "trailing",
         "mtd_pct": 25.89,
         "ytd_pct": 9.04,
@@ -864,7 +864,7 @@
         "price": 85.41,
         "daily_pct": 11.31,
         "market_cap": 9186689024,
-        "pe": 29.350515,
+        "pe": 32.59924,
         "pe_kind": "trailing",
         "mtd_pct": 12.0,
         "ytd_pct": -16.99,
@@ -877,7 +877,7 @@
         "price": 51.68,
         "daily_pct": 10.97,
         "market_cap": 4902736384,
-        "pe": 129.2,
+        "pe": 143.55556,
         "pe_kind": "trailing",
         "mtd_pct": 10.57,
         "ytd_pct": -37.07,
@@ -931,7 +931,7 @@
         "price": 182.26,
         "daily_pct": -19.61,
         "market_cap": 40616742912,
-        "pe": 423.86044,
+        "pe": 433.9524,
         "pe_kind": "trailing",
         "mtd_pct": -23.09,
         "ytd_pct": null,
@@ -1123,6 +1123,19 @@
         "source_url": "https://finance.yahoo.com/quote/XLV"
       },
       {
+        "symbol": "XLI",
+        "name": "State Street Industrial Select ",
+        "price": 180.21,
+        "daily_pct": 0.2,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": 4.09,
+        "ytd_pct": 16.17,
+        "yahoo": "XLI",
+        "source_url": "https://finance.yahoo.com/quote/XLI"
+      },
+      {
         "symbol": "HYG",
         "name": "iShares iBoxx $ High Yield Corp",
         "price": 79.85,
@@ -1160,19 +1173,6 @@
         "ytd_pct": -1.92,
         "yahoo": "XLF",
         "source_url": "https://finance.yahoo.com/quote/XLF"
-      },
-      {
-        "symbol": "XLRE",
-        "name": "State Street Real Estate Select",
-        "price": 44.51,
-        "daily_pct": -1.31,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": 1.18,
-        "ytd_pct": 10.31,
-        "yahoo": "XLRE",
-        "source_url": "https://finance.yahoo.com/quote/XLRE"
       }
     ],
     "sectors": [
@@ -1203,6 +1203,20 @@
         "yahoo": "XLV",
         "source_url": "https://finance.yahoo.com/quote/XLV",
         "name_zh": "醫療"
+      },
+      {
+        "symbol": "XLI",
+        "name": "State Street Industrial Select ",
+        "price": 180.21,
+        "daily_pct": 0.2,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": 4.09,
+        "ytd_pct": 16.17,
+        "yahoo": "XLI",
+        "source_url": "https://finance.yahoo.com/quote/XLI",
+        "name_zh": "工業"
       },
       {
         "symbol": "XLF",
@@ -1301,20 +1315,6 @@
         "yahoo": "XLE",
         "source_url": "https://finance.yahoo.com/quote/XLE",
         "name_zh": "能源"
-      },
-      {
-        "symbol": "XLC",
-        "name": "State Street Communication Serv",
-        "price": 106.54,
-        "daily_pct": -5.15,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": -7.91,
-        "ytd_pct": -9.5,
-        "yahoo": "XLC",
-        "source_url": "https://finance.yahoo.com/quote/XLC",
-        "name_zh": "通訊"
       }
     ]
   }

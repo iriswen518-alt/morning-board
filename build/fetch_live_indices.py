@@ -92,7 +92,7 @@ def fetch_one(symbol: str) -> dict:
                 if ts:
                     asof = dt.datetime.fromtimestamp(
                         ts + gmt, tz=dt.timezone.utc
-                    ).strftime("%H:%M")
+                    ).strftime("%m/%d %H:%M")
                 # 市場狀態：Yahoo chart meta 無 marketState，改由「抓取當下時間」
                 # 對照當日交易時段（currentTradingPeriod.regular）推算。
                 state = "CLOSED"
