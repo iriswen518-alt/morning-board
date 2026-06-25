@@ -3051,7 +3051,11 @@ function renderMarketCommentaryBlock(opts = {}) {
       const parts = [];
       if (gainers.length) parts.push(gainers.map(fmt).join("、") + " 領漲");
       if (losers.length) parts.push(losers.map(fmt).join("、") + " 走弱");
-      summary = parts.length ? parts.join("；") + "。" : "";
+      // 指數漲跌須標明收盤日期（取自指數列的收盤日，退而求其次用 market.closing_date）
+      const closeIso = usIndices.find(i => i.closing_date)?.closing_date || market.closing_date || "";
+      const closeLabel = shortDate(closeIso);
+      const datePrefix = closeLabel ? `${closeLabel} 美股收盤：` : "";
+      summary = parts.length ? datePrefix + parts.join("；") + "。" : "";
     }
   }
 
