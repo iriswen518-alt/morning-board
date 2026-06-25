@@ -8485,17 +8485,70 @@ function licaiBestKB(t) {
   return best;
 }
 
+// ── 參考連結（App 分頁用 tab: 開頭，外部用 https://）──
+const LICAI_REF = {
+  // App 內部分頁（點了會切過去）
+  market: "[➡️ 全球市場分頁](tab:market)",
+  funds: "[➡️ 精選基金分頁](tab:funds)",
+  obonds: "[➡️ 精選海外債分頁](tab:obonds)",
+  alloc: "[➡️ 資產配置分頁](tab:alloc)",
+  insurance: "[➡️ 精選保險分頁](tab:insurance)",
+  usstocks: "[➡️ 海外股票分頁](tab:usstocks)",
+  academy: "[📚 小學堂課程](academy/)",
+  // 外部權威網站
+  edu: "[🔗 投資人教育網（證基會）](https://www.sfi.org.tw)",
+  sitca: "[🔗 投信投顧公會](https://www.sitca.org.tw)",
+  twse: "[🔗 臺灣證券交易所](https://www.twse.com.tw)",
+  cbc: "[🔗 中央銀行](https://www.cbc.gov.tw)",
+  etax: "[🔗 財政部稅務入口網](https://www.etax.nat.gov.tw)",
+  trust: "[🔗 信託公會](https://www.trust.org.tw)",
+  lia: "[🔗 人壽保險公會](https://www.lia-roc.org.tw)",
+  nhi: "[🔗 衛生福利部](https://www.mohw.gov.tw)",
+  dgbas: "[🔗 主計總處](https://www.dgbas.gov.tw)",
+};
+// 知識庫每則的延伸連結（key＝該則 keys[0]）
+const LICAI_KB_REFS = {
+  "複利": [LICAI_REF.academy, LICAI_REF.edu],
+  "定期定額": [LICAI_REF.academy, LICAI_REF.edu],
+  "etf": [LICAI_REF.funds, LICAI_REF.edu],
+  "資產配置": [LICAI_REF.alloc, LICAI_REF.academy],
+  "風險分散": [LICAI_REF.academy, LICAI_REF.edu],
+  "停利": [LICAI_REF.academy, LICAI_REF.edu],
+  "緊急預備金": [LICAI_REF.academy],
+  "通膨怎麼辦": [LICAI_REF.academy, LICAI_REF.cbc],
+  "基金在哪": [LICAI_REF.funds, LICAI_REF.sitca],
+  "海外債": [LICAI_REF.obonds],
+  "投組": [LICAI_REF.alloc],
+  "保險在哪": [LICAI_REF.insurance, LICAI_REF.lia],
+  "小學堂": [LICAI_REF.academy],
+  "贈與稅": [LICAI_REF.etax],
+  "遺產稅": [LICAI_REF.etax],
+  "信託": [LICAI_REF.trust],
+  "保單規劃": [LICAI_REF.lia],
+  "二代健保": [LICAI_REF.nhi],
+  "殖利率": [LICAI_REF.twse, LICAI_REF.edu],
+  "本益比": [LICAI_REF.twse, LICAI_REF.edu],
+  "通膨": [LICAI_REF.cbc, LICAI_REF.dgbas],
+  "升息": [LICAI_REF.cbc],
+  "殖利率倒掛": [LICAI_REF.edu],
+  "gdp": [LICAI_REF.dgbas],
+};
+function licaiWithRefs(reply, refs) {
+  if (!refs || !refs.length) return reply;
+  return reply + "\n\n🔎 延伸參考：\n" + refs.join("\n");
+}
+
 function licaiReply(text) {
   const t = (text || "").toLowerCase().trim();
   if (!t) return "想問什麼都可以跟我說 🌸";
 
   // 1) 今日真實數據（讀 App 內的 market 資料；只在問行情時觸發）
   const live = licaiLiveReply(t);
-  if (live) return live;
+  if (live) return licaiWithRefs(live, [LICAI_REF.market, LICAI_REF.twse]);
 
   // 2) 知識庫：計分挑最精準的一則
   const hit = licaiBestKB(t);
-  if (hit) return hit.reply;
+  if (hit) return licaiWithRefs(hit.reply, LICAI_KB_REFS[hit.keys[0]]);
 
   // 3) 主題偵測 fallback（命中大方向、給明確去處）
   if (t.includes("基金")) return "想了解基金的話，可以去「精選基金」分頁看單筆、定期定額與績效比較。也可以問我「定期定額怎麼做」「ETF 是什麼」🌸";
@@ -8539,6 +8592,8 @@ function renderChatSheet() {
   .lc-bubble { max-width: 80%; padding: 11px 14px; border-radius: 16px; font-size: 14px; line-height: 1.7; word-break: break-word; white-space: normal; }
   .lc-bubble.me { background: var(--brand-primary); color: #fff; border-bottom-right-radius: 4px; }
   .lc-bubble.bot { background: var(--surface); color: var(--text); border: 1px solid var(--border); border-bottom-left-radius: 4px; }
+  .lc-bubble.bot .lc-link { display: inline-block; margin-top: 2px; color: var(--brand-deep); font-weight: 600; text-decoration: none; border-bottom: 1.5px solid var(--brand-primary); padding-bottom: 1px; }
+  .lc-bubble.bot .lc-link:active { opacity: .6; }
   .lc-suggest { display: flex; flex-wrap: wrap; gap: 8px; padding: 12px 2px; background: transparent; border-top: 1px solid var(--border); }
   .lc-chip { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 6px 12px; font-size: 12px; color: var(--brand-deep); cursor: pointer; }
   .lc-chip:active { background: var(--surface-hover); }
@@ -8581,6 +8636,20 @@ function renderChatSheet() {
 `;
 }
 
+// 把 [文字](網址) 轉成可點連結；tab:xxx＝切 App 分頁，其餘開新分頁
+function chatRenderRich(text) {
+  let h = escapeHtml(text);
+  h = h.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (m, label, url) => {
+    if (/^tab:/.test(url)) {
+      const tab = url.slice(4).replace(/[^a-z]/gi, "");
+      return `<a href="#" class="lc-link" data-tab="${tab}">${label}</a>`;
+    }
+    const safe = /^(https?:\/\/|academy\/|\.?\/)/.test(url) ? url : "#";
+    return `<a href="${safe}" class="lc-link" target="_blank" rel="noopener noreferrer">${label}</a>`;
+  });
+  return h.replace(/\n/g, "<br>");
+}
+
 function chatAppendMsg(role, text) {
   const msgs = $("lcMsgs");
   if (!msgs) return;
@@ -8592,7 +8661,7 @@ function chatAppendMsg(role, text) {
   label.textContent = isBot ? "小幫手" : "我";
   const bubble = document.createElement("div");
   bubble.className = "lc-bubble " + (isBot ? "bot" : "me");
-  bubble.innerHTML = escapeHtml(text).replace(/\n/g, "<br>");
+  bubble.innerHTML = isBot ? chatRenderRich(text) : escapeHtml(text).replace(/\n/g, "<br>");
   row.appendChild(label);
   row.appendChild(bubble);
   msgs.appendChild(row);
@@ -8686,6 +8755,23 @@ function wireChat() {
     const chip = e.target.closest(".lc-chip");
     if (chip) chatSend(chip.textContent);
   });
+  // 訊息裡的「App 分頁」連結：切到該分頁並關閉聊聊彈窗
+  const msgs = $("lcMsgs");
+  if (msgs && !msgs._lcLinkBound) {
+    msgs._lcLinkBound = true;
+    msgs.addEventListener("click", (e) => {
+      const a = e.target.closest("a.lc-link[data-tab]");
+      if (!a) return;
+      e.preventDefault();
+      const popup = document.getElementById("chat-popup");
+      if (popup && popup.classList.contains("open")) {
+        popup.classList.remove("open");
+        const fab = document.getElementById("chat-fab");
+        if (fab) fab.setAttribute("aria-expanded", "false");
+      }
+      switchTab(a.getAttribute("data-tab"));
+    });
+  }
   if (input) setTimeout(() => input.focus(), 80);
 }
 
