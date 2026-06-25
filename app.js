@@ -3170,20 +3170,37 @@ function renderLiveSheet() {
   }
   const cards = LIVE_INDICES.map((idx, i) => renderLiveCard(idx, bySym[idx.sym], i)).join("");
   const fxCards = LIVE_FX.map((f, i) => renderLiveCard(f, bySym[f.sym], 100 + i)).join("");
-  const fxBlock = fxCards
-    ? `<h3 class="live-section-title">匯率</h3><div class="live-grid">${fxCards}</div>`
-    : "";
   const exCards = LIVE_BINANCE.map((x, i) => renderLiveCard(x, bySym[x.sym], 200 + i)).join("");
-  const exBlock = exCards
-    ? `<h3 class="live-section-title">黃金・加密</h3><div class="live-grid">${exCards}</div>`
-    : "";
   return `
     <section class="live-sheet">
-      <div class="live-grid">${cards}</div>
-      ${fxBlock}
-      ${exBlock}
+      ${liveSection("idx", "全球指數", cards)}
+      ${fxCards ? liveSection("fx", "匯率", fxCards) : ""}
+      ${exCards ? liveSection("ex", "黃金・加密", exCards) : ""}
       <p class="live-credit">資料來源 鉅亨網（cnyes）、Yahoo Finance、Binance（黃金以 PAXG 為現貨參考），盤中定時更新；數值僅供參考，非投資建議或要約。</p>
     </section>`;
+}
+
+// 可折疊的行情區塊：標題列可點，折疊狀態存 LIVE_COLLAPSED（每 60 秒重畫不會被重置）
+const LIVE_COLLAPSED = {};
+function liveSection(key, title, gridHtml) {
+  const col = LIVE_COLLAPSED[key] ? " collapsed" : "";
+  return `
+    <div class="live-section${col}" data-sec="${escapeHtml(key)}">
+      <button type="button" class="live-section-head" onclick="toggleLiveSection('${escapeHtml(key)}')" aria-expanded="${LIVE_COLLAPSED[key] ? "false" : "true"}">
+        <span class="live-section-title">${escapeHtml(title)}</span>
+        <svg class="live-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="live-grid">${gridHtml}</div>
+    </div>`;
+}
+function toggleLiveSection(key) {
+  LIVE_COLLAPSED[key] = !LIVE_COLLAPSED[key];
+  const el = document.querySelector(`.live-section[data-sec="${key}"]`);
+  if (el) {
+    el.classList.toggle("collapsed", !!LIVE_COLLAPSED[key]);
+    const btn = el.querySelector(".live-section-head");
+    if (btn) btn.setAttribute("aria-expanded", LIVE_COLLAPSED[key] ? "false" : "true");
+  }
 }
 
 function renderMarketSheet() {

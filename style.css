@@ -2721,12 +2721,32 @@ table.indices.stock-cols col.c-num { width: 11%; }
 /* 覆蓋全域 .card 的 min-height:240px 與 .card h2:22px（否則卡片被撐高、名稱過大） */
 .live-grid .live-card { min-height: 0; padding: 6px 9px 5px; }
 .live-grid .live-name { font-size: 12px; }
+.live-section { margin-top: 4px; }
+.live-section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px 2px 8px;
+  text-align: left;
+}
 .live-section-title {
-  margin: 18px 0 8px;
+  margin: 0;
   font-size: 15px;
   color: var(--brand-deep);
   font-weight: 700;
 }
+.live-caret {
+  width: 18px; height: 18px;
+  color: var(--text-mute);
+  transition: transform .2s ease;
+  flex: 0 0 auto;
+}
+.live-section.collapsed .live-caret { transform: rotate(-90deg); }
+.live-section.collapsed .live-grid { display: none; }
 .live-card {
   padding: 7px 9px 5px;
   display: flex;
