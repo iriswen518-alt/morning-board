@@ -2723,6 +2723,7 @@ const LIVE_INDICES = [
   { zh: "日經225",    sym: "^N225" },
   { zh: "台股加權",   sym: "^TWII" },
   { zh: "櫃買指數",   sym: "^TWOII" },
+  { zh: "台指期近",   sym: "TWF:TXF" },
   { zh: "韓國綜合",   sym: "^KS11" },
   { zh: "恆生指數",   sym: "^HSI" },
   { zh: "上證指數",   sym: "000001.SS" },
@@ -2857,7 +2858,7 @@ function renderLiveDetail(idx, rec) {
         ${back}
         <div class="live-detail-head">${name}</div>
         <p class="live-detail-empty">此指數目前沒有盤中資料來源，暫時無法顯示走勢。</p>
-        <p class="live-credit">資料來源 Yahoo Finance；數值僅供參考，非投資建議或要約。</p>
+        <p class="live-credit">資料來源 Yahoo Finance、鉅亨網（台指期）；數值僅供參考，非投資建議或要約。</p>
       </section>`;
   }
   const up = (rec.change_pct ?? 0) >= 0;
@@ -2884,7 +2885,7 @@ function renderLiveDetail(idx, rec) {
         ${stat("昨收", rec.prev_close != null ? fmtInt(rec.prev_close) : "—")}
         ${stat("資料時間", rec.asof ? escapeHtml(rec.asof) : "—")}
       </div>
-      <p class="live-credit">資料來源 Yahoo Finance，盤中定時更新；虛線為昨收。數值僅供參考，非投資建議或要約。</p>
+      <p class="live-credit">資料來源 Yahoo Finance、鉅亨網（台指期），盤中定時更新；虛線為昨收。數值僅供參考，非投資建議或要約。</p>
     </section>`;
 }
 
@@ -2913,7 +2914,7 @@ function renderLiveSheet() {
     <section class="sheet live-sheet">
       <p class="live-intro">全球主要指數盤中走勢（${updatedNote}）。點任一指數可看放大走勢；各市場依當地交易時段顯示，紅漲綠跌、虛線為昨收。</p>
       <div class="live-grid">${cards}</div>
-      <p class="live-credit">資料來源 Yahoo Finance，盤中定時更新；數值僅供參考，非投資建議或要約。</p>
+      <p class="live-credit">資料來源 Yahoo Finance、鉅亨網（台指期），盤中定時更新；數值僅供參考，非投資建議或要約。</p>
     </section>`;
 }
 

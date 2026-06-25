@@ -34,6 +34,7 @@ INDICES = [
     ("日經225", "^N225"),
     ("台股加權", "^TWII"),
     ("櫃買指數", "^TWOII"),
+    ("台指期近", "TWF:TXF", "cnyes"),  # 台指期近月：Yahoo 無，走 cnyes
     ("韓國綜合", "^KS11"),
     ("恆生指數", "^HSI"),
     ("上證指數", "000001.SS"),
@@ -126,16 +127,77 @@ def fetch_one(symbol: str) -> dict:
     return {"ok": False, "symbol": symbol, "error": str(last_err)[:120]}
 
 
+def fetch_cnyes(key: str) -> dict:
+    """台指期等 Yahoo 無資料者改走 cnyes charting（5 分 K）。
+    key 為前端鍵（如 TWF:TXF），對應 cnyes symbol TWF:TXF:WEIGHTED。"""
+    cnyes_sym = f"{key}:WEIGHTED"
+    now = int(time.time())
+    url = (
+        "https://ws.api.cnyes.com/ws/api/v1/charting/history?"
+        f"symbol={urllib.parse.quote(cnyes_sym)}&resolution=5&from={now - 3 * 86400}&to={now}"
+    )
+    try:
+        d = json.loads(http_get(url))
+        data = d.get("data", d)
+        t = data.get("t") or []
+        c = data.get("c") or []
+        sessions = data.get("session") or []
+        # cnyes 的 t 未必全域排序，且日盤/夜盤時段會重疊；先配對、濾空、依時間排序。
+        pairs = sorted(
+            (int(ts), round(float(cl), 2)) for ts, cl in zip(t, c) if cl is not None
+        )
+        if not pairs:
+            raise ValueError("empty series")
+        # 選「包含當下」的交易時段；無則取最近已收盤的時段。
+        cur = next(((s, e) for s, e in sessions if s <= now <= e), None)
+        state = "REGULAR" if cur else "CLOSED"
+        if cur is None:
+            past = [se for se in sessions if se[1] <= now]
+            cur = max(past, key=lambda se: se[1]) if past else None
+        if cur is not None:
+            s0, e0 = cur
+            cur_pairs = [p for p in pairs if s0 <= p[0] <= e0]
+            before = [cl for ts, cl in pairs if ts < s0]  # 前一時段最後一筆＝昨收
+        else:
+            cur_pairs, before = pairs, []
+        if not cur_pairs:
+            cur_pairs = pairs
+        series = [cl for _, cl in cur_pairs]
+        prev = float(before[-1]) if before else None
+        last = series[-1]
+        change = (last - prev) if prev else None
+        change_pct = (change / prev * 100) if (prev and change is not None) else None
+        asof = dt.datetime.fromtimestamp(
+            cur_pairs[-1][0] + 8 * 3600, tz=dt.timezone.utc
+        ).strftime("%m/%d %H:%M")
+        return {
+            "ok": True,
+            "symbol": key,
+            "last": last,
+            "prev_close": round(prev, 2) if prev else None,
+            "change": round(change, 2) if change is not None else None,
+            "change_pct": round(change_pct, 2) if change_pct is not None else None,
+            "points": downsample(series, MAX_POINTS),
+            "market_state": state,
+            "asof": asof,
+            "tz": "Asia/Taipei",
+        }
+    except Exception as e:  # noqa: BLE001
+        return {"ok": False, "symbol": key, "error": f"cnyes: {str(e)[:110]}"}
+
+
 def main() -> int:
     here = os.path.dirname(os.path.abspath(__file__))
     # 雲端 GitHub Actions：腳本在 work/，work/repo symlink 到 workspace；寫 repo/data。
     out_path = os.path.join(here, "repo", "data", "live_indices.json")
     items = []
-    for zh, sym in INDICES:
-        rec = fetch_one(sym)
+    for entry in INDICES:
+        zh, sym = entry[0], entry[1]
+        src = entry[2] if len(entry) > 2 else "yahoo"
+        rec = fetch_cnyes(sym) if src == "cnyes" else fetch_one(sym)
         rec["name_zh"] = zh
         items.append(rec)
-        time.sleep(0.7)  # 降低 Yahoo 限流機率
+        time.sleep(0.7)  # 降低來源限流機率
     ok_n = sum(1 for r in items if r.get("ok"))
     # 全部失敗（多半是 Yahoo 限流）：不寫檔、保留舊資料，回非零碼
     if not ok_n:
