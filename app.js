@@ -655,7 +655,7 @@ function switchTab(name) {
   const body = $("content");
   body.dataset.section = name;
   if (name === "market") body.innerHTML = renderMarketSheet();
-  else if (name === "live") body.innerHTML = renderLiveSheet();
+  else if (name === "live") { LIVE_DETAIL_SYM = null; body.innerHTML = renderLiveSheet(); }
   else if (name === "news") body.innerHTML = renderNewsSheet();
   else if (name === "funds") body.innerHTML = renderFundsSheet();
   else if (name === "insurance") body.innerHTML = renderInsuranceSheet();
@@ -2709,6 +2709,8 @@ function renderIndexCards(cards) {
 // 全球主要指數盤中走勢：資料由 fetch_live_indices.py 抓 Yahoo intraday 存
 // data/live_indices.json（DATA.live），前端自繪走勢圖。順序對齊「全球市場」。
 // 靜態清單供排序與後備（無 live 資料時顯示連結）。
+// 點圖卡 → App 內頁開放大行情（非彈窗、非外部跳出）；LIVE_DETAIL_SYM 記目前內頁。
+let LIVE_DETAIL_SYM = null;
 const LIVE_INDICES = [
   { zh: "標普500",   sym: "^GSPC" },
   { zh: "那斯達克",   sym: "^IXIC" },
@@ -2773,14 +2775,13 @@ function renderLiveChart(points, prevClose, up, key) {
 
 function renderLiveCard(idx, rec, i) {
   const name = `<h2 class="live-name">${escapeHtml(idx.zh)}</h2>`;
-  // 無資料或抓取失敗 → 後備外部連結
+  const click = `onclick="openLiveDetail('${escapeHtml(idx.sym)}')"`;
+  // 無資料或抓取失敗 → 卡片仍可點，內頁顯示無資料說明
   if (!rec || !rec.ok || !rec.points || rec.points.length < 2) {
     return `
-      <div class="card live-card">
+      <div class="card live-card live-card-tap" role="button" tabindex="0" ${click}>
         <div class="live-head">${name}</div>
-        <div class="live-fallback">
-          <a href="${liveYahooUrl(idx.sym)}" target="_blank" rel="noopener" class="live-fallback-link">點此看即時行情</a>
-        </div>
+        <div class="live-fallback"><span class="live-fallback-link muted">暫無盤中資料</span></div>
       </div>`;
   }
   const up = (rec.change_pct ?? 0) >= 0;
@@ -2788,7 +2789,7 @@ function renderLiveCard(idx, rec, i) {
   const chgNum = rec.change != null ? `${up ? "+" : ""}${fmtInt(rec.change)}` : "";
   const chgPct = rec.change_pct != null ? `${up ? "+" : ""}${fmtNum(rec.change_pct, 2)}%` : "—";
   return `
-    <div class="card live-card">
+    <div class="card live-card live-card-tap" role="button" tabindex="0" ${click}>
       <div class="live-head">
         ${name}
         <span class="live-state ${st.cls}">${st.txt}</span>
@@ -2802,16 +2803,115 @@ function renderLiveCard(idx, rec, i) {
     </div>`;
 }
 
+// App 內頁：放大走勢圖（含昨收虛線＋最新值標記＋高低基準線）
+function renderLiveChartBig(points, prevClose, up) {
+  if (!points || points.length < 2) return `<div class="live-chart-msg">此指數暫無盤中資料</div>`;
+  const W = 720, H = 260, padL = 6, padR = 56, padT = 10, padB = 18;
+  const vals = points.slice();
+  let lo = Math.min(...vals), hi = Math.max(...vals);
+  if (prevClose != null) { lo = Math.min(lo, prevClose); hi = Math.max(hi, prevClose); }
+  const pv = (hi - lo) * 0.06 || (hi * 0.01) || 1;
+  lo -= pv; hi += pv;
+  const range = (hi - lo) || 1;
+  const n = vals.length;
+  const plotW = W - padL - padR, plotH = H - padT - padB;
+  const X = i => padL + (i / (n - 1)) * plotW;
+  const Y = v => padT + plotH * (1 - (v - lo) / range);
+  const line = vals.map((v, i) => `${X(i).toFixed(1)},${Y(v).toFixed(1)}`).join(" ");
+  const color = up ? "#d62828" : "#2a9d8f";
+  const area = `M${X(0).toFixed(1)},${Y(vals[0]).toFixed(1)} ` +
+    vals.map((v, i) => `L${X(i).toFixed(1)},${Y(v).toFixed(1)}`).join(" ") +
+    ` L${X(n - 1).toFixed(1)},${(padT + plotH).toFixed(1)} L${X(0).toFixed(1)},${(padT + plotH).toFixed(1)} Z`;
+  let grid = "";
+  for (let g = 0; g <= 3; g++) {
+    const v = lo + (range * g / 3);
+    const y = Y(v).toFixed(1);
+    grid += `<line x1="${padL}" y1="${y}" x2="${(padL + plotW).toFixed(1)}" y2="${y}" stroke="#eceff3" stroke-width="1"/>`;
+    grid += `<text x="${(W - padR + 5).toFixed(1)}" y="${(+y + 3.5).toFixed(1)}" font-size="11" fill="#9aa3af">${fmtInt(v)}</text>`;
+  }
+  const prevLine = prevClose != null
+    ? `<line x1="${padL}" y1="${Y(prevClose).toFixed(1)}" x2="${(padL + plotW).toFixed(1)}" y2="${Y(prevClose).toFixed(1)}" stroke="#b8c0cc" stroke-width="1" stroke-dasharray="4 3"/>`
+    : "";
+  const last = vals[n - 1], lastY = Y(last);
+  const marker = `<circle cx="${X(n - 1).toFixed(1)}" cy="${lastY.toFixed(1)}" r="3" fill="${color}"/>
+    <rect x="${(W - padR).toFixed(1)}" y="${(lastY - 8).toFixed(1)}" width="${padR}" height="16" rx="2" fill="${color}"/>
+    <text x="${(W - padR + padR / 2).toFixed(1)}" y="${(lastY + 3.5).toFixed(1)}" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">${fmtInt(last)}</text>`;
+  return `<svg class="live-detail-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="盤中走勢放大圖">
+    <defs><linearGradient id="lgbig" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="${color}" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="${color}" stop-opacity="0"/>
+    </linearGradient></defs>
+    ${grid}${prevLine}
+    <path d="${area}" fill="url(#lgbig)"/>
+    <polyline fill="none" stroke="${color}" stroke-width="1.8" points="${line}"/>
+    ${marker}
+  </svg>`;
+}
+
+function renderLiveDetail(idx, rec) {
+  const back = `<button type="button" class="live-back" onclick="closeLiveDetail()">‹ 返回即時行情</button>`;
+  const name = `<h2 class="live-detail-name">${escapeHtml(idx.zh)}</h2>`;
+  if (!rec || !rec.ok || !rec.points || rec.points.length < 2) {
+    return `
+      <section class="sheet live-detail">
+        ${back}
+        <div class="live-detail-head">${name}</div>
+        <p class="live-detail-empty">此指數目前沒有盤中資料來源，暫時無法顯示走勢。</p>
+        <p class="live-credit">資料來源 Yahoo Finance；數值僅供參考，非投資建議或要約。</p>
+      </section>`;
+  }
+  const up = (rec.change_pct ?? 0) >= 0;
+  const st = liveStateLabel(rec.market_state);
+  const chgNum = rec.change != null ? `${up ? "+" : ""}${fmtInt(rec.change)}` : "";
+  const chgPct = rec.change_pct != null ? `${up ? "+" : ""}${fmtNum(rec.change_pct, 2)}%` : "—";
+  const dayHi = Math.max(...rec.points), dayLo = Math.min(...rec.points);
+  const stat = (k, v) => `<div class="live-stat"><span class="live-stat-k">${k}</span><span class="live-stat-v">${v}</span></div>`;
+  return `
+    <section class="sheet live-detail">
+      ${back}
+      <div class="live-detail-head">
+        ${name}
+        <span class="live-state ${st.cls}">${st.txt}</span>
+      </div>
+      <div class="live-detail-quote">
+        <span class="live-detail-last">${fmtInt(rec.last)}</span>
+        <span class="live-detail-chg ${pctClass(rec.change_pct)}">${chgPct}${chgNum ? `（${chgNum}）` : ""}</span>
+      </div>
+      <div class="live-detail-chart">${renderLiveChartBig(rec.points, rec.prev_close, up)}</div>
+      <div class="live-stats">
+        ${stat("今日高", fmtInt(dayHi))}
+        ${stat("今日低", fmtInt(dayLo))}
+        ${stat("昨收", rec.prev_close != null ? fmtInt(rec.prev_close) : "—")}
+        ${stat("資料時間", rec.asof ? escapeHtml(rec.asof) : "—")}
+      </div>
+      <p class="live-credit">資料來源 Yahoo Finance，盤中定時更新；虛線為昨收。數值僅供參考，非投資建議或要約。</p>
+    </section>`;
+}
+
+function rerenderLive() {
+  const body = $("content");
+  if (!body || CURRENT_TAB !== "live") return;
+  body.innerHTML = renderLiveSheet();
+  window.scrollTo({ top: 0, behavior: "instant" in window ? "instant" : "auto" });
+}
+function openLiveDetail(sym) { LIVE_DETAIL_SYM = sym; rerenderLive(); }
+function closeLiveDetail() { LIVE_DETAIL_SYM = null; rerenderLive(); }
+
 function renderLiveSheet() {
   const live = DATA.live || {};
   const bySym = {};
   (live.indices || []).forEach(r => { if (r && r.symbol) bySym[r.symbol] = r; });
+  // 內頁模式：顯示單一指數放大行情
+  if (LIVE_DETAIL_SYM) {
+    const idx = LIVE_INDICES.find(x => x.sym === LIVE_DETAIL_SYM) || { zh: LIVE_DETAIL_SYM, sym: LIVE_DETAIL_SYM };
+    return renderLiveDetail(idx, bySym[LIVE_DETAIL_SYM]);
+  }
   const cards = LIVE_INDICES.map((idx, i) => renderLiveCard(idx, bySym[idx.sym], i)).join("");
   const builtAt = live.built_at ? live.built_at.replace("T", " ") : "";
   const updatedNote = builtAt ? `更新於 ${escapeHtml(builtAt)}` : "資料準備中";
   return `
     <section class="sheet live-sheet">
-      <p class="live-intro">全球主要指數盤中走勢（${updatedNote}）。各市場依當地交易時段顯示，紅漲綠跌、虛線為昨收。</p>
+      <p class="live-intro">全球主要指數盤中走勢（${updatedNote}）。點任一指數可看放大走勢；各市場依當地交易時段顯示，紅漲綠跌、虛線為昨收。</p>
       <div class="live-grid">${cards}</div>
       <p class="live-credit">資料來源 Yahoo Finance，盤中定時更新；數值僅供參考，非投資建議或要約。</p>
     </section>`;
