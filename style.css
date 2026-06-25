@@ -2715,14 +2715,14 @@ table.indices.stock-cols col.c-num { width: 11%; }
 }
 .live-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
 }
 .live-card {
-  padding: 12px 14px 10px;
+  padding: 7px 9px 5px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 3px;
 }
 .live-head {
   display: flex;
@@ -2731,12 +2731,12 @@ table.indices.stock-cols col.c-num { width: 11%; }
 }
 .live-name {
   margin: 0;
-  font-size: 16px;
+  font-size: 13px;
   color: var(--brand-deep);
 }
 .live-state {
-  font-size: 11px;
-  padding: 1px 7px;
+  font-size: 9px;
+  padding: 1px 5px;
   border-radius: 999px;
   font-weight: 600;
 }
@@ -2750,45 +2750,46 @@ table.indices.stock-cols col.c-num { width: 11%; }
   flex-wrap: wrap;
 }
 .live-last {
-  font-size: 22px;
+  font-size: 15px;
   font-weight: 700;
   color: var(--text);
   font-variant-numeric: tabular-nums;
 }
 .live-chg {
-  font-size: 14px;
+  font-size: 10px;
   font-weight: 600;
   font-variant-numeric: tabular-nums;
 }
 .live-chart {
-  height: 92px;
+  height: 48px;
   width: 100%;
   overflow: hidden;
 }
 .live-chart-svg { width: 100%; height: 100%; display: block; }
 .live-chart-msg {
-  height: 92px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--text-mute);
+  font-size: 11px;
 }
 .live-asof {
-  font-size: 11px;
+  font-size: 9px;
   color: var(--text-mute);
   text-align: right;
-  min-height: 14px;
+  min-height: 11px;
 }
 .live-fallback {
-  height: 92px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #f4f7f9;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 .live-fallback-link {
-  font-size: 14px;
+  font-size: 11px;
   color: var(--brand-deep);
   text-decoration: none;
   font-weight: 600;
@@ -2865,9 +2866,12 @@ table.indices.stock-cols col.c-num { width: 11%; }
 @media (max-width: 600px) {
   .live-stats { grid-template-columns: repeat(2, 1fr); }
 }
-@media (max-width: 980px) {
+@media (max-width: 1024px) {
+  .live-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 720px) {
   .live-grid { grid-template-columns: repeat(2, 1fr); }
 }
-@media (max-width: 600px) {
+@media (max-width: 440px) {
   .live-grid { grid-template-columns: 1fr; }
 }

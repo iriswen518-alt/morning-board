@@ -2974,17 +2974,26 @@ async function fetchCnyesLive(frontendSym) {
   }
   pairs.sort((a, b) => a[0] - b[0]);
   if (!pairs.length) throw new Error("empty");
-  let cur = sessions.find(([s, e]) => s <= now && now <= e) || null;
-  const state = cur ? "REGULAR" : "CLOSED";
-  if (!cur) {
-    const past = sessions.filter(se => se[1] <= now);
-    cur = past.length ? past.reduce((a, b) => (b[1] > a[1] ? b : a)) : null;
-  }
-  let curPairs, before;
-  if (cur) {
-    curPairs = pairs.filter(p => p[0] >= cur[0] && p[0] <= cur[1]);
-    before = pairs.filter(p => p[0] < cur[0]).map(p => p[1]);
-  } else { curPairs = pairs; before = []; }
+  const state = sessions.some(([s, e]) => s <= now && now <= e) ? "REGULAR" : "CLOSED";
+  // 把相鄰時段（間隔 < 4 小時）併成「同一交易日」區塊：港股午休分早/午盤、期貨日/夜盤都要合併，
+  // 否則剛開午盤時只剩一兩點、走勢圖會變平（恆生 bug）。
+  let blockStart, blockEnd;
+  if (sessions.length) {
+    const GAP = 4 * 3600;
+    const ss = sessions.slice().sort((a, b) => a[0] - b[0]);
+    const groups = [];
+    for (const [s, e] of ss) {
+      const g = groups[groups.length - 1];
+      if (g && s - g.end <= GAP) { g.end = Math.max(g.end, e); }
+      else groups.push({ start: s, end: e });
+    }
+    const blk = groups.find(g => g.start <= now && now <= g.end)
+      || groups.filter(g => g.end <= now).sort((a, b) => b.end - a.end)[0]
+      || groups[groups.length - 1];
+    blockStart = blk.start; blockEnd = blk.end;
+  } else { blockStart = pairs[0][0]; blockEnd = pairs[pairs.length - 1][0]; }
+  let curPairs = pairs.filter(p => p[0] >= blockStart && p[0] <= blockEnd);
+  const before = pairs.filter(p => p[0] < blockStart).map(p => p[1]);
   if (!curPairs.length) curPairs = pairs;
   const series = curPairs.map(p => p[1]);
   const prev = before.length ? before[before.length - 1] : null;
