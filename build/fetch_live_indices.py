@@ -133,29 +133,39 @@ def fetch_one(symbol: str) -> dict:
     return {"ok": False, "symbol": symbol, "error": str(last_err)[:120]}
 
 
-def mis_prev_close(ex_ch: str) -> float | None:
+def mis_prev_close(ex_ch: str, attempts: int = 4) -> float | None:
     """從 twse MIS 取昨收（y 欄）。供 cnyes 盤中圖無前一交易日序列者（如櫃買）補昨收，
-    才能算當日漲跌％。mis.twse.com.tw 在 GitHub Actions 雲端可達。"""
-    try:
-        url = (
-            "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?"
-            f"ex_ch={urllib.parse.quote(ex_ch)}&json=1&_={int(time.time() * 1000)}"
-        )
-        req = urllib.request.Request(
-            url,
-            headers={
-                "User-Agent": UA,
-                "Accept": "*/*",
-                "Referer": "https://mis.twse.com.tw/stock/index.jsp",
-            },
-        )
-        with urllib.request.urlopen(req, timeout=15) as resp:
-            d = json.loads(resp.read().decode("utf-8"))
-        m = (d.get("msgArray") or [{}])[0]
-        y = m.get("y")
-        return float(y) if y not in (None, "", "-") else None
-    except Exception:  # noqa: BLE001
-        return None
+    才能算當日漲跌％。沿用 refresh_taiex 已驗證可在 GitHub Actions 雲端跑通的請求方式：
+    查 tse_t00|otc_o00 合併頻道、Referer 用 mis.twse.com.tw 根網域、無 cache-buster、重試。
+    （單一頻道＋index.jsp Referer＋`_=` 時間戳在雲端 IP 會被擋、回空 msgArray。）
+    ex_ch 例 'otc_o00.tw'，取代碼 o00 比對 msgArray 的 c 欄。"""
+    code = ex_ch.split("_")[-1].split(".")[0]  # 'otc_o00.tw' -> 'o00'
+    url = (
+        "https://mis.twse.com.tw/stock/api/getStockInfo.jsp"
+        "?ex_ch=tse_t00.tw|otc_o00.tw&json=1"
+    )
+    for a in range(attempts):
+        try:
+            req = urllib.request.Request(
+                url,
+                headers={
+                    "User-Agent": UA,
+                    "Accept": "*/*",
+                    "Referer": "https://mis.twse.com.tw/",
+                },
+            )
+            with urllib.request.urlopen(req, timeout=8) as resp:
+                d = json.loads(resp.read().decode("utf-8"))
+            for m in d.get("msgArray") or []:
+                if m.get("c") == code:
+                    y = m.get("y")
+                    return float(y) if y not in (None, "", "-") else None
+            return None
+        except Exception:  # noqa: BLE001
+            if a == attempts - 1:
+                return None
+            time.sleep(2 * (a + 1))
+    return None
 
 
 def fetch_cnyes(key: str, cnyes_sym: str | None = None) -> dict:
