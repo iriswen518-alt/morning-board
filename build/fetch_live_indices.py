@@ -33,8 +33,14 @@ INDICES = [
     ("法國CAC", "^FCHI"),
     ("日經225", "^N225"),
     ("台股加權", "^TWII"),
-    ("櫃買指數", "^TWOII"),
-    ("台指期近", "TWF:TXF", "cnyes"),  # 台指期近月：Yahoo 無，走 cnyes
+    # 櫃買指數：Yahoo ^TWOII 長期落後／常整天空值，改走 cnyes（前端鍵仍用 ^TWOII）
+    ("櫃買指數", "^TWOII", "cnyes", "TWS:OTC01:INDEX", "otc_o00.tw"),
+    (
+        "台指期近",
+        "TWF:TXF",
+        "cnyes",
+        "TWF:TXF:WEIGHTED",
+    ),  # 台指期近月：Yahoo 無，走 cnyes
     ("韓國綜合", "^KS11"),
     ("恆生指數", "^HSI"),
     ("上證指數", "000001.SS"),
@@ -127,10 +133,37 @@ def fetch_one(symbol: str) -> dict:
     return {"ok": False, "symbol": symbol, "error": str(last_err)[:120]}
 
 
-def fetch_cnyes(key: str) -> dict:
-    """台指期等 Yahoo 無資料者改走 cnyes charting（5 分 K）。
-    key 為前端鍵（如 TWF:TXF），對應 cnyes symbol TWF:TXF:WEIGHTED。"""
-    cnyes_sym = f"{key}:WEIGHTED"
+def mis_prev_close(ex_ch: str) -> float | None:
+    """從 twse MIS 取昨收（y 欄）。供 cnyes 盤中圖無前一交易日序列者（如櫃買）補昨收，
+    才能算當日漲跌％。mis.twse.com.tw 在 GitHub Actions 雲端可達。"""
+    try:
+        url = (
+            "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?"
+            f"ex_ch={urllib.parse.quote(ex_ch)}&json=1&_={int(time.time() * 1000)}"
+        )
+        req = urllib.request.Request(
+            url,
+            headers={
+                "User-Agent": UA,
+                "Accept": "*/*",
+                "Referer": "https://mis.twse.com.tw/stock/index.jsp",
+            },
+        )
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            d = json.loads(resp.read().decode("utf-8"))
+        m = (d.get("msgArray") or [{}])[0]
+        y = m.get("y")
+        return float(y) if y not in (None, "", "-") else None
+    except Exception:  # noqa: BLE001
+        return None
+
+
+def fetch_cnyes(key: str, cnyes_sym: str | None = None) -> dict:
+    """Yahoo 無資料／不可靠者改走 cnyes charting（5 分 K）。
+    key 為前端鍵（如 TWF:TXF、^TWOII），輸出的 symbol 仍用此 key 以對應前端；
+    cnyes_sym 為實際向 cnyes 查詢的代碼（如 TWF:TXF:WEIGHTED、TWS:OTC01:INDEX），
+    未指定時沿用舊行為 f"{key}:WEIGHTED"。"""
+    cnyes_sym = cnyes_sym or f"{key}:WEIGHTED"
     now = int(time.time())
     url = (
         "https://ws.api.cnyes.com/ws/api/v1/charting/history?"
@@ -194,7 +227,22 @@ def main() -> int:
     for entry in INDICES:
         zh, sym = entry[0], entry[1]
         src = entry[2] if len(entry) > 2 else "yahoo"
-        rec = fetch_cnyes(sym) if src == "cnyes" else fetch_one(sym)
+        cnyes_sym = entry[3] if len(entry) > 3 else None
+        mis_ch = entry[4] if len(entry) > 4 else None
+        rec = fetch_cnyes(sym, cnyes_sym) if src == "cnyes" else fetch_one(sym)
+        # cnyes 盤中圖無前一交易日序列者（櫃買），昨收從 MIS 補，才能算當日漲跌％
+        if (
+            mis_ch
+            and rec.get("ok")
+            and rec.get("change_pct") is None
+            and rec.get("last") is not None
+        ):
+            prev = mis_prev_close(mis_ch)
+            if prev:
+                chg = rec["last"] - prev
+                rec["prev_close"] = round(prev, 2)
+                rec["change"] = round(chg, 2)
+                rec["change_pct"] = round(chg / prev * 100, 2)
         rec["name_zh"] = zh
         items.append(rec)
         time.sleep(0.7)  # 降低來源限流機率
