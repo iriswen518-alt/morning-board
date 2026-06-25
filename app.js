@@ -3056,8 +3056,6 @@ function renderLiveSheet() {
     return renderLiveDetail(idx, bySym[LIVE_DETAIL_SYM]);
   }
   const cards = LIVE_INDICES.map((idx, i) => renderLiveCard(idx, bySym[idx.sym], i)).join("");
-  const builtAt = live.built_at ? live.built_at.replace("T", " ") : "";
-  const updatedNote = builtAt ? `更新於 ${escapeHtml(builtAt)}` : "資料準備中";
   return `
     <section class="live-sheet">
       <div class="live-grid">${cards}</div>
