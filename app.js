@@ -733,7 +733,7 @@ function switchTab(name) {
   updateNavCurrent();
 
   // market 以外的 tab 顯示右下角「回首頁」FAB（僅手機；CSS media query 控管）
-  document.body.classList.toggle("show-home-fab", name !== "market");
+  document.body.classList.toggle("show-home-fab", name !== "live");
 
   // 背景重試 init 時失敗的資料；成功就重畫一次（避免 fallback 空狀態卡住）
   retryFailedForTab(name).then(updated => {
@@ -783,7 +783,7 @@ function wireHomeFab() {
   const fab = document.getElementById("home-fab");
   if (!fab) return;
   fab.addEventListener("click", () => {
-    switchTab("market");
+    switchTab("live");
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 }
