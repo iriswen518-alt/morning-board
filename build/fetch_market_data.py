@@ -105,6 +105,19 @@ COMMODITIES = [
     ("比特幣 (USD)", "BTC-USD", 0),
 ]
 
+# 債券市場 ETF:(顯示名稱, Yahoo代碼, 小數位)
+# 作為各類債券市場表現的代理指標（價格報酬）
+BOND_ETFS = [
+    ("LQD 投資等級債 ETF", "LQD", 2),
+    ("VCSH 短期投資等級 ETF", "VCSH", 2),
+    ("HYG 高收益債 ETF", "HYG", 2),
+    ("JNK 高收益債 ETF(備)", "JNK", 2),
+    ("EMB 新興市場債 ETF", "EMB", 2),
+    ("TLT 長天期公債 ETF", "TLT", 2),
+    ("IEF 中期公債 ETF", "IEF", 2),
+    ("AGG 綜合債市 ETF", "AGG", 2),
+]
+
 # 公債:(顯示名稱, 取得方式, 來源代碼)
 #   yahoo    → Yahoo chart API(殖利率指數)
 #   ecb      → ECB SDW CSV
@@ -798,6 +811,7 @@ def main() -> int:
     fx = build_price_rows(FX, run_date, fetch_warnings)
     commodities = build_price_rows(COMMODITIES, run_date, fetch_warnings)
     bonds = build_bond_rows(run_date, fetch_warnings)
+    bond_etfs = build_price_rows(BOND_ETFS, run_date, fetch_warnings)
 
     # 各表代表收盤日 = 該表最新的一個收盤日
     def table_close_date(rows, key="closing_date"):
@@ -812,6 +826,7 @@ def main() -> int:
         "fx": fx,
         "commodities": commodities,
         "bonds": bonds,
+        "bond_etfs": bond_etfs,
         "fed_funds_futures": build_fed_funds_futures(fetch_warnings),
         "_fetch_warnings": fetch_warnings,
     }

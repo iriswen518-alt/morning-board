@@ -1209,6 +1209,32 @@ function renderBondMarket() {
     資料來源：Yahoo Finance ETF 收盤價報酬率（每日 build 後更新）。非買賣建議。
   </p>`;
 
+  // 債市觀察重點：研究整理的「該看什麼、怎麼判讀」框架（用耐久的判讀準則，不寫會過期的當日數字）
+  function obsItem(title, body) {
+    return `<div style="padding:12px 14px;background:var(--bg,#fff);border:1px solid var(--border);border-radius:10px;margin-bottom:10px;">
+      <div style="font-weight:600;font-size:14px;margin-bottom:5px;">${title}</div>
+      <div style="font-size:12.5px;line-height:1.7;color:var(--text);">${body}</div>
+    </div>`;
+  }
+  const observeTab = `
+    <p style="font-size:11px;color:var(--text-mute);margin-bottom:12px;">
+      看債市不只看「漲跌」，更要看「利差」與「曲線」透露的風險訊號。以下是判讀框架與耐久的觀察準則（門檻為長期經驗區間，非即時值；當前數值請點各卡片的 FRED／FedWatch 連結）。
+    </p>
+    ${obsItem("① 信用利差（Credit Spread / OAS）", `公司債殖利率減同天期公債的「風險補償」，是債市最核心的溫度計。
+      <b>利差收窄</b>＝市場樂觀、風險偏好高，但下檔保護變薄；<b>利差走擴</b>＝避險升溫、信用壓力浮現。
+      參考區間：<b>投資等級 OAS</b> 約 80–120 bps（&lt;90 偏貴、&gt;150 轉保守）；<b>高收益 OAS</b> 約 300 bps 偏樂觀、&gt;500 警戒、&gt;800 衰退避險。
+      即時值見利差總覽分頁的 <a href="https://fred.stlouisfed.org/series/BAMLC0A0CM" target="_blank" rel="noopener" style="color:#3b82f6;">FRED 投資等級 OAS</a> / <a href="https://fred.stlouisfed.org/series/BAMLH0A0HYM2" target="_blank" rel="noopener" style="color:#3b82f6;">高收益 OAS</a>。`)}
+    ${obsItem("② 高收益 − 投資等級 利差差距", `兩者利差的「差距」是<b>信用風險胃納</b>最直接的指標。差距擴大＝市場開始挑剔信用品質、資金往高評級靠（risk-off）；差距壓縮＝追逐收益（risk-on）。可與下方 HYG vs LQD 報酬背離一起交叉看。`)}
+    ${obsItem("③ 殖利率曲線（10Y − 2Y）", `<b>倒掛</b>（負值）歷史上常領先衰退 12–18 個月；轉正要分辨是<b>牛陡</b>（短率跌、降息預期，偏利多）還是<b>熊陡</b>（長率漲、通膨／發債供給憂慮，偏利空）。詳見公債分頁的曲線卡。`)}
+    ${obsItem("④ 實質殖利率（Real Yield）", `名目殖利率減通膨預期（10Y 名目 − 10Y breakeven）。實質殖利率高＝持債真實報酬佳，但同時壓抑股票等風險資產評價；實質殖利率快速走高常是市場修正的觸發點。`)}
+    ${obsItem("⑤ 違約率（Default Rate）", `高收益債違約率攀升會侵蝕利差的保護墊——<b>利差要搭配違約率一起看</b>才完整。違約率走升、但利差仍很窄，代表市場低估風險（最危險的組合）。2025 全年高收益違約率約 3% 上下，須留意其趨勢方向。`)}
+    ${obsItem("⑥ Fed 政策與利率預期", `降息／升息預期牽動短端與整條曲線。看 FedWatch 隱含利率（本 App 公債分頁含 FedWatch）。<b>「降息但經濟仍穩」</b>對信用債最有利；<b>「被迫降息（救衰退）」</b>則利差會先擴後收。`)}
+    ${obsItem("⑦ 供給面：發債潮", `2026 主軸是 AI／資料中心相關的投資級發債是否放量。供給大增（賣壓）會推升利差與長端殖利率；反之供不應求則壓低利差。`)}
+    ${obsItem("⑧ 資金流向", `投資級債持續淨流入、風險債（高收益／新興）遭贖回，是風險偏好轉保守的佐證；反向則代表追逐收益。可對照本頁各類 ETF 的本月／今年報酬。`)}
+    <p style="font-size:11px;color:var(--text-mute);margin-top:6px;">
+      整理自 ICE BofA OAS 指數、Moody's 違約率展望與市場研究，供判讀參考，非投資建議。
+    </p>`;
+
   return `
     <div class="tabs tabs-wrap">
       <button class="tab active" data-bmtab="govbond">公債</button>
@@ -1216,6 +1242,7 @@ function renderBondMarket() {
       <button class="tab" data-bmtab="hy">非投資等級債</button>
       <button class="tab" data-bmtab="em">新興市場債</button>
       <button class="tab" data-bmtab="spread">利差總覽</button>
+      <button class="tab" data-bmtab="observe">觀察重點</button>
     </div>
     <div id="bmtab-govbond">
       <p style="font-size:11px;color:var(--text-mute);margin-bottom:10px;">
@@ -1247,12 +1274,15 @@ function renderBondMarket() {
     </div>
     <div id="bmtab-spread" hidden>
       ${spreadTab}
+    </div>
+    <div id="bmtab-observe" hidden>
+      ${observeTab}
     </div>`;
 }
 
 function wireBondMarketTabs() {
   wireTabs("[data-bmtab]", id => {
-    ["govbond","ig","hy","em","spread"].forEach(k => {
+    ["govbond","ig","hy","em","spread","observe"].forEach(k => {
       const el = document.getElementById("bmtab-" + k);
       if (el) el.hidden = (k !== id);
     });
