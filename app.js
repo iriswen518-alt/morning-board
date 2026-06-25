@@ -2945,6 +2945,13 @@ const LIVE_CNYES = {
   "TWF:TXF": "TWF:TXF:WEIGHTED", "^KS11": "GI:KOSPI", "^HSI": "GI:HSI",
   "000001.SS": "GI:SSEC", "000300.SS": "GI:CSI300",
 };
+// 黃金・加密（接在匯率下方）：走 Binance 公開 API（瀏覽器可直連、24 小時）。
+// 黃金用 PAXG（Pax Gold 代幣，1:1 對應一盎司實體黃金，作現貨參考）。
+const LIVE_BINANCE = [
+  { zh: "黃金", sym: "PAXGUSDT", dp: 1 },
+  { zh: "比特幣", sym: "BTCUSDT", dp: 0 },
+  { zh: "以太幣", sym: "ETHUSDT", dp: 1 },
+];
 // 匯率（接在指數下方）：cnyes symbol + 顯示小數位
 const LIVE_FX = [
   { zh: "美元指數", sym: "GI:DXY", dp: 2 },
@@ -3032,6 +3039,34 @@ async function fetchCnyesLive(frontendSym) {
   rec.symbol = frontendSym;
   return rec;
 }
+// Binance 公開 API 抓黃金/加密盤中（24 小時；klines 走勢 + 24hr 報價取漲跌與參考價）
+async function fetchBinanceLive(sym, dp) {
+  const R = Math.pow(10, dp == null ? 2 : dp);
+  const rnd = v => Math.round(v * R) / R;
+  const [kr, tr] = await Promise.all([
+    fetch(`https://api.binance.com/api/v3/klines?symbol=${sym}&interval=5m&limit=80`, { cache: "no-store" }),
+    fetch(`https://api.binance.com/api/v3/ticker/24hr?symbol=${sym}`, { cache: "no-store" }),
+  ]);
+  if (!kr.ok || !tr.ok) throw new Error("binance " + kr.status + "/" + tr.status);
+  const klines = await kr.json();
+  const t = await tr.json();
+  const series = klines.map(k => rnd(parseFloat(k[4]))).filter(v => v != null && !isNaN(v));
+  if (series.length < 2) throw new Error("empty");
+  const last = rnd(parseFloat(t.lastPrice));
+  const prev = rnd(parseFloat(t.openPrice));        // 24 小時前作參考（昨收虛線）
+  const pct = parseFloat(t.priceChangePercent);
+  const lastClose = klines[klines.length - 1][6];   // closeTime(ms)
+  return {
+    ok: true, symbol: sym, last,
+    prev_close: prev,
+    change: rnd(last - prev),
+    change_pct: Math.round(pct * 100) / 100,
+    points: liveDownsample(series, 80),
+    market_state: "REGULAR",
+    asof: liveFmtTpe(Math.floor(lastClose / 1000)),
+    dp: dp == null ? 2 : dp,
+  };
+}
 // cnyes 批次報價（一次多檔）：回 { ticker: {last, prev} }。供匯率取昨收（charting 只回今日、無昨收）。
 async function fetchCnyesQuotes(cnyesSyms) {
   const url = `https://ws.api.cnyes.com/ws/api/v1/quote/quotes/${encodeURIComponent(cnyesSyms.join(","))}`;
@@ -3087,12 +3122,21 @@ async function refreshLiveData() {
       anyOk = true;
     }
   });
-  if (!anyOk && DATA.live) return; // cnyes 全失敗：維持現狀，不動畫面
+  // 黃金・加密：Binance（24 小時、瀏覽器可直連）
+  const bnResults = await Promise.allSettled(LIVE_BINANCE.map(x => fetchBinanceLive(x.sym, x.dp)));
+  const extra = [];
+  bnResults.forEach((res, i) => {
+    if (res.status === "fulfilled" && res.value) {
+      extra.push(Object.assign(res.value, { name_zh: LIVE_BINANCE[i].zh }));
+      anyOk = true;
+    }
+  });
+  if (!anyOk && DATA.live) return; // 全失敗：維持現狀，不動畫面
   const indices = LIVE_INDICES.map(idx => bySym[idx.sym]).filter(Boolean);
   const now = new Date(Date.now() + 8 * 3600 * 1000);
   const p = n => String(n).padStart(2, "0");
   const builtAt = `${now.getUTCFullYear()}-${p(now.getUTCMonth() + 1)}-${p(now.getUTCDate())}T${p(now.getUTCHours())}:${p(now.getUTCMinutes())}`;
-  DATA.live = { built_at: builtAt, indices, fx };
+  DATA.live = { built_at: builtAt, indices, fx, extra };
   if (CURRENT_TAB === "live") {
     const body = $("content");
     if (body) {
@@ -3115,10 +3159,12 @@ function renderLiveSheet() {
   const bySym = {};
   (live.indices || []).forEach(r => { if (r && r.symbol) bySym[r.symbol] = r; });
   (live.fx || []).forEach(r => { if (r && r.symbol) bySym[r.symbol] = r; });
-  // 內頁模式：顯示單一商品放大行情（指數或匯率）
+  (live.extra || []).forEach(r => { if (r && r.symbol) bySym[r.symbol] = r; });
+  // 內頁模式：顯示單一商品放大行情（指數／匯率／黃金加密）
   if (LIVE_DETAIL_SYM) {
     const idx = LIVE_INDICES.find(x => x.sym === LIVE_DETAIL_SYM)
       || LIVE_FX.find(x => x.sym === LIVE_DETAIL_SYM)
+      || LIVE_BINANCE.find(x => x.sym === LIVE_DETAIL_SYM)
       || { zh: LIVE_DETAIL_SYM, sym: LIVE_DETAIL_SYM };
     return renderLiveDetail(idx, bySym[LIVE_DETAIL_SYM]);
   }
@@ -3127,11 +3173,16 @@ function renderLiveSheet() {
   const fxBlock = fxCards
     ? `<h3 class="live-section-title">匯率</h3><div class="live-grid">${fxCards}</div>`
     : "";
+  const exCards = LIVE_BINANCE.map((x, i) => renderLiveCard(x, bySym[x.sym], 200 + i)).join("");
+  const exBlock = exCards
+    ? `<h3 class="live-section-title">黃金・加密</h3><div class="live-grid">${exCards}</div>`
+    : "";
   return `
     <section class="live-sheet">
       <div class="live-grid">${cards}</div>
       ${fxBlock}
-      <p class="live-credit">資料來源 鉅亨網（cnyes）、Yahoo Finance，盤中定時更新；數值僅供參考，非投資建議或要約。</p>
+      ${exBlock}
+      <p class="live-credit">資料來源 鉅亨網（cnyes）、Yahoo Finance、Binance（黃金以 PAXG 為現貨參考），盤中定時更新；數值僅供參考，非投資建議或要約。</p>
     </section>`;
 }
 
