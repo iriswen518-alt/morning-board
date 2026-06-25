@@ -26,7 +26,7 @@
 // v26（2026-06-08）：費城半導體名稱改掛 MoneyDJ 走勢圖（AI000140），不再退回 Yahoo。
 // v27（2026-06-10）：卡片盒清單檢視隱藏階層式編號（zk_id），符合卡片筆記精神；資料層 zk_id 保留供排序。
 // v28（2026-06-11）：上次更新時間改取 max(本機 meta.built_at, 雲端 quotes_built_at)，Mac 關著時雲端報價刷新也會推進「上次更新」，避免標籤看起來卡住。
-const CACHE = "morning-board-v37";
+const CACHE = "morning-board-v38";
 
 self.addEventListener("install", e => {
   self.skipWaiting();

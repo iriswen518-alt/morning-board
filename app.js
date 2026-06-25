@@ -2890,15 +2890,27 @@ function liveSessionDateLabel(asof) {
   const m = asof && asof.match(/(\d{2})\/(\d{2})/);
   return m ? `${m[1]}/${m[2]}` : "";
 }
-// 由場次日期往前推一個交易日（跳過週六日）作為「昨收」日期。
-// 註：不含國定假日表，遇連假可能差一天；無法判定時回空字串（不顯示相對詞）。
-function livePrevTradingDateLabel(asof) {
+// TWSE 官方 2026 休市日（不含週末；含補假與春節結算日），來源：
+// twse.com.tw/rwd/zh/holidaySchedule。**每年初需更新此清單**（外國指數不適用此表）。
+const TW_MARKET_CLOSED = new Set([
+  "2026-01-01", "2026-02-12", "2026-02-13", "2026-02-16", "2026-02-17",
+  "2026-02-18", "2026-02-19", "2026-02-20", "2026-02-27", "2026-04-03",
+  "2026-04-06", "2026-05-01", "2026-06-19", "2026-09-25", "2026-09-28",
+  "2026-10-09", "2026-10-26", "2026-12-25",
+]);
+const TW_LIVE_SYMS = new Set(["^TWII", "^TWOII", "TWF:TXF"]); // 台股加權/櫃買/台指期
+// 由場次日期往前推一個交易日作為「昨收」日期：一律跳過週六日；台股(isTW)另跳 TWSE 休市日。
+// 無法判定時回空字串（不顯示相對詞）。外國指數無假日表，遇當地假日可能差一天。
+function livePrevTradingDateLabel(asof, isTW) {
   const m = asof && asof.match(/(\d{2})\/(\d{2})/);
   if (!m) return "";
   const now = new Date(Date.now() + 8 * 3600 * 1000); // 台北時間，補當年年份
   const d = new Date(Date.UTC(now.getUTCFullYear(), +m[1] - 1, +m[2]));
   if (d.getTime() > now.getTime() + 86400000) d.setUTCFullYear(d.getUTCFullYear() - 1); // 跨年邊界
-  do { d.setUTCDate(d.getUTCDate() - 1); } while (d.getUTCDay() === 0 || d.getUTCDay() === 6);
+  const iso = () => `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, "0")}-${String(d.getUTCDate()).padStart(2, "0")}`;
+  do {
+    d.setUTCDate(d.getUTCDate() - 1);
+  } while (d.getUTCDay() === 0 || d.getUTCDay() === 6 || (isTW && TW_MARKET_CLOSED.has(iso())));
   const mm = String(d.getUTCMonth() + 1).padStart(2, "0");
   const dd = String(d.getUTCDate()).padStart(2, "0");
   return `${mm}/${dd}`;
@@ -2923,7 +2935,7 @@ function renderLiveDetail(idx, rec) {
   const chgPct = rec.change_pct != null ? `${up ? "+" : ""}${fmtNum(rec.change_pct, 2)}%` : "—";
   const dayHi = Math.max(...rec.points), dayLo = Math.min(...rec.points);
   const sessDate = liveSessionDateLabel(rec.asof);   // 高/低 所屬場次日（精確）
-  const prevDate = livePrevTradingDateLabel(rec.asof); // 昨收 所屬前一交易日（推算）
+  const prevDate = livePrevTradingDateLabel(rec.asof, TW_LIVE_SYMS.has(idx.sym)); // 昨收 所屬前一交易日
   const stat = (k, v) => `<div class="live-stat"><span class="live-stat-k">${k}</span><span class="live-stat-v">${v}</span></div>`;
   return `
     <section class="live-detail">
@@ -6302,6 +6314,29 @@ function newsBodyHtml(it) {
   return `<div class="summary">${escapeHtml(it.summary_zh || "")}</div>`;
 }
 
+// 新聞區塊折疊：原生 details，標題列可點；狀態存 localStorage（下次打開仍記得）
+const NEWS_COLLAPSED = (() => {
+  try { return JSON.parse(localStorage.getItem("newsCollapsed") || "{}") || {}; }
+  catch (_) { return {}; }
+})();
+function saveNewsSec(d) {
+  try {
+    NEWS_COLLAPSED[d.dataset.key] = !d.open;
+    localStorage.setItem("newsCollapsed", JSON.stringify(NEWS_COLLAPSED));
+  } catch (_) { /* 略 */ }
+}
+function newsSection(title, innerHtml) {
+  const open = NEWS_COLLAPSED[title] ? "" : " open";
+  return `
+    <details class="news-sec" data-key="${escapeHtml(title)}"${open} ontoggle="saveNewsSec(this)">
+      <summary class="news-sec-head">
+        <span class="news-sec-title">${escapeHtml(title)}</span>
+        <svg class="news-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </summary>
+      <div class="news-sec-body">${innerHtml}</div>
+    </details>`;
+}
+
 function renderNewsByCategory(cat) {
   const newsDate = (DATA.news && DATA.news.news_date) || "";
   const dateFmt = newsDate ? newsDate.slice(5).replace("-", "/") : ""; // "06/16"
@@ -6311,12 +6346,10 @@ function renderNewsByCategory(cat) {
     const items = (s.items || []).filter(it => it.title_zh);
     if (!items.length) return "";
     const sectionTitle = s.section_zh || s.section;
-    return `
-      <h3 style="color:var(--brand-deep); margin-top:18px">${escapeHtml(sectionTitle)}</h3>
-      ${items.map(it => {
-        const titleDateM = it.title_zh && it.title_zh.match(/[（(](\d{4}-(\d{2}-\d{2}))[）)]/);
-        const itemDateFmt = titleDateM ? titleDateM[2].replace("-", "/") : dateFmt;
-        return `
+    const inner = items.map(it => {
+      const titleDateM = it.title_zh && it.title_zh.match(/[（(](\d{4}-(\d{2}-\d{2}))[）)]/);
+      const itemDateFmt = titleDateM ? titleDateM[2].replace("-", "/") : dateFmt;
+      return `
         <div class="news-item">
           <details>
             <summary>${escapeHtml(it.title_zh)}${itemDateFmt ? `<span class="news-date">${escapeHtml(itemDateFmt)}</span>` : ""}</summary>
@@ -6324,8 +6357,9 @@ function renderNewsByCategory(cat) {
             ${it.source_url ? `<a class="source" href="${it.source_url}" target="_blank" rel="noopener">${escapeHtml(it.source_name || "來源")}</a>` : ""}
           </details>
         </div>
-      `}).join("")}
-    `;
+      `;
+    }).join("");
+    return newsSection(sectionTitle, inner);
   }).join("");
 
   // 稅務 tab 附加 tax.json 的深度文章
