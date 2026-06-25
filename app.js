@@ -8374,24 +8374,143 @@ const LICAI_KB = [
   { keys: ["你好", "嗨", "哈囉", "hi", "hello"], reply: "嗨！我是你的理財小幫手 🌸\n可以問我理財觀念（複利、定期定額、ETF…）、App 怎麼用、傳承稅務常識，或財經名詞解釋。\n想從哪個開始呢？" },
 ];
 
-function licaiReply(text) {
-  const t = (text || "").toLowerCase();
+// ── 今日數據：指數別名表（問哪個市場 → 對應 market.json 的 name）──
+const LICAI_INDEX_ALIASES = [
+  { match: ["標普", "s&p", "sp500", "史坦普", "美股", "美國股市"], name: "S&P 500" },
+  { match: ["那斯達克", "納斯達克", "nasdaq", "那指"], name: "Nasdaq Composite" },
+  { match: ["道瓊", "道指", "dow"], name: "Dow Jones" },
+  { match: ["費半", "費城半導體", "半導體指數", "sox"], name: "PHLX Semiconductor" },
+  { match: ["台股", "加權", "taiex", "大盤", "台積電指數"], name: "TAIEX 加權指數" },
+  { match: ["櫃買", "otc", "櫃檯"], name: "OTC 櫃買加權" },
+  { match: ["台指期", "期貨指數"], name: "台指期(近月)" },
+  { match: ["日經", "日股", "nikkei", "日本股市"], name: "Nikkei 225" },
+  { match: ["韓股", "kospi", "南韓股市"], name: "KOSPI" },
+  { match: ["恆生", "港股", "hang seng", "香港股市"], name: "Hang Seng 恆生" },
+  { match: ["上證", "陸股", "中國股市", "shanghai"], name: "Shanghai 上證" },
+  { match: ["滬深", "csi 300", "csi300"], name: "CSI 300 滬深300" },
+  { match: ["印度股", "nifty"], name: "Nifty 50" },
+  { match: ["歐股", "歐洲股市", "stoxx"], name: "Euro Stoxx 50" },
+  { match: ["德股", "dax", "德國股市"], name: "DAX" },
+  { match: ["英股", "ftse", "英國股市"], name: "FTSE 100" },
+  { match: ["法股", "cac", "法國股市"], name: "CAC 40" },
+  { match: ["澳股", "asx", "澳洲股市"], name: "S&P/ASX 200" },
+];
+// 行情意圖詞：出現才回今日數據，避免「升息對美股影響」這種教學題被誤觸發
+const LICAI_PRICE_INTENT = ["今天", "今日", "現在", "目前", "最近", "多少", "幾點", "漲", "跌", "行情", "盤", "表現", "收盤", "走勢", "報價", "怎樣", "如何", "幾%", "幾趴"];
+
+function licaiFmtPct(p) {
+  if (p == null || isNaN(p)) return "—";
+  return (p > 0 ? "+" : "") + Number(p).toFixed(2) + "%";
+}
+function licaiFmtNum(n) {
+  if (n == null || isNaN(n)) return "—";
+  return Number(n).toLocaleString("en-US", { maximumFractionDigits: 2 });
+}
+function licaiHasPriceIntent(t) {
+  return LICAI_PRICE_INTENT.some(w => t.includes(w)) || t.length <= 6;
+}
+// 今日數據回應：命中才回字串，否則回 null（讓後面的知識庫接手）
+function licaiLiveReply(t) {
+  try {
+    const m = (typeof DATA !== "undefined" && DATA && DATA.market) ? DATA.market : null;
+    if (!m) return null;
+    const wantsPrice = licaiHasPriceIntent(t);
+
+    // 1) 單一指數
+    for (const a of LICAI_INDEX_ALIASES) {
+      if (a.match.some(k => t.includes(k.toLowerCase()))) {
+        if (!wantsPrice) return null; // 像「美股是什麼」就交給知識庫
+        const idx = (m.indices || []).find(x => x.name === a.name);
+        if (!idx) return null;
+        const date = idx.closing_date || m.closing_date || "";
+        const arrow = idx.daily_pct > 0 ? "📈" : (idx.daily_pct < 0 ? "📉" : "➡️");
+        return `${a.name}（收盤 ${date}）${arrow}\n\n` +
+          `• 收盤：${licaiFmtNum(idx.close)}\n` +
+          `• 當日：${licaiFmtPct(idx.daily_pct)}\n` +
+          `• 本月：${licaiFmtPct(idx.mtd_pct)}\n` +
+          `• 今年來：${licaiFmtPct(idx.ytd_pct)}\n\n` +
+          `數據為最近收盤，僅供參考、非投資建議 🌸`;
+      }
+    }
+    // 2) 黃金 / 原油
+    if (/金|gold|油|oil|原油|wti|布蘭特/.test(t) && wantsPrice) {
+      const cs = m.commodities || [];
+      let c = null;
+      if (/金|gold/.test(t)) c = cs.find(x => /金|gold/i.test(x.name));
+      else c = cs.find(x => /油|oil|wti|brent/i.test(x.name));
+      if (c) return `${c.name}（收盤 ${c.closing_date || m.closing_date || ""}）\n\n` +
+        `• 收盤：${licaiFmtNum(c.close)}\n• 當日：${licaiFmtPct(c.daily_pct)}\n` +
+        `• 本月：${licaiFmtPct(c.mtd_pct)}\n• 今年來：${licaiFmtPct(c.ytd_pct)}\n\n僅供參考、非投資建議 🌸`;
+    }
+    // 3) 美元 / 匯率 / 台幣
+    if (/美元|匯率|台幣|新台幣|dxy|usd|twd|exchange/.test(t) && wantsPrice) {
+      const fx = m.fx || [];
+      const f = fx[0];
+      if (f) {
+        let s = `匯率與美元（收盤 ${m.closing_date || ""}）💱\n\n`;
+        for (const x of fx.slice(0, 4)) s += `• ${x.name}：${licaiFmtNum(x.close)}（當日 ${licaiFmtPct(x.daily_pct)}）\n`;
+        return s + `\n僅供參考 🌸`;
+      }
+    }
+    // 4) 美債 / 公債殖利率（live；「殖利率是什麼」定義題交給知識庫）
+    if (/美債|公債|十年期|10年|2年|兩年|國債/.test(t) && /殖利率|利率|yield/.test(t)) {
+      const bs = m.bonds || [];
+      if (bs.length) {
+        let s = `美國公債殖利率（收盤 ${m.closing_date || ""}）📉\n\n`;
+        for (const b of bs.slice(0, 4)) s += `• ${b.name}：${licaiFmtPct ? Number(b.yield_pct).toFixed(2) + "%" : b.yield_pct}（當日 ${b.daily_bps > 0 ? "+" : ""}${b.daily_bps} bps）\n`;
+        const ro = m.rate_outlook;
+        if (ro && ro.curve_shape) s += `\n殖利率曲線：${ro.curve_shape}（10Y-2Y 約 ${ro.yield_curve_10y2y_bps} bps）`;
+        return s + `\n\n殖利率與價格反向，僅供參考 🌸`;
+      }
+    }
+    // 5) 大盤概況 / 今天行情總覽
+    if (/行情|盤勢|大盤|今天市場|今日市場|市場概況|整體|總覽|概況/.test(t) && wantsPrice && m.summary) {
+      return `市場概況（收盤 ${m.closing_date || ""}）📊\n\n${m.summary}\n\n想看單一市場，問我「台股」「美股」「費半」「日經」等，我給你當日/本月/今年漲跌 🌸`;
+    }
+    return null;
+  } catch (e) { return null; }
+}
+
+// 計分配對：命中越精確（關鍵字越長）分數越高，挑最佳那則，解決「第一個命中就回」誤判
+function licaiBestKB(t) {
+  let best = null, bestScore = 0;
   for (const item of LICAI_KB) {
-    if (item.keys.some(k => t.includes(k.toLowerCase()))) return item.reply;
+    let s = 0;
+    for (const k of item.keys) {
+      const kk = k.toLowerCase();
+      if (t.includes(kk)) s += kk.length;
+    }
+    if (s > bestScore) { bestScore = s; best = item; }
   }
-  // 主題偵測 fallback
+  return best;
+}
+
+function licaiReply(text) {
+  const t = (text || "").toLowerCase().trim();
+  if (!t) return "想問什麼都可以跟我說 🌸";
+
+  // 1) 今日真實數據（讀 App 內的 market 資料；只在問行情時觸發）
+  const live = licaiLiveReply(t);
+  if (live) return live;
+
+  // 2) 知識庫：計分挑最精準的一則
+  const hit = licaiBestKB(t);
+  if (hit) return hit.reply;
+
+  // 3) 主題偵測 fallback（命中大方向、給明確去處）
   if (t.includes("基金")) return "想了解基金的話，可以去「精選基金」分頁看單筆、定期定額與績效比較。也可以問我「定期定額怎麼做」「ETF 是什麼」🌸";
-  if (t.includes("債") ) return "債券相關可以看「精選海外債」分頁，或問我「殖利率是什麼」「殖利率倒掛」，我來白話解釋 📑";
-  if (t.includes("股") || t.includes("股票")) return "股票相關可以問我「本益比是什麼」「ETF」「資產配置」，或去「海外股票」「全球市場」分頁看行情 📈";
+  if (t.includes("債")) return "債券相關可以看「精選海外債」分頁，或問我「殖利率是什麼」「殖利率倒掛」，我來白話解釋 📑";
+  if (t.includes("股") || t.includes("股票")) return "股票相關可以問我「本益比是什麼」「ETF」「資產配置」，問「今天台股」「美股表現」我給你當日數據，或去「海外股票」「全球市場」分頁看行情 📈";
   if (t.includes("稅") || t.includes("傳承") || t.includes("贈與") || t.includes("遺產")) return "傳承稅務的問題我可以幫你白話說明，例如「贈與稅免稅額」「遺產稅」「信託」「保單規劃」。詳細方案建議再找傳承顧問評估 ⚖️";
   if (t.includes("保險") || t.includes("保障")) return "保險可以去「精選保險」分頁做保障缺口試算，或問我相關概念。正式保額建議洽持牌業務員 🛡️";
-  // 預設引導語
-  const defaults = [
-    "我可以幫你解釋理財觀念、App 功能、傳承稅務與財經名詞 🌸\n例如：「複利是什麼」「定期定額怎麼做」「殖利率是什麼」「贈與稅免稅額」。",
-    "想問哪方面呢？理財觀念、怎麼用這個 App、或財經名詞，我都可以白話說給你聽 💪",
-    "把問題說出來吧～例如「ETF 是什麼」「資產配置怎麼分」「升息對股市的影響」，我來幫你拆解 ✨",
-  ];
-  return defaults[Math.floor(Math.random() * defaults.length)];
+
+  // 4) 沒收錄：明確告知＋給四大類方向（不再隨機丟引導語）
+  return "這題我可能還沒收錄到 🙏 我比較拿手的是這四類：\n\n" +
+    "1️⃣ 理財觀念｜複利、定期定額、ETF、資產配置…\n" +
+    "2️⃣ App 怎麼用｜基金在哪、投組分析、保障缺口…\n" +
+    "3️⃣ 傳承稅務｜贈與稅、遺產稅、信託、保單規劃…\n" +
+    "4️⃣ 今日行情｜問「台股」「美股」「費半」「黃金」「美元」給你當日數據\n\n" +
+    "換個說法或從這四類問我，我來幫你拆解 🌸";
 }
 
 function renderChatSheet() {
