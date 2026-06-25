@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-25T16:38:14+08:00",
+  "generated_at": "2026-06-25T17:46:04+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -31,20 +31,6 @@
       "error": null
     },
     {
-      "symbol": "RUN",
-      "name_zh": "Sunrun",
-      "kind": "US",
-      "price": 14.42,
-      "change_pct": 12.57,
-      "mtd_pct": -13.76,
-      "ytd_pct": -21.63,
-      "market_date": "2026-06-24",
-      "per": 6.8529,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RUN.US",
-      "error": null
-    },
-    {
       "symbol": "GLW",
       "name_zh": "Corning Incorporated",
       "kind": "US",
@@ -59,17 +45,45 @@
       "error": null
     },
     {
-      "symbol": "WDC",
-      "name_zh": "Western Digital",
+      "symbol": "RUN",
+      "name_zh": "Sunrun",
       "kind": "US",
-      "price": 643.83,
-      "change_pct": -4.01,
-      "mtd_pct": 21.2,
-      "ytd_pct": 273.73,
+      "price": 14.42,
+      "change_pct": 12.57,
+      "mtd_pct": -13.76,
+      "ytd_pct": -21.63,
       "market_date": "2026-06-24",
-      "per": 35.5085,
+      "per": 6.8529,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=WDC.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RUN.US",
+      "error": null
+    },
+    {
+      "symbol": "UBER",
+      "name_zh": "Uber",
+      "kind": "US",
+      "price": 73.85,
+      "change_pct": 6.0,
+      "mtd_pct": 4.9,
+      "ytd_pct": -9.62,
+      "market_date": "2026-06-24",
+      "per": 17.6053,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=UBER.US",
+      "error": null
+    },
+    {
+      "symbol": "NVTS",
+      "name_zh": "Navitas Semiconductor Corporati",
+      "kind": "US",
+      "price": 18.32,
+      "change_pct": -14.39,
+      "mtd_pct": -31.13,
+      "ytd_pct": 156.58,
+      "market_date": "2026-06-24",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NVTS.US",
       "error": null
     },
     {
@@ -115,17 +129,45 @@
       "error": null
     },
     {
-      "symbol": "UBER",
-      "name_zh": "Uber",
+      "symbol": "TCOM",
+      "name_zh": "攜程",
       "kind": "US",
-      "price": 73.85,
-      "change_pct": 6.0,
-      "mtd_pct": 4.9,
-      "ytd_pct": -9.62,
+      "price": 46.3,
+      "change_pct": 1.76,
+      "mtd_pct": -2.38,
+      "ytd_pct": -35.61,
       "market_date": "2026-06-24",
-      "per": 17.6053,
+      "per": 6.0717,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=UBER.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TCOM.US",
+      "error": null
+    },
+    {
+      "symbol": "WDC",
+      "name_zh": "Western Digital",
+      "kind": "US",
+      "price": 643.83,
+      "change_pct": -4.01,
+      "mtd_pct": 21.2,
+      "ytd_pct": 273.73,
+      "market_date": "2026-06-24",
+      "per": 35.5085,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=WDC.US",
+      "error": null
+    },
+    {
+      "symbol": "WAVE",
+      "name_zh": "Eco Wave Power Global AB (publ)",
+      "kind": "US",
+      "price": 9.02,
+      "change_pct": 2.15,
+      "mtd_pct": 2.27,
+      "ytd_pct": 54.48,
+      "market_date": "2026-06-24",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=WAVE.US",
       "error": null
     },
     {
@@ -143,20 +185,6 @@
       "error": null
     },
     {
-      "symbol": "NVTS",
-      "name_zh": "Navitas Semiconductor Corporati",
-      "kind": "US",
-      "price": 18.32,
-      "change_pct": -14.39,
-      "mtd_pct": -31.13,
-      "ytd_pct": 156.58,
-      "market_date": "2026-06-24",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NVTS.US",
-      "error": null
-    },
-    {
       "symbol": "AMAT",
       "name_zh": "應材",
       "kind": "US",
@@ -171,31 +199,17 @@
       "error": null
     },
     {
-      "symbol": "STX",
-      "name_zh": "Seagate Technology",
+      "symbol": "ONDS",
+      "name_zh": "Ondas",
       "kind": "US",
-      "price": 993.25,
-      "change_pct": -4.37,
-      "mtd_pct": 12.89,
-      "ytd_pct": 260.67,
+      "price": 7.68,
+      "change_pct": -9.96,
+      "mtd_pct": -41.91,
+      "ytd_pct": -21.31,
       "market_date": "2026-06-24",
-      "per": 93.6566,
+      "per": 16.2083,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=STX.US",
-      "error": null
-    },
-    {
-      "symbol": "MUU",
-      "name_zh": "Direxion Daily MU Bull 2X ETF",
-      "kind": "US",
-      "price": 902.1,
-      "change_pct": -0.64,
-      "mtd_pct": 4.09,
-      "ytd_pct": 795.47,
-      "market_date": "2026-06-24",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MUU.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ONDS.US",
       "error": null
     },
     {
