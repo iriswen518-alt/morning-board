@@ -2943,7 +2943,7 @@ function renderLiveDetail(idx, rec) {
         ${stat(prevDate ? `${prevDate} 收` : "前一交易日收", rec.prev_close != null ? fv(rec.prev_close) : "—")}
         ${stat("資料時間", rec.asof ? escapeHtml(rec.asof) : "—")}
       </div>
-      <p class="live-credit">資料來源 鉅亨網（cnyes）、Yahoo Finance，盤中定時更新；虛線為昨收。數值僅供參考，非投資建議或要約。</p>
+      <p class="live-credit">資料來源 鉅亨網（cnyes）、Yahoo Finance，盤中定時更新；虛線為${prevDate ? `${prevDate} 收盤` : "前一交易日收盤"}。數值僅供參考，非投資建議或要約。</p>
     </section>`;
 }
 
