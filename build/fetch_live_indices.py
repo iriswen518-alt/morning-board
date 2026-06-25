@@ -203,10 +203,10 @@ def main() -> int:
     if not ok_n:
         print("all fetches failed (likely rate-limited); keeping previous file")
         return 3
+    # built_at 固定用台北時間（雲端 runner 為 UTC，不可用 astimezone()）
+    tpe = dt.datetime.now(dt.timezone.utc) + dt.timedelta(hours=8)
     payload = {
-        "built_at": dt.datetime.now(dt.timezone.utc)
-        .astimezone()
-        .strftime("%Y-%m-%dT%H:%M"),
+        "built_at": tpe.strftime("%Y-%m-%dT%H:%M"),
         "indices": items,
     }
     os.makedirs(os.path.dirname(out_path), exist_ok=True)

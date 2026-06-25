@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-06-25T04:34",
+  "built_at": "2026-06-25T12:35",
   "indices": [
     {
       "ok": true,
@@ -752,10 +752,10 @@
     {
       "ok": true,
       "symbol": "^N225",
-      "last": 71874.05,
+      "last": 71939.27,
       "prev_close": 69174.97,
-      "change": 2699.08,
-      "change_pct": 3.9,
+      "change": 2764.3,
+      "change_pct": 4.0,
       "points": [
         70556.2,
         70725.88,
@@ -798,21 +798,21 @@
         72044.11,
         72027.02,
         71939.31,
-        71847.97,
-        71874.05
+        71887.85,
+        71939.27
       ],
       "market_state": "REGULAR",
-      "asof": "06/25 13:18",
+      "asof": "06/25 13:20",
       "tz": "Asia/Tokyo",
       "name_zh": "日經225"
     },
     {
       "ok": true,
       "symbol": "^TWII",
-      "last": 46405.94,
+      "last": 46420.5,
       "prev_close": 46043.6,
-      "change": 362.34,
-      "change_pct": 0.79,
+      "change": 376.9,
+      "change_pct": 0.82,
       "points": [
         46569.1,
         46463.96,
@@ -852,11 +852,11 @@
         46379.39,
         46423.18,
         46424.65,
-        46411.81,
-        46405.94
+        46366.82,
+        46420.5
       ],
       "market_state": "REGULAR",
-      "asof": "06/25 12:13",
+      "asof": "06/25 12:15",
       "tz": "Asia/Taipei",
       "name_zh": "台股加權"
     },
@@ -869,10 +869,10 @@
     {
       "ok": true,
       "symbol": "TWF:TXF",
-      "last": 46383.0,
+      "last": 46404.0,
       "prev_close": 46910.0,
-      "change": -527.0,
-      "change_pct": -1.12,
+      "change": -506.0,
+      "change_pct": -1.08,
       "points": [
         46723.0,
         46880.0,
@@ -919,20 +919,21 @@
         46500.0,
         46475.0,
         46430.0,
-        46383.0
+        46385.0,
+        46404.0
       ],
       "market_state": "REGULAR",
-      "asof": "06/25 12:30",
+      "asof": "06/25 12:35",
       "tz": "Asia/Taipei",
       "name_zh": "台指期近"
     },
     {
       "ok": true,
       "symbol": "^KS11",
-      "last": 8946.72,
+      "last": 8941.3,
       "prev_close": 8471.02,
-      "change": 475.7,
-      "change_pct": 5.62,
+      "change": 470.28,
+      "change_pct": 5.55,
       "points": [
         8968.53,
         8886.8,
@@ -984,11 +985,11 @@
         8923.59,
         8941.02,
         8946.87,
-        8946.64,
-        8946.72
+        8958.38,
+        8941.3
       ],
       "market_state": "REGULAR",
-      "asof": "06/25 13:14",
+      "asof": "06/25 13:15",
       "tz": "Asia/Seoul",
       "name_zh": "韓國綜合"
     },
@@ -1121,10 +1122,10 @@
     {
       "ok": true,
       "symbol": "^NSEI",
-      "last": 24168.25,
+      "last": 24172.0,
       "prev_close": 24021.65,
-      "change": 146.6,
-      "change_pct": 0.61,
+      "change": 150.35,
+      "change_pct": 0.63,
       "points": [
         24129.95,
         24156.35,
@@ -1135,21 +1136,21 @@
         24165.85,
         24172.35,
         24176.8,
-        24167.6,
-        24168.25
+        24178.15,
+        24172.0
       ],
       "market_state": "REGULAR",
-      "asof": "06/25 10:04",
+      "asof": "06/25 10:05",
       "tz": "Asia/Kolkata",
       "name_zh": "印度Nifty"
     },
     {
       "ok": true,
       "symbol": "^AXJO",
-      "last": 8773.7,
+      "last": 8770.6,
       "prev_close": 8808.4,
-      "change": -34.7,
-      "change_pct": -0.39,
+      "change": -37.8,
+      "change_pct": -0.43,
       "points": [
         8781.5,
         8781.2,
@@ -1201,11 +1202,11 @@
         8773.8,
         8768.4,
         8767.6,
-        8772.1,
-        8773.7
+        8772.4,
+        8770.6
       ],
       "market_state": "REGULAR",
-      "asof": "06/25 14:13",
+      "asof": "06/25 14:15",
       "tz": "Australia/Sydney",
       "name_zh": "澳洲200"
     }
