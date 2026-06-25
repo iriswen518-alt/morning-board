@@ -295,7 +295,7 @@ function shortDate(iso) {
 }
 
 let DATA = {};
-let CURRENT_TAB = "market";
+let CURRENT_TAB = "live";
 let SEARCH_INDEX = [];
 let PENDING_HIGHLIGHT = null;
 let PENDING_SUBTAB = null;
@@ -9074,7 +9074,7 @@ function licaiLiveReply(t) {
     }
     // 6.7) 個股（美股／台股，依代號或名稱比對）
     {
-      const stockKw = /股價|股票|個股|股市|每股|大漲|大跌|漲停|跌停|這檔|這支/.test(t) || /\d{4}/.test(t);
+      const stockKw = /股價|股票|個股|股市|每股|大漲|大跌|漲停|跌停|這檔|這支|漲|跌|今年|本月|近一年|近1年|報酬|表現|本益比|現在|目前|多少/.test(t) || /\d{4}/.test(t);
       const sm = licaiFindStock(t);
       const st = (sm.score >= 9) || (stockKw && sm.score >= 1) || sm.score >= 2 ? sm.item : null;
       if (st) return licaiStockDetail(st);
@@ -9173,17 +9173,80 @@ function licaiWithRefs(reply, refs) {
   return reply + "\n\n🔎 延伸參考：\n" + refs.join("\n");
 }
 
+// ── 對話上下文記憶（「台積電」後問「那鴻海呢」）──
+let LICAI_CTX = { frame: "" };
+function licaiLongestCommon(a, b) { // a 中出現在 b 的最長中文子字串（≥2）
+  let best = "", A = a || "";
+  for (let i = 0; i < A.length; i++) for (let j = i + 2; j <= A.length; j++) {
+    const sub = A.slice(i, j);
+    if (/^[一-龥]+$/.test(sub) && (b || "").includes(sub) && sub.length > best.length) best = sub;
+  }
+  return best;
+}
+function licaiFollowUp(t) { // 抓「那X呢/X呢/X咧/那X」的 X
+  let m = t.match(/^那?(?:麼|麽)?\s*(.+?)\s*(?:呢|咧)[?？]?$/);
+  if (m && m[1]) return m[1].replace(/^那(?:麼|麽)?/, "").trim();
+  if (/^那(?:麼|麽)?\S/.test(t)) { const x = t.replace(/^那(?:麼|麽)?/, "").trim(); if (x && x.length <= 6) return x; }
+  return null;
+}
+// 投組健檢：抓「標的+數字(+單位)」，算配置比重
+function licaiPortfolioReply(t) {
+  if (!/投組|配置|組合|健檢|持股|持有|占比|佔比|比重|我有/.test(t)) return null;
+  const seg = t.split(/(\d+(?:\.\d+)?)\s*(%|％|趴|萬|元|塊)?/);
+  const items = [];
+  for (let i = 1; i < seg.length; i += 3) {
+    const num = parseFloat(seg[i]); if (isNaN(num)) continue;
+    const unit = seg[i + 1] || "";
+    const namefrag = (seg[i - 1] || "").replace(/(各|和|跟|與|有|持有|投組|配置|組合|健檢|我的|幫我|看|占比|佔比|比重|大約|約)/g, "").trim();
+    if (!namefrag) continue;
+    if (/黃金|金價|原油|石油|白銀|大宗|原物料|商品/.test(namefrag)) {
+      items.push({ name: namefrag, kind: "原物料", num, unit });
+    } else {
+      const e = licaiUnifiedLookup(namefrag, t);
+      items.push({ name: e ? e.name : namefrag, kind: e ? e.kind : "其他", num, unit });
+    }
+  }
+  if (items.length < 2) return null;
+  const total = items.reduce((s, x) => s + x.num, 0);
+  if (total <= 0) return null;
+  const KIND_ZH = { stock: "股票", bond: "債券", fund: "基金", index: "指數", 其他: "其他" };
+  let s = `📋 投組健檢（${items.length} 檔）\n\n`;
+  const withW = items.map(x => ({ ...x, w: x.num / total * 100 }));
+  for (const x of withW) s += `• ${x.name}｜${x.w.toFixed(1)}%\n`;
+  const mx = withW.slice().sort((a, b) => b.w - a.w)[0];
+  const conc = mx.w >= 50 ? "偏高" : (mx.w >= 35 ? "中等" : "尚均衡");
+  s += `\n• 最大持股：${mx.name} ${mx.w.toFixed(1)}%（集中度${conc}）\n`;
+  const byKind = {};
+  for (const x of withW) byKind[x.kind] = (byKind[x.kind] || 0) + x.w;
+  const dist = Object.keys(byKind).map(k => `${KIND_ZH[k] || k} ${byKind[k].toFixed(0)}%`).join("、");
+  s += `• 類別分布：${dist}\n`;
+  return licaiWithRefs(s + `\n教育示範用途、非投資建議。完整投組分析可用「資產配置」分頁的工具 🌸`, [LICAI_REF.alloc]);
+}
+
 function licaiReply(text) {
   const t = (text || "").toLowerCase().trim();
   if (!t) return "想問什麼都可以跟我說 🌸";
 
-  // 0) 比較型問答（A 和 B 哪個…）：優先於單一標的
+  // -1) 接續上一題：「那鴻海呢」＝沿用上一題的問法、換標的
+  const fu = licaiFollowUp(t);
+  if (fu && LICAI_CTX.frame) return licaiReply(fu + LICAI_CTX.frame);
+
+  // 0a) 投組健檢（報多檔＋比重）
+  const pf = licaiPortfolioReply(t);
+  if (pf) return pf;
+
+  // 0b) 比較型問答（A 和 B 哪個…）：優先於單一標的
   const cmp = licaiCompareReply(t);
   if (cmp) return cmp;
 
   // 1) 今日真實數據（讀 App 內的 market 資料；只在問行情時觸發）
   const live = licaiLiveReply(t);
-  if (live) return live.includes("🔎 延伸參考") ? live : licaiWithRefs(live, [LICAI_REF.market, LICAI_REF.twse]);
+  if (live) {
+    const name = live.split(/[（　\n]/)[0];           // 取答案開頭的標的名
+    const common = licaiLongestCommon(name, t);
+    LICAI_CTX = { frame: common.length >= 2 ? t.split(common).join("").trim() : "" }; // 記住問法（去掉標的）
+    return live.includes("🔎 延伸參考") ? live : licaiWithRefs(live, [LICAI_REF.market, LICAI_REF.twse]);
+  }
 
   // 2) 知識庫：計分挑最精準的一則
   const hit = licaiBestKB(t);
