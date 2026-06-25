@@ -2862,7 +2862,7 @@ function renderLiveDetail(idx, rec) {
         ${back}
         <div class="live-detail-head">${name}</div>
         <p class="live-detail-empty">此指數目前沒有盤中資料來源，暫時無法顯示走勢。</p>
-        <p class="live-credit">資料來源 Yahoo Finance、鉅亨網（台指期）；數值僅供參考，非投資建議或要約。</p>
+        <p class="live-credit">資料來源 鉅亨網（cnyes）、Yahoo Finance；數值僅供參考，非投資建議或要約。</p>
       </section>`;
   }
   const up = (rec.change_pct ?? 0) >= 0;
@@ -2889,7 +2889,7 @@ function renderLiveDetail(idx, rec) {
         ${stat("昨收", rec.prev_close != null ? fmtInt(rec.prev_close) : "—")}
         ${stat("資料時間", rec.asof ? escapeHtml(rec.asof) : "—")}
       </div>
-      <p class="live-credit">資料來源 Yahoo Finance、鉅亨網（台指期），盤中定時更新；虛線為昨收。數值僅供參考，非投資建議或要約。</p>
+      <p class="live-credit">資料來源 鉅亨網（cnyes）、Yahoo Finance，盤中定時更新；虛線為昨收。數值僅供參考，非投資建議或要約。</p>
     </section>`;
 }
 
@@ -2902,16 +2902,96 @@ function rerenderLive() {
 function openLiveDetail(sym) { LIVE_DETAIL_SYM = sym; rerenderLive(); }
 function closeLiveDetail() { LIVE_DETAIL_SYM = null; rerenderLive(); }
 
-// 即時行情自動刷新：停在本分頁時每 60 秒重抓 live_indices.json，資料有變才重畫
-// （不重置捲動位置）。離開分頁就停止；回到前景也補抓一次。
+// 即時行情自動刷新：停在本分頁時每 60 秒「前端直連 cnyes」抓最新值重畫（不靠雲端排程，
+// 打開即最新）。離開分頁就停止；回到前景也補抓一次。cnyes 允許瀏覽器跨域直抓。
+// 前端 sym → cnyes symbol；無對應者（Nifty/澳洲）沿用排程 JSON 的值。
+const LIVE_CNYES = {
+  "^GSPC": "GI:INX", "^IXIC": "GI:IXIC", "^DJI": "GI:DJI", "^SOX": "GI:SOX",
+  "^STOXX50E": "GI:STOXX50E", "^GDAXI": "GI:DAX", "^FTSE": "GI:FTSE", "^FCHI": "GI:CAC",
+  "^N225": "GI:NKY", "^TWII": "TWS:TSE01:INDEX", "^TWOII": "TWS:OTC01:INDEX",
+  "TWF:TXF": "TWF:TXF:WEIGHTED", "^KS11": "GI:KOSPI", "^HSI": "GI:HSI",
+  "000001.SS": "GI:SSEC", "000300.SS": "GI:CSI300",
+};
 let LIVE_REFRESH_TIMER = null;
+
+function liveDownsample(vals, cap) {
+  if (vals.length <= cap) return vals;
+  const step = vals.length / cap;
+  const out = [];
+  for (let i = 0; i < cap; i++) out.push(vals[Math.floor(i * step)]);
+  out[out.length - 1] = vals[vals.length - 1];
+  return out;
+}
+function liveFmtTpe(epochSec) {
+  const d = new Date((epochSec + 8 * 3600) * 1000);
+  const p = n => String(n).padStart(2, "0");
+  return `${p(d.getUTCMonth() + 1)}/${p(d.getUTCDate())} ${p(d.getUTCHours())}:${p(d.getUTCMinutes())}`;
+}
+// 直連 cnyes charting 抓單一指數盤中（與 fetch_live_indices.py 同邏輯：排序＋挑含當下時段）
+async function fetchCnyesLive(frontendSym) {
+  const cny = LIVE_CNYES[frontendSym];
+  if (!cny) return null;
+  const now = Math.floor(Date.now() / 1000);
+  const url = `https://ws.api.cnyes.com/ws/api/v1/charting/history?symbol=${encodeURIComponent(cny)}&resolution=5&from=${now - 3 * 86400}&to=${now}`;
+  const r = await fetch(url, { cache: "no-store" });
+  if (!r.ok) throw new Error("cnyes " + r.status);
+  const j = await r.json();
+  const data = j.data || j;
+  const t = data.t || [], c = data.c || [], sessions = data.session || [];
+  const pairs = [];
+  for (let i = 0; i < t.length; i++) {
+    if (c[i] != null) pairs.push([+t[i], Math.round(c[i] * 100) / 100]);
+  }
+  pairs.sort((a, b) => a[0] - b[0]);
+  if (!pairs.length) throw new Error("empty");
+  let cur = sessions.find(([s, e]) => s <= now && now <= e) || null;
+  const state = cur ? "REGULAR" : "CLOSED";
+  if (!cur) {
+    const past = sessions.filter(se => se[1] <= now);
+    cur = past.length ? past.reduce((a, b) => (b[1] > a[1] ? b : a)) : null;
+  }
+  let curPairs, before;
+  if (cur) {
+    curPairs = pairs.filter(p => p[0] >= cur[0] && p[0] <= cur[1]);
+    before = pairs.filter(p => p[0] < cur[0]).map(p => p[1]);
+  } else { curPairs = pairs; before = []; }
+  if (!curPairs.length) curPairs = pairs;
+  const series = curPairs.map(p => p[1]);
+  const prev = before.length ? before[before.length - 1] : null;
+  const last = series[series.length - 1];
+  const change = prev != null ? Math.round((last - prev) * 100) / 100 : null;
+  const pct = (prev && change != null) ? Math.round((change / prev * 100) * 100) / 100 : null;
+  return {
+    ok: true, symbol: frontendSym, last,
+    prev_close: prev != null ? Math.round(prev * 100) / 100 : null,
+    change, change_pct: pct,
+    points: liveDownsample(series, 80),
+    market_state: state,
+    asof: liveFmtTpe(curPairs[curPairs.length - 1][0]),
+  };
+}
 async function refreshLiveData() {
   if (CURRENT_TAB !== "live") { stopLiveAutoRefresh(); return; }
-  let fresh;
-  try { fresh = await load("live_indices"); } catch (_) { return; }
-  const changed = !DATA.live || fresh.built_at !== DATA.live.built_at;
-  DATA.live = fresh;
-  if (changed && CURRENT_TAB === "live") {
+  // 以排程 JSON 為底，cnyes 直抓成功者覆蓋（Nifty/澳洲無 cnyes，保留排程值）
+  const bySym = {};
+  (DATA.live && DATA.live.indices || []).forEach(r => { if (r && r.symbol) bySym[r.symbol] = r; });
+  const syms = Object.keys(LIVE_CNYES);
+  const results = await Promise.allSettled(syms.map(s => fetchCnyesLive(s)));
+  let anyOk = false;
+  results.forEach((res, i) => {
+    if (res.status === "fulfilled" && res.value) {
+      const prevName = bySym[syms[i]] && bySym[syms[i]].name_zh;
+      bySym[syms[i]] = Object.assign(res.value, { name_zh: prevName });
+      anyOk = true;
+    }
+  });
+  if (!anyOk && DATA.live) return; // cnyes 全失敗：維持現狀，不動畫面
+  const indices = LIVE_INDICES.map(idx => bySym[idx.sym]).filter(Boolean);
+  const now = new Date(Date.now() + 8 * 3600 * 1000);
+  const p = n => String(n).padStart(2, "0");
+  const builtAt = `${now.getUTCFullYear()}-${p(now.getUTCMonth() + 1)}-${p(now.getUTCDate())}T${p(now.getUTCHours())}:${p(now.getUTCMinutes())}`;
+  DATA.live = { built_at: builtAt, indices };
+  if (CURRENT_TAB === "live") {
     const body = $("content");
     if (body) {
       const sc = window.scrollY;
@@ -2944,7 +3024,7 @@ function renderLiveSheet() {
     <section class="sheet live-sheet">
       <p class="live-intro">全球主要指數盤中走勢（${updatedNote}，本頁自動更新）。點任一指數可看放大走勢；各市場依當地交易時段顯示，紅漲綠跌、虛線為昨收。</p>
       <div class="live-grid">${cards}</div>
-      <p class="live-credit">資料來源 Yahoo Finance、鉅亨網（台指期），盤中定時更新；數值僅供參考，非投資建議或要約。</p>
+      <p class="live-credit">資料來源 鉅亨網（cnyes）、Yahoo Finance，盤中定時更新；數值僅供參考，非投資建議或要約。</p>
     </section>`;
 }
 
@@ -8691,6 +8771,109 @@ function licaiPerf1y(f) {
   const p = f.perf_single || f.perf || {};
   return p["1y"] != null ? p["1y"] : (p["6m"] != null ? p["6m"] : null);
 }
+// 個股清單（精選美股＋精選台股＋熱門美股）
+function licaiStockList() {
+  const D = (typeof DATA !== "undefined" && DATA) ? DATA : {};
+  return [...((D.stocks && D.stocks.us_stocks) || []), ...((D.stocks && D.stocks.tw_stocks) || []), ...((D.popular && D.popular.stocks) || [])];
+}
+// 找個股：代號精確（台股數字/美股≥3字母）優先，否則名稱 2-gram
+function licaiFindStock(t) {
+  const list = licaiStockList();
+  for (const x of list) {
+    const sym = (x.symbol || "").toLowerCase();
+    if (!sym) continue;
+    if (/^\d{4,}$/.test(sym) && t.includes(sym)) return { item: x, score: 9 };
+    if (/^[a-z]{3,}$/.test(sym) && new RegExp("\\b" + sym + "\\b").test(t)) return { item: x, score: 9 };
+  }
+  return licaiFindScored(list, t);
+}
+function licaiStockDetail(x) {
+  const isTW = /^\d/.test(x.symbol || "");
+  const arrow = x.change_pct > 0 ? "📈" : (x.change_pct < 0 ? "📉" : "➡️");
+  let s = `${x.name_zh || x.symbol}（${x.symbol}）　${x.market_date || ""} ${arrow}\n\n`;
+  s += `• 股價：${licaiFmtNum(x.price)}${isTW ? " 元" : " 美元"}\n`;
+  s += `• 當日：${licaiFmtPct(x.change_pct)}\n`;
+  if (x.mtd_pct != null) s += `• 本月：${licaiFmtPct(x.mtd_pct)}\n`;
+  if (x.ytd_pct != null) s += `• 今年來：${licaiFmtPct(x.ytd_pct)}\n`;
+  if (x.perf_1y != null) s += `• 近1年：${licaiFmtPct(x.perf_1y)}\n`;
+  if (x.per != null) s += `• 本益比：${Number(x.per).toFixed(1)}\n`;
+  let refs = [isTW ? LICAI_REF.twstock : LICAI_REF.usstocks];
+  if (x.source_url) refs.push(`[🔗 個股報價來源](${x.source_url})`);
+  return licaiWithRefs(s + `\n數據為最近收盤，僅供參考、非投資建議 🌸`, refs);
+}
+// 跨類查找單一標的（比較型用）：股→債→基金→指數
+function licaiUnifiedLookup(frag) {
+  const D = (typeof DATA !== "undefined" && DATA) ? DATA : {};
+  const sm = licaiFindStock(frag);
+  if (sm.item && sm.score >= 2) return { kind: "stock", item: sm.item, name: sm.item.name_zh || sm.item.symbol };
+  const bm = licaiFindScored((D.obonds && D.obonds.bonds) || [], frag);
+  if (bm.item && bm.score >= 2) return { kind: "bond", item: bm.item, name: bm.item.name_zh };
+  const fm = licaiFindScored([...((D.funds && D.funds.funds) || []), ...((D.popular_funds && D.popular_funds.funds) || [])], frag);
+  if (fm.item && fm.score >= 2) return { kind: "fund", item: fm.item, name: fm.item.name_zh };
+  for (const a of LICAI_INDEX_ALIASES) {
+    if (a.match.some(k => frag.includes(k.toLowerCase()))) {
+      const idx = ((D.market && D.market.indices) || []).find(x => x.name === a.name);
+      if (idx) return { kind: "index", item: idx, name: a.name };
+    }
+  }
+  if (sm.item && sm.score >= 1) return { kind: "stock", item: sm.item, name: sm.item.name_zh || sm.item.symbol };
+  if (bm.item && bm.score >= 1) return { kind: "bond", item: bm.item, name: bm.item.name_zh };
+  if (fm.item && fm.score >= 1) return { kind: "fund", item: fm.item, name: fm.item.name_zh };
+  return null;
+}
+// 依提問挑出該標的的比較指標
+function licaiMetric(e, t) {
+  const it = e.item, k = e.kind;
+  if (/殖利率|yield|ytm/.test(t)) {
+    if (k === "bond") return { label: "殖利率(YTM)", val: it.redeem_yield_pct != null ? it.redeem_yield_pct : it.bid_yield_pct };
+    if (k === "fund") return { label: "配息率", val: it.distribution_yield_pct };
+  }
+  if (/本益比|pe|per/.test(t) && k === "stock") return { label: "本益比", val: it.per };
+  if (/配息/.test(t) && k === "fund") return { label: "配息率", val: it.distribution_yield_pct };
+  if (/今年|ytd/.test(t)) return { label: "今年來", val: it.ytd_pct };
+  if (/本月|mtd/.test(t)) return { label: "本月", val: it.mtd_pct };
+  if (/今天|今日|當日|漲|跌/.test(t)) return { label: "當日", val: it.change_pct != null ? it.change_pct : (it.daily_change_pct != null ? it.daily_change_pct : it.daily_pct) };
+  if (/績效|報酬|表現|成長|賺/.test(t)) {
+    if (k === "bond") return { label: "殖利率(YTM)", val: it.redeem_yield_pct != null ? it.redeem_yield_pct : it.bid_yield_pct };
+    if (k === "fund") return { label: "近1年", val: licaiPerf1y(it) };
+    return { label: "近1年", val: it.perf_1y != null ? it.perf_1y : it.ytd_pct };
+  }
+  if (k === "bond") return { label: "殖利率(YTM)", val: it.redeem_yield_pct != null ? it.redeem_yield_pct : it.bid_yield_pct };
+  if (k === "fund") return { label: "近1年", val: licaiPerf1y(it) };
+  if (k === "stock" || k === "index") return { label: "今年來", val: it.ytd_pct };
+  return { label: "—", val: null };
+}
+// 比較型問答：「A 和 B 哪個…高」
+function licaiCompareReply(t) {
+  const hasCmpWord = /哪個|哪一個|哪檔|哪支|哪邊|誰比較|誰較|比較|相比|對比|vs|還是/.test(t);
+  const hasConj = /和|跟|與|、/.test(t);
+  if (!hasCmpWord && !hasConj) return null;
+  const parts = t.split(/和|跟|與|、|vs|對比|相比|比一比|比較|還是/).map(s => s.trim()).filter(Boolean);
+  if (parts.length < 2) return null;
+  const found = [];
+  for (const p of parts) {
+    const e = licaiUnifiedLookup(p);
+    if (e && !found.find(x => x.name === e.name)) found.push(e);
+    if (found.length >= 2) break;
+  }
+  if (found.length < 2) return null;
+  const a = found[0], b = found[1];
+  const ma = licaiMetric(a, t), mb = licaiMetric(b, t);
+  if (ma.val == null || mb.val == null) return null;
+  const lower = /低|便宜|小|少/.test(t) && !/高|多|大/.test(t);
+  let verdict;
+  if (Number(ma.val) === Number(mb.val)) verdict = `兩者${ma.label}相同`;
+  else {
+    const aWin = lower ? Number(ma.val) < Number(mb.val) : Number(ma.val) > Number(mb.val);
+    const w = aWin ? a : b, mw = aWin ? ma : mb;
+    verdict = `→ ${w.name} 的 ${mw.label} 較${lower ? "低" : "高"}（${licaiFmtNum(mw.val)}%）`;
+  }
+  let s = `📊 比較：${a.name} vs ${b.name}\n\n`;
+  s += `• ${a.name}｜${ma.label} ${licaiFmtNum(ma.val)}%\n`;
+  s += `• ${b.name}｜${mb.label} ${licaiFmtNum(mb.val)}%\n\n`;
+  s += verdict + `\n\n數據為最近收盤/報價，僅供參考、非投資建議 🌸`;
+  return s;
+}
 // 今日數據回應：命中才回字串，否則回 null（讓後面的知識庫接手）
 function licaiLiveReply(t) {
   try {
@@ -8850,6 +9033,7 @@ const LICAI_REF = {
   alloc: "[➡️ 資產配置分頁](tab:alloc)",
   insurance: "[➡️ 精選保險分頁](tab:insurance)",
   usstocks: "[➡️ 海外股票分頁](tab:usstocks)",
+  twstock: "[➡️ 台股查詢分頁](tab:twstock)",
   academy: "[📚 小學堂課程](academy/)",
   // 外部權威網站
   edu: "[🔗 投資人教育網（證基會）](https://www.sfi.org.tw)",
