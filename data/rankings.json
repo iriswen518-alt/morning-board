@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-25T09:04:21+08:00",
+  "generated_at": "2026-06-25T10:04:03+08:00",
   "tw": {
     "as_of": "2026-06-25",
     "top_marketcap": [
@@ -745,7 +745,7 @@
         "price": 1048.51,
         "daily_pct": -0.31,
         "market_cap": 1182440357888,
-        "pe": 49.598392,
+        "pe": 23.69514,
         "pe_kind": "trailing",
         "mtd_pct": 7.98,
         "ytd_pct": 267.37,
@@ -890,7 +890,7 @@
         "price": 158.17,
         "daily_pct": 10.86,
         "market_cap": 12116065280,
-        "pe": 69.37281,
+        "pe": 69.67841,
         "pe_kind": "trailing",
         "mtd_pct": 16.24,
         "ytd_pct": -13.2,
@@ -1123,19 +1123,6 @@
         "source_url": "https://finance.yahoo.com/quote/XLV"
       },
       {
-        "symbol": "XLI",
-        "name": "State Street Industrial Select ",
-        "price": 180.21,
-        "daily_pct": 0.2,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": 4.09,
-        "ytd_pct": 16.17,
-        "yahoo": "XLI",
-        "source_url": "https://finance.yahoo.com/quote/XLI"
-      },
-      {
         "symbol": "HYG",
         "name": "iShares iBoxx $ High Yield Corp",
         "price": 79.85,
@@ -1173,6 +1160,19 @@
         "ytd_pct": -1.92,
         "yahoo": "XLF",
         "source_url": "https://finance.yahoo.com/quote/XLF"
+      },
+      {
+        "symbol": "XLRE",
+        "name": "State Street Real Estate Select",
+        "price": 44.51,
+        "daily_pct": -1.31,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": 1.18,
+        "ytd_pct": 10.31,
+        "yahoo": "XLRE",
+        "source_url": "https://finance.yahoo.com/quote/XLRE"
       }
     ],
     "sectors": [
@@ -1203,20 +1203,6 @@
         "yahoo": "XLV",
         "source_url": "https://finance.yahoo.com/quote/XLV",
         "name_zh": "醫療"
-      },
-      {
-        "symbol": "XLI",
-        "name": "State Street Industrial Select ",
-        "price": 180.21,
-        "daily_pct": 0.2,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": 4.09,
-        "ytd_pct": 16.17,
-        "yahoo": "XLI",
-        "source_url": "https://finance.yahoo.com/quote/XLI",
-        "name_zh": "工業"
       },
       {
         "symbol": "XLF",
@@ -1273,6 +1259,20 @@
         "yahoo": "XLK",
         "source_url": "https://finance.yahoo.com/quote/XLK",
         "name_zh": "科技"
+      },
+      {
+        "symbol": "XLY",
+        "name": "State Street Consumer Discretio",
+        "price": 115.07,
+        "daily_pct": -2.86,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": -4.8,
+        "ytd_pct": -3.63,
+        "yahoo": "XLY",
+        "source_url": "https://finance.yahoo.com/quote/XLY",
+        "name_zh": "非必需消費"
       },
       {
         "symbol": "XLB",

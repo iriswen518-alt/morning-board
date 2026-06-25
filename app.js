@@ -8502,7 +8502,7 @@ function licaiHasPriceIntent(t) {
   return LICAI_PRICE_INTENT.some(w => t.includes(w)) || t.length <= 6;
 }
 // 通用名稱比對：找名稱與提問「共同片段最長（≥2 字、非通用詞）」的那檔，不寫死檔名
-const LICAI_NAME_STOP = ["基金", "債券", "美元", "台幣", "新台幣", "公司", "收益", "全球", "新興", "市場", "投資", "累積", "月配", "配息", "殖利", "利率", "怎樣", "表現", "現在", "今天", "今日", "多少", "績效", "淨值", "公司債", "主權債", "目前", "最近", "如何"];
+const LICAI_NAME_STOP = ["基金", "債券", "美元", "台幣", "新台幣", "公司", "收益", "全球", "新興", "市場", "投資", "累積", "月配", "配息", "殖利", "利率", "怎樣", "表現", "現在", "今天", "今日", "多少", "績效", "淨值", "公司債", "主權債", "目前", "最近", "如何", "保險", "壽險", "保單", "終身", "人壽", "分紅", "還本", "增額", "變動"];
 function licaiStrip(s) {
   let r = s || "";
   for (const w of LICAI_NAME_STOP) r = r.split(w).join("");
@@ -8520,7 +8520,7 @@ function licaiFindScored(list, t) {
   for (let i = 0; i + 2 <= q.length; i++) grams.push(q.slice(i, i + 2));
   let best = null, bestScore = 0;
   for (const it of (list || [])) {
-    const nm = licaiClean((it.name_zh || "") + (it.issuer || ""));
+    const nm = licaiClean((it.name_zh || "") + (it.issuer || "") + (it.company || ""));
     if (!nm) continue;
     let sc = 0;
     for (const g of grams) if (nm.includes(g)) sc++;
@@ -8632,6 +8632,35 @@ function licaiLiveReply(t) {
           let s = `精選基金（淨值 ${list[0].nav_date || ""}）📊\n\n`;
           for (const f of list) s += `• ${f.name_zh}｜近1年 ${licaiFmtPct(licaiPerf1y(f))}\n`;
           return licaiWithRefs(s + `\n想看某一檔，直接報名稱（如「聯博美國收益」「富蘭克林公司債」）我給你淨值與績效 🌸`, [LICAI_REF.funds, LICAI_REF.sitca]);
+        }
+      }
+    }
+    // 6.5) 精選保險（個別商品；或泛問「有哪些保險」給總覽）
+    const insKw = /保險|壽險|保單|利變|分紅|還本|終身險|增額|利變型/.test(t);
+    {
+      const insList = (DATA.insurance && DATA.insurance.insurances) || [];
+      const im = licaiFindScored(insList, t);
+      const ins = (insKw && im.score >= 1) || im.score >= 2 ? im.item : null;
+      if (ins) {
+        let s = `${ins.name_zh}　${ins.company || ""} 🛡️\n\n`;
+        if (ins.type) s += `• 類型：${ins.type}\n`;
+        if (ins.currency) s += `• 幣別：${ins.currency}\n`;
+        if (ins.term) s += `• 繳別：${ins.term}\n`;
+        if (ins.tagline) s += `• 特色：${ins.tagline}\n`;
+        const hl = (ins.highlights || []).slice(0, 4);
+        if (hl.length) s += `重點：\n` + hl.map(h => "• " + h).join("\n") + "\n";
+        let refs = [LICAI_REF.insurance];
+        if (ins.source_url) refs.push(`[🔗 商品官網說明](${ins.source_url})`);
+        refs.push(LICAI_REF.lia);
+        return licaiWithRefs(s + `\n保險內容以保單條款及保險公司公告為準；投保前請洽持牌業務員評估需求 🌸`, refs);
+      }
+      // 泛問「有哪些保險」→ 精選保險總覽
+      if (insKw && /有哪些|有什麼|推薦|清單|精選|介紹|列出|哪幾/.test(t)) {
+        const list = insList.slice(0, 5);
+        if (list.length) {
+          let s = `精選保險 🛡️\n\n`;
+          for (const x of list) s += `• ${x.name_zh}｜${x.company || ""}\n`;
+          return licaiWithRefs(s + `\n另有「保障缺口試算」在精選保險分頁。投保前請洽持牌業務員 🌸`, [LICAI_REF.insurance, LICAI_REF.lia]);
         }
       }
     }
