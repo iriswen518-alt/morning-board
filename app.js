@@ -653,6 +653,7 @@ function switchTab(name) {
   const body = $("content");
   body.dataset.section = name;
   if (name === "market") body.innerHTML = renderMarketSheet();
+  else if (name === "live") body.innerHTML = renderLiveSheet();
   else if (name === "news") body.innerHTML = renderNewsSheet();
   else if (name === "funds") body.innerHTML = renderFundsSheet();
   else if (name === "insurance") body.innerHTML = renderInsuranceSheet();
@@ -698,6 +699,7 @@ function switchTab(name) {
   else if (name === "calc") body.innerHTML = renderCalcSheet();
   else if (name === "twstock") body.innerHTML = renderTwStockSheet();
   if (name === "news") wireNewsTabs();
+  if (name === "live") wireLive();
   if (name === "market") { wireMarketViewTabs(); wireMarketTabs(); wireTwStock(); wireNewsTabs(); }
   if (name === "funds") { wireFundsTabs(); wireFundCompare(); }
   if (name === "alloc") wireAllocTabs();
@@ -2699,6 +2701,96 @@ function renderIndexCard({ nameHtml, priceHtml, stats }) {
 function renderIndexCards(cards) {
   if (!cards.length) return "";
   return `<div class="idx-cards">${cards.map(renderIndexCard).join("")}</div>`;
+}
+
+// ── 即時行情分頁 ──────────────────────────────────────────────
+// 全球主要指數 → TradingView symbol（即時 widget 用）。
+// tv 為 null 者改用後備外部連結（TradingView 個別商品頁）。
+// 順序對齊「全球市場」market.json indices。
+const LIVE_INDICES = [
+  { zh: "標普500",   yahoo: "S&P 500",          tv: "SP:SPX" },
+  { zh: "那斯達克",   yahoo: "Nasdaq Composite", tv: "NASDAQ:IXIC" },
+  { zh: "道瓊工業",   yahoo: "Dow Jones",        tv: "DJ:DJI" },
+  { zh: "費城半導體", yahoo: "PHLX Semiconductor", tv: "NASDAQ:SOX" },
+  { zh: "歐洲50",     yahoo: "Euro Stoxx 50",    tv: "TVC:SX5E" },
+  { zh: "德國DAX",    yahoo: "DAX",              tv: "XETR:DAX" },
+  { zh: "英國FTSE",   yahoo: "FTSE 100",         tv: "TVC:UKX" },
+  { zh: "法國CAC",    yahoo: "CAC 40",           tv: "EURONEXT:PX1" },
+  { zh: "日經225",    yahoo: "Nikkei 225",       tv: "TVC:NI225" },
+  { zh: "台股加權",   yahoo: "TAIEX 加權指數",   tv: "TWSE:TAIEX" },
+  { zh: "櫃買指數",   yahoo: "OTC 櫃買加權",     tv: "TPEX:TPEx" },
+  { zh: "台指期近",   yahoo: "台指期(近月)",     tv: "TAIFEX:TXF1!" },
+  { zh: "韓國綜合",   yahoo: "KOSPI",            tv: "KRX:KOSPI" },
+  { zh: "恆生指數",   yahoo: "Hang Seng 恆生",   tv: "HSI:HSI" },
+  { zh: "上證指數",   yahoo: "Shanghai 上證",    tv: "SSE:000001" },
+  { zh: "滬深300",    yahoo: "CSI 300 滬深300",  tv: "SSE:000300" },
+  { zh: "印度Nifty",  yahoo: "Nifty 50",         tv: "NSE:NIFTY" },
+  { zh: "澳洲200",    yahoo: "S&P/ASX 200",      tv: "ASX:XJO" },
+];
+
+function renderLiveSheet() {
+  const cards = LIVE_INDICES.map((idx, i) => {
+    if (idx.tv) {
+      return `
+        <div class="card live-card">
+          <h2 class="live-name">${escapeHtml(idx.zh)}</h2>
+          <div class="live-chart" data-tv="${escapeHtml(idx.tv)}" data-i="${i}"></div>
+        </div>`;
+    }
+    // 後備：無即時 widget 的指數改放外部即時行情連結
+    const url = indexQuoteUrl(idx.yahoo);
+    const link = url
+      ? `<a href="${url}" target="_blank" rel="noopener" class="live-fallback-link">點此看即時行情</a>`
+      : `<span class="live-fallback-link muted">暫無即時行情</span>`;
+    return `
+      <div class="card live-card">
+        <h2 class="live-name">${escapeHtml(idx.zh)}</h2>
+        <div class="live-fallback">${link}</div>
+      </div>`;
+  }).join("");
+  return `
+    <section class="sheet live-sheet">
+      <p class="live-intro">全球主要指數即時走勢，於本頁開啟即由瀏覽器即時更新。</p>
+      <div class="live-grid">${cards}</div>
+      <p class="live-credit">行情由 TradingView 提供，僅供參考，非投資建議或要約。</p>
+    </section>`;
+}
+
+// 為每個 .live-chart 容器注入 TradingView mini-symbol-overview widget。
+// SPA 以 innerHTML 重畫不會執行內嵌 <script>，故在此動態建立 script 元素。
+function wireLive() {
+  const containers = document.querySelectorAll(".live-chart[data-tv]");
+  containers.forEach(el => {
+    const symbol = el.getAttribute("data-tv");
+    el.innerHTML = "";
+    const wrap = document.createElement("div");
+    wrap.className = "tradingview-widget-container";
+    wrap.style.height = "100%";
+    wrap.style.width = "100%";
+    const widget = document.createElement("div");
+    widget.className = "tradingview-widget-container__widget";
+    widget.style.height = "100%";
+    widget.style.width = "100%";
+    wrap.appendChild(widget);
+    const script = document.createElement("script");
+    script.type = "text/javascript";
+    script.async = true;
+    script.src = "https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js";
+    script.textContent = JSON.stringify({
+      symbol: symbol,
+      width: "100%",
+      height: "100%",
+      locale: "zh_TW",
+      dateRange: "1D",
+      colorTheme: "light",
+      isTransparent: true,
+      autosize: true,
+      largeChartUrl: "",
+      chartOnly: false,
+    });
+    wrap.appendChild(script);
+    el.appendChild(wrap);
+  });
 }
 
 function renderMarketSheet() {
@@ -8409,6 +8501,41 @@ function licaiFmtNum(n) {
 function licaiHasPriceIntent(t) {
   return LICAI_PRICE_INTENT.some(w => t.includes(w)) || t.length <= 6;
 }
+// 通用名稱比對：找名稱與提問「共同片段最長（≥2 字、非通用詞）」的那檔，不寫死檔名
+const LICAI_NAME_STOP = ["基金", "債券", "美元", "台幣", "新台幣", "公司", "收益", "全球", "新興", "市場", "投資", "累積", "月配", "配息", "殖利", "利率", "怎樣", "表現", "現在", "今天", "今日", "多少", "績效", "淨值", "公司債", "主權債", "目前", "最近", "如何"];
+function licaiStrip(s) {
+  let r = s || "";
+  for (const w of LICAI_NAME_STOP) r = r.split(w).join("");
+  return r;
+}
+// 剝除通用詞＋標點，留下可辨識字元（避免「公司債」殘片、「-」斷字誤判）
+function licaiClean(s) {
+  return licaiStrip((s || "").toLowerCase()).replace(/[^一-龥a-z0-9]/g, "");
+}
+// 用 2-gram（相鄰字對）重疊計分挑最相符的一檔；回 {item, score}
+function licaiFindScored(list, t) {
+  const q = licaiClean(t);
+  if (q.length < 2) return { item: null, score: 0 };
+  const grams = [];
+  for (let i = 0; i + 2 <= q.length; i++) grams.push(q.slice(i, i + 2));
+  let best = null, bestScore = 0;
+  for (const it of (list || [])) {
+    const nm = licaiClean((it.name_zh || "") + (it.issuer || ""));
+    if (!nm) continue;
+    let sc = 0;
+    for (const g of grams) if (nm.includes(g)) sc++;
+    if (sc > bestScore) { bestScore = sc; best = it; }
+  }
+  return { item: best, score: bestScore };
+}
+function licaiFindByName(list, t) {
+  const r = licaiFindScored(list, t);
+  return r.score >= 1 ? r.item : null;
+}
+function licaiPerf1y(f) {
+  const p = f.perf_single || f.perf || {};
+  return p["1y"] != null ? p["1y"] : (p["6m"] != null ? p["6m"] : null);
+}
 // 今日數據回應：命中才回字串，否則回 null（讓後面的知識庫接手）
 function licaiLiveReply(t) {
   try {
@@ -8432,11 +8559,11 @@ function licaiLiveReply(t) {
           `數據為最近收盤，僅供參考、非投資建議 🌸`;
       }
     }
-    // 2) 黃金 / 原油
-    if (/金|gold|油|oil|原油|wti|布蘭特/.test(t) && wantsPrice) {
+    // 2) 黃金 / 原油（金只認「黃金/金價」，避免吃到「基金」的金）
+    if (/黃金|金價|gold|原油|油價|布蘭特|crude|wti|brent/.test(t) && wantsPrice) {
       const cs = m.commodities || [];
       let c = null;
-      if (/金|gold/.test(t)) c = cs.find(x => /金|gold/i.test(x.name));
+      if (/黃金|金價|gold/.test(t)) c = cs.find(x => /金|gold/i.test(x.name));
       else c = cs.find(x => /油|oil|wti|brent/i.test(x.name));
       if (c) return `${c.name}（收盤 ${c.closing_date || m.closing_date || ""}）\n\n` +
         `• 收盤：${licaiFmtNum(c.close)}\n• 當日：${licaiFmtPct(c.daily_pct)}\n` +
@@ -8463,7 +8590,52 @@ function licaiLiveReply(t) {
         return s + `\n\n殖利率與價格反向，僅供參考 🌸`;
       }
     }
-    // 5) 大盤概況 / 今天行情總覽
+    // 5) 海外債（個別債券：依名稱／發行人比對）
+    if (/債|bond|票息|到期|公司債|主權債/.test(t) || (/殖利率/.test(t) && licaiFindByName((DATA.obonds && DATA.obonds.bonds) || [], t))) {
+      const b = licaiFindByName((DATA.obonds && DATA.obonds.bonds) || [], t);
+      if (b) {
+        const ytm = b.redeem_yield_pct != null ? b.redeem_yield_pct : b.bid_yield_pct;
+        let s = `${b.name_zh}${b.code ? "（" + b.code + "）" : ""}　報價 ${b.price_date || ""} 📑\n\n`;
+        if (b.issuer) s += `• 發行人：${b.issuer}\n`;
+        if (b.coupon_pct != null) s += `• 票面利率：${b.coupon_pct}%\n`;
+        if (b.maturity) s += `• 到期日：${b.maturity}\n`;
+        if (b.rating) s += `• 信評：${b.rating}\n`;
+        if (ytm != null) s += `• 參考殖利率(YTM)：${Number(ytm).toFixed(2)}%\n`;
+        if (b.bid_price != null) s += `• 參考買價：${licaiFmtNum(b.bid_price)}（當日 ${licaiFmtPct(b.daily_change_pct)}）\n`;
+        return licaiWithRefs(s + `\n債券價格與殖利率反向；數據為最近報價，僅供參考、非投資建議 🌸`, [LICAI_REF.obonds]);
+      }
+    }
+    // 6) 基金（個別基金；或泛問「基金」給精選總覽）
+    const fundKw = /基金|fund|淨值|nav|配息|月配|績效/.test(t);
+    {
+      const allF = [...(((DATA.funds && DATA.funds.funds)) || []), ...(((DATA.popular_funds && DATA.popular_funds.funds)) || [])];
+      const fm = licaiFindScored(allF, t);
+      const f = (fundKw && fm.score >= 1) || fm.score >= 2 ? fm.item : null; // 帶「基金」字弱配即可；否則需強配(≥2字對)
+      if (f) {
+        const y1 = licaiPerf1y(f);
+        const p = f.perf_single || f.perf || {};
+        let s = `${f.name_zh}　淨值 ${f.nav_date || ""} 📊\n\n`;
+        if (f.nav != null) s += `• 淨值：${licaiFmtNum(f.nav)} ${f.currency || ""}\n`;
+        if (f.change_pct != null) s += `• 當日：${licaiFmtPct(f.change_pct)}\n`;
+        if (y1 != null) s += `• 近1年：${licaiFmtPct(y1)}${p["3m"] != null ? "（近3月 " + licaiFmtPct(p["3m"]) + "）" : ""}\n`;
+        if (f.distribution_yield_pct != null) s += `• 配息率：${Number(f.distribution_yield_pct).toFixed(2)}%\n`;
+        if (f.tagline) s += `• 特色：${f.tagline}\n`;
+        let refs = [LICAI_REF.funds];
+        if (f.source_url) refs.push(`[🔗 基金淨值/月報來源](${f.source_url})`);
+        refs.push(LICAI_REF.sitca);
+        return licaiWithRefs(s + `\n過去績效不代表未來；基金有手續費與風險，僅供參考 🌸`, refs);
+      }
+      // 沒指定具體基金、但有提「基金」字 → 精選基金總覽
+      if (fundKw && wantsPrice) {
+        const list = ((DATA.funds && DATA.funds.funds) || []).slice(0, 5);
+        if (list.length) {
+          let s = `精選基金（淨值 ${list[0].nav_date || ""}）📊\n\n`;
+          for (const f of list) s += `• ${f.name_zh}｜近1年 ${licaiFmtPct(licaiPerf1y(f))}\n`;
+          return licaiWithRefs(s + `\n想看某一檔，直接報名稱（如「聯博美國收益」「富蘭克林公司債」）我給你淨值與績效 🌸`, [LICAI_REF.funds, LICAI_REF.sitca]);
+        }
+      }
+    }
+    // 7) 大盤概況 / 今天行情總覽
     if (/行情|盤勢|大盤|今天市場|今日市場|市場概況|整體|總覽|概況/.test(t) && wantsPrice && m.summary) {
       return `市場概況（收盤 ${m.closing_date || ""}）📊\n\n${m.summary}\n\n想看單一市場，問我「台股」「美股」「費半」「日經」等，我給你當日/本月/今年漲跌 🌸`;
     }
@@ -8544,7 +8716,7 @@ function licaiReply(text) {
 
   // 1) 今日真實數據（讀 App 內的 market 資料；只在問行情時觸發）
   const live = licaiLiveReply(t);
-  if (live) return licaiWithRefs(live, [LICAI_REF.market, LICAI_REF.twse]);
+  if (live) return live.includes("🔎 延伸參考") ? live : licaiWithRefs(live, [LICAI_REF.market, LICAI_REF.twse]);
 
   // 2) 知識庫：計分挑最精準的一則
   const hit = licaiBestKB(t);
