@@ -3010,8 +3010,16 @@ async function refreshLiveData() {
   let anyOk = false;
   results.forEach((res, i) => {
     if (res.status === "fulfilled" && res.value) {
-      const prevName = bySym[syms[i]] && bySym[syms[i]].name_zh;
-      bySym[syms[i]] = Object.assign(res.value, { name_zh: prevName });
+      const committed = bySym[syms[i]] || {};
+      const live = res.value;
+      // 昨收以排程 JSON（Yahoo，可靠）為準；cnyes 對收盤市場常算不出昨收。
+      // 用此昨收 + cnyes 最新價重算漲跌，確保收盤市場也有漲跌%。
+      const prev = (committed.prev_close != null) ? committed.prev_close : live.prev_close;
+      const change = (prev != null) ? Math.round((live.last - prev) * 100) / 100 : null;
+      const pct = (prev) ? Math.round((change / prev * 100) * 100) / 100 : null;
+      bySym[syms[i]] = Object.assign(live, {
+        prev_close: prev, change, change_pct: pct, name_zh: committed.name_zh,
+      });
       anyOk = true;
     }
   });
