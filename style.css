@@ -332,16 +332,16 @@ body::before {
 }
 
 #cards {
-  padding: 12px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 9px;
 }
 
 .card {
   background: var(--bg);
   border-radius: 14px;
-  padding: 16px;
+  padding: 11px 16px;
   box-shadow: var(--shadow);
   opacity: 0;
   transform: translateY(20px);
@@ -360,7 +360,7 @@ body::before {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 .card h2 { margin: 0; font-size: 18px; color: var(--brand-deep); }
