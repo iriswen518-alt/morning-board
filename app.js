@@ -2821,7 +2821,8 @@ function renderLiveCard(idx, rec, i) {
   }
   const up = (rec.change_pct ?? 0) >= 0;
   const st = liveStateLabel(rec.market_state);
-  const chgNum = rec.change != null ? `${up ? "+" : ""}${fmtInt(rec.change)}` : "";
+  const fv = v => (rec.dp != null ? fmtNum(v, rec.dp) : fmtInt(v));
+  const chgNum = rec.change != null ? `${up ? "+" : ""}${fv(rec.change)}` : "";
   const chgPct = rec.change_pct != null ? `${up ? "+" : ""}${fmtNum(rec.change_pct, 2)}%` : "—";
   return `
     <div class="card live-card live-card-tap" role="button" tabindex="0" ${click}>
@@ -2830,7 +2831,7 @@ function renderLiveCard(idx, rec, i) {
         <span class="live-state ${st.cls}">${st.txt}</span>
       </div>
       <div class="live-quote">
-        <span class="live-last">${fmtInt(rec.last)}</span>
+        <span class="live-last">${fv(rec.last)}</span>
         <span class="live-chg ${pctClass(rec.change_pct)}">${chgPct}${chgNum ? `（${chgNum}）` : ""}</span>
       </div>
       <div class="live-chart">${renderLiveChart(rec.points, rec.prev_close, up, i)}</div>
@@ -2839,7 +2840,8 @@ function renderLiveCard(idx, rec, i) {
 }
 
 // App 內頁：放大走勢圖（含昨收虛線＋最新值標記＋高低基準線）
-function renderLiveChartBig(points, prevClose, up) {
+function renderLiveChartBig(points, prevClose, up, dp) {
+  const fmtV = v => (dp != null ? fmtNum(v, dp) : fmtInt(v));
   if (!points || points.length < 2) return `<div class="live-chart-msg">此指數暫無盤中資料</div>`;
   const W = 720, H = 260, padL = 6, padR = 56, padT = 10, padB = 18;
   const vals = points.slice();
@@ -2862,7 +2864,7 @@ function renderLiveChartBig(points, prevClose, up) {
     const v = lo + (range * g / 3);
     const y = Y(v).toFixed(1);
     grid += `<line x1="${padL}" y1="${y}" x2="${(padL + plotW).toFixed(1)}" y2="${y}" stroke="#eceff3" stroke-width="1"/>`;
-    grid += `<text x="${(W - padR + 5).toFixed(1)}" y="${(+y + 3.5).toFixed(1)}" font-size="11" fill="#9aa3af">${fmtInt(v)}</text>`;
+    grid += `<text x="${(W - padR + 5).toFixed(1)}" y="${(+y + 3.5).toFixed(1)}" font-size="11" fill="#9aa3af">${fmtV(v)}</text>`;
   }
   const prevLine = prevClose != null
     ? `<line x1="${padL}" y1="${Y(prevClose).toFixed(1)}" x2="${(padL + plotW).toFixed(1)}" y2="${Y(prevClose).toFixed(1)}" stroke="#b8c0cc" stroke-width="1" stroke-dasharray="4 3"/>`
@@ -2870,7 +2872,7 @@ function renderLiveChartBig(points, prevClose, up) {
   const last = vals[n - 1], lastY = Y(last);
   const marker = `<circle cx="${X(n - 1).toFixed(1)}" cy="${lastY.toFixed(1)}" r="3" fill="${color}"/>
     <rect x="${(W - padR).toFixed(1)}" y="${(lastY - 8).toFixed(1)}" width="${padR}" height="16" rx="2" fill="${color}"/>
-    <text x="${(W - padR + padR / 2).toFixed(1)}" y="${(lastY + 3.5).toFixed(1)}" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">${fmtInt(last)}</text>`;
+    <text x="${(W - padR + padR / 2).toFixed(1)}" y="${(lastY + 3.5).toFixed(1)}" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">${fmtV(last)}</text>`;
   return `<svg class="live-detail-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="盤中走勢放大圖">
     <defs><linearGradient id="lgbig" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="${color}" stop-opacity="0.16"/>
@@ -2897,7 +2899,8 @@ function renderLiveDetail(idx, rec) {
   }
   const up = (rec.change_pct ?? 0) >= 0;
   const st = liveStateLabel(rec.market_state);
-  const chgNum = rec.change != null ? `${up ? "+" : ""}${fmtInt(rec.change)}` : "";
+  const fv = v => (rec.dp != null ? fmtNum(v, rec.dp) : fmtInt(v));
+  const chgNum = rec.change != null ? `${up ? "+" : ""}${fv(rec.change)}` : "";
   const chgPct = rec.change_pct != null ? `${up ? "+" : ""}${fmtNum(rec.change_pct, 2)}%` : "—";
   const dayHi = Math.max(...rec.points), dayLo = Math.min(...rec.points);
   const stat = (k, v) => `<div class="live-stat"><span class="live-stat-k">${k}</span><span class="live-stat-v">${v}</span></div>`;
@@ -2909,14 +2912,14 @@ function renderLiveDetail(idx, rec) {
         <span class="live-state ${st.cls}">${st.txt}</span>
       </div>
       <div class="live-detail-quote">
-        <span class="live-detail-last">${fmtInt(rec.last)}</span>
+        <span class="live-detail-last">${fv(rec.last)}</span>
         <span class="live-detail-chg ${pctClass(rec.change_pct)}">${chgPct}${chgNum ? `（${chgNum}）` : ""}</span>
       </div>
-      <div class="live-detail-chart">${renderLiveChartBig(rec.points, rec.prev_close, up)}</div>
+      <div class="live-detail-chart">${renderLiveChartBig(rec.points, rec.prev_close, up, rec.dp)}</div>
       <div class="live-stats">
-        ${stat("今日高", fmtInt(dayHi))}
-        ${stat("今日低", fmtInt(dayLo))}
-        ${stat("昨收", rec.prev_close != null ? fmtInt(rec.prev_close) : "—")}
+        ${stat("今日高", fv(dayHi))}
+        ${stat("今日低", fv(dayLo))}
+        ${stat("昨收", rec.prev_close != null ? fv(rec.prev_close) : "—")}
         ${stat("資料時間", rec.asof ? escapeHtml(rec.asof) : "—")}
       </div>
       <p class="live-credit">資料來源 鉅亨網（cnyes）、Yahoo Finance，盤中定時更新；虛線為昨收。數值僅供參考，非投資建議或要約。</p>
@@ -2942,6 +2945,16 @@ const LIVE_CNYES = {
   "TWF:TXF": "TWF:TXF:WEIGHTED", "^KS11": "GI:KOSPI", "^HSI": "GI:HSI",
   "000001.SS": "GI:SSEC", "000300.SS": "GI:CSI300",
 };
+// 匯率（接在指數下方）：cnyes symbol + 顯示小數位
+const LIVE_FX = [
+  { zh: "美元指數", sym: "GI:DXY", dp: 2 },
+  { zh: "美元台幣", sym: "FX:USDTWD", dp: 3 },
+  { zh: "日圓台幣", sym: "FX:JPYTWD", dp: 4 },
+  { zh: "美元日圓", sym: "FX:USDJPY", dp: 2 },
+  { zh: "歐元美元", sym: "FX:EURUSD", dp: 4 },
+  { zh: "英鎊美元", sym: "FX:GBPUSD", dp: 4 },
+  { zh: "美元人民幣", sym: "FX:USDCNY", dp: 4 },
+];
 let LIVE_REFRESH_TIMER = null;
 
 function liveDownsample(vals, cap) {
@@ -2957,12 +2970,13 @@ function liveFmtTpe(epochSec) {
   const p = n => String(n).padStart(2, "0");
   return `${p(d.getUTCMonth() + 1)}/${p(d.getUTCDate())} ${p(d.getUTCHours())}:${p(d.getUTCMinutes())}`;
 }
-// 直連 cnyes charting 抓單一指數盤中（與 fetch_live_indices.py 同邏輯：排序＋挑含當下時段）
-async function fetchCnyesLive(frontendSym) {
-  const cny = LIVE_CNYES[frontendSym];
-  if (!cny) return null;
+// 直連 cnyes charting 抓單一商品盤中（與 fetch_live_indices.py 同邏輯：排序＋挑含當下時段）。
+// dp = 小數位（指數/美元指數用 2；匯率多用 4 才不失精度）。
+async function fetchCnyesBySymbol(cnyesSym, dp) {
+  const R = Math.pow(10, dp == null ? 2 : dp);
+  const rnd = v => Math.round(v * R) / R;
   const now = Math.floor(Date.now() / 1000);
-  const url = `https://ws.api.cnyes.com/ws/api/v1/charting/history?symbol=${encodeURIComponent(cny)}&resolution=5&from=${now - 3 * 86400}&to=${now}`;
+  const url = `https://ws.api.cnyes.com/ws/api/v1/charting/history?symbol=${encodeURIComponent(cnyesSym)}&resolution=5&from=${now - 3 * 86400}&to=${now}`;
   const r = await fetch(url, { cache: "no-store" });
   if (!r.ok) throw new Error("cnyes " + r.status);
   const j = await r.json();
@@ -2970,7 +2984,7 @@ async function fetchCnyesLive(frontendSym) {
   const t = data.t || [], c = data.c || [], sessions = data.session || [];
   const pairs = [];
   for (let i = 0; i < t.length; i++) {
-    if (c[i] != null) pairs.push([+t[i], Math.round(c[i] * 100) / 100]);
+    if (c[i] != null) pairs.push([+t[i], rnd(c[i])]);
   }
   pairs.sort((a, b) => a[0] - b[0]);
   if (!pairs.length) throw new Error("empty");
@@ -2998,16 +3012,35 @@ async function fetchCnyesLive(frontendSym) {
   const series = curPairs.map(p => p[1]);
   const prev = before.length ? before[before.length - 1] : null;
   const last = series[series.length - 1];
-  const change = prev != null ? Math.round((last - prev) * 100) / 100 : null;
+  const change = prev != null ? rnd(last - prev) : null;
   const pct = (prev && change != null) ? Math.round((change / prev * 100) * 100) / 100 : null;
   return {
-    ok: true, symbol: frontendSym, last,
-    prev_close: prev != null ? Math.round(prev * 100) / 100 : null,
+    ok: true, symbol: cnyesSym, last,
+    prev_close: prev != null ? rnd(prev) : null,
     change, change_pct: pct,
     points: liveDownsample(series, 80),
     market_state: state,
     asof: liveFmtTpe(curPairs[curPairs.length - 1][0]),
+    dp: dp == null ? 2 : dp,
   };
+}
+// 指數用：前端 sym → cnyes symbol，鍵仍用前端 sym
+async function fetchCnyesLive(frontendSym) {
+  const cny = LIVE_CNYES[frontendSym];
+  if (!cny) return null;
+  const rec = await fetchCnyesBySymbol(cny, 2);
+  rec.symbol = frontendSym;
+  return rec;
+}
+// cnyes 批次報價（一次多檔）：回 { ticker: {last, prev} }。供匯率取昨收（charting 只回今日、無昨收）。
+async function fetchCnyesQuotes(cnyesSyms) {
+  const url = `https://ws.api.cnyes.com/ws/api/v1/quote/quotes/${encodeURIComponent(cnyesSyms.join(","))}`;
+  const r = await fetch(url, { cache: "no-store" });
+  if (!r.ok) throw new Error("cnyes quote " + r.status);
+  const j = await r.json();
+  const map = {};
+  (j.data || []).forEach(it => { if (it["200010"]) map[it["200010"]] = { last: it["6"], prev: it["21"] }; });
+  return map;
 }
 async function refreshLiveData() {
   if (CURRENT_TAB !== "live") { stopLiveAutoRefresh(); return; }
@@ -3032,12 +3065,34 @@ async function refreshLiveData() {
       anyOk = true;
     }
   });
+  // 匯率：charting 取盤中走勢；昨收改用批次報價（charting 對匯率只回今日、無昨收）
+  let fxQuotes = {};
+  try { fxQuotes = await fetchCnyesQuotes(LIVE_FX.map(f => f.sym)); } catch (_) { /* 略 */ }
+  const fxResults = await Promise.allSettled(LIVE_FX.map(f => fetchCnyesBySymbol(f.sym, f.dp)));
+  const fx = [];
+  fxResults.forEach((res, i) => {
+    if (res.status === "fulfilled" && res.value) {
+      const f = LIVE_FX[i];
+      const rec = res.value;
+      const q = fxQuotes[f.sym.split(":").pop()];
+      if (q && q.prev != null) {
+        const R = Math.pow(10, f.dp);
+        const prev = Math.round(q.prev * R) / R;
+        const change = Math.round((rec.last - prev) * R) / R;
+        rec.prev_close = prev;
+        rec.change = change;
+        rec.change_pct = prev ? Math.round((change / prev * 100) * 100) / 100 : null;
+      }
+      fx.push(Object.assign(rec, { name_zh: f.zh }));
+      anyOk = true;
+    }
+  });
   if (!anyOk && DATA.live) return; // cnyes 全失敗：維持現狀，不動畫面
   const indices = LIVE_INDICES.map(idx => bySym[idx.sym]).filter(Boolean);
   const now = new Date(Date.now() + 8 * 3600 * 1000);
   const p = n => String(n).padStart(2, "0");
   const builtAt = `${now.getUTCFullYear()}-${p(now.getUTCMonth() + 1)}-${p(now.getUTCDate())}T${p(now.getUTCHours())}:${p(now.getUTCMinutes())}`;
-  DATA.live = { built_at: builtAt, indices };
+  DATA.live = { built_at: builtAt, indices, fx };
   if (CURRENT_TAB === "live") {
     const body = $("content");
     if (body) {
@@ -3059,15 +3114,23 @@ function renderLiveSheet() {
   const live = DATA.live || {};
   const bySym = {};
   (live.indices || []).forEach(r => { if (r && r.symbol) bySym[r.symbol] = r; });
-  // 內頁模式：顯示單一指數放大行情
+  (live.fx || []).forEach(r => { if (r && r.symbol) bySym[r.symbol] = r; });
+  // 內頁模式：顯示單一商品放大行情（指數或匯率）
   if (LIVE_DETAIL_SYM) {
-    const idx = LIVE_INDICES.find(x => x.sym === LIVE_DETAIL_SYM) || { zh: LIVE_DETAIL_SYM, sym: LIVE_DETAIL_SYM };
+    const idx = LIVE_INDICES.find(x => x.sym === LIVE_DETAIL_SYM)
+      || LIVE_FX.find(x => x.sym === LIVE_DETAIL_SYM)
+      || { zh: LIVE_DETAIL_SYM, sym: LIVE_DETAIL_SYM };
     return renderLiveDetail(idx, bySym[LIVE_DETAIL_SYM]);
   }
   const cards = LIVE_INDICES.map((idx, i) => renderLiveCard(idx, bySym[idx.sym], i)).join("");
+  const fxCards = LIVE_FX.map((f, i) => renderLiveCard(f, bySym[f.sym], 100 + i)).join("");
+  const fxBlock = fxCards
+    ? `<h3 class="live-section-title">匯率</h3><div class="live-grid">${fxCards}</div>`
+    : "";
   return `
     <section class="live-sheet">
       <div class="live-grid">${cards}</div>
+      ${fxBlock}
       <p class="live-credit">資料來源 鉅亨網（cnyes）、Yahoo Finance，盤中定時更新；數值僅供參考，非投資建議或要約。</p>
     </section>`;
 }

@@ -2721,6 +2721,12 @@ table.indices.stock-cols col.c-num { width: 11%; }
 /* 覆蓋全域 .card 的 min-height:240px 與 .card h2:22px（否則卡片被撐高、名稱過大） */
 .live-grid .live-card { min-height: 0; padding: 6px 9px 5px; }
 .live-grid .live-name { font-size: 12px; }
+.live-section-title {
+  margin: 18px 0 8px;
+  font-size: 15px;
+  color: var(--brand-deep);
+  font-weight: 700;
+}
 .live-card {
   padding: 7px 9px 5px;
   display: flex;
