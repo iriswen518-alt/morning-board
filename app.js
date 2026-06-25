@@ -6366,9 +6366,7 @@ function renderNewsByCategory(cat) {
   if (cat === "tax") {
     const taxItems = (DATA.tax && DATA.tax.items) || [];
     if (taxItems.length) {
-      html += `
-        <h3 style="color:var(--brand-deep); margin-top:18px">稅務深度</h3>
-        ${taxItems.map(it => `
+      const taxInner = taxItems.map(it => `
           <div class="news-item">
             <details>
               <summary>${escapeHtml(it.title)}${dateFmt ? `<span class="news-date">${escapeHtml(dateFmt)}</span>` : ""}</summary>
@@ -6376,8 +6374,8 @@ function renderNewsByCategory(cat) {
               ${it.source_url ? `<a class="source" href="${it.source_url}" target="_blank" rel="noopener">${escapeHtml(it.source_name || "來源")}</a>` : ""}
             </details>
           </div>
-        `).join("")}
-      `;
+        `).join("");
+      html += newsSection("稅務深度", taxInner);
     }
   }
 

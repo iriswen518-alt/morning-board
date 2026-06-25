@@ -593,6 +593,29 @@ table.indices th.sortable-th {
   padding: 10px 0;
   border-bottom: 1px solid var(--border);
 }
+/* 新聞區塊（可折疊）標題列 */
+.news-sec-head {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 2px 8px;
+  margin-top: 6px;
+}
+.news-sec-head::-webkit-details-marker { display: none; }
+.news-sec-title {
+  color: var(--brand-deep);
+  font-weight: 700;
+  font-size: 16px;
+}
+.news-caret {
+  width: 18px; height: 18px;
+  color: var(--text-mute);
+  transition: transform .2s ease;
+  flex: 0 0 auto;
+}
+.news-sec:not([open]) .news-caret { transform: rotate(-90deg); }
 .news-item h3 { margin: 0 0 6px; font-size: 14px; font-weight: 400; color: var(--text); padding-left: 0; }
 .news-item h3::before { display: none; }
 .news-item details summary { list-style: none; cursor: pointer; font-size: 14px; font-weight: 400; color: var(--text); line-height: 1.4; display: flex; align-items: baseline; gap: 6px; }
