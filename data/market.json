@@ -213,7 +213,7 @@
       "name": "DXY 美元指數",
       "close": 101.61000061035156,
       "daily_pct": 0.2,
-      "mtd_pct": 2.61,
+      "mtd_pct": 2.62,
       "ytd_pct": 3.27,
       "closing_date": "2026-06-24"
     },
@@ -308,16 +308,89 @@
       "closing_date": "2026-06-23"
     }
   ],
-  "bond_etfs": [],
+  "bond_etfs": [
+    {
+      "name": "LQD 投資等級債 ETF",
+      "name_zh": null,
+      "close": 109.41000366210938,
+      "daily_pct": 0.46,
+      "mtd_pct": 0.05,
+      "ytd_pct": -0.71,
+      "closing_date": "2026-06-24"
+    },
+    {
+      "name": "VCSH 短期投資等級 ETF",
+      "name_zh": null,
+      "close": 78.9800033569336,
+      "daily_pct": 0.16,
+      "mtd_pct": -0.27,
+      "ytd_pct": -0.94,
+      "closing_date": "2026-06-24"
+    },
+    {
+      "name": "HYG 高收益債 ETF",
+      "name_zh": null,
+      "close": 79.8499984741211,
+      "daily_pct": -0.03,
+      "mtd_pct": -0.57,
+      "ytd_pct": -0.97,
+      "closing_date": "2026-06-24"
+    },
+    {
+      "name": "JNK 高收益債 ETF(備)",
+      "name_zh": null,
+      "close": 96.19000244140625,
+      "daily_pct": -0.06,
+      "mtd_pct": -0.6,
+      "ytd_pct": -1.05,
+      "closing_date": "2026-06-24"
+    },
+    {
+      "name": "EMB 新興市場債 ETF",
+      "name_zh": null,
+      "close": 96.56999969482422,
+      "daily_pct": 0.32,
+      "mtd_pct": 0.15,
+      "ytd_pct": 0.3,
+      "closing_date": "2026-06-24"
+    },
+    {
+      "name": "TLT 長天期公債 ETF",
+      "name_zh": null,
+      "close": 87.37999725341797,
+      "daily_pct": 1.37,
+      "mtd_pct": 1.89,
+      "ytd_pct": 0.25,
+      "closing_date": "2026-06-24"
+    },
+    {
+      "name": "IEF 中期公債 ETF",
+      "name_zh": null,
+      "close": 94.7300033569336,
+      "daily_pct": 0.65,
+      "mtd_pct": 0.08,
+      "ytd_pct": -1.49,
+      "closing_date": "2026-06-24"
+    },
+    {
+      "name": "AGG 綜合債市 ETF",
+      "name_zh": null,
+      "close": 99.19000244140625,
+      "daily_pct": 0.49,
+      "mtd_pct": 0.13,
+      "ytd_pct": -0.69,
+      "closing_date": "2026-06-24"
+    }
+  ],
   "rate_outlook": {
     "us2y": 4.11,
-    "us10y": 4.4,
-    "yield_curve_10y2y": 0.29,
-    "yield_curve_10y2y_bps": 29,
+    "us10y": 4.45,
+    "yield_curve_10y2y": 0.34,
+    "yield_curve_10y2y_bps": 34,
     "curve_shape": "正斜率",
     "dxy": 101.61000061035156,
     "dxy_daily_pct": 0.2,
-    "closing_date": "2026-06-24"
+    "closing_date": "2026-06-18"
   },
   "fedwatch": [
     {
@@ -332,7 +405,7 @@
     {
       "label": "Jul 2026",
       "fomc_date": "2026-07-30",
-      "implied_rate": 3.64,
+      "implied_rate": 3.63,
       "delta_rate": 0.01,
       "delta_bps": 1.0,
       "p_hike": 4.0,
@@ -355,10 +428,10 @@
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
       "implied_rate": 3.83,
-      "delta_rate": 0.06,
-      "delta_bps": 6.0,
-      "p_hike": 24.0,
-      "p_hold": 76.0,
+      "delta_rate": 0.07,
+      "delta_bps": 7.0,
+      "p_hike": 28.0,
+      "p_hold": 72.0,
       "p_cut": 0,
       "is_reference": false
     },
