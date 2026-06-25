@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-25T13:02:17+08:00",
+  "generated_at": "2026-06-25T15:01:47+08:00",
   "tw": {
     "as_of": "2026-06-25",
     "top_marketcap": [
@@ -667,7 +667,7 @@
         "price": 293.08,
         "daily_pct": -0.41,
         "market_cap": 4304570155008,
-        "pe": 35.56796,
+        "pe": 35.48184,
         "pe_kind": "trailing",
         "mtd_pct": -6.08,
         "ytd_pct": 7.81,
@@ -732,7 +732,7 @@
         "price": 375.53,
         "daily_pct": -1.59,
         "market_cap": 1410386886656,
-        "pe": 338.3153,
+        "pe": 344.52292,
         "pe_kind": "trailing",
         "mtd_pct": -13.83,
         "ytd_pct": -16.5,
@@ -1058,17 +1058,17 @@
         "source_url": "https://finance.yahoo.com/quote/SOXX"
       },
       {
-        "symbol": "IWM",
-        "name": "iShares Russell 2000 Index Fund",
-        "price": 296.69,
-        "daily_pct": 1.58,
+        "symbol": "TLT",
+        "name": "iShares 20+ Year Treasury Bond ",
+        "price": 87.38,
+        "daily_pct": 1.38,
         "market_cap": null,
         "pe": null,
         "pe_kind": null,
-        "mtd_pct": 2.16,
-        "ytd_pct": 20.53,
-        "yahoo": "IWM",
-        "source_url": "https://finance.yahoo.com/quote/IWM"
+        "mtd_pct": 1.89,
+        "ytd_pct": 0.25,
+        "yahoo": "TLT",
+        "source_url": "https://finance.yahoo.com/quote/TLT"
       },
       {
         "symbol": "XLU",
@@ -1123,6 +1123,19 @@
         "source_url": "https://finance.yahoo.com/quote/XLI"
       },
       {
+        "symbol": "HYG",
+        "name": "iShares iBoxx $ High Yield Corp",
+        "price": 79.85,
+        "daily_pct": -0.22,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": -0.57,
+        "ytd_pct": -0.97,
+        "yahoo": "HYG",
+        "source_url": "https://finance.yahoo.com/quote/HYG"
+      },
+      {
         "symbol": "DIA",
         "name": "State Street SPDR Dow Jones Ind",
         "price": 518.52,
@@ -1147,19 +1160,6 @@
         "ytd_pct": -1.92,
         "yahoo": "XLF",
         "source_url": "https://finance.yahoo.com/quote/XLF"
-      },
-      {
-        "symbol": "XLRE",
-        "name": "State Street Real Estate Select",
-        "price": 44.51,
-        "daily_pct": -1.31,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": 1.18,
-        "ytd_pct": 10.31,
-        "yahoo": "XLRE",
-        "source_url": "https://finance.yahoo.com/quote/XLRE"
       },
       {
         "symbol": "XLP",
@@ -1231,20 +1231,6 @@
         "yahoo": "XLF",
         "source_url": "https://finance.yahoo.com/quote/XLF",
         "name_zh": "金融"
-      },
-      {
-        "symbol": "XLRE",
-        "name": "State Street Real Estate Select",
-        "price": 44.51,
-        "daily_pct": -1.31,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": 1.18,
-        "ytd_pct": 10.31,
-        "yahoo": "XLRE",
-        "source_url": "https://finance.yahoo.com/quote/XLRE",
-        "name_zh": "房地產"
       },
       {
         "symbol": "XLP",
