@@ -603,8 +603,16 @@ def regenerate_summary(market):
     if len(indices) < 3:
         return
 
+    def short_date(iso):
+        # "2026-06-24" -> "6/24"；無日期則回空字串
+        parts = (iso or "").split("-")
+        return f"{int(parts[1])}/{int(parts[2])}" if len(parts) == 3 else ""
+
     def fmt(i):
-        return f"{i['name']} {i['daily_pct']:+.2f}%"
+        # 指數行情鐵則：提到指數漲跌一律附上該行情所屬日期
+        d = short_date(i.get("closing_date"))
+        prefix = f"{d} " if d else ""
+        return f"{prefix}{i['name']} {i['daily_pct']:+.2f}%"
 
     ranked = sorted(indices, key=lambda i: i["daily_pct"], reverse=True)
     gainers = [i for i in ranked if i["daily_pct"] > 0][:3]
