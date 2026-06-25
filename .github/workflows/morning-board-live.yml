@@ -22,14 +22,18 @@ jobs:
         run: |
           mkdir -p work
           cp build/fetch_live_indices.py work/
+          cp build/fetch_live_news.py work/
           ln -sfn "$GITHUB_WORKSPACE" work/repo
       - name: Fetch live indices
         run: cd work && python3 fetch_live_indices.py
+      - name: Fetch live news
+        # 抓鉅亨即時新聞頭條供「快訊」跑馬燈；失敗保留舊檔，不擋指數更新。
+        run: cd work && python3 fetch_live_news.py || true
       - name: Commit & push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/live_indices.json
+          git add data/live_indices.json data/live_news.json
           if git diff --cached --quiet; then echo "no changes"; exit 0; fi
           git commit -m "data(live): $(date -u '+%Y-%m-%d %H:%M UTC')"
           git pull --rebase origin "${GITHUB_REF_NAME}"

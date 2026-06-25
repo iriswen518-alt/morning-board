@@ -568,7 +568,7 @@ async function init() {
   // 每個來源各自有 fallback：一個壞不拖垮全頁
   // 失敗時記到 FAILED_LOADS，使用者切到對應 tab 時會背景重試
   const safe = (name, fallback) => load(name).catch(() => { FAILED_LOADS.add(name); return fallback; });
-  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
@@ -593,8 +593,9 @@ async function init() {
     safe("premarket", null),
     safe("popular_funds", { funds: [] }),
     safe("live_indices", { built_at: "", indices: [] }),
+    safe("live_news", { built_at: "", items: [] }),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live };
+  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news };
   const _updatedAt = latestBuiltAt();
   if (!_updatedAt) {
     $("updated").textContent = `載入部分失敗（顯示快取資料）`;
@@ -955,7 +956,7 @@ async function refreshData() {
     FAILED_LOADS.add(name);
     return DATA[name === "insurances" ? "insurance" : name] || fallback;
   });
-  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
@@ -980,8 +981,9 @@ async function refreshData() {
     safe("premarket", null),
     safe("popular_funds", { funds: [] }),
     safe("live_indices", { built_at: "", indices: [] }),
+    safe("live_news", { built_at: "", items: [] }),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live };
+  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news };
   SEARCH_INDEX = buildSearchIndex();
   const _updatedAt = latestBuiltAt();
   if (_updatedAt) {
@@ -2996,6 +2998,8 @@ const LIVE_FX = [
   { zh: "美元人民幣", sym: "FX:USDCNY", dp: 4 },
 ];
 let LIVE_REFRESH_TIMER = null;
+let LIVE_NEWS_TIMER = null;
+let LIVE_NEWS_IDX = 0;
 
 function liveDownsample(vals, cap) {
   if (vals.length <= cap) return vals;
@@ -3182,9 +3186,56 @@ async function refreshLiveData() {
 function startLiveAutoRefresh() {
   stopLiveAutoRefresh();
   LIVE_REFRESH_TIMER = setInterval(refreshLiveData, 60000);
+  startLiveNewsTicker();
 }
 function stopLiveAutoRefresh() {
   if (LIVE_REFRESH_TIMER) { clearInterval(LIVE_REFRESH_TIMER); LIVE_REFRESH_TIMER = null; }
+  stopLiveNewsTicker();
+}
+
+// ── 即時行情頂部「快訊」跑馬燈：鉅亨即時新聞頭條，每 5 秒淡出輪播一則 ──
+// 單一計時器、每次 tick 重新查 DOM（#lnt-item），故每 60 秒整塊重繪後仍續播；
+// LIVE_NEWS_IDX 存模組層，重繪／重綁不歸零。
+function renderLiveNewsTicker() {
+  const items = (DATA.live_news && DATA.live_news.items) || [];
+  if (!items.length) return "";
+  if (LIVE_NEWS_IDX >= items.length) LIVE_NEWS_IDX = 0;
+  const it = items[LIVE_NEWS_IDX] || items[0];
+  return `
+    <a class="live-news-ticker" id="live-news-ticker" href="${escapeHtml(it.url)}" target="_blank" rel="noopener"
+       title="開啟鉅亨網原文"
+       style="display:flex;align-items:center;gap:8px;padding:8px 12px;margin-bottom:10px;
+              background:var(--card,#fff);border:1px solid var(--border,#e5e7eb);border-radius:10px;
+              text-decoration:none;color:inherit;overflow:hidden;">
+      <span style="flex-shrink:0;font-size:12px;font-weight:700;color:#fff;background:#e8453c;
+                   padding:2px 8px;border-radius:6px;letter-spacing:1px;">快訊</span>
+      <span class="lnt-item" id="lnt-item"
+            style="flex:1;min-width:0;font-size:13px;white-space:nowrap;overflow:hidden;
+                   text-overflow:ellipsis;transition:opacity .2s ease;">${escapeHtml(it.title)}</span>
+    </a>`;
+}
+function startLiveNewsTicker() {
+  stopLiveNewsTicker();
+  const items = (DATA.live_news && DATA.live_news.items) || [];
+  if (items.length < 2) return; // 0 或 1 則無需輪播
+  LIVE_NEWS_TIMER = setInterval(() => {
+    const bar = document.getElementById("live-news-ticker");
+    const el = document.getElementById("lnt-item");
+    if (!bar || !el) return; // 已離開即時行情分頁或在詳情模式
+    const list = (DATA.live_news && DATA.live_news.items) || [];
+    if (list.length < 2) return;
+    LIVE_NEWS_IDX = (LIVE_NEWS_IDX + 1) % list.length;
+    const it = list[LIVE_NEWS_IDX];
+    el.style.opacity = "0";
+    setTimeout(() => {
+      el.textContent = it.title;
+      bar.href = it.url;
+      el.style.opacity = "1";
+    }, 220);
+  }, 5000);
+}
+function stopLiveNewsTicker() {
+  if (LIVE_NEWS_TIMER) { clearInterval(LIVE_NEWS_TIMER); LIVE_NEWS_TIMER = null; }
 }
 
 function renderLiveSheet() {
@@ -3206,6 +3257,7 @@ function renderLiveSheet() {
   const exCards = LIVE_BINANCE.map((x, i) => renderLiveCard(x, bySym[x.sym], 200 + i)).join("");
   return `
     <section class="live-sheet">
+      ${renderLiveNewsTicker()}
       ${liveSection("idx", "全球指數", cards)}
       ${fxCards ? liveSection("fx", "匯率", fxCards) : ""}
       ${exCards ? liveSection("ex", "黃金・加密", exCards) : ""}
