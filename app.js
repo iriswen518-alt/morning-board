@@ -2885,6 +2885,25 @@ function renderLiveChartBig(points, prevClose, up, dp) {
   </svg>`;
 }
 
+// rec.asof 形如 "06/25 13:30" → 取場次日期 "06/25"（即「高/低」所屬日，資料直接帶、精確）
+function liveSessionDateLabel(asof) {
+  const m = asof && asof.match(/(\d{2})\/(\d{2})/);
+  return m ? `${m[1]}/${m[2]}` : "";
+}
+// 由場次日期往前推一個交易日（跳過週六日）作為「昨收」日期。
+// 註：不含國定假日表，遇連假可能差一天；無法判定時回空字串（不顯示相對詞）。
+function livePrevTradingDateLabel(asof) {
+  const m = asof && asof.match(/(\d{2})\/(\d{2})/);
+  if (!m) return "";
+  const now = new Date(Date.now() + 8 * 3600 * 1000); // 台北時間，補當年年份
+  const d = new Date(Date.UTC(now.getUTCFullYear(), +m[1] - 1, +m[2]));
+  if (d.getTime() > now.getTime() + 86400000) d.setUTCFullYear(d.getUTCFullYear() - 1); // 跨年邊界
+  do { d.setUTCDate(d.getUTCDate() - 1); } while (d.getUTCDay() === 0 || d.getUTCDay() === 6);
+  const mm = String(d.getUTCMonth() + 1).padStart(2, "0");
+  const dd = String(d.getUTCDate()).padStart(2, "0");
+  return `${mm}/${dd}`;
+}
+
 function renderLiveDetail(idx, rec) {
   const back = `<button type="button" class="live-back" onclick="closeLiveDetail()">‹ 返回即時行情</button>`;
   const name = `<h2 class="live-detail-name">${escapeHtml(idx.zh)}</h2>`;
@@ -2903,6 +2922,8 @@ function renderLiveDetail(idx, rec) {
   const chgNum = rec.change != null ? `${up ? "+" : ""}${fv(rec.change)}` : "";
   const chgPct = rec.change_pct != null ? `${up ? "+" : ""}${fmtNum(rec.change_pct, 2)}%` : "—";
   const dayHi = Math.max(...rec.points), dayLo = Math.min(...rec.points);
+  const sessDate = liveSessionDateLabel(rec.asof);   // 高/低 所屬場次日（精確）
+  const prevDate = livePrevTradingDateLabel(rec.asof); // 昨收 所屬前一交易日（推算）
   const stat = (k, v) => `<div class="live-stat"><span class="live-stat-k">${k}</span><span class="live-stat-v">${v}</span></div>`;
   return `
     <section class="live-detail">
@@ -2917,9 +2938,9 @@ function renderLiveDetail(idx, rec) {
       </div>
       <div class="live-detail-chart">${renderLiveChartBig(rec.points, rec.prev_close, up, rec.dp)}</div>
       <div class="live-stats">
-        ${stat("今日高", fv(dayHi))}
-        ${stat("今日低", fv(dayLo))}
-        ${stat("昨收", rec.prev_close != null ? fv(rec.prev_close) : "—")}
+        ${stat(sessDate ? `${sessDate} 高` : "高", fv(dayHi))}
+        ${stat(sessDate ? `${sessDate} 低` : "低", fv(dayLo))}
+        ${stat(prevDate ? `${prevDate} 收` : "前一交易日收", rec.prev_close != null ? fv(rec.prev_close) : "—")}
         ${stat("資料時間", rec.asof ? escapeHtml(rec.asof) : "—")}
       </div>
       <p class="live-credit">資料來源 鉅亨網（cnyes）、Yahoo Finance，盤中定時更新；虛線為昨收。數值僅供參考，非投資建議或要約。</p>
@@ -3180,8 +3201,15 @@ function renderLiveSheet() {
     </section>`;
 }
 
-// 可折疊的行情區塊：標題列可點，折疊狀態存 LIVE_COLLAPSED（每 60 秒重畫不會被重置）
-const LIVE_COLLAPSED = {};
+// 可折疊的行情區塊：標題列可點。折疊狀態存 LIVE_COLLAPSED（每 60 秒重畫不會被重置），
+// 並寫入 localStorage，下次打開 App 仍記得。
+const LIVE_COLLAPSED = (() => {
+  try { return JSON.parse(localStorage.getItem("liveCollapsed") || "{}") || {}; }
+  catch (_) { return {}; }
+})();
+function saveLiveCollapsed() {
+  try { localStorage.setItem("liveCollapsed", JSON.stringify(LIVE_COLLAPSED)); } catch (_) { /* 略 */ }
+}
 function liveSection(key, title, gridHtml) {
   const col = LIVE_COLLAPSED[key] ? " collapsed" : "";
   return `
@@ -3195,6 +3223,7 @@ function liveSection(key, title, gridHtml) {
 }
 function toggleLiveSection(key) {
   LIVE_COLLAPSED[key] = !LIVE_COLLAPSED[key];
+  saveLiveCollapsed();
   const el = document.querySelector(`.live-section[data-sec="${key}"]`);
   if (el) {
     el.classList.toggle("collapsed", !!LIVE_COLLAPSED[key]);
