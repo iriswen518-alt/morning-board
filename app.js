@@ -312,10 +312,11 @@ const LOAD_NAME_TO_DATA_KEY = {
   allocation: "allocation", dca: "dca", wealth_transfer: "wealth",
   beatetf: "beatetf", presets: "presets", fund_compare: "fund_compare",
   tw_stocks: "tw_stocks", rankings: "rankings",
-  premarket: "premarket",
+  premarket: "premarket", live_indices: "live",
 };
 const TAB_LOAD_DEPS = {
   market: ["market", "stocks", "rankings", "premarket"],
+  live: ["live_indices"],
   news: ["news"],
   funds: ["funds", "dca", "beatetf", "fund_compare", "popular_funds"],
   obonds: ["overseas_bonds", "overseas_bonds_all"],
@@ -567,7 +568,7 @@ async function init() {
   // 每個來源各自有 fallback：一個壞不拖垮全頁
   // 失敗時記到 FAILED_LOADS，使用者切到對應 tab 時會背景重試
   const safe = (name, fallback) => load(name).catch(() => { FAILED_LOADS.add(name); return fallback; });
-  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
@@ -591,8 +592,9 @@ async function init() {
     safe("quotes_built_at", { built_at: "" }),
     safe("premarket", null),
     safe("popular_funds", { funds: [] }),
+    safe("live_indices", { built_at: "", indices: [] }),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds };
+  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live };
   const _updatedAt = latestBuiltAt();
   if (!_updatedAt) {
     $("updated").textContent = `載入部分失敗（顯示快取資料）`;
@@ -699,7 +701,6 @@ function switchTab(name) {
   else if (name === "calc") body.innerHTML = renderCalcSheet();
   else if (name === "twstock") body.innerHTML = renderTwStockSheet();
   if (name === "news") wireNewsTabs();
-  if (name === "live") wireLive();
   if (name === "market") { wireMarketViewTabs(); wireMarketTabs(); wireTwStock(); wireNewsTabs(); }
   if (name === "funds") { wireFundsTabs(); wireFundCompare(); }
   if (name === "alloc") wireAllocTabs();
@@ -950,7 +951,7 @@ async function refreshData() {
     FAILED_LOADS.add(name);
     return DATA[name === "insurances" ? "insurance" : name] || fallback;
   });
-  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
@@ -974,8 +975,9 @@ async function refreshData() {
     safe("quotes_built_at", { built_at: "" }),
     safe("premarket", null),
     safe("popular_funds", { funds: [] }),
+    safe("live_indices", { built_at: "", indices: [] }),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds };
+  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live };
   SEARCH_INDEX = buildSearchIndex();
   const _updatedAt = latestBuiltAt();
   if (_updatedAt) {
@@ -2704,93 +2706,115 @@ function renderIndexCards(cards) {
 }
 
 // ── 即時行情分頁 ──────────────────────────────────────────────
-// 全球主要指數 → TradingView symbol（即時 widget 用）。
-// tv 為 null 者改用後備外部連結（TradingView 個別商品頁）。
-// 順序對齊「全球市場」market.json indices。
+// 全球主要指數盤中走勢：資料由 fetch_live_indices.py 抓 Yahoo intraday 存
+// data/live_indices.json（DATA.live），前端自繪走勢圖。順序對齊「全球市場」。
+// 靜態清單供排序與後備（無 live 資料時顯示連結）。
 const LIVE_INDICES = [
-  { zh: "標普500",   yahoo: "S&P 500",          tv: "SP:SPX" },
-  { zh: "那斯達克",   yahoo: "Nasdaq Composite", tv: "NASDAQ:IXIC" },
-  { zh: "道瓊工業",   yahoo: "Dow Jones",        tv: "DJ:DJI" },
-  { zh: "費城半導體", yahoo: "PHLX Semiconductor", tv: "NASDAQ:SOX" },
-  { zh: "歐洲50",     yahoo: "Euro Stoxx 50",    tv: "TVC:SX5E" },
-  { zh: "德國DAX",    yahoo: "DAX",              tv: "XETR:DAX" },
-  { zh: "英國FTSE",   yahoo: "FTSE 100",         tv: "TVC:UKX" },
-  { zh: "法國CAC",    yahoo: "CAC 40",           tv: "EURONEXT:PX1" },
-  { zh: "日經225",    yahoo: "Nikkei 225",       tv: "TVC:NI225" },
-  { zh: "台股加權",   yahoo: "TAIEX 加權指數",   tv: "TWSE:TAIEX" },
-  { zh: "櫃買指數",   yahoo: "OTC 櫃買加權",     tv: "TPEX:TPEx" },
-  { zh: "台指期近",   yahoo: "台指期(近月)",     tv: "TAIFEX:TXF1!" },
-  { zh: "韓國綜合",   yahoo: "KOSPI",            tv: "KRX:KOSPI" },
-  { zh: "恆生指數",   yahoo: "Hang Seng 恆生",   tv: "HSI:HSI" },
-  { zh: "上證指數",   yahoo: "Shanghai 上證",    tv: "SSE:000001" },
-  { zh: "滬深300",    yahoo: "CSI 300 滬深300",  tv: "SSE:000300" },
-  { zh: "印度Nifty",  yahoo: "Nifty 50",         tv: "NSE:NIFTY" },
-  { zh: "澳洲200",    yahoo: "S&P/ASX 200",      tv: "ASX:XJO" },
+  { zh: "標普500",   sym: "^GSPC" },
+  { zh: "那斯達克",   sym: "^IXIC" },
+  { zh: "道瓊工業",   sym: "^DJI" },
+  { zh: "費城半導",   sym: "^SOX" },
+  { zh: "歐洲50",     sym: "^STOXX50E" },
+  { zh: "德國DAX",    sym: "^GDAXI" },
+  { zh: "英國FTSE",   sym: "^FTSE" },
+  { zh: "法國CAC",    sym: "^FCHI" },
+  { zh: "日經225",    sym: "^N225" },
+  { zh: "台股加權",   sym: "^TWII" },
+  { zh: "櫃買指數",   sym: "^TWOII" },
+  { zh: "韓國綜合",   sym: "^KS11" },
+  { zh: "恆生指數",   sym: "^HSI" },
+  { zh: "上證指數",   sym: "000001.SS" },
+  { zh: "滬深300",    sym: "000300.SS" },
+  { zh: "印度Nifty",  sym: "^NSEI" },
+  { zh: "澳洲200",    sym: "^AXJO" },
 ];
 
-function renderLiveSheet() {
-  const cards = LIVE_INDICES.map((idx, i) => {
-    if (idx.tv) {
-      return `
-        <div class="card live-card">
-          <h2 class="live-name">${escapeHtml(idx.zh)}</h2>
-          <div class="live-chart" data-tv="${escapeHtml(idx.tv)}" data-i="${i}"></div>
-        </div>`;
-    }
-    // 後備：無即時 widget 的指數改放外部即時行情連結
-    const url = indexQuoteUrl(idx.yahoo);
-    const link = url
-      ? `<a href="${url}" target="_blank" rel="noopener" class="live-fallback-link">點此看即時行情</a>`
-      : `<span class="live-fallback-link muted">暫無即時行情</span>`;
-    return `
-      <div class="card live-card">
-        <h2 class="live-name">${escapeHtml(idx.zh)}</h2>
-        <div class="live-fallback">${link}</div>
-      </div>`;
-  }).join("");
-  return `
-    <section class="sheet live-sheet">
-      <p class="live-intro">全球主要指數即時走勢，於本頁開啟即由瀏覽器即時更新。</p>
-      <div class="live-grid">${cards}</div>
-      <p class="live-credit">行情由 TradingView 提供，僅供參考，非投資建議或要約。</p>
-    </section>`;
+function liveYahooUrl(sym) {
+  return `https://finance.yahoo.com/quote/${encodeURIComponent(sym)}/`;
 }
 
-// 為每個 .live-chart 容器注入 TradingView mini-symbol-overview widget。
-// SPA 以 innerHTML 重畫不會執行內嵌 <script>，故在此動態建立 script 元素。
-function wireLive() {
-  const containers = document.querySelectorAll(".live-chart[data-tv]");
-  containers.forEach(el => {
-    const symbol = el.getAttribute("data-tv");
-    el.innerHTML = "";
-    const wrap = document.createElement("div");
-    wrap.className = "tradingview-widget-container";
-    wrap.style.height = "100%";
-    wrap.style.width = "100%";
-    const widget = document.createElement("div");
-    widget.className = "tradingview-widget-container__widget";
-    widget.style.height = "100%";
-    widget.style.width = "100%";
-    wrap.appendChild(widget);
-    const script = document.createElement("script");
-    script.type = "text/javascript";
-    script.async = true;
-    script.src = "https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js";
-    script.textContent = JSON.stringify({
-      symbol: symbol,
-      width: "100%",
-      height: "100%",
-      locale: "zh_TW",
-      dateRange: "1D",
-      colorTheme: "light",
-      isTransparent: true,
-      autosize: true,
-      largeChartUrl: "",
-      chartOnly: false,
-    });
-    wrap.appendChild(script);
-    el.appendChild(wrap);
-  });
+function liveStateLabel(state) {
+  if (state === "REGULAR") return { txt: "盤中", cls: "live-state-open" };
+  if (state === "PRE" || state === "PREPRE") return { txt: "盤前", cls: "live-state-pre" };
+  if (state === "POST" || state === "POSTPOST") return { txt: "盤後", cls: "live-state-post" };
+  return { txt: "收盤", cls: "live-state-closed" };
+}
+
+// 盤中走勢小圖：響應式 SVG（寬 100%），含面積填色＋昨收虛線。
+function renderLiveChart(points, prevClose, up, key) {
+  if (!points || points.length < 2) return `<div class="live-chart-msg">—</div>`;
+  const W = 300, H = 96, pad = 4;
+  const vals = points.slice();
+  let lo = Math.min(...vals), hi = Math.max(...vals);
+  if (prevClose != null) { lo = Math.min(lo, prevClose); hi = Math.max(hi, prevClose); }
+  const range = (hi - lo) || 1;
+  const n = vals.length;
+  const X = i => pad + (i / (n - 1)) * (W - 2 * pad);
+  const Y = v => pad + (H - 2 * pad) * (1 - (v - lo) / range);
+  const line = vals.map((v, i) => `${X(i).toFixed(1)},${Y(v).toFixed(1)}`).join(" ");
+  const color = up ? "#d62828" : "#2a9d8f";
+  const fillId = `lg-${key}`;
+  const area = `M${X(0).toFixed(1)},${Y(vals[0]).toFixed(1)} ` +
+    vals.map((v, i) => `L${X(i).toFixed(1)},${Y(v).toFixed(1)}`).join(" ") +
+    ` L${X(n - 1).toFixed(1)},${(H - pad).toFixed(1)} L${X(0).toFixed(1)},${(H - pad).toFixed(1)} Z`;
+  const prevLine = prevClose != null
+    ? `<line x1="${pad}" y1="${Y(prevClose).toFixed(1)}" x2="${W - pad}" y2="${Y(prevClose).toFixed(1)}" stroke="#b8c0cc" stroke-width="1" stroke-dasharray="3 3"/>`
+    : "";
+  return `<svg class="live-chart-svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" role="img" aria-label="盤中走勢">
+    <defs><linearGradient id="${fillId}" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="${color}" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="${color}" stop-opacity="0"/>
+    </linearGradient></defs>
+    ${prevLine}
+    <path d="${area}" fill="url(#${fillId})"/>
+    <polyline fill="none" stroke="${color}" stroke-width="1.6" points="${line}"/>
+  </svg>`;
+}
+
+function renderLiveCard(idx, rec, i) {
+  const name = `<h2 class="live-name">${escapeHtml(idx.zh)}</h2>`;
+  // 無資料或抓取失敗 → 後備外部連結
+  if (!rec || !rec.ok || !rec.points || rec.points.length < 2) {
+    return `
+      <div class="card live-card">
+        <div class="live-head">${name}</div>
+        <div class="live-fallback">
+          <a href="${liveYahooUrl(idx.sym)}" target="_blank" rel="noopener" class="live-fallback-link">點此看即時行情</a>
+        </div>
+      </div>`;
+  }
+  const up = (rec.change_pct ?? 0) >= 0;
+  const st = liveStateLabel(rec.market_state);
+  const chgNum = rec.change != null ? `${up ? "+" : ""}${fmtInt(rec.change)}` : "";
+  const chgPct = rec.change_pct != null ? `${up ? "+" : ""}${fmtNum(rec.change_pct, 2)}%` : "—";
+  return `
+    <div class="card live-card">
+      <div class="live-head">
+        ${name}
+        <span class="live-state ${st.cls}">${st.txt}</span>
+      </div>
+      <div class="live-quote">
+        <span class="live-last">${fmtInt(rec.last)}</span>
+        <span class="live-chg ${pctClass(rec.change_pct)}">${chgPct}${chgNum ? `（${chgNum}）` : ""}</span>
+      </div>
+      <div class="live-chart">${renderLiveChart(rec.points, rec.prev_close, up, i)}</div>
+      <div class="live-asof">${rec.asof ? `資料時間 ${escapeHtml(rec.asof)}` : ""}</div>
+    </div>`;
+}
+
+function renderLiveSheet() {
+  const live = DATA.live || {};
+  const bySym = {};
+  (live.indices || []).forEach(r => { if (r && r.symbol) bySym[r.symbol] = r; });
+  const cards = LIVE_INDICES.map((idx, i) => renderLiveCard(idx, bySym[idx.sym], i)).join("");
+  const builtAt = live.built_at ? live.built_at.replace("T", " ") : "";
+  const updatedNote = builtAt ? `更新於 ${escapeHtml(builtAt)}` : "資料準備中";
+  return `
+    <section class="sheet live-sheet">
+      <p class="live-intro">全球主要指數盤中走勢（${updatedNote}）。各市場依當地交易時段顯示，紅漲綠跌、虛線為昨收。</p>
+      <div class="live-grid">${cards}</div>
+      <p class="live-credit">資料來源 Yahoo Finance，盤中定時更新；數值僅供參考，非投資建議或要約。</p>
+    </section>`;
 }
 
 function renderMarketSheet() {
@@ -8706,33 +8730,51 @@ const LICAI_REF = {
   lia: "[🔗 人壽保險公會](https://www.lia-roc.org.tw)",
   nhi: "[🔗 衛生福利部](https://www.mohw.gov.tw)",
   dgbas: "[🔗 主計總處](https://www.dgbas.gov.tw)",
+  // 主題直接內容頁（點下去就是該概念說明，免再搜尋；皆已實測 200）
+  d_compound:   "[🔗 複利說明](https://zh.wikipedia.org/zh-tw/複利)",
+  d_dca:        "[🔗 平均成本法（定期定額）](https://zh.wikipedia.org/zh-tw/平均成本法)",
+  d_etf:        "[🔗 ETF（指數股票型基金）](https://zh.wikipedia.org/zh-tw/指數股票型基金)",
+  d_alloc:      "[🔗 資產配置說明](https://zh.wikipedia.org/zh-tw/資產配置)",
+  d_diversify:  "[🔗 分散投資說明](https://zh.wikipedia.org/zh-tw/分散投資)",
+  d_inflation:  "[🔗 通貨膨脹說明](https://zh.wikipedia.org/zh-tw/通貨膨脹)",
+  d_bond:       "[🔗 債券說明](https://zh.wikipedia.org/zh-tw/債券)",
+  d_yield:      "[🔗 殖利率說明](https://zh.wikipedia.org/zh-tw/殖利率)",
+  d_pe:         "[🔗 本益比說明](https://zh.wikipedia.org/zh-tw/本益比)",
+  d_yieldcurve: "[🔗 殖利率曲線（倒掛）](https://zh.wikipedia.org/zh-tw/殖利率曲線)",
+  d_gdp:        "[🔗 GDP（國內生產毛額）](https://zh.wikipedia.org/zh-tw/國內生產毛額)",
+  d_rate:       "[🔗 利率說明](https://zh.wikipedia.org/zh-tw/利率)",
+  d_gifttax:    "[🔗 贈與稅說明](https://zh.wikipedia.org/zh-tw/贈與稅)",
+  d_estatetax:  "[🔗 遺產稅說明](https://zh.wikipedia.org/zh-tw/遺產稅)",
+  d_trust:      "[🔗 信託說明](https://zh.wikipedia.org/zh-tw/信託)",
+  d_life:       "[🔗 人壽保險說明](https://zh.wikipedia.org/zh-tw/人壽保險)",
+  d_nhi:        "[🔗 全民健康保險（含二代健保）](https://zh.wikipedia.org/zh-tw/全民健康保險)",
 };
 // 知識庫每則的延伸連結（key＝該則 keys[0]）
 const LICAI_KB_REFS = {
-  "複利": [LICAI_REF.academy, LICAI_REF.edu],
-  "定期定額": [LICAI_REF.academy, LICAI_REF.edu],
-  "etf": [LICAI_REF.funds, LICAI_REF.edu],
-  "資產配置": [LICAI_REF.alloc, LICAI_REF.academy],
-  "風險分散": [LICAI_REF.academy, LICAI_REF.edu],
-  "停利": [LICAI_REF.academy, LICAI_REF.edu],
+  "複利": [LICAI_REF.academy, LICAI_REF.d_compound],
+  "定期定額": [LICAI_REF.academy, LICAI_REF.d_dca],
+  "etf": [LICAI_REF.funds, LICAI_REF.d_etf],
+  "資產配置": [LICAI_REF.alloc, LICAI_REF.d_alloc],
+  "風險分散": [LICAI_REF.academy, LICAI_REF.d_diversify],
+  "停利": [LICAI_REF.academy],
   "緊急預備金": [LICAI_REF.academy],
-  "通膨怎麼辦": [LICAI_REF.academy, LICAI_REF.cbc],
-  "基金在哪": [LICAI_REF.funds, LICAI_REF.sitca],
-  "海外債": [LICAI_REF.obonds],
+  "通膨怎麼辦": [LICAI_REF.academy, LICAI_REF.d_inflation],
+  "基金在哪": [LICAI_REF.funds],
+  "海外債": [LICAI_REF.obonds, LICAI_REF.d_bond],
   "投組": [LICAI_REF.alloc],
-  "保險在哪": [LICAI_REF.insurance, LICAI_REF.lia],
+  "保險在哪": [LICAI_REF.insurance],
   "小學堂": [LICAI_REF.academy],
-  "贈與稅": [LICAI_REF.etax],
-  "遺產稅": [LICAI_REF.etax],
-  "信託": [LICAI_REF.trust],
-  "保單規劃": [LICAI_REF.lia],
-  "二代健保": [LICAI_REF.nhi],
-  "殖利率": [LICAI_REF.twse, LICAI_REF.edu],
-  "本益比": [LICAI_REF.twse, LICAI_REF.edu],
-  "通膨": [LICAI_REF.cbc, LICAI_REF.dgbas],
-  "升息": [LICAI_REF.cbc],
-  "殖利率倒掛": [LICAI_REF.edu],
-  "gdp": [LICAI_REF.dgbas],
+  "贈與稅": [LICAI_REF.d_gifttax],
+  "遺產稅": [LICAI_REF.d_estatetax],
+  "信託": [LICAI_REF.d_trust],
+  "保單規劃": [LICAI_REF.d_life],
+  "二代健保": [LICAI_REF.d_nhi],
+  "殖利率": [LICAI_REF.d_yield],
+  "本益比": [LICAI_REF.d_pe],
+  "通膨": [LICAI_REF.d_inflation],
+  "升息": [LICAI_REF.d_rate],
+  "殖利率倒掛": [LICAI_REF.d_yieldcurve],
+  "gdp": [LICAI_REF.d_gdp],
 };
 function licaiWithRefs(reply, refs) {
   if (!refs || !refs.length) return reply;
