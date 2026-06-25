@@ -8758,7 +8758,7 @@ function licaiFindScored(list, t) {
     const nm = licaiClean((it.name_zh || "") + (it.issuer || "") + (it.company || ""));
     if (!nm) continue;
     let sc = 0;
-    for (const g of grams) if (nm.includes(g)) sc++;
+    for (const g of grams) if (/[一-龥]/.test(g) && nm.includes(g)) sc++; // 只算含中文的字對，避免英文 et/tf 等亂中
     if (sc > bestScore) { bestScore = sc; best = it; }
   }
   return { item: best, score: bestScore };
@@ -8774,11 +8774,18 @@ function licaiPerf1y(f) {
 // 個股清單（精選美股＋精選台股＋熱門美股）
 function licaiStockList() {
   const D = (typeof DATA !== "undefined" && DATA) ? DATA : {};
-  return [...((D.stocks && D.stocks.us_stocks) || []), ...((D.stocks && D.stocks.tw_stocks) || []), ...((D.popular && D.popular.stocks) || [])];
+  return [...((D.stocks && D.stocks.tw_stocks) || []), ...((D.stocks && D.stocks.us_stocks) || []), ...((D.popular && D.popular.stocks) || [])];
 }
 // 找個股：代號精確（台股數字/美股≥3字母）優先，否則名稱 2-gram
 function licaiFindStock(t) {
   const list = licaiStockList();
+  const qc = licaiClean(t);
+  // 全名精確（如「輝達」「台積電」直接命中，台股已排前面，優先本地掛牌）
+  for (const x of list) {
+    const nc = licaiClean(x.name_zh || "");
+    if (nc && nc === qc && qc.length >= 2) return { item: x, score: 9 };
+  }
+  // 代號精確：台股數字、美股≥3 字母
   for (const x of list) {
     const sym = (x.symbol || "").toLowerCase();
     if (!sym) continue;
@@ -8801,47 +8808,48 @@ function licaiStockDetail(x) {
   if (x.source_url) refs.push(`[🔗 個股報價來源](${x.source_url})`);
   return licaiWithRefs(s + `\n數據為最近收盤，僅供參考、非投資建議 🌸`, refs);
 }
-// 跨類查找單一標的（比較型用）：股→債→基金→指數
-function licaiUnifiedLookup(frag) {
+// 跨類查找單一標的（比較型用）：依問題語境決定優先類別，再 strong→weak
+function licaiUnifiedLookup(frag, ctx) {
+  const t = ctx || frag;
   const D = (typeof DATA !== "undefined" && DATA) ? DATA : {};
-  const sm = licaiFindStock(frag);
-  if (sm.item && sm.score >= 2) return { kind: "stock", item: sm.item, name: sm.item.name_zh || sm.item.symbol };
-  const bm = licaiFindScored((D.obonds && D.obonds.bonds) || [], frag);
-  if (bm.item && bm.score >= 2) return { kind: "bond", item: bm.item, name: bm.item.name_zh };
-  const fm = licaiFindScored([...((D.funds && D.funds.funds) || []), ...((D.popular_funds && D.popular_funds.funds) || [])], frag);
-  if (fm.item && fm.score >= 2) return { kind: "fund", item: fm.item, name: fm.item.name_zh };
-  for (const a of LICAI_INDEX_ALIASES) {
-    if (a.match.some(k => frag.includes(k.toLowerCase()))) {
-      const idx = ((D.market && D.market.indices) || []).find(x => x.name === a.name);
-      if (idx) return { kind: "index", item: idx, name: a.name };
-    }
-  }
-  if (sm.item && sm.score >= 1) return { kind: "stock", item: sm.item, name: sm.item.name_zh || sm.item.symbol };
-  if (bm.item && bm.score >= 1) return { kind: "bond", item: bm.item, name: bm.item.name_zh };
-  if (fm.item && fm.score >= 1) return { kind: "fund", item: fm.item, name: fm.item.name_zh };
+  const bonds = (D.obonds && D.obonds.bonds) || [];
+  const funds = [...((D.funds && D.funds.funds) || []), ...((D.popular_funds && D.popular_funds.funds) || [])];
+  const cand = {
+    stock: () => { const r = licaiFindStock(frag); return r.item ? { kind: "stock", item: r.item, name: r.item.name_zh || r.item.symbol, score: r.score } : null; },
+    bond: () => { const r = licaiFindScored(bonds, frag); return r.item ? { kind: "bond", item: r.item, name: r.item.name_zh, score: r.score } : null; },
+    fund: () => { const r = licaiFindScored(funds, frag); return r.item ? { kind: "fund", item: r.item, name: r.item.name_zh, score: r.score } : null; },
+    index: () => { for (const a of LICAI_INDEX_ALIASES) { if (a.match.some(k => frag.includes(k.toLowerCase()))) { const idx = ((D.market && D.market.indices) || []).find(x => x.name === a.name); if (idx) return { kind: "index", item: idx, name: a.name, score: 5 }; } } return null; },
+  };
+  const order = [];
+  if (/債|bond|殖利率|票息|到期|信評/.test(t)) order.push("bond");
+  if (/基金|fund|淨值|配息|月配/.test(t)) order.push("fund");
+  if (/股|個股|股價|本益比/.test(t)) order.push("stock");
+  ["stock", "bond", "fund", "index"].forEach(k => { if (!order.includes(k)) order.push(k); });
+  for (const k of order) { const r = cand[k](); if (r && r.score >= 2) return r; }   // strong
+  for (const k of order) { const r = cand[k](); if (r && r.score >= 1) return r; }   // weak
   return null;
 }
-// 依提問挑出該標的的比較指標
+// 依提問挑出該標的的比較指標（unit：百分比帶 %、本益比不帶）
 function licaiMetric(e, t) {
-  const it = e.item, k = e.kind;
+  const it = e.item, k = e.kind, P = { unit: "%" };
   if (/殖利率|yield|ytm/.test(t)) {
-    if (k === "bond") return { label: "殖利率(YTM)", val: it.redeem_yield_pct != null ? it.redeem_yield_pct : it.bid_yield_pct };
-    if (k === "fund") return { label: "配息率", val: it.distribution_yield_pct };
+    if (k === "bond") return { label: "殖利率(YTM)", val: it.redeem_yield_pct != null ? it.redeem_yield_pct : it.bid_yield_pct, ...P };
+    if (k === "fund") return { label: "配息率", val: it.distribution_yield_pct, ...P };
   }
-  if (/本益比|pe|per/.test(t) && k === "stock") return { label: "本益比", val: it.per };
-  if (/配息/.test(t) && k === "fund") return { label: "配息率", val: it.distribution_yield_pct };
-  if (/今年|ytd/.test(t)) return { label: "今年來", val: it.ytd_pct };
-  if (/本月|mtd/.test(t)) return { label: "本月", val: it.mtd_pct };
-  if (/今天|今日|當日|漲|跌/.test(t)) return { label: "當日", val: it.change_pct != null ? it.change_pct : (it.daily_change_pct != null ? it.daily_change_pct : it.daily_pct) };
+  if (/本益比|pe|per/.test(t) && k === "stock") return { label: "本益比", val: it.per, unit: "" };
+  if (/配息/.test(t) && k === "fund") return { label: "配息率", val: it.distribution_yield_pct, ...P };
+  if (/今年|ytd/.test(t)) return { label: "今年來", val: it.ytd_pct, ...P };
+  if (/本月|mtd/.test(t)) return { label: "本月", val: it.mtd_pct, ...P };
+  if (/今天|今日|當日|漲|跌/.test(t)) return { label: "當日", val: it.change_pct != null ? it.change_pct : (it.daily_change_pct != null ? it.daily_change_pct : it.daily_pct), ...P };
   if (/績效|報酬|表現|成長|賺/.test(t)) {
-    if (k === "bond") return { label: "殖利率(YTM)", val: it.redeem_yield_pct != null ? it.redeem_yield_pct : it.bid_yield_pct };
-    if (k === "fund") return { label: "近1年", val: licaiPerf1y(it) };
-    return { label: "近1年", val: it.perf_1y != null ? it.perf_1y : it.ytd_pct };
+    if (k === "bond") return { label: "殖利率(YTM)", val: it.redeem_yield_pct != null ? it.redeem_yield_pct : it.bid_yield_pct, ...P };
+    if (k === "fund") return { label: "近1年", val: licaiPerf1y(it), ...P };
+    return { label: "近1年", val: it.perf_1y != null ? it.perf_1y : it.ytd_pct, ...P };
   }
-  if (k === "bond") return { label: "殖利率(YTM)", val: it.redeem_yield_pct != null ? it.redeem_yield_pct : it.bid_yield_pct };
-  if (k === "fund") return { label: "近1年", val: licaiPerf1y(it) };
-  if (k === "stock" || k === "index") return { label: "今年來", val: it.ytd_pct };
-  return { label: "—", val: null };
+  if (k === "bond") return { label: "殖利率(YTM)", val: it.redeem_yield_pct != null ? it.redeem_yield_pct : it.bid_yield_pct, ...P };
+  if (k === "fund") return { label: "近1年", val: licaiPerf1y(it), ...P };
+  if (k === "stock" || k === "index") return { label: "今年來", val: it.ytd_pct, ...P };
+  return { label: "—", val: null, unit: "" };
 }
 // 比較型問答：「A 和 B 哪個…高」
 function licaiCompareReply(t) {
@@ -8852,7 +8860,7 @@ function licaiCompareReply(t) {
   if (parts.length < 2) return null;
   const found = [];
   for (const p of parts) {
-    const e = licaiUnifiedLookup(p);
+    const e = licaiUnifiedLookup(p, t);
     if (e && !found.find(x => x.name === e.name)) found.push(e);
     if (found.length >= 2) break;
   }
@@ -8866,11 +8874,11 @@ function licaiCompareReply(t) {
   else {
     const aWin = lower ? Number(ma.val) < Number(mb.val) : Number(ma.val) > Number(mb.val);
     const w = aWin ? a : b, mw = aWin ? ma : mb;
-    verdict = `→ ${w.name} 的 ${mw.label} 較${lower ? "低" : "高"}（${licaiFmtNum(mw.val)}%）`;
+    verdict = `→ ${w.name} 的 ${mw.label} 較${lower ? "低" : "高"}（${licaiFmtNum(mw.val)}${mw.unit}）`;
   }
   let s = `📊 比較：${a.name} vs ${b.name}\n\n`;
-  s += `• ${a.name}｜${ma.label} ${licaiFmtNum(ma.val)}%\n`;
-  s += `• ${b.name}｜${mb.label} ${licaiFmtNum(mb.val)}%\n\n`;
+  s += `• ${a.name}｜${ma.label} ${licaiFmtNum(ma.val)}${ma.unit}\n`;
+  s += `• ${b.name}｜${mb.label} ${licaiFmtNum(mb.val)}${mb.unit}\n\n`;
   s += verdict + `\n\n數據為最近收盤/報價，僅供參考、非投資建議 🌸`;
   return s;
 }
@@ -9002,6 +9010,13 @@ function licaiLiveReply(t) {
         }
       }
     }
+    // 6.7) 個股（美股／台股，依代號或名稱比對）
+    {
+      const stockKw = /股價|股票|個股|股市|每股|大漲|大跌|漲停|跌停|這檔|這支/.test(t) || /\d{4}/.test(t);
+      const sm = licaiFindStock(t);
+      const st = (sm.score >= 9) || (stockKw && sm.score >= 1) || sm.score >= 2 ? sm.item : null;
+      if (st) return licaiStockDetail(st);
+    }
     // 7) 大盤概況 / 今天行情總覽
     if (/行情|盤勢|大盤|今天市場|今日市場|市場概況|整體|總覽|概況/.test(t) && wantsPrice && m.summary) {
       return `市場概況（收盤 ${m.closing_date || ""}）📊\n\n${m.summary}\n\n想看單一市場，問我「台股」「美股」「費半」「日經」等，我給你當日/本月/今年漲跌 🌸`;
@@ -9099,6 +9114,10 @@ function licaiWithRefs(reply, refs) {
 function licaiReply(text) {
   const t = (text || "").toLowerCase().trim();
   if (!t) return "想問什麼都可以跟我說 🌸";
+
+  // 0) 比較型問答（A 和 B 哪個…）：優先於單一標的
+  const cmp = licaiCompareReply(t);
+  if (cmp) return cmp;
 
   // 1) 今日真實數據（讀 App 內的 market 資料；只在問行情時觸發）
   const live = licaiLiveReply(t);
