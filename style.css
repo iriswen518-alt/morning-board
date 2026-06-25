@@ -2376,7 +2376,7 @@ table.indices th.sortable-th {
   z-index: 97;
   width: 380px;
   max-width: calc(100vw - 32px);
-  height: 560px;
+  height: 460px;
   max-height: calc(100dvh - 150px);
   background: var(--surface);
   border: 1px solid var(--border);
@@ -2388,21 +2388,14 @@ table.indices th.sortable-th {
 }
 .chat-popup.open { display: flex; animation: chatPopIn .18s ease-out; }
 @keyframes chatPopIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
-.chat-popup-bar {
-  flex: 0 0 auto;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 11px 14px;
-  background: linear-gradient(135deg, #2aa6d6, var(--brand-deep));
-  color: #fff;
-}
-.chat-popup-title { font-weight: 700; font-size: 15px; letter-spacing: .5px; }
 .chat-popup-close {
-  background: rgba(255, 255, 255, .22); border: none; color: #fff;
+  position: absolute; top: 10px; right: 10px; z-index: 2;
+  background: rgba(0, 0, 0, .06); border: none; color: var(--text-mute, #6b7280);
   width: 28px; height: 28px; border-radius: 50%; cursor: pointer;
   font-size: 14px; line-height: 1; display: flex; align-items: center; justify-content: center;
 }
-.chat-popup-close:hover { background: rgba(255, 255, 255, .35); }
-.chat-popup-body { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; padding: 0 12px 10px; }
+.chat-popup-close:hover { background: rgba(0, 0, 0, .12); }
+.chat-popup-body { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; padding: 14px 12px 10px; }
 .chat-popup-body .lc-chat-wrap { max-width: none; height: 100%; }
 
 @media (max-width: 768px) {

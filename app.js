@@ -9509,16 +9509,8 @@ function renderChatSheet() {
   <div class="lc-chat-msgs" id="lcMsgs">
     <div class="lc-row bot">
       <div class="lc-label">小幫手</div>
-      <div class="lc-bubble bot">嗨！我是你的理財小幫手 🌸<br>可以問我理財觀念（複利、定期定額、ETF…）、這個 App 怎麼用、傳承稅務常識，或財經名詞解釋。<br>下面點一下，或直接打字問我都行！</div>
+      <div class="lc-bubble bot">嗨！我是你的理財小幫手 🌸<br>可以問我理財觀念（複利、定期定額、ETF…）、這個 App 怎麼用、傳承稅務常識，或財經名詞解釋。<br>直接打字問我吧！</div>
     </div>
-  </div>
-  <div class="lc-suggest" id="lcSuggest">
-    <button class="lc-chip" type="button">複利是什麼</button>
-    <button class="lc-chip" type="button">定期定額怎麼做</button>
-    <button class="lc-chip" type="button">ETF 是什麼</button>
-    <button class="lc-chip" type="button">殖利率是什麼</button>
-    <button class="lc-chip" type="button">贈與稅免稅額</button>
-    <button class="lc-chip" type="button">基金在哪</button>
   </div>
   <div class="lc-input-row">
     <button class="lc-voice" id="lcVoice" type="button" title="語音輸入">🎤</button>
