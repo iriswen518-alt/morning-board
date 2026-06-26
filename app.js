@@ -705,9 +705,8 @@ function switchTab(name) {
   else if (name === "calc") body.innerHTML = renderCalcSheet();
   else if (name === "twstock") body.innerHTML = renderTwStockSheet();
   if (name === "live") { startLiveAutoRefresh(); refreshLiveData(); } else stopLiveAutoRefresh();
-  if (name === "news") wireNewsTabs();
-  if (name === "market") { wireMarketViewTabs(); wireMarketTabs(); wireTwStock(); wireNewsTabs(); }
-  if (name === "funds") { wireFundsTabs(); wireFundCompare(); }
+  if (name === "market") { wireTwStock(); }
+  if (name === "funds") { wireFundCompare(); }
   if (name === "alloc") wireAllocTabs();
   if (name === "wealth") wireWealthTabs();
   if (name === "chat") wireChat();
@@ -3596,36 +3595,29 @@ function renderMarketSheet() {
     </div>
     ${renderRankingsBlock("tw")}`;
 
-  return `
-    <div class="tabs tabs-wrap">
-      <button class="tab" data-mvtab="overview">市場一覽</button>
-      <button class="tab" data-mvtab="us-analysis">美股分析</button>
-      <button class="tab active" data-mvtab="tw-analysis">台股分析</button>
-    </div>
-    <div id="mvtab-overview" hidden>
+  const overviewInner = `
       ${renderMarketHighlights(m)}
-
-      <div class="tabs tabs-wrap">
-        <button class="tab active" data-mtab="indices">全球</button>
-        <button class="tab" data-mtab="bonds">債券</button>
-        <button class="tab" data-mtab="fx">匯率</button>
-      </div>
-      <div id="mtab-indices">${stocksTab}</div>
-      <div id="mtab-bonds" hidden>${bondsTab}</div>
-      <div id="mtab-fx" hidden>${fxTab}</div>
-    </div>
-    <div id="mvtab-us-analysis" hidden>
+      ${accSection("mv-indices", "全球", stocksTab, true)}
+      ${accSection("mv-bonds", "債券", bondsTab)}
+      ${accSection("mv-fx", "匯率", fxTab)}
+  `;
+  const usInner = `
       ${renderUsMarketAnalysis()}
       ${renderStocksTable("", usStocks) || ""}
       ${renderRankingsBlock("us")}
-    </div>
-    <div id="mvtab-tw-analysis">
+  `;
+  const twInner = `
       ${renderPremarketBlock()}
       ${renderTwMarketAnalysis()}
       ${twPresetTable}
       ${renderRankingsBlock("tw")}
       ${renderTwStockSheet()}
-    </div>
+  `;
+
+  return `
+    ${accSection("mv-overview", "市場一覽", overviewInner, true)}
+    ${accSection("mv-us-analysis", "美股分析", usInner)}
+    ${accSection("mv-tw-analysis", "台股分析", twInner)}
   `;
 }
 
@@ -6316,16 +6308,10 @@ function renderNewsSheet() {
   ` : "";
   return `
     ${staleBanner}
-    <div class="tabs">
-      <button class="tab active" data-tab="market">市場</button>
-      <button class="tab" data-tab="wm">財管</button>
-      <button class="tab" data-tab="tax">稅務</button>
-      <button class="tab" data-tab="intl">國際</button>
-    </div>
-    <div id="tab-market">${renderNewsByCategory("market")}</div>
-    <div id="tab-wm" hidden>${renderNewsByCategory("wm")}</div>
-    <div id="tab-tax" hidden>${renderNewsByCategory("tax")}</div>
-    <div id="tab-intl" hidden>${renderNewsByCategory("intl")}</div>
+    ${accSection("news-market", "市場", renderNewsByCategory("market"), true)}
+    ${accSection("news-wm", "財管", renderNewsByCategory("wm"))}
+    ${accSection("news-tax", "稅務", renderNewsByCategory("tax"))}
+    ${accSection("news-intl", "國際", renderNewsByCategory("intl"))}
   `;
 }
 
@@ -6391,6 +6377,33 @@ function newsSection(title, innerHtml) {
         <svg class="news-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
       </summary>
       <div class="news-sec-body">${innerHtml}</div>
+    </details>`;
+}
+
+// 通用折疊區塊（內容導覽用：全球市場 / 新聞 / 基金 / 小學堂）。
+// 沿用 newsSection 的視覺與狀態記憶，差別在支援「預設只展開第一個」。
+// 規則：使用者手動改過 → 用記住的狀態；沒動過 → 用 defaultOpen。
+const ACC_COLLAPSED = (() => {
+  try { return JSON.parse(localStorage.getItem("accCollapsed") || "{}") || {}; }
+  catch (_) { return {}; }
+})();
+function saveAccSec(d) {
+  try {
+    ACC_COLLAPSED[d.dataset.key] = !d.open;
+    localStorage.setItem("accCollapsed", JSON.stringify(ACC_COLLAPSED));
+  } catch (_) { /* 略 */ }
+}
+function accSection(key, title, innerHtml, defaultOpen = false) {
+  const stored = ACC_COLLAPSED[key];
+  const isOpen = stored === undefined ? defaultOpen : !stored;
+  const open = isOpen ? " open" : "";
+  return `
+    <details class="acc-sec" data-key="${escapeHtml(key)}"${open} ontoggle="saveAccSec(this)">
+      <summary class="acc-sec-head">
+        <span class="acc-sec-title">${escapeHtml(title)}</span>
+        <svg class="acc-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </summary>
+      <div class="acc-sec-body">${innerHtml}</div>
     </details>`;
 }
 
@@ -8082,18 +8095,11 @@ function renderCompareMethodology(asOf) {
 // 已合併：精選基金主分頁，內含「單筆投資」、「定期定額」、「超越ETF」、「基金績效比較」四個次分頁
 function renderFundsSheet() {
   return `
-    <div class="tabs">
-      <button class="tab active" data-ftab="lump">單筆投資</button>
-      <button class="tab" data-ftab="dca">定期定額</button>
-      <button class="tab" data-ftab="beatetf">超越ETF</button>
-      <button class="tab" data-ftab="compare">績效比較</button>
-      <button class="tab" data-ftab="popular">熱銷基金</button>
-    </div>
-    <div id="ftab-lump">${renderLumpFundCards()}</div>
-    <div id="ftab-dca" hidden>${renderDcaFundCards()}</div>
-    <div id="ftab-beatetf" hidden>${renderBeatEtfCards()}</div>
-    <div id="ftab-compare" hidden>${renderFundCompare()}</div>
-    <div id="ftab-popular" hidden>${renderPopularFundCards()}</div>
+    ${accSection("fund-lump", "單筆投資", renderLumpFundCards(), true)}
+    ${accSection("fund-dca", "定期定額", renderDcaFundCards())}
+    ${accSection("fund-beatetf", "超越ETF", renderBeatEtfCards())}
+    ${accSection("fund-compare", "績效比較", renderFundCompare())}
+    ${accSection("fund-popular", "熱銷基金", renderPopularFundCards())}
     <div class="fund-card" style="margin-top:18px;text-align:center">
       <h3 style="margin-bottom:6px">其他基金</h3>
       <p class="tagline" style="margin-bottom:12px">瀏覽完整基金總覽（境外／國內基金龍虎榜、市場龍虎榜、快速搜尋）</p>
