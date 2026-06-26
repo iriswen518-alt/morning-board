@@ -3597,7 +3597,7 @@ function renderMarketSheet() {
 
   const overviewInner = `
       ${renderMarketHighlights(m)}
-      ${accSection("mv-indices", "全球", stocksTab, true)}
+      ${accSection("mv-indices", "全球", stocksTab)}
       ${accSection("mv-bonds", "債券", bondsTab)}
       ${accSection("mv-fx", "匯率", fxTab)}
   `;
@@ -3615,7 +3615,7 @@ function renderMarketSheet() {
   `;
 
   return `
-    ${accSection("mv-overview", "市場一覽", overviewInner, true)}
+    ${accSection("mv-overview", "市場一覽", overviewInner)}
     ${accSection("mv-us-analysis", "美股分析", usInner)}
     ${accSection("mv-tw-analysis", "台股分析", twInner)}
   `;
@@ -6308,7 +6308,7 @@ function renderNewsSheet() {
   ` : "";
   return `
     ${staleBanner}
-    ${accSection("news-market", "市場", renderNewsByCategory("market"), true)}
+    ${accSection("news-market", "市場", renderNewsByCategory("market"))}
     ${accSection("news-wm", "財管", renderNewsByCategory("wm"))}
     ${accSection("news-tax", "稅務", renderNewsByCategory("tax"))}
     ${accSection("news-intl", "國際", renderNewsByCategory("intl"))}
@@ -8095,7 +8095,7 @@ function renderCompareMethodology(asOf) {
 // 已合併：精選基金主分頁，內含「單筆投資」、「定期定額」、「超越ETF」、「基金績效比較」四個次分頁
 function renderFundsSheet() {
   return `
-    ${accSection("fund-lump", "單筆投資", renderLumpFundCards(), true)}
+    ${accSection("fund-lump", "單筆投資", renderLumpFundCards())}
     ${accSection("fund-dca", "定期定額", renderDcaFundCards())}
     ${accSection("fund-beatetf", "超越ETF", renderBeatEtfCards())}
     ${accSection("fund-compare", "績效比較", renderFundCompare())}
