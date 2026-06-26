@@ -616,6 +616,43 @@ table.indices th.sortable-th {
   flex: 0 0 auto;
 }
 .news-sec:not([open]) .news-caret { transform: rotate(-90deg); }
+
+/* 通用折疊區塊（內容導覽：全球市場 / 新聞 / 基金 / 小學堂） */
+.acc-sec {
+  background: var(--card-bg, #fff);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+.acc-sec-head {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+}
+.acc-sec-head::-webkit-details-marker { display: none; }
+.acc-sec-title {
+  color: var(--brand-deep);
+  font-weight: 700;
+  font-size: 16px;
+}
+.acc-caret {
+  width: 18px; height: 18px;
+  color: var(--text-mute);
+  transition: transform .2s ease;
+  flex: 0 0 auto;
+}
+.acc-sec:not([open]) .acc-caret { transform: rotate(-90deg); }
+.acc-sec[open] > .acc-sec-head { border-bottom: 1px solid var(--border); }
+.acc-sec-body { padding: 8px 16px 16px; }
+/* 巢狀：內層折疊區塊（如全球/債券/匯率）縮排、弱化外框 */
+.acc-sec .acc-sec { box-shadow: none; background: transparent; }
+.acc-sec .acc-sec-title { font-size: 15px; }
+
 .news-item h3 { margin: 0 0 6px; font-size: 14px; font-weight: 400; color: var(--text); padding-left: 0; }
 .news-item h3::before { display: none; }
 .news-item details summary { list-style: none; cursor: pointer; font-size: 14px; font-weight: 400; color: var(--text); line-height: 1.4; display: flex; align-items: baseline; gap: 6px; }
@@ -2907,6 +2944,7 @@ table.indices.stock-cols col.c-num { width: 11%; }
 }
 .live-stat-k { display: block; font-size: 12px; color: var(--text-mute); margin-bottom: 3px; }
 .live-stat-v { display: block; font-size: 16px; font-weight: 700; color: var(--text); font-variant-numeric: tabular-nums; }
+.live-stat-time { font-size: 13px; font-weight: 600; line-height: 1.5; }
 .live-detail-empty { color: var(--text-mute); padding: 24px 0; }
 @media (max-width: 600px) {
   .live-stats { grid-template-columns: repeat(2, 1fr); }

@@ -125,6 +125,7 @@ def fetch_one(symbol: str) -> dict:
                     "points": downsample(closes, MAX_POINTS),
                     "market_state": state,
                     "asof": asof,
+                    "asof_ts": ts,  # UTC epoch（秒）；前端據此同時換算當地/台灣時間
                     "tz": meta.get("exchangeTimezoneName"),
                 }
             except Exception as e:  # noqa: BLE001
@@ -223,6 +224,7 @@ def fetch_cnyes(key: str, cnyes_sym: str | None = None) -> dict:
             "points": downsample(series, MAX_POINTS),
             "market_state": state,
             "asof": asof,
+            "asof_ts": cur_pairs[-1][0],  # UTC epoch（秒）
             "tz": "Asia/Taipei",
         }
     except Exception as e:  # noqa: BLE001
