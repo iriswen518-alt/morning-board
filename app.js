@@ -299,7 +299,7 @@ let CURRENT_TAB = "live";
 let SEARCH_INDEX = [];
 let PENDING_HIGHLIGHT = null;
 let PENDING_SUBTAB = null;
-let ALLOC_SUBTAB = "targets";   // 資產配置 內的次分頁：targets（主題市場）| portfolio（投組分析）
+let ALLOC_SUBTAB = null;   // 資產配置 折疊次區塊：null=全部收合 | targets | portfolio | retirement | ins_gap | assist
 
 // init 時 fetch 失敗（伺服器重啟瞬間／網路 blip）的 data 名稱會被記下，
 // 使用者切到對應 tab 時背景重試一次再重畫，避免長期卡在 fallback 空狀態。
@@ -1347,12 +1347,8 @@ function renderObondsSheet() {
 
   const listView = cards + moreSection;
   return `
-    <div class="tabs tabs-wrap" role="tablist">
-      <button class="tab active" data-otab="list" role="tab">精選海外債</button>
-      <button class="tab" data-otab="swap" role="tab">換券試算</button>
-    </div>
-    <div class="otab-panel" data-otab-panel="list">${listView}</div>
-    <div class="otab-panel" data-otab-panel="swap" hidden>${renderSwapCalc()}</div>
+    ${accSection("obonds-list", "精選海外債", listView)}
+    ${accSection("obonds-swap", "換券試算", renderSwapCalc())}
   `;
 }
 
@@ -1601,13 +1597,8 @@ function wireObondsTabs() {
       else tip.hidden = true;
     });
   }
-  root.querySelectorAll('.tab[data-otab]').forEach(btn => {
-    btn.addEventListener("click", () => {
-      const sel = btn.dataset.otab;
-      root.querySelectorAll('.tab[data-otab]').forEach(b => b.classList.toggle("active", b === btn));
-      root.querySelectorAll('.otab-panel').forEach(p => { p.hidden = p.dataset.otabPanel !== sel; });
-    });
-  });
+  // 精選海外債／換券試算已改為折疊區塊（accSection），不再用分頁切換；
+  // 換券試算的輸入元件常駐 DOM，以下監聽照常運作。
   root.querySelectorAll('.swap-q').forEach(inp => {
     const side = inp.dataset.side;
     const box = root.querySelector(`.swap-results[data-side="${side}"]`);
@@ -1737,60 +1728,43 @@ function renderThemeIndexBlock(themeKey) {
 // 上層 section 切換器在 主題市場 / 投組分析 之間切；各自再帶原本的次分頁。
 // ─────────────────────────────────────────────────────────────────────────
 function renderAllocSheet() {
-  const isPortfolio = ALLOC_SUBTAB === "portfolio";
-  const isAssist = ALLOC_SUBTAB === "assist";
-  const isRetirement = ALLOC_SUBTAB === "retirement";
-  const isInsGap = ALLOC_SUBTAB === "ins_gap";
-  const isTargets = !isPortfolio && !isAssist && !isRetirement && !isInsGap;
-  const inner = isPortfolio ? renderPortfolioSheet()
-    : isAssist ? renderAssistSheet()
-    : isRetirement ? renderRetirementSheet()
-    : isInsGap ? renderInsuranceGapSheet()
-    : renderTargetsSheet();
-  return `
-    <div class="tabs alloc-sec-tabs tabs-wrap">
-      <button class="tab alloc-sec-tab ${isTargets ? "active" : ""}" data-asec="targets">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/>
-        </svg>
-        <span>主題市場</span>
-      </button>
-      <button class="tab alloc-sec-tab ${isPortfolio ? "active" : ""}" data-asec="portfolio">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="12" cy="12" r="9"/><path d="M12 3v9h9"/><path d="M12 12L5.5 17"/>
-        </svg>
-        <span>投組分析</span>
-      </button>
-      <button class="tab alloc-sec-tab ${isRetirement ? "active" : ""}" data-asec="retirement">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M3 9l9-6 9 6v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/>
-          <polyline points="9 22 9 12 15 12 15 22"/>
-        </svg>
-        <span>退休試算</span>
-      </button>
-      <button class="tab alloc-sec-tab ${isInsGap ? "active" : ""}" data-asec="ins_gap">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-          <line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
-        </svg>
-        <span>保障缺口</span>
-      </button>
-      <button class="tab alloc-sec-tab ${isAssist ? "active" : ""}" data-asec="assist">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M21 12a8 8 0 0 1-11 7.4L4 21l1.6-6A8 8 0 1 1 21 12z"/>
-          <circle cx="9" cy="11" r="0.6" fill="currentColor"/><circle cx="12" cy="11" r="0.6" fill="currentColor"/><circle cx="15" cy="11" r="0.6" fill="currentColor"/>
-        </svg>
-        <span>專屬規劃</span>
-      </button>
-    </div>
-    <div class="alloc-sec-body" id="alloc-sec-body">${inner}</div>
-  `;
+  // 五個次功能改為折疊區塊（accordion）。一次只展開一個，展開哪個就只渲染那個的內容，
+  // 維持各計算機「DOM 裡只有一份」的前提（避免 .t-pane / #pc-* 等 id/class 重複碰撞）。
+  const active = ALLOC_SUBTAB;  // null = 全部收合
+  const inner = active === "portfolio" ? renderPortfolioSheet()
+    : active === "assist" ? renderAssistSheet()
+    : active === "retirement" ? renderRetirementSheet()
+    : active === "ins_gap" ? renderInsuranceGapSheet()
+    : active === "targets" ? renderTargetsSheet()
+    : "";
+  const SECS = [
+    ["targets", "主題市場"],
+    ["portfolio", "投組分析"],
+    ["retirement", "退休試算"],
+    ["ins_gap", "保障缺口"],
+    ["assist", "專屬規劃"],
+  ];
+  return SECS.map(([key, label]) => {
+    const isOpen = active === key;
+    return `
+    <details class="acc-sec alloc-acc" data-asec-acc="${key}"${isOpen ? " open" : ""}>
+      <summary class="acc-sec-head">
+        <span class="acc-sec-title">${label}</span>
+        <svg class="acc-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </summary>
+      <div class="acc-sec-body">${isOpen ? inner : ""}</div>
+    </details>`;
+  }).join("");
 }
 
 function wireAllocTabs() {
-  document.querySelectorAll(".tab[data-asec]").forEach(btn => {
-    btn.addEventListener("click", () => {
-      ALLOC_SUBTAB = btn.dataset.asec;
+  // 折疊式：點標題列 → 設定 ALLOC_SUBTAB（再點同一個=收合）並重渲染；一次只開一個。
+  document.querySelectorAll("details.alloc-acc").forEach(d => {
+    const sum = d.querySelector("summary");
+    if (sum) sum.addEventListener("click", (e) => {
+      e.preventDefault();
+      const key = d.dataset.asecAcc;
+      ALLOC_SUBTAB = ALLOC_SUBTAB === key ? null : key;
       rerenderAlloc();
     });
   });
@@ -1798,7 +1772,7 @@ function wireAllocTabs() {
   else if (ALLOC_SUBTAB === "assist") wireAssistTab();
   else if (ALLOC_SUBTAB === "retirement") wireRetirementTab();
   else if (ALLOC_SUBTAB === "ins_gap") wireInsuranceGapTab();
-  else wireTargetsTabs();
+  else if (ALLOC_SUBTAB === "targets") wireTargetsTabs();
 }
 
 function rerenderAlloc() {
@@ -2704,14 +2678,9 @@ function renderInsuranceSheet() {
   if (!list.length) {
     return "<p style='color:var(--text-mute); padding:20px 0'>尚未提供保險商品清單</p>";
   }
-  return list.map(it => {
-    const nameHtml = it.source_url
-      ? `<a href="${it.source_url}" target="_blank" rel="noopener">${escapeHtml(it.name_zh)}</a>`
-      : escapeHtml(it.name_zh);
+  return list.map((it, i) => {
     const chips = [currencyChip(it.currency), typeChip(it.type)].join("");
-    return `
-    <div class="fund-card">
-      <h3>${nameHtml}</h3>
+    const detail = `
       <div style="margin-bottom:6px">${chips}</div>
       <p class="tagline">${escapeHtml(it.tagline || "")}</p>
       <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:6px; font-size:15px; margin-top:8px">
@@ -2724,8 +2693,9 @@ function renderInsuranceSheet() {
         <ul style="margin:10px 0 0; padding-left:18px; font-size:15px; line-height:1.7">
           ${it.highlights.map(h => `<li>${escapeHtml(h)}</li>`).join("")}
         </ul>` : ""}
-    </div>
-  `;
+      ${it.source_url ? `<p style="margin:10px 0 0"><a href="${it.source_url}" target="_blank" rel="noopener">查看商品說明 ↗</a></p>` : ""}
+    `;
+    return accSection("ins-" + i, it.name_zh, detail);
   }).join("");
 }
 
@@ -3980,12 +3950,8 @@ function renderUsStocksSheet() {
     return `<p style="color:var(--text-mute); padding:20px 0">尚未提供海外股票資料</p>`;
   }
   const note = `<p style="color:var(--text-mute); font-size:13px; padding:6px 0 12px">資料來源：板信商銀網路銀行 iQuote。點選名稱可至板信即時報價頁。</p>`;
-  const curatedBlock = curated.length ? `
-    <h2 style="font-size:16px; margin:12px 0 8px;">精選海外股票</h2>
-    ${renderStocksTable("", curated, { showPE: false })}
-  ` : "";
-  const popularBlock = popular.length ? `
-    <h2 style="font-size:16px; margin:18px 0 8px;">熱門海外股票</h2>
+  const curatedInner = curated.length ? renderStocksTable("", curated, { showPE: false }) : "";
+  const popularInner = popular.length ? `
     <p style="color:var(--text-mute); font-size:12px; margin:0 0 8px;">資料來源：Yahoo Finance trending（流動性過低個股已過濾），每次 build 重抓。</p>
     ${renderStocksTable("", popular, { showPE: false })}
   ` : "";
@@ -3999,7 +3965,21 @@ function renderUsStocksSheet() {
       </a>
     </div>
   `;
-  return renderUsMarketAnalysis() + note + curatedBlock + popularBlock + renderStockBriefBlock() + moreSection;
+  // 各區塊改為折疊；reused 區塊（盤勢/週度檢視）自帶 <h2>，折疊標題已重複，去掉首個 h2。
+  const analysisHtml = renderUsMarketAnalysis();
+  const briefHtml = renderStockBriefBlock();
+  const parts = [note];
+  if (analysisHtml && analysisHtml.trim()) parts.push(accSection("usp-analysis", "美股盤勢", dropLeadH2(analysisHtml)));
+  if (curated.length) parts.push(accSection("usp-curated", "精選海外股票", curatedInner));
+  if (popular.length) parts.push(accSection("usp-popular", "熱門海外股票", popularInner));
+  if (briefHtml && briefHtml.trim()) parts.push(accSection("usp-brief", "週度檢視", dropLeadH2(briefHtml)));
+  parts.push(moreSection);
+  return parts.join("");
+}
+
+// 去掉一段 HTML 開頭第一個 <h2>…</h2>（折疊標題已涵蓋，避免重複顯示）
+function dropLeadH2(html) {
+  return html.replace(/<h2[^>]*>[\s\S]*?<\/h2>/, "");
 }
 
 let TW_STOCK_QUERY = "";
