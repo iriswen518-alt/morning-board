@@ -1660,11 +1660,16 @@ function stanceChip(stance) {
 }
 
 const THEME_INDEX_NAME = {
-  "korea": "KOSPI",
+  "us": "S&P 500",
+  "ai": "Nasdaq Composite",
+  "europe": "Euro Stoxx 50",
+  "china": "Shanghai 上證",
   "japan": "Nikkei 225",
-  "ai": "Nasdaq",
-  "vietnam": null,
+  "korea": "KOSPI",
   "india": "Nifty 50",
+  "vietnam": null,
+  "asean": null,
+  "energy": null,
   "gold": null,
   "bonds": null
 };
