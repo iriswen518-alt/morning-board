@@ -157,7 +157,7 @@
     {
       "name": "S&P/ASX 200",
       "name_zh": null,
-      "close": 8764.2001953125,
+      "close": 8764.2,
       "daily_pct": 0.18,
       "mtd_pct": 0.19,
       "ytd_pct": 0.39,
@@ -167,9 +167,9 @@
   "bonds": [
     {
       "name": "US 10-Year",
-      "yield_pct": 4.39,
-      "daily_bps": -5.9,
-      "mtd_bps": -6.1,
+      "yield_pct": 4.49,
+      "daily_bps": 3.6,
+      "mtd_bps": 3.4,
       "closing_date": "2026-06-25"
     },
     {
@@ -195,10 +195,10 @@
     },
     {
       "name": "UK 10-Year",
-      "yield_pct": 4.74,
-      "daily_bps": -6.59,
-      "mtd_bps": -11.66,
-      "closing_date": "2026-06-24"
+      "yield_pct": null,
+      "daily_bps": null,
+      "mtd_bps": null,
+      "closing_date": null
     },
     {
       "name": "TW 10-Year",
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 101.43000030517578,
       "daily_pct": -0.18,
-      "mtd_pct": 2.35,
-      "ytd_pct": 3.01,
+      "mtd_pct": 2.25,
+      "ytd_pct": 2.9,
       "closing_date": "2026-06-25"
     },
     {
@@ -416,7 +416,7 @@
     {
       "label": "Sep 2026",
       "fomc_date": "2026-09-17",
-      "implied_rate": 3.76,
+      "implied_rate": 3.75,
       "delta_rate": 0.12,
       "delta_bps": 12.0,
       "p_hike": 48.0,
@@ -427,11 +427,11 @@
     {
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
-      "implied_rate": 3.83,
-      "delta_rate": 0.07,
-      "delta_bps": 7.0,
-      "p_hike": 28.0,
-      "p_hold": 72.0,
+      "implied_rate": 3.81,
+      "delta_rate": 0.06,
+      "delta_bps": 6.0,
+      "p_hike": 24.0,
+      "p_hold": 76.0,
       "p_cut": 0,
       "is_reference": false
     },
@@ -439,10 +439,10 @@
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
       "implied_rate": 3.92,
-      "delta_rate": 0.09,
-      "delta_bps": 9.0,
-      "p_hike": 36.0,
-      "p_hold": 64.0,
+      "delta_rate": 0.1,
+      "delta_bps": 10.0,
+      "p_hike": 40.0,
+      "p_hold": 60.0,
       "p_cut": 0,
       "is_reference": false
     }
