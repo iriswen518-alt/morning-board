@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#019AB3">
 <title>理財小幫手・小學堂</title>
-<link rel="stylesheet" href="../style.css?v=20260619-font">
-<link rel="stylesheet" href="academy.css?v=20260622-selhint">
+<link rel="stylesheet" href="../style.css?v=20260626-accordion">
+<link rel="stylesheet" href="academy.css?v=20260626-accordion">
 <style>
   .home-fab { display: none; }
   @media (max-width: 768px) {
@@ -90,16 +90,24 @@
 </nav>
 
 <main class="academy-main">
-  <div class="tabs academy-toptabs">
-    <button class="tab active" type="button" data-atab="courses">主題課程</button>
-    <button class="tab" type="button" data-atab="certs">證照考試</button>
-  </div>
-  <div id="atab-courses">
-    <div id="course-list" class="academy-grid">載入中…</div>
-  </div>
-  <div id="atab-certs" hidden>
-    <div id="cert-list" class="academy-grid">載入中…</div>
-  </div>
+  <details class="acc-sec" id="atab-courses" data-key="academy-courses" open>
+    <summary class="acc-sec-head">
+      <span class="acc-sec-title">主題課程</span>
+      <svg class="acc-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+    </summary>
+    <div class="acc-sec-body">
+      <div id="course-list" class="academy-grid">載入中…</div>
+    </div>
+  </details>
+  <details class="acc-sec" id="atab-certs" data-key="academy-certs">
+    <summary class="acc-sec-head">
+      <span class="acc-sec-title">證照考試</span>
+      <svg class="acc-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+    </summary>
+    <div class="acc-sec-body">
+      <div id="cert-list" class="academy-grid">載入中…</div>
+    </div>
+  </details>
 </main>
 
 <nav class="tabbar" id="tabbar" aria-label="主導覽">
@@ -148,6 +156,6 @@
   資料僅供內部參考，不構成任何投資建議
 </footer>
 
-<script src="academy.js?v=20260622-selhint"></script>
+<script src="academy.js?v=20260626-accordion"></script>
 </body>
 </html>

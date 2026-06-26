@@ -24,6 +24,39 @@
   margin-bottom: 24px;
 }
 
+/* 主題課程／證照考試：折疊區塊（與主站 .acc-sec 一致） */
+.acc-sec {
+  background: #fff;
+  border: 1px solid var(--academy-border);
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+.acc-sec-head {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 18px;
+}
+.acc-sec-head::-webkit-details-marker { display: none; }
+.acc-sec-title {
+  color: var(--brand-deep);
+  font-weight: 700;
+  font-size: 17px;
+}
+.acc-caret {
+  width: 18px; height: 18px;
+  color: var(--academy-muted);
+  transition: transform .2s ease;
+  flex: 0 0 auto;
+}
+.acc-sec:not([open]) .acc-caret { transform: rotate(-90deg); }
+.acc-sec[open] > .acc-sec-head { border-bottom: 1px solid var(--academy-border); }
+.acc-sec-body { padding: 16px 18px 18px; }
+
 /* === 課程主題／證照考試卡片格線（兩個分頁共用）=== */
 .academy-grid {
   display: grid;

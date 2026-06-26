@@ -56,19 +56,25 @@ async function loadCertifications() {
   }
 }
 
+// 主題課程／證照考試已改為折疊區塊（<details class="acc-sec">），
+// 折疊狀態存 localStorage（與主站 accSection 共用 accCollapsed key）。
+function saveAccSec(d) {
+  try {
+    const map = JSON.parse(localStorage.getItem('accCollapsed') || '{}') || {};
+    map[d.dataset.key] = !d.open;
+    localStorage.setItem('accCollapsed', JSON.stringify(map));
+  } catch (_) { /* 略 */ }
+}
 function wireAcademyTabs() {
-  const buttons = document.querySelectorAll('.academy-toptabs .tab[data-atab]');
-  if (!buttons.length) return;
-  buttons.forEach(t => {
-    t.addEventListener('click', () => {
-      buttons.forEach(x => x.classList.remove('active'));
-      t.classList.add('active');
-      const which = t.dataset.atab;
-      const courses = document.getElementById('atab-courses');
-      const certs = document.getElementById('atab-certs');
-      if (courses) courses.hidden = which !== 'courses';
-      if (certs) certs.hidden = which !== 'certs';
-    });
+  // 折疊呈現：初始展開狀態沿用使用者上次記憶（沒記憶則用 HTML 預設 open），
+  // 並掛上 toggle 監聽以記住之後的開合（用 JS 綁定，避免 inline handler 早於 script 載入而報錯）。
+  let map = {};
+  try { map = JSON.parse(localStorage.getItem('accCollapsed') || '{}') || {}; } catch (_) { /* 略 */ }
+  [['academy-courses', 'atab-courses'], ['academy-certs', 'atab-certs']].forEach(([key, id]) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    if (map[key] !== undefined) el.open = !map[key];
+    el.addEventListener('toggle', () => saveAccSec(el));
   });
 }
 
@@ -335,11 +341,13 @@ function wireNavToggle() {
 function selectTabFromUrl() {
   const params = new URLSearchParams(location.search);
   const tab = params.get('tab');
-  if (tab) {
-    const btn = document.querySelector(`.academy-toptabs .tab[data-atab="${tab}"]`);
-    if (btn) {
-      btn.click();
-    }
+  if (!tab) return;
+  // 折疊呈現：?tab=courses|certs → 展開對應區塊並捲動過去
+  const id = tab === 'certs' ? 'atab-certs' : tab === 'courses' ? 'atab-courses' : null;
+  const el = id && document.getElementById(id);
+  if (el) {
+    el.open = true;
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 }
 
