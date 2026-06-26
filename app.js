@@ -705,9 +705,8 @@ function switchTab(name) {
   else if (name === "calc") body.innerHTML = renderCalcSheet();
   else if (name === "twstock") body.innerHTML = renderTwStockSheet();
   if (name === "live") { startLiveAutoRefresh(); refreshLiveData(); } else stopLiveAutoRefresh();
-  if (name === "news") wireNewsTabs();
-  if (name === "market") { wireMarketViewTabs(); wireMarketTabs(); wireTwStock(); wireNewsTabs(); }
-  if (name === "funds") { wireFundsTabs(); wireFundCompare(); }
+  if (name === "market") { wireTwStock(); }
+  if (name === "funds") { wireFundCompare(); }
   if (name === "alloc") wireAllocTabs();
   if (name === "wealth") wireWealthTabs();
   if (name === "chat") wireChat();
@@ -2944,6 +2943,23 @@ function renderLiveDetail(idx, rec) {
   const sessDate = liveSessionDateLabel(rec.asof);   // 高/低 所屬場次日（精確）
   const prevDate = livePrevTradingDateLabel(rec.asof, TW_LIVE_SYMS.has(idx.sym)); // 昨收 所屬前一交易日
   const stat = (k, v) => `<div class="live-stat"><span class="live-stat-k">${k}</span><span class="live-stat-v">${v}</span></div>`;
+  // 資料時間：有 epoch 時依商品時區同時顯示「當地時間」與「台灣時間」；
+  // 台股/台幣對（當地即台灣）與 24h 商品（無 LIVE_TZ）只顯台灣時間；
+  // 無 epoch（舊資料）則原樣顯示，避免誤標時區。
+  const tz = LIVE_TZ[idx.sym];
+  let timeStat;
+  if (rec.asof_ts != null) {
+    const tpe = liveFmtTz(rec.asof_ts, "Asia/Taipei");
+    if (tz && tz !== "Asia/Taipei") {
+      const local = liveFmtTz(rec.asof_ts, tz);
+      const lbl = LIVE_TZ_LABEL[tz] || "當地";
+      timeStat = `<div class="live-stat"><span class="live-stat-k">資料時間</span><span class="live-stat-v live-stat-time">${lbl} ${local || "—"}<br>台灣 ${tpe || "—"}</span></div>`;
+    } else {
+      timeStat = stat("資料時間", tpe ? `台灣 ${tpe}` : "—");
+    }
+  } else {
+    timeStat = stat("資料時間", rec.asof ? escapeHtml(rec.asof) : "—");
+  }
   return `
     <section class="live-detail">
       ${back}
@@ -2960,7 +2976,7 @@ function renderLiveDetail(idx, rec) {
         ${stat(sessDate ? `${sessDate} 高` : "高", fv(dayHi))}
         ${stat(sessDate ? `${sessDate} 低` : "低", fv(dayLo))}
         ${stat(prevDate ? `${prevDate} 收` : "前一交易日收", rec.prev_close != null ? fv(rec.prev_close) : "—")}
-        ${stat("資料時間", rec.asof ? escapeHtml(rec.asof) : "—")}
+        ${timeStat}
       </div>
       <p class="live-credit">資料來源 鉅亨網（cnyes）、Yahoo Finance，盤中定時更新；虛線為${prevDate ? `${prevDate} 收盤` : "前一交易日收盤"}。數值僅供參考，非投資建議或要約。</p>
     </section>`;
@@ -3002,6 +3018,27 @@ const LIVE_FX = [
   { zh: "英鎊美元", sym: "FX:GBPUSD", dp: 4 },
   { zh: "美元人民幣", sym: "FX:USDCNY", dp: 4 },
 ];
+// 各商品「當地時間」所屬時區（IANA）。指數＝交易所時區；匯率＝外幣市場（非台幣那一方）。
+// 台股/台幣對因當地即台灣，沿用 Asia/Taipei → 詳情頁只顯一行。黃金/加密為 24h 無單一市場，
+// 不列於此表 → 只顯台灣時間。
+const LIVE_TZ = {
+  "^GSPC": "America/New_York", "^IXIC": "America/New_York", "^DJI": "America/New_York",
+  "^SOX": "America/New_York", "^STOXX50E": "Europe/Berlin", "^GDAXI": "Europe/Berlin",
+  "^FTSE": "Europe/London", "^FCHI": "Europe/Paris", "^N225": "Asia/Tokyo",
+  "^TWII": "Asia/Taipei", "^TWOII": "Asia/Taipei", "TWF:TXF": "Asia/Taipei",
+  "^KS11": "Asia/Seoul", "^HSI": "Asia/Hong_Kong",
+  "000001.SS": "Asia/Shanghai", "000300.SS": "Asia/Shanghai",
+  "^NSEI": "Asia/Kolkata", "^AXJO": "Australia/Sydney",
+  "GI:DXY": "America/New_York", "FX:USDTWD": "America/New_York", "FX:JPYTWD": "Asia/Tokyo",
+  "FX:USDJPY": "Asia/Tokyo", "FX:EURUSD": "Europe/Berlin", "FX:GBPUSD": "Europe/London",
+  "FX:USDCNY": "Asia/Shanghai",
+};
+const LIVE_TZ_LABEL = {
+  "America/New_York": "紐約", "Europe/Berlin": "法蘭克福", "Europe/London": "倫敦",
+  "Europe/Paris": "巴黎", "Asia/Tokyo": "東京", "Asia/Seoul": "首爾",
+  "Asia/Hong_Kong": "香港", "Asia/Shanghai": "上海", "Asia/Kolkata": "印度",
+  "Australia/Sydney": "雪梨",
+};
 let LIVE_REFRESH_TIMER = null;
 let LIVE_NEWS_TIMER = null;
 let LIVE_NEWS_IDX = 0;
@@ -3018,6 +3055,18 @@ function liveFmtTpe(epochSec) {
   const d = new Date((epochSec + 8 * 3600) * 1000);
   const p = n => String(n).padStart(2, "0");
   return `${p(d.getUTCMonth() + 1)}/${p(d.getUTCDate())} ${p(d.getUTCHours())}:${p(d.getUTCMinutes())}`;
+}
+// 將 UTC epoch（秒）格式化為指定 IANA 時區的「MM/DD HH:MM」。失敗回 null。
+function liveFmtTz(epochSec, tz) {
+  try {
+    const o = new Intl.DateTimeFormat("en-GB", {
+      timeZone: tz, month: "2-digit", day: "2-digit",
+      hour: "2-digit", minute: "2-digit", hour12: false,
+    }).formatToParts(new Date(epochSec * 1000))
+      .reduce((a, p) => (a[p.type] = p.value, a), {});
+    const hh = o.hour === "24" ? "00" : o.hour;
+    return `${o.month}/${o.day} ${hh}:${o.minute}`;
+  } catch (_) { return null; }
 }
 // 直連 cnyes charting 抓單一商品盤中（與 fetch_live_indices.py 同邏輯：排序＋挑含當下時段）。
 // dp = 小數位（指數/美元指數用 2；匯率多用 4 才不失精度）。
@@ -3070,6 +3119,7 @@ async function fetchCnyesBySymbol(cnyesSym, dp) {
     points: liveDownsample(series, 80),
     market_state: state,
     asof: liveFmtTpe(curPairs[curPairs.length - 1][0]),
+    asof_ts: curPairs[curPairs.length - 1][0],
     dp: dp == null ? 2 : dp,
   };
 }
@@ -3106,6 +3156,7 @@ async function fetchBinanceLive(sym, dp) {
     points: liveDownsample(series, 80),
     market_state: "REGULAR",
     asof: liveFmtTpe(Math.floor(lastClose / 1000)),
+    asof_ts: Math.floor(lastClose / 1000),
     dp: dp == null ? 2 : dp,
   };
 }
@@ -3596,36 +3647,29 @@ function renderMarketSheet() {
     </div>
     ${renderRankingsBlock("tw")}`;
 
-  return `
-    <div class="tabs tabs-wrap">
-      <button class="tab" data-mvtab="overview">市場一覽</button>
-      <button class="tab" data-mvtab="us-analysis">美股分析</button>
-      <button class="tab active" data-mvtab="tw-analysis">台股分析</button>
-    </div>
-    <div id="mvtab-overview" hidden>
+  const overviewInner = `
       ${renderMarketHighlights(m)}
-
-      <div class="tabs tabs-wrap">
-        <button class="tab active" data-mtab="indices">全球</button>
-        <button class="tab" data-mtab="bonds">債券</button>
-        <button class="tab" data-mtab="fx">匯率</button>
-      </div>
-      <div id="mtab-indices">${stocksTab}</div>
-      <div id="mtab-bonds" hidden>${bondsTab}</div>
-      <div id="mtab-fx" hidden>${fxTab}</div>
-    </div>
-    <div id="mvtab-us-analysis" hidden>
+      ${accSection("mv-indices", "全球", stocksTab, true)}
+      ${accSection("mv-bonds", "債券", bondsTab)}
+      ${accSection("mv-fx", "匯率", fxTab)}
+  `;
+  const usInner = `
       ${renderUsMarketAnalysis()}
       ${renderStocksTable("", usStocks) || ""}
       ${renderRankingsBlock("us")}
-    </div>
-    <div id="mvtab-tw-analysis">
+  `;
+  const twInner = `
       ${renderPremarketBlock()}
       ${renderTwMarketAnalysis()}
       ${twPresetTable}
       ${renderRankingsBlock("tw")}
       ${renderTwStockSheet()}
-    </div>
+  `;
+
+  return `
+    ${accSection("mv-overview", "市場一覽", overviewInner, true)}
+    ${accSection("mv-us-analysis", "美股分析", usInner)}
+    ${accSection("mv-tw-analysis", "台股分析", twInner)}
   `;
 }
 
@@ -6316,16 +6360,10 @@ function renderNewsSheet() {
   ` : "";
   return `
     ${staleBanner}
-    <div class="tabs">
-      <button class="tab active" data-tab="market">市場</button>
-      <button class="tab" data-tab="wm">財管</button>
-      <button class="tab" data-tab="tax">稅務</button>
-      <button class="tab" data-tab="intl">國際</button>
-    </div>
-    <div id="tab-market">${renderNewsByCategory("market")}</div>
-    <div id="tab-wm" hidden>${renderNewsByCategory("wm")}</div>
-    <div id="tab-tax" hidden>${renderNewsByCategory("tax")}</div>
-    <div id="tab-intl" hidden>${renderNewsByCategory("intl")}</div>
+    ${accSection("news-market", "市場", renderNewsByCategory("market"), true)}
+    ${accSection("news-wm", "財管", renderNewsByCategory("wm"))}
+    ${accSection("news-tax", "稅務", renderNewsByCategory("tax"))}
+    ${accSection("news-intl", "國際", renderNewsByCategory("intl"))}
   `;
 }
 
@@ -6391,6 +6429,33 @@ function newsSection(title, innerHtml) {
         <svg class="news-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
       </summary>
       <div class="news-sec-body">${innerHtml}</div>
+    </details>`;
+}
+
+// 通用折疊區塊（內容導覽用：全球市場 / 新聞 / 基金 / 小學堂）。
+// 沿用 newsSection 的視覺與狀態記憶，差別在支援「預設只展開第一個」。
+// 規則：使用者手動改過 → 用記住的狀態；沒動過 → 用 defaultOpen。
+const ACC_COLLAPSED = (() => {
+  try { return JSON.parse(localStorage.getItem("accCollapsed") || "{}") || {}; }
+  catch (_) { return {}; }
+})();
+function saveAccSec(d) {
+  try {
+    ACC_COLLAPSED[d.dataset.key] = !d.open;
+    localStorage.setItem("accCollapsed", JSON.stringify(ACC_COLLAPSED));
+  } catch (_) { /* 略 */ }
+}
+function accSection(key, title, innerHtml, defaultOpen = false) {
+  const stored = ACC_COLLAPSED[key];
+  const isOpen = stored === undefined ? defaultOpen : !stored;
+  const open = isOpen ? " open" : "";
+  return `
+    <details class="acc-sec" data-key="${escapeHtml(key)}"${open} ontoggle="saveAccSec(this)">
+      <summary class="acc-sec-head">
+        <span class="acc-sec-title">${escapeHtml(title)}</span>
+        <svg class="acc-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </summary>
+      <div class="acc-sec-body">${innerHtml}</div>
     </details>`;
 }
 
@@ -8082,18 +8147,11 @@ function renderCompareMethodology(asOf) {
 // 已合併：精選基金主分頁，內含「單筆投資」、「定期定額」、「超越ETF」、「基金績效比較」四個次分頁
 function renderFundsSheet() {
   return `
-    <div class="tabs">
-      <button class="tab active" data-ftab="lump">單筆投資</button>
-      <button class="tab" data-ftab="dca">定期定額</button>
-      <button class="tab" data-ftab="beatetf">超越ETF</button>
-      <button class="tab" data-ftab="compare">績效比較</button>
-      <button class="tab" data-ftab="popular">熱銷基金</button>
-    </div>
-    <div id="ftab-lump">${renderLumpFundCards()}</div>
-    <div id="ftab-dca" hidden>${renderDcaFundCards()}</div>
-    <div id="ftab-beatetf" hidden>${renderBeatEtfCards()}</div>
-    <div id="ftab-compare" hidden>${renderFundCompare()}</div>
-    <div id="ftab-popular" hidden>${renderPopularFundCards()}</div>
+    ${accSection("fund-lump", "單筆投資", renderLumpFundCards(), true)}
+    ${accSection("fund-dca", "定期定額", renderDcaFundCards())}
+    ${accSection("fund-beatetf", "超越ETF", renderBeatEtfCards())}
+    ${accSection("fund-compare", "績效比較", renderFundCompare())}
+    ${accSection("fund-popular", "熱銷基金", renderPopularFundCards())}
     <div class="fund-card" style="margin-top:18px;text-align:center">
       <h3 style="margin-bottom:6px">其他基金</h3>
       <p class="tagline" style="margin-bottom:12px">瀏覽完整基金總覽（境外／國內基金龍虎榜、市場龍虎榜、快速搜尋）</p>
@@ -9193,6 +9251,42 @@ function licaiCompareReply(t) {
   s += `\n\n數據為最近收盤/報價，僅供參考、非投資建議 🌸`;
   return s;
 }
+// 交易時間查詢：問「時段／幾點開收盤／夜盤」時回時間表，否則回 null。
+// 必須在 licaiLiveReply 之前呼叫，否則「台股幾點收盤」會被行情分支搶去回成價格。
+const LICAI_HOURS_TW_FUT =
+  "台指期交易時間（TAIFEX）⏰\n\n" +
+  "• 一般交易時段：08:45–13:45（最後交易日為 08:45–13:30）\n" +
+  "• 盤後交易時段（夜盤）：15:00–次日 05:00（最後交易日無夜盤）\n\n" +
+  "夜盤會即時反映美股與國際盤，所以隔天的開盤跳空，常在前一晚夜盤就先反應掉了。\n（僅供參考、非投資建議 🌸）";
+const LICAI_HOURS_TW_STK =
+  "台股交易時間 ⏰\n\n" +
+  "• 盤中撮合：09:00–13:30\n" +
+  "• 開盤前試撮：08:30–09:00\n" +
+  "• 收盤前集合競價：13:25–13:30\n" +
+  "• 盤後定價交易：14:00–14:30（以當日收盤價成交）\n" +
+  "• 零股：盤中 09:10–13:30、盤後 13:40–14:30\n\n（僅供參考、非投資建議 🌸）";
+const LICAI_HOURS_US =
+  "美股交易時間（換算台灣時間）⏰\n\n" +
+  "• 正常盤：夏令 21:30–04:00、冬令 22:30–05:00\n" +
+  "（美東當地 09:30–16:00；約每年 3～11 月為夏令時間）\n" +
+  "• 另有盤前、盤後延長時段，但流動性較低、價差較大\n\n（僅供參考、非投資建議 🌸）";
+function licaiHoursReply(t) {
+  // 時間意圖：交易時間／時段、幾點開收盤、夜盤、盤後、開市收市休市
+  const timeIntent = /交易時間|交易時段|開盤時間|收盤時間|幾點(?:開|收|到|結束)|開盤幾點|收盤幾點|幾點開盤|幾點收盤|夜盤|盤後交易|開市|收市|休市|營業時間|開盤到幾點/.test(t);
+  if (!timeIntent) return null;
+  const isFut = /台指期|台指|期指|期貨|txf/.test(t);
+  const isUS = /美股|美國股|那斯達克|納斯達克|標普|s&p|道瓊|費半|費城半導體|nasdaq|dow/.test(t);
+  const isTW = /台股|加權|大盤|台積電|上市|上櫃|櫃買|現貨/.test(t);
+  if (isFut) return licaiWithRefs(LICAI_HOURS_TW_FUT, [LICAI_REF.taifex]);
+  if (isUS) return LICAI_HOURS_US;
+  if (isTW) return licaiWithRefs(LICAI_HOURS_TW_STK, [LICAI_REF.twse]);
+  // 沒指定市場 → 給三大市場總覽
+  return licaiWithRefs(
+    LICAI_HOURS_TW_STK + "\n\n— — —\n\n" + LICAI_HOURS_TW_FUT + "\n\n— — —\n\n" + LICAI_HOURS_US,
+    [LICAI_REF.twse, LICAI_REF.taifex]
+  );
+}
+
 // 今日數據回應：命中才回字串，否則回 null（讓後面的知識庫接手）
 function licaiLiveReply(t) {
   try {
@@ -9365,6 +9459,7 @@ const LICAI_REF = {
   edu: "[🔗 投資人教育網（證基會）](https://www.sfi.org.tw)",
   sitca: "[🔗 投信投顧公會](https://www.sitca.org.tw)",
   twse: "[🔗 臺灣證券交易所](https://www.twse.com.tw)",
+  taifex: "[🔗 台指期契約規格（期交所）](https://www.taifex.com.tw/cht/2/tX)",
   cbc: "[🔗 中央銀行](https://www.cbc.gov.tw)",
   etax: "[🔗 財政部稅務入口網](https://www.etax.nat.gov.tw)",
   trust: "[🔗 信託公會](https://www.trust.org.tw)",
@@ -9487,6 +9582,10 @@ function licaiReply(text) {
   // 0b) 比較型問答（A 和 B 哪個…）：優先於單一標的
   const cmp = licaiCompareReply(t);
   if (cmp) return cmp;
+
+  // 0c) 交易時間（時段查詢，須優先於行情，否則「台股幾點收盤」會被回成價格）
+  const hours = licaiHoursReply(t);
+  if (hours) return hours;
 
   // 1) 今日真實數據（讀 App 內的 market 資料；只在問行情時觸發）
   const live = licaiLiveReply(t);
