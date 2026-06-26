@@ -1,21 +1,7 @@
 {
-  "generated_at": "2026-06-26T19:16:09+08:00",
+  "generated_at": "2026-06-26T19:49:51+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
-    {
-      "symbol": "SLS",
-      "name_zh": "SELLAS Life Sciences",
-      "kind": "US",
-      "price": 10.53,
-      "change_pct": 14.83,
-      "mtd_pct": 13.1,
-      "ytd_pct": 179.31,
-      "market_date": "2026-06-25",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SLS.US",
-      "error": null
-    },
     {
       "symbol": "ON",
       "name_zh": "ON Semiconductor",
@@ -31,6 +17,20 @@
       "error": null
     },
     {
+      "symbol": "SLS",
+      "name_zh": "SELLAS Life Sciences",
+      "kind": "US",
+      "price": 10.53,
+      "change_pct": 14.83,
+      "mtd_pct": 13.1,
+      "ytd_pct": 179.31,
+      "market_date": "2026-06-25",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SLS.US",
+      "error": null
+    },
+    {
       "symbol": "SDOT",
       "name_zh": "Sadot",
       "kind": "US",
@@ -42,20 +42,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SDOT.US",
-      "error": null
-    },
-    {
-      "symbol": "SYNA",
-      "name_zh": "Synaptics Incorporated",
-      "kind": "US",
-      "price": 125.62,
-      "change_pct": -3.45,
-      "mtd_pct": -8.49,
-      "ytd_pct": 69.71,
-      "market_date": "2026-06-25",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SYNA.US",
       "error": null
     },
     {
@@ -84,6 +70,20 @@
       "per": 21.8532,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MCD.US",
+      "error": null
+    },
+    {
+      "symbol": "SYNA",
+      "name_zh": "Synaptics Incorporated",
+      "kind": "US",
+      "price": 125.62,
+      "change_pct": -3.45,
+      "mtd_pct": -8.49,
+      "ytd_pct": 69.71,
+      "market_date": "2026-06-25",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SYNA.US",
       "error": null
     },
     {

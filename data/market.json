@@ -130,11 +130,11 @@
     {
       "name": "Shanghai 上證",
       "name_zh": null,
-      "close": 4120.28076171875,
-      "daily_pct": 0.23,
+      "close": 4027.264892578125,
+      "daily_pct": -2.26,
       "mtd_pct": 1.27,
       "ytd_pct": 3.82,
-      "closing_date": "2026-06-25"
+      "closing_date": "2026-06-26"
     },
     {
       "name": "CSI 300 滬深300",
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 101.43000030517578,
       "daily_pct": -0.18,
-      "mtd_pct": 2.32,
-      "ytd_pct": 2.98,
+      "mtd_pct": 2.35,
+      "ytd_pct": 3.01,
       "closing_date": "2026-06-25"
     },
     {
@@ -427,11 +427,11 @@
     {
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
-      "implied_rate": 3.82,
-      "delta_rate": 0.06,
-      "delta_bps": 6.0,
-      "p_hike": 24.0,
-      "p_hold": 76.0,
+      "implied_rate": 3.83,
+      "delta_rate": 0.07,
+      "delta_bps": 7.0,
+      "p_hike": 28.0,
+      "p_hold": 72.0,
       "p_cut": 0,
       "is_reference": false
     },
@@ -439,10 +439,10 @@
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
       "implied_rate": 3.92,
-      "delta_rate": 0.1,
-      "delta_bps": 10.0,
-      "p_hike": 40.0,
-      "p_hold": 60.0,
+      "delta_rate": 0.09,
+      "delta_bps": 9.0,
+      "p_hike": 36.0,
+      "p_hold": 64.0,
       "p_cut": 0,
       "is_reference": false
     }
