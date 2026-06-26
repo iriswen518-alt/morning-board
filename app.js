@@ -2913,6 +2913,23 @@ function renderLiveDetail(idx, rec) {
   const sessDate = liveSessionDateLabel(rec.asof);   // 高/低 所屬場次日（精確）
   const prevDate = livePrevTradingDateLabel(rec.asof, TW_LIVE_SYMS.has(idx.sym)); // 昨收 所屬前一交易日
   const stat = (k, v) => `<div class="live-stat"><span class="live-stat-k">${k}</span><span class="live-stat-v">${v}</span></div>`;
+  // 資料時間：有 epoch 時依商品時區同時顯示「當地時間」與「台灣時間」；
+  // 台股/台幣對（當地即台灣）與 24h 商品（無 LIVE_TZ）只顯台灣時間；
+  // 無 epoch（舊資料）則原樣顯示，避免誤標時區。
+  const tz = LIVE_TZ[idx.sym];
+  let timeStat;
+  if (rec.asof_ts != null) {
+    const tpe = liveFmtTz(rec.asof_ts, "Asia/Taipei");
+    if (tz && tz !== "Asia/Taipei") {
+      const local = liveFmtTz(rec.asof_ts, tz);
+      const lbl = LIVE_TZ_LABEL[tz] || "當地";
+      timeStat = `<div class="live-stat"><span class="live-stat-k">資料時間</span><span class="live-stat-v live-stat-time">${lbl} ${local || "—"}<br>台灣 ${tpe || "—"}</span></div>`;
+    } else {
+      timeStat = stat("資料時間", tpe ? `台灣 ${tpe}` : "—");
+    }
+  } else {
+    timeStat = stat("資料時間", rec.asof ? escapeHtml(rec.asof) : "—");
+  }
   return `
     <section class="live-detail">
       ${back}
@@ -2929,7 +2946,7 @@ function renderLiveDetail(idx, rec) {
         ${stat(sessDate ? `${sessDate} 高` : "高", fv(dayHi))}
         ${stat(sessDate ? `${sessDate} 低` : "低", fv(dayLo))}
         ${stat(prevDate ? `${prevDate} 收` : "前一交易日收", rec.prev_close != null ? fv(rec.prev_close) : "—")}
-        ${stat("資料時間", rec.asof ? escapeHtml(rec.asof) : "—")}
+        ${timeStat}
       </div>
       <p class="live-credit">資料來源 鉅亨網（cnyes）、Yahoo Finance，盤中定時更新；虛線為${prevDate ? `${prevDate} 收盤` : "前一交易日收盤"}。數值僅供參考，非投資建議或要約。</p>
     </section>`;
@@ -2971,6 +2988,27 @@ const LIVE_FX = [
   { zh: "英鎊美元", sym: "FX:GBPUSD", dp: 4 },
   { zh: "美元人民幣", sym: "FX:USDCNY", dp: 4 },
 ];
+// 各商品「當地時間」所屬時區（IANA）。指數＝交易所時區；匯率＝外幣市場（非台幣那一方）。
+// 台股/台幣對因當地即台灣，沿用 Asia/Taipei → 詳情頁只顯一行。黃金/加密為 24h 無單一市場，
+// 不列於此表 → 只顯台灣時間。
+const LIVE_TZ = {
+  "^GSPC": "America/New_York", "^IXIC": "America/New_York", "^DJI": "America/New_York",
+  "^SOX": "America/New_York", "^STOXX50E": "Europe/Berlin", "^GDAXI": "Europe/Berlin",
+  "^FTSE": "Europe/London", "^FCHI": "Europe/Paris", "^N225": "Asia/Tokyo",
+  "^TWII": "Asia/Taipei", "^TWOII": "Asia/Taipei", "TWF:TXF": "Asia/Taipei",
+  "^KS11": "Asia/Seoul", "^HSI": "Asia/Hong_Kong",
+  "000001.SS": "Asia/Shanghai", "000300.SS": "Asia/Shanghai",
+  "^NSEI": "Asia/Kolkata", "^AXJO": "Australia/Sydney",
+  "GI:DXY": "America/New_York", "FX:USDTWD": "America/New_York", "FX:JPYTWD": "Asia/Tokyo",
+  "FX:USDJPY": "Asia/Tokyo", "FX:EURUSD": "Europe/Berlin", "FX:GBPUSD": "Europe/London",
+  "FX:USDCNY": "Asia/Shanghai",
+};
+const LIVE_TZ_LABEL = {
+  "America/New_York": "紐約", "Europe/Berlin": "法蘭克福", "Europe/London": "倫敦",
+  "Europe/Paris": "巴黎", "Asia/Tokyo": "東京", "Asia/Seoul": "首爾",
+  "Asia/Hong_Kong": "香港", "Asia/Shanghai": "上海", "Asia/Kolkata": "印度",
+  "Australia/Sydney": "雪梨",
+};
 let LIVE_REFRESH_TIMER = null;
 let LIVE_NEWS_TIMER = null;
 let LIVE_NEWS_IDX = 0;
@@ -2987,6 +3025,18 @@ function liveFmtTpe(epochSec) {
   const d = new Date((epochSec + 8 * 3600) * 1000);
   const p = n => String(n).padStart(2, "0");
   return `${p(d.getUTCMonth() + 1)}/${p(d.getUTCDate())} ${p(d.getUTCHours())}:${p(d.getUTCMinutes())}`;
+}
+// 將 UTC epoch（秒）格式化為指定 IANA 時區的「MM/DD HH:MM」。失敗回 null。
+function liveFmtTz(epochSec, tz) {
+  try {
+    const o = new Intl.DateTimeFormat("en-GB", {
+      timeZone: tz, month: "2-digit", day: "2-digit",
+      hour: "2-digit", minute: "2-digit", hour12: false,
+    }).formatToParts(new Date(epochSec * 1000))
+      .reduce((a, p) => (a[p.type] = p.value, a), {});
+    const hh = o.hour === "24" ? "00" : o.hour;
+    return `${o.month}/${o.day} ${hh}:${o.minute}`;
+  } catch (_) { return null; }
 }
 // 直連 cnyes charting 抓單一商品盤中（與 fetch_live_indices.py 同邏輯：排序＋挑含當下時段）。
 // dp = 小數位（指數/美元指數用 2；匯率多用 4 才不失精度）。
@@ -3039,6 +3089,7 @@ async function fetchCnyesBySymbol(cnyesSym, dp) {
     points: liveDownsample(series, 80),
     market_state: state,
     asof: liveFmtTpe(curPairs[curPairs.length - 1][0]),
+    asof_ts: curPairs[curPairs.length - 1][0],
     dp: dp == null ? 2 : dp,
   };
 }
@@ -3075,6 +3126,7 @@ async function fetchBinanceLive(sym, dp) {
     points: liveDownsample(series, 80),
     market_state: "REGULAR",
     asof: liveFmtTpe(Math.floor(lastClose / 1000)),
+    asof_ts: Math.floor(lastClose / 1000),
     dp: dp == null ? 2 : dp,
   };
 }

@@ -27,7 +27,8 @@
 // v27（2026-06-10）：卡片盒清單檢視隱藏階層式編號（zk_id），符合卡片筆記精神；資料層 zk_id 保留供排序。
 // v28（2026-06-11）：上次更新時間改取 max(本機 meta.built_at, 雲端 quotes_built_at)，Mac 關著時雲端報價刷新也會推進「上次更新」，避免標籤看起來卡住。
 // v41（2026-06-26）：理財聊聊新增交易時間查詢（台指期/台股/美股），bump 快取版本讓 app.js 更新生效。
-const CACHE = "morning-board-v41";
+// v42（2026-06-26）：即時行情詳情頁「資料時間」改為同時顯示當地時間＋台灣時間。
+const CACHE = "morning-board-v42";
 
 self.addEventListener("install", e => {
   self.skipWaiting();
