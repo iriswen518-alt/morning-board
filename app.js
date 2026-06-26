@@ -9193,6 +9193,42 @@ function licaiCompareReply(t) {
   s += `\n\n數據為最近收盤/報價，僅供參考、非投資建議 🌸`;
   return s;
 }
+// 交易時間查詢：問「時段／幾點開收盤／夜盤」時回時間表，否則回 null。
+// 必須在 licaiLiveReply 之前呼叫，否則「台股幾點收盤」會被行情分支搶去回成價格。
+const LICAI_HOURS_TW_FUT =
+  "台指期交易時間（TAIFEX）⏰\n\n" +
+  "• 一般交易時段：08:45–13:45（最後交易日為 08:45–13:30）\n" +
+  "• 盤後交易時段（夜盤）：15:00–次日 05:00（最後交易日無夜盤）\n\n" +
+  "夜盤會即時反映美股與國際盤，所以隔天的開盤跳空，常在前一晚夜盤就先反應掉了。\n（僅供參考、非投資建議 🌸）";
+const LICAI_HOURS_TW_STK =
+  "台股交易時間 ⏰\n\n" +
+  "• 盤中撮合：09:00–13:30\n" +
+  "• 開盤前試撮：08:30–09:00\n" +
+  "• 收盤前集合競價：13:25–13:30\n" +
+  "• 盤後定價交易：14:00–14:30（以當日收盤價成交）\n" +
+  "• 零股：盤中 09:10–13:30、盤後 13:40–14:30\n\n（僅供參考、非投資建議 🌸）";
+const LICAI_HOURS_US =
+  "美股交易時間（換算台灣時間）⏰\n\n" +
+  "• 正常盤：夏令 21:30–04:00、冬令 22:30–05:00\n" +
+  "（美東當地 09:30–16:00；約每年 3～11 月為夏令時間）\n" +
+  "• 另有盤前、盤後延長時段，但流動性較低、價差較大\n\n（僅供參考、非投資建議 🌸）";
+function licaiHoursReply(t) {
+  // 時間意圖：交易時間／時段、幾點開收盤、夜盤、盤後、開市收市休市
+  const timeIntent = /交易時間|交易時段|開盤時間|收盤時間|幾點(?:開|收|到|結束)|開盤幾點|收盤幾點|幾點開盤|幾點收盤|夜盤|盤後交易|開市|收市|休市|營業時間|開盤到幾點/.test(t);
+  if (!timeIntent) return null;
+  const isFut = /台指期|台指|期指|期貨|txf/.test(t);
+  const isUS = /美股|美國股|那斯達克|納斯達克|標普|s&p|道瓊|費半|費城半導體|nasdaq|dow/.test(t);
+  const isTW = /台股|加權|大盤|台積電|上市|上櫃|櫃買|現貨/.test(t);
+  if (isFut) return licaiWithRefs(LICAI_HOURS_TW_FUT, [LICAI_REF.taifex]);
+  if (isUS) return LICAI_HOURS_US;
+  if (isTW) return licaiWithRefs(LICAI_HOURS_TW_STK, [LICAI_REF.twse]);
+  // 沒指定市場 → 給三大市場總覽
+  return licaiWithRefs(
+    LICAI_HOURS_TW_STK + "\n\n— — —\n\n" + LICAI_HOURS_TW_FUT + "\n\n— — —\n\n" + LICAI_HOURS_US,
+    [LICAI_REF.twse, LICAI_REF.taifex]
+  );
+}
+
 // 今日數據回應：命中才回字串，否則回 null（讓後面的知識庫接手）
 function licaiLiveReply(t) {
   try {
@@ -9365,6 +9401,7 @@ const LICAI_REF = {
   edu: "[🔗 投資人教育網（證基會）](https://www.sfi.org.tw)",
   sitca: "[🔗 投信投顧公會](https://www.sitca.org.tw)",
   twse: "[🔗 臺灣證券交易所](https://www.twse.com.tw)",
+  taifex: "[🔗 台指期契約規格（期交所）](https://www.taifex.com.tw/cht/2/tX)",
   cbc: "[🔗 中央銀行](https://www.cbc.gov.tw)",
   etax: "[🔗 財政部稅務入口網](https://www.etax.nat.gov.tw)",
   trust: "[🔗 信託公會](https://www.trust.org.tw)",
@@ -9487,6 +9524,10 @@ function licaiReply(text) {
   // 0b) 比較型問答（A 和 B 哪個…）：優先於單一標的
   const cmp = licaiCompareReply(t);
   if (cmp) return cmp;
+
+  // 0c) 交易時間（時段查詢，須優先於行情，否則「台股幾點收盤」會被回成價格）
+  const hours = licaiHoursReply(t);
+  if (hours) return hours;
 
   // 1) 今日真實數據（讀 App 內的 market 資料；只在問行情時觸發）
   const live = licaiLiveReply(t);
