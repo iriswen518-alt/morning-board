@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T17:53:23+08:00",
+  "generated_at": "2026-06-26T18:31:10+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -31,6 +31,34 @@
       "error": null
     },
     {
+      "symbol": "SDOT",
+      "name_zh": "Sadot",
+      "kind": "US",
+      "price": 6.18,
+      "change_pct": -14.76,
+      "mtd_pct": 126.37,
+      "ytd_pct": -74.46,
+      "market_date": "2026-06-25",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SDOT.US",
+      "error": null
+    },
+    {
+      "symbol": "SYNA",
+      "name_zh": "Synaptics Incorporated",
+      "kind": "US",
+      "price": 125.62,
+      "change_pct": -3.45,
+      "mtd_pct": -8.49,
+      "ytd_pct": 69.71,
+      "market_date": "2026-06-25",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SYNA.US",
+      "error": null
+    },
+    {
       "symbol": "STRC",
       "name_zh": "Strategy Inc - Variable Rate Se",
       "kind": "US",
@@ -56,34 +84,6 @@
       "per": 21.8532,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MCD.US",
-      "error": null
-    },
-    {
-      "symbol": "FIG",
-      "name_zh": "Figma",
-      "kind": "US",
-      "price": 16.84,
-      "change_pct": -9.66,
-      "mtd_pct": -33.96,
-      "ytd_pct": -54.94,
-      "market_date": "2026-06-25",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FIG.US",
-      "error": null
-    },
-    {
-      "symbol": "ABBV",
-      "name_zh": "艾伯維",
-      "kind": "US",
-      "price": 243.14,
-      "change_pct": 3.51,
-      "mtd_pct": 11.68,
-      "ytd_pct": 6.41,
-      "market_date": "2026-06-25",
-      "per": 114.1684,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ABBV.US",
       "error": null
     },
     {
