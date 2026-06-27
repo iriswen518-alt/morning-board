@@ -616,6 +616,14 @@ table.indices th.sortable-th {
   flex: 0 0 auto;
 }
 .news-sec:not([open]) .news-caret { transform: rotate(-90deg); }
+.news-sec[open] > .news-sec-head {
+  background: #fff8d6;
+  border-radius: 10px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.news-sec[open] > .news-sec-head > .news-sec-title { color: #8a6d00; }
+.news-sec[open] > .news-sec-head > .news-caret { color: #c79a00; }
 
 /* 通用折疊區塊（內容導覽：全球市場 / 新聞 / 基金 / 小學堂） */
 .acc-sec {
@@ -647,7 +655,16 @@ table.indices th.sortable-th {
   flex: 0 0 auto;
 }
 .acc-sec:not([open]) .acc-caret { transform: rotate(-90deg); }
-.acc-sec[open] > .acc-sec-head { border-bottom: 1px solid var(--border); }
+.acc-sec[open] > .acc-sec-head {
+  border-bottom: 1px solid var(--border);
+  background: #fff8d6;
+}
+.acc-sec[open] > .acc-sec-head > .acc-sec-title { color: #8a6d00; }
+.acc-sec[open] > .acc-sec-head > .acc-caret { color: #c79a00; }
+/* 巢狀內層折疊區塊不套黃底，避免層層疊色太重 */
+.acc-sec .acc-sec[open] > .acc-sec-head { background: transparent; }
+.acc-sec .acc-sec[open] > .acc-sec-head > .acc-sec-title { color: var(--brand-deep); }
+.acc-sec .acc-sec[open] > .acc-sec-head > .acc-caret { color: var(--text-mute); }
 .acc-sec-body { padding: 8px 16px 16px; }
 /* 巢狀：內層折疊區塊（如全球/債券/匯率）縮排、弱化外框 */
 .acc-sec .acc-sec { box-shadow: none; background: transparent; }
