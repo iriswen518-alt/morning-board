@@ -3285,8 +3285,8 @@ function renderLiveSheet() {
     <section class="live-sheet">
       ${renderLiveNewsTicker()}
       ${liveSection("idx", "全球指數", cards)}
-      ${fxCards ? liveSection("fx", "匯率", fxCards) : ""}
-      ${exCards ? liveSection("ex", "黃金・加密", exCards) : ""}
+      ${fxCards ? liveSection("fx", "匯率行情", fxCards) : ""}
+      ${exCards ? liveSection("ex", "黃金加密", exCards) : ""}
       <p class="live-credit">資料來源 鉅亨網（cnyes）、Yahoo Finance、Binance（黃金以 PAXG 為現貨參考），盤中定時更新；數值僅供參考，非投資建議或要約。</p>
     </section>`;
 }
@@ -6340,10 +6340,10 @@ function renderNewsSheet() {
   ` : "";
   return `
     ${staleBanner}
-    ${accSection("news-market", "市場", renderNewsByCategory("market"))}
-    ${accSection("news-wm", "財管", renderNewsByCategory("wm"))}
-    ${accSection("news-tax", "稅務", renderNewsByCategory("tax"))}
-    ${accSection("news-intl", "國際", renderNewsByCategory("intl"))}
+    ${accSection("news-market", "市場焦點", renderNewsByCategory("market"))}
+    ${accSection("news-wm", "財管焦點", renderNewsByCategory("wm"))}
+    ${accSection("news-tax", "稅務焦點", renderNewsByCategory("tax"))}
+    ${accSection("news-intl", "國際焦點", renderNewsByCategory("intl"))}
   `;
 }
 

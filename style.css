@@ -2770,11 +2770,20 @@ table.indices.stock-cols col.c-num { width: 11%; }
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 8px;
+  padding: 8px 16px 16px;
 }
 /* 覆蓋全域 .card 的 min-height:240px 與 .card h2:22px（否則卡片被撐高、名稱過大） */
 .live-grid .live-card { min-height: 0; padding: 6px 9px 5px; }
 .live-grid .live-name { font-size: 12px; }
-.live-section { margin-top: 4px; }
+/* 即時行情折疊區塊：與「全球市場」(.acc-sec) 同一張卡片外觀 */
+.live-section {
+  background: var(--card-bg, #fff);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  margin-bottom: 12px;
+  overflow: hidden;
+}
 .live-section-head {
   display: flex;
   align-items: center;
@@ -2783,12 +2792,13 @@ table.indices.stock-cols col.c-num { width: 11%; }
   background: none;
   border: none;
   cursor: pointer;
-  padding: 10px 2px 8px;
+  padding: 14px 16px;
   text-align: left;
 }
+.live-section:not(.collapsed) .live-section-head { border-bottom: 1px solid var(--border); }
 .live-section-title {
   margin: 0;
-  font-size: 15px;
+  font-size: 16px;
   color: var(--brand-deep);
   font-weight: 700;
 }
