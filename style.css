@@ -2795,7 +2795,12 @@ table.indices.stock-cols col.c-num { width: 11%; }
   padding: 14px 16px;
   text-align: left;
 }
-.live-section:not(.collapsed) .live-section-head { border-bottom: 1px solid var(--border); }
+.live-section:not(.collapsed) .live-section-head {
+  border-bottom: 1px solid var(--border);
+  background: #fff8d6;
+}
+.live-section:not(.collapsed) .live-section-title { color: #8a6d00; }
+.live-section:not(.collapsed) .live-caret { color: #c79a00; }
 .live-section-title {
   margin: 0;
   font-size: 16px;
