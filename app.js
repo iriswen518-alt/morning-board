@@ -6371,6 +6371,19 @@ const SECTION_TO_CATEGORY = {
   "國際": "intl",
 };
 
+// 新聞內層子區塊顯示名稱正規化：一律四個字（資料來源 section_zh 由 build 產生，
+// 故在前端做顯示對照，重建也不會被蓋掉）。未列出者沿用原名。
+const NEWS_SECTION_DISPLAY = {
+  "國際": "國際要聞",
+  "金融業": "金融族群",
+  "金融": "金融族群",
+  "產業": "產業動態",
+  "稅務": "稅務法規",
+};
+function newsSectionLabel(name) {
+  return NEWS_SECTION_DISPLAY[name] || name;
+}
+
 function sectionCategory(section) {
   const en = section.section || "";
   const zh = section.section_zh || "";
@@ -6447,7 +6460,7 @@ function renderNewsByCategory(cat) {
   let html = sections.map(s => {
     const items = (s.items || []).filter(it => it.title_zh);
     if (!items.length) return "";
-    const sectionTitle = s.section_zh || s.section;
+    const sectionTitle = newsSectionLabel(s.section_zh || s.section);
     const inner = items.map(it => {
       const titleDateM = it.title_zh && it.title_zh.match(/[（(](\d{4}-(\d{2}-\d{2}))[）)]/);
       const itemDateFmt = titleDateM ? titleDateM[2].replace("-", "/") : dateFmt;
