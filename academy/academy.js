@@ -70,7 +70,7 @@ function wireAcademyTabs() {
   // 並掛上 toggle 監聽以記住之後的開合（用 JS 綁定，避免 inline handler 早於 script 載入而報錯）。
   let map = {};
   try { map = JSON.parse(localStorage.getItem('accCollapsed') || '{}') || {}; } catch (_) { /* 略 */ }
-  [['academy-courses', 'atab-courses'], ['academy-certs', 'atab-certs']].forEach(([key, id]) => {
+  [['academy-courses-v2', 'atab-courses'], ['academy-certs-v2', 'atab-certs']].forEach(([key, id]) => {
     const el = document.getElementById(id);
     if (!el) return;
     if (map[key] !== undefined) el.open = !map[key];
