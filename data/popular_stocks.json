@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-28T16:35:36+08:00",
+  "generated_at": "2026-06-28T17:34:53+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -17,6 +17,34 @@
       "error": null
     },
     {
+      "symbol": "ONDS",
+      "name_zh": "Ondas",
+      "kind": "US",
+      "price": 7.83,
+      "change_pct": 2.02,
+      "mtd_pct": -40.77,
+      "ytd_pct": -19.77,
+      "market_date": "2026-06-26",
+      "per": 16.6236,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ONDS.US",
+      "error": null
+    },
+    {
+      "symbol": "NKE",
+      "name_zh": "Nike",
+      "kind": "US",
+      "price": 40.75,
+      "change_pct": -0.37,
+      "mtd_pct": -11.85,
+      "ytd_pct": -36.04,
+      "market_date": "2026-06-26",
+      "per": 26.8205,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NKE.US",
+      "error": null
+    },
+    {
       "symbol": "GEV",
       "name_zh": "GE Vernova",
       "kind": "US",
@@ -31,6 +59,20 @@
       "error": null
     },
     {
+      "symbol": "GLD",
+      "name_zh": "SPDR Gold Shares",
+      "kind": "US",
+      "price": 373.63,
+      "change_pct": 1.13,
+      "mtd_pct": -10.43,
+      "ytd_pct": -5.72,
+      "market_date": "2026-06-26",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GLD.US",
+      "error": null
+    },
+    {
       "symbol": "BA",
       "name_zh": "波音",
       "kind": "US",
@@ -42,34 +84,6 @@
       "per": 75.5109,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BA.US",
-      "error": null
-    },
-    {
-      "symbol": "VOO",
-      "name_zh": "Vanguard S&P 500 ETF",
-      "kind": "US",
-      "price": 670.26,
-      "change_pct": -0.81,
-      "mtd_pct": -2.84,
-      "ytd_pct": 7.75,
-      "market_date": "2026-06-25",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VOO.US",
-      "error": null
-    },
-    {
-      "symbol": "ONDS",
-      "name_zh": "Ondas",
-      "kind": "US",
-      "price": 7.83,
-      "change_pct": 2.02,
-      "mtd_pct": -40.77,
-      "ytd_pct": -19.77,
-      "market_date": "2026-06-26",
-      "per": 16.6236,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ONDS.US",
       "error": null
     },
     {
@@ -157,6 +171,20 @@
       "error": null
     },
     {
+      "symbol": "VOO",
+      "name_zh": "Vanguard S&P 500 ETF",
+      "kind": "US",
+      "price": 670.26,
+      "change_pct": -0.81,
+      "mtd_pct": -3.63,
+      "ytd_pct": 6.88,
+      "market_date": "2026-06-26",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VOO.US",
+      "error": null
+    },
+    {
       "symbol": "ARKK",
       "name_zh": "ARK 創新 ETF",
       "kind": "US",
@@ -190,26 +218,12 @@
       "kind": "US",
       "price": 589.94,
       "change_pct": -5.64,
-      "mtd_pct": 9.86,
-      "ytd_pct": 107.6,
-      "market_date": "2026-06-25",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOXX.US",
-      "error": null
-    },
-    {
-      "symbol": "GLD",
-      "name_zh": "SPDR 黃金 ETF",
-      "kind": "US",
-      "price": 373.63,
-      "change_pct": 1.13,
-      "mtd_pct": -10.43,
-      "ytd_pct": -5.72,
+      "mtd_pct": 3.67,
+      "ytd_pct": 95.9,
       "market_date": "2026-06-26",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GLD.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOXX.US",
       "error": null
     },
     {
