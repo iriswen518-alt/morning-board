@@ -43,6 +43,10 @@ jobs:
           python3 fetch_tpex_quotes.py
       - name: Gate
         run: cd work && python3 validate_quotes.py
+      - name: Validate data contract
+        # 形狀守門：fetch 寫到 data/（經 work/repo 連結），故從 repo 根跑驗證器。
+        # 任何缺欄／型別錯／空陣列即 fail，擋下「壞掉的 JSON 被 push」。見 specs/DATA_CONTRACT.md
+        run: python3 build/validate_contract.py --strict
       - name: Commit & push
         run: |
           git config user.name "github-actions[bot]"

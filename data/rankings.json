@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-28T17:20:49+08:00",
+  "generated_at": "2026-06-29T06:41:03+08:00",
   "tw": {
-    "as_of": "2026-06-28",
+    "as_of": "2026-06-29",
     "top_marketcap": [
       {
         "symbol": "2330",
@@ -646,7 +646,7 @@
     ]
   },
   "us": {
-    "as_of": "2026-06-28",
+    "as_of": "2026-06-29",
     "top_marketcap": [
       {
         "symbol": "NVDA",
@@ -688,6 +688,19 @@
         "source_url": "https://finance.yahoo.com/quote/GOOGL"
       },
       {
+        "symbol": "GOOG",
+        "name": "Alphabet Inc.",
+        "price": 334.69,
+        "daily_pct": -2.19,
+        "market_cap": 4084079001600,
+        "pe": 25.509909,
+        "pe_kind": "trailing",
+        "mtd_pct": -11.09,
+        "ytd_pct": 6.66,
+        "yahoo": "GOOG",
+        "source_url": "https://finance.yahoo.com/quote/GOOG"
+      },
+      {
         "symbol": "MSFT",
         "name": "Microsoft Corporation",
         "price": 372.97,
@@ -725,19 +738,6 @@
         "ytd_pct": null,
         "yahoo": "SPCX",
         "source_url": "https://finance.yahoo.com/quote/SPCX"
-      },
-      {
-        "symbol": "AVGO",
-        "name": "Broadcom Inc.",
-        "price": 365.02,
-        "daily_pct": -3.67,
-        "market_cap": 1736611856384,
-        "pe": 60.63455,
-        "pe_kind": "trailing",
-        "mtd_pct": -18.3,
-        "ytd_pct": 5.47,
-        "yahoo": "AVGO",
-        "source_url": "https://finance.yahoo.com/quote/AVGO"
       },
       {
         "symbol": "TSLA",
@@ -797,7 +797,7 @@
         "symbol": "LCID",
         "name": "Lucid Group, Inc.",
         "price": 5.92,
-        "daily_pct": 15.62,
+        "daily_pct": 15.63,
         "market_cap": 2310320384,
         "pe": null,
         "pe_kind": null,
@@ -940,7 +940,7 @@
       },
       {
         "symbol": "DSC",
-        "name": "DSC Holdings Ltd. American Depositary Shares",
+        "name": "DSC Holdings Ltd.",
         "price": 7.25,
         "daily_pct": -19.98,
         "market_cap": 6825511424,
