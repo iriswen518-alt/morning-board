@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-28T15:03:17+08:00",
+  "generated_at": "2026-06-28T16:27:37+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -14,62 +14,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SHAZ.US",
-      "error": null
-    },
-    {
-      "symbol": "SIMO",
-      "name_zh": "Silicon Motion Technology Corpo",
-      "kind": "US",
-      "price": 305.28,
-      "change_pct": -6.14,
-      "mtd_pct": 10.26,
-      "ytd_pct": 229.32,
-      "market_date": "2026-06-26",
-      "per": 64.2234,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SIMO.US",
-      "error": null
-    },
-    {
-      "symbol": "SCHD",
-      "name_zh": "Schwab US Dividend Equity ETF",
-      "kind": "US",
-      "price": 32.09,
-      "change_pct": 0.41,
-      "mtd_pct": -1.26,
-      "ytd_pct": 16.99,
-      "market_date": "2026-06-26",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SCHD.US",
-      "error": null
-    },
-    {
-      "symbol": "VTI",
-      "name_zh": "Vanguard Total Stock Market ETF",
-      "kind": "US",
-      "price": 362.22,
-      "change_pct": -0.48,
-      "mtd_pct": -2.77,
-      "ytd_pct": 8.04,
-      "market_date": "2026-06-26",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VTI.US",
-      "error": null
-    },
-    {
-      "symbol": "JPM",
-      "name_zh": "摩根大通",
-      "kind": "US",
-      "price": 329.05,
-      "change_pct": -1.81,
-      "mtd_pct": 9.94,
-      "ytd_pct": 2.12,
-      "market_date": "2026-06-26",
-      "per": 14.9696,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=JPM.US",
       "error": null
     },
     {
@@ -101,31 +45,31 @@
       "error": null
     },
     {
-      "symbol": "KO",
-      "name_zh": "可口可樂",
+      "symbol": "VOO",
+      "name_zh": "Vanguard S&P 500 ETF",
       "kind": "US",
-      "price": 82.63,
-      "change_pct": 2.75,
-      "mtd_pct": 4.58,
-      "ytd_pct": 18.19,
-      "market_date": "2026-06-26",
-      "per": 25.948,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=KO.US",
-      "error": null
-    },
-    {
-      "symbol": "QQQM",
-      "name_zh": "Invesco NASDAQ 100 ETF",
-      "kind": "US",
-      "price": 290.95,
-      "change_pct": -1.33,
-      "mtd_pct": -4.28,
-      "ytd_pct": 15.04,
+      "price": 670.26,
+      "change_pct": -0.81,
+      "mtd_pct": -3.63,
+      "ytd_pct": 6.88,
       "market_date": "2026-06-26",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QQQM.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VOO.US",
+      "error": null
+    },
+    {
+      "symbol": "ONDS",
+      "name_zh": "Ondas",
+      "kind": "US",
+      "price": 7.83,
+      "change_pct": 2.02,
+      "mtd_pct": -40.77,
+      "ytd_pct": -19.77,
+      "market_date": "2026-06-26",
+      "per": 16.6236,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ONDS.US",
       "error": null
     },
     {
@@ -199,17 +143,17 @@
       "error": null
     },
     {
-      "symbol": "VOO",
-      "name_zh": "Vanguard S&P 500 ETF",
+      "symbol": "VTI",
+      "name_zh": "Vanguard 全美股 ETF",
       "kind": "US",
-      "price": 670.26,
-      "change_pct": -0.81,
-      "mtd_pct": -3.63,
-      "ytd_pct": 6.88,
+      "price": 362.22,
+      "change_pct": -0.48,
+      "mtd_pct": -2.77,
+      "ytd_pct": 8.04,
       "market_date": "2026-06-26",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VOO.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VTI.US",
       "error": null
     },
     {
