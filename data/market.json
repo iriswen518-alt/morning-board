@@ -213,16 +213,16 @@
       "name": "DXY 美元指數",
       "close": 101.36000061035156,
       "daily_pct": -0.07,
-      "mtd_pct": 2.48,
+      "mtd_pct": 2.47,
       "ytd_pct": 3.13,
       "closing_date": "2026-06-26"
     },
     {
       "name": "EUR/USD 歐元",
-      "close": 1.1389521360397339,
-      "daily_pct": 0.24,
-      "mtd_pct": -2.26,
-      "ytd_pct": -3.05,
+      "close": 1.1361699104309082,
+      "daily_pct": 0.07,
+      "mtd_pct": -2.5,
+      "ytd_pct": -3.28,
       "closing_date": "2026-06-26"
     },
     {
@@ -235,10 +235,10 @@
     },
     {
       "name": "GBP/USD 英鎊",
-      "close": 1.3198009729385376,
-      "daily_pct": 0.08,
-      "mtd_pct": -1.83,
-      "ytd_pct": -2.0,
+      "close": 1.318791389465332,
+      "daily_pct": 0.16,
+      "mtd_pct": -1.91,
+      "ytd_pct": -2.07,
       "closing_date": "2026-06-26"
     },
     {
@@ -259,28 +259,28 @@
     },
     {
       "name": "JPY/TWD 日圓兌台幣",
-      "close": 0.19470000267028809,
-      "daily_pct": -1.12,
-      "mtd_pct": -1.32,
-      "ytd_pct": -2.53,
+      "close": 0.19690600037574768,
+      "daily_pct": 0.14,
+      "mtd_pct": -0.2,
+      "ytd_pct": -1.42,
       "closing_date": "2026-06-26"
     }
   ],
   "commodities": [
     {
       "name": "黃金 (USD/oz)",
-      "close": 4096.2998046875,
-      "daily_pct": 1.63,
-      "mtd_pct": -10.18,
-      "ytd_pct": -5.3,
+      "close": 4078.699951171875,
+      "daily_pct": 1.2,
+      "mtd_pct": -10.56,
+      "ytd_pct": -5.71,
       "closing_date": "2026-06-26"
     },
     {
       "name": "白銀 (USD/oz)",
-      "close": 59.67399978637695,
-      "daily_pct": 2.27,
-      "mtd_pct": -21.08,
-      "ytd_pct": -14.91,
+      "close": 59.21699905395508,
+      "daily_pct": 1.49,
+      "mtd_pct": -21.69,
+      "ytd_pct": -15.57,
       "closing_date": "2026-06-26"
     },
     {
@@ -293,10 +293,10 @@
     },
     {
       "name": "布蘭特原油 (USD/bbl)",
-      "close": 72.5999984741211,
-      "daily_pct": -3.53,
-      "mtd_pct": -21.13,
-      "ytd_pct": 19.31,
+      "close": 71.98999786376953,
+      "daily_pct": -4.34,
+      "mtd_pct": -21.79,
+      "ytd_pct": 18.31,
       "closing_date": "2026-06-26"
     },
     {
@@ -406,11 +406,11 @@
       "label": "Jul 2026",
       "fomc_date": "2026-07-30",
       "implied_rate": 3.63,
-      "delta_rate": 0.01,
-      "delta_bps": 1.0,
-      "p_hike": 4.0,
-      "p_hold": 96.0,
-      "p_cut": 0,
+      "delta_rate": 0.0,
+      "delta_bps": 0.0,
+      "p_hike": 0.0,
+      "p_hold": 100.0,
+      "p_cut": -0.0,
       "is_reference": false
     },
     {
@@ -427,7 +427,7 @@
     {
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
-      "implied_rate": 3.81,
+      "implied_rate": 3.82,
       "delta_rate": 0.06,
       "delta_bps": 6.0,
       "p_hike": 24.0,
@@ -438,11 +438,11 @@
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 3.92,
-      "delta_rate": 0.1,
-      "delta_bps": 10.0,
-      "p_hike": 40.0,
-      "p_hold": 60.0,
+      "implied_rate": 3.93,
+      "delta_rate": 0.11,
+      "delta_bps": 11.0,
+      "p_hike": 44.0,
+      "p_hold": 56.0,
       "p_cut": 0,
       "is_reference": false
     }
