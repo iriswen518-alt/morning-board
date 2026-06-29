@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-29T13:01:50+08:00",
+  "generated_at": "2026-06-29T15:01:47+08:00",
   "tw": {
     "as_of": "2026-06-29",
     "top_marketcap": [
@@ -1071,19 +1071,6 @@
         "source_url": "https://finance.yahoo.com/quote/XLU"
       },
       {
-        "symbol": "XLRE",
-        "name": "State Street Real Estate Select",
-        "price": 45.24,
-        "daily_pct": 3.15,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": 2.84,
-        "ytd_pct": 12.12,
-        "yahoo": "XLRE",
-        "source_url": "https://finance.yahoo.com/quote/XLRE"
-      },
-      {
         "symbol": "XLP",
         "name": "State Street Consumer Staples S",
         "price": 84.71,
@@ -1108,19 +1095,6 @@
         "ytd_pct": 21.8,
         "yahoo": "IWM",
         "source_url": "https://finance.yahoo.com/quote/IWM"
-      },
-      {
-        "symbol": "TLT",
-        "name": "iShares 20+ Year Treasury Bond ",
-        "price": 87.36,
-        "daily_pct": 0.7,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": 1.87,
-        "ytd_pct": 0.23,
-        "yahoo": "TLT",
-        "source_url": "https://finance.yahoo.com/quote/TLT"
       },
       {
         "symbol": "DIA",
@@ -1149,6 +1123,19 @@
         "source_url": "https://finance.yahoo.com/quote/XLI"
       },
       {
+        "symbol": "XLE",
+        "name": "State Street Energy Select Sect",
+        "price": 53.84,
+        "daily_pct": 0.13,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": -4.35,
+        "ytd_pct": 20.42,
+        "yahoo": "XLE",
+        "source_url": "https://finance.yahoo.com/quote/XLE"
+      },
+      {
         "symbol": "XLF",
         "name": "State Street Financial Select S",
         "price": 53.57,
@@ -1173,6 +1160,19 @@
         "ytd_pct": -0.99,
         "yahoo": "HYG",
         "source_url": "https://finance.yahoo.com/quote/HYG"
+      },
+      {
+        "symbol": "XLB",
+        "name": "State Street Materials Select S",
+        "price": 51.6,
+        "daily_pct": -0.41,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": 0.88,
+        "ytd_pct": 13.78,
+        "yahoo": "XLB",
+        "source_url": "https://finance.yahoo.com/quote/XLB"
       }
     ],
     "sectors": [
@@ -1205,20 +1205,6 @@
         "name_zh": "公用事業"
       },
       {
-        "symbol": "XLRE",
-        "name": "State Street Real Estate Select",
-        "price": 45.24,
-        "daily_pct": 3.15,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": 2.84,
-        "ytd_pct": 12.12,
-        "yahoo": "XLRE",
-        "source_url": "https://finance.yahoo.com/quote/XLRE",
-        "name_zh": "房地產"
-      },
-      {
         "symbol": "XLP",
         "name": "State Street Consumer Staples S",
         "price": 84.71,
@@ -1247,6 +1233,20 @@
         "name_zh": "工業"
       },
       {
+        "symbol": "XLE",
+        "name": "State Street Energy Select Sect",
+        "price": 53.84,
+        "daily_pct": 0.13,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": -4.35,
+        "ytd_pct": 20.42,
+        "yahoo": "XLE",
+        "source_url": "https://finance.yahoo.com/quote/XLE",
+        "name_zh": "能源"
+      },
+      {
         "symbol": "XLF",
         "name": "State Street Financial Select S",
         "price": 53.57,
@@ -1273,6 +1273,20 @@
         "yahoo": "XLB",
         "source_url": "https://finance.yahoo.com/quote/XLB",
         "name_zh": "原物料"
+      },
+      {
+        "symbol": "XLY",
+        "name": "State Street Consumer Discretio",
+        "price": 114.37,
+        "daily_pct": -2.38,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": -5.38,
+        "ytd_pct": -4.22,
+        "yahoo": "XLY",
+        "source_url": "https://finance.yahoo.com/quote/XLY",
+        "name_zh": "非必需消費"
       },
       {
         "symbol": "XLC",
