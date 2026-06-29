@@ -12,27 +12,27 @@
   ],
   "sections": [
     {
-      "heading": "生成式 AI 與傳統 AI 的差別",
+      "heading": "生成式與傳統",
       "html": "<p>過去我們熟悉的 AI 多半是<strong>判別式（discriminative）</strong>模型：它的工作是「分類」或「判斷」，例如判斷一封 email 是不是垃圾信、一筆交易是不是詐欺、一張影像裡有沒有貓。它的輸出通常是一個標籤或一個機率分數。</p><p><strong>生成式 AI（Generative AI）</strong>則更進一步：它不只判斷，還能「創造」全新的內容——一段文字、一張圖、一段程式碼、一份摘要。對理專最有感的，就是其中專門處理文字的<strong>大型語言模型（LLM，Large Language Model）</strong>。</p><table><thead><tr><th>面向</th><th>傳統判別式 AI</th><th>生成式 AI（LLM）</th></tr></thead><tbody><tr><td>核心任務</td><td>分類、判斷、預測標籤</td><td>產生新的內容</td></tr><tr><td>典型輸出</td><td>「是／否」、機率分數</td><td>一段文字、草稿、摘要</td></tr><tr><td>銀行案例</td><td>信用評分、洗錢偵測</td><td>客戶 email 草稿、商品說明摘要</td></tr><tr><td>使用方式</td><td>工程團隊建模部署</td><td>用自然語言「對話」即可</td></tr></tbody></table><p>關鍵差異：判別式 AI 你要「餵資料、訓模型」；生成式 AI 你只要「用人話下指令（prompt）」，門檻大幅降低，這正是它能普及到第一線業務的原因。</p>"
     },
     {
-      "heading": "LLM 到底是什麼",
+      "heading": "什麼是 LLM",
       "html": "<p>LLM 可以拆成三個關鍵字來理解：</p><ul><li><strong>Large（大）</strong>：指<strong>參數量</strong>龐大。參數是模型內部可調整的數字，類似大腦神經元的連結強度。現今主流大模型動輒數千億個參數，學到了極廣的語言規律與世界知識。</li><li><strong>Language（語言）</strong>：它處理的是文字。但模型不是一個字一個字看，而是把文字切成<strong>token（詞元）</strong>——可能是一個英文單字、半個字、或一個中文字。中文一個字大致對應 1～2 個 token，估算長度時可粗略以「字數」想像。</li><li><strong>Model（模型）</strong>：底層架構是 2017 年提出的 <strong>Transformer</strong>，它的「注意力機制（attention）」能讓模型在處理每個字時，同時參考上下文中所有相關的字，因此特別擅長理解長句脈絡。</li></ul><p>LLM 的能力來自<strong>預訓練（pre-training）</strong>：用海量網路與書籍文字，反覆練習「猜下一個字」，過程中把語言規律與大量知識壓進參數裡。之後再經過<strong>對齊／微調</strong>（如 RLHF，從人類回饋學習），讓它更聽得懂指令、回答更有幫助也更安全。</p><div class=\"mermaid\">graph LR\n    A[海量文字資料] --> B[預訓練<br/>學會猜下一個字]\n    B --> C[微調與對齊<br/>RLHF]\n    C --> D[可對話的 LLM]\n    style D fill:#019AB3,color:#fff</div>"
     },
     {
-      "heading": "它怎麼運作：預測下一個字",
+      "heading": "預測下一個字",
       "html": "<p>LLM 的核心機制其實樸實得驚人：<strong>根據前面的文字，預測下一個最可能出現的 token</strong>，產生後再把它接回去，重複這個動作，一個字一個字「長」出整段回答。這就是 <strong>next-token prediction（下一字預測）</strong>。</p><p>每一步，模型其實是算出一整張<strong>機率分布</strong>。例如輸入「台灣的首都是」，模型可能算出「台北」90%、「台中」3%、其他更低，然後挑出來。</p><p>這裡有個重要旋鈕叫 <strong>temperature（溫度）</strong>：</p><table><thead><tr><th>temperature</th><th>行為</th><th>適合場景</th></tr></thead><tbody><tr><td>低（接近 0）</td><td>幾乎總選最高機率字，穩定、可重現</td><td>事實問答、資料萃取、計算指示</td></tr><tr><td>高（接近 1）</td><td>較願意挑非最高機率字，較有變化與創意</td><td>文案發想、標題腦力激盪</td></tr></tbody></table><blockquote><strong>為什麼會「一本正經地胡說八道」？</strong> 因為模型的目標是「生出讀起來最通順合理的下一個字」，而不是「查證事實」。當它對某件事沒有把握時，仍會用流暢自信的語氣補出一個<em>聽起來</em>對、但其實錯誤的答案——這就是<strong>幻覺（hallucination）</strong>。幻覺不是程式 bug，而是這套「機率接龍」機制的內建副作用。所以模型給的數字、法條、人名、來源，<strong>務必查核</strong>。</blockquote>"
     },
     {
-      "heading": "主流模型生態與 context window",
+      "heading": "模型生態與脈絡",
       "html": "<p>市場上有數家主要的 LLM 供應商，定位各有不同（以下為 2026 年初的概況）：</p><table><thead><tr><th>模型家族</th><th>開發商</th><th>定位特色</th></tr></thead><tbody><tr><td>Claude</td><td>Anthropic</td><td>強調安全與可靠，長文理解、寫作與分析見長</td></tr><tr><td>GPT</td><td>OpenAI</td><td>生態與應用最廣，通用能力強</td></tr><tr><td>Gemini</td><td>Google</td><td>與 Google 服務整合、多模態（文字／圖／影音）</td></tr><tr><td>Llama / Mistral</td><td>Meta / Mistral</td><td>開源或開放權重，可自行部署、利於內部資料控管</td></tr></tbody></table><p>選擇上沒有絕對的「最好」，而是看任務、成本、資料隱私與合規需求。對銀行而言，<strong>資料能否落地、是否符合內部資安政策</strong>往往比單純比拚能力更關鍵。</p><p>另一個必懂概念是 <strong>context window（脈絡視窗）</strong>：模型一次對話能「同時看到」的 token 上限，包含你的提問、貼上的文件，以及它的回答。視窗越大，能一次餵進的資料越多（例如整份商品說明書）。但要留意兩點：超出視窗的較早內容會被「遺忘」；而且<strong>關掉對話後，模型不會記得你</strong>——它沒有跨次記憶，每次都是新的開始（除非系統另外把資料再貼回去）。</p>"
     },
     {
-      "heading": "能做什麼、不能做什麼",
+      "heading": "能與不能",
       "html": "<p>把 LLM 用對地方，效益很高；用錯地方，反而埋雷。下表是務必記住的能力邊界：</p><table><thead><tr><th>✅ 擅長</th><th>⚠️ 不擅長（需查核或別用）</th></tr></thead><tbody><tr><td>摘要長文件、會議記錄</td><td>精確數學計算與表格加總（會算錯）</td></tr><tr><td>翻譯、潤稿、改寫語氣</td><td>即時資訊（今日股價、最新匯率、新聞）</td></tr><tr><td>起草 email、說明、FAQ</td><td>保證事實正確（會產生幻覺）</td></tr><tr><td>分類、標記、整理重點</td><td>提供精準法條編號、引用出處</td></tr><tr><td>腦力激盪、列點、換句話說</td><td>取代專業判斷與合規審核</td></tr></tbody></table><p>幾個給理專的安全提醒：</p><ul><li><strong>不要把客戶個資、帳號、未公開資料貼進公開 AI 工具</strong>，務必遵循行內資安規範。</li><li>涉及金額、利率、報酬試算時，把計算交給試算工具或 Excel，AI 只用來「解釋與說明」。</li><li>任何要對客戶說出口或寫進文件的內容，<strong>人要當最後一道關</strong>。</li></ul>"
     },
     {
-      "heading": "對理專的意義：聰明但需查核的實習生",
+      "heading": "理專的助手定位",
       "html": "<p>最實用的心態，是把 LLM 想成一位<strong>「反應快、知識廣、不喊累，但偶爾會自信地說錯話、且不能碰機密」的實習生</strong>。</p><div class=\"mermaid\">graph TD\n    A[你的指令 / 草稿需求] --> B[LLM 快速產出初稿]\n    B --> C{你查核與修改}\n    C -->|事實/數字/法條 正確| D[採用]\n    C -->|有誤或需補強| E[退回重改或自己改]\n    style D fill:#2a9d8f,color:#fff\n    style C fill:#019AB3,color:#fff</div><p>這位實習生能幫你把 80% 的初稿時間省下來，讓你專注在<strong>判斷、查核與和客戶的關係</strong>——這些才是理專真正的價值所在。你給的指令越清楚（提供背景、對象、語氣、長度），它產出的品質越好；而你越懂它的限制，就越不會被它的「自信」帶偏。</p><blockquote><strong>一句話收尾：</strong>LLM 不會取代理專，但<em>會用 LLM 的理專，會比不會用的同事更有效率</em>。後面的章節，我們就來一步步把這位實習生訓練成你的得力助手。</blockquote>"
     },
     {

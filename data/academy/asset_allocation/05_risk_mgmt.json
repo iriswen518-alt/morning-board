@@ -12,27 +12,27 @@
   ],
   "sections": [
     {
-      "heading": "組合風險的四大量化指標",
+      "heading": "四大量化指標",
       "html": "<table><thead><tr><th>指標</th><th>定義</th><th>適用</th></tr></thead><tbody><tr><td>波動度（Volatility / Std Dev）</td><td>報酬率標準差，衡量總體波動</td><td>對稱風險度量、夏普比率計算</td></tr><tr><td>最大回撤（Max Drawdown）</td><td>歷史中從高點到低點的最大跌幅</td><td>實際歷史最壞情況</td></tr><tr><td>VaR（Value at Risk）</td><td>在某信心水準下，未來特定期間內最大可能損失</td><td>機構風險預算管理</td></tr><tr><td>CVaR（Conditional VaR）</td><td>超過 VaR 之損失的期望值</td><td>尾部風險衡量</td></tr></tbody></table><div class=\"mermaid\">graph LR\n    A[組合風險衡量] --> B[預期面<br/>波動度、VaR、CVaR]\n    A --> C[實證面<br/>最大回撤、回復時間]\n    style A fill:#019AB3,color:#fff</div>"
     },
     {
-      "heading": "波動度與標準差",
+      "heading": "波動與標準差",
       "html": "<p>波動度（σ）是統計學的標準差，假設報酬呈常態分配。</p><blockquote><p><strong>年化波動度</strong> = 日報酬標準差 × √252</p></blockquote><table><thead><tr><th>資產類別</th><th>典型年化波動度</th></tr></thead><tbody><tr><td>現金 / 短期國庫券</td><td>&lt; 1%</td></tr><tr><td>美國公債（10 年）</td><td>5-8%</td></tr><tr><td>投資級公司債</td><td>5-10%</td></tr><tr><td>大型成熟股票（如 S&amp;P 500）</td><td>15-18%</td></tr><tr><td>新興市場股票</td><td>22-28%</td></tr><tr><td>商品（黃金、原油）</td><td>20-35%</td></tr><tr><td>比特幣</td><td>70-100%</td></tr></tbody></table><div class=\"mermaid\">graph LR\n    A[常態分配假設] -->|±1σ| B[68% 機率]\n    A -->|±2σ| C[95% 機率]\n    A -->|±3σ| D[99.7% 機率]\n    style B fill:#019AB3,color:#fff</div><p><strong>實務意義</strong>：年化波動 15% 之股票組合，「68% 機率年報酬落在 -15% ~ +25%」（假設預期報酬 10%）。但實際分配常呈「肥尾」（極端事件多於常態預測）。</p>"
     },
     {
-      "heading": "半變異數與下行風險",
+      "heading": "半變異與下行",
       "html": "<p>波動度同時計入「上漲波動」與「下跌波動」，但投資人主要擔心下跌。半變異數（Semi-Variance）僅計算「報酬低於目標時」的波動。</p><table><thead><tr><th>指標</th><th>計算</th><th>用途</th></tr></thead><tbody><tr><td>變異數（Variance）</td><td>所有報酬偏離均數的平方和</td><td>對稱風險</td></tr><tr><td>半變異數（Semi-Variance）</td><td>僅計算負偏離</td><td>下行風險</td></tr><tr><td>下行偏差（Downside Deviation）</td><td>半變異數開根號</td><td>標準差類比，但僅下行</td></tr><tr><td>Sortino Ratio</td><td>超額報酬 / 下行偏差</td><td>替代夏普比率，更貼近投資人感受</td></tr></tbody></table><blockquote><p><strong>Sortino Ratio</strong> 比 Sharpe Ratio 更適合衡量「投資人厭惡虧損但不討厭上漲」的偏好。</p></blockquote>"
     },
     {
-      "heading": "最大回撤（Max Drawdown）",
+      "heading": "最大回撤",
       "html": "<p>Max Drawdown 是「從歷史最高點到隨後最低點」的最大跌幅，是投資人最直觀感受的痛苦指標。</p><div class=\"mermaid\">graph LR\n    A[歷史高點 100] --> B[下跌至 60]\n    B --> C[Max DD = 40%]\n    C --> D[回升至 100<br/>回復時間 Recovery Time]\n    style C fill:#d62828,color:#fff</div><table><thead><tr><th>資產</th><th>歷史 Max DD</th><th>回復時間</th></tr></thead><tbody><tr><td>S&amp;P 500</td><td>-55%（2007-09）</td><td>5 年（2013 回到 2007 高點）</td></tr><tr><td>S&amp;P 500</td><td>-34%（2020.2-3）</td><td>5 個月（V 形）</td></tr><tr><td>NASDAQ</td><td>-78%（2000-02）</td><td>15 年（2015 才回到 2000 高點）</td></tr><tr><td>美國公債（10Y）</td><td>-13%（2022）</td><td>仍未完全回復</td></tr><tr><td>60/40 組合</td><td>-30%（2008）</td><td>3 年</td></tr></tbody></table><p><strong>關鍵啟示</strong>：</p><ul><li>波動度只看標準差，無法反映「連續下跌」的痛苦</li><li>Max DD 給投資人「最壞情況」感受，幫助設定風險上限</li><li>回復時間提醒「下跌容易回升難」（虧 50% 需漲 100% 才回本）</li><li>長期投資人應評估能承受多大的 Max DD 而不恐慌出場</li></ul>"
     },
     {
-      "heading": "VaR 與 CVaR",
+      "heading": "VaR與CVaR",
       "html": "<p>VaR（Value at Risk）是 1990 年代由 J.P. Morgan 普及的機構風險量化工具。</p><blockquote><p><strong>VaR 定義</strong>：「在 X% 信心水準下，未來 N 天最大可能損失」</p><p>例：「95% 信心水準下、1 日 VaR = 100 萬」表示「95% 機率明天虧損不超過 100 萬」。</p></blockquote><table><thead><tr><th>VaR 計算方法</th><th>說明</th><th>優缺</th></tr></thead><tbody><tr><td>歷史模擬法</td><td>用過去 250 日報酬分布</td><td>簡單；過度依賴歷史</td></tr><tr><td>變異數－共變異數法</td><td>假設常態分配</td><td>快速；低估肥尾風險</td></tr><tr><td>Monte Carlo 模擬</td><td>大量隨機模擬</td><td>彈性高；計算量大</td></tr></tbody></table><div class=\"mermaid\">graph TD\n    A[1000 萬組合<br/>95% VaR = 50 萬] --> B[95% 機率虧損≤ 50 萬]\n    A --> C[5% 機率虧損 &gt; 50 萬]\n    C --> D[CVaR = 超過 50 萬時<br/>的平均虧損]\n    style D fill:#d62828,color:#fff</div><p><strong>VaR 的局限</strong>：</p><ul><li>不告訴你「超過 VaR 後虧多少」（CVaR 補救）</li><li>常態假設低估極端事件</li><li>歷史模擬無法預測「未曾發生過」的事件（2008、2020 都是）</li><li>多種計算方法結果差異大，需指明使用哪種</li></ul><p><strong>CVaR（Conditional VaR）</strong>：又稱 Expected Shortfall (ES)，是超過 VaR 之損失的期望值，補足 VaR 對尾部風險衡量的不足。巴塞爾協定 III 後 CVaR 逐步取代 VaR 為主要監管指標。</p>"
     },
     {
-      "heading": "情境分析與壓力測試",
+      "heading": "情境壓力測試",
       "html": "<p>除了統計指標，「情境分析」直接設想極端事件並計算組合損失。</p><table><thead><tr><th>歷史情境</th><th>典型壓力測試假設</th></tr></thead><tbody><tr><td>2008 金融危機</td><td>股票 -40%、IG 公司債 -15%、高收益債 -30%、不動產 -25%</td></tr><tr><td>2020 疫情閃崩</td><td>股票 -34% 一個月內、流動性枯竭</td></tr><tr><td>1973-74 通膨衝擊</td><td>股票 -45%、債券 -10%、實質資產 +20%</td></tr><tr><td>2000-02 科技泡沫</td><td>NASDAQ -78%、傳統股 -20%、債券 +10%</td></tr><tr><td>1997 亞洲金融風暴</td><td>EM 股 -50%、EM 貨幣大貶、DM 股輕傷</td></tr></tbody></table>\n<details><summary>情境分析模板</summary><table><thead><tr><th>情境</th><th>機率（主觀）</th><th>組合損失</th><th>因應</th></tr></thead><tbody><tr><td>輕度衰退</td><td>30%</td><td>-10%</td><td>持有現金緩衝</td></tr><tr><td>嚴重衰退</td><td>15%</td><td>-25%</td><td>降低股票部位、增加長債</td></tr><tr><td>停滯性通膨</td><td>10%</td><td>-15%</td><td>商品 + TIPS</td></tr><tr><td>金融危機</td><td>5%</td><td>-40%</td><td>緊急現金部位、黃金</td></tr></tbody></table></details><p><strong>壓力測試的價值</strong>：不是「預測」未來會發生什麼，而是「準備」未來發生時組合會如何反應，提前思考應變方案。</p>"
     },
     {

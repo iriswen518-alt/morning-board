@@ -12,27 +12,27 @@
   ],
   "sections": [
     {
-      "heading": "為什麼財管人員要懂 AI 安全",
+      "heading": "為何要懂安全",
       "html": "<p>生成式 AI 能大幅提升理專備課、客戶溝通與資料整理的效率，但它<strong>不是搜尋引擎，也不是專家系統</strong>，而是一個「會把話講得很有自信」的文字產生器。在銀行財富管理的場景裡，一句錯誤的數字、一份外洩的客戶名單，都可能造成法遵、聲譽與信任的重大損失。</p><p>本章不談特定法規條文，而是建立<strong>通用的風險意識與使用習慣</strong>。重點觀念：</p><ul><li><strong>AI 是助手，不是負責人。</strong>最終對客戶說的話、送出的建議，責任永遠在你身上。</li><li><strong>方便與風險是一體兩面。</strong>越方便貼上去的工具，越容易把機密一起貼出去。</li><li><strong>治理不是綁手綁腳，而是讓你敢用、能用得久。</strong>有清楚的界線，才能安心擴大應用。</li></ul>"
     },
     {
-      "heading": "AI 的六大風險類型",
+      "heading": "六大風險類型",
       "html": "<p>使用 AI 前，先認得它可能出什麼錯。以下六類是金融場景最需要警覺的風險：</p><table border=\"1\" cellpadding=\"6\" cellspacing=\"0\" style=\"border-collapse:collapse;width:100%\"><thead><tr style=\"background:#019AB3;color:#fff\"><th>風險類型</th><th>白話說明</th><th>財管情境例子</th></tr></thead><tbody><tr><td><strong>幻覺 Hallucination</strong></td><td>AI 編造看似合理但不存在的資訊</td><td>捏造一檔不存在的基金代碼或錯誤的配息率</td></tr><tr><td><strong>偏誤與歧視 Bias</strong></td><td>訓練資料偏差導致不公平結論</td><td>依年齡／性別給出帶刻板印象的理財建議</td></tr><tr><td><strong>隱私外洩 Privacy</strong></td><td>把機密資料送進外部系統而被保存或外流</td><td>將客戶姓名、身分證、資產明細貼進公開 ChatGPT</td></tr><tr><td><strong>資安攻擊 Security</strong></td><td>提示注入（Prompt Injection）、資料投毒</td><td>惡意網頁內嵌指令誘導 AI 洩漏內部資料</td></tr><tr><td><strong>智財／著作權</strong></td><td>產出內容可能侵權或無法主張著作權</td><td>AI 生成的圖文沿用受保護素材，對外宣傳挨告</td></tr><tr><td><strong>模型漂移 Drift</strong></td><td>模型更新或時間推移導致答案品質變動</td><td>同一提示在不同時間給出不一致的市場數字</td></tr></tbody></table><div class=\"mermaid\">graph TD\n    A[使用者輸入] --> B{AI 模型}\n    B --> C[幻覺 編造資訊]\n    B --> D[偏誤 不公平結論]\n    B --> E[隱私 機密外洩]\n    B --> F[資安 提示注入/投毒]\n    style C fill:#d62828,color:#fff\n    style D fill:#d62828,color:#fff\n    style E fill:#d62828,color:#fff\n    style F fill:#d62828,color:#fff</div>"
     },
     {
-      "heading": "幻覺：為什麼會編、怎麼防",
+      "heading": "幻覺成因與防範",
       "html": "<p>大型語言模型（LLM）的本質是<strong>預測下一個最可能出現的字</strong>，而不是查證事實。當訓練資料裡沒有正確答案、或問題太細時，它仍會「流暢地猜」，於是產生看起來很專業、實際卻錯誤的內容，這就是<strong>幻覺</strong>。在財管領域，幻覺最危險的地方是它<strong>連數字都編得很自然</strong>。</p><p>降低幻覺的五個實務做法：</p><ol><li><strong>RAG（檢索增強生成）：</strong>讓 AI 先讀公司提供的正確文件（基金月報、官方公告）再作答，而非憑記憶。</li><li><strong>要求附出處：</strong>提示加上「請註明資料來源，若不確定請直說『不確定』」。沒出處的數字一律當作未驗證。</li><li><strong>人工查核：</strong>所有對客戶的數字、法規、商品條件，<strong>務必回到官方來源比對</strong>。</li><li><strong>降低 temperature：</strong>需要精準時把隨機性調低，減少「天馬行空」。</li><li><strong>限定範圍：</strong>把問題切小、給足背景，避免開放式大哉問逼 AI 自由發揮。</li></ol><p><strong>黃金守則：</strong>AI 給的任何「事實型」內容（數字、條文、日期、代碼），都要當成「待查證的草稿」，不能直接對客戶使用。</p>"
     },
     {
-      "heading": "資料隱私與機密：別把客戶貼進公開工具",
+      "heading": "資料隱私機密",
       "html": "<p>最常見也最致命的錯誤，是把<strong>客戶個資或營業秘密</strong>直接貼進公開消費版 AI。公開版工具的條款常允許用你的輸入內容來改善模型，等於資料離開了銀行的掌控。</p><table border=\"1\" cellpadding=\"6\" cellspacing=\"0\" style=\"border-collapse:collapse;width:100%\"><thead><tr style=\"background:#017a8f;color:#fff\"><th>比較項目</th><th>公開消費版（免費／個人帳號）</th><th>企業版／私有部署</th></tr></thead><tbody><tr><td>資料是否用於訓練</td><td>可能被保存與用於訓練</td><td>通常合約保證不訓練、不留存</td></tr><tr><td>資料邊界</td><td>離開銀行掌控</td><td>留在企業租戶或內網</td></tr><tr><td>稽核與權限</td><td>幾乎無</td><td>可設權限、留軌跡</td></tr><tr><td>適合放的內容</td><td>去識別化、公開資訊</td><td>經核准的內部敏感資料</td></tr></tbody></table><p><strong>實務原則：</strong></p><ul><li>客戶姓名、身分證、帳號、資產明細、聯絡方式，<strong>一律不進任何外部公開 AI</strong>。</li><li>真的要用 AI 處理範例，先<strong>去識別化</strong>（用「客戶 A」「某科技股」代替）。</li><li>使用工具前先確認：這是公司核准的企業版嗎？合約是否保證不留存？</li><li>不確定就<strong>先問法遵與資安單位</strong>，不要自行嘗試。</li></ul>"
     },
     {
-      "heading": "人在迴路與可解釋性",
+      "heading": "人控與可解釋",
       "html": "<p>在金融業，<strong>越高風險的決策，越需要人來把關</strong>。這就是「人在迴路」（Human-in-the-loop, HITL）的精神：AI 負責草擬與輔助，人負責複核與承擔最終決定。</p><p><strong>可解釋性</strong>（Explainability）則要求：我們要能說明「為什麼會得到這個結果」，以及「依據哪些資料」。對客戶、對主管、對主管機關，都要能交代清楚，不能只說「AI 說的」。</p><div class=\"mermaid\">graph LR\n    A[AI 產出草稿] --> B{風險分級}\n    B -->|低風險 內部摘要| C[人工抽查]\n    B -->|高風險 對客建議| D[人工逐項複核]\n    C --> E[留存紀錄 可追溯]\n    D --> E\n    style A fill:#017a8f,color:#fff\n    style C fill:#2a9d8f,color:#fff\n    style D fill:#2a9d8f,color:#fff\n    style E fill:#17B5AD,color:#fff</div><p><strong>哪些情境一定要人複核：</strong></p><ul><li>任何<strong>對客戶的投資建議、商品適合度判斷</strong>。</li><li>涉及法規、稅務、契約條件的說明。</li><li>對外發布的宣傳文案（合規警語、費用、風險揭露）。</li><li>會影響客戶權益或銀行聲譽的內容。</li></ul>"
     },
     {
-      "heading": "AI 治理框架與員工使用守則",
+      "heading": "治理與守則",
       "html": "<p>國際上常引用的兩套精神：<strong>NIST AI RMF</strong>（治理、映射、量測、管理四功能）與 <strong>ISO/IEC 42001</strong>（AI 管理系統，PDCA 持續改善）。落到機構內部，可簡化成<strong>四層治理</strong>：政策 → 風險評估 → 控制措施 → 監控稽核。</p><div class=\"mermaid\">graph TD\n    A[第一層 政策 Policy<br/>明定可用/禁用範圍] --> B[第二層 風險評估<br/>分級盤點資料與用途]\n    B --> C[第三層 控制措施<br/>權限/去識別化/人工複核]\n    C --> D[第四層 監控稽核<br/>留存紀錄/定期檢視/回饋改善]\n    D -.持續改善.-> A\n    style A fill:#019AB3,color:#fff\n    style B fill:#017a8f,color:#fff\n    style C fill:#2a9d8f,color:#fff\n    style D fill:#17B5AD,color:#fff</div><p>給財管從業人員的<strong>每日使用守則</strong>：</p><table border=\"1\" cellpadding=\"6\" cellspacing=\"0\" style=\"border-collapse:collapse;width:100%\"><thead><tr style=\"background:#019AB3;color:#fff\"><th style=\"width:50%\">✅ 該做（Do）</th><th style=\"width:50%\">❌ 別做（Don't）</th></tr></thead><tbody><tr><td>只用公司核准的工具</td><td>用個人帳號處理公務敏感資料</td></tr><tr><td>輸入前先去識別化</td><td>貼客戶個資／資產明細進公開 AI</td></tr><tr><td>事實型內容回官方來源查核</td><td>把 AI 的數字直接轉給客戶</td></tr><tr><td>對外內容人工複核合規</td><td>AI 文案未審就對外發布</td></tr><tr><td>對 AI 答案保持懷疑、要求出處</td><td>盲信「AI 說的就是對的」</td></tr><tr><td>不確定先問法遵／資安</td><td>自行嘗試未經核准的新工具</td></tr></tbody></table><p>記住一句話：<strong>「能用 AI 提效，但責任不能外包給 AI。」</strong></p>"
     },
     {

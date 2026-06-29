@@ -12,23 +12,23 @@
   ],
   "sections": [
     {
-      "heading": "三大組合策略：Ladder / Barbell / Bullet",
+      "heading": "三大組合策略",
       "html": "<p>債券組合的存續期分布有三種典型策略：</p><table><thead><tr><th>策略</th><th>結構</th><th>適用情境</th></tr></thead><tbody><tr><td>階梯式（Ladder）</td><td>持有等量短中長期債券，到期者輪替再投資</td><td>追求穩定現金流、降低利率時點風險</td></tr><tr><td>啞鈴式（Barbell）</td><td>同時持有短期 + 長期，迴避中期</td><td>看好極短端與長端，預期殖利率曲線駝峰化</td></tr><tr><td>子彈式（Bullet）</td><td>集中於某一到期日</td><td>已知特定支付需求（如教育金、退休）</td></tr></tbody></table><div class=\"mermaid\">graph TD\n    A[Ladder] --> A1[2年 25%]\n    A --> A2[4年 25%]\n    A --> A3[6年 25%]\n    A --> A4[8年 25%]\n    B[Barbell] --> B1[2年 50%]\n    B --> B2[10年 50%]\n    C[Bullet] --> C1[5年 100%]\n    style A fill:#019AB3,color:#fff\n    style B fill:#17B5AD,color:#fff\n    style C fill:#a8dadc</div>\n<details><summary>實例：1000 萬美元的階梯式配置</summary><table><thead><tr><th>到期年</th><th>金額</th><th>票息</th></tr></thead><tbody><tr><td>2027</td><td>200 萬</td><td>4.5%</td></tr><tr><td>2029</td><td>200 萬</td><td>4.3%</td></tr><tr><td>2031</td><td>200 萬</td><td>4.6%</td></tr><tr><td>2033</td><td>200 萬</td><td>4.8%</td></tr><tr><td>2035</td><td>200 萬</td><td>5.0%</td></tr></tbody></table><p>每 2 年到期 200 萬，可再投資至下一個 10 年期；平均存續期 5 年，受單一時點利率影響相對小。</p></details>"
     },
     {
-      "heading": "久期管理：利率視角的對應",
+      "heading": "久期管理策略",
       "html": "<p>債券組合的目標久期應反映對利率走向的判斷。</p><table><thead><tr><th>利率展望</th><th>建議久期動作</th><th>對應商品</th></tr></thead><tbody><tr><td>升息週期</td><td>縮短久期</td><td>短天期公債、浮動利率債、TIPS</td></tr><tr><td>降息週期</td><td>拉長久期</td><td>長天期公債、長存續 IG 公司債、零息債</td></tr><tr><td>利率高點</td><td>逐步拉長</td><td>10-30 年期投資級債</td></tr><tr><td>利率低點</td><td>縮至最短</td><td>3-6 個月國庫券、貨幣型基金</td></tr><tr><td>不確定</td><td>maintain 5-7 年中性</td><td>分散多期間</td></tr></tbody></table><div class=\"mermaid\">graph LR\n    A[利率高點] -->|預期降息| B[拉長久期]\n    B --> C[價格上漲]\n    D[利率低點] -->|預期升息| E[縮短久期]\n    E --> F[避免價格損失]\n    style B fill:#019AB3,color:#fff\n    style E fill:#017AB3,color:#fff</div><p><strong>實務經驗</strong>：2022 年美國升息週期前未及時縮短久期的投資人，全年虧損 10-15%；2024 年降息預期形成時拉長久期者，享受 5-10% 資本利得。</p>"
     },
     {
-      "heading": "直接投資 vs 債券基金 vs ETF",
+      "heading": "投資工具選擇",
       "html": "<p>同樣的債券曝險，可透過三種工具實現，特性大不同。</p><table><thead><tr><th>工具</th><th>優勢</th><th>劣勢</th></tr></thead><tbody><tr><td>直接投資債券</td><td>到期返還本金（除非違約）、精確控制現金流、無管理費</td><td>需大額（10-20 萬 USD/支）、分散困難、流動性差</td></tr><tr><td>債券共同基金</td><td>少額即可分散（千美元）、專業管理、流動性佳（每日申贖）</td><td>內含費率 0.5-1.5%、無到期日、淨值隨利率波動</td></tr><tr><td>債券 ETF</td><td>分散、低費率（0.1-0.3%）、盤中可交易</td><td>需期貨／個股帳戶、追蹤誤差、無到期日</td></tr></tbody></table><div class=\"mermaid\">graph TD\n    A{客戶需求} --> B{資金規模}\n    B -->|&lt; 100 萬 USD| C[債券 ETF 或基金]\n    B -->|&gt; 500 萬 USD| D[直接投資 + ETF 分散]\n    B -->|100-500 萬| E[基金 + 少量直接投資]\n    A --> F{是否需確定到期]\n    F -->|是| G[直接投資為主]\n    F -->|否| H[基金/ETF 為主]\n    style C fill:#019AB3,color:#fff</div>\n<details><summary>實例：相同信用曝險的三種選擇</summary><p>想配置「美元投資級公司債」200 萬美元：</p><ul><li><strong>直接投資</strong>：買 20 檔不同公司債（每檔 10 萬），手續費約 0.1%，無年費，到期返還</li><li><strong>共同基金</strong>：買 PIMCO Investment Grade Corporate Bond Fund，內含費率約 0.9%/年，無到期日</li><li><strong>ETF</strong>：買 LQD（iShares IG 公司債 ETF），費率 0.14%/年，盤中可交易</li></ul><p>三者長期報酬可能差距 0.5-1%/年（費率差），但流動性、控制力差異更大。</p></details>"
     },
     {
-      "heading": "主動 vs 被動債券管理",
+      "heading": "主動被動管理",
       "html": "<table><thead><tr><th>管理方式</th><th>定義</th><th>優劣</th></tr></thead><tbody><tr><td>被動管理</td><td>追蹤指數（如 Bloomberg Global Aggregate）</td><td>費率低、可預期；放棄超額報酬機會</td></tr><tr><td>主動管理</td><td>基金經理人選擇個券、調整久期、信用配置</td><td>有機會超越指數；費率較高、依賴經理人</td></tr></tbody></table><p><strong>債券市場主動管理超額報酬</strong>：</p><ul><li>過去 10 年，約 50-60% 的主動債券基金落後指數（扣除費用後）</li><li>新興市場債、高收益債主動管理勝率較高（市場效率較低）</li><li>投資級債、政府公債主動勝率較低</li></ul>\n<details><summary>SPIVA Scorecard 觀察</summary><p>S&amp;P 每年發布 SPIVA（S&amp;P Indices Versus Active）報告，追蹤主動基金績效。長期觀察結論：</p><ul><li>美國投資級債：被動 ≈ 主動</li><li>美國高收益債：主動略勝</li><li>新興市場債：主動明顯勝</li><li>全球綜合債：被動略勝</li></ul></details>"
     },
     {
-      "heading": "景氣循環的債券配置",
+      "heading": "景氣循環配置",
       "html": "<p>債券在景氣循環不同階段的相對表現差異極大。</p><table><thead><tr><th>景氣階段</th><th>利率走向</th><th>表現最佳債種</th></tr></thead><tbody><tr><td>復甦初期</td><td>低利率持續</td><td>高收益債、長久期 IG、新興市場債</td></tr><tr><td>擴張期</td><td>利率緩升</td><td>浮動利率、短天期 IG</td></tr><tr><td>擴張末期</td><td>利率快升</td><td>極短天期、TIPS、貨幣市場</td></tr><tr><td>衰退初期</td><td>降息開始</td><td>長天期公債、長存續 IG</td></tr><tr><td>衰退期</td><td>大幅降息</td><td>長天期公債（避險）、迴避 HY</td></tr></tbody></table><div class=\"mermaid\">graph LR\n    A[復甦初期<br/>低利率] --> B[擴張期<br/>升息開始]\n    B --> C[擴張末期<br/>升息加速]\n    C --> D[衰退初期<br/>停止升息]\n    D --> E[衰退期<br/>降息]\n    E --> A\n    style A fill:#019AB3,color:#fff\n    style E fill:#d62828,color:#fff</div><p><strong>實務啟示</strong>：</p><ul><li>2020-2021 復甦初期 → 高收益債表現最好</li><li>2022 升息週期 → 所有久期債券都虧損</li><li>2023-2024 升息末期 → 短天期表現最佳</li><li>2024-2025 降息預期 → 長期公債回升</li></ul>"
     },
     {

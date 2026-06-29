@@ -12,23 +12,23 @@
   ],
   "sections": [
     {
-      "heading": "外匯管制與結匯額度",
+      "heading": "外匯結匯額度",
       "html": "<p>跨境投資涉及外匯管制，依《管理外匯條例》與中央銀行〈外匯收支或交易申報辦法〉執行。</p><table><thead><tr><th>申報門檻</th><th>身分</th><th>每年自由結匯額度</th></tr></thead><tbody><tr><td>個人</td><td>本國成年人</td><td>USD 500 萬</td></tr><tr><td>法人</td><td>公司</td><td>USD 5,000 萬</td></tr><tr><td>非居民</td><td>外國個人/法人</td><td>視個案，需申報</td></tr></tbody></table><blockquote><p><strong>申報要點</strong>：</p><ul><li>單筆結匯 USD 50 萬以上需填申報書</li><li>單筆 USD 100 萬以上需檢附證明文件</li><li>累計超過年度額度需經央行核准</li><li>違反規定罰鍰最高 50 萬</li></ul></blockquote><p><strong>常見錯誤</strong>：「拆單」（將大額結匯拆成多筆 USD 49 萬）規避申報，會被認定違反規定。</p>"
     },
     {
-      "heading": "金管會與央行的雙軌監理",
+      "heading": "雙軌監理架構",
       "html": "<div class=\"mermaid\">graph TD\n    A[跨境投資] --> B[金管會<br/>商品面監理]\n    A --> C[央行<br/>外匯面監理]\n    B --> B1[基金備查]\n    B --> B2[商品銷售規範]\n    B --> B3[銀行兼營信託]\n    C --> C1[結匯申報]\n    C --> C2[外匯指定銀行]\n    C --> C3[NDF 等衍生工具]\n    style A fill:#019AB3,color:#fff</div><table><thead><tr><th>主管機關</th><th>主要法源</th><th>監理範圍</th></tr></thead><tbody><tr><td>金管會</td><td>銀行法、信託業法、證交法、保險法</td><td>金融商品、銷售行為、業者經營</td></tr><tr><td>央行</td><td>管理外匯條例、外匯收支或交易申報辦法</td><td>結匯申報、外匯指定銀行、外匯衍生性商品</td></tr><tr><td>財政部</td><td>所得稅法、遺贈稅法、所得基本稅額條例</td><td>跨境投資稅務</td></tr><tr><td>關貿總署</td><td>關稅法</td><td>實體資產進出口</td></tr></tbody></table>"
     },
     {
-      "heading": "最低稅負制與 CFC 規定",
+      "heading": "最低稅負與CFC",
       "html": "<p>跨境投資的兩大稅務監理工具：</p><table><thead><tr><th>制度</th><th>適用</th><th>主要規範</th></tr></thead><tbody><tr><td>最低稅負制</td><td>個人海外所得</td><td>全戶 ≥ NT$100 萬時全額計入；基本所得額減 670 萬 × 20%</td></tr><tr><td>CFC（受控外國企業）— 個人</td><td>持有低稅國企業 ≥ 50%</td><td>視為已分配當年盈餘，計入個人海外所得（2023 年起實施）</td></tr><tr><td>CFC — 營利事業</td><td>境外子公司</td><td>未分配盈餘視同已分配（2023 年起）</td></tr></tbody></table><blockquote><p><strong>《所得稅法》§43-3</strong>（營利事業 CFC）與 <strong>§43-4</strong>（PEM 實際管理處所）、<strong>《所得基本稅額條例》§12-1</strong>（個人 CFC）為跨境家族架構之主要稅務監理。</p></blockquote><p><strong>實務影響</strong>：</p><ul><li>過去用 BVI/Cayman 公司持有海外資產可延遲課稅，CFC 實施後該優勢大減</li><li>家族信託若設立於低稅國，可能被認定為 CFC</li><li>跨境投資架構需重新評估，是否仍有稅務優勢</li><li>申報時應留意 CFC 計算與聲明文件</li></ul>"
     },
     {
-      "heading": "OBU/OSU/DBU/DSU 帳戶比較",
+      "heading": "四類帳戶比較",
       "html": "<p>本國銀行為跨境客戶設立的四類帳戶，適用對象與稅務不同。</p><table><thead><tr><th>帳戶</th><th>全名</th><th>適用對象</th><th>稅務特性</th></tr></thead><tbody><tr><td>DBU</td><td>Domestic Banking Unit 國內金融業務</td><td>本國個人 / 法人</td><td>一般稅務</td></tr><tr><td>OBU</td><td>Offshore Banking Unit 國際金融業務</td><td>非居民（境外公司、境外個人）</td><td>免營業稅、免印花稅、利息免扣繳</td></tr><tr><td>DSU</td><td>Domestic Securities Unit 國內證券業務</td><td>本國投資人投資證券</td><td>一般稅務</td></tr><tr><td>OSU</td><td>Offshore Securities Unit 國際證券業務</td><td>非居民投資人</td><td>免證交稅、二級市場交易免營業稅</td></tr></tbody></table><div class=\"mermaid\">graph TD\n    A[客戶身分] --> B{居民}\n    B -->|是| C[DBU/DSU]\n    B -->|否| D[OBU/OSU]\n    D --> E[免部分稅務]\n    style D fill:#019AB3,color:#fff</div><p><strong>實務注意</strong>：</p><ul><li>OBU 之稅務優勢針對「非居民」，本國居民若被認定為境外公司之 UBO，仍適用 CFC 規定</li><li>CRS（共同申報準則）2017 年起實施，OBU 帳戶資訊自動回報原居住國稅務機關</li><li>跨境家族架構應避免「形式境外、實質本國」之安排</li></ul>"
     },
     {
-      "heading": "資產配置在銷售合規面",
+      "heading": "銷售合規要點",
       "html": "<p>提供資產配置建議涉及多項合規要求：</p><table><thead><tr><th>合規要求</th><th>具體規範</th></tr></thead><tbody><tr><td>客戶適合度評估</td><td>了解客戶（KYC）+ 了解商品（KYP）+ 適合度匹配</td></tr><tr><td>商品適合度系統</td><td>系統自動檢核風險屬性與商品分級</td></tr><tr><td>跨商品建議</td><td>每個商品都應通過獨立適合度評估</td></tr><tr><td>利益衝突</td><td>避免推薦自家或關係企業之商品為主</td></tr><tr><td>留證</td><td>建議書、適合度問卷、客戶簽署</td></tr><tr><td>定期覆核</td><td>客戶屬性每年覆核、商品分級隨市場調整</td></tr></tbody></table><blockquote><p><strong>金管會〈銀行業辦理財富管理業務應注意事項〉</strong>：要求業者建立完整客戶分類、商品分類、適合度評估、紀錄留存制度。</p></blockquote>"
     },
     {

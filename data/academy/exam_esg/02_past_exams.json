@@ -12,23 +12,23 @@
   ],
   "sections": [
     {
-      "heading": "一、官方考古題哪裡找",
+      "heading": "考古題來源",
       "html": "<p>歷屆原始試題與最新測驗資訊，一律以主辦單位官方公告為準。建議從下列官方管道取得：</p>\n<blockquote>\n<p>官方來源\n- 證券暨期貨市場發展基金會（證基會）「永續發展基礎能力測驗」：<a href=\"https://www.sfi.org.tw/Node?id=270\">https://www.sfi.org.tw/Node?id=270</a>\n- 台灣金融研訓院 歷屆試題查詢（提供近三期試題）：<a href=\"https://www.tabf.org.tw/LicenseHistoryExam.aspx\">https://www.tabf.org.tw/LicenseHistoryExam.aspx</a></p>\n</blockquote>\n<p>說明：真正的歷屆原題請至官方網站下載，本章不重製受著作權保護之原題；以下僅提供題型與考點解析，以及依公開考試範圍自編之練習題。依官方公告，本測驗以單選題為主，合格標準為總分達 70 分；題數、配分與報名資訊均以主辦單位最新公告為準。</p>"
     },
     {
-      "heading": "二、測驗結構與題型地圖",
+      "heading": "測驗結構題型",
       "html": "<p>本測驗共分四大科目，涵蓋永續基本概念、資訊揭露、風險管理與治理、永續金融，各科目均圍繞 E／S／G 三支柱展開。</p>\n<p><div class=\"mermaid\">flowchart TD\n    A[永續發展基礎能力測驗] --&gt; B[永續基本概念]\n    A --&gt; C[資訊揭露]\n    A --&gt; D[風險管理與治理]\n    A --&gt; E[永續金融]\n\n    B --&gt; B1[E 環境]\n    B --&gt; B2[S 社會]\n    B --&gt; B3[G 治理]\n\n    C --&gt; C1[TCFD 四大核心]\n    C --&gt; C2[IFRS S1 S2 ISSB]\n    C --&gt; C3[GRI 影響重大性]\n    C --&gt; C4[SASB 財務重大性]\n\n    D --&gt; D1[氣候風險辨識與評估]\n    D --&gt; D2[公司治理與董事會職責]\n\n    E --&gt; E1[責任投資與 ESG 整合]\n    E --&gt; E2[永續經濟活動認定指引]</div></p>\n<p>題數、配分與合格細節以主辦單位最新公告為準，本章不列可能變動的具體數字。</p>"
     },
     {
-      "heading": "三、命題趨勢與高頻考點",
+      "heading": "命題趨勢考點",
       "html": "<table>\n<thead>\n<tr>\n<th>高頻考點</th>\n<th>對應框架／依據</th>\n<th>常見命題型態</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>E／S／G 三支柱分類</td>\n<td>永續基本概念</td>\n<td>議題歸類</td>\n</tr>\n<tr>\n<td>TCFD 四大核心要素</td>\n<td>TCFD 建議書</td>\n<td>要素記憶、辨識</td>\n</tr>\n<tr>\n<td>IFRS S1／S2 永續準則</td>\n<td>IFRS Foundation／ISSB</td>\n<td>觀念判斷</td>\n</tr>\n<tr>\n<td>GRI 與 SASB 重大性差異</td>\n<td>GRI／SASB</td>\n<td>框架比較</td>\n</tr>\n<tr>\n<td>永續金融與責任投資</td>\n<td>永續金融政策</td>\n<td>觀念判斷</td>\n</tr>\n<tr>\n<td>法定揭露義務</td>\n<td>證券交易法第 36 條</td>\n<td>條文記憶</td>\n</tr>\n</tbody>\n</table>\n<p>命題趨勢上，常跨科目混合命題，且偏重「框架辨識與差異比較」。建議把各揭露框架的主管機構、重大性觀點與適用對象整理成對照表。</p>"
     },
     {
-      "heading": "四、自編模擬題與解析",
+      "heading": "模擬題解析",
       "html": "<p>以下為依公開考試範圍自編之模擬題，非歷屆原題，僅供觀念演練。</p>\n<p><strong>第 1 題（三支柱分類）</strong>\n下列何者屬於 ESG 中「治理（G）」面向之議題？\n(A) 溫室氣體排放\n(B) 員工職業安全衛生\n(C) 董事會獨立性與商業道德\n(D) 水資源管理</p>\n<p><strong>正解：(C)</strong>\n解析：環境（E）含排放、水資源、能源等；社會（S）含勞工、職業安全、人權、社區；治理（G）含董事會組成與獨立性、商業道德、風險管理等。董事會獨立性屬治理面向，故 (C) 正確。</p>\n<p><strong>第 2 題（TCFD 四大核心）</strong>\nTCFD（氣候相關財務揭露）建議之四大核心要素，不包含下列何者？\n(A) 治理（Governance）\n(B) 策略（Strategy）\n(C) 風險管理（Risk Management）\n(D) 行銷（Marketing）</p>\n<p><strong>正解：(D)</strong>\n解析：TCFD 四大核心要素為治理、策略、風險管理、指標與目標（Metrics and Targets）。「行銷」並非 TCFD 核心要素，故 (D) 正確（為非屬之選項）。</p>\n<p><strong>第 3 題（重大性觀點）</strong>\n關於 GRI 與 SASB 在「重大性（Materiality）」觀點上的差異，下列敘述何者較為正確？\n(A) GRI 偏向財務重大性，SASB 偏向影響重大性\n(B) GRI 重視組織對經濟、環境與人群之衝擊（影響重大性），SASB 重視對企業財務之影響（財務重大性）\n(C) 兩者重大性觀點完全相同\n(D) 兩者皆只關注財務報表使用者</p>\n<p><strong>正解：(B)</strong>\n解析：GRI 以多方利害關係人為對象，強調組織對外部之影響（影響重大性／衝擊重大性）；SASB（已併入 IFRS Foundation）著重對企業財務具影響之永續議題（財務重大性）。故 (B) 正確。</p>\n<p><strong>第 4 題（永續準則制定機構）</strong>\n發布 IFRS S1（一般永續揭露）與 IFRS S2（氣候相關揭露）之國際機構為下列何者？\n(A) GRI 全球報告倡議組織\n(B) ISSB／IFRS Foundation\n(C) 我國金融監督管理委員會\n(D) 聯合國環境規劃署</p>\n<p><strong>正解：(B)</strong>\n解析：IFRS S1 與 S2 由 IFRS Foundation 旗下之國際永續準則理事會（ISSB）發布，旨在建立全球一致之永續揭露基準。GRI 為另一套揭露標準之制定機構，故 (B) 正確。</p>\n<p><strong>第 5 題（法定揭露義務）</strong>\n我國公開發行公司應依下列何項規定，於規定期限內公告並申報財務報告等資訊？\n(A) 證券交易法第 36 條\n(B) 公司法第 1 條\n(C) 民法第 1 條\n(D) 消費者保護法第 1 條</p>\n<p><strong>正解：(A)</strong>\n解析：證券交易法第 36 條規範發行人定期財務報告之公告與申報義務，是企業資訊揭露之重要法源。永續資訊揭露亦逐步納入相關規範體系，故 (A) 正確。</p>"
     },
     {
-      "heading": "五、應試技巧與易錯陷阱",
+      "heading": "應試技巧陷阱",
       "html": "<p>備考建議：</p>\n<ol>\n<li><strong>先建三支柱骨架</strong>：所有議題先歸入 E／S／G，再細分至各科目，命題常跨科目混合。</li>\n<li><strong>框架對照表</strong>：把 TCFD、IFRS S1／S2、GRI、SASB 的主管機構、重大性觀點與適用對象整理成表，框架比較題即可快速作答。</li>\n<li><strong>辨識主管機關</strong>：題目常考「某框架由誰發布」「某揭露屬何法源」，分辨國際機構與我國主管機關。</li>\n<li><strong>合格採總分</strong>：本測驗合格為總分達 70 分，各科均衡準備；實際標準以主辦單位最新公告為準。</li>\n</ol>\n<details><summary>名詞定義</summary>\n<ul>\n<li><strong>E／S／G 三支柱</strong>：環境（Environmental）、社會（Social）、治理（Governance），為永續議題的分類骨架。</li>\n<li><strong>TCFD 四大核心</strong>：治理、策略、風險管理、指標與目標，為氣候相關財務揭露之建議架構。</li>\n<li><strong>IFRS S1／S2</strong>：由 IFRS Foundation 旗下 ISSB 發布之一般永續揭露與氣候相關揭露準則。</li>\n<li><strong>影響重大性與財務重大性</strong>：GRI 著重組織對外部之衝擊（影響重大性）；SASB 著重永續議題對企業財務之影響（財務重大性）。</li>\n</ul>\n</details>\n\n<details><summary>易混淆框架辨析</summary>\n<ul>\n<li>GRI 對象為多方利害關係人、重影響重大性；SASB 對象偏財務報表使用者、重財務重大性。</li>\n<li>TCFD 是「氣候相關財務揭露建議」，其精神已被 IFRS S2 大量採納。</li>\n<li>ISSB 隸屬 IFRS Foundation，負責發布全球永續揭露準則（IFRS S1／S2）。</li>\n<li>勿將國際揭露框架與我國法定揭露（如證交法第 36 條）混為一談。</li>\n</ul>\n</details>\n\n<details><summary>作答節奏</summary>\n<ul>\n<li>框架比較題先抓「主管機構＋重大性觀點」兩個關鍵維度即可快速判斷。</li>\n<li>跨科目混合題先把選項歸入 E／S／G 或對應框架，縮小範圍。</li>\n<li>合格採總分，各科均衡作答，先完成有把握題再處理辨析題。</li>\n</ul>\n</details>"
     }
   ]

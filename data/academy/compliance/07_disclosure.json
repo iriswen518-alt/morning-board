@@ -11,23 +11,23 @@
   ],
   "sections": [
     {
-      "heading": "共同基金銷售規範",
+      "heading": "基金銷售規範",
       "html": "<p>共同基金（境外＋境內）銷售依〈境外基金管理辦法〉、〈證券投資信託基金管理辦法〉、〈中華民國證券投資信託暨顧問商業同業公會基金銷售人員自律規範〉執行。</p><table><thead><tr><th>規範類型</th><th>主要要求</th></tr></thead><tbody><tr><td>銷售人員資格</td><td>須通過「投信投顧業務員」測驗、年度回訓</td></tr><tr><td>銷售前文件</td><td>公開說明書、簡式公開說明書、月報、年報</td></tr><tr><td>適合度評估</td><td>客戶風險屬性 vs 基金 RR1-RR5 分級</td></tr><tr><td>費用揭露</td><td>申購手續費、經理費、保管費、銷售獎勵、後收手續費</td></tr><tr><td>業績宣傳</td><td>不得僅引用單一時點績效、需註明過去績效不代表未來</td></tr><tr><td>禁止行為</td><td>不得保證收益、不得對未經許可基金為招攬</td></tr></tbody></table>\n<details><summary>後收型基金（C 股 / N 股）特別揭露</summary><ul><li>遞延手續費（CDSC）金額與年度遞減表</li><li>分銷費（distribution fee）每年從淨值中扣除</li><li>持有 3-5 年才能規避全部後收費</li><li>客戶必須明確了解非「免手續費」</li></ul></details><p><strong>資料來源：</strong>境外基金管理辦法（金管會 G0400063）、投信投顧公會 <a href=\"https://www.sitca.org.tw/\" target=\"_blank\" rel=\"noopener\">sitca.org.tw</a></p>"
     },
     {
-      "heading": "海外債券銷售規範",
+      "heading": "海外債規範",
       "html": "<p>海外債券（國際債券）銷售依〈外幣計價國際債券作業要點〉與〈銀行辦理衍生性金融商品業務內部作業制度及程序管理辦法〉，與一般本國債券差異甚大。</p><table><thead><tr><th>規範重點</th><th>具體要求</th></tr></thead><tbody><tr><td>客戶適合度</td><td>多數為專業投資人（Professional Investor, PI）商品，需符合 PI 認定</td></tr><tr><td>專業投資人認定</td><td>法人：總資產 ≥ 5,000 萬，或經理人具專業背景；自然人：總資產 ≥ 3,000 萬、年所得 ≥ 150 萬、有金融商品交易經驗</td></tr><tr><td>銷售前文件</td><td>公開說明書（OC）或募集文件、銷售文件、信用評等說明</td></tr><tr><td>風險揭露</td><td>信用風險、利率風險、匯率風險、流動性風險、提前贖回風險、條款風險</td></tr><tr><td>最低承作面額</td><td>多數債券 USD 100,000～USD 200,000 起（依券種）</td></tr><tr><td>禁止行為</td><td>不得對非 PI 客戶銷售、不得保證收益</td></tr></tbody></table><div class=\"mermaid\">graph TD\n    A[客戶申請承作] --> B{是否符合 PI 認定}\n    B -->|否| C[拒絕銷售或<br/>建議改為基金/ETF]\n    B -->|是| D[簽署 PI 同意書]\n    D --> E[商品適合度評估]\n    E --> F[簽署風險預告書]\n    F --> G[完成承作]\n    style C fill:#d62828,color:#fff\n    style G fill:#019AB3,color:#fff</div>\n<details><summary>常見爭議：高收益債的銷售紅旗</summary><ul><li>客戶屬性 C3 以下不應推薦高收益債（HY Bond）</li><li>「票息高」不是低風險的證明，反映高違約風險</li><li>新興市場債的匯率風險（如阿根廷比索、土耳其里拉歷史經驗）</li><li>條款風險（Call Provision、Put Provision、轉換條款）需逐條解釋</li></ul></details>"
     },
     {
-      "heading": "結構型商品銷售規範",
+      "heading": "結構商品規範",
       "html": "<p>結構型商品（含 ELN、DRA、CMS、SLN 等）為〈銀行辦理衍生性金融商品業務內部作業制度及程序管理辦法〉管轄，揭露要求最嚴格。</p><table><thead><tr><th>規範類型</th><th>具體要求</th></tr></thead><tbody><tr><td>銷售人員資格</td><td>須通過「結構型商品銷售人員」資格測驗、年度回訓</td></tr><tr><td>客戶適合度</td><td>原則限 PI 客戶；非 PI 須通過商品適合度測試</td></tr><tr><td>商品說明書</td><td>必須包含商品結構、最大可能損失、情境分析、費用結構</td></tr><tr><td>錄音錄影</td><td>銷售過程全程錄音錄影、檔案保存至商品到期後 5 年</td></tr><tr><td>冷靜期</td><td>承作後依商品類型有 1-5 個營業日冷靜期</td></tr><tr><td>結算通知</td><td>到期或提前贖回時主動通知客戶</td></tr></tbody></table><div class=\"mermaid\">graph LR\n    A[商品說明<br/>含情境分析] --> B[最大損失揭露<br/>粗體標示]\n    B --> C[簽署風險預告書<br/>逐項核對]\n    C --> D[錄音錄影<br/>全程]\n    D --> E[冷靜期<br/>客戶可解約]\n    style B fill:#d62828,color:#fff\n    style E fill:#f4a261</div>\n<details><summary>結構型商品最大可能損失說明範例</summary><p>「ELN（股價連結型商品）若連結標的於到期日跌幅超過 30%，投資人可能依約收取連結標的而非原始本金，最大損失為本金 100%（含已收取之利息抵減後）」</p><p>此類說明必須以粗體或標示框顯示於商品說明書首頁，並於銷售過程中由業務人員逐字唸出。</p></details>"
     },
     {
-      "heading": "商品適合度評估系統",
+      "heading": "適合度系統",
       "html": "<p>多數銀行使用之商品適合度系統（俗稱 KYC/KYP 系統）功能可分為四個區塊。</p><table><thead><tr><th>系統模組</th><th>功能</th></tr></thead><tbody><tr><td>客戶風險屬性</td><td>問卷填寫、自動計分、屬性等級結果、覆核到期提醒</td></tr><tr><td>商品分級</td><td>商品評估書建檔、RR 等級、適用客戶屬性</td></tr><tr><td>適合度匹配</td><td>銷售前系統自動檢核、不符自動阻擋或要求逾屬性流程</td></tr><tr><td>留證管理</td><td>銷售文件電子化保存、查詢與調閱</td></tr></tbody></table>\n<details><summary>系統操作常見錯誤</summary><ol><li>跳過問卷直接登錄（系統應禁止此操作）</li><li>選擇「客戶不便填寫」由業務代填（違反 KYC 精神）</li><li>商品評估書未及時更新（市場變動後仍使用舊分級）</li><li>逾屬性銷售未經系統核准流程</li><li>系統警示未處理（應每日清查）</li></ol></details>"
     },
     {
-      "heading": "簽署文件與留證管理",
+      "heading": "簽署與留證",
       "html": "<p>所有財管業務銷售必有對應簽署文件，文件管理是業務單位、法遵單位與內稽單位共同責任。</p><table><thead><tr><th>商品類型</th><th>必備簽署文件</th><th>留證年限</th></tr></thead><tbody><tr><td>共同基金</td><td>公開說明書交付證明、客戶風險屬性問卷、申購單</td><td>5 年</td></tr><tr><td>海外債券</td><td>PI 同意書、商品說明書、風險預告書、承作申請書</td><td>5 年（建議 10 年）</td></tr><tr><td>結構型商品</td><td>商品說明書、最大損失告知書、風險預告書、錄音錄影檔</td><td>到期後 5 年</td></tr><tr><td>保險商品</td><td>要保書、商品說明書、適合度評估表、健康告知書</td><td>契約終止後 5 年</td></tr></tbody></table>\n<details><summary>電子化留證注意事項</summary><ul><li>數位簽章應符合電子簽章法效力</li><li>檔案備份至少兩地（含異地備援）</li><li>定期驗證檔案可讀性（每半年抽樣）</li><li>系統存取紀錄保留至少 1 年</li><li>離職員工存取權應於離職當日撤銷</li></ul></details><p><strong>資料來源：</strong>境外基金管理辦法（G0400063）、銀行辦理衍生性金融商品業務內部作業制度及程序管理辦法（金管會）、外幣計價國際債券作業要點（金管會）、投信投顧公會 <a href=\"https://www.sitca.org.tw/\" target=\"_blank\" rel=\"noopener\">sitca.org.tw</a>、櫃買中心 <a href=\"https://www.tpex.org.tw/\" target=\"_blank\" rel=\"noopener\">tpex.org.tw</a></p>"
     }
   ]

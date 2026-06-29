@@ -12,27 +12,27 @@
   ],
   "sections": [
     {
-      "heading": "三種殖利率的定義",
+      "heading": "三種殖利率",
       "html": "<p>實務上至少有三種殖利率定義，銷售文件常未明示，須自行判斷。</p><table><thead><tr><th>類型</th><th>計算方式</th><th>適用情境</th></tr></thead><tbody><tr><td>當期殖利率（Current Yield）</td><td>年票息 ÷ 當前市價</td><td>簡化指標，忽略到期價差</td></tr><tr><td>到期殖利率（YTM）</td><td>持有至到期之內部報酬率（IRR），含票息與資本利得／損失</td><td>市場最常用</td></tr><tr><td>贖回殖利率（YTC）</td><td>持有至最近贖回日之 IRR（適用 callable 債券）</td><td>callable 債券應用</td></tr><tr><td>最差殖利率（Yield to Worst, YTW）</td><td>YTM 與所有 YTC 中最低者</td><td>保守估計</td></tr></tbody></table>\n<details><summary>實例：YTM vs Current Yield 的差異</summary><p>5 年期、票面利率 3%、面額 100 之債券，目前市價 95：</p><ul><li>Current Yield = 3 / 95 = 3.16%</li><li>YTM ≈ 4.13%（含每年 ~1 元資本利得攤銷）</li></ul><p>若 Callable 條款規定可於 3 年後以 100 贖回，市價 95：</p><ul><li>YTC ≈ 4.85%（持有 3 年票息 + 5 元資本利得）</li><li>YTW = min(YTM, YTC) = 4.13%</li></ul></details>"
     },
     {
-      "heading": "殖利率曲線（Yield Curve）",
+      "heading": "殖利率曲線",
       "html": "<p>殖利率曲線是不同期間（如 3M、2Y、5Y、10Y、30Y）公債殖利率的連線。它的形狀傳達了市場對未來利率與經濟的預期。</p><table><thead><tr><th>曲線形狀</th><th>意義</th><th>經濟階段</th></tr></thead><tbody><tr><td>正常曲線（Normal）</td><td>長天期殖利率 > 短天期</td><td>經濟正常擴張</td></tr><tr><td>陡峭化（Steepening）</td><td>長短利差擴大</td><td>復甦初期或寬鬆貨幣政策</td></tr><tr><td>平坦化（Flattening）</td><td>長短利差縮小</td><td>經濟擴張末期或央行升息</td></tr><tr><td>倒掛（Inverted）</td><td>短天期殖利率 > 長天期</td><td>衰退領先指標</td></tr><tr><td>駝峰形（Humped）</td><td>中天期最高</td><td>過渡狀態</td></tr></tbody></table><div class=\"mermaid\">graph LR\n    A[正常曲線] -->|央行升息| B[平坦化]\n    B -->|繼續升息| C[倒掛]\n    C -->|衰退來臨| D[降息開始]\n    D -->|貨幣寬鬆| E[陡峭化]\n    E -->|復甦完成| A\n    style C fill:#d62828,color:#fff\n    style E fill:#019AB3,color:#fff</div><p><strong>2 年 vs 10 年殖利率利差（2s10s spread）</strong>是市場最常用的衰退指標。歷史上每次美國 2s10s 倒掛後 6-24 個月內幾乎都發生衰退。</p>"
     },
     {
-      "heading": "存續期間（Duration）",
+      "heading": "存續期間",
       "html": "<p>Duration 衡量債券價格對利率變動的敏感度，是固定收益最重要的風險指標。</p><table><thead><tr><th>類型</th><th>定義</th></tr></thead><tbody><tr><td>Macaulay Duration</td><td>各期現金流量加權平均到期年期</td></tr><tr><td>Modified Duration</td><td>Macaulay Duration ÷ (1 + YTM)，價格對殖利率變動的彈性</td></tr><tr><td>Effective Duration</td><td>含選擇權之債券（callable）的調整 duration</td></tr></tbody></table><blockquote><p><strong>關鍵公式</strong>：價格變動率 ≈ -Modified Duration × 殖利率變動（百分點）</p></blockquote><div class=\"mermaid\">graph LR\n    A[10 年期債券<br/>Duration ≈ 8] --> B[利率上升 1%]\n    B --> C[價格下跌 ≈ 8%]\n    style A fill:#019AB3,color:#fff\n    style C fill:#d62828,color:#fff</div><table><thead><tr><th>債券類型</th><th>典型 Duration</th></tr></thead><tbody><tr><td>3 個月國庫券</td><td>0.25</td></tr><tr><td>2 年期公債</td><td>1.9</td></tr><tr><td>10 年期公債</td><td>~ 8</td></tr><tr><td>30 年期公債</td><td>~ 20</td></tr><tr><td>30 年期零息公債</td><td>30</td></tr><tr><td>Perpetual（永續債）</td><td>(1 + YTM) / YTM</td></tr></tbody></table><p><strong>實務應用</strong>：升息環境下應縮短 Duration（避免大幅虧損）；降息環境下應拉長 Duration（享受價格上漲）。</p>"
     },
     {
-      "heading": "凸性（Convexity）",
+      "heading": "凸性",
       "html": "<p>Duration 是一階近似，實際價格與殖利率關係呈曲線。Convexity 衡量此曲度。</p><div class=\"mermaid\">graph LR\n    A[殖利率下降] --> B[價格上漲]\n    A2[殖利率上升] --> C[價格下跌]\n    B -.高凸性放大上漲.-> B2[+10%]\n    C -.高凸性緩和下跌.-> C2[-8%]\n    style B2 fill:#019AB3,color:#fff\n    style C2 fill:#019AB3,color:#fff</div><table><thead><tr><th>債券類型</th><th>凸性特徵</th></tr></thead><tbody><tr><td>一般公債</td><td>正凸性 - 殖利率下降時價格上漲幅度 > 上升時下跌幅度</td></tr><tr><td>Callable 公司債</td><td>負凸性 - 利率下降時發行人贖回，價格漲幅受限</td></tr><tr><td>MBS（房貸抵押證券）</td><td>負凸性 - 提前還款風險，利率下降時 prepay 加速</td></tr></tbody></table><p><strong>實務啟示</strong>：高凸性債券在利率波動劇烈時更有利。長期零息公債具有最高凸性，因此是「凸性曝險」工具。</p>"
     },
     {
-      "heading": "債券利差（Spread）",
+      "heading": "債券利差",
       "html": "<p>債券利差是分析信用與流動性風險的核心工具。</p><table><thead><tr><th>利差類型</th><th>計算</th><th>意義</th></tr></thead><tbody><tr><td>Yield Spread</td><td>公司債殖利率 - 同天期公債殖利率</td><td>信用風險溢酬</td></tr><tr><td>Z-Spread</td><td>將公司債所有現金流以「公債殖利率曲線 + Z」折現至市價</td><td>更精確的信用風險衡量</td></tr><tr><td>OAS（Option Adjusted Spread）</td><td>Z-Spread 扣除選擇權價值</td><td>callable 債券真實信用利差</td></tr><tr><td>CDS Spread</td><td>信用違約交換的年費</td><td>純信用違約風險定價</td></tr><tr><td>Asset Swap Spread</td><td>將固定債券轉浮動後與基準利率之差</td><td>機構交易常用</td></tr></tbody></table>\n<details><summary>實例：信用利差的訊號</summary><p>當投資級公司債之 Yield Spread 從 100 bp 擴大至 200 bp，反映：</p><ul><li>市場對該等級信用前景更悲觀</li><li>可能伴隨衰退預期或產業危機</li><li>新發債籌資成本上升，企業可能延遲投資</li><li>歷史上利差擴大常領先股市下跌</li></ul></details>"
     },
     {
-      "heading": "報價慣例與計算",
+      "heading": "報價慣例計算",
       "html": "<p>債券報價有幾個容易混淆的細節：</p><table><thead><tr><th>名詞</th><th>定義</th></tr></thead><tbody><tr><td>Face Value（面額）</td><td>到期日返還之本金，通常為 100 或 1,000</td></tr><tr><td>Clean Price（淨價）</td><td>不含應計利息之報價</td></tr><tr><td>Dirty Price（含息價）</td><td>Clean Price + 應計利息，實際成交金額</td></tr><tr><td>Accrued Interest（應計利息）</td><td>上次付息至今的應收票息</td></tr><tr><td>Settlement Date（交割日）</td><td>多為 T+2 或 T+3</td></tr></tbody></table><div class=\"mermaid\">graph LR\n    A[Clean Price 報價<br/>例：99.50] --> B[+ Accrued Interest<br/>例：0.75]\n    B --> C[Dirty Price<br/>= 100.25]\n    C --> D[× 面額<br/>= 實際付款]\n    style C fill:#019AB3,color:#fff</div><p><strong>實務提醒</strong>：客戶收到對帳單看到「成交價 100.25」時不要誤以為買貴了，因為這是含息價，淨價可能僅 99.5。Day Count Convention（日數計算慣例）也影響應計利息：</p><ul><li>30/360：每月當 30 天、每年當 360 天（公司債常用）</li><li>Actual/Actual：實際日數（美國公債常用）</li><li>Actual/365：實際日數除以 365（部分國家公債）</li></ul>"
     },
     {

@@ -16,7 +16,7 @@
       "html": "<div class=\"mermaid\">graph TD\n    A[財管業務] --> B[客戶關係系統<br/>CRM]\n    A --> C[商品適合度系統<br/>KYC/KYP]\n    A --> D[基金交易系統]\n    A --> E[保險投保系統<br/>保險 e 點通]\n    A --> F[債券承做系統]\n    A --> G[信託管理系統]\n    A --> H[對帳與績效系統]\n    style A fill:#019AB3,color:#fff</div><table><thead><tr><th>系統類型</th><th>主要功能</th></tr></thead><tbody><tr><td>CRM 客戶關係</td><td>客戶資料、互動紀錄、商機管理</td></tr><tr><td>商品適合度</td><td>風險屬性問卷、商品分級、適合度檢核</td></tr><tr><td>基金交易</td><td>基金申購、轉換、贖回、定期定額</td></tr><tr><td>保險投保</td><td>要保書、健康告知、核保流程</td></tr><tr><td>債券承做</td><td>商品揭露、PI 認定、承作申請</td></tr><tr><td>信託管理</td><td>信託契約、財產管理、給付執行</td></tr><tr><td>對帳與績效</td><td>客戶持倉、淨值、損益、報告產生</td></tr></tbody></table>"
     },
     {
-      "heading": "商品適合度系統操作",
+      "heading": "商品適合度系統",
       "html": "<p>商品適合度系統是所有財管銷售的「合規閘門」，所有銷售前必須通過適合度檢核。</p><div class=\"mermaid\">graph LR\n    A[客戶 KYC 完成] --> B[系統建立客戶屬性]\n    B --> C[業務員選擇商品]\n    C --> D{適合度檢核}\n    D -->|RR ≤ C 屬性| E[系統放行下單]\n    D -->|RR &gt; C 屬性| F[逾屬性流程]\n    F --> G[簽署逾屬性聲明書]\n    G --> H[主管核准]\n    H --> E\n    style E fill:#019AB3,color:#fff\n    style F fill:#d62828,color:#fff</div><table><thead><tr><th>適合度檢核項目</th><th>系統檢核點</th></tr></thead><tbody><tr><td>客戶風險屬性</td><td>有效期內、覆核完成</td></tr><tr><td>商品風險等級</td><td>已建檔且為現行有效</td></tr><tr><td>RR vs C 對應</td><td>商品 RR ≤ 客戶 C，否則阻擋</td></tr><tr><td>禁售商品</td><td>主管機關禁售名單檢核</td></tr><tr><td>地區限制</td><td>客戶居住地禁售商品（如 FATCA）</td></tr><tr><td>累計集中度</td><td>單一商品占客戶資產比例上限</td></tr></tbody></table>"
     },
     {
@@ -24,11 +24,11 @@
       "html": "<table><thead><tr><th>交易類型</th><th>必要步驟</th></tr></thead><tbody><tr><td>單筆申購</td><td>選基金 → 適合度檢核 → 簽署 → 扣款 → 確認書</td></tr><tr><td>定期定額</td><td>選基金 → 設定扣款日期/金額 → 適合度檢核 → 簽署授權</td></tr><tr><td>轉換</td><td>原基金 → 目標基金 → 適合度檢核（兩者）→ 簽署</td></tr><tr><td>贖回</td><td>選基金 → 金額/單位數 → 簽署 → 入帳確認</td></tr></tbody></table><div class=\"mermaid\">graph TD\n    A[客戶下單意願] --> B[業務員系統下單]\n    B --> C[適合度系統檢核]\n    C --> D[客戶簽署申購書]\n    D --> E[交付公開說明書]\n    E --> F[扣款]\n    F --> G[確認書與對帳單]\n    style C fill:#019AB3,color:#fff</div><blockquote><p><strong>合規重點</strong>：</p><ul><li>每筆交易都必須通過適合度檢核，無例外</li><li>客戶簽署應親見核對</li><li>公開說明書交付證明必須留存</li><li>定期定額亦需每年覆核客戶屬性與商品分級</li></ul></blockquote>"
     },
     {
-      "heading": "保險投保系統（保險 e 點通）",
+      "heading": "保險投保系統",
       "html": "<p>保險商品下單流程與基金不同，涉及健康告知、核保等獨特步驟。</p><div class=\"mermaid\">graph LR\n    A[需求分析] --> B[商品建議]\n    B --> C[要保書填寫]\n    C --> D[健康告知書]\n    D --> E[適合度評估]\n    E --> F[繳費]\n    F --> G[保險公司核保]\n    G --> H{核保結果}\n    H -->|承保| I[寄發保單]\n    H -->|延期/拒保| J[退費或修改條件]\n    style C fill:#019AB3,color:#fff</div><table><thead><tr><th>環節</th><th>系統功能</th></tr></thead><tbody><tr><td>商品適合度</td><td>客戶屬性 vs 保險商品分級</td></tr><tr><td>要保書填寫</td><td>個人資料、被保險人、受益人、繳費方式</td></tr><tr><td>健康告知</td><td>系統提示告知事項清單，客戶逐項回答</td></tr><tr><td>核保查驗</td><td>過往就醫紀錄、保險業通報資料</td></tr><tr><td>保費試算</td><td>依年齡、性別、繳費方式自動試算</td></tr><tr><td>契約撤銷</td><td>10 日內客戶可契約撤銷退費</td></tr></tbody></table>"
     },
     {
-      "heading": "下單表單的合規重點",
+      "heading": "下單合規重點",
       "html": "<table><thead><tr><th>表單欄位</th><th>合規要點</th></tr></thead><tbody><tr><td>客戶簽名</td><td>應親見、與身分證簽名比對</td></tr><tr><td>商品說明交付證明</td><td>客戶簽收欄</td></tr><tr><td>風險預告書</td><td>逐項核對、客戶簽署</td></tr><tr><td>適合度評估結果</td><td>系統列印附件，客戶簽署確認</td></tr><tr><td>銷售人員資訊</td><td>業務員姓名、員工編號</td></tr><tr><td>分行主管核可（如逾屬性）</td><td>主管簽章與核可日期</td></tr><tr><td>錄音錄影檔編號</td><td>關聯交易與錄音檔</td></tr></tbody></table>\n<details><summary>必備留證清單</summary><ul><li>客戶身分證影本</li><li>客戶簽署的申購／要保書</li><li>商品說明書交付證明</li><li>風險預告書（客戶簽署）</li><li>適合度評估結果（系統列印）</li><li>逾屬性聲明書（如適用）</li><li>主管核准書面（如適用）</li><li>錄音錄影檔（複雜商品）</li><li>後續交易確認書與對帳單</li></ul></details>"
     },
     {

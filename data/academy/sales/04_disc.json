@@ -12,7 +12,7 @@
   ],
   "sections": [
     {
-      "heading": "DISC 模型起源與架構",
+      "heading": "DISC模型架構",
       "html": "<p>DISC 模型由心理學家 William Marston 於 1928 年提出（著作《Emotions of Normal People》）。將人格特質分為四個維度，廣泛應用於職場、銷售與團隊建立。</p><div class=\"mermaid\">graph TD\n    A[DISC 模型] --> B[D Dominance<br/>主導型]\n    A --> C[I Influence<br/>影響型]\n    A --> D[S Steadiness<br/>穩健型]\n    A --> E[C Conscientiousness<br/>謹慎型]\n    style B fill:#e63946,color:#fff\n    style C fill:#f4a261,color:#fff\n    style D fill:#2a9d8f,color:#fff\n    style E fill:#264653,color:#fff</div><table><thead><tr><th>類型</th><th>核心動機</th><th>溝通偏好</th><th>決策速度</th></tr></thead><tbody><tr><td>D 主導型</td><td>結果、控制、效率</td><td>直接、簡潔、重點</td><td>快</td></tr><tr><td>I 影響型</td><td>影響力、互動、認可</td><td>熱情、故事、社交</td><td>中</td></tr><tr><td>S 穩健型</td><td>穩定、和諧、安全</td><td>溫和、慢、需時間</td><td>慢</td></tr><tr><td>C 謹慎型</td><td>準確、品質、邏輯</td><td>數據、細節、書面</td><td>慢</td></tr></tbody></table><blockquote><p><strong>注意</strong>：DISC 是「行為偏好」模型，非絕對人格分類。多數人是混合型（如 DI、SC），環境亦會影響表現。</p></blockquote>"
     },
     {
@@ -32,11 +32,11 @@
       "html": "<table><thead><tr><th>特徵</th><th>表現</th></tr></thead><tbody><tr><td>典型職業</td><td>工程師、會計師、律師、研究員、醫師</td></tr><tr><td>言行特徵</td><td>分析、提問、要求數據、反覆查證</td></tr><tr><td>身體語言</td><td>嚴肅、保留距離、皺眉思考</td></tr><tr><td>關注</td><td>準確、邏輯、品質、合理性</td></tr><tr><td>排斥</td><td>含糊、誇大、情緒化推銷</td></tr></tbody></table><p><strong>銷售策略</strong>：</p><ul><li>準備完整數據、研究報告、比較表</li><li>容許他充分提問與查證</li><li>承認商品的局限（不誇大）</li><li>提供書面資料讓他研究</li><li>引用權威來源（學術、官方數據）</li><li>給予充足決策時間</li></ul><p><strong>常見錯誤</strong>：對 C 客戶用「相信我，這個產品很好」沒有任何說服力。</p>"
     },
     {
-      "heading": "DISC 在實務應用的限制",
+      "heading": "DISC應用限制",
       "html": "<p>DISC 是有用工具，但有重要限制需注意。</p><table><thead><tr><th>限制</th><th>說明</th></tr></thead><tbody><tr><td>非精準分類</td><td>多數人是混合型（如 DI、SC），純單一類型少</td></tr><tr><td>情境差異</td><td>同一人在不同情境（工作 vs 家庭）表現不同</td></tr><tr><td>文化差異</td><td>東方文化傾向 S 與 C，西方文化傾向 D 與 I</td></tr><tr><td>非心理疾病診斷</td><td>不能用來判斷心理健康或工作能力</td></tr><tr><td>合規不可豁免</td><td>不論客戶 DISC 類型，KYC/KYP/適合度評估標準一致</td></tr><tr><td>避免標籤化</td><td>初次接觸幾分鐘的觀察難以準確判斷</td></tr></tbody></table><blockquote><p><strong>合規重點</strong>：DISC 是溝通工具，不是「合規簡化的藉口」。對 D 客戶不能因「他不愛聽細節」就省略風險揭露；對 S 客戶不能因「他信任你」就跳過 KYC。所有合規要求對所有 DISC 類型一視同仁。</p></blockquote>"
     },
     {
-      "heading": "DISC 快速辨識題庫",
+      "heading": "DISC辨識題庫",
       "html": "<details><summary>情境 1：客戶看到績效報告</summary><ul><li>D：「漲多少？跟大盤比？」</li><li>I：「太棒了！我朋友會羨慕死！」</li><li>S：「平穩成長很好，不要太大波動就好」</li><li>C：「夏普比率多少？跟基準的追蹤誤差是多少？」</li></ul></details><details><summary>情境 2：客戶決定購買新商品</summary><ul><li>D：「OK，多少額度？怎麼下單？」</li><li>I：「好啊，先試試看，我會跟朋友分享」</li><li>S：「我要回家想一下，再跟太太討論」</li><li>C：「我需要更多資料，下週我再來問你問題」</li></ul></details><details><summary>情境 3：商品虧損後的反應</summary><ul><li>D：「現在怎麼辦？停損還是加碼？」（直接行動）</li><li>I：「為什麼會這樣？跟我預期不一樣」（情緒反應）</li><li>S：「沒關係，長期應該會回來」（容忍接受）</li><li>C：「請拿出當初的研究報告，我們重新檢視」（分析）</li></ul></details>"
     },
     {

@@ -11,19 +11,19 @@
   ],
   "sections": [
     {
-      "heading": "一、資產負債表授信解讀重點",
+      "heading": "資產負債解讀",
       "html": "<p>授信角度讀資產負債表，重點在「能還多少」而非「帳面有多少」：</p><table><thead><tr><th>項目</th><th>授信關注點</th><th>紅旗警示</th></tr></thead><tbody><tr><td>現金及約當現金</td><td>流動性緩衝夠不夠還息</td><td>現金大幅減少但應收帳款飆升</td></tr><tr><td>應收帳款</td><td>DSO 是否正常；是否有集中在特定客戶</td><td>DSO 突然拉長；關係人應收帳款佔比高</td></tr><tr><td>存貨</td><td>存貨週轉是否正常；是否有呆滯品</td><td>存貨大增但銷售未成長（滯銷風險）</td></tr><tr><td>固定資產</td><td>與業務規模是否相符；有無過度投資</td><td>折舊費用異常低（可能低估折舊）</td></tr><tr><td>短期借款</td><td>與流動資產比例；有無以短支長</td><td>短期借款大於流動資產（流動性危機）</td></tr><tr><td>股東權益</td><td>實收資本是否充足；保留盈餘是否健康</td><td>累積虧損吃掉資本；每年發放特別股息清空保留盈餘</td></tr></tbody></table>"
     },
     {
-      "heading": "二、損益表授信解讀重點",
+      "heading": "損益表解讀",
       "html": "<table><thead><tr><th>指標</th><th>公式</th><th>授信參考標準</th><th>說明</th></tr></thead><tbody><tr><td>毛利率</td><td>毛利 ÷ 營收</td><td>與同業比較，趨勢應穩定</td><td>毛利率持續下滑代表競爭加劇或成本失控</td></tr><tr><td>營業利益率</td><td>營業利益 ÷ 營收</td><td>應大於 0；服務業通常 5–15%</td><td>本業獲利能力指標，剔除業外損益影響</td></tr><tr><td>利息保障倍數</td><td>EBIT ÷ 利息費用</td><td>≥ 3 倍為佳；< 1.5 倍須警惕</td><td>稅前息前利潤覆蓋利息費用的倍數</td></tr><tr><td>EBITDA</td><td>EBIT + 折舊 + 攤銷</td><td>用於計算 DSCR</td><td>近似現金獲利能力，較 EPS 不易被操縱</td></tr><tr><td>DSCR</td><td>EBITDA ÷ 本期應還本付息</td><td>≥ 1.2 為授信一般門檻</td><td>< 1.0 代表現金流不足以還款，高度風險</td></tr></tbody></table>"
     },
     {
-      "heading": "三、現金流量表——授信的核心工具",
+      "heading": "現金流量分析",
       "html": "<p>銀行最終靠的是<strong>現金還款</strong>，而非帳面利潤。現金流量表是三大報表中最難被粉飾的：</p><table><thead><tr><th>現金流項目</th><th>健康狀態</th><th>警示狀態</th></tr></thead><tbody><tr><td><strong>營業活動現金流（CFO）</strong></td><td>正值且穩定；應接近或高於淨利</td><td>CFO 持續為負；淨利高但 CFO 低（應收帳款膨脹）</td></tr><tr><td><strong>投資活動現金流（CFI）</strong></td><td>成長期負值為正常（擴產）</td><td>持續高額 CFI 支出但 CFO 不足，財務壓力大</td></tr><tr><td><strong>籌資活動現金流（CFF）</strong></td><td>借款用於擴產合理</td><td>靠不斷借款維持營運（彌補 CFO 不足）</td></tr></tbody></table><p><strong>授信判斷口訣：</strong><br>「CFO 看還款能力，CFI 看資本配置紀律，CFF 看財務結構是否依賴舉債。<strong>CFO < 0 且 CFF 持續為正，是最危險的組合。</strong>」</p>"
     },
     {
-      "heading": "四、財報紅旗——常見授信陷阱",
+      "heading": "財報紅旗辨識",
       "html": "<table><thead><tr><th>紅旗項目</th><th>可能代表</th><th>RM 動作</th></tr></thead><tbody><tr><td>應收帳款快速膨脹但銷售未同比增長</td><td>虛假銷售、關係人交易墊帳</td><td>要求提供帳齡分析、前五大客戶明細</td></tr><tr><td>存貨大增、週轉天數拉長</td><td>滯銷、跌價損失未認列</td><td>要求存貨明細及庫齡分析</td></tr><tr><td>其他應收款金額大且無說明</td><td>資金被掏空、關係人占用</td><td>要求說明往來對象及性質</td></tr><tr><td>折舊費用異常偏低</td><td>資產低估折舊，美化利潤</td><td>與同業比較折舊年限及政策</td></tr><tr><td>淨利高但 CFO 持續為負</td><td>應計利潤而非現金利潤，收款困難</td><td>深入分析應收帳款變動</td></tr><tr><td>短期借款大幅增加、以短支長</td><td>流動性危機前兆</td><td>評估借款期限結構，注意到期集中風險</td></tr><tr><td>查核意見出現保留意見或無法表示意見</td><td>財報可靠性存疑</td><td>徵審應高度謹慎，要求說明，必要時拒絕授信</td></tr></tbody></table>"
     }
   ]

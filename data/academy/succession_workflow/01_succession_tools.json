@@ -12,7 +12,7 @@
   ],
   "sections": [
     {
-      "heading": "五大傳承工具總覽",
+      "heading": "五大工具總覽",
       "html": "<div class=\"mermaid\">graph TD\n    A[高資產傳承工具] --> B[信託]\n    A --> C[投資]\n    A --> D[保險]\n    A --> E[股權]\n    A --> F[房產]\n    style A fill:#019AB3,color:#fff</div><table><thead><tr><th>工具</th><th>核心功能</th><th>法律性質</th><th>典型應用</th></tr></thead><tbody><tr><td><strong>信託</strong></td><td>財產隔離 + 跨代傳承 + 失能保障</td><td>信託法</td><td>家族信託、安養信託、保險金信託</td></tr><tr><td><strong>投資</strong></td><td>長期增值 + 抗通膨 + 流動性</td><td>金保法、投信投顧法</td><td>核心配置、退休金、教育金</td></tr><tr><td><strong>保險</strong></td><td>風險轉嫁 + 遺產稅源 + 跨代</td><td>保險法、遺贈稅法 §16</td><td>身故保障、儲蓄型、投資型</td></tr><tr><td><strong>股權</strong></td><td>家族控制 + 經營傳承 + 表決權</td><td>公司法、證交法</td><td>家族企業傳承、閉鎖性公司</td></tr><tr><td><strong>房產</strong></td><td>實質資產 + 通膨對沖 + 收租</td><td>土地法、房地合一稅</td><td>商辦、土地、自住、收租物件</td></tr></tbody></table><blockquote><p><strong>核心觀念</strong>：沒有單一最佳工具，傳承規劃通常為「多工具組合」。理財顧問的價值在於依客戶資產結構、家庭情境、稅務考量設計合適組合。</p></blockquote>"
     },
     {
@@ -36,11 +36,11 @@
       "html": "<p><strong>核心特色</strong>：實質資產，長期抗通膨，可透過租金產生現金流。傳承面臨房地合一稅、土地增值稅、契稅等多重稅目，需仔細規劃。</p><table><thead><tr><th>面向</th><th>表現</th></tr></thead><tbody><tr><td>稅務效率</td><td>★★（繼承免土增、房地合一稅高）</td></tr><tr><td>控制力</td><td>★★★★（自主決定買賣、出租）</td></tr><tr><td>流動性</td><td>★（變現需數月至 1 年）</td></tr><tr><td>隱私保護</td><td>★★（不動產登記公開）</td></tr><tr><td>跨代能力</td><td>★★（繼承免土增稅但後續再賣計房地合一）</td></tr><tr><td>設立成本</td><td>無（已有不動產者）</td></tr></tbody></table><p><strong>典型應用</strong>：</p><ul><li><strong>自住住宅</strong>：享自用住宅優惠（地價稅 0.2%、土增稅 10%、房地合一稅 10% + 400 萬扣除）</li><li><strong>商辦／收租</strong>：產生租金現金流，搭配投資公司架構降低稅負</li><li><strong>土地投資</strong>：長期增值，繼承免土增稅</li><li><strong>都更案參與</strong>：以舊屋換新屋，搭配信託避免少數所有權人阻擋</li></ul><blockquote><p><strong>個人 vs 投資公司持有</strong>：短期持有/多筆資產/跨代 → 投資公司；長期持有/自住 → 個人。</p></blockquote>"
     },
     {
-      "heading": "五大工具綜合比較",
+      "heading": "五大工具比較",
       "html": "<table><thead><tr><th>比較項目</th><th>信託</th><th>投資</th><th>保險</th><th>股權</th><th>房產</th></tr></thead><tbody><tr><td><strong>稅務效率</strong></td><td>★★★★</td><td>★★</td><td>★★★★</td><td>★★★</td><td>★★</td></tr><tr><td><strong>控制力</strong></td><td>★★★</td><td>★★★★★</td><td>★★★</td><td>★★★★★</td><td>★★★★</td></tr><tr><td><strong>流動性</strong></td><td>★★</td><td>★★★★★</td><td>★★</td><td>★★</td><td>★</td></tr><tr><td><strong>隱私</strong></td><td>★★★★★</td><td>★★</td><td>★★★★</td><td>★★★</td><td>★★</td></tr><tr><td><strong>跨代能力</strong></td><td>★★★★★</td><td>★★</td><td>★★★★</td><td>★★★★</td><td>★★</td></tr><tr><td><strong>設立／維持成本</strong></td><td>中</td><td>低</td><td>低</td><td>中高</td><td>無（既有）</td></tr></tbody></table><div class=\"mermaid\">graph LR\n    A[需求類型] --> B{核心目的}\n    B -->|跨代傳承+隱私| C[信託]\n    B -->|長期增值| D[投資]\n    B -->|遺產稅源+保障| E[保險]\n    B -->|家族企業控制| F[股權]\n    B -->|抗通膨+租金| G[房產]\n    style A fill:#019AB3,color:#fff</div>"
     },
     {
-      "heading": "工具組合與選擇原則",
+      "heading": "工具組合原則",
       "html": "<p>單一工具難以滿足完整傳承需求，實務上多採「核心 + 補強」組合。</p><table><thead><tr><th>家庭類型</th><th>核心工具</th><th>補強工具</th></tr></thead><tbody><tr><td>大眾家庭（&lt; 3,000 萬）</td><td>保險 + 投資</td><td>—</td></tr><tr><td>大眾富裕（3,000 萬 - 1 億）</td><td>投資 + 保險 + 房產</td><td>信託（安養）</td></tr><tr><td>富裕（1 億 - 5 億）</td><td>投資 + 保險 + 信託</td><td>股權、房產分散</td></tr><tr><td>高資產（5 億 - 10 億）</td><td>信託 + 股權 + 保險</td><td>跨境配置、家族辦公室</td></tr><tr><td>超高資產（&gt; 10 億）</td><td>家族信託 + 控股公司 + 多元配置</td><td>家族治理機制、慈善信託</td></tr></tbody></table><blockquote><p><strong>選擇原則</strong>：</p><ol><li><strong>從目的出發</strong>：先確定客戶優先目標（增值/保障/傳承/控制/隱私），再選工具</li><li><strong>稅務整體考量</strong>：單看一個工具的稅優常被多稅目疊加抵銷</li><li><strong>家庭情境匹配</strong>：未成年子女、失能風險、家族企業、跨境身分都影響工具選擇</li><li><strong>合規優先</strong>：避免實質課稅、CFC、利益衝突等風險</li><li><strong>定期檢視</strong>：稅法變動、家庭事件、市場環境改變都需要重新評估</li></ol></blockquote>"
     },
     {

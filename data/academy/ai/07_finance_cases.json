@@ -12,27 +12,27 @@
   ],
   "sections": [
     {
-      "heading": "全景：金融業 AI 用在哪裡",
+      "heading": "金融應用全景",
       "html": "<p>金融業是 AI 應用最積極的產業之一，因為它同時具備三個條件：<strong>大量結構化資料</strong>、<strong>高頻重複作業</strong>，以及<strong>明確的成本與風險效益</strong>。AI 不是要取代理專或法遵人員，而是把「翻資料、找異常、寫初稿」這類耗時工作交給機器，讓人專注在判斷與溝通。</p><p>本章把金融業常見 AI 應用整理成六大類，每一類都從<strong>用途、效益、注意事項</strong>三個角度說明，並特別強調與財富管理理專最相關的場景。</p><blockquote><strong>閱讀前提醒：</strong>以下案例描述的是國內外銀行<em>常見的做法類型</em>，而非宣稱任何特定銀行的未公開內部成效。實際導入效益會因資料品質、流程設計與人員配合而差異很大。</blockquote><div class=\"mermaid\">mindmap\n  root((金融業 AI))\n    對客\n      智能客服\n      智能投顧\n      行銷分群\n    風控\n      反洗錢AML\n      反詐騙\n      信用評估\n    後台\n      OCR文件辨識\n      表單處理\n      法遵審閱\n    理專\n      客戶彙整\n      商品比對\n      會議準備\n</div>"
     },
     {
-      "heading": "對客場景一：智能客服與對話機器人",
+      "heading": "智能客服機器人",
       "html": "<p><strong>用途：</strong>處理高頻、標準化的客戶問題。常見形式包括網銀／App 內的文字聊天機器人、語音客服（IVR 升級版）、以及客服中心的「真人＋AI 副駕」——AI 即時把客戶語音轉文字、調出帳戶資訊、並建議回覆話術。</p><p><strong>效益：</strong></p><ul><li>24 小時即時回覆常見問題（餘額、額度、掛失、利率查詢），分流真人客服負荷。</li><li>語音轉文字（ASR）讓通話自動留下摘要與工單，省去事後打字。</li><li>大型語言模型（LLM）讓機器人能理解口語、不限關鍵字，體驗大幅提升。</li></ul><p><strong>注意事項：</strong></p><ul><li><strong>幻覺風險：</strong>純 LLM 可能編造不存在的費率或規定。實務上須採「檢索增強（RAG）」——只從官方知識庫取答案，並對涉及金額、法遵的問題設定「轉真人」護欄。</li><li><strong>個資與留痕：</strong>對話內容含客戶個資，須符合個資法與金管會的委外、雲端規範。</li><li><strong>邊界揭露：</strong>應讓客戶知道正在與 AI 對話，避免誤導。</li></ul>"
     },
     {
-      "heading": "風控場景：反洗錢、反詐騙與信用風險",
+      "heading": "風控與反詐騙",
       "html": "<p>這一類是金融業最早、也最成熟的 AI 戰場，因為「找出少數異常」正是機器學習的強項。</p><p><strong>反洗錢（AML）與反詐騙：</strong></p><ul><li><strong>用途：</strong>監控交易行為，偵測可疑樣態（如分拆匯款、人頭帳戶、深夜異常轉帳、與詐騙水房帳戶往來）。</li><li><strong>效益：</strong>傳統規則式系統誤報率高，靠人工逐筆審查。AI 模型能學習複雜樣態，<strong>降低誤報（false positive）</strong>，讓法遵人員把時間花在真正高風險案件上。</li><li><strong>注意事項：</strong>模型須能<strong>解釋</strong>（為何判定可疑），以符合監理與內部稽核要求；且犯罪手法持續演化，模型需定期再訓練。</li></ul><p><strong>信用與核保評估：</strong></p><ul><li><strong>用途：</strong>信用評分、貸款審核輔助、保險核保的初步分流。</li><li><strong>效益：</strong>納入更多元的資料維度，加速審件、提升一致性。</li><li><strong>注意事項：</strong>須嚴防<strong>模型偏誤（bias）</strong>與差別待遇，避免對特定族群造成不公平；最終授信決策仍應由人負責，AI 僅為輔助。</li></ul>"
     },
     {
-      "heading": "財富管理場景（與你最相關）",
+      "heading": "財富管理場景",
       "html": "<p>這是理專日常最有感的一塊。AI 的角色是「<strong>把雜事做掉，讓你專心面對客戶</strong>」。</p><p><strong>1. 理專小幫手（Copilot）</strong></p><ul><li><strong>用途：</strong>會議前自動彙整單一客戶的資料——持有部位、近期交易、風險屬性、上次談話重點；並能依客戶屬性，比對適合的商品、產出會議準備摘要。</li><li><strong>效益：</strong>原本要翻多個系統、花 20～30 分鐘的準備，可縮短到幾分鐘，且不易漏掉重點。</li><li><strong>注意事項：</strong>商品比對結果<strong>必須以官方文件與合規話術為準</strong>，理專須自行複核；AI 產出的「推薦」不等於 KYC／適合度確認，銷售流程的法遵步驟一個都不能省。</li></ul><p><strong>2. 智能投顧（Robo-advisor）</strong></p><ul><li><strong>用途：</strong>依客戶風險屬性自動配置投資組合並定期再平衡，多用於小額、標準化的理財需求。</li><li><strong>台灣發展：</strong>金管會自 2017 年開放自動化投資顧問服務，國內多家銀行與投信投顧已推出相關服務，定位多為「協助理專」或「服務小額客戶」，而非完全取代真人。</li><li><strong>注意事項：</strong>須揭露為自動化服務，再平衡邏輯、收費與適合度都受監理規範。</li></ul><p><strong>3. 研究報告與市場資訊摘要</strong></p><ul><li><strong>用途：</strong>把長篇研究報告、法說會逐字稿、盤後新聞，摘要成幾段重點或客戶可讀的版本。</li><li><strong>效益：</strong>大幅縮短「讀資料」時間，理專能更快形成觀點、回應客戶。</li><li><strong>注意事項：</strong>摘要可能漏掉細節或數字出錯，<strong>對外引用前務必回查原文</strong>；不可把未經查核的 AI 摘要當成投資建議發出。</li></ul><p><strong>4. 客戶分群與行銷</strong></p><ul><li><strong>用途：</strong>依資產、交易行為、生命週期事件分群，推估誰可能需要哪類商品（如退休規劃、傳承需求），協助行銷活動命中。</li><li><strong>注意事項：</strong>個資使用須有合法基礎與客戶同意範圍；行銷不得構成不當勸誘。</li></ul>"
     },
     {
-      "heading": "後台與作業自動化",
+      "heading": "後台作業自動化",
       "html": "<p>後台是 AI 最快回收成本（ROI）的地方，因為作業量大、規則明確。</p><ul><li><strong>文件辨識（OCR + LLM）：</strong>把身分證、財力證明、合約等掃描檔自動讀成欄位資料。傳統 OCR 只認字，加上 LLM 後能理解版面、抽出「正確欄位」並做初步檢核。</li><li><strong>表單與開戶流程處理：</strong>自動帶入欄位、檢查必填與一致性，減少人工 key-in 與退件。</li><li><strong>法遵文件審閱：</strong>輔助比對合約條款、檢查文件是否缺漏、整理監理函令重點。注意：法遵的<strong>最終判斷仍須由人負責</strong>，AI 只做初篩與標記。</li><li><strong>程式開發輔助：</strong>IT 部門用 AI 加速寫程式、產測試、查 bug，縮短系統開發時程。</li></ul><table><thead><tr><th>後台應用</th><th>主要效益</th><th>關鍵風險</th></tr></thead><tbody><tr><td>OCR + LLM 文件辨識</td><td>免人工抄錄、加速開戶</td><td>辨識錯誤需人工抽核</td></tr><tr><td>表單／流程自動化</td><td>降退件、提升一致性</td><td>例外案件仍須人工</td></tr><tr><td>法遵文件審閱</td><td>加速比對與整理</td><td>最終責任在人</td></tr><tr><td>程式開發輔助</td><td>縮短開發時程</td><td>產出須資安審查</td></tr></tbody></table>"
     },
     {
-      "heading": "場景總表、成熟度與導入要素",
+      "heading": "場景總表成熟度",
       "html": "<p>下表把六大類場景用「用途 × 效益 × 風險」整理，方便快速判斷。</p><table><thead><tr><th>場景</th><th>用途</th><th>主要效益</th><th>主要風險</th></tr></thead><tbody><tr><td>智能客服</td><td>常見問題、語音轉文字</td><td>24h 即時、分流人力</td><td>幻覺、個資留痕</td></tr><tr><td>反洗錢／反詐</td><td>可疑交易偵測</td><td>降誤報、抓真風險</td><td>需可解釋、易過時</td></tr><tr><td>信用／核保</td><td>評分、審件分流</td><td>加速、一致性</td><td>模型偏誤、需人負責</td></tr><tr><td>理專小幫手</td><td>資料彙整、商品比對</td><td>省準備時間</td><td>仍須複核與走 KYC</td></tr><tr><td>智能投顧</td><td>組合配置、再平衡</td><td>服務小額、輔助理專</td><td>揭露、適合度監理</td></tr><tr><td>後台自動化</td><td>OCR、表單、法遵</td><td>ROI 快、降人工</td><td>例外與責任歸屬</td></tr></tbody></table><p><strong>技術成熟度（越右越成熟、越好落地）：</strong></p><div class=\"mermaid\">graph LR\n  A[試驗期&lt;br/&gt;智能投顧全自動] --&gt; B[成長期&lt;br/&gt;理專小幫手&lt;br/&gt;報告摘要]\n  B --&gt; C[成熟期&lt;br/&gt;反洗錢&lt;br/&gt;OCR文件&lt;br/&gt;智能客服]\n  style A fill:#d62828,color:#fff\n  style B fill:#17B5AD,color:#fff\n  style C fill:#019AB3,color:#fff\n</div><p><strong>導入成功要素：</strong></p><ul><li><strong>資料品質：</strong>AI 的上限由資料決定，髒資料只會放大錯誤。</li><li><strong>人員接受度：</strong>把 AI 定位為「副駕」而非「裁員」，並做好教育訓練，第一線才願意用。</li><li><strong>合規先行：</strong>個資、委外、雲端、適合度，導入前先過法遵。</li><li><strong>ROI 評估：</strong>從作業量大、規則清楚的後台場景先做，最容易看到效益。</li></ul><p><strong>常見陷阱：</strong>追求「全自動」而忽略人機協作、把 AI 摘要當定論不查核、缺乏可解釋性導致稽核無法過、以及只買工具卻沒改流程。</p>"
     },
     {
