@@ -449,10 +449,11 @@ button.academy-card {
 .chapter-content details.det-err { background: #fdf0f0; }
 .chapter-content details.det-err summary { color: #8b2f2c; }
 
+/* 扁平版面：mermaid 圖已在 section 盒內，去掉外層灰底/圓角避免盒中盒 */
 .chapter-content .mermaid {
-  background: var(--academy-bg-soft);
-  padding: 16px;
-  border-radius: 8px;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
   margin: 16px 0;
   text-align: center;
 }

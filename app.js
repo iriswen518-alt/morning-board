@@ -7758,7 +7758,7 @@ function renderLumpFundCards() {
   }).join("");
 
   return `
-    <div style="overflow-x:auto;background:#fff;border-radius:8px">
+    <div style="overflow-x:auto">
       <table class="freeze-col1" style="width:100%;border-collapse:collapse;font-size:13px">
         <thead>
           <tr>
@@ -7810,7 +7810,7 @@ function renderDcaFundCards() {
   }).join("");
 
   return `
-    <div style="overflow-x:auto;background:#fff;border-radius:8px">
+    <div style="overflow-x:auto">
       <table class="freeze-col1" style="width:100%;border-collapse:collapse;font-size:13px">
         <thead>
           <tr>
@@ -7904,7 +7904,7 @@ function renderBeatEtfCards() {
   }).join("");
 
   return `
-    <div style="overflow-x:auto;background:#fff;border-radius:8px">
+    <div style="overflow-x:auto">
       <table class="freeze-col1" style="width:100%;border-collapse:collapse;font-size:13px">
         <thead>
           <tr>
@@ -8224,7 +8224,7 @@ function renderPopularFundCards() {
   const note = asOf ? `<p style="font-size:11px;color:var(--text-mute);margin:8px 0 0">績效截至 ${asOf}，資料來源：板信基金平台（MoneyDJ），不構成投資建議。</p>` : "";
 
   return `
-    <div style="overflow-x:auto;background:#fff;border-radius:8px">
+    <div style="overflow-x:auto">
       <table class="freeze-col1" style="width:100%;border-collapse:collapse;font-size:13px">
         <thead>
           <tr>
