@@ -6452,6 +6452,25 @@ function accSection(key, title, innerHtml, defaultOpen = false) {
     </details>`;
 }
 
+// 回傳該則新聞「發布日」MM/DD（非資料抓取日）。優先序：
+// 權威 published 欄位 → 內文開頭日期 → 標題括號日期；都沒有則回 ""（由呼叫端退回抓取日）。
+function newsItemDate(it) {
+  let d = "";
+  if (it.published) {
+    const m = String(it.published).match(/(\d{4})-(\d{2})-(\d{2})/);
+    if (m) d = `${m[2]}-${m[3]}`;
+  }
+  if (!d && it.body_zh) {
+    const m = String(it.body_zh).slice(0, 200).match(/(\d{4})-(\d{2})-(\d{2})/);
+    if (m) d = `${m[2]}-${m[3]}`;
+  }
+  if (!d && it.title_zh) {
+    const m = it.title_zh.match(/[（(]\d{4}-(\d{2}-\d{2})[）)]/);
+    if (m) d = m[1];
+  }
+  return d ? d.replace("-", "/") : "";
+}
+
 function renderNewsByCategory(cat) {
   const newsDate = (DATA.news && DATA.news.news_date) || "";
   const dateFmt = newsDate ? newsDate.slice(5).replace("-", "/") : ""; // "06/16"
@@ -6462,8 +6481,7 @@ function renderNewsByCategory(cat) {
     if (!items.length) return "";
     const sectionTitle = newsSectionLabel(s.section_zh || s.section);
     const inner = items.map(it => {
-      const titleDateM = it.title_zh && it.title_zh.match(/[（(](\d{4}-(\d{2}-\d{2}))[）)]/);
-      const itemDateFmt = titleDateM ? titleDateM[2].replace("-", "/") : dateFmt;
+      const itemDateFmt = newsItemDate(it) || dateFmt;
       return `
         <div class="news-item">
           <details>

@@ -9,6 +9,7 @@
     **標題 ZH** — 摘要
     - 來源 / Source：[name](url)
 """
+
 import json
 import re
 import sys
@@ -60,6 +61,33 @@ def load_body_map(news_date: Optional[str]) -> Dict[str, str]:
     return out
 
 
+def load_published_map(news_date: Optional[str]) -> Dict[str, str]:
+    """Build {normalized_url -> 'YYYY-MM-DD'} from the raw fetch's `time` field.
+
+    This is each article's真實發布日 (cnyes publishAt 等)，與資料抓取日 news_date 不同。
+    Missing / undated items → absent from map (display falls back to news_date).
+    """
+    if not news_date:
+        return {}
+    raw_path = RAW_NEWS_DIR / f"news_raw_{news_date.replace('-', '')}.json"
+    if not raw_path.exists():
+        return {}
+    try:
+        data = json.loads(raw_path.read_text("utf-8"))
+    except (OSError, ValueError):
+        return {}
+    out: Dict[str, str] = {}
+    for it in data.get("all_items", []):
+        t = (it.get("time") or "").strip()
+        m = re.match(r"(\d{4}-\d{2}-\d{2})", t)
+        if not m:
+            continue
+        key = _norm_url(it.get("url", ""))
+        if key:
+            out[key] = m.group(1)
+    return out
+
+
 def parse_news(md: str) -> dict:
     # date
     m = re.search(r"date:\s*([\d\-]+)", md)
@@ -72,7 +100,11 @@ def parse_news(md: str) -> dict:
         for line in tldr_m.group(1).splitlines():
             stripped = line.strip()
             # Accept lines that have Chinese characters, whether dash-prefixed or indented
-            if not stripped or stripped.startswith("- 來源") or stripped.startswith("- Source"):
+            if (
+                not stripped
+                or stripped.startswith("- 來源")
+                or stripped.startswith("- Source")
+            ):
                 continue
             # Remove leading "- " if present
             if stripped.startswith("- "):
@@ -104,11 +136,13 @@ def parse_news(md: str) -> dict:
 
         items = parse_section_items(body)
         if items:
-            sections.append({
-                "section": section_en,
-                "section_zh": section_zh,
-                "items": items,
-            })
+            sections.append(
+                {
+                    "section": section_en,
+                    "section_zh": section_zh,
+                    "items": items,
+                }
+            )
 
     return {
         "news_date": news_date,
@@ -173,8 +207,9 @@ def parse_one_item(blk: str) -> Optional[dict]:
 
 
 def split_title_body(line: str) -> Tuple[str, str]:
-    """**Title** — body  → ('Title', 'body'). dash 容忍 — / -- / —"""
-    m = re.match(r"\*\*(.+?)\*\*\s*[—\-–]+\s*(.*)", line)
+    """**Title** — body  → ('Title', 'body'). dash 容忍 — / -- / —.
+    Also tolerates an optional date tag (2026-06-18) or（2026-06-18）before the dash."""
+    m = re.match(r"\*\*(.+?)\*\*\s*(?:[(（][^)）]*[)）])?\s*[—\-–]+\s*(.*)", line)
     if m:
         return m.group(1).strip(), m.group(2).strip()
     m = re.match(r"\*\*(.+?)\*\*\s*$", line)
@@ -190,12 +225,17 @@ def main(input_path: str, output_path: str):
     # Attach full article text (captured at fetch time) by URL match so the
     # dashboard can show the story inline instead of only the short summary.
     body_map = load_body_map(data.get("news_date"))
-    if body_map:
+    pub_map = load_published_map(data.get("news_date"))
+    if body_map or pub_map:
         for sec in data.get("sections", []):
             for it in sec.get("items", []):
-                body = body_map.get(_norm_url(it.get("source_url", "")))
+                key = _norm_url(it.get("source_url", ""))
+                body = body_map.get(key)
                 if body:
                     it["body_zh"] = body
+                pub = pub_map.get(key)
+                if pub:
+                    it["published"] = pub
 
     Path(output_path).write_text(
         json.dumps(data, ensure_ascii=False, indent=2), "utf-8"
