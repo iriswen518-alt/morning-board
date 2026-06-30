@@ -22,7 +22,7 @@
   padding: 18px 20px;
   margin-bottom: 20px;
   background: linear-gradient(135deg, #e8f5f6 0%, #def1f2 100%);
-  border: 1px solid rgba(1, 154, 179, 0.18);
+  border: 1px solid rgba(44, 140, 126, 0.18);
   border-radius: 12px;
 }
 .install-hero-icon {
@@ -35,7 +35,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 10px rgba(1, 154, 179, 0.22);
+  box-shadow: 0 4px 10px rgba(44, 140, 126, 0.22);
 }
 .install-hero-icon svg { width: 26px; height: 26px; }
 .install-hero-meta { flex: 1; min-width: 0; }
@@ -68,7 +68,7 @@
 }
 .install-card.is-target {
   border-color: var(--brand-primary);
-  box-shadow: 0 4px 14px rgba(1, 154, 179, 0.18);
+  box-shadow: 0 4px 14px rgba(44, 140, 126, 0.18);
   background: #fff;
 }
 .install-card-title {
@@ -105,7 +105,7 @@
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(1, 154, 179, 0.25);
+  box-shadow: 0 4px 12px rgba(44, 140, 126, 0.25);
 }
 .install-btn:hover { filter: brightness(1.05); }
 

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-30T10:01:28+08:00",
+  "generated_at": "2026-06-30T12:01:48+08:00",
   "tw": {
     "as_of": "2026-06-30",
     "top_marketcap": [
@@ -680,7 +680,7 @@
         "price": 281.74,
         "daily_pct": -0.72,
         "market_cap": 4138015391744,
-        "pe": 34.358536,
+        "pe": 34.150303,
         "pe_kind": "trailing",
         "mtd_pct": -9.72,
         "ytd_pct": 3.63,
@@ -732,7 +732,7 @@
         "price": 411.84,
         "daily_pct": 8.46,
         "market_cap": 1546757210112,
-        "pe": 374.4,
+        "pe": 384.8972,
         "pe_kind": "trailing",
         "mtd_pct": -5.5,
         "ytd_pct": -8.42,
@@ -864,7 +864,7 @@
         "price": 216.16,
         "daily_pct": 19.04,
         "market_cap": 48171376640,
-        "pe": 400.2963,
+        "pe": 480.3556,
         "pe_kind": "trailing",
         "mtd_pct": -8.79,
         "ytd_pct": null,
@@ -877,7 +877,7 @@
         "price": 455.96,
         "daily_pct": 16.39,
         "market_cap": 78155161600,
-        "pe": 263.5607,
+        "pe": 312.30136,
         "pe_kind": "trailing",
         "mtd_pct": 32.99,
         "ytd_pct": 174.08,
@@ -903,7 +903,7 @@
         "price": 255.69,
         "daily_pct": 15.67,
         "market_cap": 220056485888,
-        "pe": 122.92789,
+        "pe": 123.52174,
         "pe_kind": "trailing",
         "mtd_pct": 41.14,
         "ytd_pct": 192.02,
@@ -931,7 +931,7 @@
         "price": 359.76,
         "daily_pct": -15.45,
         "market_cap": 10125287424,
-        "pe": 23.920214,
+        "pe": 20.245358,
         "pe_kind": "trailing",
         "mtd_pct": -13.83,
         "ytd_pct": -13.77,
@@ -944,7 +944,7 @@
         "price": 115.85,
         "daily_pct": -14.45,
         "market_cap": 9181285376,
-        "pe": 24.2364,
+        "pe": 20.6875,
         "pe_kind": "trailing",
         "mtd_pct": 2.21,
         "ytd_pct": 82.67,
@@ -970,7 +970,7 @@
         "price": 10.45,
         "daily_pct": -8.73,
         "market_cap": 5006141952,
-        "pe": 30.735292,
+        "pe": 28.243242,
         "pe_kind": "trailing",
         "mtd_pct": 0.0,
         "ytd_pct": 17.02,
@@ -1009,7 +1009,7 @@
         "price": 28.15,
         "daily_pct": -8.1,
         "market_cap": 18209474560,
-        "pe": 16.085714,
+        "pe": 14.815789,
         "pe_kind": "trailing",
         "mtd_pct": -38.92,
         "ytd_pct": -3.83,
@@ -1136,6 +1136,19 @@
         "source_url": "https://finance.yahoo.com/quote/TLT"
       },
       {
+        "symbol": "XLC",
+        "name": "State Street Communication Serv",
+        "price": 107.88,
+        "daily_pct": 0.95,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": -6.75,
+        "ytd_pct": -8.36,
+        "yahoo": "XLC",
+        "source_url": "https://finance.yahoo.com/quote/XLC"
+      },
+      {
         "symbol": "DIA",
         "name": "State Street SPDR Dow Jones Ind",
         "price": 521.68,
@@ -1160,19 +1173,6 @@
         "ytd_pct": 17.82,
         "yahoo": "XLI",
         "source_url": "https://finance.yahoo.com/quote/XLI"
-      },
-      {
-        "symbol": "IWM",
-        "name": "iShares Russell 2000 Index Fund",
-        "price": 298.97,
-        "daily_pct": 0.26,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": 2.94,
-        "ytd_pct": 21.45,
-        "yahoo": "IWM",
-        "source_url": "https://finance.yahoo.com/quote/IWM"
       }
     ],
     "sectors": [
@@ -1247,6 +1247,20 @@
         "name_zh": "非必需消費"
       },
       {
+        "symbol": "XLC",
+        "name": "State Street Communication Serv",
+        "price": 107.88,
+        "daily_pct": 0.95,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": -6.75,
+        "ytd_pct": -8.36,
+        "yahoo": "XLC",
+        "source_url": "https://finance.yahoo.com/quote/XLC",
+        "name_zh": "通訊"
+      },
+      {
         "symbol": "XLI",
         "name": "State Street Industrial Select ",
         "price": 182.76,
@@ -1273,34 +1287,6 @@
         "yahoo": "XLF",
         "source_url": "https://finance.yahoo.com/quote/XLF",
         "name_zh": "金融"
-      },
-      {
-        "symbol": "XLE",
-        "name": "State Street Energy Select Sect",
-        "price": 53.58,
-        "daily_pct": -0.89,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": -4.81,
-        "ytd_pct": 19.84,
-        "yahoo": "XLE",
-        "source_url": "https://finance.yahoo.com/quote/XLE",
-        "name_zh": "能源"
-      },
-      {
-        "symbol": "XLB",
-        "name": "State Street Materials Select S",
-        "price": 50.66,
-        "daily_pct": -1.86,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": -0.96,
-        "ytd_pct": 11.71,
-        "yahoo": "XLB",
-        "source_url": "https://finance.yahoo.com/quote/XLB",
-        "name_zh": "原物料"
       },
       {
         "symbol": "XLK",
