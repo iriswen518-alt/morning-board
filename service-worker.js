@@ -28,7 +28,9 @@
 // v28（2026-06-11）：上次更新時間改取 max(本機 meta.built_at, 雲端 quotes_built_at)，Mac 關著時雲端報價刷新也會推進「上次更新」，避免標籤看起來卡住。
 // v41（2026-06-26）：理財聊聊新增交易時間查詢（台指期/台股/美股），bump 快取版本讓 app.js 更新生效。
 // v42（2026-06-26）：即時行情詳情頁「資料時間」改為同時顯示當地時間＋台灣時間。
-const CACHE = "morning-board-v42";
+// v43（2026-06-30）：理財聊聊知識庫大幅擴充（28→112 則，含海外債/傳承/結構商品/合規/總經專業深度），
+//   補強換問法關鍵字命中，並把延伸參考深連結到小學堂對應的整門課程。
+const CACHE = "morning-board-v43";
 
 self.addEventListener("install", e => {
   self.skipWaiting();
