@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-30T16:44:44+08:00",
+  "generated_at": "2026-06-30T18:02:21+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -17,20 +17,6 @@
       "error": null
     },
     {
-      "symbol": "SMCI",
-      "name_zh": "美超微",
-      "kind": "US",
-      "price": 28.15,
-      "change_pct": -8.1,
-      "mtd_pct": -38.92,
-      "ytd_pct": -3.83,
-      "market_date": "2026-06-29",
-      "per": 14.873,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SMCI.US",
-      "error": null
-    },
-    {
       "symbol": "IRDM",
       "name_zh": "Iridium Communications",
       "kind": "US",
@@ -45,31 +31,17 @@
       "error": null
     },
     {
-      "symbol": "AMAT",
-      "name_zh": "應材",
+      "symbol": "SMCI",
+      "name_zh": "美超微",
       "kind": "US",
-      "price": 694.64,
-      "change_pct": 10.82,
-      "mtd_pct": 54.34,
-      "ytd_pct": 170.3,
+      "price": 28.15,
+      "change_pct": -8.1,
+      "mtd_pct": -38.92,
+      "ytd_pct": -3.83,
       "market_date": "2026-06-29",
-      "per": 61.0998,
+      "per": 14.873,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AMAT.US",
-      "error": null
-    },
-    {
-      "symbol": "ASTS",
-      "name_zh": "AST SpaceMobile",
-      "kind": "US",
-      "price": 86.77,
-      "change_pct": 21.44,
-      "mtd_pct": -23.49,
-      "ytd_pct": 19.47,
-      "market_date": "2026-06-29",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ASTS.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SMCI.US",
       "error": null
     },
     {
@@ -87,17 +59,17 @@
       "error": null
     },
     {
-      "symbol": "CMCSA",
-      "name_zh": "Comcast",
+      "symbol": "AMAT",
+      "name_zh": "應材",
       "kind": "US",
-      "price": 24.22,
-      "change_pct": 4.53,
-      "mtd_pct": -2.61,
-      "ytd_pct": -13.54,
+      "price": 694.64,
+      "change_pct": 10.82,
+      "mtd_pct": 54.34,
+      "ytd_pct": 170.3,
       "market_date": "2026-06-29",
-      "per": 4.6912,
+      "per": 61.0998,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CMCSA.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AMAT.US",
       "error": null
     },
     {
@@ -115,6 +87,34 @@
       "error": null
     },
     {
+      "symbol": "CMCSA",
+      "name_zh": "Comcast",
+      "kind": "US",
+      "price": 24.22,
+      "change_pct": 4.53,
+      "mtd_pct": -2.61,
+      "ytd_pct": -13.54,
+      "market_date": "2026-06-29",
+      "per": 4.6912,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CMCSA.US",
+      "error": null
+    },
+    {
+      "symbol": "ASTS",
+      "name_zh": "AST SpaceMobile",
+      "kind": "US",
+      "price": 86.77,
+      "change_pct": 21.44,
+      "mtd_pct": -23.49,
+      "ytd_pct": 19.47,
+      "market_date": "2026-06-29",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ASTS.US",
+      "error": null
+    },
+    {
       "symbol": "SHAZ",
       "name_zh": "SharonAI",
       "kind": "US",
@@ -126,20 +126,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SHAZ.US",
-      "error": null
-    },
-    {
-      "symbol": "VZ",
-      "name_zh": "威訊",
-      "kind": "US",
-      "price": 44.1,
-      "change_pct": -5.24,
-      "mtd_pct": -7.76,
-      "ytd_pct": 8.27,
-      "market_date": "2026-06-29",
-      "per": 11.2071,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VZ.US",
       "error": null
     },
     {
@@ -157,17 +143,17 @@
       "error": null
     },
     {
-      "symbol": "VSAT",
-      "name_zh": "ViaSat",
+      "symbol": "SLS",
+      "name_zh": "SELLAS Life Sciences",
       "kind": "US",
-      "price": 76.69,
-      "change_pct": 23.79,
-      "mtd_pct": -4.87,
-      "ytd_pct": 122.55,
+      "price": 15.45,
+      "change_pct": 24.7,
+      "mtd_pct": 65.95,
+      "ytd_pct": 309.81,
       "market_date": "2026-06-29",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VSAT.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SLS.US",
       "error": null
     },
     {
@@ -185,17 +171,45 @@
       "error": null
     },
     {
-      "symbol": "GLW",
-      "name_zh": "Corning Incorporated",
+      "symbol": "VZ",
+      "name_zh": "威訊",
       "kind": "US",
-      "price": 255.69,
-      "change_pct": 15.67,
-      "mtd_pct": 41.14,
-      "ytd_pct": 192.02,
+      "price": 44.1,
+      "change_pct": -5.24,
+      "mtd_pct": -7.76,
+      "ytd_pct": 8.27,
       "market_date": "2026-06-29",
-      "per": 107.8175,
+      "per": 11.2071,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GLW.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VZ.US",
+      "error": null
+    },
+    {
+      "symbol": "VSAT",
+      "name_zh": "ViaSat",
+      "kind": "US",
+      "price": 76.69,
+      "change_pct": 23.79,
+      "mtd_pct": -4.87,
+      "ytd_pct": 122.55,
+      "market_date": "2026-06-29",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VSAT.US",
+      "error": null
+    },
+    {
+      "symbol": "CAST",
+      "name_zh": "FreeCast",
+      "kind": "US",
+      "price": 5.6,
+      "change_pct": -26.8,
+      "mtd_pct": 574.7,
+      "ytd_pct": null,
+      "market_date": "2026-06-29",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CAST.US",
       "error": null
     },
     {
