@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-30T09:01:42+08:00",
+  "generated_at": "2026-06-30T10:01:28+08:00",
   "tw": {
     "as_of": "2026-06-30",
     "top_marketcap": [
@@ -693,7 +693,7 @@
         "price": 368.57,
         "daily_pct": -1.18,
         "market_cap": 2737898258432,
-        "pe": 21.964838,
+        "pe": 21.92564,
         "pe_kind": "trailing",
         "mtd_pct": -18.14,
         "ytd_pct": -23.79,
@@ -877,7 +877,7 @@
         "price": 455.96,
         "daily_pct": 16.39,
         "market_cap": 78155161600,
-        "pe": 306.01343,
+        "pe": 263.5607,
         "pe_kind": "trailing",
         "mtd_pct": 32.99,
         "ytd_pct": 174.08,
@@ -1110,6 +1110,19 @@
         "source_url": "https://finance.yahoo.com/quote/XLRE"
       },
       {
+        "symbol": "XLY",
+        "name": "State Street Consumer Discretio",
+        "price": 117.12,
+        "daily_pct": 1.9,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": -3.1,
+        "ytd_pct": -1.92,
+        "yahoo": "XLY",
+        "source_url": "https://finance.yahoo.com/quote/XLY"
+      },
+      {
         "symbol": "TLT",
         "name": "iShares 20+ Year Treasury Bond ",
         "price": 87.45,
@@ -1121,19 +1134,6 @@
         "ytd_pct": 0.33,
         "yahoo": "TLT",
         "source_url": "https://finance.yahoo.com/quote/TLT"
-      },
-      {
-        "symbol": "XLC",
-        "name": "State Street Communication Serv",
-        "price": 107.88,
-        "daily_pct": 0.95,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": -6.75,
-        "ytd_pct": -8.36,
-        "yahoo": "XLC",
-        "source_url": "https://finance.yahoo.com/quote/XLC"
       },
       {
         "symbol": "DIA",
@@ -1233,18 +1233,18 @@
         "name_zh": "房地產"
       },
       {
-        "symbol": "XLC",
-        "name": "State Street Communication Serv",
-        "price": 107.88,
-        "daily_pct": 0.95,
+        "symbol": "XLY",
+        "name": "State Street Consumer Discretio",
+        "price": 117.12,
+        "daily_pct": 1.9,
         "market_cap": null,
         "pe": null,
         "pe_kind": null,
-        "mtd_pct": -6.75,
-        "ytd_pct": -8.36,
-        "yahoo": "XLC",
-        "source_url": "https://finance.yahoo.com/quote/XLC",
-        "name_zh": "通訊"
+        "mtd_pct": -3.1,
+        "ytd_pct": -1.92,
+        "yahoo": "XLY",
+        "source_url": "https://finance.yahoo.com/quote/XLY",
+        "name_zh": "非必需消費"
       },
       {
         "symbol": "XLI",
