@@ -130,11 +130,11 @@
     {
       "name": "Shanghai 上證",
       "name_zh": null,
-      "close": 4094.397216796875,
-      "daily_pct": 0.5,
+      "close": 4073.902099609375,
+      "daily_pct": 1.16,
       "mtd_pct": 0.13,
       "ytd_pct": 2.65,
-      "closing_date": "2026-06-30"
+      "closing_date": "2026-06-29"
     },
     {
       "name": "CSI 300 滬深300",
@@ -174,15 +174,15 @@
     },
     {
       "name": "US 2-Year",
-      "yield_pct": 4.1,
-      "daily_bps": -0.7,
+      "yield_pct": 4.11,
+      "daily_bps": 0.0,
       "mtd_bps": 12.0,
       "closing_date": "2026-06-30"
     },
     {
       "name": "Germany 10-Year",
       "yield_pct": 2.89,
-      "daily_bps": -1.6,
+      "daily_bps": -0.9,
       "mtd_bps": -9.37,
       "closing_date": "2026-06-30"
     },
@@ -195,8 +195,8 @@
     },
     {
       "name": "UK 10-Year",
-      "yield_pct": 4.71,
-      "daily_bps": -0.9,
+      "yield_pct": 4.73,
+      "daily_bps": 0.4,
       "mtd_bps": -6.54,
       "closing_date": "2026-06-30"
     },
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 101.11000061035156,
       "daily_pct": -0.25,
-      "mtd_pct": 2.48,
-      "ytd_pct": 3.13,
+      "mtd_pct": 2.43,
+      "ytd_pct": 3.09,
       "closing_date": "2026-06-29"
     },
     {
@@ -416,7 +416,7 @@
     {
       "label": "Sep 2026",
       "fomc_date": "2026-09-17",
-      "implied_rate": 3.76,
+      "implied_rate": 3.77,
       "delta_rate": 0.13,
       "delta_bps": 13.0,
       "p_hike": 52.0,
@@ -428,17 +428,17 @@
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
       "implied_rate": 3.83,
-      "delta_rate": 0.07,
-      "delta_bps": 7.0,
-      "p_hike": 28.0,
-      "p_hold": 72.0,
+      "delta_rate": 0.06,
+      "delta_bps": 6.0,
+      "p_hike": 24.0,
+      "p_hold": 76.0,
       "p_cut": 0,
       "is_reference": false
     },
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 3.93,
+      "implied_rate": 3.94,
       "delta_rate": 0.1,
       "delta_bps": 10.0,
       "p_hike": 40.0,
