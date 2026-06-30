@@ -1,5 +1,5 @@
 {
-  "closing_date": "2026-06-29",
+  "closing_date": "2026-06-30",
   "indices": [
     {
       "name": "S&P 500",
@@ -85,20 +85,20 @@
     {
       "name": "TAIEX 加權指數",
       "name_zh": null,
-      "close": 44999.8984375,
-      "daily_pct": 0.96,
+      "close": 46125.91,
+      "daily_pct": 2.5,
       "mtd_pct": 0.6,
       "ytd_pct": 55.37,
-      "closing_date": "2026-06-29"
+      "closing_date": "2026-06-30"
     },
     {
       "name": "OTC 櫃買加權",
       "name_zh": null,
-      "close": 412.93,
-      "daily_pct": -0.56,
+      "close": 426.97,
+      "daily_pct": 3.4,
       "mtd_pct": -6.4,
       "ytd_pct": 50.33,
-      "closing_date": "2026-06-29"
+      "closing_date": "2026-06-30"
     },
     {
       "name": "台指期(近月)",
@@ -181,15 +181,15 @@
     },
     {
       "name": "Germany 10-Year",
-      "yield_pct": 2.86,
-      "daily_bps": 1.2,
+      "yield_pct": 2.9,
+      "daily_bps": 0.0,
       "mtd_bps": -9.42,
       "closing_date": "2026-06-30"
     },
     {
       "name": "Japan 10-Year",
       "yield_pct": 2.68,
-      "daily_bps": 4.1,
+      "daily_bps": 4.0,
       "mtd_bps": -1.3,
       "closing_date": "2026-06-30"
     },
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 101.11000061035156,
       "daily_pct": -0.25,
-      "mtd_pct": 2.43,
-      "ytd_pct": 3.09,
+      "mtd_pct": 2.48,
+      "ytd_pct": 3.14,
       "closing_date": "2026-06-29"
     },
     {
@@ -390,7 +390,7 @@
     "curve_shape": "正斜率",
     "dxy": 101.11000061035156,
     "dxy_daily_pct": -0.25,
-    "closing_date": "2026-06-29"
+    "closing_date": "2026-06-26"
   },
   "fedwatch": [
     {
@@ -438,14 +438,14 @@
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 3.94,
-      "delta_rate": 0.11,
-      "delta_bps": 11.0,
-      "p_hike": 44.0,
-      "p_hold": 56.0,
+      "implied_rate": 3.93,
+      "delta_rate": 0.1,
+      "delta_bps": 10.0,
+      "p_hike": 40.0,
+      "p_hold": 60.0,
       "p_cut": 0,
       "is_reference": false
     }
   ],
-  "summary": "6/29 PHLX Semiconductor +3.83%、6/29 台指期(近月) +2.47%、6/29 Nasdaq Composite +2.07% 領漲；6/29 OTC 櫃買加權 -0.56%、6/29 FTSE 100 -0.23% 走弱。"
+  "summary": "6/29 PHLX Semiconductor +3.83%、6/30 OTC 櫃買加權 +3.40%、6/30 TAIEX 加權指數 +2.50% 領漲；6/29 FTSE 100 -0.23%、6/29 CAC 40 -0.21% 走弱。"
 }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-30T12:17:32+08:00",
+  "generated_at": "2026-06-30T13:46:37+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -59,6 +59,20 @@
       "error": null
     },
     {
+      "symbol": "AMAT",
+      "name_zh": "應材",
+      "kind": "US",
+      "price": 694.64,
+      "change_pct": 10.82,
+      "mtd_pct": 54.34,
+      "ytd_pct": 170.3,
+      "market_date": "2026-06-29",
+      "per": 61.0998,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AMAT.US",
+      "error": null
+    },
+    {
       "symbol": "RKLB",
       "name_zh": "Rocket Lab",
       "kind": "US",
@@ -70,6 +84,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RKLB.US",
+      "error": null
+    },
+    {
+      "symbol": "JACK",
+      "name_zh": "Jack In The Box",
+      "kind": "US",
+      "price": 16.6,
+      "change_pct": 20.2,
+      "mtd_pct": 33.33,
+      "ytd_pct": -12.4,
+      "market_date": "2026-06-29",
+      "per": 7.2562,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=JACK.US",
       "error": null
     },
     {
@@ -115,17 +143,31 @@
       "error": null
     },
     {
-      "symbol": "AMAT",
-      "name_zh": "應材",
+      "symbol": "GLW",
+      "name_zh": "Corning Incorporated",
       "kind": "US",
-      "price": 694.64,
-      "change_pct": 10.82,
-      "mtd_pct": 54.34,
-      "ytd_pct": 170.3,
+      "price": 255.69,
+      "change_pct": 15.67,
+      "mtd_pct": 41.14,
+      "ytd_pct": 192.02,
       "market_date": "2026-06-29",
-      "per": 61.0998,
+      "per": 107.8175,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AMAT.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GLW.US",
+      "error": null
+    },
+    {
+      "symbol": "ALAB",
+      "name_zh": "Astera Labs",
+      "kind": "US",
+      "price": 455.96,
+      "change_pct": 16.39,
+      "mtd_pct": 32.99,
+      "ytd_pct": 174.08,
+      "market_date": "2026-06-29",
+      "per": 292.0324,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ALAB.US",
       "error": null
     },
     {
@@ -157,17 +199,17 @@
       "error": null
     },
     {
-      "symbol": "JACK",
-      "name_zh": "Jack In The Box",
+      "symbol": "KLAC",
+      "name_zh": "科磊",
       "kind": "US",
-      "price": 16.6,
-      "change_pct": 20.2,
-      "mtd_pct": 33.33,
-      "ytd_pct": -12.4,
+      "price": 278.39,
+      "change_pct": 11.97,
+      "mtd_pct": 44.87,
+      "ytd_pct": 129.11,
       "market_date": "2026-06-29",
-      "per": 7.2562,
+      "per": 78.107,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=JACK.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=KLAC.US",
       "error": null
     },
     {
@@ -199,45 +241,17 @@
       "error": null
     },
     {
-      "symbol": "ALAB",
-      "name_zh": "Astera Labs",
+      "symbol": "LRCX",
+      "name_zh": "科林研發",
       "kind": "US",
-      "price": 455.96,
-      "change_pct": 16.39,
-      "mtd_pct": 32.99,
-      "ytd_pct": 174.08,
+      "price": 410.91,
+      "change_pct": 8.39,
+      "mtd_pct": 29.14,
+      "ytd_pct": 140.05,
       "market_date": "2026-06-29",
-      "per": 292.0324,
+      "per": 72.45,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ALAB.US",
-      "error": null
-    },
-    {
-      "symbol": "PAVS",
-      "name_zh": "Paranovus Entertainment Technol",
-      "kind": "US",
-      "price": 6.15,
-      "change_pct": -15.75,
-      "mtd_pct": -93.71,
-      "ytd_pct": -99.65,
-      "market_date": "2026-06-26",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PAVS.US",
-      "error": null
-    },
-    {
-      "symbol": "CPRT",
-      "name_zh": "Copart",
-      "kind": "US",
-      "price": 28.1,
-      "change_pct": -8.02,
-      "mtd_pct": -14.25,
-      "ytd_pct": -28.22,
-      "market_date": "2026-06-29",
-      "per": 17.6615,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CPRT.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LRCX.US",
       "error": null
     },
     {
@@ -255,31 +269,17 @@
       "error": null
     },
     {
-      "symbol": "KLAC",
-      "name_zh": "科磊",
+      "symbol": "TGT",
+      "name_zh": "標靶",
       "kind": "US",
-      "price": 278.39,
-      "change_pct": 11.97,
-      "mtd_pct": 44.87,
-      "ytd_pct": 129.11,
+      "price": 133.92,
+      "change_pct": -4.61,
+      "mtd_pct": 5.39,
+      "ytd_pct": 37.0,
       "market_date": "2026-06-29",
-      "per": 78.107,
+      "per": 17.928,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=KLAC.US",
-      "error": null
-    },
-    {
-      "symbol": "T",
-      "name_zh": "AT&T",
-      "kind": "US",
-      "price": 21.82,
-      "change_pct": -3.96,
-      "mtd_pct": -12.02,
-      "ytd_pct": -12.16,
-      "market_date": "2026-06-29",
-      "per": 7.0177,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=T.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TGT.US",
       "error": null
     },
     {
