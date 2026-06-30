@@ -1339,7 +1339,7 @@ function renderObondsSheet() {
       <h3 style="margin-bottom:6px">其他海外債</h3>
       <p class="tagline" style="margin-bottom:12px">瀏覽完整債券行情表（公司債／主權債／金融債／超國際債）</p>
       <a href="https://bopfund.moneydj.com/bond/index.html" target="_blank" rel="noopener"
-         style="display:inline-block;padding:10px 22px;background:#2c8c7e;color:#fff;border-radius:6px;text-decoration:none;font-weight:600">
+         style="display:inline-block;padding:10px 22px;background:#019AB3;color:#fff;border-radius:6px;text-decoration:none;font-weight:600">
         前往債券行情表
       </a>
     </div>
@@ -1872,9 +1872,9 @@ function renderTargetsSheet() {
 
 const POSITION_LS_KEY = "morningBoard.positionAnalysis.v1";
 const ASSET_CLASS_COLOR = {
-  "股票": "#2c8c7e",
-  "債券": "#1f6b60",
-  "平衡": "#4aa99b",
+  "股票": "#019AB3",
+  "債券": "#003D91",
+  "平衡": "#17B5AD",
   "現金": "#9ca3af",
 };
 const CURRENCY_ZH = {
@@ -2178,7 +2178,7 @@ function positionPieSvg(data, size = 180) {
   return `<svg viewBox="0 0 ${size} ${size}" width="${size}" height="${size}" class="position-pie">${slices}</svg>`;
 }
 
-function positionBarsHtml(data, color = "#2c8c7e") {
+function positionBarsHtml(data, color = "#019AB3") {
   const entries = Object.entries(data).filter(([, v]) => v > 0);
   const max = Math.max(...entries.map(([, v]) => v), 1);
   return entries.map(([label, v]) => `
@@ -4012,7 +4012,7 @@ function renderUsStocksSheet() {
       <h3 style="margin-bottom:6px">其他海外股票</h3>
       <p class="tagline" style="margin-bottom:12px">瀏覽板信完整海外股票行情表</p>
       <a href="https://bopfund.moneydj.com/main.asp?sUrl=$etfweb$html$et081001]djhtm" target="_blank" rel="noopener"
-         style="display:inline-block;padding:10px 22px;background:#2c8c7e;color:#fff;border-radius:6px;text-decoration:none;font-weight:600">
+         style="display:inline-block;padding:10px 22px;background:#019AB3;color:#fff;border-radius:6px;text-decoration:none;font-weight:600">
         前往海外股票行情表
       </a>
     </div>
@@ -5432,31 +5432,31 @@ function renderTwStockResults(code) {
       <div id="tw-snap-${escapeHtml(code)}" class="tw-snap-wrap"><div class="tw-snap-loading">載入即時行情中…</div></div>
       <div id="tw-chart-${escapeHtml(code)}" class="tw-chart-wrap"><div class="tw-chart-msg">載入走勢圖中…</div></div>
       <div class="tw-res-section">
-        <div class="tw-res-title" style="color:#2c8c7e">基本面</div>
+        <div class="tw-res-title" style="color:#019AB3">基本面</div>
         <div id="tw-val-${escapeHtml(code)}" class="tw-val-wrap"><div class="tw-val-msg">載入基本面中…</div></div>
       </div>
       <div class="tw-res-section">
-        <div class="tw-res-title" style="color:#2c8c7e">月營收</div>
+        <div class="tw-res-title" style="color:#019AB3">月營收</div>
         <div id="tw-rev-trend-${escapeHtml(code)}" class="tw-rev-trend-wrap"><div class="tw-rev-msg">載入月營收中…</div></div>
       </div>
       <div class="tw-res-section">
         <div class="tw-res-title" style="color:#017A8F">法人動向</div>
         <div id="tw-inst-trend-${escapeHtml(code)}" class="tw-inst-trend-wrap"><div class="tw-inst-msg">載入法人動向中…</div></div>
       </div>
-      ${linkSection("即時報價", "#2c8c7e", groups.realtime)}
+      ${linkSection("即時報價", "#019AB3", groups.realtime)}
       <div class="tw-res-section">
         <div class="tw-res-title" style="color:#017A8F">綜合小結</div>
         <div class="tw-summary" id="tw-summary-${escapeHtml(code)}"><div class="tw-sum-loading">資料載入中…</div></div>
       </div>
       <div class="tw-res-section">
-        <div class="tw-res-title" style="color:#2c8c7e">1. 財報與營運</div>
+        <div class="tw-res-title" style="color:#019AB3">1. 財報與營運</div>
         <div class="tw-data-cards">${pass1Cards}</div>
       </div>
       <div class="tw-res-section">
         <div class="tw-res-title" style="color:#017A8F">2. 籌碼</div>
         <div class="tw-data-cards">${pass2Cards}</div>
       </div>
-      ${linkSection("二手研究（快速發現）", "#4aa99b", groups.secondary)}
+      ${linkSection("二手研究（快速發現）", "#17B5AD", groups.secondary)}
       <p class="tw-res-note">最終決策請回 MOPS／TWSE 對原始資料。Yahoo 股市為公開揭露摘要，便利檢視用。</p>
     </div>`;
 }
@@ -5735,7 +5735,7 @@ function renderTwStockSheet() {
     </div>
     <div style="overflow-x:auto">
     <table class="tw-quote-table" style="width:100%;border-collapse:collapse;font-size:13px;min-width:520px">
-      <tr style="background:#2c8c7e;color:#fff">
+      <tr style="background:#019AB3;color:#fff">
         <th style="padding:10px;text-align:left;width:40%">項目</th>
         <th style="padding:10px;text-align:left">內容</th>
       </tr>
@@ -5766,7 +5766,7 @@ function renderTwStockSheet() {
     <h3 style="font-size:16px;margin:24px 0 8px">3. 產業／競爭</h3>
     <div style="overflow-x:auto">
     <table class="tw-quote-table" style="width:100%;border-collapse:collapse;font-size:13px;min-width:520px">
-      <tr style="background:#4aa99b;color:#fff">
+      <tr style="background:#17B5AD;color:#fff">
         <th style="padding:10px;text-align:left;width:40%">項目</th>
         <th style="padding:10px;text-align:left">內容</th>
       </tr>
@@ -5843,12 +5843,12 @@ function renderStockBriefBlock() {
   const popularCards = popularBrief.map(st => renderBriefCard(st, wkStart, wkEnd)).join("");
 
   const curatedSection = curatedBrief.length ? `
-    <h3 style="font-size:15px; margin:14px 0 8px; color:#2c8c7e;">精選股票本週重點</h3>
+    <h3 style="font-size:15px; margin:14px 0 8px; color:#019AB3;">精選股票本週重點</h3>
     ${curatedCards}
   ` : "";
 
   const popularSection = popularBrief.length ? `
-    <h3 style="font-size:15px; margin:18px 0 4px; color:#2c8c7e;">熱門股票本週重點</h3>
+    <h3 style="font-size:15px; margin:18px 0 4px; color:#019AB3;">熱門股票本週重點</h3>
     <p style="color:var(--text-mute); font-size:12px; margin:0 0 8px;">取週日晚 snapshot 前 10 檔，避免每次 build 輪動造成解讀混亂。</p>
     ${popularCards}
   ` : "";
@@ -5908,7 +5908,7 @@ function renderBriefCard(st, wkStart, wkEnd) {
       </div>
       <ul style="margin:0 0 8px; padding-left:0; list-style:none;">${newsHtml}</ul>
       <div style="font-size:13px; line-height:1.55; padding:8px 10px; background:#f8f9fb; border-radius:4px;">
-        <strong style="color:#2c8c7e;">論點檢視：</strong>${st.thesis_check || "—"}
+        <strong style="color:#019AB3;">論點檢視：</strong>${st.thesis_check || "—"}
       </div>
       ${catalyst}
     </div>
@@ -8091,7 +8091,7 @@ function renderRiskReturnScatter(f) {
   const yMin = Math.min(...ys), yMax = Math.max(...ys);
   const sx = v => PAD + (xMax === xMin ? 0.5 : (v - xMin) / (xMax - xMin)) * (W - PAD - 12);
   const sy = v => (H - PAD) - (yMax === yMin ? 0.5 : (v - yMin) / (yMax - yMin)) * (H - PAD - 12);
-  const colors = { self: "#2c8c7e", avg: "#9aa5ad", bench: "#1f6b60", peer: "#4aa99b" };
+  const colors = { self: "#019AB3", avg: "#9aa5ad", bench: "#003D91", peer: "#17B5AD" };
   const dots = valid.map(p => `
     <circle cx="${sx(p.x).toFixed(1)}" cy="${sy(p.y).toFixed(1)}" r="${p.cls === "self" ? 6 : 4.5}"
       fill="${colors[p.cls]}" stroke="#fff" stroke-width="1.5"></circle>`).join("");
@@ -8167,7 +8167,7 @@ function renderFundsSheet() {
       <h3 style="margin-bottom:6px">其他基金</h3>
       <p class="tagline" style="margin-bottom:12px">瀏覽完整基金總覽（境外／國內基金龍虎榜、市場龍虎榜、快速搜尋）</p>
       <a href="https://bopfund.moneydj.com/" target="_blank" rel="noopener"
-         style="display:inline-block;padding:10px 22px;background:#2c8c7e;color:#fff;border-radius:6px;text-decoration:none;font-weight:600">
+         style="display:inline-block;padding:10px 22px;background:#019AB3;color:#fff;border-radius:6px;text-decoration:none;font-weight:600">
         前往基金總覽
       </a>
     </div>

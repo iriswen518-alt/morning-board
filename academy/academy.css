@@ -79,7 +79,7 @@ a.academy-card:hover,
 button.academy-card:hover {
   transform: translateY(-1px);
   border-color: var(--brand-primary);
-  box-shadow: 0 4px 12px rgba(44, 140, 126, 0.12);
+  box-shadow: 0 4px 12px rgba(1, 154, 179, 0.12);
 }
 button.academy-card {
   text-align: left;
@@ -107,7 +107,7 @@ button.academy-card {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 10px rgba(44, 140, 126, 0.22);
+  box-shadow: 0 4px 10px rgba(1, 154, 179, 0.22);
 }
 .academy-card-icon svg { width: 22px; height: 22px; }
 .academy-card-meta { flex: 1; min-width: 0; }
@@ -144,7 +144,7 @@ button.academy-card {
   padding: 18px 20px;
   margin-bottom: 16px;
   background: linear-gradient(135deg, #e8f5f6 0%, #def1f2 100%);
-  border: 1px solid rgba(44, 140, 126, 0.18);
+  border: 1px solid rgba(1, 154, 179, 0.18);
   border-radius: 12px;
 }
 .course-hero-icon {
@@ -157,7 +157,7 @@ button.academy-card {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 10px rgba(44, 140, 126, 0.22);
+  box-shadow: 0 4px 10px rgba(1, 154, 179, 0.22);
 }
 .course-hero-icon svg { width: 26px; height: 26px; }
 .course-hero-meta { flex: 1; min-width: 0; }
@@ -257,14 +257,14 @@ button.academy-card {
 .chapter-topnav li a:hover:not(.current) {
   transform: translateY(-1px);
   border-color: var(--brand-primary);
-  box-shadow: 0 3px 10px rgba(44, 140, 126, 0.12);
+  box-shadow: 0 3px 10px rgba(1, 154, 179, 0.12);
 }
 
 .chapter-topnav li a.current {
   background: linear-gradient(135deg, var(--brand-primary), var(--brand-accent));
   border-color: var(--brand-primary);
   color: #fff;
-  box-shadow: 0 4px 12px rgba(44, 140, 126, 0.25);
+  box-shadow: 0 4px 12px rgba(1, 154, 179, 0.25);
 }
 
 /* 手機下拉選單：預設隱藏，手機才顯示 */
@@ -323,7 +323,7 @@ button.academy-card {
   margin-top: 20px;
   border-radius: 10px;
   overflow: hidden;
-  border: 1px solid rgba(44, 140, 126, 0.2);
+  border: 1px solid rgba(1, 154, 179, 0.2);
 }
 .section-accordion summary {
   list-style: none;
@@ -658,13 +658,13 @@ button.academy-card {
   font-size: 12px;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(44, 140, 126, 0.2);
+  box-shadow: 0 4px 10px rgba(1, 154, 179, 0.2);
   transition: all 0.2s ease;
 }
 
 .zk-graph-detail-open:hover {
   transform: translateY(-1px);
-  box-shadow: 0 6px 14px rgba(44, 140, 126, 0.3);
+  box-shadow: 0 6px 14px rgba(1, 154, 179, 0.3);
 }
 
 /* Legend panel on graph */
@@ -711,7 +711,7 @@ button.academy-card {
 }
 
 .zk-graph-legend-item:hover {
-  background: rgba(44, 140, 126, 0.08);
+  background: rgba(1, 154, 179, 0.08);
 }
 
 .zk-graph-legend-dot {
@@ -944,7 +944,7 @@ button.academy-card {
 .zk-modal-body a.zk-wikilink:hover {
   color: var(--brand-deep);
   border-bottom-style: solid;
-  background: rgba(44, 140, 126, 0.06);
+  background: rgba(1, 154, 179, 0.06);
 }
 
 @media (max-width: 640px) {
@@ -1001,7 +1001,7 @@ button.academy-card {
 .toggle-btn.active {
   background: linear-gradient(135deg, var(--brand-primary), var(--brand-accent));
   color: #fff;
-  box-shadow: 0 2px 6px rgba(44, 140, 126, 0.2);
+  box-shadow: 0 2px 6px rgba(1, 154, 179, 0.2);
 }
 
 /* === List View Layout === */
@@ -1089,7 +1089,7 @@ button.academy-card {
 /* ── Quiz ── */
 .quiz-wrap { max-width: 680px; margin: 0 auto; padding: 8px 0 32px; }
 .quiz-progress { height: 6px; background: #e8edf4; border-radius: 3px; margin-bottom: 18px; }
-.quiz-progress-bar { height: 6px; background: var(--brand-primary, #1f6b60); border-radius: 3px; transition: width 0.3s; }
+.quiz-progress-bar { height: 6px; background: var(--brand-primary, #003D91); border-radius: 3px; transition: width 0.3s; }
 .quiz-counter { font-size: 13px; color: #7a8aa0; margin-bottom: 10px; }
 .quiz-question { font-size: 16px; font-weight: 600; color: #1a2a3a; line-height: 1.6; margin-bottom: 20px; }
 .quiz-options { list-style: none; padding: 0; margin: 0 0 20px; display: flex; flex-direction: column; gap: 10px; }
@@ -1099,7 +1099,7 @@ button.academy-card {
   background: #fff; cursor: pointer; font-size: 15px; color: #1a2a3a;
   transition: border-color 0.15s, background 0.15s;
 }
-.quiz-opt-btn:hover:not(:disabled) { border-color: var(--brand-primary, #1f6b60); background: #f0f4fb; }
+.quiz-opt-btn:hover:not(:disabled) { border-color: var(--brand-primary, #003D91); background: #f0f4fb; }
 .quiz-opt-btn.quiz-correct { border-color: #17a65e; background: #eafaf2; color: #0e6b40; font-weight: 600; }
 .quiz-opt-btn.quiz-wrong   { border-color: #d9534f; background: #fdf2f2; color: #a02020; }
 .quiz-opt-btn:disabled { cursor: default; }
@@ -1107,7 +1107,7 @@ button.academy-card {
 .quiz-fb-right { color: #17a65e; font-weight: 700; }
 .quiz-fb-wrong { color: #d9534f; font-weight: 700; }
 .quiz-next-btn {
-  padding: 10px 28px; background: var(--brand-primary, #1f6b60); color: #fff;
+  padding: 10px 28px; background: var(--brand-primary, #003D91); color: #fff;
   border: none; border-radius: 8px; font-size: 15px; font-weight: 600; cursor: pointer;
   transition: opacity 0.15s;
 }
@@ -1117,16 +1117,16 @@ button.academy-card {
 .quiz-score-circle {
   display: inline-flex; align-items: baseline; justify-content: center;
   width: 120px; height: 120px; border-radius: 50%;
-  border: 5px solid var(--brand-primary, #1f6b60);
-  font-size: 42px; font-weight: 800; color: var(--brand-primary, #1f6b60);
+  border: 5px solid var(--brand-primary, #003D91);
+  font-size: 42px; font-weight: 800; color: var(--brand-primary, #003D91);
   margin-bottom: 16px;
 }
 .quiz-score-circle span { font-size: 20px; font-weight: 500; margin-left: 2px; }
 .quiz-grade { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
 .quiz-result-msg { font-size: 15px; color: #5a6a7a; margin-bottom: 24px; }
 .quiz-restart-btn {
-  padding: 10px 28px; background: #f0f4fb; color: var(--brand-primary, #1f6b60);
-  border: 1.5px solid var(--brand-primary, #1f6b60); border-radius: 8px;
+  padding: 10px 28px; background: #f0f4fb; color: var(--brand-primary, #003D91);
+  border: 1.5px solid var(--brand-primary, #003D91); border-radius: 8px;
   font-size: 15px; font-weight: 600; cursor: pointer;
 }
 .quiz-restart-btn:hover { background: #e0e8f8; }
