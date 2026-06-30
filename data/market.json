@@ -85,7 +85,7 @@
     {
       "name": "TAIEX 加權指數",
       "name_zh": null,
-      "close": 46125.91,
+      "close": 46125.91015625,
       "daily_pct": 2.5,
       "mtd_pct": 0.6,
       "ytd_pct": 55.37,
@@ -157,7 +157,7 @@
     {
       "name": "S&P/ASX 200",
       "name_zh": null,
-      "close": 8778.7001953125,
+      "close": 8778.7,
       "daily_pct": -0.51,
       "mtd_pct": 1.05,
       "ytd_pct": 1.25,
@@ -167,36 +167,36 @@
   "bonds": [
     {
       "name": "US 10-Year",
-      "yield_pct": 4.37,
-      "daily_bps": 0.2,
-      "mtd_bps": -7.9,
+      "yield_pct": 4.43,
+      "daily_bps": 5.6,
+      "mtd_bps": -2.5,
       "closing_date": "2026-06-29"
     },
     {
       "name": "US 2-Year",
-      "yield_pct": 4.12,
-      "daily_bps": 1.4,
+      "yield_pct": 4.13,
+      "daily_bps": 2.2,
       "mtd_bps": 12.0,
       "closing_date": "2026-06-30"
     },
     {
       "name": "Germany 10-Year",
-      "yield_pct": 2.89,
-      "daily_bps": -0.9,
+      "yield_pct": 2.9,
+      "daily_bps": -0.4,
       "mtd_bps": -9.37,
       "closing_date": "2026-06-30"
     },
     {
       "name": "Japan 10-Year",
       "yield_pct": 2.69,
-      "daily_bps": 5.3,
+      "daily_bps": 5.7,
       "mtd_bps": -1.3,
       "closing_date": "2026-06-30"
     },
     {
       "name": "UK 10-Year",
-      "yield_pct": 4.73,
-      "daily_bps": 0.6,
+      "yield_pct": 4.75,
+      "daily_bps": 3.1,
       "mtd_bps": -6.54,
       "closing_date": "2026-06-30"
     },
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 101.11000061035156,
       "daily_pct": -0.25,
-      "mtd_pct": 2.54,
-      "ytd_pct": 3.19,
+      "mtd_pct": 2.33,
+      "ytd_pct": 2.99,
       "closing_date": "2026-06-29"
     },
     {
@@ -396,7 +396,7 @@
     {
       "label": "Jun 2026",
       "fomc_date": "2026-06-18",
-      "implied_rate": 3.63,
+      "implied_rate": 3.62,
       "delta_rate": null,
       "p_hike": null,
       "p_cut": null,
@@ -406,11 +406,11 @@
       "label": "Jul 2026",
       "fomc_date": "2026-07-30",
       "implied_rate": 3.63,
-      "delta_rate": 0.0,
-      "delta_bps": 0.0,
-      "p_hike": 0.0,
-      "p_hold": 100.0,
-      "p_cut": -0.0,
+      "delta_rate": 0.01,
+      "delta_bps": 1.0,
+      "p_hike": 4.0,
+      "p_hold": 96.0,
+      "p_cut": 0,
       "is_reference": false
     },
     {
@@ -427,18 +427,18 @@
     {
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
-      "implied_rate": 3.83,
-      "delta_rate": 0.06,
-      "delta_bps": 6.0,
-      "p_hike": 24.0,
-      "p_hold": 76.0,
+      "implied_rate": 3.84,
+      "delta_rate": 0.07,
+      "delta_bps": 7.0,
+      "p_hike": 28.0,
+      "p_hold": 72.0,
       "p_cut": 0,
       "is_reference": false
     },
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 3.94,
+      "implied_rate": 3.95,
       "delta_rate": 0.11,
       "delta_bps": 11.0,
       "p_hike": 44.0,
