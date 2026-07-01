@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-01T17:01:20+08:00",
+  "generated_at": "2026-07-01T18:15:32+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -17,20 +17,6 @@
       "error": null
     },
     {
-      "symbol": "CRCL",
-      "name_zh": "Circle Internet",
-      "kind": "US",
-      "price": 62.63,
-      "change_pct": -17.55,
-      "mtd_pct": -44.58,
-      "ytd_pct": -21.02,
-      "market_date": "2026-06-30",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRCL.US",
-      "error": null
-    },
-    {
       "symbol": "BE",
       "name_zh": "Bloom Energy",
       "kind": "US",
@@ -45,17 +31,17 @@
       "error": null
     },
     {
-      "symbol": "AMBA",
-      "name_zh": "Ambarella",
+      "symbol": "CRCL",
+      "name_zh": "Circle Internet",
       "kind": "US",
-      "price": 85.8,
-      "change_pct": 28.04,
-      "mtd_pct": 18.87,
-      "ytd_pct": 21.12,
+      "price": 62.63,
+      "change_pct": -17.55,
+      "mtd_pct": -44.58,
+      "ytd_pct": -21.02,
       "market_date": "2026-06-30",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AMBA.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRCL.US",
       "error": null
     },
     {
@@ -70,6 +56,20 @@
       "per": 188.774,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AMD.US",
+      "error": null
+    },
+    {
+      "symbol": "AMBA",
+      "name_zh": "Ambarella",
+      "kind": "US",
+      "price": 85.8,
+      "change_pct": 28.04,
+      "mtd_pct": 18.87,
+      "ytd_pct": 21.12,
+      "market_date": "2026-06-30",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AMBA.US",
       "error": null
     },
     {
@@ -101,101 +101,17 @@
       "error": null
     },
     {
-      "symbol": "MXL",
-      "name_zh": "MaxLinear",
+      "symbol": "SPGI",
+      "name_zh": "S&P Global",
       "kind": "US",
-      "price": 128.03,
-      "change_pct": 18.03,
-      "mtd_pct": 37.77,
-      "ytd_pct": 634.54,
+      "price": 407.26,
+      "change_pct": -0.32,
+      "mtd_pct": -3.95,
+      "ytd_pct": -22.07,
       "market_date": "2026-06-30",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MXL.US",
-      "error": null
-    },
-    {
-      "symbol": "T",
-      "name_zh": "AT&T",
-      "kind": "US",
-      "price": 20.7,
-      "change_pct": -5.13,
-      "mtd_pct": -16.53,
-      "ytd_pct": -16.67,
-      "market_date": "2026-06-30",
-      "per": 6.9237,
+      "per": 25.0779,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=T.US",
-      "error": null
-    },
-    {
-      "symbol": "VRT",
-      "name_zh": "Vertiv Holdings, LLC",
-      "kind": "US",
-      "price": 334.82,
-      "change_pct": 9.07,
-      "mtd_pct": 6.05,
-      "ytd_pct": 106.67,
-      "market_date": "2026-06-30",
-      "per": 74.9165,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VRT.US",
-      "error": null
-    },
-    {
-      "symbol": "MBLY",
-      "name_zh": "Mobileye Global",
-      "kind": "US",
-      "price": 9.68,
-      "change_pct": 16.63,
-      "mtd_pct": -6.38,
-      "ytd_pct": -7.28,
-      "market_date": "2026-06-30",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MBLY.US",
-      "error": null
-    },
-    {
-      "symbol": "ISRG",
-      "name_zh": "Intuitive Surgical",
-      "kind": "US",
-      "price": 397.68,
-      "change_pct": -2.04,
-      "mtd_pct": -6.35,
-      "ytd_pct": -29.78,
-      "market_date": "2026-06-30",
-      "per": 47.4805,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ISRG.US",
-      "error": null
-    },
-    {
-      "symbol": "DRAM",
-      "name_zh": "Roundhill Memory ETF",
-      "kind": "US",
-      "price": 73.85,
-      "change_pct": 2.65,
-      "mtd_pct": 16.85,
-      "ytd_pct": null,
-      "market_date": "2026-06-30",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DRAM.US",
-      "error": null
-    },
-    {
-      "symbol": "STZ",
-      "name_zh": "Constellation Brands",
-      "kind": "US",
-      "price": 139.09,
-      "change_pct": -0.41,
-      "mtd_pct": 0.19,
-      "ytd_pct": 0.82,
-      "market_date": "2026-06-30",
-      "per": 13.926,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=STZ.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPGI.US",
       "error": null
     },
     {
