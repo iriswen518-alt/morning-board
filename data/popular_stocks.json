@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-01T18:15:32+08:00",
+  "generated_at": "2026-07-01T18:50:35+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -17,20 +17,6 @@
       "error": null
     },
     {
-      "symbol": "BE",
-      "name_zh": "Bloom Energy",
-      "kind": "US",
-      "price": 302.7,
-      "change_pct": 10.07,
-      "mtd_pct": 6.21,
-      "ytd_pct": 248.37,
-      "market_date": "2026-06-30",
-      "per": 14373.0681,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BE.US",
-      "error": null
-    },
-    {
       "symbol": "CRCL",
       "name_zh": "Circle Internet",
       "kind": "US",
@@ -45,17 +31,31 @@
       "error": null
     },
     {
-      "symbol": "AMD",
-      "name_zh": "超微",
+      "symbol": "BE",
+      "name_zh": "Bloom Energy",
       "kind": "US",
-      "price": 580.91,
-      "change_pct": 7.68,
-      "mtd_pct": 12.56,
-      "ytd_pct": 171.25,
+      "price": 302.7,
+      "change_pct": 10.07,
+      "mtd_pct": 6.21,
+      "ytd_pct": 248.37,
       "market_date": "2026-06-30",
-      "per": 188.774,
+      "per": 14373.0681,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AMD.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BE.US",
+      "error": null
+    },
+    {
+      "symbol": "NOW",
+      "name_zh": "ServiceNow",
+      "kind": "US",
+      "price": 99.28,
+      "change_pct": -0.69,
+      "mtd_pct": -20.17,
+      "ytd_pct": -35.19,
+      "market_date": "2026-06-30",
+      "per": 58.6795,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NOW.US",
       "error": null
     },
     {
@@ -73,6 +73,34 @@
       "error": null
     },
     {
+      "symbol": "AMD",
+      "name_zh": "超微",
+      "kind": "US",
+      "price": 580.91,
+      "change_pct": 7.68,
+      "mtd_pct": 12.56,
+      "ytd_pct": 171.25,
+      "market_date": "2026-06-30",
+      "per": 188.774,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AMD.US",
+      "error": null
+    },
+    {
+      "symbol": "LUNR",
+      "name_zh": "Intuitive Machines",
+      "kind": "US",
+      "price": 21.39,
+      "change_pct": 2.0,
+      "mtd_pct": -51.2,
+      "ytd_pct": 31.79,
+      "market_date": "2026-06-30",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LUNR.US",
+      "error": null
+    },
+    {
       "symbol": "NIO",
       "name_zh": "蔚來",
       "kind": "US",
@@ -87,31 +115,31 @@
       "error": null
     },
     {
-      "symbol": "HQ",
-      "name_zh": "Horizon Quantum",
+      "symbol": "MXL",
+      "name_zh": "MaxLinear",
       "kind": "US",
-      "price": 27.76,
-      "change_pct": 18.13,
-      "mtd_pct": 110.3,
-      "ytd_pct": null,
+      "price": 128.03,
+      "change_pct": 18.03,
+      "mtd_pct": 37.77,
+      "ytd_pct": 634.54,
       "market_date": "2026-06-30",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HQ.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MXL.US",
       "error": null
     },
     {
-      "symbol": "SPGI",
-      "name_zh": "S&P Global",
+      "symbol": "PLTR",
+      "name_zh": "Palantir",
       "kind": "US",
-      "price": 407.26,
-      "change_pct": -0.32,
-      "mtd_pct": -3.95,
-      "ytd_pct": -22.07,
+      "price": 116.67,
+      "change_pct": 0.84,
+      "mtd_pct": -25.47,
+      "ytd_pct": -34.36,
       "market_date": "2026-06-30",
-      "per": 25.0779,
+      "per": 122.596,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPGI.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PLTR.US",
       "error": null
     },
     {
