@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-01T19:34:04+08:00",
+  "generated_at": "2026-07-01T20:14:52+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -17,20 +17,6 @@
       "error": null
     },
     {
-      "symbol": "CRCL",
-      "name_zh": "Circle Internet",
-      "kind": "US",
-      "price": 62.63,
-      "change_pct": -17.55,
-      "mtd_pct": -44.58,
-      "ytd_pct": -21.02,
-      "market_date": "2026-06-30",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRCL.US",
-      "error": null
-    },
-    {
       "symbol": "NOW",
       "name_zh": "ServiceNow",
       "kind": "US",
@@ -42,6 +28,34 @@
       "per": 58.6795,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NOW.US",
+      "error": null
+    },
+    {
+      "symbol": "GIS",
+      "name_zh": "General Mills",
+      "kind": "US",
+      "price": 34.8,
+      "change_pct": -4.34,
+      "mtd_pct": 2.93,
+      "ytd_pct": -25.16,
+      "market_date": "2026-06-30",
+      "per": 8.5428,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GIS.US",
+      "error": null
+    },
+    {
+      "symbol": "CRCL",
+      "name_zh": "Circle Internet",
+      "kind": "US",
+      "price": 62.63,
+      "change_pct": -17.55,
+      "mtd_pct": -44.58,
+      "ytd_pct": -21.02,
+      "market_date": "2026-06-30",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRCL.US",
       "error": null
     },
     {
@@ -59,17 +73,17 @@
       "error": null
     },
     {
-      "symbol": "OKLO",
-      "name_zh": "Oklo",
+      "symbol": "FDS",
+      "name_zh": "FactSet Research Systems",
       "kind": "US",
-      "price": 52.33,
-      "change_pct": -0.81,
-      "mtd_pct": -21.76,
-      "ytd_pct": -27.08,
+      "price": 230.08,
+      "change_pct": -1.52,
+      "mtd_pct": -6.27,
+      "ytd_pct": -20.71,
       "market_date": "2026-06-30",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=OKLO.US",
+      "per": 14.3247,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FDS.US",
       "error": null
     },
     {
@@ -101,59 +115,31 @@
       "error": null
     },
     {
-      "symbol": "AMD",
-      "name_zh": "超微",
+      "symbol": "KLAR",
+      "name_zh": "Klarna",
       "kind": "US",
-      "price": 580.91,
-      "change_pct": 7.68,
-      "mtd_pct": 12.56,
-      "ytd_pct": 171.25,
-      "market_date": "2026-06-30",
-      "per": 188.774,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AMD.US",
-      "error": null
-    },
-    {
-      "symbol": "LUNR",
-      "name_zh": "Intuitive Machines",
-      "kind": "US",
-      "price": 21.39,
-      "change_pct": 2.0,
-      "mtd_pct": -51.2,
-      "ytd_pct": 31.79,
+      "price": 20.24,
+      "change_pct": 0,
+      "mtd_pct": 10.66,
+      "ytd_pct": -29.99,
       "market_date": "2026-06-30",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LUNR.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=KLAR.US",
       "error": null
     },
     {
-      "symbol": "FCEL",
-      "name_zh": "FuelCell Energy",
+      "symbol": "OKLO",
+      "name_zh": "Oklo",
       "kind": "US",
-      "price": 36.01,
-      "change_pct": 20.84,
-      "mtd_pct": 66.25,
-      "ytd_pct": 392.61,
+      "price": 52.33,
+      "change_pct": -0.81,
+      "mtd_pct": -21.76,
+      "ytd_pct": -27.08,
       "market_date": "2026-06-30",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FCEL.US",
-      "error": null
-    },
-    {
-      "symbol": "SPCX",
-      "name_zh": "Space Exploration Technologies",
-      "kind": "US",
-      "price": 170.86,
-      "change_pct": 4.06,
-      "mtd_pct": null,
-      "ytd_pct": null,
-      "market_date": "2026-06-30",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPCX.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=OKLO.US",
       "error": null
     },
     {
