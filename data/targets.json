@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-01T13:01:32+08:00",
+  "generated_at": "2026-07-01T15:01:52+08:00",
   "source": "manual curation (targets.json)",
   "version": 3,
   "updated": "2026-07-01",
@@ -180,14 +180,14 @@
       "stats": [
         {
           "k": "S&P 500 YTD",
-          "v": "+8.69%",
-          "sub": "MTD -1.84%・今日 +0.79%・截至 06/30",
+          "v": "+9.55%",
+          "sub": "MTD -1.06%・今日 +0.79%・截至 06/30",
           "url": "https://finance.yahoo.com/quote/%5EGSPC"
         },
         {
           "k": "Nasdaq Composite YTD",
-          "v": "+11.09%",
-          "sub": "MTD -4.27%・今日 +1.52%・截至 06/30",
+          "v": "+12.79%",
+          "sub": "MTD -2.81%・今日 +1.52%・截至 06/30",
           "url": "https://finance.yahoo.com/quote/%5EIXIC"
         }
       ],
@@ -317,8 +317,8 @@
       "stats": [
         {
           "k": "近1年績效",
-          "v": "+197.13%",
-          "sub": "利安資金韓國（美元）・截至 06/29",
+          "v": "+197.67%",
+          "sub": "利安資金韓國（美元）・截至 06/30",
           "url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=LIC04-LI02"
         },
         {
@@ -358,6 +358,12 @@
       "ytd": "+mixed",
       "stats": [
         {
+          "k": "WTI 原油 YTD",
+          "v": "+21.20%",
+          "sub": "今日 -0.04%・截至 07/01",
+          "url": "https://finance.yahoo.com/quote/CL=F"
+        },
+        {
           "k": "建議部位",
           "v": "3–5%",
           "sub": "算力＋電力雙軸、攻守兼備"
@@ -395,14 +401,14 @@
       "stats": [
         {
           "k": "Euro Stoxx 50 YTD",
-          "v": "+7.51%",
-          "sub": "MTD +2.99%・今日 +1.55%・截至 06/30",
+          "v": "+9.18%",
+          "sub": "MTD +4.59%・今日 +1.55%・截至 06/30",
           "url": "https://finance.yahoo.com/quote/%5ESTOXX50E"
         },
         {
           "k": "DAX YTD",
-          "v": "+0.56%",
-          "sub": "MTD -1.90%・今日 +1.50%・截至 06/30",
+          "v": "+2.06%",
+          "sub": "MTD -0.43%・今日 +1.50%・截至 06/30",
           "url": "https://finance.yahoo.com/quote/%5EGDAXI"
         },
         {
@@ -443,8 +449,8 @@
       "stats": [
         {
           "k": "近1年績效",
-          "v": "+18.33%",
-          "sub": "利安資金越南 A 級別美元・截至 06/29",
+          "v": "+18.63%",
+          "sub": "利安資金越南 A 級別美元・截至 06/30",
           "url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=LIC28-LI01"
         },
         {
@@ -485,8 +491,8 @@
       "stats": [
         {
           "k": "STI 海峽時報 YTD",
-          "v": "+11.17%",
-          "sub": "今日 +0.10%・截至 07/01",
+          "v": "+11.09%",
+          "sub": "今日 +0.03%・截至 07/01",
           "url": "https://finance.yahoo.com/quote/%5ESTI"
         },
         {
@@ -569,14 +575,14 @@
       "stats": [
         {
           "k": "Shanghai 上證 YTD",
-          "v": "+2.65%",
-          "sub": "MTD +0.13%・今日 +0.50%・截至 06/30",
+          "v": "+3.16%",
+          "sub": "MTD +0.63%・今日 +0.50%・截至 06/30",
           "url": "https://finance.yahoo.com/quote/000001.SS"
         },
         {
           "k": "CSI 300 滬深300 YTD",
           "v": "+5.15%",
-          "sub": "MTD -0.49%・今日 +2.28%・截至 06/30",
+          "sub": "MTD -0.49%・今日 +1.30%・截至 06/30",
           "url": "https://finance.yahoo.com/quote/000300.SS"
         },
         {
@@ -784,16 +790,16 @@
       "tagline": "MSCI Korea Value-Up 改革題材；近一年 +220%",
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=LIC04-LI02",
       "fund_id": "uob_korea",
-      "nav": 3.417,
-      "nav_date": "2026-06-29",
-      "change_pct": -1.3,
+      "nav": 3.456,
+      "nav_date": "2026-06-30",
+      "change_pct": 1.14,
       "perf": {
-        "1m": 0.71,
-        "3m": 75.68,
-        "6m": 118.2,
-        "ytd": 119.04,
-        "1y": 197.13,
-        "3y": 283.07
+        "1m": 1.86,
+        "3m": 85.21,
+        "6m": 121.54,
+        "ytd": 121.54,
+        "1y": 197.67,
+        "3y": 288.31
       },
       "bop_name_zh": "利安資金韓國基金(美元)"
     },
@@ -805,16 +811,16 @@
       "tagline": "FDI 轉移之長期選擇權；MSCI 升等催化",
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=LIC28-LI01",
       "fund_id": "uob_vietnam",
-      "nav": 0.865,
-      "nav_date": "2026-06-29",
-      "change_pct": -0.46,
+      "nav": 0.866,
+      "nav_date": "2026-06-30",
+      "change_pct": 0.12,
       "perf": {
-        "1m": -0.23,
-        "3m": 8.67,
-        "6m": 1.88,
-        "ytd": 0.82,
-        "1y": 18.33,
-        "3y": 31.26
+        "1m": -0.12,
+        "3m": 9.07,
+        "6m": 1.64,
+        "ytd": 0.93,
+        "1y": 18.63,
+        "3y": 33.03
       },
       "bop_name_zh": "利安資金越南基金A級別美元"
     },
