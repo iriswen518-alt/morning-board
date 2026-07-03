@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-03T18:50:51+08:00",
+  "generated_at": "2026-07-03T21:02:36+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -28,6 +28,48 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RIVN.US",
+      "error": null
+    },
+    {
+      "symbol": "CRSP",
+      "name_zh": "CRISPR Therapeutics AG",
+      "kind": "US",
+      "price": 60.08,
+      "change_pct": 8.02,
+      "mtd_pct": 10.16,
+      "ytd_pct": 14.57,
+      "market_date": "2026-07-02",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRSP.US",
+      "error": null
+    },
+    {
+      "symbol": "MRNA",
+      "name_zh": "莫德納",
+      "kind": "US",
+      "price": 79.76,
+      "change_pct": 10.01,
+      "mtd_pct": 13.89,
+      "ytd_pct": 170.46,
+      "market_date": "2026-07-02",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MRNA.US",
+      "error": null
+    },
+    {
+      "symbol": "JNJ",
+      "name_zh": "嬌生",
+      "kind": "US",
+      "price": 263.04,
+      "change_pct": 3.57,
+      "mtd_pct": 3.57,
+      "ytd_pct": 27.1,
+      "market_date": "2026-07-02",
+      "per": 29.7859,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=JNJ.US",
       "error": null
     },
     {
