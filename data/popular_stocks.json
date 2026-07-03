@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-03T11:59:23+08:00",
+  "generated_at": "2026-07-03T13:51:42+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -17,6 +17,48 @@
       "error": null
     },
     {
+      "symbol": "MCD",
+      "name_zh": "麥當勞",
+      "kind": "US",
+      "price": 280.63,
+      "change_pct": 4.16,
+      "mtd_pct": 3.82,
+      "ytd_pct": -8.18,
+      "market_date": "2026-07-02",
+      "per": 22.2978,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MCD.US",
+      "error": null
+    },
+    {
+      "symbol": "LMT",
+      "name_zh": "洛馬",
+      "kind": "US",
+      "price": 545.91,
+      "change_pct": 4.62,
+      "mtd_pct": 7.15,
+      "ytd_pct": 12.87,
+      "market_date": "2026-07-02",
+      "per": 25.9917,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LMT.US",
+      "error": null
+    },
+    {
+      "symbol": "ABBV",
+      "name_zh": "艾伯維",
+      "kind": "US",
+      "price": 261.07,
+      "change_pct": 3.99,
+      "mtd_pct": 3.75,
+      "ytd_pct": 14.26,
+      "market_date": "2026-07-02",
+      "per": 122.0278,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ABBV.US",
+      "error": null
+    },
+    {
       "symbol": "MRNA",
       "name_zh": "莫德納",
       "kind": "US",
@@ -31,20 +73,6 @@
       "error": null
     },
     {
-      "symbol": "CRSP",
-      "name_zh": "CRISPR Therapeutics AG",
-      "kind": "US",
-      "price": 60.08,
-      "change_pct": 8.02,
-      "mtd_pct": 10.16,
-      "ytd_pct": 14.57,
-      "market_date": "2026-07-02",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRSP.US",
-      "error": null
-    },
-    {
       "symbol": "JNJ",
       "name_zh": "嬌生",
       "kind": "US",
@@ -56,34 +84,6 @@
       "per": 29.7859,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=JNJ.US",
-      "error": null
-    },
-    {
-      "symbol": "ISRG",
-      "name_zh": "Intuitive Surgical",
-      "kind": "US",
-      "price": 426.01,
-      "change_pct": 5.87,
-      "mtd_pct": 7.12,
-      "ytd_pct": -24.78,
-      "market_date": "2026-07-02",
-      "per": 48.8952,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ISRG.US",
-      "error": null
-    },
-    {
-      "symbol": "CRWD",
-      "name_zh": "CrowdStrike",
-      "kind": "US",
-      "price": 193.98,
-      "change_pct": 0.41,
-      "mtd_pct": 1.67,
-      "ytd_pct": 65.53,
-      "market_date": "2026-07-02",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRWD.US",
       "error": null
     },
     {
