@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-07-03T23:56:13+08:00",
+  "generated_at": "2026-07-04T07:13:14+08:00",
   "source": "finnhub (US price+daily) + Yahoo (US MTD/YTD) + TWSE (TW)",
   "us_stocks": [
     {
       "symbol": "NVDA",
       "name_zh": "輝達",
       "kind": "US",
-      "price": 194.86,
-      "change_pct": -1.38,
+      "price": 194.83,
+      "change_pct": -1.39,
       "mtd_pct": -2.63,
       "ytd_pct": 4.47,
       "perf_1y": 23.9,
@@ -16,15 +16,15 @@
       "market_date": "2026-07-02",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NVDA.US",
       "error": null,
-      "per": 30.0171,
+      "per": 29.5395,
       "per_kind": "trailing"
     },
     {
       "symbol": "AAPL",
       "name_zh": "蘋果",
       "kind": "US",
-      "price": 308.67,
-      "change_pct": 4.85,
+      "price": 308.63,
+      "change_pct": 4.84,
       "mtd_pct": 6.66,
       "ytd_pct": 13.53,
       "perf_1y": 45.28,
@@ -33,15 +33,15 @@
       "market_date": "2026-07-02",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AAPL.US",
       "error": null,
-      "per": 36.9118,
+      "per": 36.9811,
       "per_kind": "trailing"
     },
     {
       "symbol": "MSFT",
       "name_zh": "微軟",
       "kind": "US",
-      "price": 390.53,
-      "change_pct": 1.63,
+      "price": 390.49,
+      "change_pct": 1.62,
       "mtd_pct": 4.68,
       "ytd_pct": -19.26,
       "perf_1y": -20.49,
@@ -50,15 +50,15 @@
       "market_date": "2026-07-02",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MSFT.US",
       "error": null,
-      "per": 22.8994,
+      "per": 23.1658,
       "per_kind": "trailing"
     },
     {
       "symbol": "GOOGL",
       "name_zh": "字母",
       "kind": "US",
-      "price": 359.95,
-      "change_pct": -0.35,
+      "price": 359.91,
+      "change_pct": -0.36,
       "mtd_pct": 0.71,
       "ytd_pct": 14.99,
       "perf_1y": 101.47,
@@ -67,15 +67,15 @@
       "market_date": "2026-07-02",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GOOGL.US",
       "error": null,
-      "per": 27.1182,
+      "per": 27.3504,
       "per_kind": "trailing"
     },
     {
       "symbol": "AMZN",
       "name_zh": "亞馬遜",
       "kind": "US",
-      "price": 242.71,
-      "change_pct": 0.42,
+      "price": 242.67,
+      "change_pct": 0.4,
       "mtd_pct": 1.82,
       "ytd_pct": 5.13,
       "perf_1y": 10.34,
@@ -84,15 +84,15 @@
       "market_date": "2026-07-02",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AMZN.US",
       "error": null,
-      "per": 28.7729,
+      "per": 28.7498,
       "per_kind": "trailing"
     },
     {
       "symbol": "META",
       "name_zh": "Meta",
       "kind": "US",
-      "price": 582.94,
-      "change_pct": -4.89,
+      "price": 582.9,
+      "change_pct": -4.9,
       "mtd_pct": 3.48,
       "ytd_pct": -11.69,
       "perf_1y": -18.31,
@@ -101,15 +101,15 @@
       "market_date": "2026-07-02",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=META.US",
       "error": null,
-      "per": 22.0412,
+      "per": 20.962,
       "per_kind": "trailing"
     },
     {
       "symbol": "TSLA",
       "name_zh": "特斯拉",
       "kind": "US",
-      "price": 393.49,
-      "change_pct": -7.48,
+      "price": 393.45,
+      "change_pct": -7.49,
       "mtd_pct": -6.46,
       "ytd_pct": -12.51,
       "perf_1y": 24.65,
@@ -125,8 +125,8 @@
       "symbol": "AVGO",
       "name_zh": "博通",
       "kind": "US",
-      "price": 360.49,
-      "change_pct": -2.4,
+      "price": 360.45,
+      "change_pct": -2.41,
       "mtd_pct": -4.58,
       "ytd_pct": 4.15,
       "perf_1y": 33.55,
@@ -135,15 +135,15 @@
       "market_date": "2026-07-02",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AVGO.US",
       "error": null,
-      "per": 58.3666,
+      "per": 58.494,
       "per_kind": "trailing"
     },
     {
       "symbol": "TSM",
       "name_zh": "台積電ADR",
       "kind": "US",
-      "price": 434.2,
-      "change_pct": -2.26,
+      "price": 434.16,
+      "change_pct": -2.27,
       "mtd_pct": -9.09,
       "ytd_pct": 42.87,
       "perf_1y": 85.86,
@@ -165,8 +165,8 @@
       "change_pct": -0.41,
       "mtd_pct": 0.51,
       "ytd_pct": 65.17,
-      "perf_1y": 119.69,
-      "perf_3y": 230.84,
+      "perf_1y": 123.64,
+      "perf_3y": 232.98,
       "perf_5y": 217.25,
       "market_date": "2026-07-03",
       "source_url": "https://tw.stock.yahoo.com/quote/0050.TW",
@@ -188,7 +188,7 @@
       "market_date": "2026-07-03",
       "source_url": "https://tw.stock.yahoo.com/quote/2330.TW",
       "error": null,
-      "per": 33.14,
+      "per": 32.87,
       "per_kind": "trailing"
     },
     {
@@ -205,7 +205,7 @@
       "market_date": "2026-07-03",
       "source_url": "https://tw.stock.yahoo.com/quote/2317.TW",
       "error": null,
-      "per": 16.97,
+      "per": 17.08,
       "per_kind": "trailing"
     },
     {
@@ -222,7 +222,7 @@
       "market_date": "2026-07-03",
       "source_url": "https://tw.stock.yahoo.com/quote/2454.TW",
       "error": null,
-      "per": 69.24,
+      "per": 66.85,
       "per_kind": "trailing"
     },
     {
@@ -239,7 +239,7 @@
       "market_date": "2026-07-03",
       "source_url": "https://tw.stock.yahoo.com/quote/2308.TW",
       "error": null,
-      "per": 72.64,
+      "per": 76.51,
       "per_kind": "trailing"
     },
     {
@@ -256,7 +256,7 @@
       "market_date": "2026-07-03",
       "source_url": "https://tw.stock.yahoo.com/quote/2382.TW",
       "error": null,
-      "per": 18.55,
+      "per": 18.95,
       "per_kind": "trailing"
     },
     {
@@ -273,7 +273,7 @@
       "market_date": "2026-07-03",
       "source_url": "https://tw.stock.yahoo.com/quote/2891.TW",
       "error": null,
-      "per": 16.84,
+      "per": 17.01,
       "per_kind": "trailing"
     },
     {
