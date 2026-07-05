@@ -85,7 +85,7 @@
     {
       "name": "TAIEX 加權指數",
       "name_zh": null,
-      "close": 46780.62,
+      "close": 46780.62109375,
       "daily_pct": 0.08,
       "mtd_pct": 1.42,
       "ytd_pct": 61.52,
@@ -174,10 +174,10 @@
     },
     {
       "name": "US 2-Year",
-      "yield_pct": 4.13,
-      "daily_bps": -3.3,
+      "yield_pct": 4.14,
+      "daily_bps": -3.0,
       "mtd_bps": 0.0,
-      "closing_date": "2026-07-05"
+      "closing_date": "2026-07-02"
     },
     {
       "name": "Germany 10-Year",
@@ -195,10 +195,10 @@
     },
     {
       "name": "UK 10-Year",
-      "yield_pct": 4.79,
-      "daily_bps": 0.6,
+      "yield_pct": 4.83,
+      "daily_bps": 0.34,
       "mtd_bps": 0.34,
-      "closing_date": "2026-07-05"
+      "closing_date": "2026-07-01"
     },
     {
       "name": "TW 10-Year",
@@ -211,10 +211,10 @@
   "fx": [
     {
       "name": "DXY 美元指數",
-      "close": 100.85700225830078,
-      "daily_pct": -0.0,
+      "close": 101.41,
+      "daily_pct": 0.55,
       "mtd_pct": -0.33,
-      "ytd_pct": 2.62,
+      "ytd_pct": 2.63,
       "closing_date": "2026-07-03"
     },
     {
@@ -235,11 +235,11 @@
     },
     {
       "name": "GBP/USD 英鎊",
-      "close": 1.3338704109191895,
-      "daily_pct": 0.45,
-      "mtd_pct": 0.64,
-      "ytd_pct": -0.95,
-      "closing_date": "2026-07-03"
+      "close": 1.3349887132644653,
+      "daily_pct": 0.08,
+      "mtd_pct": 0.72,
+      "ytd_pct": -0.87,
+      "closing_date": "2026-07-04"
     },
     {
       "name": "USD/CNY 人民幣",
@@ -388,8 +388,8 @@
     "yield_curve_10y2y": 0.23,
     "yield_curve_10y2y_bps": 23,
     "curve_shape": "正斜率",
-    "dxy": 100.85700225830078,
-    "dxy_daily_pct": -0.0,
+    "dxy": 100.86000061035156,
+    "dxy_daily_pct": -0.52,
     "closing_date": "2026-06-26"
   },
   "fedwatch": [
