@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-05T18:00:37+08:00",
+  "generated_at": "2026-07-06T06:58:45+08:00",
   "tw": {
-    "as_of": "2026-07-05",
+    "as_of": "2026-07-06",
     "top_marketcap": [
       {
         "symbol": "2330",
@@ -646,7 +646,7 @@
     ]
   },
   "us": {
-    "as_of": "2026-07-05",
+    "as_of": "2026-07-06",
     "top_marketcap": [
       {
         "symbol": "NVDA",
@@ -740,6 +740,19 @@
         "source_url": "https://finance.yahoo.com/quote/MU"
       },
       {
+        "symbol": "WMT",
+        "name": "Walmart Inc.",
+        "price": 111.84,
+        "daily_pct": 2.78,
+        "market_cap": 890031505408,
+        "pe": 39.380283,
+        "pe_kind": "trailing",
+        "mtd_pct": -1.25,
+        "ytd_pct": 0.39,
+        "yahoo": "WMT",
+        "source_url": "https://finance.yahoo.com/quote/WMT"
+      },
+      {
         "symbol": "INTC",
         "name": "Intel Corporation",
         "price": 120.35,
@@ -764,19 +777,6 @@
         "ytd_pct": -28.03,
         "yahoo": "ORCL",
         "source_url": "https://finance.yahoo.com/quote/ORCL"
-      },
-      {
-        "symbol": "NFLX",
-        "name": "Netflix, Inc.",
-        "price": 77.65,
-        "daily_pct": 4.66,
-        "market_cap": 326968508416,
-        "pe": 25.048388,
-        "pe_kind": "trailing",
-        "mtd_pct": 8.75,
-        "ytd_pct": -17.18,
-        "yahoo": "NFLX",
-        "source_url": "https://finance.yahoo.com/quote/NFLX"
       }
     ],
     "top_gainers": [
