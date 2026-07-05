@@ -85,7 +85,7 @@
     {
       "name": "TAIEX 加權指數",
       "name_zh": null,
-      "close": 46780.62109375,
+      "close": 46780.62,
       "daily_pct": 0.08,
       "mtd_pct": 1.42,
       "ytd_pct": 61.52,
@@ -94,11 +94,11 @@
     {
       "name": "OTC 櫃買加權",
       "name_zh": null,
-      "close": 431.23,
-      "daily_pct": 1.0,
-      "mtd_pct": -6.4,
-      "ytd_pct": 50.33,
-      "closing_date": "2026-07-01"
+      "close": 445.38,
+      "daily_pct": 1.34,
+      "mtd_pct": 4.31,
+      "ytd_pct": 61.23,
+      "closing_date": "2026-07-03"
     },
     {
       "name": "台指期(近月)",
@@ -139,10 +139,10 @@
     {
       "name": "CSI 300 滬深300",
       "name_zh": null,
-      "close": 4842.174,
-      "daily_pct": -0.54,
-      "mtd_pct": -0.49,
-      "ytd_pct": 5.15,
+      "close": 4842.169921875,
+      "daily_pct": 0.62,
+      "mtd_pct": -2.76,
+      "ytd_pct": 4.58,
       "closing_date": "2026-07-03"
     },
     {
@@ -167,9 +167,9 @@
   "bonds": [
     {
       "name": "US 10-Year",
-      "yield_pct": 4.48,
-      "daily_bps": 11.3,
-      "mtd_bps": 3.2,
+      "yield_pct": 4.49,
+      "daily_bps": 1.0,
+      "mtd_bps": 6.7,
       "closing_date": "2026-07-02"
     },
     {
@@ -384,13 +384,13 @@
   ],
   "rate_outlook": {
     "us2y": 4.14,
-    "us10y": 4.37,
-    "yield_curve_10y2y": 0.23,
-    "yield_curve_10y2y_bps": 23,
+    "us10y": 4.49,
+    "yield_curve_10y2y": 0.35,
+    "yield_curve_10y2y_bps": 35,
     "curve_shape": "正斜率",
     "dxy": 100.86000061035156,
     "dxy_daily_pct": -0.52,
-    "closing_date": "2026-06-26"
+    "closing_date": "2026-07-02"
   },
   "fedwatch": [
     {
