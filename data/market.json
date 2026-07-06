@@ -85,7 +85,7 @@
     {
       "name": "TAIEX 加權指數",
       "name_zh": null,
-      "close": 46780.62,
+      "close": 46780.62109375,
       "daily_pct": 0.08,
       "mtd_pct": 1.42,
       "ytd_pct": 61.52,
@@ -94,7 +94,7 @@
     {
       "name": "OTC 櫃買加權",
       "name_zh": null,
-      "close": 445.38,
+      "close": 445.3800048828125,
       "daily_pct": 1.34,
       "mtd_pct": 4.31,
       "ytd_pct": 61.23,
@@ -188,10 +188,10 @@
     },
     {
       "name": "Japan 10-Year",
-      "yield_pct": 2.78,
-      "daily_bps": 6.7,
-      "mtd_bps": 8.8,
-      "closing_date": "2026-07-02"
+      "yield_pct": 2.77,
+      "daily_bps": -1.0,
+      "mtd_bps": 7.8,
+      "closing_date": "2026-07-03"
     },
     {
       "name": "UK 10-Year",
@@ -211,10 +211,10 @@
   "fx": [
     {
       "name": "DXY 美元指數",
-      "close": 101.41,
-      "daily_pct": 0.55,
-      "mtd_pct": -0.31,
-      "ytd_pct": 2.64,
+      "close": 101.61,
+      "daily_pct": 0.74,
+      "mtd_pct": -0.24,
+      "ytd_pct": 2.71,
       "closing_date": "2026-07-03"
     },
     {
@@ -406,17 +406,17 @@
       "label": "Sep 2026",
       "fomc_date": "2026-09-17",
       "implied_rate": 3.73,
-      "delta_rate": 0.1,
-      "delta_bps": 10.0,
-      "p_hike": 40.0,
-      "p_hold": 60.0,
+      "delta_rate": 0.09,
+      "delta_bps": 9.0,
+      "p_hike": 36.0,
+      "p_hold": 64.0,
       "p_cut": 0,
       "is_reference": false
     },
     {
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
-      "implied_rate": 3.8,
+      "implied_rate": 3.79,
       "delta_rate": 0.06,
       "delta_bps": 6.0,
       "p_hike": 24.0,
@@ -428,10 +428,10 @@
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
       "implied_rate": 3.91,
-      "delta_rate": 0.11,
-      "delta_bps": 11.0,
-      "p_hike": 44.0,
-      "p_hold": 56.0,
+      "delta_rate": 0.12,
+      "delta_bps": 12.0,
+      "p_hike": 48.0,
+      "p_hold": 52.0,
       "p_cut": 0,
       "is_reference": false
     }
