@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-06T19:46:16+08:00",
+  "generated_at": "2026-07-06T20:16:36+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -45,34 +45,6 @@
       "error": null
     },
     {
-      "symbol": "ORCL",
-      "name_zh": "甲骨文",
-      "kind": "US",
-      "price": 140.27,
-      "change_pct": -1.56,
-      "mtd_pct": -4.29,
-      "ytd_pct": -28.03,
-      "market_date": "2026-07-02",
-      "per": 23.6463,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ORCL.US",
-      "error": null
-    },
-    {
-      "symbol": "INTC",
-      "name_zh": "英特爾",
-      "kind": "US",
-      "price": 120.35,
-      "change_pct": -5.25,
-      "mtd_pct": -13.81,
-      "ytd_pct": 226.15,
-      "market_date": "2026-07-02",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=INTC.US",
-      "error": null
-    },
-    {
       "symbol": "AMD",
       "name_zh": "超微",
       "kind": "US",
@@ -98,6 +70,34 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOXL.US",
+      "error": null
+    },
+    {
+      "symbol": "ORCL",
+      "name_zh": "甲骨文",
+      "kind": "US",
+      "price": 140.27,
+      "change_pct": -1.56,
+      "mtd_pct": -4.29,
+      "ytd_pct": -28.03,
+      "market_date": "2026-07-02",
+      "per": 23.6463,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ORCL.US",
+      "error": null
+    },
+    {
+      "symbol": "INTC",
+      "name_zh": "英特爾",
+      "kind": "US",
+      "price": 120.35,
+      "change_pct": -5.25,
+      "mtd_pct": -13.81,
+      "ytd_pct": 226.15,
+      "market_date": "2026-07-02",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=INTC.US",
       "error": null
     },
     {
@@ -143,20 +143,6 @@
       "error": null
     },
     {
-      "symbol": "NBIS",
-      "name_zh": "Nebius",
-      "kind": "US",
-      "price": 215.62,
-      "change_pct": -5.92,
-      "mtd_pct": -21.92,
-      "ytd_pct": 157.6,
-      "market_date": "2026-07-02",
-      "per": 66.3985,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NBIS.US",
-      "error": null
-    },
-    {
       "symbol": "WDC",
       "name_zh": "Western Digital",
       "kind": "US",
@@ -171,20 +157,6 @@
       "error": null
     },
     {
-      "symbol": "SOFI",
-      "name_zh": "SoFi",
-      "kind": "US",
-      "price": 18.24,
-      "change_pct": -1.08,
-      "mtd_pct": 1.73,
-      "ytd_pct": -30.33,
-      "market_date": "2026-07-02",
-      "per": 40.5543,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOFI.US",
-      "error": null
-    },
-    {
       "symbol": "ZIM",
       "name_zh": "ZIM Integrated Shipping Service",
       "kind": "US",
@@ -196,6 +168,48 @@
       "per": 31.077,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ZIM.US",
+      "error": null
+    },
+    {
+      "symbol": "AAOI",
+      "name_zh": "Applied Optoelectronics",
+      "kind": "US",
+      "price": 120.95,
+      "change_pct": -12.99,
+      "mtd_pct": -18.37,
+      "ytd_pct": 246.96,
+      "market_date": "2026-07-02",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AAOI.US",
+      "error": null
+    },
+    {
+      "symbol": "ONDS",
+      "name_zh": "Ondas",
+      "kind": "US",
+      "price": 7.41,
+      "change_pct": -6.44,
+      "mtd_pct": -10.07,
+      "ytd_pct": -24.08,
+      "market_date": "2026-07-02",
+      "per": 15.8188,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ONDS.US",
+      "error": null
+    },
+    {
+      "symbol": "SMCI",
+      "name_zh": "美超微",
+      "kind": "US",
+      "price": 27.22,
+      "change_pct": -1.56,
+      "mtd_pct": -7.19,
+      "ytd_pct": -7.0,
+      "market_date": "2026-07-02",
+      "per": 14.1158,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SMCI.US",
       "error": null
     },
     {
