@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-06T17:39:31+08:00",
+  "generated_at": "2026-07-06T19:05:07+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -31,17 +31,17 @@
       "error": null
     },
     {
-      "symbol": "DRAM",
-      "name_zh": "Roundhill Memory ETF",
+      "symbol": "IREN",
+      "name_zh": "IREN",
       "kind": "US",
-      "price": 60.63,
-      "change_pct": -7.94,
-      "mtd_pct": -17.9,
-      "ytd_pct": null,
+      "price": 38.82,
+      "change_pct": -10.39,
+      "mtd_pct": -15.11,
+      "ytd_pct": 2.78,
       "market_date": "2026-07-02",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DRAM.US",
+      "per": 180.0989,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IREN.US",
       "error": null
     },
     {
@@ -59,31 +59,17 @@
       "error": null
     },
     {
-      "symbol": "IREN",
-      "name_zh": "IREN",
+      "symbol": "DRAM",
+      "name_zh": "Roundhill Memory ETF",
       "kind": "US",
-      "price": 38.82,
-      "change_pct": -10.39,
-      "mtd_pct": -15.11,
-      "ytd_pct": 2.78,
+      "price": 60.63,
+      "change_pct": -7.94,
+      "mtd_pct": -17.9,
+      "ytd_pct": null,
       "market_date": "2026-07-02",
-      "per": 180.0989,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IREN.US",
-      "error": null
-    },
-    {
-      "symbol": "AMD",
-      "name_zh": "超微",
-      "kind": "US",
-      "price": 517.82,
-      "change_pct": -4.26,
-      "mtd_pct": -10.86,
-      "ytd_pct": 141.79,
-      "market_date": "2026-07-02",
-      "per": 168.5681,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AMD.US",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DRAM.US",
       "error": null
     },
     {
@@ -101,6 +87,20 @@
       "error": null
     },
     {
+      "symbol": "AMD",
+      "name_zh": "超微",
+      "kind": "US",
+      "price": 517.82,
+      "change_pct": -4.26,
+      "mtd_pct": -10.86,
+      "ytd_pct": 141.79,
+      "market_date": "2026-07-02",
+      "per": 168.5681,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AMD.US",
+      "error": null
+    },
+    {
       "symbol": "INTC",
       "name_zh": "英特爾",
       "kind": "US",
@@ -115,20 +115,6 @@
       "error": null
     },
     {
-      "symbol": "NBIS",
-      "name_zh": "Nebius",
-      "kind": "US",
-      "price": 215.62,
-      "change_pct": -5.92,
-      "mtd_pct": -21.92,
-      "ytd_pct": 157.6,
-      "market_date": "2026-07-02",
-      "per": 66.3985,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NBIS.US",
-      "error": null
-    },
-    {
       "symbol": "MRVL",
       "name_zh": "邁威爾",
       "kind": "US",
@@ -140,6 +126,20 @@
       "per": 84.9249,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MRVL.US",
+      "error": null
+    },
+    {
+      "symbol": "NBIS",
+      "name_zh": "Nebius",
+      "kind": "US",
+      "price": 215.62,
+      "change_pct": -5.92,
+      "mtd_pct": -21.92,
+      "ytd_pct": 157.6,
+      "market_date": "2026-07-02",
+      "per": 66.3985,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NBIS.US",
       "error": null
     },
     {
@@ -171,6 +171,20 @@
       "error": null
     },
     {
+      "symbol": "SMCI",
+      "name_zh": "美超微",
+      "kind": "US",
+      "price": 27.22,
+      "change_pct": -1.56,
+      "mtd_pct": -7.19,
+      "ytd_pct": -7.0,
+      "market_date": "2026-07-02",
+      "per": 14.1158,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SMCI.US",
+      "error": null
+    },
+    {
       "symbol": "BMNR",
       "name_zh": "BitMine Immersion Technologies,",
       "kind": "US",
@@ -182,34 +196,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BMNR.US",
-      "error": null
-    },
-    {
-      "symbol": "NOK",
-      "name_zh": "Nokia Corporation Sponsored",
-      "kind": "US",
-      "price": 12.07,
-      "change_pct": -6.51,
-      "mtd_pct": -9.11,
-      "ytd_pct": 86.55,
-      "market_date": "2026-07-02",
-      "per": 77.0764,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NOK.US",
-      "error": null
-    },
-    {
-      "symbol": "ASTS",
-      "name_zh": "AST SpaceMobile",
-      "kind": "US",
-      "price": 85.13,
-      "change_pct": -1.13,
-      "mtd_pct": -4.2,
-      "ytd_pct": 17.21,
-      "market_date": "2026-07-02",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ASTS.US",
       "error": null
     },
     {
