@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-07T18:03:03+08:00",
+  "generated_at": "2026-07-07T18:34:32+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -73,17 +73,31 @@
       "error": null
     },
     {
-      "symbol": "SOLS",
-      "name_zh": "Solstice Advanced Materials",
+      "symbol": "IBM",
+      "name_zh": "International Business Machines",
       "kind": "US",
-      "price": 68.05,
-      "change_pct": -15.14,
-      "mtd_pct": -23.19,
-      "ytd_pct": 40.08,
+      "price": 299.52,
+      "change_pct": 3.45,
+      "mtd_pct": 6.51,
+      "ytd_pct": 1.12,
       "market_date": "2026-07-06",
-      "per": 33.561,
+      "per": 26.1825,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOLS.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IBM.US",
+      "error": null
+    },
+    {
+      "symbol": "ZETA",
+      "name_zh": "Zeta Global",
+      "kind": "US",
+      "price": 21.82,
+      "change_pct": 5.41,
+      "mtd_pct": 10.87,
+      "ytd_pct": 7.22,
+      "market_date": "2026-07-06",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ZETA.US",
       "error": null
     },
     {
@@ -101,20 +115,6 @@
       "error": null
     },
     {
-      "symbol": "IBM",
-      "name_zh": "International Business Machines",
-      "kind": "US",
-      "price": 299.52,
-      "change_pct": 3.45,
-      "mtd_pct": 6.51,
-      "ytd_pct": 1.12,
-      "market_date": "2026-07-06",
-      "per": 26.1825,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IBM.US",
-      "error": null
-    },
-    {
       "symbol": "OKTA",
       "name_zh": "Okta",
       "kind": "US",
@@ -126,6 +126,34 @@
       "per": 103.7989,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=OKTA.US",
+      "error": null
+    },
+    {
+      "symbol": "SOLS",
+      "name_zh": "Solstice Advanced Materials",
+      "kind": "US",
+      "price": 68.05,
+      "change_pct": -15.14,
+      "mtd_pct": -23.19,
+      "ytd_pct": 40.08,
+      "market_date": "2026-07-06",
+      "per": 33.561,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOLS.US",
+      "error": null
+    },
+    {
+      "symbol": "CRWD",
+      "name_zh": "CrowdStrike",
+      "kind": "US",
+      "price": 199.38,
+      "change_pct": 2.78,
+      "mtd_pct": 4.51,
+      "ytd_pct": 70.13,
+      "market_date": "2026-07-06",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRWD.US",
       "error": null
     },
     {
