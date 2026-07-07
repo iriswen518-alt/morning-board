@@ -6453,7 +6453,9 @@ function accSection(key, title, innerHtml, defaultOpen = false) {
 }
 
 // 回傳該則新聞「發布日」MM/DD（非資料抓取日）。優先序：
-// 權威 published 欄位 → 內文開頭日期 → 標題括號日期；都沒有則回 ""（由呼叫端退回抓取日）。
+// 權威 published 欄位 → 內文開頭日期；都沒有則回 ""（由呼叫端退回 news_date）。
+// 不從標題括號抓日期：括號裡是事件發生日（如美股收盤日），非新聞發布日，
+// 且日期已在標題文字中可見，chip 不需重複。
 function newsItemDate(it) {
   let d = "";
   if (it.published) {
@@ -6463,10 +6465,6 @@ function newsItemDate(it) {
   if (!d && it.body_zh) {
     const m = String(it.body_zh).slice(0, 200).match(/(\d{4})-(\d{2})-(\d{2})/);
     if (m) d = `${m[2]}-${m[3]}`;
-  }
-  if (!d && it.title_zh) {
-    const m = it.title_zh.match(/[（(]\d{4}-(\d{2}-\d{2})[）)]/);
-    if (m) d = m[1];
   }
   return d ? d.replace("-", "/") : "";
 }
