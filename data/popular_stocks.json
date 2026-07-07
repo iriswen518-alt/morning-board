@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-07T16:54:14+08:00",
+  "generated_at": "2026-07-07T18:03:03+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -45,6 +45,34 @@
       "error": null
     },
     {
+      "symbol": "NOW",
+      "name_zh": "ServiceNow",
+      "kind": "US",
+      "price": 107.93,
+      "change_pct": 1.51,
+      "mtd_pct": 8.71,
+      "ytd_pct": -29.55,
+      "market_date": "2026-07-06",
+      "per": 62.4068,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NOW.US",
+      "error": null
+    },
+    {
+      "symbol": "FISV",
+      "name_zh": "Fiserv",
+      "kind": "US",
+      "price": 51.78,
+      "change_pct": -1.05,
+      "mtd_pct": 5.57,
+      "ytd_pct": -22.91,
+      "market_date": "2026-07-06",
+      "per": 8.5804,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FISV.US",
+      "error": null
+    },
+    {
       "symbol": "SOLS",
       "name_zh": "Solstice Advanced Materials",
       "kind": "US",
@@ -73,20 +101,6 @@
       "error": null
     },
     {
-      "symbol": "FISV",
-      "name_zh": "Fiserv",
-      "kind": "US",
-      "price": 51.78,
-      "change_pct": -1.05,
-      "mtd_pct": 5.57,
-      "ytd_pct": -22.91,
-      "market_date": "2026-07-06",
-      "per": 8.5804,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FISV.US",
-      "error": null
-    },
-    {
       "symbol": "IBM",
       "name_zh": "International Business Machines",
       "kind": "US",
@@ -98,34 +112,6 @@
       "per": 26.1825,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IBM.US",
-      "error": null
-    },
-    {
-      "symbol": "LMND",
-      "name_zh": "Lemonade",
-      "kind": "US",
-      "price": 78.7,
-      "change_pct": 10.04,
-      "mtd_pct": 20.98,
-      "ytd_pct": 10.56,
-      "market_date": "2026-07-06",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LMND.US",
-      "error": null
-    },
-    {
-      "symbol": "LCID",
-      "name_zh": "Lucid",
-      "kind": "US",
-      "price": 6.66,
-      "change_pct": 9.54,
-      "mtd_pct": -0.45,
-      "ytd_pct": -36.99,
-      "market_date": "2026-07-06",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LCID.US",
       "error": null
     },
     {
@@ -143,17 +129,17 @@
       "error": null
     },
     {
-      "symbol": "WFC",
-      "name_zh": "富國銀行",
+      "symbol": "LMND",
+      "name_zh": "Lemonade",
       "kind": "US",
-      "price": 87.45,
-      "change_pct": 2.27,
-      "mtd_pct": 5.82,
-      "ytd_pct": -6.17,
+      "price": 78.7,
+      "change_pct": 10.04,
+      "mtd_pct": 20.98,
+      "ytd_pct": 10.56,
       "market_date": "2026-07-06",
-      "per": 12.1111,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=WFC.US",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LMND.US",
       "error": null
     },
     {
