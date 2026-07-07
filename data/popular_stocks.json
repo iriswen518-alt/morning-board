@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-07T18:34:32+08:00",
+  "generated_at": "2026-07-07T19:20:16+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -73,20 +73,6 @@
       "error": null
     },
     {
-      "symbol": "IBM",
-      "name_zh": "International Business Machines",
-      "kind": "US",
-      "price": 299.52,
-      "change_pct": 3.45,
-      "mtd_pct": 6.51,
-      "ytd_pct": 1.12,
-      "market_date": "2026-07-06",
-      "per": 26.1825,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IBM.US",
-      "error": null
-    },
-    {
       "symbol": "ZETA",
       "name_zh": "Zeta Global",
       "kind": "US",
@@ -101,31 +87,31 @@
       "error": null
     },
     {
-      "symbol": "QNT",
-      "name_zh": "Quantinuum",
+      "symbol": "AMPG",
+      "name_zh": "Amplitech",
       "kind": "US",
-      "price": 83.17,
-      "change_pct": 11.55,
-      "mtd_pct": 1.75,
-      "ytd_pct": null,
+      "price": 5.92,
+      "change_pct": -1.17,
+      "mtd_pct": -14.94,
+      "ytd_pct": 97.99,
       "market_date": "2026-07-06",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QNT.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AMPG.US",
       "error": null
     },
     {
-      "symbol": "OKTA",
-      "name_zh": "Okta",
+      "symbol": "IBM",
+      "name_zh": "International Business Machines",
       "kind": "US",
-      "price": 148.6,
-      "change_pct": 5.08,
-      "mtd_pct": 8.9,
-      "ytd_pct": 71.85,
+      "price": 299.52,
+      "change_pct": 3.45,
+      "mtd_pct": 6.51,
+      "ytd_pct": 1.12,
       "market_date": "2026-07-06",
-      "per": 103.7989,
+      "per": 26.1825,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=OKTA.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IBM.US",
       "error": null
     },
     {
@@ -143,17 +129,17 @@
       "error": null
     },
     {
-      "symbol": "CRWD",
-      "name_zh": "CrowdStrike",
+      "symbol": "FIG",
+      "name_zh": "Figma",
       "kind": "US",
-      "price": 199.38,
-      "change_pct": 2.78,
-      "mtd_pct": 4.51,
-      "ytd_pct": 70.13,
+      "price": 21.08,
+      "change_pct": -1.22,
+      "mtd_pct": 16.53,
+      "ytd_pct": -43.59,
       "market_date": "2026-07-06",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRWD.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FIG.US",
       "error": null
     },
     {
@@ -168,6 +154,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LMND.US",
+      "error": null
+    },
+    {
+      "symbol": "CRWD",
+      "name_zh": "CrowdStrike",
+      "kind": "US",
+      "price": 199.38,
+      "change_pct": 2.78,
+      "mtd_pct": 4.51,
+      "ytd_pct": 70.13,
+      "market_date": "2026-07-06",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRWD.US",
       "error": null
     },
     {
