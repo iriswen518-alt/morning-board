@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-07-09T06:27",
+  "built_at": "2026-07-09T07:43",
   "indices": [
     {
       "ok": true,
@@ -650,7 +650,7 @@
         10468.43,
         10489.04
       ],
-      "market_state": "CLOSED",
+      "market_state": "PRE",
       "asof": "07/08 16:35",
       "tz": "Europe/London",
       "name_zh": "英國FTSE"
@@ -905,9 +905,9 @@
       "ok": true,
       "symbol": "^TWOII",
       "last": 421.39,
-      "prev_close": 419.47,
-      "change": 1.92,
-      "change_pct": 0.46,
+      "prev_close": null,
+      "change": null,
+      "change_pct": null,
       "points": [
         422.98,
         419.94,
