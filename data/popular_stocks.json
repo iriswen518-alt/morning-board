@@ -1,21 +1,7 @@
 {
-  "generated_at": "2026-07-08T13:46:48+08:00",
+  "generated_at": "2026-07-08T14:36:43+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
-    {
-      "symbol": "CLRO",
-      "name_zh": "ClearOne",
-      "kind": "US",
-      "price": 13.84,
-      "change_pct": 97.71,
-      "mtd_pct": 315.62,
-      "ytd_pct": 171.91,
-      "market_date": "2026-07-07",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CLRO.US",
-      "error": null
-    },
     {
       "symbol": "BABA",
       "name_zh": "阿里巴巴",
@@ -28,6 +14,20 @@
       "per": 15.069,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BABA.US",
+      "error": null
+    },
+    {
+      "symbol": "CLRO",
+      "name_zh": "ClearOne",
+      "kind": "US",
+      "price": 13.84,
+      "change_pct": 97.71,
+      "mtd_pct": 315.62,
+      "ytd_pct": 171.91,
+      "market_date": "2026-07-07",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CLRO.US",
       "error": null
     },
     {
@@ -73,31 +73,17 @@
       "error": null
     },
     {
-      "symbol": "VKTX",
-      "name_zh": "Viking Therapeutics",
+      "symbol": "BIDU",
+      "name_zh": "百度",
       "kind": "US",
-      "price": 42.13,
-      "change_pct": 8.83,
-      "mtd_pct": 8.0,
-      "ytd_pct": 19.76,
+      "price": 112.09,
+      "change_pct": -2.01,
+      "mtd_pct": -1.92,
+      "ytd_pct": -14.21,
       "market_date": "2026-07-07",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VKTX.US",
-      "error": null
-    },
-    {
-      "symbol": "GILD",
-      "name_zh": "吉立亞",
-      "kind": "US",
-      "price": 136.36,
-      "change_pct": 5.21,
-      "mtd_pct": 7.93,
-      "ytd_pct": 11.1,
-      "market_date": "2026-07-07",
-      "per": 18.1083,
+      "per": 676.4741,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GILD.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BIDU.US",
       "error": null
     },
     {
@@ -129,34 +115,6 @@
       "error": null
     },
     {
-      "symbol": "BIDU",
-      "name_zh": "百度",
-      "kind": "US",
-      "price": 112.09,
-      "change_pct": -2.01,
-      "mtd_pct": -1.92,
-      "ytd_pct": -14.21,
-      "market_date": "2026-07-07",
-      "per": 676.4741,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BIDU.US",
-      "error": null
-    },
-    {
-      "symbol": "ET",
-      "name_zh": "Energy Transfer LP",
-      "kind": "US",
-      "price": 19.81,
-      "change_pct": 2.91,
-      "mtd_pct": 3.61,
-      "ytd_pct": 20.13,
-      "market_date": "2026-07-07",
-      "per": 15.1793,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ET.US",
-      "error": null
-    },
-    {
       "symbol": "OXY",
       "name_zh": "西方石油",
       "kind": "US",
@@ -171,6 +129,48 @@
       "error": null
     },
     {
+      "symbol": "VKTX",
+      "name_zh": "Viking Therapeutics",
+      "kind": "US",
+      "price": 42.13,
+      "change_pct": 8.83,
+      "mtd_pct": 8.0,
+      "ytd_pct": 19.76,
+      "market_date": "2026-07-07",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VKTX.US",
+      "error": null
+    },
+    {
+      "symbol": "FIG",
+      "name_zh": "Figma",
+      "kind": "US",
+      "price": 22.19,
+      "change_pct": 5.27,
+      "mtd_pct": 22.66,
+      "ytd_pct": -40.62,
+      "market_date": "2026-07-07",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FIG.US",
+      "error": null
+    },
+    {
+      "symbol": "GILD",
+      "name_zh": "吉立亞",
+      "kind": "US",
+      "price": 136.36,
+      "change_pct": 5.21,
+      "mtd_pct": 7.93,
+      "ytd_pct": 11.1,
+      "market_date": "2026-07-07",
+      "per": 18.1083,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GILD.US",
+      "error": null
+    },
+    {
       "symbol": "XOM",
       "name_zh": "艾克森美孚",
       "kind": "US",
@@ -182,6 +182,20 @@
       "per": 22.4197,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=XOM.US",
+      "error": null
+    },
+    {
+      "symbol": "CVX",
+      "name_zh": "雪佛龍",
+      "kind": "US",
+      "price": 174.01,
+      "change_pct": 3.52,
+      "mtd_pct": 4.98,
+      "ytd_pct": 14.17,
+      "market_date": "2026-07-07",
+      "per": 31.011,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CVX.US",
       "error": null
     },
     {
