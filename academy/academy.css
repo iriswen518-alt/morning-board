@@ -1,6 +1,12 @@
 /* 理財小學堂 —— 主站 style.css 已負責 topbar / main-nav / footer，
    此檔只覆寫 academy 專屬的 layout 與內容區塊。 */
 
+/* iOS Safari 會對寬幅可捲動內容自動放大字體（font boosting），鎖定 100% 才會照 CSS 尺寸呈現 */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 /* academy-specific aliases → reuse main style.css variables */
 :root {
   --academy-bg-soft: var(--soft);
