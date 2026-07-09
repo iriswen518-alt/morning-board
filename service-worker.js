@@ -32,7 +32,7 @@
 //   補強換問法關鍵字命中，並把延伸參考深連結到小學堂對應的整門課程。
 // v44（2026-06-30）：補上原有 28 則舊條目的延伸參考，全部接上小學堂內部課程深連結（先前只有外部連結）。
 // v45（2026-07-02）：新聞排程提前到 05:00 起跑，過期橫幅文案改成「07:00 前更新完成」，bump 強制更新。
-const CACHE = "morning-board-v45";
+const CACHE = "morning-board-v46";
 
 self.addEventListener("install", e => {
   self.skipWaiting();
