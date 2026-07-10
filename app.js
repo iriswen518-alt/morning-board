@@ -3619,9 +3619,9 @@ function renderMarketSheet() {
 
   const overviewInner = `
       ${renderMarketHighlights(m)}
-      ${accSection("mv-indices", "全球", stocksTab)}
-      ${accSection("mv-bonds", "債券", bondsTab)}
-      ${accSection("mv-fx", "匯率", fxTab)}
+      ${accSection("mv-indices", "全球指數", stocksTab)}
+      ${accSection("mv-bonds", "債券行情", bondsTab)}
+      ${accSection("mv-fx", "匯率行情", fxTab)}
   `;
   // 美股分析／台股分析 內各區塊改為折疊（沿用市場一覽 accSection 慣例，一次展開一個）。
   // 盤勢區塊自帶 <h2>，折疊標題已重複，去掉首個 h2。
