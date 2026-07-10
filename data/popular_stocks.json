@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-10T17:54:18+08:00",
+  "generated_at": "2026-07-10T18:31:14+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -31,6 +31,20 @@
       "error": null
     },
     {
+      "symbol": "MSTR",
+      "name_zh": "MicroStrategy",
+      "kind": "US",
+      "price": 93.89,
+      "change_pct": 0.02,
+      "mtd_pct": 8.01,
+      "ytd_pct": -38.21,
+      "market_date": "2026-07-09",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MSTR.US",
+      "error": null
+    },
+    {
       "symbol": "VRAX",
       "name_zh": "Virax Biolabs",
       "kind": "US",
@@ -42,62 +56,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VRAX.US",
-      "error": null
-    },
-    {
-      "symbol": "LASR",
-      "name_zh": "nLIGHT",
-      "kind": "US",
-      "price": 74.71,
-      "change_pct": 27.32,
-      "mtd_pct": 7.31,
-      "ytd_pct": 99.17,
-      "market_date": "2026-07-09",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LASR.US",
-      "error": null
-    },
-    {
-      "symbol": "OPEN",
-      "name_zh": "Opendoor Technologies",
-      "kind": "US",
-      "price": 5.3,
-      "change_pct": 10.65,
-      "mtd_pct": 14.72,
-      "ytd_pct": -9.09,
-      "market_date": "2026-07-09",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=OPEN.US",
-      "error": null
-    },
-    {
-      "symbol": "FRMI",
-      "name_zh": "Fermi",
-      "kind": "US",
-      "price": 7.32,
-      "change_pct": -0.54,
-      "mtd_pct": -20.09,
-      "ytd_pct": -8.5,
-      "market_date": "2026-07-09",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FRMI.US",
-      "error": null
-    },
-    {
-      "symbol": "NOW",
-      "name_zh": "ServiceNow",
-      "kind": "US",
-      "price": 108.84,
-      "change_pct": 0.98,
-      "mtd_pct": 9.63,
-      "ytd_pct": -28.95,
-      "market_date": "2026-07-09",
-      "per": 63.2637,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NOW.US",
       "error": null
     },
     {
@@ -115,6 +73,34 @@
       "error": null
     },
     {
+      "symbol": "LASR",
+      "name_zh": "nLIGHT",
+      "kind": "US",
+      "price": 74.71,
+      "change_pct": 27.32,
+      "mtd_pct": 7.31,
+      "ytd_pct": 99.17,
+      "market_date": "2026-07-09",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LASR.US",
+      "error": null
+    },
+    {
+      "symbol": "FRMI",
+      "name_zh": "Fermi",
+      "kind": "US",
+      "price": 7.32,
+      "change_pct": -0.54,
+      "mtd_pct": -20.09,
+      "ytd_pct": -8.5,
+      "market_date": "2026-07-09",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FRMI.US",
+      "error": null
+    },
+    {
       "symbol": "MARA",
       "name_zh": "Marathon Digital",
       "kind": "US",
@@ -126,6 +112,34 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MARA.US",
+      "error": null
+    },
+    {
+      "symbol": "OPEN",
+      "name_zh": "Opendoor Technologies",
+      "kind": "US",
+      "price": 5.3,
+      "change_pct": 10.65,
+      "mtd_pct": 14.72,
+      "ytd_pct": -9.09,
+      "market_date": "2026-07-09",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=OPEN.US",
+      "error": null
+    },
+    {
+      "symbol": "NOW",
+      "name_zh": "ServiceNow",
+      "kind": "US",
+      "price": 108.84,
+      "change_pct": 0.98,
+      "mtd_pct": 9.63,
+      "ytd_pct": -28.95,
+      "market_date": "2026-07-09",
+      "per": 63.2637,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NOW.US",
       "error": null
     },
     {
