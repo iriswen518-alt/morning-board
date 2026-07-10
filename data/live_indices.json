@@ -1,13 +1,13 @@
 {
-  "built_at": "2026-07-11T03:55",
+  "built_at": "2026-07-11T05:10",
   "indices": [
     {
       "ok": true,
       "symbol": "^GSPC",
-      "last": 7576.73,
+      "last": 7575.39,
       "prev_close": 7543.64,
-      "change": 33.09,
-      "change_pct": 0.44,
+      "change": 31.75,
+      "change_pct": 0.42,
       "points": [
         7553.3,
         7551.84,
@@ -86,19 +86,20 @@
         7576.54,
         7577.39,
         7577.32,
-        7576.73
+        7575.38,
+        7575.39
       ],
-      "market_state": "REGULAR",
-      "asof": "07/10 15:55",
+      "market_state": "CLOSED",
+      "asof": "07/10 16:20",
       "tz": "America/New_York",
       "name_zh": "標普500"
     },
     {
       "ok": true,
       "symbol": "^IXIC",
-      "last": 26283.12,
+      "last": 26281.61,
       "prev_close": 26206.89,
-      "change": 76.23,
+      "change": 74.72,
       "change_pct": 0.29,
       "points": [
         26237.3,
@@ -178,20 +179,21 @@
         26287.63,
         26287.8,
         26283.37,
-        26283.12
+        26278.7,
+        26281.61
       ],
-      "market_state": "REGULAR",
-      "asof": "07/10 15:55",
+      "market_state": "CLOSED",
+      "asof": "07/10 17:09",
       "tz": "America/New_York",
       "name_zh": "那斯達克"
     },
     {
       "ok": true,
       "symbol": "^DJI",
-      "last": 52681.03,
+      "last": 52637.01,
       "prev_close": 52487.41,
-      "change": 193.62,
-      "change_pct": 0.37,
+      "change": 149.6,
+      "change_pct": 0.29,
       "points": [
         52549.05,
         52582.0,
@@ -270,20 +272,21 @@
         52690.29,
         52690.32,
         52691.7,
-        52681.03
+        52640.31,
+        52637.01
       ],
-      "market_state": "REGULAR",
-      "asof": "07/10 15:55",
+      "market_state": "CLOSED",
+      "asof": "07/10 16:20",
       "tz": "America/New_York",
       "name_zh": "道瓊工業"
     },
     {
       "ok": true,
       "symbol": "^SOX",
-      "last": 12973.28,
+      "last": 12967.16,
       "prev_close": 12960.0,
-      "change": 13.28,
-      "change_pct": 0.1,
+      "change": 7.16,
+      "change_pct": 0.06,
       "points": [
         12821.13,
         12727.47,
@@ -362,10 +365,11 @@
         12984.15,
         12983.23,
         12975.66,
-        12973.28
+        12962.9,
+        12967.16
       ],
-      "market_state": "REGULAR",
-      "asof": "07/10 15:55",
+      "market_state": "CLOSED",
+      "asof": "07/10 17:09",
       "tz": "America/New_York",
       "name_zh": "費城半導"
     },
