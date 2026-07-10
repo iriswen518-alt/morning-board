@@ -6460,8 +6460,9 @@ function saveAccSec(d) {
   } catch (_) { /* 略 */ }
 }
 function accSection(key, title, innerHtml, defaultOpen = false) {
-  const stored = ACC_COLLAPSED[key];
-  const isOpen = stored === undefined ? defaultOpen : !stored;
+  // 一律以 defaultOpen 為準、不還原先前展開狀態：預設全部折疊，且每次重新進入／
+  // 重新載入頁面都回到折疊（不記憶使用者曾展開哪些區塊）。
+  const isOpen = defaultOpen;
   const open = isOpen ? " open" : "";
   return `
     <details class="acc-sec" data-key="${escapeHtml(key)}"${open} ontoggle="saveAccSec(this)">
