@@ -85,7 +85,7 @@
     {
       "name": "TAIEX 加權指數",
       "name_zh": null,
-      "close": 45354.609375,
+      "close": 45354.61,
       "daily_pct": -0.83,
       "mtd_pct": -1.67,
       "ytd_pct": 56.59,
@@ -195,10 +195,10 @@
     },
     {
       "name": "UK 10-Year",
-      "yield_pct": 4.9,
-      "daily_bps": 3.91,
-      "mtd_bps": 7.06,
-      "closing_date": "2026-07-07"
+      "yield_pct": null,
+      "daily_bps": null,
+      "mtd_bps": null,
+      "closing_date": null
     },
     {
       "name": "TW 10-Year",
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 100.94000244140625,
       "daily_pct": -0.11,
-      "mtd_pct": -0.35,
-      "ytd_pct": 2.6,
+      "mtd_pct": -0.33,
+      "ytd_pct": 2.62,
       "closing_date": "2026-07-09"
     },
     {
@@ -406,17 +406,17 @@
       "label": "Sep 2026",
       "fomc_date": "2026-09-17",
       "implied_rate": 3.73,
-      "delta_rate": 0.1,
-      "delta_bps": 10.0,
-      "p_hike": 40.0,
-      "p_hold": 60.0,
+      "delta_rate": 0.11,
+      "delta_bps": 11.0,
+      "p_hike": 44.0,
+      "p_hold": 56.0,
       "p_cut": 0,
       "is_reference": false
     },
     {
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
-      "implied_rate": 3.79,
+      "implied_rate": 3.8,
       "delta_rate": 0.06,
       "delta_bps": 6.0,
       "p_hike": 24.0,
