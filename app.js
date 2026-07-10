@@ -3623,18 +3623,28 @@ function renderMarketSheet() {
       ${accSection("mv-bonds", "債券", bondsTab)}
       ${accSection("mv-fx", "匯率", fxTab)}
   `;
-  const usInner = `
-      ${renderUsMarketAnalysis()}
-      ${renderStocksTable("", usStocks) || ""}
-      ${renderRankingsBlock("us")}
-  `;
-  const twInner = `
-      ${renderPremarketBlock()}
-      ${renderTwMarketAnalysis()}
-      ${twPresetTable}
-      ${renderRankingsBlock("tw")}
-      ${renderTwStockSheet()}
-  `;
+  // 美股分析／台股分析 內各區塊改為折疊（沿用市場一覽 accSection 慣例，一次展開一個）。
+  // 盤勢區塊自帶 <h2>，折疊標題已重複，去掉首個 h2。
+  const usAnalysisHtml = renderUsMarketAnalysis();
+  const usStocksHtml = renderStocksTable("", usStocks) || "";
+  const usRankHtml = renderRankingsBlock("us");
+  const usParts = [];
+  if (usAnalysisHtml && usAnalysisHtml.trim()) usParts.push(accSection("mv-us-premarket", "美股盤勢", dropLeadH2(usAnalysisHtml)));
+  if (usStocksHtml && usStocksHtml.trim()) usParts.push(accSection("mv-us-stocks", "精選美股", usStocksHtml));
+  if (usRankHtml && usRankHtml.trim()) usParts.push(accSection("mv-us-rankings", "美股排行", usRankHtml));
+  const usInner = usParts.join("");
+
+  const twPremarketHtml = renderPremarketBlock();
+  const twAnalysisHtml = renderTwMarketAnalysis();
+  const twRankHtml = renderRankingsBlock("tw");
+  const twSheetHtml = renderTwStockSheet();
+  const twParts = [];
+  if (twPremarketHtml && twPremarketHtml.trim()) twParts.push(accSection("mv-tw-premarket", "盤前分析", twPremarketHtml));
+  if (twAnalysisHtml && twAnalysisHtml.trim()) twParts.push(accSection("mv-tw-market", "台股盤勢", dropLeadH2(twAnalysisHtml)));
+  if (twPresetTable && twPresetTable.trim()) twParts.push(accSection("mv-tw-stocks", "精選台股", twPresetTable));
+  if (twRankHtml && twRankHtml.trim()) twParts.push(accSection("mv-tw-rankings", "台股排行", twRankHtml));
+  if (twSheetHtml && twSheetHtml.trim()) twParts.push(accSection("mv-tw-sheet", "個股查詢", twSheetHtml));
+  const twInner = twParts.join("");
 
   // 市場一覽（全球指數／債券／匯率）吃 market.json；該來源自 2026-05 停產，
   // 無資料時整段隱藏，改由「美股分析／台股分析」的即時行情與盤前分析涵蓋。
