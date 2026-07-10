@@ -3636,8 +3636,19 @@ function renderMarketSheet() {
       ${renderTwStockSheet()}
   `;
 
+  // 市場一覽（全球指數／債券／匯率）吃 market.json；該來源自 2026-05 停產，
+  // 無資料時整段隱藏，改由「美股分析／台股分析」的即時行情與盤前分析涵蓋。
+  // 若日後 market.json 恢復供料，本區塊會自動重新顯示。
+  const hasMarketData =
+    (m.indices || []).some(i => i.daily_pct != null) ||
+    (m.bonds || []).length > 0 ||
+    (m.fx || []).length > 0;
+  const overviewSection = hasMarketData
+    ? accSection("mv-overview", "市場一覽", overviewInner)
+    : "";
+
   return `
-    ${accSection("mv-overview", "市場一覽", overviewInner)}
+    ${overviewSection}
     ${accSection("mv-us-analysis", "美股分析", usInner)}
     ${accSection("mv-tw-analysis", "台股分析", twInner)}
   `;
