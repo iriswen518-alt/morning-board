@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-10T16:51:40+08:00",
+  "generated_at": "2026-07-10T17:54:18+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -31,20 +31,6 @@
       "error": null
     },
     {
-      "symbol": "LASR",
-      "name_zh": "nLIGHT",
-      "kind": "US",
-      "price": 74.71,
-      "change_pct": 27.32,
-      "mtd_pct": 7.31,
-      "ytd_pct": 99.17,
-      "market_date": "2026-07-09",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LASR.US",
-      "error": null
-    },
-    {
       "symbol": "VRAX",
       "name_zh": "Virax Biolabs",
       "kind": "US",
@@ -59,45 +45,17 @@
       "error": null
     },
     {
-      "symbol": "PEP",
-      "name_zh": "百事",
+      "symbol": "LASR",
+      "name_zh": "nLIGHT",
       "kind": "US",
-      "price": 137.86,
-      "change_pct": -3.26,
-      "mtd_pct": 1.82,
-      "ytd_pct": -3.94,
-      "market_date": "2026-07-09",
-      "per": 21.644,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PEP.US",
-      "error": null
-    },
-    {
-      "symbol": "ITW",
-      "name_zh": "Illinois Tool Works",
-      "kind": "US",
-      "price": 265.48,
-      "change_pct": 0.14,
-      "mtd_pct": -1.84,
-      "ytd_pct": 7.79,
-      "market_date": "2026-07-09",
-      "per": 24.494,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ITW.US",
-      "error": null
-    },
-    {
-      "symbol": "MARA",
-      "name_zh": "Marathon Digital",
-      "kind": "US",
-      "price": 13.22,
-      "change_pct": 9.98,
-      "mtd_pct": -4.82,
-      "ytd_pct": 47.22,
+      "price": 74.71,
+      "change_pct": 27.32,
+      "mtd_pct": 7.31,
+      "ytd_pct": 99.17,
       "market_date": "2026-07-09",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MARA.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LASR.US",
       "error": null
     },
     {
@@ -126,6 +84,48 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FRMI.US",
+      "error": null
+    },
+    {
+      "symbol": "NOW",
+      "name_zh": "ServiceNow",
+      "kind": "US",
+      "price": 108.84,
+      "change_pct": 0.98,
+      "mtd_pct": 9.63,
+      "ytd_pct": -28.95,
+      "market_date": "2026-07-09",
+      "per": 63.2637,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NOW.US",
+      "error": null
+    },
+    {
+      "symbol": "ITW",
+      "name_zh": "Illinois Tool Works",
+      "kind": "US",
+      "price": 265.48,
+      "change_pct": 0.14,
+      "mtd_pct": -1.84,
+      "ytd_pct": 7.79,
+      "market_date": "2026-07-09",
+      "per": 24.494,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ITW.US",
+      "error": null
+    },
+    {
+      "symbol": "MARA",
+      "name_zh": "Marathon Digital",
+      "kind": "US",
+      "price": 13.22,
+      "change_pct": 9.98,
+      "mtd_pct": -4.82,
+      "ytd_pct": 47.22,
+      "market_date": "2026-07-09",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MARA.US",
       "error": null
     },
     {
