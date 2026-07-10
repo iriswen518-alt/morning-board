@@ -568,7 +568,7 @@ async function init() {
   // 每個來源各自有 fallback：一個壞不拖垮全頁
   // 失敗時記到 FAILED_LOADS，使用者切到對應 tab 時會背景重試
   const safe = (name, fallback) => load(name).catch(() => { FAILED_LOADS.add(name); return fallback; });
-  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news, etf0050] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
@@ -594,8 +594,9 @@ async function init() {
     safe("popular_funds", { funds: [] }),
     safe("live_indices", { built_at: "", indices: [] }),
     safe("live_news", { built_at: "", items: [] }),
+    safe("etf0050", { built_at: "", market_date: "", stocks: [] }),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news };
+  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news, etf0050 };
   const _updatedAt = latestBuiltAt();
   if (!_updatedAt) {
     $("updated").textContent = `載入部分失敗（顯示快取資料）`;
@@ -955,7 +956,7 @@ async function refreshData() {
     FAILED_LOADS.add(name);
     return DATA[name === "insurances" ? "insurance" : name] || fallback;
   });
-  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news, etf0050] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
@@ -981,8 +982,9 @@ async function refreshData() {
     safe("popular_funds", { funds: [] }),
     safe("live_indices", { built_at: "", indices: [] }),
     safe("live_news", { built_at: "", items: [] }),
+    safe("etf0050", { built_at: "", market_date: "", stocks: [] }),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news };
+  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news, etf0050 };
   SEARCH_INDEX = buildSearchIndex();
   const _updatedAt = latestBuiltAt();
   if (_updatedAt) {
@@ -3642,6 +3644,8 @@ function renderMarketSheet() {
   if (twPremarketHtml && twPremarketHtml.trim()) twParts.push(accSection("mv-tw-premarket", "盤前分析", twPremarketHtml));
   if (twAnalysisHtml && twAnalysisHtml.trim()) twParts.push(accSection("mv-tw-market", "台股盤勢", dropLeadH2(twAnalysisHtml)));
   if (twPresetTable && twPresetTable.trim()) twParts.push(accSection("mv-tw-stocks", "精選台股", twPresetTable));
+  const etf0050Html = render0050Section();
+  if (etf0050Html && etf0050Html.trim()) twParts.push(accSection("mv-tw-0050", "0050 成分股", etf0050Html));
   if (twRankHtml && twRankHtml.trim()) twParts.push(accSection("mv-tw-rankings", "台股排行", twRankHtml));
   if (twSheetHtml && twSheetHtml.trim()) twParts.push(accSection("mv-tw-sheet", "個股查詢", twSheetHtml));
   const twInner = twParts.join("");
@@ -6020,6 +6024,19 @@ function renderStocksTable(title, list, opts = {}) {
       <tbody>${rows}</tbody>
     </table>
   `;
+}
+
+// 0050（元大台灣50）50 檔成分股：收盤 / 日 / 本月 / 今年 / 收盤日。
+// 資料來自 data/etf0050.json（build/fetch_0050.py，隨雲端報價一起刷新）。
+// 沿用 renderStocksTable（showPE:false）→ 欄位與精選台股一致，可點欄位標題排序。
+function render0050Section() {
+  const d = DATA.etf0050 || {};
+  const list = d.stocks || [];
+  if (!list.length) return "";
+  const dateStr = shortDate(d.market_date) || "";
+  const caption = `<p style="color:var(--text-mute);font-size:13px;margin:0 0 10px">
+    元大台灣50（0050）50 檔成分股，收盤日 ${escapeHtml(dateStr)}｜點欄位標題可排序｜成分股每季調整</p>`;
+  return caption + renderStocksTable("", list, { showPE: false });
 }
 
 // ─────────────────────────────────────────────────────────────────────────

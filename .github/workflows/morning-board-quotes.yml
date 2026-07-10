@@ -41,6 +41,7 @@ jobs:
           python3 fetch_stocks.py
           python3 fetch_popular_stocks.py
           python3 fetch_tpex_quotes.py
+          python3 fetch_0050.py || echo "0050 fetch failed (non-fatal, keeps last etf0050.json)"
       - name: Gate
         run: cd work && python3 validate_quotes.py
       - name: Validate data contract
@@ -51,7 +52,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/market.json data/stocks.json data/tpex_quotes.json data/popular_stocks.json
+          git add data/market.json data/stocks.json data/tpex_quotes.json data/popular_stocks.json data/etf0050.json
           if git diff --cached --quiet; then echo "no changes"; exit 0; fi
           # numbers changed → stamp the cloud refresh time (Taipei) so 上次更新 advances even with the Mac off.
           # written only here (single-writer for this file); frontend shows max(meta.built_at, this).
