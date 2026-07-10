@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-10T12:02:57+08:00",
+  "generated_at": "2026-07-10T13:46:50+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -31,6 +31,20 @@
       "error": null
     },
     {
+      "symbol": "ARM",
+      "name_zh": "Arm",
+      "kind": "US",
+      "price": 327.87,
+      "change_pct": 9.2,
+      "mtd_pct": -7.53,
+      "ytd_pct": 199.95,
+      "market_date": "2026-07-09",
+      "per": 353.3798,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ARM.US",
+      "error": null
+    },
+    {
       "symbol": "VRAX",
       "name_zh": "Virax Biolabs",
       "kind": "US",
@@ -42,6 +56,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VRAX.US",
+      "error": null
+    },
+    {
+      "symbol": "LITE",
+      "name_zh": "Lumentum",
+      "kind": "US",
+      "price": 785.77,
+      "change_pct": 11.13,
+      "mtd_pct": -8.42,
+      "ytd_pct": 113.18,
+      "market_date": "2026-07-09",
+      "per": 140.1585,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LITE.US",
       "error": null
     },
     {
@@ -87,17 +115,17 @@
       "error": null
     },
     {
-      "symbol": "PEP",
-      "name_zh": "百事",
+      "symbol": "IONS",
+      "name_zh": "Ionis Pharmaceuticals",
       "kind": "US",
-      "price": 137.86,
-      "change_pct": -3.26,
-      "mtd_pct": 1.82,
-      "ytd_pct": -3.94,
+      "price": 64.27,
+      "change_pct": -23.9,
+      "mtd_pct": -18.94,
+      "ytd_pct": -18.76,
       "market_date": "2026-07-09",
-      "per": 21.644,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PEP.US",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IONS.US",
       "error": null
     },
     {
@@ -115,62 +143,6 @@
       "error": null
     },
     {
-      "symbol": "IONS",
-      "name_zh": "Ionis Pharmaceuticals",
-      "kind": "US",
-      "price": 64.27,
-      "change_pct": -23.9,
-      "mtd_pct": -18.94,
-      "ytd_pct": -18.76,
-      "market_date": "2026-07-09",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IONS.US",
-      "error": null
-    },
-    {
-      "symbol": "FRMI",
-      "name_zh": "Fermi",
-      "kind": "US",
-      "price": 7.32,
-      "change_pct": -0.54,
-      "mtd_pct": -20.09,
-      "ytd_pct": -8.5,
-      "market_date": "2026-07-09",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FRMI.US",
-      "error": null
-    },
-    {
-      "symbol": "METU",
-      "name_zh": "Direxion Daily META Bull 2X ETF",
-      "kind": "US",
-      "price": 25.06,
-      "change_pct": 9.38,
-      "mtd_pct": 23.75,
-      "ytd_pct": -21.96,
-      "market_date": "2026-07-09",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=METU.US",
-      "error": null
-    },
-    {
-      "symbol": "BBIO",
-      "name_zh": "BridgeBio Pharma",
-      "kind": "US",
-      "price": 90.17,
-      "change_pct": 15.12,
-      "mtd_pct": 21.07,
-      "ytd_pct": 17.88,
-      "market_date": "2026-07-09",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BBIO.US",
-      "error": null
-    },
-    {
       "symbol": "MARA",
       "name_zh": "Marathon Digital",
       "kind": "US",
@@ -182,6 +154,34 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MARA.US",
+      "error": null
+    },
+    {
+      "symbol": "PEP",
+      "name_zh": "百事",
+      "kind": "US",
+      "price": 137.86,
+      "change_pct": -3.26,
+      "mtd_pct": 1.82,
+      "ytd_pct": -3.94,
+      "market_date": "2026-07-09",
+      "per": 21.644,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PEP.US",
+      "error": null
+    },
+    {
+      "symbol": "IQQ",
+      "name_zh": "iShares Nasdaq 100 ETF",
+      "kind": "US",
+      "price": 24.47,
+      "change_pct": null,
+      "mtd_pct": null,
+      "ytd_pct": null,
+      "market_date": "2026-07-09",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IQQ.US",
       "error": null
     },
     {
