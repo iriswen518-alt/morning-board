@@ -1,7 +1,21 @@
 {
-  "generated_at": "2026-07-10T18:31:14+08:00",
+  "generated_at": "2026-07-10T19:20:36+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
+    {
+      "symbol": "DAL",
+      "name_zh": "Delta Air Lines",
+      "kind": "US",
+      "price": 89,
+      "change_pct": 1.96,
+      "mtd_pct": -4.98,
+      "ytd_pct": 28.24,
+      "market_date": "2026-07-09",
+      "per": 13.0401,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DAL.US",
+      "error": null
+    },
     {
       "symbol": "JLHL",
       "name_zh": "Julong Holding",
@@ -17,6 +31,20 @@
       "error": null
     },
     {
+      "symbol": "CRCL",
+      "name_zh": "Circle Internet",
+      "kind": "US",
+      "price": 63.01,
+      "change_pct": -1.65,
+      "mtd_pct": 0.61,
+      "ytd_pct": -20.54,
+      "market_date": "2026-07-09",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRCL.US",
+      "error": null
+    },
+    {
       "symbol": "COST",
       "name_zh": "好市多",
       "kind": "US",
@@ -28,6 +56,20 @@
       "per": 46.1423,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=COST.US",
+      "error": null
+    },
+    {
+      "symbol": "HOOD",
+      "name_zh": "Robinhood",
+      "kind": "US",
+      "price": 115.11,
+      "change_pct": 1.39,
+      "mtd_pct": 14.79,
+      "ytd_pct": 1.78,
+      "market_date": "2026-07-09",
+      "per": 54.6912,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HOOD.US",
       "error": null
     },
     {
@@ -73,6 +115,20 @@
       "error": null
     },
     {
+      "symbol": "MARA",
+      "name_zh": "Marathon Digital",
+      "kind": "US",
+      "price": 13.22,
+      "change_pct": 9.98,
+      "mtd_pct": -4.82,
+      "ytd_pct": 47.22,
+      "market_date": "2026-07-09",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MARA.US",
+      "error": null
+    },
+    {
       "symbol": "LASR",
       "name_zh": "nLIGHT",
       "kind": "US",
@@ -87,31 +143,17 @@
       "error": null
     },
     {
-      "symbol": "FRMI",
-      "name_zh": "Fermi",
+      "symbol": "COIN",
+      "name_zh": "Coinbase",
       "kind": "US",
-      "price": 7.32,
-      "change_pct": -0.54,
-      "mtd_pct": -20.09,
-      "ytd_pct": -8.5,
+      "price": 158.44,
+      "change_pct": -0.58,
+      "mtd_pct": 8.38,
+      "ytd_pct": -29.94,
       "market_date": "2026-07-09",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FRMI.US",
-      "error": null
-    },
-    {
-      "symbol": "MARA",
-      "name_zh": "Marathon Digital",
-      "kind": "US",
-      "price": 13.22,
-      "change_pct": 9.98,
-      "mtd_pct": -4.82,
-      "ytd_pct": 47.22,
-      "market_date": "2026-07-09",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MARA.US",
+      "per": 52.1392,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=COIN.US",
       "error": null
     },
     {
@@ -129,17 +171,17 @@
       "error": null
     },
     {
-      "symbol": "NOW",
-      "name_zh": "ServiceNow",
+      "symbol": "FRMI",
+      "name_zh": "Fermi",
       "kind": "US",
-      "price": 108.84,
-      "change_pct": 0.98,
-      "mtd_pct": 9.63,
-      "ytd_pct": -28.95,
+      "price": 7.32,
+      "change_pct": -0.54,
+      "mtd_pct": -20.09,
+      "ytd_pct": -8.5,
       "market_date": "2026-07-09",
-      "per": 63.2637,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NOW.US",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FRMI.US",
       "error": null
     },
     {
