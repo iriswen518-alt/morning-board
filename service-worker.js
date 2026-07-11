@@ -34,7 +34,9 @@
 // v45（2026-07-02）：新聞排程提前到 05:00 起跑，過期橫幅文案改成「07:00 前更新完成」，bump 強制更新。
 // v47（2026-07-11）：強制清掉手機上卡住的舊 app.js 快取（顯示 07-07 舊新聞、3 字「金融業」舊版面），
 //   讓 PWA 拉回最新 news.json（07-11）＋四字區塊名（金融族群／國際要聞）與現行分類版面。
-const CACHE = "morning-board-v47";
+// v48（2026-07-11）：再 bump 一次觸發 SW 位元變更，確保裝置偵測到新版並立即接管（skipWaiting+claim），
+//   讓一次關閉重開即生效、免等第二次。
+const CACHE = "morning-board-v48";
 
 self.addEventListener("install", e => {
   self.skipWaiting();
