@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-11T11:29:54+08:00",
+  "generated_at": "2026-07-11T14:23:16+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -14,6 +14,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SKHYV.US",
+      "error": null
+    },
+    {
+      "symbol": "SPCX",
+      "name_zh": "Space Exploration Technologies",
+      "kind": "US",
+      "price": 145.3,
+      "change_pct": -4.51,
+      "mtd_pct": -14.96,
+      "ytd_pct": null,
+      "market_date": "2026-07-10",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPCX.US",
       "error": null
     },
     {
@@ -45,20 +59,6 @@
       "error": null
     },
     {
-      "symbol": "SPCX",
-      "name_zh": "Space Exploration Technologies",
-      "kind": "US",
-      "price": 145.3,
-      "change_pct": -4.51,
-      "mtd_pct": -14.96,
-      "ytd_pct": null,
-      "market_date": "2026-07-10",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPCX.US",
-      "error": null
-    },
-    {
       "symbol": "WDFC",
       "name_zh": "WD-40",
       "kind": "US",
@@ -70,34 +70,6 @@
       "per": 40.7528,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=WDFC.US",
-      "error": null
-    },
-    {
-      "symbol": "VOD",
-      "name_zh": "Vodafone",
-      "kind": "US",
-      "price": 14.72,
-      "change_pct": 12.54,
-      "mtd_pct": 11.26,
-      "ytd_pct": 11.43,
-      "market_date": "2026-07-10",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VOD.US",
-      "error": null
-    },
-    {
-      "symbol": "BKR",
-      "name_zh": "Baker Hughes",
-      "kind": "US",
-      "price": 57.56,
-      "change_pct": 0.63,
-      "mtd_pct": 3.71,
-      "ytd_pct": 26.39,
-      "market_date": "2026-07-10",
-      "per": 18.3721,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BKR.US",
       "error": null
     },
     {
@@ -115,31 +87,17 @@
       "error": null
     },
     {
-      "symbol": "WHR",
-      "name_zh": "Whirlpool",
+      "symbol": "VOO",
+      "name_zh": "Vanguard S&P 500 ETF",
       "kind": "US",
-      "price": 40.72,
-      "change_pct": 7.55,
-      "mtd_pct": 3.3,
-      "ytd_pct": -43.55,
+      "price": 693.86,
+      "change_pct": 0.46,
+      "mtd_pct": 1.03,
+      "ytd_pct": 10.64,
       "market_date": "2026-07-10",
-      "per": 15.4448,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=WHR.US",
-      "error": null
-    },
-    {
-      "symbol": "CLX",
-      "name_zh": "Clorox Company (The)",
-      "kind": "US",
-      "price": 96.56,
-      "change_pct": 3.75,
-      "mtd_pct": 1.17,
-      "ytd_pct": -4.23,
-      "market_date": "2026-07-10",
-      "per": 15.1056,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CLX.US",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VOO.US",
       "error": null
     },
     {
@@ -157,17 +115,73 @@
       "error": null
     },
     {
-      "symbol": "MELI",
-      "name_zh": "MercadoLibre",
+      "symbol": "NKE",
+      "name_zh": "Nike",
       "kind": "US",
-      "price": 1852.22,
-      "change_pct": 2.46,
-      "mtd_pct": 9.12,
-      "ytd_pct": -8.04,
+      "price": 44.37,
+      "change_pct": 3.72,
+      "mtd_pct": 8.09,
+      "ytd_pct": -30.36,
       "market_date": "2026-07-10",
-      "per": 48.4282,
+      "per": 21.2079,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MELI.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NKE.US",
+      "error": null
+    },
+    {
+      "symbol": "DJT",
+      "name_zh": "Trump Media & Technology",
+      "kind": "US",
+      "price": 8.54,
+      "change_pct": -0.12,
+      "mtd_pct": 10.34,
+      "ytd_pct": -35.5,
+      "market_date": "2026-07-10",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DJT.US",
+      "error": null
+    },
+    {
+      "symbol": "VTI",
+      "name_zh": "Vanguard Total Stock Market ETF",
+      "kind": "US",
+      "price": 372.69,
+      "change_pct": 0.33,
+      "mtd_pct": 0.72,
+      "ytd_pct": 11.16,
+      "market_date": "2026-07-10",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VTI.US",
+      "error": null
+    },
+    {
+      "symbol": "SCHD",
+      "name_zh": "Schwab US Dividend Equity ETF",
+      "kind": "US",
+      "price": 32.4,
+      "change_pct": 0.43,
+      "mtd_pct": 2.18,
+      "ytd_pct": 18.12,
+      "market_date": "2026-07-10",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SCHD.US",
+      "error": null
+    },
+    {
+      "symbol": "DIS",
+      "name_zh": "迪士尼",
+      "kind": "US",
+      "price": 95.62,
+      "change_pct": -0.57,
+      "mtd_pct": -0.65,
+      "ytd_pct": -15.95,
+      "market_date": "2026-07-10",
+      "per": 14.8634,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DIS.US",
       "error": null
     },
     {
@@ -224,34 +238,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DIA.US",
-      "error": null
-    },
-    {
-      "symbol": "VTI",
-      "name_zh": "Vanguard 全美股 ETF",
-      "kind": "US",
-      "price": 372.69,
-      "change_pct": 0.33,
-      "mtd_pct": 0.72,
-      "ytd_pct": 11.16,
-      "market_date": "2026-07-10",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VTI.US",
-      "error": null
-    },
-    {
-      "symbol": "VOO",
-      "name_zh": "Vanguard S&P 500 ETF",
-      "kind": "US",
-      "price": 693.86,
-      "change_pct": 0.46,
-      "mtd_pct": 1.03,
-      "ytd_pct": 10.64,
-      "market_date": "2026-07-10",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VOO.US",
       "error": null
     },
     {
