@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-11T17:01:20+08:00",
+  "generated_at": "2026-07-11T17:49:27+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -17,20 +17,6 @@
       "error": null
     },
     {
-      "symbol": "SPCX",
-      "name_zh": "Space Exploration Technologies",
-      "kind": "US",
-      "price": 145.3,
-      "change_pct": -4.51,
-      "mtd_pct": -14.96,
-      "ytd_pct": null,
-      "market_date": "2026-07-10",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPCX.US",
-      "error": null
-    },
-    {
       "symbol": "CRCL",
       "name_zh": "Circle Internet",
       "kind": "US",
@@ -45,6 +31,20 @@
       "error": null
     },
     {
+      "symbol": "SPCX",
+      "name_zh": "Space Exploration Technologies",
+      "kind": "US",
+      "price": 145.3,
+      "change_pct": -4.51,
+      "mtd_pct": -14.96,
+      "ytd_pct": null,
+      "market_date": "2026-07-10",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPCX.US",
+      "error": null
+    },
+    {
       "symbol": "NKE",
       "name_zh": "Nike",
       "kind": "US",
@@ -56,20 +56,6 @@
       "per": 21.2079,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NKE.US",
-      "error": null
-    },
-    {
-      "symbol": "VOO",
-      "name_zh": "Vanguard S&P 500 ETF",
-      "kind": "US",
-      "price": 693.86,
-      "change_pct": 0.46,
-      "mtd_pct": 1.03,
-      "ytd_pct": 10.64,
-      "market_date": "2026-07-10",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VOO.US",
       "error": null
     },
     {
@@ -115,34 +101,6 @@
       "error": null
     },
     {
-      "symbol": "BE",
-      "name_zh": "Bloom Energy",
-      "kind": "US",
-      "price": 244.61,
-      "change_pct": -4.83,
-      "mtd_pct": -19.19,
-      "ytd_pct": 181.52,
-      "market_date": "2026-07-10",
-      "per": 11525.092,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BE.US",
-      "error": null
-    },
-    {
-      "symbol": "NFLX",
-      "name_zh": "網飛",
-      "kind": "US",
-      "price": 73.37,
-      "change_pct": -2.78,
-      "mtd_pct": 2.76,
-      "ytd_pct": -21.75,
-      "market_date": "2026-07-10",
-      "per": 22.9941,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NFLX.US",
-      "error": null
-    },
-    {
       "symbol": "V",
       "name_zh": "Visa",
       "kind": "US",
@@ -157,17 +115,45 @@
       "error": null
     },
     {
-      "symbol": "PYPL",
-      "name_zh": "PayPal",
+      "symbol": "SCHD",
+      "name_zh": "Schwab US Dividend Equity ETF",
       "kind": "US",
-      "price": 46.32,
-      "change_pct": 2.21,
-      "mtd_pct": 7.27,
-      "ytd_pct": -20.66,
+      "price": 32.4,
+      "change_pct": 0.43,
+      "mtd_pct": 2.18,
+      "ytd_pct": 18.12,
       "market_date": "2026-07-10",
-      "per": 8.0207,
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SCHD.US",
+      "error": null
+    },
+    {
+      "symbol": "VOO",
+      "name_zh": "Vanguard S&P 500 ETF",
+      "kind": "US",
+      "price": 693.86,
+      "change_pct": 0.46,
+      "mtd_pct": 1.03,
+      "ytd_pct": 10.64,
+      "market_date": "2026-07-10",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VOO.US",
+      "error": null
+    },
+    {
+      "symbol": "ANET",
+      "name_zh": "Arista Networks",
+      "kind": "US",
+      "price": 186.96,
+      "change_pct": 1.23,
+      "mtd_pct": 10.05,
+      "ytd_pct": 42.68,
+      "market_date": "2026-07-10",
+      "per": 62.5083,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PYPL.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ANET.US",
       "error": null
     },
     {
@@ -185,17 +171,45 @@
       "error": null
     },
     {
-      "symbol": "QQQM",
-      "name_zh": "Invesco NASDAQ 100 ETF",
+      "symbol": "PYPL",
+      "name_zh": "PayPal",
       "kind": "US",
-      "price": 298.72,
-      "change_pct": 0.32,
-      "mtd_pct": -1.4,
-      "ytd_pct": 18.11,
+      "price": 46.32,
+      "change_pct": 2.21,
+      "mtd_pct": 7.27,
+      "ytd_pct": -20.66,
       "market_date": "2026-07-10",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QQQM.US",
+      "per": 8.0207,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PYPL.US",
+      "error": null
+    },
+    {
+      "symbol": "NFLX",
+      "name_zh": "網飛",
+      "kind": "US",
+      "price": 73.37,
+      "change_pct": -2.78,
+      "mtd_pct": 2.76,
+      "ytd_pct": -21.75,
+      "market_date": "2026-07-10",
+      "per": 22.9941,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NFLX.US",
+      "error": null
+    },
+    {
+      "symbol": "VRT",
+      "name_zh": "Vertiv Holdings, LLC",
+      "kind": "US",
+      "price": 318.86,
+      "change_pct": -1.56,
+      "mtd_pct": -4.77,
+      "ytd_pct": 96.82,
+      "market_date": "2026-07-10",
+      "per": 79.0532,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VRT.US",
       "error": null
     },
     {
