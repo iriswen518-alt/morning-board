@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-11T07:06:41+08:00",
+  "generated_at": "2026-07-11T11:29:54+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -17,20 +17,6 @@
       "error": null
     },
     {
-      "symbol": "CRWD",
-      "name_zh": "CrowdStrike",
-      "kind": "US",
-      "price": 187.18,
-      "change_pct": -5.66,
-      "mtd_pct": -1.89,
-      "ytd_pct": 59.72,
-      "market_date": "2026-07-10",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRWD.US",
-      "error": null
-    },
-    {
       "symbol": "CRCL",
       "name_zh": "Circle Internet",
       "kind": "US",
@@ -42,6 +28,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRCL.US",
+      "error": null
+    },
+    {
+      "symbol": "CRWD",
+      "name_zh": "CrowdStrike",
+      "kind": "US",
+      "price": 187.18,
+      "change_pct": -5.66,
+      "mtd_pct": -1.89,
+      "ytd_pct": 59.72,
+      "market_date": "2026-07-10",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRWD.US",
       "error": null
     },
     {
@@ -59,17 +59,17 @@
       "error": null
     },
     {
-      "symbol": "QTTB",
-      "name_zh": "Q32 Bio",
+      "symbol": "WDFC",
+      "name_zh": "WD-40",
       "kind": "US",
-      "price": 11.21,
-      "change_pct": -10.96,
-      "mtd_pct": -12.01,
-      "ytd_pct": 237.65,
+      "price": 264.91,
+      "change_pct": 10.65,
+      "mtd_pct": 8.73,
+      "ytd_pct": 34.54,
       "market_date": "2026-07-10",
-      "per": 9.4024,
+      "per": 40.7528,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QTTB.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=WDFC.US",
       "error": null
     },
     {
@@ -87,17 +87,17 @@
       "error": null
     },
     {
-      "symbol": "ITW",
-      "name_zh": "Illinois Tool Works",
+      "symbol": "BKR",
+      "name_zh": "Baker Hughes",
       "kind": "US",
-      "price": 268.81,
-      "change_pct": 1.25,
-      "mtd_pct": -0.61,
-      "ytd_pct": 9.14,
+      "price": 57.56,
+      "change_pct": 0.63,
+      "mtd_pct": 3.71,
+      "ytd_pct": 26.39,
       "market_date": "2026-07-10",
-      "per": 24.8346,
+      "per": 18.3721,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ITW.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BKR.US",
       "error": null
     },
     {
@@ -115,20 +115,6 @@
       "error": null
     },
     {
-      "symbol": "NVVE",
-      "name_zh": "Nuvve Holding",
-      "kind": "US",
-      "price": 13.67,
-      "change_pct": 55.69,
-      "mtd_pct": 3343.32,
-      "ytd_pct": 438.19,
-      "market_date": "2026-07-10",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NVVE.US",
-      "error": null
-    },
-    {
       "symbol": "WHR",
       "name_zh": "Whirlpool",
       "kind": "US",
@@ -143,6 +129,34 @@
       "error": null
     },
     {
+      "symbol": "CLX",
+      "name_zh": "Clorox Company (The)",
+      "kind": "US",
+      "price": 96.56,
+      "change_pct": 3.75,
+      "mtd_pct": 1.17,
+      "ytd_pct": -4.23,
+      "market_date": "2026-07-10",
+      "per": 15.1056,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CLX.US",
+      "error": null
+    },
+    {
+      "symbol": "BE",
+      "name_zh": "Bloom Energy",
+      "kind": "US",
+      "price": 244.61,
+      "change_pct": -4.83,
+      "mtd_pct": -19.19,
+      "ytd_pct": 181.52,
+      "market_date": "2026-07-10",
+      "per": 11525.092,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BE.US",
+      "error": null
+    },
+    {
       "symbol": "MELI",
       "name_zh": "MercadoLibre",
       "kind": "US",
@@ -154,34 +168,6 @@
       "per": 48.4282,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MELI.US",
-      "error": null
-    },
-    {
-      "symbol": "NKE",
-      "name_zh": "Nike",
-      "kind": "US",
-      "price": 44.37,
-      "change_pct": 3.72,
-      "mtd_pct": 8.09,
-      "ytd_pct": -30.36,
-      "market_date": "2026-07-10",
-      "per": 21.2079,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NKE.US",
-      "error": null
-    },
-    {
-      "symbol": "CPRT",
-      "name_zh": "Copart",
-      "kind": "US",
-      "price": 27.52,
-      "change_pct": -2.88,
-      "mtd_pct": -2.39,
-      "ytd_pct": -29.72,
-      "market_date": "2026-07-10",
-      "per": 16.8806,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CPRT.US",
       "error": null
     },
     {
