@@ -1,11 +1,11 @@
 {
-  "news_date": "2026-07-10",
+  "news_date": "2026-07-11",
   "tldr": [
-    "颱風巴威來襲，台北股市、匯市與期貨全日休市，即使藍籌財報大量出爐、交易仍暫停一天。",
-    "AI 記憶體熱潮橫掃太平洋兩岸——環球晶拿下美光十年長約、SK 海力士赴美掛牌超額認購七倍，晶片股並無視美伊再度交火而走強。",
-    "台灣 6 月出口年增 40.3%、創歷年最強 6 月；亞銀上修台灣今年成長率至 9.5% 稱冠亞太，但新台幣重貶至逾一年低點。",
-    "金融版圖持續重塑：金管會核准永豐併京城銀、玉山取得三商美邦人壽百分百股權，青安 3.0 也將自 8 月起分級限縮申貸資格。",
-    "華爾街憂「美股七雄」熄火、改由 AI 晶片供應鏈新族群撐盤；Apollo 警告 AI 回報若延後，恐將經濟推向衰退。"
+    "南韓記憶體大廠SK海力士登陸那斯達克首日大漲約13%，募資265億美元，市值突破1兆美元，坐實AI記憶體霸主地位，也點燃全球高頻寬記憶體搶貨潮。",
+    "台灣出口續強，6月創歷年最強6月、上半年改寫同期新高，對美出超突破千億美元，亞銀更將台灣今年GDP成長率大幅上修至9.5%、稱冠亞太。",
+    "AI行情出現雜音，摩根士丹利警告晶片股恐漲過頭，美國散戶也從押注大盤轉向追逐個別熱門股，市場氣氛轉趨挑剔。",
+    "台灣金融整併加速，金管會同意永豐銀行合併京城銀行，並核准玉山金以股份轉換100%取得三商美邦人壽。",
+    "資金湧向風險性資產，受AI樂觀情緒與Fed升息預期降溫帶動，全球股票基金單周淨流入創三周新高。"
   ],
   "sections": [
     {
@@ -13,44 +13,40 @@
       "section_zh": "股市行情",
       "items": [
         {
-          "title_zh": "巴威颱風來襲　台股全日休市",
-          "title_en": "Taiwan markets shut for the day as Typhoon Bavi approaches",
-          "summary_zh": "台北市政府宣布公教機關停止上班後，臺灣證券交易所與櫃買中心公告 7 月 10 日集中市場、櫃買、匯市與期貨市場全日休市，當日應屆交割款券順延辦理，聯詠、中信金等 23 檔個股除權息也一併延後。這場臨時休市，正好卡在大量 6 月營收與上半年財報密集公布之際，投資人只能先消化財報、待下一個交易日開盤後才能反映，短線資金動能與除息行情因而遞延，颱風過後的補漲補跌動向成為觀察重點。",
-          "summary_en": "The Taiwan Stock Exchange and Taipei Exchange announced that the cash equity, over-the-counter, FX and futures markets will all close on July 10 after Taipei City ordered public offices shut for the typhoon. Settlement of trades due that day is postponed, and ex-dividend dates for 23 stocks including Novatek and CTBC Financial are pushed back. The unscheduled break freezes trading just as a wave of June revenue and first-half earnings hits the tape, leaving investors to digest results without a chance to react until the market reopens.",
+          "title_zh": "聯發科Q2營收1,521億元創5季新高、飛越財測高標",
+          "title_en": "MediaTek posts strongest quarterly revenue in five quarters, beating its own guidance",
+          "summary_zh": "聯發科公布6月營收580.12億元，月增22.3%、年增2.8%，帶動第二季營收1,521.83億元，創近五季新高，並超越公司財測高標；累計上半年營收3,013.33億元，年減0.77%大致持平。此波動能主要來自客戶拉貨力道回升，涵蓋手機、連結與邊緣AI晶片產品線。作為台灣IC設計指標廠，聯發科繳出優於預期的單季成績，顯示下半年高階晶片終端需求仍具韌性，也再度印證AI浪潮貫穿本土科技供應鏈的成長動能，市場將密切觀察其毛利率與下半年展望是否延續強勢。",
+          "summary_en": "MediaTek reported June revenue of NT$58.01 billion, up 22.3% month-on-month and 2.8% year-on-year, lifting second-quarter revenue to NT$152.18 billion, a five-quarter high that cleared the top end of its own forecast range. First-half revenue reached NT$301.33 billion, essentially flat on the year (down 0.77%). The rebound was driven by strong customer pull-in demand across its smartphone, connectivity and edge-AI chip lines. As one of Taiwan's bellwether IC design houses, MediaTek's stronger-than-expected quarter signals resilient end-demand for advanced chips heading into the second half, reinforcing the AI-driven momentum running through the local tech supply chain.",
           "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/cat/headline"
+          "source_url": "https://news.cnyes.com/news/id/6530849",
+          "published": "2026-07-10"
         },
         {
-          "title_zh": "台塑四寶上半年大賺逾千億　南亞 EPS 5.17 元居冠",
-          "title_en": "Formosa Plastics group's \"big four\" earn over NT$100bn in first half",
-          "summary_zh": "台塑四寶第 2 季稅後純益合計 642.76 億元，季增 45.5%，並擺脫去年同期虧損，上半年合計獲利達 1,084.53 億元，其中南亞每股稅後盈餘 5.17 元最亮眼。展望第 3 季，隨美伊停火、荷姆茲海峽重啟、中東原料供應回穩，台塑預估開工率將自第 2 季 62% 升至 73%，但因石化傳統旺季效應，全季業績仍可能略低於第 2 季。這波獲利回升，顯示傳產景氣正逐步走出去年外銷谷底，也為下半年原物料族群定調。",
-          "summary_en": "The four core Formosa Plastics companies reported combined second-quarter after-tax profit of NT$64.28bn, up 45.5% sequentially and reversing a year-earlier loss, lifting first-half net profit to NT$108.45bn. Nan Ya Plastics led with EPS of NT$5.17. Management expects Q3 plant utilisation to rise to 73% from 62% as the Strait of Hormuz reopens and Middle-East feedstock supply normalises, though seasonal petrochemical demand means Q3 results may dip from Q2. The rebound signals traditional-sector cyclicals are climbing out of last year's export trough.",
-          "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/cate/10846"
-        },
-        {
-          "title_zh": "台達電 6 月營收創高　AI 電源、散熱出貨旺",
-          "title_en": "Delta Electronics posts record June revenue on AI power demand",
-          "summary_zh": "電源龍頭台達電 6 月合併營收 656.03 億元，改寫單月歷史新高，月增 11.3%、年增 55.4%，主要受惠 AI 相關電源及散熱產品出貨熱潮，第 2 季與上半年營收同創新高。隨營運邁入傳統旺季，法人看好台達電業績可望續攻高峰。這份成績單再度印證，AI 伺服器建置帶動的效益已從晶片端外溢至電源、散熱與零組件供應鏈，而台灣廠商正是這波電力基礎設施升級的核心受惠者，也讓台達電成為 AI 硬體投資的重要指標股。",
-          "summary_en": "Power-supply leader Delta Electronics reported June consolidated revenue of NT$65.6bn, an all-time monthly high, up 11.3% on the month and 55.4% on the year, driven by shipments of AI-related power and thermal-management products. Second-quarter and first-half revenue also set records. With the business now entering its traditional peak season, analysts expect Delta's momentum to continue building. The result underscores how AI-server buildouts are flowing beyond chipmakers into the power, cooling and components supply chain that Taiwan dominates.",
+          "title_zh": "南亞科Q2毛利率飆79.5%、單季大賺逾500億、明年資本支出衝逾2,000億",
+          "title_en": "Nanya Technology's Q2 gross margin rockets to 79.5% as DRAM prices surge, capex to jump above NT$200bn",
+          "summary_zh": "DRAM廠南亞科第二季受惠平均售價季增逾60%，毛利率衝上79.5%、營益率73.7%雙創新高，單季大賺超過500億元、EPS達14.66元，銷售量則與第一季持平。總經理李培瑛表示，因應新廠建置、先進製程及客製化記憶體需求，今年資本支出預計逾500億元，明年內部初步規劃將拉升至逾2,000億元，惟仍待董事會核准。這份財報凸顯記憶體超級循環正為供應商帶來驚人定價能力，AI需求推升下，DRAM價格漲勢與擴產競賽同步啟動，後續供需與價格續航力值得追蹤。",
+          "summary_en": "DRAM maker Nanya Technology reported a record second-quarter gross margin of 79.5% and operating margin of 73.7%, driven by a more-than-60% sequential jump in average DRAM selling prices, delivering over NT$50 billion in single-quarter profit and EPS of NT$14.66. Sales volume was flat versus Q1. President Lee Pei-ing said capex is set to reach NT$50-plus billion this year and preliminary internal plans could push it above NT$200 billion next year to fund new fabs, advanced processes and customized memory, pending board approval. The results underscore how the memory super-cycle is delivering extraordinary pricing power to suppliers riding AI-driven demand.",
           "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/cat/headline"
+          "source_url": "https://news.cnyes.com/news/id/6530697",
+          "published": "2026-07-10"
         },
         {
-          "title_zh": "大立光奪首張 CPO 訂單　Q3 產能滿載",
-          "title_en": "Largan wins first co-packaged optics order, Q3 lines run full",
-          "summary_zh": "光學鏡頭廠大立光在法說會證實，共同封裝光學（CPO）新事業已取得首張訂單，有客戶期望光纖陣列（FA）量產，本月送樣、將以最快速度認證，預計最快明年中量產。董事長林恩平表示，7 月拉貨動能比 6 月好、8 月又更旺，本季產能利用率將滿載。這張訂單象徵大立光正式切入 AI 驅動的光通訊、共封裝光學商機，該領域是解決次世代資料中心頻寬與能耗瓶頸的關鍵戰場，也讓大立光在既有手機鏡頭本業之外，開闢一條與 AI 算力連動的成長曲線。",
-          "summary_en": "Optical-lens maker Largan Precision confirmed at its earnings call that its co-packaged optics (CPO) new business has secured its first order, with a customer seeking fibre-array (FA) mass-production volumes; samples ship this month for fast-track certification, targeting mass production by mid-2027. Chairman Lin En-ping said July pull-in momentum is better than June and August better still, with Q3 utilisation set to run at full capacity. The order marks Largan's entry into the AI-driven optical-interconnect race central to next-generation data-centre bandwidth.",
-          "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/cate/10846"
-        },
-        {
-          "title_zh": "日月光 Q2 營收創高　力積電衝 47 個月新高",
-          "title_en": "ASE hits record Q2 revenue; Powerchip revenue at 47-month high",
-          "summary_zh": "封測大廠日月光投控 6 月營收 657.83 億元，月增 4.4%、年增 32.9%，第 2 季營收 1,910.64 億元、季增 10.0%，改寫單季新高。晶圓代工廠力積電 6 月營收 64.74 億元，月增 12.2%、年增 68.75%，創近 47 個月新高，第 2 季營收 172.9 億元、季增 27.4%，為 15 季以來高點。兩家業者財報同步走揚，反映先進封裝與成熟製程代工需求皆維持強勁，AI 與記憶體相關訂單持續在台灣半導體供應鏈擴散，也為下半年封測與晶圓代工景氣提供支撐。",
-          "summary_en": "Packaging-and-test giant ASE Technology reported June revenue of NT$65.78bn, up 4.4% on the month and 32.9% on the year, with second-quarter revenue of NT$191.06bn rising 10.0% sequentially to a record. Separately, foundry Powerchip posted June revenue of NT$6.47bn, up 68.75% year-on-year and a 47-month high, with Q2 revenue up 27.4% sequentially. Both results reflect resilient demand across advanced packaging and mature-node foundry as AI and memory-related orders ripple through Taiwan's semiconductor supply chain.",
+          "title_zh": "和碩6月營收912億元、伺服器業務增溫",
+          "title_en": "Pegatron's June revenue tops NT$91bn as server business heats up",
+          "summary_zh": "電子代工大廠和碩公告6月營收912.96億元，雖較5月小幅衰退，但受惠伺服器業務持續增溫，年增超過1成；公司持續看好伺服器業務逐季成長，力拚今年達10倍成長表現。數據顯示，AI伺服器組裝正成為台灣電子代工（EMS）廠的關鍵成長引擎，抵銷消費性裝置的季節性淡季，也讓「電子五哥」在下半年AI資料中心基建放量中卡位。市場關注伺服器出貨爬坡速度，以及在營收占比與獲利結構上能否進一步發酵，帶動整體代工毛利改善。",
+          "summary_en": "Contract manufacturer Pegatron reported June revenue of NT$91.30 billion, slightly down from May but up more than 10% year-on-year, buoyed by rising server demand. The company remains upbeat on its server business growing quarter by quarter and is targeting a tenfold increase this year. The figures reinforce how AI-server assembly is becoming a key growth driver for Taiwan's electronics manufacturing service (EMS) players, offsetting seasonal softness in consumer devices and positioning the \"big five\" assemblers to capture the buildout of AI data-center infrastructure through the second half.",
           "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/cat/headline"
+          "source_url": "https://news.cnyes.com/news/id/6530845",
+          "published": "2026-07-10"
+        },
+        {
+          "title_zh": "宏碁Q2營收852億元、創13年同期新高",
+          "title_en": "Acer's Q2 revenue hits 13-year high on expanding AI applications",
+          "summary_zh": "PC品牌宏碁公布6月營收278.2億元，月增6.3%，受惠AI應用持續擴大與多元應用成長，第二季營收852.9億元，年增28.2%，創13年來同期新高。公司將成長歸因於AI應用擴大與產品組合多元化。宏碁繳出亮眼成績，顯示市場期待已久、以AI裝置為主軸的PC換機潮正逐步成形，而品牌跨足周邊硬體與服務也讓營收基礎更為多元，擺脫過往單押筆電市場的格局。後續觀察AI PC滲透率提升與旺季備貨，是否進一步推升下半年營收與獲利表現。",
+          "summary_en": "PC brand Acer reported June revenue of NT$27.82 billion, up 6.3% month-on-month, lifting second-quarter revenue to NT$85.29 billion, up 28.2% year-on-year and the highest for the same period in 13 years. The company attributed the gains to the continued expansion of AI applications and diversified growth across its product portfolio. Acer's strong showing suggests the long-awaited PC replacement cycle, increasingly framed around AI-capable devices, is gaining traction, while the brand's push into adjacent hardware and services is broadening its revenue base beyond the traditional notebook market.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6530865",
+          "published": "2026-07-10"
         }
       ]
     },
@@ -59,36 +55,40 @@
       "section_zh": "產業動態",
       "items": [
         {
-          "title_zh": "環球晶拿下美光 10 年長約　並取得 5 億美元策略資金",
-          "title_en": "GlobalWafers lands 10-year Micron supply deal and $500m in strategic funding",
-          "summary_zh": "矽晶圓大廠環球晶與美光共同宣布深化長期策略合作、強化美國半導體製造，簽訂 10 年長約，美光將提供約 5 億美元策略性資金支持環球晶美國業務並提升供應能力。董事長徐秀蘭表示，因美光長單具一定量能，德州廠第二期規劃勢必啟動，也將增加在美資本支出。此案被稱為環球晶史上最長、金額最大的合約，不僅鎖定十年穩定需求，也讓環球晶深度綁定美國記憶體供應鏈重組與在地化生產趨勢，為半導體關鍵材料供應韌性再添籌碼。",
-          "summary_en": "Silicon-wafer maker GlobalWafers and U.S. memory giant Micron jointly announced a deepened long-term partnership to strengthen American semiconductor manufacturing. Under the 10-year agreement, Micron will provide about US$500m in strategic funding to support GlobalWafers' U.S. business and boost supply capacity. Chairwoman Doris Hsu said the committed volumes mean the second phase of the company's Texas plant will proceed, inevitably raising U.S. capital spending. The deal is described as the longest and largest contract in GlobalWafers' history and anchors its position in reshoring the U.S. chip-materials supply chain.",
-          "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/cate/10846"
-        },
-        {
-          "title_zh": "台積電引爆矽光子革命　PIC 產能三年擴增 30 倍",
-          "title_en": "TSMC accelerates silicon-photonics push, PIC capacity to grow 30x in three years",
-          "summary_zh": "隨全球 AI 算力競賽白熱化，資料傳輸頻寬與能耗成為技術瓶頸。為因應次世代高效能運算需求，台積電正加速布局矽光子與共封裝光學（CPO），據傳其光子積體電路（PIC）產能三年內將擴增約 30 倍，帶動 CPO 供應鏈自 2026 年起邁入商業化元年。這波布局將把光通訊、封裝與光學元件台廠一併納入受惠圈，並牽動 AI 資料中心以更低功耗完成晶片間資料傳輸的架構革新，成為半導體下一階段成長主軸；相關矽光子、CPO 概念股後續動能值得追蹤。",
-          "summary_en": "As the global AI compute race intensifies, data-transmission bandwidth and energy consumption have become key bottlenecks. To meet next-generation high-performance-computing needs, TSMC is speeding up its build-out of silicon photonics and co-packaged optics (CPO), with reports that its photonic integrated circuit (PIC) capacity will expand roughly 30-fold over three years. The move positions 2026-onward as the commercialisation era for CPO supply chains, drawing in Taiwanese optical-component and packaging vendors and reshaping how AI data centres move data between chips at lower power.",
+          "title_zh": "京元電赴美設廠、投資金額上限14億美元",
+          "title_en": "King Yuan Electronics to build US plant with investment up to $1.4bn",
+          "summary_zh": "IC測試大廠京元電公告，董事會決議通過美國投資設廠案，投資金額初估約14億美元內、約新台幣449億元，凸顯美國半導體製造趨勢下台廠加速西進。此舉繼環球晶擴大美國資本支出後，顯示後段測試與封裝環節也開始跟隨前段晶圓廠赴美布局。對台灣供應鏈而言，此轉變既反映貼近客戶的需求，也是地緣政治的避險考量；但海外設廠也牽動成本結構，以及新產能多快能達到經濟規模，仍是後續關注焦點。市場將留意投資時程與客戶訂單能見度。",
+          "summary_en": "IC testing heavyweight King Yuan Electronics said its board approved a US plant investment estimated at up to $1.4 billion (about NT$44.9 billion), joining a broader trend of Taiwanese chip firms expanding stateside as US semiconductor manufacturing momentum builds. The move follows GlobalWafers' plans to enlarge its US capex and highlights how the back-end testing and packaging segment is now following front-end fabs into the US. For Taiwan's supply chain, the shift reflects both customer proximity requirements and geopolitical hedging, though it raises questions about cost structures and how quickly overseas capacity can reach economic scale.",
           "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/cat/headline"
+          "source_url": "https://news.cnyes.com/news/id/6530688",
+          "published": "2026-07-10"
         },
         {
-          "title_zh": "經濟部砸 230 億輔導產業 AI　拚 2028 年逾 2 萬家導入",
-          "title_en": "Ministry earmarks NT$23bn to steer industry AI transformation",
-          "summary_zh": "經濟部整合旗下各單位兩年約 230 億元 AI 轉型預算，成立「產業競爭力輔導團」，依企業需求分三階段協助導入 AI。截至 6 月底，輔導團已協助 9,249 家企業導入 AI 應用，範圍從螺帽廠到早餐店，目標 2028 年輔導突破 2 萬家、AI 普及率達 50%，帶動 500 億元產值。此舉將 AI 應用從大型科技業向下擴散至傳統中小企業，盼藉由政策資源與投資媒合縮短數位落差，讓 AI 轉型成為全產業競爭力升級的共同基礎，也回應企業對導入成本與人才不足的長期痛點。",
-          "summary_en": "Taiwan's Ministry of Economic Affairs has consolidated about NT$23bn of two-year AI-transformation budget across its agencies and set up an \"Industrial Competitiveness Advisory Corps\" to help firms adopt AI in three stages. As of end-June the corps had already helped 9,249 companies deploy AI applications, ranging from a nut-and-bolt maker to a breakfast chain. The ministry targets more than 20,000 firms assisted and 50% AI penetration by 2028, aiming to drive NT$50bn in added output value and broaden AI diffusion beyond large tech into traditional small and medium enterprises.",
+          "title_zh": "經濟部砸230億元輔導產業AI轉型、估2028年突破2萬家",
+          "title_en": "Taiwan's economics ministry pours NT$23bn into industrial AI transformation",
+          "summary_zh": "經濟部整合旗下兩年230億元AI轉型預算，成立「產業競爭力輔導團」，透過三階段協助企業導入AI，目標2028年輔導突破2萬家、帶動500億元產值，並讓企業AI普及率達50%。輔導涵蓋低門檻診斷、AI軟硬體建置補助到研發轉型補助等。截至目前已輔導9,249家企業、帶動產值232億元，其中93%為中小企業。此方案鎖定缺乏資源與know-how、難以自行數位化的傳產與中小企業，反映政府盼以政策資源縮短產業AI落差、強化整體競爭力，後續執行成效與補助落地速度將是觀察重點。",
+          "summary_en": "Taiwan's Ministry of Economic Affairs has consolidated two years of AI-transformation budgets totaling NT$23 billion to form an \"Industrial Competitiveness Advisory Team,\" aiming to help companies adopt AI through a three-stage support scheme. The ministry targets guiding more than 20,000 firms by 2028, driving NT$50 billion in output value, and lifting corporate AI adoption to 50%. Support ranges from low-cost diagnostics to subsidies for AI software/hardware deployment and R&D transformation grants. With 93% of firms helped so far being SMEs, the program targets the traditional and smaller enterprises that lack the resources and know-how to digitize on their own.",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/cate/10846"
+          "source_url": "https://money.udn.com/money/story/7307/9618086",
+          "body_zh": "AI轉型已成企業競爭力。經濟部整合旗下各單位AI轉型相關預算兩年230億元，成立「產業競爭力輔導團」，從企業需求三階段，積極協助企業導入AI，目標2028年輔導突破2萬家，帶動500億元產值。\n經濟部產發署9日舉辦「產業競爭力輔導團推動成果發表」記者會，由產發署領軍，整合商業署、中企署、貿易署、技術司等資源，加上遍地全國的法人，共同成立「產業競爭力輔導團」。產發署長邱求慧表示，中小企業及傳產對AI轉型需求高，不知道如何導入AI，也擔心成本過高、門檻太高，因此企業只要向輔導團提出任何的需求，都能獲致協助，不用一個單位一個單位去找。\n邱求慧也說明三階段輔導。第一階段是鼓勵企業透過公法人、公協會診斷輔，先掌握企業的現況與需求，邱求慧說，此階段設計為「低門檻」，企業只要出1萬元，診斷輔導19萬元由政府出。第二階段AI應用導入，協助企業建置AI軟硬體，免費參加產業AI應用人才培訓等，此階段政府每家補助10萬元或人才培訓12萬元。\n第三階段則是研發轉型補助。提供受到美國關稅政策影響製造業研發創新及設備汰舊換新，個案補助500萬元，產業聯盟每案補助4,000萬元，但企業須自籌一半。簡言之，AI三階段轉型輔導是整合經濟部資源，依企業轉型需求程度，給予不同輔導。三階段輔導皆以兩年預算共230億元。\n產發署指出，去年10月成立「產業競爭力輔導團」，積極協助企業導入AI，截至目前已輔導9,249家企業，帶動產值為232億元，其中93%為中小企業，7%為大企業。服務業占六成，製造業則為四成。服務業以批發零售最，製造業則以金屬製品、機械設備最多。\n邱求慧指出，原先訂定2028年輔導家數達1.4萬的目標，如今執行進度超前，預期可望突破2萬家，同時2028年企業AI普及率達到50%。"
         },
         {
-          "title_zh": "工業富聯發布業績預增　上半年獲利可望翻倍",
-          "title_en": "Foxconn Industrial Internet flags first-half profit doubling",
-          "summary_zh": "鴻海子公司工業富聯發布半年度業績預增公告，預估第 2 季歸屬母公司淨利為人民幣 128 億至 138 億元，年增 86% 至 101%。這份財測凸顯 AI 伺服器組裝與雲端基礎設施需求暢旺，並回饋至母公司鴻海。作為全球最大 AI 伺服器代工廠之一，工業富聯獲利爆發，反映雲端服務巨頭資本支出正轉化為電子代工鏈的超額成長，也讓市場對鴻海集團在 AI 硬體版圖的份額更具信心，成為觀察全球 AI 供應鏈景氣的重要風向球。",
-          "summary_en": "Foxconn subsidiary Foxconn Industrial Internet (FII) issued a half-year earnings pre-announcement, projecting second-quarter net profit attributable to the parent of RMB12.8bn to RMB13.8bn, a year-on-year jump of 86% to 101%. The guidance signals booming demand for AI-server assembly and cloud infrastructure that flows back to parent Hon Hai. As one of the largest contract builders of AI servers, FII's surge underscores how hyperscaler capital spending is translating into outsized earnings growth across Taiwan's electronics manufacturing services chain.",
+          "title_zh": "SemiAnalysis：記憶體價格仍有2-3倍上修空間、CPO大規模部署延至2029年",
+          "title_en": "SemiAnalysis: memory prices still have 2-3x upside, CPO mass deployment pushed to 2029",
+          "summary_zh": "研究機構SemiAnalysis創辦人Dylan Patel指出，當前AI發展受制於記憶體供應瓶頸、CPU需求調整與共封裝光學（CPO）部署時程推遲。他認為在AI基建需求超越供給下，記憶體價格仍有再上漲2至3倍的空間；而攸關次世代光互連的CPO大規模部署，恐要延到2029年才會到來。此番評論為記憶體超級循環仍將延續添增佐證，牽動DRAM與HBM廠、雲端業者資本支出規劃，以及整體AI算力擴張的時間表，也呼應近期記憶體漲價與擴產的產業熱度。",
+          "summary_en": "Research firm SemiAnalysis founder Dylan Patel said AI development is currently constrained by memory-supply bottlenecks, shifting CPU demand and delays in co-packaged optics (CPO) rollout. He argued memory prices still have room to climb another two to three times as AI infrastructure demand outstrips supply, while large-scale CPO deployment—key to next-generation optical interconnects—may not arrive until 2029. The comments add to mounting evidence that the memory super-cycle has further to run, with implications for DRAM and HBM makers, hyperscaler capex plans, and the broader timeline for scaling AI compute.",
           "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/cat/headline"
+          "source_url": "https://news.cnyes.com/news/id/6530858",
+          "published": "2026-07-10"
+        },
+        {
+          "title_zh": "中國實施氦氣臨時出口禁令、即刻執行",
+          "title_en": "China imposes temporary helium export ban, effective immediately",
+          "summary_zh": "中國商務部與海關總署發布聯合公告，依《對外貿易法》相關規定，對氦氣（海關商品編號2804290010）實施臨時禁止出口管理，自發布當日起即刻執行，後續政策調整將視情況另行處理。氦氣是半導體製造、光纖、醫療影像與航太的關鍵原料，此一突襲式限制為本已緊繃的全球供應鏈再添壓力點，也延續北京日益將戰略物資出口管制當作貿易與科技角力籌碼的做法。相關產業須留意氦氣供應與價格波動，並評估替代來源與庫存調度風險。",
+          "summary_en": "China's Ministry of Commerce and General Administration of Customs issued a joint notice imposing a temporary export ban on helium (customs code 2804290010) under the Foreign Trade Law, effective from the date of publication with future adjustments to follow as warranted. Helium is a critical input for semiconductor manufacturing, fiber optics, medical imaging and aerospace, so the abrupt restriction adds another pressure point to already tense global supply chains and echoes Beijing's growing use of export controls over strategic materials as leverage in trade and technology tensions.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6530867",
+          "published": "2026-07-10"
         }
       ]
     },
@@ -97,38 +97,40 @@
       "section_zh": "金融業",
       "items": [
         {
-          "title_zh": "金管會核准永豐銀併京城銀",
-          "title_en": "FSC clears SinoPac Bank's merger with King's Town Bank",
-          "summary_zh": "金管會同意永豐商業銀行合併京城商業銀行，讓市場矚目的整併案順利過關。此併購將擴大永豐銀的分行網絡與存款基礎，在台灣銀行業競爭激烈、規模與數位投資日益成為勝負關鍵之際，具有壯大體質的意義。主管機關放行，顯示監理單位對有助強化資本與競爭力的整併抱持開放態度，也延續近期銀行、壽險與金控間一連串併購重塑股權版圖的趨勢，後續整併綜效與客戶、通路的整合進度將是觀察重點，牽動同業對規模化競爭的策略布局。",
-          "summary_en": "Taiwan's Financial Supervisory Commission approved Bank SinoPac's acquisition of King's Town Bank, allowing one of the market's larger consolidations to proceed. The deal expands SinoPac's branch footprint and deposit base at a time when scale and digital investment increasingly separate winners in Taiwan's crowded banking sector. The approval reflects regulators' broader willingness to permit consolidation that strengthens capital and competitiveness, and follows a run of merger and acquisition activity reshaping the ownership map across banks, life insurers and financial holding companies.",
+          "title_zh": "金管會同意永豐商業銀行合併京城商業銀行",
+          "title_en": "Regulators approve SinoPac Bank's merger with King's Town Bank",
+          "summary_zh": "金管會核准永豐商業銀行合併京城商業銀行，為國內銀行業再添一樁重要整併案。此案可擴大永豐的分行版圖與客戶基礎，尤其強化在京城深耕的南台灣布局，也呼應銀行在利差壓力、數位投資需求與競爭加劇下追求規模的趨勢。主管機關放行，顯示監理端對以整併強化中型銀行競爭力與韌性的方向持續持開放態度。後續觀察兩行系統與通路整合進度、綜效發酵時程，以及對區域市場競爭格局的影響，均是市場關注重點。",
+          "summary_en": "Taiwan's Financial Supervisory Commission (FSC) approved SinoPac Commercial Bank's merger with King's Town Commercial Bank, clearing a significant consolidation in the domestic banking sector. The deal expands SinoPac's branch footprint and customer base, particularly in southern Taiwan where King's Town has deep roots, and fits a broader push toward scale as banks contend with margin pressure, digital investment needs and heightened competition. The approval signals regulators' continued openness to sector consolidation aimed at strengthening the competitiveness and resilience of Taiwan's mid-sized banks.",
           "source_name": "金管會",
-          "source_url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2",
+          "source_url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2&mcustomize=news_view.jsp&dataserno=202607070002&dtable=News",
           "published": "2026-07-06"
         },
         {
-          "title_zh": "金管會同意玉山金以股份轉換取得三商美邦人壽 100% 股權",
-          "title_en": "FSC approves E.Sun FHC's 100% share swap for Mercuries Life",
-          "summary_zh": "金管會核准玉山金控以股份轉換方式取得三商美邦人壽百分之百股權，為以銀行見長的玉山金添增壽險版圖。此案讓玉山金的金融服務線更完整，橫跨銀行、證券與保險，向同業多元金控模式看齊，也是台灣壽險股權更迭浪潮中的又一重要進展。金融集團藉此追求規模化、交叉銷售綜效與跨景氣循環的穩定獲利，後續資本結構、通路整合與壽險資產負債管理如何銜接，將攸關併購綜效能否兌現，也是市場評估玉山金長線價值的關鍵。",
-          "summary_en": "The FSC agreed to let E.Sun Financial Holding acquire 100% of Mercuries Life Insurance through a share-swap transaction, adding a life-insurance arm to a group historically strong in banking. The move gives E.Sun a fuller financial-services line-up spanning banking, securities and insurance, mirroring rivals' push toward diversified financial-holding models. It marks another significant step in the wave of insurer ownership changes sweeping Taiwan's market, as financial groups seek scale, cross-selling synergies and more stable earnings across economic cycles.",
+          "title_zh": "金管會同意玉山金控以股份轉換取得三商美邦人壽100%股份",
+          "title_en": "FSC clears E.Sun Financial to fully acquire MercuriesLife via share swap",
+          "summary_zh": "金管會核准玉山金控以股份轉換方式，100%取得三商美邦人壽股份，為玉山跨足壽險業務跨出重要一步。此案擴大金控的商品組合與交叉銷售潛力，讓其擁有橫跨銀行、證券到壽險的全方位平台。此舉也反映台灣保險版圖持續重塑：金控集團陸續吸納獨立壽險公司以擴大規模，因應接軌新清償能力與會計制度（如ICS、IFRS 17）帶來的產業變局。後續關注整併綜效、資本結構與壽險資產負債管理，是否為玉山帶來長線成長動能。",
+          "summary_en": "The FSC approved E.Sun Financial Holding's acquisition of 100% of MercuriesLife Insurance through a share-swap arrangement, marking a major step in E.Sun's expansion into the life-insurance business. The deal broadens the financial holding company's product mix and cross-selling potential, giving it a full-service platform spanning banking, securities and now life insurance. It also reflects an ongoing reshaping of Taiwan's insurance landscape, as financial holding groups absorb standalone insurers to build scale ahead of new capital and accounting regimes reshaping the sector.",
           "source_name": "金管會",
-          "source_url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2",
+          "source_url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2&mcustomize=news_view.jsp&dataserno=202607070001&dtable=News",
           "published": "2026-07-06"
         },
         {
-          "title_zh": "保經代五大鬆綁　最快 9 月底前上路",
-          "title_en": "Five easing measures for insurance agents/brokers to take effect by end-September",
-          "summary_zh": "金管會預告修正保險經紀人、代理人管理規則，共有五大亮點，最快 9 月底前上路，包括放寬電訪對象、高齡客戶免部分錄音錄影、將境外保險（OIU）轉介費合法化等。此次修正旨在提升民眾投保便利性並推動國際保險業務，釋出對通路監理採較彈性、鼓勵成長的訊號。對保經代通路而言，鬆綁有助拓展高齡與跨境客群、活絡招攬，但如何在便利與消費者保護、防止不當招攬之間取得平衡，仍是後續執行細則與市場自律的重點，牽動保險商品銷售生態。",
-          "summary_en": "The FSC pre-announced amendments to its insurance agent and broker management rules, with five headline changes expected to take effect as early as end-September. They include relaxing rules on tele-marketing targets, exempting elderly clients from certain audio-video recording requirements, and legalising referral fees under the offshore insurance unit (OIU) framework. The revisions aim to improve the convenience of buying insurance while advancing international insurance business, signalling a lighter-touch, growth-oriented turn in how distribution channels are regulated.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/cat/headline"
+          "title_zh": "綠色投融資規模突破5兆元、金管會續推綠色及轉型金融",
+          "title_en": "Green investment and lending tops NT$5tn as FSC pushes transition finance",
+          "summary_zh": "金管會表示，台灣綠色投融資規模已突破5兆元，主管機關將持續推動綠色及轉型金融發展。此里程碑反映資金持續動員投入再生能源、低碳產業與永續連結專案，讓金融業與台灣淨零路徑接軌。監理端正引導銀行、保險與資產管理業者，把氣候因素納入風險管理與商品設計，5兆元的規模也為台灣永續金融進程提供衡量基準。對財富管理與法金業務而言，綠色與轉型金融商品的擴大，將是未來資產配置與客戶溝通的重要題材，值得持續追蹤政策與商品發展。",
+          "summary_en": "The FSC said Taiwan's green investment and financing scale has surpassed NT$5 trillion, as the regulator continues to promote the development of green and transition finance. The milestone reflects growing capital mobilization toward renewable energy, low-carbon industries and sustainability-linked projects, aligning the financial sector with Taiwan's net-zero pathway. Regulators are steering banks, insurers and asset managers to embed climate considerations into risk management and product design, and the NT$5 trillion mark provides a benchmark for the momentum behind Taiwan's sustainable-finance agenda.",
+          "source_name": "金管會",
+          "source_url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2&mcustomize=news_view.jsp&dataserno=202607090003&dtable=News",
+          "published": "2026-07-06"
         },
         {
-          "title_zh": "金管會檢討董事兼職兩方向　一個月內提報告",
-          "title_en": "FSC to review director dual-role rules, disclosure report within a month",
-          "summary_zh": "董事兼職爭議延燒，金管會主委在立法院財委會答詢時提出兩大檢討方向：一是檢討利害關係人兼職規定是否需建立多重通報機制；二是重訊揭露制度將於一個月內提檢討報告。此議題源於金融檢查結果，反映監理單位對上市金融機構利益衝突與資訊透明度的治理要求趨嚴。若後續強化通報與揭露義務，將提高董事兼職的合規門檻與公司治理成本，也促使金融機構重新盤點關係人交易與兼職安排，牽動董事會運作與內控制度，成為公司治理與投資人保護的觀察焦點。",
-          "summary_en": "Amid controversy over directors holding concurrent posts, the FSC chairman told lawmakers at the Legislative Yuan's finance committee that the commission will pursue two lines of review: whether related-party concurrent-post rules need a multi-layer reporting mechanism, and a re-examination of the material-information disclosure regime, with a report to be submitted within a month. The issue surfaced from financial-examination findings and reflects tightening governance expectations around conflicts of interest and transparency at listed financial institutions.",
-          "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/cate/10846"
+          "title_zh": "金管會預告修正保經代管理規則、提升投保便利並推動國際保險業務",
+          "title_en": "FSC pre-announces revisions to insurance broker/agent rules to lift convenience and support international business",
+          "summary_zh": "金管會預告修正保險經紀人、代理人管理規則，目的在提升民眾投保便利性、推動國際保險業務並維護消費者權益。此修正顯示監理端持續就連結保險公司與保戶的中介通路進行細部調整，在市場發展與消費者保護間取得平衡。對通路業者與整體保險生態而言，修法可能牽動證照、營業範圍與跨境業務實務。預告階段也為業界提供表達意見的空間，最終條文拍板前的討論方向，值得保經代與壽險通路密切關注，以提前因應合規與業務調整。",
+          "summary_en": "The FSC pre-announced amendments to the management rules governing insurance brokers and agents, aimed at improving convenience for the public, advancing international insurance business and protecting consumer rights. The proposed changes signal continued regulatory fine-tuning of the intermediary channel that connects insurers with policyholders, balancing market development with consumer safeguards. For distributors and the wider insurance ecosystem, the revisions could reshape licensing, operating scope and cross-border business practices, and the pre-announcement opens a window for industry feedback before the rules are finalized.",
+          "source_name": "金管會",
+          "source_url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2&mcustomize=news_view.jsp&dataserno=202607090001&dtable=News",
+          "published": "2026-07-06"
         }
       ]
     },
@@ -137,28 +139,40 @@
       "section_zh": "財富管理",
       "items": [
         {
-          "title_zh": "台壽攜中信投信推類全委帳戶　兼顧資產傳承與退休金流",
-          "title_en": "Taiwan Life teams with CTBC Investments on discretionary-account policy for succession and retirement income",
-          "summary_zh": "中信金控子公司台灣人壽「信鑫滿滿」系列保單攜手中信投信，推出「全球領航」新臺幣類全委帳戶，鎖定台灣供應鏈與美國科技龍頭企業，透過主動與被動 ETF 靈活配置，滿足資產傳承與退休現金流雙重需求。此商品反映財管業者日益著重將投資型保險結合專業類全委操作，回應高資產客戶「傳承規劃」與「穩定金流」的雙目標。對財富管理與傳承實務而言，類全委帳戶提供彈性配置與撥回機制，有助客戶兼顧市場參與與現金流安排，也顯示保險商品正朝資產管理化、傳承工具化方向深化。",
-          "summary_en": "Taiwan Life, a subsidiary of CTBC Financial Holding, has partnered with CTBC Investments to launch a New-Taiwan-dollar quasi-discretionary \"全球領航\" account within its \"信鑫滿滿\" insurance series. The product targets Taiwan's supply chain and leading U.S. technology companies, using a flexible mix of active and passive ETFs to serve both wealth-succession and retirement cash-flow needs. It reflects wealth-management providers' growing focus on packaging investment-linked insurance with professional discretionary management to meet high-net-worth clients' dual goals of legacy planning and steady income.",
+          "title_zh": "AI樂觀情緒點燃風險偏好、全球股票基金三周來最吸金",
+          "title_en": "Global equity funds see biggest weekly inflow in three weeks as AI optimism lifts risk appetite",
+          "summary_zh": "截至7月8日當周，全球股票基金淨流入492.3億美元，創三周來最大單周流入規模，主因AI相關科技產品需求強勁，加上美國聯準會升息預期降溫，帶動風險偏好回升。這股資金潮凸顯，即便市場出現部分審慎聲音，AI投資主題仍持續主導全球資金流向；投資人押注貨幣政策壓力趨緩與科技需求韌性，可望延續多頭。對財富管理而言，這反映客戶對成長型、具AI題材資產配置的需求依舊旺盛，惟在估值偏高之際，如何在追逐成長與控制風險間取得平衡，將是與客戶溝通的重點。",
+          "summary_en": "Global equity funds attracted net inflows of $49.23 billion in the week ended July 8, the largest weekly inflow in three weeks, as robust demand for AI-related technology products and cooling expectations for Fed rate hikes boosted risk appetite. The surge underscores how the AI investment theme continues to anchor global fund flows even amid pockets of caution, with investors rotating into equities on hopes that easing monetary-policy pressure and resilient tech demand can sustain the rally. For wealth managers, the flows highlight persistent client appetite for growth-oriented, AI-exposed allocations.",
           "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/cat/headline"
+          "source_url": "https://news.cnyes.com/news/id/6530934",
+          "published": "2026-07-10"
         },
         {
-          "title_zh": "台幣優利活存年息衝 18%　遠東銀 Bankee 祭數位帳戶專案",
-          "title_en": "Banks dangle high-yield deposits as savers turn defensive",
-          "summary_zh": "股市高檔震盪、投資波動加劇下，部分民眾資產配置轉趨保守，台幣存款再度成為資金停泊熱門選項，各大銀行搶攻下半年存款商機。其中遠東商銀數位帳戶品牌 Bankee 針對一定額度祭出最高年息 18% 的優惠活存，成為近期優利存款專案代表。此現象反映財管客戶在市場不確定升溫時，傾向增加現金與保守部位，也顯示存款訂價已成銀行爭取資金的前線戰場。對財富管理實務來說，優利活存雖具吸金效果，但多設有額度與條件上限，客戶仍須留意實際綜合收益與資產配置平衡。",
-          "summary_en": "With equities choppy at high levels and market volatility rising, some investors are steering assets back toward Taiwan-dollar deposits as a safe parking spot, and banks are competing hard for that money ahead of the second half. Far Eastern International Bank's digital-account brand Bankee is offering a headline preferential demand-deposit rate of up to 18% on capped balances, part of a broader wave of promotional deposit schemes. The trend highlights how wealth clients are rebalancing toward conservative allocations, and how deposit pricing has become a front line in banks' fight for funding.",
-          "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/cate/10846"
+          "title_zh": "暑假神卡來了！星展揪全支付與名店、刷卡最高17%回饋",
+          "title_en": "DBS rolls out summer card campaign with rewards up to 17%",
+          "summary_zh": "迎接暑假旺季，星展銀行（台灣）宣布串聯全支付、人氣韓式燒肉品牌及《500碗》精選店家，並結合海內外旅遊優惠，祭出最高17%回饋，涵蓋日常採買、美食饗宴與旅遊購物。此波活動正值餐飲、旅遊及日常消費升溫的旺季。信用卡高回饋仍是銀行爭取富裕與中產客群的重要戰場，透過刷卡優惠不僅能拉抬簽帳量，也有助深化客戶黏著度，並交叉銷售更廣泛的銀行與財富管理服務。對財管而言，卡片與支付生態是接觸客戶、經營往來關係的重要入口，後續觀察活動帶動的客戶經營成效。",
+          "summary_en": "DBS Bank (Taiwan) launched a summer card-spending campaign offering rebates of up to 17%, teaming up with e-payment platform PXPay Plus, popular Korean BBQ chain and a selection of acclaimed eateries, spanning everyday purchases, dining and travel. The push comes as dining, travel and daily consumption heat up during the peak summer season. Aggressive card rewards remain a key battleground for banks competing for affluent and mass-affluent customers, and such campaigns help drive card spending, deepen customer engagement and cross-sell broader banking and wealth-management services.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6529793",
+          "published": "2026-07-09"
         },
         {
-          "title_zh": "永豐 00410A 精選 AI 潛力股　主動式 ETF 搶第四波科技牛市",
-          "title_en": "SinoPac launches AI-focused active ETF to ride the fourth tech bull wave",
-          "summary_zh": "台股氣勢如虹、主計總處上修台灣今年 GDP 成長估值至 9.64%，投信積極推出 AI 主題商品搶進輪動行情。永豐 00410A 主動式 ETF 定位為精選 AI 潛力股，因應台股結構轉向「AI 產業鏈輪動」——以前五月為例，電子零組件與玻璃陶瓷族群分別大漲 140% 與 99%。此檔商品反映投資人對主動管理、主題型 ETF 的興趣升溫，期望在快速輪動的 AI 行情中創造超越被動指數的報酬。對財富管理配置而言，主動式 ETF 提供選股彈性，但也考驗經理人擇時與產業輪動的判斷，客戶宜評估費用與追蹤策略。",
-          "summary_en": "With Taiwan stocks scaling record highs and the statistics bureau lifting the island's 2026 GDP growth forecast to 9.64%, fund houses are pitching AI-themed products to capture the rotation. SinoPac's actively managed 00410A ETF is designed to select AI-potential stocks as the market structure shifts toward \"AI supply-chain rotation\" — in the first five months, electronic-components and glass-ceramic groups rose 140% and 99% respectively. The launch reflects rising investor appetite for actively managed, theme-driven ETFs that aim to beat passive benchmarks in a fast-rotating AI market.",
+          "title_zh": "搶攻跨境匯款！第一銀行攜手Visa推第e數速匯、年底前免手續費",
+          "title_en": "First Bank partners with Visa to launch cross-border small-value remittance, waiving fees until year-end",
+          "summary_zh": "第一銀行推出「第e數速匯」跨境小額匯款服務，目前支援8個國家，整合網路銀行系統與Visa Direct全球通匯平台，主打免預先約定受款帳號、快速到帳兩大核心優勢，並於12月31日前免收手續費。此服務因應全球化資金往來需求日益頻繁，反映銀行加速革新零售跨境支付，提供客戶更快速便利的匯款選擇，同時在國際匯款領域與金融科技業者競逐。對高資產與往來客戶而言，便捷的跨境金流工具有助提升整體往來體驗，後續觀察支援國別擴充與到帳效率，能否形成差異化競爭優勢。",
+          "summary_en": "First Commercial Bank rolled out its \"First e-Speed Remittance\" cross-border small-value transfer service, currently supporting eight countries, integrating its online banking system with Visa Direct's global network. The service touts two core advantages—no need to pre-register the recipient account and fast crediting—and waives handling fees through December 31. The launch responds to increasingly frequent global money flows and reflects banks' push to modernize retail cross-border payments, offering customers faster, more convenient remittance options while competing with fintech players in the international transfer space.",
           "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/cat/headline"
+          "source_url": "https://news.cnyes.com/news/id/6528450",
+          "published": "2026-07-09"
+        },
+        {
+          "title_zh": "全球供應鏈金融達2.65兆美元、CRIF揭跨境金融「三層防護網」",
+          "title_en": "Global supply-chain finance hits $2.65tn as CRIF maps a \"three-layer trust net\" for cross-border finance",
+          "summary_zh": "在全球供應鏈重組、地緣政治風險升溫，以及穩定幣等新興支付工具快速發展下，2025年全球供應鏈金融市場規模達2.65兆美元，年增7.5%。CRIF（中華徵信所）邀集專家揭示跨境金融信任的四大痛點，包括最終受益人（UBO）辨識等，並提出「三層防護網」重塑信任。此議題凸顯身分驗證、法遵與風險控管，正成為跨境貿易金融的核心，對具國際布局的企業金融與財富管理客戶而言，重要性與日俱增。面對穩定幣等新支付工具，如何兼顧效率與合規、防範洗錢與詐欺，將是跨境金流的關鍵課題。",
+          "summary_en": "With global supply-chain restructuring, rising geopolitical risk and the rapid rise of new payment tools such as stablecoins, the global supply-chain finance market reached $2.65 trillion in 2025, up 7.5% year-on-year. CRIF (China Credit Information Service) convened experts to outline four pain points in cross-border financial trust—including ultimate-beneficial-owner (UBO) verification—and proposed a \"three-layer protection net\" to rebuild trust. The theme highlights how identity verification, compliance and risk controls are becoming central to cross-border trade finance, an area of growing relevance for corporate banking and wealth clients with international footprints.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6526944",
+          "published": "2026-07-08"
         }
       ]
     },
@@ -167,20 +181,20 @@
       "section_zh": "稅務法規",
       "items": [
         {
-          "title_zh": "青安 3.0 房屋總價分級設限　個人年所得逾 200 萬不得申貸",
-          "title_en": "Youth Housing 3.0 to impose tiered price caps, high earners barred from loans",
-          "summary_zh": "青安 3.0 新制預計兩周內拍板，房屋總價上限將採三級制，超過上限不得申貸：台北市 3,500 萬元、新北市與新竹縣市 2,500 萬元、其餘縣市 2,000 萬元；個人年所得 200 萬元以上者也不得申貸。此次限縮意在把政策性優惠房貸資源導向真正的首購與中低所得族群，反映主管機關在居住負擔與信用資源集中的疑慮下，力求防杜優惠貸款遭高資產族群濫用。對房市與購屋族而言，新制將牽動可貸資格與購屋決策，也可能影響特定總價帶的交易動能，相關規範細節與上路時程值得持續關注。",
-          "summary_en": "Taiwan's revamped Youth Housing (青安) 3.0 mortgage scheme is expected to be finalised within two weeks, introducing a three-tier ceiling on home prices above which applicants cannot borrow: NT$35m in Taipei City, NT$25m in New Taipei and Hsinchu county/city, and NT$20m elsewhere. Individuals with annual income of NT$2m or more will also be barred from applying. The tightening targets the subsidised loan programme at genuine first-home and lower-income buyers, reflecting policymakers' effort to curb misuse of preferential lending amid concerns over housing affordability and credit concentration.",
-          "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/cate/10846"
+          "title_zh": "2026年綜所稅第一批退稅7月31日入帳、首批217萬人符合",
+          "title_en": "First batch of 2026 income-tax refunds to land July 31, covering 2.17 million taxpayers",
+          "summary_zh": "財政部表示，今年綜合所得稅第一批退稅將於7月31日撥入納稅義務人指定帳戶，首批約217萬人符合資格。凡透過網路申報、手機報稅，或使用稅額試算服務並完成線上登錄的民眾，皆符合首批退稅資格。能否擠進最早一批退稅，取決於申報方式，凸顯政府持續推動電子化申報，以加速處理並鼓勵數位稅務行政。對民眾而言，善用線上申報與試算登錄不僅便利，也能提早取得退稅款。後續各批退稅時程與入帳安排，仍建議以財政部與各地區國稅局公告為準，並留意帳戶資訊是否正確，以免影響撥款。",
+          "summary_en": "Taiwan's Ministry of Finance said the first batch of individual income-tax refunds for this filing season will be credited to taxpayers' accounts on July 31, with roughly 2.17 million people qualifying for the initial round. Taxpayers who filed online, via mobile, or used the tax-calculation service and completed online registration are eligible for the first batch. Getting into the earliest refund tranche depends on filing method, underscoring the government's continued push toward digital filing to speed processing and encourage electronic tax administration.",
+          "source_name": "財政部 / Yahoo奇摩股市",
+          "source_url": "https://tw.stock.yahoo.com/news/2026%E5%B9%B4%E7%AC%AC%E4%B8%80%E6%89%B9%E9%80%80%E7%A8%85%E4%BD%95%E6%99%82%E9%A0%98%EF%BC%9F%E8%B2%A1%E6%94%BF%E9%83%A8%EF%BC%9A731%E6%9C%80%E5%BF%AB%E5%85%A5%E5%B8%B3-%E9%A6%96%E6%89%B9217%E8%90%AC%E4%BA%BA%E7%AC%A6%E5%90%88-093720178.html"
         },
         {
-          "title_zh": "所有青安房貸　8 月起補貼減碼",
-          "title_en": "All Youth Housing mortgage subsidies to be scaled back from August",
-          "summary_zh": "依即將上路的規定，所有青安房貸的利息補貼將自 8 月起減碼，縮減近年支撐首購貸款的優惠力度。此舉與新增的總價分級上限、所得限制並行，顯示主管機關正對房貸政策進行整體再校準，在居住負擔目標與抑制信用過度成長、房市過熱疑慮之間求取平衡。對購屋族而言，在補貼調整前完成申貸者可望保留較優惠條件，使申請時點成為潛在買方的重要考量。整體而言，青安政策由寬轉緊的方向已明確，後續房貸市場的資格門檻與資金成本變化，將是自住與置產族的觀察重點。",
-          "summary_en": "Under the incoming rules, the interest subsidy on all Youth Housing (青安) mortgages will be reduced starting in August, trimming the preferential support that has underpinned first-home borrowing in recent years. The pullback, alongside the new tiered price caps and income limits, signals a broader recalibration of housing-loan policy as authorities balance affordability goals against concerns over excessive credit growth and property-market froth. Borrowers who lock in before the change may retain more favourable terms, making the timing of applications a key consideration for prospective buyers.",
-          "source_name": "工商時報",
-          "source_url": "https://www.ctee.com.tw/category/%E8%B2%A1%E7%B6%93"
+          "title_zh": "國稅局提醒：向境外電商購買電子勞務應申報營業稅",
+          "title_en": "Tax authorities remind buyers of cross-border e-services to file business tax",
+          "summary_zh": "財政部所屬國稅局提醒，國內營業人及機關團體向境外電商購買電子勞務，應依《加值型及非加值型營業稅法》第36條規定申報繳納營業稅。此提醒凸顯在跨境數位服務快速普及下，法遵關注度提升，確保消費境外供應的電子勞務能被適當納入稅網。凡有向境外數位服務供應商採購的營業人與機關團體，宜檢視自身申報義務，避免短漏報而衍生補稅與罰鍰風險。隨著雲端、軟體訂閱與AI服務等跨境採購增加，相關營業稅申報與憑證管理將更形重要，建議及早建立內部作業與勾稽機制，落實合規。",
+          "summary_en": "Taiwan's tax authorities reminded domestic businesses, government agencies and organizations that purchase electronic services from offshore e-commerce providers that they must declare and pay business tax in accordance with Article 36 of the Value-added and Non-value-added Business Tax Act. The reminder highlights an area of growing compliance focus as cross-border digital services proliferate, ensuring that consumption of foreign-supplied electronic services is properly captured in the tax net. Entities engaging offshore digital-service vendors should review their filing obligations to avoid underreporting and potential penalties.",
+          "source_name": "財政部臺北國稅局",
+          "source_url": "https://www.ntbt.gov.tw/multiplehtml/41ae3594197f4f69b47753ce08188516"
         }
       ]
     },
@@ -189,36 +203,40 @@
       "section_zh": "總經政策",
       "items": [
         {
-          "title_zh": "出口連 32 紅　創最強 6 月",
-          "title_en": "Taiwan's June exports hit strongest-ever June, up 40.3%",
-          "summary_zh": "財政部公布 6 月出口 748.3 億美元，是歷年最強 6 月，年增 40.3%，累計上半年出口 4,166.6 億美元、創同期新高，年增率已連 32 紅，遠勝其他主要經濟體。財政部表示，受惠 AI 風潮，台灣出口續航力十足，傳產也逐步走出外銷谷底。這份數據再度凸顯 AI 驅動的科技需求已成台灣貿易主引擎，但也讓經濟對單一景氣循環的依賴加深。展望下半年，AI 供應鏈能否維持強勁、傳產復甦力道及匯率與關稅變數，將牽動出口續航與整體經濟成長步調。",
-          "summary_en": "The finance ministry reported June exports of US$74.83bn, the highest for any June on record and up 40.3% year-on-year, taking first-half exports to a record US$416.66bn. It marked the 32nd straight month of annual growth, far outpacing regional peers. Officials credited the AI boom for Taiwan's export staying power and noted traditional sectors are gradually emerging from an export trough. The data reinforces how AI-driven tech demand has become the primary engine of Taiwan's trade, even as it deepens the economy's reliance on a single cycle.",
+          "title_zh": "上半年對美出超破千億美元、出口連32紅創最強6月",
+          "title_en": "Taiwan's H1 US surplus tops $100bn as exports notch 32nd straight monthly gain",
+          "summary_zh": "財政部公布6月出口748.3億美元，是歷年最強6月、年增40.3%，帶動上半年出口4,166.6億美元創同期新高。上半年對美出超突破1,040億美元、寫歷年新高，美國成為台灣最大出口國與最大出超來源，主要由AI相關顯示卡與伺服器貢獻。出口年增率已連32紅，續航力遠勝其他主要經濟體，反映AI熱潮、科技備貨與電子供應鏈緊俏共同推升動能。惟財政部也提醒，全球經貿仍受地緣政治衝突與美國關稅等不確定因素影響。對美出超規模龐大，後續是否成為台美貿易談判焦點，值得持續關注。",
+          "summary_en": "Taiwan's Ministry of Finance reported June exports of $74.83 billion, the strongest June on record, up 40.3% year-on-year, lifting first-half exports to a record $416.66 billion. The trade surplus with the US exceeded $100 billion in the first half—an all-time high—with the US now Taiwan's largest export destination and surplus source, driven by AI-related graphics cards and servers. Export growth has now extended to 32 consecutive months, far outpacing peers, as the AI boom, tech restocking and tight electronics supply chains sustain momentum, though tariffs and geopolitics remain wildcards.",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/cate/10846"
+          "source_url": "https://money.udn.com/money/story/10869/9618792",
+          "body_zh": "台美貿易關係緊密，財政部昨（9）日發布統計，上半年對美國出超高達1,040億美元，是歷年同期新高，全年對美出超將超過2,000億美元，美國穩坐台灣最大出口國、最大出超國；同時台灣AI相關出口強勁，高度仰賴南韓記憶體，南韓已成台灣最大入超國。\n財政部昨日發布6月出口，對五大出口市場齊步向上，累計上半年對五大市場出口規模，皆改寫歷年同期紀錄。\n值得關注的是，台灣上半年總出超974.1億美元，光是對美出超就超過千億美元，寫下驚人紀錄。\n財政部統計處長蔡美娜指出，對美國6月出口規模達232.8億美元，寫歷年單月第三高，年增34.8％，已是連35月成長，且出口貨品加速往資通與視聽產品集中，今年上半年占比就達81％，與2023年、AI風潮興起時的占比49％相比，已增加32個百分點，成為對美出超大幅擴張的主要動力。\n回顧今年上半年，台灣總出超974.1億美元，蔡美娜分析，在美國積極布局AI領域，及台灣在科技產業分工架構等因素下，使上半年台灣對美國出超已達到1,040億美元，不僅大於總出超，也成為最大出超來源，其中顯示卡跟伺服器，就分別貢獻510億美元、394億美元。\n根據主計總處推估，今年整體出超會達2,488億美元，若以對美出超金額超過整體出超總額的態勢來推估，全年對美國出超預計會超過2,000億美元。\n隨著對美出口持續成長，上半年美國市場占總出口比重已達32％。\n南韓則是台灣最大入超國，上半年入超304.8億美元，主要反映AI榮景下，台灣高度仰賴南韓記憶體。\n對於近期南韓記憶體模組價格翻漲、引發產業供需失衡的疑慮，蔡美娜指出，「確實業界有這種聲音」，可能也會帶動部分業者加緊拉貨腳步，不過這在出口數據中很難釐清占比。\n另外，6月對中國大陸及香港、東協兩大出口市場，因科技產品買氣活絡，出口值分別為177.7億美元、132.3億美元，皆創下歷年同月最高，分別年增22.2％及47.1％。\n對陸港出口已連四月挺住雙位數成長，上半年占總出口比重為23.8%。\n對歐洲出口，則同樣受惠資通視聽產品需求，6月出口規模50.7億美元，寫歷年單月第三高，年增48.4％；對日本出口33.2億美元，為歷年單月新高，年增17.7％，除受惠電子零組件、資通與視聽產品需求，也與礦產品出貨自低點回升有關。\n另外，若針對出口值超過3億美元以上的單一國家來觀察，6月成長幅度前三大國家，依序是對法國出口年增六倍、對墨西哥增加2.8倍、對愛爾蘭增加1.4倍。"
         },
         {
-          "title_zh": "亞銀上修台灣今年 GDP 至 9.5%　幅度、預測值雙稱冠亞太",
-          "title_en": "ADB lifts Taiwan's 2026 growth forecast to region-topping 9.5%",
-          "summary_zh": "亞洲開發銀行調升包含台灣等先進亞太經濟體今年成長率預測，並大幅上修台灣 2026 年經濟成長預估至 9.5%，稱冠亞太、調幅也居全亞太最大；台灣明年成長率仍估可達約 4%，續居昔日亞洲四小龍前段。此次上修凸顯 AI 帶動的出口與投資動能，正推升台灣寫下超乎尋常的高成長，但也引發市場對本波景氣循環成熟後能否延續的討論。對政策而言，強勁成長雖擴大財政與投資空間，卻也須留意景氣過度集中 AI、匯率與外部需求波動所帶來的下行風險。",
-          "summary_en": "The Asian Development Bank raised its growth forecasts for advanced Asia-Pacific economies including Taiwan, sharply upgrading Taiwan's 2026 growth estimate to 9.5% — the highest in the region and the largest upward revision across Asia-Pacific. The ADB expects Taiwan's growth to still reach around 4% next year, keeping it among the strongest of the former \"Asian Tigers.\" The upgrade underscores how AI-fuelled export and investment strength is powering an outsized expansion, while raising questions about sustainability once the current cycle matures.",
+          "title_zh": "亞銀上修台灣今年GDP至9.5%、稱冠亞太",
+          "title_en": "ADB lifts Taiwan's 2026 growth forecast to region-leading 9.5%",
+          "summary_zh": "亞洲開發銀行大幅上調台灣今年GDP成長率預測至9.5%，不僅為報告所列50個經濟體最高，調升幅度1.9個百分點也是全亞太最大，明年成長率仍估達4%。相較之下，新加坡上調至3.2%、香港3%、南韓2.6%，均遠不及台灣。此外，標普旗下中華信評也將台灣全年GDP預測由6.3%上修至8.2%，歸功於強勁的AI出口與穩健內需，但同時示警高度仰賴AI浪潮的成長可能帶來新風險。亮眼預測凸顯AI紅利對台灣經濟的強力挹注，惟成長動能過度集中科技與AI，一旦景氣循環反轉的下行風險，仍須審慎看待。",
+          "summary_en": "The Asian Development Bank sharply raised its 2026 GDP growth forecast for Taiwan to 9.5%, the highest among the 50 economies in its report and also the largest upward revision, with 2027 growth still seen at 4%. The 1.9-percentage-point upgrade dwarfs revisions for Singapore (3.2%), Hong Kong (3%) and South Korea (2.6%). Separately, S&P's Taiwan Ratings lifted its full-year GDP forecast to 8.2% from 6.3%, crediting strong AI-driven exports alongside resilient domestic demand, while cautioning that heavy reliance on the AI wave could introduce new risks.",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/cate/10846"
+          "source_url": "https://money.udn.com/money/story/10869/9618842",
+          "body_zh": "亞洲開發銀行昨（9）日調升包含台灣等先進亞太經濟體今年經濟成長率預測，並大幅上修台灣2026年經濟成長預測至9.5%，稱冠亞太，且調幅為全亞太最大，台灣明年的成長率預估仍可達4%，依然是昔日亞洲四小龍最高。\n此外，標準普爾旗下中華信評昨日發表2026年台灣年中信用展望，標普將台灣全年GDP年增率預測由6.3％上修至8.2%；受惠於出口與內需穩健貢獻，強勁的AI需求為帶動經濟成長主因。不過，非科技業出口表現較疲弱，且與科技業差距大；另示警高度仰賴AI浪潮的成長可能帶來新風險。\n亞銀發布最新版「亞洲發展展望」報告，把亞太地區分為先進及開發中經濟體，調高先進亞太經濟體今年國內生產毛額（GDP）成長率到2.6%，高於4月預測的2.2%，開發中亞太經濟體成長率預測從5.1%調降到4.9%。\n亞銀大幅上調台灣今年GDP成長率預測1.9個百分點，調升至9.5%，不管是成長率預估、還是上調幅度，均為報告所列50個經濟體最高。相較下，新加坡今年GDP成長率預估獲上調0.2個百分點到3.2%，香港調升0.4個百分點至3%，就連同樣受惠AI熱潮的南韓成長率也只調高0.7個百分點，到2.6%。\n亞銀指出，台灣仍以出口為經濟成長的主要動力，第1季出口年增35.8%，科技出口更是激增76%。"
         },
         {
-          "title_zh": "楊金龍看 AI 熱提三警訊　強調產業發展沒問題",
-          "title_en": "Central bank chief flags three AI warning signs while backing the trend",
-          "summary_zh": "AI 浪潮持續推升台股，市場資金高度集中於 AI 概念股，也引發泡沫化疑慮。中央銀行總裁楊金龍指出，AI 產業發展方向沒有問題、具長期成長動能，真正令人擔憂的並非「產業泡沫」，而是圍繞其間的金融體系風險，包括信用與資產價格傳導。此番談話意在為市場熱度降溫，同時不否定 AI 基本面，也顯示央行正密切觀察 AI 榮景如何滲入放款、估值與金融穩定。對投資人而言，官方示警凸顯資金過度集中單一題材的系統性風險，配置上宜留意波動與槓桿累積。",
-          "summary_en": "As the AI wave keeps lifting Taiwan stocks and concentrates capital in AI concept shares, central bank governor Yang Chin-long said the direction of the AI industry is sound and has long-term growth momentum. His real worry, he said, is not an \"industry bubble\" but risks building in the financial system around it — including credit and asset-price channels. The remarks aim to temper froth without dismissing AI's fundamentals, and signal the central bank is watching how AI-driven exuberance feeds into lending, valuations and financial stability.",
+          "title_zh": "前五月實質薪資創六年最佳、主計總處：AI紅利發酵",
+          "title_en": "Taiwan's real regular wages hit six-year high as AI dividend feeds through",
+          "summary_zh": "主計總處公布，前五月全體受僱員工經常性薪資平均48,907元，年增2.81%，創近27年同月次高；扣除物價後，實質經常性薪資平均44,128元，年增1.27%，為近六年同期新高。官員將穩健成長歸因於勞動市場基本面穩固與AI紅利發酵，僱用人數、薪資與加班時數同步成長。5月受僱員工人數較去年同月增加7.6萬人，以製造業增加最多，顯示科技帶動的景氣上行正逐步擴散至勞動市場。不過，實質薪資成長幅度仍相對溫和，且各行業與職級間的差異，以及物價走勢，將影響民眾實際感受與消費動能，值得持續觀察。",
+          "summary_en": "Taiwan's statistics agency reported that average regular monthly wages for the first five months rose 2.81% year-on-year to NT$48,907, the second-highest for the period in nearly 27 years; adjusted for inflation, real regular wages averaged NT$44,128, up 1.27% and a six-year high for the period. Officials attributed the steady gains to a resilient labor market and the AI dividend, with employment, wages and overtime hours all rising. May payroll headcount rose by 76,000 from a year earlier, led by manufacturing, signaling that the tech-driven upswing is broadening into labor-market improvements.",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/cate/10846"
+          "source_url": "https://money.udn.com/money/story/10869/9620649",
+          "body_zh": "主計總處昨（10）日公布最新薪資統計，前五月全體受僱員工經常性薪資平均數為48,907元，年增2.81%，創下近27年來同月次高；扣除物價因素後，實質經常性薪資平均為44,128元，年增1.27%，也是近六年同期新高，顯示勞工薪資持續穩健成長。\n主計總處國勢普查處副處長譚文玲表示，目前國內勞動市場基本面依據各項指標來看，整體發展仍相當穩健。在AI紅利持續發酵與帶動下，不僅僱用人數維持成長態勢，包括經常性薪資與總薪資，無論是與上月相比或是與上年同月相比，皆呈現正成長表現；此外，加班時數亦同步維持年增長，顯示整體勞動市場各項指標皆續朝良性方向發展。\n統計顯示，今年前五月全體受僱員工總薪資平均數為351,330元，年增2.91%；扣除物價因素後，實質總薪資平均為317,000元，年增1.37%，同樣維持正成長。\n若觀察5月單月表現，全體受僱員工經常性薪資平均數為49,216元，年增2.95%；加計獎金、加班費等非經常性薪資後，總薪資平均數為62,579元，但增幅趨緩，僅年增0.94%。\n對此，主計總處表示，這主要與端午節獎金發放時點不同有關。由於前年及去年端午節時間較早，不少企業於5月即發放端午獎金；但今年端午節落點較晚，預估較多企業延至6月發放，可能有些遞延效應，使5月總薪資年增率受到影響，後續可持續觀察1至6月累計數據，更能完整反映端午獎金發放情形。\n若以較能反映多數受僱員工薪資水準的中位數觀察，今年前五月經常性薪資中位數為39,244元，年增2.94%；扣除物價因素後，實質經常性薪資中位數為34,923元，年增1.39%，顯示多數勞工薪資同步成長。\n就業市場方面，5月全體受僱員工人數為857.3萬人，較上月增加7,000人，較去年同月增加7.6萬人。其中，以製造業月增3,000人最多，其次為批發及零售業、住宿及餐飲業，以及支援服務業，各增加2,000人。\n服務業受僱人數持續增加，住宿及餐飲業受惠母親節、婚宴等節慶消費需求，餐飲市場維持熱絡，推升就業需求。"
         },
         {
-          "title_zh": "新台幣重貶 1.46 角　收 32.178 元創逾一年低",
-          "title_en": "Taiwan dollar slumps 1.46 jiao to 14-month low on dividend-outflow pressure",
-          "summary_zh": "新台幣兌美元重貶 1.46 角、收在 32.178 元，為逾一年兩個月最弱水準，主因外資股利匯出壓力浮現、且台幣多面受夾擊。此番走貶，是在去年史詩級升值之後出現，反映上市公司除息季節性資金外流疊加美元走強。台幣走弱雖有利出口報價與外銷廠商獲利，卻也墊高進口與輸入性通膨壓力，並考驗央行在物價穩定與匯率競爭力間的拿捏。後續外資動向、股利匯出節奏與美元強弱，將是判斷新台幣能否止穩的關鍵變數，牽動出口產業與資金流向。",
-          "summary_en": "The New Taiwan dollar fell sharply by 1.46 jiao to close at 32.178 against the U.S. dollar, its weakest level in more than a year and two months, as foreign investors' dividend-repatriation pressure came to the fore and the currency faced pressure on multiple fronts. The depreciation follows a period of \"epic\" appreciation last year, and reflects seasonal outflows tied to listed-company dividend payouts alongside broader dollar strength. A softer local currency cushions exporters but complicates the central bank's balance between price stability and competitiveness.",
+          "title_zh": "青安3.0房屋總價分級設限、個人年所得逾200萬不得申貸",
+          "title_en": "\"Youth housing loan 3.0\" to cap home prices and income eligibility",
+          "summary_zh": "預計兩周內拍板的新版青年安心成家貸款（青安3.0），將對可申貸房屋總價採三級制設限：台北市3,500萬元、新北市與新竹縣市2,500萬元、其餘縣市2,000萬元，超過上限不得申貸。個人年所得達200萬元以上也不得申貸，並以個人而非家戶所得認定，以避免「懲罰婚姻」。新制同時加碼婚育家庭的優惠額度，盼在現行新青安7月31日屆期後，讓有限資源精準分配。此方案針對年收、房屋總價與申貸年齡設上限，反映政策鎖定真正有自住需求者，後續細節與利率補貼銜接安排，將牽動房市與購屋族權益。",
+          "summary_en": "Taiwan's revamped youth housing-loan scheme (\"Qing-an 3.0\"), expected to be finalized within two weeks, will introduce a three-tier cap on eligible home prices—NT$35 million in Taipei, NT$25 million in New Taipei and Hsinchu, and NT$20 million elsewhere—above which loans are barred. Individuals with annual income of NT$2 million or more will also be ineligible, assessed by individual rather than household income to avoid \"penalizing marriage.\" The scheme adds preferential loan quotas for married and child-rearing households, aiming to channel limited resources more precisely as the current program expires July 31.",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/cate/10846"
+          "source_url": "https://money.udn.com/money/story/7307/9616129",
+          "body_zh": "青安3.0新制預計兩周內拍板，據指出，房屋總價上限將採三級制，超過上限不得申貸，台北市為3,500萬元，新北市、新竹縣市為2,500萬元，其餘縣市上限為2,000萬元。另，個人年所得200萬元以上也不得申貸。\n新青安貸款將於7月31日屆期，青安3.0新制正密集討論中，房屋總價、個人年收入限制方向，已愈來愈明朗。\n房屋總價將採取「三級制」設限。知情人士透露，除台北市以房屋總價最高3,500萬元，新北市與新竹縣市為2,500萬元，其他地區總價上限一律為2,000萬元。\n據悉，考量竹科受惠AI產業發展，已帶動在地房價飆漲，因此新竹縣市比照新北市門檻，比台中、高雄、桃園、台南等六都城市都還高。\n至於外界關注的200萬元所得限制，到底是以「家戶」或「個人」來看，據悉，已確定會以個人年所得200萬元作為分界點，達200萬以上不得申貸，非以家戶所得認定，以避免「懲罰婚姻」。\n消息人士指出，財部內部統計，發現年收入200萬元以上的借款人占比很低，新制不致影響太大。對於200萬元到底應採個人或家戶所得，兩種方向都有人各持立場，但最終方案決定採取個人年所得。\n財政部長莊翠雲昨（8）日在立法院回應立委質詢時表示，青安新方案將針對婚育家庭提供優惠額度。\n據知情人士指出，將分成「婚」與「生育」兩種，倘若申貸前二年有結婚，亦即已結婚二年，就可將申貸額度從1,000萬元提高至1,200萬元，若申貸時已有未成年子女，則額度將可從1,000萬元拉高至1,500萬元。\n但倘若之後離婚，八大行庫就得追討比起1,000萬多貸出來的200萬元。也就是說，八大行庫除要去對「非自住」青安借款戶，追討利息外，未來還將化身「婚姻徵信所」，了解貸款戶是否「婚變」。\n據了解，大型行庫對於實務上，還得去調查借款戶婚姻狀況，認為實務上有難度，內政部將提供相關戶政資料供大型行庫日後對借款人婚姻狀況進行勾稽。\n至於利率方面，還會有「回溯條款」，亦即在現行新青安制度之下申貸的，即使到8月1日青安3.0上路，利率補貼仍會比照新制有「3+4」（前三年和後四年逐漸落日）補貼，亦即同樣有長達七年的利率補貼優惠。\n青安3.0針對年收、房屋總價、申貸年齡都將設上限，並加碼婚育宅貸款額度，目標是要讓有限資源能精準分配。"
         }
       ]
     },
@@ -227,44 +245,32 @@
       "section_zh": "國際財經",
       "items": [
         {
-          "title_zh": "美光加碼美國投資至 2,500 億美元　衝刺 AI 記憶體",
-          "title_en": "Micron lifts U.S. investment pledge to $250bn to chase AI memory demand",
-          "summary_zh": "美光宣布因應 AI 時代記憶體需求持續攀升，將 2035 年前在美國投資額上調至逾 2,500 億美元，高於去年 6 月的 2,000 億美元計畫，也遠超最初規劃，將打造美國史上最大晶圓基地之一，強化先進記憶體在地生產與供應鏈韌性。這筆龐大投資顯示美光看好 AI 加速器所需的高頻寬記憶體需求將維持結構性強勁，也呼應近期記憶體超級循環題材。對台廠而言，美光擴產牽動矽晶圓、封測與設備供應鏈商機，環球晶等關係密切業者可望同步受惠。",
-          "summary_en": "Micron announced it will invest more than US$250bn in the United States by 2035, up from the US$200bn plan unveiled last June and far above its original blueprint, as AI-era memory demand keeps climbing. The commitment underpins what is set to become one of America's largest wafer-fabrication footprints, reinforcing the reshoring of advanced memory production. The scale of the pledge signals confidence that high-bandwidth memory demand for AI accelerators will remain structurally strong for years.",
+          "title_zh": "晶片股漲太兇？大摩警告AI支出恐開始踩煞車",
+          "title_en": "Morgan Stanley warns chip stocks may have run too far as AI-spending caution builds",
+          "summary_zh": "摩根士丹利財富管理投資長Lisa Shalett警告，隨著晶片製造商定價能力受限的跡象逐漸浮現，投資人應對半導體類股保持審慎。她認為，市場對AI支出的樂觀預期可能已推動晶片股漲得過高，AI資本支出恐開始踩煞車。這番來自華爾街知名策略師的示警，為「AI帶動的晶片行情是否已超越基本面」的辯論再添柴火，此一問題對半導體權重偏高的台股與全球科技股評價，具有重大影響。投資人須留意記憶體與AI供應鏈漲勢的持續性，以及一旦資本支出放緩，對相關個股獲利與評價的潛在衝擊。",
+          "summary_en": "Morgan Stanley Wealth Management CIO Lisa Shalett warned investors to stay cautious on semiconductor stocks as signs emerge that chipmakers' pricing power is becoming constrained. She argued the market's optimistic expectations for AI spending may have pushed chip stocks too high, and that AI capital expenditure could begin to hit the brakes. The caution from a prominent Wall Street strategist adds to a growing debate over whether the AI-fueled chip rally has outpaced fundamentals, a question with outsized implications for Taiwan's semiconductor-heavy market and global tech valuations.",
           "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/cat/headline"
+          "source_url": "https://news.cnyes.com/news/id/6531001",
+          "published": "2026-07-11"
         },
         {
-          "title_zh": "SK 海力士赴美 IPO 傳定價 149 美元　募資上看 265 億美元",
-          "title_en": "SK Hynix's U.S. IPO priced near $149, raising up to $26.5bn",
-          "summary_zh": "據彭博報導，SK 海力士計劃將美國存託憑證（ADR）發行價訂為每單位 149 美元，較南韓普通股收盤價溢價約 3.1%，募資上看 265 億美元，規模挑戰阿里巴巴紀錄。此案獲全球長線基金、科技基金、主權財富基金及亞洲投資人踴躍認購，超額認購逾七倍，預計於那斯達克掛牌交易。這樁重量級上市案凸顯市場對 AI 記憶體龍頭的高度熱情，也帶動南亞科、華邦、旺宏等台廠記憶體族群添增比價與資金動能，成為觀察全球記憶體超級循環與資金流向的重要指標。",
-          "summary_en": "According to Bloomberg, SK Hynix plans to price its U.S. American depositary receipts (ADRs) at US$149 each, about a 3.1% premium to its South Korean common-stock close, raising up to US$26.5bn in what would rival Alibaba's record. The offering drew orders from global long-only funds, tech funds, sovereign-wealth funds and Asian investors, and was more than seven times oversubscribed, with trading due to begin on the Nasdaq. The blockbuster listing highlights investor enthusiasm for AI-memory leaders and gives Taiwanese memory makers such as Nanya, Winbond and Macronix added momentum.",
+          "title_zh": "散戶不玩標普500了？美股「追熱門就跑」成新常態",
+          "title_en": "US retail investors sour on the S&P 500, chasing hot names instead",
+          "summary_zh": "曾是本輪美股多頭最堅定支持者的散戶，如今信心降溫。Vanda Research數據顯示，過去四周流入股市的資金差額已縮小至130億美元，創新冠疫情以來最低；散戶愈來愈傾向追逐個別熱門股與題材，對標普500指數興趣缺缺。策略師指出，2026年已真正成為「選股者的世界」，散戶在能源、軟體、半導體到太空概念股間快速輪動，一旦市場風向改變便迅速撤退。此現象反映市場從全面押注大盤，轉向高度選股與快速輪動的交易環境，也意味大盤指數的資金支撐力道轉弱，波動與類股分化恐加大。",
+          "summary_en": "Once among the staunchest supporters of the current US bull market, retail investors are showing signs of cooling conviction. Vanda Research data shows the four-week net flow gap into stocks has narrowed to $13 billion, the lowest since the pandemic, as retail traders increasingly chase individual hot stocks and themes rather than the broad S&P 500. Strategists say 2026 has truly become a \"stock-picker's world,\" with retail investors rotating rapidly between energy, software, semiconductors and space names, and quick to retreat when the wind changes.",
           "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/cat/headline"
+          "source_url": "https://news.cnyes.com/news/id/6530976",
+          "body_zh": "鉅亨網編譯段智恆\n2026-07-10 23:00\n曾是本輪美股多頭市場最堅定支持者之一的散戶投資人，如今正顯露信心降溫跡象。最新數據顯示，散戶愈來愈傾向追逐個別熱門股票與市場題材，卻對標普 500 指數興趣缺缺，反映 2026 年的美股市場已逐漸從全面押注大盤，轉向高度選股與快速輪動的交易環境。\n散戶不玩標普500了？美股「追熱門就跑」成新常態(圖：REUTERS/TPG)\n根據 Vanda Research 數據，過去四周流入與流出股市的資金差額已縮小至 130 億美元，創新冠疫情以來最低水準。散戶如今進出個股的速度愈來愈快，賣股幾乎與買股同樣積極，不再像疫情後幾年一樣，對整體美股抱持廣泛且堅定的看多信念。\nVanda Research 全球總體策略師 Viraj Patel 表示，2026 年已真正成為「選股者的世界」，如今選擇性更高的散戶，正加入同樣高度挑剔的機構投資人行列。\nPatel 認為，散戶對美股整體曝險偏低，不一定意味著股市即將面臨重大危機，而是顯示這群宛如「賭場玩家」的投資人，隨時準備押注下一個看似最熱門的題材，但一旦市場風向改變，就會迅速撤退。\n今年以來，散戶追逐的焦點快速轉換。最初是受工業需求激增及供應短缺推動的能源股與白銀企業，接著資金湧向軟體股，隨後又拋棄軟體、轉戰半導體。SpaceX(SPCX-US) 於 6 月上市後，散戶更大舉湧入這家由馬斯克 (Elon Musk) 領導、橫跨火箭、衛星及人工智慧 (AI) 業務的公司，以及其他太空概念股。\nPatel 指出，「2026 年的散戶投資人，與我們在疫情後幾年看到的任何情況都非常不同。」\n投資人情緒降溫或許也是原因之一。美國個人投資者協會 (AAII) 調查顯示，自 2 月中旬以來，除了四周之外，看空美股的人數始終超過看多者。截至 7 月 8 日當周，37% 受訪者預期未來六個月股市將下跌，高於看多者的 36%。\neToro 美國投資分析師 Bret Kenwell 表示，散戶投資意願可能降溫，一方面源於對整體市場的疑慮，另一方面則是科技股經過今年上漲後，估值已處於偏高水準。\nKenwell 指出，晶片股在第二季大漲後進入盤整，散戶可能不願向短期看來已過度延伸的類股投入更多新資金。他認為，如果投資人目前確實選擇按兵不動，可能只是在等待這波回檔或盤整結束，再重新進場。\nVanda Research 則指出，散戶如今還有更多押注管道，包括加密貨幣、預測市場及運動博彩，可能也是股票市場參與度逐步下降的原因。根據彭博行業研究 (Bloomberg Intelligence) 彙整數據，2026 年第一季散戶占美股總交易量 17.2%，雖仍高於疫情前水準，但低於一年前的 20.5%。\n不過，散戶並未完全離開市場。摩根大通 (JPMorgan Chase) 數據顯示，本周散戶淨買入 89 億美元股票，高於過去 12 個月平均的 68 億美元，但資金流向仍高度集中。截至 7 月 8 日當周，科技股吸引 7.12 億美元散戶資金，居 11 大類股之冠，其次為通訊服務股的 6.17 億美元。\nPatel 表示，目前 AI 與科技股之間並不存在明確一致的交易主題，就連「科技七雄」也已不再像過去一樣集體同漲同跌。對 2026 年的散戶而言，與其押注整個市場，不如尋找下一個閃亮的新題材，並在風向改變前迅速轉身。",
+          "published": "2026-07-10"
         },
         {
-          "title_zh": "華爾街開始擔心　美股七雄熄火",
-          "title_en": "Wall Street frets as the \"Magnificent Seven\" stall",
-          "summary_zh": "美股今年持續創高，但帶動近四年多頭的「美股七雄」卻意外缺席這波漲勢。隨 AI 熱潮推升半導體與 AI 晶片供應鏈，資金逐漸自大型科技與軟體平台股撤出，華爾街開始憂心：少了昔日領頭羊，標普 500 還衝得動嗎？這波輪動引發市場對「上漲廣度」的討論，若行情由少數族群主導、領導股基礎轉窄，指數對回檔的脆弱度恐升高。對投資人而言，須留意權值股與 AI 晶片供應鏈之間的資金輪動、以及財報季能否驗證 AI 資本支出成效，作為判斷多頭是否延續的依據。",
-          "summary_en": "U.S. stocks keep hitting records, yet the \"Magnificent Seven\" mega-cap tech names that drove nearly four years of gains have surprisingly sat out this rally. As the AI craze pushes capital toward semiconductor stocks and the AI chip supply chain rather than big-cap software and platforms, Wall Street is starting to worry whether the S&P 500 can keep climbing without its former leaders. The rotation raises questions about market breadth and whether narrower leadership leaves indexes more vulnerable to a pullback.",
+          "title_zh": "港股科技股強勢反攻、資金由南韓回流香港",
+          "title_en": "Hong Kong tech stocks stage strong rebound as capital rotates back from South Korea",
+          "summary_zh": "香港科技股強勢反攻，恆生指數可望創逾一年來最佳單周表現，資金開始由南韓回流香港。此輪輪動反映區域風險偏好轉變，投資人重新評估南韓股市過度集中的部位（韓股近期重挫），並在港股科技股中尋找價值。此變化凸顯在AI帶動的重新布局下，資金在亞洲市場間可迅速轉移，也顯示歷經一段相對弱勢後，市場對中國與香港科技股重燃興趣。對區域資產配置而言，南韓與香港間的資金消長，值得關注是否形成趨勢，以及AI供應鏈題材在不同市場的輪動節奏。",
+          "summary_en": "Hong Kong's technology shares rallied strongly, putting the Hang Seng Index on track for its best weekly performance in over a year, as capital began flowing back into Hong Kong from South Korea. The rotation reflects shifting regional risk appetite, with investors reassessing crowded positioning in Korean equities—which have suffered sharp declines—and finding value in Hong Kong-listed tech names. The move highlights how quickly funds can shift across Asian markets amid the AI-driven repositioning, and signals renewed interest in Chinese and Hong Kong technology plays after a period of underperformance.",
           "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/cat/headline"
-        },
-        {
-          "title_zh": "長債重定價才剛開始　PGIM 估 30 年美債殖利率上看 5.5%",
-          "title_en": "PGIM sees 30-year Treasury yield heading toward 5.5%",
-          "summary_zh": "美國 30 年期公債殖利率重返 5% 以上，市場重新評估長天期債券的合理收益率。PGIM 固定收益共同投資長 Gregory Peters 認為，長天期美債殖利率重定價才剛開始，主因 AI 投資帶動企業發債，加上美國財政部持續擴大發債，供給壓力升溫，估 30 年期殖利率上看 5.5%。此一水準將牽動房貸利率、股市估值，以及 AI 基礎設施龐大投資的融資成本。對資產配置而言，長債殖利率若續攀，將壓抑高估值成長股評價、抬高融資門檻，投資人須重新檢視存續期間與利率風險，也凸顯財政赤字與 AI 資本支出對利率的長期影響。",
-          "summary_en": "With the U.S. 30-year Treasury yield back above 5%, investors are reassessing the fair yield on long-dated bonds. PGIM Fixed Income co-CIO Gregory Peters argues the repricing of long-maturity Treasuries has only just begun, driven by AI-related corporate bond issuance and the Treasury's continued expansion of debt supply. Peters sees the 30-year yield potentially climbing to 5.5%, a level with wide implications for mortgage rates, equity valuations and the cost of financing surging AI infrastructure spending.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/cat/headline"
-        },
-        {
-          "title_zh": "韓股從全球最強墜入熊市　集中度過高才是主因",
-          "title_en": "Korea's Kospi plunges into bear market as leveraged ETFs dominate",
-          "summary_zh": "南韓 Kospi 重挫約 20% 陷入熊市，分析指出真正主因並非作為導火線的 AI 股回檔，而是市場過度集中。三星電子、SK 海力士及追蹤兩者的槓桿型 ETF 合計吃掉約七成交易量，使指數對少數晶片股的漲跌高度敏感、風險集中。這波重挫，對其他科技權重偏高的市場是一記警鐘：領導股過窄、槓桿部位過度擁擠，將放大回檔的殺傷力。對投資人而言，韓股經驗凸顯分散配置與控管槓桿的重要性，也提醒 AI 行情下須慎防單一族群集中風險蔓延至整體指數。",
-          "summary_en": "South Korea's Kospi has tumbled roughly 20% into a bear market, and analysts say the real culprit is not the AI-stock pullback that served as the trigger but the market's excessive concentration. Samsung Electronics and SK Hynix, together with leveraged ETFs tracking them, have come to account for around 70% of trading, leaving the index dangerously exposed to swings in a handful of chip names. The sell-off is a cautionary tale for other tech-heavy markets about the risks of narrow leadership and crowded, leveraged positioning.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/cat/headline"
+          "source_url": "https://news.cnyes.com/news/id/6530543",
+          "published": "2026-07-10"
         }
       ]
     },
@@ -273,94 +279,76 @@
       "section_zh": "國際",
       "items": [
         {
-          "title_zh": "晶片交易助華爾街淡化美伊最新交火",
-          "title_en": "The Chip Trade Is Helping Wall Street Shake Off Latest Iran Strikes",
-          "summary_zh": "中東緊張情勢升溫，卻被市場對記憶體類股的熱情所掩蓋，投資人重新湧入 AI 記憶體交易。晶片股走強，帶動美股淡化新一輪美伊交火的衝擊，凸顯半導體題材在動盪地緣政治背景下，仍是主導市場情緒的關鍵力量。",
-          "summary_en": "Flaring tensions in the Middle East were overshadowed by a burst of enthusiasm for the market's favourite memory stocks, as investors piled back into the AI-memory trade. The rally in chip names helped U.S. indexes look past a renewed round of U.S.–Iran fighting, underscoring how powerfully the semiconductor theme is driving sentiment even against a jittery geopolitical backdrop.",
+          "title_zh": "SK海力士那斯達克首日漲13%、董座向CNBC稱「需求龐大」",
+          "title_en": "SK Hynix rises 13% in Nasdaq debut; chairman tells CNBC 'demand is enormous'",
+          "summary_zh": "SK海力士在那斯達克交易首日大漲13%，其市值已突破1兆美元，客戶涵蓋輝達、蘋果等科技巨頭。董事長向CNBC表示需求極為龐大，凸顯AI推動的高頻寬記憶體榮景，也讓這檔記憶體巨頭的美股首秀備受矚目。",
+          "summary_en": "SK Hynix soared 13% in its Nasdaq trading debut, having reached a trillion-dollar market cap by supplying memory to tech giants including Nvidia and Apple. The chairman told CNBC that demand is enormous, underscoring the AI-driven boom in high-bandwidth memory.",
+          "source_name": "CNBC",
+          "source_url": "https://www.cnbc.com/2026/07/10/sk-hynix-skhy-stock-nasdaq.html",
+          "published": "2026-07-11"
+        },
+        {
+          "title_zh": "南韓記憶體大廠歷史性美股首秀撼動股市",
+          "title_en": "South Korean memory chip maker's historic US debut jolts stocks",
+          "summary_zh": "週五美股主要指數小幅走高，為震盪的一周作收，SK海力士指標性的美股掛牌撼動市場。這家南韓記憶體廠在美股首秀募得265.1億美元，為今年規模最大的IPO案之一，反映投資人對AI記憶體的高度追捧。",
+          "summary_en": "Major US indexes edged higher on Friday, capping a volatile week, as SK Hynix's landmark US listing jolted the market. The South Korean memory maker raised $26.51 billion in its US debut, one of the largest listings of the year.",
           "source_name": "WSJ",
-          "source_url": "https://www.wsj.com/finance/stocks/the-chip-trade-is-helping-wall-street-shake-off-latest-iran-strikes-54abbf62?mod=rss_markets_main",
-          "published": "2026-07-10"
+          "source_url": "https://www.wsj.com/finance/stocks/south-korean-memory-chip-makers-historic-u-s-debut-jolts-stocks-1cc199b2",
+          "published": "2026-07-11"
         },
         {
-          "title_zh": "美伊交火　為和平協議以來最大規模升級",
-          "title_en": "U.S., Iran Trade Fire in Largest Escalation Since Peace Deal",
-          "summary_zh": "川普宣布停火結束後，美國對伊朗發動新一輪打擊，為臨時和平協議以來最大規模的升級。川普先前承諾將展開第二晚攻擊，並警告若德黑蘭持續攻擊商船，打擊力道將加劇，為油價與全球市場帶來新的地緣政治風險。",
-          "summary_en": "The U.S. launched new strikes on Iran after President Trump declared the ceasefire over, in the largest escalation since the interim peace deal. Trump had promised a second night of attacks and warned the strikes would worsen if Tehran keeps targeting commercial shipping, raising fresh geopolitical risk for oil and global markets.",
+          "title_zh": "蘋果控告OpenAI竊取營業秘密、稱手法「涉及各個層面」",
+          "title_en": "Apple sues OpenAI alleging trade secret theft, says scheme was 'at every level'",
+          "summary_zh": "蘋果控告OpenAI竊取營業秘密，形容其手法「涉及各個層面」。兩家公司曾於2024年建立備受矚目的合作，將ChatGPT整合進iPhone作業系統，如今對簿公堂，成為雙方關係的戲劇性轉折，也牽動AI與科技巨頭的競合格局。",
+          "summary_en": "Apple has sued OpenAI alleging trade-secret theft, describing the scheme as operating \"at every level.\" The two companies entered a high-profile partnership in 2024 when ChatGPT was integrated into the iPhone's operating system, making the legal clash a striking turn in their relationship.",
+          "source_name": "CNBC",
+          "source_url": "https://www.cnbc.com/2026/07/10/apple-openai-lawsuit-trade-secrets.html",
+          "published": "2026-07-11"
+        },
+        {
+          "title_zh": "穩定幣發行商Circle獲准以銀行營運、股價上漲",
+          "title_en": "Stablecoin issuer Circle gets greenlight to operate as a bank, shares up",
+          "summary_zh": "穩定幣發行商Circle在美國貨幣監理署（OCC）批准其成立國家數位貨幣信託銀行後，盤前股價大漲。此執照讓Circle可直接管理旗下受監管穩定幣的準備金，並提供機構服務，正值穩定幣競爭日趨白熱化之際，市場高度關注。",
+          "summary_en": "Stablecoin issuer Circle surged in premarket trading after the US Office of the Comptroller of the Currency granted approval to operate as a national digital-currency trust bank. The charter lets Circle directly manage the reserves backing its regulated stablecoins and offer institutional services, as stablecoin competition heats up.",
+          "source_name": "CNBC",
+          "source_url": "https://www.cnbc.com/2026/07/10/circle-gets-an-occ-bank-charter-as-stablecoin-competition-heats-up-shares-surge-14percent.html",
+          "published": "2026-07-11"
+        },
+        {
+          "title_zh": "Meta股價強勢回神、有望寫下數年來最佳單周",
+          "title_en": "Meta's stock roars back to life, heading for its best week in years",
+          "summary_zh": "Meta股價強勢回神，有望創下數年來最佳單周表現，投資人看好其新的低成本AI定價與基礎設施計畫。這波反彈顯示市場對這家社群與AI重量級公司的情緒明顯轉向樂觀，也反映AI商業化路徑受到重新評價。",
+          "summary_en": "Meta's stock roared back to life and was heading for its best week in years, as investors turned bullish on the company's new low-cost AI pricing and infrastructure plans. The rebound marks a sharp shift in sentiment toward the social-media and AI heavyweight.",
+          "source_name": "MarketWatch",
+          "source_url": "https://www.marketwatch.com/story/metas-stock-roars-back-to-life-as-it-heads-for-its-best-week-in-years-0ff0fa7d",
+          "published": "2026-07-11"
+        },
+        {
+          "title_zh": "現金該放哪？現在鎖定4%、還是等下次Fed決議？",
+          "title_en": "Where to put cash: lock in 4% now or wait for the next Fed decision?",
+          "summary_zh": "MarketWatch報導，定存單（CD）利率目前陷入停滯，但下次Fed會議後可能生變，探討存戶該現在鎖定4%利率、還是再等等。文章點出在Fed下一步時點仍不明朗下，現金族常見的兩難抉擇，具實用參考價值。",
+          "summary_en": "CD rates are at a standstill but could shift after the next Fed meeting, MarketWatch reports, weighing whether savers should lock in a 4% CD rate now or hold out. The piece frames a common dilemma for cash savers as the timing of the Fed's next move remains uncertain.",
+          "source_name": "MarketWatch",
+          "source_url": "https://www.marketwatch.com/story/should-you-lock-in-a-4-cd-rate-now-heres-how-to-decide-on-the-next-move-for-your-cash-41a7ef4c",
+          "published": "2026-07-11"
+        },
+        {
+          "title_zh": "歐洲easyJet獲阿波羅76億美元競購",
+          "title_en": "Europe's easyJet gets rival $7.6 billion bid from Apollo",
+          "summary_zh": "廉價航空easyJet股價攀抵四年高點，因其原則上同意接受美國資產管理公司阿波羅（Apollo）提出的76億美元收購案。這項競爭性報價為歐洲航空業的潛在重大交易，也帶動投資人對航空類股的關注升溫。",
+          "summary_en": "Shares in low-cost airline easyJet jumped to a four-year high after it agreed in principle to a $7.6 billion takeover bid from US asset manager Apollo. The rival offer marks a major potential deal in European aviation and lifted investor interest in the sector.",
           "source_name": "WSJ",
-          "source_url": "https://www.wsj.com/world/middle-east/u-s-launches-new-strikes-on-iran-after-trump-declares-ceasefire-over-2c0738fe",
-          "published": "2026-07-09"
-        },
-        {
-          "title_zh": "全球石油市場尚未準備好迎接伊朗停火破局",
-          "title_en": "The Global Oil Market Isn't Ready for the Iran Ceasefire to End",
-          "summary_zh": "美國原油庫存正逼近偏低的危險水位，汽油與柴油出口則接近歷史高點，一旦伊朗停火破局，全球石油市場毫無因應餘裕。供應吃緊的格局，使得若衝突再起、擾亂中東經荷莫茲海峽的原油流動，油價恐面臨劇烈飆升的風險。",
-          "summary_en": "America's crude inventories are flirting with dangerously low levels while exports of gasoline and diesel hover near records, leaving the global oil market poorly positioned if the Iran ceasefire collapses. The tight supply picture heightens the risk of a sharp price spike should renewed conflict disrupt Middle-East flows through the Strait of Hormuz.",
-          "source_name": "WSJ",
-          "source_url": "https://www.wsj.com/finance/commodities-futures/the-global-oil-market-isnt-ready-for-the-iran-ceasefire-to-end-3a4a7ec5?mod=rss_markets_main",
-          "published": "2026-07-09"
-        },
-        {
-          "title_zh": "中國 6 月消費者物價走弱、生產者通膨升至近四年高",
-          "title_en": "China consumer price growth weakens in June while producer inflation nears 4-year high",
-          "summary_zh": "中國 6 月消費者物價增速放緩，生產者物價卻攀升至近四年高點，加深「雙速經濟」的態勢。投資人日益將中國出口強勁、內需疲弱的分歧視為長期結構特徵，使北京的政策路徑更趨複雜。",
-          "summary_en": "China's consumer price growth softened in June even as producer inflation climbed to a near four-year high, deepening the picture of a two-speed economy. Investors increasingly see China's split between robust exports and tepid domestic demand as a defining long-term feature, complicating Beijing's policy path.",
-          "source_name": "CNBC",
-          "source_url": "https://www.cnbc.com/2026/07/09/china-cpi-ppi-june-inflation-iran-war-.html",
-          "published": "2026-07-09"
-        },
-        {
-          "title_zh": "認識 SK 海力士——赴美掛牌的兆元晶片廠",
-          "title_en": "Meet SK Hynix, the trillion-dollar chipmaker debuting on U.S. markets",
-          "summary_zh": "過去一年股價大漲逾七倍後，南韓 SK 海力士登陸那斯達克掛牌，鞏固其身為 AI 記憶體熱潮核心的兆元企業地位。這場備受矚目的上市，讓美國投資人能直接參與這家 AI 加速器高頻寬記憶體關鍵供應商。",
-          "summary_en": "Following a more than sevenfold rally in its stock over the past year, South Korea's SK Hynix is listing on the Nasdaq, cementing its status as a trillion-dollar company at the heart of the AI-memory boom. The high-profile debut gives U.S. investors direct access to one of the key suppliers of high-bandwidth memory for AI accelerators.",
-          "source_name": "CNBC",
-          "source_url": "https://www.cnbc.com/2026/07/09/meet-sk-hynix-the-trillion-dollar-chipmaker-debuting-on-us-markets-.html",
-          "published": "2026-07-09"
-        },
-        {
-          "title_zh": "Meta 跨入 AI 編程市場　叫陣 Anthropic 與 OpenAI",
-          "title_en": "Meta jumps into AI coding market to chase Anthropic and OpenAI",
-          "summary_zh": "Meta 在 AI 主管 Alexandr Wang 主導下升級旗下 Muse Spark 人工智慧模型，切入 AI 編程市場，與對手 Anthropic、OpenAI 一較高下。此舉顯示程式碼生成工具競爭升溫，也反映 Meta 正將 AI 策略重新聚焦於更高價值的開發者與代理式（agentic）應用場景。",
-          "summary_en": "Meta is upgrading its Muse Spark artificial-intelligence model under AI chief Alexandr Wang, pushing into the AI-coding market to compete with rivals Anthropic and OpenAI. The move signals intensifying competition in code-generation tools and reflects Meta's effort to reposition its AI strategy around higher-value developer and agentic use cases.",
-          "source_name": "CNBC",
-          "source_url": "https://www.cnbc.com/2026/07/09/meta-jumps-into-ai-coding-market-to-chase-anthropic-and-openai.html",
-          "published": "2026-07-09"
-        },
-        {
-          "title_zh": "華許公布聯準會工作小組成員",
-          "title_en": "Kevin Warsh names members of his Federal Reserve task forces",
-          "summary_zh": "聯準會主席華許（Kevin Warsh）公布五個工作小組的專家名單，將檢視該機構的運作，成員包括創投家 Marc Andreessen 與沃爾瑪執行長 Doug McMillon。此一陣容顯示華許有意檢討、甚至重塑央行運作方式，並將商界與科技界要角納入其中。",
-          "summary_en": "Federal Reserve Chairman Kevin Warsh released the names of experts who will comprise five task forces examining the institution's operations, including venture capitalist Marc Andreessen and Walmart CEO Doug McMillon. The line-up signals Warsh's intent to review and potentially reshape how the central bank functions, drawing figures from business and technology into the process.",
-          "source_name": "CNBC",
-          "source_url": "https://www.cnbc.com/2026/07/09/kevin-warsh-names-members-of-his-federal-reserve-task-forces-including-marc-andreessen-doug-mcmillon.html",
+          "source_url": "https://www.wsj.com/business/deals/easyjet-agrees-in-principle-on-7-6-billion-takeover-deal-from-apollo-e8433418",
           "published": "2026-07-10"
         },
         {
-          "title_zh": "Meta 股價反彈　代理式 AI 編程與自研晶片緩解支出疑慮",
-          "title_en": "Meta's stock rebounds as agentic AI coding and custom chips ease spending fears",
-          "summary_zh": "Meta 股價週四勁揚，因新 AI 模型推出，加上自研晶片傳出重大進展，共同緩解投資人對其龐大 AI 資本支出的疑慮。這波反彈顯示，市場更看重 AI 產品與自研晶片的實質進展，而非單純因高支出而給予懲罰。",
-          "summary_en": "Shares of Meta rallied on Thursday after the launch of a new AI model and reports of a major custom-chip milestone, which together helped ease investor concerns over the company's heavy AI capital spending. The rebound suggests markets are rewarding tangible progress on AI products and in-house silicon rather than punishing the spending alone.",
-          "source_name": "MarketWatch",
-          "source_url": "https://www.marketwatch.com/story/metas-stock-rebounds-as-agentic-ai-coding-and-custom-chips-ease-spending-fears-16d1cb24?mod=mw_rss_topstories",
-          "published": "2026-07-10"
-        },
-        {
-          "title_zh": "Apollo 警告：AI 回報放緩恐將經濟推向衰退",
-          "title_en": "A slower AI payoff risks tipping the economy into recession, Apollo says",
-          "summary_zh": "Apollo 警告，AI 投資回報若不如預期，恐將經濟推向衰退，並點名來自中國的競爭威脅升高，以及 token 價格下滑可能危及 AI 公司的財務。此番示警凸顯龐大 AI 資本支出與近期回報不確定之間的落差，這股張力正日益牽動市場情緒。",
-          "summary_en": "Apollo warns that a slower-than-expected payoff from AI investment could tip the economy toward recession, citing growing competitive threats from China and falling token prices that may put AI companies' financials at risk. The caution highlights the gap between massive AI capital spending and uncertain near-term returns, a tension increasingly weighing on markets.",
-          "source_name": "MarketWatch",
-          "source_url": "https://www.marketwatch.com/story/a-slower-ai-payoff-risks-tipping-the-economy-into-recession-apollo-says-5d495f6c?mod=mw_rss_topstories",
-          "published": "2026-07-10"
-        },
-        {
-          "title_zh": "帶動標普 500 走高的新族群登場",
-          "title_en": "Meet the new group of stocks powering the S&P 500 higher",
-          "summary_zh": "在第二季財報季前，股市檯面下正進行一場劇烈輪動，帶動標普 500 走高的已換成一批新族群，而非長期主導的大型權值股。這一轉變意味市場領導股正在更替，也可能改變投資人為即將到來的財報季所做的布局。",
-          "summary_en": "A violent rotation is taking place under the hood of the stock market ahead of second-quarter earnings, as a new group of stocks — rather than the long-dominant mega-cap leaders — powers the S&P 500 higher. The shift points to changing market leadership and could reshape how investors position for the coming earnings season.",
-          "source_name": "MarketWatch",
-          "source_url": "https://www.marketwatch.com/story/meet-the-new-group-of-stocks-powering-the-s-p-500-higher-b749961a?mod=mw_rss_topstories",
-          "published": "2026-07-10"
+          "title_zh": "川普稱美伊將續談、儘管停火破局",
+          "title_en": "Trump says US to continue talks with Iran despite scrapped ceasefire",
+          "summary_zh": "據CNBC報導，美國總統川普表示，儘管停火破局，美國仍將與伊朗持續談判。上月簽署的停火協議近日承受嚴重壓力，美伊部隊連續數日交火，使地緣政治風險居高不下，牽動油價與能源市場情緒，後續談判進展備受關注。",
+          "summary_en": "President Trump said the US will continue talks with Iran despite a scrapped ceasefire, according to CNBC. The truce signed last month came under serious strain in recent days as US and Iranian forces exchanged attacks over consecutive days, keeping geopolitical risk elevated for energy markets.",
+          "source_name": "CNBC",
+          "source_url": "https://www.cnbc.com/2026/07/10/us-iran-war-strikes-strait-of-hormuz-technical-talks-progress-.html",
+          "published": "2026-07-11"
         }
       ]
     }
