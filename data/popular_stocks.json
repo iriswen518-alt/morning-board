@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-12T16:32:58+08:00",
+  "generated_at": "2026-07-12T17:19:16+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -17,31 +17,31 @@
       "error": null
     },
     {
-      "symbol": "SCHD",
-      "name_zh": "Schwab US Dividend Equity ETF",
+      "symbol": "OKLO",
+      "name_zh": "Oklo",
       "kind": "US",
-      "price": 32.4,
-      "change_pct": 0.43,
-      "mtd_pct": 2.18,
-      "ytd_pct": 18.12,
+      "price": 48.85,
+      "change_pct": -0.85,
+      "mtd_pct": -6.65,
+      "ytd_pct": -31.93,
       "market_date": "2026-07-10",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SCHD.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=OKLO.US",
       "error": null
     },
     {
-      "symbol": "VRT",
-      "name_zh": "Vertiv Holdings, LLC",
+      "symbol": "PEP",
+      "name_zh": "百事",
       "kind": "US",
-      "price": 318.86,
-      "change_pct": -1.56,
-      "mtd_pct": -4.77,
-      "ytd_pct": 96.82,
+      "price": 137.38,
+      "change_pct": -0.35,
+      "mtd_pct": 1.46,
+      "ytd_pct": -4.28,
       "market_date": "2026-07-10",
-      "per": 77.8183,
+      "per": 21.5008,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VRT.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PEP.US",
       "error": null
     },
     {
@@ -56,6 +56,20 @@
       "per": 141.8422,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LITE.US",
+      "error": null
+    },
+    {
+      "symbol": "QQQ",
+      "name_zh": "Invesco QQQ Trust, Series 1",
+      "kind": "US",
+      "price": 725.51,
+      "change_pct": 0.31,
+      "mtd_pct": -1.48,
+      "ytd_pct": 18.1,
+      "market_date": "2026-07-10",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QQQ.US",
       "error": null
     },
     {
@@ -84,20 +98,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPY.US",
-      "error": null
-    },
-    {
-      "symbol": "QQQ",
-      "name_zh": "Invesco 那斯達克 100 ETF",
-      "kind": "US",
-      "price": 725.51,
-      "change_pct": 0.31,
-      "mtd_pct": -1.48,
-      "ytd_pct": 18.1,
-      "market_date": "2026-07-10",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QQQ.US",
       "error": null
     },
     {
