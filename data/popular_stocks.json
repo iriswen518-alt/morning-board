@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-13T18:37:01+08:00",
+  "generated_at": "2026-07-13T19:29:53+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -17,20 +17,6 @@
       "error": null
     },
     {
-      "symbol": "MU",
-      "name_zh": "美光",
-      "kind": "US",
-      "price": 979.3,
-      "change_pct": -1.24,
-      "mtd_pct": -15.16,
-      "ytd_pct": 243.12,
-      "market_date": "2026-07-10",
-      "per": 21.9147,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MU.US",
-      "error": null
-    },
-    {
       "symbol": "QTTB",
       "name_zh": "Q32 Bio",
       "kind": "US",
@@ -45,17 +31,45 @@
       "error": null
     },
     {
-      "symbol": "SOFI",
-      "name_zh": "SoFi",
+      "symbol": "DRAM",
+      "name_zh": "Roundhill Memory ETF",
       "kind": "US",
-      "price": 18.78,
-      "change_pct": 0.86,
-      "mtd_pct": 4.74,
-      "ytd_pct": -28.27,
+      "price": 63.04,
+      "change_pct": -2.05,
+      "mtd_pct": -14.64,
+      "ytd_pct": null,
       "market_date": "2026-07-10",
-      "per": 41.7549,
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DRAM.US",
+      "error": null
+    },
+    {
+      "symbol": "RY",
+      "name_zh": "Royal Bank Of Canada",
+      "kind": "US",
+      "price": 211.09,
+      "change_pct": 1.21,
+      "mtd_pct": 1.99,
+      "ytd_pct": 23.81,
+      "market_date": "2026-07-10",
+      "per": 18.5722,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOFI.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RY.US",
+      "error": null
+    },
+    {
+      "symbol": "MU",
+      "name_zh": "美光",
+      "kind": "US",
+      "price": 979.3,
+      "change_pct": -1.24,
+      "mtd_pct": -15.16,
+      "ytd_pct": 243.12,
+      "market_date": "2026-07-10",
+      "per": 21.9147,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MU.US",
       "error": null
     },
     {
@@ -84,34 +98,6 @@
       "per": 11532.8709,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BE.US",
-      "error": null
-    },
-    {
-      "symbol": "DRAM",
-      "name_zh": "Roundhill Memory ETF",
-      "kind": "US",
-      "price": 63.04,
-      "change_pct": -2.05,
-      "mtd_pct": -14.64,
-      "ytd_pct": null,
-      "market_date": "2026-07-10",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DRAM.US",
-      "error": null
-    },
-    {
-      "symbol": "LYFT",
-      "name_zh": "Lyft",
-      "kind": "US",
-      "price": 15.61,
-      "change_pct": -0.83,
-      "mtd_pct": 6.84,
-      "ytd_pct": -19.41,
-      "market_date": "2026-07-10",
-      "per": 2.0755,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LYFT.US",
       "error": null
     },
     {
