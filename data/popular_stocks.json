@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-13T16:36:36+08:00",
+  "generated_at": "2026-07-13T17:48:53+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -31,17 +31,45 @@
       "error": null
     },
     {
-      "symbol": "DRAM",
-      "name_zh": "Roundhill Memory ETF",
+      "symbol": "QTTB",
+      "name_zh": "Q32 Bio",
       "kind": "US",
-      "price": 63.04,
-      "change_pct": -2.05,
-      "mtd_pct": -14.64,
-      "ytd_pct": null,
+      "price": 11.21,
+      "change_pct": -10.96,
+      "mtd_pct": -12.01,
+      "ytd_pct": 237.65,
+      "market_date": "2026-07-10",
+      "per": 8.9021,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QTTB.US",
+      "error": null
+    },
+    {
+      "symbol": "LYFT",
+      "name_zh": "Lyft",
+      "kind": "US",
+      "price": 15.61,
+      "change_pct": -0.83,
+      "mtd_pct": 6.84,
+      "ytd_pct": -19.41,
+      "market_date": "2026-07-10",
+      "per": 2.0755,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LYFT.US",
+      "error": null
+    },
+    {
+      "symbol": "KORU",
+      "name_zh": "Direxion Daily South Korea Bull",
+      "kind": "US",
+      "price": 557,
+      "change_pct": -2.27,
+      "mtd_pct": -28.71,
+      "ytd_pct": 206.7,
       "market_date": "2026-07-10",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DRAM.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=KORU.US",
       "error": null
     },
     {
@@ -59,20 +87,6 @@
       "error": null
     },
     {
-      "symbol": "CRCL",
-      "name_zh": "Circle Internet",
-      "kind": "US",
-      "price": 66.14,
-      "change_pct": 4.97,
-      "mtd_pct": 5.6,
-      "ytd_pct": -16.6,
-      "market_date": "2026-07-10",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRCL.US",
-      "error": null
-    },
-    {
       "symbol": "EWY",
       "name_zh": "iShares MSCI South Korea ETF",
       "kind": "US",
@@ -84,34 +98,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=EWY.US",
-      "error": null
-    },
-    {
-      "symbol": "OXY",
-      "name_zh": "西方石油",
-      "kind": "US",
-      "price": 52.89,
-      "change_pct": 1.13,
-      "mtd_pct": 8.89,
-      "ytd_pct": 28.62,
-      "market_date": "2026-07-10",
-      "per": 11.1101,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=OXY.US",
-      "error": null
-    },
-    {
-      "symbol": "LYFT",
-      "name_zh": "Lyft",
-      "kind": "US",
-      "price": 15.61,
-      "change_pct": -0.83,
-      "mtd_pct": 6.84,
-      "ytd_pct": -19.41,
-      "market_date": "2026-07-10",
-      "per": 2.0755,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LYFT.US",
       "error": null
     },
     {
