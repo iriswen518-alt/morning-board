@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-12T17:01:11+08:00",
+  "generated_at": "2026-07-13T08:30:54+08:00",
   "tw": {
-    "as_of": "2026-07-12",
+    "as_of": "2026-07-13",
     "top_marketcap": [
       {
         "symbol": "2330",
@@ -646,7 +646,7 @@
     ]
   },
   "us": {
-    "as_of": "2026-07-12",
+    "as_of": "2026-07-13",
     "top_marketcap": [
       {
         "symbol": "NVDA",
@@ -740,6 +740,19 @@
         "source_url": "https://finance.yahoo.com/quote/TSLA"
       },
       {
+        "symbol": "SKHYV",
+        "name": "SK hynix Inc. - American Deposi",
+        "price": 168.01,
+        "daily_pct": 12.76,
+        "market_cap": 1192627142656,
+        "pe": 24.455605,
+        "pe_kind": "trailing",
+        "mtd_pct": null,
+        "ytd_pct": null,
+        "yahoo": "SKHYV",
+        "source_url": "https://finance.yahoo.com/quote/SKHYV"
+      },
+      {
         "symbol": "MU",
         "name": "Micron Technology, Inc.",
         "price": 979.3,
@@ -753,25 +766,12 @@
         "source_url": "https://finance.yahoo.com/quote/MU"
       },
       {
-        "symbol": "AMD",
-        "name": "Advanced Micro Devices, Inc.",
-        "price": 557.89,
-        "daily_pct": 2.04,
-        "market_cap": 909695778816,
-        "pe": 185.34552,
-        "pe_kind": "trailing",
-        "mtd_pct": -3.96,
-        "ytd_pct": 160.5,
-        "yahoo": "AMD",
-        "source_url": "https://finance.yahoo.com/quote/AMD"
-      },
-      {
         "symbol": "INTC",
         "name": "Intel Corporation",
         "price": 109.84,
         "daily_pct": -2.4,
         "market_cap": 552055799808,
-        "pe": 69.982285,
+        "pe": 69.754295,
         "pe_kind": "forward",
         "mtd_pct": -21.33,
         "ytd_pct": 197.67,
@@ -812,7 +812,7 @@
         "price": 16.61,
         "daily_pct": 12.99,
         "market_cap": 4712952320,
-        "pe": 16.536512,
+        "pe": 16.534191,
         "pe_kind": "forward",
         "mtd_pct": 0.3,
         "ytd_pct": 88.54,
@@ -820,12 +820,25 @@
         "source_url": "https://finance.yahoo.com/quote/ALM"
       },
       {
+        "symbol": "SKHYV",
+        "name": "SK hynix Inc. - American Deposi",
+        "price": 168.01,
+        "daily_pct": 12.76,
+        "market_cap": 1192627142656,
+        "pe": 24.455605,
+        "pe_kind": "trailing",
+        "mtd_pct": null,
+        "ytd_pct": null,
+        "yahoo": "SKHYV",
+        "source_url": "https://finance.yahoo.com/quote/SKHYV"
+      },
+      {
         "symbol": "VOD",
         "name": "Vodafone Group Plc",
         "price": 14.72,
         "daily_pct": 12.54,
         "market_cap": 33896562688,
-        "pe": 9.131293,
+        "pe": 9.142408,
         "pe_kind": "forward",
         "mtd_pct": 11.26,
         "ytd_pct": 11.43,
@@ -896,19 +909,6 @@
         "ytd_pct": -0.39,
         "yahoo": "GGAL",
         "source_url": "https://finance.yahoo.com/quote/GGAL"
-      },
-      {
-        "symbol": "CBRS",
-        "name": "Cerebras Systems Inc.",
-        "price": 215.08,
-        "daily_pct": 8.34,
-        "market_cap": 47930699776,
-        "pe": 477.95557,
-        "pe_kind": "trailing",
-        "mtd_pct": -2.68,
-        "ytd_pct": null,
-        "yahoo": "CBRS",
-        "source_url": "https://finance.yahoo.com/quote/CBRS"
       }
     ],
     "top_losers": [
