@@ -36,7 +36,10 @@
 //   讓 PWA 拉回最新 news.json（07-11）＋四字區塊名（金融族群／國際要聞）與現行分類版面。
 // v48（2026-07-11）：再 bump 一次觸發 SW 位元變更，確保裝置偵測到新版並立即接管（skipWaiting+claim），
 //   讓一次關閉重開即生效、免等第二次。
-const CACHE = "morning-board-v48";
+// v49（2026-07-13）：手機又顯示舊新聞——裝置仍卡在改版前的 cache-first 舊 SW。
+//   資料層本已 fresh（news.json 2026-07-13、fetch 帶 ?t=、SW 網路優先 no-store），純屬舊 SW 未升級。
+//   再 bump 一次強制 skipWaiting+claim 接管，讓裝置關閉重開即拉回最新 news.json。
+const CACHE = "morning-board-v49";
 
 self.addEventListener("install", e => {
   self.skipWaiting();
