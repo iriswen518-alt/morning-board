@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-13T17:48:53+08:00",
+  "generated_at": "2026-07-13T18:37:01+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -45,17 +45,17 @@
       "error": null
     },
     {
-      "symbol": "LYFT",
-      "name_zh": "Lyft",
+      "symbol": "SOFI",
+      "name_zh": "SoFi",
       "kind": "US",
-      "price": 15.61,
-      "change_pct": -0.83,
-      "mtd_pct": 6.84,
-      "ytd_pct": -19.41,
+      "price": 18.78,
+      "change_pct": 0.86,
+      "mtd_pct": 4.74,
+      "ytd_pct": -28.27,
       "market_date": "2026-07-10",
-      "per": 2.0755,
+      "per": 41.7549,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LYFT.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOFI.US",
       "error": null
     },
     {
@@ -87,17 +87,31 @@
       "error": null
     },
     {
-      "symbol": "EWY",
-      "name_zh": "iShares MSCI South Korea ETF",
+      "symbol": "DRAM",
+      "name_zh": "Roundhill Memory ETF",
       "kind": "US",
-      "price": 183.52,
-      "change_pct": -0.67,
-      "mtd_pct": -9.1,
-      "ytd_pct": 88.77,
+      "price": 63.04,
+      "change_pct": -2.05,
+      "mtd_pct": -14.64,
+      "ytd_pct": null,
       "market_date": "2026-07-10",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=EWY.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DRAM.US",
+      "error": null
+    },
+    {
+      "symbol": "LYFT",
+      "name_zh": "Lyft",
+      "kind": "US",
+      "price": 15.61,
+      "change_pct": -0.83,
+      "mtd_pct": 6.84,
+      "ytd_pct": -19.41,
+      "market_date": "2026-07-10",
+      "per": 2.0755,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LYFT.US",
       "error": null
     },
     {
