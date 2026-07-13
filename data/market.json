@@ -85,7 +85,7 @@
     {
       "name": "TAIEX 加權指數",
       "name_zh": null,
-      "close": 45354.61,
+      "close": 45354.609375,
       "daily_pct": -0.83,
       "mtd_pct": -1.67,
       "ytd_pct": 56.59,
@@ -94,7 +94,7 @@
     {
       "name": "OTC 櫃買加權",
       "name_zh": null,
-      "close": 424.99,
+      "close": 424.989990234375,
       "daily_pct": 0.85,
       "mtd_pct": -0.46,
       "ytd_pct": 53.85,
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 100.97000122070312,
       "daily_pct": 0.03,
-      "mtd_pct": -0.05,
-      "ytd_pct": 2.91,
+      "mtd_pct": -0.1,
+      "ytd_pct": 2.86,
       "closing_date": "2026-07-10"
     },
     {
@@ -269,35 +269,35 @@
   "commodities": [
     {
       "name": "黃金 (USD/oz)",
-      "close": 4104.10009765625,
-      "daily_pct": -0.64,
-      "mtd_pct": 2.02,
-      "ytd_pct": -5.12,
-      "closing_date": "2026-07-10"
+      "close": 4088.300048828125,
+      "daily_pct": -0.38,
+      "mtd_pct": 1.63,
+      "ytd_pct": -5.49,
+      "closing_date": "2026-07-12"
     },
     {
       "name": "白銀 (USD/oz)",
-      "close": 59.808998107910156,
-      "daily_pct": -0.94,
-      "mtd_pct": 0.56,
-      "ytd_pct": -14.72,
-      "closing_date": "2026-07-10"
+      "close": 59.20500183105469,
+      "daily_pct": -1.01,
+      "mtd_pct": -0.46,
+      "ytd_pct": -15.58,
+      "closing_date": "2026-07-12"
     },
     {
       "name": "WTI 原油 (USD/bbl)",
-      "close": 71.41000366210938,
-      "daily_pct": -0.93,
-      "mtd_pct": 2.75,
-      "ytd_pct": 24.36,
-      "closing_date": "2026-07-10"
+      "close": 73.73999786376953,
+      "daily_pct": 3.26,
+      "mtd_pct": 6.1,
+      "ytd_pct": 28.42,
+      "closing_date": "2026-07-12"
     },
     {
       "name": "布蘭特原油 (USD/bbl)",
-      "close": 76.01000213623047,
-      "daily_pct": -0.38,
-      "mtd_pct": 4.24,
-      "ytd_pct": 24.91,
-      "closing_date": "2026-07-10"
+      "close": 78.38999938964844,
+      "daily_pct": 3.13,
+      "mtd_pct": 7.5,
+      "ytd_pct": 28.82,
+      "closing_date": "2026-07-12"
     },
     {
       "name": "比特幣 (USD)",
@@ -388,8 +388,8 @@
     "yield_curve_10y2y": 0.36,
     "yield_curve_10y2y_bps": 36,
     "curve_shape": "正斜率",
-    "dxy": 100.97000122070312,
-    "dxy_daily_pct": 0.03,
+    "dxy": 101.09200286865234,
+    "dxy_daily_pct": 0.12,
     "closing_date": "2026-07-10"
   },
   "fedwatch": [
@@ -405,18 +405,18 @@
     {
       "label": "Sep 2026",
       "fomc_date": "2026-09-17",
-      "implied_rate": 3.79,
-      "delta_rate": 0.16,
-      "delta_bps": 16.0,
-      "p_hike": 64.0,
-      "p_hold": 36.0,
+      "implied_rate": 3.77,
+      "delta_rate": 0.15,
+      "delta_bps": 15.0,
+      "p_hike": 60.0,
+      "p_hold": 40.0,
       "p_cut": 0,
       "is_reference": false
     },
     {
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
-      "implied_rate": 3.87,
+      "implied_rate": 3.86,
       "delta_rate": 0.08,
       "delta_bps": 8.0,
       "p_hike": 32.0,
@@ -427,11 +427,11 @@
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 4.0,
-      "delta_rate": 0.12,
-      "delta_bps": 12.0,
-      "p_hike": 48.0,
-      "p_hold": 52.0,
+      "implied_rate": 3.99,
+      "delta_rate": 0.13,
+      "delta_bps": 13.0,
+      "p_hike": 52.0,
+      "p_hold": 48.0,
       "p_cut": 0,
       "is_reference": false
     }
