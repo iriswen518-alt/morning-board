@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-14T10:01:56+08:00",
+  "generated_at": "2026-07-14T12:01:58+08:00",
   "tw": {
     "as_of": "2026-07-14",
     "top_marketcap": [
@@ -647,138 +647,7 @@
   },
   "us": {
     "as_of": "2026-07-14",
-    "top_marketcap": [
-      {
-        "symbol": "NVDA",
-        "name": "NVIDIA Corporation",
-        "price": 203.53,
-        "daily_pct": -3.52,
-        "market_cap": 4929700233216,
-        "pe": 31.120794,
-        "pe_kind": "trailing",
-        "mtd_pct": 1.72,
-        "ytd_pct": 9.13,
-        "yahoo": "NVDA",
-        "source_url": "https://finance.yahoo.com/quote/NVDA"
-      },
-      {
-        "symbol": "AAPL",
-        "name": "Apple Inc.",
-        "price": 317.31,
-        "daily_pct": 0.63,
-        "market_cap": 4660444790784,
-        "pe": 38.415253,
-        "pe_kind": "trailing",
-        "mtd_pct": 9.66,
-        "ytd_pct": 16.72,
-        "yahoo": "AAPL",
-        "source_url": "https://finance.yahoo.com/quote/AAPL"
-      },
-      {
-        "symbol": "AMZN",
-        "name": "Amazon.com, Inc.",
-        "price": 247.31,
-        "daily_pct": 0.8,
-        "market_cap": 2660340858880,
-        "pe": 29.547192,
-        "pe_kind": "trailing",
-        "mtd_pct": 3.76,
-        "ytd_pct": 7.14,
-        "yahoo": "AMZN",
-        "source_url": "https://finance.yahoo.com/quote/AMZN"
-      },
-      {
-        "symbol": "SPCX",
-        "name": "Space Exploration Technologies ",
-        "price": 139.14,
-        "daily_pct": -4.24,
-        "market_cap": 1833056337920,
-        "pe": 160.52887,
-        "pe_kind": "forward",
-        "mtd_pct": -18.56,
-        "ytd_pct": null,
-        "yahoo": "SPCX",
-        "source_url": "https://finance.yahoo.com/quote/SPCX"
-      },
-      {
-        "symbol": "TSLA",
-        "name": "Tesla, Inc.",
-        "price": 394.76,
-        "daily_pct": -3.19,
-        "market_cap": 1482609524736,
-        "pe": 358.87274,
-        "pe_kind": "trailing",
-        "mtd_pct": -6.14,
-        "ytd_pct": -12.22,
-        "yahoo": "TSLA",
-        "source_url": "https://finance.yahoo.com/quote/TSLA"
-      },
-      {
-        "symbol": "SKHYV",
-        "name": "SK hynix Inc. - American Deposi",
-        "price": 168.01,
-        "daily_pct": 0.0,
-        "market_cap": 1192627142656,
-        "pe": 24.455605,
-        "pe_kind": "trailing",
-        "mtd_pct": null,
-        "ytd_pct": null,
-        "yahoo": "SKHYV",
-        "source_url": "https://finance.yahoo.com/quote/SKHYV"
-      },
-      {
-        "symbol": "MU",
-        "name": "Micron Technology, Inc.",
-        "price": 937.0,
-        "daily_pct": -4.32,
-        "market_cap": 1058241380352,
-        "pe": 21.170359,
-        "pe_kind": "trailing",
-        "mtd_pct": -18.82,
-        "ytd_pct": 228.3,
-        "yahoo": "MU",
-        "source_url": "https://finance.yahoo.com/quote/MU"
-      },
-      {
-        "symbol": "INTC",
-        "name": "Intel Corporation",
-        "price": 103.12,
-        "daily_pct": -6.12,
-        "market_cap": 518281134080,
-        "pe": 65.0932,
-        "pe_kind": "forward",
-        "mtd_pct": -26.15,
-        "ytd_pct": 179.46,
-        "yahoo": "INTC",
-        "source_url": "https://finance.yahoo.com/quote/INTC"
-      },
-      {
-        "symbol": "BAC",
-        "name": "Bank of America Corporation",
-        "price": 59.5,
-        "daily_pct": -0.28,
-        "market_cap": 422247170048,
-        "pe": 14.764267,
-        "pe_kind": "trailing",
-        "mtd_pct": 4.42,
-        "ytd_pct": 8.18,
-        "yahoo": "BAC",
-        "source_url": "https://finance.yahoo.com/quote/BAC"
-      },
-      {
-        "symbol": "ORCL",
-        "name": "Oracle Corporation",
-        "price": 131.54,
-        "daily_pct": -6.47,
-        "market_cap": 378897137664,
-        "pe": 22.523972,
-        "pe_kind": "trailing",
-        "mtd_pct": -10.24,
-        "ytd_pct": -32.51,
-        "yahoo": "ORCL",
-        "source_url": "https://finance.yahoo.com/quote/ORCL"
-      }
-    ],
+    "top_marketcap": [],
     "top_gainers": [
       {
         "symbol": "FIG",
@@ -1315,6 +1184,20 @@
         "yahoo": "XLB",
         "source_url": "https://finance.yahoo.com/quote/XLB",
         "name_zh": "原物料"
+      },
+      {
+        "symbol": "XLI",
+        "name": "State Street Industrial Select ",
+        "price": 180.37,
+        "daily_pct": -2.8,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": -2.62,
+        "ytd_pct": 16.28,
+        "yahoo": "XLI",
+        "source_url": "https://finance.yahoo.com/quote/XLI",
+        "name_zh": "工業"
       }
     ]
   }
