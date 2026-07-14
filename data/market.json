@@ -112,11 +112,11 @@
     {
       "name": "KOSPI",
       "name_zh": null,
-      "close": 6806.93017578125,
-      "daily_pct": -8.95,
+      "close": 6831.47998046875,
+      "daily_pct": 0.36,
       "mtd_pct": -19.7,
       "ytd_pct": 61.52,
-      "closing_date": "2026-07-13"
+      "closing_date": "2026-07-14"
     },
     {
       "name": "Hang Seng 恆生",
@@ -157,11 +157,11 @@
     {
       "name": "S&P/ASX 200",
       "name_zh": null,
-      "close": 8808.5,
-      "daily_pct": 0.03,
+      "close": 8796.0,
+      "daily_pct": -0.14,
       "mtd_pct": 0.34,
       "ytd_pct": 1.08,
-      "closing_date": "2026-07-13"
+      "closing_date": "2026-07-14"
     }
   ],
   "bonds": [
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 101.27999877929688,
       "daily_pct": 0.31,
-      "mtd_pct": -0.03,
-      "ytd_pct": 2.93,
+      "mtd_pct": 0.01,
+      "ytd_pct": 2.97,
       "closing_date": "2026-07-13"
     },
     {
@@ -427,14 +427,14 @@
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 4.02,
-      "delta_rate": 0.13,
-      "delta_bps": 13.0,
-      "p_hike": 52.0,
-      "p_hold": 48.0,
+      "implied_rate": 4.03,
+      "delta_rate": 0.14,
+      "delta_bps": 14.0,
+      "p_hike": 56.0,
+      "p_hold": 44.0,
       "p_cut": 0,
       "is_reference": false
     }
   ],
-  "summary": "7/13 CSI 300 滬深300 +3.73%、7/13 CAC 40 +0.31%、7/13 DAX +0.19% 領漲；7/13 KOSPI -8.95%、7/13 PHLX Semiconductor -4.78% 走弱。"
+  "summary": "7/13 CSI 300 滬深300 +3.73%、7/14 KOSPI +0.36%、7/13 CAC 40 +0.31% 領漲；7/13 PHLX Semiconductor -4.78%、7/14 OTC 櫃買加權 -2.97% 走弱。"
 }
