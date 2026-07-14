@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-14T17:19:32+08:00",
+  "generated_at": "2026-07-14T18:11:54+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
       "symbol": "SKHY",
-      "name_zh": "SK hynix Inc. - American Depos",
+      "name_zh": "SK Hynix Inc. American Depositary Shares",
       "kind": "US",
       "price": 152.35,
       "change_pct": null,
@@ -14,20 +14,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SKHY.US",
-      "error": null
-    },
-    {
-      "symbol": "ORCL",
-      "name_zh": "甲骨文",
-      "kind": "US",
-      "price": 131.54,
-      "change_pct": -6.47,
-      "mtd_pct": -10.24,
-      "ytd_pct": -32.51,
-      "market_date": "2026-07-13",
-      "per": 23.1785,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ORCL.US",
       "error": null
     },
     {
@@ -45,6 +31,20 @@
       "error": null
     },
     {
+      "symbol": "ORCL",
+      "name_zh": "甲骨文",
+      "kind": "US",
+      "price": 131.54,
+      "change_pct": -6.47,
+      "mtd_pct": -10.24,
+      "ytd_pct": -32.51,
+      "market_date": "2026-07-13",
+      "per": 23.1785,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ORCL.US",
+      "error": null
+    },
+    {
       "symbol": "FIG",
       "name_zh": "Figma",
       "kind": "US",
@@ -56,6 +56,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FIG.US",
+      "error": null
+    },
+    {
+      "symbol": "AGEN",
+      "name_zh": "Agenus",
+      "kind": "US",
+      "price": 6.12,
+      "change_pct": 82.69,
+      "mtd_pct": 100.0,
+      "ytd_pct": 94.9,
+      "market_date": "2026-07-13",
+      "per": 2.1592,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AGEN.US",
       "error": null
     },
     {
@@ -101,20 +115,6 @@
       "error": null
     },
     {
-      "symbol": "TEAM",
-      "name_zh": "Atlassian",
-      "kind": "US",
-      "price": 96.16,
-      "change_pct": 8.22,
-      "mtd_pct": 23.61,
-      "ytd_pct": -40.69,
-      "market_date": "2026-07-13",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TEAM.US",
-      "error": null
-    },
-    {
       "symbol": "CMG",
       "name_zh": "Chipotle Mexican Grill",
       "kind": "US",
@@ -126,20 +126,6 @@
       "per": 32.1482,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CMG.US",
-      "error": null
-    },
-    {
-      "symbol": "XPEV",
-      "name_zh": "小鵬",
-      "kind": "US",
-      "price": 12.95,
-      "change_pct": -0.61,
-      "mtd_pct": -2.19,
-      "ytd_pct": -36.14,
-      "market_date": "2026-07-13",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=XPEV.US",
       "error": null
     },
     {
@@ -157,17 +143,17 @@
       "error": null
     },
     {
-      "symbol": "CRM",
-      "name_zh": "Salesforce",
+      "symbol": "VG",
+      "name_zh": "Venture Global",
       "kind": "US",
-      "price": 171.22,
-      "change_pct": 4.84,
-      "mtd_pct": 9.29,
-      "ytd_pct": -35.37,
+      "price": 13.36,
+      "change_pct": 9.15,
+      "mtd_pct": 20.04,
+      "ytd_pct": 95.89,
       "market_date": "2026-07-13",
-      "per": 17.1563,
+      "per": 11.8836,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRM.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VG.US",
       "error": null
     },
     {
@@ -185,31 +171,17 @@
       "error": null
     },
     {
-      "symbol": "INFQ",
-      "name_zh": "Infleqtion",
+      "symbol": "TEAM",
+      "name_zh": "Atlassian",
       "kind": "US",
-      "price": 10.13,
-      "change_pct": -9.31,
-      "mtd_pct": -23.95,
-      "ytd_pct": null,
+      "price": 96.16,
+      "change_pct": 8.22,
+      "mtd_pct": 23.61,
+      "ytd_pct": -40.69,
       "market_date": "2026-07-13",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=INFQ.US",
-      "error": null
-    },
-    {
-      "symbol": "VG",
-      "name_zh": "Venture Global",
-      "kind": "US",
-      "price": 13.36,
-      "change_pct": 9.15,
-      "mtd_pct": 20.04,
-      "ytd_pct": 95.89,
-      "market_date": "2026-07-13",
-      "per": 11.8836,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VG.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TEAM.US",
       "error": null
     },
     {
