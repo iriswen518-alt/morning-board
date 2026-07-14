@@ -1,11 +1,10 @@
 {
-  "news_date": "2026-07-13",
+  "news_date": "2026-07-14",
   "tldr": [
-    "台積電 2 奈米量產登場，Google 搶先蘋果拿下首發，漲價潮更蔓延至成熟製程；AI 供應鏈仍是本周台積電法說前的市場主軸。",
-    "台股上周重挫 1,426 點、三度叩關月線失利，法人連賣，多頭整軍待台積電法說「神救援」。",
-    "國銀上半年財管業務亮眼，受惠美股與台股 AI 熱潮，兆豐銀相關手續費收入年增約四成。",
-    "金管會核准兩樁指標整併案：永豐銀併京城銀、玉山金以股份轉換取得三商美邦人壽 100% 股權。",
-    "美伊在荷姆茲海峽再度交火，油價走高；市場則認為今年多頭行情愈來愈靠 AI、而非油價撐盤。"
+    "美伊衝突重燃主導盤面：川普宣布恢復封鎖伊朗、並擬對荷姆茲海峽過境貨物收取兩成補償費，推升國際油價近一成、黃金摜破每盎司4,000美元。",
+    "台股受AI雜音與記憶體重挫拖累，跌破45,000點；台積電6月營收再創新高、上半年首破2兆元，仍難穩住人氣。",
+    "Fed理事沃勒釋鷹派訊號，市場押7月升息機率升至五成；中研院則將台灣今年經濟成長率大幅上修至10.16%。",
+    "金融整併續行：玉山金併三商壽定出下市日，金管會亦核准永豐銀合併京城銀。"
   ],
   "sections": [
     {
@@ -13,28 +12,51 @@
       "section_zh": "股市行情",
       "items": [
         {
-          "title_zh": "台股守穩 4 萬 5、環球晶拿下美光長約",
-          "title_en": "Taiwan stocks hold 45,000 as GlobalWafers lands a Micron long-term deal",
-          "summary_zh": "經歷震盪的一周後，台股盤前聚焦能否守住 4 萬 5 大關並重返月線之上。盤前要聞以環球晶為亮點：公司與美光簽下多年期供應長約，並取得約 5 億美元資金挹注協助擴產，凸顯記憶體與矽晶圓超級循環正外溢至台灣供應鏈。在本周台積電法說與美國通膨數據接連登場下，投資人偏向謹慎布局，靜待指標訊號再決定加碼方向。",
-          "summary_en": "Ahead of Monday's open, the Taiex was working to defend the 45,000 level and reclaim its monthly moving average after a bruising week. Pre-market headlines centred on GlobalWafers, which secured a multi-year supply agreement with Micron alongside a US$500 million commitment to help fund capacity expansion, underscoring how the memory and silicon-wafer up-cycle is spilling into Taiwan's supply chain. Investors were positioning cautiously into a data-heavy week that includes TSMC's earnings and key US inflation prints.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/cat/headline"
+          "title_zh": "台積電6月營收創高，上半年首破2兆元",
+          "title_en": "TSMC posts record June revenue, breaks NT$2 trillion in H1 for the first time",
+          "summary_zh": "台積電6月合併營收4,426.8億元，連兩月創單月新高，月增6.2%、年增67.9%，推升第2季營收達1.27兆元改寫單季新猷，上半年合併營收更首度突破2.4兆元、刷新同期紀錄。美系外資同步調高全年營收年增幅逾30%，並將今年資本支出上修至約560億美元，顯示AI帶動的先進製程與封裝需求依舊強勁；即便近期半導體族群震盪，台積電基本面仍是台股定心丸，法說會後續財測與資本支出動向為觀察重點。",
+          "summary_en": "TSMC reported consolidated June revenue of NT$442.68 billion, a second straight monthly record, up 6.2% on the month and 67.9% on the year. That lifted Q2 revenue to a record NT$1.27 trillion and pushed first-half revenue past NT$2.4 trillion, a new same-period high. Foreign brokers raised full-year revenue growth estimates above 30% and lifted 2026 capex guidance toward US$56 billion, underscoring AI-driven advanced-node and packaging demand even as the broader chip tape wobbled.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/5612/9625624",
+          "body_zh": "台積電（2330）昨（13）日公布6月合併營收4,426.8億元，連續兩個月創單月新高，月增6.2%，年增67.9%，推升第2季合併營收衝上1.27兆元，改寫單季新猷；上半年合併營收首度飛越2兆元大關、達2.4兆元，為同期新高。\n台積電昨股價收2,440元、漲25元，外資賣超2,045張；周一ADR早盤跌約1%。\n台積電結算，第2季合併營收1.27兆元，為單季新高，季增12.02%，年增36.05%；上半年合併營收2.4兆元，同期最佳，年增35.6%。\n法人分析，台積電業績衝高，主要受惠AI、高速運算（HPC）訂單持續湧進，帶動先進製程接單熱轉，下半年AI相關應用續強，又有蘋果新機助陣，台積電業績可望持續走揚。\n台積電於4月的法說會預估，第2季美元營收介390億美元至402億美元，持續挑戰新高，匯率假設基礎為新台幣兌美元31.7：1。\n法人以上述財測數字推估，第2季新台幣營收高標約1兆2,743.4億元，公司昨天公布第2季新台幣營收實績約1兆2,703.84億元，相當於逼近美元營收高標，符合預期，惟實際美元營收與財報數據仍待公司於本周四（16日）法說會公布。\n台積電本次法說會，市場高度關注。法人預估，台積電最快會在這次法說會上二度上修全年展望，預期將全年美元營收年增率調高為34%至36%，最樂觀情境可望年增近四成，本季美元營收也將再度挑戰新高，估約季增雙位數百分比。\n在蘋果與非蘋AI應用高速成長帶動下，外界看好，台積電受惠客戶群追單效應，今年AI與高速運算（HPC）相關業績可望超越預期。"
         },
         {
-          "title_zh": "台股周跌 1,426 點、三攻月線失利",
-          "title_en": "Taiex sheds 1,426 points as third assault on the monthly line fails",
-          "summary_zh": "台股上周重挫 1,426 點，並第三度在月線前鎩羽，技術面轉趨脆弱。市場形容多頭「整軍待援」，寄望台積電法說會成為扭轉盤勢的關鍵催化劑。這波回檔反映強漲後的獲利了結，以及面對密集總經事件的觀望心態；交易員擔心若 AI 族群走弱、外資續賣，回檔恐在權值股法說給出方向前進一步擴大，因此短線操作偏向保守。",
-          "summary_en": "Last week the index tumbled 1,426 points and was rejected for a third time at its monthly moving average, leaving the market technically fragile. Bulls are described as \"regrouping\" while awaiting TSMC's earnings call to act as a potential rescue catalyst. The retreat reflected profit-taking after a strong run and caution ahead of a cluster of macro events, with traders wary that a weak lead from the AI complex could deepen the pullback before the heavyweight results provide fresh direction.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/cat/headline"
+          "title_zh": "台股跌破45,000點，中東風險與記憶體賣壓夾擊",
+          "title_en": "Taiwan stocks crater below 45,000 as Mideast risk and memory sell-off bite",
+          "summary_zh": "美伊衝突升溫加上美股費半重挫，台股早盤一度殺逾820點、失守45,000點大關；台積電下跌30元，櫃買指數跌約2%，功率半導體與車用二極體概念疲弱。此波下挫使先前挑戰46,000點的攻勢受挫，投資人在台積電法說會前轉趨保守，並觀望中東供應風險演變。市場人氣由攻轉守，短線資金傾向調節，後續能否守穩月線、外資是否止賣為關鍵。",
+          "summary_en": "The Taiex briefly plunged more than 820 points, breaking the 45,000 level, after renewed U.S.–Iran conflict and a slump in the Philadelphia Semiconductor Index soured risk appetite. TSMC fell NT$30 and the OTC index dropped about 2%, with power-semiconductor and auto-diode names weak. The retreat capped a failed attempt to storm the 46,000 mark, as investors turned defensive ahead of TSMC's earnings call and awaited clarity on Middle East supply risks.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/5607/9626018",
+          "body_zh": "費城半導體指數昨夜重挫4.78%，台積電ADR雖受惠亮眼財報題材，仍下跌2.89%，拖累台指期夜盤重挫507點。台股14日開盤下跌16.12點、報45,364.40點，隨後在台積電（2330）、聯發科（2454）、日月光投控（3711）、富邦金（2881）、南亞（1303）等權值股同步走弱下，指數跌勢迅速擴大至逾820點、失守45,000點整數關卡、下探至44,553.87點。\n所幸，南亞科（2408）領軍記憶體族群回神，台塑化（6505）、大立光（3008）等個股同步走強，帶動大盤跌幅逐步收斂，多空持續在44,800點關卡附近激烈拉鋸。群創（3481）、友達（2409）、群益臺灣加權正2（00685L）交投火熱。\n美股周一受中東局勢升溫衝擊全面收黑，費半指數重挫4.78%。AI晶片股遭全面調節，SK海力士ADR暴跌逾9%、輝達跌3.5%、台積電ADR跌2.89%，拖累台指期夜盤下挫507點。市場聚焦美伊衝突升級及油價飆升。\n盤面上，五大權值股開盤2漲3跌。其中，台積電開低30元、報2,410元，鴻海（2317）開低報236元、日月光投控開低報655元；台達電（2308）開高報1,900元、聯發科開高報3,830元。\n類股方面，油電燃氣、汽車等漲幅居前，玻陶、電機、光電、電子零組件、金融等相對疲弱。\n回顧台股13日表現，集中市場指數上漲25.91點、收45,380.52點，成交值1.02兆元。三大法人賣超180.80億元，包括外資賣超195.60億元、投信買超125.79億元、自營商賣超110.98億元。\n法人指出，台股失守短期均線，KD走弱、MACD綠柱擴大，短線仍偏震盪整理。美伊衝突推升油價、通膨疑慮升溫，加上外資台指期淨空單逾8.1萬口，台指期結算前波動恐加劇。不過，本週台積電法說會、生技展等題材仍有望支撐盤勢，建議保留資金彈性，聚焦AI供應鏈與基本面強勁族群逢回布局。"
         },
         {
-          "title_zh": "三大法人連賣、投信反手狂掃 16 檔",
-          "title_en": "Institutional trio turn net sellers as investment trusts hunt bargains",
-          "summary_zh": "反彈派對暫歇，台股三大法人轉為賣方，但投信卻逆勢加碼，狂掃包含南亞科、廣達等 16 檔「壓箱寶」個股。這種分歧凸顯多空對行情的看法：究竟是漲勢到頂、還是高檔整理。投信似乎趁回檔布局其視為長線核心的 AI 伺服器與記憶體個股，即便外資與自營商資金態度轉趨防禦，仍反映法人對後市結構性題材的信心並未鬆動。",
-          "summary_en": "The rebound party paused as Taiwan's three major institutional investors moved to the sell side, yet local investment trusts went the other way, scooping up 16 favoured names including Nanya Technology and Quanta. The divergence highlights a rotation debate: whether the recent surge has run its course or is merely consolidating. Trusts appear to be using the dip to accumulate AI-server and memory plays they view as core long-term holdings, even as foreign and dealer flows stay defensive.",
-          "source_name": "工商時報",
-          "source_url": "https://www.ctee.com.tw/category/財經"
+          "title_zh": "國安基金279天史上最長護盤，獲利99.32億元",
+          "title_en": "National Stabilization Fund logs record 279-day intervention with NT$9.93 billion profit",
+          "summary_zh": "國安基金結束史上最長、達279天的護盤行動，累計投入122億元、實現獲利99.32億元，報酬率高達81%。這段罕見的長時間護盤在市場波動期間發揮定錨作用，成效亮眼；然而隨護盤退場，市場少了一根支撐支柱，恰逢地緣政治與AI循環不確定性再起，後續盤勢須留意資金與信心的接手力道，是否出現追繳與量能萎縮值得觀察。",
+          "summary_en": "Taiwan's National Stabilization Fund wrapped up its longest-ever market-support operation, lasting 279 days, having deployed NT$12.2 billion and earned a profit of NT$9.932 billion, an 81% return. The unusually long and profitable campaign highlights how state backing steadied the market through a volatile stretch, though its exit removes a support pillar just as geopolitical and AI-cycle uncertainty resurfaces.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6532930",
+          "body_zh": "鉅亨網記者張韶雯 台北\n2026-07-13 19:27\n台股今 (13) 日開盤展現強勁韌性，雖然盤中一度受到國際政經情勢干擾，高檔震盪震幅超過千點，終場仍守住漲勢。國家金融安定基金今（13）日召開例行會議，會中全面審視第 9 次啟動護盤任務的最終成果，經核算總淨利 99.32 億元。國安基金自 2000 年啟動第一次任務以虧損收場，截至目前有 8 次護盤成功的高勝率。本次護盤自今年 1 月 12 日國安基金獲得授權正式退出台股市場以來，至今已屆滿半年的時間，金融市場普遍預期護盤股票已全數完成獲利了結，不僅穩住了投資人信心，更達成安定金融市場的政策目標。\n國安基金279天史上最長護盤獲利99.32億元 投入122億元報酬率81%。（鉅亨網資料照）\n國安基金本次執行安定市場任務，自 114 年 4 月 8 日起至 115 年 5 月 6 日止，執行了史上最長的 279 天護盤任務。本次護盤緣起於 114 年 4 月，當時台股受美國宣布實施對等關稅政策衝擊，創下史上最大跌點與跌幅，市場恐慌情緒蔓延。國安基金隨即於 4 月 9 日進場，投入資金持續進行穩定股市措施，期間加權指數從進場時的低點，一路震盪上行至退場時的 30,567.29 點，累計漲幅達 65.59%，充分證明國安基金適時進場對穩定市場的顯著成效。\n在退場執行方面，國安基金採取兼顧市場穩定與流動性的策略，自 115 年 1 月 13 日起啟動處分程序，並於 5 月 6 日完成任務。值得注意的是，國安基金在退場期間，台股維持正向平穩走勢，累計漲幅達 34.58%，完全未對盤勢造成負面壓力。\n財務表現上，國安基金買入股票成本為 122.50 億元，處分持股淨現金收入達 221.10 億元，扣除融資利息與委託費用後，總淨利高達 99.32 億元，報酬率約 81%。隨著國安基金退場，回顧過往總計 9 度奉命出馬干預台股的歷史，長期而言的點火拉抬效果極為顯著，長線上漲機率逼近 8 成。國安基金表示，面對未來全球經濟情勢變動，將持續密切關注政經局勢，適時依規採行必要措施。\n國安基金歷次進場紀錄如下：",
+          "published": "2026-07-13"
+        },
+        {
+          "title_zh": "外資賣超195億連7賣，狂砍友達10萬張",
+          "title_en": "Foreign investors sell NT$19.5 billion, extend selling streak to seven sessions",
+          "summary_zh": "外資單日賣超台股195億元、連續第7個交易日站賣方，其中大砍友達10萬張最多，卻反手買進航空雙雄。外資持續調節、並自面板與記憶體族群撤出，反映在全球科技股回檔下的謹慎態度，也在台股測試關鍵支撐之際增添下行壓力。資金板塊由高本益比科技股轉向內需與運輸，透露布局思維轉變，外資動向與匯率走勢將牽動後市多空。",
+          "summary_en": "Overseas funds dumped a net NT$19.5 billion of Taiwan shares, their seventh straight day of selling, slashing AUO holdings by the most (100,000 lots) while rotating into the two major airlines. The persistent foreign outflow, paired with rotation out of panel and memory names, signals caution amid the global tech pullback and adds downside pressure just as the index tests key support.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6532950",
+          "body_zh": "鉅亨網記者黃皓宸 台北\n2026-07-13 19:45\n台股今 (13) 日開高走低，盤中受韓股熔斷重挫翻黑收平盤，小漲 25.91 點，收 45,380 點，成交量為 1.02 兆元。其中外資賣超 195.77 億元、連 7 賣超台股，由買轉賣面板股友達 (2409-TW)10.69 萬張為個股最多，看好華航 (2610-TW) 與長榮航 (2618-TW) 受惠旅遊旺季及 AI 貨運需求暢旺，大買 5.8 及 2.1 萬張。\n外資大賣195億連7賣，大砍友達10萬張最多、反手買進航空雙雄。(鉅亨網資料照)\n三大法人今日資金動向部分，自營商賣超 110.98 億元、投信買超 96.09 億元、外資賣超 195.77 億元，合計單日三大法人共賣超 210.66 億元。期貨部分，外資期貨淨空單小增至 8.1 萬口。\n外資買超前 10 名個股部分，看好暑假旅遊及半導體產品載貨利多，大買華航 5.8 萬張最高，其次大買中信金  4.1 萬張，買超友訊 2.2 萬張第 3，其後依序為買超華航 2.14 萬張、臻鼎 - KY2.1 萬張、漢翔 1.54 萬張、上海商銀 1.22 萬張、聯強 1.14 萬張、合庫金 1.01 萬張、台灣大 9,724 張。\n外資賣超前 10 名個股中，賣超首位為友達 10.69 萬張最多，其次為臺企銀 3.15 萬張居次、南亞科 2.9 萬張、英業達 2.66 萬張、遠東新 1.87 萬張、台新新光金 1.85 萬張、中鋼 1.59 萬張、亞泥 1.61 萬張、陽明 1.45 萬張、華邦電 1.36 萬張。另外資針對即將在周四 (16 日) 舉行法說的台積電也賣超 2,045 張，為連 3 賣。\n投信買超前 10 名個股部分，以台新新光金買超 9,616 張最高、中信金 9,372 張居次、兆豐金 8,661 張、遠東新 5,302 張、臻鼎 - KY 賣 4,007 張、華通 3,350、英業達 2,902 張、南電 2,631 張、廣達 2,054 張。\n投信賣超前 10 名個股部分，以聯電最高 8,770 張、其次為國巨 * 4,365 張、長榮航 2,892 張、啟碁 2,384 張、日電貿 2,312 張、國泰金 1,846 張、富邦金張 1,440、群益證 1,190 張、長榮 1,057 張、宏碁 1,013 張。\n法人表示，台股今日呈現明顯的開高走低格局，從技術面來看，加權指數盤中突破 46,000 點後無法守穩，收盤留下明顯長上影線，代表 4 萬 6 千點附近仍有套牢與獲利了結賣壓，從大漲近千點縮小至僅上揚 25 點，顯示短線追價信心仍不足，後續若能重新站穩 4 萬 6，才有機會進一步轉強，反之若 4 萬 5 千點失守，盤勢可能再度回到震盪整理。",
+          "published": "2026-07-13"
+        },
+        {
+          "title_zh": "外資示警ABF載板「史詩級缺貨」，目標價翻倍飆",
+          "title_en": "Foreign brokers flag 'epic shortage' in ABF substrates, double price targets",
+          "summary_zh": "外資拋出震撼彈，警告ABF載板將出現「史詩級缺貨潮」，台廠ABF三雄目標價因而大幅調升、部分甚至翻倍。AI加速器與高效能運算需求擠壓載板供給，使台灣ABF供應商成為供應鏈瓶頸下的受惠者，即便整體半導體氣氛轉冷，市場對先進封裝與載板題材的興趣再度升溫。缺貨若延續，可望帶動載板廠報價與獲利上修，惟仍須留意終端需求與擴產進度是否改變供需平衡。",
+          "summary_en": "A foreign brokerage sparked a stir by warning of an \"epic-scale\" shortage in ABF carrier boards, sending target prices for Taiwan's ABF makers sharply higher, with some doubled. AI accelerators and high-performance computing are straining substrate supply, positioning the trio of Taiwan ABF suppliers as bottleneck beneficiaries even as broader semiconductor sentiment cools, and reigniting interest in the packaging supply chain.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/5607/9624978",
+          "body_zh": "高盛證券在最新釋出的「亞洲科技產業」報告中拋出震撼彈，直指ABF載板瓶頸難解，缺貨夢魘越演越烈，將帶動相關台系供應鏈明後二年獲利表現優於預期，因此大幅上調南電（8046）、景碩（3189）、欣興（3037）、臻鼎-KY（4958）等四檔個股目標價。\n高盛建議「買進」南電，並列為「首選」，目標價由1,115元大升至2,310元；景碩「買進」、目標價由555元大升至1,120元；欣興「中立」、目標價由630元大升至1,140元；臻鼎「買進」，目標價由388元大升至824元。\n高盛科技產業分析師王冠詔指出，隨AI ASIC 載板市況與價格成長高於預期，加上伺服器 CPU 載板的需求成長遠比預期更佳，使得ABF載板缺貨情況比預期更嚴重，交期目前已拉長至 12 個月，而年初時僅 3-4 個月。\n王冠詔預估ABF 載板缺貨潮可能會持續超過 30 個月，2026 年下半年、2027 年及 2028 年的缺貨率將分別達14%、34% 、51%，意味著漲價速度有可能會比預期更快，帶動台系載板廠毛利率與獲利表現均具備強勁的上修空間。\n王冠詔並進一步預期，自 2026 年第3季起，最少到2027 年底，ABF 載板的長約（LTA）與現貨（Spot）價格每季將分別上漲 10%-15% 及 20% 以上。\n此外，王冠詔還將 2025-2028 年預估的 ABF 全球整體市場規模（TAM）年複合成長率（CAGR），從先前預估的 33%大幅上調至 62%，預計市場規模將從 2025年的77億美元，一路向上增長，並於2028 年擴大至 330 億美元。\n在 AI 伺服器與通用伺服器 CPU 載板強勁需求的推動下，王冠詔認為這兩大領域在 2025 年合計占ABF產業需求約26%，預計2026-2028 年將分別攀升至需求比重的 41%、53% 與 62%。\n有鑒於整體產業正向樂觀的發展趨勢，王冠詔調升南電2026-2028年每股稅後純益（EPS）各9%、22%、36%；調升景碩2027-2028年EPS各8%、38%；調升欣興2027-2028年EPS各2%、6%；調升臻鼎 2027-2028年EPS各2%、11%。"
         }
       ]
     },
@@ -43,44 +65,50 @@
       "section_zh": "產業動態",
       "items": [
         {
-          "title_zh": "台積電 2 奈米 Google 搶先蘋果首發",
-          "title_en": "Google jumps the queue on TSMC's 2nm, beating Apple to first chip",
-          "summary_zh": "台積電 2 奈米開始量產，點燃智慧手機 2 奈米處理器大戰，令人意外的是，Google 破天荒搶到頭香。Google 將於 8 月中旬推出搭載自家 Tensor G6 處理器的 Pixel 11 系列新機，該處理器由台積電 2 奈米打造，時程比蘋果還早，打破以往蘋果拔頭籌的慣例。此舉顯示晶片設計巨頭對台積電先進製程產能的競逐愈演愈烈，也可能牽動整個產業對旗艦手機推出節奏的預期，後續各家排單與量產進度值得追蹤。",
-          "summary_en": "With TSMC's 2nm process entering volume production, the race for 2nm smartphone processors has ignited — and, in a surprise, Google grabbed pole position. Google plans to launch its Pixel 11 series in mid-August powered by an in-house Tensor G6 built on TSMC's 2nm, ahead of Apple, breaking the long-standing convention that Apple debuts each new node first. The move signals intensifying competition among fabless giants for TSMC's leading-edge capacity and could reshape flagship-phone timing expectations across the industry.",
+          "title_zh": "黃仁勳信心喊話：輝達仍在加速，近期獲CSP大單",
+          "title_en": "Nvidia's Huang reaffirms accelerating growth, touts fresh CSP mega-orders",
+          "summary_zh": "AI市場近期雜音漸增，輝達執行長黃仁勳在摩根士丹利閉門會議中喊出單季營收將逼近千億美元，強調成長動能尚未見頂，並提及近期取得雲端服務商（CSP）大單。此番樂觀談話激勵台系AI伺服器代工廠廣達、緯創，替供應鏈注入信心；不過在記憶體走弱與評價偏高的背景下，市場仍在檢視AI需求的續航力，後續CSP資本支出與交期能見度將是驗證題材真偽的關鍵。",
+          "summary_en": "Amid growing noise around the AI trade, Nvidia CEO Jensen Huang used a closed-door Morgan Stanley meeting to project quarterly revenue approaching US$100 billion and insisted the company's growth momentum has not peaked, citing recent large orders from cloud service providers. The bullish message cheered Taiwan AI-server assemblers Quanta and Wistron, offering a confidence anchor for the supply chain even as memory weakness and valuation worries weigh on tech sentiment.",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/cate/10846"
+          "source_url": "https://money.udn.com/money/story/5612/9625629",
+          "body_zh": "AI市場近期屢現雜音，輝達執行長黃仁勳出面信心喊話。綜合外電報導，黃仁勳日前率領輝達高層參加摩根士丹利證券（大摩）的閉門會議內容曝光，他在席間高喊輝達單季營收將逼近千億美元，成長動能不僅還沒到頂，而且還在加速，並已拿下某大雲端服務供應商（CSP）大單。\n法人指出，黃仁勳唱旺輝達後市，為AI市場吃下定心丸。隨輝達營運持續衝鋒，台積電、鴻海、廣達（2382）等相關協力廠後市跟著旺。\n外媒披露，黃仁勳率領輝達財務長柯蕾絲等高層出席大摩這場閉門會議，規格如同公司財報會議一般，凸顯對這次會議的重視。輝達高層在這次閉門會議中指出，今年CPU營運目標將達200億美元，隨著GPU產品出貨續強，輝達單季營收將叩關千億美元。\n黃仁勳強調，輝達成長動能並未到頂，而且還在加速中。他並透露，輝達成功拿下過去長期依賴ASIC伺服器算力為主的大型雲端服務供應商（CSP）訂單，目前輝達GPU已占該CSP近五成算力比重。\n這意味輝達在這場GPU與ASIC搶市大戰當中，市占率持續擴大，加上黃仁勳大力看好公司前景，大摩分析師Joseph Moore於會後發布報告指出，這場會議「氣氛積極」，看好輝達未來成長動能可望同時進攻三大領域，分別為AI實驗室、傳統CSP、NeoCloud或主權AI等相關市場。\nJoseph Moore點出，雖然傳統CSP在AI基建開始受到電力、土地、建設速度等限制影響，不過輝達後續將可望將出貨動能擴張到CPU、網通等相關領域，打破過去以GPU為主的情況。\n法人看好，黃仁勳釋出正面積極訊號，與輝達合作關係緊密的台積電、鴻海、廣達等供應鏈同步沾光。\n其中，輝達委由台積電量產的Vera Rubin晶片正在量產交貨階段，預期將為台積電下半年營運帶來顯著成長力道，伴隨下一代Rubin Ultra晶片明年接棒，挹注台積電源源不絕的訂單動能。\n鴻海、廣達、緯創等也將受惠。法人分析，目前各大CSP主要透過ODM廠採購以輝達AI平台打造的AI伺服器，隨著輝達出貨強勁，相關ODM協力廠2026年業績有望同步衝高。\n【國際中心／綜合外電】網路消息傳出，輝達決定暫停使用台積電的緊湊型通用光子引擎（COUPE），轉向高塔半導體（Tower Semiconductor）的NPO方案，原因是台積電的氮化矽（SiN）進度緩慢，及2D光柵耦合器失利。\n相關消息未獲輝達與台積電證實，由於茲事體大，立刻有網友駁斥相關說法。名為Reformed Sinner的網友回覆，他打電話給認識的台積電相關人士，對方沒辦法透露太多，但向他保證Irrational Analysis所說是一派胡言。"
         },
         {
-          "title_zh": "台積電漲價潮蔓延至成熟製程",
-          "title_en": "TSMC's price hikes spread from leading edge to mature nodes",
-          "summary_zh": "台積電先進製程接單爆滿、持續調高 3 奈米報價之際，漲價潮進一步蔓延至成熟製程。多家 IC 設計業者透露，陸續收到台積電擬調高成熟製程價格的通知，個別客戶漲幅不一，預計明年元月生效。此舉替聯電、力積電、世界先進等同業打了定心丸，後續可望跟進調漲。整體反映 AI 帶動的強勁需求已使全製程產能吃緊，不再侷限於尖端節點，成熟製程供需與報價走勢將成為下半年觀察半導體景氣的重要指標。",
-          "summary_en": "With advanced-process order books full and 3nm quotes already rising, TSMC is now extending price increases to mature nodes. Several IC design houses say they have received notices of higher mature-node pricing, with the increases varying by customer and set to take effect from January next year. The move gives foundry peers such as UMC, Powerchip and Vanguard breathing room to follow with their own hikes, signalling that robust AI-driven demand is tightening capacity across the entire process spectrum, not just at the cutting edge.",
-          "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/cate/10846"
+          "title_zh": "美光入股環球晶圓，AI算力瓶頸向上游遷移",
+          "title_en": "Micron takes stake in GlobalWafers as memory 'super-cycle' shifts upstream",
+          "summary_zh": "作為擴大美國本土晶片製造投資的一環，美光科技入股台灣矽晶圓龍頭環球晶，為其位於德州謝爾曼的大型晶圓廠提供關鍵資金支持。此舉顯示AI帶動的算力瓶頸正由成品晶片向上游原料矽晶片遷移，讓記憶體超級循環從「缺晶片」延伸為「搶矽晶片」，矽晶圓供應商地位隨之升高。對台廠而言，代表產業鏈價值重分配，上游材料話語權提升，後續擴產與長約鎖量動向值得追蹤，惟需觀察終端記憶體庫存循環的變化。",
+          "summary_en": "As part of expanding its U.S. chip-manufacturing investment, Micron has taken an equity stake in Taiwan-based silicon-wafer leader GlobalWafers, providing key financial support for its large fab facility in Sherman, Texas. The move signals that the AI-driven compute bottleneck is migrating upstream from finished chips to raw silicon wafers, reframing the memory super-cycle as a scramble not just for chips but for the wafers beneath them, and boosting silicon-wafer suppliers.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6533214",
+          "body_zh": "2026-07-14 09:00\n作為擴大美國本土晶片製造投資計劃的一部分，美光科技 (MU-US) 入股了總部位於台灣的矽晶片製造領軍者環球晶 (6488-TW)，為其位於美國德州謝爾曼的大型晶圓製造設施提供關鍵金融層面支持。\n美光入股環球晶圓背後：記憶體超級周期從「缺晶片」邁向「搶矽晶片」(圖：Shutterstock)\n華爾街知名投資機構 Wedbush Securities 認為，晶片產能擴張所需的核心原材料——矽晶片的供給最終可能成爲 AI 算力產業鏈乃至全球科技行業面臨的另一個「關鍵 AI 算力硬件」瓶頸。\n在高盛、摩根士丹利以及野村等華爾街大行們的資深股票市場分析師們看來，包括美股在內的全球 AI 超級牛市的主線正在從「輝達 (NVDA-US)AI GPU 需求狂浪單點爆發」升級為「AI 算力基礎設施全產業鏈看漲狂浪」，這也將支持美股以及全球股市圍繞 AI 的超級牛市行情繼續演繹。\n最典型的例子無疑在於，輝達最新業績可謂非常清楚地凸顯全球 AI 算力基礎設施建設狂潮遠未停歇，並且正在從 AI GPU/AI ASIC 擴展到資料中心 CPU、高性能網絡基礎設施、企業級 HBM/DRAM/NAND 記憶體、整機級別服務器集群、AI 超級工廠和企業級大規模 AI 雲計算系統。在華爾街，分析師們對於「全球 AI 總龍頭」輝達的看漲情緒愈發火熱，華爾街平均目標價就意味着輝達市值有望超 7 萬億美元。\n全球知名研究機構 IDC 最新發布的研究報告顯示，全球最高市值公司——即 AI 晶片超級霸主輝達 (NVDA.US) 首次成為按營收基準測算的全球資料中心以太網交換機市場第一大供應商。IDC 最新報告與摩根士丹利、高盛以及美國銀行等華爾街巨頭們的觀點一致，即輝達等 AI 算力產業鏈領軍者正在將算力鏈覆蓋範圍從「GPU/AI 晶片單點控制」推進到「GPU/CPU 機櫃集群 + 記憶體晶片 + 以太網交換機集群 + DPU + 光互連繫統 + 軟件生態 + 資料中心電力鏈 + AI 服務器製造」等環節的「AI 工廠系統級」閉環。\n因此 AI 超級牛市的「蛋糕」正在從 GPU 核心資產向全棧 AI 算力基建相關的硬件瓶頸擴大並持續增長。輝達仍是定義 AI 牛市基調的定價錨，但 PCB、MLCC、ABF、ODM、液冷、電源、矽晶片、CMP 耗材、光刻膠、玻璃基板、SOI/InP、資料中心光互連設備、光模塊和先進封裝設備，都可能獲得新一輪估值重估。\n全球先進半導體矽晶片的核心供應能力高度集中在日本的信越化學工業 、勝高，台灣的環球晶，德國的世創電子材料及韓國的 SK Siltron 等少數廠商手中。技術上，矽晶片廠需要先將半導體級高純多晶矽熔化，通過直拉法或區熔法生長幾乎無晶格缺陷的單晶矽棒，再完成摻雜、切片、研磨、蝕刻、拋光及外延生長; 最終矽晶片只有約 0.7—0.8 毫米厚，卻必須滿足極端平整度、表面潔淨度和微量金屬污染標準。\n矽晶片既是所有晶體管和記憶體單元的物理基底，也是晶圓廠良率的「起始上限」：任何微小晶體缺陷、翹曲或顆粒污染，都可能在後續數百道製程中被放大，降低單片晶圓可產出的合格晶片數量。因此，沒有足量且通過認證的高規格矽晶片，即使晶圓廠光刻機和先進封裝產能全部到位，也無法把資本開支轉化為真實晶片產量。\nWedbush：美光入股環球晶鎖定矽晶片產能命脈\n「我們認為，美光投資環球晶圓可能表明，美光將晶圓供應視為另一個潛在的 AI 算力硬件瓶頸。考慮到隨着記憶體晶片和邏輯晶片投資規模在 2028 年、2029 年和 2030 年可能不斷擴大，半導體級別晶圓 / 矽晶片 (wafer) 需求很可能急劇增長，美光管理層的這一判斷是非常合理的，」來自 Wedbush Securities 的資深金融市場學分析師布賴森在致客戶的一份報告中寫道。\n美光在一份聲明中表示，該公司計劃投資最高 30 億美元，以加強美國本土的半導體供應鏈生態系統，其中包括入股位於台灣的環球晶。\n布賴森領導的分析師團隊進一步分析稱，美光作出的這些最新承諾很大程度上表明，「記憶體晶片客戶們預計未來 AI 算力相關需求將更加強勁，這可能會大幅延長當前的記憶體超級周期，即使新增產能最終也會帶來額外的供應過剩風險。」\n他還指出，由於美國聯邦政府正與晶片製造行業積極合作，共同應對記憶體晶片短缺問題，相關供應過剩或者供應鏈短缺風險已經受到一定程度限制。\n受人工智慧時代記憶體需求激增推動，美光目前預計，到 2035 年的投資總額將超過 2,500 億美元，高於此前預計的 2,000 億美元。這家記憶體晶片巨頭預計，增加的最新投資規模將支持其長期增長目標，即在美國生產公司 40% 的動態隨機存取記憶體 (即 DRAM)，同時創造更多薪酬優厚的直接和間接就業崗位。\n2025 年 6 月，美光管理層當時表示，計劃在美國本土投資大約 2000 億美元，以滿足不斷增長的市場 HBM/DRAM/NAND 記憶體晶片需求，並最終在美國本土生產公司 40% 的動態隨機存取記憶體產品線。\n今年以來全球資金所謂「尋覓矽基通膨、削弱碳基」的宏大投資敘事，本質是資本從傳統制造、汽車、消費、地產、能源等依賴人口、資源和線性經濟增長的「碳基資產」，轉向 AI 算力基礎設施相關的圍繞矽晶片的高端製造鏈條。這不是單純追逐科技股的敘事，而是全球資金在重新定價「未來增長的最核心載體」：誰掌握 AI 訓練 / 推理相關的 AI 算力基礎設施資源，誰就獲得更高估值溢價，而是資金相對配置權重從依賴人口、油氣、地產、消費週期的舊經濟資產，轉向能夠承載 AI 訓練 / 推理與自動化物理 AI 生產力擴張的基礎設施資產。\n當前全球資金擁抱「矽基通膨」的核心邏輯無疑在於——AI 時代最稀缺的不是傳統勞動力、地產或一般類型的生產與製造產能，而是 GPU/ASIC、HBM/DRAM/NAND 記憶體晶片、資料中心 CPU 組件、高性能以太網基礎設施、先進封裝產能、EUV 等最前沿半導體制造設備、資料中心電力鏈條以及資料中心光互連 / 光通信這些「矽基生產資料」。\n包括 AI 晶片、高端 DRAM 記憶體晶片在內的全球先進晶片製程所需的 300 毫米半導體級矽晶片，可能成爲 AI 算力產業鏈的最新結構性瓶頸，美光計劃向環球晶圓提供 5 億美元融資，並簽訂爲期十年的矽晶片供應協議，核心目的顯然不只是財務投資，而是為未來美國 DRAM、NAND 及高帶寬記憶體產能擴張提前鎖定關鍵投入品; 這表明美光已經把矽晶片供應安全視爲與晶圓製造設備、先進封裝和電力同等級別的長期擴產約束。\n2028—2030 年若記憶體與先進邏輯晶圓廠同步擴產，晶片產量增加首先必須轉化爲更高的「晶圓投入量」。動態隨機存取記憶體與閃存主要使用高品質 300 毫米拋光矽晶片，先進邏輯晶片則大量依賴外延矽晶片; 而先進節點不僅要求更多矽晶片，還要求更低晶體缺陷密度、更高平整度、更嚴苛的金屬污染控制和更穩定的電阻率。\n值得注意的是，此類材料需要長期客戶認證，晶圓廠不能像更換普通工業原料那樣迅速切換供應商，因此即使全球矽晶片總量並不短缺，符合高帶寬記憶體和先進邏輯要求的高規格產品也可能局部供不應求。\n美光此舉無疑大幅強化了 AI 供",
+          "published": "2026-07-14"
         },
         {
-          "title_zh": "美中機器人爭霸 帶旺台鏈拉貨潮",
-          "title_en": "US–China robot rivalry sparks a new wave of Taiwan-chain orders",
-          "summary_zh": "美、中機器人巨頭大車拚，台鏈得利。美國以特斯拉為代表，執行長馬斯克宣示全力衝刺第三代 Optimus 人形機器人量產，帶旺盟立、亞光等協力廠；大陸則由宇樹領銜衝鋒，並啟動首次公開發行（IPO），後續銀彈上膛可望加速擴產。雙陣營同步推進人形機器人量產，帶動台灣零組件與系統整合廠新一波拉貨潮，所羅門等業者亦受惠。市場看好機器人供應鏈成為繼 AI 伺服器後另一條中長線成長主軸，相關個股訂單能見度與良率進展值得留意。",
-          "summary_en": "Robotics titans in the US and China are going head-to-head, and Taiwan's supply chain is reaping the benefits. On the US side, Tesla's Elon Musk has pledged an all-out push to mass-produce the third-generation Optimus humanoid, boosting partners such as Mirle Automation and Genius Electronic Optical; in China, Unitree is leading the charge and has kicked off an IPO to raise fresh ammunition. The dual-front build-out is driving a new pull-in of orders for Taiwanese component and integration players positioned across both ecosystems.",
+          "title_zh": "光寶砸近300億元赴美德州設廠，搶攻AI基建商機",
+          "title_en": "Liteon commits NT$30 billion to Texas plant, chasing AI infrastructure demand",
+          "summary_zh": "電源大廠光寶擴大「美國製造」布局，宣布斥資9.19億美元（約新台幣300億元）在德州麥金尼市建立新生產據點，鎖定快速成長的AI基礎設施與能源市場。此舉反映台灣電源電子廠正將產能在地化、貼近美國資料中心客戶，以掌握爆發性需求並分散供應鏈與關稅風險。伴隨電源雙雄同步擴產，將壯大整體生態鏈，惟大額海外投資的回收期與匯率、建廠進度仍是財務面觀察重點。",
+          "summary_en": "Power-supply maker Liteon is expanding its \"made in America\" footprint, announcing a US$919 million (about NT$30 billion) investment to build a new production base in McKinney, Texas. The plant targets the fast-growing AI infrastructure and energy markets, reflecting how Taiwan's power-electronics leaders are localizing capacity near U.S. data-center customers to capture surging demand and hedge supply-chain and tariff risks.",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/cate/10846"
+          "source_url": "https://money.udn.com/money/story/11162/9625561",
+          "body_zh": "電源大廠光寶（2301）擴大「美國製造」布局，昨（13）日宣布將斥資9.19億美元（近新台幣300億元）在美國德州麥金尼市（McKinney）建立新生產據點，搶攻AI基礎設施及能源快速成長商機。\n光寶已在日前的法說會上修2026年資本支出，由原訂110億元提高至130億元，增幅18%，當中不含美國新廠投資計畫。法人預期，隨著此次近300億元美國投資案拍板，光寶有望二度上修今年資本支出，凸顯AI需求強勁，帶動公司加速美國在地投資計畫腳步。\n光寶目前美國廠位於德州普萊諾（Plano），以租賃為主，該廠區有六條生產線，主要製造電池備援模組（BBU） 等產品，目前已不敷需求。據悉，光寶近期在美國德州之外等多地評估，最後拍板定案，仍在原來德州建立新廠，以利兩廠就近運作。\n光寶董事長宋明峰表示，此次在德州麥金尼市投資，是光寶全球成長策略的重要里程碑，不僅進一步強化集團北美市場布局，更將串聯全球營運網絡，發揮區域與全球資源整合綜效，為未來發展奠定穩固基礎。\n他說，隨著AI基建及全球能源轉型持續推動產業變革，這項投資將進一步提升光寶全球競爭力，創造長期成長動能。\n光寶說明，此次9.19億美元投資當中，逾1億元用於取得廠房所需，為麥金尼市歷來規模最大民間投資案之一，預計將創造逾600個就業機會，進一步強化光寶北美市場布局與營運能量，並掌握AI基礎設施及能源市場快速成長帶來的長期發展契機。\n光寶指出，這座新製造基地總面積超過65萬平方英尺，將支援製造、營運、工程研發等多元功能。\n光寶加碼美國製造之外，日前也宣布增資越南子公司1.49億美元（逾新台幣48億元），以支應營運成長，及擴產所需資本支出。\n光寶總經理邱森彬日前表示，高雄二廠預計8月完成，越南廣寧廠將於第3季完工，估計兩地明年產能將倍增，以生產高階電源、BBU為主。光寶估計，今年AI產品營收占比將達三成。\n光寶昨天股價漲8.5元、收222元。"
         },
         {
-          "title_zh": "航空雙雄迎貨運大旺季 Q4 運價可望再攀峰",
-          "title_en": "Air-cargo duo brace for a peak season that's \"only just begun\"",
-          "summary_zh": "AI 出貨潮升溫，全球航空貨運迎來大旺季。業者預期今年貨運旺季「才剛開始」，在 AI 基礎建設投資持續擴大、電子業旺季、開學季及年底節慶備貨接力帶動下，第 3 季艙位供給吃緊，第 4 季運價可望再攀高峰。長榮航、華航營運展望轉趨樂觀，對後市釋出正向訊號。除客運復甦外，貨運高運價可望成為航空雙雄下半年獲利的重要支撐，市場關注旺季艙位調度與運價能否延續強勢，並留意油價波動對成本結構的影響。",
-          "summary_en": "A surge in AI shipments is powering a booming peak season for global air freight. Carriers expect this year's high season to be just getting started: sustained AI-infrastructure investment, an electronics up-cycle, back-to-school demand and year-end holiday stocking are set to keep cargo capacity tight through the third quarter, with fourth-quarter freight rates likely to scale fresh highs. EVA Air and China Airlines are positioned to benefit, and management commentary on the outlook has turned notably upbeat as belly-and-freighter demand strengthens.",
-          "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/cate/10846"
-        },
-        {
-          "title_zh": "記憶體好光景到頭？美銀示警「產能騙局」",
-          "title_en": "BofA warns of a memory \"capacity mirage\" as boom questions surface",
-          "summary_zh": "美銀拆解記憶體上行循環背後的數字，示警所謂「產能騙局」，並質疑好光景能否延續。報告聚焦南亞科、華邦電、旺宏等台廠是否還能維持當前接單接到手軟的熱度，提醒帳面產能與需求數字恐高估了實際強度。此份報告在記憶體族群強勢重評價之際發布，替市場注入一劑冷靜劑。適逢南亞科法說登場，投資人須在超級循環的樂觀情緒與供給端潛在雜訊間拿捏；後續 DDR 報價、庫存去化與長約能見度，將是驗證記憶體行情續航力的關鍵。",
-          "summary_en": "Bank of America has dissected the numbers behind the memory upturn, warning of what it calls a \"capacity mirage\" and questioning whether the good times can last. The report scrutinises whether Taiwanese memory makers Nanya Technology, Winbond and Macronix can keep booking orders at their current torrid pace, cautioning that headline capacity and demand figures may overstate underlying strength. The note lands as the sector rides a powerful re-rating, injecting a dose of caution into an otherwise euphoric memory trade ahead of Nanya's earnings call.",
+          "title_zh": "AI吃光記憶體，全球手機Q2出貨創13年新低",
+          "title_en": "AI's memory appetite drives global phone shipments to a 13-year low",
+          "summary_zh": "受AI需求排擠記憶體供給、推升零組件成本影響，全球智慧型手機第2季出貨年減約11%，跌至13年來新低；三星與蘋果逆勢成為相對贏家。此現象凸顯AI算力熱潮正壓縮消費性電子供應鏈，使記憶體供給趨緊並重塑手機品牌競爭格局。對台灣供應鏈而言，記憶體漲價與零組件排擠效應既是隱憂也是機會，具備議價力與高階產品組合者較能抵禦出貨下滑，後續旺季拉貨力道為觀察指標。",
+          "summary_en": "Global smartphone shipments fell about 11% year-on-year in Q2 to their lowest in 13 years, as AI-driven demand soaks up memory supply and pushes up component costs. Samsung and Apple bucked the trend to emerge as relative winners, underscoring how the AI compute boom is squeezing consumer-electronics supply chains, tightening memory availability and reshaping the competitive balance among handset makers.",
           "source_name": "工商時報",
-          "source_url": "https://www.ctee.com.tw/category/財經"
+          "source_url": "https://www.ctee.com.tw/news/20260714700608-430704",
+          "body_zh": "AI資料中心對高頻寬記憶體（HBM）、DRAM及NAND Flash需求持續飆升，正對消費性電子市場產生排擠效應，研究機構Counterpoint Research最新初步統計顯示，2026年第二季全球智慧手機出貨量年減11％，創下2013年以來同期最低水準，由於記憶體價格持續走高，手機製造成本攀升，品牌廠被迫調漲售價，導致價格敏感的入門與中階市場需求急速降溫。\nCounterpoint指出，AI資料中心正大量吸納DRAM與NAND產能，使記憶體供應商優先將產能配置給利潤較高的企業級市場，消費性電子所能取得的供應因此持續緊縮，價格也一路攀升。對手機品牌而言，記憶體是物料成本（BOM）中最重要的元件之一，成本增加最終反映在終端售價，對入門及中階機種衝擊尤為明顯。\nCounterpoint資深分析師Shilpi Jain表示，全球記憶體供應吃緊已超越其他因素，成為目前智慧手機市場最大的單一拖累，去年仍只是零組件成本問題，如今已逐漸演變成需求危機，尤其入門與中階產品在既有價格帶已難以維持原有競爭力。\n面對成本壓力，各家品牌採取不同策略，有些選擇調高售價並壓縮獲利空間，有些則延長舊機銷售週期，透過促銷留住預算有限的消費者，也有品牌直接縮減新品推出及生產規模，以降低庫存風險。\n除了記憶體成本上升之外，中東地緣政治緊張推升國際油價及物流成本，加上全球經濟成長放緩、通膨居高不下及消費信心疲弱，也進一步壓抑智慧手機換機需求。\n不過，在整體市場下滑之際，龍頭品牌仍展現相對韌性，三星第二季以24％的全球市占率重返全球智慧手機市場龍頭，也是前五大品牌中成長表現最佳者。Counterpoint指出，Galaxy S26系列熱銷是主要推動力，其中Ultra機型憑藉AI功能及隱私顯示技術受到市場青睞，加上印度、中東市場供應穩定、漲價幅度相對有限，以及夏季促銷帶動銷售，使三星逆勢擴大市占。\n蘋果同樣繳出優於市場的成績，第二季出貨量年增3％，全球市占率首度突破20％，創歷年第二季新高；值得注意的是，蘋果也是本季唯一未調漲智慧手機售價的主要品牌，iPhone 17系列持續維持全球最暢銷機型地位。不過，Counterpoint指出，蘋果中國市場出貨仍較去年同期下滑，且預料今年秋季推出新一代iPhone時，仍將調整產品售價，以反映零組件成本上升。\n其他品牌則承受更大壓力，多家主要手機廠出貨量出現雙位數衰退，小米透過精簡產品線、放寬經銷商融資條件，維持約12％的全球市占率。OPPO與vivo則分別以11％及8％的市占率位居全球第四及第五。此外，Google與華為則逆勢成長，第二季出貨量分別年增16％及6％。\n展望後市，Counterpoint維持2026年全球智慧手機出貨量全年衰退約14％的預測，並認為全球DRAM與NAND供應吃緊情況可能延續至2027年，在記憶體供應未明顯改善之前，整體智慧手機需求難以出現明顯復甦。"
+        },
+        {
+          "title_zh": "國巨8天跌逾三成，連分析師都納悶",
+          "title_en": "Passive-component maker Yageo slides over 30% in eight days, baffling analysts",
+          "summary_zh": "被動元件龍頭國巨短短8個交易日重挫逾三成，跌勢之猛連分析師都感到不解，市場開始質疑被動元件族群究竟出了什麼問題。這波急跌反映市場對被動元件庫存、報價與終端需求的預期正快速修正，也提醒投資人：先前隨AI與電動化題材上漲的零組件股，人氣可能在短時間內劇烈反轉。後續須觀察被動元件的實際接單、庫存去化與報價走勢，方能判斷是基本面轉弱或籌碼面錯殺。",
+          "summary_en": "Yageo tumbled more than 30% in just eight trading sessions, a drop so sharp that even analysts have struggled to explain it, raising questions about what is ailing the passive-component sector. The steep decline points to shifting expectations around inventory, pricing and end-demand in passives, and serves as a reminder of how quickly sentiment can reverse in component names that had earlier ridden the AI and electrification themes.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/5607/9624436",
+          "body_zh": "被動元件漲價題材，推升國巨*（2327）股價走高，從4月底的317元一路上衝，一度飆漲至1,220元的歷史天價，但近期則出現休息，短短8個交易日，不僅跌破千元，連月線也失守，跌幅逾三成，13日在國巨一度觸及跌停領跌下，被動元件股一片慘綠，禾伸堂（3026）、華新科（2492）、日電貿（3090）、立隆電（2472）都重挫到跌停。\n國巨6月合併營收153.59億元，月增2%，年增38.9%，連續四個月改寫單月歷史新高；第2季合併營收444.56億元，刷新單季歷史新高，季增16.5%，年增35.7%；累計上半年合併營收826.22億元，年增29.4%。\n法人表示，供應鏈傳出國巨向客戶發出價格調整通知，自7月1日起調漲全系列電容產品價格，包括MLCC、鉭電、鋁電、薄膜電容等，調價的產品占國巨營收比重超過4成。\n國巨股價從4月底的317元一路往上飆漲，7月1日盤中一度衝達1,220元，寫歷史新高，但隨後股價反轉下跌，千元關及月線相繼失守，13日以921元開高後走低，盤中一度重挫至跌停810元，統計從歷史高價下跌以來，股價下跌410元，跌幅33.6%。\n國巨重挫之外，被動元件股也跌勢沈重，禾伸堂以1,025元開高後一度拉升至1,030元，但隨後翻黑，重挫至跌停905元，失守千元，但股價仍是比國巨高；華新科、日電貿、立隆電都重挫到跌停。\n分析師表示，日本村田製作所股價重挫逾9%，太陽誘電大跌逾17%，東京電氣化學工業也是下挫，拖累台股被動元件的表現，另外，在籌碼凌亂及國巨上周再傳違約交割案，可能也是造成被動元件股大跌的原因，不過，目前在基本面上並未出現雜音，下半年漲價題材仍在。\n因此，是否有市場上尚未發現的影響因素？大家真正擔心的理由是什麼？目前仍有待觀察。\n國巨第2季營收超標 法人看好評價將追趕日韓同業"
         }
       ]
     },
@@ -89,38 +117,49 @@
       "section_zh": "金融業",
       "items": [
         {
-          "title_zh": "金管會核准永豐銀併京城銀",
-          "title_en": "Regulator clears SinoPac's merger with King's Town Bank",
-          "summary_zh": "金管會正式核准永豐商業銀行合併京城商業銀行，替國內銀行業眾所矚目的整併案掃除關鍵法規障礙。此案通過後，永豐銀可擴大分行版圖與客群，尤其強化在京城銀深耕的南台灣市場布局。這樁合併反映主管機關持續鼓勵中型銀行透過整併壯大規模，以打造更具競爭力、資本更厚實的本國銀行體系。在銀行家數偏多、競爭激烈的環境下，後續合併綜效發揮、系統與人員整合進度，將是市場評估此案成敗的重點。",
-          "summary_en": "The Financial Supervisory Commission has approved Bank SinoPac's merger with King's Town Bank, greenlighting one of the more closely watched consolidation deals in Taiwan's crowded banking sector. The approval clears a key regulatory hurdle for a tie-up that expands SinoPac's branch footprint and customer base, particularly in southern Taiwan where King's Town has deep roots. The deal reflects continued official encouragement of scale-building among mid-sized banks as authorities push for a more competitive, better-capitalised domestic banking industry.",
+          "title_zh": "三商壽9月1日併入玉山金下市，8月19日最後交易",
+          "title_en": "Shin Kong Life to delist Sept 1 as Yushan Financial completes share swap",
+          "summary_zh": "玉山金以股份轉換方式取得三商美邦人壽100%股份，合併基準日訂為9月1日；三商壽公布股票最後交易日為8月19日，之後正式終止上市。此案為台灣金融整併再添一樁，將一家中型壽險納入金控體系，重塑銀行保險與財富管理通路的競爭版圖。對玉山金而言，補足壽險拼圖有助擴大商品線與客群，惟壽險資產負債與利率風險的整合成效，仍待後續財報檢視。",
+          "summary_en": "Yushan Financial will acquire 100% of Shin Kong Mei-Bang Life via a share-swap, with Sept 1 set as the merger base date. Shin Kong Life announced its final trading day will be Aug 19, after which it will delist. The deal marks another step in Taiwan's insurance-and-banking consolidation, folding a mid-sized life insurer into a financial holding group and reshaping the competitive map in bancassurance and wealth distribution.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/5613/9625194",
+          "body_zh": "玉山金（2884）以股份轉換方式取得三商美邦人壽（2867）100%股份，預定9月1日為合併基準日。三商壽13日公布與玉山金控的股份轉換案進度，最終交易日訂為8月19日。\n三商壽與玉山金控股份轉換案，已經金融監督管理委員會同意及公平交易委員會決議不禁止結合在案，股份轉換後三商壽將成為玉山金控百分之百持股之子公司。\n三商壽訂定之股份轉換基準日為2026年9月1日，並將依相關法令向臺灣證券交易所申請於股份轉換基準日終止上市。\n因玉山金控於2026年6月12日股東常會決議通過114年度盈餘分配案並公告除息基準日為2026年7月7日，故換股比例於玉山金控除息基準日後調整為三商壽每1股普通股換發玉山金控0.2596股普通股(原公告為0.2486股)。\n本次股份轉換案相關時程也進行公布，股票最後交易日2026年8月19日；股票最後過戶日2026年8月21日；股份轉換基準日暨終止上市買賣日2026年9月1日。"
+        },
+        {
+          "title_zh": "金管會核准永豐銀合併京城銀",
+          "title_en": "Regulators clear SinoPac Bank's merger with King's Town Bank",
+          "summary_zh": "金管會同意永豐商業銀行合併京城商業銀行，為國內銀行整併再開綠燈。此核准推動擁擠銀行市場中的規模化，讓併購方得以擴大分行網絡與存款基礎，也顯示主管機關持續支持以併購作為強化銀行競爭力與經營效率的途徑。對永豐銀而言，合併有助擴張南部據點與客群，惟整併過程中的系統整合、人力調整與商譽認列，將牽動短期獲利表現，後續綜效發揮情形值得留意。",
+          "summary_en": "The Financial Supervisory Commission has approved SinoPac Commercial Bank's merger with King's Town Bank, greenlighting another consolidation among Taiwan's domestic lenders. The approval advances scale-building in a crowded banking market, allowing the acquirer to expand its branch network and deposit base. It also signals regulators' continued openness to bank mergers as a route to strengthening competitiveness and efficiency in the sector.",
           "source_name": "金管會",
-          "source_url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2",
+          "source_url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2&mcustomize=news_view.jsp&dataserno=202607070002&dtable=News",
           "published": "2026-07-06"
         },
         {
-          "title_zh": "金管會核准玉山金取得三商美邦人壽 100% 股權",
-          "title_en": "E.Sun to take full ownership of Mercuries Life via share swap",
-          "summary_zh": "金管會核准玉山金控以股份轉換方式取得三商美邦人壽 100% 股權，象徵集團版圖大幅跨入壽險領域。此案讓以銀行為核心的玉山金拓展業務組合，在金控積極尋求多元化、可交叉銷售的營運布局之際，補足壽險規模。完全納入三商美邦人壽後，玉山金資產負債表擴大、商品貨架更完整。不過壽險業資本結構與長天期負債特性，使得後續營運整合、避險與資本管理成為市場關注焦點，投資人將觀察併購綜效與對集團獲利、股東權益的實際影響。",
-          "summary_en": "The FSC has approved E.Sun Financial Holding's plan to acquire 100% of Mercuries Life through a share-swap structure, marking a significant expansion of the group's footprint into life insurance. The deal broadens E.Sun beyond its banking core, adding scale in insurance at a time when financial holding companies are seeking diversified, cross-sell-friendly business mixes. Bringing Mercuries Life fully in-house gives E.Sun a larger balance sheet and a wider product shelf, though integration of insurance operations and capital management will be watched closely.",
+          "title_zh": "元大金、第一金上半年獲利創新高",
+          "title_en": "Yuanta and First Financial post record first-half profits",
+          "summary_zh": "元大金與第一金上半年獲利同步創歷史新高。元大金上半年賺365.7億元，已超越去年全年、年增125%，每股稅後純益2.74元；第一金稅後純益達177.9億元。在資本市場活絡與券商業務暢旺帶動下，亮眼成績凸顯交投熱絡與證交稅量能創高如何拉抬台灣金控獲利。展望下半年，市場波動加大與利率走向將影響手續費與自營收益，證券導向金控獲利彈性大但波動亦大，須留意行情反轉風險。",
+          "summary_en": "Yuanta Financial and First Financial both reported record first-half earnings. Yuanta earned NT$36.57 billion, already surpassing its full-year 2025 profit, up 125% year-on-year with EPS of NT$2.74; First Financial's net profit reached NT$17.79 billion. The strong results, powered by buoyant capital markets and brokerage activity, highlight how a robust trading environment and record securities-transaction volumes have lifted Taiwan's financial holding companies.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/5613/9625445",
+          "body_zh": "元大金（2885）、第一金昨（13）日公布上半年獲利，同步創歷史新高。其中元大金上半年獲利365.7億元，已超越去年全年，年增125%，每股稅後純益（EPS）2.74元；第一金上半年稅後純益仍達177.9億元，年增27.6%，續創歷年同期新高，EPS為1.24元。\n台股熱讓證券型金控獲利大爆發。元大金6月稅後純益75.1億元，創歷史新高，並連三個月站穩70億元，年增14.7%；累計上半年稅後純益365.7億元，年增125%，EPS 2.74元，三項數字均居目前已公布五家金控之冠。\n元大金獲利衝高，最大功臣仍是旗下元大證券。受惠台股交易動能熱絡、日均成交量續創新高，帶動經紀手續費、承銷及自營業務同步成長。元大證券6月稅後純益54.4億元，月增6.8%、年增110.9%，寫史上同期新高。累計上半年稅後純益245.2億元，年增155.8%，占元大金整體獲利近七成，EPS達3.72元。\n元大銀行也提供穩定獲利底盤。6月稅後純益14.8億元，月增12.8%、年增30.7%；上半年稅後純益76.9億元，年增45.2%，單月及累計獲利均創歷年同期新高。\n元大金表示，元大銀行主要受惠核心放款及財富管理業務持續成長。以整體表現來看，元大金旗下金控、證券、銀行及人壽上半年獲利均寫下歷史新高。\n第一金則由銀行本業穩健撐盤。第一金6月稅後純益29.9億元，雖月減12%，仍年增11%，並續寫史上6月同期新高。第一金單月獲利較5月下滑，主要因第一銀行5月有一筆預提存款保險獎金沖回，墊高比較基期，6月已無此一次性利益。加上證券及壽險子公司投資利益減少，也使金控獲利較上月降溫。\n不過，在旗艦子銀行獲利動能支撐下，第一金上半年稅後純益仍達177.9億元，年增27.6%，續創歷年同期新高，EPS為1.24元。\n其他已公布金控上半年獲利也普遍報喜。永豐金稅後純益245.5億元、年增94%，玉山金214.3億元、年增27.9%；國票金則賺27.8億元、年增323.6%，並已超越去年全年獲利。"
+        },
+        {
+          "title_zh": "五大信賴產業放款提前達陣，資金湧向安控、軍工、AI",
+          "title_en": "Lending to 'five trusted industries' hits targets ahead of schedule",
+          "summary_zh": "五大信賴產業放款上路僅兩個月即提前超標。金管會統計，截至5月底國銀放款餘額達4兆4,351億元，兩個月累增2,007億元，達第一期1,200億元目標的167%，以安控、軍工及AI產業新增最多。放款快速到位，顯示在政策引導下銀行將信用資源導向戰略優先產業。對銀行而言，切入政策扶植領域可兼顧成長與風險分散，惟須關注相關產業景氣循環與授信品質，避免資金過度集中造成潛在風險。",
+          "summary_en": "Just two months into the program, bank lending to Taiwan's \"five trusted industries\" has already overshot its goal. FSC data show domestic-bank loan balances reached NT$4.4351 trillion by end-May, up NT$200.7 billion over two months, or 167% of the first-phase NT$120 billion target, led by security, defense/military and AI sectors. The rapid uptake shows lenders channeling credit toward strategically prioritized industries under policy guidance.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/5613/9625566",
+          "body_zh": "五大信賴產業放款上路兩個月就提前達標。金管會公布最新統計，截至5月底國銀放款餘額達4兆4,351億元，兩個月累計增加2,007億元，已達第一期目標1,200億元的167%，其中以安控、軍工及AI產業新增放款最旺。\n由於第一期原訂達標期限為年底，現已在5月提前完成，等同較原定時程提早七個月超額達陣。\n金管會為配合行政院「五大信賴產業推動方案」，今年2月訂定獎勵本國銀行放款方案，第一期實施期間為4月至12月，新增放款目標為1,200億元。\n4月首月增加908億元，5月增額再擴大至1,099億元，顯示銀行資金持續向政策重點產業集中，放款動能也未因首月基期墊高而放緩。\n所謂五大信賴產業，包括半導體、人工智慧、軍工、安控及次世代通訊，政策重點聚焦台灣具競爭優勢，且攸關供應鏈、國防與資安韌性的關鍵產業。\n從放款餘額來看，5月底仍以軍工產業2兆9,058億元最多，其次為人工智慧1兆1,151億元，次世代通訊也突破兆元、達1兆180億元。\n若看5月單月增額，以安控產業增加570億元最多，軍工增加568億元居次，半導體增加396億元排名第三。\n累計今年4、5月兩個月，新增放款前三大產業則為安控、軍工及人工智慧，分別增加882億元、666億元及618億元，反映銀行資金正加速流向資安、國防及AI相關領域。\n金管會指出，放款增加主要是企業考量產業特性、生產周期及資金成本，增加短中期周轉金需求。\n放款餘額前五大銀行依序為臺灣銀行、兆豐銀行、第一銀行、合作金庫銀行及華南銀行，全由公股銀行包辦，仍是支援政策產業的主要資金來源。"
+        },
+        {
+          "title_zh": "綠色投融資突破5兆元，金管會續推綠色與轉型金融",
+          "title_en": "Green investment and financing tops NT$5 trillion as FSC pushes transition finance",
+          "summary_zh": "金管會宣布，台灣綠色投融資規模已突破5兆元，並將持續推動綠色及轉型金融發展。此里程碑反映銀行信用與資本市場資金正加速投入低碳與永續連結專案，強化金融業在台灣能源轉型中的角色，也預示ESG導向放款與投資的政策動能將延續。對金融業者而言，綠色金融既是責任亦是新藍海，惟須建立完善的分類標準與風險評估，避免「漂綠」爭議，並確保轉型融資真正對接實體減碳需求。",
+          "summary_en": "The FSC announced that Taiwan's green investment and financing has surpassed NT$5 trillion, as the regulator continues to advance green and transition finance. The milestone reflects growing mobilization of bank credit and capital-market funds toward low-carbon and sustainability-linked projects, reinforcing the financial sector's role in Taiwan's energy transition and signaling further policy momentum behind ESG-aligned lending and investment.",
           "source_name": "金管會",
-          "source_url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2",
+          "source_url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2&mcustomize=news_view.jsp&dataserno=202607090003&dtable=News",
           "published": "2026-07-06"
-        },
-        {
-          "title_zh": "金融業 5 月忙收割 壽險狂砍逾千億台股",
-          "title_en": "Insurers slash NT$100 billion-plus of Taiwan stocks as sector harvests gains",
-          "summary_zh": "台股連兩月狂飆後，金融業 5 月由進攻轉向收割。據金管會統計，金融三業 5 月單月減碼台股 751 億元，寫近半年最大；銀行、券商縮手，壽險業更反手大砍 1,331 億元。實現的股票資本利得可轉列保留盈餘，增加日後配息籌碼。同時金融業債市布局轉趨保守。此舉反映法人在高檔獲利入袋、調整資產配置的節奏，也牽動後續台股籌碼結構與金融股股利政策，市場關注壽險資金是否於回檔後重新回補，以及利率走勢對債券部位評價的影響。",
-          "summary_en": "After two months of surging share prices, Taiwan's financial industry switched from offence to profit-taking in May. FSC data show the three financial sub-sectors net-trimmed NT$75.1 billion of Taiwan equities in the month — the largest cutback in nearly half a year — as banks and brokerages pulled back and life insurers reversed course to dump NT$133.1 billion. The realised capital gains can be converted into retained earnings, boosting insurers' ammunition for future dividend payouts even as they turn more conservative on their bond-market positioning.",
-          "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/cate/10846"
-        },
-        {
-          "title_zh": "醫療理賠增加 壽險新挑戰 新壽籲建立一致認定標準",
-          "title_en": "Life insurers face fresh medical-claims pressure, new challenges",
-          "summary_zh": "台灣人口結構轉變，持續為壽險業帶來新挑戰。新光人壽總經理黃敏義指出，今年上半年死亡理賠比預期少，但死亡理賠減少不代表整體理賠壓力降低；隨著「醫療通膨」及新式醫療技術發展，包括癌症標靶治療、新式手術等，醫療相關理賠正持續攀升。他呼籲主管機關建立一致的認定標準，示警各方對理賠適用範圍認定不一，已成為壽險業經營長天期負債的結構性難題。此議題攸關保單成本與商品設計，後續金管會與業者如何取得共識值得追蹤。",
-          "summary_en": "Taiwan's shifting population structure continues to test life insurers. Shin Kong Life president Huang Min-yi noted that while death-benefit claims in the first half came in lower than expected, that does not mean overall claims pressure has eased: \"medical inflation\" and advancing treatments — including cancer targeted therapies and new surgical techniques — are pushing health-related payouts higher. He urged regulators to establish consistent standards for adjudicating claims, warning that inconsistent interpretation of what qualifies for reimbursement is becoming a structural headache for insurers managing long-tail liabilities.",
-          "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/cate/10846"
         }
       ]
     },
@@ -129,28 +168,41 @@
       "section_zh": "財富管理",
       "items": [
         {
-          "title_zh": "國銀上半年財管業務亮眼 兆豐手續費年增四成",
-          "title_en": "Bank wealth-management fees shine in H1; Mega Bank's up about 40%",
-          "summary_zh": "今年上半年本國銀行財富管理業務普遍繳出亮眼成績單。截至 6 月底，在美股與台股 AI 熱潮持續帶動，以及銀行客戶分群經營策略下，多家國銀財管手續費淨收益呈雙位數成長，其中兆豐銀與第一銀行上半年財管總量表現突出，兆豐相關手續費收入年增約四成。此成績凸顯多頭市場與高資產客戶參與度提升，正讓收費型財管業務成為國銀愈來愈重要的獲利支柱。對財管業者而言，如何在行情回檔時維持客戶黏著度與商品配置動能，將是下半年手續費收入能否延續成長的關鍵。",
-          "summary_en": "Domestic banks turned in strong first-half wealth-management results. As of end-June, sustained AI-driven rallies in US and Taiwan stocks, combined with banks' customer-segmentation strategies, drove double-digit growth in net wealth-management fee income at multiple lenders. Mega Bank and First Bank posted particularly strong first-half wealth-management totals, with Mega's related fee income up about 40% year-on-year. The results underline how buoyant markets and rising high-net-worth engagement are making fee-based wealth management an increasingly important earnings pillar for Taiwan's banks.",
-          "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/cate/10846"
-        },
-        {
-          "title_zh": "台壽攜中信投信推類全委帳戶 兼顧傳承與退休金流",
-          "title_en": "Cathay Life and CTBC Investments launch discretionary account for succession and retirement",
-          "summary_zh": "中信金控子公司台灣人壽「信鑫滿滿」系列保單攜手中信投信，推出「全球領航」新臺幣類全委帳戶。此雙平台商品鎖定台灣供應鏈與美國科技龍頭企業，透過主動與被動 ETF 靈活配置的優勢建立部位，定位為同時滿足資產傳承與退休金流需求。此案反映壽險與資產管理業者正將類全委、以 ETF 為核心的解決方案包裝上市，回應高資產與退休族群對世代傳承及穩定退休現金流的規劃需求。對財管顧問而言，可作為連結保險保障與投資配置、切入傳承規劃議題的實務工具，惟仍須留意市場波動對帳戶淨值與撥回機制的影響。",
-          "summary_en": "CTBC Financial's subsidiary Taiwan Life has teamed up with CTBC Investments to roll out a New Taiwan dollar discretionary (\"quasi-mandate\") account under its \"Xin Xin Man Man\" insurance series. The dual-platform product targets Taiwan's supply chain and US tech leaders, using a flexible mix of active and passive ETFs to build exposure. Positioned to serve both wealth-succession and retirement-income needs, the offering reflects how insurers and asset managers are packaging discretionary, ETF-based solutions to meet demand from clients planning intergenerational transfers and stable retirement cash flows.",
+          "title_zh": "中信銀高雄亞灣旗艦分行開幕，搶攻私銀與家辦",
+          "title_en": "CTBC Bank opens flagship Kaohsiung Asia-Bay branch, targets private banking and family offices",
+          "summary_zh": "中信銀在高雄推出亞灣旗艦分行，採高樓層、預約制、占地近500坪的尊榮設計，力圖為台灣私人銀行與家族辦公室業務開創新格局；主管陳佳文表示，該行高資產業務市占居冠。此高規格、重體驗的據點，凸顯台灣銀行業競逐南部高資產客群與傳承規劃業務的競爭正加劇。對財管業者而言，實體旗艦據點是深化高資產關係、承接家族信託與跨代財富移轉需求的重要載體，後續AUM與手續費貢獻為觀察指標。",
+          "summary_en": "CTBC Bank unveiled its flagship Asia-Bay branch in Kaohsiung, an appointment-only, high-floor space spanning nearly 500 ping, aiming to open a new chapter for private banking and family-office services in Taiwan. Executive Chen Chia-wen said the bank leads the market in high-net-worth business. The premium, experience-led format signals intensifying competition among Taiwanese banks to capture wealthy clients and succession-planning mandates in the south.",
           "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/cat/headline"
+          "source_url": "https://news.cnyes.com/news/id/6532670",
+          "body_zh": "鉅亨網記者陳于晴 高雄\n2026-07-13 19:14\n走進位於高雄亞洲新灣區承億酒店 6 樓的中信銀行亞灣分行，迎面而來的不是傳統銀行的臨櫃喧囂，而是一幅融合在地元素的古代書簡主題牆，背後映射著港都獨有的海洋意象。這座耗時超過一年半籌備、斥資超過 1 億元打造的旗艦據點，不僅是中信銀行目前「最貴的分行」，更是全台唯一沒有設在街邊、採取「預約制」的高樓層特製藝術分行。\n開箱全台最貴、高樓層預約制中信銀亞灣分行 開創台灣私銀、家辦新格局。(鉅亨網記者陳于晴 攝)\n中信銀行私人銀行處處長楊子宏指出，台灣高資產客戶的屬性，和泰國等東南亞客戶截然不同。泰國的高資產客戶喜歡在複合式商場內的銀行現身，享受眾人稱羨的目光；但台灣的頂級客群極度注重隱私、不願曝光。\n中信銀行亞灣分行特別在近 500 坪的空間中，大膽設計了「三條獨立分流動線」，首先是藝廊 / 一般金融服務，結合高雄市經發局的文教科技空間變更，引進藝術文化，讓藝廊成為通往一般服務區的優雅大眾通道；其次是財富管理，設有 7 間獨立洽談室；第三則是私人銀行貴賓理財中心，配備 5 間大型洽談室。\n資產 300 萬元以上的財管客戶及億元級以上的私銀客戶，將由理專、顧問引導到專區內，主訴求並非一般存匯業務，而是精準服務預約客。儘管如此，中信銀行個人金融執行長楊淑惠也表示，中信不會拒絕資產未達標準的民眾，「每個人都是從小到大，隨客戶一路長大，未來都有財富管理的可能，普惠金融與公平待客是一定要兼顧到的。」\n隨台灣台股市值躍升全球第五大，高資產族群迎來暴增潮。楊子宏透露，近一年受惠於 AI 興起、股價暴漲，高資產客戶越來越有錢，直接催化了家族辦公室的迫切需求。「過去第一代長輩談到財產傳承常會拖延，但看到市值一年翻幾倍，現在都願意坐在我們面前及早行動。」\n楊子宏指出，台灣高資產企業主年齡多落在 60 至 70 歲，到了交棒關鍵期，有趣的是，中信觀察到台灣家辦正走出與新加坡、香港「純粹處理資金運用與稅務」截然不同的道路，台灣家辦更聚焦於「企業的國際布局與家族傳承想法」。\n中信銀亞灣分行推出規格最高的「家族會議室」，最近即將迎來國內某家知名上市公司的第一次家族辦公室會議。楊淑惠解釋，許多家族重視「儀式感」，喜歡拉出公司場景、由外人 (中信家辦顧問團隊) 主持。她直言，兩代之間要談的議題極其慎重，張力極大不亞於公司內部會議，中信團隊身為「籌備成員」，從半年前就開始進行事前溝通與議題設計，避免會議流於形式。\n在團隊與業務量方面，中信銀財富管理經營處處長謝宗權指出，亞灣分行是中信銀於專區內的第 6 家分行 (其餘為民族、高雄、新興、東高雄、南高雄)，也是高雄地區第 17 家據點。目前亞灣分行每日在地駐點 37 人，加計台北進出調度同仁，實際服務團隊達 40 至 50 人，且每間洽談室皆配置電視，可與台北的不動產、稅務等專家實時連線。\n根據主管機關統計 (截至 3 月底)，高雄亞灣跨境專區的整體高資產客戶資產達 6020 億元，5 月底客戶數來到 4999 人。中信銀行於專區的客戶與業務量均傲視同業，市占率超過 1/4，在高端的家族辦公室規模上，推估已突破 200 億元，斬獲超過三成的市占。\n展望未來，楊子宏分析，台灣上市櫃公司每年發放高達 2.5 兆元的現金股利，這筆龐大資金勢必留在國內尋找標的，雖然各家銀行目前在第一階段跨境服務與 PE 產品上仍處於試水溫階段，但隨金管會推動亞洲資產管理中心及第二階段放寬，台灣在地資產管理業務前景相當誘人。\n中信銀這間耗資上億元的頂級藝術科技分行，雖坐落於同金控旗下台灣人壽的大樓，但基於利害關係人法規限制，租賃條件皆嚴格遵循市價、並無任何特殊優待。然而，這項高規格的投資，無疑已為中信銀在南台灣私人銀行與家族辦公室的市場爭奪戰中，奠定了難以撼動的旗艦地位。",
+          "published": "2026-07-13"
         },
         {
-          "title_zh": "高股息 ETF 混搭 打造「月月領息」現金流",
-          "title_en": "Investors chase \"monthly dividend\" cash flow via high-yield ETF combos",
-          "summary_zh": "在存股族對現金流需求高漲下，理財達人傳授如何以 0056、00878、00918、00919 等熱門台股高股息 ETF 混搭，打造「月月領息」現金流。由於這些 ETF 配息時程錯開，透過搭配可將配息平滑為近乎按月入帳的收入來源。此策略反映高股息 ETF 在台灣存股族間歷久不衰的人氣，滿足對被動收入的追求。不過顧問提醒，追逐配息率仍須與總報酬、股價波動及各檔配息的可持續性一併衡量，避免只看高息、忽略本金與填息風險，才能真正達到穩健領息的目標。",
-          "summary_en": "Amid strong retail appetite for income, financial commentators are teaching investors how to build a \"month-after-month\" dividend cash flow by mixing popular Taiwan high-yield ETFs such as 0056, 00878, 00918 and 00919. Because these funds pay distributions on staggered schedules, blending them can smooth payouts into a near-monthly income stream. The strategy reflects the enduring popularity of high-dividend ETFs among Taiwanese savers seeking passive income, though advisers caution that yield chasing must be weighed against total return, price volatility and the sustainability of each fund's distributions.",
+          "title_zh": "迎AI浪潮，家族資產重整四策略",
+          "title_en": "Four strategies for restructuring family assets amid the AI wave",
+          "summary_zh": "專欄提出高資產家族因應AI浪潮的四項資產重整策略，將AI驅動的產業與評價變革視為家族財富的風險與機會並存，呼籲資產持有人重新檢視資產配置、治理架構與傳承安排。對財管顧問而言，這提醒應將科技驅動的變局納入家族辦公室的長期規劃，而非僅視為一時題材。實務上，家族在調整持股與另類投資比重時，也需同步檢視信託、控股架構與稅務效率，方能在世代交替中兼顧成長性與資產保全。",
+          "summary_en": "A wealth-management column outlines four strategies for high-net-worth families to restructure their assets as the AI wave reshapes industries and valuations. The piece frames AI-driven disruption as both a risk and an opportunity for family wealth, urging holders to revisit asset allocation, governance and succession structures. For advisers, it underscores the need to weave technology-driven change into long-term family-office planning rather than treating it as a passing theme.",
           "source_name": "工商時報",
-          "source_url": "https://www.ctee.com.tw/category/財經"
+          "source_url": "https://www.ctee.com.tw/news/20260625700101-430104",
+          "body_zh": "AI驅動的財富創造浪潮持續擴展，資產成長與風險型態同步轉變。安永家族辦公室負責人林志翔指出，當前是高資產家族進行資產重整與策略調整的關鍵時點，建議從資產盤點、稅務規劃、傳承安排及架構優化四面向著手。林志翔表示，房市政策演進及AI浪潮帶動的財富重構，是家族財富重新配置的兩大趨力，AI時代來臨，讓科技股、主題ETF、私募股權基金創造過去十年房市無法提供的成長動能，造就許多AI新貴。\n在此同時，房市管制政策讓高槓桿滾大不動產資產的時代成為過去式，市場進入盤整期，持有大量不動產的家族如有資金調度需求，很可能緩不濟急，流動性的代價明顯較過往提高。林志翔說，這意味資金過度集中不動產的家族，面對的不僅是流動性風險，更面臨要不要跟進AI浪潮、重新架構家族財富結構的難題。\nKPMG安侯建業則認為，全球供應鏈重組、地緣政治風險升溫及國際資金流向重塑的趨勢下，企業跨境布局從生產據點規劃，進一步延伸至投資架構設計、資產管理，甚至是家族傳承等層面。\nKPMG台灣所亞資創新服務主持人陳世雄表示，高資產客群快速成長，全球資產配置需求也持續增加，財富管理從「保值」邁向「跨境增值」，家族傳承將由「被動繼承」轉向「主動治理」。\nKPMG家族辦公室主持會計師洪銘鴻提醒，企業深化全球布局，企業家族應從過往著重節稅的思維，轉向以整體風險管理為核心，評估跨境投資與資產重整可能的影響。"
+        },
+        {
+          "title_zh": "台壽攜中信投信推類全委帳戶，兼顧傳承與退休金流",
+          "title_en": "Taiwan Life and CTBC Investments launch discretionary-account platform for succession and retirement",
+          "summary_zh": "台灣人壽攜手中信投信推出類全委帳戶，以雙平台設計同時滿足資產傳承與退休現金流需求。該商品將保險載體與委外資產管理結合，反映業界正推動保障、投資與給付功能整合，協助客戶在單一工具內規劃跨代財富移轉與穩定退休收入。對財管與保險通路而言，類全委結合月配息與彈性給付，切中高齡化下的退休與傳承痛點；惟須留意投資組合的波動與配息來源，避免以本金配息侵蝕長期資產累積，銷售時的適合度把關格外重要。",
+          "summary_en": "Taiwan Life has teamed with CTBC Investments to roll out a quasi-discretionary (類全委) account, using a dual-platform design to serve both asset-succession and retirement cash-flow needs. The product bundles insurance wrappers with discretionary asset management, reflecting the industry's push to blend protection, investment and payout features to help clients plan intergenerational transfers and stable retirement income within a single vehicle.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6523608",
+          "published": "2026-07-06"
+        },
+        {
+          "title_zh": "打造「月月領息」現金流：高股息ETF混搭全攻略",
+          "title_en": "Building 'monthly income' cash flow: a mix-and-match ETF playbook",
+          "summary_zh": "理財達人傳授以0056、00878、00918、00919四檔高股息ETF混搭，利用彼此錯開的除息時程，打造「月月領息」的現金流全攻略。此策略反映散戶對穩定被動收入的高度需求；不過顧問也提醒，追逐配息須與總報酬、價格波動及配息可持續性取得平衡。對財管而言，月配息組合雖具行銷吸引力，但應向客戶說明配息不等於獲利、且可能含資本利得或本金成分，並依風險屬性與目標配置，避免過度集中單一因子造成報酬與波動失衡。",
+          "summary_en": "A wealth commentator lays out a full strategy for engineering a \"month-after-month\" dividend cash flow by combining Taiwan high-dividend ETFs 0056, 00878, 00918 and 00919, whose staggered ex-dividend schedules can smooth payouts across the calendar. The approach reflects retail investors' growing appetite for steady passive income, while advisers caution that yield chasing must be balanced against total return, price volatility and the sustainability of distributions.",
+          "source_name": "工商時報",
+          "source_url": "https://www.ctee.com.tw/news/20260711700007-430403",
+          "body_zh": "在萬物皆漲、薪水凍漲年代，許多人發現即便收入在水準之上，甚至擁有房產，手頭依然非常吃緊，形成「體感貧窮」。《今周刊》存股助理電子報總編輯謝富旭指出，大眾常被「隨時關注資產」觀念誤導，忽略真正決定生活品質關鍵。謝富旭直言：「現金流，才是你富裕感主要來源！」\n謝富旭引述國富調查指出，台灣家戶平均淨資產雖台幣1,880萬元，但高達六成鎖在無法產生現金流的房地產、汽車，能孳息的金融資產平均僅約300萬元。他指出，若將家戶視為公司來檢視淨資產收益率(ROE)，平均僅有3%左右，遠遠低於巴菲特所重視的15%指標。謝富旭強調，唯有股票和債券能創造流動性，否則即便空有高資產也難以翻身，勢必會持續陷入體感窮困境。\n面對高齡者「有房無現金」退休困境，謝富旭坦言，不建議採取將房子歸給銀行的「以房養老」逆向抵押。除最後房子會歸銀行所有的遺憾，同時也難規避活到超過一定歲數的風險。他提到，過去曾有一對60多歲夫妻找他協助，雖然他們有一間位於板橋房子，但手中存款僅有80萬左右，因此遲遲不敢退休，也對退休後生活開支感到憂心。\n對此，謝富旭提出「世代接棒」解方，建議他們運用房產借款400萬進行「領息型」投資，創造現金流，並且由三名子女當共同借款人，每人每月負擔約6,000至7,000元還款；領到的股息歸父母所有，但未來父母身故後，房產、股票皆由三名子女均分。謝富旭分析，這能帶來三大優點：第一，子女未來能繼承房產與股票，絕不吃虧；第二，父母可靠著每月2萬股息過上安心退休生活；第三，由三個孩子共同管理400萬股票部位，能讓孩子提早「學到投資本領」，比單純繼承財產更為珍貴。\n對於想要借錢投資的民眾，謝富旭提醒兩大要點：\n他建議最佳途徑是利用房子增貸，利率較低且還款期長：「如果借100萬，每月只需還款5000元左右！」若無房產則可選擇利率3.5%以下優質信貸，並依據家庭經常性收入，扣除生活費用、房貸、車貸等金額後，精算可還款額度再借款。在標的選擇上，謝富旭嚴正反對使用容易「斷頭」的融資與股票質押，一旦斷頭，恐怕持股會被迫賣在「阿呆谷」，得不償失。\n2.投資前確認投資標的\n謝富旭叮嚀投資人借款前務必確認投資標的，且切勿在借到錢後「變心」去追逐高本益比、低殖利率的熱門股或聽信明牌。他指出：「投資股利能見度高股票，現金流動才會清楚。」尤其若投資獲利、股利發放穩定公司，有較高機會可判斷來年股息，在心理上也會更有安全感。\n在具體投資配置上，謝富旭建議四檔高股息ETF，組成可「月月領息」投資組合：00918(大華優利高填息30)、00919(群益台灣精選高息)、0056(元大高股息)與00878(國泰永續高股息)。謝富旭認為今(2026)年因填息行情佳，投資人可運用配息時間差、在填息後賣出，進行輪動套利，發揮資金效益。\n面對七、八月金融股配息旺季，謝富旭建議投資標的需具備成長性。他認為，未來金融產業成長利基在於三大領域：高齡化社會的財富管理、證券與投信業務增長，如：中信金(2891)、元大金(2885)、群益證(6005)。他選擇避開官股銀行與財報過於複雜、股利難捉摸的人壽壽險金控，秉持「太複雜、不懂的都不碰」原則。\n※免責聲明：本資料由「今周刊」授權轉載，文中引述之專家觀點、內容分析、個股基金僅供參考，純屬專家意見，並非投資建議，亦不代表本社立場。"
         }
       ]
     },
@@ -159,28 +211,40 @@
       "section_zh": "稅務法規",
       "items": [
         {
-          "title_zh": "月領退休金全年 89.4 萬免稅 一次領按服務年資計算",
-          "title_en": "Monthly pensions tax-free up to NT$894,000 a year; lump sums by years of service",
-          "summary_zh": "財政部提醒，民眾領取退休金是否課稅，要看是否超過免稅額度。若採分期領取，以 2026 年標準來看，全年定額免稅 89.4 萬元；若採一次領取，則依服務年資計算免稅額；若部分分期、部分一次領，則須分別按比率設算。此提醒有助退休族規劃提領的時點與方式，藉由分期或一次領的組合安排，妥善控管稅負。對財富傳承與退休規劃而言，退休金課稅方式攸關實際可支配金額，建議提早試算不同提領情境，並搭配整體資產配置，避免因一次領取跳增稅級而侵蝕退休準備。",
-          "summary_en": "The Ministry of Finance reminds the public that whether pension income is taxable depends on whether it exceeds the exemption threshold. For those drawing pensions in instalments, the 2026 standard sets a flat annual tax-free amount of NT$894,000; for lump-sum withdrawals, the exemption is calculated according to years of service; and for mixed instalment-plus-lump-sum arrangements, the two portions must be assessed separately on a pro-rata basis. The guidance helps retirees plan the timing and structure of withdrawals to manage their tax exposure efficiently.",
+          "title_zh": "上半年證交稅3,336億創高，超越去年全年",
+          "title_en": "H1 securities-transaction tax hits record NT$333.6 billion, topping all of last year",
+          "summary_zh": "財政部公布上半年總稅收入帳2.5兆元、年增81.5%，證交稅為成長主力。6月證交稅849億元再創單月新高、年增2.8倍、連11紅，平均每天為國庫貢獻40.4億元；上半年證交稅高達3,336億元，已超越去年全年金額。此暴增反映活絡股市下創紀錄的成交量能。對財政而言，證交稅挹注使稅收超徵，但也高度依賴市場交投熱度，若下半年行情降溫，稅收動能恐同步趨緩，稅收結構的波動性值得財政規劃留意。",
+          "summary_en": "The Ministry of Finance reported total tax revenue of NT$2.5 trillion in the first half, up 81.5% year-on-year, with securities-transaction tax the main driver. June's securities-transaction tax reached NT$84.9 billion, another monthly record and up 2.8-fold, an 11th straight month of gains, averaging NT$4.04 billion a day for the treasury; first-half securities-transaction tax totaled NT$333.6 billion, already exceeding the full prior-year figure. The surge reflects record trading turnover in a buoyant equity market.",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/cate/10846"
+          "source_url": "https://money.udn.com/money/story/6710/9625581",
+          "body_zh": "財政部昨（13）日公布上半年總稅收入帳2.5兆元，年增81.5%，證交稅是成長主力。6月證交稅849億元，再次創單月新高，年增2.8倍、連11紅，平均每天貢獻國庫40.4億元；上半年證交稅高達3,336億元，已超過去年一整年，提前確定寫下歷年全年新高。\n財政部統計，6月總稅收1兆1,656億元、年增1.9倍；上半年為2兆5,876億元，年增81.5%。上半年實徵淨額占累計分配預算數124.9%，代表稅收表現優於預期。\n觀察各項稅目表現，6月創單月新高稅目包括營所稅、綜所稅、證交稅、期交稅、總稅收；關稅實徵淨額則寫下最強6月。上半年創同期新高者，則包括關稅、營所稅、綜所稅、遺產稅、證交稅、期交稅、營業稅、房屋稅、印花稅、娛樂稅、總稅收等11項。\n實徵淨額成長最多的稅目為證交稅、所得稅。財政部統計處副處長劉訓蓉表示，台股6月大起大落，6月上市櫃日均成交值高達1兆5,407億元，再度改寫歷史新高，年增幅達2.6倍，帶動6月證交稅實徵金額高達849億元，不僅首度跨越800億元大關，也是連續第四個月刷新歷年單月新高，年增2.8倍，是連11月正成長。\n若以6月台股交易天數21日計算，6月證交稅平均每日貢獻國庫約40.4億元。\n上半年證交稅表現更是驚人，累計已入帳3,336億元，是歷年同期新高，一舉超越去年全年的2,928億元，已提前寫下全年新高，邁向新里程碑。\n所得稅方面，綜所稅6月實徵4,050億元、年增六倍，上半年實徵6,709億元、年增1.3倍；營所稅6月實徵5,883億元、年增1.4倍，上半年實徵淨額7,803億元、年增1.8倍。\n所得稅雖呈現大幅成長，但主因是，去年因對等關稅衝擊，繳稅期限延長至6月底，稅款延後入帳、使去年基期較低所致，所得稅實質成長情況要待7月遞延稅款都反映後，才能精準對照比較。\n另外，上半年營業稅實徵3,496億元，年增20.2%， 主因內需穩定，資通與視聽產品、電子零組件等進口代徵稅額增加，同時適用外銷零稅率營業人申請退稅亦增，抵銷部分增幅。\n整體而言，稅收目標達成情況較佳者，包括證交稅、遺產稅、贈與稅、印花稅、綜所稅、營所稅、關稅，占分配預算數比率都超過100%。"
         },
         {
-          "title_zh": "迎 AI 浪潮 家族資產重整四策略",
-          "title_en": "Family-asset restructuring: four strategies for the AI wave",
-          "summary_zh": "在 AI 帶動投資熱潮與全球市場結構轉變的背景下，稅務與傳承專家提出高資產家族進行資產重整的四大策略。此架構涵蓋家族如何重新配置持股以對接新的成長主題、管理跨境稅務曝險，以及建立信託、控股載具等具韌性的傳承結構。相關建議反映台灣富裕家庭對主動規劃的需求日增：一方面掌握 AI 等大趨勢帶來的投資機會，另一方面兼顧稅務效率與世代間有序移轉。對財管與傳承顧問而言，如何協助客戶在追求成長題材的同時，透過適當的持有架構與稅務安排降低潛在風險，是深化家族客戶關係的關鍵切入點。",
-          "summary_en": "Against a backdrop of an AI-driven investment boom and shifting global markets, tax and estate specialists outline four strategies for high-net-worth families looking to restructure their assets. The framework addresses how families can reorganise holdings to align with new growth themes, manage cross-border tax exposure, and build durable succession structures such as trusts and holding vehicles. The guidance reflects growing demand among wealthy Taiwanese households for proactive planning that balances investment opportunity from megatrends like AI against tax efficiency and orderly intergenerational transfer.",
+          "title_zh": "自用住宅用地適用順序大有學問，省稅撇步公開",
+          "title_en": "The order of applying self-use residential land rates matters for tax savings",
+          "summary_zh": "稅務專欄說明納稅人適用自用住宅用地優惠稅率的先後順序，將實質影響應納稅額，並分享節稅實務撇步。文章指出，持有多筆房地者應審慎安排由哪筆物件主張優惠稅率，凸顯地價稅技術性規定所創造的合法規劃空間，若無專業協助極易被忽略。對財管與傳承規劃而言，房地相關稅負是家族資產配置的重要一環，事前的持有結構與適用順序安排，往往比事後補救更能有效降低長期稅務成本。",
+          "summary_en": "A tax column explains how the sequence in which taxpayers apply the preferential self-use residential land tax rate can materially affect the tax owed, sharing practical tips to minimize the bill. The piece highlights that owners with multiple properties or land parcels should carefully arrange which holdings claim the concessionary rate, underscoring how technical land-tax rules create legitimate planning opportunities that are easily overlooked without professional guidance.",
           "source_name": "工商時報",
-          "source_url": "https://www.ctee.com.tw/category/財經"
+          "source_url": "https://www.ctee.com.tw/news/20260624701277-431401",
+          "body_zh": "同樣符合自用住宅用地條件，選擇不同的適用順序，地價稅額可能相差數千元！新竹市稅務局表示，地價稅自用住宅用地優惠稅率為千分之2，相較一般用地稅率千分10至千分之55，稅負至少相差4倍。由於自用住宅用地優惠設有適用面積上限，且採全國合併計算，民眾如名下擁有多筆符合條件的土地，可透過妥善規畫適用順序，有效省稅。\n稅務局長蘇蔚芳表示，依《土地稅法》規定，自用住宅用地面積是以土地所有權人持有的全國土地面積合併計算，都市土地以300平方公尺為限，非都市土地則以700平方公尺為限，並非由各縣市分別計算。\n因此，若民眾跨縣市持有自用住宅用地，應一併納入衡量。當申請適用優惠稅率的土地面積超過法定上限時，可自行選擇適用順序，計算至規定面積上限為止。\n稅務局說明，土地所有權人申請適用自用住宅用地優惠稅率的面積超過法定限制時，如未自行擇定適用順序，稅務局將秉持「民眾利益最大化」原則，優先以申請當年自用住宅用地地價稅額最高的土地依序扣減。\n如各筆土地地價稅額相同，則依土地所有權人本人、配偶及未成年受扶養親屬、直系血親尊親屬、直系血親卑親屬及直系姻親等戶籍所在地順序辦理核定。\n稅務局舉例說明，吳小姐持有2筆都市土地，面積各為200平方公尺，其中A地申報地價每平方公尺1萬元、B地為5000元，原皆按千分之10一般用地稅率課徵。\n因2筆土地合計面積超過300平方公尺限制，若優先擇定A地適用自用住宅用地稅率，B地僅100平方公尺可適用千分之2稅率，其餘面積須按一般用地稅率千分之10課徵，全年應繳稅額共計1萬元；反之，若優先擇定B地適用，稅額將提高至1萬4000元。僅因適用順序不同，稅額即相差4000元。\n稅務局提醒，符合自用住宅優惠稅率要件者，應於9月22日前向稅務局提出申請，經核准後當年度即可適用；逾期申請者，則自申請次年起適用。已核准且土地用途未變更者，無須每年重新申請。"
         },
         {
-          "title_zh": "自用住宅用地適用順序大有學問 省稅撇步公開",
-          "title_en": "Priority order of self-use residential land holds hidden tax-saving keys",
-          "summary_zh": "稅務專家提醒，自用住宅用地享受優惠的「適用順序」暗藏可觀且常被忽略的省稅空間。由於現行規定對特定自用住宅用地優惠設有上限與優先順位，家戶在多筆房地間主張免稅或優惠稅率的先後順序，將實質影響最終的地價稅與交易相關稅負。此提醒鼓勵擁有多筆符合資格房地的屋主，審慎規劃適用順序，確保取得最大可用的稅負減免，而非任其套用到相對不利的組合。對高資產家庭而言，房地資產配置與持有架構的稅務細節，往往是傳承與節稅規劃中容易被低估的一環，值得與專業顧問逐案試算。",
-          "summary_en": "Tax specialists highlight that the order in which self-use residential land is applied for preferential treatment carries significant, and often overlooked, tax-saving implications. Because Taiwan's rules cap and prioritise certain self-use land benefits, the sequence in which a household claims exemptions or reduced rates across multiple properties can materially change the final land-tax and transaction-tax burden. The reminder encourages homeowners with more than one qualifying property to plan the application order deliberately, ensuring they capture the maximum available relief rather than defaulting to a sub-optimal arrangement.",
+          "title_zh": "陸緊追海外稅，補繳人民幣130億",
+          "title_en": "China intensifies overseas-income tax enforcement, collects RMB 13 billion in back taxes",
+          "summary_zh": "中國大陸加強稽查居民海外所得，追補約人民幣130億元稅款，顯示跨境稅務執法趨嚴。此行動反映全球稅務機關運用資訊交換（如CRS）追查未申報境外所得與資產的大趨勢。對台商及兩岸高資產人士而言，這提醒海外持有部位正面臨日益提高的透明度與稽查風險。實務上，跨境資產配置須同步檢視CRS申報、境外所得課稅與資金來源合法性，及早進行合規盤點與架構調整，才能降低補稅與裁罰的潛在衝擊。",
+          "summary_en": "China has stepped up scrutiny of residents' overseas income, recouping some RMB 13 billion in back taxes, as authorities tighten cross-border tax enforcement. The drive reflects a broader global trend of tax administrations leveraging information exchange (such as CRS) to pursue undeclared offshore income and assets. For Taiwanese and cross-strait high-net-worth individuals, it is a reminder that offshore holdings face rising transparency and enforcement risk.",
           "source_name": "工商時報",
-          "source_url": "https://www.ctee.com.tw/category/財經"
+          "source_url": "https://www.ctee.com.tw/news/20260611700151-430801",
+          "body_zh": "大陸近期有加強查稅跡象，除上市公司近月密集發出補稅公告外，稅務機關也持續加強對高所得族群的納稅引導規範。大陸稅務總局10日表示，今年前5月居民境外所得相關補繳稅款約人民幣（下同）130億元，帶動個人所得稅收入成長。\n在經濟成長放緩與財政稅收短缺的雙重壓力背景下，大陸近年依據2021年公布的「關於進一步深化稅收徵管改革的意見」，持續推動稅務數位化與大數據稽核，並加強對境外資產與未申報所得的監管力度。\n企業端方面，今年5月共有14家A股上市公司公告補稅，包括雲南銅業、愛爾眼科、太極實業等，累計補繳稅款及滯納金合計超過20億元。進入6月後，補稅動作進一步擴大，包括愛施德、建業股份、宏昌電子等10多家上市公司於本月1日至6日，密集公告補稅及繳納滯納金，相關費用對當期獲利造成壓力。\n大陸稅務總局10日發新聞稿顯示，今年1至5月個人所得稅收入達7,643.9億元，年增12％。稅務總局稅收科學研究所所長黃立新指出，個人所得稅成長主要來自三大因素，包括資本市場活絡帶動相關所得增加、部分產業稅收成長，以及稅務機關加強高收入族群徵管。\n其中，今年以來A股市場表現活躍，帶動相關稅收明顯增加。限售股轉讓所得個稅年增96.2％，股息、利息及紅利所得個稅年增17.9％，股權轉讓所得個稅年增10.2％。\n此外，部分企業以合夥企業形式設立持股平台，自然人合夥人在減持股票時需按經營所得課稅，使相關個人所得稅年增14.1％。同時，隨資本市場持續熱絡，員工行使股票選擇權的情況增加，帶動相關個人所得稅收入成長。整體估算，資本市場因素對個人所得稅成長的貢獻度近5成。\n除大陸中央政府持續加強個人所得稅監管外，外媒報導，包括江蘇、深圳等地稅務機關近期也要求相關海外信託持有人，申報更完整財務資訊。在部分個案中，地方稅務部門已針對相關投資收益課徵20％稅率。另據官方統計顯示，2025年大陸個人所得稅收入較2024年成長11.5％，達1.62兆元，創歷史新高。"
+        },
+        {
+          "title_zh": "減免稅有感，育兒擔子變輕了",
+          "title_en": "Tax relief eases the burden of raising children",
+          "summary_zh": "稅務專欄指出，近期各項減稅與免稅措施讓家庭有感，減輕養育子女的財務負擔。文章說明扣除額與免稅額的提高如何轉化為家庭實質節稅，凸顯家庭導向稅制在支持育兒成本上的作用。就規劃而言，這提醒有子女的家庭在報稅時應充分運用幼兒學前、育兒相關扣除額，以極大化合法稅務利益。對財管顧問來說，掌握家庭生命週期的稅務優惠，並協助客戶在申報時完整適用，是提升整體財務規劃價值的基本功。",
+          "summary_en": "A tax column notes that recent tax reductions and exemptions are being felt by families, lightening the financial load of raising children. The piece highlights how enhanced deductions and allowances translate into tangible savings for households, illustrating the role of family-oriented tax policy in supporting childrearing costs. For planning purposes, it is a reminder for families to fully utilize available child-related deductions when filing to maximize legitimate tax benefits.",
+          "source_name": "工商時報",
+          "source_url": "https://www.ctee.com.tw/news/20260626700099-430103",
+          "body_zh": "繳稅多子多福的時代來臨。為鼓勵生育，財政部預告修正所得稅法，受扶養未成年子女免稅額可提高50％，以減輕育兒家庭經濟負擔，賦稅署試算，以租屋自住、育有1名6歲以下子女的3口之家為例，綜所稅免繳稅門檻將由114年度的年所得131.9萬元調高至115年度的140.95萬元。租屋自住、育有2名6歲以下子女的4口之家，免繳稅門檻更將由年收164.1萬元調高至178.6萬元。\n財政部表示，育有6歲以下子女的小家庭而言，會格外「有感」，因為免稅額和幼兒學前特別扣除額可疊加計算，目前幼兒學前特扣額，第一名子女為15萬元，第二名以上則為22.5萬元。\n115年度個人免稅額為10.1萬元，70歲以上長者是15.15萬元；若財政部完成修法，明年申報115年綜所稅時，未成年子女免稅額可從10.1萬元提高到15.15萬元，以所得稅級距5％至40％計算，每人可省下2,525元至2.02萬元稅金。全國18歲以下未成年子女共237萬人，相關家庭可因而受惠減稅共約80億元。\n配合婚育宅政策，財政部也預告修正房屋稅條例及土地稅法，授權地方政府對符合住宅法規定的婚育宅，可適當減免房地稅，最低可降至免稅，但設有排富條款和限全國單一自住。\n官員說明，全國單一自住房屋稅1％、地價稅千分之2，已是最低稅率，且因房地稅屬於地方稅，因而修法是授權地方政府得視情況再減免房地稅，地方政府如果願意，可以對婚育宅免稅。\n官員補充說，這項優惠政策是在全國單一自住房屋稅率1％基礎下衍生，因此會比照房屋稅2.0排除高價房屋適用，也就是六都及新竹縣市排除房屋現值前1％者，其他縣市排除房屋現值前0.3％適用。"
         }
       ]
     },
@@ -189,37 +253,50 @@
       "section_zh": "總經政策",
       "items": [
         {
-          "title_zh": "青安 3.0 補貼將不隨升息加碼 寬限期成最終拉鋸",
-          "title_en": "New youth-housing subsidy won't rise with rate hikes; grace period the final sticking point",
-          "summary_zh": "財政部規劃的青安 3.0 方案，最快本周再向行政院長卓榮泰報告。各方意見已逐漸收斂，最終拉鋸關鍵在於寬限期是否維持五年。跨部會初步共識為：未來若中央銀行升息，住宅基金將不再隨之加碼補貼，與現行設計相比是明顯轉變；且 8 月起所有青安房貸補貼都將減碼，顯示政策朝更具財政永續性的方向調整。此舉牽動首購族購屋成本與房市買氣，市場關注寬限期最終版本，以及補貼縮減對房貸需求與銀行放款結構的實際影響。",
-          "summary_en": "The Ministry of Finance's \"Youth Peace of Mind 3.0\" housing plan is set to go back to Premier Cho Jung-tai as early as this week. Views have largely converged, with the final tussle over whether to keep the five-year grace period. In a preliminary cross-ministry consensus, the housing fund will no longer add extra subsidy in step with future central bank rate hikes — a notable change from the current design. From August, subsidies on all youth housing loans are set to be trimmed, marking a shift toward a more fiscally sustainable programme.",
+          "title_zh": "中研院大幅上修今年GDP成長至10.16%",
+          "title_en": "Academia Sinica sharply upgrades 2026 GDP growth forecast to 10.16%",
+          "summary_zh": "中研院經濟所將今年台灣經濟成長率上修至10.16%，較去年底預測激增6.45個百分點，為國內主要智庫最高值，宣告台灣經濟邁入高速擴張期。此大幅上修反映AI帶動的強勁出口與投資動能；不過如此高的預測數字，也引發對基期效應、成長可持續性及經濟過度依賴科技循環的討論。對政策與市場而言，高成長固然亮眼，但須留意成長是否過度集中於半導體與AI出口，內需與傳統產業能否同步受惠，攸關擴張的均衡與韌性。",
+          "summary_en": "Academia Sinica's Institute of Economics raised its 2026 Taiwan GDP growth forecast to 10.16%, a jump of 6.45 percentage points from its late-2025 projection, the highest among major domestic think tanks and a signal that Taiwan is entering a period of high-speed expansion. The dramatic upgrade reflects powerful AI-driven export and investment momentum, though such an outsized forecast also raises questions about base effects, sustainability and the economy's dependence on the tech cycle.",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/cate/10846"
+          "source_url": "https://money.udn.com/money/story/10869/9625606",
+          "body_zh": "中研院經濟所昨（13）日發布最新預測，將今年台灣經濟成長率上修至10.16%，較去年底預測激增6.45個百分點，是目前國內主要經濟智庫最高預測值，也宣告台灣經濟迎來高速擴張期。\n中研院經濟所合聘研究員林常青指出，去年底發布預測時，市場因台美關稅協商尚未塵埃落定，如今關稅走向大致底定，相關衝擊疑慮逐步消除，加上全球對AI硬體需求已超越傳統景氣循環，促成本次上調。\n林常青表示，目前高階晶片、伺服器及顯卡等出貨動能維持高速成長，帶動民間投資顯著擴增，政府積極推動「AI新十大建設」也為投資注入新一波活水。在內需消費方面，受惠於股市創新高帶來的財富效果，及國內外旅遊熱潮不減，預期國內需求與國外淨需求對今年經濟成長貢獻，將各達5.03與5.13個百分點。\n按季表現來看，中研院經濟所初估，今年1至4季經濟成長率分別為14.55%、8.75%、10.9%與7.01%。主要經濟指標方面，民間消費預估年增3.6%、政府消費年增5.01%，固定資本形成則大幅年增8.59%。物價部分，消費者物價指數（CPI）年增率預估為1.95%，維持在2%的通膨警戒線下方。\nAI熱潮持續加溫台灣經濟成長，但也引發產業「K型分化」的隱憂。林常青分析，目前整體產業均呈現向上提升趨勢，但各行業步調不一，部分高速成長、部分相對持平。\n儘管台灣經濟持續上揚，林常青示警，未來仍有四大不確定因素須保持密切關注，首要是「AI投資是否能持續」；其次為「美國貨幣與貿易政策的潛在影響」；第三是「地緣政治風險與供應鏈重組走勢」；最後則是「中國大陸經濟成長仍面臨挑戰」，這些變數都將牽動台灣下半年的經濟走向。"
         },
         {
-          "title_zh": "軍公教調薪拍板 明年加薪 4%、專業加給大增",
-          "title_en": "Public-sector pay raise finalised: 4% next year, allowances up sharply",
-          "summary_zh": "政府拍板軍公教調薪方案。自 7 月起，專業與主管加給調增 2,000 元，明年並將調薪 4%，專業加給估飆升約 20%，牽動約 160 億元經費。此方案旨在於勞動市場緊俏之際，強化公部門的人才招募與留任，並協助收入跟上生活成本，同時替政府人事預算新增可觀支出。對總體經濟而言，公部門調薪具指標意義，可能牽動民間薪資談判與消費動能；後續須觀察加薪對財政負擔、物價預期及整體薪資結構的連鎖影響。",
-          "summary_en": "The government has finalised its salary package for military personnel, civil servants and public-school teachers. From July, professional and supervisory allowances are being raised by NT$2,000, with a broader 4% pay increase set for next year and professional allowances estimated to jump around 20% — a change that affects roughly NT$16 billion in expenditure. The package aims to bolster public-sector recruitment and retention amid a tight labour market and to help incomes keep pace with living costs, while adding a meaningful new line item to the government's personnel budget.",
+          "title_zh": "Fed沃勒轉鷹，7月升息機率升至五成",
+          "title_en": "Fed's Waller turns hawkish, lifting July hike odds to about 50%",
+          "summary_zh": "Fed理事沃勒釋出鷹派訊號，指若通膨走高則須升息，帶動市場押注7月升息機率升至約五成。此鷹派傾向反映通膨疑慮再起，且可能因中東緊張推升能源價格而加劇。更鷹的Fed將重新定價全球利率預期、壓抑風險性資產並推升美元，對亞洲貨幣與股市資金流動產生連帶影響。對台灣而言，美元走強與利率預期上移，恐牽動新台幣匯率與外資動向，央行的因應與後續美國通膨數據將是關鍵觀察點。",
+          "summary_en": "Federal Reserve Governor Christopher Waller signaled that the Fed would need to raise rates if inflation runs hotter, sending markets to price roughly a 50% chance of a July move. The hawkish tilt reflects renewed inflation concerns, potentially compounded by higher energy prices amid Middle East tensions. A more hawkish Fed reprices global rate expectations, pressures risk assets and lifts the dollar, with knock-on effects for Asian currencies and equity flows.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/5599/9625896",
+          "body_zh": "美國聯準會（Fed）理事沃勒（Christopher Waller）表示，若未來公布的經濟數據顯示通膨仍遠高於2%目標，Fed可能必須在近期內升息。他形容貨幣政策正處於「十字路口」。同時間，市場交易人士認為，美國本月底升息的機率幾乎達「五五波」，而近期油價再度上漲，加上Fed官員釋出鷹派言論，都預示決策官員可能迅速採取行動，以抑制通膨。\n沃勒周一（13日）在紐約商業經濟協會演講時表示，他將高度仰賴即將公布的通膨數據，首先就是預定周二公布的美國消費者物價指數（CPI）。他強調，若通膨數據朝錯誤方向前進，Fed絕不能掉以輕心。\n沃勒說：「光是嚴厲地盯著通膨，期待它在我們凌厲的目光下自行消融，並不是一個選項。」這席話也引起現場經濟學家一陣笑聲。\n他接著表示：「我們已經連續五、六個月看到通膨數據一路『更高、更高、更高、更高』。如果這次再出現更高的數據，我會把它視為訊號，而非只是雜音。」\n在沃勒發表談話之際，美國與伊朗軍事衝突再度升溫，已再次推高油價。西德州原油期貨自13日迄今上漲約11%，逼近每桶80美元價位；布蘭特原油期貨價格13日大漲逾9%，報每桶83.3美元。\n貨幣市場周一的定價顯示，在美國再次對伊朗發動空襲後，交易者提高了對Fed在7月升息1碼的押注，市場隱含的升息機率接近50%，高於當天稍早不到40%的水準。\n對Fed政策預期最敏感的美國2年期公債殖利率一度上升7個基點至4.28%，創下2025年2月以來最高。5年期殖利率也升至4.37%的類似高點；10年期公債殖利率則上漲6個基點至4.62%，創今年5月以來最高水準。\n短天期公債殖利率飆升，反映市場更加偏向預期，隨著全球能源價格彈升及美國經濟展現韌性，聯準會可能必須更早升息，以抑制通膨壓力。\n沃勒表示，「目前仍有合理理由相信，在現行政策設定下，通膨終將回落至2%目標。但我同樣擔心，未來幾周的數據也可能顯示通膨維持在高檔，甚至持續上升，屆時將需要在近期進一步緊縮貨幣政策。」\n尤其令他擔憂的是，近期的通膨報告顯示，價格壓力正逐漸擴散至整體經濟，而不再只是受到去年進口關稅提高或近期能源價格上漲的影響，這可能代表更具系統性的通膨壓力，必須透過更緊縮的貨幣政策來抑制。\n另一方面，華許本周也首度以Fed新主席身份赴國會作證。此前他曾表示，將縮減Fed對未來利率路徑的前瞻指引。\nBMO資本市場公司美國利率策略主管林根表示：「投資人仍聚焦7月29日的聯準會會議，視其為華許可能首次升息的時點。周二公布的CPI數據與華許的談話，勢必將左右市場對升息機率的判斷。」"
+        },
+        {
+          "title_zh": "立院鬆綁電信法，為星鏈落地開大門",
+          "title_en": "Legislature moves to relax telecom rules, opening the door to Starlink",
+          "summary_zh": "立法院交通委員會初審通過《電信管理法》修正草案，大幅放寬外資持股比率與董事長國籍限制，被外界解讀為「星鏈條款」，意在引進SpaceX的低軌衛星星鏈（Starlink）服務來台；電信三雄已作回應。此鬆綁可能重塑台灣衛星通訊版圖與網路韌性，同時帶來競爭與監理層面的新課題。對產業而言，低軌衛星有助偏鄉與備援通訊，並牽動衛星地面設備供應鏈；惟外資鬆綁下的國安與頻譜管理配套，仍是後續立法與審查的攻防焦點。",
+          "summary_en": "The Legislative Yuan's Transportation Committee gave initial approval to amendments to the Telecommunications Management Act, substantially loosening limits on foreign shareholding and the chairman's nationality, in changes widely read as a \"Starlink clause\" meant to bring SpaceX's low-earth-orbit satellite service to Taiwan. The three major telecoms have responded, and the liberalization could reshape Taiwan's satellite-communications landscape and resilience of connectivity, while raising competitive and regulatory questions.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/7307/9625621",
+          "body_zh": "立法院交通委員會昨（13）日初審通過《電信管理法》修正草案，大幅放寬外資持股比率與董事長國籍等規定，外界將此解讀為「星鏈條款」，希望引進全球最大低軌衛星商SpaceX的星鏈（Starlink）服務來台落地，助力台灣能享有SpaceX無遠弗屆的低軌衛星服務。\n台灣積極爭取國際低軌衛星落地服務，惟受限先前的法規規範，目前僅OneWeb已開始提供通訊服務，亞馬遜（Amazon）旗下Amazon Leo將來台，但遲遲未見SpaceX身影。\n業界看好，隨著法規鬆綁，未來若SpaceX落地台灣，提供星鏈服務，將引爆大商機，包括昇達科（3491）、啟碁（6285）、華通（2313）等供應鏈將協助建立更多接收站並提供衛星相關元件，迎來新一波拉貨潮，電信三雄也可望爭取合作，攜手SpaceX提供全民低軌衛星服務。\n此次修法是由立委提案主導，並無行政院版本。現行電信管理法規定，設置使用電信資源的公眾電信網路者，董事長應具中華民國國籍，且外國人直接持股不得超過49%，直接及間接持股合計不得超過60%，星鏈落地就是卡在這項法規。\n立委提案，若經主管機關核准，申請設置使用電信資源的公眾電信網路，董事長可不具中華民國國籍，外國人持股比率也不受前述法規限制。\n昨日修法在立法院交通委員會初審通過，後續還要經立法院三讀。\n此前，傳出星鏈遲遲無法落地台灣，卡在SpaceX對外資持股上限等法規限制「有意見」，傾向公司獨資。如今法規大鬆綁，業界認為有利後續爭取星鏈來台。\n數位發展部表示，過去曾與星鏈接洽，但SpaceX認為台灣商業市場有限，對台灣市場興趣不高。\n不過，政府推動低軌衛星並非為取代既有行動通訊，而是希望在天然災害、海底光纜中斷等緊急情況下，維持基本通訊能力，提升整體通訊韌性。\n數發部長林宜敬指出，依現行制度，衛星通訊業者若申請設置公眾電信網路，須先由國家通訊傳播委員會（NCC）審查核准，取得資格後，再向數發部申請無線電頻率核配，兩機關分別負責不同階段管理工作。\nSpaceX是特斯拉執行長馬斯克創辦的公司，其星鏈服務是全球低軌衛星龍頭。據統計，目前SpaceX已獲得美國聯邦通訊委員會（FCC）批准發射三代衛星，總計超過10萬顆，現在星鏈的衛星寬頻用戶已經超過1,030萬戶。"
+        },
+        {
+          "title_zh": "央行阻貶，新台幣震盪翻升收32.17元",
+          "title_en": "Central bank leans against depreciation as Taiwan dollar closes at 32.17",
+          "summary_zh": "台灣央行進場對抗新台幣走弱，匯價盤中由貶轉升，終場收在32.17元兌1美元。此干預凸顯在資金流動劇烈與美元轉強之際，決策者對匯率穩定的重視。隨外資持續賣超台股、鷹派Fed推升美元，央行面臨在平滑匯率波動的同時、又避免助長單邊貶值預期的兩難壓力。對出口導向的台灣而言，匯率牽動廠商競爭力與外資評價，後續美國通膨與利率走向、以及外資買賣超節奏，將是新台幣強弱的關鍵變數。",
+          "summary_en": "Taiwan's central bank stepped in to counter weakness in the local currency, with the New Taiwan dollar swinging to close higher at 32.17 per U.S. dollar after an intraday reversal. The intervention highlights policymakers' focus on exchange-rate stability amid volatile capital flows and a firmer dollar. With foreign investors persistently selling equities and a hawkish Fed lifting the greenback, the central bank faces ongoing pressure to smooth currency moves without fueling one-way expectations.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6532958",
+          "body_zh": "鉅亨網記者陳于晴 台北\n2026-07-13 20:15\n台北匯市上周五獨步全球休市，今 (13) 日恢復交易後，一度升值逾 1 角，但午後豬羊變色，隨著外資擴大匯出，升幅全數回吐、甚至翻貶，終場在央行出手調節下，驚險以微升 0.8 分、32.17 元作收，台北與元太外匯市場總成交值 28.11 億美元。\n〈台幣〉午後豬羊變色！央行阻貶 驚險翻升收32.17元。(圖：shutterstock)\n新台幣兌美元今天以 32.12 元開盤後，早盤最高來到 32.075 元，但外資午盤過後加大匯出力道，使得匯價最低來到 32.232 元，但出口商伺機進場拋匯，加上央行出手阻貶，終場驚險由貶轉升，以 32.17 元作收。\n觀察主要貨幣今天對美元表現，根據央行統計，美元指數小漲 0.01%，韓元強勢升值 0.89%，人民幣升值 0.18%，日元亦升值 0.15%，新台幣與星幣微幅升值 0.02%。\n台股早盤一度大漲逾 900 點，但受到韓國科技股重挫觸發熔斷陰霾影響，指數一度翻黑，但權王台積電挾著法說行情力守平盤之上，大盤最終驚險翻紅，小漲 25.91 點或 0.06%，收 45,380.52 點。",
+          "published": "2026-07-13"
+        },
+        {
+          "title_zh": "軍公教調薪拍板：明年加薪4%",
+          "title_en": "Military and civil-servant pay raise finalized: 4% next year",
+          "summary_zh": "政府定案軍公教調薪方案，7月起專業加給與主管加給各調增2,000元，明年薪資調升4%，牽動約160億元經費。此調整旨在提振公部門士氣與留才，同時透過家庭所得傳導至消費。對財政而言，調薪增加支出，須與台灣當前稅收超徵的強勁背景權衡。整體而言，公部門加薪具帶動民間調薪的示範效果，有助內需，但也墊高人事固定成本，長期財政負擔與世代公平仍是政策須兼顧的面向。",
+          "summary_en": "Taiwan's government finalized its pay-raise package for military personnel, civil servants and teachers, with professional and supervisory allowances increased by NT$2,000 from July and a 4% salary rise next year, touching roughly NT$16 billion in expenditure. The adjustment aims to bolster public-sector morale and retention while feeding through to household income and consumption. It also adds to fiscal spending, a factor to weigh against Taiwan's strong revenue backdrop.",
           "source_name": "工商時報",
-          "source_url": "https://www.ctee.com.tw/category/財經"
-        },
-        {
-          "title_zh": "前五月實質薪資六年最佳 主計總處：AI 紅利發酵",
-          "title_en": "Real wages in first five months best in six years as AI dividend feeds through",
-          "summary_zh": "主計總處指出，今年前五月實質經常性薪資創六年最佳，並歸因於「AI 紅利」在經濟體中逐步發酵。資訊電子業受 AI 帶動獲利大增，推升相關產業薪資與加班，但官方也坦言，科技聚落以外的多數勞工對這波榮景幾乎無感。數據凸顯勞動市場「雙軌化」加劇，薪資增長集中於 AI 相關製造業。此現象牽動所得分配與消費結構，也成為政策關注焦點；後續須留意 AI 紅利能否外溢至其他產業，以及薪資成長在物價壓力下的實質購買力表現。",
-          "summary_en": "Taiwan's real regular earnings in the first five months of the year hit their best level in six years, according to the Directorate-General of Budget, Accounting and Statistics, which attributes the improvement to the \"AI dividend\" filtering through the economy. Strong AI-driven profitability in the information-electronics sector has lifted pay and overtime in related industries, even as officials acknowledge that most workers outside the tech complex feel little of the boom. The data underscore an increasingly two-speed labour market, with gains concentrated in AI-linked manufacturing.",
-          "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/cate/10846"
-        },
-        {
-          "title_zh": "綠色投融資突破 5 兆元 金管會持續推動轉型金融",
-          "title_en": "Green investment and financing tops NT$5 trillion as FSC pushes transition finance",
-          "summary_zh": "金管會表示，綠色投融資規模已突破 5 兆元，並將持續推動綠色及轉型金融發展。此里程碑反映銀行、資本市場與保險業對永續連結專案的資金動員持續上升，符合主管機關引導金融體系邁向淨零目標的路徑規劃。金管會釋出訊號，將持續完善相關框架與誘因以支持轉型金融，協助高碳排產業取得減碳所需資金，同時深化綠色金融商品市場。對金融業者而言，綠色與轉型金融既是政策方向，也是新的業務與資產配置機會，惟須兼顧氣候風險評估與資訊揭露品質，避免「漂綠」爭議。",
-          "summary_en": "The Financial Supervisory Commission reports that the scale of green investment and financing has surpassed NT$5 trillion, as it continues to advance green and transition finance in Taiwan. The milestone reflects rising capital mobilisation toward sustainability-linked projects across banking, capital markets and insurance, in line with the regulator's roadmap to steer the financial system toward net-zero goals. The FSC signalled it will keep developing frameworks and incentives to support transition finance, helping carbon-intensive industries fund their decarbonisation while deepening the market for green financial products.",
-          "source_name": "金管會",
-          "source_url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2",
-          "published": "2026-07-06"
+          "source_url": "https://www.ctee.com.tw/news/20260702700046-430101",
+          "body_zh": "在公務員缺口議題持續擴大、勞工基本工資連年調漲下，行政院會2日將拍板明年度軍公教調薪方案，預計調幅4％，專業與主管加給則大幅調升20％。\n行政院公布2日院會議程中，將由人事總處報告明年度軍公教員工待遇提升方案，院會上同步討論軍士官兵相關條例修正案。\n據悉，人總已在數周前完成軍公教員工待遇審議委員會，並在1日內部會議彙整方案後送至行政院，將於2日行政院會拍板。軍公教調薪幅度仍定為4％，不過專業及主管加級調幅達20％。\n人總人事長蘇俊榮3月時曾稱，將於6月軍公教員工待遇審議委員會討論明年是否調薪、「專業加給表調整」等議題，會透過近年財經指標與相關資料來研議。他強調爭取今年就幫公務員加薪，是最重要任務。而專業加給表涉及數十萬公務員專長、調整牽一髮動全身，會有大幅調整，以緩解公務員缺口。\n據悉，專業加給表公布之後，相關調整7月就生效。知情者說，行政院將在今年度總預算審議完成後，辦理這筆經費的追加預算。\n另，因近三年CPI累增約5.16％，行政院長卓榮泰5月時曾說，明年軍公教調薪幅度或可以期待比過往3％～4％幅度高一些，但也坦言部分團體呼聲一次加薪幅度10％，對經濟結構衝擊較大，難以一次調這麼高。\n軍公教2011年～2025年共五次調薪，2011、2018、2025年為3％，2022、2024年為4％。而外界關注本次調薪能否突破3％～4％的天花板，如今按人總相關規劃，將透過專業與主管加給大幅提升方式來補足軍公教的期待，讓付出更多勞心力的軍公教享受到更好的待遇調整，令軍公教能在今年就有感加薪。\n財政狀況方面，據悉，軍公教待遇調升1％，涉及中央部分所需的經費約為40％。因此，本次調整4％，約涉及中央經費約160億元。加上專業加給調整部分，整體預算籌措規模將更大。此外，也有中央補助地方相關議題要考量，在新版《財劃法》後中央地方財源大幅變動，中央是否補助地方，後續還有相關攻防。"
         }
       ]
     },
@@ -228,36 +305,44 @@
       "section_zh": "國際財經",
       "items": [
         {
-          "title_zh": "美銀揭「四大」逆向投資機會",
-          "title_en": "BofA flags four contrarian trades against the market's \"four consensus\" views",
-          "summary_zh": "美國銀行首席投資策略師 Michael Hartnett 警告，市場對美國經濟、聯準會、AI 資本支出及期中選舉形成的「四大共識」，反而可能成為最大風險。他提出四項逆勢交易策略，包括布局美債、美元、黃金，並因應 AI 資本支出可能下修。此觀點呼籲投資人反向操作過度擁擠的共識部位，提醒最大意外往往出現在市場最有信心之處。對資產配置而言，適度納入避險資產、留意 AI 投資動能與聯準會政策轉向的可能性，有助在共識反轉時降低組合波動。",
-          "summary_en": "Bank of America chief investment strategist Michael Hartnett warns that the market's \"four big consensus\" positions — on the US economy, the Federal Reserve, AI capital spending and the midterm elections — could themselves become the biggest risks. He lays out four contrarian trades in response, including building positions in US Treasuries, the US dollar and gold, and preparing for a downshift in AI capex. The call urges investors to fade crowded assumptions, cautioning that the biggest surprises tend to come from where the consensus is most confident.",
+          "title_zh": "川普恢復封鎖伊朗、擬收荷姆茲「保護費」，油價飆近10%",
+          "title_en": "Trump reimposes Iran blockade and floats Hormuz 'protection fee'; oil jumps ~10%",
+          "summary_zh": "川普通知國會伊朗戰事重啟，宣布美軍將恢復對伊朗的海上封鎖，並擬對通過荷姆茲海峽的貨物課徵20%補償費。市場擔憂這條關鍵咽喉恐難回復正常，國際油價應聲飆漲近10%。此升溫恐衝擊大宗商品、股市與債市，並在央行政策路徑轉趨不明之際，重新推升全球市場的地緣政治風險溢價。對台灣而言，油價與運價上揚將牽動輸入性通膨與航運、塑化等產業，能源供應與運輸安全的連鎖效應值得持續追蹤。",
+          "summary_en": "President Trump notified Congress that the war with Iran had reignited and said the U.S. would restart a naval blockade of Iran, while proposing a 20% compensation levy on cargo transiting the Strait of Hormuz. International oil prices surged nearly 10% on fears the vital chokepoint may not return to normal. The escalation threatens to ripple across commodities, equities and bonds, and revives geopolitical risk premia across global markets just as central-bank policy paths turn uncertain.",
           "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/cat/headline"
+          "source_url": "https://news.cnyes.com/news/id/6533128",
+          "body_zh": "鉅亨網編譯段智恆\n2026-07-13 23:30\n美國總統川普周一 (13 日) 宣布，美國將恢復封鎖通過荷姆茲海峽的伊朗船隻，並要求所有其他經由這條水道運輸的貨物，向美方支付相當於貨值 20% 的補償，以支應美國維護航運安全所需成本。相關言論隨即推升國際油價，布蘭特原油一度再度觸及每桶 80 美元。\n川普真的開價了！荷姆茲海峽過境貨物要收20%補償費(圖：REUTERS/TPG)\n川普在社群媒體發文表示，美國從現在起將被稱為「荷姆茲海峽守護者」，但基於公平原則，美方必須獲得補償，費率為所有經海峽運輸貨物的 20%，用於支付美國在這個高度動盪地區提供安全與保障所需的一切成本。\n他表示，相關制度與執行機制將立即展開。不過，白宮尚未說明 20% 費用將如何計算與徵收，也未交代是否已事先與波斯灣地區的美國盟友溝通。\n川普最新主張進一步加劇華府與德黑蘭對荷姆茲海峽是否開放的爭議。伊朗宣稱已關閉海峽，美方則堅稱航道仍對合法通行船隻開放。\n消息傳出後，國際油價擴大漲幅，布蘭特原油與美國西德州中級原油 (WTI) 一度均上漲約 5%，其中布蘭特原油再度觸及每桶 80 美元。\n荷姆茲海峽是全球最重要的能源運輸航道之一，在美國與以色列 2 月底對伊朗發動攻擊前，全球約五分之一石油運輸經過此地。伊朗在戰爭期間限制海峽通行，曾推高全球能源價格，也使川普政府面臨國內政治壓力。\n美伊先前達成的臨時和平協議，原本規定在 60 天談判期間維持商業船隻免費通行。其他依賴荷姆茲海峽的國家與產業也一直主張，這條國際航道不應徵收通行費或額外海事服務費。\n川普稍早則表示，過去其他國家靠荷姆茲海峽賺取大量利益，美國卻長期免費提供安全保障，如今美方不應再無償承擔成本。他強調，美國只是要求補償，因為美軍人員正為維持航運安全承擔風險。\n不過，川普的 20% 收費構想可能引發國際法爭議。依國際法，一般而言，船隻有權通過用於國際航行的海域，沿岸國家不得僅因船隻通行而收費，但若向個別船隻提供特定服務，則可能收取相關費用。川普方案是否符合這項例外，目前仍不清楚。",
+          "published": "2026-07-13"
         },
         {
-          "title_zh": "大摩警告美股夏季行情恐提前結束",
-          "title_en": "Morgan Stanley warns summer rally may end early on \"three big risks\"",
-          "summary_zh": "摩根士丹利警告，美股夏季行情恐因三大風險提前降溫，包括伊朗衝突升溫、聯準會可能升息，以及 AI 資本支出放緩。分析師指出，若科技巨頭在第二季財報透露縮減 AI 投資，加上市場開始質疑 AI 投資報酬率，恐對科技七巨頭與美股帶來新一波衝擊。此份報告呼應華爾街要求在高估值下保持謹慎的聲音。對投資人而言，本周登場的美股財報季將是檢驗 AI 資本支出動能與獲利預期的關鍵，須留意科技權值股法說對後市風向的牽引。",
-          "summary_en": "Morgan Stanley cautions that the US market's summer rally could cool prematurely due to three key risks: escalating conflict with Iran, the possibility of a Fed rate hike, and a slowdown in AI capital spending. Analysts warn that if tech giants signal a pullback in AI investment during second-quarter earnings, and the market begins to question AI's return on investment, it could deal a fresh blow to the \"Magnificent Seven\" and US equities more broadly. The note adds to a chorus of Wall Street voices urging caution at elevated valuations.",
+          "title_zh": "SK海力士ADR暴跌逾9%，費半下殺近5%",
+          "title_en": "SK Hynix ADR crashes over 9%, dragging the SOX down nearly 5%",
+          "summary_zh": "南韓記憶體大廠SK海力士在首爾股市重挫逾15%，創近18年最大單日跌幅，其ADR跌逾9%，費城半導體指數也下殺近5%。這波重挫凸顯美韓科技股波動連動性正加速，記憶體族群的疑慮擴散至全球晶片產業鏈。在風光的美國掛牌後隨即急轉直下，反映AI與記憶體交易的市場情緒轉趨脆弱。對台廠而言，記憶體與矽晶圓族群易受連動影響，須留意超級循環題材是否過熱，以及庫存與報價的實質變化，避免情緒性追高殺低。",
+          "summary_en": "South Korean memory giant SK Hynix plunged more than 15% in Seoul, its biggest single-day drop in nearly 18 years, with its ADR down over 9% and the Philadelphia Semiconductor Index off almost 5%. The rout underscores how U.S.–Korea tech-stock volatility is increasingly synchronized, as memory-sector jitters spread across the global chip complex. The sharp reversal, after a blockbuster U.S. debut, signals fragile sentiment in the AI-and-memory trade.",
           "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/cat/headline"
+          "source_url": "https://news.cnyes.com/news/id/6533196",
+          "body_zh": "鉅亨網編譯羅昀玫\n2026-07-14 06:40\n南韓記憶體大廠 SK 海力士 (SK Hynix) (000660-KR) 週一 (13 日) 在南韓股市重挫逾 15%，創下近 18 年來最大單日跌幅，拖累全球半導體類股同步走弱，費城半導體指數 (SOX-US) 下殺近 5%，SK 海力士 ADR (SKHY-US) 暴跌逾 9%。\nSK海力士ADR暴跌逾9% 費半下殺近5% 美韓科技股波動「正加速連動」(圖：shutterstock)\n美股週一收盤，AI 晶片股殺氣騰騰，美光 (MU-US) 重挫 4.32%、Sandisk (SNDK-US) 慘跌 12.63%。輝達 (NVDA-US) 與博通 (AVGO-US) 均跌幅超 3%，\nSK 海力士上週五才剛完成美國 ADR 掛牌，上市首日股價大漲 12.8%，但市場樂觀情緒迅速降溫。週一回到南韓市場後，股價暴跌逾 15%，創 18 年來最大單日跌幅；其美國 ADR (SKHY-US) 同步崩跌逾 9%。\n《Marketwatch》報導指出，分析師認為，此次賣壓除了受到中東地緣政治緊張局勢升溫影響外，也反映市場對 SK 海力士第二季財報預期開始修正。\nD.A. Davidson 董事總經理 Gil Luria 表示，近來南韓股市波動加劇，主因散戶交易活躍，加上三星電子 (005930-KR) 與 SK 海力士兩大權值股皆屬記憶體產業，使市場波動更加明顯。\n他指出，隨著 SK 海力士 ADR 在美上市，美國與南韓記憶體股的連動性將進一步提高，美國投資人未來可能每天都會直接承受南韓股市的波動。\nCoin Bureau 創辦人 Nic Puckrin 表示，美國與南韓股市因 AI 與記憶體產業而變得「前所未有地緊密連動」，兩地市場正相互放大彼此的波動，投資人應留意這種循環效應帶來的風險。\n他指出，韓國投資證券 (Korea Investment & Securities) 日前發布報告，預估 SK 海力士第二季營業利益可能低於市場共識預期，雖然仍可望維持成長，但已足以引發市場大幅修正。\nPuckrin 認為，這反映市場對 AI 概念股的獲利期待已相當高，只要企業財報略低於預期，就可能引發雙位數跌幅，尤其南韓股市散戶比重較高，更容易放大市場情緒。\n另一方面，Zacks Investment Management 市場策略師 Brian Mulberry 指出，SK 海力士 ADR 與近期 SpaceX IPO 吸引大量市場資金，導致其他股票流動性遭到分流。\n當投資人完成資金配置後，市場成交量可能降低，進一步放大股價波動，而在中東地緣政治風險升溫下，這種波動效應又被進一步擴大。",
+          "published": "2026-07-14"
         },
         {
-          "title_zh": "三星龍仁首座晶圓廠投產提前一年",
-          "title_en": "Samsung pulls Yongin fab start-up forward a year to chase AI chips",
-          "summary_zh": "三星電子宣布，將南韓龍仁半導體國家產業園區首座晶圓廠量產時程提前至 2029 年，較市場預期至少提前一年。三星配合南韓政府加速供電、供水等基礎建設，全力搶攻 AI 晶片需求。龍仁園區未來將建置六座晶圓廠，成為三星下一世代半導體製造核心。此舉凸顯三星在先進製程與 AI 相關產能上，加大力度追趕台積電。對供應鏈而言，龍仁擴產進度、良率與客戶導入情況將牽動全球晶圓代工競局，也影響記憶體與先進封裝的產能配置，值得台廠密切關注。",
-          "summary_en": "Samsung Electronics has announced it will bring forward mass production at the first fab in South Korea's Yongin semiconductor national industrial complex to 2029, at least a year earlier than the market expected. Working with the Korean government's accelerated build-out of power and water infrastructure, Samsung is going all-out to capture surging AI-chip demand. The Yongin complex will eventually house six fabs and become the core of Samsung's next-generation semiconductor manufacturing, intensifying the capacity race against TSMC in advanced-node and AI-related production.",
+          "title_zh": "黃金現貨摜破4,000美元，美國恢復封鎖伊朗",
+          "title_en": "Gold spot breaks below $4,000 as U.S. reimposes Iran blockade",
+          "summary_zh": "在美伊再度交火、川普推動恢復海上封鎖之際，黃金現貨跌破每盎司4,000美元的關鍵價位。金價自歷史高點回落呈現矛盾的避險反應——即便地緣政治緊張升溫，美元走強與利率預期變化仍壓抑金價。此走勢凸顯在危機時刻，黃金作為避險工具的角色，可能被匯率與利率動態所複雜化。對資產配置而言，避險資產並非單向反應地緣風險，須同時衡量美元與實質利率，方能理解貴金屬短線的震盪邏輯。",
+          "summary_en": "Spot gold tumbled through the key US$4,000-an-ounce level after the U.S. and Iran traded fresh attacks and Trump moved to reimpose a naval blockade. The pullback from record highs reflects a paradoxical safe-haven reaction, as a stronger dollar and shifting rate expectations weighed on bullion even amid rising geopolitical tension. The move highlights how gold's role as a hedge can be complicated by currency and interest-rate dynamics during crises.",
           "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/cat/headline"
+          "source_url": "https://news.cnyes.com/news/id/6533233",
+          "body_zh": "鉅亨網編譯余曉惠\n2026-07-14 06:57\n黃金周一 (13 日) 下挫 3%，美國總統川普宣布重啟對伊朗的海上封鎖之後，油價應聲飆漲，重燃通膨升溫疑慮和升息預期，進而打壓不孳息的黃金。\n〈貴金屬盤後〉川普恢復對伊朗海上封鎖 黃金現貨應聲摜破4000美元大關 (圖:Shutterstock)\nForex.com 市場分析師 Fawad Razaqzada 說：「油價因為中東衝突而大漲，而且還有聯準會 (Fed) 可能緊縮政策的因素存在。這對黃金這類不孳息的資產來說是壞消息。如果油價持續攀高，金價可能繼續下跌，一開始先跌破 3800 美元，如果賣壓加速，還有可能跌到 3500 美元。」\n川普周一表示美國將恢復對伊朗的海上封鎖，且將對所有通過荷姆茲海峽的貨物收取 20%「通瓶費」，以回擊伊朗封鎖海峽的說法。油價應聲大漲 5%。\n高油價通常會導致能源價格上漲，進而推升整個經濟體系中的運輸費用，進而推升通膨，導致央行必須維持更長一段時間的高利率，甚至必須進一步升息，以平抑物價上漲壓力。\n芝商所 (CME) 的 FedWatch 工具顯示，交易員目前預測 9 月升息的機率約為 75%。\nFed 主席華許 (Kevin Warsh) 預定周二首度出席國會聽證會，投資人將檢視他對利率展望的任何線索。\n美國政府本周預定發布關鍵數據，包括消費者物價指數 (CPI)、生產者價格指數 (PPI)、零售銷售和初領失業救濟金人數。",
+          "published": "2026-07-14"
         },
         {
-          "title_zh": "SK 海力士示警：2027 年全球記憶體恐陷史上最嚴重缺貨",
-          "title_en": "SK Hynix warns of worst-ever global memory shortage by 2027",
-          "summary_zh": "SK 海力士示警，隨 AI 需求緊繃供給，全球恐於 2027 年面臨史上最嚴重的記憶體缺貨。此警告強化記憶體廠的結構性多頭論述，意味 DRAM 與高頻寬記憶體（HBM）的供需吃緊，可能延續至當前循環之後。對台灣供應鏈與整體半導體族群而言，此展望代表報價續強與訂單維持高檔，但也引發市場對三星、SK 海力士及中國新進者新增產能能多快填補缺口的疑問。後續 HBM 擴產節奏、先進製程良率與 AI 需求持續性，將是驗證缺貨論述的觀察重點。",
-          "summary_en": "SK Hynix has cautioned that the world could face its most severe memory shortage on record by 2027, as AI-driven demand strains supply. The warning reinforces a bullish structural narrative for memory makers, suggesting that tight conditions in DRAM and high-bandwidth memory could persist well beyond the current cycle. For Taiwanese suppliers and the broader semiconductor complex, the outlook implies continued pricing power and elevated orders — but also raises questions about how quickly new capacity from the likes of Samsung, SK Hynix and Chinese entrants can close the gap.",
+          "title_zh": "中國GDP首破20兆美元，與美國差距反擴大",
+          "title_en": "China's GDP tops US$20 trillion, yet the gap with the U.S. widens",
+          "summary_zh": "中國GDP首度突破20兆美元，弔詭的是與美國的差距非但沒縮小、反而擴大。這種分歧反映匯率效應、成長結構差異，以及中國「出口強勁、內需疲弱」的雙速經濟特徵。里程碑與差距並存，凸顯關於中國成長模式及其相對美國走勢的長期核心辯論，並對全球貿易與投資布局帶來影響。對投資人而言，中國規模龐大但成長品質與內需動能存疑，資金在中美之間的配置，須權衡估值、政策與結構性風險，而非僅看總量數字。",
+          "summary_en": "China's GDP surpassed US$20 trillion for the first time, but paradoxically its gap with the United States has widened rather than narrowed. The divergence reflects currency effects, differing growth composition and a two-speed Chinese economy marked by robust exports but tepid domestic demand. The milestone-and-gap combination frames a key long-term debate over China's growth model and its trajectory relative to the U.S., with implications for global trade and investment.",
           "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/cat/headline"
+          "source_url": "https://news.cnyes.com/news/id/6532154",
+          "body_zh": "2026-07-13 12:43\n國際貨幣基金組織（IMF）最新預測，AI 正加速重塑全球經濟版圖。美國受惠 AI 與商業航太熱潮，2026 年 GDP 將達 32.38 兆美元、續居全球第一；中國 GDP 雖可望首度突破 20 兆美元，但占美國經濟規模比重仍由 65% 降至 64%，較 2021 年的 77% 持續縮水。\n中國GDP首度衝破20兆美元 為何與美國差距反而擴大？(圖:shutterstock)\n全球經濟發展呈現強者恆強的態勢。在歐洲，德國以 5.45 兆美元的 GDP 持續領先日本，而日本經濟則持續停滯，GDP 僅剩 4.38 兆美元，面臨英國以 4.26 兆美元 GDP 步步進逼的挑戰，全球經濟第四名的寶座恐將易主。\n另一方面，印度儘管擁有龐大人口，但在 AI 時代面臨人口紅利難以轉化的困境，國際排名下滑至世界第六，表現不如預期。\n反觀以韓國為代表的科技先行國，正因掌握 AI 產業紅利而展現爆發式成長，成功守住世界第 15 大經濟體地位，未來人均 GDP 預期將隨 AI 產值提升而穩健上揚。\n分析指出，隨著自動化與 AI 機器人的普及，發展中國家過去依賴廉價勞力的優勢將趨於歸零，全球南北經濟差距恐將進一步擴大。\n在這場產業重組的競賽中，能否精準抓住 AI 技術帶來的轉型機會，已成為各國維持競爭力並防止衰落的關鍵。",
+          "published": "2026-07-13"
         }
       ]
     },
@@ -266,76 +351,85 @@
       "section_zh": "國際",
       "items": [
         {
-          "title_zh": "美伊在荷姆茲海峽戰火升級（2026-07-13）",
-          "title_en": "U.S. and Iran Ramp Up Attacks in Fight Over Strait of Hormuz (2026-07-13)",
-          "summary_zh": "美方周日對荷姆茲海峽附近的伊朗目標發動新一輪打擊，讓周末的交火進一步升級，衝突威脅全球最重要的石油咽喉。戰事再起加深市場對能源供應與全球通膨的疑慮，油價與地緣風險成為本周焦點。",
-          "summary_en": "The U.S. intensified a weekend of exchanges by launching a new round of strikes on Iranian targets near the Strait of Hormuz on Sunday, escalating a conflict that threatens the world's most important oil chokepoint. The renewed fighting stokes fears over energy supply and global inflation.",
+          "title_zh": "油價創2020年來最大漲幅，市場押注荷姆茲難回正常",
+          "title_en": "Oil Surges Most Since 2020 on Bet Hormuz Won't Return to Normal",
+          "summary_zh": "國際原油飆漲近10%，為2020年以來最大單日漲幅，肇因川普表示將恢復對伊朗的封鎖。此走勢反映市場認定關鍵石油咽喉荷姆茲海峽恐持續受阻，使能源價格續含地緣政治風險溢價。",
+          "summary_en": "International crude climbed nearly 10%, its biggest jump since 2020, after President Trump said he would reimpose the U.S. blockade of Iran. The move reflects market conviction that the Strait of Hormuz, a critical oil chokepoint, may stay disrupted, keeping a fresh geopolitical risk premium in energy prices.",
           "source_name": "WSJ",
-          "source_url": "https://www.wsj.com/world/middle-east/u-s-launches-new-strikes-on-iran-after-hormuz-tensions-escalate-d6903c7f",
-          "published": "2026-07-13"
+          "source_url": "https://www.wsj.com/finance/commodities-futures/oil-surges-most-since-2020-reflecting-bet-that-strait-wont-go-back-to-normal-9aa1639f",
+          "published": "2026-07-14"
         },
         {
-          "title_zh": "銀行財報週 Citigroup 最受矚目（2026-07-13）",
-          "title_en": "Why Citigroup Is the One to Watch as Big Banks Report Earnings (2026-07-13)",
-          "summary_zh": "美國五大銀行同日公布財報，花旗（Citigroup）格外受關注。在大型銀行中，花旗預料將在某項關鍵指標上展現最大幅度改善，但距離自身設定的績效目標仍有一段路要走。其財報將是本周檢視銀行類股體質的重要風向球，牽動投資人對美股財報季開局的看法。",
-          "summary_en": "As five big U.S. banks report earnings on the same day, Citigroup stands out. Among the largest lenders, Citi is expected to show the greatest improvement by one important measure — though it still has a long way to go to reach its own performance target. Its results will be a key read on the sector this week.",
-          "source_name": "MarketWatch",
-          "source_url": "https://www.marketwatch.com/story/as-five-big-u-s-banks-report-earnings-on-the-same-day-citigroup-is-the-one-to-watch-683c3707?mod=mw_rss_topstories",
-          "published": "2026-07-13"
-        },
-        {
-          "title_zh": "美股多頭行情愈來愈靠 AI、而非油價（2026-07-12）",
-          "title_en": "The Stock-Market Rally Now Hinges More on AI Than Oil (2026-07-12)",
-          "summary_zh": "隨財報季開跑，AI 投資仍是美股焦點。分析指出，即便中東情勢緊張，這波行情的走向如今更取決於 AI 支出的軌跡，而非油價波動。這使科技權值股的財報結果格外受矚目，市場關注 AI 資本支出動能能否延續，成為左右美股後市的關鍵變數。",
-          "summary_en": "As earnings season kicks off, AI investment remains front and center for the U.S. stock market. Analysis suggests the rally's fate now depends more on the trajectory of AI spending than on swings in oil prices, even amid Middle East tensions — putting tech-heavyweight results under an especially bright spotlight.",
-          "source_name": "MarketWatch",
-          "source_url": "https://www.marketwatch.com/story/the-stock-market-rally-now-hinges-more-on-ai-than-oil-1292260a?mod=mw_rss_topstories",
-          "published": "2026-07-12"
-        },
-        {
-          "title_zh": "高層：AI 需求「近乎無限」即便企業轉向「價值極大化」（2026-07-12）",
-          "title_en": "'Almost Unlimited': Execs Say AI Demand Stays Strong Amid 'Valuemaxxing' (2026-07-12)",
-          "summary_zh": "在 AI 需求與支出的爭論中，AI 相關晶片股走勢震盪。不過多位高層形容需求「近乎無限」，即便企業開始轉向「valuemaxxing」、力求從 AI 投資中榨出更多價值。這番說法反駁了 AI 資本支出熱潮降溫的疑慮，替市場對 AI 需求前景注入信心，也呼應本周科技財報的觀察重點。",
-          "summary_en": "AI-related chip stocks have been volatile amid a debate over AI demand and spending. Yet executives describe demand as \"almost unlimited,\" even as enterprises shift toward \"valuemaxxing\" — squeezing more value from their AI investments. The comments push back against fears that the AI capex boom is cooling.",
-          "source_name": "CNBC",
-          "source_url": "https://www.cnbc.com/2026/07/12/ai-demand-chips-data-centers-stock-volatility.html",
-          "published": "2026-07-12"
-        },
-        {
-          "title_zh": "調查：多數美國勞工支持設 AI 主權財富基金（2026-07-12）",
-          "title_en": "Majority of U.S. Workers Support an AI Wealth Fund as Tech Layoffs Surge (2026-07-12)",
-          "summary_zh": "隨科技業裁員增加，最新調查顯示，多數美國受僱者希望成立 AI 主權財富基金，以促使企業承擔更多責任。此結果反映勞工對自動化與工作保障的焦慮升高，也讓「AI 帶來的利得應如何分配」的辯論再度升溫，成為政策與企業治理的新議題。",
-          "summary_en": "A majority of U.S. employees now want an AI sovereign wealth fund to hold corporations more accountable, according to a recent survey, as tech layoffs rise. The finding reflects growing worker anxiety over automation and job security, and adds to the debate over how the gains from AI should be shared.",
-          "source_name": "CNBC",
-          "source_url": "https://www.cnbc.com/2026/07/12/majority-of-us-workers-support-ai-fund-amid-tech-layoffs-survey.html",
-          "published": "2026-07-12"
-        },
-        {
-          "title_zh": "蘋果控告 OpenAI 後 馬斯克與奧特曼再槓上（2026-07-13）",
-          "title_en": "Musk and Altman Spar on X After Apple Files OpenAI Lawsuit (2026-07-13)",
-          "summary_zh": "蘋果對 OpenAI 提告後，馬斯克與 OpenAI 執行長奧特曼在 X 上公開交鋒。奧特曼稱，馬斯克在 OpenAI 本周稍早發布新模型後又對他念念不忘。這場口水戰再度點燃 AI 產業兩位要角之間的長期恩怨，也反映 AI 模型與人才競逐的白熱化。",
-          "summary_en": "Elon Musk and Sam Altman clashed publicly on X after Apple filed a lawsuit against OpenAI. Altman insisted that Musk was again obsessed with him following an OpenAI model release earlier in the week, reigniting a long-running feud between two of the most prominent figures in the AI industry.",
-          "source_name": "CNBC",
-          "source_url": "https://www.cnbc.com/2026/07/12/elon-musk-and-sam-altman-spar-.html",
-          "published": "2026-07-13"
-        },
-        {
-          "title_zh": "本季財報預估出現不尋常型態（2026-07-12）",
-          "title_en": "Earnings Estimates Are Following an Unusual Pattern This Time (2026-07-12)",
-          "summary_zh": "分析師通常在財報前數月調降預估，但這一輪受能源與科技類股帶動，第二季財報前的獲利預期反而上修。這種罕見的情況墊高了企業要打動投資人所需跨越的門檻，若實際表現未能超越已被拉高的預期，股價恐承壓，是本周財報季須留意的風險。",
-          "summary_en": "Analysts typically lower their estimates in the months before earnings. But this cycle, thanks to the energy and technology sectors, expectations have actually climbed heading into second-quarter results — an unusual setup that raises the bar companies must clear to impress investors.",
-          "source_name": "MarketWatch",
-          "source_url": "https://www.marketwatch.com/story/earnings-estimates-have-been-following-an-unusual-pattern-this-time-around-fbebfb62?mod=mw_rss_topstories",
-          "published": "2026-07-12"
-        },
-        {
-          "title_zh": "共和黨重量級參議員葛拉漢辭世 享壽 71 歲（2026-07-12）",
-          "title_en": "Lindsey Graham, Influential GOP Senator, Dies at 71 (2026-07-12)",
-          "summary_zh": "具影響力的南卡羅來納州共和黨參議員、外交鷹派代表人物葛拉漢（Lindsey Graham），因突發疾病辭世，享壽 71 歲，稍早才結束烏克蘭行程。身為川普的重要盟友，他的離世讓美國外交與國防政策失去一個關鍵聲音，各界表達哀悼。",
-          "summary_en": "Lindsey Graham, the influential Republican senator from South Carolina and a prominent foreign-policy hawk, has died at 71 after a brief illness, having just returned from a trip to Ukraine. A key Trump ally, his death removes a significant voice on U.S. foreign and defense policy.",
+          "title_zh": "資料中心建商競相出售數十億美元股權",
+          "title_en": "Data-Center Builders Are Racing to Offload Stakes Worth Billions",
+          "summary_zh": "運算需求不減，投資人積極尋求持有支撐AI的實體基礎設施，資料中心建商正競相出售價值數十億美元的股權。此趨勢顯示AI熱潮正催生一個新市場，聚焦於支撐大規模運算的建物、電力等硬資產。",
+          "summary_en": "Unrelenting demand for computing power has investors hunting for chances to own the physical infrastructure behind AI, and data-center builders are racing to sell stakes worth billions of dollars. The trend shows how the AI boom is spawning a new market in the hard assets, from buildings to power, that underpin large-scale computing.",
           "source_name": "WSJ",
-          "source_url": "https://www.wsj.com/articles/lindsey-graham-influential-gop-senator-dies-at-71-ba0b0b8f",
-          "published": "2026-07-12"
+          "source_url": "https://www.wsj.com/finance/investing/data-center-builders-are-racing-to-offload-stakes-worth-billions-1a7d92f8",
+          "published": "2026-07-14"
+        },
+        {
+          "title_zh": "油價漲逾2%，中東緊張與荷姆茲收費疑慮升高供給憂慮",
+          "title_en": "Oil gains over 2% as Mideast tensions and Hormuz toll prospects raise supply fears",
+          "summary_zh": "川普宣布擬對荷姆茲海峽航運收費，加劇中東緊張，週二油價上揚。荷姆茲過境收費前景加上衝突再起，引發市場對這條關鍵水道供給的擔憂，在地緣不確定下油價維持強勢。",
+          "summary_en": "Oil prices rose on Tuesday after President Trump announced plans to impose shipping fees in the Strait of Hormuz, adding to Middle East tensions. The prospect of a Hormuz transit toll, alongside renewed conflict, has stoked fears about supply through the vital waterway, keeping crude bid amid geopolitical uncertainty.",
+          "source_name": "CNBC",
+          "source_url": "https://www.cnbc.com/2026/07/14/oil-prices-today-brent-wti-hormuz-trump-toll-iran.html",
+          "published": "2026-07-14"
+        },
+        {
+          "title_zh": "新加坡Q2經濟成長5.7%，優於預期",
+          "title_en": "Singapore's economy expands 5.7% in Q2, beating expectations",
+          "summary_zh": "新加坡第2季經濟成長5.7%，高於預期的5.5%，但低於第1季修正後的6.3%。優於預測的數據顯示，即便伊朗戰事與全球不確定性形成壓力，這個仰賴貿易的城市國家仍展現韌性，為下半年亞洲成長動能提供參考。",
+          "summary_en": "Singapore's economy grew 5.7% in the second quarter, above the 5.5% expected but slower than the revised 6.3% in the first quarter. The better-than-forecast print suggests resilience in the trade-dependent city-state even as the Iran war and global uncertainty weigh, offering a read on Asian growth momentum heading into the second half.",
+          "source_name": "CNBC",
+          "source_url": "https://www.cnbc.com/2026/07/14/singapore-gdp-iran-war-impact-takes-hold.html",
+          "published": "2026-07-14"
+        },
+        {
+          "title_zh": "日本債市沉寂數十年後重回焦點",
+          "title_en": "Japan's bond market is back in play after decades in the wilderness",
+          "summary_zh": "在政策正常化與市場對東京支出計畫的憂慮下，日本公債近期遭拋售，但專家認為日本公債值得投資人重新檢視。沉寂數十年後，殖利率走升正吸引資金重新關注日本龐大的債市，對全球固定收益配置與日圓走勢均具意涵。",
+          "summary_en": "Japanese government bonds have been selling off amid policy normalization and worries over Tokyo's spending plans, but experts say JGBs deserve another look from investors. After decades on the sidelines, rising yields are drawing renewed attention to Japan's vast bond market, with implications for global fixed-income allocation and the yen.",
+          "source_name": "CNBC",
+          "source_url": "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html",
+          "published": "2026-07-14"
+        },
+        {
+          "title_zh": "印度6月通膨升至4.38%，高於預期",
+          "title_en": "India's inflation accelerates to 4.38% in June, exceeding forecasts",
+          "summary_zh": "受伊朗戰事與降雨不足推升食品與能源價格影響，印度6月通膨連續第八個月上升至4.38%，高於預期。持續的上行壓力使央行政策路徑更為複雜，也凸顯中東衝突正透過能源與食品傳導至亞洲各國通膨。",
+          "summary_en": "India's inflation rose for an eighth straight month to 4.38% in June, beating forecasts, as food and energy prices climbed on the back of the Iran war and deficient rainfall. The persistent upside pressure complicates the central bank's policy path and highlights how the Middle East conflict is feeding through to inflation across Asian economies.",
+          "source_name": "CNBC",
+          "source_url": "https://www.cnbc.com/2026/07/13/india-june-inflation-oil-food-iran-war.html",
+          "published": "2026-07-13"
+        },
+        {
+          "title_zh": "Sandisk股價重挫，部分分析師卻更看多",
+          "title_en": "Sandisk's stock is plunging, but some analysts are getting even more bullish",
+          "summary_zh": "儘管Sandisk股價下滑，部分分析師轉趨樂觀，某新目標價隱含較現價近85%的上漲空間。股價與分析師信心的背離，凸顯即便記憶體族群短線波動，華爾街仍有一派強烈看好這家記憶儲存廠的前景。",
+          "summary_en": "Even as Sandisk shares slide, some analysts are turning more optimistic, with one new price target implying nearly 85% upside from current levels. The split between price action and analyst conviction underscores how strongly some on Wall Street believe in the memory-storage maker's prospects despite near-term volatility in the memory complex.",
+          "source_name": "MarketWatch",
+          "source_url": "https://www.marketwatch.com/story/sandisks-stock-is-plunging-but-some-analysts-are-getting-even-more-bullish-cba3472f",
+          "published": "2026-07-14"
+        },
+        {
+          "title_zh": "投資人借貸買股激增，成為股市警訊",
+          "title_en": "Why a borrowing binge by investors is a warning sign for the stock market",
+          "summary_zh": "投資人愈來愈傾向借錢買股、以融資放大報酬，反映市場的貪婪情緒。不斷堆高的融資餘額令部分華爾街人士憂心，因為歷史上融資債務攀升往往是警訊，一旦情緒反轉引發強制賣壓，恐放大跌勢與損失。",
+          "summary_en": "Investors are increasingly borrowing to buy stocks, using margin debt to amplify returns, a reflection of greed in the market. The growing pile of borrowed money has some on Wall Street worried, as rising margin debt has historically been a warning sign that can magnify losses if sentiment turns and forced selling ensues.",
+          "source_name": "MarketWatch",
+          "source_url": "https://www.marketwatch.com/story/why-a-borrowing-binge-by-investors-is-a-warning-sign-for-the-stock-market-996ee446",
+          "published": "2026-07-14"
+        },
+        {
+          "title_zh": "川普稱將恢復對伊朗的海上封鎖",
+          "title_en": "Trump Says He Is Reimposing the U.S. Blockade of Iran",
+          "summary_zh": "川普表示將恢復美國對伊朗的海上封鎖，使圍繞荷姆茲海峽控制權、已引發連日交火的對峙進一步升溫。在伊朗拒絕開放荷姆茲的要求後，美軍打擊新目標，使這場攸關全球能源供給與市場的對抗風險升高。",
+          "summary_en": "President Trump said he is reimposing the U.S. naval blockade of Iran, sharpening a standoff over control of the Strait of Hormuz that has already triggered days of fighting. The U.S. struck new targets after Iran rejected a demand to open Hormuz, raising the stakes in a confrontation with global energy-supply and market implications.",
+          "source_name": "WSJ",
+          "source_url": "https://www.wsj.com/world/middle-east/u-s-strikes-new-targets-after-iran-rejects-demand-to-open-hormuz-b1f167d0",
+          "published": "2026-07-14"
         }
       ]
     }
