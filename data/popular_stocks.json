@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-14T11:18:46+08:00",
+  "generated_at": "2026-07-14T13:46:57+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -45,20 +45,6 @@
       "error": null
     },
     {
-      "symbol": "AGEN",
-      "name_zh": "Agenus",
-      "kind": "US",
-      "price": 6.12,
-      "change_pct": 82.69,
-      "mtd_pct": 100.0,
-      "ytd_pct": 94.9,
-      "market_date": "2026-07-13",
-      "per": 2.1592,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AGEN.US",
-      "error": null
-    },
-    {
       "symbol": "FIG",
       "name_zh": "Figma",
       "kind": "US",
@@ -70,6 +56,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FIG.US",
+      "error": null
+    },
+    {
+      "symbol": "AGEN",
+      "name_zh": "Agenus",
+      "kind": "US",
+      "price": 6.12,
+      "change_pct": 82.69,
+      "mtd_pct": 100.0,
+      "ytd_pct": 94.9,
+      "market_date": "2026-07-13",
+      "per": 2.1592,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AGEN.US",
       "error": null
     },
     {
@@ -129,20 +129,6 @@
       "error": null
     },
     {
-      "symbol": "QTTB",
-      "name_zh": "Q32 Bio",
-      "kind": "US",
-      "price": 21.38,
-      "change_pct": 90.72,
-      "mtd_pct": 67.82,
-      "ytd_pct": 543.98,
-      "market_date": "2026-07-13",
-      "per": 16.3588,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QTTB.US",
-      "error": null
-    },
-    {
       "symbol": "DIS",
       "name_zh": "迪士尼",
       "kind": "US",
@@ -157,6 +143,34 @@
       "error": null
     },
     {
+      "symbol": "BIDU",
+      "name_zh": "百度",
+      "kind": "US",
+      "price": 113.39,
+      "change_pct": -3.52,
+      "mtd_pct": -0.79,
+      "ytd_pct": -13.22,
+      "market_date": "2026-07-13",
+      "per": 705.0185,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BIDU.US",
+      "error": null
+    },
+    {
+      "symbol": "QTTB",
+      "name_zh": "Q32 Bio",
+      "kind": "US",
+      "price": 21.38,
+      "change_pct": 90.72,
+      "mtd_pct": 67.82,
+      "ytd_pct": 543.98,
+      "market_date": "2026-07-13",
+      "per": 16.3588,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QTTB.US",
+      "error": null
+    },
+    {
       "symbol": "CRM",
       "name_zh": "Salesforce",
       "kind": "US",
@@ -168,6 +182,76 @@
       "per": 17.1563,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRM.US",
+      "error": null
+    },
+    {
+      "symbol": "WFC",
+      "name_zh": "富國銀行",
+      "kind": "US",
+      "price": 87.67,
+      "change_pct": 0.59,
+      "mtd_pct": 6.09,
+      "ytd_pct": -5.93,
+      "market_date": "2026-07-13",
+      "per": 12.3447,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=WFC.US",
+      "error": null
+    },
+    {
+      "symbol": "PYPL",
+      "name_zh": "PayPal",
+      "kind": "US",
+      "price": 47.65,
+      "change_pct": 2.87,
+      "mtd_pct": 10.35,
+      "ytd_pct": -18.38,
+      "market_date": "2026-07-13",
+      "per": 8.3819,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PYPL.US",
+      "error": null
+    },
+    {
+      "symbol": "JPM",
+      "name_zh": "摩根大通",
+      "kind": "US",
+      "price": 334.53,
+      "change_pct": -0.58,
+      "mtd_pct": 2.2,
+      "ytd_pct": 3.82,
+      "market_date": "2026-07-13",
+      "per": 15.1807,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=JPM.US",
+      "error": null
+    },
+    {
+      "symbol": "ADBE",
+      "name_zh": "Adobe",
+      "kind": "US",
+      "price": 230.61,
+      "change_pct": 3.12,
+      "mtd_pct": 12.48,
+      "ytd_pct": -34.11,
+      "market_date": "2026-07-13",
+      "per": 12.2973,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ADBE.US",
+      "error": null
+    },
+    {
+      "symbol": "XLE",
+      "name_zh": "State Street Energy Select Sect",
+      "kind": "US",
+      "price": 56.74,
+      "change_pct": 3.01,
+      "mtd_pct": 6.83,
+      "ytd_pct": 26.91,
+      "market_date": "2026-07-13",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=XLE.US",
       "error": null
     },
     {
