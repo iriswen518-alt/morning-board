@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-15T15:02:06+08:00",
+  "generated_at": "2026-07-15T17:02:12+08:00",
   "tw": {
     "as_of": "2026-07-15",
     "top_marketcap": [
@@ -1097,6 +1097,19 @@
         "source_url": "https://finance.yahoo.com/quote/XLK"
       },
       {
+        "symbol": "QQQ",
+        "name": "Invesco QQQ Trust, Series 1",
+        "price": 719.71,
+        "daily_pct": 1.45,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": -3.35,
+        "ytd_pct": 15.86,
+        "yahoo": "QQQ",
+        "source_url": "https://finance.yahoo.com/quote/QQQ"
+      },
+      {
         "symbol": "VOO",
         "name": "Vanguard S&P 500 ETF",
         "price": 691.1,
@@ -1147,19 +1160,6 @@
         "ytd_pct": -5.33,
         "yahoo": "XLC",
         "source_url": "https://finance.yahoo.com/quote/XLC"
-      },
-      {
-        "symbol": "VWO",
-        "name": "Vanguard FTSE Emerging Markets ",
-        "price": 59.08,
-        "daily_pct": 0.34,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": -1.51,
-        "ytd_pct": 9.36,
-        "yahoo": "VWO",
-        "source_url": "https://finance.yahoo.com/quote/VWO"
       },
       {
         "symbol": "XLF",
@@ -1287,6 +1287,34 @@
         "yahoo": "XLY",
         "source_url": "https://finance.yahoo.com/quote/XLY",
         "name_zh": "非必需消費"
+      },
+      {
+        "symbol": "XLB",
+        "name": "State Street Materials Select S",
+        "price": 50.64,
+        "daily_pct": -1.69,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": -0.49,
+        "ytd_pct": 11.53,
+        "yahoo": "XLB",
+        "source_url": "https://finance.yahoo.com/quote/XLB",
+        "name_zh": "原物料"
+      },
+      {
+        "symbol": "XLP",
+        "name": "State Street Consumer Staples S",
+        "price": 83.42,
+        "daily_pct": -1.7,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": 1.83,
+        "ytd_pct": 8.9,
+        "yahoo": "XLP",
+        "source_url": "https://finance.yahoo.com/quote/XLP",
+        "name_zh": "必需消費"
       },
       {
         "symbol": "XLV",
