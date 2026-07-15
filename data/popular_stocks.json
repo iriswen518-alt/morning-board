@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-15T15:32:26+08:00",
+  "generated_at": "2026-07-15T16:37:05+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -73,6 +73,20 @@
       "error": null
     },
     {
+      "symbol": "INTC",
+      "name_zh": "英特爾",
+      "kind": "US",
+      "price": 107.76,
+      "change_pct": 4.5,
+      "mtd_pct": -26.15,
+      "ytd_pct": 179.46,
+      "market_date": "2026-07-13",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=INTC.US",
+      "error": null
+    },
+    {
       "symbol": "ISRG",
       "name_zh": "Intuitive Surgical",
       "kind": "US",
@@ -84,20 +98,6 @@
       "per": 46.741,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ISRG.US",
-      "error": null
-    },
-    {
-      "symbol": "GS",
-      "name_zh": "高盛",
-      "kind": "US",
-      "price": 1140,
-      "change_pct": 9.0,
-      "mtd_pct": 3.42,
-      "ytd_pct": 18.99,
-      "market_date": "2026-07-13",
-      "per": 18.0894,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GS.US",
       "error": null
     },
     {
@@ -115,45 +115,17 @@
       "error": null
     },
     {
-      "symbol": "BMNR",
-      "name_zh": "BitMine Immersion Technologies,",
+      "symbol": "GS",
+      "name_zh": "高盛",
       "kind": "US",
-      "price": 16.29,
-      "change_pct": 11.5,
-      "mtd_pct": 22.39,
-      "ytd_pct": -40.0,
-      "market_date": "2026-07-14",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BMNR.US",
-      "error": null
-    },
-    {
-      "symbol": "DELL",
-      "name_zh": "Dell Technologies",
-      "kind": "US",
-      "price": 457.54,
-      "change_pct": 7.12,
-      "mtd_pct": 6.04,
-      "ytd_pct": 263.47,
-      "market_date": "2026-07-14",
-      "per": 35.0036,
+      "price": 1140,
+      "change_pct": 9.0,
+      "mtd_pct": 3.42,
+      "ytd_pct": 18.99,
+      "market_date": "2026-07-13",
+      "per": 18.0894,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DELL.US",
-      "error": null
-    },
-    {
-      "symbol": "XYZ",
-      "name_zh": "Block",
-      "kind": "US",
-      "price": 79.99,
-      "change_pct": 1.61,
-      "mtd_pct": 5.25,
-      "ytd_pct": 22.89,
-      "market_date": "2026-07-14",
-      "per": 57.903,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=XYZ.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GS.US",
       "error": null
     },
     {
@@ -171,6 +143,34 @@
       "error": null
     },
     {
+      "symbol": "MUU",
+      "name_zh": "Direxion Daily MU Bull 2X ETF",
+      "kind": "US",
+      "price": 742.65,
+      "change_pct": 9.5,
+      "mtd_pct": -29.19,
+      "ytd_pct": 637.19,
+      "market_date": "2026-07-14",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MUU.US",
+      "error": null
+    },
+    {
+      "symbol": "DELL",
+      "name_zh": "Dell Technologies",
+      "kind": "US",
+      "price": 457.54,
+      "change_pct": 7.12,
+      "mtd_pct": 6.04,
+      "ytd_pct": 263.47,
+      "market_date": "2026-07-14",
+      "per": 35.0036,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DELL.US",
+      "error": null
+    },
+    {
       "symbol": "MS",
       "name_zh": "摩根士丹利",
       "kind": "US",
@@ -185,31 +185,17 @@
       "error": null
     },
     {
-      "symbol": "CLSK",
-      "name_zh": "CleanSpark",
+      "symbol": "BMNR",
+      "name_zh": "BitMine Immersion Technologies,",
       "kind": "US",
-      "price": 13.45,
-      "change_pct": 8.82,
-      "mtd_pct": -7.56,
-      "ytd_pct": 32.91,
+      "price": 16.29,
+      "change_pct": 11.5,
+      "mtd_pct": 22.39,
+      "ytd_pct": -40.0,
       "market_date": "2026-07-14",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CLSK.US",
-      "error": null
-    },
-    {
-      "symbol": "C",
-      "name_zh": "花旗",
-      "kind": "US",
-      "price": 133.27,
-      "change_pct": -5.29,
-      "mtd_pct": 0.54,
-      "ytd_pct": 20.58,
-      "market_date": "2026-07-13",
-      "per": 14.2609,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=C.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BMNR.US",
       "error": null
     },
     {
@@ -227,17 +213,31 @@
       "error": null
     },
     {
-      "symbol": "ATAI",
-      "name_zh": "AtaiBeckley",
+      "symbol": "AMAT",
+      "name_zh": "應材",
       "kind": "US",
-      "price": 5.67,
-      "change_pct": 14.08,
-      "mtd_pct": 7.59,
-      "ytd_pct": 38.63,
-      "market_date": "2026-07-14",
+      "price": 595.7,
+      "change_pct": 3.53,
+      "mtd_pct": -20.42,
+      "ytd_pct": 123.9,
+      "market_date": "2026-07-13",
+      "per": 55.6705,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AMAT.US",
+      "error": null
+    },
+    {
+      "symbol": "POET",
+      "name_zh": "POET Technologies",
+      "kind": "US",
+      "price": 8.81,
+      "change_pct": 10.12,
+      "mtd_pct": -22.18,
+      "ytd_pct": 26.38,
+      "market_date": "2026-07-13",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ATAI.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=POET.US",
       "error": null
     },
     {
