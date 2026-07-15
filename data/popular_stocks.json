@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-15T13:47:07+08:00",
+  "generated_at": "2026-07-15T14:24:14+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -31,6 +31,20 @@
       "error": null
     },
     {
+      "symbol": "ASML",
+      "name_zh": "ASML",
+      "kind": "US",
+      "price": 1775.64,
+      "change_pct": 2.87,
+      "mtd_pct": -13.24,
+      "ytd_pct": 61.33,
+      "market_date": "2026-07-13",
+      "per": 57.6287,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ASML.US",
+      "error": null
+    },
+    {
       "symbol": "AEHR",
       "name_zh": "Aehr Test Systems",
       "kind": "US",
@@ -56,20 +70,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRWD.US",
-      "error": null
-    },
-    {
-      "symbol": "ASML",
-      "name_zh": "ASML",
-      "kind": "US",
-      "price": 1775.64,
-      "change_pct": 2.87,
-      "mtd_pct": -13.24,
-      "ytd_pct": 61.33,
-      "market_date": "2026-07-13",
-      "per": 57.6287,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ASML.US",
       "error": null
     },
     {
@@ -101,17 +101,17 @@
       "error": null
     },
     {
-      "symbol": "NBIS",
-      "name_zh": "Nebius",
+      "symbol": "NXTC",
+      "name_zh": "NextCure",
       "kind": "US",
-      "price": 194.09,
-      "change_pct": -7.8,
-      "mtd_pct": -29.72,
-      "ytd_pct": 131.87,
+      "price": 6.58,
+      "change_pct": 201.83,
+      "mtd_pct": 311.25,
+      "ytd_pct": -53.63,
       "market_date": "2026-07-14",
-      "per": 64.8249,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NBIS.US",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NXTC.US",
       "error": null
     },
     {
@@ -143,20 +143,6 @@
       "error": null
     },
     {
-      "symbol": "DELL",
-      "name_zh": "Dell Technologies",
-      "kind": "US",
-      "price": 457.54,
-      "change_pct": 7.12,
-      "mtd_pct": 6.04,
-      "ytd_pct": 263.47,
-      "market_date": "2026-07-14",
-      "per": 35.0036,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DELL.US",
-      "error": null
-    },
-    {
       "symbol": "MS",
       "name_zh": "摩根士丹利",
       "kind": "US",
@@ -171,59 +157,45 @@
       "error": null
     },
     {
-      "symbol": "C",
-      "name_zh": "花旗",
+      "symbol": "DELL",
+      "name_zh": "Dell Technologies",
       "kind": "US",
-      "price": 133.27,
-      "change_pct": -5.29,
-      "mtd_pct": 0.54,
-      "ytd_pct": 20.58,
-      "market_date": "2026-07-13",
-      "per": 14.2609,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=C.US",
-      "error": null
-    },
-    {
-      "symbol": "POET",
-      "name_zh": "POET Technologies",
-      "kind": "US",
-      "price": 8.81,
-      "change_pct": 10.12,
-      "mtd_pct": -22.18,
-      "ytd_pct": 26.38,
-      "market_date": "2026-07-13",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=POET.US",
-      "error": null
-    },
-    {
-      "symbol": "ATAI",
-      "name_zh": "AtaiBeckley",
-      "kind": "US",
-      "price": 5.67,
-      "change_pct": 14.08,
-      "mtd_pct": 7.59,
-      "ytd_pct": 38.63,
+      "price": 457.54,
+      "change_pct": 7.12,
+      "mtd_pct": 6.04,
+      "ytd_pct": 263.47,
       "market_date": "2026-07-14",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ATAI.US",
+      "per": 35.0036,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DELL.US",
       "error": null
     },
     {
-      "symbol": "PANW",
-      "name_zh": "Palo Alto Networks",
+      "symbol": "CVNA",
+      "name_zh": "Carvana",
       "kind": "US",
-      "price": 352.89,
-      "change_pct": 6.84,
-      "mtd_pct": 3.48,
-      "ytd_pct": 91.58,
+      "price": 70.38,
+      "change_pct": 8.29,
+      "mtd_pct": 6.93,
+      "ytd_pct": -16.62,
       "market_date": "2026-07-14",
-      "per": 319.405,
+      "per": 53.4793,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PANW.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CVNA.US",
+      "error": null
+    },
+    {
+      "symbol": "BABA",
+      "name_zh": "阿里巴巴",
+      "kind": "US",
+      "price": 112.32,
+      "change_pct": -0.03,
+      "mtd_pct": 17.02,
+      "ytd_pct": -23.37,
+      "market_date": "2026-07-14",
+      "per": 17.3327,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BABA.US",
       "error": null
     },
     {
@@ -252,6 +224,34 @@
       "per": 57.903,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=XYZ.US",
+      "error": null
+    },
+    {
+      "symbol": "NBIS",
+      "name_zh": "Nebius",
+      "kind": "US",
+      "price": 194.09,
+      "change_pct": -7.8,
+      "mtd_pct": -29.72,
+      "ytd_pct": 131.87,
+      "market_date": "2026-07-14",
+      "per": 64.8249,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NBIS.US",
+      "error": null
+    },
+    {
+      "symbol": "C",
+      "name_zh": "花旗",
+      "kind": "US",
+      "price": 133.27,
+      "change_pct": -5.29,
+      "mtd_pct": 0.54,
+      "ytd_pct": 20.58,
+      "market_date": "2026-07-13",
+      "per": 14.2609,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=C.US",
       "error": null
     },
     {
