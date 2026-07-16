@@ -1,5 +1,5 @@
 {
-  "closing_date": "2026-07-15",
+  "closing_date": "2026-07-16",
   "indices": [
     {
       "name": "S&P 500",
@@ -13,7 +13,7 @@
     {
       "name": "Nasdaq Composite",
       "name_zh": null,
-      "close": 26269.2265625,
+      "close": 26269.23046875,
       "daily_pct": 0.62,
       "mtd_pct": 0.21,
       "ytd_pct": 13.02,
@@ -31,7 +31,7 @@
     {
       "name": "PHLX Semiconductor",
       "name_zh": null,
-      "close": 12398.8935546875,
+      "close": 12398.8896484375,
       "daily_pct": -2.08,
       "mtd_pct": -12.97,
       "ytd_pct": 75.05,
@@ -85,20 +85,20 @@
     {
       "name": "TAIEX 加權指數",
       "name_zh": null,
-      "close": 45631.58984375,
-      "daily_pct": 2.0,
+      "close": 45624.98,
+      "daily_pct": -0.01,
       "mtd_pct": -1.07,
       "ytd_pct": 57.55,
-      "closing_date": "2026-07-15"
+      "closing_date": "2026-07-16"
     },
     {
       "name": "OTC 櫃買加權",
       "name_zh": null,
-      "close": 416.41,
-      "daily_pct": 2.21,
+      "close": 407.01,
+      "daily_pct": -2.26,
       "mtd_pct": -0.46,
       "ytd_pct": 53.85,
-      "closing_date": "2026-07-15"
+      "closing_date": "2026-07-16"
     },
     {
       "name": "台指期(近月)",
@@ -112,11 +112,11 @@
     {
       "name": "KOSPI",
       "name_zh": null,
-      "close": 7284.41015625,
-      "daily_pct": 6.24,
+      "close": 6797.10009765625,
+      "daily_pct": -6.69,
       "mtd_pct": -14.06,
       "ytd_pct": 72.86,
-      "closing_date": "2026-07-15"
+      "closing_date": "2026-07-16"
     },
     {
       "name": "Hang Seng 恆生",
@@ -157,11 +157,11 @@
     {
       "name": "S&P/ASX 200",
       "name_zh": null,
-      "close": 8841.099609375,
-      "daily_pct": 0.37,
+      "close": 8840.400390625,
+      "daily_pct": -0.01,
       "mtd_pct": 0.71,
       "ytd_pct": 1.46,
-      "closing_date": "2026-07-15"
+      "closing_date": "2026-07-16"
     }
   ],
   "bonds": [
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 100.5,
       "daily_pct": -0.44,
-      "mtd_pct": -0.67,
-      "ytd_pct": 2.28,
+      "mtd_pct": -0.68,
+      "ytd_pct": 2.26,
       "closing_date": "2026-07-15"
     },
     {
@@ -269,34 +269,34 @@
   "commodities": [
     {
       "name": "黃金 (USD/oz)",
-      "close": 4037.10009765625,
-      "daily_pct": -0.17,
-      "mtd_pct": 0.35,
-      "ytd_pct": -6.67,
+      "close": 4044.0,
+      "daily_pct": -0.42,
+      "mtd_pct": 0.52,
+      "ytd_pct": -6.51,
       "closing_date": "2026-07-15"
     },
     {
       "name": "白銀 (USD/oz)",
-      "close": 57.334999084472656,
-      "daily_pct": 0.39,
-      "mtd_pct": -3.6,
-      "ytd_pct": -18.25,
+      "close": 57.11000061035156,
+      "daily_pct": -2.83,
+      "mtd_pct": -3.98,
+      "ytd_pct": -18.57,
       "closing_date": "2026-07-15"
     },
     {
       "name": "WTI 原油 (USD/bbl)",
-      "close": 79.91999816894531,
-      "daily_pct": 0.4,
-      "mtd_pct": 14.99,
-      "ytd_pct": 39.18,
+      "close": 79.5999984741211,
+      "daily_pct": 0.33,
+      "mtd_pct": 14.53,
+      "ytd_pct": 38.63,
       "closing_date": "2026-07-15"
     },
     {
       "name": "布蘭特原油 (USD/bbl)",
-      "close": 85.0999984741211,
-      "daily_pct": 0.18,
-      "mtd_pct": 16.7,
-      "ytd_pct": 39.85,
+      "close": 84.94999694824219,
+      "daily_pct": 0.26,
+      "mtd_pct": 16.5,
+      "ytd_pct": 39.61,
       "closing_date": "2026-07-15"
     },
     {
@@ -388,8 +388,8 @@
     "yield_curve_10y2y": 0.42,
     "yield_curve_10y2y_bps": 42,
     "curve_shape": "正斜率",
-    "dxy": 100.51399993896484,
-    "dxy_daily_pct": 0.01,
+    "dxy": 100.5,
+    "dxy_daily_pct": -0.44,
     "closing_date": "2026-07-15"
   },
   "fedwatch": [
@@ -417,10 +417,10 @@
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
       "implied_rate": 3.77,
-      "delta_rate": 0.06,
-      "delta_bps": 6.0,
-      "p_hike": 24.0,
-      "p_hold": 76.0,
+      "delta_rate": 0.07,
+      "delta_bps": 7.0,
+      "p_hike": 28.0,
+      "p_hold": 72.0,
       "p_cut": 0,
       "is_reference": false
     },
@@ -436,5 +436,5 @@
       "is_reference": false
     }
   ],
-  "summary": "7/15 KOSPI +6.24%、7/15 台指期(近月) +2.32%、7/15 OTC 櫃買加權 +2.21% 領漲；7/15 PHLX Semiconductor -2.08%、7/15 DAX -0.59% 走弱。"
+  "summary": "7/15 台指期(近月) +2.32%、7/15 Nikkei 225 +1.49%、7/15 Hang Seng 恆生 +1.40% 領漲；7/16 KOSPI -6.69%、7/16 OTC 櫃買加權 -2.26% 走弱。"
 }
