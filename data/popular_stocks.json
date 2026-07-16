@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-16T14:27:29+08:00",
+  "generated_at": "2026-07-16T15:38:23+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -17,6 +17,20 @@
       "error": null
     },
     {
+      "symbol": "GOOG",
+      "name_zh": "谷歌 C",
+      "kind": "US",
+      "price": 370.21,
+      "change_pct": 3.6,
+      "mtd_pct": 4.78,
+      "ytd_pct": 17.98,
+      "market_date": "2026-07-15",
+      "per": 28.168,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GOOG.US",
+      "error": null
+    },
+    {
       "symbol": "ATAI",
       "name_zh": "AtaiBeckley",
       "kind": "US",
@@ -28,20 +42,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ATAI.US",
-      "error": null
-    },
-    {
-      "symbol": "UAL",
-      "name_zh": "United Airlines",
-      "kind": "US",
-      "price": 120.97,
-      "change_pct": 0.52,
-      "mtd_pct": -11.04,
-      "ytd_pct": 8.18,
-      "market_date": "2026-07-15",
-      "per": 10.6965,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=UAL.US",
       "error": null
     },
     {
@@ -59,17 +59,17 @@
       "error": null
     },
     {
-      "symbol": "XPEV",
-      "name_zh": "小鵬",
+      "symbol": "UAL",
+      "name_zh": "United Airlines",
       "kind": "US",
-      "price": 13.78,
-      "change_pct": 3.14,
-      "mtd_pct": 4.08,
-      "ytd_pct": -32.05,
+      "price": 120.97,
+      "change_pct": 0.52,
+      "mtd_pct": -11.04,
+      "ytd_pct": 8.18,
       "market_date": "2026-07-15",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=XPEV.US",
+      "per": 10.6965,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=UAL.US",
       "error": null
     },
     {
@@ -87,17 +87,45 @@
       "error": null
     },
     {
-      "symbol": "GOOG",
-      "name_zh": "谷歌 C",
+      "symbol": "XPEV",
+      "name_zh": "小鵬",
       "kind": "US",
-      "price": 370.21,
-      "change_pct": 3.6,
-      "mtd_pct": 4.78,
-      "ytd_pct": 17.98,
+      "price": 13.78,
+      "change_pct": 3.14,
+      "mtd_pct": 4.08,
+      "ytd_pct": -32.05,
       "market_date": "2026-07-15",
-      "per": 28.168,
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=XPEV.US",
+      "error": null
+    },
+    {
+      "symbol": "SNDK",
+      "name_zh": "Sandisk",
+      "kind": "US",
+      "price": 1615,
+      "change_pct": -8.12,
+      "mtd_pct": -28.97,
+      "ytd_pct": 580.34,
+      "market_date": "2026-07-15",
+      "per": 53.0652,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GOOG.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SNDK.US",
+      "error": null
+    },
+    {
+      "symbol": "GRRR",
+      "name_zh": "Gorilla Technology",
+      "kind": "US",
+      "price": 11.89,
+      "change_pct": -29.1,
+      "mtd_pct": -40.19,
+      "ytd_pct": 8.88,
+      "market_date": "2026-07-15",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GRRR.US",
       "error": null
     },
     {
@@ -115,31 +143,17 @@
       "error": null
     },
     {
-      "symbol": "BABA",
-      "name_zh": "阿里巴巴",
+      "symbol": "NFLX",
+      "name_zh": "網飛",
       "kind": "US",
-      "price": 117.69,
-      "change_pct": 4.78,
-      "mtd_pct": 22.62,
-      "ytd_pct": -19.71,
+      "price": 73.68,
+      "change_pct": 0.2,
+      "mtd_pct": 3.19,
+      "ytd_pct": -21.42,
       "market_date": "2026-07-15",
-      "per": 17.337,
+      "per": 23.4302,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BABA.US",
-      "error": null
-    },
-    {
-      "symbol": "JNJ",
-      "name_zh": "嬌生",
-      "kind": "US",
-      "price": 247.02,
-      "change_pct": -2.69,
-      "mtd_pct": -2.74,
-      "ytd_pct": 19.36,
-      "market_date": "2026-07-15",
-      "per": 28.7539,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=JNJ.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NFLX.US",
       "error": null
     },
     {
