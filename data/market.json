@@ -1,5 +1,5 @@
 {
-  "closing_date": "2026-07-16",
+  "closing_date": "2026-07-17",
   "indices": [
     {
       "name": "S&P 500",
@@ -157,11 +157,11 @@
     {
       "name": "S&P/ASX 200",
       "name_zh": null,
-      "close": 8840.7001953125,
-      "daily_pct": -0.0,
+      "close": 8782.900390625,
+      "daily_pct": -0.65,
       "mtd_pct": 0.71,
       "ytd_pct": 1.45,
-      "closing_date": "2026-07-16"
+      "closing_date": "2026-07-17"
     }
   ],
   "bonds": [
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 100.7300033569336,
       "daily_pct": 0.23,
-      "mtd_pct": -0.42,
-      "ytd_pct": 2.52,
+      "mtd_pct": -0.46,
+      "ytd_pct": 2.49,
       "closing_date": "2026-07-16"
     },
     {
@@ -301,11 +301,11 @@
     },
     {
       "name": "比特幣 (USD)",
-      "close": 64712.375,
-      "daily_pct": -0.38,
-      "mtd_pct": 10.51,
-      "ytd_pct": -26.05,
-      "closing_date": "2026-07-15"
+      "close": 63789.28125,
+      "daily_pct": -1.43,
+      "mtd_pct": 8.93,
+      "ytd_pct": -27.11,
+      "closing_date": "2026-07-16"
     }
   ],
   "bond_etfs": [
@@ -427,7 +427,7 @@
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 3.88,
+      "implied_rate": 3.87,
       "delta_rate": 0.1,
       "delta_bps": 10.0,
       "p_hike": 40.0,
