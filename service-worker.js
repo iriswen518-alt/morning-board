@@ -39,7 +39,9 @@
 // v49（2026-07-13）：手機又顯示舊新聞——裝置仍卡在改版前的 cache-first 舊 SW。
 //   資料層本已 fresh（news.json 2026-07-13、fetch 帶 ?t=、SW 網路優先 no-store），純屬舊 SW 未升級。
 //   再 bump 一次強制 skipWaiting+claim 接管，讓裝置關閉重開即拉回最新 news.json。
-const CACHE = "morning-board-v49";
+// v50（2026-07-18）：手機字級放大改用固定 px 覆寫（text-size-adjust 在 iOS PWA 會自行失效），
+//   bump 強制裝置更新 style.css，避免卡舊快取「自行恢復原狀」。
+const CACHE = "morning-board-v50";
 
 self.addEventListener("install", e => {
   self.skipWaiting();

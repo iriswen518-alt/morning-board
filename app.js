@@ -3637,12 +3637,11 @@ function renderMarketSheet() {
   const usInner = usParts.join("");
 
   const twPremarketHtml = renderPremarketBlock();
-  const twAnalysisHtml = renderTwMarketAnalysis();
+  // 台股盤勢區塊已依需求移除（2026-07-18），盤勢內容由「盤前分析」涵蓋；renderTwMarketAnalysis 保留備用。
   const twRankHtml = renderRankingsBlock("tw");
   const twSheetHtml = renderTwStockSheet();
   const twParts = [];
   if (twPremarketHtml && twPremarketHtml.trim()) twParts.push(accSection("mv-tw-premarket", "盤前分析", twPremarketHtml));
-  if (twAnalysisHtml && twAnalysisHtml.trim()) twParts.push(accSection("mv-tw-market", "台股盤勢", dropLeadH2(twAnalysisHtml)));
   if (twPresetTable && twPresetTable.trim()) twParts.push(accSection("mv-tw-stocks", "精選台股", twPresetTable));
   const etf0050Html = render0050Section();
   if (etf0050Html && etf0050Html.trim()) twParts.push(accSection("mv-tw-0050", "0050 成分股", etf0050Html));

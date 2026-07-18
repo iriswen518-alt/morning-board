@@ -2991,7 +2991,18 @@ table.indices.stock-cols col.c-num { width: 11%; }
   .live-grid { grid-template-columns: 1fr; }
 }
 
-/* 手機整體字級放大（桌面不受影響） */
+/* 手機字級放大：改用固定 px 覆寫（text-size-adjust 在 iOS PWA 不可靠，會自行失效）。
+   放在檔案最末，蓋過前面各 media query 的小字設定；桌面不受影響。 */
 @media (max-width: 768px) {
-  html { -webkit-text-size-adjust: 112%; text-size-adjust: 112%; }
+  body { font-size: 17px; }
+  table.indices, .card { font-size: 14.5px; }
+  .preview { font-size: 16px; }
+  .card h2 { font-size: 19px; }
+  .expand-btn { font-size: 15px; }
+  .acc-sec .acc-sec-title { font-size: 16px; }
+  .news-item .summary, .news-item .news-body { font-size: 15.5px; }
+  .idx-card .idx-nm, .idx-card .idx-px,
+  .idx-card .idx-st .k, .idx-card .idx-st .v { font-size: 15px; }
+  .sr-title { font-size: 15px; }
+  .sr-snippet { font-size: 13px; }
 }
