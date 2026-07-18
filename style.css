@@ -2990,3 +2990,8 @@ table.indices.stock-cols col.c-num { width: 11%; }
 @media (max-width: 440px) {
   .live-grid { grid-template-columns: 1fr; }
 }
+
+/* 手機整體字級放大（桌面不受影響） */
+@media (max-width: 768px) {
+  html { -webkit-text-size-adjust: 112%; text-size-adjust: 112%; }
+}
