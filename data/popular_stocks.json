@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T14:12:37+08:00",
+  "generated_at": "2026-07-18T15:16:14+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -14,6 +14,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LCID.US",
+      "error": null
+    },
+    {
+      "symbol": "EBAY",
+      "name_zh": "eBay",
+      "kind": "US",
+      "price": 112.06,
+      "change_pct": 1.04,
+      "mtd_pct": 0.28,
+      "ytd_pct": 28.66,
+      "market_date": "2026-07-17",
+      "per": 24.0261,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=EBAY.US",
       "error": null
     },
     {
@@ -45,34 +59,6 @@
       "error": null
     },
     {
-      "symbol": "EBAY",
-      "name_zh": "eBay",
-      "kind": "US",
-      "price": 112.06,
-      "change_pct": 1.04,
-      "mtd_pct": 0.28,
-      "ytd_pct": 28.66,
-      "market_date": "2026-07-17",
-      "per": 24.0261,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=EBAY.US",
-      "error": null
-    },
-    {
-      "symbol": "NSC",
-      "name_zh": "Norfolk Southern",
-      "kind": "US",
-      "price": 340.16,
-      "change_pct": 0.62,
-      "mtd_pct": 8.13,
-      "ytd_pct": 17.82,
-      "market_date": "2026-07-17",
-      "per": 28.7354,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NSC.US",
-      "error": null
-    },
-    {
       "symbol": "CDNS",
       "name_zh": "Cadence Design Systems",
       "kind": "US",
@@ -84,20 +70,6 @@
       "per": 78.1751,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CDNS.US",
-      "error": null
-    },
-    {
-      "symbol": "TRV",
-      "name_zh": "The Travelers Companies",
-      "kind": "US",
-      "price": 368.98,
-      "change_pct": 9.22,
-      "mtd_pct": 11.77,
-      "ytd_pct": 27.21,
-      "market_date": "2026-07-17",
-      "per": 10.1096,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TRV.US",
       "error": null
     },
     {
@@ -115,20 +87,6 @@
       "error": null
     },
     {
-      "symbol": "IOVA",
-      "name_zh": "Iovance Biotherapeutics",
-      "kind": "US",
-      "price": 5,
-      "change_pct": 7.3,
-      "mtd_pct": 20.19,
-      "ytd_pct": 83.15,
-      "market_date": "2026-07-17",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IOVA.US",
-      "error": null
-    },
-    {
       "symbol": "GME",
       "name_zh": "GameStop",
       "kind": "US",
@@ -143,59 +101,31 @@
       "error": null
     },
     {
-      "symbol": "F",
-      "name_zh": "福特",
+      "symbol": "DIS",
+      "name_zh": "迪士尼",
       "kind": "US",
-      "price": 14.23,
-      "change_pct": 0.28,
-      "mtd_pct": 2.37,
-      "ytd_pct": 8.46,
+      "price": 97.67,
+      "change_pct": -2.05,
+      "mtd_pct": 1.48,
+      "ytd_pct": -14.15,
+      "market_date": "2026-07-17",
+      "per": 15.1759,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DIS.US",
+      "error": null
+    },
+    {
+      "symbol": "IOVA",
+      "name_zh": "Iovance Biotherapeutics",
+      "kind": "US",
+      "price": 5,
+      "change_pct": 7.3,
+      "mtd_pct": 20.19,
+      "ytd_pct": 83.15,
       "market_date": "2026-07-17",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=F.US",
-      "error": null
-    },
-    {
-      "symbol": "TTD",
-      "name_zh": "The Trade Desk",
-      "kind": "US",
-      "price": 18.59,
-      "change_pct": -2.77,
-      "mtd_pct": 2.82,
-      "ytd_pct": -51.03,
-      "market_date": "2026-07-17",
-      "per": 20.3529,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TTD.US",
-      "error": null
-    },
-    {
-      "symbol": "VTI",
-      "name_zh": "Vanguard Total Stock Market ETF",
-      "kind": "US",
-      "price": 367.01,
-      "change_pct": -0.96,
-      "mtd_pct": -0.82,
-      "ytd_pct": 9.47,
-      "market_date": "2026-07-17",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VTI.US",
-      "error": null
-    },
-    {
-      "symbol": "OXY",
-      "name_zh": "西方石油",
-      "kind": "US",
-      "price": 54.86,
-      "change_pct": 2.26,
-      "mtd_pct": 12.95,
-      "ytd_pct": 33.41,
-      "market_date": "2026-07-17",
-      "per": 11.4987,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=OXY.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IOVA.US",
       "error": null
     },
     {
@@ -213,17 +143,45 @@
       "error": null
     },
     {
-      "symbol": "JNJ",
-      "name_zh": "嬌生",
+      "symbol": "SCHD",
+      "name_zh": "Schwab US Dividend Equity ETF",
       "kind": "US",
-      "price": 253.04,
-      "change_pct": 1.23,
-      "mtd_pct": -0.37,
-      "ytd_pct": 22.27,
+      "price": 32.91,
+      "change_pct": -0.39,
+      "mtd_pct": 3.78,
+      "ytd_pct": 19.98,
       "market_date": "2026-07-17",
-      "per": 29.0687,
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SCHD.US",
+      "error": null
+    },
+    {
+      "symbol": "PANW",
+      "name_zh": "Palo Alto Networks",
+      "kind": "US",
+      "price": 358.68,
+      "change_pct": 1.32,
+      "mtd_pct": 5.18,
+      "ytd_pct": 94.72,
+      "market_date": "2026-07-17",
+      "per": 342.3135,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=JNJ.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PANW.US",
+      "error": null
+    },
+    {
+      "symbol": "DJT",
+      "name_zh": "Trump Media & Technology",
+      "kind": "US",
+      "price": 9.66,
+      "change_pct": 0.31,
+      "mtd_pct": 24.81,
+      "ytd_pct": -27.04,
+      "market_date": "2026-07-17",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DJT.US",
       "error": null
     },
     {
@@ -238,6 +196,20 @@
       "per": 23.9824,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=XOM.US",
+      "error": null
+    },
+    {
+      "symbol": "TEST",
+      "name_zh": "YieldMax TSLA Performance & Dis",
+      "kind": "US",
+      "price": 42.27,
+      "change_pct": -1.99,
+      "mtd_pct": -7.54,
+      "ytd_pct": -20.02,
+      "market_date": "2026-07-17",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TEST.US",
       "error": null
     },
     {
@@ -294,6 +266,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DIA.US",
+      "error": null
+    },
+    {
+      "symbol": "VTI",
+      "name_zh": "Vanguard 全美股 ETF",
+      "kind": "US",
+      "price": 367.01,
+      "change_pct": -0.96,
+      "mtd_pct": -0.82,
+      "ytd_pct": 9.47,
+      "market_date": "2026-07-17",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VTI.US",
       "error": null
     },
     {
