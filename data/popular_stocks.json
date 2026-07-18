@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T18:25:51+08:00",
+  "generated_at": "2026-07-18T19:59:21+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -45,20 +45,6 @@
       "error": null
     },
     {
-      "symbol": "SDOT",
-      "name_zh": "Sadot",
-      "kind": "US",
-      "price": 25.3,
-      "change_pct": 77.54,
-      "mtd_pct": -27.9,
-      "ytd_pct": 4.55,
-      "market_date": "2026-07-17",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SDOT.US",
-      "error": null
-    },
-    {
       "symbol": "IOVA",
       "name_zh": "Iovance Biotherapeutics",
       "kind": "US",
@@ -73,17 +59,17 @@
       "error": null
     },
     {
-      "symbol": "GME",
-      "name_zh": "GameStop",
+      "symbol": "SDOT",
+      "name_zh": "Sadot",
       "kind": "US",
-      "price": 21.89,
-      "change_pct": -0.14,
-      "mtd_pct": -0.86,
-      "ytd_pct": 9.01,
+      "price": 25.3,
+      "change_pct": 77.54,
+      "mtd_pct": -27.9,
+      "ytd_pct": 4.55,
       "market_date": "2026-07-17",
-      "per": 12.7635,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GME.US",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SDOT.US",
       "error": null
     },
     {
@@ -101,31 +87,59 @@
       "error": null
     },
     {
-      "symbol": "SCHD",
-      "name_zh": "Schwab US Dividend Equity ETF",
+      "symbol": "GME",
+      "name_zh": "GameStop",
       "kind": "US",
-      "price": 32.91,
-      "change_pct": -0.39,
-      "mtd_pct": 3.78,
-      "ytd_pct": 19.98,
+      "price": 21.89,
+      "change_pct": -0.14,
+      "mtd_pct": -0.86,
+      "ytd_pct": 9.01,
       "market_date": "2026-07-17",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SCHD.US",
+      "per": 12.7635,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GME.US",
       "error": null
     },
     {
-      "symbol": "PANW",
-      "name_zh": "Palo Alto Networks",
+      "symbol": "DJT",
+      "name_zh": "Trump Media & Technology",
       "kind": "US",
-      "price": 358.68,
-      "change_pct": 1.32,
-      "mtd_pct": 5.18,
-      "ytd_pct": 94.72,
+      "price": 9.66,
+      "change_pct": 0.31,
+      "mtd_pct": 24.81,
+      "ytd_pct": -27.04,
       "market_date": "2026-07-17",
-      "per": 342.3135,
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DJT.US",
+      "error": null
+    },
+    {
+      "symbol": "VTI",
+      "name_zh": "Vanguard Total Stock Market ETF",
+      "kind": "US",
+      "price": 367.01,
+      "change_pct": -0.96,
+      "mtd_pct": -0.82,
+      "ytd_pct": 9.47,
+      "market_date": "2026-07-17",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VTI.US",
+      "error": null
+    },
+    {
+      "symbol": "BA",
+      "name_zh": "波音",
+      "kind": "US",
+      "price": 214.03,
+      "change_pct": -0.14,
+      "mtd_pct": -1.13,
+      "ytd_pct": -1.42,
+      "market_date": "2026-07-17",
+      "per": 74.3048,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PANW.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BA.US",
       "error": null
     },
     {
@@ -196,20 +210,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DIA.US",
-      "error": null
-    },
-    {
-      "symbol": "VTI",
-      "name_zh": "Vanguard 全美股 ETF",
-      "kind": "US",
-      "price": 367.01,
-      "change_pct": -0.96,
-      "mtd_pct": -0.82,
-      "ytd_pct": 9.47,
-      "market_date": "2026-07-17",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VTI.US",
       "error": null
     },
     {
