@@ -616,7 +616,7 @@ async function init() {
   wireSearch();
 
   const hashTab = location.hash.replace(/^#/, "");
-  if (hashTab) CURRENT_TAB = hashTab;
+  CURRENT_TAB = hashTab || smartDefaultTab();
   switchTab(CURRENT_TAB);
 
   if ("serviceWorker" in navigator) {
@@ -649,8 +649,30 @@ function redirectToAlloc(body) {
   return "alloc";
 }
 
+// 聰明預設值：記住上次分頁（60 分鐘內回訪還原），否則依時段給預設分頁
+const LAST_TAB_KEY = "mb_lastTab";
+function saveLastTab(name) {
+  try { localStorage.setItem(LAST_TAB_KEY, JSON.stringify({ tab: name, ts: Date.now() })); } catch (_) { /* 略 */ }
+}
+function smartDefaultTab() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(LAST_TAB_KEY) || "null");
+    if (saved && saved.tab && (Date.now() - saved.ts) < 60 * 60 * 1000 &&
+        document.querySelector(`.main-tab[data-tab="${saved.tab}"]`)) {
+      return saved.tab;
+    }
+  } catch (_) { /* 略 */ }
+  const now = new Date();
+  const weekday = now.getDay() >= 1 && now.getDay() <= 5;
+  const hm = now.getHours() * 100 + now.getMinutes();
+  if (weekday && hm >= 500 && hm < 900) return "market"; // 盤前 → 盤勢
+  if (weekday && hm >= 900 && hm < 1400) return "live";  // 台股盤中 → 即時行情
+  return "news";                                         // 晚間／週末 → 新聞
+}
+
 function switchTab(name) {
   CURRENT_TAB = name;
+  saveLastTab(name);
   document.querySelectorAll(".main-tab").forEach(b => {
     b.classList.toggle("active", b.dataset.tab === name);
   });
