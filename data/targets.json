@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T17:22:04+08:00",
+  "generated_at": "2026-07-19T09:02:02+08:00",
   "source": "manual curation (targets.json)",
   "version": 3,
   "updated": "2026-07-17",
@@ -84,14 +84,14 @@
       "stats": [
         {
           "k": "近1年績效",
-          "v": "+12.64%",
-          "sub": "東方匯理新興市場債券・截至 07/16",
+          "v": "+12.56%",
+          "sub": "東方匯理新興市場債券・截至 07/17",
           "url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=PIZA4-PI0V"
         },
         {
           "k": "近1年績效",
-          "v": "+5.68%",
-          "sub": "富蘭克林公司債・截至 07/16",
+          "v": "+5.51%",
+          "sub": "富蘭克林公司債・截至 07/17",
           "url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLZA9-FR76"
         },
         {
@@ -132,8 +132,8 @@
       "stats": [
         {
           "k": "近1年績效",
-          "v": "+51.99%",
-          "sub": "富蘭克林黃金美元 A・截至 07/16",
+          "v": "+52.44%",
+          "sub": "富蘭克林黃金美元 A・截至 07/17",
           "url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLZ01-FA01"
         },
         {
@@ -275,8 +275,8 @@
         },
         {
           "k": "近1年績效",
-          "v": "+53.13%",
-          "sub": "聯博-國際科技 A 美元・截至 07/16",
+          "v": "+49.41%",
+          "sub": "聯博-國際科技 A 美元・截至 07/17",
           "url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=ALZ03-AL08"
         },
         {
@@ -357,6 +357,12 @@
       "tagline": "美伊衝突與海上封鎖升溫、油價與地緣風險續居焦點、供給衝擊題材回歸｜長線核心仍聚焦AI資料中心電力＋鈾循環、水電瓦斯基建單筆1年+24.76%",
       "ytd": "+mixed",
       "stats": [
+        {
+          "k": "WTI 原油 YTD",
+          "v": "+43.91%",
+          "sub": "今日 +4.48%・截至 07/17",
+          "url": "https://finance.yahoo.com/quote/CL=F"
+        },
         {
           "k": "建議部位",
           "v": "3–5%",
@@ -484,6 +490,12 @@
       "ytd": "+low-single",
       "stats": [
         {
+          "k": "STI 海峽時報 YTD",
+          "v": "+18.33%",
+          "sub": "今日 -0.54%・截至 07/17",
+          "url": "https://finance.yahoo.com/quote/%5ESTI"
+        },
+        {
           "k": "建議部位",
           "v": "2–3%",
           "sub": "與越南分流"
@@ -521,8 +533,8 @@
       "stats": [
         {
           "k": "近1年績效",
-          "v": "-15.94%",
-          "sub": "富蘭克林坦伯頓印度・截至 07/16",
+          "v": "-15.43%",
+          "sub": "富蘭克林坦伯頓印度・截至 07/17",
           "url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLZ79-FR59"
         },
         {
@@ -610,16 +622,16 @@
       "tagline": "捕捉新興國家主權債與公司債利差",
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=PIZA4-PI0V",
       "fund_id": "amundi_em_bond",
-      "nav": 24.5,
-      "nav_date": "2026-07-16",
-      "change_pct": 0.0,
+      "nav": 24.47,
+      "nav_date": "2026-07-17",
+      "change_pct": -0.12,
       "perf": {
-        "1m": -0.69,
-        "3m": 1.07,
-        "6m": 2.94,
-        "ytd": 3.81,
-        "1y": 12.64,
-        "3y": 34.39
+        "1m": -0.65,
+        "3m": 0.25,
+        "6m": 2.82,
+        "ytd": 3.69,
+        "1y": 12.56,
+        "3y": 34.08
       },
       "bop_name_zh": "東方匯理基金新興市場債券A美元"
     },
@@ -632,15 +644,15 @@
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLZA9-FR76",
       "fund_id": "franklin_corporate_bond",
       "nav": 25.66,
-      "nav_date": "2026-07-16",
-      "change_pct": 0.04,
+      "nav_date": "2026-07-17",
+      "change_pct": 0.0,
       "perf": {
-        "1m": 0.12,
-        "3m": 0.59,
+        "1m": 0.31,
+        "3m": 0.27,
         "6m": 1.14,
         "ytd": 1.7,
-        "1y": 5.68,
-        "3y": 25.29
+        "1y": 5.51,
+        "3y": 25.54
       },
       "bop_name_zh": "富蘭克林坦伯頓全球投資系列公司債基金美元A(acc)"
     },
@@ -673,16 +685,16 @@
       "tagline": "金礦類股佈局，抗通膨＋去美元化",
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLZ01-FA01",
       "fund_id": "franklin_gold",
-      "nav": 39.33,
-      "nav_date": "2026-07-16",
-      "change_pct": -3.89,
+      "nav": 39.05,
+      "nav_date": "2026-07-17",
+      "change_pct": -0.71,
       "perf": {
-        "1m": -18.3,
-        "3m": -26.64,
-        "6m": -21.89,
-        "ytd": -14.76,
-        "1y": 51.99,
-        "3y": 186.74
+        "1m": -17.04,
+        "3m": -28.94,
+        "6m": -22.44,
+        "ytd": -15.37,
+        "1y": 52.44,
+        "3y": 184.7
       },
       "bop_name_zh": "富蘭克林黃金基金美元A"
     },
@@ -757,16 +769,16 @@
       "tagline": "全球科技巨頭與雲端軟體應用",
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=ALZ03-AL08",
       "fund_id": "ab_intl_tech",
-      "nav": 1524.03,
-      "nav_date": "2026-07-16",
-      "change_pct": -3.74,
+      "nav": 1502.38,
+      "nav_date": "2026-07-17",
+      "change_pct": -1.42,
       "perf": {
-        "1m": -9.05,
-        "3m": 13.39,
-        "6m": 23.58,
-        "ytd": 29.65,
-        "1y": 53.13,
-        "3y": 139.0
+        "1m": -9.99,
+        "3m": 9.84,
+        "6m": 21.82,
+        "ytd": 27.81,
+        "1y": 49.41,
+        "3y": 132.15
       },
       "bop_name_zh": "聯博-國際科技基金A級別美元"
     },
@@ -820,16 +832,16 @@
       "tagline": "印度長期成長敘事",
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLZ79-FR59",
       "fund_id": "franklin_india",
-      "nav": 59.21,
-      "nav_date": "2026-07-16",
-      "change_pct": -0.5,
+      "nav": 59.53,
+      "nav_date": "2026-07-17",
+      "change_pct": 0.54,
       "perf": {
-        "1m": 0.95,
-        "3m": -0.27,
-        "6m": -9.38,
-        "ytd": -12.39,
-        "1y": -15.94,
-        "3y": 9.47
+        "1m": 2.43,
+        "3m": -1.6,
+        "6m": -8.89,
+        "ytd": -11.91,
+        "1y": -15.43,
+        "3y": 9.21
       },
       "bop_name_zh": "富蘭克林坦伯頓全球投資系列印度基金美元A(acc)"
     }
