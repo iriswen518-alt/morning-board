@@ -3657,20 +3657,24 @@ function renderMarketSheet() {
   const usRankHtml = renderRankingsBlock("us");
   const usParts = [];
   if (usAnalysisHtml && usAnalysisHtml.trim()) usParts.push(accSection("mv-us-premarket", "美股盤勢", dropLeadH2(usAnalysisHtml)));
-  if (usStocksHtml && usStocksHtml.trim()) usParts.push(accSection("mv-us-stocks", "精選美股", usStocksHtml));
   if (usRankHtml && usRankHtml.trim()) usParts.push(accSection("mv-us-rankings", "美股排行", usRankHtml));
+  // 精選美股＝道瓊／S&P500／費半重要成分股（清單見 build/fetch_stocks.py）
+  if (usStocksHtml && usStocksHtml.trim()) {
+    const usCaption = `<p style="color:var(--text-mute);font-size:13px;margin:0 0 10px">道瓊／S&amp;P500／費半（SOX）重要成分股｜點欄位標題可排序</p>`;
+    usParts.push(accSection("mv-us-stocks", "精選美股", usCaption + usStocksHtml));
+  }
   const usInner = usParts.join("");
 
   const twPremarketHtml = renderPremarketBlock();
-  // 台股盤勢區塊已依需求移除（2026-07-18），盤勢內容由「盤前分析」涵蓋；renderTwMarketAnalysis 保留備用。
+  // 台股盤勢區塊已依需求移除（2026-07-18），盤勢內容由「盤勢分析」涵蓋；renderTwMarketAnalysis 保留備用。
   const twRankHtml = renderRankingsBlock("tw");
   const twSheetHtml = renderTwStockSheet();
   const twParts = [];
-  if (twPremarketHtml && twPremarketHtml.trim()) twParts.push(accSection("mv-tw-premarket", "盤前分析", twPremarketHtml));
-  if (twPresetTable && twPresetTable.trim()) twParts.push(accSection("mv-tw-stocks", "精選台股", twPresetTable));
-  const etf0050Html = render0050Section();
-  if (etf0050Html && etf0050Html.trim()) twParts.push(accSection("mv-tw-0050", "0050 成分股", etf0050Html));
+  if (twPremarketHtml && twPremarketHtml.trim()) twParts.push(accSection("mv-tw-premarket", "盤勢分析", twPremarketHtml));
   if (twRankHtml && twRankHtml.trim()) twParts.push(accSection("mv-tw-rankings", "台股排行", twRankHtml));
+  // 精選台股內容＝0050（元大台灣50）成分股（2026-07-20 起，取代原精選清單）
+  const etf0050Html = render0050Section();
+  if (etf0050Html && etf0050Html.trim()) twParts.push(accSection("mv-tw-stocks", "精選台股", etf0050Html));
   if (twSheetHtml && twSheetHtml.trim()) twParts.push(accSection("mv-tw-sheet", "個股查詢", twSheetHtml));
   const twInner = twParts.join("");
 
@@ -6265,7 +6269,7 @@ function renderRankingsBlock(market) {
 
 function renderPremarketBlock() {
   const p = DATA.premarket;
-  if (!p) return `<p style="color:var(--text-mute);padding:32px 0;text-align:center">今日尚無盤前分析資料</p>`;
+  if (!p) return `<p style="color:var(--text-mute);padding:32px 0;text-align:center">今日尚無盤勢分析資料</p>`;
 
   const pmDate = shortDate((p.generated_at || "").slice(0, 10));
 
