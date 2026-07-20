@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T17:35:24+08:00",
+  "generated_at": "2026-07-20T18:22:45+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -73,20 +73,6 @@
       "error": null
     },
     {
-      "symbol": "USO",
-      "name_zh": "United States Oil Fund",
-      "kind": "US",
-      "price": 123.96,
-      "change_pct": 3.91,
-      "mtd_pct": 16.46,
-      "ytd_pct": 79.24,
-      "market_date": "2026-07-17",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=USO.US",
-      "error": null
-    },
-    {
       "symbol": "SNPS",
       "name_zh": "Synopsys",
       "kind": "US",
@@ -115,17 +101,31 @@
       "error": null
     },
     {
-      "symbol": "VG",
-      "name_zh": "Venture Global",
+      "symbol": "VKTX",
+      "name_zh": "Viking Therapeutics",
       "kind": "US",
-      "price": 13.8,
-      "change_pct": 8.92,
-      "mtd_pct": 23.99,
-      "ytd_pct": 102.35,
+      "price": 37.08,
+      "change_pct": 1.95,
+      "mtd_pct": -4.95,
+      "ytd_pct": 5.4,
       "market_date": "2026-07-17",
-      "per": 12.275,
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VKTX.US",
+      "error": null
+    },
+    {
+      "symbol": "BA",
+      "name_zh": "波音",
+      "kind": "US",
+      "price": 214.03,
+      "change_pct": -0.14,
+      "mtd_pct": -1.13,
+      "ytd_pct": -1.42,
+      "market_date": "2026-07-17",
+      "per": 74.3917,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VG.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BA.US",
       "error": null
     },
     {
