@@ -313,9 +313,10 @@ const LOAD_NAME_TO_DATA_KEY = {
   beatetf: "beatetf", presets: "presets", fund_compare: "fund_compare",
   tw_stocks: "tw_stocks", rankings: "rankings",
   premarket: "premarket", live_indices: "live",
+  weekly_report: "weekly",
 };
 const TAB_LOAD_DEPS = {
-  market: ["market", "stocks", "rankings", "premarket"],
+  market: ["market", "stocks", "rankings", "premarket", "weekly_report"],
   live: ["live_indices"],
   news: ["news"],
   funds: ["funds", "dca", "beatetf", "fund_compare", "popular_funds"],
@@ -568,7 +569,7 @@ async function init() {
   // 每個來源各自有 fallback：一個壞不拖垮全頁
   // 失敗時記到 FAILED_LOADS，使用者切到對應 tab 時會背景重試
   const safe = (name, fallback) => load(name).catch(() => { FAILED_LOADS.add(name); return fallback; });
-  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news, etf0050] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news, etf0050, weekly] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
@@ -595,8 +596,9 @@ async function init() {
     safe("live_indices", { built_at: "", indices: [] }),
     safe("live_news", { built_at: "", items: [] }),
     safe("etf0050", { built_at: "", market_date: "", stocks: [] }),
+    safe("weekly_report", null),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news, etf0050 };
+  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news, etf0050, weekly };
   const _updatedAt = latestBuiltAt();
   if (!_updatedAt) {
     $("updated").textContent = `載入部分失敗（顯示快取資料）`;
@@ -978,7 +980,7 @@ async function refreshData() {
     FAILED_LOADS.add(name);
     return DATA[name === "insurances" ? "insurance" : name] || fallback;
   });
-  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news, etf0050] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news, etf0050, weekly] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
@@ -1005,8 +1007,9 @@ async function refreshData() {
     safe("live_indices", { built_at: "", indices: [] }),
     safe("live_news", { built_at: "", items: [] }),
     safe("etf0050", { built_at: "", market_date: "", stocks: [] }),
+    safe("weekly_report", null),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news, etf0050 };
+  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news, etf0050, weekly };
   SEARCH_INDEX = buildSearchIndex();
   const _updatedAt = latestBuiltAt();
   if (_updatedAt) {
@@ -3682,11 +3685,39 @@ function renderMarketSheet() {
     ? accSection("mv-overview", "市場一覽", overviewInner)
     : "";
 
+  const weeklyInner = renderWeeklyReportBlock();
+  const weeklySection = weeklyInner ? accSection("mv-weekly", "市場週報", weeklyInner) : "";
+
   return `
     ${overviewSection}
     ${accSection("mv-us-analysis", "美股分析", usInner)}
     ${accSection("mv-tw-analysis", "台股分析", twInner)}
+    ${weeklySection}
   `;
+}
+
+// ── 市場週報：彙整 7 日內權威來源對市場的最新看法 ────────────────────────────
+// 資料 data/weekly_report.json；每週更新一次（sections[].items[]：source/date/view/url）。
+function renderWeeklyReportBlock() {
+  const w = DATA.weekly;
+  if (!w || !Array.isArray(w.sections)) return "";
+  const secs = w.sections.filter(s => Array.isArray(s.items) && s.items.length);
+  if (!secs.length) return "";
+  const range = (w.week_start && w.week_end)
+    ? `彙整期間：${shortDate(w.week_start).replace("-", "/")} – ${shortDate(w.week_end).replace("-", "/")}`
+    : "";
+  const inner = secs.map(s => {
+    const items = s.items.map(it => `
+      <li class="wr-item">
+        <div class="wr-item-head">
+          <span class="wr-src">${escapeHtml(it.source || "")}</span>
+          ${it.date ? `<span class="wr-date">${escapeHtml(shortDate(it.date).replace("-", "/"))}</span>` : ""}
+        </div>
+        <div class="wr-view">${escapeHtml(it.view || "")}${it.url ? ` <a class="wr-link" href="${escapeHtml(it.url)}" target="_blank" rel="noopener">原文 →</a>` : ""}</div>
+      </li>`).join("");
+    return accSection("wr-" + (s.key || s.title), s.title, `<ul class="wr-list">${items}</ul>`);
+  }).join("");
+  return `${range ? `<p class="wr-range">${escapeHtml(range)}</p>` : ""}${inner}`;
 }
 
 // ── 盤勢說明區塊（美股/台股共用） ────────────────────────────────────────────

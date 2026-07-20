@@ -3006,3 +3006,17 @@ table.indices.stock-cols col.c-num { width: 11%; }
   .sr-title { font-size: 15px; }
   .sr-snippet { font-size: 13px; }
 }
+
+/* ── 市場週報（全球分頁）：7 日內權威來源觀點列表 ── */
+.wr-range { font-size: 12px; color: var(--text-mute); margin: 4px 0 10px; }
+.wr-list { list-style: none; margin: 0; padding: 0; }
+.wr-item { padding: 10px 0; border-top: 1px dashed #eef1f4; }
+.wr-item:first-child { border-top: none; padding-top: 2px; }
+.wr-item-head { display: flex; align-items: baseline; gap: 8px; margin-bottom: 3px; }
+.wr-src { font-size: 14px; font-weight: 700; color: var(--brand-deep); }
+.wr-date { font-size: 11px; background: #E5F2F5; color: #0a5a6e; border-radius: 8px; padding: 1px 7px; white-space: nowrap; }
+.wr-view { font-size: 14px; line-height: 1.65; color: var(--text-main, #1f2937); }
+.wr-link { font-size: 13px; color: #017A8F; white-space: nowrap; }
+@media (max-width: 768px) {
+  .wr-view { font-size: 15px; }
+}
