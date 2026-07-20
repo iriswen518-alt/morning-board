@@ -42,7 +42,7 @@
 // v50（2026-07-18）：手機字級放大改用固定 px 覆寫（text-size-adjust 在 iOS PWA 會自行失效），
 //   bump 強制裝置更新 style.css，避免卡舊快取「自行恢復原狀」。
 // v51（2026-07-19）：聰明預設分頁——記住上次分頁（60 分內還原），否則盤前→盤勢、盤中→即時、晚間→新聞。
-const CACHE = "morning-board-v53";
+const CACHE = "morning-board-v54";
 
 self.addEventListener("install", e => {
   self.skipWaiting();
