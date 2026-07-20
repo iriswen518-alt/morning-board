@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-12T20:36:32+08:00",
-  "week_of": "2026-07-05 ~ 2026-07-12",
-  "week_of_start": "2026-07-05",
-  "week_of_end": "2026-07-12",
+  "generated_at": "2026-07-19T20:30:10+08:00",
+  "week_of": "2026-07-12 ~ 2026-07-19",
+  "week_of_start": "2026-07-12",
+  "week_of_end": "2026-07-19",
   "watchlist": [
     "NVDA",
     "AAPL",
@@ -18,473 +18,502 @@
     {
       "symbol": "NVDA",
       "name_zh": "輝達",
-      "weekly_change_pct": 8.28,
+      "weekly_change_pct": -3.86,
       "weekly_definition": "5 個交易日 close-to-close",
-      "weekly_as_of": "2026-07-10",
-      "weekly_start": "2026-07-02",
+      "weekly_as_of": "2026-07-17",
+      "weekly_start": "2026-07-10",
       "weekly_source": "yahoo_chart",
       "news_highlights": [
         {
-          "headline_zh": "摩根士丹利警告雲端巨頭加碼算力恐引發晶片通膨",
-          "headline_en": "Morgan Stanley Warns of \"Chipflation\" as Hyperscalers Invest More in Compute Capacity: 2 No-Brainer Artificial Intelligence (AI) Chip Stocks to Buy Right Now",
+          "headline_zh": "台積電亮眼財報公布後我正買進的3檔股票",
+          "headline_en": "3 Stocks I'm Buying After Taiwan Semiconductor's Stellar Announcement",
           "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=65e7b5c3c2e26963f5978bbaceef2486f40bbe288d3869422ba9877f54f432e2",
-          "published": "2026-07-12",
+          "url": "https://finnhub.io/api/news?id=94493af9cf6faacc977b90fda5624fd1a87b4a219e621b3d613b80057845708a",
+          "published": "2026-07-19",
           "importance": "MED"
         },
         {
-          "headline_zh": "輝達投資人須留意 7 月 16 日",
-          "headline_en": "Nvidia Investors Need to Be Paying Attention on July 16",
+          "headline_zh": "股市出現155年來僅3次的現象—1999、2022、2026—對華爾街發出嚴峻警訊",
+          "headline_en": "The Stock Market Is Doing Something Observed Only 3 Times in 155 Years -- 1999, 2022, and 2026 -- and It Offers a Dire Warning for Wall Street",
           "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=b80731d9bf5a181c664fb8e3a73ff69b8a0af6ca7f4205e6b3820cddc722f364",
-          "published": "2026-07-12",
-          "importance": "MED"
+          "url": "https://finnhub.io/api/news?id=5f430b1c165b7c4fe42356b3885733cacaa7113f19992b11ed2205a6cf0c1923",
+          "published": "2026-07-19",
+          "importance": "LOW"
         },
         {
-          "headline_zh": "Robinhood 投資人持有最多的三檔晶片股",
-          "headline_en": "The 3 Top Chip Stocks Investors Own on Robinhood",
+          "headline_zh": "2026上半年ETF資金流創紀錄，現在是進場時機嗎？",
+          "headline_en": "ETF Flows Smash Records in the First Half of 2026. Is It Time to Invest?",
           "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=20414c4ffd250328b09032028339d6e98b81d6027d7ef658b2baa9a6fd3d854e",
-          "published": "2026-07-12",
+          "url": "https://finnhub.io/api/news?id=c286c56a6f1acb89f9bea5c74198b5e15c8690aa026a7c8f217b1353cbb68271",
+          "published": "2026-07-19",
           "importance": "LOW"
         }
       ],
-      "thesis_check": "本週無改變核心論點的個股新聞，市場聚焦 AI 算力需求與晶片供給議題，並關注台積電後續指引。",
-      "next_week_catalyst": "新聞提及台積電將於 7/16 公布財報，市場視為 AI 需求風向球。"
+      "thesis_check": "本週company_news無輝達個股特定消息，多為通用清單與AI主題文章；台積電財報顯示AI需求強勁，但晶片股普遍回檔。核心論點未見改變。",
+      "next_week_catalyst": null
     },
     {
       "symbol": "AAPL",
       "name_zh": "蘋果",
-      "weekly_change_pct": 2.17,
+      "weekly_change_pct": 5.84,
       "weekly_definition": "5 個交易日 close-to-close",
-      "weekly_as_of": "2026-07-10",
-      "weekly_start": "2026-07-02",
+      "weekly_as_of": "2026-07-17",
+      "weekly_start": "2026-07-10",
       "weekly_source": "yahoo_chart",
       "news_highlights": [
         {
-          "headline_zh": "庫克宣布與博通 300 億美元、生產 150 億顆晶片協議",
-          "headline_en": "Apple CEO Tim Cook Announces $30 Billion Broadcom Deal to Produce 15 Billion Chips",
+          "headline_zh": "五大分析師AI動作：滙豐點名「營運轉折點」上調蘋果評等",
+          "headline_en": "5 big analyst AI moves: Apple upgraded as HSBC flags ’operational turning point’",
           "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=a9f05420e2fa73b268e35c04de55cc1ebaf68080c294a9477707f1663b3fb2a6",
-          "published": "2026-07-11",
+          "url": "https://finnhub.io/api/news?id=433833a0c7f1bc614c0ee5e87dc9f9f1212f038cce9a6e6b2aae1aa3fa4baf53",
+          "published": "2026-07-19",
           "importance": "HIGH"
         },
         {
-          "headline_zh": "Google 與 Apple：兩大 AI 股比較",
-          "headline_en": "Google vs Apple: Which of the 2 Biggest AI Stocks Is the Better Buy Right Now?",
+          "headline_zh": "分析師Gene Munster稱新Siri AI感覺「像換了新手機」、郭明錤稱股價創高早在預期，蘋果股價觸及紀錄高點",
+          "headline_en": "Gene Munster Says New Siri AI Makes It Feel 'Like Having a New Phone,' Ming-Chi Kuo Says Stock Rally Was Expected as Apple Stock Touches Record High",
           "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=1deaf95b6458a19e10fd239a7270bdfa11e20e748915d129a029746d92f675f3",
-          "published": "2026-07-12",
-          "importance": "LOW"
+          "url": "https://finnhub.io/api/news?id=dd544d081d831642701ade20c701bb3b02f9db23defc414902decff0c40a0536",
+          "published": "2026-07-18",
+          "importance": "HIGH"
         },
         {
-          "headline_zh": "預測：Apple 2026 年底市值上看 5 兆美元",
-          "headline_en": "Prediction: Apple Will Be Worth $5 Trillion (or More) by the End of 2026",
+          "headline_zh": "蘋果調漲主要訂閱服務價格",
+          "headline_en": "Apple raises prices on key subscription services",
           "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=ef9f081cf0e5b1135573a533e3215467945d1fdf17599e3fc71cc5efd885cb11",
-          "published": "2026-07-11",
-          "importance": "LOW"
+          "url": "https://finnhub.io/api/news?id=7b1708bad204c916ed1df997601a6126c8628f03994ca0bebc6ba765166480bb",
+          "published": "2026-07-18",
+          "importance": "MED"
         }
       ],
-      "thesis_check": "蘋果宣布與博通簽訂 300 億美元、至 2031 年的晶片供應協議（屬美國製造計畫），強化自研晶片供應鏈，屬本週正面資訊但未改變長期論點。",
+      "thesis_check": "本週蘋果新Siri AI beta與Apple Intelligence進展獲市場肯定、股價創高並獲滙豐上調評等，另調漲訂閱服務價格；AI與服務敘事轉正，強化核心論點。",
       "next_week_catalyst": null
     },
     {
       "symbol": "MSFT",
       "name_zh": "微軟",
-      "weekly_change_pct": -1.38,
+      "weekly_change_pct": 2.26,
       "weekly_definition": "5 個交易日 close-to-close",
-      "weekly_as_of": "2026-07-10",
-      "weekly_start": "2026-07-02",
+      "weekly_as_of": "2026-07-17",
+      "weekly_start": "2026-07-10",
       "weekly_source": "yahoo_chart",
       "news_highlights": [
         {
-          "headline_zh": "微軟 2025 年碳排增 25%，AI 資料中心挑戰 ESG 目標",
-          "headline_en": "Microsoft (MSFT) Faces A 25% Emissions Jump As AI Data Centers Test ESG Goals",
+          "headline_zh": "評價壓縮是微軟股票的真實威脅，但其核心故事並未瓦解",
+          "headline_en": "Multiple Compression Is a Real Threat to Microsoft Stock, But Its Core Story Isn’t Broken",
           "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=23108290660ed451ad786e9e0312ceb47ee8a5d06ec5352b852c11025cb918d4",
-          "published": "2026-07-12",
+          "url": "https://finnhub.io/api/news?id=3aaa7bb7956ba21b676399ee6e2562a50b5312e7b22baf6559a717f26768588f",
+          "published": "2026-07-18",
+          "importance": "HIGH"
+        },
+        {
+          "headline_zh": "傳微軟要求業務團隊力推自家AI模型，而非OpenAI、Google與Anthropic",
+          "headline_en": "Microsoft Wants Sales Team to Push Its Own AI Models Instead of Rivals OpenAI, Google and Anthropic: Report (UPDATED)",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=807020de1e668f52d451c7698dacfbaf3509fec1e05a94444fa377188685732e",
+          "published": "2026-07-18",
           "importance": "MED"
         },
         {
-          "headline_zh": "大型科技 AI 資本支出才剛開始，財報將見真章",
-          "headline_en": "Big Tech’s Massive AI Spending Is Just Starting. Earnings Will Show It.",
+          "headline_zh": "美國銀行對微軟股票發出強烈評價",
+          "headline_en": "Bank of America sends strong verdict on Microsoft stock",
           "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=0257548999319eb9f095a710db7225430f94c161276fc6b8e88c812119e0782b",
-          "published": "2026-07-12",
+          "url": "https://finnhub.io/api/news?id=0a82edbecf566c1b5f294314bf7e97a177627cfe91a55e24cee562c6cb3fd789",
+          "published": "2026-07-18",
           "importance": "MED"
-        },
-        {
-          "headline_zh": "微軟自願退休方案為員工敲響警鐘",
-          "headline_en": "Microsoft's retirement offer is a wake-up call for workers",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=f7c70ec4d157057f3533ded33de4ca95f9ea069005b01138e23b4adaef0c1895",
-          "published": "2026-07-11",
-          "importance": "LOW"
         }
       ],
-      "thesis_check": "本週以 AI 資料中心碳排上升與大型科技資本支出議題為主，未出現改變核心論點的營運事件。",
+      "thesis_check": "本週利多利空並陳：花旗維持買進但下調評等、美銀正面表態，並傳出要求業務優先推銷自家AI模型；Azure與AI論點延續，惟軟體評價壓縮為主要風險。",
       "next_week_catalyst": null
     },
     {
       "symbol": "GOOGL",
       "name_zh": "字母",
-      "weekly_change_pct": -0.76,
+      "weekly_change_pct": -2.91,
       "weekly_definition": "5 個交易日 close-to-close",
-      "weekly_as_of": "2026-07-10",
-      "weekly_start": "2026-07-02",
+      "weekly_as_of": "2026-07-17",
+      "weekly_start": "2026-07-10",
       "weekly_source": "yahoo_chart",
       "news_highlights": [
         {
-          "headline_zh": "分析師估 Alphabet 第二季資本支出達 449 億美元、年增一倍",
-          "headline_en": "Big Tech’s Massive AI Spending Is Just Starting. Earnings Will Show It.",
+          "headline_zh": "英特爾與Google深化晶片設計AI合作",
+          "headline_en": "Intel and Google deepen AI ties for chip design",
           "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=0257548999319eb9f095a710db7225430f94c161276fc6b8e88c812119e0782b",
-          "published": "2026-07-12",
+          "url": "https://finnhub.io/api/news?id=58c00a358d0a2c6dc4c73f6d895a38bb1b6db71a4f6b14655a325aa866ccef3c",
+          "published": "2026-07-18",
           "importance": "HIGH"
         },
         {
-          "headline_zh": "波克夏押注 85 億美元於住宅與 AI",
-          "headline_en": "Berkshire Hathaway (BRK.A) Is Making An $8.5 Billion Bet On Homes And AI",
+          "headline_zh": "美伊攻擊升溫道瓊期貨承壓，Google、特斯拉、AMD即將登場",
+          "headline_en": "Dow Jones Futures Loom As U.S.-Iran Attacks Escalate; Google, Tesla, AMD Ahead",
           "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=67a449a5622a69f6f09c19319f0691d40b39f73f5212f280c9f315afcfbf4f9f",
-          "published": "2026-07-11",
+          "url": "https://finnhub.io/api/news?id=2d3cccb04a42f2252f4762d535a3541cb90b6bf4620f71342aa532df4c6056f3",
+          "published": "2026-07-19",
           "importance": "MED"
         },
         {
-          "headline_zh": "Google 與 Apple：兩大 AI 股比較",
-          "headline_en": "Google vs Apple: Which of the 2 Biggest AI Stocks Is the Better Buy Right Now?",
+          "headline_zh": "巴菲特這三個字對字母投資人是大好消息",
+          "headline_en": "These 3 Words From Warren Buffett Are Great News for Alphabet Investors",
           "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=1deaf95b6458a19e10fd239a7270bdfa11e20e748915d129a029746d92f675f3",
-          "published": "2026-07-12",
+          "url": "https://finnhub.io/api/news?id=7348b6b8005d9a511e385a472e0d6b6ad8f50ca0b60265fd9458a7774ae04a62",
+          "published": "2026-07-19",
           "importance": "LOW"
         }
       ],
-      "thesis_check": "市場聚焦 Alphabet 第二季龐大 AI 資本支出（新聞估約 449 億美元），將於財報驗證投報效益，屬觀察重點但核心論點未變。",
-      "next_week_catalyst": null
+      "thesis_check": "本週英特爾與Google擴大晶片設計AI合作（部署Gemini Enterprise），巴菲特持續加持；市場聚焦即將公布的財報與資本支出指引。核心雲端與AI論點維持不變。",
+      "next_week_catalyst": "字母(Alphabet)將於2026-07-22盤後(amc)公布財報，市場預估EPS約2.97、營收約1,203億美元，資本支出指引為關注焦點。"
     },
     {
       "symbol": "AMZN",
       "name_zh": "亞馬遜",
-      "weekly_change_pct": 1.1,
+      "weekly_change_pct": 0.77,
       "weekly_definition": "5 個交易日 close-to-close",
-      "weekly_as_of": "2026-07-10",
-      "weekly_start": "2026-07-02",
+      "weekly_as_of": "2026-07-17",
+      "weekly_start": "2026-07-10",
       "weekly_source": "yahoo_chart",
       "news_highlights": [
         {
-          "headline_zh": "亞馬遜 AI 支出龐大到現金不敷、發債支應",
-          "headline_en": "Amazon Is Spending So Much on AI That Even Its Cash Isn’t Enough. Why Investors Shouldn’t Be Worried.",
+          "headline_zh": "亞馬遜250億美元發債，讓我更有理由持續買進",
+          "headline_en": "Amazon’s $25 Billion Bond Sale Created 3 More Reasons for Me to Keep Buying",
           "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=f558b9b464cdadf0f609272844069880331bfedb57aa74daa8e3938adfe3810c",
-          "published": "2026-07-11",
-          "importance": "HIGH"
-        },
-        {
-          "headline_zh": "亞馬遜 2 兆美元帝國面臨關鍵轉折點",
-          "headline_en": "Amazon’s $2 Trillion Empire Faces a Critical Turning Point",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=4474edc9e45ae8e5b9a88f7a6071a608e94f439077d4ad2e3b968974dd941553",
-          "published": "2026-07-11",
+          "url": "https://finnhub.io/api/news?id=02cb31ea4f8e7d04055803dc62e90d9c9cd6bbd34b18613bf382c86fbac07777",
+          "published": "2026-07-18",
           "importance": "MED"
         },
         {
-          "headline_zh": "亞馬遜在線上生鮮雜貨戰役中落居下風",
-          "headline_en": "Amazon is losing the battle for online groceries",
+          "headline_zh": "亞馬遜：放大版AWS複製既有模式即已足夠",
+          "headline_en": "Amazon: A Scaled-Up AWS Rinse And Repeat Is All It Needs",
+          "source": "SeekingAlpha",
+          "url": "https://finnhub.io/api/news?id=921c7b79c1698d55f263f4ccfd91611cea3e916e8b66d99c427260c39226f510",
+          "published": "2026-07-18",
+          "importance": "MED"
+        },
+        {
+          "headline_zh": "馬斯克坦承低估Anthropic的AI，亞馬遜與字母投資人應留意",
+          "headline_en": "Elon Musk Admits He Underestimated Anthropic's AI, and Amazon and Alphabet Investors Should Take Notice",
           "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=fc970b37a2e00de239762972bb37b21232802b0e7cf1a45db1dfe629ece31831",
-          "published": "2026-07-11",
+          "url": "https://finnhub.io/api/news?id=5a14e91ea6a162153837306bef359e075f9ea2c8ca93a5924de299fd6d26840b",
+          "published": "2026-07-19",
           "importance": "MED"
         }
       ],
-      "thesis_check": "本週焦點為 AWS／AI 資本支出擴大並發債籌資，反映 AI 投入加碼；零售端線上生鮮競爭轉弱為觀察點，核心論點未變。",
+      "thesis_check": "本週焦點在亞馬遜250億美元發債以支應AI／AWS資本支出，及其投資的Anthropic獲馬斯克肯定；AWS成長與生成式AI論點延續，核心論點未變。",
       "next_week_catalyst": null
     },
     {
       "symbol": "META",
       "name_zh": "Meta",
-      "weekly_change_pct": 14.81,
+      "weekly_change_pct": -3.47,
       "weekly_definition": "5 個交易日 close-to-close",
-      "weekly_as_of": "2026-07-10",
-      "weekly_start": "2026-07-02",
+      "weekly_as_of": "2026-07-17",
+      "weekly_start": "2026-07-10",
       "weekly_source": "yahoo_chart",
       "news_highlights": [
         {
-          "headline_zh": "祖克柏坦言 Meta 的 AI 押注尚未見成效，股價跌 5%",
-          "headline_en": "Mark Zuckerberg Said Meta's AI Bets \"Haven't Come to Fruition Yet\" as Shares Fell 5%",
+          "headline_zh": "傳Meta與Anthropic洽談100億美元AI交易",
+          "headline_en": "Meta Reportedly In Talks With Anthropic Over a $10 Billion AI Deal",
           "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=f5ad5dcb5e025c5e3d5da9644f6f1e9bbd9c6d9291a719978c613466e313af51",
-          "published": "2026-07-12",
+          "url": "https://finnhub.io/api/news?id=03142af1275e8009429ca4b84597f146035c5b089c1fd8a06dba0f1c1593a9e4",
+          "published": "2026-07-18",
           "importance": "HIGH"
         },
         {
-          "headline_zh": "Meta 能否將過剩 AI 算力轉為穩定企業營收引擎",
-          "headline_en": "Can Meta Platforms (META) Turn Surplus AI Capacity Into a Durable Enterprise Revenue Engine?",
+          "headline_zh": "Meta本月上漲21%，背後驅動因素解析",
+          "headline_en": "Meta Platforms Is Up 21% This Month, and Here Is What's Driving the Surge",
           "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=ad707c1161fa7fb0fe7519cae4bae6328e20b0b8cee553c39cd61ade2bc63a04",
-          "published": "2026-07-12",
-          "importance": "HIGH"
+          "url": "https://finnhub.io/api/news?id=8a68684b7afd8056e3d86e1e7027a7c52b1503616d0cb5d79cba77bced0d662d",
+          "published": "2026-07-18",
+          "importance": "MED"
         },
         {
-          "headline_zh": "Meta 揭露震撼新 AI 策略，計畫跨足雲端運算",
-          "headline_en": "Meta Platforms Just Unveiled a Shocking New Artificial Intelligence (AI) Strategy",
+          "headline_zh": "祖克柏的Meta與其他超大規模業者面臨重大瓶頸",
+          "headline_en": "Mark Zuckerberg's Meta and Other Hyperscalers Face a Major Bottleneck. Here Are 2 Industrial Stocks That Will Benefit",
           "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=1d24c83d41d5f3ad8678df9d98b56f893c0a49270437bdd7f957df397846fd0c",
-          "published": "2026-07-12",
+          "url": "https://finnhub.io/api/news?id=cf51b64852dab0a94535405cbe4b59e23c7f86ac1e465876becfc2562cf11bc5",
+          "published": "2026-07-19",
           "importance": "MED"
         }
       ],
-      "thesis_check": "Meta 推出「Meta Compute」出租過剩 AI 算力、加速自研 Iris 晶片量產，並由管理層坦言 AI 投資尚未見成效；策略轉向雲端為重要觀察點，中長期成效待驗證。",
+      "thesis_check": "本週傳出Meta擬向Anthropic出租AI算力（約100億美元），顯示其資料中心投資可能轉為對外變現；股價本月大漲。AI算力供給角色強化核心論點。",
       "next_week_catalyst": null
     },
     {
       "symbol": "TSLA",
       "name_zh": "特斯拉",
-      "weekly_change_pct": 3.64,
+      "weekly_change_pct": -6.6,
       "weekly_definition": "5 個交易日 close-to-close",
-      "weekly_as_of": "2026-07-10",
-      "weekly_start": "2026-07-02",
+      "weekly_as_of": "2026-07-17",
+      "weekly_start": "2026-07-10",
       "weekly_source": "yahoo_chart",
       "news_highlights": [
         {
-          "headline_zh": "特斯拉 Robotaxi 面臨聯邦監管機構新安全質疑",
-          "headline_en": "Tesla (TSLA) Faces New Robotaxi Safety Questions From Federal Regulators",
+          "headline_zh": "特斯拉在財報前面臨三大逆風",
+          "headline_en": "Tesla face 3 major headwinds heading into earnings report",
           "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=e17284c54aa25245411ec46204ec6e511f3d7549415b85d601e34d19be937c63",
-          "published": "2026-07-12",
+          "url": "https://finnhub.io/api/news?id=3b25ff6960e1d55b24839cda3074dc98868b897c186c0e5764b4910127dc4380",
+          "published": "2026-07-18",
           "importance": "HIGH"
         },
         {
-          "headline_zh": "特斯拉在達拉斯、休士頓兌現十年 Robotaxi 承諾",
-          "headline_en": "NVIDA Vs. Tesla: Tesla Jumps as It Finally Fulfills Decade-Old Promise So Buy Nvidia Instead",
+          "headline_zh": "特斯拉汽車業務改善對股價有多重要？",
+          "headline_en": "Tesla stock: How much does an improved auto business matter?",
           "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=0cb7ffd6a6f0c85e168272d883b4f7638056a6d6d8dab40b06d736c5e562f9ea",
-          "published": "2026-07-11",
+          "url": "https://finnhub.io/api/news?id=f4b69d7d7caddecbe7f932cca129a62dc45ea25959d627475ec70f6896d52897",
+          "published": "2026-07-18",
           "importance": "MED"
         },
         {
-          "headline_zh": "特斯拉傳要求員工改用 Grok 4.5 以降低 AI 成本",
-          "headline_en": "Tesla Reportedly Pushes Staff Toward Grok 4.5 As AI Spending Cap Takes Effect",
+          "headline_zh": "美國銀行在財報前調整特斯拉預測",
+          "headline_en": "Bank of America revamps Tesla forecast before earnings",
           "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=08e22d6f3f7845a161f7007cf37d2f875ab87f12389ba81ef7ab5e5a4d21883f",
-          "published": "2026-07-11",
-          "importance": "LOW"
+          "url": "https://finnhub.io/api/news?id=b83d33d593d92299813f10614e2737d095c023c555d5cc6292226f70157f9e92",
+          "published": "2026-07-18",
+          "importance": "MED"
         }
       ],
-      "thesis_check": "Robotaxi 於達拉斯、休士頓上路後隨即遭聯邦監管機構就與緊急救援人員互動提出安全質疑，監管風險為本週新增觀察重點。",
-      "next_week_catalyst": null
+      "thesis_check": "本週市場聚焦特斯拉財報前的三大逆風與汽車業務改善程度；Robotaxi、FSD、Optimus仍被視為估值主軸。核心論點未變，待財報驗證。",
+      "next_week_catalyst": "特斯拉將於2026-07-22盤後(amc)公布財報，市場預估EPS約0.51、營收約260億美元。"
     },
     {
       "symbol": "AVGO",
       "name_zh": "博通",
-      "weekly_change_pct": 10.96,
+      "weekly_change_pct": -7.29,
       "weekly_definition": "5 個交易日 close-to-close",
-      "weekly_as_of": "2026-07-10",
-      "weekly_start": "2026-07-02",
+      "weekly_as_of": "2026-07-17",
+      "weekly_start": "2026-07-10",
       "weekly_source": "yahoo_chart",
       "news_highlights": [
         {
-          "headline_zh": "博通拿下蘋果 300 億美元晶片訂單",
-          "headline_en": "Broadcom Lands $30 Billion Chip Deal With Apple. Why It’s a Win-Win for AAPL and AVGO.",
+          "headline_zh": "這波賣壓中我最想大舉買進的AI晶片股，而且不是輝達",
+          "headline_en": "The 1 AI Chip Stock I'd Buy Hand Over Fist in This Sell-Off -- and It Isn't Nvidia.",
           "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=02d1d5a47f52f75d305c2000af9da91729591aa1d7aed97e0f7c09cc8ba58903",
-          "published": "2026-07-11",
-          "importance": "HIGH"
-        },
-        {
-          "headline_zh": "Meta 自研 AI 晶片將於 9 月投產",
-          "headline_en": "Mark Zuckerberg Is Turning Meta Into a Bigger Chipmaker. Its Newest In-House AI Chip Enters Production in September.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=20a3c958fad602ac7c2b06e25fd2b55f3100fc239920bf5a6b933e8b40906a03",
-          "published": "2026-07-11",
+          "url": "https://finnhub.io/api/news?id=fe55413b6fd2b9f2645fae11b9a07cc361af2d7338273bc961214cdc62f890a2",
+          "published": "2026-07-19",
           "importance": "MED"
         },
         {
-          "headline_zh": "投資輝達與博通各 1000 美元，何者報酬更高",
-          "headline_en": "$1,000 in Nvidia vs. $1,000 in Broadcom: Which AI Chip Bet Paid Off More?",
+          "headline_zh": "歷史顯示晶片股回檔20%後買進在本輪循環多半奏效，這次還會嗎？",
+          "headline_en": "History Says Buying Chip Stocks After a 20% Drawdown Has Usually Worked in This Cycle. Will It Work Again?",
           "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=635f19578778394086009f6fb915d5168a46f49bb05c2be809a7004ef8dac64c",
-          "published": "2026-07-12",
+          "url": "https://finnhub.io/api/news?id=81198598bb83481b717791df01a36986587608426595d1eae4681df7086fead8",
+          "published": "2026-07-18",
+          "importance": "MED"
+        },
+        {
+          "headline_zh": "AI投資人變得更挑剔，兩檔股票仍脫穎而出",
+          "headline_en": "AI Investors Are Becoming Pickier. 2 Stocks Still Stand Out.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=2f979c86415d43b580e86c625d05b25e1ff75eb90eeb3bc42b11c0fdd5b3e3a6",
+          "published": "2026-07-18",
           "importance": "LOW"
         }
       ],
-      "thesis_check": "博通取得蘋果 300 億美元、至 2031 年的晶片供應協議，並將協助 Meta 自研 Iris 晶片 9 月量產，客製晶片與非 AI 業務動能增強，屬本週正面資訊。",
+      "thesis_check": "本週晶片股受AI賣壓普遍回檔，博通亦下跌；多篇評論視回檔為AI基建循環中的常態震盪。company_news無博通個股重大消息，核心論點未見改變。",
       "next_week_catalyst": null
     },
     {
       "symbol": "TSM",
       "name_zh": "台積電ADR",
-      "weekly_change_pct": -0.01,
+      "weekly_change_pct": -8.23,
       "weekly_definition": "5 個交易日 close-to-close",
-      "weekly_as_of": "2026-07-10",
-      "weekly_start": "2026-07-02",
+      "weekly_as_of": "2026-07-17",
+      "weekly_start": "2026-07-10",
       "weekly_source": "yahoo_chart",
       "news_highlights": [
         {
-          "headline_zh": "華爾街前瞻：本週大型銀行財報、台積電、Netflix 與 CPI/PPI",
-          "headline_en": "Wall Street Week Ahead",
+          "headline_zh": "台積電Q2營收成長34%，分析師因「高度看多」的投資展望上調評等",
+          "headline_en": "Taiwan Semiconductor Posts 34% Q2 Revenue Growth; Analyst Raises Price Target On ‘Highly Bullish’ Investment Outlook",
+          "source": "Benzinga",
+          "url": "https://finnhub.io/api/news?id=adb0f7bf2423275a43cc5cd598e851b51fa6536b8a64ef82c1f42e14d22527a4",
+          "published": "2026-07-17",
+          "importance": "HIGH"
+        },
+        {
+          "headline_zh": "川普發文稱台積電加碼投資亞利桑那晶圓廠，在美建廠總承諾達2650億美元",
+          "headline_en": "President Trump Posts On Truth Social \"... Now, TSMC, the largest Leading Edge Semiconductor Chip Manufacturer in the World, has announced an additional 100 Billion Dollar Investment in their Semiconductor Fabrication Factories in Arizona. That brings their total commitment to build Chips in America to a record 265 Billion Dollars... \"",
+          "source": "Benzinga",
+          "url": "https://finnhub.io/api/news?id=07c3b74cf05fcc9fc2d761237931a1d6ec6ae6d10c157a33db4d362c1c78cefb",
+          "published": "2026-07-17",
+          "importance": "HIGH"
+        },
+        {
+          "headline_zh": "台積電：市場懲罰了錯的AI股",
+          "headline_en": "TSMC: The Market Is Punishing The Wrong AI Stock",
           "source": "SeekingAlpha",
-          "url": "https://finnhub.io/api/news?id=a77b6a16e9d7a09cda7e708cd54b49ae5c2a7756f06852dfd9ceedcef2b6af02",
-          "published": "2026-07-12",
-          "importance": "MED"
-        },
-        {
-          "headline_zh": "Ken Griffin 警告：失去台積電晶片恐引發大蕭條",
-          "headline_en": "Ken Griffin Warns Losing TSMC Chips Could Trigger a 'Great Depression:' They're in 'Every High-End Product'",
-          "source": "Benzinga",
-          "url": "https://finnhub.io/api/news?id=79032fd758c4ad2036776a50af5d0a4f4cc098b38b90572603ffdf95d9256e45",
-          "published": "2026-07-10",
-          "importance": "MED"
-        },
-        {
-          "headline_zh": "Futurum：輝達、超微、蘋果、博通皆仰賴台積電",
-          "headline_en": "Futurum's Shay Boloor Explains Why Nvidia, AMD, Apple and Broadcom All Depend on TSMC: 'Every Token Ultimately Pays an Invisible Royalty'",
-          "source": "Benzinga",
-          "url": "https://finnhub.io/api/news?id=008cffac2ae1f625ecde68c0420b951851eb509800a94ada7e2a18696cf52da0",
-          "published": "2026-07-09",
+          "url": "https://finnhub.io/api/news?id=2c76f6edc8dd9500c9367950a3ee7052e180c7eb85c43aa23c044fcb821f8f8a",
+          "published": "2026-07-18",
           "importance": "MED"
         }
       ],
-      "thesis_check": "多位業界人士強調台積電為 AI 供應鏈核心，眾多晶片廠皆仰賴其產能；市場關注即將公布的法說會，核心論點維持不變。",
-      "next_week_catalyst": "新聞前瞻提及台積電本週將公布財報，為市場關注焦點。"
+      "thesis_check": "台積電公布Q2營收年增34%、上調2026資本支出，HPC占營收約66%，並加碼美國亞利桑那投資；基本面強勁，惟本週隨AI晶片賣壓大幅回檔，核心論點未被推翻。",
+      "next_week_catalyst": null
     }
   ],
   "popular_symbols_snapshot": [
-    "KO",
-    "SCHD",
-    "VRT",
-    "LITE",
+    "JEPQ",
+    "BA",
+    "ONDS",
+    "LLY",
+    "OKLO",
     "TEST",
     "SPY",
     "QQQ",
     "IWM",
-    "DIA",
-    "VTI"
+    "DIA"
   ],
   "popular_stocks": [
     {
-      "symbol": "KO",
-      "name_zh": "可口可樂",
-      "weekly_change_pct": -0.77,
+      "symbol": "JEPQ",
+      "name_zh": "JPMorgan Nasdaq Equity Premium",
+      "weekly_change_pct": -3.31,
       "weekly_definition": "5 個交易日 close-to-close",
-      "weekly_as_of": "2026-07-10",
-      "weekly_start": "2026-07-02",
+      "weekly_as_of": "2026-07-17",
+      "weekly_start": "2026-07-10",
       "weekly_source": "yahoo_chart",
       "news_highlights": [
         {
-          "headline_zh": "可口可樂股價或低於合理價值10%，儘管有印度IPO計畫",
-          "headline_en": "Coca Cola (KO) Stock May Be 10% Below Fair Value Despite India IPO Plans",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=4880acfaea30ba9bba88f188736824516a9d2e2b3d2110c19dbcae6bc469d740",
-          "published": "2026-07-10",
-          "importance": "HIGH"
-        },
-        {
-          "headline_zh": "可口可樂表現超越標普500與那斯達克100",
-          "headline_en": "Coca-Cola Is Crushing the S&P 500 and Nasdaq-100. But There's an Even Better Reason to Buy the Stock in July.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=595bbda3b42f27076691f16123eab3b84b1c59b7594d7c80f4cfecb798f92821",
-          "published": "2026-07-11",
-          "importance": "MED"
-        }
-      ],
-      "thesis_check": "本週有分析指KO股價接近合理價值並提及印度IPO計畫，核心論點未見重大改變。",
-      "next_week_catalyst": null
-    },
-    {
-      "symbol": "SCHD",
-      "name_zh": "Schwab US Dividend Equity ETF",
-      "weekly_change_pct": 0.03,
-      "weekly_definition": "5 個交易日 close-to-close",
-      "weekly_as_of": "2026-07-10",
-      "weekly_start": "2026-07-02",
-      "weekly_source": "yahoo_chart",
-      "news_highlights": [
-        {
-          "headline_zh": "2026年7月50檔高品質股息成長股",
-          "headline_en": "Top 50 High-Quality Dividend Growth Stocks For July 2026",
+          "headline_zh": "QQQI：好基金，但現在買進時機不對",
+          "headline_en": "QQQI: Great Fund, Wrong Time To Buy",
           "source": "SeekingAlpha",
-          "url": "https://finnhub.io/api/news?id=dd881bcabc2bb19487918ffbc9709eff68916225493c5faeff1ce53c02d8bc5e",
-          "published": "2026-07-08",
+          "url": "https://finnhub.io/api/news?id=e14d59eaa7637d9d75cf81657526c78680f7278df08f6e8b0a9aa42a2c0c6257",
+          "published": "2026-07-15",
           "importance": "MED"
         },
         {
-          "headline_zh": "60歲開始投資、靠股息安享退休",
-          "headline_en": "Start Investing At 60 And Retire On Dividends Forever",
+          "headline_zh": "我終極低壓力、可靠的退休收益組合",
+          "headline_en": "My Ultimate Low-Stress Reliable Retirement Income Portfolio",
           "source": "SeekingAlpha",
-          "url": "https://finnhub.io/api/news?id=05c9d0b05eebf89f623c411c536911bdbc907a978d54ebdc8893d5dbc021bd35",
-          "published": "2026-07-10",
+          "url": "https://finnhub.io/api/news?id=3a9ca70e792711b6a319dd0be92fb5a6c6f9c2a24ac7605fdd87130190581178",
+          "published": "2026-07-13",
           "importance": "LOW"
         }
       ],
-      "thesis_check": "本週多為股息投資通論、無SCHD個股新聞，論點維持不變，宜參考總經與資金流向。",
+      "thesis_check": "本週無JEPQ本身新聞，相關報導聚焦同類那斯達克掩護性買權ETF的估值偏高與科技集中度風險，核心論點大致維持不變。",
       "next_week_catalyst": null
     },
     {
-      "symbol": "VRT",
-      "name_zh": "Vertiv Holdings, LLC",
-      "weekly_change_pct": 6.1,
+      "symbol": "BA",
+      "name_zh": "波音",
+      "weekly_change_pct": -3.71,
       "weekly_definition": "5 個交易日 close-to-close",
-      "weekly_as_of": "2026-07-10",
-      "weekly_start": "2026-07-02",
+      "weekly_as_of": "2026-07-17",
+      "weekly_start": "2026-07-10",
       "weekly_source": "yahoo_chart",
       "news_highlights": [
         {
-          "headline_zh": "Vertiv透過收購ThermoKey擴展AI資料中心冷卻平台",
-          "headline_en": "How Vertiv (VRT) Is Expanding Its AI Data Center Cooling Platform Through the ThermoKey Acquisition",
+          "headline_zh": "波音瞄準SMBC百架訂單，空巴力爭大單",
+          "headline_en": "Boeing Targets 100-Jet SMBC Deal as Airbus Battles for Major Order",
           "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=c002f1545786c0966c630a86e76ae404aeb97e9b0cd235316ace27c208641ef1",
-          "published": "2026-07-11",
+          "url": "https://finnhub.io/api/news?id=fc1668ab6de45318103c735a63c9b802fb4fb87a396e8789498752979b60015d",
+          "published": "2026-07-17",
           "importance": "HIGH"
         },
         {
-          "headline_zh": "Bernstein重申對Vertiv的買進評等",
-          "headline_en": "Bernstein Reiterates Buy Rating on Vertiv (VRT)",
+          "headline_zh": "波音等推動國會撥200億美元升級空管系統",
+          "headline_en": "Boeing, Airbus, Major Airlines Push Congress for $20 Billion to Modernize Air Traffic Control: Report",
           "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=fe182b0c8fc57210915e70a296df57596f275f5eb56f7eb02554b43e06730eb5",
-          "published": "2026-07-10",
+          "url": "https://finnhub.io/api/news?id=06d5044451bdc87f98013bfa26bf062757149979377d5b732d9e7d3019310b27",
+          "published": "2026-07-18",
           "importance": "MED"
         }
       ],
-      "thesis_check": "VRT完成ThermoKey收購以強化資料中心散熱布局，AI資料中心需求題材延續，核心論點維持。",
+      "thesis_check": "依本週新聞，波音赴范堡羅航展爭取窄體機訂單，並公布20年機隊需求近翻倍展望，商用機需求面訊息偏正向。",
+      "next_week_catalyst": "據本週新聞提及范堡羅航展下週登場，訂單動向為觀察焦點。"
+    },
+    {
+      "symbol": "ONDS",
+      "name_zh": "Ondas",
+      "weekly_change_pct": -10.12,
+      "weekly_definition": "5 個交易日 close-to-close",
+      "weekly_as_of": "2026-07-17",
+      "weekly_start": "2026-07-10",
+      "weekly_source": "yahoo_chart",
+      "news_highlights": [
+        {
+          "headline_zh": "Benzinga『Stock Whisper』指數：5檔投資人暗中關注股",
+          "headline_en": "Benzinga's 'Stock Whisper' Index: 5 Stocks Investors Secretly Monitor But Don't Talk About Yet",
+          "source": "Benzinga",
+          "url": "https://finnhub.io/api/news?id=3f1b08d2ee0205293d0085cf41f1a038381ffc7ce07c93dc645fe56c4d8ba482",
+          "published": "2026-07-18",
+          "importance": "LOW"
+        },
+        {
+          "headline_zh": "今日盤中10檔資訊科技股出現大戶動向",
+          "headline_en": "10 Information Technology Stocks Whale Activity In Today’s Session",
+          "source": "Benzinga",
+          "url": "https://finnhub.io/api/news?id=803ee2e1a342fd17d8b7c7e669465733d0cf14c60677dbbef6b3e28387e2bbea",
+          "published": "2026-07-17",
+          "importance": "LOW"
+        }
+      ],
+      "thesis_check": "本週僅出現於熱門關注、大戶動向與成交量榜單，無基本面新聞，核心論點維持不變。",
       "next_week_catalyst": null
     },
     {
-      "symbol": "LITE",
-      "name_zh": "Lumentum",
-      "weekly_change_pct": 10.12,
+      "symbol": "LLY",
+      "name_zh": "禮來",
+      "weekly_change_pct": -0.8,
       "weekly_definition": "5 個交易日 close-to-close",
-      "weekly_as_of": "2026-07-10",
-      "weekly_start": "2026-07-02",
+      "weekly_as_of": "2026-07-17",
+      "weekly_start": "2026-07-10",
       "weekly_source": "yahoo_chart",
       "news_highlights": [
         {
-          "headline_zh": "Lumentum受惠AI光通訊需求，共封裝光學採用加速",
-          "headline_en": "Why Lumentum (LITE) Could Benefit From AI Optical Networking Demand as Co-Packaged Optics Adoption Accelerates",
+          "headline_zh": "維京療法啟動超越GLP-1的減重新藥試驗",
+          "headline_en": "Watch Out, Eli Lilly and Novo Nordisk: Viking Therapeutics Just Started Testing a Weight Loss Drug That Goes Beyond GLP-1",
           "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=9e41de26520c34dc052e5a7a509b7b115fd84d186f82e3754c0852dacf4494df",
-          "published": "2026-07-11",
-          "importance": "HIGH"
+          "url": "https://finnhub.io/api/news?id=9d3b43a29e84b5e519e515c72dbb2d5e62c0b424a0778946e11db185883228a9",
+          "published": "2026-07-18",
+          "importance": "MED"
         },
         {
-          "headline_zh": "高盛稱光通訊是AI下一個兆美元機會，Lumentum可能最大受惠",
-          "headline_en": "Goldman Sachs Says Optical Networking Is AI’s Next Trillion-Dollar Opportunity. Lumentum May Be the Biggest Winner",
+          "headline_zh": "禮來股價續漲最被忽略的原因，與減重無關",
+          "headline_en": "The Most Overlooked Reason Eli Lilly Stock Keeps Surging -- and It Has Nothing to Do With Weight Loss",
           "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=e4e9818908b84f87660c05e98ebfa0713aad3ad33a6628ff781d6d67e55ea7c6",
-          "published": "2026-07-11",
+          "url": "https://finnhub.io/api/news?id=ac87da50615f1f010650baf3bb0f355a4da8dee30fd79e6f816f432ace33de66",
+          "published": "2026-07-18",
           "importance": "MED"
         }
       ],
-      "thesis_check": "多篇報導指LITE受惠AI光通訊與資料中心升級需求、供給仍緊，核心成長論點獲支持。",
+      "thesis_check": "依新聞，除GLP-1減重業務外的其他業務亦被視為股價支撐；同時競爭者維京療法啟動新一代減重藥試驗，為潛在競爭觀察點。",
+      "next_week_catalyst": null
+    },
+    {
+      "symbol": "OKLO",
+      "name_zh": "Oklo",
+      "weekly_change_pct": -15.84,
+      "weekly_definition": "5 個交易日 close-to-close",
+      "weekly_as_of": "2026-07-17",
+      "weekly_start": "2026-07-10",
+      "weekly_source": "yahoo_chart",
+      "news_highlights": [
+        {
+          "headline_zh": "Truist證券首次覆蓋Oklo，給予持有評等",
+          "headline_en": "Truist Securities Initiates Coverage of Oklo (OKLO) with Hold Recommendation",
+          "source": "Fintel",
+          "url": "https://finnhub.io/api/news?id=61bec0b392d4317f966346f4577b47d881a1aba177e865ba935a9bc2c20f6483",
+          "published": "2026-07-15",
+          "importance": "HIGH"
+        },
+        {
+          "headline_zh": "Oklo今日重挫，跌破52週低點技術訊號",
+          "headline_en": "Oklo Stock is Tumbling Today — Here’s What the Chart is Signaling",
+          "source": "Benzinga",
+          "url": "https://finnhub.io/api/news?id=58d0182f18a0407f9d08e93964d9b96e26a7342b53436d7e6f8e4c735bfa5bd0",
+          "published": "2026-07-16",
+          "importance": "MED"
+        }
+      ],
+      "thesis_check": "本週Truist證券首次覆蓋給予中性（持有）評等，股價跌破52週低點並延續下行趨勢，市場情緒偏保守。",
       "next_week_catalyst": null
     },
     {
       "symbol": "TEST",
       "name_zh": "YieldMax TSLA Performance & Dis",
-      "weekly_change_pct": 2.7,
+      "weekly_change_pct": -5.68,
       "weekly_definition": "5 個交易日 close-to-close",
-      "weekly_as_of": "2026-07-10",
-      "weekly_start": "2026-07-02",
+      "weekly_as_of": "2026-07-17",
+      "weekly_start": "2026-07-10",
       "weekly_source": "yahoo_chart",
       "news_highlights": [],
       "thesis_check": "本週無重大新聞，論點維持不變。",
@@ -493,136 +522,124 @@
     {
       "symbol": "SPY",
       "name_zh": "SPDR S&P 500 ETF",
-      "weekly_change_pct": 1.37,
+      "weekly_change_pct": -1.54,
       "weekly_definition": "5 個交易日 close-to-close",
-      "weekly_as_of": "2026-07-10",
-      "weekly_start": "2026-07-02",
+      "weekly_as_of": "2026-07-17",
+      "weekly_start": "2026-07-10",
       "weekly_source": "yahoo_chart",
       "news_highlights": [
         {
-          "headline_zh": "大型銀行財報揭開財報季序幕",
-          "headline_en": "Big Bank Earnings Kick Off Earnings Season",
+          "headline_zh": "動能股意外崩跌，令交易員措手不及",
+          "headline_en": "Momentum Meltdown Catches Traders By Surprise",
           "source": "SeekingAlpha",
-          "url": "https://finnhub.io/api/news?id=bd7731afc0c65620672a740ce68064b788d9f39aca759dfcc98550afbf14a64e",
-          "published": "2026-07-12",
+          "url": "https://finnhub.io/api/news?id=d08df5ef3032c15ad95a84cb2b72b4867a090f28aa2aea59056fd424ec125952",
+          "published": "2026-07-19",
           "importance": "MED"
         },
         {
-          "headline_zh": "S&P 500已不再是你以為的樣子——令人不安的真相",
-          "headline_en": "The S&P 500 Isn’t What You Think It Is Anymore — Here’s the Uncomfortable Truth",
+          "headline_zh": "若總經轉變延續，等權重RSP可能勝過SPY",
+          "headline_en": "Equal-Weight Strategy RSP Could Outrun SPY if This Macro Shift Continues",
           "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=14e0cf088c97e30f1f53742675f39f9fdbfff59d23cc2d2c9bf82c9ef404d965",
-          "published": "2026-07-11",
-          "importance": "LOW"
+          "url": "https://finnhub.io/api/news?id=6948dadaeb277d2fbada05e05671d3969030c91ddc3b6dc2f4dfb085b9d1aa37",
+          "published": "2026-07-18",
+          "importance": "MED"
         }
       ],
-      "thesis_check": "本週無重大個股新聞，宜參考總經與資金流向。",
+      "thesis_check": "本週市場出現動能股回檔、資金由成長轉向價值與防禦的輪動跡象，宜參考總經與資金流向。",
       "next_week_catalyst": null
     },
     {
       "symbol": "QQQ",
       "name_zh": "Invesco 那斯達克 100 ETF",
-      "weekly_change_pct": 1.81,
+      "weekly_change_pct": -4.16,
       "weekly_definition": "5 個交易日 close-to-close",
-      "weekly_as_of": "2026-07-10",
-      "weekly_start": "2026-07-02",
+      "weekly_as_of": "2026-07-17",
+      "weekly_start": "2026-07-10",
       "weekly_source": "yahoo_chart",
       "news_highlights": [
         {
-          "headline_zh": "1分鐘市場報告：S&P 500逼近歷史高點、Mag 7領軍",
-          "headline_en": "The 1-Minute Market Report, July 11, 2026",
+          "headline_zh": "動能股意外崩跌，令交易員措手不及",
+          "headline_en": "Momentum Meltdown Catches Traders By Surprise",
           "source": "SeekingAlpha",
-          "url": "https://finnhub.io/api/news?id=d1081a869f9971b14fa90d29633fbad08d0898b500cbf03823f12e17cce9040d",
-          "published": "2026-07-11",
+          "url": "https://finnhub.io/api/news?id=d08df5ef3032c15ad95a84cb2b72b4867a090f28aa2aea59056fd424ec125952",
+          "published": "2026-07-19",
           "importance": "MED"
         },
         {
-          "headline_zh": "聯準會會議紀要顯示委員會分歧大於12比0票面",
-          "headline_en": "Fed Minutes Show A Committee More Divided Than The 12-0 Vote Suggests",
+          "headline_zh": "S&P 500下跌1.6%，資金轉向價值/防禦，科技落後",
+          "headline_en": "The 1-Minute Market Report, July 18, 2026",
           "source": "SeekingAlpha",
-          "url": "https://finnhub.io/api/news?id=99688fac97aed6c502daea56ad7068dc5f875f874aa5aeb6209ad73e8f782855",
-          "published": "2026-07-11",
+          "url": "https://finnhub.io/api/news?id=1865017f80e1cee96640ef4c4364382a7e9b75ac5c169e59aadd1465144cd059",
+          "published": "2026-07-18",
           "importance": "MED"
         }
       ],
-      "thesis_check": "本週無重大個股新聞，宜參考總經與資金流向。",
+      "thesis_check": "本週那斯達克100因半導體與動能股回檔而走弱，資金轉向價值與防禦，宜參考總經與資金流向。",
       "next_week_catalyst": null
     },
     {
       "symbol": "IWM",
       "name_zh": "iShares 羅素 2000 ETF",
-      "weekly_change_pct": -0.53,
+      "weekly_change_pct": -0.66,
       "weekly_definition": "5 個交易日 close-to-close",
-      "weekly_as_of": "2026-07-10",
-      "weekly_start": "2026-07-02",
+      "weekly_as_of": "2026-07-17",
+      "weekly_start": "2026-07-10",
       "weekly_source": "yahoo_chart",
       "news_highlights": [
         {
-          "headline_zh": "RYLD：漲勢掩蓋了結構性缺陷",
-          "headline_en": "RYLD: The Rally Is Hiding The Structural Flaws",
+          "headline_zh": "S&P 500下跌1.6%，資金轉向價值/防禦，科技落後",
+          "headline_en": "The 1-Minute Market Report, July 18, 2026",
           "source": "SeekingAlpha",
-          "url": "https://finnhub.io/api/news?id=1b9d1fac91bb3a50dd936a21e637933cbf8c9da06f19d82200129d7267796087",
-          "published": "2026-07-12",
-          "importance": "LOW"
+          "url": "https://finnhub.io/api/news?id=1865017f80e1cee96640ef4c4364382a7e9b75ac5c169e59aadd1465144cd059",
+          "published": "2026-07-18",
+          "importance": "MED"
         },
         {
-          "headline_zh": "大型銀行財報揭開財報季序幕",
-          "headline_en": "Big Bank Earnings Kick Off Earnings Season",
+          "headline_zh": "2026年Q3固定收益展望：能見度低時看數據",
+          "headline_en": "Fixed Income Outlook Q3 2026: Looking To The Data When Visibility Is Low",
           "source": "SeekingAlpha",
-          "url": "https://finnhub.io/api/news?id=bd7731afc0c65620672a740ce68064b788d9f39aca759dfcc98550afbf14a64e",
-          "published": "2026-07-12",
-          "importance": "MED"
+          "url": "https://finnhub.io/api/news?id=967da34e228c98646718e015135236850dc585856d6d48ac1dd5a18b44f276b9",
+          "published": "2026-07-19",
+          "importance": "LOW"
         }
       ],
-      "thesis_check": "本週無重大個股新聞，宜參考總經與資金流向。",
+      "thesis_check": "本週無小型股個股重大新聞，市場焦點在成長轉價值/防禦的資金輪動與利率展望，宜參考總經與資金流向。",
       "next_week_catalyst": null
     },
     {
       "symbol": "DIA",
       "name_zh": "SPDR 道瓊 30 ETF",
-      "weekly_change_pct": -0.4,
+      "weekly_change_pct": -0.95,
       "weekly_definition": "5 個交易日 close-to-close",
-      "weekly_as_of": "2026-07-10",
-      "weekly_start": "2026-07-02",
-      "weekly_source": "yahoo_chart",
-      "news_highlights": [],
-      "thesis_check": "本週無重大個股新聞，宜參考總經與資金流向。",
-      "next_week_catalyst": null
-    },
-    {
-      "symbol": "VTI",
-      "name_zh": "Vanguard 全美股 ETF",
-      "weekly_change_pct": 1.07,
-      "weekly_definition": "5 個交易日 close-to-close",
-      "weekly_as_of": "2026-07-10",
-      "weekly_start": "2026-07-02",
+      "weekly_as_of": "2026-07-17",
+      "weekly_start": "2026-07-10",
       "weekly_source": "yahoo_chart",
       "news_highlights": [
         {
-          "headline_zh": "1分鐘市場報告：S&P 500逼近歷史高點、Mag 7領軍",
-          "headline_en": "The 1-Minute Market Report, July 11, 2026",
+          "headline_zh": "S&P 500下跌1.6%，資金轉向價值/防禦，科技落後",
+          "headline_en": "The 1-Minute Market Report, July 18, 2026",
           "source": "SeekingAlpha",
-          "url": "https://finnhub.io/api/news?id=d1081a869f9971b14fa90d29633fbad08d0898b500cbf03823f12e17cce9040d",
-          "published": "2026-07-11",
+          "url": "https://finnhub.io/api/news?id=1865017f80e1cee96640ef4c4364382a7e9b75ac5c169e59aadd1465144cd059",
+          "published": "2026-07-18",
           "importance": "MED"
         },
         {
-          "headline_zh": "被動ETF與槓桿：市場隱藏的未爆彈",
-          "headline_en": "Passive ETFs And Leverage: The Market's Hidden Time Bomb",
+          "headline_zh": "AI回檔：泡沫破裂或逢低買進？我認為都不是",
+          "headline_en": "AI Pullback: Bubble Pop Or Buy The Dip? I Say Neither",
           "source": "SeekingAlpha",
-          "url": "https://finnhub.io/api/news?id=b7c7bd072d157d9abc8e819e41f2404b79b27751f997cccacfa0de6c4820f729",
-          "published": "2026-07-10",
-          "importance": "LOW"
+          "url": "https://finnhub.io/api/news?id=9b333e9162648ca97098d576b30b3d5d450d24ede491e7e2a9799f342eb664df",
+          "published": "2026-07-18",
+          "importance": "MED"
         }
       ],
-      "thesis_check": "本週無重大個股新聞，宜參考總經與資金流向。",
+      "thesis_check": "本週道瓊相對抗跌，市場由科技轉向價值/防禦；無道瓊成分個股重大新聞，宜參考總經與資金流向。",
       "next_week_catalyst": null
     }
   ],
   "sources_status": {
     "finnhub_news_curated": "ok",
     "claude_curated": "ok",
-    "finnhub_news_popular": "partial (8/10)",
+    "finnhub_news_popular": "partial (9/10)",
     "claude_popular": "ok",
     "popular_pass": "ok"
   }
