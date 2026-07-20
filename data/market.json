@@ -1,5 +1,5 @@
 {
-  "closing_date": "2026-07-17",
+  "closing_date": "2026-07-20",
   "indices": [
     {
       "name": "S&P 500",
@@ -85,20 +85,20 @@
     {
       "name": "TAIEX 加權指數",
       "name_zh": null,
-      "close": 42671.26953125,
-      "daily_pct": -6.47,
+      "close": 42449.7,
+      "daily_pct": -0.52,
       "mtd_pct": -7.49,
       "ytd_pct": 47.33,
-      "closing_date": "2026-07-17"
+      "closing_date": "2026-07-20"
     },
     {
       "name": "OTC 櫃買加權",
       "name_zh": null,
-      "close": 378.44000244140625,
-      "daily_pct": -7.02,
+      "close": 368.53,
+      "daily_pct": -2.62,
       "mtd_pct": -11.37,
       "ytd_pct": 37.0,
-      "closing_date": "2026-07-17"
+      "closing_date": "2026-07-20"
     },
     {
       "name": "台指期(近月)",
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 100.75,
       "daily_pct": 0.02,
-      "mtd_pct": -0.49,
-      "ytd_pct": 2.46,
+      "mtd_pct": -0.46,
+      "ytd_pct": 2.48,
       "closing_date": "2026-07-17"
     },
     {
@@ -428,13 +428,13 @@
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
       "implied_rate": 3.92,
-      "delta_rate": 0.11,
-      "delta_bps": 11.0,
-      "p_hike": 44.0,
-      "p_hold": 56.0,
+      "delta_rate": 0.12,
+      "delta_bps": 12.0,
+      "p_hike": 48.0,
+      "p_hold": 52.0,
       "p_cut": 0,
       "is_reference": false
     }
   ],
-  "summary": "7/17 KOSPI +18.59%、7/17 Nifty 50 +1.09%、7/17 FTSE 100 +0.27% 領漲；7/17 OTC 櫃買加權 -7.02%、7/17 台指期(近月) -6.49% 走弱。"
+  "summary": "7/17 KOSPI +18.59%、7/17 Nifty 50 +1.09%、7/17 FTSE 100 +0.27% 領漲；7/17 台指期(近月) -6.49%、7/17 Nikkei 225 -4.03% 走弱。"
 }
