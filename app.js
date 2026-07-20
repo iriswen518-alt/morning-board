@@ -617,9 +617,20 @@ async function init() {
   SEARCH_INDEX = buildSearchIndex();
   wireSearch();
 
-  const hashTab = location.hash.replace(/^#/, "");
+  const hashRaw = location.hash.replace(/^#/, "");
+  // 小學堂等子頁的搜尋框以 #q=關鍵字 深連結回主頁搜尋
+  const hashQ = hashRaw.match(/^q=(.*)$/);
+  const hashTab = hashQ ? "" : hashRaw;
   CURRENT_TAB = hashTab || smartDefaultTab();
   switchTab(CURRENT_TAB);
+  if (hashQ) {
+    const q = decodeURIComponent(hashQ[1] || "");
+    history.replaceState(null, "", location.pathname + location.search);
+    if (q) setTimeout(() => {
+      const inp = $("search-input");
+      if (inp) { inp.value = q; inp.focus(); }
+    }, 150);
+  }
 
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("service-worker.js?v=20260604-v11").catch(() => {});

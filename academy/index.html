@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#019AB3">
 <title>理財小幫手・小學堂</title>
-<link rel="stylesheet" href="../style.css?v=20260626-accordion">
+<link rel="stylesheet" href="../style.css?v=20260720-weekly">
 <link rel="stylesheet" href="academy.css?v=20260709-textsize">
 <style>
   .home-fab { display: none; }
@@ -19,8 +19,14 @@
 <body>
 
 <header class="topbar">
-  <h1>理財小幫手 <span class="test-badge">僅測試使用</span></h1>
+  <div class="topbar-title-row">
+    <h1>理財小幫手 <span class="test-badge">僅測試使用</span></h1>
+    <p class="updated" id="updated">載入中…</p>
+  </div>
   <p class="test-note">本網站僅供測試使用，所有數據與試算僅供參考，非投資建議或要約。</p>
+  <div class="search-wrap">
+    <input id="search-input" type="search" placeholder="搜尋關鍵字（基金、主題、稅務、新聞⋯）" autocomplete="off">
+  </div>
 </header>
 
 <nav class="main-nav">
@@ -158,5 +164,25 @@
 </footer>
 
 <script src="academy.js?v=20260628-collapse"></script>
+<script>
+// 與主頁一致：上次更新時間＋搜尋（搜尋深連結回主頁 #q=）
+(function(){
+  Promise.all([
+    fetch("../data/meta.json").then(function(r){return r.json();}).catch(function(){return {};}),
+    fetch("../data/quotes_built_at.json").then(function(r){return r.json();}).catch(function(){return {};})
+  ]).then(function(res){
+    var a=(res[0]&&res[0].built_at)||"", b=(res[1]&&res[1].built_at)||"", t=a>b?a:b;
+    var el=document.getElementById("updated");
+    if(el) el.textContent = t ? "上次更新："+t.replace("T"," ").slice(0,16) : "";
+  });
+  var si=document.getElementById("search-input");
+  if(si) si.addEventListener("keydown",function(e){
+    if(e.key!=="Enter") return;
+    e.preventDefault();
+    var q=si.value.trim();
+    if(q) location.href="../#q="+encodeURIComponent(q);
+  });
+})();
+</script>
 </body>
 </html>
