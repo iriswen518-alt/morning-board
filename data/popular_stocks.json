@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T18:22:45+08:00",
+  "generated_at": "2026-07-20T19:14:32+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -14,6 +14,20 @@
       "per": 18.2888,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BABA.US",
+      "error": null
+    },
+    {
+      "symbol": "DPZ",
+      "name_zh": "Domino's Pizza",
+      "kind": "US",
+      "price": 322.18,
+      "change_pct": -2.27,
+      "mtd_pct": 8.83,
+      "ytd_pct": -22.71,
+      "market_date": "2026-07-17",
+      "per": 18.106,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DPZ.US",
       "error": null
     },
     {
@@ -45,6 +59,20 @@
       "error": null
     },
     {
+      "symbol": "FGMC",
+      "name_zh": "FG Merger II",
+      "kind": "US",
+      "price": 8.3,
+      "change_pct": -9.98,
+      "mtd_pct": -17.82,
+      "ytd_pct": -17.33,
+      "market_date": "2026-07-17",
+      "per": 61.0656,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FGMC.US",
+      "error": null
+    },
+    {
       "symbol": "RYAAY",
       "name_zh": "Ryanair",
       "kind": "US",
@@ -59,73 +87,31 @@
       "error": null
     },
     {
-      "symbol": "JD",
-      "name_zh": "京東",
+      "symbol": "FCEL",
+      "name_zh": "FuelCell Energy",
       "kind": "US",
-      "price": 29.62,
-      "change_pct": -0.2,
-      "mtd_pct": 16.25,
-      "ytd_pct": 3.21,
-      "market_date": "2026-07-17",
-      "per": 20.4621,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=JD.US",
-      "error": null
-    },
-    {
-      "symbol": "SNPS",
-      "name_zh": "Synopsys",
-      "kind": "US",
-      "price": 384.27,
-      "change_pct": -7.85,
-      "mtd_pct": -13.85,
-      "ytd_pct": -18.19,
-      "market_date": "2026-07-17",
-      "per": 95.1555,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SNPS.US",
-      "error": null
-    },
-    {
-      "symbol": "LCID",
-      "name_zh": "Lucid",
-      "kind": "US",
-      "price": 7.36,
-      "change_pct": 13.93,
-      "mtd_pct": 10.01,
-      "ytd_pct": -30.37,
+      "price": 18.5,
+      "change_pct": 7.16,
+      "mtd_pct": -48.63,
+      "ytd_pct": 153.08,
       "market_date": "2026-07-17",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LCID.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FCEL.US",
       "error": null
     },
     {
-      "symbol": "VKTX",
-      "name_zh": "Viking Therapeutics",
+      "symbol": "SNEX",
+      "name_zh": "StoneX",
       "kind": "US",
-      "price": 37.08,
-      "change_pct": 1.95,
-      "mtd_pct": -4.95,
-      "ytd_pct": 5.4,
+      "price": 102.99,
+      "change_pct": -7.12,
+      "mtd_pct": -42.08,
+      "ytd_pct": 8.23,
       "market_date": "2026-07-17",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VKTX.US",
-      "error": null
-    },
-    {
-      "symbol": "BA",
-      "name_zh": "波音",
-      "kind": "US",
-      "price": 214.03,
-      "change_pct": -0.14,
-      "mtd_pct": -1.13,
-      "ytd_pct": -1.42,
-      "market_date": "2026-07-17",
-      "per": 74.3917,
+      "per": 17.6516,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BA.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SNEX.US",
       "error": null
     },
     {
