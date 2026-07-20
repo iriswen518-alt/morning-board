@@ -10,8 +10,9 @@
 <style>
   .home-fab { display: none; }
   @media (max-width: 768px) {
-    .nav-toggle,
-    .main-nav { display: none !important; }
+    .nav-toggle { display: none !important; }
+    /* 底部「更多」靠 body.nav-open 展開主選單，平時才隱藏 */
+    body:not(.nav-open) .main-nav { display: none !important; }
   }
 </style>
 </head>
@@ -147,7 +148,7 @@
     item.setAttribute('aria-expanded',open?'true':'false');
   });
   if(nav) nav.addEventListener('click',function(e){
-    if(e.target.closest('.main-tab')) document.body.classList.remove('nav-open');
+    if(e.target.closest('.main-tab')||e.target===nav) document.body.classList.remove('nav-open');
   });
 })();
 </script>
