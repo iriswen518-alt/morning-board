@@ -565,6 +565,22 @@ function latestBuiltAt() {
   return a > b ? a : b;
 }
 
+// 上次成功抓資料的時間；回前景時判斷是否過期需重抓
+let LAST_DATA_TS = 0;
+function dataIsStale() {
+  const age = Date.now() - LAST_DATA_TS;
+  if (age > 10 * 60 * 1000) return true;
+  // 新聞日期不是今天（跨日喚醒）也算過期，立刻補抓；
+  // 但距上次抓不到 60 秒就先不重抓（清晨新聞尚未產出時避免每次切換都白抓）
+  const nd = DATA && DATA.news && DATA.news.news_date;
+  if (nd && age > 60 * 1000) {
+    const now = new Date();
+    const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
+    if (nd !== today) return true;
+  }
+  return false;
+}
+
 async function init() {
   // 每個來源各自有 fallback：一個壞不拖垮全頁
   // 失敗時記到 FAILED_LOADS，使用者切到對應 tab 時會背景重試
@@ -599,6 +615,7 @@ async function init() {
     safe("weekly_report", null),
   ]);
   DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news, etf0050, weekly };
+  LAST_DATA_TS = Date.now();
   const _updatedAt = latestBuiltAt();
   if (!_updatedAt) {
     $("updated").textContent = `載入部分失敗（顯示快取資料）`;
@@ -639,15 +656,22 @@ async function init() {
   wireSortableTables();
   setupPullToRefresh();
 
-  // 進入畫面/從背景回到前景時自動檢查新版
+  // 進入畫面/從背景回到前景時自動檢查新版＋補抓資料。
+  // iOS PWA 從背景喚醒會直接還原昨晚的畫面、不重跑 JS，
+  // 只 checkForNewVersion() 不夠（app.js 沒改版就什麼都不做），
+  // 造成「伺服器新聞已更新、手機仍顯示昨天」——資料過期就整包重抓。
   document.addEventListener("visibilitychange", () => {
     if (document.visibilityState === "visible") {
-      checkForNewVersion();
+      if (dataIsStale()) refreshData();
+      else checkForNewVersion();
       if (CURRENT_TAB === "live") refreshLiveData();
     }
   });
   window.addEventListener("pageshow", (e) => {
-    if (e.persisted) checkForNewVersion();
+    if (e.persisted) {
+      if (dataIsStale()) refreshData();
+      else checkForNewVersion();
+    }
   });
 }
 
@@ -1021,6 +1045,7 @@ async function refreshData() {
     safe("weekly_report", null),
   ]);
   DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news, etf0050, weekly };
+  LAST_DATA_TS = Date.now();
   SEARCH_INDEX = buildSearchIndex();
   const _updatedAt = latestBuiltAt();
   if (_updatedAt) {
