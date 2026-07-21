@@ -666,9 +666,31 @@ table.indices th.sortable-th {
 .acc-sec .acc-sec[open] > .acc-sec-head > .acc-sec-title { color: var(--brand-deep); }
 .acc-sec .acc-sec[open] > .acc-sec-head > .acc-caret { color: var(--text-mute); }
 .acc-sec-body { padding: 8px 16px 16px; }
-/* 巢狀：內層折疊區塊（如全球/債券/匯率）縮排、弱化外框 */
-.acc-sec .acc-sec { box-shadow: none; background: transparent; }
+/* 巢狀：內層折疊全扁平（盒中盒會把手機內文越縮越窄）——
+   內層不畫框、左右貼齊外層內距，區塊之間只用一條底線分隔 */
+.acc-sec .acc-sec {
+  box-shadow: none;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  border-radius: 0;
+  margin-bottom: 0;
+}
+.acc-sec .acc-sec:last-child { border-bottom: none; }
+.acc-sec .acc-sec > .acc-sec-head { padding: 12px 0; }
+.acc-sec .acc-sec[open] > .acc-sec-head { border-bottom: none; }
+.acc-sec .acc-sec > .acc-sec-body { padding: 0 0 14px; }
 .acc-sec .acc-sec-title { font-size: 15px; }
+/* 內層折疊裡的 fund-card 不再包一層卡框，內容直接貼齊 */
+#content .acc-sec .acc-sec .fund-card,
+.acc-sec .acc-sec .fund-card {
+  padding: 0;
+  background: transparent;
+  border: none !important;
+  border-radius: 0;
+  box-shadow: none;
+}
+.acc-sec .acc-sec .fund-card:hover { transform: none; box-shadow: none; }
 
 .news-item h3 { margin: 0 0 6px; font-size: 14px; font-weight: 400; color: var(--text); padding-left: 0; }
 .news-item h3::before { display: none; }
