@@ -624,6 +624,16 @@ table.indices th.sortable-th {
 }
 .news-sec[open] > .news-sec-head > .news-sec-title { color: #8a6d00; }
 .news-sec[open] > .news-sec-head > .news-caret { color: #c79a00; }
+/* 巢狀（acc-sec 外層卡內）的新聞小節改扁平：內層不再畫黃底圓角小盒，
+   黃底只留最外層折疊標題，避免盒中盒把內文越縮越窄 */
+.acc-sec .news-sec[open] > .news-sec-head {
+  background: transparent;
+  border-radius: 0;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.acc-sec .news-sec[open] > .news-sec-head > .news-sec-title { color: var(--brand-deep); }
+.acc-sec .news-sec[open] > .news-sec-head > .news-caret { color: var(--text-mute); }
 
 /* 通用折疊區塊（內容導覽：全球市場 / 新聞 / 基金 / 小學堂） */
 .acc-sec {

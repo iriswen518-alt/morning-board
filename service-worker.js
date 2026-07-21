@@ -44,7 +44,7 @@
 // v51（2026-07-19）：聰明預設分頁——記住上次分頁（60 分內還原），否則盤前→盤勢、盤中→即時、晚間→新聞。
 // v55（2026-07-21）：根治「每天早上看到昨天新聞」——iOS PWA 從背景喚醒只還原舊畫面不重抓資料，
 //   app.js 回前景改為資料過期（>10 分或 news_date 非今天）就整包 refreshData()，不再只檢查改版。
-const CACHE = "morning-board-v55";
+const CACHE = "morning-board-v56";
 
 self.addEventListener("install", e => {
   self.skipWaiting();
