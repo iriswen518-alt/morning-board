@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-21T17:42:48+08:00",
+  "generated_at": "2026-07-21T18:34:57+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -59,17 +59,17 @@
       "error": null
     },
     {
-      "symbol": "SNDK",
-      "name_zh": "Sandisk",
+      "symbol": "NBIS",
+      "name_zh": "Nebius",
       "kind": "US",
-      "price": 1390.95,
-      "change_pct": 2.67,
-      "mtd_pct": -38.83,
-      "ytd_pct": 485.96,
+      "price": 182.62,
+      "change_pct": 2.76,
+      "mtd_pct": -33.87,
+      "ytd_pct": 118.17,
       "market_date": "2026-07-20",
-      "per": 45.7035,
+      "per": 54.7244,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SNDK.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NBIS.US",
       "error": null
     },
     {
@@ -87,6 +87,20 @@
       "error": null
     },
     {
+      "symbol": "COIN",
+      "name_zh": "Coinbase",
+      "kind": "US",
+      "price": 160.43,
+      "change_pct": 2.11,
+      "mtd_pct": 9.74,
+      "ytd_pct": -29.06,
+      "market_date": "2026-07-20",
+      "per": 53.9264,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=COIN.US",
+      "error": null
+    },
+    {
       "symbol": "BMNR",
       "name_zh": "BitMine Immersion Technologies,",
       "kind": "US",
@@ -98,20 +112,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BMNR.US",
-      "error": null
-    },
-    {
-      "symbol": "NBIS",
-      "name_zh": "Nebius",
-      "kind": "US",
-      "price": 182.62,
-      "change_pct": 2.76,
-      "mtd_pct": -33.87,
-      "ytd_pct": 118.17,
-      "market_date": "2026-07-20",
-      "per": 54.7244,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NBIS.US",
       "error": null
     },
     {
@@ -129,17 +129,31 @@
       "error": null
     },
     {
-      "symbol": "COIN",
-      "name_zh": "Coinbase",
+      "symbol": "APLD",
+      "name_zh": "Applied Digital",
       "kind": "US",
-      "price": 160.43,
-      "change_pct": 2.11,
-      "mtd_pct": 9.74,
-      "ytd_pct": -29.06,
+      "price": 27.85,
+      "change_pct": 7.99,
+      "mtd_pct": -25.34,
+      "ytd_pct": 13.58,
       "market_date": "2026-07-20",
-      "per": 53.9264,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=COIN.US",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=APLD.US",
+      "error": null
+    },
+    {
+      "symbol": "CLSK",
+      "name_zh": "CleanSpark",
+      "kind": "US",
+      "price": 14.42,
+      "change_pct": 10.67,
+      "mtd_pct": -0.89,
+      "ytd_pct": 42.49,
+      "market_date": "2026-07-20",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CLSK.US",
       "error": null
     },
     {
@@ -157,45 +171,31 @@
       "error": null
     },
     {
-      "symbol": "APLD",
-      "name_zh": "Applied Digital",
+      "symbol": "ADBE",
+      "name_zh": "Adobe",
       "kind": "US",
-      "price": 27.85,
-      "change_pct": 7.99,
-      "mtd_pct": -25.34,
-      "ytd_pct": 13.58,
+      "price": 234.74,
+      "change_pct": -1.06,
+      "mtd_pct": 14.5,
+      "ytd_pct": -32.93,
       "market_date": "2026-07-20",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=APLD.US",
-      "error": null
-    },
-    {
-      "symbol": "ONDS",
-      "name_zh": "Ondas",
-      "kind": "US",
-      "price": 6.87,
-      "change_pct": 5.29,
-      "mtd_pct": -16.63,
-      "ytd_pct": -29.61,
-      "market_date": "2026-07-20",
-      "per": 15.9745,
+      "per": 13.0456,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ONDS.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ADBE.US",
       "error": null
     },
     {
-      "symbol": "CLSK",
-      "name_zh": "CleanSpark",
+      "symbol": "IBIT",
+      "name_zh": "iShares Bitcoin Trust ETF",
       "kind": "US",
-      "price": 14.42,
-      "change_pct": 10.67,
-      "mtd_pct": -0.89,
-      "ytd_pct": 42.49,
+      "price": 36.89,
+      "change_pct": 1.49,
+      "mtd_pct": 10.81,
+      "ytd_pct": -25.7,
       "market_date": "2026-07-20",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CLSK.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IBIT.US",
       "error": null
     },
     {
