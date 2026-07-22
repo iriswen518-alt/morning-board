@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T15:02:31+08:00",
+  "generated_at": "2026-07-22T17:02:04+08:00",
   "tw": {
     "as_of": "2026-07-22",
     "top_marketcap": [
@@ -1097,19 +1097,6 @@
         "source_url": "https://finance.yahoo.com/quote/XLP"
       },
       {
-        "symbol": "GLD",
-        "name": "SPDR Gold Shares",
-        "price": 374.81,
-        "daily_pct": 0.71,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": 1.75,
-        "ytd_pct": -5.43,
-        "yahoo": "GLD",
-        "source_url": "https://finance.yahoo.com/quote/GLD"
-      },
-      {
         "symbol": "IWM",
         "name": "iShares Russell 2000 Index Fund",
         "price": 296.54,
@@ -1121,19 +1108,6 @@
         "ytd_pct": 20.47,
         "yahoo": "IWM",
         "source_url": "https://finance.yahoo.com/quote/IWM"
-      },
-      {
-        "symbol": "HYG",
-        "name": "iShares iBoxx $ High Yield Corp",
-        "price": 79.65,
-        "daily_pct": -0.04,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": -0.4,
-        "ytd_pct": -1.22,
-        "yahoo": "HYG",
-        "source_url": "https://finance.yahoo.com/quote/HYG"
       },
       {
         "symbol": "XLF",
@@ -1173,6 +1147,32 @@
         "ytd_pct": 9.49,
         "yahoo": "VWO",
         "source_url": "https://finance.yahoo.com/quote/VWO"
+      },
+      {
+        "symbol": "VTI",
+        "name": "Vanguard Total Stock Market ETF",
+        "price": 369.45,
+        "daily_pct": -0.46,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": -0.16,
+        "ytd_pct": 10.19,
+        "yahoo": "VTI",
+        "source_url": "https://finance.yahoo.com/quote/VTI"
+      },
+      {
+        "symbol": "SPY",
+        "name": "State Street SPDR S&P 500 ETF T",
+        "price": 748.28,
+        "daily_pct": -0.47,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": 0.2,
+        "ytd_pct": 9.73,
+        "yahoo": "SPY",
+        "source_url": "https://finance.yahoo.com/quote/SPY"
       }
     ],
     "sectors": [
@@ -1275,20 +1275,6 @@
         "name_zh": "工業"
       },
       {
-        "symbol": "XLB",
-        "name": "State Street Materials Select S",
-        "price": 50.1,
-        "daily_pct": -1.07,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": -1.44,
-        "ytd_pct": 10.47,
-        "yahoo": "XLB",
-        "source_url": "https://finance.yahoo.com/quote/XLB",
-        "name_zh": "原物料"
-      },
-      {
         "symbol": "XLC",
         "name": "State Street Communication Serv",
         "price": 110.03,
@@ -1301,20 +1287,6 @@
         "yahoo": "XLC",
         "source_url": "https://finance.yahoo.com/quote/XLC",
         "name_zh": "通訊"
-      },
-      {
-        "symbol": "XLK",
-        "name": "State Street Technology Select ",
-        "price": 180.78,
-        "daily_pct": -1.55,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": -5.11,
-        "ytd_pct": 25.57,
-        "yahoo": "XLK",
-        "source_url": "https://finance.yahoo.com/quote/XLK",
-        "name_zh": "科技"
       },
       {
         "symbol": "XLU",
