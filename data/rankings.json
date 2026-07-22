@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T10:01:43+08:00",
+  "generated_at": "2026-07-22T12:01:52+08:00",
   "tw": {
     "as_of": "2026-07-22",
     "top_marketcap": [
@@ -667,7 +667,7 @@
         "price": 327.74,
         "daily_pct": 0.35,
         "market_cap": 4813633880064,
-        "pe": 39.677963,
+        "pe": 39.534378,
         "pe_kind": "trailing",
         "mtd_pct": 13.26,
         "ytd_pct": 20.55,
@@ -693,7 +693,7 @@
         "price": 378.93,
         "daily_pct": 2.53,
         "market_cap": 1423156445184,
-        "pe": 354.14017,
+        "pe": 344.4818,
         "pe_kind": "trailing",
         "mtd_pct": -9.91,
         "ytd_pct": -15.74,
@@ -812,7 +812,7 @@
         "price": 216.92,
         "daily_pct": 18.78,
         "market_cap": 55075594240,
-        "pe": 83.7529,
+        "pe": 70.42857,
         "pe_kind": "trailing",
         "mtd_pct": -21.45,
         "ytd_pct": 159.15,
@@ -943,7 +943,7 @@
         "name": "Danaher Corporation",
         "price": 179.01,
         "daily_pct": -10.99,
-        "market_cap": 126698012672,
+        "market_cap": 125841530880,
         "pe": 38.91522,
         "pe_kind": "trailing",
         "mtd_pct": -6.02,
@@ -956,7 +956,7 @@
         "name": "MSCI Inc.",
         "price": 561.74,
         "daily_pct": -10.14,
-        "market_cap": 40853995520,
+        "market_cap": 40838496256,
         "pe": 35.71138,
         "pe_kind": "trailing",
         "mtd_pct": 0.3,
@@ -1044,6 +1044,19 @@
       }
     ],
     "top_etf": [
+      {
+        "symbol": "XLE",
+        "name": "State Street Energy Select Sect",
+        "price": 58.5,
+        "daily_pct": 2.72,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": 10.15,
+        "ytd_pct": 30.84,
+        "yahoo": "XLE",
+        "source_url": "https://finance.yahoo.com/quote/XLE"
+      },
       {
         "symbol": "XLRE",
         "name": "State Street Real Estate Select",
@@ -1149,33 +1162,34 @@
         "source_url": "https://finance.yahoo.com/quote/VEA"
       },
       {
-        "symbol": "VTI",
-        "name": "Vanguard Total Stock Market ETF",
-        "price": 369.45,
-        "daily_pct": -0.46,
+        "symbol": "VWO",
+        "name": "Vanguard FTSE Emerging Markets ",
+        "price": 58.86,
+        "daily_pct": -0.37,
         "market_cap": null,
         "pe": null,
         "pe_kind": null,
-        "mtd_pct": -0.16,
-        "ytd_pct": 10.19,
-        "yahoo": "VTI",
-        "source_url": "https://finance.yahoo.com/quote/VTI"
-      },
-      {
-        "symbol": "SPY",
-        "name": "State Street SPDR S&P 500 ETF T",
-        "price": 748.28,
-        "daily_pct": -0.47,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": 0.2,
-        "ytd_pct": 9.73,
-        "yahoo": "SPY",
-        "source_url": "https://finance.yahoo.com/quote/SPY"
+        "mtd_pct": -1.39,
+        "ytd_pct": 9.49,
+        "yahoo": "VWO",
+        "source_url": "https://finance.yahoo.com/quote/VWO"
       }
     ],
     "sectors": [
+      {
+        "symbol": "XLE",
+        "name": "State Street Energy Select Sect",
+        "price": 58.5,
+        "daily_pct": 2.72,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": 10.15,
+        "ytd_pct": 30.84,
+        "yahoo": "XLE",
+        "source_url": "https://finance.yahoo.com/quote/XLE",
+        "name_zh": "能源"
+      },
       {
         "symbol": "XLRE",
         "name": "State Street Real Estate Select",
@@ -1273,20 +1287,6 @@
         "yahoo": "XLB",
         "source_url": "https://finance.yahoo.com/quote/XLB",
         "name_zh": "原物料"
-      },
-      {
-        "symbol": "XLC",
-        "name": "State Street Communication Serv",
-        "price": 110.03,
-        "daily_pct": -1.27,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": 2.71,
-        "ytd_pct": -6.53,
-        "yahoo": "XLC",
-        "source_url": "https://finance.yahoo.com/quote/XLC",
-        "name_zh": "通訊"
       },
       {
         "symbol": "XLK",
