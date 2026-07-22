@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T13:02:07+08:00",
+  "generated_at": "2026-07-22T15:02:31+08:00",
   "tw": {
     "as_of": "2026-07-22",
     "top_marketcap": [
@@ -647,7 +647,138 @@
   },
   "us": {
     "as_of": "2026-07-22",
-    "top_marketcap": [],
+    "top_marketcap": [
+      {
+        "symbol": "NVDA",
+        "name": "NVIDIA Corporation",
+        "price": 207.29,
+        "daily_pct": 1.97,
+        "market_cap": 5020770631680,
+        "pe": 31.171427,
+        "pe_kind": "trailing",
+        "mtd_pct": 3.6,
+        "ytd_pct": 11.15,
+        "yahoo": "NVDA",
+        "source_url": "https://finance.yahoo.com/quote/NVDA"
+      },
+      {
+        "symbol": "AAPL",
+        "name": "Apple Inc.",
+        "price": 327.74,
+        "daily_pct": 0.35,
+        "market_cap": 4813633880064,
+        "pe": 39.534378,
+        "pe_kind": "trailing",
+        "mtd_pct": 13.26,
+        "ytd_pct": 20.55,
+        "yahoo": "AAPL",
+        "source_url": "https://finance.yahoo.com/quote/AAPL"
+      },
+      {
+        "symbol": "SPCX",
+        "name": "Space Exploration Technologies ",
+        "price": 123.54,
+        "daily_pct": 3.08,
+        "market_cap": 1627539111936,
+        "pe": 136.81064,
+        "pe_kind": "forward",
+        "mtd_pct": -27.7,
+        "ytd_pct": null,
+        "yahoo": "SPCX",
+        "source_url": "https://finance.yahoo.com/quote/SPCX"
+      },
+      {
+        "symbol": "TSLA",
+        "name": "Tesla, Inc.",
+        "price": 378.93,
+        "daily_pct": 2.53,
+        "market_cap": 1423156445184,
+        "pe": 344.4818,
+        "pe_kind": "trailing",
+        "mtd_pct": -9.91,
+        "ytd_pct": -15.74,
+        "yahoo": "TSLA",
+        "source_url": "https://finance.yahoo.com/quote/TSLA"
+      },
+      {
+        "symbol": "SKHY",
+        "name": "SK hynix Inc.",
+        "price": 171.94,
+        "daily_pct": 13.75,
+        "market_cap": 1220524507136,
+        "pe": 21.987211,
+        "pe_kind": "trailing",
+        "mtd_pct": null,
+        "ytd_pct": null,
+        "yahoo": "SKHY",
+        "source_url": "https://finance.yahoo.com/quote/SKHY"
+      },
+      {
+        "symbol": "MU",
+        "name": "Micron Technology, Inc.",
+        "price": 970.82,
+        "daily_pct": 12.17,
+        "market_cap": 1096437465088,
+        "pe": 19.569038,
+        "pe_kind": "trailing",
+        "mtd_pct": -15.89,
+        "ytd_pct": 240.15,
+        "yahoo": "MU",
+        "source_url": "https://finance.yahoo.com/quote/MU"
+      },
+      {
+        "symbol": "AMD",
+        "name": "Advanced Micro Devices, Inc.",
+        "price": 544.43,
+        "daily_pct": 8.11,
+        "market_cap": 887747837952,
+        "pe": 166.49236,
+        "pe_kind": "trailing",
+        "mtd_pct": -6.28,
+        "ytd_pct": 154.22,
+        "yahoo": "AMD",
+        "source_url": "https://finance.yahoo.com/quote/AMD"
+      },
+      {
+        "symbol": "INTC",
+        "name": "Intel Corporation",
+        "price": 105.45,
+        "daily_pct": 8.64,
+        "market_cap": 529991663616,
+        "pe": 64.893105,
+        "pe_kind": "forward",
+        "mtd_pct": -24.48,
+        "ytd_pct": 185.77,
+        "yahoo": "INTC",
+        "source_url": "https://finance.yahoo.com/quote/INTC"
+      },
+      {
+        "symbol": "BAC",
+        "name": "Bank of America Corporation",
+        "price": 61.22,
+        "daily_pct": 1.32,
+        "market_cap": 434453315584,
+        "pe": 13.945331,
+        "pe_kind": "trailing",
+        "mtd_pct": 7.44,
+        "ytd_pct": 11.31,
+        "yahoo": "BAC",
+        "source_url": "https://finance.yahoo.com/quote/BAC"
+      },
+      {
+        "symbol": "ORCL",
+        "name": "Oracle Corporation",
+        "price": 127.05,
+        "daily_pct": 4.67,
+        "market_cap": 365963870208,
+        "pe": 20.82787,
+        "pe_kind": "trailing",
+        "mtd_pct": -13.31,
+        "ytd_pct": -34.82,
+        "yahoo": "ORCL",
+        "source_url": "https://finance.yahoo.com/quote/ORCL"
+      }
+    ],
     "top_gainers": [
       {
         "symbol": "AEHR",
@@ -1018,6 +1149,19 @@
         "source_url": "https://finance.yahoo.com/quote/XLF"
       },
       {
+        "symbol": "VEA",
+        "name": "Vanguard FTSE Developed Markets",
+        "price": 70.47,
+        "daily_pct": -0.18,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": -1.09,
+        "ytd_pct": 12.81,
+        "yahoo": "VEA",
+        "source_url": "https://finance.yahoo.com/quote/VEA"
+      },
+      {
         "symbol": "VWO",
         "name": "Vanguard FTSE Emerging Markets ",
         "price": 58.86,
@@ -1029,19 +1173,6 @@
         "ytd_pct": 9.49,
         "yahoo": "VWO",
         "source_url": "https://finance.yahoo.com/quote/VWO"
-      },
-      {
-        "symbol": "VTI",
-        "name": "Vanguard Total Stock Market ETF",
-        "price": 369.45,
-        "daily_pct": -0.46,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": -0.16,
-        "ytd_pct": 10.19,
-        "yahoo": "VTI",
-        "source_url": "https://finance.yahoo.com/quote/VTI"
       }
     ],
     "sectors": [
