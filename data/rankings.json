@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T08:41:27+08:00",
+  "generated_at": "2026-07-22T09:01:58+08:00",
   "tw": {
     "as_of": "2026-07-22",
     "top_marketcap": [
@@ -706,7 +706,7 @@
         "price": 171.94,
         "daily_pct": 13.75,
         "market_cap": 1220524507136,
-        "pe": 24.99128,
+        "pe": 21.987211,
         "pe_kind": "trailing",
         "mtd_pct": null,
         "ytd_pct": null,
@@ -758,7 +758,7 @@
         "price": 61.22,
         "daily_pct": 1.32,
         "market_cap": 434453315584,
-        "pe": 14.138569,
+        "pe": 13.945331,
         "pe_kind": "trailing",
         "mtd_pct": 7.44,
         "ytd_pct": 11.31,
@@ -771,7 +771,7 @@
         "price": 127.05,
         "daily_pct": 4.67,
         "market_cap": 365963870208,
-        "pe": 21.792454,
+        "pe": 20.82787,
         "pe_kind": "trailing",
         "mtd_pct": -13.31,
         "ytd_pct": -34.82,
@@ -825,7 +825,7 @@
         "price": 208.57,
         "daily_pct": 17.92,
         "market_cap": 46479941632,
-        "pe": 453.41306,
+        "pe": 386.24075,
         "pe_kind": "trailing",
         "mtd_pct": -5.62,
         "ytd_pct": null,
@@ -1045,17 +1045,17 @@
     ],
     "top_etf": [
       {
-        "symbol": "XLE",
-        "name": "State Street Energy Select Sect",
-        "price": 58.5,
-        "daily_pct": 2.72,
+        "symbol": "XLRE",
+        "name": "State Street Real Estate Select",
+        "price": 45.2,
+        "daily_pct": 1.62,
         "market_cap": null,
         "pe": null,
         "pe_kind": null,
-        "mtd_pct": 10.15,
-        "ytd_pct": 30.84,
-        "yahoo": "XLE",
-        "source_url": "https://finance.yahoo.com/quote/XLE"
+        "mtd_pct": 2.66,
+        "ytd_pct": 12.02,
+        "yahoo": "XLRE",
+        "source_url": "https://finance.yahoo.com/quote/XLRE"
       },
       {
         "symbol": "XLV",
@@ -1177,18 +1177,18 @@
     ],
     "sectors": [
       {
-        "symbol": "XLE",
-        "name": "State Street Energy Select Sect",
-        "price": 58.5,
-        "daily_pct": 2.72,
+        "symbol": "XLRE",
+        "name": "State Street Real Estate Select",
+        "price": 45.2,
+        "daily_pct": 1.62,
         "market_cap": null,
         "pe": null,
         "pe_kind": null,
-        "mtd_pct": 10.15,
-        "ytd_pct": 30.84,
-        "yahoo": "XLE",
-        "source_url": "https://finance.yahoo.com/quote/XLE",
-        "name_zh": "能源"
+        "mtd_pct": 2.66,
+        "ytd_pct": 12.02,
+        "yahoo": "XLRE",
+        "source_url": "https://finance.yahoo.com/quote/XLRE",
+        "name_zh": "房地產"
       },
       {
         "symbol": "XLV",
@@ -1273,6 +1273,20 @@
         "yahoo": "XLB",
         "source_url": "https://finance.yahoo.com/quote/XLB",
         "name_zh": "原物料"
+      },
+      {
+        "symbol": "XLC",
+        "name": "State Street Communication Serv",
+        "price": 110.03,
+        "daily_pct": -1.27,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": 2.71,
+        "ytd_pct": -6.53,
+        "yahoo": "XLC",
+        "source_url": "https://finance.yahoo.com/quote/XLC",
+        "name_zh": "通訊"
       },
       {
         "symbol": "XLK",
