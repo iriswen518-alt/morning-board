@@ -1,5 +1,5 @@
 {
-  "closing_date": "2026-07-21",
+  "closing_date": "2026-07-22",
   "indices": [
     {
       "name": "S&P 500",
@@ -13,7 +13,7 @@
     {
       "name": "Nasdaq Composite",
       "name_zh": null,
-      "close": 25837.20703125,
+      "close": 25837.2109375,
       "daily_pct": 1.29,
       "mtd_pct": -1.44,
       "ytd_pct": 11.17,
@@ -31,7 +31,7 @@
     {
       "name": "PHLX Semiconductor",
       "name_zh": null,
-      "close": 12356.1640625,
+      "close": 12356.16015625,
       "daily_pct": 5.21,
       "mtd_pct": -13.27,
       "ytd_pct": 74.44,
@@ -85,20 +85,20 @@
     {
       "name": "TAIEX 加權指數",
       "name_zh": null,
-      "close": 44232.87109375,
-      "daily_pct": 4.2,
+      "close": 44825.78,
+      "daily_pct": 1.34,
       "mtd_pct": -4.1,
       "ytd_pct": 52.72,
-      "closing_date": "2026-07-21"
+      "closing_date": "2026-07-22"
     },
     {
       "name": "OTC 櫃買加權",
       "name_zh": null,
-      "close": 381.96,
-      "daily_pct": 3.64,
+      "close": 395.18,
+      "daily_pct": 3.46,
       "mtd_pct": -11.37,
       "ytd_pct": 37.0,
-      "closing_date": "2026-07-21"
+      "closing_date": "2026-07-22"
     },
     {
       "name": "台指期(近月)",
@@ -175,21 +175,21 @@
     {
       "name": "US 2-Year",
       "yield_pct": 4.25,
-      "daily_bps": -0.8,
+      "daily_bps": -0.6,
       "mtd_bps": 12.0,
       "closing_date": "2026-07-22"
     },
     {
       "name": "Germany 10-Year",
-      "yield_pct": 3.17,
-      "daily_bps": 1.8,
+      "yield_pct": 3.16,
+      "daily_bps": -0.1,
       "mtd_bps": 24.34,
       "closing_date": "2026-07-22"
     },
     {
       "name": "Japan 10-Year",
       "yield_pct": 2.74,
-      "daily_bps": 2.0,
+      "daily_bps": 1.8,
       "mtd_bps": 4.1,
       "closing_date": "2026-07-22"
     },
@@ -269,34 +269,34 @@
   "commodities": [
     {
       "name": "黃金 (USD/oz)",
-      "close": 4142.7998046875,
-      "daily_pct": 1.76,
-      "mtd_pct": 2.98,
-      "ytd_pct": -4.23,
+      "close": 4071.10009765625,
+      "daily_pct": 1.52,
+      "mtd_pct": 1.2,
+      "ytd_pct": -5.88,
       "closing_date": "2026-07-21"
     },
     {
       "name": "白銀 (USD/oz)",
-      "close": 60.20000076293945,
-      "daily_pct": 2.32,
-      "mtd_pct": 1.22,
-      "ytd_pct": -14.16,
+      "close": 58.834999084472656,
+      "daily_pct": 3.58,
+      "mtd_pct": -1.08,
+      "ytd_pct": -16.11,
       "closing_date": "2026-07-21"
     },
     {
       "name": "WTI 原油 (USD/bbl)",
-      "close": 85.2300033569336,
-      "daily_pct": 0.38,
-      "mtd_pct": 22.63,
-      "ytd_pct": 48.43,
+      "close": 84.91000366210938,
+      "daily_pct": 2.02,
+      "mtd_pct": 22.17,
+      "ytd_pct": 47.88,
       "closing_date": "2026-07-21"
     },
     {
       "name": "布蘭特原油 (USD/bbl)",
-      "close": 92.0999984741211,
-      "daily_pct": 1.2,
-      "mtd_pct": 26.3,
-      "ytd_pct": 51.36,
+      "close": 91.01000213623047,
+      "daily_pct": 2.01,
+      "mtd_pct": 24.81,
+      "ytd_pct": 49.56,
       "closing_date": "2026-07-21"
     },
     {
@@ -388,8 +388,8 @@
     "yield_curve_10y2y": 0.37,
     "yield_curve_10y2y_bps": 37,
     "curve_shape": "正斜率",
-    "dxy": 101.1449966430664,
-    "dxy_daily_pct": -0.03,
+    "dxy": 101.18000030517578,
+    "dxy_daily_pct": 0.19,
     "closing_date": "2026-07-21"
   },
   "fedwatch": [
@@ -436,5 +436,5 @@
       "is_reference": false
     }
   ],
-  "summary": "7/21 CSI 300 滬深300 +7.67%、7/21 PHLX Semiconductor +5.21%、7/21 TAIEX 加權指數 +4.20% 領漲；7/21 Nifty 50 -0.21%、7/21 Hang Seng 恆生 -0.04% 走弱。"
+  "summary": "7/21 CSI 300 滬深300 +7.67%、7/21 PHLX Semiconductor +5.21%、7/21 台指期(近月) +4.02% 領漲；7/21 Nifty 50 -0.21%、7/21 Hang Seng 恆生 -0.04% 走弱。"
 }
