@@ -8032,6 +8032,15 @@ function renderBeatEtfCards() {
     return `<tr><td style="${tdBase};white-space:nowrap">${escapeHtml(e.name_zh)}${catChip}</td>${cells}</tr>`;
   }).join("");
 
+  const fundAsOf = (data.funds && data.funds.stat_date) || fundItems.find(f => f.nav_date)?.nav_date || "";
+  const etfAsOf  = (data.etfs  && data.etfs.stat_date)  || etfItems.find(e => e.market_date)?.market_date || "";
+  const asOfTxt = (fundAsOf && etfAsOf && fundAsOf !== etfAsOf)
+    ? `基金 ${fundAsOf}（淨值日）、ETF ${etfAsOf}（收盤日）`
+    : `${fundAsOf || etfAsOf}（基金為淨值日、ETF 為收盤日）`;
+  const note = (fundAsOf || etfAsOf)
+    ? `<p style="font-size:11px;color:var(--text-mute);margin:8px 0 0">績效截至 ${asOfTxt}，資料來源：板信基金平台／MoneyDJ，不構成投資建議。</p>`
+    : "";
+
   return `
     <div style="overflow-x:auto">
       <table class="freeze-col1" style="width:100%;border-collapse:collapse;font-size:13px">
@@ -8049,6 +8058,7 @@ function renderBeatEtfCards() {
         </tbody>
       </table>
     </div>
+    ${note}
   `;
 }
 
