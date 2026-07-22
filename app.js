@@ -7969,6 +7969,7 @@ function renderBeatEtfCards() {
     { key: "5y", label: "近5年" }
   ];
   const fmtR = v => (v === null || v === undefined) ? "—" : `${Number(v).toFixed(1)}%`;
+  const fmtD = d => d ? escapeHtml(String(d).slice(5).replace("-", "/")) : "—";
   const cellClass = v => (v === null || v === undefined) ? "" : (v > 0 ? "up" : (v < 0 ? "down" : ""));
 
   const tdBase = "padding:6px 8px;border-bottom:1px solid var(--border)";
@@ -7976,10 +7977,10 @@ function renderBeatEtfCards() {
 
   const headerCells = periods.map(p =>
     `<th style="${thBase};text-align:right">${p.label}</th>`
-  ).join("");
+  ).join("") + `<th style="${thBase};text-align:right;white-space:nowrap">收盤日</th>`;
 
   const groupHeader = (title, bg) => `<tr>
-    <td colspan="${periods.length + 1}" style="padding:10px 8px;font-weight:600;color:var(--brand-deep);background:${bg};border-bottom:1px solid var(--border)">${escapeHtml(title)}</td>
+    <td colspan="${periods.length + 2}" style="padding:10px 8px;font-weight:600;color:var(--brand-deep);background:${bg};border-bottom:1px solid var(--border)">${escapeHtml(title)}</td>
   </tr>`;
 
   // 商品屬性中文標籤：以基金名稱（去空白）對照
@@ -8008,7 +8009,7 @@ function renderBeatEtfCards() {
     if (f.unlisted) {
       return `<tr>
         <td style="${tdBase};white-space:nowrap;color:var(--text-mute)">${escapeHtml(f.name_zh)}</td>
-        <td colspan="${periods.length}" style="${tdBase};color:var(--text-mute);font-size:12px">${escapeHtml(f.note || "未上架")}</td>
+        <td colspan="${periods.length + 1}" style="${tdBase};color:var(--text-mute);font-size:12px">${escapeHtml(f.note || "未上架")}</td>
       </tr>`;
     }
     const nameHtml = f.source_url
@@ -8018,7 +8019,8 @@ function renderBeatEtfCards() {
       const v = f.perf?.[p.key];
       return `<td style="${tdBase};text-align:right" class="${cellClass(v)}">${perfLink(fmtR(v), f.source_url)}</td>`;
     }).join("");
-    return `<tr><td style="${tdBase};white-space:nowrap">${nameHtml}${beatCatChip(f.name_zh)}</td>${cells}</tr>`;
+    const dateCell = `<td style="${tdBase};text-align:right;white-space:nowrap;color:var(--text-mute);font-size:12px">${fmtD(f.nav_date || (data.funds && data.funds.stat_date))}</td>`;
+    return `<tr><td style="${tdBase};white-space:nowrap">${nameHtml}${beatCatChip(f.name_zh)}</td>${cells}${dateCell}</tr>`;
   }).join("");
 
   const etfRows = etfItems.map(e => {
@@ -8029,7 +8031,8 @@ function renderBeatEtfCards() {
       const v = e.perf?.[p.key];
       return `<td style="${tdBase};text-align:right" class="${cellClass(v)}">${fmtR(v)}</td>`;
     }).join("");
-    return `<tr><td style="${tdBase};white-space:nowrap">${escapeHtml(e.name_zh)}${catChip}</td>${cells}</tr>`;
+    const dateCell = `<td style="${tdBase};text-align:right;white-space:nowrap;color:var(--text-mute);font-size:12px">${fmtD(e.market_date || (data.etfs && data.etfs.stat_date))}</td>`;
+    return `<tr><td style="${tdBase};white-space:nowrap">${escapeHtml(e.name_zh)}${catChip}</td>${cells}${dateCell}</tr>`;
   }).join("");
 
   const fundAsOf = (data.funds && data.funds.stat_date) || fundItems.find(f => f.nav_date)?.nav_date || "";
