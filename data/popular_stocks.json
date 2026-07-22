@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T16:46:20+08:00",
+  "generated_at": "2026-07-22T17:34:04+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -59,20 +59,6 @@
       "error": null
     },
     {
-      "symbol": "DHR",
-      "name_zh": "Danaher",
-      "kind": "US",
-      "price": 179.01,
-      "change_pct": -10.99,
-      "mtd_pct": -6.02,
-      "ytd_pct": -21.8,
-      "market_date": "2026-07-21",
-      "per": 34.3084,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DHR.US",
-      "error": null
-    },
-    {
       "symbol": "OKLO",
       "name_zh": "Oklo",
       "kind": "US",
@@ -87,17 +73,31 @@
       "error": null
     },
     {
-      "symbol": "AEHR",
-      "name_zh": "Aehr Test Systems",
+      "symbol": "MNDY",
+      "name_zh": "monday.com",
       "kind": "US",
-      "price": 98.91,
-      "change_pct": 27.86,
-      "mtd_pct": 2.97,
-      "ytd_pct": 389.9,
+      "price": 72.84,
+      "change_pct": -5.09,
+      "mtd_pct": 0.62,
+      "ytd_pct": -50.64,
       "market_date": "2026-07-21",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AEHR.US",
+      "per": 26.0369,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MNDY.US",
+      "error": null
+    },
+    {
+      "symbol": "DHR",
+      "name_zh": "Danaher",
+      "kind": "US",
+      "price": 179.01,
+      "change_pct": -10.99,
+      "mtd_pct": -6.02,
+      "ytd_pct": -21.8,
+      "market_date": "2026-07-21",
+      "per": 34.3084,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DHR.US",
       "error": null
     },
     {
@@ -115,45 +115,17 @@
       "error": null
     },
     {
-      "symbol": "MMM",
-      "name_zh": "3M",
+      "symbol": "AEHR",
+      "name_zh": "Aehr Test Systems",
       "kind": "US",
-      "price": 170.76,
-      "change_pct": 7.32,
-      "mtd_pct": 5.47,
-      "ytd_pct": 6.66,
-      "market_date": "2026-07-21",
-      "per": 32.5301,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MMM.US",
-      "error": null
-    },
-    {
-      "symbol": "CBRS",
-      "name_zh": "Cerebras Systems",
-      "kind": "US",
-      "price": 208.57,
-      "change_pct": 17.92,
-      "mtd_pct": -5.62,
-      "ytd_pct": null,
+      "price": 98.91,
+      "change_pct": 27.86,
+      "mtd_pct": 2.97,
+      "ytd_pct": 389.9,
       "market_date": "2026-07-21",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CBRS.US",
-      "error": null
-    },
-    {
-      "symbol": "IBKR",
-      "name_zh": "Interactive Brokers",
-      "kind": "US",
-      "price": 94.42,
-      "change_pct": 2.99,
-      "mtd_pct": 8.48,
-      "ytd_pct": 46.82,
-      "market_date": "2026-07-21",
-      "per": 154.1305,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IBKR.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AEHR.US",
       "error": null
     },
     {
@@ -171,17 +143,17 @@
       "error": null
     },
     {
-      "symbol": "IOVA",
-      "name_zh": "Iovance Biotherapeutics",
+      "symbol": "XOM",
+      "name_zh": "艾克森美孚",
       "kind": "US",
-      "price": 5.48,
-      "change_pct": 9.16,
-      "mtd_pct": 31.73,
-      "ytd_pct": 100.73,
+      "price": 151.71,
+      "change_pct": 2.26,
+      "mtd_pct": 10.96,
+      "ytd_pct": 26.07,
       "market_date": "2026-07-21",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IOVA.US",
+      "per": 24.1289,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=XOM.US",
       "error": null
     },
     {
