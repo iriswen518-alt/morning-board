@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T15:58:09+08:00",
+  "generated_at": "2026-07-22T16:46:20+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -59,20 +59,6 @@
       "error": null
     },
     {
-      "symbol": "OKLO",
-      "name_zh": "Oklo",
-      "kind": "US",
-      "price": 44.13,
-      "change_pct": 6.31,
-      "mtd_pct": -15.67,
-      "ytd_pct": -38.5,
-      "market_date": "2026-07-21",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=OKLO.US",
-      "error": null
-    },
-    {
       "symbol": "DHR",
       "name_zh": "Danaher",
       "kind": "US",
@@ -87,31 +73,17 @@
       "error": null
     },
     {
-      "symbol": "MSCI",
-      "name_zh": "MSCI",
+      "symbol": "OKLO",
+      "name_zh": "Oklo",
       "kind": "US",
-      "price": 561.74,
-      "change_pct": -10.14,
-      "mtd_pct": 0.3,
-      "ytd_pct": -2.09,
-      "market_date": "2026-07-21",
-      "per": 30.8537,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MSCI.US",
-      "error": null
-    },
-    {
-      "symbol": "CBRS",
-      "name_zh": "Cerebras Systems",
-      "kind": "US",
-      "price": 208.57,
-      "change_pct": 17.92,
-      "mtd_pct": -5.62,
-      "ytd_pct": null,
+      "price": 44.13,
+      "change_pct": 6.31,
+      "mtd_pct": -15.67,
+      "ytd_pct": -38.5,
       "market_date": "2026-07-21",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CBRS.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=OKLO.US",
       "error": null
     },
     {
@@ -129,6 +101,20 @@
       "error": null
     },
     {
+      "symbol": "MSCI",
+      "name_zh": "MSCI",
+      "kind": "US",
+      "price": 561.74,
+      "change_pct": -10.14,
+      "mtd_pct": 0.3,
+      "ytd_pct": -2.09,
+      "market_date": "2026-07-21",
+      "per": 30.8537,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MSCI.US",
+      "error": null
+    },
+    {
       "symbol": "MMM",
       "name_zh": "3M",
       "kind": "US",
@@ -143,17 +129,17 @@
       "error": null
     },
     {
-      "symbol": "HPE",
-      "name_zh": "Hewlett Packard Enterprise Comp",
+      "symbol": "CBRS",
+      "name_zh": "Cerebras Systems",
       "kind": "US",
-      "price": 46.72,
-      "change_pct": 4.85,
-      "mtd_pct": 3.57,
-      "ytd_pct": 94.5,
+      "price": 208.57,
+      "change_pct": 17.92,
+      "mtd_pct": -5.62,
+      "ytd_pct": null,
       "market_date": "2026-07-21",
-      "per": 39.641,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HPE.US",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CBRS.US",
       "error": null
     },
     {
@@ -168,6 +154,34 @@
       "per": 154.1305,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IBKR.US",
+      "error": null
+    },
+    {
+      "symbol": "COF",
+      "name_zh": "Capital One Financial Corporati",
+      "kind": "US",
+      "price": 206.22,
+      "change_pct": -0.27,
+      "mtd_pct": 2.79,
+      "ytd_pct": -14.91,
+      "market_date": "2026-07-21",
+      "per": 39.4191,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=COF.US",
+      "error": null
+    },
+    {
+      "symbol": "IOVA",
+      "name_zh": "Iovance Biotherapeutics",
+      "kind": "US",
+      "price": 5.48,
+      "change_pct": 9.16,
+      "mtd_pct": 31.73,
+      "ytd_pct": 100.73,
+      "market_date": "2026-07-21",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IOVA.US",
       "error": null
     },
     {
