@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T17:40:58+08:00",
+  "generated_at": "2026-07-22T18:35:49+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -59,20 +59,6 @@
       "error": null
     },
     {
-      "symbol": "OKLO",
-      "name_zh": "Oklo",
-      "kind": "US",
-      "price": 44.13,
-      "change_pct": 6.31,
-      "mtd_pct": -15.67,
-      "ytd_pct": -38.5,
-      "market_date": "2026-07-21",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=OKLO.US",
-      "error": null
-    },
-    {
       "symbol": "MNDY",
       "name_zh": "monday.com",
       "kind": "US",
@@ -84,6 +70,48 @@
       "per": 26.0369,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MNDY.US",
+      "error": null
+    },
+    {
+      "symbol": "RDDT",
+      "name_zh": "Reddit",
+      "kind": "US",
+      "price": 185.84,
+      "change_pct": 2.31,
+      "mtd_pct": 7.06,
+      "ytd_pct": -19.15,
+      "market_date": "2026-07-21",
+      "per": 50.6832,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RDDT.US",
+      "error": null
+    },
+    {
+      "symbol": "T",
+      "name_zh": "AT&T",
+      "kind": "US",
+      "price": 22.26,
+      "change_pct": 1.41,
+      "mtd_pct": 7.54,
+      "ytd_pct": -10.39,
+      "market_date": "2026-07-21",
+      "per": 7.042,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=T.US",
+      "error": null
+    },
+    {
+      "symbol": "OKLO",
+      "name_zh": "Oklo",
+      "kind": "US",
+      "price": 44.13,
+      "change_pct": 6.31,
+      "mtd_pct": -15.67,
+      "ytd_pct": -38.5,
+      "market_date": "2026-07-21",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=OKLO.US",
       "error": null
     },
     {
@@ -101,17 +129,31 @@
       "error": null
     },
     {
-      "symbol": "MSCI",
-      "name_zh": "MSCI",
+      "symbol": "USO",
+      "name_zh": "United States Oil Fund",
       "kind": "US",
-      "price": 561.74,
-      "change_pct": -10.14,
-      "mtd_pct": 0.3,
-      "ytd_pct": -2.09,
+      "price": 128.85,
+      "change_pct": 2.66,
+      "mtd_pct": 21.05,
+      "ytd_pct": 86.31,
       "market_date": "2026-07-21",
-      "per": 30.8537,
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=USO.US",
+      "error": null
+    },
+    {
+      "symbol": "GOOG",
+      "name_zh": "谷歌 C",
+      "kind": "US",
+      "price": 346.19,
+      "change_pct": -1.47,
+      "mtd_pct": -2.02,
+      "ytd_pct": 10.32,
+      "market_date": "2026-07-21",
+      "per": 26.5327,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MSCI.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GOOG.US",
       "error": null
     },
     {
@@ -126,34 +168,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AEHR.US",
-      "error": null
-    },
-    {
-      "symbol": "COF",
-      "name_zh": "Capital One Financial Corporati",
-      "kind": "US",
-      "price": 206.22,
-      "change_pct": -0.27,
-      "mtd_pct": 2.79,
-      "ytd_pct": -14.91,
-      "market_date": "2026-07-21",
-      "per": 39.4191,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=COF.US",
-      "error": null
-    },
-    {
-      "symbol": "XOM",
-      "name_zh": "艾克森美孚",
-      "kind": "US",
-      "price": 151.71,
-      "change_pct": 2.26,
-      "mtd_pct": 10.96,
-      "ytd_pct": 26.07,
-      "market_date": "2026-07-21",
-      "per": 24.1289,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=XOM.US",
       "error": null
     },
     {
