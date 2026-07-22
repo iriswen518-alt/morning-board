@@ -174,16 +174,16 @@
     },
     {
       "name": "US 2-Year",
-      "yield_pct": 4.27,
-      "daily_bps": 0.7,
+      "yield_pct": 4.29,
+      "daily_bps": 3.2,
       "mtd_bps": 12.0,
       "closing_date": "2026-07-22"
     },
     {
       "name": "Germany 10-Year",
-      "yield_pct": 3.19,
-      "daily_bps": 2.2,
-      "mtd_bps": 28.56,
+      "yield_pct": 3.18,
+      "daily_bps": 1.8,
+      "mtd_bps": null,
       "closing_date": "2026-07-22"
     },
     {
@@ -195,8 +195,8 @@
     },
     {
       "name": "UK 10-Year",
-      "yield_pct": 5.06,
-      "daily_bps": 2.7,
+      "yield_pct": 5.05,
+      "daily_bps": 1.9,
       "mtd_bps": 26.72,
       "closing_date": "2026-07-22"
     },
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 101.18000030517578,
       "daily_pct": 0.19,
-      "mtd_pct": -0.03,
-      "ytd_pct": 2.93,
+      "mtd_pct": -0.11,
+      "ytd_pct": 2.85,
       "closing_date": "2026-07-21"
     },
     {
@@ -416,7 +416,7 @@
     {
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
-      "implied_rate": 3.85,
+      "implied_rate": 3.86,
       "delta_rate": 0.09,
       "delta_bps": 9.0,
       "p_hike": 36.0,
@@ -427,11 +427,11 @@
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 3.99,
-      "delta_rate": 0.14,
-      "delta_bps": 14.0,
-      "p_hike": 56.0,
-      "p_hold": 44.0,
+      "implied_rate": 4.0,
+      "delta_rate": 0.15,
+      "delta_bps": 15.0,
+      "p_hike": 60.0,
+      "p_hold": 40.0,
       "p_cut": 0,
       "is_reference": false
     }
