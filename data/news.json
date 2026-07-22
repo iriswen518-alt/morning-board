@@ -1,9 +1,11 @@
 {
   "news_date": "2026-07-23",
   "tldr": [
-    "台股收漲592.91點站上44,826點，外資終結連13賣，記憶體族群亮燈漲停帶動買氣。",
+    "台股收漲592.91點站上44,826點，外資終結連13賣，南亞科、華邦電、旺宏亮燈漲停帶動買氣。",
     "力積電7月調漲DRAM代工價45%，美銀估Q3 DRAM合約價漲21%，供需缺口看到2027年。",
-    "金管會揭保險監理三方向（AI轉型、綠色金融、全齡金融），財管業務加速布局私募市場與家族辦公室。"
+    "金管會揭保險監理三方向（AI轉型、綠色金融、全齡金融），財管業務加速布局私募市場與家族辦公室。",
+    "美股7月22日收黑（標普-0.14%、那斯達克-0.57%），油價因中東情勢飆約3%，Alphabet因上修2026 AI資本支出至1,950~2,050億美元、盤後重挫近5%。",
+    "中經院因科技出口強勁上修2026台灣GDP預測、並將CPI預測上修至約2.02%，美銀則改估Fed今年升息三次。"
   ],
   "sections": [
     {
@@ -91,6 +93,114 @@
           "summary_en": "Taiwan's high-asset Wealth Management 2.0 regime continues to broaden, with the number of high-net-worth clients surpassing 24,000 and assets under management reaching about NT$2.55 trillion as of April. Securities firms such as Hua Nan Yong Chang have won approval to run high-asset services for clients with NT$100 million or more, offering overseas equities and bonds and derivatives — a milestone as brokers move into private banking long dominated by banks and intensify competition for affluent investors.",
           "source_name": "Yahoo奇摩股市",
           "source_url": "https://tw.stock.yahoo.com/news/%E8%8F%AF%E5%8D%97%E6%B0%B8%E6%98%8C%E8%AD%89%E8%B7%A8%E5%85%A5%E7%A7%81%E9%8A%80%E6%96%B0%E9%87%8C%E7%A8%8B%E7%A2%91-%E7%8D%B2%E5%87%86%E9%96%8B%E8%BE%A6%E8%B2%A1%E7%AE%A12-0%E6%A5%AD%E5%8B%99-014900937.html"
+        }
+      ]
+    },
+    {
+      "section": "Tax & Regulations",
+      "section_zh": "稅務法規",
+      "items": [
+        {
+          "title_zh": "2026遺產稅級距因物價調整拉寬 免稅額維持不變",
+          "title_en": "2026 estate-tax brackets widen as inflation adjustment kicks in; exemptions unchanged",
+          "summary_zh": "2026年台灣遺產稅課稅級距因消費者物價指數（CPI）漲幅達法定調整門檻而向上調整，各級距金額拉寬，使遺產在較高門檻後才適用高稅率，實質減輕稅負。遺產稅免稅額與贈與稅免稅額則維持不變，其中贈與稅免稅額續為每年244萬元。此調整在不動核心免稅額的前提下，減輕較大額遺產的稅負，規劃財產移轉者應留意新級距金額，並據以試算2026年度申報稅負，以掌握節稅空間。",
+          "summary_en": "For 2026, Taiwan's estate-tax rate brackets have been widened after the consumer price index rose enough to cross the statutory adjustment threshold, lifting the monetary limits of each tier so heirs face tax on a smaller effective base. The basic estate-tax exemption and the gift-tax exemption — the latter held at NT$2.44 million per year — remain unchanged. The changes ease the burden on larger estates while keeping the core thresholds steady, and taxpayers planning transfers should factor the new bracket figures into 2026 filings.",
+          "source_name": "TICPA 台北市會計師公會",
+          "source_url": "https://ticpa.com.tw/import-and-export-registration/"
+        },
+        {
+          "title_zh": "財政部公布114年地方稅統計 房屋稅差別稅率2.0上路首年",
+          "title_en": "MOF publishes 2025 local-tax statistics as differential house-tax 2.0 completes first year",
+          "summary_zh": "財政部財政資訊中心公開民國114年財稅資訊地方稅統計表，呈現「房屋稅差別稅率2.0」新制上路首年的完整數據。該新制對非自住及閒置房屋採較高稅率，旨在抑制囤房、引導房屋有效使用。此批統計讓政策部門與分析者得以檢視改制後的稅率結構如何改變不動產持有成本，成為觀察多屋族持有行為是否如預期受到差別稅率影響的早期檢核點，後續走勢仍待更多年度數據驗證政策成效。",
+          "summary_en": "Taiwan's Ministry of Finance released its 2025 (ROC year 114) local-tax statistical tables, offering the first full-year picture under the \"differential house-tax rate 2.0\" regime that raises rates on non-owner-occupied and idle homes to discourage housing hoarding. The data lets policymakers and analysts gauge how the reformed rate structure is reshaping holding costs across the property market. It marks an early checkpoint on whether the higher progressive rates are nudging multiple-home owners' behaviour as intended.",
+          "source_name": "財政部",
+          "source_url": "https://www.mof.gov.tw/"
+        }
+      ]
+    },
+    {
+      "section": "Macro & Policy",
+      "section_zh": "總經政策",
+      "items": [
+        {
+          "title_zh": "中經院大幅上修2026台灣GDP成長預測 科技出口強撐",
+          "title_en": "CIER lifts 2026 Taiwan GDP growth forecast sharply on booming tech exports",
+          "summary_zh": "中華經濟研究院（中經院）上修2026年台灣GDP成長預測，主因外需異常強勁，其中資通訊與電子產品出口年增近六成，占整體出口比重逼近八成，成為最主要成長動能。出口、投資與消費三大需求均優於預期，第二季資本設備進口突破400億美元，反映企業投資持續擴張。數據凸顯AI驅動的科技循環已成為今年台灣經濟最關鍵引擎，惟高成長是否可延續，仍須留意全球需求與科技庫存變化。",
+          "summary_en": "The Chung-Hua Institution for Economic Research (CIER) raised its 2026 Taiwan GDP growth forecast, citing exceptionally strong external demand led by information, communications and electronics products, whose exports have jumped nearly 60% year-on-year and now account for close to 80% of total shipments. Robust exports, capital-equipment imports topping US$40 billion and resilient investment and consumption all beat expectations, underscoring how the AI-driven tech cycle has become the dominant engine of the island's growth this year.",
+          "source_name": "中華經濟研究院",
+          "source_url": "https://www.cier.edu.tw/eco_cat/tmf-ch/"
+        },
+        {
+          "title_zh": "中經院上修2026 CPI預測至約2.02% 中東衝突推升油價",
+          "title_en": "CIER nudges up 2026 inflation forecast as Middle East conflict lifts oil prices",
+          "summary_zh": "中經院在上修成長預測同時，將2026年CPI預測由原先1.98%上修至約2.02%，反映中東衝突反覆推升能源價格、經由運輸與生產成本傳導的輸入型通膨壓力。此上修呼應6月CPI年增2.6%、創近17個月新高並連續兩個月站上2%警戒線的走勢。惟官方仍預期下半年隨國際油價趨穩、季節性因素消退，物價漲幅可望回落，通膨黏著度與油價後續變化為關鍵觀察點。",
+          "summary_en": "Alongside its growth upgrade, CIER raised its 2026 CPI forecast to about 2.02% from an earlier 1.98%, reflecting imported-inflation pressure as recurring Middle East conflict pushes energy prices higher and feeds through to transport and production costs. The revision echoes June CPI's 17-month-high 2.6% reading, which stayed above the 2% alert line for a second month, though officials still expect price gains to ease in the second half as oil prices stabilise and seasonal effects fade.",
+          "source_name": "大紀元",
+          "source_url": "https://www.epochtimes.com/gb/26/7/22/n14814693.htm"
+        }
+      ]
+    },
+    {
+      "section": "Global Markets",
+      "section_zh": "國際財經",
+      "items": [
+        {
+          "title_zh": "外電：美銀預測Fed 2026年升息三次 通膨風險再起",
+          "title_en": "BofA now sees the Fed hiking rates three times in 2026 as inflation risks resurface",
+          "summary_zh": "據台灣財經媒體報導，美銀翻轉對聯準會（Fed）的預期，改估2026年9月、10月、12月各升息1碼，將聯邦資金利率目標區間推升至4.25%~4.50%。此由原先預期降息、轉為預備升息的大逆轉，反映Fed政策焦點已轉向防範通膨「第二波」風險。分析師警告，若此情境成真，債券、股票及利率敏感型資產恐再度承壓，市場須密切留意後續通膨數據與Fed官員談話對政策路徑的指引。",
+          "summary_en": "Taiwanese financial media reported that Bank of America has flipped its Federal Reserve call, now forecasting three 25-basis-point rate hikes in September, October and December 2026 that would lift the federal funds target range to 4.25%-4.50%. The reversal — from expecting cuts to bracing for hikes — reflects the Fed's shift toward guarding against a \"second wave\" of inflation. Analysts warn that if it plays out, bonds, equities and rate-sensitive assets could face renewed pressure.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6508173"
+        },
+        {
+          "title_zh": "外電：Fed維持利率不變 聲明精簡刪除偏降息措辭",
+          "title_en": "Fed holds rates and trims its statement, dropping language that leaned toward easing",
+          "summary_zh": "台灣媒體報導，聯準會（Fed）維持利率不變，並大幅精簡政策聲明，刪除先前偏向降息的措辭，釋出偏鷹訊號，強化市場對短期內不降息的預期。此份在新領導層下發布的精簡聲明，凸顯央行在通膨黏著、油價高企下維持依賴數據的立場，使2026年剩餘時間的政策路徑保持開放，並將高度取決於後續物價與就業數據表現，市場對年內利率走向的分歧因此加大。",
+          "summary_en": "Taiwanese media reported the Federal Reserve left interest rates unchanged and sharply pared back its policy statement, removing wording that had tilted toward rate cuts — a hawkish signal that reinforced the market's shift away from near-term easing bets. The streamlined statement, delivered under new leadership, underscored the central bank's data-dependent stance amid sticky inflation and elevated oil prices, leaving the path for the rest of 2026 open and highly sensitive to incoming price and jobs data.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6503669"
+        }
+      ]
+    },
+    {
+      "section": "International",
+      "section_zh": "國際",
+      "items": [
+        {
+          "title_zh": "美股7月22日收黑 油價走高抵銷財報行情（2026-07-22）",
+          "title_en": "US stocks slip on July 22 as rising oil prices offset a busy earnings docket",
+          "summary_zh": "美股週三小幅收黑，油價走高帶來壓力，投資人靜候大量企業財報。標普500下跌0.14%收7,498.96點，那斯達克跌0.57%收25,690.90點，道瓊幾近平盤、下跌6.06點（0.01%）收52,218.58點。關稅發展與中東緊張情勢持續為市場焦點，盤後Alphabet與Tesla財報揭曉前，投資人保持觀望，避免在財報空窗期過度承擔風險。",
+          "summary_en": "Wall Street's main indexes closed slightly lower on Wednesday, pressured by climbing oil prices as investors awaited a heavy slate of corporate earnings. The S&P 500 eased 0.14% to 7,498.96, the Nasdaq Composite fell 0.57% to 25,690.90 and the Dow Jones Industrial Average was essentially flat, down 6.06 points (0.01%) to 52,218.58. Tariff developments and Middle East tensions stayed in focus ahead of results from Alphabet and Tesla after the bell.",
+          "source_name": "Yahoo Finance",
+          "source_url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-news-july-22-131800656.html",
+          "published": "2026-07-22"
+        },
+        {
+          "title_zh": "Alphabet Q2財報優於預期 因AI資本支出上修盤後重挫近5%（2026-07-22）",
+          "title_en": "Alphabet beats on Q2 but stock sinks nearly 5% after hours on a bigger AI capex bill",
+          "summary_zh": "Alphabet第2季營收年增約24%至約1,198億美元，Google Cloud營收大增82%，明顯優於市場預期。惟公司將2026年資本支出財測由1,800~1,900億美元上修至1,950~2,050億美元，股價盤後重挫近5%。此反應具體凸顯投資人對龐大AI基礎建設支出能否創造足夠回報的憂慮，也拖累市場對其他科技巨頭的情緒，成為本季財報季檢視AI資本支出成效的關鍵指標。",
+          "summary_en": "Alphabet reported Q2 revenue up about 24% year-on-year to roughly US$119.8 billion with Google Cloud sales surging 82%, comfortably topping estimates. Yet shares fell close to 5% after hours after the company lifted its 2026 capital-expenditure guidance to US$195-205 billion from US$180-190 billion. The market's reaction crystallised investor anxiety over whether massive AI-infrastructure spending will generate adequate returns, weighing on sentiment toward other Big Tech names.",
+          "source_name": "CNBC",
+          "source_url": "https://www.cnbc.com/2026/07/22/google-earnings-q2-goog-live-updates.html",
+          "published": "2026-07-22"
+        },
+        {
+          "title_zh": "油價飆升約3% 中東攻擊與油管襲擊點燃供給疑慮（2026-07-22）",
+          "title_en": "Oil jumps about 3% as Middle East strikes and pipeline attacks stoke supply fears",
+          "summary_zh": "國際油價週三大漲約3%，美國指標原油升至約每桶86.85美元，布蘭特原油逼近95.47美元，地緣風險升溫重新引發供給疑慮。美國就青年運動威脅紅海航運誓言報復，並持續打擊伊朗威脅荷莫茲海峽的能力；同時俄羅斯黑海沿岸的裏海油管財團輸油站再遭攻擊，威脅哈薩克原油關鍵出口路線，多重供給面衝擊推升油價，也為全球通膨與市場情緒增添變數。",
+          "summary_en": "Crude prices rose roughly 3% on Wednesday, with US benchmark oil climbing to about US$86.85 a barrel and Brent near US$95.47, as escalating geopolitical risk revived supply concerns. The US pledged retaliation over Houthi threats to Red Sea shipping and carried out further strikes aimed at Iran's ability to menace the Strait of Hormuz, while renewed attacks on a Caspian Pipeline terminal on Russia's Black Sea coast threatened a key Kazakh crude export route.",
+          "source_name": "Fortune",
+          "source_url": "https://fortune.com/article/price-of-oil-07-22-2026/",
+          "published": "2026-07-22"
+        },
+        {
+          "title_zh": "科技財報季升溫 ServiceNow大漲、Google走弱（2026-07-22）",
+          "title_en": "ServiceNow pops while Google slides as Big Tech Q2 earnings season kicks into gear",
+          "summary_zh": "第2季財報季於7月22日全面升溫，軟體與科技巨頭表現明顯分化。ServiceNow因季度財報獲市場肯定股價大漲，Alphabet則因AI支出展望加重而走弱，凸顯投資人獎勵執行明確者、懲罰高資本支出計畫的態度。隨Tesla等重量級企業同步公布財報，本場次為市場如何在AI變現與節節攀升的基礎建設支出之間權衡，定下財報季初步基調，後續科技巨頭財報與資本支出指引將主導類股走勢。",
+          "summary_en": "The second-quarter reporting season shifted into high gear on July 22, with results diverging sharply across software and Big Tech. ServiceNow shares jumped after a well-received quarter, while Alphabet slid on its heavier AI-spending outlook, illustrating how investors are rewarding clear execution but punishing costly capex plans. With Tesla and other heavyweights reporting alongside, the session set an early tone for how the market will judge AI monetisation against escalating infrastructure bills this earnings cycle.",
+          "source_name": "Yahoo Finance",
+          "source_url": "https://finance.yahoo.com/markets/live/earnings-live-second-quarter-results-tesla-google-july-115324842.html",
+          "published": "2026-07-22"
         }
       ]
     }
