@@ -76,8 +76,8 @@
     {
       "name": "Nikkei 225",
       "name_zh": null,
-      "close": 66011.2578125,
-      "daily_pct": -0.33,
+      "close": 66115.6015625,
+      "daily_pct": -0.18,
       "mtd_pct": -5.47,
       "ytd_pct": 31.57,
       "closing_date": "2026-07-22"
@@ -112,8 +112,8 @@
     {
       "name": "KOSPI",
       "name_zh": null,
-      "close": 6813.02978515625,
-      "daily_pct": 0.96,
+      "close": 6797.7001953125,
+      "daily_pct": 0.74,
       "mtd_pct": -20.39,
       "ytd_pct": 60.13,
       "closing_date": "2026-07-22"
@@ -130,20 +130,20 @@
     {
       "name": "Shanghai 上證",
       "name_zh": null,
-      "close": 3864.366943359375,
-      "daily_pct": 1.79,
+      "close": 3867.03369140625,
+      "daily_pct": 0.07,
       "mtd_pct": -5.62,
       "ytd_pct": -2.63,
-      "closing_date": "2026-07-21"
+      "closing_date": "2026-07-22"
     },
     {
       "name": "CSI 300 滬深300",
       "name_zh": null,
-      "close": 4876.31,
-      "daily_pct": 7.67,
+      "close": 4717.244140625,
+      "daily_pct": null,
       "mtd_pct": -9.04,
       "ytd_pct": -2.18,
-      "closing_date": "2026-07-21"
+      "closing_date": "2026-07-22"
     },
     {
       "name": "Nifty 50",
@@ -175,14 +175,14 @@
     {
       "name": "US 2-Year",
       "yield_pct": 4.26,
-      "daily_bps": 0.1,
+      "daily_bps": 0.3,
       "mtd_bps": 12.0,
       "closing_date": "2026-07-22"
     },
     {
       "name": "Germany 10-Year",
       "yield_pct": 3.18,
-      "daily_bps": 1.2,
+      "daily_bps": 1.4,
       "mtd_bps": 24.34,
       "closing_date": "2026-07-22"
     },
@@ -196,7 +196,7 @@
     {
       "name": "UK 10-Year",
       "yield_pct": 5.04,
-      "daily_bps": 0.7,
+      "daily_bps": 1.1,
       "mtd_bps": 18.72,
       "closing_date": "2026-07-22"
     },
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 101.18000030517578,
       "daily_pct": 0.19,
-      "mtd_pct": -0.06,
-      "ytd_pct": 2.9,
+      "mtd_pct": -0.05,
+      "ytd_pct": 2.91,
       "closing_date": "2026-07-21"
     },
     {
@@ -436,5 +436,5 @@
       "is_reference": false
     }
   ],
-  "summary": "7/21 CSI 300 滬深300 +7.67%、7/21 PHLX Semiconductor +5.21%、7/21 台指期(近月) +4.02% 領漲；7/22 Nikkei 225 -0.33%、7/21 Nifty 50 -0.21% 走弱。"
+  "summary": "7/21 PHLX Semiconductor +5.21%、7/21 台指期(近月) +4.02%、7/22 OTC 櫃買加權 +3.46% 領漲；7/21 Nifty 50 -0.21%、7/22 Nikkei 225 -0.18% 走弱。"
 }
