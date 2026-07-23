@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-23T12:00:28+08:00",
+  "generated_at": "2026-07-23T13:27:19+08:00",
   "metric": "lump_sum_cumulative_return_pct",
   "metric_label": "單筆投資累積報酬率",
   "tagline": "同樣單筆持有，多檔老牌主動式台股基金多年期表現勝過代表性台股 ETF",
@@ -305,6 +305,89 @@
         },
         "market_date": "2026-07-22",
         "source_url": "https://www.moneydj.com/ETF/X/Basic/Basic0008.xdjhtm?etfid=00981A.TW"
+      }
+    ]
+  },
+  "linked": {
+    "source": "板信基金理財網（bopfund.moneydj.com）",
+    "source_url": "https://bopfund.moneydj.com/W/HTML/bopSelect0.htm",
+    "stat_date": "2026-07-22",
+    "items": [
+      {
+        "name_zh": "元大台灣卓越50ETF連結基金",
+        "bop_code": "ACYT151-0341",
+        "bop_full_name": "元大台灣卓越50ETF連結基金A不配息(台幣)",
+        "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACYT151-0341",
+        "nav": 63.69,
+        "nav_date": "2026-07-22",
+        "perf": {
+          "1m": -5.7,
+          "3m": 21.15,
+          "6m": 45.54,
+          "1y": 110.2,
+          "3y": 244.83,
+          "5y": 242.79
+        },
+        "unlisted": false,
+        "note": null,
+        "category": "連結0050"
+      },
+      {
+        "name_zh": "元大台灣高股息ETF連結基金",
+        "bop_code": "ACYT153-0342",
+        "bop_full_name": "元大台灣高股息ETF連結基金A不配息(台幣)",
+        "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACYT153-0342",
+        "nav": 35.72,
+        "nav_date": "2026-07-22",
+        "perf": {
+          "1m": -2.99,
+          "3m": 26.09,
+          "6m": 41.8,
+          "1y": 64.46,
+          "3y": 98.33,
+          "5y": 140.7
+        },
+        "unlisted": false,
+        "note": null,
+        "category": "連結0056"
+      },
+      {
+        "name_zh": "元大臺灣ESG永續ETF連結基金",
+        "bop_code": "ACYT197-0343",
+        "bop_full_name": "元大臺灣ESG永續ETF連結基金A不配息",
+        "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACYT197-0343",
+        "nav": 28.04,
+        "nav_date": "2026-07-22",
+        "perf": {
+          "1m": -6.44,
+          "3m": 21.86,
+          "6m": 50.19,
+          "1y": 103.48,
+          "3y": null,
+          "5y": null
+        },
+        "unlisted": false,
+        "note": null,
+        "category": "連結00850"
+      },
+      {
+        "name_zh": "元大全球航太與防衛科技ETF連結基金",
+        "bop_code": "ACYT211-0344",
+        "bop_full_name": "元大全球航太與防衛科技ETF連結基金",
+        "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACYT211-0344",
+        "nav": 11.38,
+        "nav_date": "2026-07-21",
+        "perf": {
+          "1m": -4.29,
+          "3m": -4.45,
+          "6m": -4.69,
+          "1y": null,
+          "3y": null,
+          "5y": null
+        },
+        "unlisted": false,
+        "note": null,
+        "category": "連結00965"
       }
     ]
   }

@@ -406,6 +406,9 @@ function buildSearchIndex() {
   for (const e of (DATA.beatetf?.etfs?.items || [])) {
     idx.push({ tab: "funds", subtab: "beatetf", tabLabel: "精選基金 · 超越ETF", title: `${e.symbol || ""} ${e.name_zh || ""}`.trim(), text: e.category || "" });
   }
+  for (const f of (DATA.beatetf?.linked?.items || [])) {
+    idx.push({ tab: "funds", subtab: "beatetf", tabLabel: "精選基金 · 超越ETF", title: f.name_zh || "", text: f.category || "ETF連結基金" });
+  }
   // 精選基金 · 熱銷基金
   for (const f of (DATA.popular_funds?.funds || [])) {
     idx.push({ tab: "funds", subtab: "popular", tabLabel: "精選基金 · 熱銷基金", title: f.name_zh || "", text: f.tagline || "" });
@@ -7957,6 +7960,7 @@ function renderBeatEtfCards() {
   const data = DATA.beatetf || {};
   const fundItems = ((data.funds && data.funds.items) || []).filter(f => !f.unlisted);
   const etfItems  = (data.etfs  && data.etfs.items)  || [];
+  const linkedItems = ((data.linked && data.linked.items) || []).filter(f => !f.unlisted);
   if (!fundItems.length && !etfItems.length) {
     return "<p style='color:var(--text-mute); padding:20px 0'>尚未提供超越ETF清單</p>";
   }
@@ -8035,6 +8039,21 @@ function renderBeatEtfCards() {
     return `<tr><td style="${tdBase};white-space:nowrap">${escapeHtml(e.name_zh)}${catChip}</td>${cells}${dateCell}</tr>`;
   }).join("");
 
+  const linkedRows = linkedItems.map(f => {
+    const nameHtml = f.source_url
+      ? `<a href="${f.source_url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${escapeHtml(f.name_zh)}</a>`
+      : escapeHtml(f.name_zh);
+    const catChip = f.category
+      ? `<span class="chip chip-default" style="background:#E5F2F5;color:var(--brand-deep);margin-left:6px;font-size:11px">${escapeHtml(f.category)}</span>`
+      : "";
+    const cells = periods.map(p => {
+      const v = f.perf?.[p.key];
+      return `<td style="${tdBase};text-align:right" class="${cellClass(v)}">${perfLink(fmtR(v), f.source_url)}</td>`;
+    }).join("");
+    const dateCell = `<td style="${tdBase};text-align:right;white-space:nowrap;color:var(--text-mute);font-size:12px">${fmtD(f.nav_date || (data.linked && data.linked.stat_date))}</td>`;
+    return `<tr><td style="${tdBase};white-space:nowrap">${nameHtml}${catChip}</td>${cells}${dateCell}</tr>`;
+  }).join("");
+
   const fundAsOf = (data.funds && data.funds.stat_date) || fundItems.find(f => f.nav_date)?.nav_date || "";
   const etfAsOf  = (data.etfs  && data.etfs.stat_date)  || etfItems.find(e => e.market_date)?.market_date || "";
   const asOfTxt = (fundAsOf && etfAsOf && fundAsOf !== etfAsOf)
@@ -8058,6 +8077,8 @@ function renderBeatEtfCards() {
           ${fundRows}
           ${etfItems.length ? groupHeader("代表性台股 ETF（對照）", "#E5F2F5") : ""}
           ${etfRows}
+          ${linkedItems.length ? groupHeader("ETF連結基金", "#CCE8ED") : ""}
+          ${linkedRows}
         </tbody>
       </table>
     </div>
