@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-23T16:46:12+08:00",
+  "generated_at": "2026-07-23T17:30:41+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -73,20 +73,6 @@
       "error": null
     },
     {
-      "symbol": "SPCX",
-      "name_zh": "Space Exploration Technologies",
-      "kind": "US",
-      "price": 115.26,
-      "change_pct": -6.7,
-      "mtd_pct": -32.54,
-      "ytd_pct": null,
-      "market_date": "2026-07-22",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPCX.US",
-      "error": null
-    },
-    {
       "symbol": "QS",
       "name_zh": "QuantumScape",
       "kind": "US",
@@ -101,31 +87,31 @@
       "error": null
     },
     {
-      "symbol": "RDDT",
-      "name_zh": "Reddit",
+      "symbol": "SPCX",
+      "name_zh": "Space Exploration Technologies",
       "kind": "US",
-      "price": 170.38,
-      "change_pct": -8.32,
-      "mtd_pct": -1.84,
-      "ytd_pct": -25.88,
-      "market_date": "2026-07-22",
-      "per": 46.3571,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RDDT.US",
-      "error": null
-    },
-    {
-      "symbol": "NG",
-      "name_zh": "Novagold Resources",
-      "kind": "US",
-      "price": 6.21,
-      "change_pct": 10.3,
-      "mtd_pct": 4.02,
-      "ytd_pct": -33.37,
+      "price": 115.26,
+      "change_pct": -6.7,
+      "mtd_pct": -32.54,
+      "ytd_pct": null,
       "market_date": "2026-07-22",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NG.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPCX.US",
+      "error": null
+    },
+    {
+      "symbol": "TSLL",
+      "name_zh": "Direxion Daily TSLA Bull 2X ETF",
+      "kind": "US",
+      "price": 10.96,
+      "change_pct": -2.4,
+      "mtd_pct": -22.6,
+      "ytd_pct": -42.65,
+      "market_date": "2026-07-22",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TSLL.US",
       "error": null
     },
     {
@@ -140,6 +126,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ARWR.US",
+      "error": null
+    },
+    {
+      "symbol": "NG",
+      "name_zh": "Novagold Resources",
+      "kind": "US",
+      "price": 6.21,
+      "change_pct": 10.3,
+      "mtd_pct": 4.02,
+      "ytd_pct": -33.37,
+      "market_date": "2026-07-22",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NG.US",
       "error": null
     },
     {
