@@ -2752,6 +2752,20 @@ table.indices.stock-cols col.c-num { width: 11%; }
   text-align: center !important;
 }
 
+/* 超越ETF表手機版：名稱維持一列不換行，chip 折到名稱下一行，避免擁擠 */
+@media (max-width: 768px) {
+  #content table.beatetf-tbl th:first-child,
+  #content table.beatetf-tbl td:first-child {
+    white-space: nowrap !important;
+    max-width: none;
+  }
+  #content table.beatetf-tbl td:first-child .chip {
+    display: block;
+    width: fit-content;
+    margin: 4px 0 0;
+  }
+}
+
 /* ===== 僅測試使用 標示 ===== */
 .test-badge {
   display: inline-block; vertical-align: middle; margin-left: 8px;

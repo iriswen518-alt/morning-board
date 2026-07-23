@@ -8065,7 +8065,7 @@ function renderBeatEtfCards() {
 
   return `
     <div style="overflow-x:auto">
-      <table class="freeze-col1" style="width:100%;border-collapse:collapse;font-size:13px">
+      <table class="freeze-col1 beatetf-tbl" style="width:100%;border-collapse:collapse;font-size:13px">
         <thead>
           <tr>
             <th style="${thBase};text-align:left">名稱</th>
