@@ -2766,6 +2766,15 @@ table.indices.stock-cols col.c-num { width: 11%; }
   }
 }
 
+/* 超越ETF表群組標題（老牌主動式／代表性ETF／ETF連結）：
+   鎖同層級字體大小，並擋掉手機瀏覽器對寬 colspan 儲存格的字體自動放大（font boosting）。 */
+#content table.beatetf-tbl td[colspan] {
+  font-size: 13px !important;
+  max-height: 999999px;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 /* ===== 僅測試使用 標示 ===== */
 .test-badge {
   display: inline-block; vertical-align: middle; margin-left: 8px;
