@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-23T17:39:46+08:00",
+  "generated_at": "2026-07-23T18:36:20+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -45,20 +45,6 @@
       "error": null
     },
     {
-      "symbol": "IBM",
-      "name_zh": "International Business Machines",
-      "kind": "US",
-      "price": 205.77,
-      "change_pct": -2.25,
-      "mtd_pct": -26.83,
-      "ytd_pct": -30.53,
-      "market_date": "2026-07-22",
-      "per": 18.3589,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IBM.US",
-      "error": null
-    },
-    {
       "symbol": "STM",
       "name_zh": "STMicroelectronics",
       "kind": "US",
@@ -73,31 +59,17 @@
       "error": null
     },
     {
-      "symbol": "QS",
-      "name_zh": "QuantumScape",
+      "symbol": "IBM",
+      "name_zh": "International Business Machines",
       "kind": "US",
-      "price": 5.87,
-      "change_pct": -2.98,
-      "mtd_pct": -22.35,
-      "ytd_pct": -43.67,
+      "price": 205.77,
+      "change_pct": -2.25,
+      "mtd_pct": -26.83,
+      "ytd_pct": -30.53,
       "market_date": "2026-07-22",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QS.US",
-      "error": null
-    },
-    {
-      "symbol": "SPCX",
-      "name_zh": "Space Exploration Technologies",
-      "kind": "US",
-      "price": 115.26,
-      "change_pct": -6.7,
-      "mtd_pct": -32.54,
-      "ytd_pct": null,
-      "market_date": "2026-07-22",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPCX.US",
+      "per": 18.3589,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IBM.US",
       "error": null
     },
     {
@@ -115,17 +87,17 @@
       "error": null
     },
     {
-      "symbol": "ARWR",
-      "name_zh": "Arrowhead Pharmaceuticals",
+      "symbol": "QS",
+      "name_zh": "QuantumScape",
       "kind": "US",
-      "price": 88.7,
-      "change_pct": 19.03,
-      "mtd_pct": 8.82,
-      "ytd_pct": 33.6,
+      "price": 5.87,
+      "change_pct": -2.98,
+      "mtd_pct": -22.35,
+      "ytd_pct": -43.67,
       "market_date": "2026-07-22",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ARWR.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QS.US",
       "error": null
     },
     {
@@ -140,6 +112,34 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NG.US",
+      "error": null
+    },
+    {
+      "symbol": "SPCX",
+      "name_zh": "Space Exploration Technologies",
+      "kind": "US",
+      "price": 115.26,
+      "change_pct": -6.7,
+      "mtd_pct": -32.54,
+      "ytd_pct": null,
+      "market_date": "2026-07-22",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPCX.US",
+      "error": null
+    },
+    {
+      "symbol": "MEDP",
+      "name_zh": "Medpace",
+      "kind": "US",
+      "price": 528.12,
+      "change_pct": -0.67,
+      "mtd_pct": -0.28,
+      "ytd_pct": -5.97,
+      "market_date": "2026-07-22",
+      "per": 32.6872,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MEDP.US",
       "error": null
     },
     {
