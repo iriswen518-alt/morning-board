@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-23T16:00:42+08:00",
+  "generated_at": "2026-07-23T16:46:12+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -11,8 +11,8 @@
       "mtd_pct": -3.23,
       "ytd_pct": 8.96,
       "market_date": "2026-07-22",
-      "per": null,
-      "per_kind": null,
+      "per": 26.4369,
+      "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GOOG.US",
       "error": null
     },
@@ -59,6 +59,20 @@
       "error": null
     },
     {
+      "symbol": "STM",
+      "name_zh": "STMicroelectronics",
+      "kind": "US",
+      "price": 65.77,
+      "change_pct": 0.52,
+      "mtd_pct": -12.18,
+      "ytd_pct": 153.55,
+      "market_date": "2026-07-22",
+      "per": 194.9307,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=STM.US",
+      "error": null
+    },
+    {
       "symbol": "SPCX",
       "name_zh": "Space Exploration Technologies",
       "kind": "US",
@@ -101,20 +115,6 @@
       "error": null
     },
     {
-      "symbol": "STM",
-      "name_zh": "STMicroelectronics",
-      "kind": "US",
-      "price": 65.77,
-      "change_pct": 0.52,
-      "mtd_pct": -12.18,
-      "ytd_pct": 153.55,
-      "market_date": "2026-07-22",
-      "per": 194.9307,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=STM.US",
-      "error": null
-    },
-    {
       "symbol": "NG",
       "name_zh": "Novagold Resources",
       "kind": "US",
@@ -140,76 +140,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ARWR.US",
-      "error": null
-    },
-    {
-      "symbol": "GEV",
-      "name_zh": "GE Vernova",
-      "kind": "US",
-      "price": 985.03,
-      "change_pct": -8.69,
-      "mtd_pct": -16.16,
-      "ytd_pct": 50.72,
-      "market_date": "2026-07-22",
-      "per": 28.2374,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GEV.US",
-      "error": null
-    },
-    {
-      "symbol": "TSLL",
-      "name_zh": "Direxion Daily TSLA Bull 2X ETF",
-      "kind": "US",
-      "price": 10.96,
-      "change_pct": -2.4,
-      "mtd_pct": -22.6,
-      "ytd_pct": -42.65,
-      "market_date": "2026-07-22",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TSLL.US",
-      "error": null
-    },
-    {
-      "symbol": "PLTR",
-      "name_zh": "Palantir",
-      "kind": "US",
-      "price": 124.57,
-      "change_pct": -6.1,
-      "mtd_pct": 6.77,
-      "ytd_pct": -29.92,
-      "market_date": "2026-07-22",
-      "per": 130.8917,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PLTR.US",
-      "error": null
-    },
-    {
-      "symbol": "RIOT",
-      "name_zh": "Riot Platforms",
-      "kind": "US",
-      "price": 23.38,
-      "change_pct": 8.79,
-      "mtd_pct": -14.61,
-      "ytd_pct": 84.53,
-      "market_date": "2026-07-22",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RIOT.US",
-      "error": null
-    },
-    {
-      "symbol": "CRM",
-      "name_zh": "Salesforce",
-      "kind": "US",
-      "price": 163,
-      "change_pct": -4.15,
-      "mtd_pct": 4.05,
-      "ytd_pct": -38.47,
-      "market_date": "2026-07-22",
-      "per": 17.0415,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRM.US",
       "error": null
     },
     {
