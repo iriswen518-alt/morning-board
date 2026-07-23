@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-23T10:01:27+08:00",
+  "generated_at": "2026-07-23T12:01:40+08:00",
   "tw": {
     "as_of": "2026-07-23",
     "top_marketcap": [
@@ -807,19 +807,6 @@
         "source_url": "https://finance.yahoo.com/quote/ARWR"
       },
       {
-        "symbol": "WEGZY",
-        "name": "Weg SA",
-        "price": 9.25,
-        "daily_pct": 10.78,
-        "market_cap": 38811426816,
-        "pe": 29.838709,
-        "pe_kind": "trailing",
-        "mtd_pct": 0.76,
-        "ytd_pct": 2.32,
-        "yahoo": "WEGZY",
-        "source_url": "https://finance.yahoo.com/quote/WEGZY"
-      },
-      {
         "symbol": "NG",
         "name": "Novagold Resources Inc.",
         "price": 6.21,
@@ -870,6 +857,19 @@
         "ytd_pct": 250.97,
         "yahoo": "DELL",
         "source_url": "https://finance.yahoo.com/quote/DELL"
+      },
+      {
+        "symbol": "WEGZY",
+        "name": "Weg SA",
+        "price": 9.123,
+        "daily_pct": 9.0,
+        "market_cap": 38278553600,
+        "pe": 29.429033,
+        "pe_kind": "trailing",
+        "mtd_pct": -0.62,
+        "ytd_pct": 0.92,
+        "yahoo": "WEGZY",
+        "source_url": "https://finance.yahoo.com/quote/WEGZY"
       },
       {
         "symbol": "RIOT",
@@ -983,7 +983,7 @@
         "price": 10.7,
         "daily_pct": -11.13,
         "market_cap": 5543886848,
-        "pe": 17.833332,
+        "pe": 20.18868,
         "pe_kind": "trailing",
         "mtd_pct": -1.56,
         "ytd_pct": -34.72,
@@ -1024,7 +1024,7 @@
         "market_cap": 20576249856,
         "pe": 228.625,
         "pe_kind": "trailing",
-        "mtd_pct": -30.63,
+        "mtd_pct": -30.62,
         "ytd_pct": null,
         "yahoo": "INIO",
         "source_url": "https://finance.yahoo.com/quote/INIO"
@@ -1136,19 +1136,6 @@
         "source_url": "https://finance.yahoo.com/quote/XLB"
       },
       {
-        "symbol": "SOXX",
-        "name": "iShares PHLX SOX Semiconductor ",
-        "price": 555.52,
-        "daily_pct": 0.05,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": -13.3,
-        "ytd_pct": 84.47,
-        "yahoo": "SOXX",
-        "source_url": "https://finance.yahoo.com/quote/SOXX"
-      },
-      {
         "symbol": "HYG",
         "name": "iShares iBoxx $ High Yield Corp",
         "price": 79.52,
@@ -1173,6 +1160,19 @@
         "ytd_pct": 12.84,
         "yahoo": "VEA",
         "source_url": "https://finance.yahoo.com/quote/VEA"
+      },
+      {
+        "symbol": "SMH",
+        "name": "VanEck Semiconductor ETF",
+        "price": 586.91,
+        "daily_pct": -0.65,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": -10.52,
+        "ytd_pct": 62.97,
+        "yahoo": "SMH",
+        "source_url": "https://finance.yahoo.com/quote/SMH"
       }
     ],
     "sectors": [
