@@ -101,15 +101,6 @@
       "closing_date": "2026-07-24"
     },
     {
-      "name": "台指期(近月)",
-      "name_zh": null,
-      "close": 44930.0,
-      "daily_pct": 0.64,
-      "mtd_pct": null,
-      "ytd_pct": null,
-      "closing_date": "2026-07-23"
-    },
-    {
       "name": "KOSPI",
       "name_zh": null,
       "close": 6690.6201171875,
@@ -175,23 +166,23 @@
     {
       "name": "US 2-Year",
       "yield_pct": 4.33,
-      "daily_bps": -3.4,
+      "daily_bps": -2.7,
       "mtd_bps": 23.0,
       "closing_date": "2026-07-24"
     },
     {
       "name": "Germany 10-Year",
       "yield_pct": 3.18,
-      "daily_bps": -2.9,
+      "daily_bps": -2.7,
       "mtd_bps": 30.02,
       "closing_date": "2026-07-24"
     },
     {
       "name": "Japan 10-Year",
-      "yield_pct": 2.78,
-      "daily_bps": 3.1,
+      "yield_pct": 2.82,
+      "daily_bps": 4.4,
       "mtd_bps": 8.6,
-      "closing_date": "2026-07-23"
+      "closing_date": "2026-07-24"
     },
     {
       "name": "UK 10-Year",
@@ -213,8 +204,8 @@
       "name": "DXY 美元指數",
       "close": 101.43000030517578,
       "daily_pct": 0.29,
-      "mtd_pct": 0.16,
-      "ytd_pct": 3.12,
+      "mtd_pct": 0.21,
+      "ytd_pct": 3.18,
       "closing_date": "2026-07-23"
     },
     {
@@ -406,28 +397,28 @@
       "label": "Sep 2026",
       "fomc_date": "2026-09-17",
       "implied_rate": 3.79,
-      "delta_rate": 0.15,
-      "delta_bps": 15.0,
-      "p_hike": 60.0,
-      "p_hold": 40.0,
+      "delta_rate": 0.16,
+      "delta_bps": 16.0,
+      "p_hike": 64.0,
+      "p_hold": 36.0,
       "p_cut": 0,
       "is_reference": false
     },
     {
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
-      "implied_rate": 3.88,
-      "delta_rate": 0.09,
-      "delta_bps": 9.0,
-      "p_hike": 36.0,
-      "p_hold": 64.0,
+      "implied_rate": 3.9,
+      "delta_rate": 0.1,
+      "delta_bps": 10.0,
+      "p_hike": 40.0,
+      "p_hold": 60.0,
       "p_cut": 0,
       "is_reference": false
     },
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 4.02,
+      "implied_rate": 4.03,
       "delta_rate": 0.14,
       "delta_bps": 14.0,
       "p_hike": 56.0,
@@ -436,5 +427,5 @@
       "is_reference": false
     }
   ],
-  "summary": "7/23 台指期(近月) +0.64% 領漲；7/24 KOSPI -5.72%、7/24 OTC 櫃買加權 -3.69% 走弱。"
+  "summary": "7/24 KOSPI -5.72%、7/24 OTC 櫃買加權 -3.69% 走弱。"
 }
