@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-24T17:37:10+08:00",
+  "generated_at": "2026-07-24T18:29:57+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -73,6 +73,20 @@
       "error": null
     },
     {
+      "symbol": "DECK",
+      "name_zh": "Deckers Outdoor",
+      "kind": "US",
+      "price": 96.23,
+      "change_pct": -6.09,
+      "mtd_pct": -3.08,
+      "ytd_pct": -7.18,
+      "market_date": "2026-07-23",
+      "per": 13.7393,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DECK.US",
+      "error": null
+    },
+    {
       "symbol": "LMT",
       "name_zh": "洛馬",
       "kind": "US",
@@ -101,45 +115,31 @@
       "error": null
     },
     {
-      "symbol": "DECK",
-      "name_zh": "Deckers Outdoor",
+      "symbol": "VZ",
+      "name_zh": "威訊",
       "kind": "US",
-      "price": 96.23,
-      "change_pct": -6.09,
-      "mtd_pct": -3.08,
-      "ytd_pct": -7.18,
+      "price": 43.82,
+      "change_pct": -1.06,
+      "mtd_pct": 3.5,
+      "ytd_pct": 7.59,
       "market_date": "2026-07-23",
-      "per": 13.7393,
+      "per": 10.6508,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DECK.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VZ.US",
       "error": null
     },
     {
-      "symbol": "CLF",
-      "name_zh": "Cleveland-Cliffs",
+      "symbol": "AXP",
+      "name_zh": "美國運通",
       "kind": "US",
-      "price": 10.96,
-      "change_pct": 15.98,
-      "mtd_pct": 16.72,
-      "ytd_pct": -17.47,
+      "price": 340.84,
+      "change_pct": -2.27,
+      "mtd_pct": 0.77,
+      "ytd_pct": -7.87,
       "market_date": "2026-07-23",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CLF.US",
-      "error": null
-    },
-    {
-      "symbol": "ACI",
-      "name_zh": "Albertsons Companies",
-      "kind": "US",
-      "price": 11.44,
-      "change_pct": -21.64,
-      "mtd_pct": -15.45,
-      "ytd_pct": -33.37,
-      "market_date": "2026-07-23",
-      "per": 25.2662,
+      "per": 20.7319,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ACI.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AXP.US",
       "error": null
     },
     {
@@ -168,6 +168,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SKYQ.US",
+      "error": null
+    },
+    {
+      "symbol": "CLF",
+      "name_zh": "Cleveland-Cliffs",
+      "kind": "US",
+      "price": 10.96,
+      "change_pct": 15.98,
+      "mtd_pct": 16.72,
+      "ytd_pct": -17.47,
+      "market_date": "2026-07-23",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CLF.US",
       "error": null
     },
     {
