@@ -76,11 +76,11 @@
     {
       "name": "Nikkei 225",
       "name_zh": null,
-      "close": 66422.6015625,
-      "daily_pct": 0.46,
+      "close": 64472.96875,
+      "daily_pct": -2.94,
       "mtd_pct": -5.19,
       "ytd_pct": 31.95,
-      "closing_date": "2026-07-23"
+      "closing_date": "2026-07-24"
     },
     {
       "name": "TAIEX 加權指數",
@@ -112,11 +112,11 @@
     {
       "name": "KOSPI",
       "name_zh": null,
-      "close": 7096.89013671875,
-      "daily_pct": 4.4,
+      "close": 6679.3701171875,
+      "daily_pct": -5.88,
       "mtd_pct": -16.28,
       "ytd_pct": 68.41,
-      "closing_date": "2026-07-23"
+      "closing_date": "2026-07-24"
     },
     {
       "name": "Hang Seng 恆生",
@@ -157,11 +157,11 @@
     {
       "name": "S&P/ASX 200",
       "name_zh": null,
-      "close": 8839.0,
-      "daily_pct": 0.18,
+      "close": 8772.2998046875,
+      "daily_pct": -0.75,
       "mtd_pct": 0.69,
       "ytd_pct": 1.43,
-      "closing_date": "2026-07-23"
+      "closing_date": "2026-07-24"
     }
   ],
   "bonds": [
@@ -174,24 +174,24 @@
     },
     {
       "name": "US 2-Year",
-      "yield_pct": 4.36,
-      "daily_bps": 0.1,
+      "yield_pct": 4.37,
+      "daily_bps": 6.0,
       "mtd_bps": 23.0,
-      "closing_date": "2026-07-24"
+      "closing_date": "2026-07-23"
     },
     {
       "name": "Germany 10-Year",
       "yield_pct": 3.2,
-      "daily_bps": -0.8,
+      "daily_bps": -0.61,
       "mtd_bps": 27.95,
-      "closing_date": "2026-07-24"
+      "closing_date": "2026-07-22"
     },
     {
       "name": "Japan 10-Year",
-      "yield_pct": 2.8,
-      "daily_bps": 2.6,
+      "yield_pct": 2.78,
+      "daily_bps": 3.1,
       "mtd_bps": 8.6,
-      "closing_date": "2026-07-24"
+      "closing_date": "2026-07-23"
     },
     {
       "name": "UK 10-Year",
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 101.43000030517578,
       "daily_pct": 0.29,
-      "mtd_pct": 0.22,
-      "ytd_pct": 3.19,
+      "mtd_pct": 0.19,
+      "ytd_pct": 3.16,
       "closing_date": "2026-07-23"
     },
     {
@@ -301,11 +301,11 @@
     },
     {
       "name": "比特幣 (USD)",
-      "close": 66100.796875,
-      "daily_pct": -0.61,
-      "mtd_pct": 12.88,
-      "ytd_pct": -24.46,
-      "closing_date": "2026-07-22"
+      "close": 65044.8125,
+      "daily_pct": -1.6,
+      "mtd_pct": 11.08,
+      "ytd_pct": -25.67,
+      "closing_date": "2026-07-23"
     }
   ],
   "bond_etfs": [
@@ -405,11 +405,11 @@
     {
       "label": "Sep 2026",
       "fomc_date": "2026-09-17",
-      "implied_rate": 3.8,
-      "delta_rate": 0.17,
-      "delta_bps": 17.0,
-      "p_hike": 68.0,
-      "p_hold": 32.0,
+      "implied_rate": 3.79,
+      "delta_rate": 0.16,
+      "delta_bps": 16.0,
+      "p_hike": 64.0,
+      "p_hold": 36.0,
       "p_cut": 0,
       "is_reference": false
     },
@@ -427,7 +427,7 @@
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 4.05,
+      "implied_rate": 4.04,
       "delta_rate": 0.15,
       "delta_bps": 15.0,
       "p_hike": 60.0,
@@ -436,5 +436,5 @@
       "is_reference": false
     }
   ],
-  "summary": "7/23 KOSPI +4.40%、7/23 CSI 300 滬深300 +3.67%、7/23 Hang Seng 恆生 +1.28% 領漲；7/24 OTC 櫃買加權 -3.69%、7/24 TAIEX 加權指數 -2.67% 走弱。"
+  "summary": "7/23 CSI 300 滬深300 +3.67%、7/23 Hang Seng 恆生 +1.28%、7/23 台指期(近月) +0.64% 領漲；7/24 KOSPI -5.88%、7/24 OTC 櫃買加權 -3.69% 走弱。"
 }
