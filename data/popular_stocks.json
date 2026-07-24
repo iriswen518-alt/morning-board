@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-24T15:57:59+08:00",
+  "generated_at": "2026-07-24T16:44:03+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -73,34 +73,6 @@
       "error": null
     },
     {
-      "symbol": "DECK",
-      "name_zh": "Deckers Outdoor",
-      "kind": "US",
-      "price": 96.23,
-      "change_pct": -6.09,
-      "mtd_pct": -3.08,
-      "ytd_pct": -7.18,
-      "market_date": "2026-07-23",
-      "per": 13.7393,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DECK.US",
-      "error": null
-    },
-    {
-      "symbol": "ACI",
-      "name_zh": "Albertsons Companies",
-      "kind": "US",
-      "price": 11.44,
-      "change_pct": -21.64,
-      "mtd_pct": -15.45,
-      "ytd_pct": -33.37,
-      "market_date": "2026-07-23",
-      "per": 25.2662,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ACI.US",
-      "error": null
-    },
-    {
       "symbol": "NVCR",
       "name_zh": "NovoCure",
       "kind": "US",
@@ -115,17 +87,17 @@
       "error": null
     },
     {
-      "symbol": "SKYQ",
-      "name_zh": "Sky Quarry",
+      "symbol": "DECK",
+      "name_zh": "Deckers Outdoor",
       "kind": "US",
-      "price": 5.64,
-      "change_pct": 36.56,
-      "mtd_pct": 53.68,
-      "ytd_pct": 214.73,
+      "price": 96.23,
+      "change_pct": -6.09,
+      "mtd_pct": -3.08,
+      "ytd_pct": -7.18,
       "market_date": "2026-07-23",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SKYQ.US",
+      "per": 13.7393,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DECK.US",
       "error": null
     },
     {
@@ -143,20 +115,6 @@
       "error": null
     },
     {
-      "symbol": "CLF",
-      "name_zh": "Cleveland-Cliffs",
-      "kind": "US",
-      "price": 10.96,
-      "change_pct": 15.98,
-      "mtd_pct": 16.72,
-      "ytd_pct": -17.47,
-      "market_date": "2026-07-23",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CLF.US",
-      "error": null
-    },
-    {
       "symbol": "HIMS",
       "name_zh": "Hims & Hers Health",
       "kind": "US",
@@ -171,6 +129,48 @@
       "error": null
     },
     {
+      "symbol": "SKYQ",
+      "name_zh": "Sky Quarry",
+      "kind": "US",
+      "price": 5.64,
+      "change_pct": 36.56,
+      "mtd_pct": 53.68,
+      "ytd_pct": 214.73,
+      "market_date": "2026-07-23",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SKYQ.US",
+      "error": null
+    },
+    {
+      "symbol": "CLF",
+      "name_zh": "Cleveland-Cliffs",
+      "kind": "US",
+      "price": 10.96,
+      "change_pct": 15.98,
+      "mtd_pct": 16.72,
+      "ytd_pct": -17.47,
+      "market_date": "2026-07-23",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CLF.US",
+      "error": null
+    },
+    {
+      "symbol": "NEM",
+      "name_zh": "Newmont",
+      "kind": "US",
+      "price": 94.72,
+      "change_pct": -1.08,
+      "mtd_pct": 1.41,
+      "ytd_pct": -5.14,
+      "market_date": "2026-07-23",
+      "per": 11.9052,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NEM.US",
+      "error": null
+    },
+    {
       "symbol": "RTX",
       "name_zh": "雷神",
       "kind": "US",
@@ -182,6 +182,20 @@
       "per": 38.745,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RTX.US",
+      "error": null
+    },
+    {
+      "symbol": "TMUS",
+      "name_zh": "T-Mobile US",
+      "kind": "US",
+      "price": 170.42,
+      "change_pct": -10.75,
+      "mtd_pct": 1.6,
+      "ytd_pct": -16.07,
+      "market_date": "2026-07-23",
+      "per": 18.1105,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TMUS.US",
       "error": null
     },
     {
