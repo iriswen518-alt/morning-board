@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-24T14:35:38+08:00",
+  "generated_at": "2026-07-24T15:57:59+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -45,20 +45,6 @@
       "error": null
     },
     {
-      "symbol": "LMT",
-      "name_zh": "洛馬",
-      "kind": "US",
-      "price": 568.59,
-      "change_pct": 10.54,
-      "mtd_pct": 11.61,
-      "ytd_pct": 17.56,
-      "market_date": "2026-07-23",
-      "per": 27.5782,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LMT.US",
-      "error": null
-    },
-    {
       "symbol": "SAP",
       "name_zh": "SAP  SE",
       "kind": "US",
@@ -70,6 +56,20 @@
       "per": 21.0809,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SAP.US",
+      "error": null
+    },
+    {
+      "symbol": "LMT",
+      "name_zh": "洛馬",
+      "kind": "US",
+      "price": 568.59,
+      "change_pct": 10.54,
+      "mtd_pct": 11.61,
+      "ytd_pct": 17.56,
+      "market_date": "2026-07-23",
+      "per": 27.5782,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LMT.US",
       "error": null
     },
     {
@@ -101,6 +101,48 @@
       "error": null
     },
     {
+      "symbol": "NVCR",
+      "name_zh": "NovoCure",
+      "kind": "US",
+      "price": 19.99,
+      "change_pct": 28.39,
+      "mtd_pct": 31.95,
+      "ytd_pct": 54.6,
+      "market_date": "2026-07-23",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NVCR.US",
+      "error": null
+    },
+    {
+      "symbol": "SKYQ",
+      "name_zh": "Sky Quarry",
+      "kind": "US",
+      "price": 5.64,
+      "change_pct": 36.56,
+      "mtd_pct": 53.68,
+      "ytd_pct": 214.73,
+      "market_date": "2026-07-23",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SKYQ.US",
+      "error": null
+    },
+    {
+      "symbol": "MBLY",
+      "name_zh": "Mobileye Global",
+      "kind": "US",
+      "price": 7.47,
+      "change_pct": -14.92,
+      "mtd_pct": -22.83,
+      "ytd_pct": -28.45,
+      "market_date": "2026-07-23",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MBLY.US",
+      "error": null
+    },
+    {
       "symbol": "CLF",
       "name_zh": "Cleveland-Cliffs",
       "kind": "US",
@@ -129,48 +171,6 @@
       "error": null
     },
     {
-      "symbol": "SKYQ",
-      "name_zh": "Sky Quarry",
-      "kind": "US",
-      "price": 5.64,
-      "change_pct": 36.56,
-      "mtd_pct": 53.68,
-      "ytd_pct": 214.73,
-      "market_date": "2026-07-23",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SKYQ.US",
-      "error": null
-    },
-    {
-      "symbol": "TMUS",
-      "name_zh": "T-Mobile US",
-      "kind": "US",
-      "price": 170.42,
-      "change_pct": -10.75,
-      "mtd_pct": 1.6,
-      "ytd_pct": -16.07,
-      "market_date": "2026-07-23",
-      "per": 18.1105,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TMUS.US",
-      "error": null
-    },
-    {
-      "symbol": "PYPL",
-      "name_zh": "PayPal",
-      "kind": "US",
-      "price": 56,
-      "change_pct": 0.88,
-      "mtd_pct": 29.69,
-      "ytd_pct": -4.08,
-      "market_date": "2026-07-23",
-      "per": 9.7112,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PYPL.US",
-      "error": null
-    },
-    {
       "symbol": "RTX",
       "name_zh": "雷神",
       "kind": "US",
@@ -182,62 +182,6 @@
       "per": 38.745,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RTX.US",
-      "error": null
-    },
-    {
-      "symbol": "MBLY",
-      "name_zh": "Mobileye Global",
-      "kind": "US",
-      "price": 7.47,
-      "change_pct": -14.92,
-      "mtd_pct": -22.83,
-      "ytd_pct": -28.45,
-      "market_date": "2026-07-23",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MBLY.US",
-      "error": null
-    },
-    {
-      "symbol": "FIX",
-      "name_zh": "Comfort Systems USA",
-      "kind": "US",
-      "price": 1831.15,
-      "change_pct": 2.24,
-      "mtd_pct": -7.61,
-      "ytd_pct": 96.2,
-      "market_date": "2026-07-23",
-      "per": 52.673,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FIX.US",
-      "error": null
-    },
-    {
-      "symbol": "NEM",
-      "name_zh": "Newmont",
-      "kind": "US",
-      "price": 94.72,
-      "change_pct": -1.08,
-      "mtd_pct": 1.41,
-      "ytd_pct": -5.14,
-      "market_date": "2026-07-23",
-      "per": 11.9052,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NEM.US",
-      "error": null
-    },
-    {
-      "symbol": "CMCSA",
-      "name_zh": "Comcast",
-      "kind": "US",
-      "price": 21.92,
-      "change_pct": -6.8,
-      "mtd_pct": -10.71,
-      "ytd_pct": -21.75,
-      "market_date": "2026-07-23",
-      "per": 4.2997,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CMCSA.US",
       "error": null
     },
     {

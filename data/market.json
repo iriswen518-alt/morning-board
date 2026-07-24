@@ -76,8 +76,8 @@
     {
       "name": "Nikkei 225",
       "name_zh": null,
-      "close": 64472.96875,
-      "daily_pct": -2.94,
+      "close": 64611.1484375,
+      "daily_pct": -2.73,
       "mtd_pct": -5.19,
       "ytd_pct": 31.95,
       "closing_date": "2026-07-24"
@@ -112,8 +112,8 @@
     {
       "name": "KOSPI",
       "name_zh": null,
-      "close": 6679.3701171875,
-      "daily_pct": -5.88,
+      "close": 6690.6201171875,
+      "daily_pct": -5.72,
       "mtd_pct": -16.28,
       "ytd_pct": 68.41,
       "closing_date": "2026-07-24"
@@ -130,20 +130,20 @@
     {
       "name": "Shanghai 上證",
       "name_zh": null,
-      "close": 3876.777099609375,
-      "daily_pct": 0.25,
+      "close": 3814.19775390625,
+      "daily_pct": -1.61,
       "mtd_pct": -5.32,
       "ytd_pct": -2.32,
-      "closing_date": "2026-07-23"
+      "closing_date": "2026-07-24"
     },
     {
       "name": "CSI 300 滬深300",
       "name_zh": null,
-      "close": 4695.38,
-      "daily_pct": 3.67,
+      "close": 4649.19189453125,
+      "daily_pct": null,
       "mtd_pct": -9.04,
       "ytd_pct": -2.18,
-      "closing_date": "2026-07-23"
+      "closing_date": "2026-07-24"
     },
     {
       "name": "Nifty 50",
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 101.43000030517578,
       "daily_pct": 0.29,
-      "mtd_pct": 0.19,
-      "ytd_pct": 3.16,
+      "mtd_pct": 0.14,
+      "ytd_pct": 3.11,
       "closing_date": "2026-07-23"
     },
     {
@@ -406,17 +406,17 @@
       "label": "Sep 2026",
       "fomc_date": "2026-09-17",
       "implied_rate": 3.79,
-      "delta_rate": 0.16,
-      "delta_bps": 16.0,
-      "p_hike": 64.0,
-      "p_hold": 36.0,
+      "delta_rate": 0.15,
+      "delta_bps": 15.0,
+      "p_hike": 60.0,
+      "p_hold": 40.0,
       "p_cut": 0,
       "is_reference": false
     },
     {
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
-      "implied_rate": 3.9,
+      "implied_rate": 3.88,
       "delta_rate": 0.1,
       "delta_bps": 10.0,
       "p_hike": 40.0,
@@ -427,7 +427,7 @@
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 4.04,
+      "implied_rate": 4.03,
       "delta_rate": 0.15,
       "delta_bps": 15.0,
       "p_hike": 60.0,
@@ -436,5 +436,5 @@
       "is_reference": false
     }
   ],
-  "summary": "7/23 CSI 300 滬深300 +3.67%、7/23 Hang Seng 恆生 +1.28%、7/23 台指期(近月) +0.64% 領漲；7/24 KOSPI -5.88%、7/24 OTC 櫃買加權 -3.69% 走弱。"
+  "summary": "7/23 Hang Seng 恆生 +1.28%、7/23 台指期(近月) +0.64% 領漲；7/24 KOSPI -5.72%、7/24 OTC 櫃買加權 -3.69% 走弱。"
 }
