@@ -181,10 +181,10 @@
     },
     {
       "name": "Germany 10-Year",
-      "yield_pct": 3.2,
-      "daily_bps": -0.61,
-      "mtd_bps": 27.95,
-      "closing_date": "2026-07-22"
+      "yield_pct": null,
+      "daily_bps": null,
+      "mtd_bps": null,
+      "closing_date": null
     },
     {
       "name": "Japan 10-Year",
@@ -213,7 +213,7 @@
       "name": "DXY 美元指數",
       "close": 101.43000030517578,
       "daily_pct": 0.29,
-      "mtd_pct": 0.18,
+      "mtd_pct": 0.19,
       "ytd_pct": 3.15,
       "closing_date": "2026-07-23"
     },
@@ -427,11 +427,11 @@
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 4.02,
-      "delta_rate": 0.14,
-      "delta_bps": 14.0,
-      "p_hike": 56.0,
-      "p_hold": 44.0,
+      "implied_rate": 4.01,
+      "delta_rate": 0.13,
+      "delta_bps": 13.0,
+      "p_hike": 52.0,
+      "p_hold": 48.0,
       "p_cut": 0,
       "is_reference": false
     }
