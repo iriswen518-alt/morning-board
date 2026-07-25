@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-25T14:26:31+08:00",
+  "generated_at": "2026-07-25T15:36:16+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -17,20 +17,6 @@
       "error": null
     },
     {
-      "symbol": "BE",
-      "name_zh": "Bloom Energy",
-      "kind": "US",
-      "price": 184.89,
-      "change_pct": -14.91,
-      "mtd_pct": -38.92,
-      "ytd_pct": 112.79,
-      "market_date": "2026-07-24",
-      "per": 8741.7106,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BE.US",
-      "error": null
-    },
-    {
       "symbol": "UBER",
       "name_zh": "Uber",
       "kind": "US",
@@ -42,6 +28,20 @@
       "per": 15.6508,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=UBER.US",
+      "error": null
+    },
+    {
+      "symbol": "BE",
+      "name_zh": "Bloom Energy",
+      "kind": "US",
+      "price": 184.89,
+      "change_pct": -14.91,
+      "mtd_pct": -38.92,
+      "ytd_pct": 112.79,
+      "market_date": "2026-07-24",
+      "per": 8741.7106,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BE.US",
       "error": null
     },
     {
@@ -73,17 +73,17 @@
       "error": null
     },
     {
-      "symbol": "FRMI",
-      "name_zh": "Fermi",
+      "symbol": "RKLB",
+      "name_zh": "Rocket Lab",
       "kind": "US",
-      "price": 7.4,
-      "change_pct": 17.09,
-      "mtd_pct": -19.21,
-      "ytd_pct": -7.5,
+      "price": 63.91,
+      "change_pct": -8.69,
+      "mtd_pct": -37.13,
+      "ytd_pct": -8.39,
       "market_date": "2026-07-24",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FRMI.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RKLB.US",
       "error": null
     },
     {
@@ -98,6 +98,20 @@
       "per": 11.6666,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ADBE.US",
+      "error": null
+    },
+    {
+      "symbol": "FRMI",
+      "name_zh": "Fermi",
+      "kind": "US",
+      "price": 7.4,
+      "change_pct": 17.09,
+      "mtd_pct": -19.21,
+      "ytd_pct": -7.5,
+      "market_date": "2026-07-24",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FRMI.US",
       "error": null
     },
     {
@@ -129,6 +143,34 @@
       "error": null
     },
     {
+      "symbol": "CRWV",
+      "name_zh": "CoreWeave",
+      "kind": "US",
+      "price": 71.88,
+      "change_pct": -11.37,
+      "mtd_pct": -27.79,
+      "ytd_pct": 0.38,
+      "market_date": "2026-07-24",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRWV.US",
+      "error": null
+    },
+    {
+      "symbol": "T",
+      "name_zh": "AT&T",
+      "kind": "US",
+      "price": 24.13,
+      "change_pct": 5.1,
+      "mtd_pct": 16.57,
+      "ytd_pct": -2.86,
+      "market_date": "2026-07-24",
+      "per": 7.4808,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=T.US",
+      "error": null
+    },
+    {
       "symbol": "SLB",
       "name_zh": "SLB",
       "kind": "US",
@@ -140,6 +182,20 @@
       "per": 23.2724,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SLB.US",
+      "error": null
+    },
+    {
+      "symbol": "AXP",
+      "name_zh": "美國運通",
+      "kind": "US",
+      "price": 326.17,
+      "change_pct": -4.3,
+      "mtd_pct": -3.57,
+      "ytd_pct": -11.83,
+      "market_date": "2026-07-24",
+      "per": 19.6701,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AXP.US",
       "error": null
     },
     {
@@ -157,59 +213,17 @@
       "error": null
     },
     {
-      "symbol": "WBD",
-      "name_zh": "Warner Bros. Discovery, Inc. -",
+      "symbol": "JOBY",
+      "name_zh": "Joby Aviation",
       "kind": "US",
-      "price": 25.77,
-      "change_pct": -0.69,
-      "mtd_pct": -3.34,
-      "ytd_pct": -10.58,
+      "price": 6.93,
+      "change_pct": -8.09,
+      "mtd_pct": -22.31,
+      "ytd_pct": -47.5,
       "market_date": "2026-07-24",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=WBD.US",
-      "error": null
-    },
-    {
-      "symbol": "CRWV",
-      "name_zh": "CoreWeave",
-      "kind": "US",
-      "price": 71.88,
-      "change_pct": -11.37,
-      "mtd_pct": -27.79,
-      "ytd_pct": 0.38,
-      "market_date": "2026-07-24",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRWV.US",
-      "error": null
-    },
-    {
-      "symbol": "RKLB",
-      "name_zh": "Rocket Lab",
-      "kind": "US",
-      "price": 63.91,
-      "change_pct": -8.69,
-      "mtd_pct": -37.13,
-      "ytd_pct": -8.39,
-      "market_date": "2026-07-24",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RKLB.US",
-      "error": null
-    },
-    {
-      "symbol": "T",
-      "name_zh": "AT&T",
-      "kind": "US",
-      "price": 24.13,
-      "change_pct": 5.1,
-      "mtd_pct": 16.57,
-      "ytd_pct": -2.86,
-      "market_date": "2026-07-24",
-      "per": 7.4808,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=T.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=JOBY.US",
       "error": null
     },
     {
