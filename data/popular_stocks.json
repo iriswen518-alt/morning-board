@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-26T17:26:45+08:00",
+  "generated_at": "2026-07-26T18:14:13+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -42,48 +42,6 @@
       "per": 18.137,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ONDS.US",
-      "error": null
-    },
-    {
-      "symbol": "PLTR",
-      "name_zh": "Palantir",
-      "kind": "US",
-      "price": 122.92,
-      "change_pct": -0.36,
-      "mtd_pct": 5.74,
-      "ytd_pct": -30.59,
-      "market_date": "2026-07-23",
-      "per": 129.158,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PLTR.US",
-      "error": null
-    },
-    {
-      "symbol": "SOFI",
-      "name_zh": "SoFi",
-      "kind": "US",
-      "price": 16.46,
-      "change_pct": -1.14,
-      "mtd_pct": -7.14,
-      "ytd_pct": -36.4,
-      "market_date": "2026-07-23",
-      "per": 36.5967,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOFI.US",
-      "error": null
-    },
-    {
-      "symbol": "VOO",
-      "name_zh": "Vanguard S&P 500 ETF",
-      "kind": "US",
-      "price": 679.14,
-      "change_pct": 0.08,
-      "mtd_pct": -1.19,
-      "ytd_pct": 8.21,
-      "market_date": "2026-07-23",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VOO.US",
       "error": null
     },
     {
@@ -168,6 +126,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VTI.US",
+      "error": null
+    },
+    {
+      "symbol": "VOO",
+      "name_zh": "Vanguard S&P 500 ETF",
+      "kind": "US",
+      "price": 679.14,
+      "change_pct": 0.08,
+      "mtd_pct": -1.19,
+      "ytd_pct": 8.21,
+      "market_date": "2026-07-23",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VOO.US",
       "error": null
     },
     {
