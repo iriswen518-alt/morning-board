@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-27T07:51:39+08:00",
+  "generated_at": "2026-07-27T09:03:03+08:00",
   "tw": {
-    "as_of": "2026-07-26",
+    "as_of": "2026-07-27",
     "top_marketcap": [
       {
         "symbol": "2330",
@@ -646,7 +646,7 @@
     ]
   },
   "us": {
-    "as_of": "2026-07-26",
+    "as_of": "2026-07-27",
     "top_marketcap": [
       {
         "symbol": "NVDA",
@@ -745,12 +745,25 @@
         "price": 92.32,
         "daily_pct": -7.89,
         "market_cap": 465662050304,
-        "pe": 52.7926,
+        "pe": 46.494762,
         "pe_kind": "forward",
         "mtd_pct": -33.88,
         "ytd_pct": 150.19,
         "yahoo": "INTC",
         "source_url": "https://finance.yahoo.com/quote/INTC"
+      },
+      {
+        "symbol": "BAC",
+        "name": "Bank of America Corporation",
+        "price": 62.05,
+        "daily_pct": 1.26,
+        "market_cap": 440343461888,
+        "pe": 14.330255,
+        "pe_kind": "trailing",
+        "mtd_pct": 8.9,
+        "ytd_pct": 12.82,
+        "yahoo": "BAC",
+        "source_url": "https://finance.yahoo.com/quote/BAC"
       },
       {
         "symbol": "ORCL",
@@ -764,19 +777,6 @@
         "ytd_pct": -41.0,
         "yahoo": "ORCL",
         "source_url": "https://finance.yahoo.com/quote/ORCL"
-      },
-      {
-        "symbol": "NFLX",
-        "name": "Netflix, Inc.",
-        "price": 70.09,
-        "daily_pct": 1.74,
-        "market_cap": 291850518528,
-        "pe": 22.040878,
-        "pe_kind": "trailing",
-        "mtd_pct": -1.83,
-        "ytd_pct": -25.25,
-        "yahoo": "NFLX",
-        "source_url": "https://finance.yahoo.com/quote/NFLX"
       }
     ],
     "top_gainers": [
@@ -918,7 +918,7 @@
         "price": 71.59,
         "daily_pct": -21.54,
         "market_cap": 6492725248,
-        "pe": 37.573147,
+        "pe": 27.715296,
         "pe_kind": "forward",
         "mtd_pct": -44.08,
         "ytd_pct": 310.73,
