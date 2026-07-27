@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-27T18:11:00+08:00",
+  "generated_at": "2026-07-27T18:52:27+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -45,20 +45,6 @@
       "error": null
     },
     {
-      "symbol": "SKHY",
-      "name_zh": "SK hynix",
-      "kind": "US",
-      "price": 154.57,
-      "change_pct": -8.81,
-      "mtd_pct": null,
-      "ytd_pct": null,
-      "market_date": "2026-07-23",
-      "per": 18.6139,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SKHY.US",
-      "error": null
-    },
-    {
       "symbol": "QBTS",
       "name_zh": "D-Wave Quantum Inc. Common Stock",
       "kind": "US",
@@ -87,45 +73,31 @@
       "error": null
     },
     {
-      "symbol": "RKLB",
-      "name_zh": "Rocket Lab",
+      "symbol": "AZN",
+      "name_zh": "AstraZeneca",
       "kind": "US",
-      "price": 63.91,
-      "change_pct": -8.69,
-      "mtd_pct": -31.15,
-      "ytd_pct": 0.33,
-      "market_date": "2026-07-23",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RKLB.US",
-      "error": null
-    },
-    {
-      "symbol": "IREN",
-      "name_zh": "IREN",
-      "kind": "US",
-      "price": 37.07,
-      "change_pct": -8.65,
+      "price": 169.26,
+      "change_pct": 0.59,
       "mtd_pct": -11.26,
-      "ytd_pct": 7.44,
+      "ytd_pct": -8.48,
       "market_date": "2026-07-23",
-      "per": 171.9801,
+      "per": 25.2375,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IREN.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AZN.US",
       "error": null
     },
     {
-      "symbol": "FBRX",
-      "name_zh": "Forte Biosciences",
+      "symbol": "FRMI",
+      "name_zh": "Fermi",
       "kind": "US",
-      "price": 54.78,
-      "change_pct": -8.24,
-      "mtd_pct": 180.94,
-      "ytd_pct": 118.92,
+      "price": 7.4,
+      "change_pct": 17.09,
+      "mtd_pct": -31.0,
+      "ytd_pct": -21.0,
       "market_date": "2026-07-23",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FBRX.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FRMI.US",
       "error": null
     },
     {
@@ -143,6 +115,34 @@
       "error": null
     },
     {
+      "symbol": "RNG",
+      "name_zh": "Ringcentral",
+      "kind": "US",
+      "price": 48.31,
+      "change_pct": 25.09,
+      "mtd_pct": -0.92,
+      "ytd_pct": 33.73,
+      "market_date": "2026-07-23",
+      "per": 36.7427,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RNG.US",
+      "error": null
+    },
+    {
+      "symbol": "UBER",
+      "name_zh": "Uber",
+      "kind": "US",
+      "price": 65.94,
+      "change_pct": -4.31,
+      "mtd_pct": -4.5,
+      "ytd_pct": -15.67,
+      "market_date": "2026-07-23",
+      "per": 15.7175,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=UBER.US",
+      "error": null
+    },
+    {
       "symbol": "CRWV",
       "name_zh": "CoreWeave",
       "kind": "US",
@@ -157,17 +157,31 @@
       "error": null
     },
     {
-      "symbol": "RNG",
-      "name_zh": "Ringcentral",
+      "symbol": "FBRX",
+      "name_zh": "Forte Biosciences",
       "kind": "US",
-      "price": 48.31,
-      "change_pct": 25.09,
-      "mtd_pct": -0.92,
-      "ytd_pct": 33.73,
+      "price": 54.78,
+      "change_pct": -8.24,
+      "mtd_pct": 180.94,
+      "ytd_pct": 118.92,
       "market_date": "2026-07-23",
-      "per": 36.7427,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RNG.US",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FBRX.US",
+      "error": null
+    },
+    {
+      "symbol": "SOXL",
+      "name_zh": "Direxion Daily Semiconductor Bu",
+      "kind": "US",
+      "price": 136.81,
+      "change_pct": -13.14,
+      "mtd_pct": -40.95,
+      "ytd_pct": 274.73,
+      "market_date": "2026-07-23",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOXL.US",
       "error": null
     },
     {
