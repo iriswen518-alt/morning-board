@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-28T17:06:28+08:00",
+  "generated_at": "2026-07-28T17:42:32+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -17,20 +17,6 @@
       "error": null
     },
     {
-      "symbol": "CLS",
-      "name_zh": "Celestica",
-      "kind": "US",
-      "price": 318.24,
-      "change_pct": 4.25,
-      "mtd_pct": -12.76,
-      "ytd_pct": 7.66,
-      "market_date": "2026-07-27",
-      "per": 36.5648,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CLS.US",
-      "error": null
-    },
-    {
       "symbol": "SNDK",
       "name_zh": "Sandisk",
       "kind": "US",
@@ -42,6 +28,20 @@
       "per": 41.9997,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SNDK.US",
+      "error": null
+    },
+    {
+      "symbol": "CLS",
+      "name_zh": "Celestica",
+      "kind": "US",
+      "price": 318.24,
+      "change_pct": 4.25,
+      "mtd_pct": -12.76,
+      "ytd_pct": 7.66,
+      "market_date": "2026-07-27",
+      "per": 36.5648,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CLS.US",
       "error": null
     },
     {
@@ -87,17 +87,17 @@
       "error": null
     },
     {
-      "symbol": "AMKR",
-      "name_zh": "Amkor Technology",
+      "symbol": "DJT",
+      "name_zh": "Trump Media & Technology",
       "kind": "US",
-      "price": 60.71,
-      "change_pct": -6.54,
-      "mtd_pct": -29.6,
-      "ytd_pct": 53.77,
+      "price": 9.56,
+      "change_pct": 11.68,
+      "mtd_pct": 23.51,
+      "ytd_pct": -27.79,
       "market_date": "2026-07-27",
-      "per": 33.556,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AMKR.US",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DJT.US",
       "error": null
     },
     {
@@ -115,17 +115,17 @@
       "error": null
     },
     {
-      "symbol": "CDNS",
-      "name_zh": "Cadence Design Systems",
+      "symbol": "AMKR",
+      "name_zh": "Amkor Technology",
       "kind": "US",
-      "price": 338.61,
-      "change_pct": 3.79,
-      "mtd_pct": -9.78,
-      "ytd_pct": 8.33,
+      "price": 60.71,
+      "change_pct": -6.54,
+      "mtd_pct": -29.6,
+      "ytd_pct": 53.77,
       "market_date": "2026-07-27",
-      "per": 79.6006,
+      "per": 33.556,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CDNS.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AMKR.US",
       "error": null
     },
     {
