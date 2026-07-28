@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-28T16:04:24+08:00",
+  "generated_at": "2026-07-28T17:06:28+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -45,20 +45,6 @@
       "error": null
     },
     {
-      "symbol": "SOXS",
-      "name_zh": "Direxion Daily Semiconductor Be",
-      "kind": "US",
-      "price": 54.93,
-      "change_pct": 6.6,
-      "mtd_pct": 69.54,
-      "ytd_pct": -99.42,
-      "market_date": "2026-07-27",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOXS.US",
-      "error": null
-    },
-    {
       "symbol": "SHOP",
       "name_zh": "Shopify",
       "kind": "US",
@@ -73,45 +59,31 @@
       "error": null
     },
     {
-      "symbol": "SKHY",
-      "name_zh": "SK hynix",
+      "symbol": "APLD",
+      "name_zh": "Applied Digital",
       "kind": "US",
-      "price": 143.02,
-      "change_pct": -7.47,
-      "mtd_pct": null,
-      "ytd_pct": null,
-      "market_date": "2026-07-27",
-      "per": 17.0619,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SKHY.US",
-      "error": null
-    },
-    {
-      "symbol": "DFNS",
-      "name_zh": "T3 Defense",
-      "kind": "US",
-      "price": 13.1,
-      "change_pct": 201.15,
-      "mtd_pct": 7560.82,
-      "ytd_pct": 225.06,
+      "price": 26.38,
+      "change_pct": -3.0,
+      "mtd_pct": -29.29,
+      "ytd_pct": 7.57,
       "market_date": "2026-07-27",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DFNS.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=APLD.US",
       "error": null
     },
     {
-      "symbol": "DJT",
-      "name_zh": "Trump Media & Technology",
+      "symbol": "SOXS",
+      "name_zh": "Direxion Daily Semiconductor Be",
       "kind": "US",
-      "price": 9.56,
-      "change_pct": 11.68,
-      "mtd_pct": 23.51,
-      "ytd_pct": -27.79,
+      "price": 54.93,
+      "change_pct": 6.6,
+      "mtd_pct": 69.54,
+      "ytd_pct": -99.42,
       "market_date": "2026-07-27",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DJT.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOXS.US",
       "error": null
     },
     {
@@ -129,6 +101,20 @@
       "error": null
     },
     {
+      "symbol": "CAPR",
+      "name_zh": "Capricor Therapeutics",
+      "kind": "US",
+      "price": 7.0,
+      "change_pct": -64.49,
+      "mtd_pct": -70.93,
+      "ytd_pct": -75.74,
+      "market_date": "2026-07-27",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CAPR.US",
+      "error": null
+    },
+    {
       "symbol": "CDNS",
       "name_zh": "Cadence Design Systems",
       "kind": "US",
@@ -140,34 +126,6 @@
       "per": 79.6006,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CDNS.US",
-      "error": null
-    },
-    {
-      "symbol": "SOXX",
-      "name_zh": "iShares PHLX SOX Semiconductor",
-      "kind": "US",
-      "price": 516.23,
-      "change_pct": -2.05,
-      "mtd_pct": -19.43,
-      "ytd_pct": 71.42,
-      "market_date": "2026-07-27",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOXX.US",
-      "error": null
-    },
-    {
-      "symbol": "BSX",
-      "name_zh": "Boston Scientific",
-      "kind": "US",
-      "price": 45.51,
-      "change_pct": 2.85,
-      "mtd_pct": 6.63,
-      "ytd_pct": -52.27,
-      "market_date": "2026-07-27",
-      "per": 19.2601,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BSX.US",
       "error": null
     },
     {
@@ -280,6 +238,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SMH.US",
+      "error": null
+    },
+    {
+      "symbol": "SOXX",
+      "name_zh": "iShares 半導體 ETF",
+      "kind": "US",
+      "price": 516.23,
+      "change_pct": -2.05,
+      "mtd_pct": -19.43,
+      "ytd_pct": 71.42,
+      "market_date": "2026-07-27",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOXX.US",
       "error": null
     },
     {
