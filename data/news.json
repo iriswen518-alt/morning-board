@@ -2,9 +2,10 @@
   "news_date": "2026-07-30",
   "tldr": [
     "台股週三續崩，再跌 1,564.18 點、跌幅 3.76%，收 40,039.18 點，勉強守住 4 萬關卡，115 檔跌停；兩日累計重挫約 8%。",
+    "美國聯準會鷹派按兵不動，利率維持 3.50%–3.75% 且 3 位官員主張升息，道瓊血崩 1,153 點，30 年期公債殖利率飆至近 19 年高點。",
     "外資續砍、單日賣超 222.52 億元，三大法人合計賣超 317.57 億元；台積電跌 3.51% 至 2,200 元，外資連 6 賣。",
-    "大摩喊話「別被過去週期嚇跑」，維持記憶體股買進評等，指 HBM 帶動的缺貨恐惡化至 2028 年，半導體熊市中逢低仍具價值。",
-    "金管會核准 7 家國銀自 2026 第 4 季採用內部評等法（IRB），預估平均資本適足率提升約 0.34 個百分點，放款與配息空間同步擴大。"
+    "金管會核准 7 家國銀自 2026 第 4 季採用內部評等法（IRB），預估平均資本適足率提升約 0.34 個百分點，放款與配息空間同步擴大。",
+    "總經面，主計總處上修 2026 經濟成長率至 7.71%，GDP 規模可望首破 1 兆美元、人均 GDP 估創 44,181 美元新高，AI 出口與資本支出為主要動能。"
   ],
   "sections": [
     {
@@ -92,6 +93,114 @@
           "summary_en": "A CTBC × BCG study of Taiwan's ultra-high-net-worth segment finds overseas allocation has become near-default: 86% of billion-dollar-plus clients hold offshore assets and over half (52%) already place at least 20% of wealth abroad. The high-net-worth pool is projected to grow at roughly 10% a year through 2029, with the billion-dollar tier fastest at about 11%. For private-banking and trust providers, the data points to sustained demand for cross-border diversification, structured products and succession planning as domestic markets whipsaw.",
           "source_name": "老喬報",
           "source_url": "https://joelin.cc/?p=8309"
+        }
+      ]
+    },
+    {
+      "section": "Tax & Regulations",
+      "section_zh": "稅務法規",
+      "items": [
+        {
+          "title_zh": "2026 遺產稅架構：免稅額 1,333 萬、三級稅率",
+          "title_en": "2026 estate-tax framework: NT$13.33m exemption, three-tier rates",
+          "summary_zh": "2026 年（民國 115 年）遺產稅免稅額維持新臺幣 1,333 萬元，採三級超額累進：遺產淨額 5,621 萬元以下課 10%、5,621 萬至 1 億 1,242 萬元部分課 15%、超過 1 億 1,242 萬元課 20%。免稅額上次調整為 2022 年、課稅級距則停留在 2017 年，因物價累計漲幅已逾 10% 的調整門檻，相關金額具備法定檢討條件。此架構仍是高資產族群傳承規劃與贈與時點安排的核心依據。",
+          "summary_en": "For 2026, Taiwan's estate-tax exemption stands at NT$13.33m, applied under a three-tier progressive schedule: 10% on net estates up to NT$56.21m, 15% on the portion between NT$56.21m and NT$112.42m, and 20% above that. Exemptions were last adjusted in 2022 and brackets back in 2017; with cumulative inflation now exceeding the 10% trigger, the thresholds meet the statutory conditions for review. The structure remains central to high-net-worth succession planning and gifting timing.",
+          "source_name": "不動產繼承律師880",
+          "source_url": "https://lawyer880.com/articles/article-estate-tax-exemption-2026.html"
+        },
+        {
+          "title_zh": "2026 贈與稅：免稅額維持 244 萬元",
+          "title_en": "Gift-tax exemption holds at NT$2.44m for 2026",
+          "summary_zh": "2026 年贈與稅每人每年免稅額為新臺幣 244 萬元，超過部分採累進：課稅級距 2,811 萬元以下課 10%、至 5,621 萬元課 15%、其上課 20%。由於遺產稅與贈與稅級距自 2017 年迄今未調整，稅務規劃者指出，善用每年免稅額分年贈與，仍是未來級距調整前移轉財富最有效的工具之一，尤其在市場劇烈波動、資產評價可能壓低之際，更具規劃彈性與節稅空間。",
+          "summary_en": "Taiwan's 2026 gift-tax annual exemption is NT$2.44m per donor, above which a progressive schedule applies: 10% on the taxable band up to NT$28.11m, 15% up to NT$56.21m, and 20% thereafter. With estate and gift taxes sharing brackets untouched since 2017, planners note that phased lifetime gifting within the annual allowance remains one of the most efficient tools for transferring wealth ahead of any future bracket revision, especially amid heightened market volatility that can compress asset valuations.",
+          "source_name": "商業周刊",
+          "source_url": "https://www.businessweekly.com.tw/business/blog/3018870"
+        }
+      ]
+    },
+    {
+      "section": "Macro & Policy",
+      "section_zh": "總經政策",
+      "items": [
+        {
+          "title_zh": "主計總處上修 2026 成長至 7.71%，GDP 拚破 1 兆美元",
+          "title_en": "DGBAS lifts 2026 growth forecast to 7.71%, GDP to top US$1tn",
+          "summary_zh": "主計總處上修 2026 年經濟成長率至 7.71%，預估名目 GDP 規模將首度突破 1 兆美元、人均 GDP 上看 44,181 美元創歷史新高。上修動能來自 AI、高效能運算（HPC）與先進半導體需求帶動的出口與企業資本支出，加上股市上漲的財富效果支撐消費。數據強化台灣為全球 AI 建置核心受惠者的定位，即便近期股市劇烈震盪，實體經濟基本面仍具韌性，惟須留意外需波動風險。",
+          "summary_en": "Taiwan's official statistics agency (DGBAS) upgraded its 2026 economic-growth forecast to 7.71%, projecting nominal GDP to break the US$1tn mark for the first time and per-capita GDP to reach a record US$44,181. The upgrade rests on surging exports and corporate capex tied to AI, high-performance computing and advanced semiconductor demand, with a stock-driven wealth effect underpinning consumption. The reading reinforces Taiwan's position as a core beneficiary of the global AI build-out, even as equity markets whipsaw.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/10869/9329757"
+        },
+        {
+          "title_zh": "成長動能轉向內需，外需趨緩添變數",
+          "title_en": "Growth engine tilts to domestic demand as external tailwinds cool",
+          "summary_zh": "分析點出台灣 2026 年成長結構的微妙轉向：內需回溫，外需成長則自高檔趨緩，此一轉折兼具機會與風險。消費轉強與投資穩健為經濟提供緩衝，但對 AI 相關出口的高度依賴，使成長在全球科技資本支出或市場情緒反轉時較為脆弱。全年 CPI 約 2.02%，政策仍有調節空間，惟在維繫動能與防範過熱之間的拿捏日益細膩，後續須密切關注外需與國際金融情勢變化。",
+          "summary_en": "Analysts flag a subtle rotation in Taiwan's 2026 growth mix: domestic demand is warming even as external demand growth moderates from a torrid pace, a shift that carries both opportunity and risk. A firmer consumer and steady investment cushion the economy, but a heavy reliance on AI-linked exports leaves growth exposed should global tech capex or sentiment turn. With headline CPI running near 2.02%, policymakers retain room to manoeuvre, but the balance between sustaining momentum and guarding against overheating is becoming more delicate.",
+          "source_name": "海基會兩岸經貿網",
+          "source_url": "https://www.seftb.org/cp-4-2652-1088e-1.html"
+        }
+      ]
+    },
+    {
+      "section": "Global Markets",
+      "section_zh": "國際財經",
+      "items": [
+        {
+          "title_zh": "台媒：聯準會鷹派按兵，道瓊血崩 1,153 點",
+          "title_en": "Taiwan media: Fed's hawkish hold triggers a 1,153-point Dow crash",
+          "summary_zh": "中時新聞網報導，美國聯準會連五度凍結利率但立場轉鷹，道瓊工業指數血崩 1,153 點，費城半導體指數（費半）重挫逾 5%。30 年期公債殖利率升破 5.2%、創約 2007 年以來新高；美伊緊張升溫推升西德州中級原油大漲 6.6% 至每桶 84.46 美元。利率、殖利率與油價同步走高，為以出口與晶片為主體的台股短線前景再添壓力，資金風險偏好明顯轉弱。",
+          "summary_en": "Taiwan's China Times reported that the US Federal Reserve held rates for a fifth straight meeting but struck a hawkish tone, sending the Dow Jones plunging 1,153 points and the Philadelphia Semiconductor Index (SOX) tumbling more than 5%. The 30-year Treasury yield pushed above 5.2%, its highest since roughly 2007, while a flare-up in US–Iran tensions lifted WTI crude 6.6% to US$84.46 a barrel — a combination that darkens the near-term backdrop for Taiwan's export-heavy, chip-dominated market.",
+          "source_name": "中時新聞網",
+          "source_url": "https://www.chinatimes.com/realtimenews/20260730000969-260410"
+        },
+        {
+          "title_zh": "全球晶片股再遭血洗，AI 融資疑慮升溫",
+          "title_en": "Chip stocks bloodied worldwide as AI-financing fears mount",
+          "summary_zh": "鉅亨網彙整報導，隔夜全球半導體再度遭拋售，記憶體類股首當其衝：美光、SK 海力士 ADR 下殺逾 8%，SanDisk 更暴跌 13%。市場並憂心輝達傳擬為 OpenAI 相關資料中心計畫提供約 2,500 億美元融資，恐加深 AI 產業「循環融資」風險；加上中國在記憶體晶片與國產浸潤式深紫外光（DUV）曝光機傳出進展，競爭疑慮同步升高，AI 供應鏈評價面臨全面重估壓力。",
+          "summary_en": "Local financial portal cnyes reported another global sell-off in semiconductors overnight, with memory names hit hardest: Micron and SK Hynix ADRs fell more than 8% and SanDisk collapsed 13%. Adding to the unease, markets fretted over reports that Nvidia may extend roughly US$250bn of financing tied to OpenAI-related data-centre projects, stoking worries about \"circular financing\" risk in the AI supply chain, while signs of Chinese progress in memory and domestic DUV lithography sharpened competitive fears.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6548750"
+        }
+      ]
+    },
+    {
+      "section": "International",
+      "section_zh": "國際",
+      "items": [
+        {
+          "title_zh": "聯準會鷹派凍結利率，3 官員主張升息（2026-07-29）",
+          "title_en": "Fed delivers hawkish hold, three officials dissent for a hike (2026-07-29)",
+          "summary_zh": "聯準會連五度將基準利率維持在 3.50%–3.75%，但 3 位 FOMC 委員投下反對票、主張升息，並刪除先前暗示未來降息的措辭。市場解讀本次決議明顯偏鷹，官員上調通膨預期，期貨已對 9 月會議升息 1 碼定價偏高機率，下半年重啟升息循環的預期升溫。",
+          "summary_en": "The Federal Reserve left its benchmark rate at 3.50%–3.75% for a fifth straight meeting, but three FOMC members dissented in favour of a rate increase and policymakers dropped prior language hinting at future easing. Markets read the decision as decidedly hawkish, with futures now pricing a strong chance of a 25bp hike at the September meeting as officials lifted inflation projections.",
+          "source_name": "CNBC",
+          "source_url": "https://www.cnbc.com/2026/07/29/fed-meeting-interest-rates-warsh-stocks-bonds.html",
+          "published": "2026-07-29"
+        },
+        {
+          "title_zh": "殖利率飆升，道瓊崩逾 1,100 點（2026-07-29）",
+          "title_en": "Dow plunges over 1,100 points as yields spike (2026-07-29)",
+          "summary_zh": "道瓊工業指數重挫約 1,153 點、跌幅 2.19%，收 51,594 點，創 2025 年 4 月以來最大單日跌幅；主因聯準會鷹派決議推升公債殖利率。標普 500 指數下跌 1.52%、收 7,316 點。此波賣壓並非單一財報利空所致，而是市場重新定價再次升息機率、對借貸成本上升的預期，導致股市全面走弱。",
+          "summary_en": "The Dow Jones Industrial Average sank about 1,153 points, or 2.19%, to 51,594 — its worst single-day drop since April 2025 — after the Fed's hawkish hold drove government-bond yields higher. The S&P 500 fell 1.52% to 7,316. Rising borrowing-cost expectations, rather than any single earnings miss, drove the broad-based decline as investors repriced the odds of another rate increase.",
+          "source_name": "Proactive Investors",
+          "source_url": "https://www.proactiveinvestors.com/companies/news/1096206/dow-jones-slumps-as-fed-keeps-rates-steady-1096206.html",
+          "published": "2026-07-29"
+        },
+        {
+          "title_zh": "鷹派聯準會加中東緊張，美股全面下挫（2026-07-29）",
+          "title_en": "Stocks slide on hawkish Fed and Middle East tensions (2026-07-29)",
+          "summary_zh": "美股因聯準會鷹派決議疊加中東緊張升溫而普遍走弱。那斯達克綜合指數下跌 1.74%、收 24,443 點，較歷史高點回落逾 10%、確認進入修正區間，科技與工業類股領跌。少數上漲者集中在能源與防禦性消費股，因地緣風險升溫推升油價，資金短線轉向抗跌題材，市場避險情緒明顯升高。",
+          "summary_en": "US equities fell broadly as the hawkish Fed decision collided with an escalation in Middle East tensions. The Nasdaq Composite dropped 1.74% to 24,443 and closed more than 10% below its all-time high, confirming a correction, while technology and industrial shares led losses. Energy and consumer-defensive names were among the few gainers as oil prices climbed on the geopolitical flare-up.",
+          "source_name": "The Motley Fool",
+          "source_url": "https://www.fool.com/coverage/stock-market-today/2026/07/29/stock-market-today-july-29-stocks-slide-on-hawkish-fed-and-increased-middle-east-tensions/",
+          "published": "2026-07-29"
+        },
+        {
+          "title_zh": "長天期公債殖利率創近 19 年高（2026-07-29）",
+          "title_en": "Long-bond yield hits near-19-year high (2026-07-29)",
+          "summary_zh": "債市承受鷹派意外的最大衝擊：30 年期美國公債殖利率飆升至約 5.21%，創近 19 年新高；10 年期殖利率走高、2 年期則小幅走低，殖利率曲線變化反映市場對聯準會可能續行緊縮的疑慮。由於華爾街普遍解讀央行傾向 9 月升息，長天期殖利率走高使金融情勢收緊，並壓抑對利率敏感的股票，估值面承壓。",
+          "summary_en": "The bond market bore the brunt of the hawkish surprise: the 30-year Treasury yield surged to about 5.21%, its highest in roughly 19 years, and the 10-year yield climbed while the 2-year slipped, a curve move consistent with fears the Fed could still tighten. With Wall Street broadly reading the central bank as leaning toward a September hike, higher long-term yields tightened financial conditions and pressured rate-sensitive equities.",
+          "source_name": "Yahoo Finance",
+          "source_url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-july-29-212135780.html",
+          "published": "2026-07-29"
         }
       ]
     }
