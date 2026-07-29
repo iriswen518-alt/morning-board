@@ -4,74 +4,74 @@
     {
       "name": "S&P 500",
       "name_zh": null,
-      "close": 7428.77978515625,
-      "daily_pct": 0.21,
+      "close": 7316.14990234375,
+      "daily_pct": -1.52,
       "mtd_pct": -0.94,
       "ytd_pct": 8.52,
-      "closing_date": "2026-07-28"
+      "closing_date": "2026-07-29"
     },
     {
       "name": "Nasdaq Composite",
       "name_zh": null,
-      "close": 24876.91015625,
-      "daily_pct": -0.22,
+      "close": 24442.94140625,
+      "daily_pct": -1.74,
       "mtd_pct": -5.1,
       "ytd_pct": 7.03,
-      "closing_date": "2026-07-28"
+      "closing_date": "2026-07-29"
     },
     {
       "name": "Dow Jones",
       "name_zh": null,
-      "close": 52747.3203125,
-      "daily_pct": 1.03,
+      "close": 51594.140625,
+      "daily_pct": -2.19,
       "mtd_pct": 0.82,
       "ytd_pct": 9.75,
-      "closing_date": "2026-07-28"
+      "closing_date": "2026-07-29"
     },
     {
       "name": "PHLX Semiconductor",
       "name_zh": null,
-      "close": 11035.6796875,
-      "daily_pct": -4.49,
+      "close": 10447.4892578125,
+      "daily_pct": -5.33,
       "mtd_pct": -22.54,
       "ytd_pct": 55.8,
-      "closing_date": "2026-07-28"
+      "closing_date": "2026-07-29"
     },
     {
       "name": "Euro Stoxx 50",
       "name_zh": null,
-      "close": 6289.509765625,
-      "daily_pct": 0.12,
+      "close": 6248.84,
+      "daily_pct": -0.65,
       "mtd_pct": -0.61,
       "ytd_pct": 8.51,
-      "closing_date": "2026-07-28"
+      "closing_date": "2026-07-29"
     },
     {
       "name": "DAX",
       "name_zh": null,
-      "close": 25464.009765625,
-      "daily_pct": 0.41,
+      "close": 25460.48,
+      "daily_pct": -0.01,
       "mtd_pct": 1.87,
       "ytd_pct": 3.98,
-      "closing_date": "2026-07-28"
+      "closing_date": "2026-07-29"
     },
     {
       "name": "FTSE 100",
       "name_zh": null,
-      "close": 10871.0,
-      "daily_pct": 0.83,
+      "close": 10908.41,
+      "daily_pct": 0.34,
       "mtd_pct": 3.56,
       "ytd_pct": 9.46,
-      "closing_date": "2026-07-28"
+      "closing_date": "2026-07-29"
     },
     {
       "name": "CAC 40",
       "name_zh": null,
-      "close": 8458.7802734375,
-      "daily_pct": 0.63,
+      "close": 8408.27,
+      "daily_pct": -0.6,
       "mtd_pct": 0.65,
       "ytd_pct": 3.8,
-      "closing_date": "2026-07-28"
+      "closing_date": "2026-07-29"
     },
     {
       "name": "Nikkei 225",
@@ -121,7 +121,7 @@
     {
       "name": "Hang Seng 恆生",
       "name_zh": null,
-      "close": 25807.919921875,
+      "close": 25807.92,
       "daily_pct": 1.96,
       "mtd_pct": 10.62,
       "ytd_pct": -1.25,
@@ -130,7 +130,7 @@
     {
       "name": "Shanghai 上證",
       "name_zh": null,
-      "close": 3828.468994140625,
+      "close": 3828.469,
       "daily_pct": 0.4,
       "mtd_pct": -6.87,
       "ytd_pct": -3.92,
@@ -139,8 +139,8 @@
     {
       "name": "CSI 300 滬深300",
       "name_zh": null,
-      "close": 4600.26220703125,
-      "daily_pct": null,
+      "close": 4600.262,
+      "daily_pct": 1.57,
       "mtd_pct": -9.04,
       "ytd_pct": -2.18,
       "closing_date": "2026-07-29"
@@ -148,7 +148,7 @@
     {
       "name": "Nifty 50",
       "name_zh": null,
-      "close": 24250.19921875,
+      "close": 24250.2,
       "daily_pct": 1.1,
       "mtd_pct": 0.5,
       "ytd_pct": -8.21,
@@ -167,10 +167,10 @@
   "bonds": [
     {
       "name": "US 10-Year",
-      "yield_pct": 4.6,
-      "daily_bps": -3.7,
-      "mtd_bps": 18.6,
-      "closing_date": "2026-07-28"
+      "yield_pct": 4.62,
+      "daily_bps": 1.8,
+      "mtd_bps": 20.4,
+      "closing_date": "2026-07-29"
     },
     {
       "name": "US 2-Year",
@@ -212,9 +212,9 @@
     {
       "name": "DXY 美元指數",
       "close": 101.37999725341797,
-      "daily_pct": -0.09,
-      "mtd_pct": 0.26,
-      "ytd_pct": 3.23,
+      "daily_pct": -0.13,
+      "mtd_pct": -0.38,
+      "ytd_pct": 2.57,
       "closing_date": "2026-07-28"
     },
     {
@@ -389,7 +389,7 @@
     "yield_curve_10y2y_bps": 34,
     "curve_shape": "正斜率",
     "dxy": 101.37999725341797,
-    "dxy_daily_pct": -0.09,
+    "dxy_daily_pct": -0.13,
     "closing_date": "2026-07-28"
   },
   "fedwatch": [
@@ -405,36 +405,36 @@
     {
       "label": "Sep 2026",
       "fomc_date": "2026-09-17",
-      "implied_rate": 3.8,
-      "delta_rate": 0.17,
-      "delta_bps": 17.0,
-      "p_hike": 68.0,
-      "p_hold": 32.0,
+      "implied_rate": 3.71,
+      "delta_rate": 0.08,
+      "delta_bps": 8.0,
+      "p_hike": 32.0,
+      "p_hold": 68.0,
       "p_cut": 0,
       "is_reference": false
     },
     {
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
-      "implied_rate": 3.9,
-      "delta_rate": 0.1,
-      "delta_bps": 10.0,
-      "p_hike": 40.0,
-      "p_hold": 60.0,
+      "implied_rate": 3.79,
+      "delta_rate": 0.09,
+      "delta_bps": 9.0,
+      "p_hike": 36.0,
+      "p_hold": 64.0,
       "p_cut": 0,
       "is_reference": false
     },
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 4.04,
-      "delta_rate": 0.15,
-      "delta_bps": 15.0,
-      "p_hike": 60.0,
-      "p_hold": 40.0,
+      "implied_rate": 3.94,
+      "delta_rate": 0.14,
+      "delta_bps": 14.0,
+      "p_hike": 56.0,
+      "p_hold": 44.0,
       "p_cut": 0,
       "is_reference": false
     }
   ],
-  "summary": "7/29 Hang Seng 恆生 +1.96%、7/29 Nifty 50 +1.10%、7/28 Dow Jones +1.03% 領漲；7/29 KOSPI -5.98%、7/28 台指期(近月) -5.17% 走弱。"
+  "summary": "7/29 Hang Seng 恆生 +1.96%、7/29 CSI 300 滬深300 +1.57%、7/29 Nifty 50 +1.10% 領漲；7/29 KOSPI -5.98%、7/29 PHLX Semiconductor -5.33% 走弱。"
 }
