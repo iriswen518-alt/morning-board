@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-30T16:51:42+08:00",
+  "generated_at": "2026-07-30T17:45:02+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -31,6 +31,20 @@
       "error": null
     },
     {
+      "symbol": "FTNT",
+      "name_zh": "Fortinet",
+      "kind": "US",
+      "price": 153.22,
+      "change_pct": 2.16,
+      "mtd_pct": -0.26,
+      "ytd_pct": 92.95,
+      "market_date": "2026-07-29",
+      "per": 54.7303,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FTNT.US",
+      "error": null
+    },
+    {
       "symbol": "HOOD",
       "name_zh": "Robinhood",
       "kind": "US",
@@ -59,6 +73,20 @@
       "error": null
     },
     {
+      "symbol": "SNOW",
+      "name_zh": "Snowflake",
+      "kind": "US",
+      "price": 282.9,
+      "change_pct": 4.64,
+      "mtd_pct": 11.16,
+      "ytd_pct": 28.97,
+      "market_date": "2026-07-29",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SNOW.US",
+      "error": null
+    },
+    {
       "symbol": "SBUX",
       "name_zh": "星巴克",
       "kind": "US",
@@ -73,31 +101,45 @@
       "error": null
     },
     {
-      "symbol": "FTNT",
-      "name_zh": "Fortinet",
+      "symbol": "HURN",
+      "name_zh": "Huron Consulting",
       "kind": "US",
-      "price": 153.22,
-      "change_pct": 2.16,
-      "mtd_pct": -0.26,
-      "ytd_pct": 92.95,
+      "price": 170.37,
+      "change_pct": 40.37,
+      "mtd_pct": 88.96,
+      "ytd_pct": -1.47,
       "market_date": "2026-07-29",
-      "per": 54.7303,
+      "per": 23.2698,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FTNT.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HURN.US",
       "error": null
     },
     {
-      "symbol": "SNOW",
-      "name_zh": "Snowflake",
+      "symbol": "IREN",
+      "name_zh": "IREN",
       "kind": "US",
-      "price": 282.9,
-      "change_pct": 4.64,
-      "mtd_pct": 11.16,
-      "ytd_pct": 28.97,
+      "price": 29.31,
+      "change_pct": -13.62,
+      "mtd_pct": -35.91,
+      "ytd_pct": -22.4,
+      "market_date": "2026-07-29",
+      "per": 135.9788,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IREN.US",
+      "error": null
+    },
+    {
+      "symbol": "IBRX",
+      "name_zh": "ImmunityBio",
+      "kind": "US",
+      "price": 6.83,
+      "change_pct": -2.01,
+      "mtd_pct": -21.99,
+      "ytd_pct": 244.95,
       "market_date": "2026-07-29",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SNOW.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IBRX.US",
       "error": null
     },
     {
@@ -115,20 +157,6 @@
       "error": null
     },
     {
-      "symbol": "LMND",
-      "name_zh": "Lemonade",
-      "kind": "US",
-      "price": 47.38,
-      "change_pct": -23.72,
-      "mtd_pct": -27.16,
-      "ytd_pct": -33.44,
-      "market_date": "2026-07-29",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LMND.US",
-      "error": null
-    },
-    {
       "symbol": "CVNA",
       "name_zh": "Carvana",
       "kind": "US",
@@ -143,31 +171,17 @@
       "error": null
     },
     {
-      "symbol": "VRT",
-      "name_zh": "Vertiv Holdings, LLC",
+      "symbol": "PSN",
+      "name_zh": "Parsons",
       "kind": "US",
-      "price": 223.04,
-      "change_pct": -17.26,
-      "mtd_pct": -33.39,
-      "ytd_pct": 37.67,
+      "price": 40.32,
+      "change_pct": -35.0,
+      "mtd_pct": -23.04,
+      "ytd_pct": -34.76,
       "market_date": "2026-07-29",
-      "per": 54.9741,
+      "per": 18.6762,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VRT.US",
-      "error": null
-    },
-    {
-      "symbol": "TDOC",
-      "name_zh": "Teladoc Health",
-      "kind": "US",
-      "price": 9.18,
-      "change_pct": -1.92,
-      "mtd_pct": 8.25,
-      "ytd_pct": 31.14,
-      "market_date": "2026-07-29",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TDOC.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PSN.US",
       "error": null
     },
     {
