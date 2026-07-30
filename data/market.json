@@ -1,5 +1,5 @@
 {
-  "closing_date": "2026-07-29",
+  "closing_date": "2026-07-30",
   "indices": [
     {
       "name": "S&P 500",
@@ -13,7 +13,7 @@
     {
       "name": "Nasdaq Composite",
       "name_zh": null,
-      "close": 24442.94140625,
+      "close": 24442.939453125,
       "daily_pct": -1.74,
       "mtd_pct": -6.76,
       "ytd_pct": 5.17,
@@ -31,7 +31,7 @@
     {
       "name": "PHLX Semiconductor",
       "name_zh": null,
-      "close": 10447.4892578125,
+      "close": 10447.490234375,
       "daily_pct": -5.33,
       "mtd_pct": -26.67,
       "ytd_pct": 47.5,
@@ -85,11 +85,11 @@
     {
       "name": "TAIEX 加權指數",
       "name_zh": null,
-      "close": 40039.1796875,
-      "daily_pct": -3.76,
+      "close": 39933.3,
+      "daily_pct": -0.26,
       "mtd_pct": -13.2,
       "ytd_pct": 38.24,
-      "closing_date": "2026-07-29"
+      "closing_date": "2026-07-30"
     },
     {
       "name": "OTC 櫃買加權",
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 100.80000305175781,
       "daily_pct": -0.57,
-      "mtd_pct": -0.28,
-      "ytd_pct": 2.67,
+      "mtd_pct": -0.27,
+      "ytd_pct": 2.68,
       "closing_date": "2026-07-29"
     },
     {
@@ -269,34 +269,34 @@
   "commodities": [
     {
       "name": "黃金 (USD/oz)",
-      "close": 4132.5,
-      "daily_pct": 2.38,
-      "mtd_pct": 2.72,
-      "ytd_pct": -4.46,
+      "close": 4034.699951171875,
+      "daily_pct": -0.04,
+      "mtd_pct": 0.29,
+      "ytd_pct": -6.73,
       "closing_date": "2026-07-29"
     },
     {
       "name": "白銀 (USD/oz)",
-      "close": 58.07500076293945,
-      "daily_pct": 1.36,
-      "mtd_pct": -2.36,
-      "ytd_pct": -17.19,
+      "close": 57.862998962402344,
+      "daily_pct": 0.99,
+      "mtd_pct": -2.71,
+      "ytd_pct": -17.5,
       "closing_date": "2026-07-29"
     },
     {
       "name": "WTI 原油 (USD/bbl)",
-      "close": 83.62999725341797,
-      "daily_pct": 5.51,
-      "mtd_pct": 20.33,
-      "ytd_pct": 45.65,
+      "close": 84.45999908447266,
+      "daily_pct": 6.56,
+      "mtd_pct": 21.53,
+      "ytd_pct": 47.09,
       "closing_date": "2026-07-29"
     },
     {
       "name": "布蘭特原油 (USD/bbl)",
-      "close": 89.33999633789062,
-      "daily_pct": 6.24,
-      "mtd_pct": 22.52,
-      "ytd_pct": 46.82,
+      "close": 90.73999786376953,
+      "daily_pct": 7.91,
+      "mtd_pct": 24.44,
+      "ytd_pct": 49.12,
       "closing_date": "2026-07-29"
     },
     {
@@ -388,8 +388,8 @@
     "yield_curve_10y2y": 0.4,
     "yield_curve_10y2y_bps": 40,
     "curve_shape": "正斜率",
-    "dxy": 100.90699768066406,
-    "dxy_daily_pct": 0.11,
+    "dxy": 100.80000305175781,
+    "dxy_daily_pct": -0.57,
     "closing_date": "2026-07-29"
   },
   "fedwatch": [
@@ -427,11 +427,11 @@
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 3.94,
-      "delta_rate": 0.15,
-      "delta_bps": 15.0,
-      "p_hike": 60.0,
-      "p_hold": 40.0,
+      "implied_rate": 3.96,
+      "delta_rate": 0.16,
+      "delta_bps": 16.0,
+      "p_hike": 64.0,
+      "p_hold": 36.0,
       "p_cut": 0,
       "is_reference": false
     }
