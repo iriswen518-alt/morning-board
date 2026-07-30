@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-30T10:01:53+08:00",
+  "generated_at": "2026-07-30T12:01:54+08:00",
   "tw": {
     "as_of": "2026-07-30",
     "top_marketcap": [
@@ -918,7 +918,7 @@
         "price": 40.32,
         "daily_pct": -35.0,
         "market_cap": 4306393600,
-        "pe": 19.291866,
+        "pe": 29.647058,
         "pe_kind": "trailing",
         "mtd_pct": -23.04,
         "ytd_pct": -34.76,
@@ -1045,19 +1045,6 @@
     ],
     "top_etf": [
       {
-        "symbol": "XLV",
-        "name": "State Street Health Care Select",
-        "price": 166.24,
-        "daily_pct": 4.27,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": 4.78,
-        "ytd_pct": 7.39,
-        "yahoo": "XLV",
-        "source_url": "https://finance.yahoo.com/quote/XLV"
-      },
-      {
         "symbol": "XLP",
         "name": "State Street Consumer Staples S",
         "price": 87.36,
@@ -1173,23 +1160,22 @@
         "ytd_pct": 7.25,
         "yahoo": "DIA",
         "source_url": "https://finance.yahoo.com/quote/DIA"
-      }
-    ],
-    "sectors": [
+      },
       {
-        "symbol": "XLV",
-        "name": "State Street Health Care Select",
-        "price": 166.24,
-        "daily_pct": 4.27,
+        "symbol": "XLI",
+        "name": "State Street Industrial Select ",
+        "price": 176.66,
+        "daily_pct": -1.22,
         "market_cap": null,
         "pe": null,
         "pe_kind": null,
-        "mtd_pct": 4.78,
-        "ytd_pct": 7.39,
-        "yahoo": "XLV",
-        "source_url": "https://finance.yahoo.com/quote/XLV",
-        "name_zh": "醫療"
-      },
+        "mtd_pct": -4.63,
+        "ytd_pct": 13.89,
+        "yahoo": "XLI",
+        "source_url": "https://finance.yahoo.com/quote/XLI"
+      }
+    ],
+    "sectors": [
       {
         "symbol": "XLP",
         "name": "State Street Consumer Staples S",
