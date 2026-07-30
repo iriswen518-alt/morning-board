@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-30T09:34:31+08:00",
+  "generated_at": "2026-07-30T10:01:53+08:00",
   "tw": {
     "as_of": "2026-07-30",
     "top_marketcap": [
@@ -786,7 +786,7 @@
         "price": 170.37,
         "daily_pct": 40.37,
         "market_cap": 2710598912,
-        "pe": 29.123077,
+        "pe": 20.802198,
         "pe_kind": "trailing",
         "mtd_pct": 88.96,
         "ytd_pct": -1.47,
@@ -838,7 +838,7 @@
         "price": 54.9,
         "daily_pct": 17.56,
         "market_cap": 2979664896,
-        "pe": 21.529413,
+        "pe": 18.300001,
         "pe_kind": "trailing",
         "mtd_pct": 71.13,
         "ytd_pct": 8.82,
@@ -911,7 +911,138 @@
         "source_url": "https://finance.yahoo.com/quote/GEHC"
       }
     ],
-    "top_losers": [],
+    "top_losers": [
+      {
+        "symbol": "PSN",
+        "name": "Parsons Corporation",
+        "price": 40.32,
+        "daily_pct": -35.0,
+        "market_cap": 4306393600,
+        "pe": 19.291866,
+        "pe_kind": "trailing",
+        "mtd_pct": -23.04,
+        "ytd_pct": -34.76,
+        "yahoo": "PSN",
+        "source_url": "https://finance.yahoo.com/quote/PSN"
+      },
+      {
+        "symbol": "LMND",
+        "name": "Lemonade, Inc.",
+        "price": 47.38,
+        "daily_pct": -23.72,
+        "market_cap": 3663740160,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": -27.16,
+        "ytd_pct": -33.44,
+        "yahoo": "LMND",
+        "source_url": "https://finance.yahoo.com/quote/LMND"
+      },
+      {
+        "symbol": "LII",
+        "name": "Lennox International, Inc.",
+        "price": 430.02,
+        "daily_pct": -20.97,
+        "market_cap": 14964681728,
+        "pe": 19.08655,
+        "pe_kind": "trailing",
+        "mtd_pct": -24.95,
+        "ytd_pct": -11.44,
+        "yahoo": "LII",
+        "source_url": "https://finance.yahoo.com/quote/LII"
+      },
+      {
+        "symbol": "FRVO",
+        "name": "Fervo Energy Company",
+        "price": 17.08,
+        "daily_pct": -19.13,
+        "market_cap": 5032536064,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": -41.57,
+        "ytd_pct": null,
+        "yahoo": "FRVO",
+        "source_url": "https://finance.yahoo.com/quote/FRVO"
+      },
+      {
+        "symbol": "AAUC",
+        "name": "Allied Gold Corporation",
+        "price": 17.03,
+        "daily_pct": -18.28,
+        "market_cap": 2155110656,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": -28.39,
+        "ytd_pct": -25.57,
+        "yahoo": "AAUC",
+        "source_url": "https://finance.yahoo.com/quote/AAUC"
+      },
+      {
+        "symbol": "VFC",
+        "name": "V.F. Corporation",
+        "price": 15.08,
+        "daily_pct": -17.37,
+        "market_cap": 5916593152,
+        "pe": 28.452831,
+        "pe_kind": "trailing",
+        "mtd_pct": -9.59,
+        "ytd_pct": -16.59,
+        "yahoo": "VFC",
+        "source_url": "https://finance.yahoo.com/quote/VFC"
+      },
+      {
+        "symbol": "PLBL",
+        "name": "Polibeli Group Ltd",
+        "price": 5.58,
+        "daily_pct": -17.33,
+        "market_cap": 2044441984,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": -33.57,
+        "ytd_pct": -49.09,
+        "yahoo": "PLBL",
+        "source_url": "https://finance.yahoo.com/quote/PLBL"
+      },
+      {
+        "symbol": "VRT",
+        "name": "Vertiv Holdings, LLC",
+        "price": 223.04,
+        "daily_pct": -17.26,
+        "market_cap": 85856346112,
+        "pe": 67.587875,
+        "pe_kind": "trailing",
+        "mtd_pct": -33.39,
+        "ytd_pct": 37.67,
+        "yahoo": "VRT",
+        "source_url": "https://finance.yahoo.com/quote/VRT"
+      },
+      {
+        "symbol": "DBD",
+        "name": "Diebold Nixdorf Incorporated",
+        "price": 75.17,
+        "daily_pct": -17.17,
+        "market_cap": 2603016192,
+        "pe": 31.19087,
+        "pe_kind": "trailing",
+        "mtd_pct": -11.59,
+        "ytd_pct": 10.72,
+        "yahoo": "DBD",
+        "source_url": "https://finance.yahoo.com/quote/DBD"
+      },
+      {
+        "symbol": "INIO",
+        "name": "INNIO N.V.",
+        "price": 21.77,
+        "daily_pct": -16.97,
+        "market_cap": 16327500800,
+        "pe": 725.6667,
+        "pe_kind": "trailing",
+        "mtd_pct": -44.96,
+        "ytd_pct": null,
+        "yahoo": "INIO",
+        "source_url": "https://finance.yahoo.com/quote/INIO"
+      }
+    ],
     "top_etf": [
       {
         "symbol": "XLV",
@@ -1005,6 +1136,19 @@
         "source_url": "https://finance.yahoo.com/quote/HYG"
       },
       {
+        "symbol": "TLT",
+        "name": "iShares 20+ Year Treasury Bond ",
+        "price": 82.85,
+        "daily_pct": -0.71,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": -4.13,
+        "ytd_pct": -4.94,
+        "yahoo": "TLT",
+        "source_url": "https://finance.yahoo.com/quote/TLT"
+      },
+      {
         "symbol": "XLE",
         "name": "State Street Energy Select Sect",
         "price": 58.65,
@@ -1029,19 +1173,6 @@
         "ytd_pct": 7.25,
         "yahoo": "DIA",
         "source_url": "https://finance.yahoo.com/quote/DIA"
-      },
-      {
-        "symbol": "XLI",
-        "name": "State Street Industrial Select ",
-        "price": 176.66,
-        "daily_pct": -1.22,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": -4.63,
-        "ytd_pct": 13.89,
-        "yahoo": "XLI",
-        "source_url": "https://finance.yahoo.com/quote/XLI"
       }
     ],
     "sectors": [
