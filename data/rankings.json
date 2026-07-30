@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-30T13:01:37+08:00",
+  "generated_at": "2026-07-30T15:01:59+08:00",
   "tw": {
     "as_of": "2026-07-30",
     "top_marketcap": [
@@ -647,7 +647,138 @@
   },
   "us": {
     "as_of": "2026-07-30",
-    "top_marketcap": [],
+    "top_marketcap": [
+      {
+        "symbol": "AAPL",
+        "name": "Apple Inc.",
+        "price": 338.19,
+        "daily_pct": -0.56,
+        "market_cap": 4967117094912,
+        "pe": 41.142334,
+        "pe_kind": "trailing",
+        "mtd_pct": 16.88,
+        "ytd_pct": 24.4,
+        "yahoo": "AAPL",
+        "source_url": "https://finance.yahoo.com/quote/AAPL"
+      },
+      {
+        "symbol": "NVDA",
+        "name": "NVIDIA Corporation",
+        "price": 190.01,
+        "daily_pct": -3.55,
+        "market_cap": 4602232045568,
+        "pe": 30.208267,
+        "pe_kind": "trailing",
+        "mtd_pct": -5.04,
+        "ytd_pct": 1.88,
+        "yahoo": "NVDA",
+        "source_url": "https://finance.yahoo.com/quote/NVDA"
+      },
+      {
+        "symbol": "MSFT",
+        "name": "Microsoft Corporation",
+        "price": 390.54,
+        "daily_pct": -0.71,
+        "market_cap": 2901100986368,
+        "pe": 23.41367,
+        "pe_kind": "trailing",
+        "mtd_pct": 4.7,
+        "ytd_pct": -19.25,
+        "yahoo": "MSFT",
+        "source_url": "https://finance.yahoo.com/quote/MSFT"
+      },
+      {
+        "symbol": "AMZN",
+        "name": "Amazon.com, Inc.",
+        "price": 226.65,
+        "daily_pct": -1.82,
+        "market_cap": 2438098845696,
+        "pe": 27.640244,
+        "pe_kind": "trailing",
+        "mtd_pct": -4.9,
+        "ytd_pct": -1.81,
+        "yahoo": "AMZN",
+        "source_url": "https://finance.yahoo.com/quote/AMZN"
+      },
+      {
+        "symbol": "SPCX",
+        "name": "Space Exploration Technologies ",
+        "price": 112.55,
+        "daily_pct": -3.32,
+        "market_cap": 1482754752512,
+        "pe": 124.64009,
+        "pe_kind": "forward",
+        "mtd_pct": -34.13,
+        "ytd_pct": null,
+        "yahoo": "SPCX",
+        "source_url": "https://finance.yahoo.com/quote/SPCX"
+      },
+      {
+        "symbol": "TSLA",
+        "name": "Tesla, Inc.",
+        "price": 298.32,
+        "daily_pct": -2.97,
+        "market_cap": 1178229014528,
+        "pe": 286.84616,
+        "pe_kind": "trailing",
+        "mtd_pct": -29.07,
+        "ytd_pct": -33.67,
+        "yahoo": "TSLA",
+        "source_url": "https://finance.yahoo.com/quote/TSLA"
+      },
+      {
+        "symbol": "SKHY",
+        "name": "SK hynix Inc.",
+        "price": 126.79,
+        "daily_pct": -2.6,
+        "market_cap": 900025024512,
+        "pe": 17.984396,
+        "pe_kind": "trailing",
+        "mtd_pct": null,
+        "ytd_pct": null,
+        "yahoo": "SKHY",
+        "source_url": "https://finance.yahoo.com/quote/SKHY"
+      },
+      {
+        "symbol": "MU",
+        "name": "Micron Technology, Inc.",
+        "price": 739.0,
+        "daily_pct": -9.94,
+        "market_cap": 834621538304,
+        "pe": 18.553852,
+        "pe_kind": "trailing",
+        "mtd_pct": -35.98,
+        "ytd_pct": 158.93,
+        "yahoo": "MU",
+        "source_url": "https://finance.yahoo.com/quote/MU"
+      },
+      {
+        "symbol": "AMD",
+        "name": "Advanced Micro Devices, Inc.",
+        "price": 429.56,
+        "daily_pct": -5.51,
+        "market_cap": 700440772608,
+        "pe": 151.25352,
+        "pe_kind": "trailing",
+        "mtd_pct": -26.05,
+        "ytd_pct": 100.58,
+        "yahoo": "AMD",
+        "source_url": "https://finance.yahoo.com/quote/AMD"
+      },
+      {
+        "symbol": "BAC",
+        "name": "Bank of America Corporation",
+        "price": 61.07,
+        "daily_pct": -2.48,
+        "market_cap": 433388814336,
+        "pe": 14.471564,
+        "pe_kind": "trailing",
+        "mtd_pct": 7.18,
+        "ytd_pct": 11.04,
+        "yahoo": "BAC",
+        "source_url": "https://finance.yahoo.com/quote/BAC"
+      }
+    ],
     "top_gainers": [
       {
         "symbol": "HURN",
@@ -813,7 +944,7 @@
         "price": 430.02,
         "daily_pct": -20.97,
         "market_cap": 14964681728,
-        "pe": 19.08655,
+        "pe": 24.158428,
         "pe_kind": "trailing",
         "mtd_pct": -24.95,
         "ytd_pct": -11.44,
@@ -913,6 +1044,19 @@
       }
     ],
     "top_etf": [
+      {
+        "symbol": "XLV",
+        "name": "State Street Health Care Select",
+        "price": 166.24,
+        "daily_pct": 4.27,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": 4.78,
+        "ytd_pct": 7.39,
+        "yahoo": "XLV",
+        "source_url": "https://finance.yahoo.com/quote/XLV"
+      },
       {
         "symbol": "XLP",
         "name": "State Street Consumer Staples S",
@@ -1029,22 +1173,23 @@
         "ytd_pct": 7.25,
         "yahoo": "DIA",
         "source_url": "https://finance.yahoo.com/quote/DIA"
-      },
-      {
-        "symbol": "XLI",
-        "name": "State Street Industrial Select ",
-        "price": 176.66,
-        "daily_pct": -1.22,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": -4.63,
-        "ytd_pct": 13.89,
-        "yahoo": "XLI",
-        "source_url": "https://finance.yahoo.com/quote/XLI"
       }
     ],
     "sectors": [
+      {
+        "symbol": "XLV",
+        "name": "State Street Health Care Select",
+        "price": 166.24,
+        "daily_pct": 4.27,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": 4.78,
+        "ytd_pct": 7.39,
+        "yahoo": "XLV",
+        "source_url": "https://finance.yahoo.com/quote/XLV",
+        "name_zh": "醫療"
+      },
       {
         "symbol": "XLP",
         "name": "State Street Consumer Staples S",
