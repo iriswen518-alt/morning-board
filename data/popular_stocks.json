@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-30T17:45:02+08:00",
+  "generated_at": "2026-07-30T18:35:20+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -31,20 +31,6 @@
       "error": null
     },
     {
-      "symbol": "FTNT",
-      "name_zh": "Fortinet",
-      "kind": "US",
-      "price": 153.22,
-      "change_pct": 2.16,
-      "mtd_pct": -0.26,
-      "ytd_pct": 92.95,
-      "market_date": "2026-07-29",
-      "per": 54.7303,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FTNT.US",
-      "error": null
-    },
-    {
       "symbol": "HOOD",
       "name_zh": "Robinhood",
       "kind": "US",
@@ -59,17 +45,17 @@
       "error": null
     },
     {
-      "symbol": "DFNS",
-      "name_zh": "T3 Defense",
+      "symbol": "FTNT",
+      "name_zh": "Fortinet",
       "kind": "US",
-      "price": 50.22,
-      "change_pct": 109.25,
-      "mtd_pct": 29268.42,
-      "ytd_pct": 1146.15,
+      "price": 153.22,
+      "change_pct": 2.16,
+      "mtd_pct": -0.26,
+      "ytd_pct": 92.95,
       "market_date": "2026-07-29",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DFNS.US",
+      "per": 54.7303,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FTNT.US",
       "error": null
     },
     {
@@ -87,6 +73,20 @@
       "error": null
     },
     {
+      "symbol": "DFNS",
+      "name_zh": "T3 Defense",
+      "kind": "US",
+      "price": 50.22,
+      "change_pct": 109.25,
+      "mtd_pct": 29268.42,
+      "ytd_pct": 1146.15,
+      "market_date": "2026-07-29",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DFNS.US",
+      "error": null
+    },
+    {
       "symbol": "SBUX",
       "name_zh": "星巴克",
       "kind": "US",
@@ -98,34 +98,6 @@
       "per": 79.1054,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SBUX.US",
-      "error": null
-    },
-    {
-      "symbol": "HURN",
-      "name_zh": "Huron Consulting",
-      "kind": "US",
-      "price": 170.37,
-      "change_pct": 40.37,
-      "mtd_pct": 88.96,
-      "ytd_pct": -1.47,
-      "market_date": "2026-07-29",
-      "per": 23.2698,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HURN.US",
-      "error": null
-    },
-    {
-      "symbol": "IREN",
-      "name_zh": "IREN",
-      "kind": "US",
-      "price": 29.31,
-      "change_pct": -13.62,
-      "mtd_pct": -35.91,
-      "ytd_pct": -22.4,
-      "market_date": "2026-07-29",
-      "per": 135.9788,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IREN.US",
       "error": null
     },
     {
@@ -143,17 +115,31 @@
       "error": null
     },
     {
-      "symbol": "SHEL",
-      "name_zh": "Shell",
+      "symbol": "YUMC",
+      "name_zh": "Yum China",
       "kind": "US",
-      "price": 88.34,
-      "change_pct": 2.48,
-      "mtd_pct": 13.93,
-      "ytd_pct": 20.22,
+      "price": 45.85,
+      "change_pct": 0.7,
+      "mtd_pct": 12.18,
+      "ytd_pct": -3.96,
       "market_date": "2026-07-29",
-      "per": 12.7047,
+      "per": 16.4826,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SHEL.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=YUMC.US",
+      "error": null
+    },
+    {
+      "symbol": "HURN",
+      "name_zh": "Huron Consulting",
+      "kind": "US",
+      "price": 170.37,
+      "change_pct": 40.37,
+      "mtd_pct": 88.96,
+      "ytd_pct": -1.47,
+      "market_date": "2026-07-29",
+      "per": 23.2698,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HURN.US",
       "error": null
     },
     {
@@ -171,17 +157,31 @@
       "error": null
     },
     {
-      "symbol": "PSN",
-      "name_zh": "Parsons",
+      "symbol": "SHEL",
+      "name_zh": "Shell",
       "kind": "US",
-      "price": 40.32,
-      "change_pct": -35.0,
-      "mtd_pct": -23.04,
-      "ytd_pct": -34.76,
+      "price": 88.34,
+      "change_pct": 2.48,
+      "mtd_pct": 13.93,
+      "ytd_pct": 20.22,
       "market_date": "2026-07-29",
-      "per": 18.6762,
+      "per": 12.7047,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PSN.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SHEL.US",
+      "error": null
+    },
+    {
+      "symbol": "LMND",
+      "name_zh": "Lemonade",
+      "kind": "US",
+      "price": 47.38,
+      "change_pct": -23.72,
+      "mtd_pct": -27.16,
+      "ytd_pct": -33.44,
+      "market_date": "2026-07-29",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LMND.US",
       "error": null
     },
     {

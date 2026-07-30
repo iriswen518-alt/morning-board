@@ -148,11 +148,11 @@
     {
       "name": "Nifty 50",
       "name_zh": null,
-      "close": 24250.19921875,
-      "daily_pct": 1.1,
+      "close": 24317.150390625,
+      "daily_pct": 0.28,
       "mtd_pct": 1.61,
       "ytd_pct": -7.19,
-      "closing_date": "2026-07-29"
+      "closing_date": "2026-07-30"
     },
     {
       "name": "S&P/ASX 200",
@@ -181,10 +181,10 @@
     },
     {
       "name": "Germany 10-Year",
-      "yield_pct": 3.16,
-      "daily_bps": -0.78,
-      "mtd_bps": 23.35,
-      "closing_date": "2026-07-28"
+      "yield_pct": 3.18,
+      "daily_bps": 1.71,
+      "mtd_bps": 25.05,
+      "closing_date": "2026-07-29"
     },
     {
       "name": "Japan 10-Year",
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 100.80000305175781,
       "daily_pct": -0.57,
-      "mtd_pct": -0.34,
-      "ytd_pct": 2.61,
+      "mtd_pct": -0.45,
+      "ytd_pct": 2.49,
       "closing_date": "2026-07-29"
     },
     {
@@ -406,17 +406,6 @@
       "label": "Sep 2026",
       "fomc_date": "2026-09-17",
       "implied_rate": 3.71,
-      "delta_rate": 0.08,
-      "delta_bps": 8.0,
-      "p_hike": 32.0,
-      "p_hold": 68.0,
-      "p_cut": 0,
-      "is_reference": false
-    },
-    {
-      "label": "Nov 2026",
-      "fomc_date": "2026-11-05",
-      "implied_rate": 3.8,
       "delta_rate": 0.09,
       "delta_bps": 9.0,
       "p_hike": 36.0,
@@ -425,16 +414,27 @@
       "is_reference": false
     },
     {
+      "label": "Nov 2026",
+      "fomc_date": "2026-11-05",
+      "implied_rate": 3.8,
+      "delta_rate": 0.08,
+      "delta_bps": 8.0,
+      "p_hike": 32.0,
+      "p_hold": 68.0,
+      "p_cut": 0,
+      "is_reference": false
+    },
+    {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
       "implied_rate": 3.94,
-      "delta_rate": 0.15,
-      "delta_bps": 15.0,
-      "p_hike": 60.0,
-      "p_hold": 40.0,
+      "delta_rate": 0.14,
+      "delta_bps": 14.0,
+      "p_hike": 56.0,
+      "p_hold": 44.0,
       "p_cut": 0,
       "is_reference": false
     }
   ],
-  "summary": "7/29 Nifty 50 +1.10%、7/30 Nikkei 225 +0.71%、7/29 FTSE 100 +0.34% 領漲；7/29 PHLX Semiconductor -5.33%、7/29 台指期(近月) -2.84% 走弱。"
+  "summary": "7/30 Nikkei 225 +0.71%、7/29 FTSE 100 +0.34%、7/30 Nifty 50 +0.28% 領漲；7/29 PHLX Semiconductor -5.33%、7/29 台指期(近月) -2.84% 走弱。"
 }
