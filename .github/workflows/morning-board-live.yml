@@ -30,8 +30,11 @@ jobs:
       - name: Fetch live news
         # 抓鉅亨即時新聞頭條供「快訊」跑馬燈；失敗保留舊檔，不擋指數更新。
         run: cd work && python3 fetch_live_news.py || true
-      - name: Fetch cnyes news (multi-category)
-        # 抓鉅亨多分類新聞供「新聞」分頁頂部獨立區塊；失敗保留舊檔，不擋其他更新。
+      - name: Fetch cnyes news (multi-category, full text + EN)
+        # 抓鉅亨多分類新聞全文＋Groq 英文翻譯，供「新聞」分頁頂部獨立區塊；
+        # 失敗保留舊檔，不擋其他更新。金鑰缺失時仍產中文全文。
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: cd work && python3 fetch_cnyes_news.py || true
       - name: Commit & push
         run: |

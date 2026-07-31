@@ -1,25 +1,37 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""抓鉅亨網（cnyes）多分類即時新聞，產出 data/cnyes_news.json 供「新聞」分頁頂部
-獨立的「鉅亨新聞」區塊（分類牆）使用。與 fetch_live_news.py（頭條跑馬燈）分開：
-本檔多分類、供新聞頁閱讀；live_news.json 仍只餵即時行情跑馬燈，互不影響。
+"""抓鉅亨網（cnyes）多分類即時新聞「全文」，產出 data/cnyes_news.json 供「新聞」
+分頁頂部獨立的「鉅亨新聞」區塊使用：站內直接顯示完整內容（不外連），並以 Groq
+開源模型（首選 gpt-oss-120b）產生英文翻譯，中英並陳。
 
-比照 fetch_live_indices.py／fetch_live_news.py：雲端 GitHub Actions 每 20 分鐘跑，
+與 fetch_live_news.py（頭條跑馬燈）分開：本檔多分類＋全文＋翻譯；live_news.json
+仍只餵即時行情跑馬燈，互不影響。
+
+執行環境：雲端 GitHub Actions 每 20 分鐘跑（morning-board-live.yml），
+GROQ_API_KEY 由 repo secret 注入；金鑰缺失時仍產出中文全文（英文留待補）。
+
+節流與快取（Groq 免費層 TPM 8000）：
+- 以 newsId 快取前次輸出的翻譯，跨分類共用，只翻新文章。
+- 每輪最多翻 MAX_TRANSLATE 篇、每篇之間 sleep；沒翻到的先出中文，下輪補英文。
+- 模型 429/失敗依序退到備用模型；全失敗該篇英文留空，不擋輸出。
 單一分類抓取失敗就略過該類、保留其他類；全部失敗才不寫檔、保留舊資料。"""
 
 from __future__ import annotations
 
 import datetime as dt
 import gzip
+import html
 import json
 import os
+import re
 import sys
+import time
 import urllib.request
 
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
-API = "https://api.cnyes.com/media/api/v1/newslist/category/{cat}?limit=30"
+API = "https://api.cnyes.com/media/api/v1/newslist/category/{cat}?limit=20"
 NEWS_URL = "https://news.cnyes.com/news/id/{}"
-PER_CAT = 12  # 每分類最多顯示則數
+PER_CAT = 8  # 每分類最多顯示則數（全文模式，量比純標題模式收斂）
 
 # (cnyes 分類代碼, 顯示標題)。標題一律四字，配合網站區塊命名慣例。
 CATEGORIES = [
@@ -29,6 +41,18 @@ CATEGORIES = [
     ("wd_stock", "國際財經"),
     ("forex", "外匯焦點"),
 ]
+
+GROQ_API = "https://api.groq.com/openai/v1/chat/completions"
+# 依序嘗試；各模型在 Groq 免費層有獨立配額，前面額度用盡自動退下一個
+GROQ_MODELS = ["openai/gpt-oss-120b", "llama-3.3-70b-versatile", "llama-3.1-8b-instant"]
+MAX_TRANSLATE = 8  # 每輪最多翻譯篇數（其餘下輪補）
+SLEEP_BETWEEN = 20  # 每篇之間秒數（TPM 8000 節流）
+BODY_CHAR_CAP = 6000  # 單篇全文上限（極長文截斷，避免撐爆 token）
+
+# 內文雜訊段落（推廣／延伸閱讀等，非本文）
+NOISE_PAT = re.compile(
+    r"^(更多|延伸閱讀|【更多|加入鉅亨|訂閱|下載鉅亨|👉|◤|◢)|鉅亨\s?App"
+)
 
 
 def fetch_json(url: str) -> dict:
@@ -48,25 +72,81 @@ def fetch_json(url: str) -> dict:
     return json.loads(raw.decode("utf-8"))
 
 
-def fetch_category(cat: str) -> list:
-    data = fetch_json(API.format(cat=cat))
-    rows = (data.get("items") or {}).get("data") or []
-    items = []
-    for r in rows:
-        nid = r.get("newsId")
-        title = (r.get("title") or "").strip()
-        if not nid or not title:
+def content_to_paras(content: str) -> list:
+    """cnyes 列表 API 的 content 為 HTML-entity 轉義過的 HTML；解回後拆段、去標籤。"""
+    h = html.unescape(content or "")
+    # 圖表／腳本整塊移除
+    h = re.sub(r"<(figure|script|style|table)[\s\S]*?</\1>", "", h, flags=re.I)
+    # 以段落／換行邊界切段
+    parts = re.split(r"</p>|<br\s*/?>", h, flags=re.I)
+    paras = []
+    total = 0
+    for p in parts:
+        t = re.sub(r"<[^>]+>", "", p)
+        t = html.unescape(t).strip()
+        if not t or NOISE_PAT.search(t):
             continue
-        items.append(
-            {
-                "title": title,
-                "url": NEWS_URL.format(nid),
-                "publish_at": r.get("publishAt"),
-            }
-        )
-        if len(items) >= PER_CAT:
+        if total + len(t) > BODY_CHAR_CAP:
             break
-    return items
+        paras.append(t)
+        total += len(t)
+    return paras
+
+
+def groq_translate(key: str, title: str, paras: list) -> dict | None:
+    """回 {"title_en": str, "paras_en": [str]}；全部模型失敗回 None。"""
+    body = "\n\n".join(paras)
+    prompt = (
+        "Translate this Traditional-Chinese financial news article into natural, "
+        "faithful English. Keep numbers, tickers and names accurate. "
+        'Return ONLY JSON: {"title_en": "...", "paras_en": ["paragraph 1", ...]} '
+        "with one array element per source paragraph, same order.\n\n"
+        f"TITLE: {title}\n\nARTICLE:\n{body}"
+    )
+    payload_base = {
+        "messages": [{"role": "user", "content": prompt}],
+        "temperature": 0.2,
+        "max_tokens": 4096,
+        "response_format": {"type": "json_object"},
+    }
+    for model in GROQ_MODELS:
+        payload = dict(payload_base, model=model)
+        if model.startswith("openai/"):
+            payload["reasoning_effort"] = "low"
+        req = urllib.request.Request(
+            GROQ_API,
+            data=json.dumps(payload).encode("utf-8"),
+            headers={
+                "Authorization": f"Bearer {key}",
+                "Content-Type": "application/json",
+                # Cloudflare 擋 python-urllib 預設 UA（error 1010），必須自帶 UA
+                "User-Agent": UA,
+            },
+        )
+        for attempt in (1, 2):
+            try:
+                with urllib.request.urlopen(req, timeout=90) as resp:
+                    out = json.loads(resp.read().decode("utf-8"))
+                got = json.loads(out["choices"][0]["message"]["content"])
+                title_en = str(got.get("title_en") or "").strip()
+                paras_en = [
+                    str(p).strip()
+                    for p in (got.get("paras_en") or [])
+                    if str(p).strip()
+                ]
+                if title_en and paras_en:
+                    return {"title_en": title_en, "paras_en": paras_en}
+                break  # 回了格式但內容空：換下一個模型
+            except urllib.error.HTTPError as e:
+                if e.code == 429 and attempt == 1:
+                    time.sleep(30)
+                    continue
+                print(f"  groq {model} HTTP {e.code}; next model")
+                break
+            except Exception as e:
+                print(f"  groq {model} failed: {e}; next model")
+                break
+    return None
 
 
 def main() -> int:
@@ -74,13 +154,68 @@ def main() -> int:
     # 雲端 GitHub Actions：腳本在 work/，work/repo symlink 到 workspace；寫 repo/data。
     out_path = os.path.join(here, "repo", "data", "cnyes_news.json")
 
+    # 前次輸出當快取：newsId → item（含已翻好的英文），跨分類共用
+    cache = {}
+    try:
+        with open(out_path, encoding="utf-8") as f:
+            prev = json.load(f)
+        for c in prev.get("categories") or []:
+            for it in c.get("items") or []:
+                nid = it.get("news_id")
+                if nid:
+                    cache[str(nid)] = it
+    except Exception:
+        pass
+
+    groq_key = (os.environ.get("GROQ_API_KEY") or "").strip()
+    if not groq_key:
+        print("GROQ_API_KEY missing; producing zh-only output")
+
+    translated = 0
     categories = []
+    done = {}  # 本輪已組好的 newsId → item（同文多分類共用，不重翻）
     for cat, label in CATEGORIES:
         try:
-            items = fetch_category(cat)
+            data = fetch_json(API.format(cat=cat))
+            rows = (data.get("items") or {}).get("data") or []
         except Exception as e:  # 單類異常：略過該類、續抓其他類
             print(f"category {cat} failed: {e}; skipping")
             continue
+        items = []
+        for r in rows:
+            nid = str(r.get("newsId") or "")
+            title = (r.get("title") or "").strip()
+            if not nid or not title:
+                continue
+            if nid in done:
+                items.append(done[nid])
+            else:
+                paras = content_to_paras(r.get("content") or "")
+                if not paras:  # 全文模式沒內文就沒東西可看，略過（影音類等）
+                    continue
+                old = cache.get(nid) or {}
+                it = {
+                    "news_id": nid,
+                    "title": title,
+                    "title_en": old.get("title_en") or "",
+                    "publish_at": r.get("publishAt"),
+                    "url": NEWS_URL.format(nid),  # 僅存檔備查，前端不外連
+                    "paras": paras,
+                    "paras_en": old.get("paras_en") or [],
+                }
+                # 只翻新文章；每輪上限，超過的先出中文、下輪補英文
+                if groq_key and not it["paras_en"] and translated < MAX_TRANSLATE:
+                    print(f"translating {nid}: {title[:30]}")
+                    got = groq_translate(groq_key, title, paras)
+                    if got:
+                        it["title_en"] = got["title_en"]
+                        it["paras_en"] = got["paras_en"]
+                    translated += 1
+                    time.sleep(SLEEP_BETWEEN)
+                done[nid] = it
+                items.append(it)
+            if len(items) >= PER_CAT:
+                break
         if items:
             categories.append({"key": cat, "label": label, "items": items})
 
@@ -100,7 +235,11 @@ def main() -> int:
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)
     total = sum(len(c["items"]) for c in categories)
-    print(f"cnyes_news.json written: {len(categories)} categories, {total} items")
+    pending = sum(1 for it in done.values() if not it["paras_en"])
+    print(
+        f"cnyes_news.json written: {len(categories)} categories, {total} items, "
+        f"{translated} translated this run, {pending} EN-pending"
+    )
     return 0
 
 
