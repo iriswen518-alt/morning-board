@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-31T08:56:45+08:00",
+  "generated_at": "2026-07-31T09:01:39+08:00",
   "tw": {
     "as_of": "2026-07-31",
     "top_marketcap": [
@@ -667,7 +667,7 @@
         "price": 195.04,
         "daily_pct": 2.65,
         "market_cap": 4724063469568,
-        "pe": 29.82263,
+        "pe": 29.067062,
         "pe_kind": "trailing",
         "mtd_pct": -2.52,
         "ytd_pct": 4.58,
@@ -911,7 +911,138 @@
         "source_url": "https://finance.yahoo.com/quote/FORM"
       }
     ],
-    "top_losers": [],
+    "top_losers": [
+      {
+        "symbol": "ALNY",
+        "name": "Alnylam Pharmaceuticals, Inc.",
+        "price": 205.48,
+        "daily_pct": -28.31,
+        "market_cap": 27434164224,
+        "pe": 71.84615,
+        "pe_kind": "trailing",
+        "mtd_pct": -31.74,
+        "ytd_pct": -48.33,
+        "yahoo": "ALNY",
+        "source_url": "https://finance.yahoo.com/quote/ALNY"
+      },
+      {
+        "symbol": "RTO",
+        "name": "Rentokil Initial plc",
+        "price": 24.25,
+        "daily_pct": -17.6,
+        "market_cap": 12203763712,
+        "pe": 42.54386,
+        "pe_kind": "trailing",
+        "mtd_pct": -15.24,
+        "ytd_pct": -17.68,
+        "yahoo": "RTO",
+        "source_url": "https://finance.yahoo.com/quote/RTO"
+      },
+      {
+        "symbol": "GPI",
+        "name": "Group 1 Automotive, Inc.",
+        "price": 296.71,
+        "daily_pct": -17.11,
+        "market_cap": 3530312704,
+        "pe": 13.60431,
+        "pe_kind": "trailing",
+        "mtd_pct": 1.9,
+        "ytd_pct": -24.56,
+        "yahoo": "GPI",
+        "source_url": "https://finance.yahoo.com/quote/GPI"
+      },
+      {
+        "symbol": "FICO",
+        "name": "Fair Isaac Corporation",
+        "price": 1139.54,
+        "daily_pct": -17.01,
+        "market_cap": 24611371008,
+        "pe": 32.934685,
+        "pe_kind": "trailing",
+        "mtd_pct": -4.62,
+        "ytd_pct": -32.6,
+        "yahoo": "FICO",
+        "source_url": "https://finance.yahoo.com/quote/FICO"
+      },
+      {
+        "symbol": "CHRW",
+        "name": "C.H. Robinson Worldwide, Inc.",
+        "price": 146.92,
+        "daily_pct": -15.44,
+        "market_cap": 17317906432,
+        "pe": 29.801218,
+        "pe_kind": "trailing",
+        "mtd_pct": -21.99,
+        "ytd_pct": -8.61,
+        "yahoo": "CHRW",
+        "source_url": "https://finance.yahoo.com/quote/CHRW"
+      },
+      {
+        "symbol": "LRN",
+        "name": "Stride, Inc.",
+        "price": 83.07,
+        "daily_pct": -14.98,
+        "market_cap": 3532538368,
+        "pe": 13.0,
+        "pe_kind": "trailing",
+        "mtd_pct": -3.68,
+        "ytd_pct": 27.94,
+        "yahoo": "LRN",
+        "source_url": "https://finance.yahoo.com/quote/LRN"
+      },
+      {
+        "symbol": "WAY",
+        "name": "Waystar Holding Corp.",
+        "price": 20.94,
+        "daily_pct": -14.6,
+        "market_cap": 4015212032,
+        "pe": 31.25373,
+        "pe_kind": "trailing",
+        "mtd_pct": 2.0,
+        "ytd_pct": -36.06,
+        "yahoo": "WAY",
+        "source_url": "https://finance.yahoo.com/quote/WAY"
+      },
+      {
+        "symbol": "LKQ",
+        "name": "LKQ Corporation",
+        "price": 22.6,
+        "daily_pct": -14.36,
+        "market_cap": 5758273024,
+        "pe": 11.3,
+        "pe_kind": "trailing",
+        "mtd_pct": -14.17,
+        "ytd_pct": -25.17,
+        "yahoo": "LKQ",
+        "source_url": "https://finance.yahoo.com/quote/LKQ"
+      },
+      {
+        "symbol": "RSI",
+        "name": "Rush Street Interactive, Inc.",
+        "price": 26.76,
+        "daily_pct": -13.03,
+        "market_cap": 6196926976,
+        "pe": 78.70588,
+        "pe_kind": "trailing",
+        "mtd_pct": -10.02,
+        "ytd_pct": 37.73,
+        "yahoo": "RSI",
+        "source_url": "https://finance.yahoo.com/quote/RSI"
+      },
+      {
+        "symbol": "PFSI",
+        "name": "PennyMac Financial Services, In",
+        "price": 75.87,
+        "daily_pct": -11.82,
+        "market_cap": 3939540480,
+        "pe": 9.140964,
+        "pe_kind": "trailing",
+        "mtd_pct": -12.89,
+        "ytd_pct": -42.45,
+        "yahoo": "PFSI",
+        "source_url": "https://finance.yahoo.com/quote/PFSI"
+      }
+    ],
     "top_etf": [
       {
         "symbol": "XLY",
