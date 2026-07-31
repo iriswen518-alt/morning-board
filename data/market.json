@@ -13,7 +13,7 @@
     {
       "name": "Nasdaq Composite",
       "name_zh": null,
-      "close": 25122.177734375,
+      "close": 25122.1796875,
       "daily_pct": 2.78,
       "mtd_pct": -4.16,
       "ytd_pct": 8.09,
@@ -31,7 +31,7 @@
     {
       "name": "PHLX Semiconductor",
       "name_zh": null,
-      "close": 11302.9873046875,
+      "close": 11302.990234375,
       "daily_pct": 8.19,
       "mtd_pct": -20.66,
       "ytd_pct": 59.58,
@@ -139,7 +139,7 @@
     {
       "name": "CSI 300 滬深300",
       "name_zh": null,
-      "close": 4597.54296875,
+      "close": 4605.435546875,
       "daily_pct": null,
       "mtd_pct": -9.04,
       "ytd_pct": -2.18,
@@ -148,11 +148,11 @@
     {
       "name": "Nifty 50",
       "name_zh": null,
-      "close": 24361.45,
-      "daily_pct": 0.18,
+      "close": 24317.150390625,
+      "daily_pct": 0.28,
       "mtd_pct": 1.89,
       "ytd_pct": -6.94,
-      "closing_date": "2026-07-31"
+      "closing_date": "2026-07-30"
     },
     {
       "name": "S&P/ASX 200",
@@ -214,7 +214,7 @@
       "close": 100.01000213623047,
       "daily_pct": -0.78,
       "mtd_pct": -0.96,
-      "ytd_pct": 1.98,
+      "ytd_pct": 1.97,
       "closing_date": "2026-07-30"
     },
     {
@@ -269,34 +269,34 @@
   "commodities": [
     {
       "name": "黃金 (USD/oz)",
-      "close": 4133.0,
-      "daily_pct": 0.8,
-      "mtd_pct": 2.74,
-      "ytd_pct": -4.45,
+      "close": 4100.10009765625,
+      "daily_pct": 1.62,
+      "mtd_pct": 1.92,
+      "ytd_pct": -5.21,
       "closing_date": "2026-07-30"
     },
     {
       "name": "白銀 (USD/oz)",
-      "close": 58.619998931884766,
-      "daily_pct": -0.33,
-      "mtd_pct": -1.44,
-      "ytd_pct": -16.42,
+      "close": 58.814998626708984,
+      "daily_pct": 1.65,
+      "mtd_pct": -1.11,
+      "ytd_pct": -16.14,
       "closing_date": "2026-07-30"
     },
     {
       "name": "WTI 原油 (USD/bbl)",
-      "close": 82.26000213623047,
-      "daily_pct": -1.59,
-      "mtd_pct": 18.36,
-      "ytd_pct": 43.26,
+      "close": 83.58999633789062,
+      "daily_pct": -1.03,
+      "mtd_pct": 20.27,
+      "ytd_pct": 45.58,
       "closing_date": "2026-07-30"
     },
     {
       "name": "布蘭特原油 (USD/bbl)",
-      "close": 88.05000305175781,
-      "daily_pct": -1.1,
-      "mtd_pct": 20.75,
-      "ytd_pct": 44.7,
+      "close": 89.02999877929688,
+      "daily_pct": -1.88,
+      "mtd_pct": 22.09,
+      "ytd_pct": 46.31,
       "closing_date": "2026-07-30"
     },
     {
@@ -321,10 +321,10 @@
     {
       "name": "VCSH 短期投資等級 ETF",
       "name_zh": null,
-      "close": 78.66500091552734,
-      "daily_pct": 0.07,
+      "close": 78.66999816894531,
+      "daily_pct": 0.08,
       "mtd_pct": -0.46,
-      "ytd_pct": -1.34,
+      "ytd_pct": -1.33,
       "closing_date": "2026-07-30"
     },
     {
@@ -388,8 +388,8 @@
     "yield_curve_10y2y": 0.43,
     "yield_curve_10y2y_bps": 43,
     "curve_shape": "正斜率",
-    "dxy": 100.22100067138672,
-    "dxy_daily_pct": 0.21,
+    "dxy": 100.01000213623047,
+    "dxy_daily_pct": -0.78,
     "closing_date": "2026-07-30"
   },
   "fedwatch": [
