@@ -3080,3 +3080,11 @@ table.indices.stock-cols col.c-num { width: 11%; }
 .news-body .cnyes-en { color: #4a6a8a; font-style: italic; }
 .news-body .cnyes-en-title { font-weight: 600; font-style: normal; color: var(--brand-primary); }
 .news-body .cnyes-en-block { border-top: 1px dashed var(--border); margin-top: 10px; padding-top: 10px; }
+
+/* 手機閱讀字級：新聞全文（含鉅亨中英並陳）加大，行動裝置看得舒服 */
+@media (max-width: 768px) {
+  .news-item details summary { font-size: 16.5px; line-height: 1.5; }
+  .news-item .summary, .news-item .news-body { font-size: 16px; line-height: 1.8; }
+  .news-date { font-size: 12px; }
+  .news-sec-title { font-size: 17px; }
+}
