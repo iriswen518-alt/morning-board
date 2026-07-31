@@ -6463,9 +6463,12 @@ function renderMarketHighlights(m) {
 }
 
 function renderNewsSheet() {
-  const today = (DATA.meta && DATA.meta.today) || "";
+  // 以瀏覽器實際日期為準（meta.today 由完整 build 產生，可能落後於已更新的新聞）。
+  const _n = new Date();
+  const today = `${_n.getFullYear()}-${String(_n.getMonth() + 1).padStart(2, "0")}-${String(_n.getDate()).padStart(2, "0")}`;
   const newsDate = (DATA.news && DATA.news.news_date) || "";
-  const isStale = today && newsDate && newsDate !== today;
+  // 只有在新聞「落後於今天」才是真的尚未產生；新聞等於今天（甚至超前）都不是過期。
+  const isStale = newsDate && newsDate < today;
   const staleBanner = isStale ? `
     <div style="background:#fff4e6; border:1px solid #ffb74d; border-radius:6px; padding:10px 14px; margin-bottom:12px; color:#5a3a00; font-size:15px; line-height:1.5">
       <strong>今日新聞尚未產生</strong>　目前顯示 ${escapeHtml(newsDate)} 內容（今日 ${escapeHtml(today)}）。系統每日 05:00 起自動產生，通常 07:00 前更新完成；若尚未更新，07:00 / 08:00 / 09:30 / 11:30 會自動補抓。
