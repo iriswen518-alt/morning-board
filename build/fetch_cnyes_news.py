@@ -45,8 +45,8 @@ CATEGORIES = [
 GROQ_API = "https://api.groq.com/openai/v1/chat/completions"
 # 依序嘗試；各模型在 Groq 免費層有獨立配額，前面額度用盡自動退下一個
 GROQ_MODELS = ["openai/gpt-oss-120b", "llama-3.3-70b-versatile", "llama-3.1-8b-instant"]
-MAX_TRANSLATE = 8  # 每輪最多翻譯篇數（其餘下輪補）
-SLEEP_BETWEEN = 20  # 每篇之間秒數（TPM 8000 節流）
+MAX_TRANSLATE = 24  # 每輪最多翻譯篇數（雲端 cron 稀疏，一次多翻清 backlog）
+SLEEP_BETWEEN = 22  # 每篇之間秒數（TPM 8000 節流）
 BODY_CHAR_CAP = 6000  # 單篇全文上限（極長文截斷，避免撐爆 token）
 
 # 內文雜訊段落（推廣／延伸閱讀等，非本文）
@@ -171,7 +171,7 @@ def main() -> int:
     if not groq_key:
         print("GROQ_API_KEY missing; producing zh-only output")
 
-    translated = 0
+    # 第一輪：先抓齊全部分類、組好 item（帶快取的英文），先不翻譯
     categories = []
     done = {}  # 本輪已組好的 newsId → item（同文多分類共用，不重翻）
     for cat, label in CATEGORIES:
@@ -203,15 +203,6 @@ def main() -> int:
                     "paras": paras,
                     "paras_en": old.get("paras_en") or [],
                 }
-                # 只翻新文章；每輪上限，超過的先出中文、下輪補英文
-                if groq_key and not it["paras_en"] and translated < MAX_TRANSLATE:
-                    print(f"translating {nid}: {title[:30]}")
-                    got = groq_translate(groq_key, title, paras)
-                    if got:
-                        it["title_en"] = got["title_en"]
-                        it["paras_en"] = got["paras_en"]
-                    translated += 1
-                    time.sleep(SLEEP_BETWEEN)
                 done[nid] = it
                 items.append(it)
             if len(items) >= PER_CAT:
@@ -223,6 +214,34 @@ def main() -> int:
     if not categories:
         print("no parsable categories; keeping previous file")
         return 3
+
+    # 第二輪：翻譯待補的文章。**round-robin 跨分類**（每分類輪流各取一篇），
+    # 避免順序在前的分類把每輪額度用光、讓後面分類（如外匯）永遠餓死。
+    translated = 0
+    if groq_key:
+        seen = set()
+        pending_by_cat = []
+        for c in categories:
+            lst = [it for it in c["items"] if not it["paras_en"] and id(it) not in seen]
+            for it in lst:
+                seen.add(id(it))
+            pending_by_cat.append(lst)
+        # 交錯展平：cat0[0],cat1[0],...,cat0[1],cat1[1],...
+        queue = []
+        for i in range(max((len(x) for x in pending_by_cat), default=0)):
+            for lst in pending_by_cat:
+                if i < len(lst):
+                    queue.append(lst[i])
+        for it in queue:
+            if translated >= MAX_TRANSLATE:
+                break
+            print(f"translating {it['news_id']}: {it['title'][:30]}")
+            got = groq_translate(groq_key, it["title"], it["paras"])
+            if got:
+                it["title_en"] = got["title_en"]
+                it["paras_en"] = got["paras_en"]
+            translated += 1
+            time.sleep(SLEEP_BETWEEN)
 
     # built_at 固定用台北時間（雲端 runner 為 UTC，不可用 astimezone()）
     tpe = dt.datetime.now(dt.timezone.utc) + dt.timedelta(hours=8)
