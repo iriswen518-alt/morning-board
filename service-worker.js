@@ -45,7 +45,7 @@
 // v55（2026-07-21）：根治「每天早上看到昨天新聞」——iOS PWA 從背景喚醒只還原舊畫面不重抓資料，
 //   app.js 回前景改為資料過期（>10 分或 news_date 非今天）就整包 refreshData()，不再只檢查改版。
 // v57（2026-07-22）：超越ETF 表格下方新增資料日期註記（績效截至＝基金淨值日／ETF 收盤日，取自 beatetf.json stat_date）。
-const CACHE = "morning-board-v57";
+const CACHE = "morning-board-v58";
 
 self.addEventListener("install", e => {
   self.skipWaiting();

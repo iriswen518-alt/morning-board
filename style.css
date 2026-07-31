@@ -3075,3 +3075,8 @@ table.indices.stock-cols col.c-num { width: 11%; }
 @media (max-width: 768px) {
   .wr-view { font-size: 15px; }
 }
+
+/* 鉅亨網獨立新聞：站內全文中英並陳（不外連）。英文段落淡色斜體與中文區隔 */
+.news-body .cnyes-en { color: #4a6a8a; font-style: italic; }
+.news-body .cnyes-en-title { font-weight: 600; font-style: normal; color: var(--brand-primary); }
+.news-body .cnyes-en-block { border-top: 1px dashed var(--border); margin-top: 10px; padding-top: 10px; }
