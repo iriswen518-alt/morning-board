@@ -112,7 +112,7 @@
     {
       "name": "KOSPI",
       "name_zh": null,
-      "close": 6595.43994140625,
+      "close": 6595.4501953125,
       "daily_pct": 17.91,
       "mtd_pct": -34.01,
       "ytd_pct": 32.73,
@@ -121,25 +121,25 @@
     {
       "name": "Hang Seng 恆生",
       "name_zh": null,
-      "close": 25858.880859375,
-      "daily_pct": 0.2,
+      "close": 25889.73046875,
+      "daily_pct": 0.12,
       "mtd_pct": 13.01,
       "ytd_pct": 0.89,
-      "closing_date": "2026-07-30"
+      "closing_date": "2026-07-31"
     },
     {
       "name": "Shanghai 上證",
       "name_zh": null,
-      "close": 3804.693115234375,
-      "daily_pct": -0.62,
+      "close": 3832.262451171875,
+      "daily_pct": 0.72,
       "mtd_pct": -7.08,
       "ytd_pct": -4.14,
-      "closing_date": "2026-07-30"
+      "closing_date": "2026-07-31"
     },
     {
       "name": "CSI 300 滬深300",
       "name_zh": null,
-      "close": 4609.619140625,
+      "close": 4588.19677734375,
       "daily_pct": null,
       "mtd_pct": -9.04,
       "ytd_pct": -2.18,
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 100.01000213623047,
       "daily_pct": -0.78,
-      "mtd_pct": -1.02,
-      "ytd_pct": 1.91,
+      "mtd_pct": -0.99,
+      "ytd_pct": 1.94,
       "closing_date": "2026-07-30"
     },
     {
@@ -301,11 +301,11 @@
     },
     {
       "name": "比特幣 (USD)",
-      "close": 63908.16796875,
-      "daily_pct": 0.06,
-      "mtd_pct": 9.13,
-      "ytd_pct": -26.97,
-      "closing_date": "2026-07-29"
+      "close": 64725.30859375,
+      "daily_pct": 1.28,
+      "mtd_pct": 10.53,
+      "ytd_pct": -26.04,
+      "closing_date": "2026-07-30"
     }
   ],
   "bond_etfs": [
@@ -436,5 +436,5 @@
       "is_reference": false
     }
   ],
-  "summary": "7/31 KOSPI +17.91%、7/30 PHLX Semiconductor +8.19%、7/31 Nikkei 225 +4.03% 領漲；7/30 Shanghai 上證 -0.62%、7/30 TAIEX 加權指數 -0.26% 走弱。"
+  "summary": "7/31 KOSPI +17.91%、7/30 PHLX Semiconductor +8.19%、7/31 Nikkei 225 +4.03% 領漲；7/30 TAIEX 加權指數 -0.26%、7/30 台指期(近月) -0.14% 走弱。"
 }
