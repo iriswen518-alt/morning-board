@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-31T16:20:14+08:00",
+  "generated_at": "2026-07-31T17:18:17+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -14,6 +14,48 @@
       "per": 48.4412,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RDDT.US",
+      "error": null
+    },
+    {
+      "symbol": "AXTI",
+      "name_zh": "AXT",
+      "kind": "US",
+      "price": 46.94,
+      "change_pct": 26.97,
+      "mtd_pct": -34.88,
+      "ytd_pct": 187.09,
+      "market_date": "2026-07-30",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AXTI.US",
+      "error": null
+    },
+    {
+      "symbol": "MRVL",
+      "name_zh": "邁威爾",
+      "kind": "US",
+      "price": 183.3,
+      "change_pct": 12.18,
+      "mtd_pct": -38.47,
+      "ytd_pct": 115.7,
+      "market_date": "2026-07-30",
+      "per": 63.5327,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MRVL.US",
+      "error": null
+    },
+    {
+      "symbol": "RBLX",
+      "name_zh": "Roblox",
+      "kind": "US",
+      "price": 48.67,
+      "change_pct": -2.91,
+      "mtd_pct": -10.5,
+      "ytd_pct": -39.94,
+      "market_date": "2026-07-30",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RBLX.US",
       "error": null
     },
     {
@@ -45,59 +87,17 @@
       "error": null
     },
     {
-      "symbol": "AXTI",
-      "name_zh": "AXT",
+      "symbol": "RIVN",
+      "name_zh": "Rivian",
       "kind": "US",
-      "price": 46.94,
-      "change_pct": 26.97,
-      "mtd_pct": -34.88,
-      "ytd_pct": 187.09,
+      "price": 16.83,
+      "change_pct": 3.06,
+      "mtd_pct": -3.0,
+      "ytd_pct": -14.61,
       "market_date": "2026-07-30",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AXTI.US",
-      "error": null
-    },
-    {
-      "symbol": "RBLX",
-      "name_zh": "Roblox",
-      "kind": "US",
-      "price": 48.67,
-      "change_pct": -2.91,
-      "mtd_pct": -10.5,
-      "ytd_pct": -39.94,
-      "market_date": "2026-07-30",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RBLX.US",
-      "error": null
-    },
-    {
-      "symbol": "IREN",
-      "name_zh": "IREN",
-      "kind": "US",
-      "price": 38.26,
-      "change_pct": 30.54,
-      "mtd_pct": -16.34,
-      "ytd_pct": 1.3,
-      "market_date": "2026-07-30",
-      "per": 177.5009,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IREN.US",
-      "error": null
-    },
-    {
-      "symbol": "SNDK",
-      "name_zh": "Sandisk",
-      "kind": "US",
-      "price": 1279.96,
-      "change_pct": 25.99,
-      "mtd_pct": -43.71,
-      "ytd_pct": 439.2,
-      "market_date": "2026-07-30",
-      "per": 42.0566,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SNDK.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RIVN.US",
       "error": null
     },
     {
@@ -115,34 +115,6 @@
       "error": null
     },
     {
-      "symbol": "RIVN",
-      "name_zh": "Rivian",
-      "kind": "US",
-      "price": 16.83,
-      "change_pct": 3.06,
-      "mtd_pct": -3.0,
-      "ytd_pct": -14.61,
-      "market_date": "2026-07-30",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RIVN.US",
-      "error": null
-    },
-    {
-      "symbol": "MRVL",
-      "name_zh": "邁威爾",
-      "kind": "US",
-      "price": 183.3,
-      "change_pct": 12.18,
-      "mtd_pct": -38.47,
-      "ytd_pct": 115.7,
-      "market_date": "2026-07-30",
-      "per": 63.5327,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MRVL.US",
-      "error": null
-    },
-    {
       "symbol": "REPL",
       "name_zh": "Replimune",
       "kind": "US",
@@ -154,6 +126,34 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=REPL.US",
+      "error": null
+    },
+    {
+      "symbol": "ORCL",
+      "name_zh": "甲骨文",
+      "kind": "US",
+      "price": 127.56,
+      "change_pct": 8.34,
+      "mtd_pct": -12.96,
+      "ytd_pct": -34.55,
+      "market_date": "2026-07-30",
+      "per": 21.0375,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ORCL.US",
+      "error": null
+    },
+    {
+      "symbol": "IREN",
+      "name_zh": "IREN",
+      "kind": "US",
+      "price": 38.26,
+      "change_pct": 30.54,
+      "mtd_pct": -16.34,
+      "ytd_pct": 1.3,
+      "market_date": "2026-07-30",
+      "per": 177.5009,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IREN.US",
       "error": null
     },
     {
@@ -185,6 +185,20 @@
       "error": null
     },
     {
+      "symbol": "ALAB",
+      "name_zh": "Astera Labs",
+      "kind": "US",
+      "price": 299.69,
+      "change_pct": 20.0,
+      "mtd_pct": -37.95,
+      "ytd_pct": 80.15,
+      "market_date": "2026-07-30",
+      "per": 191.9449,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ALAB.US",
+      "error": null
+    },
+    {
       "symbol": "ALNY",
       "name_zh": "Alnylam Pharmaceuticals",
       "kind": "US",
@@ -196,20 +210,6 @@
       "per": 50.1398,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ALNY.US",
-      "error": null
-    },
-    {
-      "symbol": "ORCL",
-      "name_zh": "甲骨文",
-      "kind": "US",
-      "price": 127.56,
-      "change_pct": 8.34,
-      "mtd_pct": -12.96,
-      "ytd_pct": -34.55,
-      "market_date": "2026-07-30",
-      "per": 21.0375,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ORCL.US",
       "error": null
     },
     {
