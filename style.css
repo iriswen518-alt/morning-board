@@ -3083,9 +3083,9 @@ table.indices.stock-cols col.c-num { width: 11%; }
 
 /* 手機閱讀字級：新聞全文（含鉅亨中英並陳）加大，行動裝置看得舒服 */
 @media (max-width: 768px) {
-  .news-item details summary { font-size: 16.5px; line-height: 1.5; }
-  .news-item .summary, .news-item .news-body { font-size: 18px; line-height: 1.85; }
-  .news-item .news-body p { margin: 0 0 12px; }
+  .news-item details summary { font-size: 18px; line-height: 1.55; }
+  .news-item .summary, .news-item .news-body { font-size: 19.5px; line-height: 1.9; }
+  .news-item .news-body p { margin: 0 0 13px; }
   .news-date { font-size: 12px; }
-  .news-sec-title { font-size: 17px; }
+  .news-sec-title { font-size: 18.5px; }
 }
