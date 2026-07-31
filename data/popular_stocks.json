@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-31T13:46:57+08:00",
+  "generated_at": "2026-07-31T14:52:09+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -17,34 +17,6 @@
       "error": null
     },
     {
-      "symbol": "JMKE",
-      "name_zh": "Jersey Mikes Subs",
-      "kind": "US",
-      "price": 21.63,
-      "change_pct": null,
-      "mtd_pct": null,
-      "ytd_pct": null,
-      "market_date": "2026-07-30",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=JMKE.US",
-      "error": null
-    },
-    {
-      "symbol": "RIVN",
-      "name_zh": "Rivian",
-      "kind": "US",
-      "price": 16.83,
-      "change_pct": 3.06,
-      "mtd_pct": -3.0,
-      "ytd_pct": -14.61,
-      "market_date": "2026-07-30",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RIVN.US",
-      "error": null
-    },
-    {
       "symbol": "AXTI",
       "name_zh": "AXT",
       "kind": "US",
@@ -56,34 +28,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AXTI.US",
-      "error": null
-    },
-    {
-      "symbol": "QBTS",
-      "name_zh": "D-Wave Quantum",
-      "kind": "US",
-      "price": 17.98,
-      "change_pct": 11.12,
-      "mtd_pct": -25.05,
-      "ytd_pct": -31.24,
-      "market_date": "2026-07-30",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QBTS.US",
-      "error": null
-    },
-    {
-      "symbol": "RBLX",
-      "name_zh": "Roblox",
-      "kind": "US",
-      "price": 48.67,
-      "change_pct": -2.91,
-      "mtd_pct": -10.5,
-      "ytd_pct": -39.94,
-      "market_date": "2026-07-30",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RBLX.US",
       "error": null
     },
     {
@@ -101,17 +45,31 @@
       "error": null
     },
     {
-      "symbol": "COIN",
-      "name_zh": "Coinbase",
+      "symbol": "JMKE",
+      "name_zh": "Jersey Mikes Subs",
       "kind": "US",
-      "price": 163.58,
-      "change_pct": 2.18,
-      "mtd_pct": 11.9,
-      "ytd_pct": -27.66,
+      "price": 21.63,
+      "change_pct": null,
+      "mtd_pct": null,
+      "ytd_pct": null,
       "market_date": "2026-07-30",
-      "per": 53.8307,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=COIN.US",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=JMKE.US",
+      "error": null
+    },
+    {
+      "symbol": "QBTS",
+      "name_zh": "D-Wave Quantum",
+      "kind": "US",
+      "price": 17.98,
+      "change_pct": 11.12,
+      "mtd_pct": -25.05,
+      "ytd_pct": -31.24,
+      "market_date": "2026-07-30",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QBTS.US",
       "error": null
     },
     {
@@ -129,6 +87,48 @@
       "error": null
     },
     {
+      "symbol": "RBLX",
+      "name_zh": "Roblox",
+      "kind": "US",
+      "price": 48.67,
+      "change_pct": -2.91,
+      "mtd_pct": -10.5,
+      "ytd_pct": -39.94,
+      "market_date": "2026-07-30",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RBLX.US",
+      "error": null
+    },
+    {
+      "symbol": "RIVN",
+      "name_zh": "Rivian",
+      "kind": "US",
+      "price": 16.83,
+      "change_pct": 3.06,
+      "mtd_pct": -3.0,
+      "ytd_pct": -14.61,
+      "market_date": "2026-07-30",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RIVN.US",
+      "error": null
+    },
+    {
+      "symbol": "SNDK",
+      "name_zh": "Sandisk",
+      "kind": "US",
+      "price": 1279.96,
+      "change_pct": 25.99,
+      "mtd_pct": -43.71,
+      "ytd_pct": 439.2,
+      "market_date": "2026-07-30",
+      "per": 42.0566,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SNDK.US",
+      "error": null
+    },
+    {
       "symbol": "ALNY",
       "name_zh": "Alnylam Pharmaceuticals",
       "kind": "US",
@@ -140,6 +140,48 @@
       "per": 50.1398,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ALNY.US",
+      "error": null
+    },
+    {
+      "symbol": "COIN",
+      "name_zh": "Coinbase",
+      "kind": "US",
+      "price": 163.58,
+      "change_pct": 2.18,
+      "mtd_pct": 11.9,
+      "ytd_pct": -27.66,
+      "market_date": "2026-07-30",
+      "per": 53.8307,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=COIN.US",
+      "error": null
+    },
+    {
+      "symbol": "BE",
+      "name_zh": "Bloom Energy",
+      "kind": "US",
+      "price": 207.12,
+      "change_pct": 26.49,
+      "mtd_pct": -31.58,
+      "ytd_pct": 138.37,
+      "market_date": "2026-07-30",
+      "per": 10265.7401,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BE.US",
+      "error": null
+    },
+    {
+      "symbol": "ORCL",
+      "name_zh": "甲骨文",
+      "kind": "US",
+      "price": 127.56,
+      "change_pct": 8.34,
+      "mtd_pct": -12.96,
+      "ytd_pct": -34.55,
+      "market_date": "2026-07-30",
+      "per": 21.0375,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ORCL.US",
       "error": null
     },
     {
@@ -157,20 +199,6 @@
       "error": null
     },
     {
-      "symbol": "TEM",
-      "name_zh": "Tempus AI",
-      "kind": "US",
-      "price": 44.29,
-      "change_pct": 6.59,
-      "mtd_pct": -23.55,
-      "ytd_pct": -25.0,
-      "market_date": "2026-07-30",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TEM.US",
-      "error": null
-    },
-    {
       "symbol": "REPL",
       "name_zh": "Replimune",
       "kind": "US",
@@ -185,17 +213,31 @@
       "error": null
     },
     {
-      "symbol": "BB",
-      "name_zh": "BlackBerry",
+      "symbol": "CRWV",
+      "name_zh": "CoreWeave",
       "kind": "US",
-      "price": 8.44,
-      "change_pct": 8.07,
-      "mtd_pct": -33.28,
-      "ytd_pct": 122.69,
+      "price": 73.9,
+      "change_pct": 21.51,
+      "mtd_pct": -25.76,
+      "ytd_pct": 3.2,
       "market_date": "2026-07-30",
-      "per": 76.9117,
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRWV.US",
+      "error": null
+    },
+    {
+      "symbol": "ALAB",
+      "name_zh": "Astera Labs",
+      "kind": "US",
+      "price": 299.69,
+      "change_pct": 20.0,
+      "mtd_pct": -37.95,
+      "ytd_pct": 80.15,
+      "market_date": "2026-07-30",
+      "per": 191.9449,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BB.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ALAB.US",
       "error": null
     },
     {
@@ -213,17 +255,17 @@
       "error": null
     },
     {
-      "symbol": "FSLR",
-      "name_zh": "First Solar",
+      "symbol": "MRVL",
+      "name_zh": "邁威爾",
       "kind": "US",
-      "price": 206.01,
-      "change_pct": 3.4,
-      "mtd_pct": -12.69,
-      "ytd_pct": -21.14,
+      "price": 183.3,
+      "change_pct": 12.18,
+      "mtd_pct": -38.47,
+      "ytd_pct": 115.7,
       "market_date": "2026-07-30",
-      "per": 13.1698,
+      "per": 63.5327,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FSLR.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MRVL.US",
       "error": null
     },
     {
