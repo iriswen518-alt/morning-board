@@ -13,7 +13,7 @@
     {
       "name": "Nasdaq Composite",
       "name_zh": null,
-      "close": 25373.853515625,
+      "close": 25373.849609375,
       "daily_pct": 1.0,
       "mtd_pct": -3.2,
       "ytd_pct": 9.17,
@@ -31,7 +31,7 @@
     {
       "name": "PHLX Semiconductor",
       "name_zh": null,
-      "close": 11311.0751953125,
+      "close": 11311.080078125,
       "daily_pct": 0.07,
       "mtd_pct": -20.61,
       "ytd_pct": 59.69,
@@ -211,11 +211,11 @@
   "fx": [
     {
       "name": "DXY 美元指數",
-      "close": 100.01000213623047,
-      "daily_pct": -0.78,
+      "close": 99.80000305175781,
+      "daily_pct": -0.21,
       "mtd_pct": -1.37,
       "ytd_pct": 1.55,
-      "closing_date": "2026-07-30"
+      "closing_date": "2026-07-31"
     },
     {
       "name": "EUR/USD 歐元",
@@ -227,10 +227,10 @@
     },
     {
       "name": "USD/JPY 日圓",
-      "close": 157.39999389648438,
-      "daily_pct": -1.74,
-      "mtd_pct": -2.79,
-      "ytd_pct": 0.63,
+      "close": 160.18299865722656,
+      "daily_pct": -1.91,
+      "mtd_pct": -1.07,
+      "ytd_pct": 2.41,
       "closing_date": "2026-07-31"
     },
     {
@@ -269,26 +269,26 @@
   "commodities": [
     {
       "name": "黃金 (USD/oz)",
-      "close": 4098.60009765625,
-      "daily_pct": -0.04,
-      "mtd_pct": 1.88,
-      "ytd_pct": -5.25,
+      "close": 4049.10009765625,
+      "daily_pct": -1.24,
+      "mtd_pct": 0.65,
+      "ytd_pct": -6.39,
       "closing_date": "2026-07-31"
     },
     {
       "name": "白銀 (USD/oz)",
-      "close": 57.775001525878906,
-      "daily_pct": -1.77,
-      "mtd_pct": -2.86,
-      "ytd_pct": -17.62,
+      "close": 57.590999603271484,
+      "daily_pct": -2.08,
+      "mtd_pct": -3.17,
+      "ytd_pct": -17.88,
       "closing_date": "2026-07-31"
     },
     {
       "name": "WTI 原油 (USD/bbl)",
-      "close": 86.80000305175781,
-      "daily_pct": 3.84,
-      "mtd_pct": 24.89,
-      "ytd_pct": 51.17,
+      "close": 84.66999816894531,
+      "daily_pct": 1.29,
+      "mtd_pct": 21.83,
+      "ytd_pct": 47.46,
       "closing_date": "2026-07-31"
     },
     {
@@ -388,7 +388,7 @@
     "yield_curve_10y2y": 0.46,
     "yield_curve_10y2y_bps": 46,
     "curve_shape": "正斜率",
-    "dxy": 99.8030014038086,
+    "dxy": 99.80000305175781,
     "dxy_daily_pct": -0.21,
     "closing_date": "2026-07-31"
   },
@@ -405,18 +405,18 @@
     {
       "label": "Sep 2026",
       "fomc_date": "2026-09-17",
-      "implied_rate": 3.72,
-      "delta_rate": 0.09,
-      "delta_bps": 9.0,
-      "p_hike": 36.0,
-      "p_hold": 64.0,
+      "implied_rate": 3.71,
+      "delta_rate": 0.08,
+      "delta_bps": 8.0,
+      "p_hike": 32.0,
+      "p_hold": 68.0,
       "p_cut": 0,
       "is_reference": false
     },
     {
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
-      "implied_rate": 3.82,
+      "implied_rate": 3.81,
       "delta_rate": 0.1,
       "delta_bps": 10.0,
       "p_hike": 40.0,
@@ -427,7 +427,7 @@
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 3.97,
+      "implied_rate": 3.96,
       "delta_rate": 0.15,
       "delta_bps": 15.0,
       "p_hike": 60.0,
