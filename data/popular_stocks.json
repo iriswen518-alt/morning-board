@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-02T16:38:25+08:00",
+  "generated_at": "2026-08-02T17:25:00+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -17,34 +17,6 @@
       "error": null
     },
     {
-      "symbol": "DJT",
-      "name_zh": "Trump Media & Technology",
-      "kind": "US",
-      "price": 9.86,
-      "change_pct": -5.01,
-      "mtd_pct": 27.39,
-      "ytd_pct": -25.53,
-      "market_date": "2026-07-31",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DJT.US",
-      "error": null
-    },
-    {
-      "symbol": "NKE",
-      "name_zh": "Nike",
-      "kind": "US",
-      "price": 41.71,
-      "change_pct": -1.37,
-      "mtd_pct": 1.61,
-      "ytd_pct": -34.53,
-      "market_date": "2026-07-31",
-      "per": 19.9089,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NKE.US",
-      "error": null
-    },
-    {
       "symbol": "BA",
       "name_zh": "波音",
       "kind": "US",
@@ -56,6 +28,20 @@
       "per": 70.1563,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BA.US",
+      "error": null
+    },
+    {
+      "symbol": "CRCL",
+      "name_zh": "Circle Internet",
+      "kind": "US",
+      "price": 62.61,
+      "change_pct": -2.54,
+      "mtd_pct": -0.03,
+      "ytd_pct": -21.05,
+      "market_date": "2026-07-31",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRCL.US",
       "error": null
     },
     {
