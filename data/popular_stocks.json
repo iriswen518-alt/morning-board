@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-02T18:05:52+08:00",
+  "generated_at": "2026-08-02T20:10:55+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -17,17 +17,31 @@
       "error": null
     },
     {
-      "symbol": "BA",
-      "name_zh": "波音",
+      "symbol": "NNE",
+      "name_zh": "Nano Nuclear Energy",
       "kind": "US",
-      "price": 216.14,
-      "change_pct": -2.15,
-      "mtd_pct": -0.15,
-      "ytd_pct": -0.45,
+      "price": 15.91,
+      "change_pct": -4.62,
+      "mtd_pct": -24.74,
+      "ytd_pct": -33.74,
       "market_date": "2026-07-31",
-      "per": 70.1563,
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NNE.US",
+      "error": null
+    },
+    {
+      "symbol": "SBUX",
+      "name_zh": "星巴克",
+      "kind": "US",
+      "price": 105.25,
+      "change_pct": -0.57,
+      "mtd_pct": 2.99,
+      "ytd_pct": 24.99,
+      "market_date": "2026-07-31",
+      "per": 60.516,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BA.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SBUX.US",
       "error": null
     },
     {
@@ -45,17 +59,59 @@
       "error": null
     },
     {
-      "symbol": "TEST",
-      "name_zh": "YieldMax TSLA Performance & Dis",
+      "symbol": "ONDS",
+      "name_zh": "Ondas",
       "kind": "US",
-      "price": 34.76,
-      "change_pct": 0.88,
-      "mtd_pct": -23.97,
-      "ytd_pct": -34.23,
+      "price": 7.49,
+      "change_pct": -1.19,
+      "mtd_pct": -9.1,
+      "ytd_pct": -23.26,
+      "market_date": "2026-07-31",
+      "per": 17.4168,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ONDS.US",
+      "error": null
+    },
+    {
+      "symbol": "AAOI",
+      "name_zh": "Applied Optoelectronics",
+      "kind": "US",
+      "price": 94.32,
+      "change_pct": 4.67,
+      "mtd_pct": -36.34,
+      "ytd_pct": 170.57,
       "market_date": "2026-07-31",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TEST.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AAOI.US",
+      "error": null
+    },
+    {
+      "symbol": "MRVL",
+      "name_zh": "邁威爾",
+      "kind": "US",
+      "price": 187.56,
+      "change_pct": 2.32,
+      "mtd_pct": -37.04,
+      "ytd_pct": 120.71,
+      "market_date": "2026-07-31",
+      "per": 65.0092,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MRVL.US",
+      "error": null
+    },
+    {
+      "symbol": "OKLO",
+      "name_zh": "Oklo",
+      "kind": "US",
+      "price": 38.83,
+      "change_pct": -5.5,
+      "mtd_pct": -25.8,
+      "ytd_pct": -45.89,
+      "market_date": "2026-07-31",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=OKLO.US",
       "error": null
     },
     {
