@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-02T15:52:46+08:00",
+  "generated_at": "2026-08-02T16:38:25+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -17,34 +17,6 @@
       "error": null
     },
     {
-      "symbol": "NNE",
-      "name_zh": "Nano Nuclear Energy",
-      "kind": "US",
-      "price": 15.91,
-      "change_pct": -4.62,
-      "mtd_pct": -24.74,
-      "ytd_pct": -33.74,
-      "market_date": "2026-07-31",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NNE.US",
-      "error": null
-    },
-    {
-      "symbol": "QQQM",
-      "name_zh": "Invesco NASDAQ 100 ETF",
-      "kind": "US",
-      "price": 283.29,
-      "change_pct": 0.69,
-      "mtd_pct": -6.5,
-      "ytd_pct": 12.01,
-      "market_date": "2026-07-31",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QQQM.US",
-      "error": null
-    },
-    {
       "symbol": "DJT",
       "name_zh": "Trump Media & Technology",
       "kind": "US",
@@ -59,31 +31,17 @@
       "error": null
     },
     {
-      "symbol": "MCD",
-      "name_zh": "麥當勞",
+      "symbol": "NKE",
+      "name_zh": "Nike",
       "kind": "US",
-      "price": 270.64,
-      "change_pct": 0.82,
-      "mtd_pct": 0.12,
-      "ytd_pct": -11.45,
+      "price": 41.71,
+      "change_pct": -1.37,
+      "mtd_pct": 1.61,
+      "ytd_pct": -34.53,
       "market_date": "2026-07-31",
-      "per": 22.161,
+      "per": 19.9089,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MCD.US",
-      "error": null
-    },
-    {
-      "symbol": "SOFI",
-      "name_zh": "SoFi",
-      "kind": "US",
-      "price": 16.31,
-      "change_pct": -0.97,
-      "mtd_pct": -9.04,
-      "ytd_pct": -37.7,
-      "market_date": "2026-07-31",
-      "per": 36.2632,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOFI.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NKE.US",
       "error": null
     },
     {
@@ -98,20 +56,6 @@
       "per": 70.1563,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BA.US",
-      "error": null
-    },
-    {
-      "symbol": "NKE",
-      "name_zh": "Nike",
-      "kind": "US",
-      "price": 41.71,
-      "change_pct": -1.37,
-      "mtd_pct": 1.61,
-      "ytd_pct": -34.53,
-      "market_date": "2026-07-31",
-      "per": 19.9089,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NKE.US",
       "error": null
     },
     {
