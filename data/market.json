@@ -40,43 +40,43 @@
     {
       "name": "Euro Stoxx 50",
       "name_zh": null,
-      "close": 6358.009765625,
-      "daily_pct": 0.21,
+      "close": 6426.5,
+      "daily_pct": 1.08,
       "mtd_pct": 0.47,
       "ytd_pct": 9.69,
-      "closing_date": "2026-07-31"
+      "closing_date": "2026-08-03"
     },
     {
       "name": "DAX",
       "name_zh": null,
-      "close": 25629.240234375,
-      "daily_pct": 0.07,
+      "close": 26001.310546875,
+      "daily_pct": 1.45,
       "mtd_pct": 2.53,
       "ytd_pct": 4.65,
-      "closing_date": "2026-07-31"
+      "closing_date": "2026-08-03"
     },
     {
       "name": "FTSE 100",
       "name_zh": null,
-      "close": 10868.099609375,
-      "daily_pct": -0.27,
+      "close": 10857.7001953125,
+      "daily_pct": -0.1,
       "mtd_pct": 3.53,
       "ytd_pct": 9.43,
-      "closing_date": "2026-07-31"
+      "closing_date": "2026-08-03"
     },
     {
       "name": "CAC 40",
       "name_zh": null,
-      "close": 8509.6396484375,
-      "daily_pct": 0.28,
+      "close": 8613.8203125,
+      "daily_pct": 1.22,
       "mtd_pct": 1.26,
       "ytd_pct": 4.42,
-      "closing_date": "2026-07-31"
+      "closing_date": "2026-08-03"
     },
     {
       "name": "Nikkei 225",
       "name_zh": null,
-      "close": 63754.8984375,
+      "close": 63754.9,
       "daily_pct": -0.94,
       "mtd_pct": -8.14,
       "ytd_pct": 27.86,
@@ -112,7 +112,7 @@
     {
       "name": "KOSPI",
       "name_zh": null,
-      "close": 6257.4501953125,
+      "close": 6257.45,
       "daily_pct": -5.12,
       "mtd_pct": -22.19,
       "ytd_pct": 56.51,
@@ -121,7 +121,7 @@
     {
       "name": "Hang Seng 恆生",
       "name_zh": null,
-      "close": 26009.400390625,
+      "close": 26009.4,
       "daily_pct": 0.48,
       "mtd_pct": 13.13,
       "ytd_pct": 0.99,
@@ -130,7 +130,7 @@
     {
       "name": "Shanghai 上證",
       "name_zh": null,
-      "close": 3809.662841796875,
+      "close": 3809.6628,
       "daily_pct": -0.59,
       "mtd_pct": -6.4,
       "ytd_pct": -3.44,
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 99.80000305175781,
       "daily_pct": -0.21,
-      "mtd_pct": 0.09,
-      "ytd_pct": 1.64,
+      "mtd_pct": 0.17,
+      "ytd_pct": 1.72,
       "closing_date": "2026-07-31"
     },
     {
@@ -406,17 +406,6 @@
       "label": "Sep 2026",
       "fomc_date": "2026-09-17",
       "implied_rate": 3.71,
-      "delta_rate": 0.08,
-      "delta_bps": 8.0,
-      "p_hike": 32.0,
-      "p_hold": 68.0,
-      "p_cut": 0,
-      "is_reference": false
-    },
-    {
-      "label": "Nov 2026",
-      "fomc_date": "2026-11-05",
-      "implied_rate": 3.8,
       "delta_rate": 0.09,
       "delta_bps": 9.0,
       "p_hike": 36.0,
@@ -425,9 +414,20 @@
       "is_reference": false
     },
     {
+      "label": "Nov 2026",
+      "fomc_date": "2026-11-05",
+      "implied_rate": 3.81,
+      "delta_rate": 0.1,
+      "delta_bps": 10.0,
+      "p_hike": 40.0,
+      "p_hold": 60.0,
+      "p_cut": 0,
+      "is_reference": false
+    },
+    {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 3.95,
+      "implied_rate": 3.96,
       "delta_rate": 0.15,
       "delta_bps": 15.0,
       "p_hike": 60.0,
