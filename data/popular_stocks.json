@@ -1,21 +1,7 @@
 {
-  "generated_at": "2026-08-03T16:51:17+08:00",
+  "generated_at": "2026-08-03T18:07:16+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
-    {
-      "symbol": "BABA",
-      "name_zh": "阿里巴巴",
-      "kind": "US",
-      "price": 122.25,
-      "change_pct": 5.1,
-      "mtd_pct": 27.37,
-      "ytd_pct": -16.6,
-      "market_date": "2026-07-31",
-      "per": 17.421,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BABA.US",
-      "error": null
-    },
     {
       "symbol": "PLTR",
       "name_zh": "Palantir",
@@ -31,17 +17,17 @@
       "error": null
     },
     {
-      "symbol": "FCUV",
-      "name_zh": "Focus Universal",
+      "symbol": "BABA",
+      "name_zh": "阿里巴巴",
       "kind": "US",
-      "price": 11.6,
-      "change_pct": 517.02,
-      "mtd_pct": 205.26,
-      "ytd_pct": -64.2,
+      "price": 122.25,
+      "change_pct": 5.1,
+      "mtd_pct": 27.37,
+      "ytd_pct": -16.6,
       "market_date": "2026-07-31",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FCUV.US",
+      "per": 17.421,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BABA.US",
       "error": null
     },
     {
@@ -56,6 +42,20 @@
       "per": 22.3145,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BMY.US",
+      "error": null
+    },
+    {
+      "symbol": "FCUV",
+      "name_zh": "Focus Universal",
+      "kind": "US",
+      "price": 11.6,
+      "change_pct": 517.02,
+      "mtd_pct": 205.26,
+      "ytd_pct": -64.2,
+      "market_date": "2026-07-31",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FCUV.US",
       "error": null
     },
     {
@@ -87,6 +87,34 @@
       "error": null
     },
     {
+      "symbol": "PANW",
+      "name_zh": "Palo Alto Networks",
+      "kind": "US",
+      "price": 331.83,
+      "change_pct": 1.89,
+      "mtd_pct": -2.69,
+      "ytd_pct": 80.15,
+      "market_date": "2026-07-31",
+      "per": 320.8845,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PANW.US",
+      "error": null
+    },
+    {
+      "symbol": "SGLY",
+      "name_zh": "Singularity Future Technology L",
+      "kind": "US",
+      "price": 5.23,
+      "change_pct": 13.45,
+      "mtd_pct": 24.52,
+      "ytd_pct": -41.63,
+      "market_date": "2026-07-31",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SGLY.US",
+      "error": null
+    },
+    {
       "symbol": "IESC",
       "name_zh": "IES",
       "kind": "US",
@@ -98,20 +126,6 @@
       "per": 38.9994,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IESC.US",
-      "error": null
-    },
-    {
-      "symbol": "AMBA",
-      "name_zh": "Ambarella",
-      "kind": "US",
-      "price": 86,
-      "change_pct": 16.07,
-      "mtd_pct": 0.23,
-      "ytd_pct": 21.4,
-      "market_date": "2026-07-31",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AMBA.US",
       "error": null
     },
     {
