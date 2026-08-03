@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-02T17:55:58+08:00",
+  "generated_at": "2026-08-03T09:01:42+08:00",
   "tw": {
-    "as_of": "2026-08-02",
+    "as_of": "2026-08-03",
     "top_marketcap": [
       {
         "symbol": "2330",
@@ -646,7 +646,7 @@
     ]
   },
   "us": {
-    "as_of": "2026-08-02",
+    "as_of": "2026-08-03",
     "top_marketcap": [
       {
         "symbol": "NVDA",
@@ -673,6 +673,19 @@
         "ytd_pct": 13.63,
         "yahoo": "AAPL",
         "source_url": "https://finance.yahoo.com/quote/AAPL"
+      },
+      {
+        "symbol": "GOOG",
+        "name": "Alphabet Inc.",
+        "price": 356.65,
+        "daily_pct": 6.88,
+        "market_cap": 4361806151680,
+        "pe": 17.886158,
+        "pe_kind": "trailing",
+        "mtd_pct": 0.94,
+        "ytd_pct": 13.66,
+        "yahoo": "GOOG",
+        "source_url": "https://finance.yahoo.com/quote/GOOG"
       },
       {
         "symbol": "GOOGL",
@@ -764,19 +777,6 @@
         "ytd_pct": 188.37,
         "yahoo": "MU",
         "source_url": "https://finance.yahoo.com/quote/MU"
-      },
-      {
-        "symbol": "INTC",
-        "name": "Intel Corporation",
-        "price": 90.2,
-        "daily_pct": -1.02,
-        "market_cap": 454968770560,
-        "pe": 44.27298,
-        "pe_kind": "forward",
-        "mtd_pct": -35.4,
-        "ytd_pct": 144.44,
-        "yahoo": "INTC",
-        "source_url": "https://finance.yahoo.com/quote/INTC"
       }
     ],
     "top_gainers": [
@@ -823,7 +823,7 @@
         "symbol": "AMBA",
         "name": "Ambarella, Inc.",
         "price": 86.0,
-        "daily_pct": 16.07,
+        "daily_pct": 16.08,
         "market_cap": 3772663808,
         "pe": 74.95925,
         "pe_kind": "forward",
