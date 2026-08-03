@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-03T18:07:16+08:00",
+  "generated_at": "2026-08-03T18:54:26+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -45,20 +45,6 @@
       "error": null
     },
     {
-      "symbol": "FCUV",
-      "name_zh": "Focus Universal",
-      "kind": "US",
-      "price": 11.6,
-      "change_pct": 517.02,
-      "mtd_pct": 205.26,
-      "ytd_pct": -64.2,
-      "market_date": "2026-07-31",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FCUV.US",
-      "error": null
-    },
-    {
       "symbol": "AZN",
       "name_zh": "AstraZeneca",
       "kind": "US",
@@ -70,20 +56,6 @@
       "per": 25.4651,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AZN.US",
-      "error": null
-    },
-    {
-      "symbol": "FFAI",
-      "name_zh": "Faraday Future Intelligent Elec",
-      "kind": "US",
-      "price": 5.93,
-      "change_pct": 10.84,
-      "mtd_pct": 2467.1,
-      "ytd_pct": 481.37,
-      "market_date": "2026-07-31",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FFAI.US",
       "error": null
     },
     {
@@ -101,17 +73,45 @@
       "error": null
     },
     {
-      "symbol": "SGLY",
-      "name_zh": "Singularity Future Technology L",
+      "symbol": "FFAI",
+      "name_zh": "Faraday Future Intelligent Elec",
       "kind": "US",
-      "price": 5.23,
-      "change_pct": 13.45,
-      "mtd_pct": 24.52,
-      "ytd_pct": -41.63,
+      "price": 5.93,
+      "change_pct": 10.84,
+      "mtd_pct": 2467.1,
+      "ytd_pct": 481.37,
       "market_date": "2026-07-31",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SGLY.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FFAI.US",
+      "error": null
+    },
+    {
+      "symbol": "ATKR",
+      "name_zh": "Atkore",
+      "kind": "US",
+      "price": 72.96,
+      "change_pct": 2.76,
+      "mtd_pct": -4.05,
+      "ytd_pct": 15.35,
+      "market_date": "2026-07-31",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ATKR.US",
+      "error": null
+    },
+    {
+      "symbol": "CRCL",
+      "name_zh": "Circle Internet",
+      "kind": "US",
+      "price": 62.61,
+      "change_pct": -2.54,
+      "mtd_pct": -0.03,
+      "ytd_pct": -21.05,
+      "market_date": "2026-07-31",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRCL.US",
       "error": null
     },
     {
@@ -129,17 +129,31 @@
       "error": null
     },
     {
-      "symbol": "SPCX",
-      "name_zh": "Space Exploration Technologies",
+      "symbol": "INHD",
+      "name_zh": "Inno",
       "kind": "US",
-      "price": 108.37,
-      "change_pct": -3.41,
-      "mtd_pct": -36.57,
-      "ytd_pct": null,
+      "price": 18,
+      "change_pct": -54.42,
+      "mtd_pct": -54.42,
+      "ytd_pct": -21.05,
       "market_date": "2026-07-31",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPCX.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=INHD.US",
+      "error": null
+    },
+    {
+      "symbol": "SGLY",
+      "name_zh": "Singularity Future Technology L",
+      "kind": "US",
+      "price": 5.23,
+      "change_pct": 13.45,
+      "mtd_pct": 24.52,
+      "ytd_pct": -41.63,
+      "market_date": "2026-07-31",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SGLY.US",
       "error": null
     },
     {
