@@ -4,6 +4,8 @@ on:
     # 全球指數橫跨時區（亞洲早上、歐洲下午、美股深夜 Taipei time），故平日近全日每 20 分鐘刷新一次。
     # GitHub 排程為 best-effort，高負載時會延遲或跳過；準即時、非秒級。
     - cron: '*/20 * * * 1-5'
+    # 週末指數休市，但鉅亨新聞照發：週末每 30 分鐘也跑（指數無變化就不 commit，不會多推版本）。
+    - cron: '*/30 * * * 0,6'
   workflow_dispatch: {}
 permissions:
   contents: write
