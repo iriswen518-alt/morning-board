@@ -1193,30 +1193,30 @@ function renderBondMarket() {
 
   const spreadCard = `
     <div style="margin-bottom:16px;padding:14px 16px;background:var(--card-bg,#fff);border:1px solid var(--border);border-radius:10px;">
-      <div style="font-weight:600;font-size:16px;margin-bottom:10px;">美國殖利率曲線利差
+      <div style="font-weight:600;font-size:18px;margin-bottom:10px;">美國殖利率曲線利差
         <a href="https://fred.stlouisfed.org/series/T10Y2Y" target="_blank" rel="noopener"
-           style="font-size:11px;color:#3b82f6;text-decoration:none;margin-left:8px;">FRED T10Y2Y ↗</a>
+           style="font-size:13px;color:#3b82f6;text-decoration:none;margin-left:8px;">FRED T10Y2Y ↗</a>
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:8px;">
         <div style="padding:8px 10px;background:var(--bg,#fff);border:1px solid var(--border);border-radius:8px;">
-          <div style="font-size:11px;color:var(--text-mute);margin-bottom:3px;">US 2Y 殖利率</div>
-          <div style="font-size:18px;font-weight:700;">${y2 != null ? y2.toFixed(2) + "%" : "—"}</div>
-          <div style="font-size:10px;color:var(--text-mute);">升息預期指標</div>
+          <div style="font-size:13px;color:var(--text-mute);margin-bottom:3px;">US 2Y 殖利率</div>
+          <div style="font-size:20px;font-weight:700;">${y2 != null ? y2.toFixed(2) + "%" : "—"}</div>
+          <div style="font-size:12px;color:var(--text-mute);">升息預期指標</div>
         </div>
         <div style="padding:8px 10px;background:var(--bg,#fff);border:1px solid var(--border);border-radius:8px;">
-          <div style="font-size:11px;color:var(--text-mute);margin-bottom:3px;">US 10Y 殖利率</div>
-          <div style="font-size:18px;font-weight:700;">${y10 != null ? y10.toFixed(2) + "%" : "—"}</div>
-          <div style="font-size:10px;color:var(--text-mute);">長期通膨/景氣預期</div>
+          <div style="font-size:13px;color:var(--text-mute);margin-bottom:3px;">US 10Y 殖利率</div>
+          <div style="font-size:20px;font-weight:700;">${y10 != null ? y10.toFixed(2) + "%" : "—"}</div>
+          <div style="font-size:12px;color:var(--text-mute);">長期通膨/景氣預期</div>
         </div>
         <div style="padding:8px 10px;background:${curveBg};border:1px solid var(--border);border-radius:8px;">
-          <div style="font-size:11px;color:var(--text-mute);margin-bottom:3px;">10Y−2Y 利差</div>
-          <div style="font-size:18px;font-weight:700;color:${curveColor};">
+          <div style="font-size:13px;color:var(--text-mute);margin-bottom:3px;">10Y−2Y 利差</div>
+          <div style="font-size:20px;font-weight:700;color:${curveColor};">
             ${spreadBps != null ? (spreadBps >= 0 ? "+" : "") + spreadBps + " bps" : "—"}
           </div>
-          <div style="font-size:10px;color:${curveColor};font-weight:500;">${curveShape || "殖利率曲線"}</div>
+          <div style="font-size:12px;color:${curveColor};font-weight:500;">${curveShape || "殖利率曲線"}</div>
         </div>
       </div>
-      <p style="font-size:11px;color:var(--text-mute);margin:10px 0 0;">
+      <p style="font-size:13px;color:var(--text-mute);margin:10px 0 0;">
         10Y−2Y 正值=正斜率（景氣擴張預期）；負值=倒掛（歷史上常先行衰退訊號）。
         資料來源：美國財政部/Yahoo Finance。
       </p>
@@ -1238,7 +1238,7 @@ function renderBondMarket() {
     const yv = fmtPct(e.ytd_pct);
     return `<tr>
       <td style="font-weight:500;">${escapeHtml(label)}</td>
-      <td style="font-size:11px;color:var(--text-mute);">${etfLink(e)}</td>
+      <td style="font-size:13px;color:var(--text-mute);">${etfLink(e)}</td>
       <td class="${pctClass(e.daily_pct)}">${dv}</td>
       <td class="${pctClass(e.mtd_pct)}">${mv}</td>
       <td class="${pctClass(e.ytd_pct)}">${yv}</td>
@@ -1256,8 +1256,8 @@ function renderBondMarket() {
   ];
   const spreadRows = allCatsForSpread.map(([label, etfs]) => spreadSummaryRow(label, etfs)).filter(Boolean).join("");
   const spreadTab = spreadCard + (spreadRows ? `
-    <h2 style="font-size:16px;margin:20px 0 8px;">各類債券市場表現比較</h2>
-    <p style="font-size:11px;color:var(--text-mute);margin-bottom:10px;">
+    <h2 style="font-size:18px;margin:20px 0 8px;">各類債券市場表現比較</h2>
+    <p style="font-size:13px;color:var(--text-mute);margin-bottom:10px;">
       以 ETF 收盤價報酬率代理各類債市走勢；點擊 ETF 名稱可查 Yahoo Finance 詳情。
       實際信用利差（OAS）請參閱
       <a href="https://fred.stlouisfed.org/series/BAMLH0A0HYM2" target="_blank" rel="noopener" style="color:#3b82f6;">FRED BAMLH0A0HYM2（高收益 OAS）</a> 及
@@ -1266,7 +1266,7 @@ function renderBondMarket() {
     <table class="indices">
       <thead><tr>
         <th>類別</th>
-        <th style="font-size:11px;color:var(--text-mute);">代表 ETF</th>
+        <th style="font-size:13px;color:var(--text-mute);">代表 ETF</th>
         <th class="sortable-th">日</th>
         <th class="sortable-th">本月</th>
         <th class="sortable-th">今年</th>
@@ -1274,19 +1274,19 @@ function renderBondMarket() {
       <tbody>${spreadRows}</tbody>
     </table>` : `<p style="color:var(--text-mute);padding:16px 0">ETF 資料尚未載入，請等待每日 build 後刷新。</p>`);
 
-  const noEtfNote = `<p style="font-size:11px;color:var(--text-mute);margin-top:10px;">
+  const noEtfNote = `<p style="font-size:13px;color:var(--text-mute);margin-top:10px;">
     資料來源：Yahoo Finance ETF 收盤價報酬率（每日 build 後更新）。非買賣建議。
   </p>`;
 
   // 債市觀察重點：研究整理的「該看什麼、怎麼判讀」框架（用耐久的判讀準則，不寫會過期的當日數字）
   function obsItem(title, body) {
     return `<div style="padding:12px 14px;background:var(--bg,#fff);border:1px solid var(--border);border-radius:10px;margin-bottom:10px;">
-      <div style="font-weight:600;font-size:14px;margin-bottom:5px;">${title}</div>
-      <div style="font-size:12.5px;line-height:1.7;color:var(--text);">${body}</div>
+      <div style="font-weight:600;font-size:18px;margin-bottom:5px;">${title}</div>
+      <div style="font-size:14px;line-height:1.7;color:var(--text);">${body}</div>
     </div>`;
   }
   const observeTab = `
-    <p style="font-size:11px;color:var(--text-mute);margin-bottom:12px;">
+    <p style="font-size:13px;color:var(--text-mute);margin-bottom:12px;">
       看債市不只看「漲跌」，更要看「利差」與「曲線」透露的風險訊號。以下是判讀框架與耐久的觀察準則（門檻為長期經驗區間，非即時值；當前數值請點各卡片的 FRED／FedWatch 連結）。
     </p>
     ${obsItem("① 信用利差（Credit Spread / OAS）", `公司債殖利率減同天期公債的「風險補償」，是債市最核心的溫度計。
@@ -1300,7 +1300,7 @@ function renderBondMarket() {
     ${obsItem("⑥ Fed 政策與利率預期", `降息／升息預期牽動短端與整條曲線。看 FedWatch 隱含利率（本 App 公債分頁含 FedWatch）。<b>「降息但經濟仍穩」</b>對信用債最有利；<b>「被迫降息（救衰退）」</b>則利差會先擴後收。`)}
     ${obsItem("⑦ 供給面：發債潮", `2026 主軸是 AI／資料中心相關的投資級發債是否放量。供給大增（賣壓）會推升利差與長端殖利率；反之供不應求則壓低利差。`)}
     ${obsItem("⑧ 資金流向", `投資級債持續淨流入、風險債（高收益／新興）遭贖回，是風險偏好轉保守的佐證；反向則代表追逐收益。可對照本頁各類 ETF 的本月／今年報酬。`)}
-    <p style="font-size:11px;color:var(--text-mute);margin-top:6px;">
+    <p style="font-size:13px;color:var(--text-mute);margin-top:6px;">
       整理自 ICE BofA OAS 指數、Moody's 違約率展望與市場研究，供判讀參考，非投資建議。
     </p>`;
 
@@ -1314,28 +1314,28 @@ function renderBondMarket() {
       <button class="tab" data-bmtab="observe">觀察重點</button>
     </div>
     <div id="bmtab-govbond">
-      <p style="font-size:11px;color:var(--text-mute);margin-bottom:10px;">
+      <p style="font-size:13px;color:var(--text-mute);margin-bottom:10px;">
         各國 10 年期（及美國 2 年期）公債殖利率（到期殖利率 YTM）。
         來源：美國財政部 / 英格蘭銀行 / 歐洲央行 / 日本財務省 / Yahoo Finance。
       </p>
       ${renderGovBondTable()}
     </div>
     <div id="bmtab-ig" hidden>
-      <p style="font-size:11px;color:var(--text-mute);margin-bottom:10px;">
+      <p style="font-size:13px;color:var(--text-mute);margin-bottom:10px;">
         投資等級公司債市場（信評 BBB− 以上）。以 LQD（綜合投資等級）及 VCSH（短期投資等級）ETF 報酬率代理走勢。
       </p>
       ${renderEtfTable(igEtfs, "尚無投資等級債 ETF 資料")}
       ${igEtfs.length ? noEtfNote : ""}
     </div>
     <div id="bmtab-hy" hidden>
-      <p style="font-size:11px;color:var(--text-mute);margin-bottom:10px;">
+      <p style="font-size:13px;color:var(--text-mute);margin-bottom:10px;">
         非投資等級債（高收益債 / 信評 BB+ 以下）。以 HYG 及 JNK ETF 報酬率代理走勢；兩檔成分債相近，可交叉驗證。
       </p>
       ${renderEtfTable(hyEtfs, "尚無高收益債 ETF 資料")}
       ${hyEtfs.length ? noEtfNote : ""}
     </div>
     <div id="bmtab-em" hidden>
-      <p style="font-size:11px;color:var(--text-mute);margin-bottom:10px;">
+      <p style="font-size:13px;color:var(--text-mute);margin-bottom:10px;">
         新興市場主權債與公司債（美元計價）。以 EMB ETF（摩根大通新興市場美元債指數）報酬率代理走勢。
       </p>
       ${renderEtfTable(emEtfs, "尚無新興市場債 ETF 資料")}
@@ -1366,7 +1366,7 @@ function renderObondsSheet() {
   const fmtPctNum = p => (p === null || p === undefined) ? "—" : fmtPct(p);
   const fmtPrice = p => (p === null || p === undefined) ? "—" : Number(p).toFixed(1);
   const priceCell = b => fmtPrice(b.ask_price);
-  const priceDateCell = b => b.price_date ? `<span style="font-size:11px;color:var(--text-mute)">${escapeHtml(shortDate(b.price_date))}</span>` : "—";
+  const priceDateCell = b => b.price_date ? `<span style="font-size:13px;color:var(--text-mute)">${escapeHtml(shortDate(b.price_date))}</span>` : "—";
 
   let cards;
   if (!list.length) {
@@ -2751,14 +2751,14 @@ function renderInsuranceSheet() {
     const detail = `
       <div style="margin-bottom:6px">${chips}</div>
       <p class="tagline">${escapeHtml(it.tagline || "")}</p>
-      <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:6px; font-size:15px; margin-top:8px">
-        <div><label style="display:block; font-size:13px; color:var(--text-mute); margin-bottom:2px">公司</label>${escapeHtml(it.company || "—")}</div>
-        <div><label style="display:block; font-size:13px; color:var(--text-mute); margin-bottom:2px">類型</label>${escapeHtml(it.type || "—")}</div>
-        <div><label style="display:block; font-size:13px; color:var(--text-mute); margin-bottom:2px">幣別</label>${escapeHtml(it.currency || "—")}</div>
-        <div><label style="display:block; font-size:13px; color:var(--text-mute); margin-bottom:2px">期間</label>${escapeHtml(it.term || "—")}</div>
+      <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:6px; font-size:18px; margin-top:8px">
+        <div><label style="display:block; font-size:15px; color:var(--text-mute); margin-bottom:2px">公司</label>${escapeHtml(it.company || "—")}</div>
+        <div><label style="display:block; font-size:15px; color:var(--text-mute); margin-bottom:2px">類型</label>${escapeHtml(it.type || "—")}</div>
+        <div><label style="display:block; font-size:15px; color:var(--text-mute); margin-bottom:2px">幣別</label>${escapeHtml(it.currency || "—")}</div>
+        <div><label style="display:block; font-size:15px; color:var(--text-mute); margin-bottom:2px">期間</label>${escapeHtml(it.term || "—")}</div>
       </div>
       ${(it.highlights && it.highlights.length) ? `
-        <ul style="margin:10px 0 0; padding-left:18px; font-size:15px; line-height:1.7">
+        <ul style="margin:10px 0 0; padding-left:18px; font-size:18px; line-height:1.7">
           ${it.highlights.map(h => `<li>${escapeHtml(h)}</li>`).join("")}
         </ul>` : ""}
       ${it.source_url ? `<p style="margin:10px 0 0"><a href="${it.source_url}" target="_blank" rel="noopener">查看商品說明 ↗</a></p>` : ""}
@@ -3302,10 +3302,10 @@ function renderLiveNewsTicker() {
        style="display:flex;align-items:center;gap:8px;padding:8px 12px;margin-bottom:10px;
               background:var(--card,#fff);border:1px solid var(--border,#e5e7eb);border-radius:10px;
               text-decoration:none;color:inherit;overflow:hidden;cursor:pointer;">
-      <span style="flex-shrink:0;font-size:12px;font-weight:700;color:#fff;background:#e8453c;
+      <span style="flex-shrink:0;font-size:14px;font-weight:700;color:#fff;background:#e8453c;
                    padding:2px 8px;border-radius:6px;letter-spacing:1px;">快訊</span>
       <span class="lnt-item" id="lnt-item"
-            style="flex:1;min-width:0;font-size:13px;white-space:nowrap;overflow:hidden;
+            style="flex:1;min-width:0;font-size:15px;white-space:nowrap;overflow:hidden;
                    text-overflow:ellipsis;transition:opacity .2s ease;">${escapeHtml(it.title)}</span>
     </div>`;
 }
@@ -3503,7 +3503,7 @@ function renderMarketSheet() {
     if (!c) return "";
     return `
       <tr>
-        <td>${commodityLink(cd)}<span style="color:var(--text-mute);font-size:12px;margin-left:6px">${cd.sub}</span></td>
+        <td>${commodityLink(cd)}<span style="color:var(--text-mute);font-size:14px;margin-left:6px">${cd.sub}</span></td>
         <td>${c.close != null ? c.close.toLocaleString("en-US", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) : "—"}</td>
         <td class="${pctClass(c.daily_pct)}">${fmtPct(c.daily_pct)}</td>
         <td class="${pctClass(c.mtd_pct)}">${fmtPct(c.mtd_pct)}</td>
@@ -3513,7 +3513,7 @@ function renderMarketSheet() {
   }).filter(Boolean).join("");
 
   const commoditiesBlock = commodityRows ? `
-    <h2 style="font-size:16px; margin:24px 0 8px;">商品期貨</h2>
+    <h2 style="font-size:18px; margin:24px 0 8px;">商品期貨</h2>
     <table class="indices">
       <thead><tr>
         <th title="商品名稱">商品</th>
@@ -3586,13 +3586,13 @@ function renderMarketSheet() {
     const hikeLabel = pHike >= 5 ? `<span style="color:#dc2626;font-weight:600">${pHike.toFixed(0)}%升</span>` : "";
     const cutLabel  = pCut  >= 5 ? `<span style="color:#2563eb;font-weight:600">${pCut.toFixed(0)}%降</span>` : "";
     return `<div style="margin-bottom:8px;">
-      <div style="display:flex;justify-content:space-between;align-items:baseline;font-size:12px;margin-bottom:3px;">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;font-size:14px;margin-bottom:3px;">
         <span style="font-weight:600;">${fw.label}</span>
-        <span style="color:var(--text-mute);font-size:11px;">${fw.fomc_date}</span>
-        <span style="margin-left:auto;font-size:11px;">implied ${fw.implied_rate != null ? fw.implied_rate.toFixed(3) + "%" : "—"} ${deltaStr}</span>
+        <span style="color:var(--text-mute);font-size:13px;">${fw.fomc_date}</span>
+        <span style="margin-left:auto;font-size:13px;">implied ${fw.implied_rate != null ? fw.implied_rate.toFixed(3) + "%" : "—"} ${deltaStr}</span>
       </div>
       <div style="display:flex;width:100%;border-radius:3px;overflow:hidden;background:#e2e8f0;">${hikeBar}${holdBar}${cutBar}</div>
-      <div style="display:flex;gap:8px;font-size:10px;margin-top:2px;color:var(--text-mute);">
+      <div style="display:flex;gap:8px;font-size:12px;margin-top:2px;color:var(--text-mute);">
         ${hikeLabel || cutLabel ? (hikeLabel + " " + cutLabel).trim() : `<span>持平機率${pHold.toFixed(0)}%</span>`}
         <span style="margin-left:auto;">升${pHike.toFixed(0)}% 持${pHold.toFixed(0)}% 降${pCut.toFixed(0)}%</span>
       </div>
@@ -3602,53 +3602,53 @@ function renderMarketSheet() {
   const _fedwatchSection = _fwDecisions.length > 0 ? `
     <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--border);">
       <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px;">
-        <span style="font-size:12px;font-weight:600;">CME FedWatch — FOMC 升息機率</span>
+        <span style="font-size:14px;font-weight:600;">CME FedWatch — FOMC 升息機率</span>
         <a href="https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html" target="_blank" rel="noopener"
-           style="font-size:11px;color:#3b82f6;text-decoration:none;margin-left:auto;">詳細 ↗</a>
+           style="font-size:13px;color:#3b82f6;text-decoration:none;margin-left:auto;">詳細 ↗</a>
       </div>
-      ${_fwRef ? `<div style="font-size:11px;color:var(--text-mute);margin-bottom:8px;">基準：${_fwRef.label} implied ${_fwRef.implied_rate != null ? _fwRef.implied_rate.toFixed(3) + "%" : "—"}（目前有效利率）</div>` : ""}
-      <div style="display:flex;gap:6px;font-size:10px;margin-bottom:6px;">
+      ${_fwRef ? `<div style="font-size:13px;color:var(--text-mute);margin-bottom:8px;">基準：${_fwRef.label} implied ${_fwRef.implied_rate != null ? _fwRef.implied_rate.toFixed(3) + "%" : "—"}（目前有效利率）</div>` : ""}
+      <div style="display:flex;gap:6px;font-size:12px;margin-bottom:6px;">
         <span style="display:flex;align-items:center;gap:3px;"><span style="display:inline-block;width:10px;height:8px;background:#dc2626;border-radius:1px;"></span>升息</span>
         <span style="display:flex;align-items:center;gap:3px;"><span style="display:inline-block;width:10px;height:8px;background:#94a3b8;border-radius:1px;"></span>持平</span>
         <span style="display:flex;align-items:center;gap:3px;"><span style="display:inline-block;width:10px;height:8px;background:#2563eb;border-radius:1px;"></span>降息</span>
       </div>
       ${_fwRows}
-      <p style="font-size:10px;color:var(--text-mute);margin:4px 0 0;">各欄獨立計算：以相鄰兩次 FOMC implied rate 差值 ÷ 0.25% 估算單次會議升降息機率。</p>
+      <p style="font-size:12px;color:var(--text-mute);margin:4px 0 0;">各欄獨立計算：以相鄰兩次 FOMC implied rate 差值 ÷ 0.25% 估算單次會議升降息機率。</p>
     </div>` : "";
 
   const _rateOutlookPanel = `
     <div style="margin-bottom:16px;padding:14px 16px;background:var(--card-bg,#fff);border:1px solid var(--border);border-radius:10px;">
       <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;flex-wrap:wrap;">
-        <span style="font-weight:600;font-size:16px;">升息押注指標</span>
-        ${_curveLabel && _curveLabel !== "正斜率" ? `<span style="font-size:12px;padding:2px 9px;border-radius:20px;font-weight:500;background:${_curveBg};color:${_curveColor};">${_curveLabel}</span>` : ""}
+        <span style="font-weight:600;font-size:18px;">升息押注指標</span>
+        ${_curveLabel && _curveLabel !== "正斜率" ? `<span style="font-size:14px;padding:2px 9px;border-radius:20px;font-weight:500;background:${_curveBg};color:${_curveColor};">${_curveLabel}</span>` : ""}
         ${_fwDecisions.length === 0 ? `<a href="https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html" target="_blank" rel="noopener"
-           style="margin-left:auto;font-size:12px;color:#3b82f6;text-decoration:none;white-space:nowrap;">CME FedWatch ↗</a>` : ""}
+           style="margin-left:auto;font-size:14px;color:#3b82f6;text-decoration:none;white-space:nowrap;">CME FedWatch ↗</a>` : ""}
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:8px;">
         <div style="padding:8px 10px;background:var(--bg,#fff);border:1px solid var(--border);border-radius:8px;">
-          <div style="font-size:11px;color:var(--text-mute);margin-bottom:3px;">US 2Y 殖利率</div>
-          <div style="font-size:18px;font-weight:700;">${_us2y != null ? _us2y.toFixed(2) + "%" : "—"}</div>
-          <div style="font-size:10px;color:var(--text-mute);">升息最敏感指標</div>
+          <div style="font-size:13px;color:var(--text-mute);margin-bottom:3px;">US 2Y 殖利率</div>
+          <div style="font-size:20px;font-weight:700;">${_us2y != null ? _us2y.toFixed(2) + "%" : "—"}</div>
+          <div style="font-size:12px;color:var(--text-mute);">升息最敏感指標</div>
         </div>
         <div style="padding:8px 10px;background:var(--bg,#fff);border:1px solid var(--border);border-radius:8px;">
-          <div style="font-size:11px;color:var(--text-mute);margin-bottom:3px;">US 10Y 殖利率</div>
-          <div style="font-size:18px;font-weight:700;">${_us10y != null ? _us10y.toFixed(2) + "%" : "—"}</div>
-          <div style="font-size:10px;color:var(--text-mute);">通膨／景氣長期預期</div>
+          <div style="font-size:13px;color:var(--text-mute);margin-bottom:3px;">US 10Y 殖利率</div>
+          <div style="font-size:20px;font-weight:700;">${_us10y != null ? _us10y.toFixed(2) + "%" : "—"}</div>
+          <div style="font-size:12px;color:var(--text-mute);">通膨／景氣長期預期</div>
         </div>
         <div style="padding:8px 10px;background:var(--bg,#fff);border:1px solid var(--border);border-radius:8px;">
-          <div style="font-size:11px;color:var(--text-mute);margin-bottom:3px;">10Y−2Y 利差</div>
-          <div style="font-size:18px;font-weight:700;">${_spreadHtml}</div>
-          <div style="font-size:10px;color:var(--text-mute);">${_curveLabel ? _curveLabel + "：" + _curveDesc.split("，")[0] : "殖利率曲線形狀"}</div>
+          <div style="font-size:13px;color:var(--text-mute);margin-bottom:3px;">10Y−2Y 利差</div>
+          <div style="font-size:20px;font-weight:700;">${_spreadHtml}</div>
+          <div style="font-size:12px;color:var(--text-mute);">${_curveLabel ? _curveLabel + "：" + _curveDesc.split("，")[0] : "殖利率曲線形狀"}</div>
         </div>
         <div style="padding:8px 10px;background:var(--bg,#fff);border:1px solid var(--border);border-radius:8px;">
-          <div style="font-size:11px;color:var(--text-mute);margin-bottom:3px;">DXY 美元指數</div>
-          <div style="font-size:18px;font-weight:700;">${_dxyClose != null ? _dxyClose.toFixed(1) : "—"}</div>
-          <div style="font-size:10px;${_dxyDaily != null ? 'color:' + (_dxyDaily >= 0 ? '#16a34a' : '#dc2626') : 'color:var(--text-mute)'}">
+          <div style="font-size:13px;color:var(--text-mute);margin-bottom:3px;">DXY 美元指數</div>
+          <div style="font-size:20px;font-weight:700;">${_dxyClose != null ? _dxyClose.toFixed(1) : "—"}</div>
+          <div style="font-size:12px;${_dxyDaily != null ? 'color:' + (_dxyDaily >= 0 ? '#16a34a' : '#dc2626') : 'color:var(--text-mute)'}">
             ${_dxyDaily != null ? fmtPct(_dxyDaily) + " 日" : "升息→美元強"}</div>
         </div>
       </div>
       ${_fedwatchSection}
-      ${_fwDecisions.length === 0 ? `<p style="font-size:11px;color:var(--text-mute);margin:10px 0 0;">2Y 殖利率對政策利率預期最敏感；10Y−2Y 倒掛（負值）表示市場預期降息或衰退；CME FedWatch 顯示各 FOMC 會議升降息機率。</p>` : ""}
+      ${_fwDecisions.length === 0 ? `<p style="font-size:13px;color:var(--text-mute);margin:10px 0 0;">2Y 殖利率對政策利率預期最敏感；10Y−2Y 倒掛（負值）表示市場預期降息或衰退；CME FedWatch 顯示各 FOMC 會議升降息機率。</p>` : ""}
     </div>`;
 
   const bondsTab = _rateOutlookPanel + (bondRows ? `
@@ -3701,7 +3701,7 @@ function renderMarketSheet() {
   if (usRankHtml && usRankHtml.trim()) usParts.push(accSection("mv-us-rankings", "美股排行", usRankHtml));
   // 精選美股＝道瓊／S&P500／費半重要成分股（清單見 build/fetch_stocks.py）
   if (usStocksHtml && usStocksHtml.trim()) {
-    const usCaption = `<p style="color:var(--text-mute);font-size:13px;margin:0 0 10px">道瓊／S&amp;P500／費半（SOX）重要成分股｜點欄位標題可排序</p>`;
+    const usCaption = `<p style="color:var(--text-mute);font-size:15px;margin:0 0 10px">道瓊／S&amp;P500／費半（SOX）重要成分股｜點欄位標題可排序</p>`;
     usParts.push(accSection("mv-us-stocks", "精選美股", usCaption + usStocksHtml));
   }
   const usInner = usParts.join("");
@@ -3835,7 +3835,7 @@ function renderMarketCommentaryBlock(opts = {}) {
     : tldr;
 
   // 統一格式：summary、sectorNote、tldr 全部用 <ul><li> 點號呈現
-  const liStyle = `margin-bottom:6px;line-height:1.65;font-size:15px`;
+  const liStyle = `margin-bottom:6px;line-height:1.65;font-size:18px`;
   const allItems = [];
   if (summary) allItems.push(`<li style="${liStyle}">${escapeHtml(summary)}</li>`);
   if (sectors.length) {
@@ -3848,7 +3848,7 @@ function renderMarketCommentaryBlock(opts = {}) {
 
   const bulletsHtml = allItems.length ? `<ul style="margin:0;padding-left:18px">${allItems.join("")}</ul>` : "";
 
-  const dateLabel = newsDate ? `<span style="font-size:12px;color:var(--text-mute)">${newsDate}</span>` : "";
+  const dateLabel = newsDate ? `<span style="font-size:14px;color:var(--text-mute)">${newsDate}</span>` : "";
 
   // bare mode: return only the bullets (to embed inside another card)
   if (opts.bare) return bulletsHtml;
@@ -3857,7 +3857,7 @@ function renderMarketCommentaryBlock(opts = {}) {
   return `
     <div style="border:1px solid var(--border,#e5e7eb);border-radius:10px;padding:14px 16px;margin-bottom:16px;background:var(--card-bg,#fff)">
       <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px">
-        <h2 style="font-size:16px;margin:0;font-weight:700">盤勢說明</h2>${dateLabel}
+        <h2 style="font-size:18px;margin:0;font-weight:700">盤勢說明</h2>${dateLabel}
       </div>
       ${bulletsHtml}
     </div>`;
@@ -3892,7 +3892,7 @@ function renderTwMarketAnalysis() {
   }).join("");
 
   const indexBlock = keyIndices.length ? `
-    <h3 style="font-size:13px; margin:0 0 6px; color:var(--text-mute); text-transform:uppercase; letter-spacing:.05em">主要指數</h3>
+    <h3 style="font-size:15px; margin:0 0 6px; color:var(--text-mute); text-transform:uppercase; letter-spacing:.05em">主要指數</h3>
     <div style="overflow-x:auto; -webkit-overflow-scrolling:touch; margin-bottom:16px">
       <table class="indices" style="width:100%">
         <thead><tr>
@@ -3918,15 +3918,15 @@ function renderTwMarketAnalysis() {
     const pStr = dp == null ? "—" : (dp >= 0 ? "+" : "") + dp.toFixed(2) + "%";
     return `<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;
         background:${bg};color:${txtColor};border-radius:5px;padding:8px 4px;min-width:64px;flex:1;
-        font-size:13px;line-height:1.4;text-align:center">
+        font-size:15px;line-height:1.4;text-align:center">
       <span>${s.name_zh || s.symbol}</span>
       <span style="margin-top:3px">${pStr}</span>
     </div>`;
   }).join("");
   const twSectorBlock = twSectors.length ? `
-    <h3 style="font-size:13px; margin:0 0 6px; color:var(--text-mute); text-transform:uppercase; letter-spacing:.05em">類股表現</h3>
+    <h3 style="font-size:15px; margin:0 0 6px; color:var(--text-mute); text-transform:uppercase; letter-spacing:.05em">類股表現</h3>
     <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:4px">${twSectorBars}</div>
-    <p style="color:var(--text-mute);font-size:12px;margin:4px 0 16px">依今日漲幅排序；資料來源：TWSE 類股指數</p>
+    <p style="color:var(--text-mute);font-size:14px;margin:4px 0 16px">依今日漲幅排序；資料來源：TWSE 類股指數</p>
   ` : "";
 
   // 今日熱門 ETF — top_etf 前 8 名，色塊熱力圖
@@ -3941,17 +3941,17 @@ function renderTwMarketAnalysis() {
     const href = s.source_url ? ` href="${s.source_url}" target="_blank" rel="noopener"` : "";
     return `<a${href} style="display:flex;flex-direction:column;align-items:center;justify-content:center;
         background:${bg};color:${txtColor};border-radius:5px;padding:8px 4px;min-width:72px;flex:1;
-        font-size:13px;line-height:1.4;text-align:center;text-decoration:none">
+        font-size:15px;line-height:1.4;text-align:center;text-decoration:none">
       <span style="max-width:68px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${s.name || s.symbol}</span>
-      <span style="font-size:12px;opacity:.85">${s.symbol}</span>
+      <span style="font-size:14px;opacity:.85">${s.symbol}</span>
       <span style="margin-top:2px">${pStr}</span>
     </a>`;
   }).join("");
 
   const etfBlock = etfs.length ? `
-    <h3 style="font-size:13px; margin:0 0 6px; color:var(--text-mute); text-transform:uppercase; letter-spacing:.05em">今日熱門 ETF</h3>
+    <h3 style="font-size:15px; margin:0 0 6px; color:var(--text-mute); text-transform:uppercase; letter-spacing:.05em">今日熱門 ETF</h3>
     <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:16px">${etfBars}</div>
-    <p style="color:var(--text-mute);font-size:12px;margin:-10px 0 16px">依今日漲幅排序；資料來源：TWSE</p>
+    <p style="color:var(--text-mute);font-size:14px;margin:-10px 0 16px">依今日漲幅排序；資料來源：TWSE</p>
   ` : "";
 
   // 個股排行
@@ -3963,26 +3963,26 @@ function renderTwMarketAnalysis() {
     const pStr = dp == null ? "—" : (dp >= 0 ? "+" : "") + dp.toFixed(2) + "%";
     const href = s.source_url ? ` href="${s.source_url}" target="_blank" rel="noopener"` : "";
     return `<a${href} style="display:flex;align-items:center;padding:6px 0;border-bottom:1px solid var(--border,#e5e7eb);text-decoration:none;color:inherit;gap:6px">
-      <span style="min-width:38px;font-size:12px;color:var(--text-mute)">${s.symbol}</span>
-      <span style="flex:1;font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${s.name || ""}</span>
-      <span style="font-weight:700;color:${color};min-width:64px;text-align:right;font-size:13px">${pStr}</span>
-      <span style="min-width:36px;text-align:right;color:var(--text-mute);font-size:12px">${s.price != null ? s.price.toFixed(1) : "—"}</span>
+      <span style="min-width:38px;font-size:14px;color:var(--text-mute)">${s.symbol}</span>
+      <span style="flex:1;font-size:15px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${s.name || ""}</span>
+      <span style="font-weight:700;color:${color};min-width:64px;text-align:right;font-size:15px">${pStr}</span>
+      <span style="min-width:36px;text-align:right;color:var(--text-mute);font-size:14px">${s.price != null ? s.price.toFixed(1) : "—"}</span>
     </a>`;
   };
 
   const rankBlock = (gainers.length || losers.length) ? `
-    <h3 style="font-size:13px; margin:0 0 10px; color:var(--text-mute); text-transform:uppercase; letter-spacing:.05em">個股排行</h3>
+    <h3 style="font-size:15px; margin:0 0 10px; color:var(--text-mute); text-transform:uppercase; letter-spacing:.05em">個股排行</h3>
     ${gainers.length ? `
     <div style="margin-bottom:14px">
-      <div style="font-size:13px;font-weight:700;color:#d62828;margin-bottom:4px">▲ 漲幅前五</div>
+      <div style="font-size:15px;font-weight:700;color:#d62828;margin-bottom:4px">▲ 漲幅前五</div>
       ${gainers.map(s => stockFlexRow(s, true)).join("")}
     </div>` : ""}
     ${losers.length ? `
     <div style="margin-bottom:8px">
-      <div style="font-size:13px;font-weight:700;color:#2a9d8f;margin-bottom:4px">▼ 跌幅前五</div>
+      <div style="font-size:15px;font-weight:700;color:#2a9d8f;margin-bottom:4px">▼ 跌幅前五</div>
       ${losers.map(s => stockFlexRow(s, false)).join("")}
     </div>` : ""}
-    <p style="color:var(--text-mute);font-size:12px;margin:4px 0 8px">資料來源：TWSE；非投資建議</p>
+    <p style="color:var(--text-mute);font-size:14px;margin:4px 0 8px">資料來源：TWSE；非投資建議</p>
   ` : "";
 
   const asOf = twRankings.as_of || market.closing_date || keyIndices[0]?.closing_date || "";
@@ -3991,8 +3991,8 @@ function renderTwMarketAnalysis() {
   return commentaryCard + `
     <div style="border:1px solid var(--border,#e5e7eb);border-radius:10px;padding:14px 16px;margin-bottom:18px;background:var(--card-bg,#fff)">
       <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px">
-        <h2 style="font-size:16px;margin:0;font-weight:700">台股盤勢</h2>
-        ${asOf ? `<span style="font-size:12px;color:var(--text-mute)">${asOf}</span>` : ""}
+        <h2 style="font-size:18px;margin:0;font-weight:700">台股盤勢</h2>
+        ${asOf ? `<span style="font-size:14px;color:var(--text-mute)">${asOf}</span>` : ""}
       </div>
       ${indexBlock}${twSectorBlock}${etfBlock}${rankBlock}
     </div>`;
@@ -4030,7 +4030,7 @@ function renderUsMarketAnalysis() {
   }).join("");
 
   const indexBlock = keyIndices.length ? `
-    <h3 style="font-size:13px; margin:0 0 6px; color:var(--text-mute); text-transform:uppercase; letter-spacing:.05em">主要指數</h3>
+    <h3 style="font-size:15px; margin:0 0 6px; color:var(--text-mute); text-transform:uppercase; letter-spacing:.05em">主要指數</h3>
     <div style="overflow-x:auto; -webkit-overflow-scrolling:touch; margin-bottom:16px">
       <table class="indices" style="width:100%">
         <thead><tr>
@@ -4056,17 +4056,17 @@ function renderUsMarketAnalysis() {
     const pStr = dp == null ? "—" : (dp >= 0 ? "+" : "") + dp.toFixed(2) + "%";
     return `<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;
         background:${bg};color:${txtColor};border-radius:5px;padding:8px 4px;min-width:64px;flex:1;
-        font-size:13px;line-height:1.4;text-align:center">
+        font-size:15px;line-height:1.4;text-align:center">
       <span>${s.name_zh || s.symbol}</span>
-      <span style="font-size:12px;opacity:.85">${s.symbol}</span>
+      <span style="font-size:14px;opacity:.85">${s.symbol}</span>
       <span style="margin-top:2px">${pStr}</span>
     </div>`;
   }).join("");
 
   const sectorBlock = sectors.length ? `
-    <h3 style="font-size:13px; margin:0 0 6px; color:var(--text-mute); text-transform:uppercase; letter-spacing:.05em">類股 ETF 表現（SPDR 11 大類）</h3>
+    <h3 style="font-size:15px; margin:0 0 6px; color:var(--text-mute); text-transform:uppercase; letter-spacing:.05em">類股 ETF 表現（SPDR 11 大類）</h3>
     <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:16px">${sectorBars}</div>
-    <p style="color:var(--text-mute);font-size:12px;margin:-10px 0 16px">顏色深紅＝漲幅大、深綠＝跌幅大；資料來源：Yahoo Finance</p>
+    <p style="color:var(--text-mute);font-size:14px;margin:-10px 0 16px">顏色深紅＝漲幅大、深綠＝跌幅大；資料來源：Yahoo Finance</p>
   ` : "";
 
   // 個股排行 — 前 5 漲 / 前 5 跌
@@ -4078,26 +4078,26 @@ function renderUsMarketAnalysis() {
     const pStr = dp == null ? "—" : (dp >= 0 ? "+" : "") + dp.toFixed(2) + "%";
     const href = s.source_url ? ` href="${s.source_url}" target="_blank" rel="noopener"` : "";
     return `<a${href} style="display:flex;align-items:center;padding:6px 0;border-bottom:1px solid var(--border,#e5e7eb);text-decoration:none;color:inherit;gap:6px">
-      <span style="min-width:44px;font-size:12px;color:var(--text-mute);font-weight:600">${s.symbol}</span>
-      <span style="flex:1;font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${s.name || ""}</span>
-      <span style="font-weight:700;color:${color};min-width:64px;text-align:right;font-size:13px">${pStr}</span>
-      <span style="min-width:48px;text-align:right;color:var(--text-mute);font-size:12px">${s.price != null ? s.price.toFixed(2) : "—"}</span>
+      <span style="min-width:44px;font-size:14px;color:var(--text-mute);font-weight:600">${s.symbol}</span>
+      <span style="flex:1;font-size:15px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${s.name || ""}</span>
+      <span style="font-weight:700;color:${color};min-width:64px;text-align:right;font-size:15px">${pStr}</span>
+      <span style="min-width:48px;text-align:right;color:var(--text-mute);font-size:14px">${s.price != null ? s.price.toFixed(2) : "—"}</span>
     </a>`;
   };
 
   const rankBlock = (gainers.length || losers.length) ? `
-    <h3 style="font-size:13px; margin:0 0 10px; color:var(--text-mute); text-transform:uppercase; letter-spacing:.05em">個股排行</h3>
+    <h3 style="font-size:15px; margin:0 0 10px; color:var(--text-mute); text-transform:uppercase; letter-spacing:.05em">個股排行</h3>
     ${gainers.length ? `
     <div style="margin-bottom:14px">
-      <div style="font-size:13px;font-weight:700;color:#d62828;margin-bottom:4px">▲ 漲幅前五</div>
+      <div style="font-size:15px;font-weight:700;color:#d62828;margin-bottom:4px">▲ 漲幅前五</div>
       ${gainers.map(s => stockFlexRow(s, true)).join("")}
     </div>` : ""}
     ${losers.length ? `
     <div style="margin-bottom:8px">
-      <div style="font-size:13px;font-weight:700;color:#2a9d8f;margin-bottom:4px">▼ 跌幅前五</div>
+      <div style="font-size:15px;font-weight:700;color:#2a9d8f;margin-bottom:4px">▼ 跌幅前五</div>
       ${losers.map(s => stockFlexRow(s, false)).join("")}
     </div>` : ""}
-    <p style="color:var(--text-mute);font-size:12px;margin:4px 0 8px">資料來源：Yahoo Finance Screener；非投資建議</p>
+    <p style="color:var(--text-mute);font-size:14px;margin:4px 0 8px">資料來源：Yahoo Finance Screener；非投資建議</p>
   ` : "";
 
   const asOf = usRankings.as_of || market.closing_date || "";
@@ -4107,8 +4107,8 @@ function renderUsMarketAnalysis() {
   return `
     <div style="border:1px solid var(--border,#e5e7eb);border-radius:10px;padding:14px 16px;margin-bottom:18px;background:var(--card-bg,#fff)">
       <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px">
-        <h2 style="font-size:16px;margin:0;font-weight:700">美股盤勢</h2>
-        ${asOf ? `<span style="font-size:12px;color:var(--text-mute)">${asOf}</span>` : ""}
+        <h2 style="font-size:18px;margin:0;font-weight:700">美股盤勢</h2>
+        ${asOf ? `<span style="font-size:14px;color:var(--text-mute)">${asOf}</span>` : ""}
       </div>
       ${commentaryBullets ? `<div style="margin-bottom:14px">${commentaryBullets}</div>` : ""}
       ${indexBlock}${sectorBlock}${rankBlock}
@@ -4123,10 +4123,10 @@ function renderUsStocksSheet() {
   if (!hasAny) {
     return `<p style="color:var(--text-mute); padding:20px 0">尚未提供海外股票資料</p>`;
   }
-  const note = `<p style="color:var(--text-mute); font-size:13px; padding:6px 0 12px">資料來源：板信商銀網路銀行 iQuote。點選名稱可至板信即時報價頁。</p>`;
+  const note = `<p style="color:var(--text-mute); font-size:15px; padding:6px 0 12px">資料來源：板信商銀網路銀行 iQuote。點選名稱可至板信即時報價頁。</p>`;
   const curatedInner = curated.length ? renderStocksTable("", curated, { showPE: false }) : "";
   const popularInner = popular.length ? `
-    <p style="color:var(--text-mute); font-size:12px; margin:0 0 8px;">資料來源：Yahoo Finance trending（流動性過低個股已過濾），每次 build 重抓。</p>
+    <p style="color:var(--text-mute); font-size:14px; margin:0 0 8px;">資料來源：Yahoo Finance trending（流動性過低個股已過濾），每次 build 重抓。</p>
     ${renderStocksTable("", popular, { showPE: false })}
   ` : "";
   const moreSection = `
@@ -5851,12 +5851,12 @@ function renderTwStockSheet() {
     <details class="tw-sop-reference">
     <summary class="tw-sop-summary">📚 資料來源</summary>
 
-    <h3 style="font-size:16px;margin:24px 0 8px">1. 基本面</h3>
-    <div style="background:#E5F2F5;padding:12px 16px;border-radius:6px;margin:10px 0;font-size:13px">
+    <h3 style="font-size:18px;margin:24px 0 8px">1. 基本面</h3>
+    <div style="background:#E5F2F5;padding:12px 16px;border-radius:6px;margin:10px 0;font-size:15px">
       入口：<b>${lnk("https://mops.twse.com.tw", "mops.twse.com.tw")}</b> → 上方搜尋輸入股票代號或公司名
     </div>
     <div style="overflow-x:auto">
-    <table class="tw-quote-table" style="width:100%;border-collapse:collapse;font-size:13px;min-width:520px">
+    <table class="tw-quote-table" style="width:100%;border-collapse:collapse;font-size:15px;min-width:520px">
       <tr style="background:#019AB3;color:#fff">
         <th style="padding:10px;text-align:left;width:40%">項目</th>
         <th style="padding:10px;text-align:left">內容</th>
@@ -5869,12 +5869,12 @@ function renderTwStockSheet() {
     </table>
     </div>
 
-    <h3 style="font-size:16px;margin:24px 0 8px">2. TWSE 看籌碼</h3>
-    <div style="background:#E5F2F5;padding:12px 16px;border-radius:6px;margin:10px 0;font-size:13px">
+    <h3 style="font-size:18px;margin:24px 0 8px">2. TWSE 看籌碼</h3>
+    <div style="background:#E5F2F5;padding:12px 16px;border-radius:6px;margin:10px 0;font-size:15px">
       入口：<b>${lnk("https://www.twse.com.tw", "www.twse.com.tw")}</b> → 交易資訊
     </div>
     <div style="overflow-x:auto">
-    <table class="tw-quote-table" style="width:100%;border-collapse:collapse;font-size:13px;min-width:520px">
+    <table class="tw-quote-table" style="width:100%;border-collapse:collapse;font-size:15px;min-width:520px">
       <tr style="background:#017A8F;color:#fff">
         <th style="padding:10px;text-align:left;width:40%">項目</th>
         <th style="padding:10px;text-align:left">內容</th>
@@ -5885,9 +5885,9 @@ function renderTwStockSheet() {
     </table>
     </div>
 
-    <h3 style="font-size:16px;margin:24px 0 8px">3. 產業／競爭</h3>
+    <h3 style="font-size:18px;margin:24px 0 8px">3. 產業／競爭</h3>
     <div style="overflow-x:auto">
-    <table class="tw-quote-table" style="width:100%;border-collapse:collapse;font-size:13px;min-width:520px">
+    <table class="tw-quote-table" style="width:100%;border-collapse:collapse;font-size:15px;min-width:520px">
       <tr style="background:#17B5AD;color:#fff">
         <th style="padding:10px;text-align:left;width:40%">項目</th>
         <th style="padding:10px;text-align:left">內容</th>
@@ -5898,9 +5898,9 @@ function renderTwStockSheet() {
     </table>
     </div>
 
-    <h3 style="font-size:16px;margin:28px 0 8px">紅旗訊號（看到立即扣分）</h3>
+    <h3 style="font-size:18px;margin:28px 0 8px">紅旗訊號（看到立即扣分）</h3>
     <div style="background:#FFEBEE;padding:16px 20px;border-radius:6px">
-      <table style="width:100%;border-collapse:collapse;font-size:13px">
+      <table style="width:100%;border-collapse:collapse;font-size:15px">
         <tr><td style="padding:6px 0;width:28px">⛔</td><td style="padding:6px 0"><b>處置股／變更交易方法</b> — 監管警示，遠離</td></tr>
         <tr><td style="padding:6px 0">⛔</td><td style="padding:6px 0"><b>內部人連續申讓</b> — 董監對自家股票沒信心</td></tr>
         <tr><td style="padding:6px 0">⛔</td><td style="padding:6px 0"><b>業績預警公告</b> — 重大訊息列出</td></tr>
@@ -5911,9 +5911,9 @@ function renderTwStockSheet() {
       </table>
     </div>
 
-    <h3 style="font-size:16px;margin:24px 0 8px">綠旗訊號（看到加分）</h3>
+    <h3 style="font-size:18px;margin:24px 0 8px">綠旗訊號（看到加分）</h3>
     <div style="background:#E8F5E9;padding:16px 20px;border-radius:6px">
-      <table style="width:100%;border-collapse:collapse;font-size:13px">
+      <table style="width:100%;border-collapse:collapse;font-size:15px">
         <tr><td style="padding:6px 0;width:28px">✅</td><td style="padding:6px 0"><b>連續多季營收／EPS 雙增長</b> — 基本面擴張</td></tr>
         <tr><td style="padding:6px 0">✅</td><td style="padding:6px 0"><b>毛利率穩定或上升</b> — 議價能力佳</td></tr>
         <tr><td style="padding:6px 0">✅</td><td style="padding:6px 0"><b>自由現金流為正且穩定</b> — 真正賺到錢</td></tr>
@@ -5923,9 +5923,9 @@ function renderTwStockSheet() {
       </table>
     </div>
 
-    <h3 style="font-size:16px;margin:28px 0 8px">工具備忘</h3>
+    <h3 style="font-size:18px;margin:28px 0 8px">工具備忘</h3>
     <div style="overflow-x:auto">
-    <table class="tw-quote-table" style="width:100%;border-collapse:collapse;font-size:13px;min-width:520px">
+    <table class="tw-quote-table" style="width:100%;border-collapse:collapse;font-size:15px;min-width:520px">
       <tr style="background:#F2F8FA"><td style="padding:8px 12px;width:30%"><b>MOPS</b></td><td style="padding:8px 12px">${lnk("https://mops.twse.com.tw", "mops.twse.com.tw")} — 第一手揭露</td></tr>
       <tr><td style="padding:8px 12px"><b>TWSE</b></td><td style="padding:8px 12px">${lnk("https://www.twse.com.tw", "www.twse.com.tw")} — 行情、籌碼</td></tr>
       <tr style="background:#F2F8FA"><td style="padding:8px 12px"><b>Goodinfo!</b></td><td style="padding:8px 12px">${lnk("https://goodinfo.tw", "goodinfo.tw")} — 個股資料總覽（二手，僅供發現）</td></tr>
@@ -5933,9 +5933,9 @@ function renderTwStockSheet() {
       <tr style="background:#F2F8FA"><td style="padding:8px 12px"><b>CMoney</b></td><td style="padding:8px 12px">${lnk("https://cmoney.tw", "cmoney.tw")} — 法人籌碼</td></tr>
     </table>
     </div>
-    <p style="color:var(--text-mute);font-size:12px;margin:10px 0 4px">二手網站只用來「快速發現」，最終決策必回 MOPS／TWSE 對原始資料。</p>
+    <p style="color:var(--text-mute);font-size:14px;margin:10px 0 4px">二手網站只用來「快速發現」，最終決策必回 MOPS／TWSE 對原始資料。</p>
 
-    <p class="a-note" style="margin-top:24px;font-size:12px;color:var(--text-mute)">個人研究 SOP v1.0 · 2026-05-08 建立</p>
+    <p class="a-note" style="margin-top:24px;font-size:14px;color:var(--text-mute)">個人研究 SOP v1.0 · 2026-05-08 建立</p>
     </details>
   `;
 }
@@ -5946,8 +5946,8 @@ function renderStockBriefBlock() {
   const popularBrief = brief.popular_stocks || [];
   if (!curatedBrief.length && !popularBrief.length) {
     return `
-      <h2 style="font-size:16px; margin:24px 0 8px;">週度檢視</h2>
-      <p style="color:var(--text-mute); font-size:12px; margin:0 0 8px;">每週日晚 20:30 自動更新。本週尚未產出。</p>
+      <h2 style="font-size:18px; margin:24px 0 8px;">週度檢視</h2>
+      <p style="color:var(--text-mute); font-size:14px; margin:0 0 8px;">每週日晚 20:30 自動更新。本週尚未產出。</p>
     `;
   }
   const updated = brief.generated_at
@@ -5965,19 +5965,19 @@ function renderStockBriefBlock() {
   const popularCards = popularBrief.map(st => renderBriefCard(st, wkStart, wkEnd)).join("");
 
   const curatedSection = curatedBrief.length ? `
-    <h3 style="font-size:15px; margin:14px 0 8px; color:#019AB3;">精選股票本週重點</h3>
+    <h3 style="font-size:18px; margin:14px 0 8px; color:#019AB3;">精選股票本週重點</h3>
     ${curatedCards}
   ` : "";
 
   const popularSection = popularBrief.length ? `
-    <h3 style="font-size:15px; margin:18px 0 4px; color:#019AB3;">熱門股票本週重點</h3>
-    <p style="color:var(--text-mute); font-size:12px; margin:0 0 8px;">取週日晚 snapshot 前 10 檔，避免每次 build 輪動造成解讀混亂。</p>
+    <h3 style="font-size:18px; margin:18px 0 4px; color:#019AB3;">熱門股票本週重點</h3>
+    <p style="color:var(--text-mute); font-size:14px; margin:0 0 8px;">取週日晚 snapshot 前 10 檔，避免每次 build 輪動造成解讀混亂。</p>
     ${popularCards}
   ` : "";
 
   return `
-    <h2 style="font-size:16px; margin:24px 0 4px;">週度檢視${dateLabel}</h2>
-    <p style="color:var(--text-mute); font-size:12px; margin:0 0 12px;">
+    <h2 style="font-size:18px; margin:24px 0 4px;">週度檢視${dateLabel}</h2>
+    <p style="color:var(--text-mute); font-size:14px; margin:0 0 12px;">
       AI 摘要・資訊聚合・非投資建議・更新 ${updated}<br>
       資料來源：finnhub company-news；摘要由 Claude CLI 產出。本區塊僅供研究，不構成個股投資建議。
     </p>
@@ -6009,27 +6009,27 @@ function renderBriefCard(st, wkStart, wkEnd) {
     ? `定義：${st.weekly_definition || "5 個交易日 close-to-close"}\n基準收盤日（denominator）：${st.weekly_start || "—"}\n最新收盤日（numerator）：${st.weekly_as_of || "—"}\n算法：(${st.weekly_as_of} 收盤 / ${st.weekly_start} 收盤) − 1\n來源：${st.weekly_source || "yahoo_chart"}（點開可驗證）`
     : "weekly 資料未取得，點開 Yahoo 自驗";
   const wkValue = yahooUrl
-    ? `<a href="${yahooUrl}" target="_blank" rel="noopener" title="${wkTitle.replace(/"/g,'&quot;')}" style="color:${wkColor}; text-decoration:underline; text-decoration-style:dotted; font-size:13px;">${wkPctStr}</a>`
-    : `<span style="color:${wkColor}; font-size:13px;">${wkPctStr}</span>`;
-  const wkPct = `<span style="font-size:13px;">本週${wkRange ? ` <span style="color:var(--text-mute); font-size:11px;">${wkRange}</span>` : ""} ${wkValue}</span>`;
+    ? `<a href="${yahooUrl}" target="_blank" rel="noopener" title="${wkTitle.replace(/"/g,'&quot;')}" style="color:${wkColor}; text-decoration:underline; text-decoration-style:dotted; font-size:15px;">${wkPctStr}</a>`
+    : `<span style="color:${wkColor}; font-size:15px;">${wkPctStr}</span>`;
+  const wkPct = `<span style="font-size:15px;">本週${wkRange ? ` <span style="color:var(--text-mute); font-size:13px;">${wkRange}</span>` : ""} ${wkValue}</span>`;
   const newsHtml = (st.news_highlights || []).map(n => `
     <li style="margin-bottom:8px; line-height:1.55;">
-      <span style="display:inline-block; padding:1px 6px; border-radius:3px; font-size:11px; color:#fff; background:${impColor(n.importance)}; margin-right:6px;">${impLabel(n.importance)}</span>
+      <span style="display:inline-block; padding:1px 6px; border-radius:3px; font-size:13px; color:#fff; background:${impColor(n.importance)}; margin-right:6px;">${impLabel(n.importance)}</span>
       <a href="${n.url}" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">${n.headline_zh || n.headline_en}</a>
-      <span style="color:var(--text-mute); font-size:12px; margin-left:6px;">${n.source || ""} · ${n.published || ""}</span>
+      <span style="color:var(--text-mute); font-size:14px; margin-left:6px;">${n.source || ""} · ${n.published || ""}</span>
     </li>
-  `).join("") || `<li style="color:var(--text-mute); font-size:13px;">本週無重大新聞</li>`;
+  `).join("") || `<li style="color:var(--text-mute); font-size:15px;">本週無重大新聞</li>`;
   const catalyst = st.next_week_catalyst
-    ? `<div style="margin-top:6px; font-size:13px; color:var(--text-mute);"><strong>下週觀察：</strong>${st.next_week_catalyst}</div>`
+    ? `<div style="margin-top:6px; font-size:15px; color:var(--text-mute);"><strong>下週觀察：</strong>${st.next_week_catalyst}</div>`
     : "";
   return `
     <div style="border:1px solid var(--border, #e5e7eb); border-radius:8px; padding:14px; margin-bottom:12px; background:var(--card-bg, #fff);">
       <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px;">
-        <strong style="font-size:15px;">${st.symbol} ${st.name_zh || ""}</strong>
+        <strong style="font-size:18px;">${st.symbol} ${st.name_zh || ""}</strong>
         <span>${wkPct}</span>
       </div>
       <ul style="margin:0 0 8px; padding-left:0; list-style:none;">${newsHtml}</ul>
-      <div style="font-size:13px; line-height:1.55; padding:8px 10px; background:#f8f9fb; border-radius:4px;">
+      <div style="font-size:15px; line-height:1.55; padding:8px 10px; background:#f8f9fb; border-radius:4px;">
         <strong style="color:#019AB3;">論點檢視：</strong>${st.thesis_check || "—"}
       </div>
       ${catalyst}
@@ -6131,7 +6131,7 @@ function render0050Section() {
   const list = d.stocks || [];
   if (!list.length) return "";
   const dateStr = shortDate(d.market_date) || "";
-  const caption = `<p style="color:var(--text-mute);font-size:13px;margin:0 0 10px">
+  const caption = `<p style="color:var(--text-mute);font-size:15px;margin:0 0 10px">
     元大台灣50（0050）50 檔成分股，收盤日 ${escapeHtml(dateStr)}｜點欄位標題可排序｜成分股每季調整</p>`;
   return caption + renderStocksTable("", list, { showPE: false });
 }
@@ -6300,10 +6300,10 @@ function renderRankingsBlock(market) {
   return `
     <div style="margin-top:28px;padding-top:20px;border-top:1px solid var(--border)">
       ${blocks.map(([title, items, cap, pe]) => `
-          <h3 style="font-size:16px;margin:18px 0 8px">${title}</h3>
+          <h3 style="font-size:18px;margin:18px 0 8px">${title}</h3>
           ${renderRankingTable(items, { showMarketCap: cap, showPE: pe, asOf })}
         `).join("")}
-      <p style="color:var(--text-mute);font-size:12px;margin:10px 0 0">
+      <p style="color:var(--text-mute);font-size:14px;margin:10px 0 0">
         當日全市場掃描；點名稱可至 Yahoo／TWSE 驗證。本月=MTD，本年=YTD。本益比為近四季（trailing），「預」=預估值（forward）。</p>
     </div>`;
 }
@@ -6391,7 +6391,7 @@ function renderPremarketBlock() {
 
   // 統一格式：盤前分析全部用 <ul><li> 點號呈現（與下方盤勢說明一致，不混段落／列點兩種格式）
   const renderLines = lines => {
-    const liStyle = `margin-bottom:6px;line-height:1.65;font-size:15px`;
+    const liStyle = `margin-bottom:6px;line-height:1.65;font-size:18px`;
     const items = [];
     let i = 0;
     // Strip leading warning emoji and convert **bold** markdown to <strong>
@@ -6446,9 +6446,9 @@ function renderMarketHighlights(m) {
   const downs = ix.slice().sort((a, b) => a.daily_pct - b.daily_pct).filter(i => i.daily_pct < 0).slice(0, 3);
   const tldr = (DATA.news && DATA.news.tldr) ? DATA.news.tldr.slice(0, 5) : [];
   const newsDate = (DATA.news && DATA.news.news_date) ? DATA.news.news_date : "";
-  const dateLabel = newsDate ? `<span style="font-size:12px;color:var(--text-mute)">${newsDate}</span>` : "";
+  const dateLabel = newsDate ? `<span style="font-size:14px;color:var(--text-mute)">${newsDate}</span>` : "";
 
-  const liStyle = `margin-bottom:6px;line-height:1.65;font-size:15px`;
+  const liStyle = `margin-bottom:6px;line-height:1.65;font-size:18px`;
   const items = [];
   if (ups.length) items.push(`<li style="${liStyle}"><strong style="color:#d62828">領漲</strong>：${ups.map(fmt).join("、")}</li>`);
   if (downs.length) items.push(`<li style="${liStyle}"><strong style="color:#2a9d8f">領跌</strong>：${downs.map(fmt).join("、")}</li>`);
@@ -6458,7 +6458,7 @@ function renderMarketHighlights(m) {
   return `
     <div style="border:1px solid var(--border,#e5e7eb);border-radius:10px;padding:14px 16px;margin-bottom:16px;background:var(--card-bg,#fff)">
       <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px">
-        <h2 style="font-size:16px;margin:0;font-weight:700">今日重點</h2>${dateLabel}
+        <h2 style="font-size:18px;margin:0;font-weight:700">今日重點</h2>${dateLabel}
       </div>
       <ul style="margin:0;padding-left:18px">${items.join("")}</ul>
     </div>`;
@@ -6539,7 +6539,7 @@ function renderNewsSheet() {
   // 只有在新聞「落後於今天」才是真的尚未產生；新聞等於今天（甚至超前）都不是過期。
   const isStale = newsDate && newsDate < today;
   const staleBanner = isStale ? `
-    <div style="background:#fff4e6; border:1px solid #ffb74d; border-radius:6px; padding:10px 14px; margin-bottom:12px; color:#5a3a00; font-size:15px; line-height:1.5">
+    <div style="background:#fff4e6; border:1px solid #ffb74d; border-radius:6px; padding:10px 14px; margin-bottom:12px; color:#5a3a00; font-size:18px; line-height:1.5">
       <strong>今日新聞尚未產生</strong>　目前顯示 ${escapeHtml(newsDate)} 內容（今日 ${escapeHtml(today)}）。系統每日 05:00 起自動產生，通常 07:00 前更新完成；若尚未更新，07:00 / 08:00 / 09:30 / 11:30 會自動補抓。
     </div>
   ` : "";
@@ -6925,7 +6925,7 @@ function renderCalcCaseHouse() {
   return `
     <div class="calc-form calc-form-wide">
       <h3>案例試算：房產繼承 vs 贈與 vs 買賣比較</h3>
-      <p style="font-size:13px; color:var(--text-sub); margin-bottom:14px">
+      <p style="font-size:15px; color:var(--text-sub); margin-bottom:14px">
         同一筆房地，比較「繼承」「贈與」「買賣」三種傳承方式之稅負總成本（本次移轉稅 ＋ 未來受讓人出售之房地合一稅）。
       </p>
       <div class="calc-shared">
@@ -7090,34 +7090,34 @@ function doCalcCaseHouse() {
   $("cx-result").innerHTML = `
     <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:12px;margin-bottom:10px">
       <div style="padding:10px;background:#fff;border-radius:6px">
-        <div style="font-size:13px;color:var(--brand-deep);font-weight:700;margin-bottom:6px">繼承路徑</div>
+        <div style="font-size:15px;color:var(--brand-deep);font-weight:700;margin-bottom:6px">繼承路徑</div>
         <div class="kv"><span>遺產稅（房產佔比）</span><b>${fmtMoney(inheritEstateTax)}</b></div>
         <div class="kv"><span>土地增值稅</span><b style="color:var(--down)">免徵</b></div>
         <div class="kv"><span>房屋契稅</span><b style="color:var(--down)">免徵</b></div>
         <div class="kv"><span>未來出售房地合一（${inheritHL.rate}）</span><b>${fmtMoney(inheritHL.tax)}</b></div>
-        <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:16px">${fmtMoney(inheritTotal)}</b></div>
+        <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:18px">${fmtMoney(inheritTotal)}</b></div>
       </div>
       <div style="padding:10px;background:#fff;border-radius:6px">
-        <div style="font-size:13px;color:#e08a3c;font-weight:700;margin-bottom:6px">贈與路徑</div>
+        <div style="font-size:15px;color:#e08a3c;font-weight:700;margin-bottom:6px">贈與路徑</div>
         <div class="kv"><span>贈與稅（房產佔比）</span><b>${fmtMoney(giftTaxOnHouse)}</b></div>
         <div class="kv"><span>土地增值稅${giftSpouse?'（配偶不課徵）':''}</span><b>${fmtMoney(giftLVT)}</b></div>
         <div class="kv"><span>房屋契稅 6%</span><b>${fmtMoney(giftDeed)}</b></div>
         <div class="kv"><span>未來出售房地合一（${giftHL.rate}）</span><b>${fmtMoney(giftHL.tax)}</b></div>
-        <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:16px">${fmtMoney(giftTotal)}</b></div>
+        <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:18px">${fmtMoney(giftTotal)}</b></div>
       </div>
       <div style="padding:10px;background:#fff;border-radius:6px">
-        <div style="font-size:13px;color:#6a5acd;font-weight:700;margin-bottom:6px">買賣路徑</div>
+        <div style="font-size:15px;color:#6a5acd;font-weight:700;margin-bottom:6px">買賣路徑</div>
         <div class="kv"><span>父母房地合一（${saleParentHL.rate}）</span><b>${fmtMoney(saleParentHL.tax)}</b></div>
         <div class="kv"><span>父母土地增值稅</span><b>${fmtMoney(saleLVT)}</b></div>
         <div class="kv"><span>子女房屋契稅 6%</span><b>${fmtMoney(saleDeed)}</b></div>
         <div class="kv"><span>子女印花稅 0.1%</span><b>${fmtMoney(saleStamp)}</b></div>
         <div class="kv"><span>未來出售房地合一（${saleFutureHL.rate}）</span><b>${fmtMoney(saleFutureHL.tax)}</b></div>
-        <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:16px">${fmtMoney(saleTotal)}</b></div>
+        <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:18px">${fmtMoney(saleTotal)}</b></div>
       </div>
     </div>
     <div style="padding:12px 14px;background:linear-gradient(135deg,#E5F2F5,#fff);border-radius:8px">
-      <div style="font-size:15px;font-weight:700;color:var(--brand-deep);margin-bottom:4px">建議：${winner}路徑較划算</div>
-      <div style="font-size:13px;color:var(--text-sub)">較次低差額約 <b>${fmtMoney(diff)}</b>${winnerNote[winner] || ""}</div>
+      <div style="font-size:18px;font-weight:700;color:var(--brand-deep);margin-bottom:4px">建議：${winner}路徑較划算</div>
+      <div style="font-size:15px;color:var(--text-sub)">較次低差額約 <b>${fmtMoney(diff)}</b>${winnerNote[winner] || ""}</div>
     </div>`;
 }
 
@@ -7126,7 +7126,7 @@ function renderCalcCaseStock() {
   return `
     <div class="calc-form calc-form-wide">
       <h3>案例試算：股票持有 個人 vs 投資公司比較</h3>
-      <p style="font-size:13px;color:var(--text-sub);margin-bottom:14px">
+      <p style="font-size:15px;color:var(--text-sub);margin-bottom:14px">
         比較相同股票部位由「個人」或「投資公司」持有，於年度配息＋資本利得情境下之稅負總和。
       </p>
       <div class="calc-shared">
@@ -7146,7 +7146,7 @@ function renderCalcCaseStock() {
               <option value="0.40">40%</option>
             </select>
           </div>
-          <p style="font-size:12px;color:var(--text-mute);margin:6px 0 0">
+          <p style="font-size:14px;color:var(--text-mute);margin:6px 0 0">
             股利兩制取低 + 二代健保 2.11%；資本利得停徵
           </p>
         </div>
@@ -7158,7 +7158,7 @@ function renderCalcCaseStock() {
               <option value="1">是（最終分配，再課個人）</option>
             </select>
           </div>
-          <p style="font-size:12px;color:var(--text-mute);margin:6px 0 0">
+          <p style="font-size:14px;color:var(--text-mute);margin:6px 0 0">
             §42 股利免稅；資本利得計入最低稅負 12%
           </p>
         </div>
@@ -7228,25 +7228,25 @@ function doCalcCaseStock() {
   $("cs-result").innerHTML = `
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:10px">
       <div style="padding:10px;background:#fff;border-radius:6px">
-        <div style="font-size:13px;color:var(--brand-deep);font-weight:700;margin-bottom:6px">個人持有</div>
+        <div style="font-size:15px;color:var(--brand-deep);font-weight:700;margin-bottom:6px">個人持有</div>
         <div class="kv"><span>股利稅（${divMethod}）</span><b>${fmtMoney(personalDivTax)}</b></div>
         <div class="kv"><span>二代健保 2.11%</span><b>${fmtMoney(personalNHI)}</b></div>
         <div class="kv"><span>資本利得稅</span><b style="color:var(--down)">停徵</b></div>
-        <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:16px">${fmtMoney(personalTotal)}</b></div>
+        <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:18px">${fmtMoney(personalTotal)}</b></div>
       </div>
       <div style="padding:10px;background:#fff;border-radius:6px">
-        <div style="font-size:13px;color:#6a5acd;font-weight:700;margin-bottom:6px">投資公司持有</div>
+        <div style="font-size:15px;color:#6a5acd;font-weight:700;margin-bottom:6px">投資公司持有</div>
         <div class="kv"><span>股利稅（§42 免稅）</span><b style="color:var(--down)">免徵</b></div>
         ${distrib
           ? `<div class="kv"><span>分配給個人再課（兩制擇低）</span><b>${fmtMoney(companyDistribToPerson)}</b></div>`
           : `<div class="kv"><span>未分配盈餘加徵 5%</span><b>${fmtMoney(companyRetention)}</b></div>`}
         <div class="kv"><span>資本利得最低稅負 12%</span><b>${fmtMoney(companyGainAMT)}</b></div>
-        <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:16px">${fmtMoney(companyTotal)}</b></div>
+        <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:18px">${fmtMoney(companyTotal)}</b></div>
       </div>
     </div>
     <div style="padding:12px 14px;background:linear-gradient(135deg,#E5F2F5,#fff);border-radius:8px">
-      <div style="font-size:15px;font-weight:700;color:var(--brand-deep);margin-bottom:4px">建議：${winner}較划算</div>
-      <div style="font-size:13px;color:var(--text-sub)">差額約 <b>${fmtMoney(diff)}</b>${winner === "投資公司持有" ? "；惟須計入公司設立與行政成本，且未來盈餘分配給個人時將二次課稅。" : "；個人持有單純，但股利大額時邊際稅率高。"}</div>
+      <div style="font-size:18px;font-weight:700;color:var(--brand-deep);margin-bottom:4px">建議：${winner}較划算</div>
+      <div style="font-size:15px;color:var(--text-sub)">差額約 <b>${fmtMoney(diff)}</b>${winner === "投資公司持有" ? "；惟須計入公司設立與行政成本，且未來盈餘分配給個人時將二次課稅。" : "；個人持有單純，但股利大額時邊際稅率高。"}</div>
     </div>`;
 }
 
@@ -7255,7 +7255,7 @@ function renderCalcCaseFund() {
   return `
     <div class="calc-form calc-form-wide">
       <h3>案例試算：基金持有 個人 vs 投資公司比較</h3>
-      <p style="font-size:13px;color:var(--text-sub);margin-bottom:14px">
+      <p style="font-size:15px;color:var(--text-sub);margin-bottom:14px">
         比較相同基金部位由「個人」或「投資公司」持有，於配息＋贖回利得情境下之稅負總和。
       </p>
       <div class="calc-shared">
@@ -7280,13 +7280,13 @@ function renderCalcCaseFund() {
               <option value="0.40">40%</option>
             </select>
           </div>
-          <p style="font-size:12px;color:var(--text-mute);margin:6px 0 0">
+          <p style="font-size:14px;color:var(--text-mute);margin:6px 0 0">
             境內：贖回停徵、股利兩制。境外：海外所得扣 670 萬後 ×20% AMT
           </p>
         </div>
         <div class="calc-col col-company">
           <h4>投資公司持有</h4>
-          <p style="font-size:12px;color:var(--text-mute);margin:6px 0 0">
+          <p style="font-size:14px;color:var(--text-mute);margin:6px 0 0">
             境內：股利 §42 免稅、贖回計入未分配盈餘 5% 加徵。境外：贖回利得+配息併營所稅 20%
           </p>
         </div>
@@ -7359,19 +7359,19 @@ function doCalcCaseFund() {
   $("cf-result").innerHTML = `
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:10px">
       <div style="padding:10px;background:#fff;border-radius:6px">
-        <div style="font-size:13px;color:var(--brand-deep);font-weight:700;margin-bottom:6px">個人持有</div>
+        <div style="font-size:15px;color:var(--brand-deep);font-weight:700;margin-bottom:6px">個人持有</div>
         ${personalBreakdown}
-        <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:16px">${fmtMoney(personalTotal)}</b></div>
+        <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:18px">${fmtMoney(personalTotal)}</b></div>
       </div>
       <div style="padding:10px;background:#fff;border-radius:6px">
-        <div style="font-size:13px;color:#6a5acd;font-weight:700;margin-bottom:6px">投資公司持有</div>
+        <div style="font-size:15px;color:#6a5acd;font-weight:700;margin-bottom:6px">投資公司持有</div>
         ${companyBreakdown}
-        <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:16px">${fmtMoney(companyTotal)}</b></div>
+        <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:18px">${fmtMoney(companyTotal)}</b></div>
       </div>
     </div>
     <div style="padding:12px 14px;background:linear-gradient(135deg,#E5F2F5,#fff);border-radius:8px">
-      <div style="font-size:15px;font-weight:700;color:var(--brand-deep);margin-bottom:4px">建議：${winner}較划算</div>
-      <div style="font-size:13px;color:var(--text-sub)">差額約 <b>${fmtMoney(diff)}</b>${loc==="dom" ? "（境內基金，個人贖回利得停徵為關鍵優勢）" : "（境外基金，個人有 670 萬免稅額；公司全額併入營所稅）"}</div>
+      <div style="font-size:18px;font-weight:700;color:var(--brand-deep);margin-bottom:4px">建議：${winner}較划算</div>
+      <div style="font-size:15px;color:var(--text-sub)">差額約 <b>${fmtMoney(diff)}</b>${loc==="dom" ? "（境內基金，個人贖回利得停徵為關鍵優勢）" : "（境外基金，個人有 670 萬免稅額；公司全額併入營所稅）"}</div>
     </div>`;
 }
 
@@ -7380,7 +7380,7 @@ function renderCalcCaseRealty() {
   return `
     <div class="calc-form calc-form-wide">
       <h3>案例試算：房產持有 個人 vs 投資公司比較</h3>
-      <p style="font-size:13px;color:var(--text-sub);margin-bottom:14px">
+      <p style="font-size:15px;color:var(--text-sub);margin-bottom:14px">
         比較同一筆出租房產由「個人」或「投資公司」持有，於持有期間（租賃所得）＋未來出售（房地合一）之稅負總和。
       </p>
       <div class="calc-shared">
@@ -7401,13 +7401,13 @@ function renderCalcCaseRealty() {
               <option value="0.40">40%</option>
             </select>
           </div>
-          <p style="font-size:12px;color:var(--text-mute);margin:6px 0 0">
+          <p style="font-size:14px;color:var(--text-mute);margin:6px 0 0">
             租金 ×57% 併綜所稅；房地合一依持有期間 45/35/20/15%（自住優惠）
           </p>
         </div>
         <div class="calc-col col-company">
           <h4>投資公司持有</h4>
-          <p style="font-size:12px;color:var(--text-mute);margin:6px 0 0">
+          <p style="font-size:14px;color:var(--text-mute);margin:6px 0 0">
             租金 ×70% 併營所稅 20%；房地合一 45/35/20%（無自住）+ 未分配盈餘加徵 5%
           </p>
         </div>
@@ -7472,22 +7472,22 @@ function doCalcCaseRealty() {
   $("cr-result").innerHTML = `
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:10px">
       <div style="padding:10px;background:#fff;border-radius:6px">
-        <div style="font-size:13px;color:var(--brand-deep);font-weight:700;margin-bottom:6px">個人持有</div>
+        <div style="font-size:15px;color:var(--brand-deep);font-weight:700;margin-bottom:6px">個人持有</div>
         <div class="kv"><span>租賃所得稅（×57%×${(rate*100).toFixed(0)}%）</span><b>${fmtMoney(personalRentTax)}</b></div>
         <div class="kv"><span>房地合一（${(personalHLRate*100).toFixed(0)}%）</span><b>${fmtMoney(personalSaleTax)}</b></div>
-        <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:16px">${fmtMoney(personalTotal)}</b></div>
+        <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:18px">${fmtMoney(personalTotal)}</b></div>
       </div>
       <div style="padding:10px;background:#fff;border-radius:6px">
-        <div style="font-size:13px;color:#6a5acd;font-weight:700;margin-bottom:6px">投資公司持有</div>
+        <div style="font-size:15px;color:#6a5acd;font-weight:700;margin-bottom:6px">投資公司持有</div>
         <div class="kv"><span>租金併營所稅 20%（×70%）</span><b>${fmtMoney(companyRentTax)}</b></div>
         <div class="kv"><span>房地合一（${(companyHLRate*100).toFixed(0)}%）</span><b>${fmtMoney(companySaleTax)}</b></div>
         <div class="kv"><span>未分配盈餘加徵 5%</span><b>${fmtMoney(companyRet)}</b></div>
-        <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:16px">${fmtMoney(companyTotal)}</b></div>
+        <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:18px">${fmtMoney(companyTotal)}</b></div>
       </div>
     </div>
     <div style="padding:12px 14px;background:linear-gradient(135deg,#E5F2F5,#fff);border-radius:8px">
-      <div style="font-size:15px;font-weight:700;color:var(--brand-deep);margin-bottom:4px">建議：${winner}較划算</div>
-      <div style="font-size:13px;color:var(--text-sub)">差額約 <b>${fmtMoney(diff)}</b>；持有 ≤ 5 年短期持有時，個人房地合一稅率與法人相同，但法人多了營所稅與未分配盈餘加徵。</div>
+      <div style="font-size:18px;font-weight:700;color:var(--brand-deep);margin-bottom:4px">建議：${winner}較划算</div>
+      <div style="font-size:15px;color:var(--text-sub)">差額約 <b>${fmtMoney(diff)}</b>；持有 ≤ 5 年短期持有時，個人房地合一稅率與法人相同，但法人多了營所稅與未分配盈餘加徵。</div>
     </div>`;
 }
 
@@ -7581,7 +7581,7 @@ function renderCalcGift() {
     <div class="calc-form">
       <h3>贈與稅試算</h3>
       <div class="calc-row"><label>本年度贈與總額</label><input type="number" id="cg-amount" placeholder="例：10000000"></div>
-      <p style="font-size:13px; color:var(--text-mute)">114 年度免稅額 244 萬／級距 10% (≤2,811 萬) → 15% → 20% (>5,621 萬)</p>
+      <p style="font-size:15px; color:var(--text-mute)">114 年度免稅額 244 萬／級距 10% (≤2,811 萬) → 15% → 20% (>5,621 萬)</p>
       <button class="calc-btn" onclick="doCalcGift()">試算</button>
       <div class="calc-result" id="cg-result"></div>
     </div>
@@ -7629,7 +7629,7 @@ function renderCalcEstate() {
       <div class="calc-row"><label>父母人數（每人扣 138 萬）</label><input type="number" id="ce-parents" value="0"></div>
       <div class="calc-row"><label>喪葬費扣除（固定 1,380,000）</label><input type="number" id="ce-funeral" value="1380000"></div>
       <div class="calc-row"><label>其他扣除額</label><input type="number" id="ce-other" value="0"></div>
-      <p style="font-size:13px; color:var(--text-mute)">114 年度免稅額 1,333 萬／級距 10% (≤5,621 萬) → 15% → 20% (>1.1242 億)</p>
+      <p style="font-size:15px; color:var(--text-mute)">114 年度免稅額 1,333 萬／級距 10% (≤5,621 萬) → 15% → 20% (>1.1242 億)</p>
       <button class="calc-btn" onclick="doCalcEstate()">試算</button>
       <div class="calc-result" id="ce-result"></div>
     </div>
@@ -7686,7 +7686,7 @@ function renderCalcHouse() {
       <div class="calc-row"><label>是否符合自住房地（6 年條件）</label>
         <select id="ch-selfuse"><option value="0">否</option><option value="1">是</option></select>
       </div>
-      <p style="font-size:13px; color:var(--text-mute)">≤2 年 45%／2–5 年 35%／5–10 年 20%／&gt;10 年 15%；自住 10% + 400 萬免稅額</p>
+      <p style="font-size:15px; color:var(--text-mute)">≤2 年 45%／2–5 年 35%／5–10 年 20%／&gt;10 年 15%；自住 10% + 400 萬免稅額</p>
       <button class="calc-btn" onclick="doCalcHouse()">試算</button>
       <div class="calc-result" id="ch-result"></div>
     </div>
@@ -7746,7 +7746,7 @@ function renderCalcLand() {
         <select id="cl-selfuse"><option value="0">否</option><option value="1">是</option></select>
       </div>
       <div class="calc-row"><label>持有年數（一般稅率才減徵）</label><input type="number" id="cl-years" value="10"></div>
-      <p style="font-size:13px; color:var(--text-mute)">漲價 1 倍 20%／2 倍 30%／&gt;2 倍 40%；長期持有 20/30/40 年減 20/30/40%；自用 10%</p>
+      <p style="font-size:15px; color:var(--text-mute)">漲價 1 倍 20%／2 倍 30%／&gt;2 倍 40%；長期持有 20/30/40 年減 20/30/40%；自用 10%</p>
       <button class="calc-btn" onclick="doCalcLand()">試算</button>
       <div class="calc-result" id="cl-result"></div>
     </div>
@@ -7953,7 +7953,7 @@ function renderLumpFundCards() {
     const chip = f.currency ? `<span style="margin-left:6px">${currencyChip(f.currency)}</span>` : "";
     const catLabel = LUMP_CAT[f.id] || LUMP_CAT_CODE[f.category] || "";
     const catChip = catLabel
-      ? `<span class="chip chip-default" style="background:#E5F2F5;color:var(--brand-deep);margin-left:6px;font-size:11px">${escapeHtml(catLabel)}</span>`
+      ? `<span class="chip chip-default" style="background:#E5F2F5;color:var(--brand-deep);margin-left:6px;font-size:13px">${escapeHtml(catLabel)}</span>`
       : "";
     const cells = periods.map(p => {
       const v = p.get(f);
@@ -7964,7 +7964,7 @@ function renderLumpFundCards() {
 
   return `
     <div style="overflow-x:auto">
-      <table class="freeze-col1" style="width:100%;border-collapse:collapse;font-size:13px">
+      <table class="freeze-col1" style="width:100%;border-collapse:collapse;font-size:15px">
         <thead>
           <tr>
             <th style="${thBase};text-align:left">名稱</th>
@@ -8005,7 +8005,7 @@ function renderDcaFundCards() {
       : escapeHtml(f.name_zh);
     const curChip = f.currency ? `<span style="margin-left:6px">${currencyChip(f.currency)}</span>` : "";
     const catChip = f.category
-      ? `<span class="chip chip-default" style="background:#E5F2F5;color:var(--brand-deep);margin-left:6px;font-size:11px">${escapeHtml(f.category)}</span>`
+      ? `<span class="chip chip-default" style="background:#E5F2F5;color:var(--brand-deep);margin-left:6px;font-size:13px">${escapeHtml(f.category)}</span>`
       : "";
     const cells = periods.map(p => {
       const v = f.perf_dca?.[p.key];
@@ -8016,7 +8016,7 @@ function renderDcaFundCards() {
 
   return `
     <div style="overflow-x:auto">
-      <table class="freeze-col1" style="width:100%;border-collapse:collapse;font-size:13px">
+      <table class="freeze-col1" style="width:100%;border-collapse:collapse;font-size:15px">
         <thead>
           <tr>
             <th style="${thBase};text-align:left">名稱</th>
@@ -8078,7 +8078,7 @@ function renderBeatEtfCards() {
   const beatCatChip = name => {
     const lab = BEAT_FUND_CAT[(name || "").replace(/\s/g, "")];
     return lab
-      ? `<span class="chip chip-default" style="background:#E5F2F5;color:var(--brand-deep);margin-left:6px;font-size:11px">${escapeHtml(lab)}</span>`
+      ? `<span class="chip chip-default" style="background:#E5F2F5;color:var(--brand-deep);margin-left:6px;font-size:13px">${escapeHtml(lab)}</span>`
       : "";
   };
 
@@ -8086,7 +8086,7 @@ function renderBeatEtfCards() {
     if (f.unlisted) {
       return `<tr>
         <td style="${tdBase};white-space:nowrap;color:var(--text-mute)">${escapeHtml(f.name_zh)}</td>
-        <td colspan="${periods.length + 1}" style="${tdBase};color:var(--text-mute);font-size:12px">${escapeHtml(f.note || "未上架")}</td>
+        <td colspan="${periods.length + 1}" style="${tdBase};color:var(--text-mute);font-size:14px">${escapeHtml(f.note || "未上架")}</td>
       </tr>`;
     }
     const nameHtml = f.source_url
@@ -8096,19 +8096,19 @@ function renderBeatEtfCards() {
       const v = f.perf?.[p.key];
       return `<td style="${tdBase};text-align:right" class="${cellClass(v)}">${perfLink(fmtR(v), f.source_url)}</td>`;
     }).join("");
-    const dateCell = `<td style="${tdBase};text-align:right;white-space:nowrap;color:var(--text-mute);font-size:12px">${fmtD(f.nav_date || (data.funds && data.funds.stat_date))}</td>`;
+    const dateCell = `<td style="${tdBase};text-align:right;white-space:nowrap;color:var(--text-mute);font-size:14px">${fmtD(f.nav_date || (data.funds && data.funds.stat_date))}</td>`;
     return `<tr><td style="${tdBase};white-space:nowrap">${nameHtml}${beatCatChip(f.name_zh)}</td>${cells}${dateCell}</tr>`;
   }).join("");
 
   const etfRows = etfItems.map(e => {
     const catChip = e.category
-      ? `<span class="chip chip-default" style="background:#E5F2F5;color:var(--brand-deep);margin-left:6px;font-size:11px">${escapeHtml(e.category)}</span>`
+      ? `<span class="chip chip-default" style="background:#E5F2F5;color:var(--brand-deep);margin-left:6px;font-size:13px">${escapeHtml(e.category)}</span>`
       : "";
     const cells = periods.map(p => {
       const v = e.perf?.[p.key];
       return `<td style="${tdBase};text-align:right" class="${cellClass(v)}">${fmtR(v)}</td>`;
     }).join("");
-    const dateCell = `<td style="${tdBase};text-align:right;white-space:nowrap;color:var(--text-mute);font-size:12px">${fmtD(e.market_date || (data.etfs && data.etfs.stat_date))}</td>`;
+    const dateCell = `<td style="${tdBase};text-align:right;white-space:nowrap;color:var(--text-mute);font-size:14px">${fmtD(e.market_date || (data.etfs && data.etfs.stat_date))}</td>`;
     return `<tr><td style="${tdBase};white-space:nowrap">${escapeHtml(e.name_zh)}${catChip}</td>${cells}${dateCell}</tr>`;
   }).join("");
 
@@ -8117,13 +8117,13 @@ function renderBeatEtfCards() {
       ? `<a href="${f.source_url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${escapeHtml(f.name_zh)}</a>`
       : escapeHtml(f.name_zh);
     const catChip = f.category
-      ? `<span class="chip chip-default" style="background:#E5F2F5;color:var(--brand-deep);margin-left:6px;font-size:11px">${escapeHtml(f.category)}</span>`
+      ? `<span class="chip chip-default" style="background:#E5F2F5;color:var(--brand-deep);margin-left:6px;font-size:13px">${escapeHtml(f.category)}</span>`
       : "";
     const cells = periods.map(p => {
       const v = f.perf?.[p.key];
       return `<td style="${tdBase};text-align:right" class="${cellClass(v)}">${perfLink(fmtR(v), f.source_url)}</td>`;
     }).join("");
-    const dateCell = `<td style="${tdBase};text-align:right;white-space:nowrap;color:var(--text-mute);font-size:12px">${fmtD(f.nav_date || (data.linked && data.linked.stat_date))}</td>`;
+    const dateCell = `<td style="${tdBase};text-align:right;white-space:nowrap;color:var(--text-mute);font-size:14px">${fmtD(f.nav_date || (data.linked && data.linked.stat_date))}</td>`;
     return `<tr><td style="${tdBase};white-space:nowrap">${nameHtml}${catChip}</td>${cells}${dateCell}</tr>`;
   }).join("");
 
@@ -8133,12 +8133,12 @@ function renderBeatEtfCards() {
     ? `基金 ${fundAsOf}（淨值日）、ETF ${etfAsOf}（收盤日）`
     : `${fundAsOf || etfAsOf}（基金為淨值日、ETF 為收盤日）`;
   const note = (fundAsOf || etfAsOf)
-    ? `<p style="font-size:11px;color:var(--text-mute);margin:8px 0 0">績效截至 ${asOfTxt}，資料來源：板信基金平台／MoneyDJ，不構成投資建議。</p>`
+    ? `<p style="font-size:13px;color:var(--text-mute);margin:8px 0 0">績效截至 ${asOfTxt}，資料來源：板信基金平台／MoneyDJ，不構成投資建議。</p>`
     : "";
 
   return `
     <div style="overflow-x:auto">
-      <table class="freeze-col1 beatetf-tbl" style="width:100%;border-collapse:collapse;font-size:13px">
+      <table class="freeze-col1 beatetf-tbl" style="width:100%;border-collapse:collapse;font-size:15px">
         <thead>
           <tr>
             <th style="${thBase};text-align:left">名稱</th>
@@ -8444,11 +8444,11 @@ function renderPopularFundCards() {
     const catLabel = f.cat_label || "";
     const catBg = CAT_COLOR[f.category] || "#E5F2F5";
     const catChip = catLabel
-      ? `<span class="chip chip-default" style="background:${catBg};color:var(--brand-deep);margin-left:6px;font-size:11px">${escapeHtml(catLabel)}</span>`
+      ? `<span class="chip chip-default" style="background:${catBg};color:var(--brand-deep);margin-left:6px;font-size:13px">${escapeHtml(catLabel)}</span>`
       : "";
     const listedChip = f.panhsin_listed === true
-      ? `<span class="chip chip-default" style="background:#E5F5EC;color:#1a7a42;margin-left:6px;font-size:11px">板信上架</span>`
-      : `<span class="chip chip-default" style="background:#F5F0E5;color:#7a5a1a;margin-left:6px;font-size:11px">板信未上架</span>`;
+      ? `<span class="chip chip-default" style="background:#E5F5EC;color:#1a7a42;margin-left:6px;font-size:13px">板信上架</span>`
+      : `<span class="chip chip-default" style="background:#F5F0E5;color:#7a5a1a;margin-left:6px;font-size:13px">板信未上架</span>`;
     const cells = periods.map(p => {
       const v = f.perf_single?.[p.key];
       return `<td style="${tdBase};text-align:right" class="${cellClass(v)}">${perfLink(fmtR(v), f.perf_url || f.source_url)}</td>`;
@@ -8457,11 +8457,11 @@ function renderPopularFundCards() {
   }).join("");
 
   const asOf = funds.find(f => f.perf_date)?.perf_date || "";
-  const note = asOf ? `<p style="font-size:11px;color:var(--text-mute);margin:8px 0 0">績效截至 ${asOf}，資料來源：板信基金平台（MoneyDJ），不構成投資建議。</p>` : "";
+  const note = asOf ? `<p style="font-size:13px;color:var(--text-mute);margin:8px 0 0">績效截至 ${asOf}，資料來源：板信基金平台（MoneyDJ），不構成投資建議。</p>` : "";
 
   return `
     <div style="overflow-x:auto">
-      <table class="freeze-col1" style="width:100%;border-collapse:collapse;font-size:13px">
+      <table class="freeze-col1" style="width:100%;border-collapse:collapse;font-size:15px">
         <thead>
           <tr>
             <th style="${thBase};text-align:left">名稱</th>
@@ -8601,32 +8601,32 @@ function renderAssistSheet() {
   return `
 <style>
 .ast-field { margin-bottom: 10px; }
-.ast-field label { display: block; font-size: 12px; color: var(--text-mute); margin-bottom: 4px; font-weight: 500; }
+.ast-field label { display: block; font-size: 14px; color: var(--text-mute); margin-bottom: 4px; font-weight: 500; }
 .ast-field select, .ast-field input[type=text], .ast-field textarea {
   width: 100%; padding: 7px 10px; border: 1px solid var(--border); border-radius: 4px;
-  font-size: 13px; font-family: inherit; box-sizing: border-box;
+  font-size: 15px; font-family: inherit; box-sizing: border-box;
   background: var(--bg); color: var(--text);
 }
 .ast-field textarea { resize: vertical; min-height: 60px; }
 .ast-existing { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; }
-.ast-existing label { display: flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 400; cursor: pointer; color: var(--text); }
+.ast-existing label { display: flex; align-items: center; gap: 4px; font-size: 14px; font-weight: 400; cursor: pointer; color: var(--text); }
 .ast-submit { background: var(--brand-primary); color: white; border: 0; padding: 9px 16px; border-radius: 6px;
-  font-size: 13px; font-weight: 600; cursor: pointer; width: 100%; margin-top: 10px; }
+  font-size: 15px; font-weight: 600; cursor: pointer; width: 100%; margin-top: 10px; }
 .ast-submit:hover { opacity: .88; }
 .ast-submit:disabled { opacity: .5; cursor: wait; }
-.ast-sec { font-size: 10px; font-weight: 700; color: var(--text-mute); text-transform: uppercase;
+.ast-sec { font-size: 12px; font-weight: 700; color: var(--text-mute); text-transform: uppercase;
   letter-spacing: .06em; margin: 14px 0 8px; padding-bottom: 3px; border-bottom: 1px solid var(--border); }
 .ast-notice { background: var(--bg-alt); border-left: 3px solid #f97316;
-  padding: 10px 14px; margin-bottom: 12px; border-radius: 0 6px 6px 0; font-size: 12px; color: var(--text-mute); }
-.ast-notice strong { display: block; margin-bottom: 4px; color: var(--text); font-size: 12px; }
+  padding: 10px 14px; margin-bottom: 12px; border-radius: 0 6px 6px 0; font-size: 14px; color: var(--text-mute); }
+.ast-notice strong { display: block; margin-bottom: 4px; color: var(--text); font-size: 14px; }
 .ast-notice ul { margin: 0; padding-left: 16px; line-height: 1.7; }
 .ast-prompt-out { background: var(--bg-alt); border: 1px solid var(--border); border-radius: 6px;
   padding: 12px; font-family: ui-monospace, "SF Mono", Consolas, monospace;
-  font-size: 11px; line-height: 1.5; white-space: pre-wrap; word-break: break-word;
+  font-size: 13px; line-height: 1.5; white-space: pre-wrap; word-break: break-word;
   max-height: 220px; overflow-y: auto; margin: 8px 0; color: var(--text); }
 .ast-btn-row { display: flex; gap: 8px; flex-wrap: wrap; margin: 8px 0; }
 .ast-btn-row button, .ast-btn-row a {
-  padding: 9px 14px; border-radius: 4px; font-size: 13px; font-weight: 600;
+  padding: 9px 14px; border-radius: 4px; font-size: 15px; font-weight: 600;
   cursor: pointer; text-decoration: none; text-align: center; display: inline-block; flex: 1; }
 .ast-btn-p { background: var(--brand-primary); color: white; border: 0; }
 .ast-btn-p:hover { opacity: .88; }
@@ -8634,34 +8634,34 @@ function renderAssistSheet() {
 .ast-btn-s:hover { background: var(--bg-alt); }
 .ast-step-num { display: inline-flex; align-items: center; justify-content: center;
   background: var(--brand-primary); color: white; width: 20px; height: 20px;
-  border-radius: 50%; font-size: 11px; margin-right: 6px; font-weight: 700; flex-shrink: 0; }
-.ast-step-title { font-size: 13px; font-weight: 600; color: var(--text); margin: 14px 0 6px; display: flex; align-items: center; }
+  border-radius: 50%; font-size: 13px; margin-right: 6px; font-weight: 700; flex-shrink: 0; }
+.ast-step-title { font-size: 15px; font-weight: 600; color: var(--text); margin: 14px 0 6px; display: flex; align-items: center; }
 .ast-paste { width: 100%; min-height: 120px; padding: 10px; border: 1px solid var(--border);
   border-radius: 4px; font-family: ui-monospace, "SF Mono", Consolas, monospace;
-  font-size: 11px; line-height: 1.5; box-sizing: border-box; resize: vertical;
+  font-size: 13px; line-height: 1.5; box-sizing: border-box; resize: vertical;
   background: var(--bg); color: var(--text); }
-.ast-status { text-align: center; padding: 20px; color: var(--text-mute); font-size: 13px; }
-.ast-status .spinner { font-size: 24px; animation: spin 1.5s linear infinite; display: inline-block; }
+.ast-status { text-align: center; padding: 20px; color: var(--text-mute); font-size: 15px; }
+.ast-status .spinner { font-size: 26px; animation: spin 1.5s linear infinite; display: inline-block; }
 .ast-product { border-left: 3px solid var(--brand-primary); padding: 6px 10px; margin: 6px 0;
-  background: var(--bg-alt); font-size: 12px; }
+  background: var(--bg-alt); font-size: 14px; }
 .ast-product .name { font-weight: 600; color: var(--text); }
 .ast-product .reason { color: var(--text-mute); margin-top: 2px; }
-.ast-script { background: var(--bg-alt); padding: 8px 12px; border-radius: 4px; margin: 6px 0; font-size: 12px; line-height: 1.6; }
-.ast-script .lbl { font-weight: 600; color: var(--brand-primary); font-size: 11px; margin-bottom: 2px; }
-.ast-list { margin: 0; padding-left: 18px; font-size: 12px; line-height: 1.7; color: var(--text); }
-.ast-disclaimer { background: var(--bg-alt); border-left: 3px solid #f59e0b; padding: 8px 12px; margin: 12px 0; font-size: 11px; color: var(--text-mute); }
+.ast-script { background: var(--bg-alt); padding: 8px 12px; border-radius: 4px; margin: 6px 0; font-size: 14px; line-height: 1.6; }
+.ast-script .lbl { font-weight: 600; color: var(--brand-primary); font-size: 13px; margin-bottom: 2px; }
+.ast-list { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; color: var(--text); }
+.ast-disclaimer { background: var(--bg-alt); border-left: 3px solid #f59e0b; padding: 8px 12px; margin: 12px 0; font-size: 13px; color: var(--text-mute); }
 .ast-feedback { margin-top: 16px; padding-top: 12px; border-top: 1px dashed var(--border); }
 .ast-feedback button { margin-right: 8px; padding: 6px 14px; border: 1px solid var(--border);
-  background: var(--bg); color: var(--text); border-radius: 4px; cursor: pointer; font-size: 12px; }
+  background: var(--bg); color: var(--text); border-radius: 4px; cursor: pointer; font-size: 14px; }
 .ast-feedback button:hover { background: var(--bg-alt); }
 .ast-feedback button.adopted { background: #d1fae5; border-color: #2a9d8f; }
 .ast-feedback button.modified { background: #fef3c7; border-color: #f59e0b; }
 .ast-feedback button.rejected { background: #fee2e2; border-color: #d62828; }
-.ast-error { color: #d62828; background: #fee2e2; padding: 10px; border-radius: 4px; font-size: 12px; }
-.ast-meta { font-size: 10px; color: var(--text-mute); margin-top: 8px; }
+.ast-error { color: #d62828; background: #fee2e2; padding: 10px; border-radius: 4px; font-size: 14px; }
+.ast-meta { font-size: 12px; color: var(--text-mute); margin-top: 8px; }
 .ast-section { margin-bottom: 16px; }
-.ast-section h4 { margin: 0 0 6px; font-size: 13px; color: var(--text); font-weight: 600; }
-.ast-section p { margin: 4px 0; font-size: 12px; line-height: 1.6; color: var(--text); }
+.ast-section h4 { margin: 0 0 6px; font-size: 15px; color: var(--text); font-weight: 600; }
+.ast-section p { margin: 4px 0; font-size: 14px; line-height: 1.6; color: var(--text); }
 </style>
 
 <div style="display:grid;grid-template-columns:1fr 1.4fr;gap:16px;align-items:start">
@@ -8780,7 +8780,7 @@ function renderAssistRuleResult(p) {
 
   const allocRows = Object.entries(alloc).map(([k, v]) => `
     <div style="margin-bottom:6px">
-      <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:2px">
+      <div style="display:flex;justify-content:space-between;font-size:14px;margin-bottom:2px">
         <span style="color:var(--text-mute)">${k}</span><span style="font-weight:600;color:var(--text)">${v}%</span>
       </div>
       <div style="background:var(--border);border-radius:3px;height:6px;overflow:hidden">
@@ -8805,7 +8805,7 @@ function renderAssistRuleResult(p) {
   const goalProds = (goalAddons[goal] || []).slice(0, 2);
   const allProds = [...new Set([...baseProds, ...goalProds])];
   const prodRows = allProds.map(name => `
-    <div style="border-left:3px solid var(--brand-primary);padding:5px 10px;margin:5px 0;background:var(--bg-alt);font-size:12px;color:var(--text)">${name}</div>`).join("");
+    <div style="border-left:3px solid var(--brand-primary);padding:5px 10px;margin:5px 0;background:var(--bg-alt);font-size:14px;color:var(--text)">${name}</div>`).join("");
 
   // --- 缺口提示 ---
   const gaps = [];
@@ -8825,7 +8825,7 @@ function renderAssistRuleResult(p) {
 
   return `
 <div style="background:var(--bg-alt);border:1px solid var(--border);border-radius:8px;padding:12px;margin-bottom:10px">
-  <div style="font-size:11px;font-weight:700;color:var(--text-mute);margin-bottom:8px">建議配置方向（${risk} · ${goal} · ${horizon}）</div>
+  <div style="font-size:13px;font-weight:700;color:var(--text-mute);margin-bottom:8px">建議配置方向（${risk} · ${goal} · ${horizon}）</div>
   ${allocRows}
 </div>
 
@@ -8856,26 +8856,26 @@ function renderRetirementSheet() {
 .tcalc-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 16px; align-items: start; }
 @media (max-width: 800px) { .tcalc-grid { grid-template-columns: 1fr; } }
 .tcalc-field { margin-bottom: 10px; }
-.tcalc-field label { display: flex; justify-content: space-between; font-size: 12px; color: var(--text-mute); margin-bottom: 3px; font-weight: 500; }
+.tcalc-field label { display: flex; justify-content: space-between; font-size: 14px; color: var(--text-mute); margin-bottom: 3px; font-weight: 500; }
 .tcalc-field label .val { color: var(--brand-primary); font-weight: 600; }
 .tcalc-field input[type=range] { width: 100%; accent-color: var(--brand-primary); }
-.tcalc-field input[type=number] { width: 100%; padding: 6px 10px; border: 1px solid var(--border); border-radius: 4px; font-size: 13px; box-sizing: border-box; background: var(--bg); color: var(--text); }
-.tcalc-sec { font-size: 10px; font-weight: 700; color: var(--text-mute); text-transform: uppercase; letter-spacing: .06em; margin: 14px 0 8px; padding-bottom: 3px; border-bottom: 1px solid var(--border); }
-.tcalc-btn { background: var(--brand-primary); color: white; border: 0; padding: 9px 16px; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; width: 100%; margin-top: 10px; }
+.tcalc-field input[type=number] { width: 100%; padding: 6px 10px; border: 1px solid var(--border); border-radius: 4px; font-size: 15px; box-sizing: border-box; background: var(--bg); color: var(--text); }
+.tcalc-sec { font-size: 12px; font-weight: 700; color: var(--text-mute); text-transform: uppercase; letter-spacing: .06em; margin: 14px 0 8px; padding-bottom: 3px; border-bottom: 1px solid var(--border); }
+.tcalc-btn { background: var(--brand-primary); color: white; border: 0; padding: 9px 16px; border-radius: 6px; font-size: 15px; font-weight: 600; cursor: pointer; width: 100%; margin-top: 10px; }
 .tcalc-btn:hover { opacity: .88; }
-.tcalc-result-sec { padding: 8px 0; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; font-size: 13px; }
+.tcalc-result-sec { padding: 8px 0; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; font-size: 15px; }
 .tcalc-result-sec:last-of-type { border-bottom: none; }
 .tcalc-result-sec .lbl { color: var(--text-mute); }
 .tcalc-result-sec .val { font-weight: 600; color: var(--text); }
 .tcalc-gap { border: 2px solid; border-radius: 8px; padding: 12px 16px; margin: 12px 0; text-align: center; }
-.tcalc-gap .gnum { font-size: 22px; font-weight: 700; }
-.tcalc-gap .glbl { font-size: 12px; color: var(--text-mute); margin-top: 3px; }
+.tcalc-gap .gnum { font-size: 24px; font-weight: 700; }
+.tcalc-gap .glbl { font-size: 14px; color: var(--text-mute); margin-top: 3px; }
 .tcalc-subgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 10px; }
 .tcalc-subbox { background: var(--bg-alt); border: 1px solid var(--border); border-radius: 6px; padding: 10px; text-align: center; }
-.tcalc-subbox .sv { font-size: 16px; font-weight: 700; color: var(--brand-deep); }
-.tcalc-subbox .sl { font-size: 11px; color: var(--text-mute); margin-top: 2px; line-height: 1.4; }
-.tcalc-note { font-size: 11px; color: var(--text-mute); margin-top: 12px; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 8px; }
-.tcalc-h { font-size: 14px; font-weight: 700; color: var(--brand-deep); margin: 0 0 12px; }
+.tcalc-subbox .sv { font-size: 18px; font-weight: 700; color: var(--brand-deep); }
+.tcalc-subbox .sl { font-size: 13px; color: var(--text-mute); margin-top: 2px; line-height: 1.4; }
+.tcalc-note { font-size: 13px; color: var(--text-mute); margin-top: 12px; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 8px; }
+.tcalc-h { font-size: 18px; font-weight: 700; color: var(--brand-deep); margin: 0 0 12px; }
 </style>
 
 <div style="display:grid;grid-template-columns:1fr 1.3fr;gap:16px;align-items:start">
@@ -8933,7 +8933,7 @@ function renderRetirementSheet() {
 
   <div class="card" style="animation:none;opacity:1;transform:none">
     <div class="tcalc-h">試算結果</div>
-    <div id="ret-result" style="color:var(--text-mute);font-size:13px;padding:20px 0;text-align:center">填入資料後按「試算退休缺口」</div>
+    <div id="ret-result" style="color:var(--text-mute);font-size:15px;padding:20px 0;text-align:center">填入資料後按「試算退休缺口」</div>
   </div>
 </div>
 `;
@@ -9037,7 +9037,7 @@ function wireRetirementTab() {
 
     document.getElementById("ret-result").innerHTML = `
 <div style="background:var(--bg-alt);border:1px solid var(--border);border-radius:8px;padding:12px;margin-bottom:10px">
-  <div style="font-size:11px;font-weight:700;color:var(--text-mute);margin-bottom:6px">退休後每月收支預估（退休年齡 ${retireAge} 歲）</div>
+  <div style="font-size:13px;font-weight:700;color:var(--text-mute);margin-bottom:6px">退休後每月收支預估（退休年齡 ${retireAge} 歲）</div>
   ${[
     ["退休後月支出（通膨後）", fmt(futureMonthExp), false],
     ["勞保老年年金", fmt(monthlyLabIns), true],
@@ -9051,8 +9051,8 @@ function wireRetirementTab() {
   </div>`).join("")}
 </div>
 <div style="border:2px solid ${monthlyGap <= 0 ? 'var(--down)' : monthlyGap < 20000 ? '#f59e0b' : 'var(--up)'};border-radius:8px;padding:12px;text-align:center;margin:0 0 10px">
-  <div style="font-size:22px;font-weight:700;color:${monthlyGap <= 0 ? 'var(--down)' : monthlyGap < 20000 ? '#d97706' : 'var(--up)'}">${gapIcon} ${gapText}</div>
-  <div style="font-size:12px;color:var(--text-mute);margin-top:3px">${monthlyGap <= 0 ? '目前規劃充足，建議定期檢視' : `建議每月再多存 ${fmt(extraMonthly)}（到退休前）`}</div>
+  <div style="font-size:24px;font-weight:700;color:${monthlyGap <= 0 ? 'var(--down)' : monthlyGap < 20000 ? '#d97706' : 'var(--up)'}">${gapIcon} ${gapText}</div>
+  <div style="font-size:14px;color:var(--text-mute);margin-top:3px">${monthlyGap <= 0 ? '目前規劃充足，建議定期檢視' : `建議每月再多存 ${fmt(extraMonthly)}（到退休前）`}</div>
 </div>
 <div class="tcalc-subgrid">
   <div class="tcalc-subbox"><div class="sv">${(labRetireFV / 10000).toFixed(0)} 萬</div><div class="sl">勞退累積本金<br>（退休時）</div></div>
@@ -9070,24 +9070,24 @@ function renderInsuranceGapSheet() {
   return `
 <style>
 .tins-field { margin-bottom: 10px; }
-.tins-field label { display: flex; justify-content: space-between; font-size: 12px; color: var(--text-mute); margin-bottom: 3px; font-weight: 500; }
+.tins-field label { display: flex; justify-content: space-between; font-size: 14px; color: var(--text-mute); margin-bottom: 3px; font-weight: 500; }
 .tins-field label .val { color: var(--brand-primary); font-weight: 600; }
 .tins-field input[type=range] { width: 100%; accent-color: var(--brand-primary); }
-.tins-field input[type=number] { width: 100%; padding: 6px 10px; border: 1px solid var(--border); border-radius: 4px; font-size: 13px; box-sizing: border-box; background: var(--bg); color: var(--text); }
-.tins-sec { font-size: 10px; font-weight: 700; color: var(--text-mute); text-transform: uppercase; letter-spacing: .06em; margin: 14px 0 8px; padding-bottom: 3px; border-bottom: 1px solid var(--border); }
-.tins-btn { background: var(--brand-primary); color: white; border: 0; padding: 9px 16px; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; width: 100%; margin-top: 10px; }
+.tins-field input[type=number] { width: 100%; padding: 6px 10px; border: 1px solid var(--border); border-radius: 4px; font-size: 15px; box-sizing: border-box; background: var(--bg); color: var(--text); }
+.tins-sec { font-size: 12px; font-weight: 700; color: var(--text-mute); text-transform: uppercase; letter-spacing: .06em; margin: 14px 0 8px; padding-bottom: 3px; border-bottom: 1px solid var(--border); }
+.tins-btn { background: var(--brand-primary); color: white; border: 0; padding: 9px 16px; border-radius: 6px; font-size: 15px; font-weight: 600; cursor: pointer; width: 100%; margin-top: 10px; }
 .tins-btn:hover { opacity: .88; }
 .tins-gsec { background: var(--bg-alt); border: 1px solid var(--border); border-radius: 8px; padding: 12px; margin-bottom: 10px; }
-.tins-gsec h4 { margin: 0 0 8px; font-size: 13px; color: var(--brand-deep); font-weight: 700; }
-.tins-grow { display: flex; justify-content: space-between; font-size: 12px; padding: 4px 0; border-bottom: 1px solid var(--border); color: var(--text-mute); }
+.tins-gsec h4 { margin: 0 0 8px; font-size: 15px; color: var(--brand-deep); font-weight: 700; }
+.tins-grow { display: flex; justify-content: space-between; font-size: 14px; padding: 4px 0; border-bottom: 1px solid var(--border); color: var(--text-mute); }
 .tins-grow:last-child { border-bottom: none; }
-.tins-gtotal { display: flex; justify-content: space-between; font-size: 14px; font-weight: 700; padding: 8px 0; border-top: 2px solid var(--brand-primary); margin-top: 6px; color: var(--text); }
-.tins-badge { display: inline-block; padding: 1px 7px; border-radius: 10px; font-size: 10px; font-weight: 600; }
+.tins-gtotal { display: flex; justify-content: space-between; font-size: 18px; font-weight: 700; padding: 8px 0; border-top: 2px solid var(--brand-primary); margin-top: 6px; color: var(--text); }
+.tins-badge { display: inline-block; padding: 1px 7px; border-radius: 10px; font-size: 12px; font-weight: 600; }
 .tins-badge.high { background: #fee2e2; color: #991b1b; }
 .tins-badge.mid { background: #fef3c7; color: #92400e; }
 .tins-badge.low { background: #d1fae5; color: #065f46; }
-.tins-pitem { font-size: 12px; padding: 4px 0; display: flex; gap: 8px; align-items: center; color: var(--text); }
-.tins-note { font-size: 11px; color: var(--text-mute); margin-top: 12px; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 8px; }
+.tins-pitem { font-size: 14px; padding: 4px 0; display: flex; gap: 8px; align-items: center; color: var(--text); }
+.tins-note { font-size: 13px; color: var(--text-mute); margin-top: 12px; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 8px; }
 </style>
 
 <div style="display:grid;grid-template-columns:1fr 1.3fr;gap:16px;align-items:start">
@@ -9157,7 +9157,7 @@ function renderInsuranceGapSheet() {
 
   <div class="card" style="animation:none;opacity:1;transform:none">
     <div class="tcalc-h">試算結果</div>
-    <div id="ins-result" style="color:var(--text-mute);font-size:13px;padding:20px 0;text-align:center">填入資料後按「試算保障缺口」</div>
+    <div id="ins-result" style="color:var(--text-mute);font-size:15px;padding:20px 0;text-align:center">填入資料後按「試算保障缺口」</div>
   </div>
 </div>
 `;
@@ -9245,11 +9245,11 @@ function wireInsuranceGapTab() {
   <div class="tins-gtotal"><span>失能缺口</span><span style="color:${disGapWan > 0 ? 'var(--up)' : 'var(--down)'}">${disGapWan > 0 ? '缺 ' + fmtW(disGapWan) : '充足 ✓'}</span></div>
 </div>
 <div style="background:var(--brand-primary);color:white;border-radius:8px;padding:12px;text-align:center;margin:8px 0">
-  <div style="font-size:12px;opacity:.85">三大保障總缺口</div>
-  <div style="font-size:24px;font-weight:700;margin:4px 0">${totalGapWan > 0 ? '缺 ' + fmtW(totalGapWan) : '各項均充足 ✓'}</div>
+  <div style="font-size:14px;opacity:.85">三大保障總缺口</div>
+  <div style="font-size:26px;font-weight:700;margin:4px 0">${totalGapWan > 0 ? '缺 ' + fmtW(totalGapWan) : '各項均充足 ✓'}</div>
 </div>
 <div style="background:var(--bg-alt);border:1px solid var(--border);border-radius:6px;padding:10px;margin-top:8px">
-  <div style="font-size:11px;font-weight:700;color:var(--text-mute);margin-bottom:6px">補強優先順序</div>
+  <div style="font-size:13px;font-weight:700;color:var(--text-mute);margin-bottom:6px">補強優先順序</div>
   ${priorities.map((p, i) => `
   <div class="tins-pitem">
     <span class="tins-badge ${p.level}">${p.level === 'high' ? '優先' : p.level === 'mid' ? '次優先' : '充足'}</span>
@@ -10040,41 +10040,41 @@ function renderChatSheet() {
   .lc-chat-header { flex: 0 0 auto; }
   .lc-suggest, .lc-input-row { flex: 0 0 auto; }
   .lc-chat-header { padding: 12px 4px 14px; background: transparent; color: var(--text); display: flex; align-items: center; gap: 10px; border-bottom: 1px solid var(--border); }
-  .lc-chat-avatar { background: linear-gradient(135deg, #2aa6d6, var(--brand-deep)) !important; color: #fff; font-weight: 800; font-size: 22px; }
+  .lc-chat-avatar { background: linear-gradient(135deg, #2aa6d6, var(--brand-deep)) !important; color: #fff; font-weight: 800; font-size: 24px; }
   .lc-chat-hname { color: var(--text) !important; }
   .lc-chat-hsub { color: var(--text-mute) !important; opacity: 1 !important; }
   .lc-chat-reset { background: var(--bg-alt) !important; color: var(--brand-deep) !important; border: 1px solid var(--border) !important; }
-  .lc-chat-avatar { width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,.22); display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+  .lc-chat-avatar { width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,.22); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
   .lc-chat-hinfo { flex: 1; min-width: 0; }
-  .lc-chat-hname { font-weight: 700; font-size: 15px; }
-  .lc-chat-hsub { font-size: 12px; opacity: .9; }
-  .lc-chat-reset { background: rgba(255,255,255,.25); border: none; border-radius: 18px; padding: 6px 12px; color: #fff; font-size: 12px; cursor: pointer; white-space: nowrap; }
+  .lc-chat-hname { font-weight: 700; font-size: 18px; }
+  .lc-chat-hsub { font-size: 14px; opacity: .9; }
+  .lc-chat-reset { background: rgba(255,255,255,.25); border: none; border-radius: 18px; padding: 6px 12px; color: #fff; font-size: 14px; cursor: pointer; white-space: nowrap; }
   .lc-chat-msgs { flex: 1 1 auto; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; padding: 16px 2px; display: flex; flex-direction: column; gap: 12px; background: transparent; }
   .lc-row { display: flex; flex-direction: column; }
   .lc-row.me { align-items: flex-end; }
   .lc-row.bot { align-items: flex-start; }
-  .lc-label { font-size: 11px; font-weight: 600; color: var(--text-mute); margin-bottom: 3px; }
-  .lc-bubble { max-width: 80%; padding: 11px 14px; border-radius: 16px; font-size: 14px; line-height: 1.7; word-break: break-word; white-space: normal; }
+  .lc-label { font-size: 13px; font-weight: 600; color: var(--text-mute); margin-bottom: 3px; }
+  .lc-bubble { max-width: 80%; padding: 11px 14px; border-radius: 16px; font-size: 18px; line-height: 1.7; word-break: break-word; white-space: normal; }
   .lc-bubble.me { background: var(--brand-primary); color: #fff; border-bottom-right-radius: 4px; }
   .lc-bubble.bot { background: var(--surface); color: var(--text); border: 1px solid var(--border); border-bottom-left-radius: 4px; }
   .lc-bubble.bot .lc-link { display: inline-block; margin-top: 2px; color: var(--brand-deep); font-weight: 600; text-decoration: none; border-bottom: 1.5px solid var(--brand-primary); padding-bottom: 1px; }
   .lc-bubble.bot .lc-link:active { opacity: .6; }
   .lc-suggest { display: flex; flex-wrap: wrap; gap: 8px; padding: 12px 2px; background: transparent; border-top: 1px solid var(--border); }
-  .lc-chip { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 6px 12px; font-size: 12px; color: var(--brand-deep); cursor: pointer; }
+  .lc-chip { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 6px 12px; font-size: 14px; color: var(--brand-deep); cursor: pointer; }
   .lc-chip:active { background: var(--surface-hover); }
   .lc-input-row { display: flex; gap: 8px; padding: 12px 2px 4px; border-top: 1px solid var(--border); background: transparent; }
-  .lc-input { flex: 1; border: 1.5px solid var(--border); border-radius: 20px; padding: 9px 14px; font-size: 14px; font-family: inherit; outline: none; background: var(--bg); color: var(--text); }
+  .lc-input { flex: 1; border: 1.5px solid var(--border); border-radius: 20px; padding: 9px 14px; font-size: 18px; font-family: inherit; outline: none; background: var(--bg); color: var(--text); }
   .lc-input:focus { border-color: var(--brand-primary); }
-  .lc-voice { background: var(--bg); border: 1.5px solid var(--border); border-radius: 50%; width: 40px; height: 40px; font-size: 18px; cursor: pointer; flex-shrink: 0; }
+  .lc-voice { background: var(--bg); border: 1.5px solid var(--border); border-radius: 50%; width: 40px; height: 40px; font-size: 20px; cursor: pointer; flex-shrink: 0; }
   .lc-voice.listening { border-color: var(--brand-primary); animation: lcpulse 1s infinite; }
   @keyframes lcpulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.08)} }
-  .lc-send { background: var(--brand-primary); color: #fff; border: none; border-radius: 20px; padding: 9px 18px; font-size: 14px; font-weight: 600; cursor: pointer; white-space: nowrap; }
+  .lc-send { background: var(--brand-primary); color: #fff; border: none; border-radius: 20px; padding: 9px 18px; font-size: 18px; font-weight: 600; cursor: pointer; white-space: nowrap; }
   .lc-send:disabled { opacity: .45; cursor: not-allowed; }
   .lc-typing { display: flex; gap: 4px; padding: 11px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; border-bottom-left-radius: 4px; width: fit-content; }
   .lc-typing span { width: 7px; height: 7px; background: var(--brand-secondary); border-radius: 50%; animation: lcbounce 1.2s infinite; }
   .lc-typing span:nth-child(2){animation-delay:.2s} .lc-typing span:nth-child(3){animation-delay:.4s}
   @keyframes lcbounce { 0%,60%,100%{transform:translateY(0)} 30%{transform:translateY(-6px)} }
-  .lc-foot { flex: 0 0 auto; margin: 6px 2px 0; font-size: 10px; color: var(--text-mute); line-height: 1.5; text-align: center; }
+  .lc-foot { flex: 0 0 auto; margin: 6px 2px 0; font-size: 12px; color: var(--text-mute); line-height: 1.5; text-align: center; }
 </style>
 <div class="lc-chat-wrap">
   <div class="lc-chat-msgs" id="lcMsgs">
