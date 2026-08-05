@@ -8057,7 +8057,7 @@ function renderBeatEtfCards() {
   ).join("") + `<th style="${thBase};text-align:right;white-space:nowrap">收盤日</th>`;
 
   const groupHeader = (title, bg) => `<tr>
-    <td colspan="${periods.length + 2}" style="padding:10px 8px;font-weight:600;color:var(--brand-deep);background:${bg};border-bottom:1px solid var(--border)">${escapeHtml(title)}</td>
+    <td colspan="${periods.length + 2}" style="padding:10px 8px;font-weight:600;color:var(--tint-text);background:${bg};border-bottom:1px solid var(--border)"><span style="position:sticky;left:8px;display:inline-block">${escapeHtml(title)}</span></td>
   </tr>`;
 
   // 商品屬性中文標籤：以基金名稱（去空白）對照

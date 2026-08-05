@@ -2699,9 +2699,11 @@ table.indices.stock-cols col.c-num { width: 11%; }
 /* === 凍結第一欄（名稱／標籤）：全站所有表格橫滑時保持第一欄可見 ===
    通用套用到 #content 內每一個 table 的第一欄：sticky 釘左、不透明底、
    限寬 42vw 截斷（避免長名稱寬過螢幕擋住資料欄）、右緣細陰影。
-   排行榜(ranking-table)特別凍結前兩欄（排名＋名稱）。 */
-#content table th:first-child,
-#content table td:first-child {
+   排行榜(ranking-table)特別凍結前兩欄（排名＋名稱）。
+   跨欄(colspan)的群組標題列不可凍結：它寬度等於整張表，一旦 sticky 釘左就會
+   在橫滑時整條蓋在數字欄上，看起來像多出一層，故以 :not([colspan]) 排除。 */
+#content table th:first-child:not([colspan]),
+#content table td:first-child:not([colspan]) {
   position: sticky;
   left: 0;
   z-index: 2;

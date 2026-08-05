@@ -49,7 +49,9 @@
 //   把寫死的 #fff／淺黃／淺紅底改吃 token，並壓暗頂部漸層、搜尋框、浮動聊聊鈕與底部列。
 // v65（2026-08-05）：深色模式第二輪——修「快訊」跑馬燈白底看不到字（引用未定義的 --card），
 //   補齊 --card／--brand／--text-sub 等別名，並把淺水藍／淺灰貼片與分隔線全數 token 化。
-const CACHE = "morning-board-v65";
+// v66（2026-08-05）：修表格橫滑出現「多一層」——群組標題列(colspan 跨全表)不再 sticky 釘左
+//   （整條寬帶會蓋住數字欄），改由標題文字本身釘左；標題色改吃 --tint-text 配合深色底。
+const CACHE = "morning-board-v66";
 
 self.addEventListener("install", e => {
   self.skipWaiting();
