@@ -6029,7 +6029,7 @@ function renderBriefCard(st, wkStart, wkEnd) {
         <span>${wkPct}</span>
       </div>
       <ul style="margin:0 0 8px; padding-left:0; list-style:none;">${newsHtml}</ul>
-      <div style="font-size:15px; line-height:1.55; padding:8px 10px; background:#f8f9fb; border-radius:4px;">
+      <div style="font-size:15px; line-height:1.55; padding:8px 10px; background:var(--soft); border-radius:4px;">
         <strong style="color:#019AB3;">論點檢視：</strong>${st.thesis_check || "—"}
       </div>
       ${catalyst}
@@ -6539,7 +6539,7 @@ function renderNewsSheet() {
   // 只有在新聞「落後於今天」才是真的尚未產生；新聞等於今天（甚至超前）都不是過期。
   const isStale = newsDate && newsDate < today;
   const staleBanner = isStale ? `
-    <div style="background:#fff4e6; border:1px solid #ffb74d; border-radius:6px; padding:10px 14px; margin-bottom:12px; color:#5a3a00; font-size:18px; line-height:1.5">
+    <div style="background:var(--warn-soft); border:1px solid var(--warn-soft-border); border-radius:6px; padding:10px 14px; margin-bottom:12px; color:var(--warn-soft-text); font-size:18px; line-height:1.5">
       <strong>今日新聞尚未產生</strong>　目前顯示 ${escapeHtml(newsDate)} 內容（今日 ${escapeHtml(today)}）。系統每日 05:00 起自動產生，通常 07:00 前更新完成；若尚未更新，07:00 / 08:00 / 09:30 / 11:30 會自動補抓。
     </div>
   ` : "";
@@ -7089,7 +7089,7 @@ function doCalcCaseHouse() {
 
   $("cx-result").innerHTML = `
     <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:12px;margin-bottom:10px">
-      <div style="padding:10px;background:#fff;border-radius:6px">
+      <div style="padding:10px;background:var(--card-bg);border-radius:6px">
         <div style="font-size:15px;color:var(--brand-deep);font-weight:700;margin-bottom:6px">繼承路徑</div>
         <div class="kv"><span>遺產稅（房產佔比）</span><b>${fmtMoney(inheritEstateTax)}</b></div>
         <div class="kv"><span>土地增值稅</span><b style="color:var(--down)">免徵</b></div>
@@ -7097,7 +7097,7 @@ function doCalcCaseHouse() {
         <div class="kv"><span>未來出售房地合一（${inheritHL.rate}）</span><b>${fmtMoney(inheritHL.tax)}</b></div>
         <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:18px">${fmtMoney(inheritTotal)}</b></div>
       </div>
-      <div style="padding:10px;background:#fff;border-radius:6px">
+      <div style="padding:10px;background:var(--card-bg);border-radius:6px">
         <div style="font-size:15px;color:#e08a3c;font-weight:700;margin-bottom:6px">贈與路徑</div>
         <div class="kv"><span>贈與稅（房產佔比）</span><b>${fmtMoney(giftTaxOnHouse)}</b></div>
         <div class="kv"><span>土地增值稅${giftSpouse?'（配偶不課徵）':''}</span><b>${fmtMoney(giftLVT)}</b></div>
@@ -7105,7 +7105,7 @@ function doCalcCaseHouse() {
         <div class="kv"><span>未來出售房地合一（${giftHL.rate}）</span><b>${fmtMoney(giftHL.tax)}</b></div>
         <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:18px">${fmtMoney(giftTotal)}</b></div>
       </div>
-      <div style="padding:10px;background:#fff;border-radius:6px">
+      <div style="padding:10px;background:var(--card-bg);border-radius:6px">
         <div style="font-size:15px;color:#6a5acd;font-weight:700;margin-bottom:6px">買賣路徑</div>
         <div class="kv"><span>父母房地合一（${saleParentHL.rate}）</span><b>${fmtMoney(saleParentHL.tax)}</b></div>
         <div class="kv"><span>父母土地增值稅</span><b>${fmtMoney(saleLVT)}</b></div>
@@ -7227,14 +7227,14 @@ function doCalcCaseStock() {
 
   $("cs-result").innerHTML = `
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:10px">
-      <div style="padding:10px;background:#fff;border-radius:6px">
+      <div style="padding:10px;background:var(--card-bg);border-radius:6px">
         <div style="font-size:15px;color:var(--brand-deep);font-weight:700;margin-bottom:6px">個人持有</div>
         <div class="kv"><span>股利稅（${divMethod}）</span><b>${fmtMoney(personalDivTax)}</b></div>
         <div class="kv"><span>二代健保 2.11%</span><b>${fmtMoney(personalNHI)}</b></div>
         <div class="kv"><span>資本利得稅</span><b style="color:var(--down)">停徵</b></div>
         <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:18px">${fmtMoney(personalTotal)}</b></div>
       </div>
-      <div style="padding:10px;background:#fff;border-radius:6px">
+      <div style="padding:10px;background:var(--card-bg);border-radius:6px">
         <div style="font-size:15px;color:#6a5acd;font-weight:700;margin-bottom:6px">投資公司持有</div>
         <div class="kv"><span>股利稅（§42 免稅）</span><b style="color:var(--down)">免徵</b></div>
         ${distrib
@@ -7358,12 +7358,12 @@ function doCalcCaseFund() {
 
   $("cf-result").innerHTML = `
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:10px">
-      <div style="padding:10px;background:#fff;border-radius:6px">
+      <div style="padding:10px;background:var(--card-bg);border-radius:6px">
         <div style="font-size:15px;color:var(--brand-deep);font-weight:700;margin-bottom:6px">個人持有</div>
         ${personalBreakdown}
         <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:18px">${fmtMoney(personalTotal)}</b></div>
       </div>
-      <div style="padding:10px;background:#fff;border-radius:6px">
+      <div style="padding:10px;background:var(--card-bg);border-radius:6px">
         <div style="font-size:15px;color:#6a5acd;font-weight:700;margin-bottom:6px">投資公司持有</div>
         ${companyBreakdown}
         <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:18px">${fmtMoney(companyTotal)}</b></div>
@@ -7471,13 +7471,13 @@ function doCalcCaseRealty() {
 
   $("cr-result").innerHTML = `
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:10px">
-      <div style="padding:10px;background:#fff;border-radius:6px">
+      <div style="padding:10px;background:var(--card-bg);border-radius:6px">
         <div style="font-size:15px;color:var(--brand-deep);font-weight:700;margin-bottom:6px">個人持有</div>
         <div class="kv"><span>租賃所得稅（×57%×${(rate*100).toFixed(0)}%）</span><b>${fmtMoney(personalRentTax)}</b></div>
         <div class="kv"><span>房地合一（${(personalHLRate*100).toFixed(0)}%）</span><b>${fmtMoney(personalSaleTax)}</b></div>
         <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:18px">${fmtMoney(personalTotal)}</b></div>
       </div>
-      <div style="padding:10px;background:#fff;border-radius:6px">
+      <div style="padding:10px;background:var(--card-bg);border-radius:6px">
         <div style="font-size:15px;color:#6a5acd;font-weight:700;margin-bottom:6px">投資公司持有</div>
         <div class="kv"><span>租金併營所稅 20%（×70%）</span><b>${fmtMoney(companyRentTax)}</b></div>
         <div class="kv"><span>房地合一（${(companyHLRate*100).toFixed(0)}%）</span><b>${fmtMoney(companySaleTax)}</b></div>
@@ -7925,7 +7925,7 @@ function renderLumpFundCards() {
   const fmtR = v => (v === null || v === undefined) ? "—" : `${Number(v).toFixed(1)}%`;
   const cellClass = v => (v === null || v === undefined) ? "" : (v > 0 ? "up" : (v < 0 ? "down" : ""));
   const tdBase = "padding:6px 8px;border-bottom:1px solid var(--border)";
-  const thBase = "padding:6px 8px;border-bottom:1px solid var(--border);background:#fff";
+  const thBase = "padding:6px 8px;border-bottom:1px solid var(--border);background:var(--card-bg)";
 
   const headerCells = periods.map(p =>
     `<th style="${thBase};text-align:right">${p.label}</th>`
@@ -7993,7 +7993,7 @@ function renderDcaFundCards() {
   const fmtR = v => (v === null || v === undefined) ? "—" : `${Number(v).toFixed(1)}%`;
   const cellClass = v => (v === null || v === undefined) ? "" : (v > 0 ? "up" : (v < 0 ? "down" : ""));
   const tdBase = "padding:6px 8px;border-bottom:1px solid var(--border)";
-  const thBase = "padding:6px 8px;border-bottom:1px solid var(--border);background:#fff";
+  const thBase = "padding:6px 8px;border-bottom:1px solid var(--border);background:var(--card-bg)";
 
   const headerCells = periods.map(p =>
     `<th style="${thBase};text-align:right">${p.label}</th>`
@@ -8050,7 +8050,7 @@ function renderBeatEtfCards() {
   const cellClass = v => (v === null || v === undefined) ? "" : (v > 0 ? "up" : (v < 0 ? "down" : ""));
 
   const tdBase = "padding:6px 8px;border-bottom:1px solid var(--border)";
-  const thBase = "padding:6px 8px;border-bottom:1px solid var(--border);background:#fff";
+  const thBase = "padding:6px 8px;border-bottom:1px solid var(--border);background:var(--card-bg)";
 
   const headerCells = periods.map(p =>
     `<th style="${thBase};text-align:right">${p.label}</th>`
@@ -8426,7 +8426,7 @@ function renderPopularFundCards() {
   const fmtR = v => (v === null || v === undefined) ? "—" : `${Number(v).toFixed(1)}%`;
   const cellClass = v => (v === null || v === undefined) ? "" : (v > 0 ? "up" : (v < 0 ? "down" : ""));
   const tdBase = "padding:6px 8px;border-bottom:1px solid var(--border)";
-  const thBase = "padding:6px 8px;border-bottom:1px solid var(--border);background:#fff";
+  const thBase = "padding:6px 8px;border-bottom:1px solid var(--border);background:var(--card-bg)";
 
   const headerCells = periods.map(p =>
     `<th style="${thBase};text-align:right">${p.label}</th>`
@@ -8654,10 +8654,10 @@ function renderAssistSheet() {
 .ast-feedback button { margin-right: 8px; padding: 6px 14px; border: 1px solid var(--border);
   background: var(--bg); color: var(--text); border-radius: 4px; cursor: pointer; font-size: 14px; }
 .ast-feedback button:hover { background: var(--bg-alt); }
-.ast-feedback button.adopted { background: #d1fae5; border-color: #2a9d8f; }
-.ast-feedback button.modified { background: #fef3c7; border-color: #f59e0b; }
-.ast-feedback button.rejected { background: #fee2e2; border-color: #d62828; }
-.ast-error { color: #d62828; background: #fee2e2; padding: 10px; border-radius: 4px; font-size: 14px; }
+.ast-feedback button.adopted { background: rgba(42,157,143,0.18); border-color: #2a9d8f; }
+.ast-feedback button.modified { background: var(--warn-soft); border-color: #f59e0b; }
+.ast-feedback button.rejected { background: var(--up-soft); border-color: #d62828; }
+.ast-error { color: #d62828; background: var(--up-soft); padding: 10px; border-radius: 4px; font-size: 14px; }
 .ast-meta { font-size: 12px; color: var(--text-mute); margin-top: 8px; }
 .ast-section { margin-bottom: 16px; }
 .ast-section h4 { margin: 0 0 6px; font-size: 15px; color: var(--text); font-weight: 600; }
@@ -9083,9 +9083,9 @@ function renderInsuranceGapSheet() {
 .tins-grow:last-child { border-bottom: none; }
 .tins-gtotal { display: flex; justify-content: space-between; font-size: 18px; font-weight: 700; padding: 8px 0; border-top: 2px solid var(--brand-primary); margin-top: 6px; color: var(--text); }
 .tins-badge { display: inline-block; padding: 1px 7px; border-radius: 10px; font-size: 12px; font-weight: 600; }
-.tins-badge.high { background: #fee2e2; color: #991b1b; }
-.tins-badge.mid { background: #fef3c7; color: #92400e; }
-.tins-badge.low { background: #d1fae5; color: #065f46; }
+.tins-badge.high { background: var(--up-soft); color: #991b1b; }
+.tins-badge.mid { background: var(--warn-soft); color: #92400e; }
+.tins-badge.low { background: rgba(42,157,143,0.18); color: #065f46; }
 .tins-pitem { font-size: 14px; padding: 4px 0; display: flex; gap: 8px; align-items: center; color: var(--text); }
 .tins-note { font-size: 13px; color: var(--text-mute); margin-top: 12px; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 8px; }
 </style>
