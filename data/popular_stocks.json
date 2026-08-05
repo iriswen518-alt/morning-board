@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-05T17:07:07+08:00",
+  "generated_at": "2026-08-05T17:43:42+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -45,6 +45,20 @@
       "error": null
     },
     {
+      "symbol": "UBER",
+      "name_zh": "Uber",
+      "kind": "US",
+      "price": 71.99,
+      "change_pct": 0.53,
+      "mtd_pct": 2.32,
+      "ytd_pct": -11.9,
+      "market_date": "2026-08-04",
+      "per": 17.2216,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=UBER.US",
+      "error": null
+    },
+    {
       "symbol": "AMIX",
       "name_zh": "Autonomix Medical",
       "kind": "US",
@@ -56,6 +70,34 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AMIX.US",
+      "error": null
+    },
+    {
+      "symbol": "KTOS",
+      "name_zh": "Kratos Defense & Security Solut",
+      "kind": "US",
+      "price": 51.87,
+      "change_pct": 5.41,
+      "mtd_pct": 11.31,
+      "ytd_pct": -31.67,
+      "market_date": "2026-08-04",
+      "per": 325.1622,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=KTOS.US",
+      "error": null
+    },
+    {
+      "symbol": "CMG",
+      "name_zh": "Chipotle Mexican Grill",
+      "kind": "US",
+      "price": 33.82,
+      "change_pct": -9.72,
+      "mtd_pct": -9.13,
+      "ytd_pct": -8.59,
+      "market_date": "2026-08-04",
+      "per": 33.0929,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CMG.US",
       "error": null
     },
     {
@@ -87,34 +129,6 @@
       "error": null
     },
     {
-      "symbol": "CMG",
-      "name_zh": "Chipotle Mexican Grill",
-      "kind": "US",
-      "price": 33.82,
-      "change_pct": -9.72,
-      "mtd_pct": -9.13,
-      "ytd_pct": -8.59,
-      "market_date": "2026-08-04",
-      "per": 33.0929,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CMG.US",
-      "error": null
-    },
-    {
-      "symbol": "ALAB",
-      "name_zh": "Astera Labs",
-      "kind": "US",
-      "price": 361.67,
-      "change_pct": 12.65,
-      "mtd_pct": 16.21,
-      "ytd_pct": 117.4,
-      "market_date": "2026-08-04",
-      "per": 231.6417,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ALAB.US",
-      "error": null
-    },
-    {
       "symbol": "UPST",
       "name_zh": "Upstart",
       "kind": "US",
@@ -126,20 +140,6 @@
       "per": 59.5751,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=UPST.US",
-      "error": null
-    },
-    {
-      "symbol": "W",
-      "name_zh": "Wayfair",
-      "kind": "US",
-      "price": 116.08,
-      "change_pct": 29.97,
-      "mtd_pct": 36.73,
-      "ytd_pct": 15.61,
-      "market_date": "2026-08-04",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=W.US",
       "error": null
     },
     {
@@ -157,17 +157,17 @@
       "error": null
     },
     {
-      "symbol": "NRG",
-      "name_zh": "NRG Energy",
+      "symbol": "W",
+      "name_zh": "Wayfair",
       "kind": "US",
-      "price": 117.04,
-      "change_pct": -15.48,
-      "mtd_pct": -12.85,
-      "ytd_pct": -26.5,
+      "price": 116.08,
+      "change_pct": 29.97,
+      "mtd_pct": 36.73,
+      "ytd_pct": 15.61,
       "market_date": "2026-08-04",
-      "per": 116.6958,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NRG.US",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=W.US",
       "error": null
     },
     {
@@ -185,31 +185,31 @@
       "error": null
     },
     {
-      "symbol": "SLV",
-      "name_zh": "iShares Silver Trust",
+      "symbol": "SHOP",
+      "name_zh": "Shopify",
       "kind": "US",
-      "price": 53.84,
-      "change_pct": 2.63,
-      "mtd_pct": 2.83,
-      "ytd_pct": -16.42,
+      "price": 123.3,
+      "change_pct": 5.38,
+      "mtd_pct": 5.25,
+      "ytd_pct": -23.4,
       "market_date": "2026-08-04",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SLV.US",
+      "per": 117.5001,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SHOP.US",
       "error": null
     },
     {
-      "symbol": "UBER",
-      "name_zh": "Uber",
+      "symbol": "TMDX",
+      "name_zh": "TransMedics",
       "kind": "US",
-      "price": 71.99,
-      "change_pct": 0.53,
-      "mtd_pct": 2.32,
-      "ytd_pct": -11.9,
+      "price": 80.75,
+      "change_pct": -0.98,
+      "mtd_pct": 5.54,
+      "ytd_pct": -33.62,
       "market_date": "2026-08-04",
-      "per": 17.2216,
+      "per": 16.2287,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=UBER.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TMDX.US",
       "error": null
     },
     {
