@@ -1186,10 +1186,10 @@ function renderBondMarket() {
   const y10 = ro.us10y  ?? null;
   const spreadBps = ro.yield_curve_10y2y_bps ?? null;
   const curveShape = ro.curve_shape || "";
-  let curveBg = "#f8fafc", curveColor = "var(--text)";
-  if (curveShape === "倒掛")  { curveBg = "#fee2e2"; curveColor = "#991b1b"; }
-  else if (curveShape === "正斜率") { curveBg = "#d1fae5"; curveColor = "#065f46"; }
-  else if (curveShape === "平坦")  { curveBg = "#fef9c3"; curveColor = "#854d0e"; }
+  let curveBg = "var(--tint-brand-2)", curveColor = "var(--text)";
+  if (curveShape === "倒掛")  { curveBg = "var(--up-soft)"; curveColor = "var(--up)"; }
+  else if (curveShape === "正斜率") { curveBg = "var(--down-soft)"; curveColor = "var(--down)"; }
+  else if (curveShape === "平坦")  { curveBg = "var(--warn-soft)"; curveColor = "var(--warn-soft-text)"; }
 
   const spreadCard = `
     <div style="margin-bottom:16px;padding:14px 16px;background:var(--card-bg,#fff);border:1px solid var(--border);border-radius:10px;">
@@ -2907,7 +2907,7 @@ function renderLiveChartBig(points, prevClose, up, dp) {
   for (let g = 0; g <= 3; g++) {
     const v = lo + (range * g / 3);
     const y = Y(v).toFixed(1);
-    grid += `<line x1="${padL}" y1="${y}" x2="${(padL + plotW).toFixed(1)}" y2="${y}" stroke="#eceff3" stroke-width="1"/>`;
+    grid += `<line x1="${padL}" y1="${y}" x2="${(padL + plotW).toFixed(1)}" y2="${y}" stroke="var(--border)" stroke-width="1"/>`;
     grid += `<text x="${(W - padR + 5).toFixed(1)}" y="${(+y + 3.5).toFixed(1)}" font-size="11" fill="#9aa3af">${fmtV(v)}</text>`;
   }
   const prevLine = prevClose != null
@@ -3300,7 +3300,7 @@ function renderLiveNewsTicker() {
     <div class="live-news-ticker" id="live-news-ticker" role="button" tabindex="0"
        onclick="switchTab('news')" title="到站內新聞分頁看全文"
        style="display:flex;align-items:center;gap:8px;padding:8px 12px;margin-bottom:10px;
-              background:var(--card,#fff);border:1px solid var(--border,#e5e7eb);border-radius:10px;
+              background:var(--card-bg);border:1px solid var(--border,#e5e7eb);border-radius:10px;
               text-decoration:none;color:inherit;overflow:hidden;cursor:pointer;">
       <span style="flex-shrink:0;font-size:14px;font-weight:700;color:#fff;background:#e8453c;
                    padding:2px 8px;border-radius:6px;letter-spacing:1px;">快訊</span>
@@ -3555,13 +3555,13 @@ function renderMarketSheet() {
   let _curveLabel = "", _curveBg = "", _curveColor = "", _curveDesc = "";
   if (_spread10y2y != null) {
     if (_spread10y2y > 0.1) {
-      _curveLabel = "正斜率"; _curveBg = "#d1fae5"; _curveColor = "#065f46";
+      _curveLabel = "正斜率"; _curveBg = "var(--down-soft)"; _curveColor = "var(--down)";
       _curveDesc = "長債殖利率高於短債，市場預期景氣擴張";
     } else if (_spread10y2y < -0.1) {
-      _curveLabel = "倒掛"; _curveBg = "#fee2e2"; _curveColor = "#991b1b";
+      _curveLabel = "倒掛"; _curveBg = "var(--up-soft)"; _curveColor = "var(--up)";
       _curveDesc = "短債殖利率高於長債，歷史上常先行衰退訊號";
     } else {
-      _curveLabel = "平坦"; _curveBg = "#fef9c3"; _curveColor = "#854d0e";
+      _curveLabel = "平坦"; _curveBg = "var(--warn-soft)"; _curveColor = "var(--warn-soft-text)";
       _curveDesc = "市場對利率走向猶豫，升降息預期接近五五波";
     }
   }
@@ -3591,7 +3591,7 @@ function renderMarketSheet() {
         <span style="color:var(--text-mute);font-size:13px;">${fw.fomc_date}</span>
         <span style="margin-left:auto;font-size:13px;">implied ${fw.implied_rate != null ? fw.implied_rate.toFixed(3) + "%" : "—"} ${deltaStr}</span>
       </div>
-      <div style="display:flex;width:100%;border-radius:3px;overflow:hidden;background:#e2e8f0;">${hikeBar}${holdBar}${cutBar}</div>
+      <div style="display:flex;width:100%;border-radius:3px;overflow:hidden;background:var(--tint-grey);">${hikeBar}${holdBar}${cutBar}</div>
       <div style="display:flex;gap:8px;font-size:12px;margin-top:2px;color:var(--text-mute);">
         ${hikeLabel || cutLabel ? (hikeLabel + " " + cutLabel).trim() : `<span>持平機率${pHold.toFixed(0)}%</span>`}
         <span style="margin-left:auto;">升${pHike.toFixed(0)}% 持${pHold.toFixed(0)}% 降${pCut.toFixed(0)}%</span>
@@ -4537,7 +4537,7 @@ function renderPriceChart(chart) {
   for (let g = 0; g <= 3; g++) {
     const v = lo + (span * g / 3);
     const y = Y(v).toFixed(1);
-    grid += `<line x1="${padL}" y1="${y}" x2="${(padL + plotW).toFixed(1)}" y2="${y}" stroke="#eceff3" stroke-width="1"/>`;
+    grid += `<line x1="${padL}" y1="${y}" x2="${(padL + plotW).toFixed(1)}" y2="${y}" stroke="var(--border)" stroke-width="1"/>`;
     grid += `<text x="${(W - padR + 4).toFixed(1)}" y="${(+y + 3.5).toFixed(1)}" font-size="11" fill="#9aa3af">${fmtNum(v, 2)}</text>`;
   }
   const maxVol = Math.max(...pts.map(p => p.v || 0)) || 1;
@@ -4776,7 +4776,7 @@ function renderRevenueBars(series) {
   const firstLbl = fmtYyyymmFromRoc(series[0].ym);
   const lastLbl = fmtYyyymmFromRoc(series[n - 1].ym);
   return `<svg class="tw-rev-bars" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true">
-    <line x1="0" y1="${baseY}" x2="${W}" y2="${baseY}" stroke="#d7dde3" stroke-width="0.8"/>${bars}</svg>
+    <line x1="0" y1="${baseY}" x2="${W}" y2="${baseY}" stroke="var(--border)" stroke-width="0.8"/>${bars}</svg>
     <div class="tw-rev-axis"><span>${escapeHtml(firstLbl)}</span><span>${escapeHtml(lastLbl)}</span></div>`;
 }
 
@@ -4897,7 +4897,7 @@ function renderInstBarRow(label, arr) {
   }).join("");
   return `<div class="tw-inst-row">
     <div class="tw-inst-row-head"><span class="tw-inst-row-lbl">${escapeHtml(label)}</span><span class="tw-inst-row-sum ${sumCls}">Σ ${fmtLots(sum)}</span></div>
-    <svg class="tw-inst-bars" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="${mid}" x2="${W}" y2="${mid}" stroke="#d7dde3" stroke-width="0.8"/>${bars}</svg>
+    <svg class="tw-inst-bars" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="${mid}" x2="${W}" y2="${mid}" stroke="var(--border)" stroke-width="0.8"/>${bars}</svg>
   </div>`;
 }
 
@@ -5852,7 +5852,7 @@ function renderTwStockSheet() {
     <summary class="tw-sop-summary">📚 資料來源</summary>
 
     <h3 style="font-size:18px;margin:24px 0 8px">1. 基本面</h3>
-    <div style="background:#E5F2F5;padding:12px 16px;border-radius:6px;margin:10px 0;font-size:15px">
+    <div style="background:var(--tint-brand);padding:12px 16px;border-radius:6px;margin:10px 0;font-size:15px">
       入口：<b>${lnk("https://mops.twse.com.tw", "mops.twse.com.tw")}</b> → 上方搜尋輸入股票代號或公司名
     </div>
     <div style="overflow-x:auto">
@@ -5861,16 +5861,16 @@ function renderTwStockSheet() {
         <th style="padding:10px;text-align:left;width:40%">項目</th>
         <th style="padding:10px;text-align:left">內容</th>
       </tr>
-      <tr style="background:#F2F8FA"><td style="padding:8px 12px"><b>公司治理一覽表</b></td><td style="padding:8px 12px">資本額、員工數、董事長、產業別、實收資本</td></tr>
+      <tr style="background:var(--tint-brand-2)"><td style="padding:8px 12px"><b>公司治理一覽表</b></td><td style="padding:8px 12px">資本額、員工數、董事長、產業別、實收資本</td></tr>
       <tr><td style="padding:8px 12px"><b>月營收</b>（每月 10 日後）</td><td style="padding:8px 12px">最近 12 個月趨勢、年增率、累計年增率</td></tr>
-      <tr style="background:#F2F8FA"><td style="padding:8px 12px"><b>最新季財報</b></td><td style="padding:8px 12px">三表 + 毛利率／營益率／EPS 三大關鍵</td></tr>
+      <tr style="background:var(--tint-brand-2)"><td style="padding:8px 12px"><b>最新季財報</b></td><td style="padding:8px 12px">三表 + 毛利率／營益率／EPS 三大關鍵</td></tr>
       <tr><td style="padding:8px 12px"><b>重大訊息</b>（過去 3 個月）</td><td style="padding:8px 12px">併購、買回庫藏股、業績預警、董監異動</td></tr>
-      <tr style="background:#F2F8FA"><td style="padding:8px 12px"><b>法說會簡報</b></td><td style="padding:8px 12px">公司怎麼講自己（管理層敘事 vs 數字）</td></tr>
+      <tr style="background:var(--tint-brand-2)"><td style="padding:8px 12px"><b>法說會簡報</b></td><td style="padding:8px 12px">公司怎麼講自己（管理層敘事 vs 數字）</td></tr>
     </table>
     </div>
 
     <h3 style="font-size:18px;margin:24px 0 8px">2. TWSE 看籌碼</h3>
-    <div style="background:#E5F2F5;padding:12px 16px;border-radius:6px;margin:10px 0;font-size:15px">
+    <div style="background:var(--tint-brand);padding:12px 16px;border-radius:6px;margin:10px 0;font-size:15px">
       入口：<b>${lnk("https://www.twse.com.tw", "www.twse.com.tw")}</b> → 交易資訊
     </div>
     <div style="overflow-x:auto">
@@ -5879,9 +5879,9 @@ function renderTwStockSheet() {
         <th style="padding:10px;text-align:left;width:40%">項目</th>
         <th style="padding:10px;text-align:left">內容</th>
       </tr>
-      <tr style="background:#F2F8FA"><td style="padding:8px 12px"><b>三大法人買賣超</b>（最近 5 日）</td><td style="padding:8px 12px">外資、投信、自營商各別買賣超；連買連賣天數</td></tr>
+      <tr style="background:var(--tint-brand-2)"><td style="padding:8px 12px"><b>三大法人買賣超</b>（最近 5 日）</td><td style="padding:8px 12px">外資、投信、自營商各別買賣超；連買連賣天數</td></tr>
       <tr><td style="padding:8px 12px"><b>融資融券餘額變化</b></td><td style="padding:8px 12px">融資增 = 散戶看好；融券增 = 看空或避險</td></tr>
-      <tr style="background:#F2F8FA"><td style="padding:8px 12px"><b>借券賣出餘額</b></td><td style="padding:8px 12px">外資／法人放空指標；快速攀升警訊</td></tr>
+      <tr style="background:var(--tint-brand-2)"><td style="padding:8px 12px"><b>借券賣出餘額</b></td><td style="padding:8px 12px">外資／法人放空指標；快速攀升警訊</td></tr>
     </table>
     </div>
 
@@ -5892,14 +5892,14 @@ function renderTwStockSheet() {
         <th style="padding:10px;text-align:left;width:40%">項目</th>
         <th style="padding:10px;text-align:left">內容</th>
       </tr>
-      <tr style="background:#F2F8FA"><td style="padding:8px 12px"><b>公司年報「行業狀況」章節</b></td><td style="padding:8px 12px">產業地位、市佔、上下游、技術門檻</td></tr>
+      <tr style="background:var(--tint-brand-2)"><td style="padding:8px 12px"><b>公司年報「行業狀況」章節</b></td><td style="padding:8px 12px">產業地位、市佔、上下游、技術門檻</td></tr>
       <tr><td style="padding:8px 12px"><b>最近一次法說會 Q&amp;A</b></td><td style="padding:8px 12px">分析師問什麼 = 市場關注點</td></tr>
-      <tr style="background:#F2F8FA"><td style="padding:8px 12px"><b>同業比較表</b>（找 3 家競品）</td><td style="padding:8px 12px">營收成長、毛利率、PE、ROE 對比</td></tr>
+      <tr style="background:var(--tint-brand-2)"><td style="padding:8px 12px"><b>同業比較表</b>（找 3 家競品）</td><td style="padding:8px 12px">營收成長、毛利率、PE、ROE 對比</td></tr>
     </table>
     </div>
 
     <h3 style="font-size:18px;margin:28px 0 8px">紅旗訊號（看到立即扣分）</h3>
-    <div style="background:#FFEBEE;padding:16px 20px;border-radius:6px">
+    <div style="background:var(--up-soft);padding:16px 20px;border-radius:6px">
       <table style="width:100%;border-collapse:collapse;font-size:15px">
         <tr><td style="padding:6px 0;width:28px">⛔</td><td style="padding:6px 0"><b>處置股／變更交易方法</b> — 監管警示，遠離</td></tr>
         <tr><td style="padding:6px 0">⛔</td><td style="padding:6px 0"><b>內部人連續申讓</b> — 董監對自家股票沒信心</td></tr>
@@ -5912,7 +5912,7 @@ function renderTwStockSheet() {
     </div>
 
     <h3 style="font-size:18px;margin:24px 0 8px">綠旗訊號（看到加分）</h3>
-    <div style="background:#E8F5E9;padding:16px 20px;border-radius:6px">
+    <div style="background:var(--down-soft);padding:16px 20px;border-radius:6px">
       <table style="width:100%;border-collapse:collapse;font-size:15px">
         <tr><td style="padding:6px 0;width:28px">✅</td><td style="padding:6px 0"><b>連續多季營收／EPS 雙增長</b> — 基本面擴張</td></tr>
         <tr><td style="padding:6px 0">✅</td><td style="padding:6px 0"><b>毛利率穩定或上升</b> — 議價能力佳</td></tr>
@@ -5926,11 +5926,11 @@ function renderTwStockSheet() {
     <h3 style="font-size:18px;margin:28px 0 8px">工具備忘</h3>
     <div style="overflow-x:auto">
     <table class="tw-quote-table" style="width:100%;border-collapse:collapse;font-size:15px;min-width:520px">
-      <tr style="background:#F2F8FA"><td style="padding:8px 12px;width:30%"><b>MOPS</b></td><td style="padding:8px 12px">${lnk("https://mops.twse.com.tw", "mops.twse.com.tw")} — 第一手揭露</td></tr>
+      <tr style="background:var(--tint-brand-2)"><td style="padding:8px 12px;width:30%"><b>MOPS</b></td><td style="padding:8px 12px">${lnk("https://mops.twse.com.tw", "mops.twse.com.tw")} — 第一手揭露</td></tr>
       <tr><td style="padding:8px 12px"><b>TWSE</b></td><td style="padding:8px 12px">${lnk("https://www.twse.com.tw", "www.twse.com.tw")} — 行情、籌碼</td></tr>
-      <tr style="background:#F2F8FA"><td style="padding:8px 12px"><b>Goodinfo!</b></td><td style="padding:8px 12px">${lnk("https://goodinfo.tw", "goodinfo.tw")} — 個股資料總覽（二手，僅供發現）</td></tr>
+      <tr style="background:var(--tint-brand-2)"><td style="padding:8px 12px"><b>Goodinfo!</b></td><td style="padding:8px 12px">${lnk("https://goodinfo.tw", "goodinfo.tw")} — 個股資料總覽（二手，僅供發現）</td></tr>
       <tr><td style="padding:8px 12px"><b>財報狗</b></td><td style="padding:8px 12px">${lnk("https://statementdog.com", "statementdog.com")} — 財報視覺化</td></tr>
-      <tr style="background:#F2F8FA"><td style="padding:8px 12px"><b>CMoney</b></td><td style="padding:8px 12px">${lnk("https://cmoney.tw", "cmoney.tw")} — 法人籌碼</td></tr>
+      <tr style="background:var(--tint-brand-2)"><td style="padding:8px 12px"><b>CMoney</b></td><td style="padding:8px 12px">${lnk("https://cmoney.tw", "cmoney.tw")} — 法人籌碼</td></tr>
     </table>
     </div>
     <p style="color:var(--text-mute);font-size:14px;margin:10px 0 4px">二手網站只用來「快速發現」，最終決策必回 MOPS／TWSE 對原始資料。</p>
@@ -7115,7 +7115,7 @@ function doCalcCaseHouse() {
         <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:18px">${fmtMoney(saleTotal)}</b></div>
       </div>
     </div>
-    <div style="padding:12px 14px;background:linear-gradient(135deg,#E5F2F5,#fff);border-radius:8px">
+    <div style="padding:12px 14px;background:linear-gradient(135deg,var(--tint-brand),#fff);border-radius:8px">
       <div style="font-size:18px;font-weight:700;color:var(--brand-deep);margin-bottom:4px">建議：${winner}路徑較划算</div>
       <div style="font-size:15px;color:var(--text-sub)">較次低差額約 <b>${fmtMoney(diff)}</b>${winnerNote[winner] || ""}</div>
     </div>`;
@@ -7244,7 +7244,7 @@ function doCalcCaseStock() {
         <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:18px">${fmtMoney(companyTotal)}</b></div>
       </div>
     </div>
-    <div style="padding:12px 14px;background:linear-gradient(135deg,#E5F2F5,#fff);border-radius:8px">
+    <div style="padding:12px 14px;background:linear-gradient(135deg,var(--tint-brand),#fff);border-radius:8px">
       <div style="font-size:18px;font-weight:700;color:var(--brand-deep);margin-bottom:4px">建議：${winner}較划算</div>
       <div style="font-size:15px;color:var(--text-sub)">差額約 <b>${fmtMoney(diff)}</b>${winner === "投資公司持有" ? "；惟須計入公司設立與行政成本，且未來盈餘分配給個人時將二次課稅。" : "；個人持有單純，但股利大額時邊際稅率高。"}</div>
     </div>`;
@@ -7369,7 +7369,7 @@ function doCalcCaseFund() {
         <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:18px">${fmtMoney(companyTotal)}</b></div>
       </div>
     </div>
-    <div style="padding:12px 14px;background:linear-gradient(135deg,#E5F2F5,#fff);border-radius:8px">
+    <div style="padding:12px 14px;background:linear-gradient(135deg,var(--tint-brand),#fff);border-radius:8px">
       <div style="font-size:18px;font-weight:700;color:var(--brand-deep);margin-bottom:4px">建議：${winner}較划算</div>
       <div style="font-size:15px;color:var(--text-sub)">差額約 <b>${fmtMoney(diff)}</b>${loc==="dom" ? "（境內基金，個人贖回利得停徵為關鍵優勢）" : "（境外基金，個人有 670 萬免稅額；公司全額併入營所稅）"}</div>
     </div>`;
@@ -7485,7 +7485,7 @@ function doCalcCaseRealty() {
         <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:18px">${fmtMoney(companyTotal)}</b></div>
       </div>
     </div>
-    <div style="padding:12px 14px;background:linear-gradient(135deg,#E5F2F5,#fff);border-radius:8px">
+    <div style="padding:12px 14px;background:linear-gradient(135deg,var(--tint-brand),#fff);border-radius:8px">
       <div style="font-size:18px;font-weight:700;color:var(--brand-deep);margin-bottom:4px">建議：${winner}較划算</div>
       <div style="font-size:15px;color:var(--text-sub)">差額約 <b>${fmtMoney(diff)}</b>；持有 ≤ 5 年短期持有時，個人房地合一稅率與法人相同，但法人多了營所稅與未分配盈餘加徵。</div>
     </div>`;
@@ -7953,7 +7953,7 @@ function renderLumpFundCards() {
     const chip = f.currency ? `<span style="margin-left:6px">${currencyChip(f.currency)}</span>` : "";
     const catLabel = LUMP_CAT[f.id] || LUMP_CAT_CODE[f.category] || "";
     const catChip = catLabel
-      ? `<span class="chip chip-default" style="background:#E5F2F5;color:var(--brand-deep);margin-left:6px;font-size:13px">${escapeHtml(catLabel)}</span>`
+      ? `<span class="chip chip-default" style="background:var(--tint-brand);color:var(--brand-deep);margin-left:6px;font-size:13px">${escapeHtml(catLabel)}</span>`
       : "";
     const cells = periods.map(p => {
       const v = p.get(f);
@@ -8005,7 +8005,7 @@ function renderDcaFundCards() {
       : escapeHtml(f.name_zh);
     const curChip = f.currency ? `<span style="margin-left:6px">${currencyChip(f.currency)}</span>` : "";
     const catChip = f.category
-      ? `<span class="chip chip-default" style="background:#E5F2F5;color:var(--brand-deep);margin-left:6px;font-size:13px">${escapeHtml(f.category)}</span>`
+      ? `<span class="chip chip-default" style="background:var(--tint-brand);color:var(--brand-deep);margin-left:6px;font-size:13px">${escapeHtml(f.category)}</span>`
       : "";
     const cells = periods.map(p => {
       const v = f.perf_dca?.[p.key];
@@ -8078,7 +8078,7 @@ function renderBeatEtfCards() {
   const beatCatChip = name => {
     const lab = BEAT_FUND_CAT[(name || "").replace(/\s/g, "")];
     return lab
-      ? `<span class="chip chip-default" style="background:#E5F2F5;color:var(--brand-deep);margin-left:6px;font-size:13px">${escapeHtml(lab)}</span>`
+      ? `<span class="chip chip-default" style="background:var(--tint-brand);color:var(--brand-deep);margin-left:6px;font-size:13px">${escapeHtml(lab)}</span>`
       : "";
   };
 
@@ -8102,7 +8102,7 @@ function renderBeatEtfCards() {
 
   const etfRows = etfItems.map(e => {
     const catChip = e.category
-      ? `<span class="chip chip-default" style="background:#E5F2F5;color:var(--brand-deep);margin-left:6px;font-size:13px">${escapeHtml(e.category)}</span>`
+      ? `<span class="chip chip-default" style="background:var(--tint-brand);color:var(--brand-deep);margin-left:6px;font-size:13px">${escapeHtml(e.category)}</span>`
       : "";
     const cells = periods.map(p => {
       const v = e.perf?.[p.key];
@@ -8117,7 +8117,7 @@ function renderBeatEtfCards() {
       ? `<a href="${f.source_url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">${escapeHtml(f.name_zh)}</a>`
       : escapeHtml(f.name_zh);
     const catChip = f.category
-      ? `<span class="chip chip-default" style="background:#E5F2F5;color:var(--brand-deep);margin-left:6px;font-size:13px">${escapeHtml(f.category)}</span>`
+      ? `<span class="chip chip-default" style="background:var(--tint-brand);color:var(--brand-deep);margin-left:6px;font-size:13px">${escapeHtml(f.category)}</span>`
       : "";
     const cells = periods.map(p => {
       const v = f.perf?.[p.key];
@@ -8146,11 +8146,11 @@ function renderBeatEtfCards() {
           </tr>
         </thead>
         <tbody>
-          ${fundItems.length ? groupHeader("老牌主動式台股基金", "#CCE8ED") : ""}
+          ${fundItems.length ? groupHeader("老牌主動式台股基金", "var(--tint-head)") : ""}
           ${fundRows}
-          ${etfItems.length ? groupHeader("代表性台股 ETF（對照）", "#E5F2F5") : ""}
+          ${etfItems.length ? groupHeader("代表性台股 ETF（對照）", "var(--tint-brand)") : ""}
           ${etfRows}
-          ${linkedItems.length ? groupHeader("ETF連結基金", "#CCE8ED") : ""}
+          ${linkedItems.length ? groupHeader("ETF連結基金", "var(--tint-head)") : ""}
           ${linkedRows}
         </tbody>
       </table>
@@ -8342,8 +8342,8 @@ function renderRiskReturnScatter(f) {
     <div class="cmp-scatter">
       <div class="cmp-scatter-title">風險報酬定位(近3年)</div>
       <svg viewBox="0 0 ${W} ${H}" class="cmp-scatter-svg" role="img" aria-label="風險報酬散點圖">
-        <line x1="${PAD}" y1="${H - PAD}" x2="${W - 6}" y2="${H - PAD}" stroke="#d8dee3"></line>
-        <line x1="${PAD}" y1="6" x2="${PAD}" y2="${H - PAD}" stroke="#d8dee3"></line>
+        <line x1="${PAD}" y1="${H - PAD}" x2="${W - 6}" y2="${H - PAD}" stroke="var(--border)"></line>
+        <line x1="${PAD}" y1="6" x2="${PAD}" y2="${H - PAD}" stroke="var(--border)"></line>
         <text x="${W - 6}" y="${H - PAD + 14}" font-size="9" fill="#9aa5ad" text-anchor="end">波動度 →</text>
         <text x="${PAD - 6}" y="12" font-size="9" fill="#9aa5ad">報酬 ↑</text>
         ${dots}${labels}
@@ -8433,7 +8433,7 @@ function renderPopularFundCards() {
   ).join("");
 
   const CAT_COLOR = {
-    bond: "#E5F2F5", equity: "#EEF5E5", balanced: "#F5F0E5", income: "#F5E5EE",
+    bond: "var(--tint-brand)", equity: "var(--down-soft)", balanced: "var(--warn-soft)", income: "var(--tint-indigo)",
   };
 
   const rows = funds.map(f => {
@@ -8442,13 +8442,13 @@ function renderPopularFundCards() {
       : escapeHtml(f.name_zh);
     const chip = f.currency ? `<span style="margin-left:6px">${currencyChip(f.currency)}</span>` : "";
     const catLabel = f.cat_label || "";
-    const catBg = CAT_COLOR[f.category] || "#E5F2F5";
+    const catBg = CAT_COLOR[f.category] || "var(--tint-brand)";
     const catChip = catLabel
       ? `<span class="chip chip-default" style="background:${catBg};color:var(--brand-deep);margin-left:6px;font-size:13px">${escapeHtml(catLabel)}</span>`
       : "";
     const listedChip = f.panhsin_listed === true
-      ? `<span class="chip chip-default" style="background:#E5F5EC;color:#1a7a42;margin-left:6px;font-size:13px">板信上架</span>`
-      : `<span class="chip chip-default" style="background:#F5F0E5;color:#7a5a1a;margin-left:6px;font-size:13px">板信未上架</span>`;
+      ? `<span class="chip chip-default" style="background:var(--down-soft);color:var(--down);margin-left:6px;font-size:13px">板信上架</span>`
+      : `<span class="chip chip-default" style="background:var(--warn-soft);color:var(--warn-soft-text);margin-left:6px;font-size:13px">板信未上架</span>`;
     const cells = periods.map(p => {
       const v = f.perf_single?.[p.key];
       return `<td style="${tdBase};text-align:right" class="${cellClass(v)}">${perfLink(fmtR(v), f.perf_url || f.source_url)}</td>`;

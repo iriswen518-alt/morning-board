@@ -47,7 +47,9 @@
 // v57（2026-07-22）：超越ETF 表格下方新增資料日期註記（績效截至＝基金淨值日／ETF 收盤日，取自 beatetf.json stat_date）。
 // v64（2026-08-05）：深色模式配色整修——補上 --card-bg／--line 等 token（原本未定義，卡片在深色下仍是白底），
 //   把寫死的 #fff／淺黃／淺紅底改吃 token，並壓暗頂部漸層、搜尋框、浮動聊聊鈕與底部列。
-const CACHE = "morning-board-v64";
+// v65（2026-08-05）：深色模式第二輪——修「快訊」跑馬燈白底看不到字（引用未定義的 --card），
+//   補齊 --card／--brand／--text-sub 等別名，並把淺水藍／淺灰貼片與分隔線全數 token 化。
+const CACHE = "morning-board-v65";
 
 self.addEventListener("install", e => {
   self.skipWaiting();
