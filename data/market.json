@@ -76,8 +76,8 @@
     {
       "name": "Nikkei 225",
       "name_zh": null,
-      "close": 66263.53125,
-      "daily_pct": 3.61,
+      "close": 66300.4375,
+      "daily_pct": 3.66,
       "mtd_pct": -0.63,
       "ytd_pct": 27.05,
       "closing_date": "2026-08-05"
@@ -112,8 +112,8 @@
     {
       "name": "KOSPI",
       "name_zh": null,
-      "close": 6631.4501953125,
-      "daily_pct": 4.29,
+      "close": 6598.259765625,
+      "daily_pct": 3.76,
       "mtd_pct": -3.59,
       "ytd_pct": 50.89,
       "closing_date": "2026-08-05"
@@ -130,16 +130,16 @@
     {
       "name": "Shanghai 上證",
       "name_zh": null,
-      "close": 3822.284912109375,
-      "daily_pct": 0.33,
+      "close": 3878.4296875,
+      "daily_pct": 1.47,
       "mtd_pct": -0.26,
       "ytd_pct": -3.69,
-      "closing_date": "2026-08-04"
+      "closing_date": "2026-08-05"
     },
     {
       "name": "CSI 300 滬深300",
       "name_zh": null,
-      "close": 4646.56298828125,
+      "close": 4658.15478515625,
       "daily_pct": null,
       "mtd_pct": -9.04,
       "ytd_pct": -2.18,
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 99.88999938964844,
       "daily_pct": -0.07,
-      "mtd_pct": 0.06,
-      "ytd_pct": 1.61,
+      "mtd_pct": 0.03,
+      "ytd_pct": 1.58,
       "closing_date": "2026-08-04"
     },
     {
@@ -405,18 +405,18 @@
     {
       "label": "Sep 2026",
       "fomc_date": "2026-09-17",
-      "implied_rate": 3.7,
-      "delta_rate": 0.07,
-      "delta_bps": 7.0,
-      "p_hike": 28.0,
-      "p_hold": 72.0,
+      "implied_rate": 3.71,
+      "delta_rate": 0.08,
+      "delta_bps": 8.0,
+      "p_hike": 32.0,
+      "p_hold": 68.0,
       "p_cut": 0,
       "is_reference": false
     },
     {
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
-      "implied_rate": 3.78,
+      "implied_rate": 3.79,
       "delta_rate": 0.08,
       "delta_bps": 8.0,
       "p_hike": 32.0,
@@ -436,5 +436,5 @@
       "is_reference": false
     }
   ],
-  "summary": "8/4 PHLX Semiconductor +6.55%、8/5 KOSPI +4.29%、8/5 Nikkei 225 +3.61% 領漲；8/4 Nifty 50 -0.64%、8/4 Hang Seng 恆生 -0.60% 走弱。"
+  "summary": "8/4 PHLX Semiconductor +6.55%、8/5 KOSPI +3.76%、8/5 Nikkei 225 +3.66% 領漲；8/4 Nifty 50 -0.64%、8/4 Hang Seng 恆生 -0.60% 走弱。"
 }
