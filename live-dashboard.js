@@ -1,5 +1,6 @@
 /* =========================================================
-   市場儀表 Market Dashboard — 即時行情分頁的次分頁層（不動 app.js / style.css）
+   今年表現 Market Dashboard — 即時行情分頁的次分頁層（不動 app.js / style.css）
+   2026-08-06 次分頁改名：行情卡片→當日盤勢、市場儀表→今年表現，預設期間同步改今年以來
    - 版面：全球市場水平橫條，零軸置中；紅色為漲、綠色為跌
    - 期間：當日漲跌 / 當月漲跌 / 今年以來（chip 切換，記憶於 localStorage）
    - 資料：當日優先取 DATA.live 盤中報價，缺漏時回退 market.json daily_pct；
@@ -20,7 +21,7 @@
   function getPeriod() {
     var p;
     try { p = localStorage.getItem(LS_PERIOD); } catch (_) {}
-    return (p === "mtd" || p === "ytd") ? p : "daily";
+    return (p === "daily" || p === "mtd" || p === "ytd") ? p : "ytd";
   }
   function setPeriod(p) { try { localStorage.setItem(LS_PERIOD, p); } catch (_) {} }
 
@@ -202,8 +203,8 @@
 
   function renderSubtabs(view) {
     return '<div class="mbd-subtabs">' +
-      '<button type="button" data-mbd-view="quotes"' + (view === "quotes" ? ' class="on"' : "") + ">行情卡片</button>" +
-      '<button type="button" data-mbd-view="dash"' + (view === "dash" ? ' class="on"' : "") + ">市場儀表</button>" +
+      '<button type="button" data-mbd-view="quotes"' + (view === "quotes" ? ' class="on"' : "") + ">當日盤勢</button>" +
+      '<button type="button" data-mbd-view="dash"' + (view === "dash" ? ' class="on"' : "") + ">今年表現</button>" +
       "</div>";
   }
 
