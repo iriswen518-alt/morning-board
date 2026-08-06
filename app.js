@@ -6464,8 +6464,10 @@ function renderMarketHighlights(m) {
     </div>`;
 }
 
-// ── 鉅亨網（cnyes）多分類即時新聞：站內全文中英並陳，不外連 ──
-// 資料來自雲端 cnyes_news.json（每 20 分鐘更新＋Groq 英文翻譯）。
+// ── 鉅亨網（cnyes）多分類即時新聞：站內全文，不外連 ──
+// 資料來自雲端 cnyes_news.json（每 20 分鐘更新）。
+// 2026-08-06 用戶要求：中文版只顯示中文，不再中英並陳（英文版站另有一份 app.js）。
+// JSON 仍帶 title_en / paras_en 欄位供英文版使用，這裡單純不渲染。
 function cnyesTimeFmt(ts) {
   if (!ts) return "";
   const d = new Date(ts * 1000);
@@ -6486,22 +6488,12 @@ function cnyesCatSection(label, inner, open) {
     </details>`;
 }
 
-// 單則全文：逐段中英對照，一段一組（英文在上、中文在下），方便對照學英文。
-// 段數不一致時仍以索引配對，多出來的段落單獨成組；英文尚未翻好（新文章）就先只出中文。
+// 單則全文：只出中文段落（英文翻譯留給英文版站顯示）。
 function cnyesItemBody(it) {
-  const zh = it.paras || [];
-  const en = it.paras_en || [];
-  const zhP = (t) => `<p>${escapeHtml(t)}</p>`;
-  const enP = (t) => `<p class="cnyes-en">${escapeHtml(t)}</p>`;
-  const n = Math.max(zh.length, en.length);
-  let paras = "";
-  for (let i = 0; i < n; i++) {
-    const pair = (en[i] ? enP(en[i]) : "") + (zh[i] ? zhP(zh[i]) : "");
-    paras += `<div class="cnyes-pair">${pair}</div>`;
-  }
-  const enTitle = it.title_en
-    ? `<p class="cnyes-en cnyes-en-title">${escapeHtml(it.title_en)}</p>` : "";
-  return `<div class="news-body">${enTitle}${paras}</div>`;
+  const paras = (it.paras || [])
+    .map((t) => `<p>${escapeHtml(t)}</p>`)
+    .join("");
+  return `<div class="news-body">${paras}</div>`;
 }
 
 function renderCnyesNews() {
@@ -6525,7 +6517,7 @@ function renderCnyesNews() {
     return cnyesCatSection(c.label || "鉅亨新聞", inner, ci === 0);
   }).join("");
   const builtFmt = cn.built_at ? cn.built_at.replace("T", " ") : "";
-  const credit = `<p class="live-credit" style="margin-top:10px">資料來源 鉅亨網（cnyes）即時新聞，盤中每 20 分鐘更新${builtFmt ? `（${escapeHtml(builtFmt)}）` : ""}；英文為 AI 翻譯僅供參考，內容以鉅亨網為準，非投資建議或要約。新文章英文稍後自動補上。</p>`;
+  const credit = `<p class="live-credit" style="margin-top:10px">資料來源 鉅亨網（cnyes）即時新聞，盤中每 20 分鐘更新${builtFmt ? `（${escapeHtml(builtFmt)}）` : ""}；內容以鉅亨網為準，非投資建議或要約。</p>`;
   return body + credit;
 }
 

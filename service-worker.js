@@ -51,7 +51,7 @@
 //   補齊 --card／--brand／--text-sub 等別名，並把淺水藍／淺灰貼片與分隔線全數 token 化。
 // v66（2026-08-05）：修表格橫滑出現「多一層」——群組標題列(colspan 跨全表)不再 sticky 釘左
 //   （整條寬帶會蓋住數字欄），改由標題文字本身釘左；標題色改吃 --tint-text 配合深色底。
-const CACHE = "morning-board-v66";
+const CACHE = "morning-board-v67";
 
 self.addEventListener("install", e => {
   self.skipWaiting();
