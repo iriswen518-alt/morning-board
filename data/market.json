@@ -76,7 +76,7 @@
     {
       "name": "Nikkei 225",
       "name_zh": null,
-      "close": 65683.2578125,
+      "close": 65683.26,
       "daily_pct": -0.93,
       "mtd_pct": 3.01,
       "ytd_pct": 31.71,
@@ -112,7 +112,7 @@
     {
       "name": "KOSPI",
       "name_zh": null,
-      "close": 6296.3798828125,
+      "close": 6296.38,
       "daily_pct": -4.58,
       "mtd_pct": 0.04,
       "ytd_pct": 56.57,
@@ -157,7 +157,7 @@
     {
       "name": "S&P/ASX 200",
       "name_zh": null,
-      "close": 9271.599609375,
+      "close": 9271.6,
       "daily_pct": 0.47,
       "mtd_pct": 2.8,
       "ytd_pct": 5.89,
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 99.69000244140625,
       "daily_pct": -0.2,
-      "mtd_pct": -0.07,
-      "ytd_pct": 1.48,
+      "mtd_pct": 0.12,
+      "ytd_pct": 1.66,
       "closing_date": "2026-08-05"
     },
     {
@@ -405,33 +405,33 @@
     {
       "label": "Sep 2026",
       "fomc_date": "2026-09-17",
-      "implied_rate": 3.71,
-      "delta_rate": 0.08,
-      "delta_bps": 8.0,
-      "p_hike": 32.0,
-      "p_hold": 68.0,
+      "implied_rate": 3.7,
+      "delta_rate": 0.07,
+      "delta_bps": 7.0,
+      "p_hike": 28.0,
+      "p_hold": 72.0,
       "p_cut": 0,
       "is_reference": false
     },
     {
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
-      "implied_rate": 3.79,
-      "delta_rate": 0.08,
-      "delta_bps": 8.0,
-      "p_hike": 32.0,
-      "p_hold": 68.0,
+      "implied_rate": 3.77,
+      "delta_rate": 0.07,
+      "delta_bps": 7.0,
+      "p_hike": 28.0,
+      "p_hold": 72.0,
       "p_cut": 0,
       "is_reference": false
     },
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 3.93,
-      "delta_rate": 0.15,
-      "delta_bps": 15.0,
-      "p_hike": 60.0,
-      "p_hold": 40.0,
+      "implied_rate": 3.94,
+      "delta_rate": 0.16,
+      "delta_bps": 16.0,
+      "p_hike": 64.0,
+      "p_hold": 36.0,
       "p_cut": 0,
       "is_reference": false
     }
