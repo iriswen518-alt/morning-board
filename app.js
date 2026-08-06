@@ -1192,18 +1192,18 @@ function renderBondMarket() {
   else if (curveShape === "平坦")  { curveBg = "var(--warn-soft)"; curveColor = "var(--warn-soft-text)"; }
 
   const spreadCard = `
-    <div style="margin-bottom:16px;padding:14px 16px;background:var(--card-bg,#fff);border:1px solid var(--border);border-radius:10px;">
+    <div style="margin-bottom:16px;padding:4px 2px 14px;border-bottom:1px solid var(--line-soft,#eef1f4);">
       <div style="font-weight:600;font-size:18px;margin-bottom:10px;">美國殖利率曲線利差
         <a href="https://fred.stlouisfed.org/series/T10Y2Y" target="_blank" rel="noopener"
            style="font-size:13px;color:#3b82f6;text-decoration:none;margin-left:8px;">FRED T10Y2Y ↗</a>
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:8px;">
-        <div style="padding:8px 10px;background:var(--bg,#fff);border:1px solid var(--border);border-radius:8px;">
+        <div style="padding:8px 2px;">
           <div style="font-size:13px;color:var(--text-mute);margin-bottom:3px;">US 2Y 殖利率</div>
           <div style="font-size:20px;font-weight:700;">${y2 != null ? y2.toFixed(2) + "%" : "—"}</div>
           <div style="font-size:12px;color:var(--text-mute);">升息預期指標</div>
         </div>
-        <div style="padding:8px 10px;background:var(--bg,#fff);border:1px solid var(--border);border-radius:8px;">
+        <div style="padding:8px 2px;">
           <div style="font-size:13px;color:var(--text-mute);margin-bottom:3px;">US 10Y 殖利率</div>
           <div style="font-size:20px;font-weight:700;">${y10 != null ? y10.toFixed(2) + "%" : "—"}</div>
           <div style="font-size:12px;color:var(--text-mute);">長期通膨/景氣預期</div>
@@ -1280,7 +1280,7 @@ function renderBondMarket() {
 
   // 債市觀察重點：研究整理的「該看什麼、怎麼判讀」框架（用耐久的判讀準則，不寫會過期的當日數字）
   function obsItem(title, body) {
-    return `<div style="padding:12px 14px;background:var(--bg,#fff);border:1px solid var(--border);border-radius:10px;margin-bottom:10px;">
+    return `<div style="padding:12px 2px;margin-bottom:10px;border-bottom:1px solid var(--line-soft,#eef1f4);">
       <div style="font-weight:600;font-size:18px;margin-bottom:5px;">${title}</div>
       <div style="font-size:14px;line-height:1.7;color:var(--text);">${body}</div>
     </div>`;
@@ -3617,7 +3617,7 @@ function renderMarketSheet() {
     </div>` : "";
 
   const _rateOutlookPanel = `
-    <div style="margin-bottom:16px;padding:14px 16px;background:var(--card-bg,#fff);border:1px solid var(--border);border-radius:10px;">
+    <div style="margin-bottom:16px;padding:4px 2px 14px;border-bottom:1px solid var(--line-soft,#eef1f4);">
       <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;flex-wrap:wrap;">
         <span style="font-weight:600;font-size:18px;">升息押注指標</span>
         ${_curveLabel && _curveLabel !== "正斜率" ? `<span style="font-size:14px;padding:2px 9px;border-radius:20px;font-weight:500;background:${_curveBg};color:${_curveColor};">${_curveLabel}</span>` : ""}
@@ -3625,22 +3625,22 @@ function renderMarketSheet() {
            style="margin-left:auto;font-size:14px;color:#3b82f6;text-decoration:none;white-space:nowrap;">CME FedWatch ↗</a>` : ""}
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:8px;">
-        <div style="padding:8px 10px;background:var(--bg,#fff);border:1px solid var(--border);border-radius:8px;">
+        <div style="padding:8px 2px;">
           <div style="font-size:13px;color:var(--text-mute);margin-bottom:3px;">US 2Y 殖利率</div>
           <div style="font-size:20px;font-weight:700;">${_us2y != null ? _us2y.toFixed(2) + "%" : "—"}</div>
           <div style="font-size:12px;color:var(--text-mute);">升息最敏感指標</div>
         </div>
-        <div style="padding:8px 10px;background:var(--bg,#fff);border:1px solid var(--border);border-radius:8px;">
+        <div style="padding:8px 2px;">
           <div style="font-size:13px;color:var(--text-mute);margin-bottom:3px;">US 10Y 殖利率</div>
           <div style="font-size:20px;font-weight:700;">${_us10y != null ? _us10y.toFixed(2) + "%" : "—"}</div>
           <div style="font-size:12px;color:var(--text-mute);">通膨／景氣長期預期</div>
         </div>
-        <div style="padding:8px 10px;background:var(--bg,#fff);border:1px solid var(--border);border-radius:8px;">
+        <div style="padding:8px 2px;">
           <div style="font-size:13px;color:var(--text-mute);margin-bottom:3px;">10Y−2Y 利差</div>
           <div style="font-size:20px;font-weight:700;">${_spreadHtml}</div>
           <div style="font-size:12px;color:var(--text-mute);">${_curveLabel ? _curveLabel + "：" + _curveDesc.split("，")[0] : "殖利率曲線形狀"}</div>
         </div>
-        <div style="padding:8px 10px;background:var(--bg,#fff);border:1px solid var(--border);border-radius:8px;">
+        <div style="padding:8px 2px;">
           <div style="font-size:13px;color:var(--text-mute);margin-bottom:3px;">DXY 美元指數</div>
           <div style="font-size:20px;font-weight:700;">${_dxyClose != null ? _dxyClose.toFixed(1) : "—"}</div>
           <div style="font-size:12px;${_dxyDaily != null ? 'color:' + (_dxyDaily >= 0 ? '#16a34a' : '#dc2626') : 'color:var(--text-mute)'}">
@@ -3855,7 +3855,7 @@ function renderMarketCommentaryBlock(opts = {}) {
 
   if (!bulletsHtml) return "";
   return `
-    <div style="border:1px solid var(--border,#e5e7eb);border-radius:10px;padding:14px 16px;margin-bottom:16px;background:var(--card-bg,#fff)">
+    <div style="padding:4px 2px 14px;margin-bottom:12px;border-bottom:1px solid var(--line-soft,#eef1f4)">
       <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px">
         <h2 style="font-size:18px;margin:0;font-weight:700">盤勢說明</h2>${dateLabel}
       </div>
@@ -3989,7 +3989,7 @@ function renderTwMarketAnalysis() {
   if (!indexBlock && !twSectorBlock && !etfBlock && !rankBlock) return "";
   const commentaryCard = DATA.premarket ? "" : renderMarketCommentaryBlock({ focus: "tw" });
   return commentaryCard + `
-    <div style="border:1px solid var(--border,#e5e7eb);border-radius:10px;padding:14px 16px;margin-bottom:18px;background:var(--card-bg,#fff)">
+    <div style="padding:4px 2px 14px;margin-bottom:14px;border-bottom:1px solid var(--line-soft,#eef1f4)">
       <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px">
         <h2 style="font-size:18px;margin:0;font-weight:700">台股盤勢</h2>
         ${asOf ? `<span style="font-size:14px;color:var(--text-mute)">${asOf}</span>` : ""}
@@ -4105,7 +4105,7 @@ function renderUsMarketAnalysis() {
   if (!indexBlock && !sectorBlock && !rankBlock && !commentaryBullets) return "";
 
   return `
-    <div style="border:1px solid var(--border,#e5e7eb);border-radius:10px;padding:14px 16px;margin-bottom:18px;background:var(--card-bg,#fff)">
+    <div style="padding:4px 2px 14px;margin-bottom:14px;border-bottom:1px solid var(--line-soft,#eef1f4)">
       <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px">
         <h2 style="font-size:18px;margin:0;font-weight:700">美股盤勢</h2>
         ${asOf ? `<span style="font-size:14px;color:var(--text-mute)">${asOf}</span>` : ""}
@@ -5852,7 +5852,7 @@ function renderTwStockSheet() {
     <summary class="tw-sop-summary">📚 資料來源</summary>
 
     <h3 style="font-size:18px;margin:24px 0 8px">1. 基本面</h3>
-    <div style="background:var(--tint-brand);padding:12px 16px;border-radius:6px;margin:10px 0;font-size:15px">
+    <div style="padding:12px 2px;margin:10px 0;font-size:15px">
       入口：<b>${lnk("https://mops.twse.com.tw", "mops.twse.com.tw")}</b> → 上方搜尋輸入股票代號或公司名
     </div>
     <div style="overflow-x:auto">
@@ -5870,7 +5870,7 @@ function renderTwStockSheet() {
     </div>
 
     <h3 style="font-size:18px;margin:24px 0 8px">2. TWSE 看籌碼</h3>
-    <div style="background:var(--tint-brand);padding:12px 16px;border-radius:6px;margin:10px 0;font-size:15px">
+    <div style="padding:12px 2px;margin:10px 0;font-size:15px">
       入口：<b>${lnk("https://www.twse.com.tw", "www.twse.com.tw")}</b> → 交易資訊
     </div>
     <div style="overflow-x:auto">
@@ -5899,7 +5899,7 @@ function renderTwStockSheet() {
     </div>
 
     <h3 style="font-size:18px;margin:28px 0 8px">紅旗訊號（看到立即扣分）</h3>
-    <div style="background:var(--up-soft);padding:16px 20px;border-radius:6px">
+    <div style="padding:16px 2px">
       <table style="width:100%;border-collapse:collapse;font-size:15px">
         <tr><td style="padding:6px 0;width:28px">⛔</td><td style="padding:6px 0"><b>處置股／變更交易方法</b> — 監管警示，遠離</td></tr>
         <tr><td style="padding:6px 0">⛔</td><td style="padding:6px 0"><b>內部人連續申讓</b> — 董監對自家股票沒信心</td></tr>
@@ -5912,7 +5912,7 @@ function renderTwStockSheet() {
     </div>
 
     <h3 style="font-size:18px;margin:24px 0 8px">綠旗訊號（看到加分）</h3>
-    <div style="background:var(--down-soft);padding:16px 20px;border-radius:6px">
+    <div style="padding:16px 2px">
       <table style="width:100%;border-collapse:collapse;font-size:15px">
         <tr><td style="padding:6px 0;width:28px">✅</td><td style="padding:6px 0"><b>連續多季營收／EPS 雙增長</b> — 基本面擴張</td></tr>
         <tr><td style="padding:6px 0">✅</td><td style="padding:6px 0"><b>毛利率穩定或上升</b> — 議價能力佳</td></tr>
@@ -6023,13 +6023,13 @@ function renderBriefCard(st, wkStart, wkEnd) {
     ? `<div style="margin-top:6px; font-size:15px; color:var(--text-mute);"><strong>下週觀察：</strong>${st.next_week_catalyst}</div>`
     : "";
   return `
-    <div style="border:1px solid var(--border, #e5e7eb); border-radius:8px; padding:14px; margin-bottom:12px; background:var(--card-bg, #fff);">
+    <div style="padding:14px 2px; margin-bottom:12px; border-bottom:1px solid var(--line-soft,#eef1f4);">
       <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px;">
         <strong style="font-size:18px;">${st.symbol} ${st.name_zh || ""}</strong>
         <span>${wkPct}</span>
       </div>
       <ul style="margin:0 0 8px; padding-left:0; list-style:none;">${newsHtml}</ul>
-      <div style="font-size:15px; line-height:1.55; padding:8px 10px; background:var(--soft); border-radius:4px;">
+      <div style="font-size:15px; line-height:1.55; padding:8px 2px;">
         <strong style="color:#019AB3;">論點檢視：</strong>${st.thesis_check || "—"}
       </div>
       ${catalyst}
@@ -6456,7 +6456,7 @@ function renderMarketHighlights(m) {
 
   if (!items.length) return "";
   return `
-    <div style="border:1px solid var(--border,#e5e7eb);border-radius:10px;padding:14px 16px;margin-bottom:16px;background:var(--card-bg,#fff)">
+    <div style="padding:4px 2px 14px;margin-bottom:12px;border-bottom:1px solid var(--line-soft,#eef1f4)">
       <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px">
         <h2 style="font-size:18px;margin:0;font-weight:700">今日重點</h2>${dateLabel}
       </div>
@@ -6529,7 +6529,7 @@ function renderNewsSheet() {
   // 只有在新聞「落後於今天」才是真的尚未產生；新聞等於今天（甚至超前）都不是過期。
   const isStale = newsDate && newsDate < today;
   const staleBanner = isStale ? `
-    <div style="background:var(--warn-soft); border:1px solid var(--warn-soft-border); border-radius:6px; padding:10px 14px; margin-bottom:12px; color:var(--warn-soft-text); font-size:18px; line-height:1.5">
+    <div style="border-left:3px solid var(--warn-soft-border); padding:10px 14px; margin-bottom:12px; color:var(--warn-soft-text); font-size:18px; line-height:1.5">
       <strong>今日新聞尚未產生</strong>　目前顯示 ${escapeHtml(newsDate)} 內容（今日 ${escapeHtml(today)}）。系統每日 05:00 起自動產生，通常 07:00 前更新完成；若尚未更新，07:00 / 08:00 / 09:30 / 11:30 會自動補抓。
     </div>
   ` : "";
@@ -7079,7 +7079,7 @@ function doCalcCaseHouse() {
 
   $("cx-result").innerHTML = `
     <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:12px;margin-bottom:10px">
-      <div style="padding:10px;background:var(--card-bg);border-radius:6px">
+      <div style="padding:10px 2px">
         <div style="font-size:15px;color:var(--brand-deep);font-weight:700;margin-bottom:6px">繼承路徑</div>
         <div class="kv"><span>遺產稅（房產佔比）</span><b>${fmtMoney(inheritEstateTax)}</b></div>
         <div class="kv"><span>土地增值稅</span><b style="color:var(--down)">免徵</b></div>
@@ -7087,7 +7087,7 @@ function doCalcCaseHouse() {
         <div class="kv"><span>未來出售房地合一（${inheritHL.rate}）</span><b>${fmtMoney(inheritHL.tax)}</b></div>
         <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:18px">${fmtMoney(inheritTotal)}</b></div>
       </div>
-      <div style="padding:10px;background:var(--card-bg);border-radius:6px">
+      <div style="padding:10px 2px">
         <div style="font-size:15px;color:#e08a3c;font-weight:700;margin-bottom:6px">贈與路徑</div>
         <div class="kv"><span>贈與稅（房產佔比）</span><b>${fmtMoney(giftTaxOnHouse)}</b></div>
         <div class="kv"><span>土地增值稅${giftSpouse?'（配偶不課徵）':''}</span><b>${fmtMoney(giftLVT)}</b></div>
@@ -7095,7 +7095,7 @@ function doCalcCaseHouse() {
         <div class="kv"><span>未來出售房地合一（${giftHL.rate}）</span><b>${fmtMoney(giftHL.tax)}</b></div>
         <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:18px">${fmtMoney(giftTotal)}</b></div>
       </div>
-      <div style="padding:10px;background:var(--card-bg);border-radius:6px">
+      <div style="padding:10px 2px">
         <div style="font-size:15px;color:#6a5acd;font-weight:700;margin-bottom:6px">買賣路徑</div>
         <div class="kv"><span>父母房地合一（${saleParentHL.rate}）</span><b>${fmtMoney(saleParentHL.tax)}</b></div>
         <div class="kv"><span>父母土地增值稅</span><b>${fmtMoney(saleLVT)}</b></div>
@@ -7217,14 +7217,14 @@ function doCalcCaseStock() {
 
   $("cs-result").innerHTML = `
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:10px">
-      <div style="padding:10px;background:var(--card-bg);border-radius:6px">
+      <div style="padding:10px 2px">
         <div style="font-size:15px;color:var(--brand-deep);font-weight:700;margin-bottom:6px">個人持有</div>
         <div class="kv"><span>股利稅（${divMethod}）</span><b>${fmtMoney(personalDivTax)}</b></div>
         <div class="kv"><span>二代健保 2.11%</span><b>${fmtMoney(personalNHI)}</b></div>
         <div class="kv"><span>資本利得稅</span><b style="color:var(--down)">停徵</b></div>
         <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:18px">${fmtMoney(personalTotal)}</b></div>
       </div>
-      <div style="padding:10px;background:var(--card-bg);border-radius:6px">
+      <div style="padding:10px 2px">
         <div style="font-size:15px;color:#6a5acd;font-weight:700;margin-bottom:6px">投資公司持有</div>
         <div class="kv"><span>股利稅（§42 免稅）</span><b style="color:var(--down)">免徵</b></div>
         ${distrib
@@ -7348,12 +7348,12 @@ function doCalcCaseFund() {
 
   $("cf-result").innerHTML = `
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:10px">
-      <div style="padding:10px;background:var(--card-bg);border-radius:6px">
+      <div style="padding:10px 2px">
         <div style="font-size:15px;color:var(--brand-deep);font-weight:700;margin-bottom:6px">個人持有</div>
         ${personalBreakdown}
         <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:18px">${fmtMoney(personalTotal)}</b></div>
       </div>
-      <div style="padding:10px;background:var(--card-bg);border-radius:6px">
+      <div style="padding:10px 2px">
         <div style="font-size:15px;color:#6a5acd;font-weight:700;margin-bottom:6px">投資公司持有</div>
         ${companyBreakdown}
         <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:18px">${fmtMoney(companyTotal)}</b></div>
@@ -7461,13 +7461,13 @@ function doCalcCaseRealty() {
 
   $("cr-result").innerHTML = `
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:10px">
-      <div style="padding:10px;background:var(--card-bg);border-radius:6px">
+      <div style="padding:10px 2px">
         <div style="font-size:15px;color:var(--brand-deep);font-weight:700;margin-bottom:6px">個人持有</div>
         <div class="kv"><span>租賃所得稅（×57%×${(rate*100).toFixed(0)}%）</span><b>${fmtMoney(personalRentTax)}</b></div>
         <div class="kv"><span>房地合一（${(personalHLRate*100).toFixed(0)}%）</span><b>${fmtMoney(personalSaleTax)}</b></div>
         <div class="kv" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><span>合計</span><b style="color:var(--up);font-size:18px">${fmtMoney(personalTotal)}</b></div>
       </div>
-      <div style="padding:10px;background:var(--card-bg);border-radius:6px">
+      <div style="padding:10px 2px">
         <div style="font-size:15px;color:#6a5acd;font-weight:700;margin-bottom:6px">投資公司持有</div>
         <div class="kv"><span>租金併營所稅 20%（×70%）</span><b>${fmtMoney(companyRentTax)}</b></div>
         <div class="kv"><span>房地合一（${(companyHLRate*100).toFixed(0)}%）</span><b>${fmtMoney(companySaleTax)}</b></div>
@@ -8795,7 +8795,7 @@ function renderAssistRuleResult(p) {
   const goalProds = (goalAddons[goal] || []).slice(0, 2);
   const allProds = [...new Set([...baseProds, ...goalProds])];
   const prodRows = allProds.map(name => `
-    <div style="border-left:3px solid var(--brand-primary);padding:5px 10px;margin:5px 0;background:var(--bg-alt);font-size:14px;color:var(--text)">${name}</div>`).join("");
+    <div style="border-left:3px solid var(--brand-primary);padding:5px 10px;margin:5px 0;font-size:14px;color:var(--text)">${name}</div>`).join("");
 
   // --- 缺口提示 ---
   const gaps = [];
@@ -8814,7 +8814,7 @@ function renderAssistRuleResult(p) {
   ];
 
   return `
-<div style="background:var(--bg-alt);border:1px solid var(--border);border-radius:8px;padding:12px;margin-bottom:10px">
+<div style="padding:12px 2px;margin-bottom:10px;border-bottom:1px solid var(--line-soft,#eef1f4)">
   <div style="font-size:13px;font-weight:700;color:var(--text-mute);margin-bottom:8px">建議配置方向（${risk} · ${goal} · ${horizon}）</div>
   ${allocRows}
 </div>
@@ -9026,7 +9026,7 @@ function wireRetirementTab() {
       : `每月缺口 ${fmt(monthlyGap)}`;
 
     document.getElementById("ret-result").innerHTML = `
-<div style="background:var(--bg-alt);border:1px solid var(--border);border-radius:8px;padding:12px;margin-bottom:10px">
+<div style="padding:12px 2px;margin-bottom:10px;border-bottom:1px solid var(--line-soft,#eef1f4)">
   <div style="font-size:13px;font-weight:700;color:var(--text-mute);margin-bottom:6px">退休後每月收支預估（退休年齡 ${retireAge} 歲）</div>
   ${[
     ["退休後月支出（通膨後）", fmt(futureMonthExp), false],

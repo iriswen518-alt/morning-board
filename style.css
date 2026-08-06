@@ -3321,3 +3321,78 @@ table.indices.stock-cols col.c-num { width: 11%; }
   margin-bottom: 0 !important;
 }
 .t-section:first-of-type, .fund-card:first-of-type { border-top: none !important; }
+
+/* ===== 第三批扁平化：表格無底色、只留格線；區塊一律不畫底 =====
+   2026-08-06 用戶要求：「區塊不要有底色，表格不要有底色，表格有格線即可」。
+   放在檔案最後，覆蓋前面所有表頭白底／斑馬紋／hover 底色。
+   例外：sticky 表頭與凍結欄仍需不透明底才不會透出捲動內容，
+   改用與頁面同色的 var(--bg-alt)（深淺色模式各自對應），視覺上等同「沒有底色」。 */
+#content table,
+#content table th,
+#content table td,
+#content table tbody tr,
+#content table thead tr {
+  background: transparent !important;
+}
+#content table tbody tr:hover td,
+#content table tbody tr:nth-child(even) td,
+.cmp-row-self td,
+.position-constituents tr:nth-child(even) td {
+  background: transparent !important;
+}
+/* 格線：上下左右細線構成表格，取代底色分區 */
+#content table th,
+#content table td,
+.cmp-table th, .cmp-table td,
+.position-list th, .position-list td,
+.position-constituents th, .position-constituents td,
+.position-perf th, .position-perf td,
+.position-perf-each th, .position-perf-each td,
+.swap-table th, .swap-table td {
+  border: 1px solid var(--border) !important;
+}
+/* sticky 表頭／凍結欄：改頁面同色底、去掉右緣陰影（靠格線區隔即可） */
+#content table thead th,
+#content table th:first-child:not([colspan]),
+#content table td:first-child:not([colspan]),
+#content table.ranking-table th:nth-child(2),
+#content table.ranking-table td:nth-child(2) {
+  background: var(--bg-alt) !important;
+  box-shadow: none !important;
+}
+
+/* 區塊（第三批）：仍有底色的內容方塊一併拿掉，改用細線分隔 */
+.idx-card,
+.idx-cards .idx-card,
+.news-card,
+.t-detail,
+.live-stat,
+.acc-sec .acc-sec,
+.tw-snap, .tw-chips {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+.idx-card + .idx-card { border-top: 1px solid var(--line-soft) !important; }
+
+/* ===== 標題層級：分頁內的小節標題要與分頁大標題有區別 =====
+   2026-08-06 用戶要求。外層折疊（＝分頁大標題，如「美股分析」）維持深藍 19px 粗體；
+   內層小節（「美股盤勢」「美股排行」…）改水藍、字級小一階、略縮排，一眼看出從屬關係。 */
+.acc-sec > .acc-sec-head > .acc-sec-title,
+#content > .acc-sec > .acc-sec-head > .acc-sec-title {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--brand-deep) !important;
+  letter-spacing: 0.02em;
+}
+.acc-sec .acc-sec > .acc-sec-head > .acc-sec-title,
+.acc-sec .acc-sec[open] > .acc-sec-head > .acc-sec-title,
+.acc-sec .news-sec > .news-sec-head > .news-sec-title {
+  font-size: 17px !important;
+  font-weight: 600 !important;
+  color: var(--brand-primary) !important;
+  letter-spacing: 0;
+}
+.acc-sec .acc-sec > .acc-sec-head { padding-left: 10px; }
+.acc-sec .acc-sec > .acc-sec-body { padding-left: 10px; }
