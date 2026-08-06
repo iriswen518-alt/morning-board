@@ -3432,3 +3432,16 @@ table.indices.ic-chain-table tbody td:first-child { text-align: left; }
   /* 47 個產業 chip 在手機上會 wrap 成一大片，改用下拉（沿用 .tw-ind-select 慣例） */
   .ic-chain-tabs.tabs { display: none; }
 }
+
+/* ===== 新聞：標題與內文用不同顏色（字級不動）=====
+   2026-08-06 用戶要求。標題（折疊 summary／h3）改深藍，內文維持一般文字色；
+   只換顏色，字體大小與粗細一律沿用原設定。深色模式 --brand-deep 自動換成亮藍。 */
+.news-item h3,
+.news-item details summary {
+  color: var(--brand-deep) !important;
+}
+.news-item .summary,
+.news-item .news-body,
+.news-item .news-body p {
+  color: var(--text) !important;
+}
