@@ -6724,6 +6724,20 @@ function saveNewsSec(d) {
     localStorage.setItem("newsCollapsed", JSON.stringify(NEWS_COLLAPSED));
   } catch (_) { /* 略 */ }
 }
+// 新聞內文點兩下＝收合／展開該則新聞（讀完不必捲回標題才收）。
+// 用事件委派掛在 document，之後重繪的新聞照樣有效；雙擊會選字，順手清掉選取。
+document.addEventListener("dblclick", (e) => {
+  const el = e.target instanceof Element ? e.target : null;
+  const body = el && el.closest(".news-item .news-body, .news-item .summary");
+  if (!body) return;
+  const d = body.closest("details");
+  if (!d) return;
+  d.open = !d.open;
+  try { window.getSelection().removeAllRanges(); } catch (_) { /* 略 */ }
+  // 收合後若標題被捲到畫面外，帶回視野
+  if (!d.open) d.scrollIntoView({ block: "nearest" });
+});
+
 function newsSection(title, innerHtml) {
   const open = NEWS_COLLAPSED[title] ? "" : " open";
   return `
