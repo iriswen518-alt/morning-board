@@ -3137,11 +3137,15 @@ table.indices.stock-cols col.c-num { width: 11%; }
   .wr-view { font-size: 18px; }
 }
 
-/* 鉅亨網獨立新聞：站內全文中英並陳（不外連）。英文段落淡色斜體與中文區隔 */
+/* 鉅亨網獨立新聞：站內全文逐段中英對照（不外連）。英文在上、中文在下，一段一組 */
 .news-body, .news-body p, .news-body .cnyes-en, .news-item details summary { font-style: normal; }
 .news-body .cnyes-en { color: #4a6a8a; }
 .news-body .cnyes-en-title { font-weight: 600; font-style: normal; color: var(--brand-primary); }
-.news-body .cnyes-en-block { border-top: 1px dashed var(--border); margin-top: 10px; padding-top: 10px; }
+/* 一組＝同一段的英文＋中文；組內貼緊、組間留白並以淡線分隔，方便逐段對照 */
+.news-body .cnyes-pair { padding-top: 10px; margin-top: 10px; border-top: 1px dashed var(--border); }
+.news-body .cnyes-pair:first-child { padding-top: 0; margin-top: 0; border-top: none; }
+.news-body .cnyes-pair p { margin: 0 0 4px; }
+.news-body .cnyes-pair p:last-child { margin-bottom: 0; }
 
 /* 手機閱讀字級：新聞全文（含鉅亨中英並陳）加大，行動裝置看得舒服 */
 @media (max-width: 768px) {

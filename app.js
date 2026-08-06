@@ -6486,20 +6486,18 @@ function cnyesCatSection(label, inner, open) {
     </details>`;
 }
 
-// 單則全文：中英並陳。段數一致時逐段交錯（中→英），否則中文整塊後接英文整塊；
-// 英文尚未翻好（新文章）就先只出中文，下次資料更新自動補上。
+// 單則全文：逐段中英對照，一段一組（英文在上、中文在下），方便對照學英文。
+// 段數不一致時仍以索引配對，多出來的段落單獨成組；英文尚未翻好（新文章）就先只出中文。
 function cnyesItemBody(it) {
   const zh = it.paras || [];
   const en = it.paras_en || [];
   const zhP = (t) => `<p>${escapeHtml(t)}</p>`;
   const enP = (t) => `<p class="cnyes-en">${escapeHtml(t)}</p>`;
-  let paras;
-  if (!en.length) {
-    paras = zh.map(zhP).join("");
-  } else if (zh.length === en.length) {
-    paras = zh.map((p, i) => zhP(p) + enP(en[i])).join("");
-  } else {
-    paras = zh.map(zhP).join("") + `<div class="cnyes-en-block">${en.map(enP).join("")}</div>`;
+  const n = Math.max(zh.length, en.length);
+  let paras = "";
+  for (let i = 0; i < n; i++) {
+    const pair = (en[i] ? enP(en[i]) : "") + (zh[i] ? zhP(zh[i]) : "");
+    paras += `<div class="cnyes-pair">${pair}</div>`;
   }
   const enTitle = it.title_en
     ? `<p class="cnyes-en cnyes-en-title">${escapeHtml(it.title_en)}</p>` : "";

@@ -95,12 +95,16 @@ def content_to_paras(content: str) -> list:
 
 def groq_translate(key: str, title: str, paras: list) -> dict | None:
     """回 {"title_en": str, "paras_en": [str]}；全部模型失敗回 None。"""
-    body = "\n\n".join(paras)
+    # 站上逐段中英對照（英上中下），段落必須一一對齊：把來源段落編號、要求同段數
+    n = len(paras)
+    body = "\n\n".join(f"[{i + 1}] {p}" for i, p in enumerate(paras))
     prompt = (
         "Translate this Traditional-Chinese financial news article into natural, "
         "faithful English. Keep numbers, tickers and names accurate. "
         'Return ONLY JSON: {"title_en": "...", "paras_en": ["paragraph 1", ...]} '
-        "with one array element per source paragraph, same order.\n\n"
+        f"where paras_en has EXACTLY {n} elements, one per numbered source "
+        "paragraph, in the same order. Do not merge, split, drop or add "
+        "paragraphs; do not include the [n] markers in the output.\n\n"
         f"TITLE: {title}\n\nARTICLE:\n{body}"
     )
     payload_base = {
@@ -134,9 +138,14 @@ def groq_translate(key: str, title: str, paras: list) -> dict | None:
                     for p in (got.get("paras_en") or [])
                     if str(p).strip()
                 ]
-                if title_en and paras_en:
+                if title_en and len(paras_en) == n:
                     return {"title_en": title_en, "paras_en": paras_en}
-                break  # 回了格式但內容空：換下一個模型
+                # 段數對不上就不能逐段對照，換下一個模型；都失敗就這輪先出中文，下輪再翻
+                print(
+                    f"  groq {model} paragraph mismatch "
+                    f"({len(paras_en)} vs {n}); next model"
+                )
+                break  # 回了格式但內容空或段數不符：換下一個模型
             except urllib.error.HTTPError as e:
                 if e.code == 429 and attempt == 1:
                     time.sleep(30)
@@ -194,14 +203,18 @@ def main() -> int:
                 if not paras:  # 全文模式沒內文就沒東西可看，略過（影音類等）
                     continue
                 old = cache.get(nid) or {}
+                old_en = old.get("paras_en") or []
+                # 舊快取若段數與中文對不上（早期未強制對齊），丟掉重翻，否則逐段對照會錯位
+                if len(old_en) != len(paras):
+                    old_en = []
                 it = {
                     "news_id": nid,
                     "title": title,
-                    "title_en": old.get("title_en") or "",
+                    "title_en": (old.get("title_en") or "") if old_en else "",
                     "publish_at": r.get("publishAt"),
                     "url": NEWS_URL.format(nid),  # 僅存檔備查，前端不外連
                     "paras": paras,
-                    "paras_en": old.get("paras_en") or [],
+                    "paras_en": old_en,
                 }
                 done[nid] = it
                 items.append(it)
