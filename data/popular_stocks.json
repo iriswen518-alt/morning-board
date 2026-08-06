@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-06T18:01:50+08:00",
+  "generated_at": "2026-08-06T18:50:14+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -129,6 +129,20 @@
       "error": null
     },
     {
+      "symbol": "CLS",
+      "name_zh": "Celestica",
+      "kind": "US",
+      "price": 362.76,
+      "change_pct": -2.26,
+      "mtd_pct": 9.45,
+      "ytd_pct": 22.72,
+      "market_date": "2026-08-05",
+      "per": 44.662,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CLS.US",
+      "error": null
+    },
+    {
       "symbol": "SEDG",
       "name_zh": "SolarEdge Technologies",
       "kind": "US",
@@ -140,20 +154,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SEDG.US",
-      "error": null
-    },
-    {
-      "symbol": "GOOG",
-      "name_zh": "谷歌 C",
-      "kind": "US",
-      "price": 360.13,
-      "change_pct": -4.05,
-      "mtd_pct": 0.98,
-      "ytd_pct": 14.76,
-      "market_date": "2026-08-05",
-      "per": 18.0727,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GOOG.US",
       "error": null
     },
     {
@@ -185,31 +185,17 @@
       "error": null
     },
     {
-      "symbol": "CRM",
-      "name_zh": "Salesforce",
+      "symbol": "CELH",
+      "name_zh": "Celsius",
       "kind": "US",
-      "price": 192.98,
-      "change_pct": 1.04,
-      "mtd_pct": 4.87,
-      "ytd_pct": -27.15,
+      "price": 29.15,
+      "change_pct": -1.32,
+      "mtd_pct": -0.21,
+      "ytd_pct": -36.27,
       "market_date": "2026-08-05",
-      "per": 19.8702,
+      "per": 43.7158,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRM.US",
-      "error": null
-    },
-    {
-      "symbol": "CLS",
-      "name_zh": "Celestica",
-      "kind": "US",
-      "price": 362.76,
-      "change_pct": -2.26,
-      "mtd_pct": 9.45,
-      "ytd_pct": 22.72,
-      "market_date": "2026-08-05",
-      "per": 44.662,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CLS.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CELH.US",
       "error": null
     },
     {
@@ -252,6 +238,34 @@
       "per": 74.822,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MTRN.US",
+      "error": null
+    },
+    {
+      "symbol": "CRM",
+      "name_zh": "Salesforce",
+      "kind": "US",
+      "price": 192.98,
+      "change_pct": 1.04,
+      "mtd_pct": 4.87,
+      "ytd_pct": -27.15,
+      "market_date": "2026-08-05",
+      "per": 19.8702,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRM.US",
+      "error": null
+    },
+    {
+      "symbol": "BROS",
+      "name_zh": "Dutch Bros",
+      "kind": "US",
+      "price": 65.67,
+      "change_pct": 2.43,
+      "mtd_pct": -0.24,
+      "ytd_pct": 7.27,
+      "market_date": "2026-08-05",
+      "per": 134.2831,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BROS.US",
       "error": null
     },
     {
