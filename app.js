@@ -588,7 +588,7 @@ async function init() {
   // 每個來源各自有 fallback：一個壞不拖垮全頁
   // 失敗時記到 FAILED_LOADS，使用者切到對應 tab 時會背景重試
   const safe = (name, fallback) => load(name).catch(() => { FAILED_LOADS.add(name); return fallback; });
-  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news, cnyes_news, etf0050, weekly] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news, cnyes_news, etf0050, weekly, ic_chain] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
@@ -617,8 +617,9 @@ async function init() {
     safe("cnyes_news", { built_at: "", categories: [] }),
     safe("etf0050", { built_at: "", market_date: "", stocks: [] }),
     safe("weekly_report", null),
+    safe("ic_chain", null),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news, cnyes_news, etf0050, weekly };
+  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news, cnyes_news, etf0050, weekly, ic_chain };
   LAST_DATA_TS = Date.now();
   const _updatedAt = latestBuiltAt();
   if (!_updatedAt) {
@@ -1019,7 +1020,7 @@ async function refreshData() {
     FAILED_LOADS.add(name);
     return DATA[name === "insurances" ? "insurance" : name] || fallback;
   });
-  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news, cnyes_news, etf0050, weekly] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news, cnyes_news, etf0050, weekly, ic_chain] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
@@ -1048,8 +1049,9 @@ async function refreshData() {
     safe("cnyes_news", { built_at: "", categories: [] }),
     safe("etf0050", { built_at: "", market_date: "", stocks: [] }),
     safe("weekly_report", null),
+    safe("ic_chain", null),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news, cnyes_news, etf0050, weekly };
+  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news, cnyes_news, etf0050, weekly, ic_chain };
   LAST_DATA_TS = Date.now();
   SEARCH_INDEX = buildSearchIndex();
   const _updatedAt = latestBuiltAt();
@@ -3716,6 +3718,9 @@ function renderMarketSheet() {
   // 精選台股內容＝0050（元大台灣50）成分股（2026-07-20 起，取代原精選清單）
   const etf0050Html = render0050Section();
   if (etf0050Html && etf0050Html.trim()) twParts.push(accSection("mv-tw-stocks", "精選台股", etf0050Html));
+  // 產業龍頭：價值鏈分類×各環節市值最大的上市櫃公司（data/ic_chain.json）
+  const icChainHtml = renderIcChainSection();
+  if (icChainHtml && icChainHtml.trim()) twParts.push(accSection("mv-tw-icchain", "產業龍頭", icChainHtml));
   if (twSheetHtml && twSheetHtml.trim()) twParts.push(accSection("mv-tw-sheet", "個股查詢", twSheetHtml));
   const twInner = twParts.join("");
 
@@ -6134,6 +6139,116 @@ function render0050Section() {
   const caption = `<p style="color:var(--text-mute);font-size:15px;margin:0 0 10px">
     元大台灣50（0050）50 檔成分股，收盤日 ${escapeHtml(dateStr)}｜點欄位標題可排序｜成分股每季調整</p>`;
   return caption + renderStocksTable("", list, { showPE: false });
+}
+
+// ── 產業龍頭 ─────────────────────────────────────────────────────────────
+// 資料 data/ic_chain.json（build/fetch_ic_chain.py，隨雲端報價一起刷新）：
+// 產業價值鏈資訊平台（ic.tpex.org.tw）的產業／上中下游環節分類，
+// 每個環節取市值最大的幾家上市櫃公司當龍頭，附當日／近五日／近廿日報酬與相關新聞。
+// 市值為概算（實收資本額÷每股面額×收盤價），同一家公司可能同時屬於多個產業。
+let IC_CHAIN_PICK = "";
+
+function renderIcChainSection() {
+  const d = DATA.ic_chain || {};
+  const inds = d.industries || [];
+  if (!inds.length) return "";
+  if (!inds.some(i => i.code === IC_CHAIN_PICK)) IC_CHAIN_PICK = inds[0].code;
+  const caption = `<p style="color:var(--text-mute);font-size:15px;margin:0 0 10px">
+    產業分類取自
+    <a href="https://ic.tpex.org.tw/" target="_blank" rel="noopener" style="color:inherit">產業價值鏈資訊平台</a>
+    （${escapeHtml(shortDate(d.chain_fetched) || "")} 更新），每個環節列出市值最大的
+    ${d.leaders_per_segment || 5} 家上市櫃公司｜收盤日 ${escapeHtml(shortDate(d.market_date) || "")}</p>`;
+  // 47 個產業全做成 chip 會佔掉四行，桌機只放市值最大的 12 個當快速入口，
+  // 其餘（與手機）走下拉選單。
+  const chipList = inds.slice(0, 8);
+  const tabs = `<div class="tabs tabs-wrap ic-chain-tabs" id="ic-chain-tabs">${
+    chipList.map(i => `
+      <button class="tab ${i.code === IC_CHAIN_PICK ? "active" : ""}" type="button"
+        data-ic="${escapeHtml(i.code)}" onclick="setIcChainIndustry('${escapeHtml(i.code)}')">
+        ${escapeHtml(i.name)} <span class="tw-ind-tab-n">${i.companies}</span>
+      </button>`).join("")
+  }</div>`;
+  // 下拉一律顯示（含桌機）：chip 只放前 12 大，其餘產業要靠這裡選
+  const select = `
+    <label class="ic-chain-select-wrap" for="ic-chain-select">
+      <select id="ic-chain-select" class="tw-ind-select" onchange="setIcChainIndustry(this.value)">${
+        inds.map(i => `<option value="${escapeHtml(i.code)}" ${i.code === IC_CHAIN_PICK ? "selected" : ""}>${escapeHtml(i.name)}（${i.companies}）</option>`).join("")
+      }</select>
+    </label>`;
+  return caption + tabs + select + `<div id="ic-chain-body">${renderIcChainBody()}</div>`;
+}
+
+function setIcChainIndustry(code) {
+  IC_CHAIN_PICK = code;
+  const slot = document.getElementById("ic-chain-body");
+  if (slot) slot.innerHTML = renderIcChainBody();
+  document.querySelectorAll("#ic-chain-tabs .tab").forEach(b =>
+    b.classList.toggle("active", b.dataset.ic === code));
+  const sel = document.getElementById("ic-chain-select");
+  if (sel && sel.value !== code) sel.value = code;
+}
+
+function renderIcChainBody() {
+  const d = DATA.ic_chain || {};
+  const ind = (d.industries || []).find(i => i.code === IC_CHAIN_PICK);
+  if (!ind) return "";
+  const news = d.news || {};
+  const mcap = v => v == null ? "—" : (v >= 10000 ? `${(v / 10000).toFixed(2)} 兆` : `${Math.round(v)} 億`);
+  const pct = v => `<span class="${pctClass(v)}">${fmtPct(v)}</span>`;
+
+  const rows = ind.segments.map(seg => {
+    const head = `<tr class="ic-seg-row"><td colspan="6">
+      ${escapeHtml(seg.name)}${seg.stage ? `<span class="ic-stage">${escapeHtml(seg.stage)}</span>` : ""}
+      <span class="ic-seg-n">上市櫃 ${seg.listed} 家</span></td></tr>`;
+    const body = seg.leaders.map(l => `
+      <tr>
+        <td><a href="https://ic.tpex.org.tw/company_basic.php?stk_code=${encodeURIComponent(l.c)}"
+          target="_blank" rel="noopener" style="color:inherit;text-decoration:underline"
+          title="產業價值鏈資訊平台公司基本資料">${escapeHtml(l.n)}</a>
+          <span class="ic-code">${escapeHtml(l.c)}·${escapeHtml(l.mk)}</span></td>
+        <td>${mcap(l.mcap)}</td>
+        <td>${l.p == null ? "—" : l.p.toLocaleString("en-US", { minimumFractionDigits: 1, maximumFractionDigits: 1 })}</td>
+        <td>${pct(l.d)}</td><td>${pct(l.d5)}</td><td>${pct(l.d20)}</td>
+      </tr>`).join("");
+    return head + body;
+  }).join("");
+
+  const seen = new Set();
+  const items = [];
+  ind.segments.forEach(seg => seg.leaders.forEach(l => (news[l.c] || []).forEach(n => {
+    if (seen.has(n.u)) return;
+    seen.add(n.u);
+    items.push({ who: l.n, ...n });
+  })));
+  items.sort((a, b) => b.ts - a.ts);
+  const newsHtml = items.length ? `
+    <h3 style="margin:18px 0 8px">龍頭動態</h3>
+    <ul class="ic-news">${items.slice(0, 20).map(n => `
+      <li><b>${escapeHtml(n.who)}</b>
+        <a href="${escapeHtml(n.u)}" target="_blank" rel="noopener">${escapeHtml(n.t)}</a></li>`).join("")}
+    </ul>
+    <p style="color:var(--text-mute);font-size:13px;margin:8px 0 0">
+      鉅亨網近 48 小時新聞，以公司簡稱做標題比對，未經模型改寫。</p>` : "";
+
+  const summary = `<p style="color:var(--text-mute);font-size:15px;margin:0 0 10px">
+    ${escapeHtml(ind.name)}：上市櫃 ${ind.companies} 家，合計市值 ${mcap(ind.mcap)}，
+    市值加權當日 ${pct(ind.chg)}
+    <a href="https://ic.tpex.org.tw/introduce.php?ic=${encodeURIComponent(ind.code)}"
+      target="_blank" rel="noopener" style="color:inherit">（原始價值鏈圖）</a></p>`;
+
+  return summary + `
+    <table class="indices stock-cols ic-chain-table">
+      <colgroup><col class="c-name"><col class="c-num"><col class="c-num"><col class="c-num"><col class="c-num"><col class="c-num"></colgroup>
+      <thead><tr>
+        <th>公司</th>
+        <th title="市值概算＝實收資本額÷每股面額×收盤價，未扣庫藏股與特別股">市值</th>
+        <th title="收盤價，來源：TWSE／TPEx OpenAPI">收盤</th>
+        <th title="當日漲跌幅">當日</th>
+        <th title="近五個交易日收盤報酬（未還原除權息）">近五日</th>
+        <th title="近廿個交易日收盤報酬（未還原除權息）">近廿日</th>
+      </tr></thead>
+      <tbody>${rows}</tbody>
+    </table>` + newsHtml;
 }
 
 // ─────────────────────────────────────────────────────────────────────────

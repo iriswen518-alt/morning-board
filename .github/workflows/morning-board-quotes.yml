@@ -42,6 +42,8 @@ jobs:
           python3 fetch_popular_stocks.py
           python3 fetch_tpex_quotes.py
           python3 fetch_0050.py || echo "0050 fetch failed (non-fatal, keeps last etf0050.json)"
+          # 產業龍頭：ic.tpex 分類快照超過 7 天才會重抓（平時只打 TWSE/TPEx 兩支 API）
+          python3 fetch_ic_chain.py || echo "ic_chain fetch failed (non-fatal, keeps last ic_chain.json)"
       - name: Gate
         run: cd work && python3 validate_quotes.py
       - name: Validate data contract
@@ -53,7 +55,11 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/market.json data/stocks.json data/tpex_quotes.json data/popular_stocks.json data/etf0050.json
+          # 改動判定只看報價檔：ic_chain.json 每次都會因 built_at 而不同，
+          # 若拿它當判準會每小時空推一次、還會誤把 quotes_built_at 往前撥。
           if git diff --cached --quiet; then echo "no changes"; exit 0; fi
+          # 報價有變才順帶收產業龍頭（同一批市場資料，跟著一起進 commit）
+          git add data/ic_chain.json data/ic_chain_hist.json build/ic_chain_map.json
           # numbers changed → stamp the cloud refresh time (Taipei) so 上次更新 advances even with the Mac off.
           # written only here (single-writer for this file); frontend shows max(meta.built_at, this).
           printf '{"built_at": "%s"}\n' "$(TZ=Asia/Taipei date '+%Y-%m-%dT%H:%M:%S+08:00')" > data/quotes_built_at.json

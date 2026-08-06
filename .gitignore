@@ -3,3 +3,6 @@
 # Python bytecode cache
 __pycache__/
 *.pyc
+
+# 雲端 workflow 的暫存佈局（本機測 build 腳本時也會產生）
+/work/

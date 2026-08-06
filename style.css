@@ -3396,3 +3396,39 @@ table.indices.stock-cols col.c-num { width: 11%; }
 }
 .acc-sec .acc-sec > .acc-sec-head { padding-left: 10px; }
 .acc-sec .acc-sec > .acc-sec-body { padding-left: 10px; }
+
+/* 產業龍頭（台股分析內）：環節分隔列＋公司代號／市場別小字 */
+.ic-chain-tabs { margin-bottom: 10px; }
+/* 產業下拉一律顯示（桌機 chip 只放前 12 大，其餘產業從這裡選） */
+.ic-chain-select-wrap { display: block; margin-bottom: 14px; }
+/* 環節分隔列：全站表格底色被扁平化規則設為 transparent !important，
+   所以改用粗體＋品牌深藍＋上方分隔線來區隔，不再另加底色。
+   選擇器要壓過 table.indices td:first-child（會把文字置中），故連 table 一起指定。 */
+table.indices.ic-chain-table tr.ic-seg-row td,
+table.indices.ic-chain-table tr.ic-seg-row td:first-child {
+  font-weight: 700;
+  color: var(--brand-deep, #003D91);
+  text-align: left;
+  padding-top: 16px;
+  padding-bottom: 6px;
+  border-top: 2px solid var(--brand-primary, #019AB3);
+}
+table.indices.ic-chain-table tbody tr.ic-seg-row:first-child td { padding-top: 8px; }
+.ic-stage {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--brand-primary, #019AB3);
+  margin-left: 8px;
+}
+.ic-seg-n { font-size: 13px; font-weight: 400; color: var(--text-mute); margin-left: 8px; }
+table.indices.ic-chain-table tbody td:first-child { text-align: left; }
+.ic-code { font-size: 13px; color: var(--text-mute); margin-left: 6px; white-space: nowrap; }
+.ic-news { list-style: none; margin: 0; padding: 0; }
+.ic-news li { padding: 8px 0; border-bottom: 1px solid var(--line); font-size: 16px; line-height: 1.7; }
+.ic-news li:last-child { border-bottom: none; }
+.ic-news a { color: var(--brand-primary, #019AB3); text-decoration: none; }
+.ic-news b { margin-right: 8px; }
+@media (max-width: 640px) {
+  /* 47 個產業 chip 在手機上會 wrap 成一大片，改用下拉（沿用 .tw-ind-select 慣例） */
+  .ic-chain-tabs.tabs { display: none; }
+}
