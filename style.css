@@ -3228,3 +3228,101 @@ table.indices.stock-cols col.c-num { width: 11%; }
   .cmp-table th { color: var(--text); }
   .tw-link { color: var(--tint-text); }
 }
+
+/* ===== 扁平化：所有方塊無底色、無框線；展開／選中不用黃底 =====
+   2026-08-06 用戶要求（比照工作資料站）。放在檔案最後統一覆蓋前面各區塊的卡片樣式。
+   只處理「版面內的方塊」；浮層（聊聊彈窗／搜尋結果／下拉建議／sticky 表頭）保留底色，
+   否則會透出底下內容看不清楚。深色模式沿用同一組 token，不寫死色碼。 */
+.card,
+.acc-sec,
+.news-sec,
+.live-section,
+.live-detail-chart,
+.live-stat,
+.a-table,
+.calc-col,
+.position-preset-card,
+.position-analysis,
+.position-metric,
+.cmp-cat,
+.cmp-card,
+.tw-chart-wrap,
+.tw-rev-trend,
+.tw-inst-trend,
+.tw-chips,
+.tw-basic-card,
+.tw-data-card,
+.tw-res-card,
+.swap-results {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+/* 區塊之間改用細分隔線區隔，不再靠外框與陰影 */
+.card,
+.acc-sec,
+.live-section {
+  border-top: 1px solid var(--line-soft) !important;
+  margin-bottom: 0 !important;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.card:first-child,
+.acc-sec:first-of-type,
+.live-section:first-of-type { border-top: none !important; }
+.acc-sec-head,
+.acc-sec-body,
+.live-section-head { padding-left: 2px; padding-right: 2px; }
+
+/* 展開狀態：不用黃底，改用深藍字＋粗體＋caret 變色 */
+.acc-sec[open] > .acc-sec-head,
+.news-sec[open] > .news-sec-head {
+  background: transparent !important;
+  border-bottom: none !important;
+}
+.acc-sec[open] > .acc-sec-head > .acc-sec-title,
+.news-sec[open] > .news-sec-head > .news-sec-title {
+  color: var(--brand-deep) !important;
+  font-weight: 700;
+}
+.acc-sec[open] > .acc-sec-head > .acc-caret,
+.news-sec[open] > .news-sec-head > .news-caret {
+  color: var(--brand-primary) !important;
+}
+
+/* 即時行情區塊展開：同樣拿掉黃底（.live-section 用 :not(.collapsed) 表示展開） */
+.live-section:not(.collapsed) .live-section-head {
+  background: transparent !important;
+  border-bottom: none !important;
+}
+.live-section:not(.collapsed) .live-section-title { color: var(--brand-deep) !important; font-weight: 700; }
+.live-section:not(.collapsed) .live-caret { color: var(--brand-primary) !important; }
+
+/* 內容型方塊（第二批）：分頁面板、統計磚、說明區、資料卡一併扁平化。
+   刻意保留底色的是「控制項與浮層」：.tabs/.t-tab/.t-select/.expand-btn/.tw-pick/.cmp-chip
+   等按鈕與藥丸、各種 bar-track 進度條、.sheet/.chat-popup/#search-results/.tw-suggest
+   /.tw-matches 等浮層，以及 .live-state 狀態標籤——這些需要底色才看得出可點與層次。 */
+#content table.indices,
+.live-intro, .live-card, .live-fallback,
+.fund-card,
+.t-kpi, .t-stat, .t-section, .t-detail, .t-seq li,
+.a-note, .a-head, .a-ref,
+.w-law, .w-law-body,
+.calc-form, .calc-result, .calc-shared, .calc-notes,
+.position-warn-card, .position-perf-fxnote,
+.cmp-intro,
+.tw-search-box, .tw-snap, .tw-rev-accum, .tw-res-quote, .tw-sop-summary,
+.wr-date {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+/* 扁平後靠細線分隔，避免區塊黏在一起 */
+.t-section, .fund-card {
+  border-top: 1px solid var(--line-soft) !important;
+  margin-bottom: 0 !important;
+}
+.t-section:first-of-type, .fund-card:first-of-type { border-top: none !important; }
