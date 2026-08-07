@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-08T06:47:13+08:00",
+  "generated_at": "2026-08-08T07:41:17+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -73,34 +73,6 @@
       "error": null
     },
     {
-      "symbol": "USAR",
-      "name_zh": "USA Rare Earth",
-      "kind": "US",
-      "price": 19.33,
-      "change_pct": 11.03,
-      "mtd_pct": 29.3,
-      "ytd_pct": 62.44,
-      "market_date": "2026-08-07",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=USAR.US",
-      "error": null
-    },
-    {
-      "symbol": "HPQ",
-      "name_zh": "HP",
-      "kind": "US",
-      "price": 30.05,
-      "change_pct": 6.64,
-      "mtd_pct": 10.19,
-      "ytd_pct": 34.87,
-      "market_date": "2026-08-07",
-      "per": 10.6909,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HPQ.US",
-      "error": null
-    },
-    {
       "symbol": "TEM",
       "name_zh": "Tempus AI",
       "kind": "US",
@@ -112,20 +84,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TEM.US",
-      "error": null
-    },
-    {
-      "symbol": "IREN",
-      "name_zh": "IREN",
-      "kind": "US",
-      "price": 41.23,
-      "change_pct": 8.7,
-      "mtd_pct": 12.04,
-      "ytd_pct": 9.16,
-      "market_date": "2026-08-07",
-      "per": 175.9699,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IREN.US",
       "error": null
     },
     {
@@ -151,9 +109,37 @@
       "mtd_pct": 21.63,
       "ytd_pct": -6.66,
       "market_date": "2026-08-07",
-      "per": 20.3234,
+      "per": 21.1838,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ONDS.US",
+      "error": null
+    },
+    {
+      "symbol": "USAR",
+      "name_zh": "USA Rare Earth",
+      "kind": "US",
+      "price": 19.33,
+      "change_pct": 11.03,
+      "mtd_pct": 29.3,
+      "ytd_pct": 62.44,
+      "market_date": "2026-08-07",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=USAR.US",
+      "error": null
+    },
+    {
+      "symbol": "INFQ",
+      "name_zh": "Infleqtion",
+      "kind": "US",
+      "price": 11.91,
+      "change_pct": 7.2,
+      "mtd_pct": 21.16,
+      "ytd_pct": null,
+      "market_date": "2026-08-07",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=INFQ.US",
       "error": null
     },
     {
