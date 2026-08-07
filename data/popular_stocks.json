@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-07T14:13:50+08:00",
+  "generated_at": "2026-08-07T14:52:41+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -73,6 +73,20 @@
       "error": null
     },
     {
+      "symbol": "IOVA",
+      "name_zh": "Iovance Biotherapeutics",
+      "kind": "US",
+      "price": 6.21,
+      "change_pct": 43.09,
+      "mtd_pct": 52.58,
+      "ytd_pct": 127.47,
+      "market_date": "2026-08-06",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IOVA.US",
+      "error": null
+    },
+    {
       "symbol": "DOCS",
       "name_zh": "Doximity",
       "kind": "US",
@@ -84,20 +98,6 @@
       "per": 19.8319,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DOCS.US",
-      "error": null
-    },
-    {
-      "symbol": "DDOG",
-      "name_zh": "Datadog",
-      "kind": "US",
-      "price": 229.29,
-      "change_pct": -19.03,
-      "mtd_pct": -14.43,
-      "ytd_pct": 68.61,
-      "market_date": "2026-08-06",
-      "per": 601.5797,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DDOG.US",
       "error": null
     },
     {
@@ -115,20 +115,6 @@
       "error": null
     },
     {
-      "symbol": "IOVA",
-      "name_zh": "Iovance Biotherapeutics",
-      "kind": "US",
-      "price": 6.21,
-      "change_pct": 43.09,
-      "mtd_pct": 52.58,
-      "ytd_pct": 127.47,
-      "market_date": "2026-08-06",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IOVA.US",
-      "error": null
-    },
-    {
       "symbol": "NBIS",
       "name_zh": "Nebius",
       "kind": "US",
@@ -140,6 +126,20 @@
       "per": 67.4363,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NBIS.US",
+      "error": null
+    },
+    {
+      "symbol": "DDOG",
+      "name_zh": "Datadog",
+      "kind": "US",
+      "price": 229.29,
+      "change_pct": -19.03,
+      "mtd_pct": -14.43,
+      "ytd_pct": 68.61,
+      "market_date": "2026-08-06",
+      "per": 601.5797,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DDOG.US",
       "error": null
     },
     {
@@ -157,20 +157,6 @@
       "error": null
     },
     {
-      "symbol": "TE",
-      "name_zh": "T1 Energy",
-      "kind": "US",
-      "price": 5.55,
-      "change_pct": 1.46,
-      "mtd_pct": 33.09,
-      "ytd_pct": -16.92,
-      "market_date": "2026-08-06",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TE.US",
-      "error": null
-    },
-    {
       "symbol": "SEZL",
       "name_zh": "Sezzle",
       "kind": "US",
@@ -185,17 +171,17 @@
       "error": null
     },
     {
-      "symbol": "AKAM",
-      "name_zh": "Akamai Technologies",
+      "symbol": "BRVE",
+      "name_zh": "Braveheart Bio, Inc. Common Stock",
       "kind": "US",
-      "price": 118.55,
-      "change_pct": -3.04,
-      "mtd_pct": 2.93,
-      "ytd_pct": 35.87,
+      "price": 29.8,
+      "change_pct": null,
+      "mtd_pct": null,
+      "ytd_pct": null,
       "market_date": "2026-08-06",
-      "per": 40.0097,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AKAM.US",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BRVE.US",
       "error": null
     },
     {
@@ -210,6 +196,34 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SERV.US",
+      "error": null
+    },
+    {
+      "symbol": "TE",
+      "name_zh": "T1 Energy",
+      "kind": "US",
+      "price": 5.55,
+      "change_pct": 1.46,
+      "mtd_pct": 33.09,
+      "ytd_pct": -16.92,
+      "market_date": "2026-08-06",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TE.US",
+      "error": null
+    },
+    {
+      "symbol": "AKAM",
+      "name_zh": "Akamai Technologies",
+      "kind": "US",
+      "price": 118.55,
+      "change_pct": -3.04,
+      "mtd_pct": 2.93,
+      "ytd_pct": 35.87,
+      "market_date": "2026-08-06",
+      "per": 40.0097,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AKAM.US",
       "error": null
     },
     {
@@ -255,45 +269,31 @@
       "error": null
     },
     {
-      "symbol": "RGTI",
-      "name_zh": "Rigetti Computing",
+      "symbol": "FROG",
+      "name_zh": "JFrog",
       "kind": "US",
-      "price": 16.53,
-      "change_pct": -1.49,
-      "mtd_pct": 10.57,
-      "ytd_pct": -25.37,
+      "price": 83.04,
+      "change_pct": -1.75,
+      "mtd_pct": 4.07,
+      "ytd_pct": 32.95,
       "market_date": "2026-08-06",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RGTI.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FROG.US",
       "error": null
     },
     {
-      "symbol": "MNST",
-      "name_zh": "Monster Beverage",
+      "symbol": "INSM",
+      "name_zh": "Insmed Incorporated",
       "kind": "US",
-      "price": 94.16,
-      "change_pct": -0.32,
-      "mtd_pct": -2.3,
-      "ytd_pct": 22.81,
+      "price": 132.55,
+      "change_pct": 33.86,
+      "mtd_pct": 34.43,
+      "ytd_pct": -23.84,
       "market_date": "2026-08-06",
-      "per": 45.3501,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MNST.US",
-      "error": null
-    },
-    {
-      "symbol": "LITE",
-      "name_zh": "Lumentum",
-      "kind": "US",
-      "price": 838.06,
-      "change_pct": 1.43,
-      "mtd_pct": 17.39,
-      "ytd_pct": 127.37,
-      "market_date": "2026-08-06",
-      "per": 152.0036,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LITE.US",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=INSM.US",
       "error": null
     },
     {
