@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-08T22:40:24+08:00",
+  "generated_at": "2026-08-08T23:37:52+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -31,45 +31,17 @@
       "error": null
     },
     {
-      "symbol": "AGNC",
-      "name_zh": "AGNC Investment",
+      "symbol": "NNE",
+      "name_zh": "Nano Nuclear Energy",
       "kind": "US",
-      "price": 10.84,
-      "change_pct": 2.17,
-      "mtd_pct": 1.69,
-      "ytd_pct": 1.12,
-      "market_date": "2026-08-07",
-      "per": 5.6998,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AGNC.US",
-      "error": null
-    },
-    {
-      "symbol": "ARCC",
-      "name_zh": "Ares Capital",
-      "kind": "US",
-      "price": 20.01,
-      "change_pct": 1.99,
-      "mtd_pct": 6.66,
-      "ytd_pct": -1.09,
-      "market_date": "2026-08-07",
-      "per": 14.7569,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ARCC.US",
-      "error": null
-    },
-    {
-      "symbol": "QS",
-      "name_zh": "QuantumScape",
-      "kind": "US",
-      "price": 6.08,
-      "change_pct": 9.95,
-      "mtd_pct": 16.48,
-      "ytd_pct": -41.65,
+      "price": 18.85,
+      "change_pct": 7.04,
+      "mtd_pct": 18.48,
+      "ytd_pct": -21.49,
       "market_date": "2026-08-07",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QS.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NNE.US",
       "error": null
     },
     {
@@ -87,20 +59,6 @@
       "error": null
     },
     {
-      "symbol": "EPD",
-      "name_zh": "Enterprise Products Partners L.",
-      "kind": "US",
-      "price": 37.75,
-      "change_pct": -0.79,
-      "mtd_pct": -0.79,
-      "ytd_pct": 17.75,
-      "market_date": "2026-08-07",
-      "per": 13.8358,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=EPD.US",
-      "error": null
-    },
-    {
       "symbol": "LMT",
       "name_zh": "洛馬",
       "kind": "US",
@@ -115,17 +73,17 @@
       "error": null
     },
     {
-      "symbol": "DJT",
-      "name_zh": "Trump Media & Technology",
+      "symbol": "DAVE",
+      "name_zh": "Dave",
       "kind": "US",
-      "price": 10.21,
-      "change_pct": 3.24,
-      "mtd_pct": 3.55,
-      "ytd_pct": -22.89,
+      "price": 317.93,
+      "change_pct": -12.96,
+      "mtd_pct": -14.69,
+      "ytd_pct": 43.59,
       "market_date": "2026-08-07",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DJT.US",
+      "per": 18.0247,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DAVE.US",
       "error": null
     },
     {
@@ -143,20 +101,6 @@
       "error": null
     },
     {
-      "symbol": "NNE",
-      "name_zh": "Nano Nuclear Energy",
-      "kind": "US",
-      "price": 18.85,
-      "change_pct": 7.04,
-      "mtd_pct": 18.48,
-      "ytd_pct": -21.49,
-      "market_date": "2026-08-07",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NNE.US",
-      "error": null
-    },
-    {
       "symbol": "JNJ",
       "name_zh": "嬌生",
       "kind": "US",
@@ -168,6 +112,48 @@
       "per": 29.333,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=JNJ.US",
+      "error": null
+    },
+    {
+      "symbol": "QS",
+      "name_zh": "QuantumScape",
+      "kind": "US",
+      "price": 6.08,
+      "change_pct": 9.95,
+      "mtd_pct": 16.48,
+      "ytd_pct": -41.65,
+      "market_date": "2026-08-07",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QS.US",
+      "error": null
+    },
+    {
+      "symbol": "AGNC",
+      "name_zh": "AGNC Investment",
+      "kind": "US",
+      "price": 10.84,
+      "change_pct": 2.17,
+      "mtd_pct": 1.69,
+      "ytd_pct": 1.12,
+      "market_date": "2026-08-07",
+      "per": 5.6998,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AGNC.US",
+      "error": null
+    },
+    {
+      "symbol": "KHC",
+      "name_zh": "The Kraft Heinz",
+      "kind": "US",
+      "price": 25.32,
+      "change_pct": 1.44,
+      "mtd_pct": -2.05,
+      "ytd_pct": 4.41,
+      "market_date": "2026-08-07",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=KHC.US",
       "error": null
     },
     {
