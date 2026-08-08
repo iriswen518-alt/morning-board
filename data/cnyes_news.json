@@ -1,11 +1,64 @@
 {
-  "built_at": "2026-08-08T19:34",
+  "built_at": "2026-08-08T20:55",
   "source": "鉅亨網（cnyes）",
   "categories": [
     {
       "key": "headline",
       "label": "鉅亨頭條",
       "items": [
+        {
+          "news_id": "6566508",
+          "title": "CPU恐成雲端業下一個瓶頸！亞馬遜AWS出現「CPU短缺」",
+          "title_en": "CPU May Become the Next Bottleneck for Cloud Industry as Amazon AWS Faces \"CPU Shortage\"",
+          "publish_at": 1786191006,
+          "url": "https://news.cnyes.com/news/id/6566508",
+          "paras": [
+            "科技業已經從聚焦於 GPU 一片難求的窘境，轉向 CPU 這項基礎運算資源。",
+            "根據《The Information》報導，亞馬遜 (AMZN-US) 雲端服務（AWS）內部今年 5 月已對工程團隊發出示警，要求全力節省運算資源，以確保未來能持續滿足客戶需求。",
+            "值得注意的是，這波節流令不僅鎖定 AI 晶片，更直指長年支撐網路服務運作的傳統 CPU 伺服器。",
+            "知情人士透露，AWS 已對各部門下達期限，要求在今年稍晚前削減運算資源的占用比例。為了騰出算力轉供外部客戶使用，工程師們正陸續關閉先前用於軟體開發、如今處於閒置狀態的 EC2 虛擬伺服器。",
+            "一名任職 AWS 多年的工程師表示，過去申請 CPU 伺服器資源通常數小時內就能到位，如今卻得苦候數天之久，這樣的延遲在他的職涯中前所未見，甚至可能拖累專案交付時程。",
+            "對此，AWS 官方回應強調，儘管當前面臨「龐大需求」，公司仍有能力滿足「絕大多數」內外部客戶的運算需求，並表示正與內部團隊密切合作，確保 EC2 資源維持一貫的高效運用，員工使用資源的相關指引也未因目前的緊張情勢而調整。",
+            "值得留意的是，外部客戶目前受到的衝擊仍屬有限。一名協助企業導入 AWS 服務的顧問指出，尚未觀察到客戶在合約承諾的算力上出現實際短缺。",
+            "不過，AWS 以折扣價提供、但可隨時在兩分鐘內被收回的「競價執行個體」（Spot Instances），近幾個月來已越來越難大量取得，被視為 AWS 整體供需缺口正在收窄、彈性空間持續壓縮的明確訊號，也可能預示雲端運算成本即將走高。",
+            "分析指出，這波 CPU 吃緊的根本原因，在於「AI 代理」應用的快速擴散。AI 顧問公司 Elendil Labs 共同創辦人暨董事總經理 Jing Xie 觀察到，客戶的人均 IT 支出已然翻倍，主因正是企業內大量導入 AI 代理程式協助軟體開發。",
+            "他指出，AI 代理程式在運作過程中往往需要調用比以往更多的雲端資源，進而對 CPU 形成持續性的龐大需求。",
+            "他表示：「不論是現在的開發、生產或營運，幾乎所有工作所需的 CPU 都比過去更多。」",
+            "事實上，CPU 的角色不僅限於 AI 應用的執行端，在 AI 開發流程中同樣不可或缺。例如 AI 公司為訓練模型準備資料時，仍須仰賴 CPU 從文件、影像與影片中讀取並處理原始資料。",
+            "晶片大廠的最新表態也印證了這股趨勢。英特爾 (INTC-US) 執行長陳立武（Lip-Bu Tan）今年 4 月的財報電話會議上曾透露，在 AI 推論（即模型實際運作）情境中，CPU 與 GPU 的使用比例約為 1 比 4。",
+            "然而，到了 7 月，該公司財務長 David Zinsner 便指出這項比例已迅速拉近至接近 1 比 1。",
+            "超微半導體 (AMD-US) 與 Arm(ARM-US) 的高層主管近期也做出類似表態，顯示 CPU 需求成長的速度已超出業界原先預期。",
+            "除了 CPU 本身供不應求，與之搭配使用的記憶體晶片供應緊張，以及資料中心實體空間的限制，也共同加劇了這場算力荒。",
+            "大型科技公司的算力分配難題",
+            "如何在內部研發與外部客戶之間分配有限算力，已成為近兩年科技巨頭共同面臨的棘手課題。",
+            "根據《The Information》先前報導，Google 去年已成立一個由高階主管組成的專責委員會，負責協調 Google Cloud、DeepMind 研究部門與消費端業務之間的運算資源分配。",
+            "即便如此，內部摩擦仍未消弭。Google 知名 AI 研究員 Noam Shazeer 今年稍早便因不滿算力取得受限而選擇離職。",
+            "相較之下，微軟則展現出算力管理效率提升所帶來的正面效益。該公司財務長 Amy Hood 上月在財報電話會議上表示，Azure 雲端服務部分營收成長，正是得益於 CPU 與 GPU 叢集管理效率的提升。"
+          ],
+          "paras_en": [
+            "The tech industry has shifted its focus from the scarce GPU shortage to the fundamental computing resource of CPUs.",
+            "According to a report by The Information, Amazon (AMZN-US) cloud services (AWS) internally issued a warning to engineering teams in May of this year, urging them to conserve computing resources to ensure continued customer demand can be met.",
+            "Notably, this throttling effort targets not only AI chips but also the traditional CPU servers that have long underpinned network services.",
+            "Sources familiar with the matter say AWS has set deadlines for each division to reduce the proportion of computing resources they consume later this year. To free up capacity for external customers, engineers are gradually shutting down EC2 virtual servers that were previously used for software development and are now idle.",
+            "An engineer who has worked at AWS for many years said that in the past, requesting CPU server resources could be fulfilled within a few hours, but now it can take several days—a delay he has never seen in his career and one that could even jeopardize project delivery timelines.",
+            "AWS responded that despite the \"massive demand\" currently faced, the company remains capable of meeting the computing needs of \"the vast majority\" of internal and external customers, and that it is working closely with internal teams to keep EC2 resources efficiently utilized, with no changes to employee resource‑use guidelines despite the current tight situation.",
+            "It is worth noting that the impact on external customers remains limited. A consultant who helps enterprises adopt AWS services said he has not yet observed any actual shortfall in the compute capacity promised under customer contracts.",
+            "However, AWS’s discounted Spot Instances, which can be reclaimed at any time within two minutes, have become increasingly difficult to obtain in large quantities over the past few months, a clear sign that the overall supply‑demand gap is narrowing and flexibility is being squeezed, potentially foreshadowing higher cloud‑computing costs.",
+            "Analysts point out that the root cause of the CPU crunch is the rapid proliferation of \"AI agents\" applications. Jing Xie, co‑founder and managing director of AI consultancy Elendil Labs, observed that per‑capita IT spending by customers has doubled, driven largely by the massive adoption of AI agent programs to assist software development within enterprises.",
+            "He noted that AI agent programs typically require far more cloud resources during operation, creating a sustained, massive demand for CPUs.",
+            "He said, \"Whether in development, production, or operations, almost every task now needs more CPU than before.\"",
+            "In fact, the role of CPUs extends beyond the execution side of AI applications; they are also indispensable in the AI development pipeline. For example, when AI companies prepare data for model training, they still rely on CPUs to read and process raw data from documents, images, and videos.",
+            "The latest statements from chip makers confirm this trend. Intel (INTC-US) CEO Lip‑Bu Tan disclosed in the April earnings call that in AI inference scenarios, the CPU‑to‑GPU usage ratio is about 1 to 4.",
+            "However, by July, the company’s CFO David Zinsner noted that the ratio had quickly narrowed to nearly 1 to 1.",
+            "Senior executives at AMD (AMD-US) and Arm (ARM-US) have made similar remarks recently, indicating that CPU demand growth is outpacing industry expectations.",
+            "In addition to the shortage of CPUs themselves, tight supplies of memory chips used alongside them and constraints on physical data‑center space are jointly exacerbating this compute scarcity.",
+            "Large tech companies face compute allocation challenges",
+            "How to allocate limited compute between internal R&D and external customers has become a thorny issue that major tech giants have grappled with over the past two years.",
+            "According to earlier reporting by The Information, Google established a high‑level committee last year to coordinate compute resource allocation among Google Cloud, DeepMind research, and consumer‑facing businesses.",
+            "Nevertheless, internal friction persists. Google AI researcher Noam Shazeer left the company earlier this year over frustrations with limited compute access.",
+            "In contrast, Microsoft has demonstrated the positive effects of improved compute management efficiency. CFO Amy Hood said last month in the earnings call that Azure’s revenue growth was driven in part by better CPU and GPU cluster management."
+          ]
+        },
         {
           "news_id": "6566440",
           "title": "輝達砸30億美元押注AI電力基建！傳入股Lancium 20%、布局「星際之門」資料中心",
@@ -38,7 +91,7 @@
         {
           "news_id": "6566489",
           "title": "AI投資恐成下一個經濟風險？阿波羅警告「次貸危機式」逆轉衝擊",
-          "title_en": "",
+          "title_en": "AI Investment May Become the Next Economic Risk? Apollo Warns of 'Subprime Crisis-Style' Reversal Impact",
           "publish_at": 1786183804,
           "url": "https://news.cnyes.com/news/id/6566489",
           "paras": [
@@ -55,7 +108,20 @@
             "2000 年前後電信泡沫破裂時，由於投資規模相對有限，對美國經濟造成的衝擊也較為溫和，僅引發戰後歷來最輕微的一次衰退；\n反觀 2006 年初至 2008 年底，房市投資佔 GDP 比重在短短三年內急速萎縮約 3.2 個百分點，正是釀成後續金融危機與嚴重衰退的關鍵推手之一。\n\n\n以此類推，如今資料中心資本支出正以每年約 0.85 個百分點的速度加速擴張，一旦企業對 AI 的商業化預期未能如期兌現，這股資金浪潮同樣可能以相近的速度急遽收縮。",
             "Slok 在報告結語中直言，當前總體經濟層面真正需要關注的風險，並非 AI 基礎建設本身的擴張，而是一旦市場對 AI 的殷切期待落空，隨之而來的投資急遽反轉，恐將對整體經濟成長帶來難以忽視的衝擊。"
           ],
-          "paras_en": []
+          "paras_en": [
+            "The investment boom in artificial intelligence (AI) infrastructure is sweeping the global capital market at an unprecedented pace, but the overall economic risks hidden behind this boom are gradually emerging.",
+            "Torsten Slok, the chief economist of Apollo Management, recently analyzed that the capital expenditure of some large cloud service providers as a percentage of US GDP is expected to jump from 1.4% in 2025 to around 3% in 2027-2029, which will be more than twice the peak of the telecom and fiber construction boom in the late 1990s.",
+            "In his report, Slok compared this AI investment boom with the two major capital expenditure cycles in the past. In terms of the absolute scale of investment as a percentage of GDP, this data center construction boom is still smaller than the peak of the US housing market bubble in 2005 (which accounted for 6.6% of GDP), but it is more than twice the peak of the telecom boom in the late 1990s (around 1.2%).",
+            "However, what really alerted Slok was not the scale of investment itself, but the 'speed of ascent'. He pointed out that the capital expenditure of data centers as a percentage of GDP is expected to rise from 0.6% in 2023 to 3.1% in 2027, with a cumulative increase of about 2.5 percentage points, which has surpassed the cumulative increase of about 2.2 percentage points during the housing boom period (from the mid-1990s to 2005) and is much higher than the 0.4 percentage point increase during the telecom boom.",
+            "In other words, if measured by the 'marginal contribution to GDP', AI data center investment has become the largest capital expenditure cycle in history.",
+            "More noteworthy is the pace of construction itself. The report shows that data center capital expenditure will rise from 1.4% in 2025 to 3.1% in 2027 in just two years, which translates to an average annual increase of about 0.85 percentage points.",
+            "In comparison, the most intense phase of the housing boom (2002-2005) had an average annual increase of only about 0.5 percentage points, while the telecom boom had an increase of only about 0.15 percentage points.",
+            "That is to say, the pace of this AI construction boom is almost twice that of the housing boom at its peak.",
+            "Sloak emphasized a symmetrical logic in his report: the faster the investment cycle rises, the more severe the impact will be when it reverses.",
+            "He cited two historical experiences as a contrast: around 2000, when the telecom bubble burst, the impact on the US economy was relatively mild due to the limited scale of investment, resulting in the mildest recession in the post-war period.",
+            "On the other hand, from 2006 to 2008, the housing investment as a percentage of GDP shrank rapidly by about 3.2 percentage points in just three years, which was a key factor leading to the subsequent financial crisis and severe recession.",
+            "By analogy, if the current data center capital expenditure is expanding at a rate of about 0.85 percentage points per year, and the commercialization expectations of AI are not met, this wave of investment may also shrink rapidly at a similar rate."
+          ]
         },
         {
           "news_id": "6566351",
@@ -212,27 +278,6 @@
             "If the data come in mild, expectations for a September rate hike could cool further; if inflation surprises on the high side, rate‑hike concerns may resurface, potentially pulling back the gold, small‑cap and long‑duration tech stocks that led the market this week.",
             "On the other hand, Applied Materials (AMAT‑US), touted as one of the best‑performing semiconductor stocks of 2026, will report earnings after the U.S. market close on Thursday (the 13th), and investors will be watching closely.",
             "Analysts conclude that weak employment data gave Wall Street a celebratory rally this time, but next week’s CPI will be the key determinant of whether the party can continue."
-          ]
-        },
-        {
-          "news_id": "6566419",
-          "title": "DRAM供給恐緊缺至2030年！高盛示警：南韓記憶體股遭過度悲觀定價",
-          "title_en": "DRAM supply feared scarce until 2030! Goldman warns: South Korea memory stocks overly pessimistically priced",
-          "publish_at": 1786173006,
-          "url": "https://news.cnyes.com/news/id/6566419",
-          "paras": [
-            "高盛亞洲首爾分部交易員 Justin Park 近日發布最新研究報告指出，南韓股市近期劇烈震盪，已使投資人對記憶體晶片產業的基本面預期，壓低到明顯偏離現實的悲觀水準。",
-            "Park 強調，目前市場對記憶體晶片股的估值，並未反映這一輪景氣循環真正的強度與延續性。",
-            "報告分析，這波記憶體產業的多頭行情，主要動能來自 AI 運算需求快速擴張所引發的結構性供需失衡。",
-            "高盛預估，DRAM 供應短缺的情況可能一路延續到 2030 年，長期缺貨態勢將賦予相關廠商更強的定價權與獲利空間。",
-            "除基本面因素外，報告也點出市場技術面正在改善的訊號：槓桿型 ETF 的資金規模明顯收縮、保證金交易的曝險部位下降，加上主管機關監管力道轉趨嚴格，以及避險基金持倉部位逐步退場。"
-          ],
-          "paras_en": [
-            "Goldman Sachs' Seoul branch trader Justin Park recently released a new research report noting that the South Korean stock market's recent severe volatility has pushed investors' expectations for the memory chip industry's fundamentals down to a clearly unrealistic pessimistic level.",
-            "Park emphasized that current market valuations of memory chip stocks do not reflect the true strength and persistence of this economic cycle.",
-            "The report analysis says the bullish run in the memory industry is mainly driven by a structural supply‑demand imbalance caused by the rapid expansion of AI computing demand.",
-            "Goldman estimates that the DRAM supply shortage could persist all the way to 2030, and the long‑term scarcity will give related manufacturers stronger pricing power and profit margins.",
-            "Besides fundamentals, the report also points to improving technical signals: the asset base of leveraged ETFs has noticeably contracted, margin‑trading exposure has fallen, regulatory scrutiny has become stricter, and hedge‑fund positions are gradually exiting."
           ]
         }
       ]
@@ -432,6 +477,59 @@
       "label": "美股焦點",
       "items": [
         {
+          "news_id": "6566508",
+          "title": "CPU恐成雲端業下一個瓶頸！亞馬遜AWS出現「CPU短缺」",
+          "title_en": "CPU May Become the Next Bottleneck for Cloud Industry as Amazon AWS Faces \"CPU Shortage\"",
+          "publish_at": 1786191006,
+          "url": "https://news.cnyes.com/news/id/6566508",
+          "paras": [
+            "科技業已經從聚焦於 GPU 一片難求的窘境，轉向 CPU 這項基礎運算資源。",
+            "根據《The Information》報導，亞馬遜 (AMZN-US) 雲端服務（AWS）內部今年 5 月已對工程團隊發出示警，要求全力節省運算資源，以確保未來能持續滿足客戶需求。",
+            "值得注意的是，這波節流令不僅鎖定 AI 晶片，更直指長年支撐網路服務運作的傳統 CPU 伺服器。",
+            "知情人士透露，AWS 已對各部門下達期限，要求在今年稍晚前削減運算資源的占用比例。為了騰出算力轉供外部客戶使用，工程師們正陸續關閉先前用於軟體開發、如今處於閒置狀態的 EC2 虛擬伺服器。",
+            "一名任職 AWS 多年的工程師表示，過去申請 CPU 伺服器資源通常數小時內就能到位，如今卻得苦候數天之久，這樣的延遲在他的職涯中前所未見，甚至可能拖累專案交付時程。",
+            "對此，AWS 官方回應強調，儘管當前面臨「龐大需求」，公司仍有能力滿足「絕大多數」內外部客戶的運算需求，並表示正與內部團隊密切合作，確保 EC2 資源維持一貫的高效運用，員工使用資源的相關指引也未因目前的緊張情勢而調整。",
+            "值得留意的是，外部客戶目前受到的衝擊仍屬有限。一名協助企業導入 AWS 服務的顧問指出，尚未觀察到客戶在合約承諾的算力上出現實際短缺。",
+            "不過，AWS 以折扣價提供、但可隨時在兩分鐘內被收回的「競價執行個體」（Spot Instances），近幾個月來已越來越難大量取得，被視為 AWS 整體供需缺口正在收窄、彈性空間持續壓縮的明確訊號，也可能預示雲端運算成本即將走高。",
+            "分析指出，這波 CPU 吃緊的根本原因，在於「AI 代理」應用的快速擴散。AI 顧問公司 Elendil Labs 共同創辦人暨董事總經理 Jing Xie 觀察到，客戶的人均 IT 支出已然翻倍，主因正是企業內大量導入 AI 代理程式協助軟體開發。",
+            "他指出，AI 代理程式在運作過程中往往需要調用比以往更多的雲端資源，進而對 CPU 形成持續性的龐大需求。",
+            "他表示：「不論是現在的開發、生產或營運，幾乎所有工作所需的 CPU 都比過去更多。」",
+            "事實上，CPU 的角色不僅限於 AI 應用的執行端，在 AI 開發流程中同樣不可或缺。例如 AI 公司為訓練模型準備資料時，仍須仰賴 CPU 從文件、影像與影片中讀取並處理原始資料。",
+            "晶片大廠的最新表態也印證了這股趨勢。英特爾 (INTC-US) 執行長陳立武（Lip-Bu Tan）今年 4 月的財報電話會議上曾透露，在 AI 推論（即模型實際運作）情境中，CPU 與 GPU 的使用比例約為 1 比 4。",
+            "然而，到了 7 月，該公司財務長 David Zinsner 便指出這項比例已迅速拉近至接近 1 比 1。",
+            "超微半導體 (AMD-US) 與 Arm(ARM-US) 的高層主管近期也做出類似表態，顯示 CPU 需求成長的速度已超出業界原先預期。",
+            "除了 CPU 本身供不應求，與之搭配使用的記憶體晶片供應緊張，以及資料中心實體空間的限制，也共同加劇了這場算力荒。",
+            "大型科技公司的算力分配難題",
+            "如何在內部研發與外部客戶之間分配有限算力，已成為近兩年科技巨頭共同面臨的棘手課題。",
+            "根據《The Information》先前報導，Google 去年已成立一個由高階主管組成的專責委員會，負責協調 Google Cloud、DeepMind 研究部門與消費端業務之間的運算資源分配。",
+            "即便如此，內部摩擦仍未消弭。Google 知名 AI 研究員 Noam Shazeer 今年稍早便因不滿算力取得受限而選擇離職。",
+            "相較之下，微軟則展現出算力管理效率提升所帶來的正面效益。該公司財務長 Amy Hood 上月在財報電話會議上表示，Azure 雲端服務部分營收成長，正是得益於 CPU 與 GPU 叢集管理效率的提升。"
+          ],
+          "paras_en": [
+            "The tech industry has shifted its focus from the scarce GPU shortage to the fundamental computing resource of CPUs.",
+            "According to a report by The Information, Amazon (AMZN-US) cloud services (AWS) internally issued a warning to engineering teams in May of this year, urging them to conserve computing resources to ensure continued customer demand can be met.",
+            "Notably, this throttling effort targets not only AI chips but also the traditional CPU servers that have long underpinned network services.",
+            "Sources familiar with the matter say AWS has set deadlines for each division to reduce the proportion of computing resources they consume later this year. To free up capacity for external customers, engineers are gradually shutting down EC2 virtual servers that were previously used for software development and are now idle.",
+            "An engineer who has worked at AWS for many years said that in the past, requesting CPU server resources could be fulfilled within a few hours, but now it can take several days—a delay he has never seen in his career and one that could even jeopardize project delivery timelines.",
+            "AWS responded that despite the \"massive demand\" currently faced, the company remains capable of meeting the computing needs of \"the vast majority\" of internal and external customers, and that it is working closely with internal teams to keep EC2 resources efficiently utilized, with no changes to employee resource‑use guidelines despite the current tight situation.",
+            "It is worth noting that the impact on external customers remains limited. A consultant who helps enterprises adopt AWS services said he has not yet observed any actual shortfall in the compute capacity promised under customer contracts.",
+            "However, AWS’s discounted Spot Instances, which can be reclaimed at any time within two minutes, have become increasingly difficult to obtain in large quantities over the past few months, a clear sign that the overall supply‑demand gap is narrowing and flexibility is being squeezed, potentially foreshadowing higher cloud‑computing costs.",
+            "Analysts point out that the root cause of the CPU crunch is the rapid proliferation of \"AI agents\" applications. Jing Xie, co‑founder and managing director of AI consultancy Elendil Labs, observed that per‑capita IT spending by customers has doubled, driven largely by the massive adoption of AI agent programs to assist software development within enterprises.",
+            "He noted that AI agent programs typically require far more cloud resources during operation, creating a sustained, massive demand for CPUs.",
+            "He said, \"Whether in development, production, or operations, almost every task now needs more CPU than before.\"",
+            "In fact, the role of CPUs extends beyond the execution side of AI applications; they are also indispensable in the AI development pipeline. For example, when AI companies prepare data for model training, they still rely on CPUs to read and process raw data from documents, images, and videos.",
+            "The latest statements from chip makers confirm this trend. Intel (INTC-US) CEO Lip‑Bu Tan disclosed in the April earnings call that in AI inference scenarios, the CPU‑to‑GPU usage ratio is about 1 to 4.",
+            "However, by July, the company’s CFO David Zinsner noted that the ratio had quickly narrowed to nearly 1 to 1.",
+            "Senior executives at AMD (AMD-US) and Arm (ARM-US) have made similar remarks recently, indicating that CPU demand growth is outpacing industry expectations.",
+            "In addition to the shortage of CPUs themselves, tight supplies of memory chips used alongside them and constraints on physical data‑center space are jointly exacerbating this compute scarcity.",
+            "Large tech companies face compute allocation challenges",
+            "How to allocate limited compute between internal R&D and external customers has become a thorny issue that major tech giants have grappled with over the past two years.",
+            "According to earlier reporting by The Information, Google established a high‑level committee last year to coordinate compute resource allocation among Google Cloud, DeepMind research, and consumer‑facing businesses.",
+            "Nevertheless, internal friction persists. Google AI researcher Noam Shazeer left the company earlier this year over frustrations with limited compute access.",
+            "In contrast, Microsoft has demonstrated the positive effects of improved compute management efficiency. CFO Amy Hood said last month in the earnings call that Azure’s revenue growth was driven in part by better CPU and GPU cluster management."
+          ]
+        },
+        {
           "news_id": "6566440",
           "title": "輝達砸30億美元押注AI電力基建！傳入股Lancium 20%、布局「星際之門」資料中心",
           "title_en": "Nvidia Pours $3 B into AI Power Infrastructure, Takes 20% Stake in Lancium and Plans “Stargate” Data Center",
@@ -463,7 +561,7 @@
         {
           "news_id": "6566489",
           "title": "AI投資恐成下一個經濟風險？阿波羅警告「次貸危機式」逆轉衝擊",
-          "title_en": "",
+          "title_en": "AI Investment May Become the Next Economic Risk? Apollo Warns of 'Subprime Crisis-Style' Reversal Impact",
           "publish_at": 1786183804,
           "url": "https://news.cnyes.com/news/id/6566489",
           "paras": [
@@ -480,7 +578,20 @@
             "2000 年前後電信泡沫破裂時，由於投資規模相對有限，對美國經濟造成的衝擊也較為溫和，僅引發戰後歷來最輕微的一次衰退；\n反觀 2006 年初至 2008 年底，房市投資佔 GDP 比重在短短三年內急速萎縮約 3.2 個百分點，正是釀成後續金融危機與嚴重衰退的關鍵推手之一。\n\n\n以此類推，如今資料中心資本支出正以每年約 0.85 個百分點的速度加速擴張，一旦企業對 AI 的商業化預期未能如期兌現，這股資金浪潮同樣可能以相近的速度急遽收縮。",
             "Slok 在報告結語中直言，當前總體經濟層面真正需要關注的風險，並非 AI 基礎建設本身的擴張，而是一旦市場對 AI 的殷切期待落空，隨之而來的投資急遽反轉，恐將對整體經濟成長帶來難以忽視的衝擊。"
           ],
-          "paras_en": []
+          "paras_en": [
+            "The investment boom in artificial intelligence (AI) infrastructure is sweeping the global capital market at an unprecedented pace, but the overall economic risks hidden behind this boom are gradually emerging.",
+            "Torsten Slok, the chief economist of Apollo Management, recently analyzed that the capital expenditure of some large cloud service providers as a percentage of US GDP is expected to jump from 1.4% in 2025 to around 3% in 2027-2029, which will be more than twice the peak of the telecom and fiber construction boom in the late 1990s.",
+            "In his report, Slok compared this AI investment boom with the two major capital expenditure cycles in the past. In terms of the absolute scale of investment as a percentage of GDP, this data center construction boom is still smaller than the peak of the US housing market bubble in 2005 (which accounted for 6.6% of GDP), but it is more than twice the peak of the telecom boom in the late 1990s (around 1.2%).",
+            "However, what really alerted Slok was not the scale of investment itself, but the 'speed of ascent'. He pointed out that the capital expenditure of data centers as a percentage of GDP is expected to rise from 0.6% in 2023 to 3.1% in 2027, with a cumulative increase of about 2.5 percentage points, which has surpassed the cumulative increase of about 2.2 percentage points during the housing boom period (from the mid-1990s to 2005) and is much higher than the 0.4 percentage point increase during the telecom boom.",
+            "In other words, if measured by the 'marginal contribution to GDP', AI data center investment has become the largest capital expenditure cycle in history.",
+            "More noteworthy is the pace of construction itself. The report shows that data center capital expenditure will rise from 1.4% in 2025 to 3.1% in 2027 in just two years, which translates to an average annual increase of about 0.85 percentage points.",
+            "In comparison, the most intense phase of the housing boom (2002-2005) had an average annual increase of only about 0.5 percentage points, while the telecom boom had an increase of only about 0.15 percentage points.",
+            "That is to say, the pace of this AI construction boom is almost twice that of the housing boom at its peak.",
+            "Sloak emphasized a symmetrical logic in his report: the faster the investment cycle rises, the more severe the impact will be when it reverses.",
+            "He cited two historical experiences as a contrast: around 2000, when the telecom bubble burst, the impact on the US economy was relatively mild due to the limited scale of investment, resulting in the mildest recession in the post-war period.",
+            "On the other hand, from 2006 to 2008, the housing investment as a percentage of GDP shrank rapidly by about 3.2 percentage points in just three years, which was a key factor leading to the subsequent financial crisis and severe recession.",
+            "By analogy, if the current data center capital expenditure is expanding at a rate of about 0.85 percentage points per year, and the commercialization expectations of AI are not met, this wave of investment may also shrink rapidly at a similar rate."
+          ]
         },
         {
           "news_id": "6566401",
@@ -726,65 +837,6 @@
             "He stated that SpaceX's emphasis on obtaining NVIDIA's chip allocations 'further reinforces the view that AI computing shortages are unlikely to be alleviated before 2027.'",
             "Additionally, SpaceX noted that memory production grows by 20% annually, while AI demand increases by 200%. Slowinski believes this supports the view that supply is still severely lagging behind demand. Therefore, even if the data is only directionally accurate, it suggests that the current favorable pricing environment will not return to normal in the short term."
           ]
-        },
-        {
-          "news_id": "6566379",
-          "title": "記憶體雙雄大對決！美光漲208%後估值遭質疑 分析師：SK hynix更便宜",
-          "title_en": "Memory Chipmakers' Duel: Micron Rises 208% as Valuation Questioned, SK Hynix Seen as Cheaper",
-          "publish_at": 1786160404,
-          "url": "https://news.cnyes.com/news/id/6566379",
-          "paras": [
-            "在人工智慧 (AI) 帶動記憶體需求爆發的背景下，Micron Technology (MU-US)與 SK hynix (SKHY-US)成為市場最受矚目的兩大記憶體股。兩家公司都受惠於 DRAM、NAND 及高頻寬記憶體 (HBM) 價格走高，但華爾街投資人如今面對的問題已從「哪家公司能受惠於 AI 需求」轉向「哪一家股票的估值更值得買進」。",
-            "Micron 是美國最大的記憶體製造商，產品涵蓋 DRAM、NAND Flash 及 HBM，業務橫跨智慧手機、個人電腦、資料中心，以及支撐 AI 運算的先進加速器。SK hynix 則在多個市場與 Micron 直接競爭，但其最大的優勢來自 HBM 業務，目前在 HBM 市場居於領先地位，並且是 Nvidia (NVDA-US) 的重要供應商。",
-            "對美國投資人而言，SK hynix 今年 7 月在 Nasdaq 掛牌後，投資管道進一步便利。股票上市初期受到市場追捧，股價一度大幅高於 IPO 發行價，但此後已從上市後高點回落約 29%。相比之下，Micron 今年以來股價大漲 208%，主要受到記憶體價格飆升及 AI 需求異常強勁的推動。",
-            "Micron 近期雖然公布強勁財報及樂觀展望，但股價波動也明顯升高。經過今年超過 2 倍的漲幅後，市場對公司未來獲利的期待同步升高，投資人對任何可能暗示記憶體價格環境轉弱的訊號都更加敏感。",
-            "這也使兩家公司目前的估值差異成為投資人爭論焦點。一名以 Alpha Analyst 為筆名的投資人認為，單純比較本益比可能會誤導市場，因為記憶體製造商具有高度週期性，當 DRAM、NAND 及 HBM 價格上升、獲利快速增加時，公司的本益比往往會因分母獲利膨脹而顯得異常便宜。",
-            "Alpha Analyst 警告，「處於週期高點的低本益比，不代表股票就是便宜貨」。他認為，Micron 目前遠期本益比約 12 倍，雖然表面上低於許多高成長半導體公司，但不能因此直接判斷 Micron 估值便宜，因為當前獲利可能已經受到記憶體價格上升的顯著推動。",
-            "相較之下，SK hynix 的估值差距則讓 Alpha Analyst 更加看好。他指出，SK hynix 目前估值「幾乎只有 Micron 的一半」，因此即使兩家公司同樣受惠於 AI 記憶體需求，投資人為 SK hynix 未來每 1 美元獲利支付的價格仍明顯較低。",
-            "Alpha Analyst 並不認為兩家公司之間的估值差距會很快消失。他預期，即使 SK hynix 透過 Nasdaq 掛牌提高美國投資人參與程度，兩家公司之間的估值折價仍可能維持一段時間。不過從更長期來看，隨著投資人逐漸重新評估 SK hynix 的 HBM 地位及盈利能力，估值差距仍有機會逐步收窄。",
-            "這項估值差異也可能在記憶體景氣循環反轉時成為重要的防禦因素。Alpha Analyst 認為，如果未來市場開始降低對記憶體股的本益比評價，SK hynix 相對 Micron 的交易可能具有更好的安全邊際。換言之，即使兩家公司的估值倍數同步遭到壓縮，原本估值較低的 SK hynix 受到的下行壓力可能相對有限。",
-            "除了估值之外，兩家公司的供應協議結構也是 Alpha Analyst 偏好 SK hynix 的重要理由。",
-            "在他的判斷中，SK hynix 簽訂的長期供應協議 (LTA) 更有機會讓公司捕捉未來記憶體價格進一步上漲的好處。如果 AI 資料中心持續擴大投資，HBM 及其他高階記憶體供應持續吃緊，SK hynix 可能透過較具彈性的合約安排進一步提高產品售價，將供應短缺轉化為更高的利潤。",
-            "Micron 的合約結構則同時包含價格上限與價格下限。這種安排可以讓公司與客戶取得更高的價格可預測性，在記憶體價格大幅波動時提供一定程度的穩定性，但另一方面，如果市場價格持續向上突破，也可能限制 Micron 從價格上漲中獲取全部額外收益的能力。",
-            "因此，Alpha Analyst 最終給予 Micron「Sell」評級，並給予 SK hynix「Buy」評級，核心理由並非認為 Micron 基本面疲弱，而是認為 Micron 目前的股價已經反映相當多利多因素，而 SK hynix 則同時具備較低估值、HBM 領先地位及潛在的價格上行空間。",
-            "不過，華爾街主流分析師目前並未完全認同這種明確的多空分化。市場對兩家公司的整體評價仍然非常正面，Micron 與 SK hynix 目前均獲得分析師「Strong Buy」共識評級。",
-            "更值得注意的是，華爾街對兩家公司未來股價上漲空間的預期幾乎完全相同。Micron 的平均目標價為 1560.74 美元，按照相關分析時點的股價計算，代表約 78% 的潛在上漲空間；SK hynix 平均目標價則為 245.50 美元，隱含的潛在漲幅同樣接近 78%。",
-            "這意味著市場目前並未認為 Micron 與 SK hynix 之間存在明顯的長期報酬差距。相反地，主流分析師認為，無論投資人選擇美國記憶體龍頭 Micron，還是 HBM 領導者 SK hynix，AI 資料中心擴張、HBM 需求成長及整體記憶體供應緊張都可能繼續成為股價的重要催化劑。",
-            "但兩家公司面臨的風險也並不完全相同。Micron 今年股價已經上漲 208%，意味著市場對其獲利成長及記憶體價格持續走強的期待已經非常高。一旦 DRAM 或 NAND 價格開始降溫，或 AI 伺服器需求增速低於預期，估值壓縮可能對股價造成更大衝擊。",
-            "SK hynix 則面臨另一種風險。雖然其 HBM 市場地位以及與 Nvidia 的合作使公司直接受惠於 AI 加速器需求，但股票今年 7 月才正式登陸 Nasdaq，美國市場投資人對其估值方式、韓國企業治理及 HBM 週期的理解仍需要時間建立。因此，SK hynix 相對 Micron 的估值折價是否能夠持續收斂，仍取決於未來獲利增長能否得到市場驗證。",
-            "此外，整個記憶體產業目前仍處於供需高度緊張的階段。AI 伺服器持續消耗大量 HBM、伺服器 DRAM 及企業級 SSD，主要記憶體製造商又將更多產能配置到高毛利產品，使一般 DRAM 及 NAND 供應受到擠壓。只要 AI 資料中心資本支出維持高位，Micron 與 SK hynix 都將繼續受益。",
-            "然而，記憶體本身具有明顯週期性。當價格快速上漲並刺激製造商增加資本支出，供應最終可能重新追上需求，進而造成價格漲勢反轉。對投資人而言，真正重要的並不是目前哪家公司本益比較低，而是當前獲利有多少能夠在下一個記憶體週期中持續存在。",
-            "從這個角度來看，Alpha Analyst 偏好 SK hynix 的核心邏輯，是希望以較低的估值買入 AI 記憶體成長故事，並降低記憶體週期反轉時的估值風險；而看好 Micron 的投資人則可以押注其美國本土供應鏈地位、HBM 成長以及 AI 資料中心需求持續增加。",
-            "目前市場給出的訊號則相對一致：兩家公司基本面都受到 AI 熱潮支撐，華爾街也同樣給予「Strong Buy」共識評級，平均目標價隱含的潛在漲幅都接近 78%。真正的分歧並不在於 AI 是否會繼續推升記憶體需求，而在於投資人願意為這些未來獲利支付多少價格。",
-            "在 Micron 今年股價已飆升 208%、SK hynix 則從 Nasdaq 上市高點回落約 29% 的背景下，兩家公司如今呈現截然不同的風險報酬結構。對 Alpha Analyst 而言，SK hynix 較低的估值提供更大的安全邊際；但對華爾街多數分析師而言，兩家公司仍是 AI 記憶體浪潮中的共同受益者。",
-            "因此，這場 Micron 與 SK hynix 的比較，最終可能不是「誰的基本面更好」這麼簡單，而是「誰的股價尚未完全反映基本面」。在記憶體價格仍處高檔、HBM 需求持續爆發的當下，估值與合約結構將成為決定兩大記憶體股下一階段表現的重要分水嶺。"
-          ],
-          "paras_en": [
-            "In the context of surging memory demand driven by artificial intelligence (AI), Micron Technology (MU-US) and SK hynix (SKHY-US) have become the two most watched memory stocks in the market. Both companies have benefited from the rising prices of DRAM, NAND, and high-bandwidth memory (HBM), but the question for Wall Street investors has shifted from 'which company will benefit from AI demand' to 'which stock is more worth buying' in terms of valuation.",
-            "Micron, the largest memory manufacturer in the US, offers a range of products including DRAM, NAND Flash, and HBM, with its business spanning smartphones, personal computers, data centers, and advanced accelerators that support AI computing. SK hynix, on the other hand, competes directly with Micron in several markets but has a significant advantage in the HBM business, where it is the market leader and an important supplier to Nvidia (NVDA-US).",
-            "For US investors, SK hynix's listing on Nasdaq in July has made investment more accessible. Initially, the stock was highly sought after, with its price surging above the IPO issue price, but it has since retreated about 29% from its post-listing high. In contrast, Micron's stock price has risen by 208% this year, primarily driven by the surge in memory prices and exceptionally strong AI demand.",
-            "Although Micron recently released strong financial reports and an optimistic outlook, its stock price volatility has increased. After more than doubling in value this year, market expectations for the company's future earnings have also risen, making investors more sensitive to any signals that might suggest a weakening in memory prices.",
-            "This has made the current valuation difference between the two companies a focal point of debate among investors. An investor known as Alpha Analyst believes that simply comparing price-to-earnings ratios can be misleading because memory manufacturers are highly cyclical. When DRAM, NAND, and HBM prices rise and earnings increase rapidly, the company's price-to-earnings ratio often appears unusually cheap due to the expansion of the earnings denominator.",
-            "Alpha Analyst warns that 'a low price-to-earnings ratio at the peak of a cycle does not necessarily mean the stock is cheap'. He believes that Micron's current forward price-to-earnings ratio of about 12 times, although seemingly low compared to many high-growth semiconductor companies, should not be directly used to judge that Micron is undervalued. This is because current earnings may have been significantly boosted by the rise in memory prices.",
-            "In contrast, the valuation gap of SK hynix makes Alpha Analyst more optimistic about the company. He points out that SK hynix's valuation is 'almost half that of Micron', meaning that even if both companies benefit equally from AI memory demand, investors are paying a significantly lower price for SK hynix's future earnings per dollar.",
-            "Alpha Analyst does not expect the valuation gap between the two companies to disappear soon. He anticipates that even as SK hynix's Nasdaq listing increases US investor participation, the valuation discount between the two companies may persist for a while. However, from a longer-term perspective, as investors reassess SK hynix's HBM position and profitability, the valuation gap may narrow.",
-            "This valuation difference could also become a crucial defensive factor when the memory market cycle reverses. Alpha Analyst believes that if the market starts to lower its price-to-earnings ratio expectations for memory stocks, SK hynix's trade relative to Micron may offer better safety margins. In other words, even if both companies' valuation multiples are compressed simultaneously, SK hynix, with its originally lower valuation, may face less downward pressure.",
-            "Apart from valuation, the structure of the two companies' supply agreements is another key reason Alpha Analyst prefers SK hynix.",
-            "In his judgment, SK hynix's long-term agreements (LTAs) are more likely to allow the company to capture the benefits of further memory price increases in the future. If AI data center investment continues to expand and HBM and other high-end memory supplies remain tight, SK hynix may be able to increase product prices further through more flexible contract arrangements, turning supply shortages into higher profits.",
-            "Micron's contract structure, on the other hand, includes both price ceilings and floors. This arrangement can provide the company and its customers with higher price predictability, offering a degree of stability during significant memory price fluctuations. However, it may also limit Micron's ability to fully capitalize on price increases if market prices continue to rise.",
-            "Therefore, Alpha Analyst ultimately gives Micron a 'Sell' rating and SK hynix a 'Buy' rating. The core reason is not that Micron's fundamentals are weak but that Micron's current stock price has already reflected many positive factors, while SK hynix offers a lower valuation, a leading position in HBM, and potential for price increases.",
-            "However, mainstream Wall Street analysts do not entirely agree with this clear bullish-bearish differentiation. The market's overall assessment of both companies remains very positive, with both Micron and SK hynix currently holding 'Strong Buy' consensus ratings.",
-            "More notably, Wall Street's expectations for the two companies' future stock price upside are almost identical. Micron's average target price is $1560.74, representing about 78% potential upside from the relevant analysis point; SK hynix's average target price is $245.50, implying a similar potential increase of about 78%.",
-            "This means that the market currently does not perceive a significant long-term return difference between Micron and SK hynix. Instead, mainstream analysts believe that whether investors choose Micron, the US memory leader, or SK hynix, the HBM leader, the expansion of AI data centers, HBM demand growth, and overall memory supply tightness could continue to be important catalysts for stock prices.",
-            "However, the risks faced by the two companies are not entirely the same. Micron's stock price has already risen 208% this year, meaning market expectations for its earnings growth and memory price strength are extremely high. If DRAM or NAND prices start to cool down or AI server demand growth is lower than expected, the impact on the stock price could be more significant due to valuation compression.",
-            "SK hynix, on the other hand, faces a different risk. Although its HBM market position and partnership with Nvidia make it a direct beneficiary of AI accelerator demand, its stock only listed on Nasdaq in July. US market investors' understanding of its valuation method, Korean corporate governance, and the HBM cycle may take time to develop. Therefore, whether SK hynix's relative valuation discount to Micron can continue to narrow depends on future earnings growth being validated by the market.",
-            "Additionally, the entire memory industry is currently in a phase of high supply-demand tension. AI servers continue to consume large amounts of HBM, server DRAM, and enterprise-level SSDs, while major memory manufacturers allocate more production capacity to high-margin products, squeezing the supply of general DRAM and NAND. As long as AI data center capital expenditures remain high, both Micron and SK hynix will continue to benefit.",
-            "However, memory itself is highly cyclical. When prices rise rapidly and stimulate manufacturers to increase capital expenditures, supply may eventually catch up with demand, leading to a reversal of the price surge. For investors, what's truly important is not which company has a lower price-to-earnings ratio now but how much of the current earnings can persist in the next memory cycle.",
-            "From this perspective, Alpha Analyst's preference for SK hynix is based on the logic of buying into the AI memory growth story at a lower valuation and reducing the risk of valuation compression when the memory cycle reverses. Investors who favor Micron, on the other hand, can bet on its US-based supply chain position, HBM growth, and the continued increase in AI data center demand.",
-            "The current market signal is relatively consistent: both companies' fundamentals are supported by the AI trend, and Wall Street has given them a 'Strong Buy' consensus rating, with implied potential upside of about 78% based on average target prices. The real difference lies not in whether AI will continue to drive memory demand but in how much investors are willing to pay for these future earnings.",
-            "Given that Micron's stock price has surged 208% this year, while SK hynix has retreated about 29% from its Nasdaq listing high, the two companies now present distinctly different risk-reward structures. For Alpha Analyst, SK hynix's lower valuation provides a greater safety margin, but for most Wall Street analysts, both companies remain beneficiaries of the AI memory wave.",
-            "Thus, the comparison between Micron and SK hynix may not be as simple as 'whose fundamentals are better' but rather 'whose stock price has not fully reflected its fundamentals'. With memory prices remaining high and HBM demand continuing to explode, valuation and contract structure will become crucial in determining the next stage of performance for these two memory stocks."
-          ]
         }
       ]
     },
@@ -792,6 +844,59 @@
       "key": "wd_stock",
       "label": "國際財經",
       "items": [
+        {
+          "news_id": "6566508",
+          "title": "CPU恐成雲端業下一個瓶頸！亞馬遜AWS出現「CPU短缺」",
+          "title_en": "CPU May Become the Next Bottleneck for Cloud Industry as Amazon AWS Faces \"CPU Shortage\"",
+          "publish_at": 1786191006,
+          "url": "https://news.cnyes.com/news/id/6566508",
+          "paras": [
+            "科技業已經從聚焦於 GPU 一片難求的窘境，轉向 CPU 這項基礎運算資源。",
+            "根據《The Information》報導，亞馬遜 (AMZN-US) 雲端服務（AWS）內部今年 5 月已對工程團隊發出示警，要求全力節省運算資源，以確保未來能持續滿足客戶需求。",
+            "值得注意的是，這波節流令不僅鎖定 AI 晶片，更直指長年支撐網路服務運作的傳統 CPU 伺服器。",
+            "知情人士透露，AWS 已對各部門下達期限，要求在今年稍晚前削減運算資源的占用比例。為了騰出算力轉供外部客戶使用，工程師們正陸續關閉先前用於軟體開發、如今處於閒置狀態的 EC2 虛擬伺服器。",
+            "一名任職 AWS 多年的工程師表示，過去申請 CPU 伺服器資源通常數小時內就能到位，如今卻得苦候數天之久，這樣的延遲在他的職涯中前所未見，甚至可能拖累專案交付時程。",
+            "對此，AWS 官方回應強調，儘管當前面臨「龐大需求」，公司仍有能力滿足「絕大多數」內外部客戶的運算需求，並表示正與內部團隊密切合作，確保 EC2 資源維持一貫的高效運用，員工使用資源的相關指引也未因目前的緊張情勢而調整。",
+            "值得留意的是，外部客戶目前受到的衝擊仍屬有限。一名協助企業導入 AWS 服務的顧問指出，尚未觀察到客戶在合約承諾的算力上出現實際短缺。",
+            "不過，AWS 以折扣價提供、但可隨時在兩分鐘內被收回的「競價執行個體」（Spot Instances），近幾個月來已越來越難大量取得，被視為 AWS 整體供需缺口正在收窄、彈性空間持續壓縮的明確訊號，也可能預示雲端運算成本即將走高。",
+            "分析指出，這波 CPU 吃緊的根本原因，在於「AI 代理」應用的快速擴散。AI 顧問公司 Elendil Labs 共同創辦人暨董事總經理 Jing Xie 觀察到，客戶的人均 IT 支出已然翻倍，主因正是企業內大量導入 AI 代理程式協助軟體開發。",
+            "他指出，AI 代理程式在運作過程中往往需要調用比以往更多的雲端資源，進而對 CPU 形成持續性的龐大需求。",
+            "他表示：「不論是現在的開發、生產或營運，幾乎所有工作所需的 CPU 都比過去更多。」",
+            "事實上，CPU 的角色不僅限於 AI 應用的執行端，在 AI 開發流程中同樣不可或缺。例如 AI 公司為訓練模型準備資料時，仍須仰賴 CPU 從文件、影像與影片中讀取並處理原始資料。",
+            "晶片大廠的最新表態也印證了這股趨勢。英特爾 (INTC-US) 執行長陳立武（Lip-Bu Tan）今年 4 月的財報電話會議上曾透露，在 AI 推論（即模型實際運作）情境中，CPU 與 GPU 的使用比例約為 1 比 4。",
+            "然而，到了 7 月，該公司財務長 David Zinsner 便指出這項比例已迅速拉近至接近 1 比 1。",
+            "超微半導體 (AMD-US) 與 Arm(ARM-US) 的高層主管近期也做出類似表態，顯示 CPU 需求成長的速度已超出業界原先預期。",
+            "除了 CPU 本身供不應求，與之搭配使用的記憶體晶片供應緊張，以及資料中心實體空間的限制，也共同加劇了這場算力荒。",
+            "大型科技公司的算力分配難題",
+            "如何在內部研發與外部客戶之間分配有限算力，已成為近兩年科技巨頭共同面臨的棘手課題。",
+            "根據《The Information》先前報導，Google 去年已成立一個由高階主管組成的專責委員會，負責協調 Google Cloud、DeepMind 研究部門與消費端業務之間的運算資源分配。",
+            "即便如此，內部摩擦仍未消弭。Google 知名 AI 研究員 Noam Shazeer 今年稍早便因不滿算力取得受限而選擇離職。",
+            "相較之下，微軟則展現出算力管理效率提升所帶來的正面效益。該公司財務長 Amy Hood 上月在財報電話會議上表示，Azure 雲端服務部分營收成長，正是得益於 CPU 與 GPU 叢集管理效率的提升。"
+          ],
+          "paras_en": [
+            "The tech industry has shifted its focus from the scarce GPU shortage to the fundamental computing resource of CPUs.",
+            "According to a report by The Information, Amazon (AMZN-US) cloud services (AWS) internally issued a warning to engineering teams in May of this year, urging them to conserve computing resources to ensure continued customer demand can be met.",
+            "Notably, this throttling effort targets not only AI chips but also the traditional CPU servers that have long underpinned network services.",
+            "Sources familiar with the matter say AWS has set deadlines for each division to reduce the proportion of computing resources they consume later this year. To free up capacity for external customers, engineers are gradually shutting down EC2 virtual servers that were previously used for software development and are now idle.",
+            "An engineer who has worked at AWS for many years said that in the past, requesting CPU server resources could be fulfilled within a few hours, but now it can take several days—a delay he has never seen in his career and one that could even jeopardize project delivery timelines.",
+            "AWS responded that despite the \"massive demand\" currently faced, the company remains capable of meeting the computing needs of \"the vast majority\" of internal and external customers, and that it is working closely with internal teams to keep EC2 resources efficiently utilized, with no changes to employee resource‑use guidelines despite the current tight situation.",
+            "It is worth noting that the impact on external customers remains limited. A consultant who helps enterprises adopt AWS services said he has not yet observed any actual shortfall in the compute capacity promised under customer contracts.",
+            "However, AWS’s discounted Spot Instances, which can be reclaimed at any time within two minutes, have become increasingly difficult to obtain in large quantities over the past few months, a clear sign that the overall supply‑demand gap is narrowing and flexibility is being squeezed, potentially foreshadowing higher cloud‑computing costs.",
+            "Analysts point out that the root cause of the CPU crunch is the rapid proliferation of \"AI agents\" applications. Jing Xie, co‑founder and managing director of AI consultancy Elendil Labs, observed that per‑capita IT spending by customers has doubled, driven largely by the massive adoption of AI agent programs to assist software development within enterprises.",
+            "He noted that AI agent programs typically require far more cloud resources during operation, creating a sustained, massive demand for CPUs.",
+            "He said, \"Whether in development, production, or operations, almost every task now needs more CPU than before.\"",
+            "In fact, the role of CPUs extends beyond the execution side of AI applications; they are also indispensable in the AI development pipeline. For example, when AI companies prepare data for model training, they still rely on CPUs to read and process raw data from documents, images, and videos.",
+            "The latest statements from chip makers confirm this trend. Intel (INTC-US) CEO Lip‑Bu Tan disclosed in the April earnings call that in AI inference scenarios, the CPU‑to‑GPU usage ratio is about 1 to 4.",
+            "However, by July, the company’s CFO David Zinsner noted that the ratio had quickly narrowed to nearly 1 to 1.",
+            "Senior executives at AMD (AMD-US) and Arm (ARM-US) have made similar remarks recently, indicating that CPU demand growth is outpacing industry expectations.",
+            "In addition to the shortage of CPUs themselves, tight supplies of memory chips used alongside them and constraints on physical data‑center space are jointly exacerbating this compute scarcity.",
+            "Large tech companies face compute allocation challenges",
+            "How to allocate limited compute between internal R&D and external customers has become a thorny issue that major tech giants have grappled with over the past two years.",
+            "According to earlier reporting by The Information, Google established a high‑level committee last year to coordinate compute resource allocation among Google Cloud, DeepMind research, and consumer‑facing businesses.",
+            "Nevertheless, internal friction persists. Google AI researcher Noam Shazeer left the company earlier this year over frustrations with limited compute access.",
+            "In contrast, Microsoft has demonstrated the positive effects of improved compute management efficiency. CFO Amy Hood said last month in the earnings call that Azure’s revenue growth was driven in part by better CPU and GPU cluster management."
+          ]
+        },
         {
           "news_id": "6566440",
           "title": "輝達砸30億美元押注AI電力基建！傳入股Lancium 20%、布局「星際之門」資料中心",
@@ -824,7 +929,7 @@
         {
           "news_id": "6566489",
           "title": "AI投資恐成下一個經濟風險？阿波羅警告「次貸危機式」逆轉衝擊",
-          "title_en": "",
+          "title_en": "AI Investment May Become the Next Economic Risk? Apollo Warns of 'Subprime Crisis-Style' Reversal Impact",
           "publish_at": 1786183804,
           "url": "https://news.cnyes.com/news/id/6566489",
           "paras": [
@@ -841,7 +946,20 @@
             "2000 年前後電信泡沫破裂時，由於投資規模相對有限，對美國經濟造成的衝擊也較為溫和，僅引發戰後歷來最輕微的一次衰退；\n反觀 2006 年初至 2008 年底，房市投資佔 GDP 比重在短短三年內急速萎縮約 3.2 個百分點，正是釀成後續金融危機與嚴重衰退的關鍵推手之一。\n\n\n以此類推，如今資料中心資本支出正以每年約 0.85 個百分點的速度加速擴張，一旦企業對 AI 的商業化預期未能如期兌現，這股資金浪潮同樣可能以相近的速度急遽收縮。",
             "Slok 在報告結語中直言，當前總體經濟層面真正需要關注的風險，並非 AI 基礎建設本身的擴張，而是一旦市場對 AI 的殷切期待落空，隨之而來的投資急遽反轉，恐將對整體經濟成長帶來難以忽視的衝擊。"
           ],
-          "paras_en": []
+          "paras_en": [
+            "The investment boom in artificial intelligence (AI) infrastructure is sweeping the global capital market at an unprecedented pace, but the overall economic risks hidden behind this boom are gradually emerging.",
+            "Torsten Slok, the chief economist of Apollo Management, recently analyzed that the capital expenditure of some large cloud service providers as a percentage of US GDP is expected to jump from 1.4% in 2025 to around 3% in 2027-2029, which will be more than twice the peak of the telecom and fiber construction boom in the late 1990s.",
+            "In his report, Slok compared this AI investment boom with the two major capital expenditure cycles in the past. In terms of the absolute scale of investment as a percentage of GDP, this data center construction boom is still smaller than the peak of the US housing market bubble in 2005 (which accounted for 6.6% of GDP), but it is more than twice the peak of the telecom boom in the late 1990s (around 1.2%).",
+            "However, what really alerted Slok was not the scale of investment itself, but the 'speed of ascent'. He pointed out that the capital expenditure of data centers as a percentage of GDP is expected to rise from 0.6% in 2023 to 3.1% in 2027, with a cumulative increase of about 2.5 percentage points, which has surpassed the cumulative increase of about 2.2 percentage points during the housing boom period (from the mid-1990s to 2005) and is much higher than the 0.4 percentage point increase during the telecom boom.",
+            "In other words, if measured by the 'marginal contribution to GDP', AI data center investment has become the largest capital expenditure cycle in history.",
+            "More noteworthy is the pace of construction itself. The report shows that data center capital expenditure will rise from 1.4% in 2025 to 3.1% in 2027 in just two years, which translates to an average annual increase of about 0.85 percentage points.",
+            "In comparison, the most intense phase of the housing boom (2002-2005) had an average annual increase of only about 0.5 percentage points, while the telecom boom had an increase of only about 0.15 percentage points.",
+            "That is to say, the pace of this AI construction boom is almost twice that of the housing boom at its peak.",
+            "Sloak emphasized a symmetrical logic in his report: the faster the investment cycle rises, the more severe the impact will be when it reverses.",
+            "He cited two historical experiences as a contrast: around 2000, when the telecom bubble burst, the impact on the US economy was relatively mild due to the limited scale of investment, resulting in the mildest recession in the post-war period.",
+            "On the other hand, from 2006 to 2008, the housing investment as a percentage of GDP shrank rapidly by about 3.2 percentage points in just three years, which was a key factor leading to the subsequent financial crisis and severe recession.",
+            "By analogy, if the current data center capital expenditure is expanding at a rate of about 0.85 percentage points per year, and the commercialization expectations of AI are not met, this wave of investment may also shrink rapidly at a similar rate."
+          ]
         },
         {
           "news_id": "6566442",
@@ -1049,45 +1167,6 @@
             "In a strategy report on July 28, RBC pointed out that 'the price drop cycle driven by headlines may lead the market to believe that the economic cost of the conflict is still controllable,' but the continued decline in US strategic petroleum reserves (SPR) shows that 'global buffer capacity is weakening.'",
             "Rapidan's McNally warned that if the two sides fail to control military escalation or continue to consume stocks, the market's 'deep-seated optimistic bias' may dissipate, causing oil prices to surge again and forcing the market to reduce consumption to curb prices.",
             "Rystad's Galimberti said: 'My intuition is that if they want to avoid a costly stalemate, avoid oil prices quickly rising back to April levels or even higher, and almost completely cut off Iranian oil supplies, then they need to start bridging their differences and moving their red lines towards the middle.'"
-          ]
-        },
-        {
-          "news_id": "6566400",
-          "title": "輝達Rubin Ultra傳縮減HBM容量！記憶體短缺下晶片廠商如何破局？",
-          "title_en": "NVIDIA's Rubin Ultra GPU May See Reduced HBM Capacity Amid Memory Shortages",
-          "publish_at": 1786165803,
-          "url": "https://news.cnyes.com/news/id/6566400",
-          "paras": [
-            "AI 晶片巨頭輝達 (NVDA-US) 傳出正悄悄調整下一代旗艦晶片的設計藍圖。據了解，該公司近期針對新一代 Rubin Ultra GPU 測試多款「縮水版」配置，部分方案的高頻寬記憶體（HBM）容量已不如當初規劃，凸顯這波 AI 熱潮帶動的晶片需求，正反過來讓晶片大廠自己也陷入記憶體不夠用的窘境。",
-            "知情人士透露，過去數週輝達已測試至少三種 HBM 規格經過下修的 Rubin Ultra 版本。回顧去年輝達年度開發者大會，執行長黃仁勳親自揭曉 Rubin Ultra 時曾誇下海口，強調每顆晶片將搭載高達 1TB 的 HBM4e 記憶體，透過 16 組堆疊架構打造前所未有的運算效能。",
-            "不過，市場調查機構 TrendForce 指出，輝達近期已跳脫原先規劃的 12 層 HBM4e 單一路線，另外拉出 8 層 HBM4e、12 層 HBM4、8 層 HBM4 等三套備案同步評估，目前尚未定案最終規格會落在哪個版本。",
-            "TrendForce 分析，這波規格重新評估背後有兩大推手。首先，市場普遍預期 2027 年整體 DRAM 產業將面臨供給緊張，屆時可投入 HBM 生產的晶圓產能勢必被壓縮；其次，12 層 HBM4e 目前仍在測試驗證階段，未來量產後的良率能否達標，仍是一大未知數。",
-            "除了 HBM 之外，記憶體吃緊的警訊也蔓延到其他產品線。TrendForce 透露，由於 LPDDR5X 晶片缺貨狀況預料將延燒至 2027 年，輝達已拍板將 Vera Rubin 超級晶片模組所搭載的 SOCAMM 記憶體模組容量直接砍半。",
-            "業界人士點出這起事件最諷刺之處：正是輝達自家 AI 晶片賣得太好，才把整個產業的記憶體需求推向高峰、加劇供應吃緊，如今這股缺貨壓力竟回頭反噬輝達本身，使公司不得不修改記憶體配置因應。",
-            "記憶體荒的效應並非輝達獨自面對。TrendForce 指出，包括多家大型雲端服務業者在內，也正評估將旗下自研 AI 專用晶片的 HBM 容量向下調整。",
-            "該機構同時預估，儘管 2027 年全球 HBM 出貨總位元數可望較前一年成長 50% 至 60%，但即便如此仍難以填補市場的實際需求缺口。",
-            "在供不應求的格局下，TrendForce 研判，HBM 供應商在 2027 年全年將持續握有定價主導權，反觀下游的 AI 晶片廠商，勢必得同時承受「拿不到貨」與「成本墊高」的雙重夾擊。",
-            "省下的記憶體錢 轉戰光互聯技術\n\n記憶體降規對終端用戶而言並非全無影響。分析認為，記憶體容量縮水恐波及晶片實際運算效能，若企業採用這些降規版本來訓練或運行大型 AI 模型，恐怕得比原先計畫添購更多顆 GPU，才能補足效能缺口。",
-            "半導體研究機構 SemiAnalysis 分析指出，輝達從 HBM 記憶體上省下來的成本，很可能轉而挹注到交換器與光互聯元件等領域，透過分層式儲存架構搭配光互聯技術，設法緩解 HBM 價格居高不下、供貨緊繃帶來的衝擊。",
-            "這樣的策略也呼應了黃仁勳先前的公開說法，供應鏈一旦卡關，雖然會讓上游供應商坐擁議價優勢，但同時也會逼著企業端拿出創新技術方案，設法突圍。",
-            "儘管輝達可望藉由拉高 GPU 運算能力、優化互聯頻寬等方式，部分彌補記憶體降規帶來的效能損失，但業界普遍認為，整體系統建置成本與叢集架設的複雜程度恐怕只會有增無減。",
-            "對微軟 (MSFT-US) 、Meta(META-US) 、亞馬遜 (AMZN-US) 、Google(GOOGL-US) 等持續砸重金加碼 AI 基礎建設的雲端巨頭而言，這也代表未來資料中心的興建成本，恐怕還有進一步上修的空間。"
-          ],
-          "paras_en": [
-            "NVIDIA (NVDA-US) is reportedly adjusting the design plans for its next-generation flagship GPU, Rubin Ultra. According to sources, the company has been testing multiple \"downsized\" configurations for the new GPU, with some versions featuring reduced high-bandwidth memory (HBM) capacity.",
-            "Insiders claim that NVIDIA has been testing at least three versions of Rubin Ultra with reduced HBM specifications over the past few weeks. Last year, CEO Jensen Huang showcased Rubin Ultra at the NVIDIA Developer Conference, touting its 1TB HBM4e memory capacity, which would be achieved through a 16-stack architecture.",
-            "However, market research firm TrendForce notes that NVIDIA has shifted away from its original 12-layer HBM4e single-line plan and is now evaluating three alternative configurations: 8-layer HBM4, 12-layer HBM4, and 8-layer HBM4.",
-            "TrendForce analysts suggest that the shift in HBM specifications is driven by two factors. Firstly, the market expects a global DRAM shortage in 2027, which will reduce the available HBM production capacity. Secondly, the 12-layer HBM4e is still in the testing phase, and its yield rate is uncertain.",
-            "The memory shortage is not limited to HBM. TrendForce reveals that NVIDIA is also reducing the memory capacity of its Vera Rubin superchip module's SOCAMM memory module by 50% due to LPDDR5X shortages expected to last until 2027.",
-            "Industry insiders point out the irony of the situation: NVIDIA's success in the AI chip market has driven up demand for memory, exacerbating the shortage, which is now affecting NVIDIA itself.",
-            "The memory shortage is not unique to NVIDIA. TrendForce notes that other cloud service providers are also evaluating reducing the HBM capacity of their custom AI chips.",
-            "The firm estimates that, despite a 50-60% increase in global HBM shipments in 2027, the market will still face a significant demand shortfall.",
-            "In a supply-constrained market, TrendForce predicts that HBM suppliers will maintain pricing power in 2027, while AI chip manufacturers will face \"no supply\" and \"cost increases\" simultaneously.",
-            "The reduced memory capacity may have implications for end-users. Analysts suggest that the reduced capacity could impact the actual computing performance of the GPU, potentially requiring more GPUs to be purchased to compensate for the performance gap.",
-            "Semiconductor research firm SemiAnalysis suggests that NVIDIA may redirect the cost savings from HBM to other areas, such as interconnects and optical interconnects, to alleviate the impact of HBM price increases and supply constraints.",
-            "This strategy aligns with Jensen Huang's previous statements that supply chain disruptions will drive innovation in the industry. Companies will need to develop new technologies to overcome supply chain challenges.",
-            "While NVIDIA may be able to partially offset the performance loss from reduced memory capacity through increased GPU performance and optimized interconnects, the overall system build cost and complexity are likely to increase.",
-            "For cloud giants like Microsoft (MSFT-US), Meta (META-US), Amazon (AMZN-US), and Google (GOOGL-US), which are heavily investing in AI infrastructure, this may mean higher data center construction costs in the future."
           ]
         }
       ]
