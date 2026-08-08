@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-08T14:24:14+08:00",
+  "generated_at": "2026-08-08T15:06:11+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -17,20 +17,6 @@
       "error": null
     },
     {
-      "symbol": "OKLO",
-      "name_zh": "Oklo",
-      "kind": "US",
-      "price": 48.42,
-      "change_pct": 14.77,
-      "mtd_pct": 24.7,
-      "ytd_pct": -32.53,
-      "market_date": "2026-08-07",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=OKLO.US",
-      "error": null
-    },
-    {
       "symbol": "SPCX",
       "name_zh": "Space Exploration Technologies",
       "kind": "US",
@@ -42,6 +28,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPCX.US",
+      "error": null
+    },
+    {
+      "symbol": "OKLO",
+      "name_zh": "Oklo",
+      "kind": "US",
+      "price": 48.42,
+      "change_pct": 14.77,
+      "mtd_pct": 24.7,
+      "ytd_pct": -32.53,
+      "market_date": "2026-08-07",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=OKLO.US",
       "error": null
     },
     {
@@ -84,6 +84,34 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NNE.US",
+      "error": null
+    },
+    {
+      "symbol": "AVAV",
+      "name_zh": "AeroVironment",
+      "kind": "US",
+      "price": 186.73,
+      "change_pct": 9.12,
+      "mtd_pct": 25.01,
+      "ytd_pct": -22.8,
+      "market_date": "2026-08-07",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AVAV.US",
+      "error": null
+    },
+    {
+      "symbol": "VOO",
+      "name_zh": "Vanguard S&P 500 ETF",
+      "kind": "US",
+      "price": 710.71,
+      "change_pct": 0.61,
+      "mtd_pct": 3.5,
+      "ytd_pct": 13.33,
+      "market_date": "2026-08-07",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VOO.US",
       "error": null
     },
     {
@@ -143,45 +171,45 @@
       "error": null
     },
     {
-      "symbol": "AVAV",
-      "name_zh": "AeroVironment",
+      "symbol": "BTG",
+      "name_zh": "B2Gold",
       "kind": "US",
-      "price": 186.73,
-      "change_pct": 9.12,
-      "mtd_pct": 25.01,
-      "ytd_pct": -22.8,
+      "price": 5.03,
+      "change_pct": 22.98,
+      "mtd_pct": 34.13,
+      "ytd_pct": 11.53,
+      "market_date": "2026-08-07",
+      "per": 10.0216,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BTG.US",
+      "error": null
+    },
+    {
+      "symbol": "TTWO",
+      "name_zh": "Take-Two Interactive Software,",
+      "kind": "US",
+      "price": 246.5,
+      "change_pct": 6.04,
+      "mtd_pct": 1.47,
+      "ytd_pct": -3.72,
       "market_date": "2026-08-07",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AVAV.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TTWO.US",
       "error": null
     },
     {
-      "symbol": "HPQ",
-      "name_zh": "HP",
+      "symbol": "MRNA",
+      "name_zh": "莫德納",
       "kind": "US",
-      "price": 30.05,
-      "change_pct": 6.64,
-      "mtd_pct": 10.19,
-      "ytd_pct": 34.87,
+      "price": 59.17,
+      "change_pct": 9.86,
+      "mtd_pct": 7.94,
+      "ytd_pct": 100.64,
       "market_date": "2026-08-07",
-      "per": 10.6909,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HPQ.US",
-      "error": null
-    },
-    {
-      "symbol": "LULU",
-      "name_zh": "lululemon athletica",
-      "kind": "US",
-      "price": 128.58,
-      "change_pct": 3.09,
-      "mtd_pct": 8.17,
-      "ytd_pct": -38.13,
-      "market_date": "2026-08-07",
-      "per": 10.1503,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LULU.US",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MRNA.US",
       "error": null
     },
     {
@@ -199,17 +227,17 @@
       "error": null
     },
     {
-      "symbol": "LASR",
-      "name_zh": "nLIGHT",
+      "symbol": "CBRS",
+      "name_zh": "Cerebras Systems",
       "kind": "US",
-      "price": 56.16,
-      "change_pct": -25.56,
-      "mtd_pct": -18.38,
-      "ytd_pct": 49.71,
+      "price": 226.73,
+      "change_pct": 7.3,
+      "mtd_pct": 14.1,
+      "ytd_pct": null,
       "market_date": "2026-08-07",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LASR.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CBRS.US",
       "error": null
     },
     {
@@ -280,20 +308,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VTI.US",
-      "error": null
-    },
-    {
-      "symbol": "VOO",
-      "name_zh": "Vanguard S&P 500 ETF",
-      "kind": "US",
-      "price": 710.71,
-      "change_pct": 0.61,
-      "mtd_pct": 3.5,
-      "ytd_pct": 13.33,
-      "market_date": "2026-08-07",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VOO.US",
       "error": null
     },
     {
