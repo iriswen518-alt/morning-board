@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-07T17:00:50+08:00",
+  "generated_at": "2026-08-08T09:15:56+08:00",
   "static_as_of": "2026-03-31",
   "as_of_note": "風險指標及同基金報酬截至 2026-03-31；同類別平均截至 2026-04-30",
   "fx_usdtwd": 32.264801025390625,
@@ -85,9 +85,9 @@
         {
           "name": "摩根新興雙利平衡基金",
           "return": {
-            "1y": 82.24,
-            "3y": 145.99,
-            "5y": 149.69
+            "1y": 77.21,
+            "3y": 138.62,
+            "5y": 146.89
           },
           "std_3y": 10.04,
           "sharpe_3y": 1.24,
@@ -304,9 +304,9 @@
         {
           "name": "安聯四季雙收入息組合基金",
           "return": {
-            "1y": 31.8,
-            "3y": 52.66,
-            "5y": 56.72
+            "1y": 30.82,
+            "3y": 52.37,
+            "5y": 56.54
           },
           "std_3y": null,
           "sharpe_3y": null,
@@ -315,9 +315,9 @@
         {
           "name": "野村鴻利基金",
           "return": {
-            "1y": 202.15,
-            "3y": 355.65,
-            "5y": 505.98
+            "1y": 190.39,
+            "3y": 327.34,
+            "5y": 499.29
           },
           "std_3y": null,
           "sharpe_3y": null,
@@ -447,49 +447,8 @@
         "inception_years": 0.4,
         "expense_ratio": 1.76,
         "distribution_yield": null,
-        "top10_concentration": 27.7,
-        "top_holdings": [
-          {
-            "name": "BUONI POLIENNALI DEL TES SER 5Y 2.950000 % 01JU",
-            "pct": 6.23
-          },
-          {
-            "name": "US TREASURY N/B 3.875 % 31-MAR-2031",
-            "pct": 5.06
-          },
-          {
-            "name": "US TREASURY 4.375% 15MAY2034",
-            "pct": 2.89
-          },
-          {
-            "name": "UNITED MEXICAN STATES 3.500000 % 19-SEP-2029",
-            "pct": 2.54
-          },
-          {
-            "name": "ITALY (REP OF) SER 10Y (REG S) (BR) 3.45% 01FEB",
-            "pct": 2.54
-          },
-          {
-            "name": "ROMANIA (GOVT OF) SER REGS (REG) (REG S) 6.625%",
-            "pct": 1.9
-          },
-          {
-            "name": "SOCIETE GENERALE SER REGS (REG) (REG S) VAR 08J",
-            "pct": 1.68
-          },
-          {
-            "name": "BURGAN BANK (REG) (REG S) VAR 15DEC2031",
-            "pct": 1.65
-          },
-          {
-            "name": "ELECTRICITE DE FRANCE SA SER EMTN (BR) (REG S)",
-            "pct": 1.65
-          },
-          {
-            "name": "BMW INTL INVESTMENT BV SER EMTN 5 % 24-JAN-2028",
-            "pct": 1.54
-          }
-        ],
+        "top10_concentration": null,
+        "top_holdings": [],
         "sector_top3": [],
         "aum_twd_yi": 39.6
       },
@@ -697,11 +656,11 @@
             "pct": 2.26
           },
           {
-            "name": "NIPPON TELEGRAPH & TELEPHONE",
+            "name": "SUMITOMO MITSUI FINANCIAL GR",
             "pct": 2.25
           },
           {
-            "name": "SUMITOMO MITSUI FINANCIAL GR",
+            "name": "NIPPON TELEGRAPH & TELEPHONE",
             "pct": 2.25
           },
           {
@@ -909,9 +868,9 @@
       "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACDD04-2602",
       "self": {
         "return": {
-          "1y": 217.46,
-          "3y": 413.93,
-          "5y": 527.32
+          "1y": 199.87,
+          "3y": 381.44,
+          "5y": 512.73
         },
         "std_3y": 24.29,
         "std_1y": null,
@@ -990,9 +949,9 @@
       "benchmark": {
         "name": "元大台灣卓越50基金（0050）",
         "return": {
-          "1y": 106.66,
-          "3y": 247.9,
-          "5y": 243.51
+          "1y": 100.07,
+          "3y": 243.02,
+          "5y": 242.01
         },
         "std_3y": null,
         "sharpe_3y": null,
@@ -1013,9 +972,9 @@
         {
           "name": "景順台灣科技基金",
           "return": {
-            "1y": 168.74,
-            "3y": 287.74,
-            "5y": 284.65
+            "1y": 159.4,
+            "3y": 276.67,
+            "5y": 281.3
           },
           "std_3y": 22.45,
           "sharpe_3y": 1.5,
@@ -1053,7 +1012,7 @@
         "aum_ccy": "美元",
         "aum_date": "2026-03-31",
         "inception_date": "1995-10-02",
-        "inception_years": 30.8,
+        "inception_years": 30.9,
         "expense_ratio": 2.5,
         "distribution_yield": null,
         "top10_concentration": null,
@@ -1091,9 +1050,9 @@
         {
           "name": "富蘭克林科技基金",
           "return": {
-            "1y": 148.62,
-            "3y": 305.07,
-            "5y": 380.11
+            "1y": 136.81,
+            "3y": 281.21,
+            "5y": 369.06
           },
           "std_3y": 27.73,
           "sharpe_3y": 0.81,
@@ -1524,9 +1483,9 @@
       "benchmark": {
         "name": "富邦印度ETF（00652）",
         "return": {
-          "1y": -1.71,
-          "3y": 5.8,
-          "5y": 28.01
+          "1y": -1.92,
+          "3y": 4.53,
+          "5y": 26.82
         },
         "std_3y": null,
         "sharpe_3y": null,
