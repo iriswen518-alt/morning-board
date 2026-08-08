@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-08T07:41:17+08:00",
+  "generated_at": "2026-08-08T10:07:54+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -17,20 +17,6 @@
       "error": null
     },
     {
-      "symbol": "OKLO",
-      "name_zh": "Oklo",
-      "kind": "US",
-      "price": 48.42,
-      "change_pct": 14.77,
-      "mtd_pct": 24.7,
-      "ytd_pct": -32.53,
-      "market_date": "2026-08-07",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=OKLO.US",
-      "error": null
-    },
-    {
       "symbol": "QS",
       "name_zh": "QuantumScape",
       "kind": "US",
@@ -45,17 +31,17 @@
       "error": null
     },
     {
-      "symbol": "RKLB",
-      "name_zh": "Rocket Lab",
+      "symbol": "OKLO",
+      "name_zh": "Oklo",
       "kind": "US",
-      "price": 82.83,
-      "change_pct": 9.46,
-      "mtd_pct": 27.53,
-      "ytd_pct": 18.74,
+      "price": 48.42,
+      "change_pct": 14.77,
+      "mtd_pct": 24.7,
+      "ytd_pct": -32.53,
       "market_date": "2026-08-07",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RKLB.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=OKLO.US",
       "error": null
     },
     {
@@ -70,6 +56,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ABCL.US",
+      "error": null
+    },
+    {
+      "symbol": "RKLB",
+      "name_zh": "Rocket Lab",
+      "kind": "US",
+      "price": 82.83,
+      "change_pct": 9.46,
+      "mtd_pct": 27.53,
+      "ytd_pct": 18.74,
+      "market_date": "2026-08-07",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RKLB.US",
       "error": null
     },
     {
@@ -101,20 +101,6 @@
       "error": null
     },
     {
-      "symbol": "ONDS",
-      "name_zh": "Ondas",
-      "kind": "US",
-      "price": 9.11,
-      "change_pct": 4.23,
-      "mtd_pct": 21.63,
-      "ytd_pct": -6.66,
-      "market_date": "2026-08-07",
-      "per": 21.1838,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ONDS.US",
-      "error": null
-    },
-    {
       "symbol": "USAR",
       "name_zh": "USA Rare Earth",
       "kind": "US",
@@ -129,17 +115,73 @@
       "error": null
     },
     {
-      "symbol": "INFQ",
-      "name_zh": "Infleqtion",
+      "symbol": "AVAV",
+      "name_zh": "AeroVironment",
       "kind": "US",
-      "price": 11.91,
-      "change_pct": 7.2,
-      "mtd_pct": 21.16,
+      "price": 186.73,
+      "change_pct": 9.12,
+      "mtd_pct": 25.01,
+      "ytd_pct": -22.8,
+      "market_date": "2026-08-07",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AVAV.US",
+      "error": null
+    },
+    {
+      "symbol": "HPQ",
+      "name_zh": "HP",
+      "kind": "US",
+      "price": 30.05,
+      "change_pct": 6.64,
+      "mtd_pct": 10.19,
+      "ytd_pct": 34.87,
+      "market_date": "2026-08-07",
+      "per": 10.6909,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HPQ.US",
+      "error": null
+    },
+    {
+      "symbol": "GDX",
+      "name_zh": "VanEck Gold Miners ETF",
+      "kind": "US",
+      "price": 89.89,
+      "change_pct": 7.11,
+      "mtd_pct": 21.31,
+      "ytd_pct": 4.8,
+      "market_date": "2026-08-07",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GDX.US",
+      "error": null
+    },
+    {
+      "symbol": "IREN",
+      "name_zh": "IREN",
+      "kind": "US",
+      "price": 41.23,
+      "change_pct": 8.7,
+      "mtd_pct": 12.04,
+      "ytd_pct": 9.16,
+      "market_date": "2026-08-07",
+      "per": 191.2797,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IREN.US",
+      "error": null
+    },
+    {
+      "symbol": "CBRS",
+      "name_zh": "Cerebras Systems",
+      "kind": "US",
+      "price": 226.73,
+      "change_pct": 7.3,
+      "mtd_pct": 14.1,
       "ytd_pct": null,
       "market_date": "2026-08-07",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=INFQ.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CBRS.US",
       "error": null
     },
     {
