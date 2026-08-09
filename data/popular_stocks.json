@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-10T06:40:30+08:00",
+  "generated_at": "2026-08-10T07:40:03+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -31,17 +31,31 @@
       "error": null
     },
     {
-      "symbol": "RTX",
-      "name_zh": "雷神",
+      "symbol": "SOXL",
+      "name_zh": "Direxion Daily Semiconductor Bu",
       "kind": "US",
-      "price": 223.03,
-      "change_pct": -0.1,
-      "mtd_pct": 3.63,
-      "ytd_pct": 21.61,
+      "price": 140.25,
+      "change_pct": 5.99,
+      "mtd_pct": 22.25,
+      "ytd_pct": 233.69,
       "market_date": "2026-08-07",
-      "per": 38.846,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RTX.US",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOXL.US",
+      "error": null
+    },
+    {
+      "symbol": "SPY",
+      "name_zh": "State Street SPDR S&P 500 ETF T",
+      "kind": "US",
+      "price": 773.26,
+      "change_pct": 0.61,
+      "mtd_pct": 3.51,
+      "ytd_pct": 13.39,
+      "market_date": "2026-08-07",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPY.US",
       "error": null
     },
     {
@@ -56,34 +70,6 @@
       "per": 16.1434,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SMCI.US",
-      "error": null
-    },
-    {
-      "symbol": "USO",
-      "name_zh": "United States Oil Fund",
-      "kind": "US",
-      "price": 117.98,
-      "change_pct": -0.75,
-      "mtd_pct": -8.66,
-      "ytd_pct": 70.59,
-      "market_date": "2026-08-07",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=USO.US",
-      "error": null
-    },
-    {
-      "symbol": "SPY",
-      "name_zh": "SPDR S&P 500 ETF",
-      "kind": "US",
-      "price": 773.26,
-      "change_pct": 0.61,
-      "mtd_pct": 3.51,
-      "ytd_pct": 13.39,
-      "market_date": "2026-08-07",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPY.US",
       "error": null
     },
     {
