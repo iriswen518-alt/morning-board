@@ -1,7 +1,21 @@
 {
-  "generated_at": "2026-08-10T17:49:59+08:00",
+  "generated_at": "2026-08-10T18:25:57+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
+    {
+      "symbol": "SMCI",
+      "name_zh": "美超微",
+      "kind": "US",
+      "price": 31.13,
+      "change_pct": 5.96,
+      "mtd_pct": 9.61,
+      "ytd_pct": 6.35,
+      "market_date": "2026-08-07",
+      "per": 16.1434,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SMCI.US",
+      "error": null
+    },
     {
       "symbol": "PLTR",
       "name_zh": "Palantir",
@@ -31,34 +45,6 @@
       "error": null
     },
     {
-      "symbol": "SMCI",
-      "name_zh": "美超微",
-      "kind": "US",
-      "price": 31.13,
-      "change_pct": 5.96,
-      "mtd_pct": 9.61,
-      "ytd_pct": 6.35,
-      "market_date": "2026-08-07",
-      "per": 16.1434,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SMCI.US",
-      "error": null
-    },
-    {
-      "symbol": "IREN",
-      "name_zh": "IREN",
-      "kind": "US",
-      "price": 41.23,
-      "change_pct": 8.7,
-      "mtd_pct": 12.04,
-      "ytd_pct": 9.16,
-      "market_date": "2026-08-07",
-      "per": 191.2797,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IREN.US",
-      "error": null
-    },
-    {
       "symbol": "ONDS",
       "name_zh": "Ondas",
       "kind": "US",
@@ -73,17 +59,17 @@
       "error": null
     },
     {
-      "symbol": "MSTR",
-      "name_zh": "MicroStrategy",
+      "symbol": "IREN",
+      "name_zh": "IREN",
       "kind": "US",
-      "price": 100.01,
-      "change_pct": 3.26,
-      "mtd_pct": 7.21,
-      "ytd_pct": -34.18,
+      "price": 41.23,
+      "change_pct": 8.7,
+      "mtd_pct": 12.04,
+      "ytd_pct": 9.16,
       "market_date": "2026-08-07",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MSTR.US",
+      "per": 191.2797,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IREN.US",
       "error": null
     },
     {
@@ -115,34 +101,6 @@
       "error": null
     },
     {
-      "symbol": "INHD",
-      "name_zh": "Inno",
-      "kind": "US",
-      "price": 5.14,
-      "change_pct": -42.39,
-      "mtd_pct": -71.42,
-      "ytd_pct": -77.43,
-      "market_date": "2026-08-07",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=INHD.US",
-      "error": null
-    },
-    {
-      "symbol": "ACHR",
-      "name_zh": "Archer Aviation",
-      "kind": "US",
-      "price": 5.59,
-      "change_pct": 6.88,
-      "mtd_pct": 20.47,
-      "ytd_pct": -25.66,
-      "market_date": "2026-08-07",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ACHR.US",
-      "error": null
-    },
-    {
       "symbol": "AMPG",
       "name_zh": "Amplitech",
       "kind": "US",
@@ -157,17 +115,45 @@
       "error": null
     },
     {
-      "symbol": "NVTS",
-      "name_zh": "Navitas Semiconductor Corporati",
+      "symbol": "MRNA",
+      "name_zh": "莫德納",
       "kind": "US",
-      "price": 13.89,
-      "change_pct": 12.02,
-      "mtd_pct": 27.9,
-      "ytd_pct": 94.54,
+      "price": 59.17,
+      "change_pct": 9.86,
+      "mtd_pct": 7.94,
+      "ytd_pct": 100.64,
       "market_date": "2026-08-07",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NVTS.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MRNA.US",
+      "error": null
+    },
+    {
+      "symbol": "ASTS",
+      "name_zh": "AST SpaceMobile",
+      "kind": "US",
+      "price": 71.94,
+      "change_pct": 6.8,
+      "mtd_pct": 21.97,
+      "ytd_pct": -0.95,
+      "market_date": "2026-08-07",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ASTS.US",
+      "error": null
+    },
+    {
+      "symbol": "INHD",
+      "name_zh": "Inno",
+      "kind": "US",
+      "price": 5.14,
+      "change_pct": -42.39,
+      "mtd_pct": -71.42,
+      "ytd_pct": -77.43,
+      "market_date": "2026-08-07",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=INHD.US",
       "error": null
     },
     {
