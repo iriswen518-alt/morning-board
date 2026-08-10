@@ -3928,8 +3928,10 @@ function renderMcDetail(byDay) {
     const dots = e.imp >= 1 ? "●●●" : (e.imp === 0 ? "●●○" : "●○○");
     const impCls = e.imp >= 1 ? "i1" : (e.imp === 0 ? "i0" : "");
     const act = (e.act && e.act !== "—")
-      ? `<td class="mc-act">${escapeHtml(e.act)}</td>`
-      : (MC_SEL >= today ? `<td><span class="mc-cmp">待公布</span></td>` : `<td class="mc-tm">—</td>`);
+      ? `<td class="mc-act" data-l="公布">${escapeHtml(e.act)}</td>`
+      : (MC_SEL >= today
+        ? `<td data-l="公布"><span class="mc-cmp">待公布</span></td>`
+        : `<td class="mc-tm" data-l="公布">—</td>`);
     const cmp = e.cmp
       ? `<span class="mc-cmp${e.cmp.includes("符合") ? " eq" : ""}">${escapeHtml(e.cmp)}</span>` : "—";
     return `<tr>
@@ -3937,9 +3939,10 @@ function renderMcDetail(byDay) {
       <td><span class="mc-badge b-${e.r}">${escapeHtml(e.cn)}</span></td>
       <td class="mc-nm${e.imp >= 1 ? " hi" : ""}"><div class="zh">${escapeHtml(e.zh)}</div>
         <div class="en">${escapeHtml(e.en)}</div></td>
-      <td class="mc-imp ${impCls}">${dots}</td>
-      ${act}<td>${cmp}</td>
-      <td class="mc-fc">${escapeHtml(e.fc)}</td><td>${escapeHtml(e.pv)}</td>
+      <td class="mc-imp ${impCls}" data-l="重要性">${dots}</td>
+      ${act}<td data-l="對比預期">${cmp}</td>
+      <td class="mc-fc" data-l="預期">${escapeHtml(e.fc)}</td>
+      <td data-l="前值">${escapeHtml(e.pv)}</td>
     </tr>`;
   }).join("");
   return head + `<div class="mc-tbl-wrap"><table class="mc-table"><thead><tr>
@@ -3953,15 +3956,18 @@ function renderMcRates() {
   if (!rates.length) return "";
   const today = (DATA.market_calendar || {}).today || "";
   const rows = rates.map(r => {
-    const res = r.act ? `<td class="mc-act">${escapeHtml(r.act)}</td>`
-      : (r.past ? `<td class="mc-tm">—</td>` : `<td><span class="mc-cmp">待公布</span></td>`);
+    const res = r.act ? `<td class="mc-act" data-l="結果">${escapeHtml(r.act)}</td>`
+      : (r.past
+        ? `<td class="mc-tm" data-l="結果">—</td>`
+        : `<td data-l="結果"><span class="mc-cmp">待公布</span></td>`);
     return `<tr>
       <td class="mc-tm">${r.d.slice(5).replace("-", "/")} ${escapeHtml(r.wd)}　${escapeHtml(r.tm)}
         ${r.d === today ? '<span class="mc-today-tag">今天</span>' : ""}</td>
       <td><span class="mc-badge b-${r.r}">${escapeHtml(r.cn)}</span></td>
       <td class="mc-nm hi"><div class="zh">${escapeHtml(r.zh)}</div>
         <div class="en">${escapeHtml(r.en)}</div></td>
-      <td>${escapeHtml(r.pv)}</td><td class="mc-fc">${escapeHtml(r.fc)}</td>${res}
+      <td data-l="現行/前值">${escapeHtml(r.pv)}</td>
+      <td class="mc-fc" data-l="預期">${escapeHtml(r.fc)}</td>${res}
     </tr>`;
   }).join("");
   return `<div class="mc-tbl-wrap"><table class="mc-table"><thead><tr>

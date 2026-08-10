@@ -53,7 +53,9 @@
 //   （整條寬帶會蓋住數字欄），改由標題文字本身釘左；標題色改吃 --tint-text 配合深色底。
 // v69（2026-08-10）：「市場」分頁新增『財經日曆』折疊區塊（市場一覽之後）——
 //   經濟數據月曆＋利率決策＋美股／台股財報時程（data/market_calendar.json，每 3 小時雲端刷新）。
-const CACHE = "morning-board-v69";
+// v70（2026-08-10）：財經日曆手機版改「一列一張卡」（拿掉表格橫向捲動），
+//   並把底部導覽列提升為獨立合成層——修捲動時底部列飄到畫面中間。
+const CACHE = "morning-board-v70";
 
 self.addEventListener("install", e => {
   self.skipWaiting();

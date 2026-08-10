@@ -2647,6 +2647,11 @@ table.indices th.sortable-th {
   .tabbar {
     display: flex;
     position: fixed; left: 0; right: 0; bottom: 0; z-index: 95;
+    /* 自成一個合成層：iOS Safari 在長頁面慣性捲動時會延遲重繪 fixed 元素，
+       底部列因此偶爾停在畫面中間（2026-08-10 回報）。提升圖層可避免。 */
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    will-change: transform;
     background: var(--surface-glass);
     -webkit-backdrop-filter: saturate(180%) blur(12px);
     backdrop-filter: saturate(180%) blur(12px);
@@ -3563,12 +3568,26 @@ table.mc-table td.mc-fc { font-weight: 600; color: var(--brand-primary); }
   table.mc-table { font-size: 14px; }
 }
 @media (max-width: 640px) {
-  /* 蓋過 #content table 的手機通則（display:block + 表頭換行）：
-     日曆明細已包在 .mc-tbl-wrap 裡自行水平捲，表頭要維持單行（「重要性」不折成兩行） */
-  #content table.mc-table { display: table; }
-  #content table.mc-table th,
-  #content table.mc-table td { white-space: nowrap; }
-  #content table.mc-table td.mc-nm { white-space: normal; }
+  /* 手機不走「表格橫向捲動」：8 欄表格塞不進手機，而頁內再套一層水平捲動區
+     會讓 iOS Safari 的 position:fixed 底部列在捲動時飄到畫面中間（2026-08-10 回報）。
+     改成一列一張卡：時間＋地區一行、項目一行、數值用 data-l 標籤橫排。 */
+  .mc-tbl-wrap { overflow-x: visible; }
+  #content table.mc-table { display: block; min-width: 0; width: 100%; white-space: normal; }
+  #content table.mc-table thead { display: none; }
+  #content table.mc-table tbody { display: block; }
+  #content table.mc-table tr {
+    display: block; padding: 10px 0; border-bottom: 1px solid var(--line);
+  }
+  #content table.mc-table tbody tr:last-child { border-bottom: none; }
+  #content table.mc-table td {
+    display: inline-block; border: none; padding: 0 12px 0 0;
+    text-align: left; white-space: normal; vertical-align: baseline;
+  }
+  #content table.mc-table td.mc-nm { display: block; padding: 3px 0 5px; min-width: 0; }
+  #content table.mc-table td[data-l]::before {
+    content: attr(data-l) " "; color: var(--text-mute); font-size: 12.5px; font-weight: 400;
+  }
+  #content table.mc-table td.mc-imp { letter-spacing: 1px; font-size: 11px; }
 }
 /* 財經日曆篩選 chip：改 grid 讓四字標籤等寬均分（地區 6 欄，手機收成 3 欄） */
 .tabs.mc-chips { display: grid; gap: 4px; margin-bottom: 8px; }
