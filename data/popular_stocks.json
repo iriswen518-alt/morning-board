@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-11T06:48:42+08:00",
+  "generated_at": "2026-08-11T07:43:30+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -17,20 +17,6 @@
       "error": null
     },
     {
-      "symbol": "ASTS",
-      "name_zh": "AST SpaceMobile",
-      "kind": "US",
-      "price": 68.76,
-      "change_pct": -4.42,
-      "mtd_pct": 16.58,
-      "ytd_pct": -5.33,
-      "market_date": "2026-08-10",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ASTS.US",
-      "error": null
-    },
-    {
       "symbol": "HIMS",
       "name_zh": "Hims & Hers Health",
       "kind": "US",
@@ -42,6 +28,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HIMS.US",
+      "error": null
+    },
+    {
+      "symbol": "ASTS",
+      "name_zh": "AST SpaceMobile",
+      "kind": "US",
+      "price": 68.76,
+      "change_pct": -4.42,
+      "mtd_pct": 16.58,
+      "ytd_pct": -5.33,
+      "market_date": "2026-08-10",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ASTS.US",
       "error": null
     },
     {
@@ -59,20 +59,6 @@
       "error": null
     },
     {
-      "symbol": "USAR",
-      "name_zh": "USA Rare Earth",
-      "kind": "US",
-      "price": 19.04,
-      "change_pct": -1.5,
-      "mtd_pct": 27.36,
-      "ytd_pct": 60.0,
-      "market_date": "2026-08-10",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=USAR.US",
-      "error": null
-    },
-    {
       "symbol": "FRMI",
       "name_zh": "Fermi",
       "kind": "US",
@@ -87,6 +73,20 @@
       "error": null
     },
     {
+      "symbol": "USAR",
+      "name_zh": "USA Rare Earth",
+      "kind": "US",
+      "price": 19.04,
+      "change_pct": -1.5,
+      "mtd_pct": 27.36,
+      "ytd_pct": 60.0,
+      "market_date": "2026-08-10",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=USAR.US",
+      "error": null
+    },
+    {
       "symbol": "RIOT",
       "name_zh": "Riot Platforms",
       "kind": "US",
@@ -98,34 +98,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RIOT.US",
-      "error": null
-    },
-    {
-      "symbol": "DJT",
-      "name_zh": "Trump Media & Technology",
-      "kind": "US",
-      "price": 9.39,
-      "change_pct": -8.03,
-      "mtd_pct": -4.77,
-      "ytd_pct": -29.08,
-      "market_date": "2026-08-10",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DJT.US",
-      "error": null
-    },
-    {
-      "symbol": "QUBT",
-      "name_zh": "Quantum Computing",
-      "kind": "US",
-      "price": 8.93,
-      "change_pct": -2.72,
-      "mtd_pct": 10.25,
-      "ytd_pct": -12.96,
-      "market_date": "2026-08-10",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QUBT.US",
       "error": null
     },
     {
@@ -157,45 +129,31 @@
       "error": null
     },
     {
-      "symbol": "CRWV",
-      "name_zh": "CoreWeave",
+      "symbol": "QUBT",
+      "name_zh": "Quantum Computing",
       "kind": "US",
-      "price": 88.19,
-      "change_pct": -2.74,
-      "mtd_pct": 22.88,
-      "ytd_pct": 23.15,
+      "price": 8.93,
+      "change_pct": -2.72,
+      "mtd_pct": 10.25,
+      "ytd_pct": -12.96,
       "market_date": "2026-08-10",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRWV.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QUBT.US",
       "error": null
     },
     {
-      "symbol": "P",
-      "name_zh": "Everpure",
+      "symbol": "DJT",
+      "name_zh": "Trump Media & Technology",
       "kind": "US",
-      "price": 97.98,
-      "change_pct": 8.81,
-      "mtd_pct": 26.97,
-      "ytd_pct": 46.22,
+      "price": 9.39,
+      "change_pct": -8.03,
+      "mtd_pct": -4.77,
+      "ytd_pct": -29.08,
       "market_date": "2026-08-10",
-      "per": 145.1096,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=P.US",
-      "error": null
-    },
-    {
-      "symbol": "UPWK",
-      "name_zh": "Upwork",
-      "kind": "US",
-      "price": 9.83,
-      "change_pct": 1.65,
-      "mtd_pct": 7.31,
-      "ytd_pct": -50.4,
-      "market_date": "2026-08-10",
-      "per": 10.9072,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=UPWK.US",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DJT.US",
       "error": null
     },
     {
@@ -213,6 +171,34 @@
       "error": null
     },
     {
+      "symbol": "UPWK",
+      "name_zh": "Upwork",
+      "kind": "US",
+      "price": 9.83,
+      "change_pct": 1.65,
+      "mtd_pct": 7.31,
+      "ytd_pct": -50.4,
+      "market_date": "2026-08-10",
+      "per": 10.9072,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=UPWK.US",
+      "error": null
+    },
+    {
+      "symbol": "P",
+      "name_zh": "Everpure",
+      "kind": "US",
+      "price": 97.98,
+      "change_pct": 8.81,
+      "mtd_pct": 26.97,
+      "ytd_pct": 46.22,
+      "market_date": "2026-08-10",
+      "per": 145.1096,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=P.US",
+      "error": null
+    },
+    {
       "symbol": "COHR",
       "name_zh": "Coherent",
       "kind": "US",
@@ -224,20 +210,6 @@
       "per": 146.6849,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=COHR.US",
-      "error": null
-    },
-    {
-      "symbol": "SPG",
-      "name_zh": "Simon Property",
-      "kind": "US",
-      "price": 220.55,
-      "change_pct": -1.06,
-      "mtd_pct": -3.85,
-      "ytd_pct": 19.15,
-      "market_date": "2026-08-10",
-      "per": 15.1564,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPG.US",
       "error": null
     },
     {
