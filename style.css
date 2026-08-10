@@ -2647,11 +2647,9 @@ table.indices th.sortable-th {
   .tabbar {
     display: flex;
     position: fixed; left: 0; right: 0; bottom: 0; z-index: 95;
-    /* 自成一個合成層：iOS Safari 在長頁面慣性捲動時會延遲重繪 fixed 元素，
-       底部列因此偶爾停在畫面中間（2026-08-10 回報）。提升圖層可避免。 */
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
-    will-change: transform;
+    /* 注意：這裡不要加 transform／will-change:transform。2026-08-10 曾想用
+       translateZ(0) 提升合成層來修「底部列飄到中間」，結果 WebKit 會把帶
+       transform 的 fixed 元素改成相對文件定位，全站每一頁的底部列都跑掉，已撤回。 */
     background: var(--surface-glass);
     -webkit-backdrop-filter: saturate(180%) blur(12px);
     backdrop-filter: saturate(180%) blur(12px);
