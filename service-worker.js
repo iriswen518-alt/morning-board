@@ -51,7 +51,9 @@
 //   補齊 --card／--brand／--text-sub 等別名，並把淺水藍／淺灰貼片與分隔線全數 token 化。
 // v66（2026-08-05）：修表格橫滑出現「多一層」——群組標題列(colspan 跨全表)不再 sticky 釘左
 //   （整條寬帶會蓋住數字欄），改由標題文字本身釘左；標題色改吃 --tint-text 配合深色底。
-const CACHE = "morning-board-v68";
+// v69（2026-08-10）：「市場」分頁新增『財經日曆』折疊區塊（市場一覽之後）——
+//   經濟數據月曆＋利率決策＋美股／台股財報時程（data/market_calendar.json，每 3 小時雲端刷新）。
+const CACHE = "morning-board-v69";
 
 self.addEventListener("install", e => {
   self.skipWaiting();

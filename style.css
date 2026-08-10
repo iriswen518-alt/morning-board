@@ -3445,3 +3445,137 @@ table.indices.ic-chain-table tbody td:first-child { text-align: left; }
 .news-item .news-body p {
   color: var(--text) !important;
 }
+
+/* ===== 新聞內文字級＝標題字級 =====
+   2026-08-06 用戶要求。原本手機端內文 23px、標題 20px（內文刻意放大好閱讀），
+   現在統一：內文一律跟著標題走，桌機 18px、手機 20px。 */
+.news-item .summary,
+.news-item .news-body,
+.news-item .news-body p {
+  font-size: 18px;
+}
+@media (max-width: 768px) {
+  .news-item details summary { font-size: 20px; line-height: 1.55; }
+  .news-item .summary,
+  .news-item .news-body,
+  .news-item .news-body p { font-size: 20px; }
+}
+
+/* ===== 財經日曆（市場分頁『財經日曆』折疊區塊，2026-08-10） =====
+   月曆格子＋當日明細，欄位定義與工作資料站的財經行事曆一致。
+   地區色塊用固定淺底＋深字（深淺模式下皆可讀），其餘一律吃 token。 */
+.mc-chips { margin-bottom: 8px; }
+.mc-head { display: flex; align-items: center; gap: 8px; margin: 12px 0 8px; }
+.mc-head .mc-mtitle { font-size: 20px; font-weight: 700; margin-right: auto; }
+.mc-navbtn {
+  border: 1px solid var(--line); background: var(--card-bg); border-radius: 9px;
+  padding: 5px 14px; cursor: pointer; font-size: 15px; color: var(--brand-primary);
+  min-height: var(--tap);
+}
+.mc-navbtn:disabled { color: var(--text-mute); opacity: .45; cursor: default; }
+.mc-legend {
+  display: flex; flex-wrap: wrap; gap: 6px 14px; margin-bottom: 8px;
+  font-size: 13px; color: var(--text-mute);
+}
+.mc-legend span { display: inline-flex; align-items: center; gap: 5px; }
+.mc-legend i { width: 10px; height: 10px; border-radius: 3px; flex: none; }
+.mc-cal {
+  display: grid; grid-template-columns: repeat(7, 1fr);
+  border-left: 1px solid var(--line); border-top: 1px solid var(--line);
+}
+.mc-wd {
+  padding: 3px 8px; font-size: 13px; color: var(--text-mute); text-align: right;
+  border-right: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  background: var(--bg-alt);
+}
+.mc-cell {
+  min-height: 104px; padding: 3px 3px 5px; cursor: pointer; overflow: hidden;
+  background: var(--card-bg);
+  border-right: 1px solid var(--line); border-bottom: 1px solid var(--line);
+}
+.mc-cell.dim { background: var(--bg-alt); }
+.mc-cell.dim .mc-dnum span { opacity: .45; }
+.mc-cell.sel { outline: 2px solid var(--brand-primary); outline-offset: -2px; }
+.mc-dnum { text-align: right; font-size: 14px; font-weight: 600; line-height: 1.4; margin-bottom: 2px; }
+.mc-dnum span {
+  display: inline-flex; min-width: 23px; height: 23px; align-items: center;
+  justify-content: center; border-radius: 50%; padding: 0 3px;
+}
+.mc-cell.today .mc-dnum span { background: var(--up); color: #fff; }
+.mc-evi {
+  display: flex; align-items: center; gap: 4px; font-size: 12.5px; line-height: 1.6;
+  white-space: nowrap; overflow: hidden; padding: 0 5px 0 3px; border-radius: 5px;
+  margin-bottom: 2px;
+}
+.mc-evi .rc {
+  flex: none; font-weight: 700; font-size: 11px; border: 1px solid currentColor;
+  border-radius: 4px; line-height: 1.3; padding: 0 2px; margin: 1px 0;
+}
+.mc-evi .t { overflow: hidden; text-overflow: ellipsis; flex: 0 1 auto; font-weight: 500; min-width: 0; }
+.mc-evi .v { flex: none; font-size: 11.5px; margin-left: auto; opacity: .85; }
+.mc-evi.hi .t { font-weight: 700; }
+.mc-more { font-size: 12px; color: var(--text-mute); padding-left: 8px; line-height: 1.5; }
+.mc-dtitle { font-weight: 700; font-size: 17px; margin: 16px 0 6px; display: flex; align-items: center; gap: 8px; }
+.mc-today-tag {
+  font-size: 13px; color: #fff; background: var(--brand-primary);
+  border-radius: 20px; padding: 1px 9px; font-weight: 400;
+}
+.mc-tbl-wrap { overflow-x: auto; }
+table.mc-table { border-collapse: collapse; width: 100%; font-size: 15px; min-width: 640px; }
+table.mc-table th, table.mc-table td {
+  padding: 7px 10px; text-align: right; white-space: nowrap;
+  border-bottom: 1px solid var(--line);
+}
+table.mc-table tbody tr:last-child td { border-bottom: none; }
+table.mc-table th { color: var(--text-mute); font-weight: 500; font-size: 13px; background: transparent; }
+table.mc-table th:nth-child(-n+3), table.mc-table td:nth-child(-n+3) { text-align: left; }
+table.mc-table td.mc-tm { color: var(--text-mute); font-size: 14px; }
+table.mc-table td.mc-nm { white-space: normal; min-width: 220px; }
+table.mc-table td.mc-nm .zh { font-weight: 600; }
+table.mc-table td.mc-nm.hi .zh { color: var(--brand-primary); }
+table.mc-table td.mc-nm .en { color: var(--text-mute); font-size: 12.5px; line-height: 1.5; }
+table.mc-table td.mc-imp { font-size: 10px; letter-spacing: 2px; color: var(--text-mute); opacity: .5; }
+table.mc-table td.mc-imp.i1 { color: var(--brand-primary); opacity: 1; }
+table.mc-table td.mc-imp.i0 { color: var(--brand-primary); opacity: .7; }
+table.mc-table td.mc-act { font-weight: 700; }
+table.mc-table td.mc-fc { font-weight: 600; color: var(--brand-primary); }
+.mc-badge {
+  font-size: 13px; border-radius: 20px; padding: 1px 9px; white-space: nowrap;
+  background: #ddeefb; color: #0f5c8c;
+}
+.mc-badge.b-TW { background: #dcf5e7; color: #187244; }
+.mc-badge.b-CN { background: #fce4e4; color: #b02f2f; }
+.mc-badge.b-EUR { background: #e9e5fb; color: #5747ad; }
+.mc-badge.b-JP { background: #fdeed3; color: #a2660f; }
+.mc-cmp {
+  font-size: 13px; color: var(--brand-primary); background: var(--tint-brand);
+  border-radius: 20px; padding: 1px 8px; white-space: nowrap;
+}
+.mc-cmp.eq { color: var(--text-mute); background: var(--tint-grey); }
+@media (max-width: 768px) {
+  /* 手機格子縮小：只留地區字＋顏色，細節看下方明細 */
+  .mc-cell { min-height: 64px; }
+  .mc-evi { display: inline-flex; padding: 1px 2px; margin: 0 2px 2px 0; }
+  .mc-evi .t, .mc-evi .v { display: none; }
+  .mc-evi .rc { border: none; padding: 0; font-size: 11.5px; }
+  .mc-more { padding-left: 3px; font-size: 11px; }
+  .mc-head .mc-mtitle { font-size: 18px; }
+  table.mc-table { font-size: 14px; }
+}
+@media (max-width: 640px) {
+  /* 蓋過 #content table 的手機通則（display:block + 表頭換行）：
+     日曆明細已包在 .mc-tbl-wrap 裡自行水平捲，表頭要維持單行（「重要性」不折成兩行） */
+  #content table.mc-table { display: table; }
+  #content table.mc-table th,
+  #content table.mc-table td { white-space: nowrap; }
+  #content table.mc-table td.mc-nm { white-space: normal; }
+}
+/* 財經日曆篩選 chip：改 grid 讓四字標籤等寬均分（地區 6 欄，手機收成 3 欄） */
+.tabs.mc-chips { display: grid; gap: 4px; margin-bottom: 8px; }
+.tabs.mc-chips .tab { flex: none; min-width: 0; }
+#mc-regs { grid-template-columns: repeat(6, 1fr); }
+#mc-typs { grid-template-columns: repeat(3, 1fr); }
+#mc-scopes { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 768px) {
+  #mc-regs { grid-template-columns: repeat(3, 1fr); }
+}

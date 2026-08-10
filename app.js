@@ -588,7 +588,7 @@ async function init() {
   // 每個來源各自有 fallback：一個壞不拖垮全頁
   // 失敗時記到 FAILED_LOADS，使用者切到對應 tab 時會背景重試
   const safe = (name, fallback) => load(name).catch(() => { FAILED_LOADS.add(name); return fallback; });
-  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news, cnyes_news, etf0050, weekly, ic_chain] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news, cnyes_news, etf0050, weekly, ic_chain, market_calendar] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
@@ -618,8 +618,9 @@ async function init() {
     safe("etf0050", { built_at: "", market_date: "", stocks: [] }),
     safe("weekly_report", null),
     safe("ic_chain", null),
+    safe("market_calendar", null),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news, cnyes_news, etf0050, weekly, ic_chain };
+  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news, cnyes_news, etf0050, weekly, ic_chain, market_calendar };
   LAST_DATA_TS = Date.now();
   const _updatedAt = latestBuiltAt();
   if (!_updatedAt) {
@@ -1020,7 +1021,7 @@ async function refreshData() {
     FAILED_LOADS.add(name);
     return DATA[name === "insurances" ? "insurance" : name] || fallback;
   });
-  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news, cnyes_news, etf0050, weekly, ic_chain] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news, cnyes_news, etf0050, weekly, ic_chain, market_calendar] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
@@ -1050,8 +1051,9 @@ async function refreshData() {
     safe("etf0050", { built_at: "", market_date: "", stocks: [] }),
     safe("weekly_report", null),
     safe("ic_chain", null),
+    safe("market_calendar", null),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news, cnyes_news, etf0050, weekly, ic_chain };
+  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news, cnyes_news, etf0050, weekly, ic_chain, market_calendar };
   LAST_DATA_TS = Date.now();
   SEARCH_INDEX = buildSearchIndex();
   const _updatedAt = latestBuiltAt();
@@ -3738,8 +3740,13 @@ function renderMarketSheet() {
   const weeklyInner = renderWeeklyReportBlock();
   const weeklySection = weeklyInner ? accSection("mv-weekly", "市場週報", weeklyInner) : "";
 
+  // 財經日曆：經濟數據／利率決策／財報行事曆（data/market_calendar.json）
+  const calInner = renderMarketCalendarSection();
+  const calSection = calInner ? accSection("mv-calendar", "財經日曆", calInner) : "";
+
   return `
     ${overviewSection}
+    ${calSection}
     ${accSection("mv-us-analysis", "美股分析", usInner)}
     ${accSection("mv-tw-analysis", "台股分析", twInner)}
     ${weeklySection}
@@ -3768,6 +3775,200 @@ function renderWeeklyReportBlock() {
     return accSection("wr-" + (s.key || s.title), s.title, `<ul class="wr-list">${items}</ul>`);
   }).join("");
   return `${range ? `<p class="wr-range">${escapeHtml(range)}</p>` : ""}${inner}`;
+}
+
+// ── 財經日曆 ─────────────────────────────────────────────────────────────
+// 資料 data/market_calendar.json（build/fetch_market_calendar.py，每 3 小時刷新）：
+// 過去 14 天（含公布值 vs 預期）＋未來 28 天（含預期值）的經濟數據、央行利率決策，
+// 加上美股大型股財報（Nasdaq，市值 ≥ $50B）與台股法定財報時程。時間一律台北時間。
+// 本機另有同源完整版（~/scripts/market_calendar_open.py → 工作資料站「財經日曆」分頁）。
+const MC_COLOR = {
+  US: { c: "#0f5c8c", bg: "#ddeefb" }, TW: { c: "#187244", bg: "#dcf5e7" },
+  CN: { c: "#b02f2f", bg: "#fce4e4" }, EUR: { c: "#5747ad", bg: "#e9e5fb" },
+  JP: { c: "#a2660f", bg: "#fdeed3" },
+};
+const MC_FIN = { c: "#0c7a8d", bg: "#dcf2f6" };
+const MC_RCHAR = { US: "美", TW: "台", CN: "中", EUR: "歐", JP: "日" };
+const MC_WD = ["週一", "週二", "週三", "週四", "週五", "週六", "週日"];
+// 篩選狀態：地區／類型／重點（預設只看重點數據，全部數據雜訊太多）
+let MC_REG = "ALL", MC_TYP = "ALL", MC_SCOPE = "key", MC_MONTH = "", MC_SEL = "";
+
+function renderMarketCalendarSection() {
+  const d = DATA.market_calendar;
+  if (!d || !Array.isArray(d.events) || !d.events.length) return "";
+  if (!MC_SEL) { MC_SEL = d.today; MC_MONTH = d.today.slice(0, 7); }
+
+  const chips = (id, items, cur) => `<div class="tabs tabs-wrap mc-chips" id="${id}">${
+    items.map(([v, label]) => `<button class="tab ${v === cur ? "active" : ""}" type="button"
+      data-v="${v}" onclick="setMcFilter('${id}','${v}')">${label}</button>`).join("")
+  }</div>`;
+
+  const filters =
+    chips("mc-regs", [["ALL", "全部地區"], ["US", "美國數據"], ["TW", "台灣數據"],
+      ["CN", "中國數據"], ["EUR", "歐洲數據"], ["JP", "日本數據"]], MC_REG) +
+    chips("mc-typs", [["ALL", "全部類型"], ["eco", "經濟數據"], ["fin", "財報法說"]], MC_TYP) +
+    chips("mc-scopes", [["key", "重點數據"], ["all", "全部數據"]], MC_SCOPE);
+
+  const caption = `<p style="color:var(--text-mute);font-size:15px;margin:0 0 10px">
+    美國・台灣・中國・歐元區・德國・日本・英國 重要經濟數據，時間均為台北時間｜
+    過去 ${shortDate(d.min).replace("-", "/")} 起至 ${shortDate(d.max).replace("-", "/")}
+    ｜資料源 <a href="https://www.tradingview.com/economic-calendar/" target="_blank" rel="noopener" style="color:inherit">TradingView</a>
+    ／<a href="https://www.nasdaq.com/market-activity/earnings" target="_blank" rel="noopener" style="color:inherit">Nasdaq</a>
+    ${d.stale ? "｜本次抓取失敗，顯示上次快取" : ""}</p>`;
+
+  const ratesInner = renderMcRates();
+  const ratesSection = ratesInner ? accSection("mc-rates", "利率決策", ratesInner) : "";
+
+  return caption + ratesSection + filters +
+    `<div id="mc-body">${renderMcCalendar()}</div>` + `
+    <p style="color:var(--text-mute);font-size:13px;line-height:1.7;margin:10px 0 0">
+      點日期格子可展開當日完整明細（公布值、預期、前值）。重要性：●●● 高、●●○ 中、●○○ 低
+      （TradingView 分級；台灣數據被一律標為低重要性，故「重點數據」檢視仍完整保留台灣）。
+      「歐洲數據」＝歐元區＋德國＋英國，已剔除公債標售、德國各邦 CPI 等雜訊項目。
+      財報法說：美國＝市值 500 億美元以上個股（含 EPS 預估與去年同期）；
+      台灣＝金管會法定時程（每月 10 日月營收、5/15、8/14、11/14、3/31 季／年報申報截止）。</p>`;
+}
+
+function mcPass(e) {
+  if (MC_REG !== "ALL" && e.r !== MC_REG) return false;
+  if (MC_TYP !== "ALL" && e.t !== MC_TYP) return false;
+  if (MC_SCOPE === "key" && e.k !== 1) return false;
+  return true;
+}
+
+function setMcFilter(group, v) {
+  if (group === "mc-regs") MC_REG = v;
+  else if (group === "mc-typs") MC_TYP = v;
+  else MC_SCOPE = v;
+  document.querySelectorAll(`#${group} .tab`).forEach(b =>
+    b.classList.toggle("active", b.dataset.v === v));
+  const slot = document.getElementById("mc-body");
+  if (slot) slot.innerHTML = renderMcCalendar();
+}
+
+function setMcDay(ds) {
+  MC_SEL = ds;
+  MC_MONTH = ds.slice(0, 7);
+  const slot = document.getElementById("mc-body");
+  if (slot) slot.innerHTML = renderMcCalendar();
+}
+
+function shiftMcMonth(delta) {
+  const y = +MC_MONTH.slice(0, 4), m = +MC_MONTH.slice(5, 7);
+  const dt = new Date(y, m - 1 + delta, 1);
+  MC_MONTH = `${dt.getFullYear()}-${String(dt.getMonth() + 1).padStart(2, "0")}`;
+  const slot = document.getElementById("mc-body");
+  if (slot) slot.innerHTML = renderMcCalendar();
+}
+
+function mcToday() {
+  const d = DATA.market_calendar || {};
+  MC_SEL = d.today || MC_SEL;
+  MC_MONTH = MC_SEL.slice(0, 7);
+  const slot = document.getElementById("mc-body");
+  if (slot) slot.innerHTML = renderMcCalendar();
+}
+
+function renderMcCalendar() {
+  const d = DATA.market_calendar || {};
+  const today = d.today || "";
+  const byDay = {};
+  (d.events || []).forEach(e => (byDay[e.d] = byDay[e.d] || []).push(e));
+
+  const y = +MC_MONTH.slice(0, 4), mo = +MC_MONTH.slice(5, 7);
+  const startOff = (new Date(y, mo - 1, 1).getDay() + 6) % 7;   // 週一為每列第一天
+  const start = new Date(y, mo - 1, 1 - startOff);
+  let cells = MC_WD.map(w => `<div class="mc-wd">${w}</div>`).join("");
+  for (let i = 0; i < 42; i++) {
+    const dt = new Date(start.getFullYear(), start.getMonth(), start.getDate() + i);
+    // 最後一列若整列都已經是下個月就不畫（月曆維持 5 或 6 列）
+    if (i % 7 === 0 && i > 0 && dt.getMonth() + 1 !== mo && dt.getDate() <= 7) break;
+    const ds = `${dt.getFullYear()}-${String(dt.getMonth() + 1).padStart(2, "0")}-${String(dt.getDate()).padStart(2, "0")}`;
+    const evs = (byDay[ds] || []).filter(mcPass);
+    const cls = ["mc-cell", dt.getMonth() + 1 === mo ? "" : "dim",
+      ds === today ? "today" : "", ds === MC_SEL ? "sel" : ""].filter(Boolean).join(" ");
+    const MAXI = 4;
+    let inner = `<div class="mc-dnum"><span>${dt.getDate()}</span></div>`;
+    evs.slice(0, MAXI).forEach(e => {
+      const col = e.t === "fin" ? MC_FIN : (MC_COLOR[e.r] || { c: "#5b7183", bg: "#eef2f6" });
+      const v = e.t === "fin" ? e.tm : (e.act && e.act !== "—" ? e.act : e.tm);
+      inner += `<div class="mc-evi${e.imp >= 1 ? " hi" : ""}" style="background:${col.bg};color:${col.c}">
+        <span class="rc">${MC_RCHAR[e.r] || ""}</span><span class="t">${escapeHtml(e.zh)}</span>
+        <span class="v">${escapeHtml(v)}</span></div>`;
+    });
+    if (evs.length > MAXI) inner += `<div class="mc-more">還有 ${evs.length - MAXI} 項</div>`;
+    cells += `<div class="${cls}" onclick="setMcDay('${ds}')">${inner}</div>`;
+  }
+
+  const head = `<div class="mc-head">
+      <div class="mc-mtitle">${y} 年 ${mo} 月</div>
+      <button class="mc-navbtn" type="button" onclick="shiftMcMonth(-1)"
+        ${MC_MONTH <= (d.min || "").slice(0, 7) ? "disabled" : ""}>‹</button>
+      <button class="mc-navbtn" type="button" onclick="mcToday()">今天</button>
+      <button class="mc-navbtn" type="button" onclick="shiftMcMonth(1)"
+        ${MC_MONTH >= (d.max || "").slice(0, 7) ? "disabled" : ""}>›</button>
+    </div>`;
+  const legend = `<div class="mc-legend">${
+    [["#0f5c8c", "美國"], ["#187244", "台灣"], ["#b02f2f", "中國"], ["#5747ad", "歐洲"],
+      ["#a2660f", "日本"], ["#0c7a8d", "財報法說"]]
+      .map(([c, t]) => `<span><i style="background:${c}"></i>${t}</span>`).join("")
+  }</div>`;
+  return head + legend + `<div class="mc-cal">${cells}</div>` + renderMcDetail(byDay);
+}
+
+function renderMcDetail(byDay) {
+  if (!MC_SEL) return "";
+  const today = (DATA.market_calendar || {}).today || "";
+  const dt = new Date(MC_SEL + "T00:00:00");
+  const head = `<div class="mc-dtitle">${+MC_SEL.slice(5, 7)}月${dt.getDate()}日 ${MC_WD[(dt.getDay() + 6) % 7]}
+    ${MC_SEL === today ? '<span class="mc-today-tag">今天</span>' : ""}</div>`;
+  const evs = (byDay[MC_SEL] || []).filter(mcPass);
+  if (!evs.length) return head + `<p style="color:var(--text-mute);font-size:15px;margin:8px 0 0">此篩選條件下當日沒有項目</p>`;
+  const rows = evs.map(e => {
+    const dots = e.imp >= 1 ? "●●●" : (e.imp === 0 ? "●●○" : "●○○");
+    const impCls = e.imp >= 1 ? "i1" : (e.imp === 0 ? "i0" : "");
+    const act = (e.act && e.act !== "—")
+      ? `<td class="mc-act">${escapeHtml(e.act)}</td>`
+      : (MC_SEL >= today ? `<td><span class="mc-cmp">待公布</span></td>` : `<td class="mc-tm">—</td>`);
+    const cmp = e.cmp
+      ? `<span class="mc-cmp${e.cmp.includes("符合") ? " eq" : ""}">${escapeHtml(e.cmp)}</span>` : "—";
+    return `<tr>
+      <td class="mc-tm">${escapeHtml(e.tm)}</td>
+      <td><span class="mc-badge b-${e.r}">${escapeHtml(e.cn)}</span></td>
+      <td class="mc-nm${e.imp >= 1 ? " hi" : ""}"><div class="zh">${escapeHtml(e.zh)}</div>
+        <div class="en">${escapeHtml(e.en)}</div></td>
+      <td class="mc-imp ${impCls}">${dots}</td>
+      ${act}<td>${cmp}</td>
+      <td class="mc-fc">${escapeHtml(e.fc)}</td><td>${escapeHtml(e.pv)}</td>
+    </tr>`;
+  }).join("");
+  return head + `<div class="mc-tbl-wrap"><table class="mc-table"><thead><tr>
+      <th>時間</th><th>地區</th><th>項目</th><th>重要性</th>
+      <th>公布</th><th>對比預期</th><th>預期</th><th>前值</th>
+    </tr></thead><tbody>${rows}</tbody></table></div>`;
+}
+
+function renderMcRates() {
+  const rates = (DATA.market_calendar || {}).rates || [];
+  if (!rates.length) return "";
+  const today = (DATA.market_calendar || {}).today || "";
+  const rows = rates.map(r => {
+    const res = r.act ? `<td class="mc-act">${escapeHtml(r.act)}</td>`
+      : (r.past ? `<td class="mc-tm">—</td>` : `<td><span class="mc-cmp">待公布</span></td>`);
+    return `<tr>
+      <td class="mc-tm">${r.d.slice(5).replace("-", "/")} ${escapeHtml(r.wd)}　${escapeHtml(r.tm)}
+        ${r.d === today ? '<span class="mc-today-tag">今天</span>' : ""}</td>
+      <td><span class="mc-badge b-${r.r}">${escapeHtml(r.cn)}</span></td>
+      <td class="mc-nm hi"><div class="zh">${escapeHtml(r.zh)}</div>
+        <div class="en">${escapeHtml(r.en)}</div></td>
+      <td>${escapeHtml(r.pv)}</td><td class="mc-fc">${escapeHtml(r.fc)}</td>${res}
+    </tr>`;
+  }).join("");
+  return `<div class="mc-tbl-wrap"><table class="mc-table"><thead><tr>
+      <th>日期</th><th>地區</th><th>央行決策</th><th>現行/前值</th><th>預期</th><th>結果</th>
+    </tr></thead><tbody>${rows}</tbody></table></div>
+    <p style="color:var(--text-mute);font-size:13px;margin:8px 0 0">
+      台灣央行理監事會約每季一次（3、6、9、12 月），進入未來 28 天視窗後會自動出現。</p>`;
 }
 
 // ── 盤勢說明區塊（美股/台股共用） ────────────────────────────────────────────

@@ -1,0 +1,38 @@
+name: Morning Board — market calendar (財經日曆)
+on:
+  schedule:
+    # 每 3 小時刷新一次（UTC）：經濟數據公布值多在台北時間 20:30（美國盤前）與
+    # 08:30–10:00（亞洲），3 小時的粒度足以在當天內把「待公布 → 公布值」補上。
+    - cron: '20 */3 * * *'
+  workflow_dispatch: {}
+permissions:
+  contents: write
+concurrency:
+  group: morning-board-calendar
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Prepare working layout
+        run: |
+          mkdir -p work
+          cp build/fetch_market_calendar.py work/
+          ln -sfn "$GITHUB_WORKSPACE" work/repo
+      - name: Fetch market calendar
+        # TradingView 抓不到就整段放棄（return 1），保留 repo 內既有 market_calendar.json，
+        # 不讓前端變空白；Nasdaq 財報被 runner IP 擋掉時只會少掉財報列，不影響經濟數據。
+        run: cd work && python3 fetch_market_calendar.py || echo "calendar fetch failed (non-fatal, keeps last market_calendar.json)"
+      - name: Commit & push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/market_calendar.json data/us_earnings_cache.json
+          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
+          git commit -m "data(calendar): $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push

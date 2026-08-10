@@ -6,3 +6,6 @@ __pycache__/
 
 # 雲端 workflow 的暫存佈局（本機測 build 腳本時也會產生）
 /work/
+
+# 財經日曆的 TradingView 原始回應快取（僅本機／runner 內暫用，不進版控：750KB 且每次都變）
+data/market_calendar_cache.json
