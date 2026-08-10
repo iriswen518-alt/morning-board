@@ -1,7 +1,21 @@
 {
-  "generated_at": "2026-08-10T18:25:57+08:00",
+  "generated_at": "2026-08-10T19:55:43+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
+    {
+      "symbol": "B",
+      "name_zh": "Barrick Mining",
+      "kind": "US",
+      "price": 43.68,
+      "change_pct": 5.58,
+      "mtd_pct": 18.92,
+      "ytd_pct": 0.3,
+      "market_date": "2026-08-07",
+      "per": 11.4056,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=B.US",
+      "error": null
+    },
     {
       "symbol": "SMCI",
       "name_zh": "美超微",
@@ -59,20 +73,6 @@
       "error": null
     },
     {
-      "symbol": "IREN",
-      "name_zh": "IREN",
-      "kind": "US",
-      "price": 41.23,
-      "change_pct": 8.7,
-      "mtd_pct": 12.04,
-      "ytd_pct": 9.16,
-      "market_date": "2026-08-07",
-      "per": 191.2797,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IREN.US",
-      "error": null
-    },
-    {
       "symbol": "MNDY",
       "name_zh": "monday.com",
       "kind": "US",
@@ -84,6 +84,20 @@
       "per": 32.9866,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MNDY.US",
+      "error": null
+    },
+    {
+      "symbol": "HPE",
+      "name_zh": "Hewlett Packard Enterprise Comp",
+      "kind": "US",
+      "price": 53.22,
+      "change_pct": 1.51,
+      "mtd_pct": 11.11,
+      "ytd_pct": 121.57,
+      "market_date": "2026-08-07",
+      "per": 45.2918,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HPE.US",
       "error": null
     },
     {
@@ -101,17 +115,31 @@
       "error": null
     },
     {
-      "symbol": "AMPG",
-      "name_zh": "Amplitech",
+      "symbol": "INHD",
+      "name_zh": "Inno",
       "kind": "US",
-      "price": 5.8,
-      "change_pct": 6.81,
-      "mtd_pct": 24.73,
-      "ytd_pct": 93.98,
+      "price": 5.14,
+      "change_pct": -42.39,
+      "mtd_pct": -71.42,
+      "ytd_pct": -77.43,
       "market_date": "2026-08-07",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AMPG.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=INHD.US",
+      "error": null
+    },
+    {
+      "symbol": "QS",
+      "name_zh": "QuantumScape",
+      "kind": "US",
+      "price": 6.08,
+      "change_pct": 9.95,
+      "mtd_pct": 16.48,
+      "ytd_pct": -41.65,
+      "market_date": "2026-08-07",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QS.US",
       "error": null
     },
     {
@@ -126,34 +154,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MRNA.US",
-      "error": null
-    },
-    {
-      "symbol": "ASTS",
-      "name_zh": "AST SpaceMobile",
-      "kind": "US",
-      "price": 71.94,
-      "change_pct": 6.8,
-      "mtd_pct": 21.97,
-      "ytd_pct": -0.95,
-      "market_date": "2026-08-07",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ASTS.US",
-      "error": null
-    },
-    {
-      "symbol": "INHD",
-      "name_zh": "Inno",
-      "kind": "US",
-      "price": 5.14,
-      "change_pct": -42.39,
-      "mtd_pct": -71.42,
-      "ytd_pct": -77.43,
-      "market_date": "2026-08-07",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=INHD.US",
       "error": null
     },
     {
