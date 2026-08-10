@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-09T17:01:07+08:00",
+  "generated_at": "2026-08-10T10:01:37+08:00",
   "tw": {
-    "as_of": "2026-08-09",
+    "as_of": "2026-08-10",
     "top_marketcap": [
       {
         "symbol": "2330",
@@ -646,7 +646,7 @@
     ]
   },
   "us": {
-    "as_of": "2026-08-09",
+    "as_of": "2026-08-10",
     "top_marketcap": [
       {
         "symbol": "NVDA",
@@ -660,6 +660,32 @@
         "ytd_pct": 20.09,
         "yahoo": "NVDA",
         "source_url": "https://finance.yahoo.com/quote/NVDA"
+      },
+      {
+        "symbol": "AAPL",
+        "name": "Apple Inc.",
+        "price": 313.33,
+        "daily_pct": 0.29,
+        "market_cap": 4572794322944,
+        "pe": 35.97359,
+        "pe_kind": "trailing",
+        "mtd_pct": 1.43,
+        "ytd_pct": 15.25,
+        "yahoo": "AAPL",
+        "source_url": "https://finance.yahoo.com/quote/AAPL"
+      },
+      {
+        "symbol": "AMZN",
+        "name": "Amazon.com, Inc.",
+        "price": 274.48,
+        "daily_pct": 0.82,
+        "market_cap": 2960627335168,
+        "pe": 22.08206,
+        "pe_kind": "trailing",
+        "mtd_pct": 1.07,
+        "ytd_pct": 18.92,
+        "yahoo": "AMZN",
+        "source_url": "https://finance.yahoo.com/quote/AMZN"
       },
       {
         "symbol": "SPCX",
@@ -740,43 +766,17 @@
         "source_url": "https://finance.yahoo.com/quote/PLTR"
       },
       {
-        "symbol": "UBER",
-        "name": "Uber Technologies, Inc.",
-        "price": 75.02,
-        "daily_pct": 6.46,
-        "market_cap": 153232850944,
-        "pe": 16.451754,
+        "symbol": "T",
+        "name": "AT&T Inc.",
+        "price": 23.79,
+        "daily_pct": 0.34,
+        "market_cap": 163018260480,
+        "pe": 7.8514857,
         "pe_kind": "trailing",
-        "mtd_pct": 6.62,
-        "ytd_pct": -8.19,
-        "yahoo": "UBER",
-        "source_url": "https://finance.yahoo.com/quote/UBER"
-      },
-      {
-        "symbol": "PFE",
-        "name": "Pfizer, Inc.",
-        "price": 26.76,
-        "daily_pct": 2.14,
-        "market_cap": 152523259904,
-        "pe": 35.210526,
-        "pe_kind": "trailing",
-        "mtd_pct": 7.0,
-        "ytd_pct": 7.47,
-        "yahoo": "PFE",
-        "source_url": "https://finance.yahoo.com/quote/PFE"
-      },
-      {
-        "symbol": "ITUB",
-        "name": "Itau Unibanco Banco Holding SA",
-        "price": 7.94,
-        "daily_pct": -2.93,
-        "market_cap": 87513661440,
-        "pe": 9.682927,
-        "pe_kind": "trailing",
-        "mtd_pct": -6.15,
-        "ytd_pct": 10.89,
-        "yahoo": "ITUB",
-        "source_url": "https://finance.yahoo.com/quote/ITUB"
+        "mtd_pct": 2.32,
+        "ytd_pct": -4.23,
+        "yahoo": "T",
+        "source_url": "https://finance.yahoo.com/quote/T"
       }
     ],
     "top_gainers": [
@@ -786,7 +786,7 @@
         "price": 149.07,
         "daily_pct": 35.31,
         "market_cap": 37829177344,
-        "pe": 22.084414,
+        "pe": 22.01917,
         "pe_kind": "forward",
         "mtd_pct": 47.57,
         "ytd_pct": -8.06,
@@ -931,7 +931,7 @@
         "price": 56.155,
         "daily_pct": -25.56,
         "market_cap": 3167630848,
-        "pe": 83.12363,
+        "pe": 89.13492,
         "pe_kind": "forward",
         "mtd_pct": -18.38,
         "ytd_pct": 49.71,
