@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-10T10:25:16+08:00",
+  "generated_at": "2026-08-10T12:47:32+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -73,31 +73,17 @@
       "error": null
     },
     {
-      "symbol": "ASTS",
-      "name_zh": "AST SpaceMobile",
+      "symbol": "MSTR",
+      "name_zh": "MicroStrategy",
       "kind": "US",
-      "price": 71.94,
-      "change_pct": 6.8,
-      "mtd_pct": 21.97,
-      "ytd_pct": -0.95,
+      "price": 100.01,
+      "change_pct": 3.26,
+      "mtd_pct": 7.21,
+      "ytd_pct": -34.18,
       "market_date": "2026-08-07",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ASTS.US",
-      "error": null
-    },
-    {
-      "symbol": "QSR",
-      "name_zh": "Restaurant Brands International",
-      "kind": "US",
-      "price": 73.89,
-      "change_pct": 1.33,
-      "mtd_pct": -0.18,
-      "ytd_pct": 8.3,
-      "market_date": "2026-08-07",
-      "per": 26.4878,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QSR.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MSTR.US",
       "error": null
     },
     {
@@ -115,59 +101,17 @@
       "error": null
     },
     {
-      "symbol": "MSTR",
-      "name_zh": "MicroStrategy",
+      "symbol": "QSR",
+      "name_zh": "Restaurant Brands International",
       "kind": "US",
-      "price": 100.01,
-      "change_pct": 3.26,
-      "mtd_pct": 7.21,
-      "ytd_pct": -34.18,
+      "price": 73.89,
+      "change_pct": 1.33,
+      "mtd_pct": -0.18,
+      "ytd_pct": 8.3,
       "market_date": "2026-08-07",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MSTR.US",
-      "error": null
-    },
-    {
-      "symbol": "AXTI",
-      "name_zh": "AXT",
-      "kind": "US",
-      "price": 88.58,
-      "change_pct": 17.84,
-      "mtd_pct": 46.58,
-      "ytd_pct": 441.77,
-      "market_date": "2026-08-07",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AXTI.US",
-      "error": null
-    },
-    {
-      "symbol": "COHR",
-      "name_zh": "Coherent",
-      "kind": "US",
-      "price": 379.13,
-      "change_pct": 13.44,
-      "mtd_pct": 44.22,
-      "ytd_pct": 105.41,
-      "market_date": "2026-08-07",
-      "per": 158.2018,
+      "per": 26.4878,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=COHR.US",
-      "error": null
-    },
-    {
-      "symbol": "NASA",
-      "name_zh": "Tema Space Innovators ETF",
-      "kind": "US",
-      "price": 25.55,
-      "change_pct": 5.84,
-      "mtd_pct": 18.18,
-      "ytd_pct": null,
-      "market_date": "2026-08-07",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NASA.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QSR.US",
       "error": null
     },
     {
@@ -185,17 +129,17 @@
       "error": null
     },
     {
-      "symbol": "SLV",
-      "name_zh": "iShares Silver Trust",
+      "symbol": "ASTS",
+      "name_zh": "AST SpaceMobile",
       "kind": "US",
-      "price": 57.5,
-      "change_pct": 2.95,
-      "mtd_pct": 9.82,
-      "ytd_pct": -10.74,
+      "price": 71.94,
+      "change_pct": 6.8,
+      "mtd_pct": 21.97,
+      "ytd_pct": -0.95,
       "market_date": "2026-08-07",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SLV.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ASTS.US",
       "error": null
     },
     {
@@ -224,6 +168,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CIFR.US",
+      "error": null
+    },
+    {
+      "symbol": "AVAV",
+      "name_zh": "AeroVironment",
+      "kind": "US",
+      "price": 186.73,
+      "change_pct": 9.12,
+      "mtd_pct": 25.01,
+      "ytd_pct": -22.8,
+      "market_date": "2026-08-07",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AVAV.US",
       "error": null
     },
     {
