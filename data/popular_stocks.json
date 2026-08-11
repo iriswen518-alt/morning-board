@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-11T15:39:21+08:00",
+  "generated_at": "2026-08-11T16:17:35+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -73,20 +73,6 @@
       "error": null
     },
     {
-      "symbol": "ASTS",
-      "name_zh": "AST SpaceMobile",
-      "kind": "US",
-      "price": 68.76,
-      "change_pct": -4.42,
-      "mtd_pct": 16.58,
-      "ytd_pct": -5.33,
-      "market_date": "2026-08-10",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ASTS.US",
-      "error": null
-    },
-    {
       "symbol": "FRMI",
       "name_zh": "Fermi",
       "kind": "US",
@@ -98,20 +84,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FRMI.US",
-      "error": null
-    },
-    {
-      "symbol": "P",
-      "name_zh": "Everpure",
-      "kind": "US",
-      "price": 97.98,
-      "change_pct": 8.81,
-      "mtd_pct": 26.97,
-      "ytd_pct": 46.22,
-      "market_date": "2026-08-10",
-      "per": 145.1096,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=P.US",
       "error": null
     },
     {
@@ -129,31 +101,45 @@
       "error": null
     },
     {
-      "symbol": "BTDR",
-      "name_zh": "Bitdeer Technologies",
+      "symbol": "ASTS",
+      "name_zh": "AST SpaceMobile",
       "kind": "US",
-      "price": 8.7,
-      "change_pct": -20.08,
-      "mtd_pct": -17.35,
-      "ytd_pct": -22.44,
+      "price": 68.76,
+      "change_pct": -4.42,
+      "mtd_pct": 16.58,
+      "ytd_pct": -5.33,
       "market_date": "2026-08-10",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BTDR.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ASTS.US",
       "error": null
     },
     {
-      "symbol": "ESLT",
-      "name_zh": "Elbit Systems",
+      "symbol": "P",
+      "name_zh": "Everpure",
       "kind": "US",
-      "price": 846.04,
-      "change_pct": -1.52,
-      "mtd_pct": 4.62,
-      "ytd_pct": 46.45,
+      "price": 97.98,
+      "change_pct": 8.81,
+      "mtd_pct": 26.97,
+      "ytd_pct": 46.22,
       "market_date": "2026-08-10",
-      "per": 67.421,
+      "per": 145.1096,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ESLT.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=P.US",
+      "error": null
+    },
+    {
+      "symbol": "BSP",
+      "name_zh": "Bending Spoons S.p.A.",
+      "kind": "US",
+      "price": 51.43,
+      "change_pct": 15.7,
+      "mtd_pct": 46.11,
+      "ytd_pct": null,
+      "market_date": "2026-08-10",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BSP.US",
       "error": null
     },
     {
@@ -185,31 +171,17 @@
       "error": null
     },
     {
-      "symbol": "DDOG",
-      "name_zh": "Datadog",
+      "symbol": "UPWK",
+      "name_zh": "Upwork",
       "kind": "US",
-      "price": 260.78,
-      "change_pct": 11.48,
-      "mtd_pct": -2.68,
-      "ytd_pct": 91.76,
+      "price": 9.83,
+      "change_pct": 1.65,
+      "mtd_pct": 7.31,
+      "ytd_pct": -50.4,
       "market_date": "2026-08-10",
-      "per": 524.5098,
+      "per": 10.9072,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DDOG.US",
-      "error": null
-    },
-    {
-      "symbol": "BSP",
-      "name_zh": "Bending Spoons S.p.A.",
-      "kind": "US",
-      "price": 51.43,
-      "change_pct": 15.7,
-      "mtd_pct": 46.11,
-      "ytd_pct": null,
-      "market_date": "2026-08-10",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BSP.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=UPWK.US",
       "error": null
     },
     {
