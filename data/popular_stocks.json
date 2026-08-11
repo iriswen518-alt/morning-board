@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-11T14:34:30+08:00",
+  "generated_at": "2026-08-11T15:23:01+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -101,20 +101,6 @@
       "error": null
     },
     {
-      "symbol": "BW",
-      "name_zh": "Babcock & Wilcox Enterprises, I",
-      "kind": "US",
-      "price": 8.88,
-      "change_pct": -5.23,
-      "mtd_pct": -4.72,
-      "ytd_pct": 40.06,
-      "market_date": "2026-08-10",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BW.US",
-      "error": null
-    },
-    {
       "symbol": "P",
       "name_zh": "Everpure",
       "kind": "US",
@@ -126,6 +112,20 @@
       "per": 145.1096,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=P.US",
+      "error": null
+    },
+    {
+      "symbol": "BW",
+      "name_zh": "Babcock & Wilcox Enterprises, I",
+      "kind": "US",
+      "price": 8.88,
+      "change_pct": -5.23,
+      "mtd_pct": -4.72,
+      "ytd_pct": 40.06,
+      "market_date": "2026-08-10",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BW.US",
       "error": null
     },
     {
@@ -143,6 +143,20 @@
       "error": null
     },
     {
+      "symbol": "ESLT",
+      "name_zh": "Elbit Systems",
+      "kind": "US",
+      "price": 846.04,
+      "change_pct": -1.52,
+      "mtd_pct": 4.62,
+      "ytd_pct": 46.45,
+      "market_date": "2026-08-10",
+      "per": 67.421,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ESLT.US",
+      "error": null
+    },
+    {
       "symbol": "SE",
       "name_zh": "Sea",
       "kind": "US",
@@ -154,34 +168,6 @@
       "per": 43.3391,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SE.US",
-      "error": null
-    },
-    {
-      "symbol": "DDOG",
-      "name_zh": "Datadog",
-      "kind": "US",
-      "price": 260.78,
-      "change_pct": 11.48,
-      "mtd_pct": -2.68,
-      "ytd_pct": 91.76,
-      "market_date": "2026-08-10",
-      "per": 524.5098,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DDOG.US",
-      "error": null
-    },
-    {
-      "symbol": "NFLX",
-      "name_zh": "網飛",
-      "kind": "US",
-      "price": 76.29,
-      "change_pct": 2.9,
-      "mtd_pct": 6.39,
-      "ytd_pct": -18.63,
-      "market_date": "2026-08-10",
-      "per": 22.8809,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NFLX.US",
       "error": null
     },
     {
@@ -199,59 +185,31 @@
       "error": null
     },
     {
-      "symbol": "USAR",
-      "name_zh": "USA Rare Earth",
+      "symbol": "DDOG",
+      "name_zh": "Datadog",
       "kind": "US",
-      "price": 19.04,
-      "change_pct": -1.5,
-      "mtd_pct": 27.36,
-      "ytd_pct": 60.0,
+      "price": 260.78,
+      "change_pct": 11.48,
+      "mtd_pct": -2.68,
+      "ytd_pct": 91.76,
       "market_date": "2026-08-10",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=USAR.US",
+      "per": 524.5098,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DDOG.US",
       "error": null
     },
     {
-      "symbol": "JD",
-      "name_zh": "京東",
+      "symbol": "BSP",
+      "name_zh": "Bending Spoons S.p.A.",
       "kind": "US",
-      "price": 33.47,
-      "change_pct": 1.52,
-      "mtd_pct": 1.39,
-      "ytd_pct": 16.62,
+      "price": 51.43,
+      "change_pct": 15.7,
+      "mtd_pct": 46.11,
+      "ytd_pct": null,
       "market_date": "2026-08-10",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=JD.US",
-      "error": null
-    },
-    {
-      "symbol": "QUBT",
-      "name_zh": "Quantum Computing",
-      "kind": "US",
-      "price": 8.93,
-      "change_pct": -2.72,
-      "mtd_pct": 10.25,
-      "ytd_pct": -12.96,
-      "market_date": "2026-08-10",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QUBT.US",
-      "error": null
-    },
-    {
-      "symbol": "ABCL",
-      "name_zh": "AbCellera Biologics",
-      "kind": "US",
-      "price": 9.34,
-      "change_pct": 34.78,
-      "mtd_pct": 63.57,
-      "ytd_pct": 173.1,
-      "market_date": "2026-08-10",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ABCL.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BSP.US",
       "error": null
     },
     {
