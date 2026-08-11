@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-11T17:09:31+08:00",
+  "generated_at": "2026-08-11T18:58:20+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -73,6 +73,34 @@
       "error": null
     },
     {
+      "symbol": "ONON",
+      "name_zh": "On Holding AG",
+      "kind": "US",
+      "price": 38.78,
+      "change_pct": 3.28,
+      "mtd_pct": 7.01,
+      "ytd_pct": -16.57,
+      "market_date": "2026-08-10",
+      "per": 41.4507,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ONON.US",
+      "error": null
+    },
+    {
+      "symbol": "SE",
+      "name_zh": "Sea",
+      "kind": "US",
+      "price": 114.8,
+      "change_pct": 1.21,
+      "mtd_pct": 7.55,
+      "ytd_pct": -10.01,
+      "market_date": "2026-08-10",
+      "per": 43.3391,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SE.US",
+      "error": null
+    },
+    {
       "symbol": "FRMI",
       "name_zh": "Fermi",
       "kind": "US",
@@ -101,34 +129,6 @@
       "error": null
     },
     {
-      "symbol": "ASTS",
-      "name_zh": "AST SpaceMobile",
-      "kind": "US",
-      "price": 68.76,
-      "change_pct": -4.42,
-      "mtd_pct": 16.58,
-      "ytd_pct": -5.33,
-      "market_date": "2026-08-10",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ASTS.US",
-      "error": null
-    },
-    {
-      "symbol": "P",
-      "name_zh": "Everpure",
-      "kind": "US",
-      "price": 97.98,
-      "change_pct": 8.81,
-      "mtd_pct": 26.97,
-      "ytd_pct": 46.22,
-      "market_date": "2026-08-10",
-      "per": 145.1096,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=P.US",
-      "error": null
-    },
-    {
       "symbol": "BSP",
       "name_zh": "Bending Spoons S.p.A.",
       "kind": "US",
@@ -143,31 +143,17 @@
       "error": null
     },
     {
-      "symbol": "SE",
-      "name_zh": "Sea",
+      "symbol": "P",
+      "name_zh": "Everpure",
       "kind": "US",
-      "price": 114.8,
-      "change_pct": 1.21,
-      "mtd_pct": 7.55,
-      "ytd_pct": -10.01,
+      "price": 97.98,
+      "change_pct": 8.81,
+      "mtd_pct": 26.97,
+      "ytd_pct": 46.22,
       "market_date": "2026-08-10",
-      "per": 43.3391,
+      "per": 145.1096,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SE.US",
-      "error": null
-    },
-    {
-      "symbol": "PANW",
-      "name_zh": "Palo Alto Networks",
-      "kind": "US",
-      "price": 385.04,
-      "change_pct": 5.82,
-      "mtd_pct": 16.04,
-      "ytd_pct": 109.03,
-      "market_date": "2026-08-10",
-      "per": 351.8579,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PANW.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=P.US",
       "error": null
     },
     {
