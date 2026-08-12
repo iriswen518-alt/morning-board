@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-12T13:47:07+08:00",
+  "generated_at": "2026-08-12T14:21:49+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -64,7 +64,7 @@
       "kind": "US",
       "price": 60.81,
       "change_pct": -1.25,
-      "mtd_pct": -8.47,
+      "mtd_pct": -6.78,
       "ytd_pct": 3.61,
       "market_date": "2026-08-11",
       "per": 112.5215,
@@ -73,31 +73,45 @@
       "error": null
     },
     {
-      "symbol": "PLAG",
-      "name_zh": "Planet Green",
-      "kind": "US",
-      "price": 5.81,
-      "change_pct": 927.05,
-      "mtd_pct": 884.75,
-      "ytd_pct": 165.3,
-      "market_date": "2026-08-11",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PLAG.US",
-      "error": null
-    },
-    {
       "symbol": "ONON",
       "name_zh": "On Holding AG",
       "kind": "US",
       "price": 30.91,
       "change_pct": -20.29,
-      "mtd_pct": -16.68,
+      "mtd_pct": -14.71,
       "ytd_pct": -33.5,
       "market_date": "2026-08-11",
       "per": 41.4507,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ONON.US",
+      "error": null
+    },
+    {
+      "symbol": "ONDS",
+      "name_zh": "Ondas",
+      "kind": "US",
+      "price": 9.74,
+      "change_pct": 4.62,
+      "mtd_pct": 30.04,
+      "ytd_pct": -0.2,
+      "market_date": "2026-08-11",
+      "per": 21.6489,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ONDS.US",
+      "error": null
+    },
+    {
+      "symbol": "FLY",
+      "name_zh": "Firefly Aerospace",
+      "kind": "US",
+      "price": 26.36,
+      "change_pct": 2.33,
+      "mtd_pct": 29.66,
+      "ytd_pct": 17.84,
+      "market_date": "2026-08-11",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FLY.US",
       "error": null
     },
     {
@@ -129,34 +143,6 @@
       "error": null
     },
     {
-      "symbol": "NIQ",
-      "name_zh": "NIQ Global Intelligence",
-      "kind": "US",
-      "price": 16.58,
-      "change_pct": 41.95,
-      "mtd_pct": 4.57,
-      "ytd_pct": -29.17,
-      "market_date": "2026-08-10",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NIQ.US",
-      "error": null
-    },
-    {
-      "symbol": "FLY",
-      "name_zh": "Firefly Aerospace",
-      "kind": "US",
-      "price": 26.36,
-      "change_pct": 2.33,
-      "mtd_pct": 29.66,
-      "ytd_pct": 17.84,
-      "market_date": "2026-08-11",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FLY.US",
-      "error": null
-    },
-    {
       "symbol": "IREN",
       "name_zh": "IREN",
       "kind": "US",
@@ -168,48 +154,6 @@
       "per": 179.7278,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IREN.US",
-      "error": null
-    },
-    {
-      "symbol": "QNT",
-      "name_zh": "Quantinuum",
-      "kind": "US",
-      "price": 56.06,
-      "change_pct": -0.94,
-      "mtd_pct": 9.04,
-      "ytd_pct": null,
-      "market_date": "2026-08-11",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QNT.US",
-      "error": null
-    },
-    {
-      "symbol": "ONDS",
-      "name_zh": "Ondas",
-      "kind": "US",
-      "price": 9.74,
-      "change_pct": 4.62,
-      "mtd_pct": 30.04,
-      "ytd_pct": -0.2,
-      "market_date": "2026-08-11",
-      "per": 21.6489,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ONDS.US",
-      "error": null
-    },
-    {
-      "symbol": "QMCO",
-      "name_zh": "Quantum",
-      "kind": "US",
-      "price": 19.4,
-      "change_pct": 64.69,
-      "mtd_pct": 82.33,
-      "ytd_pct": 200.78,
-      "market_date": "2026-08-11",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QMCO.US",
       "error": null
     },
     {
@@ -227,6 +171,20 @@
       "error": null
     },
     {
+      "symbol": "QMCO",
+      "name_zh": "Quantum",
+      "kind": "US",
+      "price": 19.4,
+      "change_pct": 64.69,
+      "mtd_pct": 82.33,
+      "ytd_pct": 200.78,
+      "market_date": "2026-08-11",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QMCO.US",
+      "error": null
+    },
+    {
       "symbol": "UAMY",
       "name_zh": "United States Antimony Corporat",
       "kind": "US",
@@ -238,6 +196,34 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=UAMY.US",
+      "error": null
+    },
+    {
+      "symbol": "QNT",
+      "name_zh": "Quantinuum",
+      "kind": "US",
+      "price": 56.06,
+      "change_pct": -0.94,
+      "mtd_pct": 9.04,
+      "ytd_pct": null,
+      "market_date": "2026-08-11",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QNT.US",
+      "error": null
+    },
+    {
+      "symbol": "GOOG",
+      "name_zh": "谷歌 C",
+      "kind": "US",
+      "price": 343,
+      "change_pct": -3.61,
+      "mtd_pct": -3.83,
+      "ytd_pct": 9.31,
+      "market_date": "2026-08-11",
+      "per": 17.7554,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GOOG.US",
       "error": null
     },
     {
