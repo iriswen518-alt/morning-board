@@ -1,11 +1,36 @@
 {
-  "built_at": "2026-08-13T02:13",
+  "built_at": "2026-08-13T03:35",
   "source": "鉅亨網（cnyes）",
   "categories": [
     {
       "key": "headline",
       "label": "鉅亨頭條",
       "items": [
+        {
+          "news_id": "6574174",
+          "title": "DeepSeek不再獨領風騷？Meta、輝達殺入開放模型戰場",
+          "title_en": "",
+          "publish_at": 1786561204,
+          "url": "https://news.cnyes.com/news/id/6574174",
+          "paras": [
+            "中國AI實驗室近年在開放權重模型市場取得領先後，Meta(META-US)與輝達(NVDA-US)本周相繼推出可供開發者免費下載的新模型，正式加入由深度求索(DeepSeek)、月之暗面(Moonshot AI)及阿里巴巴(BABA-US)(09988-HK)通義千問(Qwen)主導的競爭。業界人士認為，兩大科技公司此舉等於明確宣告，美國不會把接近前沿水準的開放模型市場拱手讓給中國業者。",
+            "與OpenAI及Anthropic旗下熱門封閉模型不同，開放權重模型允許開發者下載決定AI運作與行為的參數，進行檢視、調整與部署。不過，開放權重不一定等同完整的開源，因為業者未必會同時公布訓練資料、訓練方法與原始碼。",
+            "就在上月，Meta、輝達與其他美國科技公司曾聯名呼籲政策制定者，不要對開放權重模型施加「過早限制」，即使模型來自中國也不例外。這些公司主張，開放權重AI能擴大機會、促進競爭、延續美國科技領導地位，並避免能力集中在少數企業手中。",
+            "Meta、輝達接連出招 正面迎戰中國模型",
+            "Meta周一發表Muse Glimmer，作為重新向開放生態系統釋出強大模型的策略之一。執行長祖克柏(Mark Zuckerberg)並宣布，將開放最新模型Muse Spark 1.2的權重。",
+            "Muse Spark 1.2被視為可與OpenAI及Anthropic頂尖基礎模型競爭的產品，不過Meta與輝達本周率先發布的模型規模較小，主要設計為在筆電等本地裝置運行，可用於驅動裝置端數位代理。",
+            "輝達隔日推出Nemotron 3.5 Lightning，延續去年12月發表的Nemotron 3模型家族。輝達強調，其模型屬於「真正的開源」，因為公司除模型權重外，也公布相關訓練資料集及訓練技術，供開發者檢視。",
+            "Box(BOX-US)執行長Aaron Levie形容，祖克柏開放Muse Spark 1.2權重的計畫是「非常重大的事件」，Meta與輝達的最新動作已明確表態，美國將擁有接近前沿水準的開源模型。",
+            "Meta先前曾透過Llama進軍開放模型市場，但2025年4月推出的Llama 4未能獲得開發者青睞。公司隨後投入數十億美元重整AI部門，延攬Scale AI執行長Alexandr Wang領導相關業務。近期，Wang團隊陸續以Muse品牌推出封閉模型，試圖開拓新收入來源，如今又重新向開放權重路線靠攏。",
+            "政府、銀行商機龐大 Meta仍須挽回開發者信任\n\nMeta與輝達仍須證明，在DeepSeek、月之暗面與通義千問等中國模型已廣受歡迎的市場中，美國開放模型確實能吸引足夠的開發者與企業用戶。",
+            "Levie認為，美國企業推出具競爭力的開放權重模型，可望釋放龐大需求。美國政府機構與大型銀行可能因資安、監管及資料主權疑慮，無法採用中國開放模型，但更願意嘗試Meta等本土供應商的產品。這將使Muse有機會進入過去難以觸及的敏感應用場景。",
+            "Forrester分析師Charlie Dai也表示，Meta回歸開放權重具有重要戰略意義，因為這讓美國主要前沿AI業者重新回到開放生態系統。對開發者及企業而言，開放權重有助提高透明度、客製化程度、部署彈性與資料自主性。",
+            "不過，Meta曾從開放權重轉向封閉模型，已傷害部分第三方開發者的信任。企業AI新創Uniphore執行長Umesh Sachdev表示，Meta當初改變策略，讓旗下開發者感到遭到背叛，祖克柏本周發表長達3,500字的宣言，恐怕仍不足以說服他們重新投入Meta生態系統。",
+            "Sachdev仍期待美國本土業者成功，因為更多競爭可望降低AI模型的Token使用成本，同時加快創新，最終讓消費者受惠。Dai則指出，Meta接下來不能只靠發布性能優異的模型，還必須證明有能力建立可長期維持的開發者生態系統。",
+            "開放權重AI在美國仍具有政治爭議。批評者擔心中國模型可能帶來國家安全風險，也將「蒸餾」技術視為一種潛在的智慧財產竊取手段；業界則反駁，蒸餾是廣泛用於模型改進、評估及驗證的技術。隨著Meta與輝達加入戰局，美中AI競爭也正從封閉模型效能之爭，進一步延伸至誰能掌控全球開放生態系統。"
+          ],
+          "paras_en": []
+        },
         {
           "news_id": "6574308",
           "title": "DeepSeek要挑戰Claude Code！成立AI代理新團隊大舉徵才",
@@ -44,7 +69,7 @@
             "不過，川普兩度執政使這項工作面臨新挑戰，尤其是政府試圖對海外製造產品加徵關稅，恐直接衝擊高度依賴亞洲供應鏈的蘋果。近年來，執行長庫克(Tim Cook)也更親自介入與白宮的關係。",
             "知情人士透露，蘋果希望延攬一名能與川普政府保持一致及順暢合作的人選。蓋頓是共和黨人，2017年起擔任美國航空政府事務主管，直到本周離任；此前曾在摩根大通(JPM-US)領導全球政府關係與政策團隊，也曾在房利美(Fannie Mae)帶領負責與共和黨國會議員溝通的團隊。",
             "蓋頓也具有房地產相關經驗，可望在蘋果擴大零售門市與其他營運據點之際提供協助。他上任後預計與庫克密切合作。現任政府事務主管阿曼(Nick Ammann)則將改向蓋頓報告，團隊其他主管波德利(Tim Powderly)、布朗(Matt Brown)與奧吉爾(Mike Orgill)也將納入其管理。",
-            "這項任命是蘋果高層世代交替的最新一環。公司本周也通知員工，長期負責Apple Pay與Wallet服務的主管即將卸任。庫克則預計9月1日把執行長職務交給硬體工程主管特努斯(John Ternus)，自己轉任執行董事長，並繼續參與政府關係事務，包括維繫與川普政府的互動。"
+            "這項任命是蘋果高層世代交替的最新一環。公司本周也通知員工，長期負責Apple Pay與Wallet服務的主管即將卸任。庫克則預計9月1日把執行長職務交給硬體工程主管特納斯(John Ternus)，自己轉任執行董事長，並繼續參與政府關係事務，包括維繫與川普政府的互動。"
           ],
           "paras_en": [
             "According to foreign media reports on Wednesday (the 12th), Apple (AAPL-US) has hired Nate Gatten, a senior executive from American Airlines (AAL-US), as Vice President of Global Government Affairs, leveraging his deep Republican network to help the company manage its relationship with the Trump administration. As tariffs and overseas production become policy focal points, the appointment underscores Apple’s reshaping of its government‑relations strategy.",
@@ -226,31 +251,6 @@
             "Although rising prices theoretically can boost corporate margins, Counterpoint notes that the Windows migration cycle and the spread of AI PCs still support some business‑upgrade demand, but the continuously climbing memory prices and component costs are squeezing OEMs from both ends.",
             "The industry worries that if this price‑increase trend continues unchecked, consumers may become reluctant to buy new computers in the future, which would pose a huge hidden risk to the entire sector."
           ]
-        },
-        {
-          "news_id": "6574251",
-          "title": "強行升息只會把事情搞砸！摩根大通策略師警告Fed別操之過急",
-          "title_en": "JPMorgan Strategist Warns Fed Against Overstepping on Rate Hikes",
-          "publish_at": 1786545004,
-          "url": "https://news.cnyes.com/news/id/6574251",
-          "paras": [
-            "摩根大通資產管理(JPMorgan Asset Management)全球首席策略師David Kelly表示，聯準會(Fed)應維持利率不變，而且最終也很可能選擇按兵不動，因為美國通膨正沿著明確的降溫軌道前進，持續性薪資—物價螺旋成形的風險也逐漸下降。",
-            "美國7月核心通膨表現溫和，數據公布後美債延續漲勢。Kelly接受《彭博》電視訪問時直言，Fed「絕對應該」維持利率不變，試圖透過升息加快通膨回落，不僅無法帶來好處，反而可能破壞經濟與金融市場。",
-            "Kelly認為，三股力量正共同推動通膨降溫。首先，關稅成本的年增影響將逐步減弱；其次，市場對美伊戰爭結束抱持樂觀期待，有望帶動油價回落；最後，薪資成長持續落後於通膨，使物價壓力缺乏自我強化所需的燃料，Fed也就沒有非升息不可的理由。",
-            "他將當前情況形容為美國正面臨「鐵氟龍式通膨」(Teflon inflation)，意指通膨壓力不會牢牢黏住經濟。Kelly表示，通膨就像傷勢一樣，只能緩慢痊癒，若強行加快過程，反而可能把事情弄得更糟；只要薪資沒有跟著物價加速上漲，就難以形成薪資—物價螺旋。",
-            "Kelly也批評Fed近期的溝通策略，認為主席華許(Kevin Warsh)8月底在傑克森霍爾(Jackson Hole)全球央行年會的演說將是關鍵時刻。華許必須稍微收回先前過於強硬的論調，承認Fed在抑制通膨方面已取得一定進展。他並認為，Fed暗示未來將減少與市場溝通，是走在錯誤的道路上。",
-            "至於升息是否能重建Fed抗通膨公信力，進而壓低長天期美債殖利率，Kelly坦言這是一個難以判斷的選擇。但他警告，相較升息，量化緊縮可能是更危險的政策工具，因為對長期利率的推升作用更強；若同時升息與縮減資產負債表，恐增加市場失序的風險。",
-            "Kelly指出，目前金融市場槓桿程度相當高，即使只是小幅升息，也可能觸發各類資產重新定價。短期利率升高將促使投資人轉向較安全的資產，抽走部分市場上漲動能，Fed沒有必要為了加速通膨降溫而承擔這項風險。"
-          ],
-          "paras_en": [
-            "JPMorgan Asset Management's global chief strategist David Kelly says the Federal Reserve should keep interest rates unchanged and is likely to do so as US inflation is moving along a clear downward trajectory, with the risk of a persistent wage-price spiral diminishing.",
-            "US core inflation showed a mild performance in July, and after the data was released, US Treasury yields continued to rise. Kelly told Bloomberg TV that the Fed \"absolutely should\" keep interest rates unchanged, attempting to accelerate inflation decline through rate hikes, which would not only fail to bring benefits but could also damage the economy and financial markets.",
-            "Kelly believes that three forces are driving down inflation. Firstly, the year-over-year impact of tariff costs will gradually weaken; secondly, the market's optimistic expectations for the end of the US-Iran war may lead to a decline in oil prices; and thirdly, wage growth continues to lag behind inflation, making it difficult for prices to sustain themselves, leaving the Fed without a reason to raise interest rates.",
-            "He describes the current situation as the US facing \"Teflon inflation,\" meaning that inflationary pressure will not stick to the economy. Kelly says that inflation is like an injury, which can only heal slowly, and that forcing a faster process could make things worse; as long as wages do not accelerate with prices, it is difficult to form a wage-price spiral.",
-            "Kelly also criticizes the Fed's recent communication strategy, saying that Chairman Kevin Warsh's speech at the Jackson Hole Global Central Bank Conference at the end of August will be a critical moment. Warsh must slightly retract his previous overly hawkish tone and acknowledge that the Fed has made some progress in suppressing inflation. He also believes that the Fed's hint that it will reduce market communication is on the wrong track.",
-            "As for whether rate hikes can rebuild the Fed's credibility in fighting inflation and thereby lower long-term US Treasury yields, Kelly says it is a difficult choice to make. However, he warns that quantitative tightening may be a more dangerous policy tool, as it has a stronger impact on long-term interest rates; if the Fed raises interest rates and reduces its balance sheet at the same time, it may increase the risk of market disorder.",
-            "Kelly notes that the financial market's leverage is currently high, and even a small rate hike could trigger a re-pricing of various assets. Higher short-term interest rates would encourage investors to move to safer assets, draining some of the market's upward momentum, and the Fed does not need to take on this risk to accelerate the decline of inflation."
-          ]
         }
       ]
     },
@@ -365,7 +365,7 @@
         {
           "news_id": "6574056",
           "title": "【奇鋐法說會AI摘要】 2026/8/12",
-          "title_en": "",
+          "title_en": "Qihong Earnings Call AI Summary 2026/8/12",
           "publish_at": 1786539249,
           "url": "https://news.cnyes.com/news/id/6574056",
           "paras": [
@@ -384,7 +384,22 @@
             "Q10：面對市場對 CSP 客戶 Capex 投資回報的疑慮，公司對 AI 長期趨勢的看法？ \n\n回答：公司堅信 AI 趨勢是真實且持續發展的。整體產業在技術、資源與資本上的投入不斷增加，水冷在資料中心(Data Center)的滲透率今年確定會持續提升(預計滲透率將超過 50%)。",
             "免責聲明：本內容為使用 AI 軟體根據各家公司法說會的錄音檔進行 AI 摘要整理，主要是為了協助讀者快速理解各公司法說會之重點，例如：公司財務表現、營運狀況、未來展望以及產業前景，內容僅供參考，並非任何投資建議。如欲了解進一步法說詳情，請查閱鉅亨網相關新聞內容或公司官方公告。"
           ],
-          "paras_en": []
+          "paras_en": [
+            "1. Qihong (3017-TW) detailed Q2 2026 financial and operational results. Profitability improved markedly: Q2 gross margin 32.57%, up 2.8 percentage points from Q1 and 8.16 points year‑over‑year; operating margin 27.44%; quarterly EPS NT$24.37, up 136.6% YoY. Revenue growth is translating into higher profit quality, shifting focus from scale expansion to profit quality.",
+            "2. Revenue and product mix continue to be optimized: H1 revenue NT$98.1 billion, up 85.5% YoY. Thermol and Chassis products together accounted for 83.42% of sales, with growth driven by server applications: H1 server revenue rose 153.4% YoY, increasing its share from 48.4% to 66.1%, a key factor in product‑mix optimization and margin improvement.",
+            "3. Financial position remains solid and cash flow strong: as of end‑June cash stood at NT$77.7 billion, shareholders’ equity NT$55.197 billion; debt ratio fell to 68.07%. Although supply‑chain issues pushed inventory turnover to 145 days, liquidity is ample. H1 operating cash inflow was NT$26.2 billion, up 175% YoY; free cash flow NT$19.1979 billion, nearly three‑fold growth, indicating robust operating cash generation.",
+            "4. Complete Q&A list from Qihong earnings call. Q1: What are the revenue and margin outlook for the second half of the year? Answer: The company maintains its prior outlook; products will enter mass production sequentially, and overall revenue and profit are expected to rise quarter over quarter, with H2 performance projected to exceed H1 (actual results will depend on customer pull‑in timing and supply‑chain conditions). Ongoing automation investments are expected to significantly boost gross margin, and management remains optimistic about the future.",
+            "5. Q2: How is the revenue contribution of the liquid‑cooling business broken down? Answer: The company does not disclose a single revenue share for liquid‑cooling because projects include cooling modules, manifolds, quick disconnects and often mechanical parts and fans. Qihong positions itself as a total thermal and mechanical solution provider, managing projects by customer and project rather than by air‑ vs. liquid‑cooling. However, the contribution of AI servers to revenue is clearly increasing.",
+            "6. Q3: What is the shipment progress of NVIDIA GB200 (or B200) liquid‑cooling products and the timeline for contribution from the new plant? Answer: Progress follows the customer‑provided project schedule. The new plant has already begun mass production for the relevant products and is expected to start generating revenue in Q3.",
+            "7. Q4: Regarding ASIC/TPU projects for large CSP customers such as Google and Amazon, what is the supply situation and penetration rate? Answer: The company does not comment on individual customer details but emphasizes that it remains a leading supplier for core ASIC customers. Liquid‑cooling penetration is rising sharply; first‑ and second‑generation ASIC projects for many customers are now in volume production, with Qihong serving as a primary supplier and offering end‑to‑end services from design and verification to mass production.",
+            "8. Q5: What are the development directions for ASIC and GPU cooling products? Will ASIC’s share surpass GPU’s by 2027? Answer: The company does not maintain detailed ratio statistics for ASIC versus GPU, and it does not view the two as mutually exclusive. Both platforms are driving higher cooling power and cabinet density demands, so both will continue to ship and benefit together.",
+            "9. Q6: What is the development status and market acceptance of two‑phase immersion cooling? Answer: Qihong has a professional R&D team and mature technology; two‑phase cooling indeed outperforms single‑phase cooling in heat‑removal. However, after evaluating current chip TDPs and system reliability, customers presently favor single‑phase cold‑plate solutions as the optimal choice. Cooling technologies will evolve incrementally with demand, without abrupt, cliff‑like transitions.",
+            "10. Q7: If future chip TDPs reach 3,000 W to 5,000 W or higher, how will cooling solutions adapt? Answer: Qihong already offers solutions above 3,000 W and sees no physical ceiling. Future approaches include strengthening single‑phase water cooling, optimizing rack architecture, adjusting flow rates, and employing bare‑die packaging or metal kits, with customized combos based on each customer’s system constraints.",
+            "11. Q8: What is the outlook for the server chassis/rack business and its margin trends? Answer: As rack density increases, chassis must accommodate manifolds, fans, and liquid‑cooling components, raising structural strength, airflow design, and serviceability challenges, which lifts per‑rack value and design thresholds. While the company does not comment on margins for individual products, the overall trend is positive, and chassis/mechanical parts are expected to grow strongly alongside liquid‑cooling offerings.",
+            "12. Q9: What are this year’s capital expenditure plans and financing strategy? Answer: Capital expenditure for the year is projected at roughly NT$15 billion, with next year’s Capex expected to be higher, focusing on capacity expansion mainly at the Vietnam facility. Current operating cash flow and bank credit are ample to fund existing expansion plans, and no additional financing is planned at this time.",
+            "13. Q10: Facing market concerns about CSP customers’ Capex ROI, what is the company’s view on the long‑term AI trend? Answer: The company firmly believes the AI trend is real and ongoing. Industry investment in technology, resources, and capital continues to rise, and liquid‑cooling penetration in data centers is expected to exceed 50% this year.",
+            "14. Disclaimer: This content was generated by AI software summarizing earnings‑call recordings from various companies to help readers quickly grasp key points such as financial performance, operational status, outlook, and industry prospects. It is for reference only and does not constitute investment advice. For detailed earnings‑call information, please consult the relevant news on Juheng Net or the companies’ official announcements."
+          ]
         },
         {
           "news_id": "6574054",
@@ -464,6 +479,31 @@
       "label": "美股焦點",
       "items": [
         {
+          "news_id": "6574174",
+          "title": "DeepSeek不再獨領風騷？Meta、輝達殺入開放模型戰場",
+          "title_en": "",
+          "publish_at": 1786561204,
+          "url": "https://news.cnyes.com/news/id/6574174",
+          "paras": [
+            "中國AI實驗室近年在開放權重模型市場取得領先後，Meta(META-US)與輝達(NVDA-US)本周相繼推出可供開發者免費下載的新模型，正式加入由深度求索(DeepSeek)、月之暗面(Moonshot AI)及阿里巴巴(BABA-US)(09988-HK)通義千問(Qwen)主導的競爭。業界人士認為，兩大科技公司此舉等於明確宣告，美國不會把接近前沿水準的開放模型市場拱手讓給中國業者。",
+            "與OpenAI及Anthropic旗下熱門封閉模型不同，開放權重模型允許開發者下載決定AI運作與行為的參數，進行檢視、調整與部署。不過，開放權重不一定等同完整的開源，因為業者未必會同時公布訓練資料、訓練方法與原始碼。",
+            "就在上月，Meta、輝達與其他美國科技公司曾聯名呼籲政策制定者，不要對開放權重模型施加「過早限制」，即使模型來自中國也不例外。這些公司主張，開放權重AI能擴大機會、促進競爭、延續美國科技領導地位，並避免能力集中在少數企業手中。",
+            "Meta、輝達接連出招 正面迎戰中國模型",
+            "Meta周一發表Muse Glimmer，作為重新向開放生態系統釋出強大模型的策略之一。執行長祖克柏(Mark Zuckerberg)並宣布，將開放最新模型Muse Spark 1.2的權重。",
+            "Muse Spark 1.2被視為可與OpenAI及Anthropic頂尖基礎模型競爭的產品，不過Meta與輝達本周率先發布的模型規模較小，主要設計為在筆電等本地裝置運行，可用於驅動裝置端數位代理。",
+            "輝達隔日推出Nemotron 3.5 Lightning，延續去年12月發表的Nemotron 3模型家族。輝達強調，其模型屬於「真正的開源」，因為公司除模型權重外，也公布相關訓練資料集及訓練技術，供開發者檢視。",
+            "Box(BOX-US)執行長Aaron Levie形容，祖克柏開放Muse Spark 1.2權重的計畫是「非常重大的事件」，Meta與輝達的最新動作已明確表態，美國將擁有接近前沿水準的開源模型。",
+            "Meta先前曾透過Llama進軍開放模型市場，但2025年4月推出的Llama 4未能獲得開發者青睞。公司隨後投入數十億美元重整AI部門，延攬Scale AI執行長Alexandr Wang領導相關業務。近期，Wang團隊陸續以Muse品牌推出封閉模型，試圖開拓新收入來源，如今又重新向開放權重路線靠攏。",
+            "政府、銀行商機龐大 Meta仍須挽回開發者信任\n\nMeta與輝達仍須證明，在DeepSeek、月之暗面與通義千問等中國模型已廣受歡迎的市場中，美國開放模型確實能吸引足夠的開發者與企業用戶。",
+            "Levie認為，美國企業推出具競爭力的開放權重模型，可望釋放龐大需求。美國政府機構與大型銀行可能因資安、監管及資料主權疑慮，無法採用中國開放模型，但更願意嘗試Meta等本土供應商的產品。這將使Muse有機會進入過去難以觸及的敏感應用場景。",
+            "Forrester分析師Charlie Dai也表示，Meta回歸開放權重具有重要戰略意義，因為這讓美國主要前沿AI業者重新回到開放生態系統。對開發者及企業而言，開放權重有助提高透明度、客製化程度、部署彈性與資料自主性。",
+            "不過，Meta曾從開放權重轉向封閉模型，已傷害部分第三方開發者的信任。企業AI新創Uniphore執行長Umesh Sachdev表示，Meta當初改變策略，讓旗下開發者感到遭到背叛，祖克柏本周發表長達3,500字的宣言，恐怕仍不足以說服他們重新投入Meta生態系統。",
+            "Sachdev仍期待美國本土業者成功，因為更多競爭可望降低AI模型的Token使用成本，同時加快創新，最終讓消費者受惠。Dai則指出，Meta接下來不能只靠發布性能優異的模型，還必須證明有能力建立可長期維持的開發者生態系統。",
+            "開放權重AI在美國仍具有政治爭議。批評者擔心中國模型可能帶來國家安全風險，也將「蒸餾」技術視為一種潛在的智慧財產竊取手段；業界則反駁，蒸餾是廣泛用於模型改進、評估及驗證的技術。隨著Meta與輝達加入戰局，美中AI競爭也正從封閉模型效能之爭，進一步延伸至誰能掌控全球開放生態系統。"
+          ],
+          "paras_en": []
+        },
+        {
           "news_id": "6574308",
           "title": "DeepSeek要挑戰Claude Code！成立AI代理新團隊大舉徵才",
           "title_en": "DeepSeek Aims to Challenge Claude Code, Launches New AI Agent Team and Aggressively Hires",
@@ -501,7 +541,7 @@
             "不過，川普兩度執政使這項工作面臨新挑戰，尤其是政府試圖對海外製造產品加徵關稅，恐直接衝擊高度依賴亞洲供應鏈的蘋果。近年來，執行長庫克(Tim Cook)也更親自介入與白宮的關係。",
             "知情人士透露，蘋果希望延攬一名能與川普政府保持一致及順暢合作的人選。蓋頓是共和黨人，2017年起擔任美國航空政府事務主管，直到本周離任；此前曾在摩根大通(JPM-US)領導全球政府關係與政策團隊，也曾在房利美(Fannie Mae)帶領負責與共和黨國會議員溝通的團隊。",
             "蓋頓也具有房地產相關經驗，可望在蘋果擴大零售門市與其他營運據點之際提供協助。他上任後預計與庫克密切合作。現任政府事務主管阿曼(Nick Ammann)則將改向蓋頓報告，團隊其他主管波德利(Tim Powderly)、布朗(Matt Brown)與奧吉爾(Mike Orgill)也將納入其管理。",
-            "這項任命是蘋果高層世代交替的最新一環。公司本周也通知員工，長期負責Apple Pay與Wallet服務的主管即將卸任。庫克則預計9月1日把執行長職務交給硬體工程主管特努斯(John Ternus)，自己轉任執行董事長，並繼續參與政府關係事務，包括維繫與川普政府的互動。"
+            "這項任命是蘋果高層世代交替的最新一環。公司本周也通知員工，長期負責Apple Pay與Wallet服務的主管即將卸任。庫克則預計9月1日把執行長職務交給硬體工程主管特納斯(John Ternus)，自己轉任執行董事長，並繼續參與政府關係事務，包括維繫與川普政府的互動。"
           ],
           "paras_en": [
             "According to foreign media reports on Wednesday (the 12th), Apple (AAPL-US) has hired Nate Gatten, a senior executive from American Airlines (AAL-US), as Vice President of Global Government Affairs, leveraging his deep Republican network to help the company manage its relationship with the Trump administration. As tariffs and overseas production become policy focal points, the appointment underscores Apple’s reshaping of its government‑relations strategy.",
@@ -657,37 +697,6 @@
             "※ This article is reproduced with permission from U‑Analysis; original source: link provided.",
             "※ Disclaimer: The securities, funds and futures mentioned are for reference only and do not constitute investment advice. Investors should make independent judgments and carefully assess risks."
           ]
-        },
-        {
-          "news_id": "6574226",
-          "title": "AI算力供不應求 Nebius Q2營收勝預期、股價飆逾17%",
-          "title_en": "Nebius Q2 Revenue Surpasses Expectations, Stock Price Soars Over 17%",
-          "publish_at": 1786543205,
-          "url": "https://news.cnyes.com/news/id/6574226",
-          "paras": [
-            "2026年08月12日（優分析／產業數據中心報導）⸺ AI基礎建設需求持續超越供給，雲端運算業者Nebius Group(NBIS-US)第2季營收優於市場預期，AI雲端業務營收更成長近6倍，帶動周三早盤股價大漲逾17%。",
-            "Nebius第2季營收達5.823億美元，高於LSEG市場預估的5.7275億美元，主要受AI雲端業務強勁成長帶動。執行長Arkady Volozh表示，公司正將快速增加的AI需求轉化為已簽約且具獲利能力的成長。",
-            "Nebius採用輝達Nvidia(NVDA-US)GPU提供AI雲端運算服務，第2季簽下4筆大型合約，每筆平均價值超過10億美元。整體合約總值較前一季增加近3倍，新客戶合約價值則增加超過8倍。",
-            "為擴充GPU與資料中心產能，Nebius第2季資本支出約57億美元，高於Visible Alpha分析師預估的47億美元，顯示公司持續大舉投入AI算力基礎建設。",
-            "面對市場新增AI算力供給，Nebius管理層表示，目前競爭環境並未改變公司的市場狀況，並指出若維持現行合約條件，公司甚至有能力售出所有規劃中的2027年產能。",
-            "Nebius也將2026年底已簽約電力容量目標由原先超過4 GW上調至5 GW，並預計自2027年起每年新增超過1 GW運算容量。第2季簽署的AI雲端合約，每MW年合約價值超過2,000萬美元，預計自第4季末開始投入服務。",
-            "公司預計2026年可收到超過90億美元客戶預付款，目前客戶承諾金額則超過400億美元。",
-            "Nebius財報發布前一天，競爭對手CoreWeave(CRWV-US)也調高全年財測。兩家公司最新營運表現顯示，AI運算容量需求仍高於供給，帶動AI基礎建設相關個股同步走強。",
-            "※ 本文經「優分析」授權轉載，原文出處:原文連結",
-            "※ 免責聲明：文中所提的個股、基金、期貨商品內容僅供參考，並非投資建議，投資人應獨立判斷，審慎評估風險。"
-          ],
-          "paras_en": [
-            "August 12, 2026 (Optimal Analysis / Industry Data Center Report) - The demand for AI infrastructure continues to exceed supply, with cloud computing company Nebius Group (NBIS-US) reporting second-quarter revenue that exceeds market expectations, with AI cloud business revenue growing nearly sixfold, driving a 17% surge in stock price on Wednesday morning.",
-            "Nebius' second-quarter revenue reached $582.3 million, exceeding the London Stock Exchange Group's (LSEG) market estimate of $572.75 million, primarily driven by the strong growth of AI cloud business. CEO Arkady Volozh stated that the company is converting rapidly increasing AI demand into signed and profitable growth.",
-            "Nebius uses NVIDIA (NVDA-US) GPUs to provide AI cloud computing services, signing four large contracts in the second quarter, each with an average value exceeding $1 billion. The total contract value increased nearly threefold compared to the previous quarter, with new customer contract values increasing over eightfold.",
-            "To expand GPU and data center capacity, Nebius invested approximately $5.7 billion in capital expenditures in the second quarter, exceeding Visible Alpha analyst estimates of $4.7 billion, indicating that the company continues to heavily invest in AI infrastructure.",
-            "In the face of market additions to AI infrastructure supply, Nebius' management stated that the current competitive environment has not changed the company's market situation, and that if the current contract conditions are maintained, the company can even sell all the planned 2027 capacity.",
-            "Nebius also raised its 2026 year-end contracted power capacity target from over 4 GW to 5 GW and expects to add over 1 GW of computing capacity annually from 2027 onwards. The second-quarter signed AI cloud contracts have a contract value of over $20 million per MW per year, expected to be deployed from the fourth quarter onwards.",
-            "The company expects to receive over $9 billion in customer prepayments in 2026, with current customer commitments exceeding $40 billion.",
-            "Before Nebius' earnings report, its competitor CoreWeave (CRWV-US) also raised its full-year earnings forecast. The latest operating performance of the two companies shows that AI computing capacity demand remains higher than supply, driving AI infrastructure-related stocks to rise in unison.",
-            "※ This article is reproduced with the authorization of Optimal Analysis, original source: original link",
-            "※ Disclaimer: The stocks, funds, and futures commodities mentioned in the article are for reference only and are not investment recommendations. Investors should make their own judgments and evaluate risks independently."
-          ]
         }
       ]
     },
@@ -695,6 +704,69 @@
       "key": "wd_stock",
       "label": "國際財經",
       "items": [
+        {
+          "news_id": "6574174",
+          "title": "DeepSeek不再獨領風騷？Meta、輝達殺入開放模型戰場",
+          "title_en": "",
+          "publish_at": 1786561204,
+          "url": "https://news.cnyes.com/news/id/6574174",
+          "paras": [
+            "中國AI實驗室近年在開放權重模型市場取得領先後，Meta(META-US)與輝達(NVDA-US)本周相繼推出可供開發者免費下載的新模型，正式加入由深度求索(DeepSeek)、月之暗面(Moonshot AI)及阿里巴巴(BABA-US)(09988-HK)通義千問(Qwen)主導的競爭。業界人士認為，兩大科技公司此舉等於明確宣告，美國不會把接近前沿水準的開放模型市場拱手讓給中國業者。",
+            "與OpenAI及Anthropic旗下熱門封閉模型不同，開放權重模型允許開發者下載決定AI運作與行為的參數，進行檢視、調整與部署。不過，開放權重不一定等同完整的開源，因為業者未必會同時公布訓練資料、訓練方法與原始碼。",
+            "就在上月，Meta、輝達與其他美國科技公司曾聯名呼籲政策制定者，不要對開放權重模型施加「過早限制」，即使模型來自中國也不例外。這些公司主張，開放權重AI能擴大機會、促進競爭、延續美國科技領導地位，並避免能力集中在少數企業手中。",
+            "Meta、輝達接連出招 正面迎戰中國模型",
+            "Meta周一發表Muse Glimmer，作為重新向開放生態系統釋出強大模型的策略之一。執行長祖克柏(Mark Zuckerberg)並宣布，將開放最新模型Muse Spark 1.2的權重。",
+            "Muse Spark 1.2被視為可與OpenAI及Anthropic頂尖基礎模型競爭的產品，不過Meta與輝達本周率先發布的模型規模較小，主要設計為在筆電等本地裝置運行，可用於驅動裝置端數位代理。",
+            "輝達隔日推出Nemotron 3.5 Lightning，延續去年12月發表的Nemotron 3模型家族。輝達強調，其模型屬於「真正的開源」，因為公司除模型權重外，也公布相關訓練資料集及訓練技術，供開發者檢視。",
+            "Box(BOX-US)執行長Aaron Levie形容，祖克柏開放Muse Spark 1.2權重的計畫是「非常重大的事件」，Meta與輝達的最新動作已明確表態，美國將擁有接近前沿水準的開源模型。",
+            "Meta先前曾透過Llama進軍開放模型市場，但2025年4月推出的Llama 4未能獲得開發者青睞。公司隨後投入數十億美元重整AI部門，延攬Scale AI執行長Alexandr Wang領導相關業務。近期，Wang團隊陸續以Muse品牌推出封閉模型，試圖開拓新收入來源，如今又重新向開放權重路線靠攏。",
+            "政府、銀行商機龐大 Meta仍須挽回開發者信任\n\nMeta與輝達仍須證明，在DeepSeek、月之暗面與通義千問等中國模型已廣受歡迎的市場中，美國開放模型確實能吸引足夠的開發者與企業用戶。",
+            "Levie認為，美國企業推出具競爭力的開放權重模型，可望釋放龐大需求。美國政府機構與大型銀行可能因資安、監管及資料主權疑慮，無法採用中國開放模型，但更願意嘗試Meta等本土供應商的產品。這將使Muse有機會進入過去難以觸及的敏感應用場景。",
+            "Forrester分析師Charlie Dai也表示，Meta回歸開放權重具有重要戰略意義，因為這讓美國主要前沿AI業者重新回到開放生態系統。對開發者及企業而言，開放權重有助提高透明度、客製化程度、部署彈性與資料自主性。",
+            "不過，Meta曾從開放權重轉向封閉模型，已傷害部分第三方開發者的信任。企業AI新創Uniphore執行長Umesh Sachdev表示，Meta當初改變策略，讓旗下開發者感到遭到背叛，祖克柏本周發表長達3,500字的宣言，恐怕仍不足以說服他們重新投入Meta生態系統。",
+            "Sachdev仍期待美國本土業者成功，因為更多競爭可望降低AI模型的Token使用成本，同時加快創新，最終讓消費者受惠。Dai則指出，Meta接下來不能只靠發布性能優異的模型，還必須證明有能力建立可長期維持的開發者生態系統。",
+            "開放權重AI在美國仍具有政治爭議。批評者擔心中國模型可能帶來國家安全風險，也將「蒸餾」技術視為一種潛在的智慧財產竊取手段；業界則反駁，蒸餾是廣泛用於模型改進、評估及驗證的技術。隨著Meta與輝達加入戰局，美中AI競爭也正從封閉模型效能之爭，進一步延伸至誰能掌控全球開放生態系統。"
+          ],
+          "paras_en": []
+        },
+        {
+          "news_id": "6574327",
+          "title": "鉅亨速報 - Factset 最新調查：Liquidia CorpLQDA-US的目標價調升至81元，幅度約8.72%",
+          "title_en": "Factset Latest Survey: Liquidia Corp LQDA-US Target Price Raised to 81 USD, Up 8.72%",
+          "publish_at": 1786558525,
+          "url": "https://news.cnyes.com/news/id/6574327",
+          "paras": [
+            "根據FactSet最新調查，共8位分析師，對Liquidia Corp(LQDA-US)提出目標價估值：中位數由74.5元上修至81元，調升幅度8.72%。其中最高估值130元，最低估值60元。",
+            "綜合評級 - 共有9位分析師給予Liquidia Corp評價：積極樂觀7位、保持中立2位、保守悲觀0位。",
+            "Liquidia Corp今(13日)收盤價為80.32元。近5日股價下跌8.72%，標普指數下跌0.11%股價波動與大盤表現同步。",
+            "資料來源：Factset，數據僅供參考，不作為投資建議。"
+          ],
+          "paras_en": [
+            "According to FactSet's latest survey, 8 analysts have set target prices for Liquidia Corp (LQDA-US): the median price has been revised up to 81 USD from 74.5 USD, representing an 8.72% increase. The highest estimate is 130 USD, while the lowest is 60 USD.",
+            "Overall Rating - A total of 9 analysts have given ratings to Liquidia Corp: 7 are optimistic, 2 are neutral, and 0 are pessimistic.",
+            "Liquidia Corp closed at 80.32 USD on 13th. Over the past 5 days, the stock price has fallen 8.72%, while the S&P index has fallen 0.11%. The stock price movement is in sync with the overall market performance.",
+            "Data source: Factset. The data is for reference only and should not be used as investment advice."
+          ]
+        },
+        {
+          "news_id": "6574326",
+          "title": "鉅亨速報 - Factset 最新調查：Cava Group IncCAVA-US的目標價調降至90元，幅度約3.74%",
+          "title_en": "Factset Latest Survey: Cava Group Inc's Target Price Lowered to $90, Down 3.74%",
+          "publish_at": 1786558523,
+          "url": "https://news.cnyes.com/news/id/6574326",
+          "paras": [
+            "根據FactSet最新調查，共24位分析師，對Cava Group Inc(CAVA-US)提出目標價估值：中位數由93.5元下修至90元，調降幅度3.74%。其中最高估值110元，最低估值63元。",
+            "綜合評級 - 共有29位分析師給予Cava Group Inc評價：積極樂觀19位、保持中立9位、保守悲觀1位。",
+            "Cava Group Inc今(13日)收盤價為69.06元。近5日股價下跌3.74%，標普指數下跌0.11%短期股價無明顯表現。",
+            "資料來源：Factset，數據僅供參考，不作為投資建議。"
+          ],
+          "paras_en": [
+            "According to FactSet's latest survey, 24 analysts have set target prices for Cava Group Inc (CAVA-US), with the median value lowered to $90, a decrease of 3.74%. The highest estimate is $110, while the lowest is $63.",
+            "Overall Rating - A total of 29 analysts have given Cava Group Inc ratings: 19 are bullish, 9 are neutral, and 1 is bearish.",
+            "Cava Group Inc closed at $69.06 on 13th. Over the past 5 days, the stock price has fallen 3.74%, while the S&P index has fallen 0.11%. There is no significant short-term stock price movement.",
+            "Data source: Factset, for reference only, not as investment advice."
+          ]
+        },
         {
           "news_id": "6574308",
           "title": "DeepSeek要挑戰Claude Code！成立AI代理新團隊大舉徵才",
@@ -733,7 +805,7 @@
             "不過，川普兩度執政使這項工作面臨新挑戰，尤其是政府試圖對海外製造產品加徵關稅，恐直接衝擊高度依賴亞洲供應鏈的蘋果。近年來，執行長庫克(Tim Cook)也更親自介入與白宮的關係。",
             "知情人士透露，蘋果希望延攬一名能與川普政府保持一致及順暢合作的人選。蓋頓是共和黨人，2017年起擔任美國航空政府事務主管，直到本周離任；此前曾在摩根大通(JPM-US)領導全球政府關係與政策團隊，也曾在房利美(Fannie Mae)帶領負責與共和黨國會議員溝通的團隊。",
             "蓋頓也具有房地產相關經驗，可望在蘋果擴大零售門市與其他營運據點之際提供協助。他上任後預計與庫克密切合作。現任政府事務主管阿曼(Nick Ammann)則將改向蓋頓報告，團隊其他主管波德利(Tim Powderly)、布朗(Matt Brown)與奧吉爾(Mike Orgill)也將納入其管理。",
-            "這項任命是蘋果高層世代交替的最新一環。公司本周也通知員工，長期負責Apple Pay與Wallet服務的主管即將卸任。庫克則預計9月1日把執行長職務交給硬體工程主管特努斯(John Ternus)，自己轉任執行董事長，並繼續參與政府關係事務，包括維繫與川普政府的互動。"
+            "這項任命是蘋果高層世代交替的最新一環。公司本周也通知員工，長期負責Apple Pay與Wallet服務的主管即將卸任。庫克則預計9月1日把執行長職務交給硬體工程主管特納斯(John Ternus)，自己轉任執行董事長，並繼續參與政府關係事務，包括維繫與川普政府的互動。"
           ],
           "paras_en": [
             "According to foreign media reports on Wednesday (the 12th), Apple (AAPL-US) has hired Nate Gatten, a senior executive from American Airlines (AAL-US), as Vice President of Global Government Affairs, leveraging his deep Republican network to help the company manage its relationship with the Trump administration. As tariffs and overseas production become policy focal points, the appointment underscores Apple’s reshaping of its government‑relations strategy.",
@@ -823,87 +895,6 @@
             "Historical Profit Performance",
             "For more information, please see the US Stocks page:",
             "Novo Nordisk - ADR(NVO-US)",
-            "Data source: Factset, for reference only, not as investment advice."
-          ]
-        },
-        {
-          "news_id": "6574298",
-          "title": "鉅亨速報 - Factset 最新調查：American Homes 4 Rent - Class A(AMH-US)EPS預估上修至0.9元，預估目標價為38.00元",
-          "title_en": "Factset Latest Survey: American Homes 4 Rent - Class A (AMH-US) EPS Forecast Upgraded to $0.9, Target Price Set at $38.00",
-          "publish_at": 1786551380,
-          "url": "https://news.cnyes.com/news/id/6574298",
-          "paras": [
-            "根據FactSet最新調查，共7位分析師，對American Homes 4 Rent - Class A(AMH-US)做出2026年EPS預估：中位數由0.88元上修至0.9元，其中最高估值1.32元，最低估值0.63元，預估目標價為38.00元。",
-            "※本篇提及EPS與營收的單位均為「美元」",
-            "市場預估EPS",
-            "市場預估營收",
-            "歷史獲利表現",
-            "詳細資訊請看美股內頁：",
-            "American Homes 4 Rent - Class A(AMH-US)",
-            "資料來源：Factset，數據僅供參考，不作為投資建議。"
-          ],
-          "paras_en": [
-            "According to FactSet's latest survey, 7 analysts have made EPS forecasts for American Homes 4 Rent - Class A (AMH-US) in 2026: the median forecast has been upgraded from $0.88 to $0.9, with the highest estimate at $1.32 and the lowest at $0.63, with a target price of $38.00.",
-            "Note: The article mentions EPS and revenue in US dollars.",
-            "Market EPS Forecast",
-            "Market Revenue Forecast",
-            "Historical Profit Performance",
-            "For more information, please see the US Stocks page:",
-            "American Homes 4 Rent - Class A (AMH-US)",
-            "Data source: Factset, for reference only, not as investment advice."
-          ]
-        },
-        {
-          "news_id": "6574297",
-          "title": "鉅亨速報 - Factset 最新調查：SM能源(SM-US)EPS預估下修至7.06元，預估目標價為39.50元",
-          "title_en": "Factset Latest Survey: SM Energy (SM-US) EPS Estimate Downgraded to $7.06, Target Price Estimated at $39.50",
-          "publish_at": 1786551377,
-          "url": "https://news.cnyes.com/news/id/6574297",
-          "paras": [
-            "根據FactSet最新調查，共16位分析師，對SM能源(SM-US)做出2026年EPS預估：中位數由7.17元下修至7.06元，其中最高估值7.81元，最低估值3.07元，預估目標價為39.50元。",
-            "※本篇提及EPS與營收的單位均為「美元」",
-            "市場預估EPS",
-            "市場預估營收",
-            "歷史獲利表現",
-            "詳細資訊請看美股內頁：",
-            "SM能源(SM-US)",
-            "資料來源：Factset，數據僅供參考，不作為投資建議。"
-          ],
-          "paras_en": [
-            "According to FactSet's latest survey, 16 analysts have made EPS estimates for SM Energy (SM-US) in 2026: the median estimate has been downgraded to $7.06 from $7.17, with a high estimate of $7.81 and a low estimate of $3.07, and a target price estimated at $39.50.",
-            "Note: The article mentions EPS and revenue in US dollars.",
-            "Market EPS Estimates",
-            "Market Revenue Estimates",
-            "Historical Profit Performance",
-            "For more information, please see the US Stocks page:",
-            "SM Energy (SM-US)",
-            "Data source: Factset, for reference only, not as investment advice."
-          ]
-        },
-        {
-          "news_id": "6574296",
-          "title": "鉅亨速報 - Factset 最新調查：戴文能源(DVN-US)EPS預估上修至5.23元，預估目標價為62.00元",
-          "title_en": "Factset Latest Survey: DTE Energy (DTE) EPS Forecast Upgraded to $5.23, Target Price Set at $62.00",
-          "publish_at": 1786551375,
-          "url": "https://news.cnyes.com/news/id/6574296",
-          "paras": [
-            "根據FactSet最新調查，共27位分析師，對戴文能源(DVN-US)做出2026年EPS預估：中位數由5.13元上修至5.23元，其中最高估值6.89元，最低估值2.19元，預估目標價為62.00元。",
-            "※本篇提及EPS與營收的單位均為「美元」",
-            "市場預估EPS",
-            "市場預估營收",
-            "歷史獲利表現",
-            "詳細資訊請看美股內頁：",
-            "戴文能源(DVN-US)",
-            "資料來源：Factset，數據僅供參考，不作為投資建議。"
-          ],
-          "paras_en": [
-            "According to FactSet's latest survey, 27 analysts have made EPS forecasts for DTE Energy (DTE) in 2026: the median forecast has been upgraded to $5.23 from $5.13, with a high estimate of $6.89 and a low estimate of $2.19, and a target price of $62.00.",
-            "Note: The article mentions EPS and revenue in US dollars.",
-            "Market EPS Forecast",
-            "Market Revenue Forecast",
-            "Historical Profit Performance",
-            "For more information, please see the US Stocks page:",
-            "DTE Energy (DTE)",
             "Data source: Factset, for reference only, not as investment advice."
           ]
         }
