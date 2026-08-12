@@ -314,9 +314,10 @@ const LOAD_NAME_TO_DATA_KEY = {
   tw_stocks: "tw_stocks", rankings: "rankings",
   premarket: "premarket", live_indices: "live",
   weekly_report: "weekly",
+  monthly_report: "monthly",
 };
 const TAB_LOAD_DEPS = {
-  market: ["market", "stocks", "rankings", "premarket", "weekly_report"],
+  market: ["market", "stocks", "rankings", "premarket", "weekly_report", "monthly_report"],
   live: ["live_indices"],
   news: ["news"],
   funds: ["funds", "dca", "beatetf", "fund_compare", "popular_funds"],
@@ -588,7 +589,7 @@ async function init() {
   // 每個來源各自有 fallback：一個壞不拖垮全頁
   // 失敗時記到 FAILED_LOADS，使用者切到對應 tab 時會背景重試
   const safe = (name, fallback) => load(name).catch(() => { FAILED_LOADS.add(name); return fallback; });
-  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news, cnyes_news, etf0050, weekly, ic_chain, market_calendar] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news, cnyes_news, etf0050, weekly, monthly, ic_chain, market_calendar] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
@@ -617,10 +618,11 @@ async function init() {
     safe("cnyes_news", { built_at: "", categories: [] }),
     safe("etf0050", { built_at: "", market_date: "", stocks: [] }),
     safe("weekly_report", null),
+    safe("monthly_report", null),
     safe("ic_chain", null),
     safe("market_calendar", null),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news, cnyes_news, etf0050, weekly, ic_chain, market_calendar };
+  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news, cnyes_news, etf0050, weekly, monthly, ic_chain, market_calendar };
   LAST_DATA_TS = Date.now();
   const _updatedAt = latestBuiltAt();
   if (!_updatedAt) {
@@ -1021,7 +1023,7 @@ async function refreshData() {
     FAILED_LOADS.add(name);
     return DATA[name === "insurances" ? "insurance" : name] || fallback;
   });
-  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news, cnyes_news, etf0050, weekly, ic_chain, market_calendar] = await Promise.all([
+  const [meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news, cnyes_news, etf0050, weekly, monthly, ic_chain, market_calendar] = await Promise.all([
     safe("meta", { built_at: "", today: "", sources_status: {} }),
     safe("market", { closing_date: "", indices: [], bonds: [], fx: [], summary: "" }),
     safe("news", { news_date: "", tldr: [], sections: [] }),
@@ -1050,10 +1052,11 @@ async function refreshData() {
     safe("cnyes_news", { built_at: "", categories: [] }),
     safe("etf0050", { built_at: "", market_date: "", stocks: [] }),
     safe("weekly_report", null),
+    safe("monthly_report", null),
     safe("ic_chain", null),
     safe("market_calendar", null),
   ]);
-  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news, cnyes_news, etf0050, weekly, ic_chain, market_calendar };
+  DATA = { meta, market, news, tax, funds, stocks, popular, stock_brief, insurance, obonds, obonds_all, targets, allocation, dca, wealth, beatetf, presets, fund_compare, tw_stocks, rankings, quotes_built_at, premarket, popular_funds, live, live_news, cnyes_news, etf0050, weekly, monthly, ic_chain, market_calendar };
   LAST_DATA_TS = Date.now();
   SEARCH_INDEX = buildSearchIndex();
   const _updatedAt = latestBuiltAt();
@@ -3740,6 +3743,9 @@ function renderMarketSheet() {
   const weeklyInner = renderWeeklyReportBlock();
   const weeklySection = weeklyInner ? accSection("mv-weekly", "市場週報", weeklyInner) : "";
 
+  const monthlyInner = renderMonthlyReportBlock();
+  const monthlySection = monthlyInner ? accSection("mv-monthly", "市場月報", monthlyInner) : "";
+
   // 財經日曆：經濟數據／利率決策／財報行事曆（data/market_calendar.json）
   const calInner = renderMarketCalendarSection();
   const calSection = calInner ? accSection("mv-calendar", "財經日曆", calInner) : "";
@@ -3750,6 +3756,7 @@ function renderMarketSheet() {
     ${accSection("mv-us-analysis", "美股分析", usInner)}
     ${accSection("mv-tw-analysis", "台股分析", twInner)}
     ${weeklySection}
+    ${monthlySection}
   `;
 }
 
@@ -3763,7 +3770,13 @@ function renderWeeklyReportBlock() {
   const range = (w.week_start && w.week_end)
     ? `彙整期間：${shortDate(w.week_start).replace("-", "/")} – ${shortDate(w.week_end).replace("-", "/")}`
     : "";
-  const inner = secs.map(s => {
+  const inner = renderReportSections(secs, "wr-");
+  return `${range ? `<p class="wr-range">${escapeHtml(range)}</p>` : ""}${inner}`;
+}
+
+// 週報／月報共用：把 sections[].items[] 畫成分區折疊清單
+function renderReportSections(secs, idPrefix) {
+  return secs.map(s => {
     const items = s.items.map(it => `
       <li class="wr-item">
         <div class="wr-item-head">
@@ -3772,9 +3785,23 @@ function renderWeeklyReportBlock() {
         </div>
         <div class="wr-view">${escapeHtml(it.view || "")}${it.url ? ` <a class="wr-link" href="${escapeHtml(it.url)}" target="_blank" rel="noopener">原文 →</a>` : ""}</div>
       </li>`).join("");
-    return accSection("wr-" + (s.key || s.title), s.title, `<ul class="wr-list">${items}</ul>`);
+    return accSection(idPrefix + (s.key || s.title), s.title, `<ul class="wr-list">${items}</ul>`);
   }).join("");
-  return `${range ? `<p class="wr-range">${escapeHtml(range)}</p>` : ""}${inner}`;
+}
+
+// ── 市場月報：前月（完整月）＋當月（1 日至今）兩段並陳 ──────────────────────
+// 資料 data/monthly_report.json（~/scripts/market_reports_open.py，鉅亨新聞 + Groq）。
+function renderMonthlyReportBlock() {
+  const m = DATA.monthly;
+  if (!m || !Array.isArray(m.periods)) return "";
+  const periods = m.periods.filter(p => Array.isArray(p.sections) && p.sections.length);
+  if (!periods.length) return "";
+  const asOf = m.as_of ? `<p class="wr-range">更新日期：${escapeHtml(shortDate(m.as_of).replace("-", "/"))}｜前月與當月各自彙整</p>` : "";
+  const body = periods.map(p =>
+    accSection("mr-" + (p.key || p.label), p.label,
+      renderReportSections(p.sections, "mr-" + (p.key || "") + "-"))
+  ).join("");
+  return asOf + body;
 }
 
 // ── 財經日曆 ─────────────────────────────────────────────────────────────
