@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-12T18:16:35+08:00",
+  "generated_at": "2026-08-12T19:55:06+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -73,20 +73,6 @@
       "error": null
     },
     {
-      "symbol": "APLD",
-      "name_zh": "Applied Digital",
-      "kind": "US",
-      "price": 29.69,
-      "change_pct": 2.17,
-      "mtd_pct": 6.1,
-      "ytd_pct": 18.52,
-      "market_date": "2026-08-10",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=APLD.US",
-      "error": null
-    },
-    {
       "symbol": "IREN",
       "name_zh": "IREN",
       "kind": "US",
@@ -98,20 +84,6 @@
       "per": 179.7278,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IREN.US",
-      "error": null
-    },
-    {
-      "symbol": "SNDK",
-      "name_zh": "Sandisk",
-      "kind": "US",
-      "price": 1271.05,
-      "change_pct": 2.68,
-      "mtd_pct": 1.9,
-      "ytd_pct": 421.49,
-      "market_date": "2026-08-10",
-      "per": 16.0346,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SNDK.US",
       "error": null
     },
     {
@@ -129,6 +101,48 @@
       "error": null
     },
     {
+      "symbol": "TE",
+      "name_zh": "T1 Energy",
+      "kind": "US",
+      "price": 5.47,
+      "change_pct": 3.01,
+      "mtd_pct": 27.34,
+      "ytd_pct": -20.51,
+      "market_date": "2026-08-10",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TE.US",
+      "error": null
+    },
+    {
+      "symbol": "APLD",
+      "name_zh": "Applied Digital",
+      "kind": "US",
+      "price": 29.69,
+      "change_pct": 2.17,
+      "mtd_pct": 6.1,
+      "ytd_pct": 18.52,
+      "market_date": "2026-08-10",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=APLD.US",
+      "error": null
+    },
+    {
+      "symbol": "SNDK",
+      "name_zh": "Sandisk",
+      "kind": "US",
+      "price": 1271.05,
+      "change_pct": 2.68,
+      "mtd_pct": 1.9,
+      "ytd_pct": 421.49,
+      "market_date": "2026-08-10",
+      "per": 16.0346,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SNDK.US",
+      "error": null
+    },
+    {
       "symbol": "CAVA",
       "name_zh": "CAVA",
       "kind": "US",
@@ -143,17 +157,17 @@
       "error": null
     },
     {
-      "symbol": "SKHY",
-      "name_zh": "SK hynix",
+      "symbol": "VRT",
+      "name_zh": "Vertiv Holdings, LLC",
       "kind": "US",
-      "price": 141.65,
-      "change_pct": 4.7,
-      "mtd_pct": -5.87,
-      "ytd_pct": null,
+      "price": 281.81,
+      "change_pct": 4.34,
+      "mtd_pct": 11.81,
+      "ytd_pct": 66.72,
       "market_date": "2026-08-10",
-      "per": 13.7931,
+      "per": 55.1352,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SKHY.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VRT.US",
       "error": null
     },
     {
@@ -171,45 +185,31 @@
       "error": null
     },
     {
-      "symbol": "FLY",
-      "name_zh": "Firefly Aerospace",
+      "symbol": "BETA",
+      "name_zh": "Beta Technologies",
       "kind": "US",
-      "price": 26.36,
-      "change_pct": 2.33,
-      "mtd_pct": 26.71,
-      "ytd_pct": 15.15,
+      "price": 24.59,
+      "change_pct": 3.49,
+      "mtd_pct": 25.52,
+      "ytd_pct": -15.77,
       "market_date": "2026-08-10",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FLY.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BETA.US",
       "error": null
     },
     {
-      "symbol": "DRAM",
-      "name_zh": "Roundhill Memory ETF",
+      "symbol": "WYFI",
+      "name_zh": "WhiteFiber",
       "kind": "US",
-      "price": 50.89,
-      "change_pct": 2.6,
-      "mtd_pct": -1.53,
-      "ytd_pct": null,
+      "price": 24.22,
+      "change_pct": 2.54,
+      "mtd_pct": -0.34,
+      "ytd_pct": 49.49,
       "market_date": "2026-08-10",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DRAM.US",
-      "error": null
-    },
-    {
-      "symbol": "VELO",
-      "name_zh": "Velo3D",
-      "kind": "US",
-      "price": 13.69,
-      "change_pct": 5.71,
-      "mtd_pct": 27.84,
-      "ytd_pct": -5.75,
-      "market_date": "2026-08-10",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VELO.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=WYFI.US",
       "error": null
     },
     {
@@ -224,20 +224,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=JMIA.US",
-      "error": null
-    },
-    {
-      "symbol": "APP",
-      "name_zh": "AppLovin",
-      "kind": "US",
-      "price": 318.68,
-      "change_pct": -5.99,
-      "mtd_pct": -14.37,
-      "ytd_pct": -49.69,
-      "market_date": "2026-08-10",
-      "per": 25.7252,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=APP.US",
       "error": null
     },
     {
