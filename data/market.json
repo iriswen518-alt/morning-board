@@ -13,7 +13,7 @@
     {
       "name": "Nasdaq Composite",
       "name_zh": null,
-      "close": 26588.48828125,
+      "close": 26588.490234375,
       "daily_pct": 0.54,
       "mtd_pct": 4.79,
       "ytd_pct": 14.4,
@@ -31,7 +31,7 @@
     {
       "name": "PHLX Semiconductor",
       "name_zh": null,
-      "close": 12399.3759765625,
+      "close": 12399.3798828125,
       "daily_pct": 2.49,
       "mtd_pct": 9.62,
       "ytd_pct": 75.06,
@@ -139,7 +139,7 @@
     {
       "name": "CSI 300 滬深300",
       "name_zh": null,
-      "close": 4718.21728515625,
+      "close": 4714.05908203125,
       "daily_pct": null,
       "mtd_pct": -9.04,
       "ytd_pct": -2.18,
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 100.01000213623047,
       "daily_pct": 0.19,
-      "mtd_pct": 0.19,
-      "ytd_pct": 1.74,
+      "mtd_pct": 0.18,
+      "ytd_pct": 1.73,
       "closing_date": "2026-08-12"
     },
     {
@@ -269,34 +269,34 @@
   "commodities": [
     {
       "name": "黃金 (USD/oz)",
-      "close": 4468.5,
-      "daily_pct": 1.95,
-      "mtd_pct": 10.36,
-      "ytd_pct": 3.3,
+      "close": 4408.89990234375,
+      "daily_pct": 0.59,
+      "mtd_pct": 8.89,
+      "ytd_pct": 1.93,
       "closing_date": "2026-08-12"
     },
     {
       "name": "白銀 (USD/oz)",
-      "close": 65.74500274658203,
-      "daily_pct": 1.51,
-      "mtd_pct": 14.16,
-      "ytd_pct": -6.26,
+      "close": 65.55500030517578,
+      "daily_pct": 1.21,
+      "mtd_pct": 13.83,
+      "ytd_pct": -6.53,
       "closing_date": "2026-08-12"
     },
     {
       "name": "WTI 原油 (USD/bbl)",
-      "close": 82.11000061035156,
-      "daily_pct": -1.31,
-      "mtd_pct": -3.02,
-      "ytd_pct": 43.0,
+      "close": 83.2699966430664,
+      "daily_pct": 0.08,
+      "mtd_pct": -1.65,
+      "ytd_pct": 45.02,
       "closing_date": "2026-08-12"
     },
     {
       "name": "布蘭特原油 (USD/bbl)",
-      "close": 87.87000274658203,
-      "daily_pct": -1.17,
-      "mtd_pct": -2.5,
-      "ytd_pct": 44.4,
+      "close": 88.9800033569336,
+      "daily_pct": 0.08,
+      "mtd_pct": -1.26,
+      "ytd_pct": 46.23,
       "closing_date": "2026-08-12"
     },
     {
@@ -388,8 +388,8 @@
     "yield_curve_10y2y": 0.48,
     "yield_curve_10y2y_bps": 48,
     "curve_shape": "正斜率",
-    "dxy": 99.99299621582031,
-    "dxy_daily_pct": -0.02,
+    "dxy": 100.01000213623047,
+    "dxy_daily_pct": 0.19,
     "closing_date": "2026-08-12"
   },
   "fedwatch": [
