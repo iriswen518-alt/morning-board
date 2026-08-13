@@ -1,8 +1,10 @@
 {
   "news_date": "2026-08-14",
   "tldr": [
-    "台股8月13日收在新高46,021點、大漲503點，美國CPI降溫點燃聯準會降息預期。",
-    "台積電領漲、MSCI納入台灣記憶體股，凸顯HBM需求題材延燒。",
+    "台股8月13日收在新高46,021點、大漲503點，美國通膨降溫點燃降息想像。",
+    "台積電領漲、MSCI納入南亞科、華邦電、群聯等台灣記憶體股。",
+    "美股8月13日收高（標普漲0.43%至7,781.59），7月PPI走軟緩解升息預期；思科獲利了結下跌。",
+    "油價回落，布蘭特約87.9美元、西德州約82.1美元。",
     "外銀搶進台灣約8兆美元財富管理市場，高資產AUM突破新台幣1兆元。"
   ],
   "sections": [
@@ -91,6 +93,114 @@
           "summary_en": "Assets under management in Taiwan banks' high-net-worth wealth business have surpassed NT$1.0387 trillion, a fivefold jump from NT$207.7 billion at end-2020, according to FSC data. Growth has been aided by a Kaohsiung financial demonstration zone offering Lombard lending and portfolio-backed products, signalling deepening demand for private-banking services among wealthy clients.",
           "source_name": "金融監督管理委員會",
           "source_url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0&mcustomize=news_view.jsp&dataserno=202405140001&dtable=News"
+        }
+      ]
+    },
+    {
+      "section": "Tax & Regulations",
+      "section_zh": "稅務法規",
+      "items": [
+        {
+          "title_zh": "遺產稅新法上路 擬制遺產可分開課稅",
+          "title_en": "New rules let estate tax be assessed separately from deemed-gift assets",
+          "summary_zh": "財政部推動的遺產稅新制，允許擬制遺產（生前贈與併計部分）分開課稅，繼承人不再須一次承擔全部稅負，連小額稅款都可申請分期繳納。此舉緩解繼承時的現金流壓力，並釐清死亡前贈與併入遺產總額的計算方式，對高資產家庭的傳承與稅務規劃影響顯著，實務上有助降低一次補稅的資金負擔。",
+          "summary_en": "Taiwan's revised estate-tax framework allows so-called deemed-estate assets to be taxed separately, so heirs are no longer forced to shoulder the full liability at once, and even small amounts can be paid in instalments. The change eases cash-flow strain in inheritance cases and clarifies how gifts made before death are folded into the taxable estate.",
+          "source_name": "Yahoo奇摩股市／財政部",
+          "source_url": "https://tw.stock.yahoo.com/news/%E9%81%BA%E7%94%A2%E7%A8%85%E4%B8%8D%E5%86%8D%E7%B9%BC%E6%89%BF%E4%BA%BA%E4%B8%80%E6%AC%A1%E6%89%9B%EF%BC%81%E6%96%B0%E6%B3%95%E4%B8%8A%E8%B7%AF%E6%93%AC%E5%88%B6%E9%81%BA%E7%94%A2%E5%88%86%E9%96%8B%E8%AA%B2%E7%A8%85-%E9%80%A3%E5%B0%8F%E9%A1%8D%E9%83%BD%E8%83%BD%E7%94%B3%E8%AB%8B%E5%88%86%E6%9C%9F-041000543.html"
+        },
+        {
+          "title_zh": "課稅級距隨物價調升 營所稅暫繳9月開跑",
+          "title_en": "Estate-tax brackets rise with inflation as corporate provisional filing nears",
+          "summary_zh": "因累計CPI漲幅達法定調整標準，2026年度遺產稅課稅級距金額調升，惟免稅額與各項扣除額維持不變，略降部分稅負。另115年度營利事業所得稅暫繳申報將於9月1日至30日辦理，符合條件者可免辦。企業與高資產族群須留意申報時程與級距變動，及早完成稅務試算與資金安排，避免逾期補繳。",
+          "summary_en": "With cumulative CPI gains crossing the statutory threshold, 2026 estate-tax bracket thresholds have been lifted, while exemption and deduction amounts remain unchanged. Separately, provisional corporate income-tax filing for fiscal 2026 runs Sept 1–30, with qualifying firms exempt, keeping compliance calendars in focus for businesses.",
+          "source_name": "財政部",
+          "source_url": "https://www.mof.gov.tw/"
+        }
+      ]
+    },
+    {
+      "section": "Macro & Policy",
+      "section_zh": "總經政策",
+      "items": [
+        {
+          "title_zh": "台灣通膨溫和 6月CPI年增2.6%",
+          "title_en": "Taiwan inflation stays moderate with CPI up 2.6% in June",
+          "summary_zh": "主計總處資料顯示，6月消費者物價指數（CPI）年增2.60%，生產者物價指數（PPI）年增15.10%，上游成本仍高但消費端通膨受控。研究機構預期物價壓力續降，2027年CPI年增率有望回落至約1.7%，為央行維持利率政策留下空間。整體物價走勢牽動實質購買力與內需動能，也影響後續貨幣政策節奏。",
+          "summary_en": "Taiwan's consumer price index rose 2.60% year-on-year in June while the producer price index climbed 15.10%, reflecting firm upstream costs even as consumer inflation stays contained. Forecasters expect price pressure to cool further, with 2027 CPI seen easing toward 1.7%, giving the central bank room to keep policy steady.",
+          "source_name": "中央銀行",
+          "source_url": "https://www.cbc.gov.tw/tw/lp-302-1.html"
+        },
+        {
+          "title_zh": "AI帶動2025出口暴衝 2026動能料趨緩",
+          "title_en": "Export momentum set to moderate after AI-driven 2025 surge",
+          "summary_zh": "2025年台灣出口在AI晶片、先進封裝與伺服器需求帶動下年增34.9%，惟受高基期影響，2026年出口成長預期趨於溫和。多數機構預估全年經濟成長率落在約3.5%至4.1%，內需回溫、外需趨緩，成長引擎出現轉向。此結構變化提示投資與消費布局須因應，並關注全球景氣與科技需求循環對台灣的外溢效應。",
+          "summary_en": "Taiwan's 2025 exports jumped 34.9% on booming demand for AI chips, advanced packaging and servers, but growth is expected to slow in 2026 on a high base. Most forecasters see full-year GDP growth around 3.5%–4.1%, with domestic demand recovering as external momentum eases, underscoring a rotation in the economy's growth drivers.",
+          "source_name": "台灣經濟研究院",
+          "source_url": "https://www.tier.org.tw/forecast/macro_trends_annual.aspx"
+        }
+      ]
+    },
+    {
+      "section": "Global Markets",
+      "section_zh": "國際財經",
+      "items": [
+        {
+          "title_zh": "AI財報報喜＋通膨降溫 美股多收紅",
+          "title_en": "US stocks close higher as AI earnings and cooling inflation lift sentiment",
+          "summary_zh": "據台灣媒體報導，美股隔夜多收紅，標普500與那斯達克在AI相關財報強勁及通膨降溫帶動下走高，台積電ADR上漲約1.68%，台指期夜盤同步走揚。市場氛圍偏多，為台股次一交易日提供有利背景，惟須留意漲多後的獲利了結與國際變數，追高宜控管風險。",
+          "summary_en": "Taiwan media reported Wall Street ended mostly higher overnight, with the S&P 500 and Nasdaq gaining on strong AI-related earnings and softer inflation data. TSMC's ADR advanced about 1.7%, and Taiwan index futures firmed in after-hours trade, pointing to a supportive backdrop for the local market's next session.",
+          "source_name": "壹蘋新聞網",
+          "source_url": "https://news.nextapple.com/finance/20260813/7D42F720D64ACBBBC4F41B6EAB61B4E0"
+        },
+        {
+          "title_zh": "SMCI財報爆發帶動費半 那指收高",
+          "title_en": "SMCI earnings spark chip rally, lifting the Nasdaq",
+          "summary_zh": "台灣媒體報導，美超微（SMCI）財報亮眼，點燃半導體與AI硬體族群漲勢，費城半導體指數勁揚、那斯達克收高。此波行情強化AI伺服器投資主軸，並延續帶動美國科技股與台灣供應鏈個股的連動表現。台廠伺服器、散熱與零組件供應鏈可望受惠題材延燒，但估值偏高族群仍須留意波動。",
+          "summary_en": "Super Micro's blowout results ignited a rally across semiconductor and AI-hardware names, with the Philadelphia Semiconductor Index surging and the Nasdaq closing higher, as reported by Taiwan outlets. The move reinforced the AI-server investment theme that continues to drive both US tech and Taiwan's supply-chain equities.",
+          "source_name": "CMoney",
+          "source_url": "https://www.cmoney.tw/notes/note-detail.aspx?nid=1250131"
+        }
+      ]
+    },
+    {
+      "section": "International",
+      "section_zh": "國際",
+      "items": [
+        {
+          "title_zh": "標普、那指收高 道瓊受思科拖累（2026-08-13）",
+          "title_en": "S&P 500 and Nasdaq end higher, Dow lags on Cisco (2026-08-13)",
+          "summary_zh": "美股週四收高，標普500上漲0.43%至約7,781.59點，那斯達克漲0.58%，道瓊僅升58點至53,828點，受思科走弱拖累。通膨數據降溫與科技股續強，使主要指數維持在接近歷史高點區間，標普今年以來累計上漲近14%，市場風險偏好仍偏正向。",
+          "summary_en": "US stocks closed higher on Thursday, with the S&P 500 up 0.43% to about 7,781.59 and the Nasdaq gaining 0.58%, while the Dow rose a modest 58 points to 53,828 as Cisco weighed. Cooling inflation data and continued strength in technology shares kept the benchmarks near record territory, leaving the S&P up nearly 14% for the year.",
+          "source_name": "STL.News",
+          "source_url": "https://www.stl.news/u-s-stock-market-today-thursday-august-13-2026/",
+          "published": "2026-08-13"
+        },
+        {
+          "title_zh": "思科財報超預期仍下跌（2026-08-13）",
+          "title_en": "Cisco slides despite earnings beat and strong guidance (2026-08-13)",
+          "summary_zh": "思科公布財季調整後每股盈餘1.22美元、優於預期的1.17美元，營收172.5億美元亦超標，並釋出樂觀財測，股價卻因先前漲多、投資人獲利了結而重挫。全年來自超大規模雲端業者的AI基礎設施訂單達93億美元，惟股價下跌拖累道瓊表現，凸顯高預期下財報行情的兌現壓力。",
+          "summary_en": "Cisco shares fell sharply after reporting fiscal Q4 adjusted EPS of $1.22 versus $1.17 expected and revenue of $17.25 billion, above estimates, with upbeat guidance. Investors took profits after a strong run; AI-infrastructure orders from hyperscalers reached $9.3 billion for the year, but the stock's decline weighed on the Dow.",
+          "source_name": "CNBC",
+          "source_url": "https://www.cnbc.com/2026/08/13/cisco-shares-slide-9percent-despite-earnings-beat-and-strong-guidance.html",
+          "published": "2026-08-13"
+        },
+        {
+          "title_zh": "7月PPI走軟 美債殖利率下滑（2026-08-13）",
+          "title_en": "Treasury yields ease after soft July producer prices (2026-08-13)",
+          "summary_zh": "美國7月生產者物價指數（PPI）月增持平、低於市場預期的0.2%，年增率由5.5%降至4.7%。2年期公債殖利率下滑至約4.145%，市場將聯準會9月升息機率由前一日近50%下修至約40%。數據緩解通膨與升息疑慮，支撐股市風險偏好，並反映投資人對貨幣政策轉趨中性的預期。",
+          "summary_en": "US Treasury yields fell after the July producer price index came in flat versus an expected 0.2% rise, with the annual rate slipping to 4.7% from 5.5%. The 2-year yield dropped to about 4.145%, and markets trimmed the odds of a September Fed rate hike to roughly 40% from near 50% a day earlier.",
+          "source_name": "CNBC",
+          "source_url": "https://www.cnbc.com/2026/08/13/treasury-yields-wall-street-inflation-data.html",
+          "published": "2026-08-13"
+        },
+        {
+          "title_zh": "油價下跌 供需再平衡（2026-08-13）",
+          "title_en": "Oil prices fall as supply-demand balance shifts (2026-08-13)",
+          "summary_zh": "國際油價走弱，布蘭特原油約下跌1.2%至每桶約87.9美元，西德州中級原油下跌約1.4%至約82.1美元。交易員權衡地緣供給風險與需求訊號，能源市場維持震盪；儘管通膨降溫改善整體風險偏好，油價回落有助紓解輸入性通膨壓力，對後續物價走勢與運輸、原物料成本具正面意涵。",
+          "summary_en": "Crude prices declined, with Brent slipping about 1.2% to around $87.9 a barrel and WTI down about 1.4% near $82.1, according to daily price trackers. Traders weighed geopolitical supply risks against demand signals, keeping energy markets volatile even as broader risk appetite improved on softer inflation data.",
+          "source_name": "Fortune",
+          "source_url": "https://fortune.com/article/price-of-oil-08-13-2026/",
+          "published": "2026-08-13"
         }
       ]
     }
