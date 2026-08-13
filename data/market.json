@@ -69,14 +69,14 @@
       "name_zh": null,
       "close": 8674.9404296875,
       "daily_pct": -0.46,
-      "mtd_pct": 1.94,
+      "mtd_pct": 2.23,
       "ytd_pct": 6.45,
       "closing_date": "2026-08-12"
     },
     {
       "name": "Nikkei 225",
       "name_zh": null,
-      "close": 68308.59375,
+      "close": 68308.59,
       "daily_pct": 1.16,
       "mtd_pct": 4.91,
       "ytd_pct": 34.14,
@@ -112,7 +112,7 @@
     {
       "name": "KOSPI",
       "name_zh": null,
-      "close": 6813.33984375,
+      "close": 6813.34,
       "daily_pct": 3.56,
       "mtd_pct": -0.25,
       "ytd_pct": 56.12,
@@ -169,7 +169,7 @@
       "name": "US 10-Year",
       "yield_pct": 4.68,
       "daily_bps": -0.2,
-      "mtd_bps": -6.3,
+      "mtd_bps": 1.9,
       "closing_date": "2026-08-12"
     },
     {
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 100.01000213623047,
       "daily_pct": 0.19,
-      "mtd_pct": 0.06,
-      "ytd_pct": 1.61,
+      "mtd_pct": 0.04,
+      "ytd_pct": 1.59,
       "closing_date": "2026-08-12"
     },
     {
@@ -350,7 +350,7 @@
       "name_zh": null,
       "close": 94.94000244140625,
       "daily_pct": 0.12,
-      "mtd_pct": 0.3,
+      "mtd_pct": 0.16,
       "ytd_pct": -1.39,
       "closing_date": "2026-08-12"
     },
@@ -377,7 +377,7 @@
       "name_zh": null,
       "close": 97.43000030517578,
       "daily_pct": 0.11,
-      "mtd_pct": 0.06,
+      "mtd_pct": -0.19,
       "ytd_pct": -2.45,
       "closing_date": "2026-08-12"
     }
@@ -405,11 +405,11 @@
     {
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
-      "implied_rate": 3.71,
-      "delta_rate": 0.04,
-      "delta_bps": 4.0,
-      "p_hike": 16.0,
-      "p_hold": 84.0,
+      "implied_rate": 3.72,
+      "delta_rate": 0.05,
+      "delta_bps": 5.0,
+      "p_hike": 20.0,
+      "p_hold": 80.0,
       "p_cut": 0,
       "is_reference": false
     },
