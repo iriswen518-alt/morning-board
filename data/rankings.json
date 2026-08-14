@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-14T13:32:46+08:00",
+  "generated_at": "2026-08-14T17:02:10+08:00",
   "tw": {
     "as_of": "2026-08-14",
     "top_marketcap": [
@@ -654,7 +654,7 @@
         "price": 225.3,
         "daily_pct": 0.54,
         "market_cap": 5456991354880,
-        "pe": 34.344513,
+        "pe": 34.555214,
         "pe_kind": "trailing",
         "mtd_pct": 12.23,
         "ytd_pct": 20.8,
@@ -706,7 +706,7 @@
         "price": 339.96,
         "daily_pct": 3.8,
         "market_cap": 1342688198656,
-        "pe": 314.77777,
+        "pe": 303.5357,
         "pe_kind": "trailing",
         "mtd_pct": 9.24,
         "ytd_pct": -24.41,
@@ -745,7 +745,7 @@
         "price": 104.56,
         "daily_pct": 3.58,
         "market_cap": 552715157504,
-        "pe": 50.520863,
+        "pe": 51.251637,
         "pe_kind": "forward",
         "mtd_pct": 15.92,
         "ytd_pct": 183.36,
@@ -918,7 +918,7 @@
         "price": 10.8,
         "daily_pct": -29.18,
         "market_cap": 2693950208,
-        "pe": 38.57143,
+        "pe": 54.0,
         "pe_kind": "trailing",
         "mtd_pct": -26.78,
         "ytd_pct": -40.1,
@@ -944,7 +944,7 @@
         "price": 20.46,
         "daily_pct": -20.42,
         "market_cap": 3098181120,
-        "pe": 7.9921875,
+        "pe": 10.029411,
         "pe_kind": "trailing",
         "mtd_pct": -14.28,
         "ytd_pct": -16.28,
@@ -1084,6 +1084,19 @@
         "source_url": "https://finance.yahoo.com/quote/SOXX"
       },
       {
+        "symbol": "SMH",
+        "name": "VanEck Semiconductor ETF",
+        "price": 589.12,
+        "daily_pct": 3.09,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": 8.99,
+        "ytd_pct": 63.59,
+        "yahoo": "SMH",
+        "source_url": "https://finance.yahoo.com/quote/SMH"
+      },
+      {
         "symbol": "XLK",
         "name": "State Street Technology Select ",
         "price": 190.77,
@@ -1095,19 +1108,6 @@
         "ytd_pct": 32.51,
         "yahoo": "XLK",
         "source_url": "https://finance.yahoo.com/quote/XLK"
-      },
-      {
-        "symbol": "EEM",
-        "name": "iShares MSCI Emerging Index Fun",
-        "price": 66.68,
-        "daily_pct": 2.55,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": 4.04,
-        "ytd_pct": 21.88,
-        "yahoo": "EEM",
-        "source_url": "https://finance.yahoo.com/quote/EEM"
       },
       {
         "symbol": "QQQ",
@@ -1231,20 +1231,6 @@
         "yahoo": "XLU",
         "source_url": "https://finance.yahoo.com/quote/XLU",
         "name_zh": "公用事業"
-      },
-      {
-        "symbol": "XLC",
-        "name": "State Street Communication Serv",
-        "price": 112.55,
-        "daily_pct": 1.23,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": 3.98,
-        "ytd_pct": -4.39,
-        "yahoo": "XLC",
-        "source_url": "https://finance.yahoo.com/quote/XLC",
-        "name_zh": "通訊"
       },
       {
         "symbol": "XLP",
