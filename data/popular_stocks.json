@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-15T06:32:14+08:00",
+  "generated_at": "2026-08-15T07:29:46+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -17,20 +17,6 @@
       "error": null
     },
     {
-      "symbol": "UMAC",
-      "name_zh": "Unusual Machines",
-      "kind": "US",
-      "price": 34.06,
-      "change_pct": 25.04,
-      "mtd_pct": 60.96,
-      "ytd_pct": 167.35,
-      "market_date": "2026-08-14",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=UMAC.US",
-      "error": null
-    },
-    {
       "symbol": "PYPL",
       "name_zh": "PayPal",
       "kind": "US",
@@ -42,6 +28,20 @@
       "per": 10.436,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PYPL.US",
+      "error": null
+    },
+    {
+      "symbol": "UMAC",
+      "name_zh": "Unusual Machines",
+      "kind": "US",
+      "price": 34.06,
+      "change_pct": 25.04,
+      "mtd_pct": 60.96,
+      "ytd_pct": 167.35,
+      "market_date": "2026-08-14",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=UMAC.US",
       "error": null
     },
     {
@@ -73,6 +73,34 @@
       "error": null
     },
     {
+      "symbol": "RACE",
+      "name_zh": "Ferrari",
+      "kind": "US",
+      "price": 414.85,
+      "change_pct": 0.62,
+      "mtd_pct": 5.33,
+      "ytd_pct": 12.26,
+      "market_date": "2026-08-14",
+      "per": 42.1059,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RACE.US",
+      "error": null
+    },
+    {
+      "symbol": "WING",
+      "name_zh": "Wingstop",
+      "kind": "US",
+      "price": 126.12,
+      "change_pct": 10.73,
+      "mtd_pct": -2.6,
+      "ytd_pct": -47.12,
+      "market_date": "2026-08-14",
+      "per": 26.2292,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=WING.US",
+      "error": null
+    },
+    {
       "symbol": "AAOI",
       "name_zh": "Applied Optoelectronics",
       "kind": "US",
@@ -101,20 +129,6 @@
       "error": null
     },
     {
-      "symbol": "WING",
-      "name_zh": "Wingstop",
-      "kind": "US",
-      "price": 126.12,
-      "change_pct": 10.73,
-      "mtd_pct": -2.6,
-      "ytd_pct": -47.12,
-      "market_date": "2026-08-14",
-      "per": 26.2292,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=WING.US",
-      "error": null
-    },
-    {
       "symbol": "FIEE",
       "name_zh": "FiEE",
       "kind": "US",
@@ -129,45 +143,17 @@
       "error": null
     },
     {
-      "symbol": "RCAT",
-      "name_zh": "Red Cat",
+      "symbol": "CLM",
+      "name_zh": "Cornerstone Strategic Value Fd",
       "kind": "US",
-      "price": 11.13,
-      "change_pct": 8.8,
-      "mtd_pct": 47.81,
-      "ytd_pct": 40.35,
+      "price": 7.35,
+      "change_pct": -2,
+      "mtd_pct": -1.21,
+      "ytd_pct": -12.08,
       "market_date": "2026-08-14",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RCAT.US",
-      "error": null
-    },
-    {
-      "symbol": "NBIS",
-      "name_zh": "Nebius",
-      "kind": "US",
-      "price": 277.68,
-      "change_pct": 8.88,
-      "mtd_pct": 45.83,
-      "ytd_pct": 231.74,
-      "market_date": "2026-08-14",
-      "per": 1513.4795,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NBIS.US",
-      "error": null
-    },
-    {
-      "symbol": "AVAV",
-      "name_zh": "AeroVironment",
-      "kind": "US",
-      "price": 192.81,
-      "change_pct": 1.78,
-      "mtd_pct": 29.08,
-      "ytd_pct": -20.29,
-      "market_date": "2026-08-14",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AVAV.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CLM.US",
       "error": null
     },
     {
