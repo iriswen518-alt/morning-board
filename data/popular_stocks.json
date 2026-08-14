@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-14T14:58:16+08:00",
+  "generated_at": "2026-08-14T16:39:57+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -31,6 +31,20 @@
       "error": null
     },
     {
+      "symbol": "SNDK",
+      "name_zh": "Sandisk",
+      "kind": "US",
+      "price": 1528.11,
+      "change_pct": 13.67,
+      "mtd_pct": 25.79,
+      "ytd_pct": 543.74,
+      "market_date": "2026-08-13",
+      "per": 19.7934,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SNDK.US",
+      "error": null
+    },
+    {
       "symbol": "WDAY",
       "name_zh": "Workday",
       "kind": "US",
@@ -42,34 +56,6 @@
       "per": 51.1176,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=WDAY.US",
-      "error": null
-    },
-    {
-      "symbol": "FGI",
-      "name_zh": "FGI Industries",
-      "kind": "US",
-      "price": 11.72,
-      "change_pct": 147.78,
-      "mtd_pct": 173.83,
-      "ytd_pct": 105.61,
-      "market_date": "2026-08-13",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FGI.US",
-      "error": null
-    },
-    {
-      "symbol": "UMAC",
-      "name_zh": "Unusual Machines",
-      "kind": "US",
-      "price": 27.24,
-      "change_pct": 0.78,
-      "mtd_pct": 28.73,
-      "ytd_pct": 113.81,
-      "market_date": "2026-08-13",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=UMAC.US",
       "error": null
     },
     {
@@ -87,17 +73,45 @@
       "error": null
     },
     {
-      "symbol": "BSX",
-      "name_zh": "Boston Scientific",
+      "symbol": "FGI",
+      "name_zh": "FGI Industries",
       "kind": "US",
-      "price": 51.69,
-      "change_pct": 0.53,
-      "mtd_pct": 10.61,
-      "ytd_pct": -45.79,
+      "price": 11.72,
+      "change_pct": 147.78,
+      "mtd_pct": 173.83,
+      "ytd_pct": 105.61,
       "market_date": "2026-08-13",
-      "per": 20.3957,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BSX.US",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FGI.US",
+      "error": null
+    },
+    {
+      "symbol": "AKAN",
+      "name_zh": "Akanda",
+      "kind": "US",
+      "price": 5.01,
+      "change_pct": -7.05,
+      "mtd_pct": -5.65,
+      "ytd_pct": -51.33,
+      "market_date": "2026-08-13",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AKAN.US",
+      "error": null
+    },
+    {
+      "symbol": "UMAC",
+      "name_zh": "Unusual Machines",
+      "kind": "US",
+      "price": 27.24,
+      "change_pct": 0.78,
+      "mtd_pct": 28.73,
+      "ytd_pct": 113.81,
+      "market_date": "2026-08-13",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=UMAC.US",
       "error": null
     },
     {
@@ -115,17 +129,17 @@
       "error": null
     },
     {
-      "symbol": "SNDK",
-      "name_zh": "Sandisk",
+      "symbol": "BSX",
+      "name_zh": "Boston Scientific",
       "kind": "US",
-      "price": 1528.11,
-      "change_pct": 13.67,
-      "mtd_pct": 25.79,
-      "ytd_pct": 543.74,
+      "price": 51.69,
+      "change_pct": 0.53,
+      "mtd_pct": 10.61,
+      "ytd_pct": -45.79,
       "market_date": "2026-08-13",
-      "per": 19.7934,
+      "per": 20.3957,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SNDK.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BSX.US",
       "error": null
     },
     {
@@ -157,17 +171,17 @@
       "error": null
     },
     {
-      "symbol": "INTU",
-      "name_zh": "Intuit",
+      "symbol": "RCAT",
+      "name_zh": "Red Cat",
       "kind": "US",
-      "price": 358.29,
-      "change_pct": 7.04,
-      "mtd_pct": 13.36,
-      "ytd_pct": -45.91,
+      "price": 10.23,
+      "change_pct": -0.87,
+      "mtd_pct": 35.86,
+      "ytd_pct": 29.0,
       "market_date": "2026-08-13",
-      "per": 19.9729,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=INTU.US",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RCAT.US",
       "error": null
     },
     {
@@ -185,62 +199,6 @@
       "error": null
     },
     {
-      "symbol": "FIG",
-      "name_zh": "Figma",
-      "kind": "US",
-      "price": 26.35,
-      "change_pct": 10.95,
-      "mtd_pct": 8.35,
-      "ytd_pct": -29.49,
-      "market_date": "2026-08-13",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FIG.US",
-      "error": null
-    },
-    {
-      "symbol": "XYZ",
-      "name_zh": "Block",
-      "kind": "US",
-      "price": 83.09,
-      "change_pct": 6.14,
-      "mtd_pct": 2.28,
-      "ytd_pct": 27.65,
-      "market_date": "2026-08-13",
-      "per": 130.4545,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=XYZ.US",
-      "error": null
-    },
-    {
-      "symbol": "TPR",
-      "name_zh": "Tapestry",
-      "kind": "US",
-      "price": 128.39,
-      "change_pct": -16.49,
-      "mtd_pct": -15.74,
-      "ytd_pct": 0.49,
-      "market_date": "2026-08-13",
-      "per": 39.6911,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TPR.US",
-      "error": null
-    },
-    {
-      "symbol": "VCX",
-      "name_zh": "Fundrise Growth Tech Fund, LLC",
-      "kind": "US",
-      "price": 38.5,
-      "change_pct": 20.73,
-      "mtd_pct": 16.67,
-      "ytd_pct": null,
-      "market_date": "2026-08-13",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VCX.US",
-      "error": null
-    },
-    {
       "symbol": "AMPG",
       "name_zh": "Amplitech",
       "kind": "US",
@@ -252,20 +210,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AMPG.US",
-      "error": null
-    },
-    {
-      "symbol": "MDB",
-      "name_zh": "MongoDB",
-      "kind": "US",
-      "price": 472.29,
-      "change_pct": 7.87,
-      "mtd_pct": 39.95,
-      "ytd_pct": 12.53,
-      "market_date": "2026-08-13",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MDB.US",
       "error": null
     },
     {
