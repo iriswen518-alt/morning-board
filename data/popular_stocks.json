@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-15T18:31:10+08:00",
+  "generated_at": "2026-08-15T19:28:23+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -31,6 +31,20 @@
       "error": null
     },
     {
+      "symbol": "DIS",
+      "name_zh": "迪士尼",
+      "kind": "US",
+      "price": 106.85,
+      "change_pct": 1.96,
+      "mtd_pct": 11.08,
+      "ytd_pct": -6.08,
+      "market_date": "2026-08-14",
+      "per": 20.8979,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DIS.US",
+      "error": null
+    },
+    {
       "symbol": "BYND",
       "name_zh": "Beyond Meat",
       "kind": "US",
@@ -45,17 +59,87 @@
       "error": null
     },
     {
-      "symbol": "DIS",
-      "name_zh": "迪士尼",
+      "symbol": "SPGI",
+      "name_zh": "S&P Global",
       "kind": "US",
-      "price": 106.85,
-      "change_pct": 1.96,
-      "mtd_pct": 11.08,
-      "ytd_pct": -6.08,
+      "price": 418.8,
+      "change_pct": -0.92,
+      "mtd_pct": 1.67,
+      "ytd_pct": -15.29,
       "market_date": "2026-08-14",
-      "per": 20.8979,
+      "per": 24.949,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DIS.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPGI.US",
+      "error": null
+    },
+    {
+      "symbol": "SCHD",
+      "name_zh": "Schwab US Dividend Equity ETF",
+      "kind": "US",
+      "price": 34.52,
+      "change_pct": 0.26,
+      "mtd_pct": 3.14,
+      "ytd_pct": 25.85,
+      "market_date": "2026-08-14",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SCHD.US",
+      "error": null
+    },
+    {
+      "symbol": "AAOI",
+      "name_zh": "Applied Optoelectronics",
+      "kind": "US",
+      "price": 150.28,
+      "change_pct": 15.53,
+      "mtd_pct": 59.33,
+      "ytd_pct": 331.1,
+      "market_date": "2026-08-14",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AAOI.US",
+      "error": null
+    },
+    {
+      "symbol": "MP",
+      "name_zh": "MP Materials",
+      "kind": "US",
+      "price": 58.74,
+      "change_pct": 5.53,
+      "mtd_pct": 41.99,
+      "ytd_pct": 16.27,
+      "market_date": "2026-08-14",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MP.US",
+      "error": null
+    },
+    {
+      "symbol": "HD",
+      "name_zh": "家得寶",
+      "kind": "US",
+      "price": 338.86,
+      "change_pct": -0.83,
+      "mtd_pct": 2.08,
+      "ytd_pct": -1.52,
+      "market_date": "2026-08-14",
+      "per": 24.4148,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HD.US",
+      "error": null
+    },
+    {
+      "symbol": "CEG",
+      "name_zh": "Constellation Energy Corporatio",
+      "kind": "US",
+      "price": 282.5,
+      "change_pct": 1.39,
+      "mtd_pct": 7.52,
+      "ytd_pct": -20.03,
+      "market_date": "2026-08-14",
+      "per": 28.4918,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CEG.US",
       "error": null
     },
     {
