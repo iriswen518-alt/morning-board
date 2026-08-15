@@ -1,11 +1,59 @@
 {
-  "built_at": "2026-08-15T20:48",
+  "built_at": "2026-08-15T21:39",
   "source": "鉅亨網（cnyes）",
   "categories": [
     {
       "key": "headline",
       "label": "鉅亨頭條",
       "items": [
+        {
+          "news_id": "6577989",
+          "title": "中美算力博弈進入「鐵幕時代」！美國要把資料中心建成「戰略武器」？",
+          "title_en": "",
+          "publish_at": 1786799404,
+          "url": "https://news.cnyes.com/news/id/6577989",
+          "paras": [
+            "美國智庫蘭德公司（RAND）近日發布《AI推理資料中心：面向國家安全的垂直安全工程架構策略》報告，提出「安全推理資料中心」（Secure Inference Data Center，SIDC）架構，試圖重新定義AI推理基礎設施的安全邏輯。報告雖以工程設計為主軸，背後卻反映出美國正逐步將AI推理算力從商業基礎設施提升至國家安全層級。",
+            "這份51頁報告認為，面對具備OC5級能力的國家級對手，傳統資料中心依靠防火牆、存取控制與加密等措施逐層加固的模式已不足以確保安全。",
+            "SIDC因此主張從概念、硬體、軟體到跨域通訊全面採取「原生安全」架構，讓AI推理環境本身成為一座高度隔離的數位堡壘。",
+            "所謂OC5級對手，是蘭德先前定義的頂級攻擊組織，可能具備約1,000名各領域頂尖專家、最高10億美元資金，以及國家級基礎設施與合法掩護。SIDC的設計，正是以這類具備強大資源的攻擊者作為威脅模型。",
+            "從「建好再防」轉向AI基礎設施原生安全\n\nSIDC與一般商業資料中心最大的不同，在於安全機制並非後續附加，而是從整體架構設計之初便被納入。",
+            "傳統AI算力中心通常先依商業需求完成建置，再透過防火牆、存取控制與加密通道等方式增加防護。然而，蘭德認為，若攻擊者具備國家級資源，通用運算設備本身的攻擊面、供應鏈遭植入後門的可能性，以及軟體堆疊中的零日漏洞，都可能成為突破點。",
+            "因此，SIDC採取多層隔離架構，將整座設施劃分為8個彼此不信任的安全域，包括介面室（IR）、載荷交換室（PER）、可信推理計算聖所（TICS）、可信復原保險庫（TRV）、IT管理中心（ITM）、防護營運中心（POC）、公用設施域與衛生域。",
+            "其中，模型權重、推理演算法與參考資料僅能以明文形式存在於TICS內部，並盡可能降低跨域資料流。",
+            "在硬體層面，SIDC要求跨域通訊採用物理層固定的單向資料通路，也就是資料二極體，藉此阻斷反向通道與潛伏式通訊管道。即使上層軟體遭到攻破，也能限制資料逆向傳輸的可能性。",
+            "此外，跨域協定還必須接受形式化驗證。架構將結合FPGA客製化電路、有限狀態機驗證與後量子密碼學認證，並利用Tamarin、CryptoVerif等工具對跨域互動協定進行數學證明。",
+            "蘭德在報告中更直接假設，商業運算硬體與推理軟體供應鏈遭到入侵不僅可能，而且具有高度可能性。因此，SIDC並不將供應鏈安全完全建立在「設備本身值得信任」的前提上，而是試圖透過架構設計降低設備遭入侵後造成的影響。",
+            "高昂成本換取最高等級安全\n\n高度安全隔離也意味著龐大的成本與效率代價。",
+            "蘭德估算，SIDC概念驗證版本的建置成本約3,700萬至5,000萬美元，企業級版本則可能達到2.77億至3.45億美元。正常建置時間約2至2.5年，若處於緊急狀態，則可壓縮至14個月。",
+            "在運作層面，單次推理請求的往返安全開銷約需3至5分鐘。更大的限制在於，SIDC建成後，軟體堆疊將在5年內維持凍結狀態，硬體則在建設階段便完成鎖定。",
+            "換言之，SIDC並不是以商業資料中心追求的彈性、快速更新與大規模擴張為優先，而是將安全性放在最高順位。這也使其更接近一套為高度敏感AI應用打造的專用基礎設施，而非一般企業雲端運算環境。",
+            "AI競爭從訓練算力延伸至推理基礎設施\n\nSIDC的提出，也讓美國AI戰略中的另一項變化更加明顯，即AI安全管制的重心正從模型訓練與晶片供應，進一步延伸至AI推理設施本身。",
+            "近年美國持續以國家安全為由，對AI產業鏈進行更廣泛的管控，從半導體設備、GPU與HBM，到AI資料中心相關元件與模型權重等，均逐漸被納入安全審查與出口管制框架。",
+            "在這樣的背景下，SIDC所提出的並不只是「如何保護一座資料中心」，而是如何確保美國境內最敏感的AI推理能力，即使面臨供應鏈滲透、硬體遭入侵或內部人員失守等情況，核心模型與資料仍能受到保護。",
+            "這也使AI算力的安全邊界從「晶片是否安全」進一步延伸至「晶片所在的整個運算環境是否可信」。",
+            "與此同時，中國AI產業的快速發展，也增加了美國對尖端AI能力保護的戰略壓力。",
+            "隨著中國模型在推理、長文本處理與低成本推理等方向持續追趕，加上開源模型逐步擴大海外生態，美中AI競爭已不再只是單純比較模型效能，而逐漸延伸至算力、供應鏈、模型安全與全球生態等層面。",
+            "在這種競爭環境下，SIDC可以被視為美國針對最敏感AI能力所提出的一套極端安全方案。",
+            "「AI算力堡壘」可能成為國家級基礎設施\n\n從戰略層面來看，SIDC最重要的訊號，是AI推理資料中心的定位正在發生變化。",
+            "蘭德建議美國儘快確認SIDC的實施主體並提前進行選址，同時利用既有政府算力設施縮短建設時間。這代表這類資料中心的目標並非一般商業服務，而是可能承擔高度敏感的國家級AI應用。",
+            "如果這類架構進一步被採用，前沿AI模型將不再只是部署在商業雲端，而可能被放入由政府或公共利益機構掌控、依照最高安全標準建造的專用環境。",
+            "這也可能進一步加深中美AI基礎設施的分化。",
+            "一方面，美國正透過晶片、設備、供應鏈與資料中心安全等多個層面建立更嚴格的技術防線；另一方面，中國也持續推進自主可控的AI與算力安全體系。當雙方各自建立高度隔離的技術與供應鏈體系，AI安全標準也可能逐漸出現陣營化趨勢。",
+            "從這個角度來看，SIDC並非要取代所有商業資料中心，而更像是針對最敏感、最重要AI能力所設計的「最後防線」。",
+            "SIDC最大挑戰：安全與AI更新速度的矛盾\n\n不過，SIDC的高度安全設計也帶來明顯限制。",
+            "首先是軟體凍結與AI快速演進之間的衝突。SIDC要求軟體堆疊長期維持穩定，但AI模型、演算法與工具的更新速度遠高於傳統關鍵基礎設施。蘭德也承認，到了設施5年生命週期結束時，相關軟體與演算法可能已經落後外部發展。",
+            "其次是高度隔離與AI 代理發展之間的矛盾。新一代AI逐漸從單純的對話模式轉向具備自主工具調用、狀態管理與複雜互動能力的AI代理，而這類應用需要更頻繁的跨系統互動，與SIDC強調的嚴格隔離存在衝突。",
+            "蘭德也將Agentic interaction列為仍待進一步工程化的項目。",
+            "第三則是客製化安全硬體與商業規模化之間的矛盾。SIDC需要高度專業化的FPGA通道控制器、形式化驗證協定與專用資料二極體硬體。",
+            "報告估計，通道控制器開發成本可能達1,000萬至2,250萬美元，而具備相關能力的人才供給有限，並非單純投入資金就能快速擴大。",
+            "因此，SIDC更適合被視為一種國家級AI安全備援與戰略設施，而不是未來所有AI算力中心的標準答案。",
+            "分析認為，這份報告真正值得關注的地方，或許正是在於它所反映出的戰略轉向，即當AI推理能力開始被視為國家安全資產，資料中心就不再只是承載GPU的機房，而可能成為需要以最高等級安全標準保護的戰略基礎設施。",
+            "AI算力競爭因此也正在從「誰擁有更多晶片」逐步延伸至「誰能建造更安全、更難以滲透的算力堡壘」。",
+            "在中美AI競爭持續升溫的背景下，這種以安全隔離為核心的基礎設施思維，也可能讓全球AI產業進一步走向兩套標準、兩套體系並存的局面。"
+          ],
+          "paras_en": []
+        },
         {
           "news_id": "6577956",
           "title": "Anthropic為Claude加AI浮水印引爆爭議！Reddit用戶正反激辯",
@@ -201,31 +249,6 @@
             "Regarding Shengxin Materials, beyond AI data‑center applications that use third‑category semiconductors, there is also strong demand from the emerging low‑Earth‑orbit satellite sector. The company has recently passed certification from major manufacturers and expects revenue to grow steadily starting in the second half of this year.",
             "Xie said that both Jin Yun Technology and Shengxin Materials are expected to be listed on the Emerging Stock Board in October of this year.",
             "Looking at the group's momentum, automation is a major driver this year, fueled by semiconductor orders that are projected to increase several‑fold compared to last year. Shengxin Materials’ revenue in the first half of 2026 already exceeds the entire previous year’s revenue, indicating that the Guangyun group should see a solid growth margin in the second half."
-          ]
-        },
-        {
-          "news_id": "6577917",
-          "title": "廣運布局AI、半導體及機器人產業 團隊全面領航另一個50年",
-          "title_en": "Broad Transport Positions Itself in AI, Semiconductor and Robotics Industries, Team Leads Another 50 Years",
-          "publish_at": 1786787856,
-          "url": "https://news.cnyes.com/news/id/6577917",
-          "paras": [
-            "自動化與智慧製造大廠廣運(6125-TW)今(2026)年迎來創立50周年的重要里程碑，今(15)日並舉辦「50週年家庭日活動」，宣示世代傳承布局完成，將引領廣運集團全力搶攻人工智慧AI、半導體、機器人與無人機、智慧製造及新能源等新世代產業戰略高地，邁向百年企業目標。",
-            "回顧創業歷程，廣運總裁謝清福感性表示，1976年他與現任副總裁白周煌攜手創業，當時僅憑藉兩個人合資10萬元資本額起家，憑著「肯做、肯學、不要怕辛苦」的精神，一步一腳印走過半個世紀。",
-            "面對快速變化的產業環境與科技浪潮，廣運也已落實企業治理與傳承規劃。謝清在2025年5月20日將董事長一職正式交棒給謝明凱，完成「創業世代」走向「新創世代」的歷史轉折。",
-            "對於廣運集團的發展，謝清福指出，除自動化、半導體、光學、物流產業之外，這幾年廣運也藉著這個AI浪潮，在7年前開始研發了這個水冷系統，最近也不斷的接到一些訂單，而50年來廣運應該建構了一些非常好的一個基礎，未來廣運50年的目標，由傳承去進一步發揚光大，",
-            "謝清福指出，不管是在自動化，或者是在太陽能能源方面，或者在AI方面，AI自動化方面，廣運都有非常的完整的布局，",
-            "廣運集團目前涵蓋廣運機械。太極能源(4934-TW)）、盛新材料(6930-TW)、專注於第三方物流與智慧物流運營服務的子公司群豐欣業、金運科技、足生醫光學與消費醫療領域的重點布局的永暘光學",
-            "廣運集團指出，從1976年創業至2026年邁入第50個年頭，廣運站在下一個半世紀的起點，已明確鎖定未來關鍵技術領域。謝清福廣運持續精進核心技術，掌握新產業契機，朝向百年企業目標堅定前行，並期盼未來走到百年之際，每一位廣運人都能驕傲地表示，廣運走向百年的歷史裡，有我一份。"
-          ],
-          "paras_en": [
-            "Automation and smart manufacturing giant Broad Transport (6125-TW) marks its 50th anniversary this year (2026) with a \"50th Anniversary Family Day\" event today (the 15th), announcing the completion of its generational transition and its full‑scale push into next‑generation strategic sectors such as artificial intelligence, semiconductors, robotics and drones, smart manufacturing and new energy, aiming toward a centennial corporate goal.",
-            "Reflecting on its founding journey, Broad Transport President Xie Qingfu emotively recalled that in 1976 he and current Vice President Bai Zhouhuang started the company with a joint capital of NT$100,000, and with a spirit of \"willing to work, willing to learn, and not afraid of hardship\" they have walked step by step through half a century.",
-            "Facing a rapidly changing industrial environment and technological wave, Broad Transport has also implemented corporate governance and succession planning. On May 20, 2025, Xie Qing formally handed the chairmanship to Xie Mingkai, completing the historic shift from the \"founding generation\" to the \"new founding generation.\"",
-            "Regarding the group’s development, Xie Qingfu noted that beyond automation, semiconductors, optics and logistics, Broad Transport has leveraged the AI wave and began developing a water‑cooling system seven years ago; recent orders have been coming in steadily, and after 50 years the company has built a solid foundation that will be further expanded through inheritance.",
-            "Xie Qingfu emphasized that whether in automation, solar energy, or AI—particularly AI‑driven automation—Broad Transport has established a very comprehensive layout.",
-            "The Broad Transport Group currently includes Broad Transport Machinery, Taiji Energy (4934‑TW), Shengxin Materials (6930‑TW), the subsidiary Qunfeng Xinye focused on third‑party and smart logistics services, Jin Yun Technology, and Yongyang Optics, which concentrates on biomedical optics and consumer medical fields.",
-            "The group stated that from its founding in 1976 to its 50th year in 2026, Broad Transport stands at the starting point of the next half‑century, having clearly locked in future key technology areas. Xie Qingfu said Broad Transport will continue to refine core technologies, seize new industry opportunities, and steadfastly move toward the centennial goal, hoping that when the company reaches 100 years, every Broad Transport employee can proudly say they were part of its century‑long history."
           ]
         }
       ]
@@ -815,6 +838,54 @@
       "label": "國際財經",
       "items": [
         {
+          "news_id": "6577989",
+          "title": "中美算力博弈進入「鐵幕時代」！美國要把資料中心建成「戰略武器」？",
+          "title_en": "",
+          "publish_at": 1786799404,
+          "url": "https://news.cnyes.com/news/id/6577989",
+          "paras": [
+            "美國智庫蘭德公司（RAND）近日發布《AI推理資料中心：面向國家安全的垂直安全工程架構策略》報告，提出「安全推理資料中心」（Secure Inference Data Center，SIDC）架構，試圖重新定義AI推理基礎設施的安全邏輯。報告雖以工程設計為主軸，背後卻反映出美國正逐步將AI推理算力從商業基礎設施提升至國家安全層級。",
+            "這份51頁報告認為，面對具備OC5級能力的國家級對手，傳統資料中心依靠防火牆、存取控制與加密等措施逐層加固的模式已不足以確保安全。",
+            "SIDC因此主張從概念、硬體、軟體到跨域通訊全面採取「原生安全」架構，讓AI推理環境本身成為一座高度隔離的數位堡壘。",
+            "所謂OC5級對手，是蘭德先前定義的頂級攻擊組織，可能具備約1,000名各領域頂尖專家、最高10億美元資金，以及國家級基礎設施與合法掩護。SIDC的設計，正是以這類具備強大資源的攻擊者作為威脅模型。",
+            "從「建好再防」轉向AI基礎設施原生安全\n\nSIDC與一般商業資料中心最大的不同，在於安全機制並非後續附加，而是從整體架構設計之初便被納入。",
+            "傳統AI算力中心通常先依商業需求完成建置，再透過防火牆、存取控制與加密通道等方式增加防護。然而，蘭德認為，若攻擊者具備國家級資源，通用運算設備本身的攻擊面、供應鏈遭植入後門的可能性，以及軟體堆疊中的零日漏洞，都可能成為突破點。",
+            "因此，SIDC採取多層隔離架構，將整座設施劃分為8個彼此不信任的安全域，包括介面室（IR）、載荷交換室（PER）、可信推理計算聖所（TICS）、可信復原保險庫（TRV）、IT管理中心（ITM）、防護營運中心（POC）、公用設施域與衛生域。",
+            "其中，模型權重、推理演算法與參考資料僅能以明文形式存在於TICS內部，並盡可能降低跨域資料流。",
+            "在硬體層面，SIDC要求跨域通訊採用物理層固定的單向資料通路，也就是資料二極體，藉此阻斷反向通道與潛伏式通訊管道。即使上層軟體遭到攻破，也能限制資料逆向傳輸的可能性。",
+            "此外，跨域協定還必須接受形式化驗證。架構將結合FPGA客製化電路、有限狀態機驗證與後量子密碼學認證，並利用Tamarin、CryptoVerif等工具對跨域互動協定進行數學證明。",
+            "蘭德在報告中更直接假設，商業運算硬體與推理軟體供應鏈遭到入侵不僅可能，而且具有高度可能性。因此，SIDC並不將供應鏈安全完全建立在「設備本身值得信任」的前提上，而是試圖透過架構設計降低設備遭入侵後造成的影響。",
+            "高昂成本換取最高等級安全\n\n高度安全隔離也意味著龐大的成本與效率代價。",
+            "蘭德估算，SIDC概念驗證版本的建置成本約3,700萬至5,000萬美元，企業級版本則可能達到2.77億至3.45億美元。正常建置時間約2至2.5年，若處於緊急狀態，則可壓縮至14個月。",
+            "在運作層面，單次推理請求的往返安全開銷約需3至5分鐘。更大的限制在於，SIDC建成後，軟體堆疊將在5年內維持凍結狀態，硬體則在建設階段便完成鎖定。",
+            "換言之，SIDC並不是以商業資料中心追求的彈性、快速更新與大規模擴張為優先，而是將安全性放在最高順位。這也使其更接近一套為高度敏感AI應用打造的專用基礎設施，而非一般企業雲端運算環境。",
+            "AI競爭從訓練算力延伸至推理基礎設施\n\nSIDC的提出，也讓美國AI戰略中的另一項變化更加明顯，即AI安全管制的重心正從模型訓練與晶片供應，進一步延伸至AI推理設施本身。",
+            "近年美國持續以國家安全為由，對AI產業鏈進行更廣泛的管控，從半導體設備、GPU與HBM，到AI資料中心相關元件與模型權重等，均逐漸被納入安全審查與出口管制框架。",
+            "在這樣的背景下，SIDC所提出的並不只是「如何保護一座資料中心」，而是如何確保美國境內最敏感的AI推理能力，即使面臨供應鏈滲透、硬體遭入侵或內部人員失守等情況，核心模型與資料仍能受到保護。",
+            "這也使AI算力的安全邊界從「晶片是否安全」進一步延伸至「晶片所在的整個運算環境是否可信」。",
+            "與此同時，中國AI產業的快速發展，也增加了美國對尖端AI能力保護的戰略壓力。",
+            "隨著中國模型在推理、長文本處理與低成本推理等方向持續追趕，加上開源模型逐步擴大海外生態，美中AI競爭已不再只是單純比較模型效能，而逐漸延伸至算力、供應鏈、模型安全與全球生態等層面。",
+            "在這種競爭環境下，SIDC可以被視為美國針對最敏感AI能力所提出的一套極端安全方案。",
+            "「AI算力堡壘」可能成為國家級基礎設施\n\n從戰略層面來看，SIDC最重要的訊號，是AI推理資料中心的定位正在發生變化。",
+            "蘭德建議美國儘快確認SIDC的實施主體並提前進行選址，同時利用既有政府算力設施縮短建設時間。這代表這類資料中心的目標並非一般商業服務，而是可能承擔高度敏感的國家級AI應用。",
+            "如果這類架構進一步被採用，前沿AI模型將不再只是部署在商業雲端，而可能被放入由政府或公共利益機構掌控、依照最高安全標準建造的專用環境。",
+            "這也可能進一步加深中美AI基礎設施的分化。",
+            "一方面，美國正透過晶片、設備、供應鏈與資料中心安全等多個層面建立更嚴格的技術防線；另一方面，中國也持續推進自主可控的AI與算力安全體系。當雙方各自建立高度隔離的技術與供應鏈體系，AI安全標準也可能逐漸出現陣營化趨勢。",
+            "從這個角度來看，SIDC並非要取代所有商業資料中心，而更像是針對最敏感、最重要AI能力所設計的「最後防線」。",
+            "SIDC最大挑戰：安全與AI更新速度的矛盾\n\n不過，SIDC的高度安全設計也帶來明顯限制。",
+            "首先是軟體凍結與AI快速演進之間的衝突。SIDC要求軟體堆疊長期維持穩定，但AI模型、演算法與工具的更新速度遠高於傳統關鍵基礎設施。蘭德也承認，到了設施5年生命週期結束時，相關軟體與演算法可能已經落後外部發展。",
+            "其次是高度隔離與AI 代理發展之間的矛盾。新一代AI逐漸從單純的對話模式轉向具備自主工具調用、狀態管理與複雜互動能力的AI代理，而這類應用需要更頻繁的跨系統互動，與SIDC強調的嚴格隔離存在衝突。",
+            "蘭德也將Agentic interaction列為仍待進一步工程化的項目。",
+            "第三則是客製化安全硬體與商業規模化之間的矛盾。SIDC需要高度專業化的FPGA通道控制器、形式化驗證協定與專用資料二極體硬體。",
+            "報告估計，通道控制器開發成本可能達1,000萬至2,250萬美元，而具備相關能力的人才供給有限，並非單純投入資金就能快速擴大。",
+            "因此，SIDC更適合被視為一種國家級AI安全備援與戰略設施，而不是未來所有AI算力中心的標準答案。",
+            "分析認為，這份報告真正值得關注的地方，或許正是在於它所反映出的戰略轉向，即當AI推理能力開始被視為國家安全資產，資料中心就不再只是承載GPU的機房，而可能成為需要以最高等級安全標準保護的戰略基礎設施。",
+            "AI算力競爭因此也正在從「誰擁有更多晶片」逐步延伸至「誰能建造更安全、更難以滲透的算力堡壘」。",
+            "在中美AI競爭持續升溫的背景下，這種以安全隔離為核心的基礎設施思維，也可能讓全球AI產業進一步走向兩套標準、兩套體系並存的局面。"
+          ],
+          "paras_en": []
+        },
+        {
           "news_id": "6577956",
           "title": "Anthropic為Claude加AI浮水印引爆爭議！Reddit用戶正反激辯",
           "title_en": "Anthropic Sparks Controversy Over AI Watermark on Claude; Reddit Users Debate Heatedly",
@@ -1112,39 +1183,6 @@
             "The list further contains cooling‑and‑power‑management firm Vertiv (VRT‑US), power supplier Talen Energy (TLN‑US), and nuclear‑power generator Vistra (VST‑US).",
             "World’s largest lithium producer Albemarle (ALB‑US) is also named by BofA, reflecting lithium’s importance for data‑center battery production. Uranium supplier Cameco (CCJ‑US) makes the list as well.",
             "Electronics manufacturer Flex (FLEX‑US), enterprise‑software company Atlassian (TEAM‑US), brokerage platform Robinhood (HOOD‑US), and Aktis Oncology (AKTS‑US), which is backed by Eli Lilly (LLY‑US), are likewise featured in the list."
-          ]
-        },
-        {
-          "news_id": "6577941",
-          "title": "「AI股神」槓桿爆倉前內幕！Situational重押美光、SanDisk",
-          "title_en": "Inside the Leveraged Collapse of the “AI Stock God”! Situational’s Heavy Bet on Micron and SanDisk",
-          "publish_at": 1786774212,
-          "url": "https://news.cnyes.com/news/id/6577941",
-          "paras": [
-            "近期「AI股神」Leopold Aschenbrenner創立的人工智慧（AI）避險基金Situational Awareness因槓桿交易失利震動資本市場。值得注意的是，最新監管文件顯示，該基金在遭遇崩盤前，仍持續大舉加碼半導體股票，尤其集中押注記憶體晶片業者美光科技(MU-US) 與SanDisk (SNDKV-US) 。",
-            "監管文件顯示，Situational Awareness今年第2季大幅增加美光與SanDisk持股，兩家公司合計持倉規模約110億美元，約占基金當時淨資產四分之一。",
-            "與此同時，該基金還降低輝達(NVDA-US) 、博通(AVGO-US) 及超微半導體(AMD-US) 的選擇權空頭部位。",
-            "分析指出，這項操作表明，基金管理層彼時對半導體板塊整體持更樂觀的判斷，主動降低了避險敞口，進一步加大了淨多頭暴露。",
-            "然而，這套布局很快遭遇市場反轉。上月AI相關股票遭遇劇烈拋售，美光股價重挫29%，SanDisk跌幅更達47%，導致Situational Awareness的科技股部位快速縮水。",
-            "在高槓桿與持股高度集中的雙重壓力下，Situational Awareness被迫出售公開市場股票，以應對資金壓力。最終， Ken Griffin旗下避險基金金融服務公司Citadel接手該基金大量AI相關股票。",
-            "Situational Awareness由前OpenAI研究員Leopold Aschenbrenner創立，主要押注AI基礎建設發展。",
-            "對Situational Awareness而言，重押少數個股的策略在市場反轉後迅速放大虧損。",
-            "美光與SanDisk合計約110億美元的部位集中於兩家公司，當股價急挫之際，基金淨值承受沉重壓力，也讓其難以透過調整持倉來緩解流動性問題，最終只能拋售公開市場股票。",
-            "另一方面，Citadel旗下旗艦基金Wellington 7月表現大幅改善，當月上漲5.9%。主要原因在於Citadel以約市價九折的價格承接Situational Awareness持有的大量公開股票。",
-            "值得注意的是，在這筆交易於7月最後一週展開前，Wellington當月漲幅僅約0.45%，顯示這筆折價收購交易很快便轉化為基金績效。"
-          ],
-          "paras_en": [
-            "Recently, the AI‑focused hedge fund Situational Awareness, founded by the so‑called “AI Stock God” Leopold Aschenbrenner, has shaken the capital markets after a leveraged trade loss. Notably, the latest regulatory filings show that before the collapse the fund continued to massively increase its positions in semiconductor stocks, concentrating especially on memory‑chip makers Micron Technology (MU‑US) and SanDisk (SNDKV‑US).",
-            "Regulatory documents reveal that in Q2 of this year Situational Awareness dramatically increased its holdings of Micron and SanDisk, with a combined position of roughly $11 billion, accounting for about one‑quarter of the fund’s net assets at the time.",
-            "At the same time, the fund reduced its short‑option exposure on Nvidia (NVDA‑US), Broadcom (AVGO‑US) and Advanced Micro Devices (AMD‑US).",
-            "Analysts note that this move indicated the fund’s management was more optimistic about the semiconductor sector overall at that moment, actively cutting hedge exposure and further increasing its net long exposure.",
-            "However, the positioning quickly ran into a market reversal. Last month AI‑related stocks suffered a sharp sell‑off, with Micron plunging 29% and SanDisk falling a staggering 47%, causing Situational Awareness’s tech‑stock holdings to shrink rapidly.",
-            "Under the dual pressure of high leverage and a highly concentrated portfolio, Situational Awareness was forced to sell shares on the open market to meet funding needs. Ultimately, Citadel’s hedge‑fund arm, led by Ken Griffin, took over a large block of the fund’s AI‑related stocks.",
-            "Situational Awareness was founded by former OpenAI researcher Leopold Aschenbrenner and primarily bet on the development of AI infrastructure.",
-            "For Situational Awareness, the strategy of heavily concentrating on a few stocks amplified losses rapidly after the market turned against them.",
-            "The roughly $11 billion position in Micron and SanDisk concentrated in just two companies placed heavy pressure on the fund’s net asset value when the stocks slumped, leaving it unable to alleviate liquidity issues by rebalancing and forcing it to sell shares on the open market.",
-            "On the other hand, Citadel’s flagship fund Wellington showed a marked improvement in July, rising 5.9% for the month. The main driver was Citadel’s purchase of a large block of publicly traded shares held by Situational Awareness at about a 10% discount to market price.",
-            "It is worth noting that before this transaction unfolded in the last week of July, Wellington had only gained about 0.45% for the month, indicating that the discounted acquisition quickly translated into improved fund performance."
           ]
         }
       ]
