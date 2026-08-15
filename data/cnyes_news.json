@@ -1,11 +1,48 @@
 {
-  "built_at": "2026-08-15T19:48",
+  "built_at": "2026-08-15T20:48",
   "source": "鉅亨網（cnyes）",
   "categories": [
     {
       "key": "headline",
       "label": "鉅亨頭條",
       "items": [
+        {
+          "news_id": "6577956",
+          "title": "Anthropic為Claude加AI浮水印引爆爭議！Reddit用戶正反激辯",
+          "title_en": "Anthropic Sparks Controversy Over AI Watermark on Claude; Reddit Users Debate Heatedly",
+          "publish_at": 1786795803,
+          "url": "https://news.cnyes.com/news/id/6577956",
+          "paras": [
+            "Anthropic近期決定為旗下Claude聊天機器人的輸出內容加入隱形浮水印，在生成的文字中嵌入一般使用者肉眼無法察覺、但可由電腦系統辨識的程式碼，以標示內容是否由AI生成，引發一些用戶不滿。",
+            "根據《TechCrunch》報導，Anthropic此舉主要是為配合歐盟《人工智慧法案》（EU AI Act）旗下的透明度規範。相關規範要求科技公司對AI生成或經AI編輯的內容進行標記，而且標記方式必須能夠被電腦系統識別。",
+            "不過，這項政策雖符合監管方向，卻也在部分Claude使用者之間引發爭議。",
+            "從Reddit上的討論可以看到，不少使用者對AI浮水印持不同看法。其中，一名帳號註冊僅約3週、名為visionode的使用者認為，這套新的浮水印機制是一場嚴苛的陰謀，目的是讓全球無辜的聊天機器人使用者成為受害者。",
+            "visionode的核心論點似乎是，熟悉AI工具的Claude使用者，或許可以透過改寫內容，或利用其他AI服務對輸出內容進一步處理，來掩蓋自己使用AI的痕跡；但對一般Claude使用者而言，則可能無法躲過偵測。",
+            "該使用者舉例，學生若只是使用Claude協助重新整理段落、記者利用AI整理長達200頁的逐字稿，或作家因創作瓶頸請Claude提供同義詞，最後都可能留下AI生成的標記。",
+            "不過，這套說法也沒有獲得所有Reddit使用者認同。有網友認為，若記者只是利用Claude整理大量逐字稿，浮水印本身並不會造成太大問題，除非記者直接將AI整理出的內容原封不動放入報導；同樣地，學生若將Claude產出的文字直接貼進作業，也涉及學術誠信問題。",
+            "另一名使用者則直接要求原發文者「深呼吸」，顯示部分網友並不認為浮水印本身構成嚴重問題。",
+            "除了對使用情境的疑慮，也有使用者從「創作者權益」角度批評Anthropic的做法。其中一名網友認為，自己在使用Claude時提供指令、背景資訊、判斷與多次修改，Claude只是協助完成工作的工具，因此質疑如果Claude開始對生成的程式碼或其他內容加上浮水印，究竟是在主張什麼樣的「所有權」。",
+            "然而，其他使用者很快反駁這項觀點，指出浮水印並非代表Claude要對內容主張所有權，而是為了讓外界能夠辨識AI生成內容，降低AI產製內容可能帶來的各種風險。",
+            "甚至有網友調侃，批評Claude的文章本身似乎就是透過Claude撰寫，反而讓這場討論形成反差。",
+            "值得注意的是，並非所有批評者都採取如此強烈的立場。有使用者認為，真正值得討論的是AI浮水印背後的倫理問題，尤其考量部分大型AI模型本身就是透過大量人類創作內容進行訓練，在這樣的背景下，再由AI替使用者產出的內容加入浮水印，確實存在某種諷刺意味。",
+            "不過，從目前Reddit上的相關討論來看，支持Anthropic加入浮水印的聲音仍相當明顯。有使用者認為，讓AI生成內容具備可辨識性本身並沒有充分理由被反對，真正不希望內容被標示的人，主要是擔心他人知道內容曾經經過AI生成。"
+          ],
+          "paras_en": [
+            "Anthropic recently decided to embed an invisible watermark in the output of its Claude chatbot, inserting code that is invisible to the naked eye but detectable by computer systems to indicate whether content was AI‑generated, prompting some user dissatisfaction.",
+            "According to TechCrunch, Anthropic’s move is mainly to comply with the transparency provisions of the EU AI Act, which require tech companies to label AI‑generated or AI‑edited content in a way that can be recognized by computer systems.",
+            "However, while the policy aligns with regulatory direction, it has also sparked controversy among some Claude users.",
+            "Reddit discussions reveal a split in opinion on AI watermarks. One user, visionode, who has been registered for only about three weeks, claims the new watermark mechanism is a harsh conspiracy aimed at turning innocent chatbot users worldwide into victims.",
+            "Visionode’s core argument is that experienced Claude users might rewrite or further process the output with other AI services to hide their AI usage, whereas ordinary users may not be able to evade detection.",
+            "The user gives examples: a student using Claude to reorganize paragraphs, a journalist using AI to process a 200‑page transcript, or a writer seeking synonyms during a creative block could all end up leaving an AI‑generated marker.",
+            "But this view is not shared by all Redditors. Some argue that if a journalist merely uses Claude to organize large transcripts, the watermark itself isn’t a major issue unless the AI‑processed text is inserted verbatim into the article; similarly, a student copying Claude‑generated text directly into an assignment raises academic integrity concerns.",
+            "Another user simply told the original poster to “take a deep breath,” indicating that some do not see the watermark as a serious problem.",
+            "Beyond usage concerns, some users criticize Anthropic from a creator‑rights perspective, arguing that when they provide prompts, context, judgments, and multiple edits, Claude is just a tool, and they question what ownership the watermark implies.",
+            "Other users quickly rebutted this, pointing out that the watermark does not claim ownership by Claude but serves to let the public identify AI‑generated content and mitigate various risks associated with AI‑produced material.",
+            "Some even joked that criticism of Claude articles seems self‑referential, as the critiques themselves appear to be written by Claude, creating an ironic twist in the debate.",
+            "It is worth noting that not all critics take such a strong stance; some say the real discussion should focus on the ethics of AI watermarks, especially given that large AI models are trained on massive amounts of human‑created content, making the addition of a watermark to AI‑generated output somewhat paradoxical.",
+            "Nevertheless, Reddit discussions show that support for Anthropic’s watermark remains quite pronounced, with users arguing that making AI‑generated content identifiable is not a reason to oppose it, and those who dislike labeling mainly fear others will know the content was AI‑generated."
+          ]
+        },
         {
           "news_id": "6577950",
           "title": "Anthropic驚爆「Model 2」新模型！性能超越Mythos 5、AI風險評估卻陷「飽和」危機",
@@ -190,33 +227,6 @@
             "The Broad Transport Group currently includes Broad Transport Machinery, Taiji Energy (4934‑TW), Shengxin Materials (6930‑TW), the subsidiary Qunfeng Xinye focused on third‑party and smart logistics services, Jin Yun Technology, and Yongyang Optics, which concentrates on biomedical optics and consumer medical fields.",
             "The group stated that from its founding in 1976 to its 50th year in 2026, Broad Transport stands at the starting point of the next half‑century, having clearly locked in future key technology areas. Xie Qingfu said Broad Transport will continue to refine core technologies, seize new industry opportunities, and steadfastly move toward the centennial goal, hoping that when the company reaches 100 years, every Broad Transport employee can proudly say they were part of its century‑long history."
           ]
-        },
-        {
-          "news_id": "6577871",
-          "title": "無人機232關稅9月上路！經部允強化美規認驗證助攻 15%稅率迎「轉單」商機",
-          "title_en": "Drone 232 Tariff to Take Effect in September: MOEA to Enhance US Certification to Assist Taiwanese Exporters",
-          "publish_at": 1786787702,
-          "url": "https://news.cnyes.com/news/id/6577871",
-          "paras": [
-            "美國針對無人機及相關零組件祭出的「232關稅措施」將於9月3日上路，經濟部昨（14）日表示，將加速推動國內認驗證體系與美國標準接軌，協助業者取得輸美資格及認證。同時，依據美方公布內容，台灣與歐盟、日本、韓國及瑞士同列低稅率優惠名單，只要符合關鍵零組件及技術來源規定，即可適用15%關稅，有助維持我國無人機產品輸美競爭優勢，並爭取全球供應鏈移轉商機。",
-            "美國政府於美東時間13日公布《1962年貿易擴張法》第232條無人機調查結果，認定進口無人機系統（UAS）及零組件涉及國家安全議題，因此針對不同產品採取差別關稅措施。一般中小型無人機原則適用25%關稅，大型或具敏感功能的無人機及關鍵零組件則面臨100%高關稅。",
-            "不過，台灣、歐盟、日本、韓國及瑞士等國產品若符合美方要求的關鍵零組件與技術來源條件，可適用15%稅率且無須疊加最惠國待遇（MFN）關稅，屬於本次措施中相對有利的稅率區間。經濟部認為，在關稅差異下，台灣業者有望藉此提高相對競爭力，進一步爭取國際客戶轉單及擴大輸美市場。",
-            "經濟部指出，目前台灣無人機產業以25公斤以下機型為主要布局，其中5公斤以下產品更是外銷主力，廣泛應用於巡檢、監偵及智慧管理等領域。相較之下，25公斤以上大型無人機目前多用於農業市場，中國業者仍掌握一定優勢。然而隨著美國等主要市場持續強化供應鏈安全及在地化生產，台廠也迎來切入大型無人機及關鍵零組件供應鏈的新機會。",
-            "值得注意的是，美方15%優惠關稅須符合「實質上關鍵零組件及技術來自指定國家或美國」的條件。經濟部表示，相關規範與政府近年推動的無人機「非紅供應鏈」政策方向一致，未來將協助業者盤點物料清單（BOM）及關鍵零組件來源，並串聯美國、日本及歐洲夥伴供應鏈資源，協助業者符合相關規範，取得較低關稅待遇。",
-            "除關稅因素外，美國聯邦通訊委員會（FCC）近年陸續將外國製無人機及關鍵零組件納入管制名單（Covered List），市場准入門檻同步提高。對此，經濟部已推動工研院成為美國Green UAS境外唯一認證據點，並促成金屬中心與Blue UAS認證體系接軌，未來將持續強化國內認驗證能量，加速與美方標準接軌，協助更多台灣業者打入美國供應鏈並拓展海外商機。",
-            "美國無人機232關稅措施一覽",
-            "資料來源：經濟部"
-          ],
-          "paras_en": [
-            "The US '232 Tariff' on drones and related components will take effect on September 3. The Ministry of Economic Affairs (MOEA) stated on the 14th that it will accelerate the development of domestic certification systems to align with US standards, helping Taiwanese companies obtain export qualifications and certifications.",
-            "The US government announced on the 13th that it has identified the importation of drone systems (UAS) and components as a national security issue under Section 232 of the 1962 Trade Expansion Act. As a result, the US will impose differential tariffs on various products. General small and medium-sized drones will be subject to a 25% tariff, while large drones or those with sensitive functions and key components will face a 100% high tariff.",
-            "However, products from Taiwan, the EU, Japan, South Korea, and Switzerland will be eligible for a 15% tariff if they meet the US requirements for key components and technology sources. This is a relatively favorable tax rate interval in this measure. The MOEA believes that Taiwanese companies can take advantage of this tariff difference to improve their relative competitiveness and further attract international customers to transfer orders and expand their US market.",
-            "The MOEA pointed out that Taiwan's drone industry is currently mainly focused on drones weighing less than 25 kg, with products weighing less than 5 kg being the main export force, widely used in patrol, surveillance, and intelligent management fields. In comparison, large drones weighing over 25 kg are mainly used in the agricultural market, and Chinese companies still have a certain advantage. However, as major markets such as the US continue to strengthen supply chain security and localization production, Taiwanese companies also have new opportunities to enter the large drone and key component supply chain.",
-            "It is worth noting that the US 15% preferential tariff requires that the key components and technology come from designated countries or the US. The MOEA stated that the relevant regulations are consistent with the government's recent 'non-red supply chain' policy direction, and in the future, it will assist companies in checking their material lists (BOM) and key component sources, and connecting with US, Japanese, and European partner supply chain resources to help companies meet the relevant regulations and obtain lower tariff treatment.",
-            "In addition to tariff factors, the US Federal Communications Commission (FCC) has recently added foreign-made drones and key components to the controlled list (Covered List), raising market access thresholds. In response, the MOEA has promoted the Industrial Technology Research Institute (ITRI) to become the US Green UAS's only overseas certification point, and has facilitated the Metal Center and Blue UAS certification system to align, and will continue to strengthen domestic certification capabilities, accelerating alignment with US standards, and helping more Taiwanese companies enter the US supply chain and expand overseas business opportunities.",
-            "US Drone 232 Tariff Measures at a Glance",
-            "Source: Ministry of Economic Affairs"
-          ]
         }
       ]
     },
@@ -224,6 +234,134 @@
       "key": "tw_stock",
       "label": "台股焦點",
       "items": [
+        {
+          "news_id": "6578083",
+          "title": "聯亞連拉6根漲停、川湖狂飆破萬！CPO下一棒換誰接？大戶「幾百億資金」正在卡位的黑馬股全公開！",
+          "title_en": "",
+          "publish_at": 1786797006,
+          "url": "https://news.cnyes.com/news/id/6578083",
+          "paras": [
+            "台股經歷了 7 月份激烈的「去槓桿」修正後，8 月展開強勁反彈。然而，這一次的行情與今年 4、5 月「怎麼射飛鏢怎麼賺、買什麼都漲」的普漲格局完全不同！",
+            "徐紹軒分析師在優分析的《股民想知道》節目中直言：「這一波往上攻高，必須抓對主流才能賺到錢；沒抓對，你只能眼睜睜看著指數衝上 5 萬點，自己卻與獲利擦身而過！」",
+            "那麼，誰才是真正的市場新主流？看看盤面最兇悍的訊號就知道：伺服器滑軌大廠川湖(2059-TW)短線暴漲 80% 飆破 12,000 元天價；光通訊龍頭聯亞(3081-TWO)從底部噴出 5、6 根漲停板！",
+            "大戶與法人幾百億的「新錢（New Money）」已經用連續漲停板給出答案——CPO（共同封裝光學元件 / 矽光子）就是帶領台股攻上 5 萬點的下一棒核心！",
+            "但在眾多光通訊個股中，究竟誰才是技術最強、獲利最紮實、最有機會成為下一檔「萬金股」的真正黑馬？",
+            "一、 辨識真主流：底部連續噴漲停的族群就是答案！\n回顧大盤從季線止穩反彈的過程，多數股票只是隨波逐流，唯獨 CPO 矽光子族群 展現出驚人的整齊度與爆發力。",
+            "除了龍頭聯亞(3081)以連續漲停宣告王者歸來，包括聯鈞、全新、環宇-KY、華星光等供應鏈也同步走強。這背後有兩大關鍵推動力：",
+            "去槓桿籌碼極度乾淨：前波殺盤將浮額清洗完畢，法人與大戶在低檔積極卡位。",
+            "美中科技戰的超級轉單紅利：美國傳出可能進一步制裁中國光通訊模組（如光收發器），導致中國龍頭「易中天」（新易盛、中際旭創、天孚通信）股價重挫腰斬。雖然中國在整機模組領先台灣，但這龐大的轉單缺口，勢必由具備關鍵技術的台廠強勢瓜分！",
+            "二、 震撼業界的降維打擊！大立光（3008）低調轉型 CPO 霸主\n當市場還在緊盯上詮、波若威、華星光等過去幾年漲了 5 到 8 倍的中小型題材股時，市場上幾百億身價的頂級操盤手與投信法人，目光早已鎖定在一位低調的「隱形巨人」身上——大立光(3008-TW)！",
+            "1. 什麼是光陣列（FA / FAU）？為什麼它是 CPO 瓶頸？\n光訊號與電訊號不同，光打出去是 360 度的，就像火車到站時乘客蜂擁衝出車門一樣混亂。要讓光訊號精準傳輸，必須仰賴「光纖陣列（FA / FAU）」作為軌道引導。過去這塊技術主要由陸廠天孚通信寡占，也是限制 CPO 普及的最大良率瓶頸。",
+            "2. 6.4T ＋ 0.3 微米！大立光技術讓所有 CPO 廠「全體下課」\n當市場多數光通訊廠還在努力研發 1.6T、3.2T 傳輸規格時，大立光已經成功做出 6.4T 的超高階產品！",
+            "更驚人的是精度指標：",
+            "目前業界做 FAU 的誤差值：普遍在 0.9 到 1.0 微米以上。",
+            "大立光 6.4T 的誤差值：竟然壓到了不可思議的 0.3 微米！",
+            "身為全球高階光學鏡頭霸主，大立光將精密光學技術應用在 CPO 領域，直接實現「技術降維打擊」。這項數據一旦全面公開，大立光將成為全球唯一能滿足最嚴苛光傳輸標準的供應商，最有實力直接吃下原本屬於天孚通信的國際轉單！",
+            "(圖片來源:優分析產業數據庫)",
+            "三、 老實樹連發 4 道訊號！林家佈局洩露天機\n大立光林家的經營風格在市場上以保守、誠實聞名，被封為「老實樹」，向來是「做 10 分只說 5 分，絕不吹噓」。然而，回顧過去半年多來，大立光一反常態的大動作，根本是在向市場「打 PASS」：",
+            "破天荒回購與加碼：去年底在 2,000 多元實施庫藏股，今年 3、4 月林家更於 3,000 元附近公開加碼自家持股（創十幾年來罕見舉動）。",
+            "法說會官方定調轉型：5 月法說會正式向法人宣布「由手機鏡頭轉型進軍 CPO」。",
+            "客戶訂單到手：6、7 月法說會進一步證實「已接到關鍵客戶的 FA 訂單」。",
+            "砸 25 億狂掃 3 塊地：緊接著在 7 月斥資 25 億元大舉獵地擴廠，並預計 9 月正式投產、下半年迎來出貨高峰！",
+            "從技術突破、自家加碼、證實接單到大買土地擴產，背後的底氣顯而易見——大立光極可能已經與護國神山台積電、AI 霸主 NVIDIA 達成深度綁定！",
+            "四、 財報最好、位階最低！下一檔「萬金股」大立光怎麼買？\n很多人看到大立光 4,000 多元的股價，第一個反應就是「好貴、買不起」。但徐紹軒分析師點出盲點：",
+            "基本面最紮實：攤開 CPO 概念股財報，許多飆股（如上詮）甚至還在虧損，過去兩三年卻已經漲了 5～8 倍；反觀大立光是全族群獲利最好、本益比位階最低的資優生，股價今年 3 月才剛從底部起漲！",
+            "投信天天狂買：投信從 4、5 月一路買進，即便經歷 7 月股災也僅微幅調節，隨後又天天連續買超，籌碼集中度極高。",
+            "外資目標價上看「萬金」：野村等外資券商已在最新報告中，直接將大立光目標價喊破萬元大關！",
+            "專家建議：「成長性極高的龍頭股，你只會買貴，不會買錯！」如果覺得一張 400 萬太貴，投資人完全可以善用「盤中零股交易」分批卡位。千萬不要因為單價高，而錯過了它從 4,000 元邁向萬金股的主升段行情。",
+            "此外，若未來國際盤勢出現黑天鵝或突發性股災，大立光更被專家評為「閉著眼睛都能買」的唯一避風港首選！",
+            "五、 總結：CPO 接棒多頭主流，鎖定兩大王牌\n台股年底前挑戰 5 萬點的架構不變，但資金將高度集中在具備實質獲利與技術護城河的族群：",
+            "短線動能指標——聯亞（3081）：身為磷化銦與光通訊上游龍頭，只要股價維持強勢漲停態勢，整個 CPO 族群的熱度就不會熄滅。",
+            "長線波段巨星——大立光（3008）：坐擁 0.3 微米頂尖技術、25 億擴產效益與投信連續買超加持，具備問鼎下一檔「萬金股王」的強大潛力！",
+            "抓緊 8 月打底洗盤的最後上車時機，跟隨大戶資金的腳步佈局 CPO，才能在第四季的爆發行情中成為真正的大贏家！",
+            "(免責聲明：本文所提及之個股與價位僅供參考，不具投資建議，投資人應審慎評估風險。)",
+            "※ 本文經「優分析」授權轉載，原文出處:原文連結",
+            "※ 免責聲明：文中所提的個股、基金、期貨商品內容僅供參考，並非投資建議，投資人應獨立判斷，審慎評估風險。"
+          ],
+          "paras_en": []
+        },
+        {
+          "news_id": "6578081",
+          "title": "魏哲家說不妙，聯電(2303)卻默默暴賺？奪下Intel「矽橋」關鍵大單！成熟製程走出谷底？達人: 進場訊號看「這2點」！",
+          "title_en": "",
+          "publish_at": 1786797006,
+          "url": "https://news.cnyes.com/news/id/6578081",
+          "paras": [
+            "過去一段時間，半導體成熟製程族群在市場上可說是備受冷落。特別是在台積電法說會上，董事長魏哲家被問及成熟製程展望時一句霸氣的「Not at all」，一度引發市場恐慌，導致聯電、世界先進、力積電等個股同步重挫跌停，讓不少投資人對成熟製程的前景打上大大的問號。",
+            "然而，市場風向正在悄悄轉變！近期成熟製程三雄陸續釋出產能利用率（稼動率）回升、報價調漲、毛利率上看 40% 等樂觀訊號。其中，聯電(2303-TW)第二季繳出 EPS 3.39 元的驚豔成績單，更傳出低調吃下 Intel 關鍵的「矽橋（Silicon Bridge）」大單，跨足先進封裝與矽光子領域。",
+            "(圖片來源:優分析產業資料庫)",
+            "究竟成熟製程真的走出谷底了嗎？聯電後市該怎麼看？現在是上車的好時機嗎？",
+            "一、 擺脫「Not at all」陰霾！成熟製程真的落底了嗎？\n要判斷成熟製程是否翻轉，必須從「基本面」與「獲利品質」來檢視。",
+            "徐紹軒分析師指出，成熟製程的產業底部確實已經浮現，漲價循環與稼動率拉升也是事實，但並非所有成熟製程個股都能雨露均霑，市場正在進行嚴格的「獲利淘汰賽」：",
+            "警惕「虛胖」財報（以環球晶 6488 為例）：環球晶法說會後股價開高走低甚至破底，主因在於 Q2 EPS 雖有 7.9 元，但超過六成來自賣廠房土地等「一次性業外收益」，本業成長性反而低於市場預期 20%，自然遭到市場無情修正。",
+            "(圖片來源:優分析產業資料庫)",
+            "聯電（2303）展現真實力：聯電 Q2 單季 EPS 高達 3.39 元，令市場跌破眼鏡。要知道過去幾年聯電有時「一整年賺不到 3 元」，如今一季就能賺超過 3 元，證明本業實質受惠於漲價效益與產能回溫，成長力道貨真價實。",
+            "二、 聯電默默暴賺的秘密武器：奪下 Intel「矽橋（Silicon Bridge）」大單！\n除了傳統晶圓代工業務回溫，聯電之所以被法人長線看好，最關鍵的底氣在於它成功卡位先進封裝與矽光子供應鏈。",
+            "什麼是「矽橋（Silicon Bridge）」？\n在 AI 伺服器運算需求大爆發下，晶片面積越來越大，封裝技術走向「小晶片（Chiplet）」架構：",
+            "台積電 CoWoS 路線：主要在大面積基板上進行高密度堆疊，並在 ABF 載板中間夾入玻璃基板以防止翹曲（Warpage）。",
+            "Intel EMIB 路線：Intel 不把所有晶片全部直接死板地堆在同一個基板上，而是在 GPU、CPU、HBM 與邏輯晶片之間，透過一塊小小的「橋樑」連接起來，這個橋樑就叫做「矽橋」。",
+            "為什麼這對聯電是超級大利多？\n很多人以為先進封裝裡的零組件一定都要用台積電的 2 奈米、3 奈米先進製程，但「矽橋」根本不需要高階製程，用最基礎、最穩定的「成熟製程」來做就綽綽有餘！",
+            "而這塊關鍵的矽橋訂單，正是由聯電所拿下！這意味著聯電不僅坐擁傳統代工的漲價題材，更實質切入：",
+            "Intel EMIB 玻璃基板先進封裝生態系",
+            "未來高速傳輸必備的矽光子領域",
+            "在雙引擎加持下，聯電未來的營運爆發力遠比市場想像得更有想像空間。",
+            "三、 明明基本面大好，為什麼股價還在震盪？\n既然聯電基本面強勁、題材豐富，甚至有機會挑戰歷史新高，為什麼股價近期走勢依然反覆？",
+            "分析師一針見血指出：「現在聯電不是產業面的問題，是籌碼面的問題！」",
+            "觀察聯電近期的籌碼結構，可以發現一個危險訊號——「法人在賣，融資在增」。在先前的去槓桿修正中，許多散戶投資人認為聯電跌深很甜，紛紛使用融資進場搶反彈；然而，外資與投信等法人大戶卻持續進行調節。當「籌碼從法人流向散戶融資」，盤面就會變得混亂，容易造成反彈無力、反覆震盪打底。",
+            "四、 聯電何時能重押？專家：進場訊號看「這 2 點」！\n對於想參與聯電長線多頭行情的投資人，徐紹軒分析師建議「千萬不要急著在籌碼混亂時盲目追高」，應耐心等待底部籌碼洗乾淨。",
+            "判斷籌碼沉澱、最佳進場的 2 大關鍵訊號 如下：",
+            "訊號 1：融資餘額顯著消退（散戶退場）\n散戶浮額必須經過震盪洗盤，當融資開始連續減少、不再逆勢增加時，代表短線不穩定的浮動籌碼已經被清洗完畢。",
+            "訊號 2：法人由賣轉買、連續回補（大戶歸隊）\n上一波聯電從波段低點一路推升，背後全靠外資與投信的大力買超。因此，必須看到法人買盤重新歸隊，連續數日進場吸籌，才是多頭發動的真正訊號。",
+            "總結：穩健獲利的最佳策略\n\n「投資不要賭不確定性，寧可買在確認點，也不要買在半山腰接刀。」",
+            "雖然現在看聯電在相對低檔（如 120～130 元附近）看似便宜，但若籌碼未定且國際盤勢再度震盪，進場容易承受不必要的破底風險。",
+            "與其在局勢未明時買進 3～5 張提心吊膽，不如等待「融資退、法人買」的訊號確立後，就算股價稍微回升到 150 元再進場，因為上方距離歷史新高仍有廣闊的獲利空間，投資人反而能更有信心地「重押大賺」！",
+            "成熟製程的谷底已過，聯電手握 Intel 矽橋與矽光子王牌，只要靜待籌碼沉澱完成，下一波多頭主升段值得拭目以待！",
+            "(免責聲明：本文所提及之個股與價位僅供參考，不具投資建議，投資人應審慎評估風險。)",
+            "※ 本文經「優分析」授權轉載，原文出處:原文連結",
+            "※ 免責聲明：文中所提的個股、基金、期貨商品內容僅供參考，並非投資建議，投資人應獨立判斷，審慎評估風險。"
+          ],
+          "paras_en": []
+        },
+        {
+          "news_id": "6578080",
+          "title": "南亞科逼近前高、群聯沒動靜？記憶體營收創新高還能買嗎？專家：別當最後一隻老鼠，改用「這招」滾動獲利！",
+          "title_en": "",
+          "publish_at": 1786797005,
+          "url": "https://news.cnyes.com/news/id/6578080",
+          "paras": [
+            "記憶體族群近期可說是話題不斷！從基本面來看，數據表現極為亮眼：最新公布的 7 月營收中，華邦電(2344-TW)、旺宏(2337-TW)、群聯(8299-TWO)皆刷出單月新高，龍頭南亞科(2408-TW)更是連續 8 個月改寫歷史紀錄，上一季毛利率甚至飆上逼近 80% 的驚人水準（表現甚至優於台積電）！",
+            "(圖片來源:優分析產業數據庫)",
+            "然而，攤開股價走勢，市場卻呈現兩樣情：南亞科、華邦電反彈至前波高點附近後頻頻遇壓、震盪加劇；而身為高價指標的群聯，這兩個月來股價卻顯得無動於衷。",
+            "許多投資人都在問：既然記憶體缺貨、漲價題材滿天飛，現在還能進場長抱嗎？為什麼股價不再像過去那樣一路噴射？",
+            "深入產業趨勢的徐紹軒分析師在優分析的《股民想知道》節目中直言：「記憶體長線趨勢依舊看好，但操作邏輯必須徹底改變——從過去『長抱抱一倍兩倍』，轉變為『波段價差操作』！千萬別抱著不放，最後淪為洗盤下的犧牲品！」",
+            "一、 營收創高背後，記憶體面臨的「三大隱憂」\n記憶體利多消息人盡皆知，但大戶與法人之所以在此時轉趨謹慎，主因在於產業背後浮現了三股不可忽視的潛在壓力：",
+            "1. 終端消費產品買氣恐被「高物價」壓抑\n記憶體價格瘋狂上漲，直接推升了消費性電子的製造成本。",
+            "舉個最真實的例子：過去組裝一台符合需求的電腦只要 5 萬元，現在因為記憶體大漲，整機飆到 7 萬甚至 9 萬元；原本買一支新 iPhone 只要 3～4 萬，若未來因零組件漲價賣到 7～8 萬，消費者往往會選擇「再等等、先不換」。",
+            "一旦消費者的換機需求被高昂價格壓抑，終端出貨量下滑，最終就會反過來逼迫記憶體現貨報價停止上漲甚至反轉。",
+            "2. 輝達（NVIDIA）策略調整：下修部分 HBM 依賴\n市場原先期待高階 AI 需求能無止境推升 HBM（高頻寬記憶體）用量。然而，NVIDIA 近期因為晶片出貨嚴重遭到 HBM 缺貨「卡脖子」，為了避免下一季營收大幅衰退，決定策略性下修部分產品線的 HBM 用量，轉而使用次階規格來彌補出貨量。",
+            "這項舉動並非技術達不到，而是為了順利出貨。但後續的連鎖效應是：若高階 HBM 需求出現微幅鬆動，原廠產能是否會回流排擠一般標準型 DRAM（如 DDR4/DDR5），進而影響未來的顆粒漲價循環？",
+            "3. 「考 98 分就算不及格」的超高期待\n南亞科單季毛利率衝上近 80%，股價也早已從底部大幅反映利多。如同市場對 NVIDIA 財報的嚴苛標準——當市場期待你考 101 分，你考 98 分就是會引來賣壓。 近 80% 的毛利率能維持多久？只要未來稍微下滑，股價就容易遭遇估值修正。",
+            "(圖片來源:優分析產業數據庫)",
+            "二、 別想著抱一倍！大戶操盤手的「滾動式獲利法」\n回顧 2021 年航運股狂飆時，運價長約簽滿、獲利天天創高，但許多投資人死抱不放，最後從大賺抱到重套。",
+            "徐紹軒分析師強調：「大戶與法人從來沒有人是從 50 元抱到 500 元才一次賣掉的！他們的操作永遠是：漲上去減碼、殺下來加碼。面對現在的記憶體，你必須用大戶的邏輯才能在市場穩健賺錢！」",
+            "想要參與記憶體行情，請改用這套【滾動式箱型價差操作法】：",
+            "就像餐廳翻桌率一樣：只要模組廠的存貨出得去、報價有撐，拉回到季線就是甜甜價；但每次來到前高附近，一定會累積前波的解套賣壓，此時落袋為安才是上策。",
+            "三、 南亞科漲多遇壓，資金下一波會輪到「群聯（8299）」嗎？\n不少投資人疑惑：為什麼南亞科、華邦電頻頻挑戰前高，群聯卻在原地踏步？",
+            "原因分析：",
+            "股價單價高：群聯身為高價股，散戶參與度相對較低。",
+            "上游顆粒先受惠：前一波報價大漲，最直接受惠的是南亞科、華邦電等上游顆粒製造廠，因此資金集中在前端。",
+            "後市轉機與補漲機會：群聯董事長潘健成近期已在股價低檔多次出手加碼自家持股（跌就加碼），用真金白銀印證公司對後市長線的看好。",
+            "盤面輪動邏輯正在發酵：當南亞科、華邦電漲到前高遭遇反壓、主力暫時熄火時，市場上想玩記憶體的資金就會轉向低位階、具備補漲空間的中下游模組廠與客製化廠商。除了群聯之外，包括威剛(3260-TWO)、凌航(3135-TW)等模組廠，近期都已開始出現資金輪動進駐的補漲訊號。",
+            "四、 總結：手中持有記憶體，你現在該怎麼做？\n\n\n先看基本面兩大指標：隨時緊盯「顆粒報價有沒有凍漲」與「存貨週轉率有沒有惡化」。若指標正常，套牢者不必過度恐慌。",
+            "換掉「死抱長投」思維：記憶體已走過最甜蜜的初升段，現階段進入高檔震盪期，請務必採取「季線買、前高賣」的節奏靈活應對。",
+            "留意族群內部輪動：若南亞科、華邦電在前高震盪整理，資金極有機會轉向群聯、威剛等中下游模組股進行補漲行情，投資人可適度進行持股配置的滾動調整。",
+            "掌握大戶的節奏，不賺最後一塊銅板，才是保護獲利、在記憶體行情中長久致勝的關鍵！",
+            "(免責聲明：本文所提及之個股與價位僅供參考，不具投資建議，投資人應審慎評估風險。)",
+            "※ 本文經「優分析」授權轉載，原文出處:原文連結",
+            "※ 免責聲明：文中所提的個股、基金、期貨商品內容僅供參考，並非投資建議，投資人應獨立判斷，審慎評估風險。"
+          ],
+          "paras_en": []
+        },
         {
           "news_id": "6578032",
           "title": "貿協攜手慈善協會捐「食物箱」送愛 以行動為偏鄉家庭送溫暖",
@@ -330,77 +468,6 @@
             "Xie said that both Jin Yun Technology and Shengxin Materials are expected to be listed on the Emerging Stock Board in October of this year.",
             "Looking at the group's momentum, automation is a major driver this year, fueled by semiconductor orders that are projected to increase several‑fold compared to last year. Shengxin Materials’ revenue in the first half of 2026 already exceeds the entire previous year’s revenue, indicating that the Guangyun group should see a solid growth margin in the second half."
           ]
-        },
-        {
-          "news_id": "6577917",
-          "title": "廣運布局AI、半導體及機器人產業 團隊全面領航另一個50年",
-          "title_en": "Broad Transport Positions Itself in AI, Semiconductor and Robotics Industries, Team Leads Another 50 Years",
-          "publish_at": 1786787856,
-          "url": "https://news.cnyes.com/news/id/6577917",
-          "paras": [
-            "自動化與智慧製造大廠廣運(6125-TW)今(2026)年迎來創立50周年的重要里程碑，今(15)日並舉辦「50週年家庭日活動」，宣示世代傳承布局完成，將引領廣運集團全力搶攻人工智慧AI、半導體、機器人與無人機、智慧製造及新能源等新世代產業戰略高地，邁向百年企業目標。",
-            "回顧創業歷程，廣運總裁謝清福感性表示，1976年他與現任副總裁白周煌攜手創業，當時僅憑藉兩個人合資10萬元資本額起家，憑著「肯做、肯學、不要怕辛苦」的精神，一步一腳印走過半個世紀。",
-            "面對快速變化的產業環境與科技浪潮，廣運也已落實企業治理與傳承規劃。謝清在2025年5月20日將董事長一職正式交棒給謝明凱，完成「創業世代」走向「新創世代」的歷史轉折。",
-            "對於廣運集團的發展，謝清福指出，除自動化、半導體、光學、物流產業之外，這幾年廣運也藉著這個AI浪潮，在7年前開始研發了這個水冷系統，最近也不斷的接到一些訂單，而50年來廣運應該建構了一些非常好的一個基礎，未來廣運50年的目標，由傳承去進一步發揚光大，",
-            "謝清福指出，不管是在自動化，或者是在太陽能能源方面，或者在AI方面，AI自動化方面，廣運都有非常的完整的布局，",
-            "廣運集團目前涵蓋廣運機械。太極能源(4934-TW)）、盛新材料(6930-TW)、專注於第三方物流與智慧物流運營服務的子公司群豐欣業、金運科技、足生醫光學與消費醫療領域的重點布局的永暘光學",
-            "廣運集團指出，從1976年創業至2026年邁入第50個年頭，廣運站在下一個半世紀的起點，已明確鎖定未來關鍵技術領域。謝清福廣運持續精進核心技術，掌握新產業契機，朝向百年企業目標堅定前行，並期盼未來走到百年之際，每一位廣運人都能驕傲地表示，廣運走向百年的歷史裡，有我一份。"
-          ],
-          "paras_en": [
-            "Automation and smart manufacturing giant Broad Transport (6125-TW) marks its 50th anniversary this year (2026) with a \"50th Anniversary Family Day\" event today (the 15th), announcing the completion of its generational transition and its full‑scale push into next‑generation strategic sectors such as artificial intelligence, semiconductors, robotics and drones, smart manufacturing and new energy, aiming toward a centennial corporate goal.",
-            "Reflecting on its founding journey, Broad Transport President Xie Qingfu emotively recalled that in 1976 he and current Vice President Bai Zhouhuang started the company with a joint capital of NT$100,000, and with a spirit of \"willing to work, willing to learn, and not afraid of hardship\" they have walked step by step through half a century.",
-            "Facing a rapidly changing industrial environment and technological wave, Broad Transport has also implemented corporate governance and succession planning. On May 20, 2025, Xie Qing formally handed the chairmanship to Xie Mingkai, completing the historic shift from the \"founding generation\" to the \"new founding generation.\"",
-            "Regarding the group’s development, Xie Qingfu noted that beyond automation, semiconductors, optics and logistics, Broad Transport has leveraged the AI wave and began developing a water‑cooling system seven years ago; recent orders have been coming in steadily, and after 50 years the company has built a solid foundation that will be further expanded through inheritance.",
-            "Xie Qingfu emphasized that whether in automation, solar energy, or AI—particularly AI‑driven automation—Broad Transport has established a very comprehensive layout.",
-            "The Broad Transport Group currently includes Broad Transport Machinery, Taiji Energy (4934‑TW), Shengxin Materials (6930‑TW), the subsidiary Qunfeng Xinye focused on third‑party and smart logistics services, Jin Yun Technology, and Yongyang Optics, which concentrates on biomedical optics and consumer medical fields.",
-            "The group stated that from its founding in 1976 to its 50th year in 2026, Broad Transport stands at the starting point of the next half‑century, having clearly locked in future key technology areas. Xie Qingfu said Broad Transport will continue to refine core technologies, seize new industry opportunities, and steadfastly move toward the centennial goal, hoping that when the company reaches 100 years, every Broad Transport employee can proudly say they were part of its century‑long history."
-          ]
-        },
-        {
-          "news_id": "6577871",
-          "title": "無人機232關稅9月上路！經部允強化美規認驗證助攻 15%稅率迎「轉單」商機",
-          "title_en": "Drone 232 Tariff to Take Effect in September: MOEA to Enhance US Certification to Assist Taiwanese Exporters",
-          "publish_at": 1786787702,
-          "url": "https://news.cnyes.com/news/id/6577871",
-          "paras": [
-            "美國針對無人機及相關零組件祭出的「232關稅措施」將於9月3日上路，經濟部昨（14）日表示，將加速推動國內認驗證體系與美國標準接軌，協助業者取得輸美資格及認證。同時，依據美方公布內容，台灣與歐盟、日本、韓國及瑞士同列低稅率優惠名單，只要符合關鍵零組件及技術來源規定，即可適用15%關稅，有助維持我國無人機產品輸美競爭優勢，並爭取全球供應鏈移轉商機。",
-            "美國政府於美東時間13日公布《1962年貿易擴張法》第232條無人機調查結果，認定進口無人機系統（UAS）及零組件涉及國家安全議題，因此針對不同產品採取差別關稅措施。一般中小型無人機原則適用25%關稅，大型或具敏感功能的無人機及關鍵零組件則面臨100%高關稅。",
-            "不過，台灣、歐盟、日本、韓國及瑞士等國產品若符合美方要求的關鍵零組件與技術來源條件，可適用15%稅率且無須疊加最惠國待遇（MFN）關稅，屬於本次措施中相對有利的稅率區間。經濟部認為，在關稅差異下，台灣業者有望藉此提高相對競爭力，進一步爭取國際客戶轉單及擴大輸美市場。",
-            "經濟部指出，目前台灣無人機產業以25公斤以下機型為主要布局，其中5公斤以下產品更是外銷主力，廣泛應用於巡檢、監偵及智慧管理等領域。相較之下，25公斤以上大型無人機目前多用於農業市場，中國業者仍掌握一定優勢。然而隨著美國等主要市場持續強化供應鏈安全及在地化生產，台廠也迎來切入大型無人機及關鍵零組件供應鏈的新機會。",
-            "值得注意的是，美方15%優惠關稅須符合「實質上關鍵零組件及技術來自指定國家或美國」的條件。經濟部表示，相關規範與政府近年推動的無人機「非紅供應鏈」政策方向一致，未來將協助業者盤點物料清單（BOM）及關鍵零組件來源，並串聯美國、日本及歐洲夥伴供應鏈資源，協助業者符合相關規範，取得較低關稅待遇。",
-            "除關稅因素外，美國聯邦通訊委員會（FCC）近年陸續將外國製無人機及關鍵零組件納入管制名單（Covered List），市場准入門檻同步提高。對此，經濟部已推動工研院成為美國Green UAS境外唯一認證據點，並促成金屬中心與Blue UAS認證體系接軌，未來將持續強化國內認驗證能量，加速與美方標準接軌，協助更多台灣業者打入美國供應鏈並拓展海外商機。",
-            "美國無人機232關稅措施一覽",
-            "資料來源：經濟部"
-          ],
-          "paras_en": [
-            "The US '232 Tariff' on drones and related components will take effect on September 3. The Ministry of Economic Affairs (MOEA) stated on the 14th that it will accelerate the development of domestic certification systems to align with US standards, helping Taiwanese companies obtain export qualifications and certifications.",
-            "The US government announced on the 13th that it has identified the importation of drone systems (UAS) and components as a national security issue under Section 232 of the 1962 Trade Expansion Act. As a result, the US will impose differential tariffs on various products. General small and medium-sized drones will be subject to a 25% tariff, while large drones or those with sensitive functions and key components will face a 100% high tariff.",
-            "However, products from Taiwan, the EU, Japan, South Korea, and Switzerland will be eligible for a 15% tariff if they meet the US requirements for key components and technology sources. This is a relatively favorable tax rate interval in this measure. The MOEA believes that Taiwanese companies can take advantage of this tariff difference to improve their relative competitiveness and further attract international customers to transfer orders and expand their US market.",
-            "The MOEA pointed out that Taiwan's drone industry is currently mainly focused on drones weighing less than 25 kg, with products weighing less than 5 kg being the main export force, widely used in patrol, surveillance, and intelligent management fields. In comparison, large drones weighing over 25 kg are mainly used in the agricultural market, and Chinese companies still have a certain advantage. However, as major markets such as the US continue to strengthen supply chain security and localization production, Taiwanese companies also have new opportunities to enter the large drone and key component supply chain.",
-            "It is worth noting that the US 15% preferential tariff requires that the key components and technology come from designated countries or the US. The MOEA stated that the relevant regulations are consistent with the government's recent 'non-red supply chain' policy direction, and in the future, it will assist companies in checking their material lists (BOM) and key component sources, and connecting with US, Japanese, and European partner supply chain resources to help companies meet the relevant regulations and obtain lower tariff treatment.",
-            "In addition to tariff factors, the US Federal Communications Commission (FCC) has recently added foreign-made drones and key components to the controlled list (Covered List), raising market access thresholds. In response, the MOEA has promoted the Industrial Technology Research Institute (ITRI) to become the US Green UAS's only overseas certification point, and has facilitated the Metal Center and Blue UAS certification system to align, and will continue to strengthen domestic certification capabilities, accelerating alignment with US standards, and helping more Taiwanese companies enter the US supply chain and expand overseas business opportunities.",
-            "US Drone 232 Tariff Measures at a Glance",
-            "Source: Ministry of Economic Affairs"
-          ]
-        },
-        {
-          "news_id": "6577814",
-          "title": "〈熱門股〉健鼎H1提前賺回逾一個股本EPS達 13.02元 股價周漲23.86%",
-          "title_en": "Hot Stock: Jian Ding's H1 Earnings Exceed Expectations with EPS of 13.02, Stock Price Surges 23.86% for the Week",
-          "publish_at": 1786764005,
-          "url": "https://news.cnyes.com/news/id/6577814",
-          "paras": [
-            "績優PCB 廠健鼎 (3044-TW) 2026年以來獲記憶體模組板及伺服器板放量出貨挹注，營收2季創新高，的營收及獲利都有亮麗表現，健鼎上半年稅後純益 68.43 億元，年增 42.55%，每股純益 13.02 元，股價量價齊揚，收在488元，周漲23.86%。",
-            "健鼎 2026 年上半年營收 458.22 億元，毛利率 28.45%，年增 2.85 個百分點，2026 年上半年稅後純益 68.43 億元，創同期新高，年增 42.55%，每股純益 13.02 元。在PCB全製程族群每股獲利僅次於金像電(2368-TW)的16.14元，",
-            "健鼎 2026年7 月營收達 98.22 億元，創新高，依健鼎目前對伺服器板及 DRAM 模組板的旺盛接單及新開產能及的腳步來看，健鼎第三季有望突破 300 億元，再創新高，全年營收向 1000 億元大關挑戰。可望與金像電 (在繼臻鼎 - KY(4958-TW) 及欣興 (3037-TW) 之後，晉身爲 PCB 廠年營收的千億元戶。",
-            "健鼎股價在本周獲營收及獲利表現亮麗激勵而急漲，並出現罕見連續2支漲停，收在488元，周漲23.86%；股價站上所有均線，短線支撐 在5日線與10日線交叉的462元。"
-          ],
-          "paras_en": [
-            "Jian Ding (3044-TW), a leading PCB manufacturer, has seen a significant increase in shipments of memory module boards and server boards, resulting in record-high revenue for the second quarter. The company's revenue and earnings have both shown impressive growth, with a net profit of NT$6.843 billion in the first half of the year, representing a 42.55% year-over-year increase. The earnings per share (EPS) reached NT$13.02, and the stock price closed at NT$488, with a weekly gain of 23.86%.",
-            "In the first half of 2026, Jian Ding's revenue reached NT$45.822 billion, with a gross margin of 28.45%, up 2.85 percentage points year-over-year. The company's net profit for the same period was NT$6.843 billion, a new high, with a year-over-year increase of 42.55%. The EPS was NT$13.02, second only to Jinmei Dian (2368-TW) in the PCB industry, which reported an EPS of NT$16.14.",
-            "Jian Ding's revenue for July 2026 reached a new high of NT$9.822 billion. Given the company's strong orders for server boards and DRAM module boards, as well as its new production capacity, Jian Ding is expected to break through the NT$30 billion mark in the third quarter, setting a new record. The company is also expected to challenge the NT$100 billion mark in annual revenue, joining Jinmei Dian, Jiyang Dian (4958-TW), and Xinxing (3037-TW) as one of the top PCB manufacturers in terms of annual revenue.",
-            "Jian Ding's stock price surged this week, driven by the company's impressive revenue and earnings performance, with two consecutive days of limit-up gains. The stock closed at NT$488, with a weekly gain of 23.86%. The stock price has risen above all moving averages, with short-term support at the 5-day and 10-day moving average intersection of NT$462."
-          ]
         }
       ]
     },
@@ -408,6 +475,43 @@
       "key": "us_stock",
       "label": "美股焦點",
       "items": [
+        {
+          "news_id": "6577956",
+          "title": "Anthropic為Claude加AI浮水印引爆爭議！Reddit用戶正反激辯",
+          "title_en": "Anthropic Sparks Controversy Over AI Watermark on Claude; Reddit Users Debate Heatedly",
+          "publish_at": 1786795803,
+          "url": "https://news.cnyes.com/news/id/6577956",
+          "paras": [
+            "Anthropic近期決定為旗下Claude聊天機器人的輸出內容加入隱形浮水印，在生成的文字中嵌入一般使用者肉眼無法察覺、但可由電腦系統辨識的程式碼，以標示內容是否由AI生成，引發一些用戶不滿。",
+            "根據《TechCrunch》報導，Anthropic此舉主要是為配合歐盟《人工智慧法案》（EU AI Act）旗下的透明度規範。相關規範要求科技公司對AI生成或經AI編輯的內容進行標記，而且標記方式必須能夠被電腦系統識別。",
+            "不過，這項政策雖符合監管方向，卻也在部分Claude使用者之間引發爭議。",
+            "從Reddit上的討論可以看到，不少使用者對AI浮水印持不同看法。其中，一名帳號註冊僅約3週、名為visionode的使用者認為，這套新的浮水印機制是一場嚴苛的陰謀，目的是讓全球無辜的聊天機器人使用者成為受害者。",
+            "visionode的核心論點似乎是，熟悉AI工具的Claude使用者，或許可以透過改寫內容，或利用其他AI服務對輸出內容進一步處理，來掩蓋自己使用AI的痕跡；但對一般Claude使用者而言，則可能無法躲過偵測。",
+            "該使用者舉例，學生若只是使用Claude協助重新整理段落、記者利用AI整理長達200頁的逐字稿，或作家因創作瓶頸請Claude提供同義詞，最後都可能留下AI生成的標記。",
+            "不過，這套說法也沒有獲得所有Reddit使用者認同。有網友認為，若記者只是利用Claude整理大量逐字稿，浮水印本身並不會造成太大問題，除非記者直接將AI整理出的內容原封不動放入報導；同樣地，學生若將Claude產出的文字直接貼進作業，也涉及學術誠信問題。",
+            "另一名使用者則直接要求原發文者「深呼吸」，顯示部分網友並不認為浮水印本身構成嚴重問題。",
+            "除了對使用情境的疑慮，也有使用者從「創作者權益」角度批評Anthropic的做法。其中一名網友認為，自己在使用Claude時提供指令、背景資訊、判斷與多次修改，Claude只是協助完成工作的工具，因此質疑如果Claude開始對生成的程式碼或其他內容加上浮水印，究竟是在主張什麼樣的「所有權」。",
+            "然而，其他使用者很快反駁這項觀點，指出浮水印並非代表Claude要對內容主張所有權，而是為了讓外界能夠辨識AI生成內容，降低AI產製內容可能帶來的各種風險。",
+            "甚至有網友調侃，批評Claude的文章本身似乎就是透過Claude撰寫，反而讓這場討論形成反差。",
+            "值得注意的是，並非所有批評者都採取如此強烈的立場。有使用者認為，真正值得討論的是AI浮水印背後的倫理問題，尤其考量部分大型AI模型本身就是透過大量人類創作內容進行訓練，在這樣的背景下，再由AI替使用者產出的內容加入浮水印，確實存在某種諷刺意味。",
+            "不過，從目前Reddit上的相關討論來看，支持Anthropic加入浮水印的聲音仍相當明顯。有使用者認為，讓AI生成內容具備可辨識性本身並沒有充分理由被反對，真正不希望內容被標示的人，主要是擔心他人知道內容曾經經過AI生成。"
+          ],
+          "paras_en": [
+            "Anthropic recently decided to embed an invisible watermark in the output of its Claude chatbot, inserting code that is invisible to the naked eye but detectable by computer systems to indicate whether content was AI‑generated, prompting some user dissatisfaction.",
+            "According to TechCrunch, Anthropic’s move is mainly to comply with the transparency provisions of the EU AI Act, which require tech companies to label AI‑generated or AI‑edited content in a way that can be recognized by computer systems.",
+            "However, while the policy aligns with regulatory direction, it has also sparked controversy among some Claude users.",
+            "Reddit discussions reveal a split in opinion on AI watermarks. One user, visionode, who has been registered for only about three weeks, claims the new watermark mechanism is a harsh conspiracy aimed at turning innocent chatbot users worldwide into victims.",
+            "Visionode’s core argument is that experienced Claude users might rewrite or further process the output with other AI services to hide their AI usage, whereas ordinary users may not be able to evade detection.",
+            "The user gives examples: a student using Claude to reorganize paragraphs, a journalist using AI to process a 200‑page transcript, or a writer seeking synonyms during a creative block could all end up leaving an AI‑generated marker.",
+            "But this view is not shared by all Redditors. Some argue that if a journalist merely uses Claude to organize large transcripts, the watermark itself isn’t a major issue unless the AI‑processed text is inserted verbatim into the article; similarly, a student copying Claude‑generated text directly into an assignment raises academic integrity concerns.",
+            "Another user simply told the original poster to “take a deep breath,” indicating that some do not see the watermark as a serious problem.",
+            "Beyond usage concerns, some users criticize Anthropic from a creator‑rights perspective, arguing that when they provide prompts, context, judgments, and multiple edits, Claude is just a tool, and they question what ownership the watermark implies.",
+            "Other users quickly rebutted this, pointing out that the watermark does not claim ownership by Claude but serves to let the public identify AI‑generated content and mitigate various risks associated with AI‑produced material.",
+            "Some even joked that criticism of Claude articles seems self‑referential, as the critiques themselves appear to be written by Claude, creating an ironic twist in the debate.",
+            "It is worth noting that not all critics take such a strong stance; some say the real discussion should focus on the ethics of AI watermarks, especially given that large AI models are trained on massive amounts of human‑created content, making the addition of a watermark to AI‑generated output somewhat paradoxical.",
+            "Nevertheless, Reddit discussions show that support for Anthropic’s watermark remains quite pronounced, with users arguing that making AI‑generated content identifiable is not a reason to oppose it, and those who dislike labeling mainly fear others will know the content was AI‑generated."
+          ]
+        },
         {
           "news_id": "6577950",
           "title": "Anthropic驚爆「Model 2」新模型！性能超越Mythos 5、AI風險評估卻陷「飽和」危機",
@@ -702,39 +806,6 @@
             "The roughly $11 billion position in Micron and SanDisk concentrated in just two companies placed heavy pressure on the fund’s net asset value when the stocks slumped, leaving it unable to alleviate liquidity issues by rebalancing and forcing it to sell shares on the open market.",
             "On the other hand, Citadel’s flagship fund Wellington showed a marked improvement in July, rising 5.9% for the month. The main driver was Citadel’s purchase of a large block of publicly traded shares held by Situational Awareness at about a 10% discount to market price.",
             "It is worth noting that before this transaction unfolded in the last week of July, Wellington had only gained about 0.45% for the month, indicating that the discounted acquisition quickly translated into improved fund performance."
-          ]
-        },
-        {
-          "news_id": "6577790",
-          "title": "SanDisk一周反彈近35% 最新財測與NAND技術藍圖成催化劑",
-          "title_en": "SanDisk Surges Nearly 35% in One Week as Latest Financial Forecast and NAND Technology Roadmap Serve as Catalysts",
-          "publish_at": 1786770005,
-          "url": "https://news.cnyes.com/news/id/6577790",
-          "paras": [
-            "《MarketWatch》報導，SanDisk(SNDK-US)股價延續近期低點以來的強勁反彈，短短兩周多累計漲幅已超過60%。",
-            "SanDisk周五(14日)收盤大漲7.4%，前一交易日則飆升13.7%。這波漲勢反映華爾街對SanDisk最新財務目標及技術發展藍圖的樂觀態度。",
-            "這家記憶體與儲存裝置製造商周四舉行投資人日活動時表示，預期2028至2030會計年度營收將以中高個位數百分比成長。SanDisk同時希望在這段期間維持約80%的高毛利率。公司表示，旗下「新商業模式」協議能提高客戶需求的能見度，是公司對上述目標更具信心原因之一。",
-            "SanDisk也計劃在這段期間將營業利益率維持在約75%。不過，摩根士丹利分析師Joseph Moore表示，考量目前記憶體晶片短缺是推升利潤率的因素，他認為這項水準難以長期維持。",
-            "不過，Moore在給客戶的報告中表示，SanDisk「可以在未來數年維持或超過這些利潤率水準」，因為供給預計將增加20%，以滿足資料中心需求，而記憶體與儲存產業其他領域也正面臨供給短缺。",
-            "摩根大通分析師Harlan Sur表示，SanDisk的新商業模式協議，是他認為該公司「在掌握NAND需求持續的結構性轉折方面具獨特優勢」原因之一。",
-            "他在給客戶的報告中表示，這些長期協議「從結構上將SanDisk的利潤率水準重新拉高，並大幅降低周期性」，這指的是記憶體產業過去隨景氣循環的價格與獲利波動。",
-            "同時，這家NAND快閃記憶體製造商也大力介紹即將推出的高頻寬快閃記憶體技術。SanDisk表示，這項技術以與高頻寬記憶體(HBM)互補，並可能取代HBM部分用途。",
-            "Bernstein分析師Mark Newman表示，這項產品可能成為「NAND需求一項巨大的新成長動能」，但也可能「大量消耗晶圓供給，導致供給短缺持續的時間遠超過多數多頭預期」。",
-            "Newman估計，由於高頻寬快閃記憶體需要更多晶片內部空間，每艾位元組(exabyte)產品所需的晶圓產能將是一般產品的3至4倍。",
-            "摩根士丹利的Moore表示，SanDisk投資人日活動後股價的反應，很可能受到公司「合理的長期財務模型」，以及承諾將100%超額現金返還股東等因素帶動。"
-          ],
-          "paras_en": [
-            "According to MarketWatch, SanDisk (SNDK-US) stock price continued its strong rebound from recent lows, with a cumulative gain of over 60% in just over two weeks.",
-            "SanDisk's stock price soared 7.4% on Friday, following a 13.7% surge the previous trading day, reflecting Wall Street's optimism towards the company's latest financial targets and technology development roadmap.",
-            "During its investor day event on Thursday, the memory and storage device manufacturer stated that it expects revenue to grow by mid-to-high single digits from 2028 to 2030, while maintaining a gross margin of around 80% during this period.",
-            "SanDisk also plans to maintain an operating margin of around 75% during this period, although Morgan Stanley analyst Joseph Moore expressed skepticism about the company's ability to sustain this level due to the current memory chip shortage.",
-            "However, Moore noted in a report to clients that SanDisk 'can maintain or exceed these levels of profitability' in the coming years, as supply is expected to increase by 20% to meet data center demand, while other areas of the memory and storage industry face supply shortages.",
-            "Morgan Stanley analyst Harlan Sur stated that SanDisk's new business model agreements give the company a unique advantage in capturing the structural shift in NAND demand.",
-            "Sur noted in a report to clients that these long-term agreements 'structurally raise SanDisk's level of profitability and significantly reduce cyclicality', referring to the price and profit fluctuations in the memory industry due to economic cycles.",
-            "The NAND flash memory manufacturer also highlighted its upcoming high-bandwidth flash memory technology, which SanDisk claims will complement high-bandwidth memory (HBM) and potentially replace it for some uses.",
-            "Bernstein analyst Mark Newman stated that this product could become a 'huge new growth driver for NAND demand', but may also 'consume a significant amount of wafer supply, leading to a prolonged period of shortages beyond what most bulls expect'.",
-            "Newman estimated that high-bandwidth flash memory will require 3-4 times more wafer capacity per exabyte of product due to the need for more space within the chip.",
-            "Morgan Stanley's Moore stated that the stock price reaction following SanDisk's investor day event was likely driven by the company's 'reasonable long-term financial model' and its commitment to return 100% of excess cash to shareholders."
           ]
         }
       ]
@@ -744,6 +815,43 @@
       "label": "國際財經",
       "items": [
         {
+          "news_id": "6577956",
+          "title": "Anthropic為Claude加AI浮水印引爆爭議！Reddit用戶正反激辯",
+          "title_en": "Anthropic Sparks Controversy Over AI Watermark on Claude; Reddit Users Debate Heatedly",
+          "publish_at": 1786795803,
+          "url": "https://news.cnyes.com/news/id/6577956",
+          "paras": [
+            "Anthropic近期決定為旗下Claude聊天機器人的輸出內容加入隱形浮水印，在生成的文字中嵌入一般使用者肉眼無法察覺、但可由電腦系統辨識的程式碼，以標示內容是否由AI生成，引發一些用戶不滿。",
+            "根據《TechCrunch》報導，Anthropic此舉主要是為配合歐盟《人工智慧法案》（EU AI Act）旗下的透明度規範。相關規範要求科技公司對AI生成或經AI編輯的內容進行標記，而且標記方式必須能夠被電腦系統識別。",
+            "不過，這項政策雖符合監管方向，卻也在部分Claude使用者之間引發爭議。",
+            "從Reddit上的討論可以看到，不少使用者對AI浮水印持不同看法。其中，一名帳號註冊僅約3週、名為visionode的使用者認為，這套新的浮水印機制是一場嚴苛的陰謀，目的是讓全球無辜的聊天機器人使用者成為受害者。",
+            "visionode的核心論點似乎是，熟悉AI工具的Claude使用者，或許可以透過改寫內容，或利用其他AI服務對輸出內容進一步處理，來掩蓋自己使用AI的痕跡；但對一般Claude使用者而言，則可能無法躲過偵測。",
+            "該使用者舉例，學生若只是使用Claude協助重新整理段落、記者利用AI整理長達200頁的逐字稿，或作家因創作瓶頸請Claude提供同義詞，最後都可能留下AI生成的標記。",
+            "不過，這套說法也沒有獲得所有Reddit使用者認同。有網友認為，若記者只是利用Claude整理大量逐字稿，浮水印本身並不會造成太大問題，除非記者直接將AI整理出的內容原封不動放入報導；同樣地，學生若將Claude產出的文字直接貼進作業，也涉及學術誠信問題。",
+            "另一名使用者則直接要求原發文者「深呼吸」，顯示部分網友並不認為浮水印本身構成嚴重問題。",
+            "除了對使用情境的疑慮，也有使用者從「創作者權益」角度批評Anthropic的做法。其中一名網友認為，自己在使用Claude時提供指令、背景資訊、判斷與多次修改，Claude只是協助完成工作的工具，因此質疑如果Claude開始對生成的程式碼或其他內容加上浮水印，究竟是在主張什麼樣的「所有權」。",
+            "然而，其他使用者很快反駁這項觀點，指出浮水印並非代表Claude要對內容主張所有權，而是為了讓外界能夠辨識AI生成內容，降低AI產製內容可能帶來的各種風險。",
+            "甚至有網友調侃，批評Claude的文章本身似乎就是透過Claude撰寫，反而讓這場討論形成反差。",
+            "值得注意的是，並非所有批評者都採取如此強烈的立場。有使用者認為，真正值得討論的是AI浮水印背後的倫理問題，尤其考量部分大型AI模型本身就是透過大量人類創作內容進行訓練，在這樣的背景下，再由AI替使用者產出的內容加入浮水印，確實存在某種諷刺意味。",
+            "不過，從目前Reddit上的相關討論來看，支持Anthropic加入浮水印的聲音仍相當明顯。有使用者認為，讓AI生成內容具備可辨識性本身並沒有充分理由被反對，真正不希望內容被標示的人，主要是擔心他人知道內容曾經經過AI生成。"
+          ],
+          "paras_en": [
+            "Anthropic recently decided to embed an invisible watermark in the output of its Claude chatbot, inserting code that is invisible to the naked eye but detectable by computer systems to indicate whether content was AI‑generated, prompting some user dissatisfaction.",
+            "According to TechCrunch, Anthropic’s move is mainly to comply with the transparency provisions of the EU AI Act, which require tech companies to label AI‑generated or AI‑edited content in a way that can be recognized by computer systems.",
+            "However, while the policy aligns with regulatory direction, it has also sparked controversy among some Claude users.",
+            "Reddit discussions reveal a split in opinion on AI watermarks. One user, visionode, who has been registered for only about three weeks, claims the new watermark mechanism is a harsh conspiracy aimed at turning innocent chatbot users worldwide into victims.",
+            "Visionode’s core argument is that experienced Claude users might rewrite or further process the output with other AI services to hide their AI usage, whereas ordinary users may not be able to evade detection.",
+            "The user gives examples: a student using Claude to reorganize paragraphs, a journalist using AI to process a 200‑page transcript, or a writer seeking synonyms during a creative block could all end up leaving an AI‑generated marker.",
+            "But this view is not shared by all Redditors. Some argue that if a journalist merely uses Claude to organize large transcripts, the watermark itself isn’t a major issue unless the AI‑processed text is inserted verbatim into the article; similarly, a student copying Claude‑generated text directly into an assignment raises academic integrity concerns.",
+            "Another user simply told the original poster to “take a deep breath,” indicating that some do not see the watermark as a serious problem.",
+            "Beyond usage concerns, some users criticize Anthropic from a creator‑rights perspective, arguing that when they provide prompts, context, judgments, and multiple edits, Claude is just a tool, and they question what ownership the watermark implies.",
+            "Other users quickly rebutted this, pointing out that the watermark does not claim ownership by Claude but serves to let the public identify AI‑generated content and mitigate various risks associated with AI‑produced material.",
+            "Some even joked that criticism of Claude articles seems self‑referential, as the critiques themselves appear to be written by Claude, creating an ironic twist in the debate.",
+            "It is worth noting that not all critics take such a strong stance; some say the real discussion should focus on the ethics of AI watermarks, especially given that large AI models are trained on massive amounts of human‑created content, making the addition of a watermark to AI‑generated output somewhat paradoxical.",
+            "Nevertheless, Reddit discussions show that support for Anthropic’s watermark remains quite pronounced, with users arguing that making AI‑generated content identifiable is not a reason to oppose it, and those who dislike labeling mainly fear others will know the content was AI‑generated."
+          ]
+        },
+        {
           "news_id": "6577950",
           "title": "Anthropic驚爆「Model 2」新模型！性能超越Mythos 5、AI風險評估卻陷「飽和」危機",
           "title_en": "",
@@ -1037,29 +1145,6 @@
             "The roughly $11 billion position in Micron and SanDisk concentrated in just two companies placed heavy pressure on the fund’s net asset value when the stocks slumped, leaving it unable to alleviate liquidity issues by rebalancing and forcing it to sell shares on the open market.",
             "On the other hand, Citadel’s flagship fund Wellington showed a marked improvement in July, rising 5.9% for the month. The main driver was Citadel’s purchase of a large block of publicly traded shares held by Situational Awareness at about a 10% discount to market price.",
             "It is worth noting that before this transaction unfolded in the last week of July, Wellington had only gained about 0.45% for the month, indicating that the discounted acquisition quickly translated into improved fund performance."
-          ]
-        },
-        {
-          "news_id": "6577937",
-          "title": "川普稱擊敗伊朗後將宣布荷姆茲海峽為「美國領土」！強調高油價只是「小問題」",
-          "title_en": "Trump Says After Defeating Iran He Will Declare the Hormuz Strait as “U.S. Territory”! Emphasizes High Oil Prices Are Just a “Small Problem”",
-          "publish_at": 1786770517,
-          "url": "https://news.cnyes.com/news/id/6577937",
-          "paras": [
-            "美國總統川普再度就荷姆茲海峽控制權發表強硬言論，稱美國在「徹底擊敗伊朗」後，很快就會宣布荷姆茲海峽為美國領土。",
-            "川普週五（14日）在紐約州長島一場活動中談及伊朗戰事時表示，伊朗目前正遭受「慘敗」，並稱美國在擊敗伊朗後，將宣布荷姆茲海峽屬於美國領土。",
-            "他在說出這番話時還輕笑了一下，但隨後強調「這是真的」。",
-            "川普近來持續宣稱美國已掌握荷姆茲海峽的控制權。他12日曾在社群平台發文表示，美國「完全控制」荷姆茲海峽，伊朗對此「束手無策」。",
-            "不過，伊朗武裝部隊哈塔姆安比亞中央總部發言人13日表示，荷姆茲海峽仍處於伊朗控制之下，未經伊朗方面許可，任何船隻都無法安全通過。",
-            "面對油價上升帶來的國內壓力，川普則淡化高油價問題，認為與阻止伊朗取得核武相比，燃料價格上漲只是「小問題」。他並表示自己「永遠不會道歉」，堅稱美國採取的行動是正確的。"
-          ],
-          "paras_en": [
-            "U.S. President Donald Trump again issued a hard‑line statement on control of the Hormuz Strait, saying that once the United States has “completely defeated Iran,” it will soon declare the Hormuz Strait to be U.S. territory.",
-            "Speaking at an event on Long Island, New York, on Friday the 14th, Trump said Iran is currently suffering a “catastrophic defeat” and that after beating Iran, the United States will announce that the Hormuz Strait belongs to the United States.",
-            "He chuckled lightly while making the remark, but then stressed, “It’s true.”",
-            "Trump has recently been repeatedly claiming that the United States has already seized control of the Hormuz Strait. On the 12th he posted on social media that the United States “fully controls” the strait and that Iran is “powerless” to do anything about it.",
-            "However, a spokesperson for Iran’s Armed Forces, the Hatam Anbia Central Headquarters, said on the 13th that the Hormuz Strait remains under Iranian control and that no vessel can pass safely without Iran’s permission.",
-            "Facing domestic pressure from rising oil prices, Trump downplayed the issue, saying that compared with stopping Iran from acquiring nuclear weapons, higher fuel prices are only a “small problem.” He added that he will “never apologize” and insisted that America’s actions are correct."
           ]
         }
       ]
