@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-15T16:45:33+08:00",
+  "generated_at": "2026-08-15T17:08:41+08:00",
   "source": "finnhub (US price+daily) + Yahoo (US MTD/YTD) + TWSE (TW)",
   "us_stocks": [
     {
@@ -16,8 +16,8 @@
       "market_date": "2026-08-14",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NVDA.US",
       "error": null,
-      "per": 33.9758,
-      "per_kind": "trailing"
+      "per": null,
+      "per_kind": null
     },
     {
       "symbol": "AAPL",
@@ -288,8 +288,8 @@
       "market_date": "2026-08-14",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TSM.US",
       "error": null,
-      "per": 27.867,
-      "per_kind": "trailing"
+      "per": null,
+      "per_kind": null
     },
     {
       "symbol": "AMD",
