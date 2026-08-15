@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-08-15T14:41",
+  "built_at": "2026-08-15T15:33",
   "indices": [
     {
       "ok": true,
@@ -89,7 +89,7 @@
         7785.76
       ],
       "market_state": "CLOSED",
-      "asof": "08/14 16:39",
+      "asof": "08/14 16:00",
       "tz": "America/New_York",
       "name_zh": "標普500"
     },
@@ -189,9 +189,9 @@
     {
       "ok": true,
       "symbol": "^DJI",
-      "last": 53732.41,
+      "last": 53732.4,
       "prev_close": 53840.0,
-      "change": -107.59,
+      "change": -107.6,
       "change_pct": -0.2,
       "points": [
         53818.51,
@@ -272,10 +272,10 @@
         53740.7,
         53720.85,
         53733.51,
-        53732.41
+        53732.4
       ],
       "market_state": "CLOSED",
-      "asof": "08/14 16:41",
+      "asof": "08/14 16:00",
       "tz": "America/New_York",
       "name_zh": "道瓊工業"
     },
@@ -470,8 +470,8 @@
       "ok": true,
       "symbol": "^GDAXI",
       "last": 26440.31,
-      "prev_close": 26299.7,
-      "change": 140.61,
+      "prev_close": 26299.74,
+      "change": 140.57,
       "change_pct": 0.53,
       "points": [
         26463.61,
@@ -564,8 +564,8 @@
       "ok": true,
       "symbol": "^FTSE",
       "last": 10750.11,
-      "prev_close": 10772.7,
-      "change": -22.59,
+      "prev_close": 10772.67,
+      "change": -22.56,
       "change_pct": -0.21,
       "points": [
         10772.99,
@@ -787,6 +787,7 @@
         68882.64,
         68899.76,
         68889.01,
+        68889.01,
         68875.04,
         68834.32,
         68801.18,
@@ -903,9 +904,9 @@
       "ok": true,
       "symbol": "^TWOII",
       "last": 400.95,
-      "prev_close": 406.12,
-      "change": -5.17,
-      "change_pct": -1.27,
+      "prev_close": null,
+      "change": null,
+      "change_pct": null,
       "points": [
         407.8,
         408.7,
@@ -1365,8 +1366,8 @@
       "ok": true,
       "symbol": "^NSEI",
       "last": 24366.0,
-      "prev_close": 24395.85,
-      "change": -29.85,
+      "prev_close": 24395.8,
+      "change": -29.8,
       "change_pct": -0.12,
       "points": [
         24322.7,
