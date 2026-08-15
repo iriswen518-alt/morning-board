@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-15T14:52:33+08:00",
+  "generated_at": "2026-08-15T15:38:18+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -17,20 +17,6 @@
       "error": null
     },
     {
-      "symbol": "BYND",
-      "name_zh": "Beyond Meat",
-      "kind": "US",
-      "price": 13.47,
-      "change_pct": 10.32,
-      "mtd_pct": -26.15,
-      "ytd_pct": -49.02,
-      "market_date": "2026-08-11",
-      "per": 0.7415,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BYND.US",
-      "error": null
-    },
-    {
       "symbol": "WETO",
       "name_zh": "Wetour Robotics",
       "kind": "US",
@@ -45,6 +31,20 @@
       "error": null
     },
     {
+      "symbol": "BYND",
+      "name_zh": "Beyond Meat",
+      "kind": "US",
+      "price": 13.47,
+      "change_pct": 10.32,
+      "mtd_pct": -20.67,
+      "ytd_pct": -45.24,
+      "market_date": "2026-08-14",
+      "per": 0.7415,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BYND.US",
+      "error": null
+    },
+    {
       "symbol": "WING",
       "name_zh": "Wingstop",
       "kind": "US",
@@ -56,6 +56,20 @@
       "per": 26.2292,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=WING.US",
+      "error": null
+    },
+    {
+      "symbol": "MXL",
+      "name_zh": "MaxLinear",
+      "kind": "US",
+      "price": 84.84,
+      "change_pct": 10.68,
+      "mtd_pct": 26.97,
+      "ytd_pct": 386.75,
+      "market_date": "2026-08-14",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MXL.US",
       "error": null
     },
     {
@@ -101,31 +115,17 @@
       "error": null
     },
     {
-      "symbol": "ARKK",
-      "name_zh": "ARK Innovation ETF",
+      "symbol": "BAC",
+      "name_zh": "美國銀行",
       "kind": "US",
-      "price": 81.1,
-      "change_pct": -1.8,
-      "mtd_pct": 13.84,
-      "ytd_pct": 5.43,
+      "price": 64.49,
+      "change_pct": 0.62,
+      "mtd_pct": 4.1,
+      "ytd_pct": 17.25,
       "market_date": "2026-08-14",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ARKK.US",
-      "error": null
-    },
-    {
-      "symbol": "DIS",
-      "name_zh": "迪士尼",
-      "kind": "US",
-      "price": 106.85,
-      "change_pct": 1.96,
-      "mtd_pct": 11.08,
-      "ytd_pct": -6.08,
-      "market_date": "2026-08-14",
-      "per": 20.8979,
+      "per": 13.2926,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DIS.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BAC.US",
       "error": null
     },
     {
@@ -143,45 +143,17 @@
       "error": null
     },
     {
-      "symbol": "MXL",
-      "name_zh": "MaxLinear",
+      "symbol": "IBM",
+      "name_zh": "International Business Machines",
       "kind": "US",
-      "price": 84.84,
-      "change_pct": 10.68,
-      "mtd_pct": 26.97,
-      "ytd_pct": 386.75,
+      "price": 234.32,
+      "change_pct": -1.19,
+      "mtd_pct": 4.77,
+      "ytd_pct": -20.89,
       "market_date": "2026-08-14",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MXL.US",
-      "error": null
-    },
-    {
-      "symbol": "F",
-      "name_zh": "福特",
-      "kind": "US",
-      "price": 14.37,
-      "change_pct": 3.46,
-      "mtd_pct": -2.11,
-      "ytd_pct": 9.53,
-      "market_date": "2026-08-14",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=F.US",
-      "error": null
-    },
-    {
-      "symbol": "MP",
-      "name_zh": "MP Materials",
-      "kind": "US",
-      "price": 58.74,
-      "change_pct": 5.53,
-      "mtd_pct": 41.99,
-      "ytd_pct": 16.27,
-      "market_date": "2026-08-14",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MP.US",
+      "per": 20.6487,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IBM.US",
       "error": null
     },
     {
@@ -266,6 +238,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VOO.US",
+      "error": null
+    },
+    {
+      "symbol": "ARKK",
+      "name_zh": "ARK 創新 ETF",
+      "kind": "US",
+      "price": 81.1,
+      "change_pct": -1.8,
+      "mtd_pct": 13.84,
+      "ytd_pct": 5.43,
+      "market_date": "2026-08-14",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ARKK.US",
       "error": null
     },
     {
