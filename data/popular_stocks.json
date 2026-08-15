@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-15T19:28:23+08:00",
+  "generated_at": "2026-08-15T21:37:50+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -14,6 +14,34 @@
       "per": 10.436,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PYPL.US",
+      "error": null
+    },
+    {
+      "symbol": "WING",
+      "name_zh": "Wingstop",
+      "kind": "US",
+      "price": 126.12,
+      "change_pct": 10.73,
+      "mtd_pct": -2.6,
+      "ytd_pct": -47.12,
+      "market_date": "2026-08-14",
+      "per": 26.2292,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=WING.US",
+      "error": null
+    },
+    {
+      "symbol": "NLST",
+      "name_zh": "Netlist",
+      "kind": "US",
+      "price": 5.88,
+      "change_pct": 18.55,
+      "mtd_pct": 150.21,
+      "ytd_pct": 560.67,
+      "market_date": "2026-08-14",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NLST.US",
       "error": null
     },
     {
@@ -45,6 +73,48 @@
       "error": null
     },
     {
+      "symbol": "EPD",
+      "name_zh": "Enterprise Products Partners L.",
+      "kind": "US",
+      "price": 38.9,
+      "change_pct": 2.31,
+      "mtd_pct": 2.23,
+      "ytd_pct": 21.33,
+      "market_date": "2026-08-14",
+      "per": 14.1776,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=EPD.US",
+      "error": null
+    },
+    {
+      "symbol": "PDD",
+      "name_zh": "拼多多",
+      "kind": "US",
+      "price": 84.79,
+      "change_pct": 0.74,
+      "mtd_pct": -4.26,
+      "ytd_pct": -25.22,
+      "market_date": "2026-08-14",
+      "per": 8.4482,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PDD.US",
+      "error": null
+    },
+    {
+      "symbol": "MO",
+      "name_zh": "Altria",
+      "kind": "US",
+      "price": 65.7,
+      "change_pct": 0.95,
+      "mtd_pct": -3.85,
+      "ytd_pct": 13.94,
+      "market_date": "2026-08-14",
+      "per": 13.7487,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MO.US",
+      "error": null
+    },
+    {
       "symbol": "BYND",
       "name_zh": "Beyond Meat",
       "kind": "US",
@@ -56,6 +126,20 @@
       "per": 0.7415,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BYND.US",
+      "error": null
+    },
+    {
+      "symbol": "O",
+      "name_zh": "Realty Income",
+      "kind": "US",
+      "price": 62.74,
+      "change_pct": -0.33,
+      "mtd_pct": -1.77,
+      "ytd_pct": 11.3,
+      "market_date": "2026-08-14",
+      "per": 47.1475,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=O.US",
       "error": null
     },
     {
@@ -84,76 +168,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SCHD.US",
-      "error": null
-    },
-    {
-      "symbol": "AAOI",
-      "name_zh": "Applied Optoelectronics",
-      "kind": "US",
-      "price": 150.28,
-      "change_pct": 15.53,
-      "mtd_pct": 59.33,
-      "ytd_pct": 331.1,
-      "market_date": "2026-08-14",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AAOI.US",
-      "error": null
-    },
-    {
-      "symbol": "MP",
-      "name_zh": "MP Materials",
-      "kind": "US",
-      "price": 58.74,
-      "change_pct": 5.53,
-      "mtd_pct": 41.99,
-      "ytd_pct": 16.27,
-      "market_date": "2026-08-14",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MP.US",
-      "error": null
-    },
-    {
-      "symbol": "HD",
-      "name_zh": "家得寶",
-      "kind": "US",
-      "price": 338.86,
-      "change_pct": -0.83,
-      "mtd_pct": 2.08,
-      "ytd_pct": -1.52,
-      "market_date": "2026-08-14",
-      "per": 24.4148,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HD.US",
-      "error": null
-    },
-    {
-      "symbol": "CEG",
-      "name_zh": "Constellation Energy Corporatio",
-      "kind": "US",
-      "price": 282.5,
-      "change_pct": 1.39,
-      "mtd_pct": 7.52,
-      "ytd_pct": -20.03,
-      "market_date": "2026-08-14",
-      "per": 28.4918,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CEG.US",
-      "error": null
-    },
-    {
-      "symbol": "TEST",
-      "name_zh": "YieldMax TSLA Performance & Dis",
-      "kind": "US",
-      "price": 36.88,
-      "change_pct": 0.19,
-      "mtd_pct": 6.08,
-      "ytd_pct": -30.23,
-      "market_date": "2026-08-14",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TEST.US",
       "error": null
     },
     {
