@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-14T17:02:11+08:00",
+  "generated_at": "2026-08-15T09:01:14+08:00",
   "source": "manual curation (targets.json)",
   "version": 3,
   "updated": "2026-08-12",
@@ -181,13 +181,13 @@
         {
           "k": "S&P 500 YTD",
           "v": "+13.93%",
-          "sub": "MTD +4.13%・今日 +0.65%・截至 08/13",
+          "sub": "MTD +4.13%・今日 -0.17%・截至 08/14",
           "url": "https://finance.yahoo.com/quote/%5EGSPC"
         },
         {
           "k": "Nasdaq Composite YTD",
           "v": "+15.32%",
-          "sub": "MTD +5.63%・今日 +0.81%・截至 08/13",
+          "sub": "MTD +5.63%・今日 -0.28%・截至 08/14",
           "url": "https://finance.yahoo.com/quote/%5EIXIC"
         }
       ],
@@ -269,8 +269,8 @@
       "stats": [
         {
           "k": "近1年績效",
-          "v": "+205.44%",
-          "sub": "安聯台灣科技・截至 08/13",
+          "v": "+206.78%",
+          "sub": "安聯台灣科技・截至 08/14",
           "url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACDD04-2602"
         },
         {
@@ -359,8 +359,8 @@
       "stats": [
         {
           "k": "WTI 原油 YTD",
-          "v": "+43.89%",
-          "sub": "今日 +1.51%・截至 08/14",
+          "v": "+43.75%",
+          "sub": "今日 +1.42%・截至 08/14",
           "url": "https://finance.yahoo.com/quote/CL=F"
         },
         {
@@ -402,13 +402,13 @@
         {
           "k": "Euro Stoxx 50 YTD",
           "v": "+12.93%",
-          "sub": "MTD +2.95%・今日 +0.18%・截至 08/13",
+          "sub": "MTD +2.95%・今日 -0.09%・截至 08/14",
           "url": "https://finance.yahoo.com/quote/%5ESTOXX50E"
         },
         {
           "k": "DAX YTD",
           "v": "+7.39%",
-          "sub": "MTD +2.62%・今日 -0.12%・截至 08/13",
+          "sub": "MTD +2.62%・今日 +0.53%・截至 08/14",
           "url": "https://finance.yahoo.com/quote/%5EGDAXI"
         },
         {
@@ -489,6 +489,12 @@
       "tagline": "供應鏈中國+1結構轉移、內需＋FDI雙引擎｜ASX今日+0.19%收9,251、YTD+5.95%、MTD+2.85%月內穩健，多元卡位",
       "ytd": "+5.95%",
       "stats": [
+        {
+          "k": "STI 海峽時報 YTD",
+          "v": "+22.85%",
+          "sub": "今日 -0.01%・截至 08/13",
+          "url": "https://finance.yahoo.com/quote/%5ESTI"
+        },
         {
           "k": "建議部位",
           "v": "2–3%",
@@ -659,11 +665,11 @@
       "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACCF304-1813",
       "fund_id": "amundi_global_strategic",
       "nav": 10.27,
-      "nav_date": "2026-08-12",
-      "change_pct": -0.1,
+      "nav_date": "2026-08-13",
+      "change_pct": 0.0,
       "perf": {
-        "1m": 0.1,
-        "3m": 3.32,
+        "1m": 0.39,
+        "3m": 3.11,
         "6m": null,
         "ytd": 2.7,
         "1y": null,
@@ -721,14 +727,14 @@
       "tagline": "參與日本重估行情與降低單一波動",
       "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACAI451-WA17",
       "fund_id": "pinebridge_japan_multi_asset",
-      "nav": 11.7128,
-      "nav_date": "2026-08-12",
-      "change_pct": 0.32,
+      "nav": 11.7701,
+      "nav_date": "2026-08-13",
+      "change_pct": 0.49,
       "perf": {
-        "1m": 2.38,
-        "3m": 3.29,
-        "6m": 1.14,
-        "ytd": 10.41,
+        "1m": 3.29,
+        "3m": 2.88,
+        "6m": 2.33,
+        "ytd": 10.95,
         "1y": null,
         "3y": null
       },
@@ -742,16 +748,16 @@
       "tagline": "台股 AI 與半導體供應鏈主動選股",
       "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACDD04-2602",
       "fund_id": "allianz_tw_tech",
-      "nav": 784.71,
-      "nav_date": "2026-08-13",
-      "change_pct": 1.44,
+      "nav": 789.99,
+      "nav_date": "2026-08-14",
+      "change_pct": 0.67,
       "perf": {
-        "1m": 2.13,
-        "3m": 2.82,
-        "6m": 68.44,
-        "ytd": 102.49,
-        "1y": 205.44,
-        "3y": 434.33
+        "1m": 6.65,
+        "3m": 1.05,
+        "6m": 69.57,
+        "ytd": 103.85,
+        "1y": 206.78,
+        "3y": 441.24
       },
       "bop_name_zh": "安聯台灣科技基金"
     },
