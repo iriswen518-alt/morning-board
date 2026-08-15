@@ -13,7 +13,7 @@
     {
       "name": "Nasdaq Composite",
       "name_zh": null,
-      "close": 26729.1640625,
+      "close": 26729.16015625,
       "daily_pct": -0.28,
       "mtd_pct": 5.34,
       "ytd_pct": 15.0,
@@ -123,7 +123,7 @@
       "name_zh": null,
       "close": 25116.849609375,
       "daily_pct": -1.1,
-      "mtd_pct": -2.87,
+      "mtd_pct": -2.97,
       "ytd_pct": -2.0,
       "closing_date": "2026-08-14"
     },
@@ -211,11 +211,11 @@
   "fx": [
     {
       "name": "DXY 美元指數",
-      "close": 99.95999908447266,
-      "daily_pct": -0.05,
-      "mtd_pct": -0.16,
-      "ytd_pct": 1.38,
-      "closing_date": "2026-08-13"
+      "close": 99.66999816894531,
+      "daily_pct": -0.29,
+      "mtd_pct": -0.13,
+      "ytd_pct": 1.41,
+      "closing_date": "2026-08-14"
     },
     {
       "name": "EUR/USD 歐元",
@@ -227,10 +227,10 @@
     },
     {
       "name": "USD/JPY 日圓",
-      "close": 159.30499267578125,
-      "daily_pct": -0.08,
-      "mtd_pct": -0.55,
-      "ytd_pct": 1.85,
+      "close": 159.42599487304688,
+      "daily_pct": 0.06,
+      "mtd_pct": -0.47,
+      "ytd_pct": 1.93,
       "closing_date": "2026-08-14"
     },
     {
@@ -269,18 +269,18 @@
   "commodities": [
     {
       "name": "黃金 (USD/oz)",
-      "close": 4432.0,
-      "daily_pct": 1.57,
-      "mtd_pct": 9.46,
-      "ytd_pct": 2.46,
+      "close": 4380.39990234375,
+      "daily_pct": 0.38,
+      "mtd_pct": 8.18,
+      "ytd_pct": 1.27,
       "closing_date": "2026-08-14"
     },
     {
       "name": "白銀 (USD/oz)",
-      "close": 64.82499694824219,
-      "daily_pct": -0.07,
-      "mtd_pct": 12.56,
-      "ytd_pct": -7.57,
+      "close": 64.98799896240234,
+      "daily_pct": 0.18,
+      "mtd_pct": 12.84,
+      "ytd_pct": -7.34,
       "closing_date": "2026-08-14"
     },
     {
@@ -293,10 +293,10 @@
     },
     {
       "name": "布蘭特原油 (USD/bbl)",
-      "close": 88.58999633789062,
-      "daily_pct": 1.75,
-      "mtd_pct": -1.7,
-      "ytd_pct": 45.59,
+      "close": 88.5199966430664,
+      "daily_pct": 1.67,
+      "mtd_pct": -1.78,
+      "ytd_pct": 45.47,
       "closing_date": "2026-08-14"
     },
     {
@@ -377,7 +377,7 @@
       "name_zh": null,
       "close": 97.4800033569336,
       "daily_pct": -0.21,
-      "mtd_pct": -0.14,
+      "mtd_pct": 0.11,
       "ytd_pct": -2.4,
       "closing_date": "2026-08-14"
     }
@@ -388,8 +388,8 @@
     "yield_curve_10y2y": 0.53,
     "yield_curve_10y2y_bps": 53,
     "curve_shape": "正斜率",
-    "dxy": 99.63600158691406,
-    "dxy_daily_pct": -0.32,
+    "dxy": 99.66999816894531,
+    "dxy_daily_pct": -0.29,
     "closing_date": "2026-08-14"
   },
   "fedwatch": [
@@ -406,10 +406,10 @@
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
       "implied_rate": 3.72,
-      "delta_rate": 0.06,
-      "delta_bps": 6.0,
-      "p_hike": 24.0,
-      "p_hold": 76.0,
+      "delta_rate": 0.05,
+      "delta_bps": 5.0,
+      "p_hike": 20.0,
+      "p_hold": 80.0,
       "p_cut": 0,
       "is_reference": false
     },

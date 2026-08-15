@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-15T11:00:06+08:00",
+  "generated_at": "2026-08-15T12:40:34+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -73,6 +73,20 @@
       "error": null
     },
     {
+      "symbol": "HTFL",
+      "name_zh": "Heartflow",
+      "kind": "US",
+      "price": 42.08,
+      "change_pct": 35.7,
+      "mtd_pct": 66.79,
+      "ytd_pct": 44.36,
+      "market_date": "2026-08-14",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HTFL.US",
+      "error": null
+    },
+    {
       "symbol": "AAOI",
       "name_zh": "Applied Optoelectronics",
       "kind": "US",
@@ -84,6 +98,62 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AAOI.US",
+      "error": null
+    },
+    {
+      "symbol": "ARKK",
+      "name_zh": "ARK Innovation ETF",
+      "kind": "US",
+      "price": 81.1,
+      "change_pct": -1.8,
+      "mtd_pct": 13.84,
+      "ytd_pct": 5.43,
+      "market_date": "2026-08-14",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ARKK.US",
+      "error": null
+    },
+    {
+      "symbol": "NLST",
+      "name_zh": "Netlist",
+      "kind": "US",
+      "price": 5.88,
+      "change_pct": 18.55,
+      "mtd_pct": 150.21,
+      "ytd_pct": 560.67,
+      "market_date": "2026-08-14",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NLST.US",
+      "error": null
+    },
+    {
+      "symbol": "MXL",
+      "name_zh": "MaxLinear",
+      "kind": "US",
+      "price": 84.84,
+      "change_pct": 10.68,
+      "mtd_pct": 26.97,
+      "ytd_pct": 386.75,
+      "market_date": "2026-08-14",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MXL.US",
+      "error": null
+    },
+    {
+      "symbol": "OUST",
+      "name_zh": "Ouster",
+      "kind": "US",
+      "price": 48.71,
+      "change_pct": 7.93,
+      "mtd_pct": 24.87,
+      "ytd_pct": 125.09,
+      "market_date": "2026-08-14",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=OUST.US",
       "error": null
     },
     {
@@ -101,73 +171,17 @@
       "error": null
     },
     {
-      "symbol": "CPRT",
-      "name_zh": "Copart",
+      "symbol": "EPD",
+      "name_zh": "Enterprise Products Partners L.",
       "kind": "US",
-      "price": 31.61,
-      "change_pct": 7.55,
-      "mtd_pct": 8.55,
-      "ytd_pct": -19.26,
+      "price": 38.9,
+      "change_pct": 2.31,
+      "mtd_pct": 2.23,
+      "ytd_pct": 21.33,
       "market_date": "2026-08-14",
-      "per": 17.5184,
+      "per": 13.9087,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CPRT.US",
-      "error": null
-    },
-    {
-      "symbol": "LEN",
-      "name_zh": "Lennar",
-      "kind": "US",
-      "price": 86.83,
-      "change_pct": -0.81,
-      "mtd_pct": 5.44,
-      "ytd_pct": -15.54,
-      "market_date": "2026-08-14",
-      "per": 13.0203,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LEN.US",
-      "error": null
-    },
-    {
-      "symbol": "HTFL",
-      "name_zh": "Heartflow",
-      "kind": "US",
-      "price": 42.08,
-      "change_pct": 35.7,
-      "mtd_pct": 66.79,
-      "ytd_pct": 44.36,
-      "market_date": "2026-08-14",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HTFL.US",
-      "error": null
-    },
-    {
-      "symbol": "MP",
-      "name_zh": "MP Materials",
-      "kind": "US",
-      "price": 58.74,
-      "change_pct": 5.53,
-      "mtd_pct": 41.99,
-      "ytd_pct": 16.27,
-      "market_date": "2026-08-14",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MP.US",
-      "error": null
-    },
-    {
-      "symbol": "CLM",
-      "name_zh": "Cornerstone Strategic Value Fd",
-      "kind": "US",
-      "price": 7.35,
-      "change_pct": -2,
-      "mtd_pct": -1.21,
-      "ytd_pct": -12.08,
-      "market_date": "2026-08-14",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CLM.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=EPD.US",
       "error": null
     },
     {
@@ -252,20 +266,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VOO.US",
-      "error": null
-    },
-    {
-      "symbol": "ARKK",
-      "name_zh": "ARK 創新 ETF",
-      "kind": "US",
-      "price": 81.1,
-      "change_pct": -1.8,
-      "mtd_pct": 13.84,
-      "ytd_pct": 5.43,
-      "market_date": "2026-08-14",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ARKK.US",
       "error": null
     },
     {
