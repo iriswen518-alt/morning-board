@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-16T06:30:40+08:00",
+  "generated_at": "2026-08-16T07:28:16+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -45,20 +45,6 @@
       "error": null
     },
     {
-      "symbol": "JEPI",
-      "name_zh": "JPMorgan Equity Premium Income",
-      "kind": "US",
-      "price": 58.02,
-      "change_pct": 0.17,
-      "mtd_pct": 1.03,
-      "ytd_pct": 1.36,
-      "market_date": "2026-08-14",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=JEPI.US",
-      "error": null
-    },
-    {
       "symbol": "SCHD",
       "name_zh": "Schwab US Dividend Equity ETF",
       "kind": "US",
@@ -87,6 +73,34 @@
       "error": null
     },
     {
+      "symbol": "JEPI",
+      "name_zh": "JPMorgan Equity Premium Income",
+      "kind": "US",
+      "price": 58.02,
+      "change_pct": 0.17,
+      "mtd_pct": 1.03,
+      "ytd_pct": 1.36,
+      "market_date": "2026-08-14",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=JEPI.US",
+      "error": null
+    },
+    {
+      "symbol": "QQQI",
+      "name_zh": "NEOS Nasdaq 100 High Income ETF",
+      "kind": "US",
+      "price": 55.79,
+      "change_pct": 0.02,
+      "mtd_pct": 5.18,
+      "ytd_pct": 3.58,
+      "market_date": "2026-08-14",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QQQI.US",
+      "error": null
+    },
+    {
       "symbol": "SPGI",
       "name_zh": "S&P Global",
       "kind": "US",
@@ -101,17 +115,31 @@
       "error": null
     },
     {
-      "symbol": "SPMO",
-      "name_zh": "Invesco S&P 500 Momentum ETF",
+      "symbol": "ETN",
+      "name_zh": "Eaton",
       "kind": "US",
-      "price": 153.31,
-      "change_pct": 0.39,
-      "mtd_pct": 6.59,
-      "ytd_pct": 28.49,
+      "price": 451.51,
+      "change_pct": -0.4,
+      "mtd_pct": 8.75,
+      "ytd_pct": 41.76,
       "market_date": "2026-08-14",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPMO.US",
+      "per": 46.2694,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ETN.US",
+      "error": null
+    },
+    {
+      "symbol": "MMM",
+      "name_zh": "3M",
+      "kind": "US",
+      "price": 182.65,
+      "change_pct": 0,
+      "mtd_pct": 3.61,
+      "ytd_pct": 14.08,
+      "market_date": "2026-08-14",
+      "per": 31.1722,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MMM.US",
       "error": null
     },
     {
@@ -129,6 +157,20 @@
       "error": null
     },
     {
+      "symbol": "BABA",
+      "name_zh": "阿里巴巴",
+      "kind": "US",
+      "price": 123.81,
+      "change_pct": 1.35,
+      "mtd_pct": 1.28,
+      "ytd_pct": -15.53,
+      "market_date": "2026-08-14",
+      "per": 18.9574,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BABA.US",
+      "error": null
+    },
+    {
       "symbol": "VXUS",
       "name_zh": "Vanguard Total International St",
       "kind": "US",
@@ -143,59 +185,17 @@
       "error": null
     },
     {
-      "symbol": "PG",
-      "name_zh": "寶僑",
+      "symbol": "VTI",
+      "name_zh": "Vanguard Morningstar Total Stoc",
       "kind": "US",
-      "price": 144.55,
-      "change_pct": 0.2,
-      "mtd_pct": 0.04,
-      "ytd_pct": 0.87,
-      "market_date": "2026-08-14",
-      "per": 20.8828,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PG.US",
-      "error": null
-    },
-    {
-      "symbol": "VOO",
-      "name_zh": "Vanguard S&P 500 ETF",
-      "kind": "US",
-      "price": 713.61,
-      "change_pct": -0.19,
-      "mtd_pct": 3.93,
-      "ytd_pct": 13.79,
+      "price": 383.85,
+      "change_pct": -0.12,
+      "mtd_pct": 4.25,
+      "ytd_pct": 14.49,
       "market_date": "2026-08-14",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VOO.US",
-      "error": null
-    },
-    {
-      "symbol": "QBTS",
-      "name_zh": "D-Wave Quantum",
-      "kind": "US",
-      "price": 21.17,
-      "change_pct": 1.29,
-      "mtd_pct": 17.09,
-      "ytd_pct": -19.04,
-      "market_date": "2026-08-14",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QBTS.US",
-      "error": null
-    },
-    {
-      "symbol": "UBER",
-      "name_zh": "Uber",
-      "kind": "US",
-      "price": 75.95,
-      "change_pct": 0.09,
-      "mtd_pct": 7.94,
-      "ytd_pct": -7.05,
-      "market_date": "2026-08-14",
-      "per": 16.1972,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=UBER.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VTI.US",
       "error": null
     },
     {
@@ -213,17 +213,31 @@
       "error": null
     },
     {
-      "symbol": "TEST",
-      "name_zh": "YieldMax TSLA Performance & Dis",
+      "symbol": "MCD",
+      "name_zh": "麥當勞",
       "kind": "US",
-      "price": 36.88,
-      "change_pct": 0.19,
-      "mtd_pct": 6.08,
-      "ytd_pct": -30.23,
+      "price": 272.83,
+      "change_pct": 0.21,
+      "mtd_pct": 0.81,
+      "ytd_pct": -10.73,
       "market_date": "2026-08-14",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TEST.US",
+      "per": 22.3141,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MCD.US",
+      "error": null
+    },
+    {
+      "symbol": "UBER",
+      "name_zh": "Uber",
+      "kind": "US",
+      "price": 75.95,
+      "change_pct": 0.09,
+      "mtd_pct": 7.94,
+      "ytd_pct": -7.05,
+      "market_date": "2026-08-14",
+      "per": 16.1972,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=UBER.US",
       "error": null
     },
     {
@@ -283,17 +297,17 @@
       "error": null
     },
     {
-      "symbol": "VTI",
-      "name_zh": "Vanguard 全美股 ETF",
+      "symbol": "VOO",
+      "name_zh": "Vanguard S&P 500 ETF",
       "kind": "US",
-      "price": 383.85,
-      "change_pct": -0.12,
-      "mtd_pct": 4.25,
-      "ytd_pct": 14.49,
+      "price": 713.61,
+      "change_pct": -0.19,
+      "mtd_pct": 3.93,
+      "ytd_pct": 13.79,
       "market_date": "2026-08-14",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VTI.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VOO.US",
       "error": null
     },
     {
