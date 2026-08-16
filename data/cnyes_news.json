@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-08-16T19:29",
+  "built_at": "2026-08-16T19:53",
   "source": "鉅亨網（cnyes）",
   "categories": [
     {
@@ -897,6 +897,41 @@
       "label": "國際財經",
       "items": [
         {
+          "news_id": "6578375",
+          "title": "AI推論需求爆發！Together AI每月跑400兆Token，再擴2,000顆B300",
+          "title_en": "AI Inference Demand Surges! Together AI Processes 400 Terabytes of Tokens Monthly, Expands 2,000 NVIDIA B300 GPUs",
+          "publish_at": 1786879803,
+          "url": "https://news.cnyes.com/news/id/6578375",
+          "paras": [
+            "2026年08月16日（優分析／產業數據中心報導）⸺ 過去市場判斷GPU需求，主要看大型AI模型需要多少算力訓練。但隨AI從模型開發走向企業實際使用，終端企業的Token使用量也愈來愈受到關注。",
+            "美國AI雲端新創Together AI目前每月已處理約400兆Token，近期與IBM(IBM-US)簽署2.4億美元多年合約。IBM預計2027年第1季在美國部署約2,000顆NVIDIA(NVDA-US) Blackwell B300，專門提供Together AI執行開源模型推論。",
+            "更值得注意的是，這批GPU還沒上線，需求可能就會先滿。Together AI營收長Kai Mak表示，預計新叢集在正式提供服務前2至3個月就會售罄，並在上線前找到足夠客戶使用全部算力。",
+            "Together AI主要提供企業開源AI模型的訓練與推論服務。企業不必自行購買GPU，可以直接透過Together AI使用DeepSeek、MiniMax及Kimi等開源模型，並主打較封閉式系統更低的運算成本。",
+            "這類服務與模型訓練最大的差別，在於需求會隨AI使用量持續增加。模型可能只需要集中一段時間進行訓練，但模型上線後，每一次使用者提問、生成內容或AI Agent執行工作，都需要GPU進行推論。",
+            "因此，AI使用量增加，需要處理的Token也會跟著成長，業者就必須準備更多GPU承接推論需求。Together AI目前每月400兆Token的使用規模，接著帶動約2,000顆B300的新增部署，而且這批算力預期上線前就會被客戶用滿，讓Token成長如何轉化為GPU需求更加具體。",
+            "這股需求也開始反映在IBM的基礎設施業務。IBM第2季Distributed Infrastructure營收年增37%，創歷史最佳成長紀錄，第2季底backlog約5億美元，同樣創歷史新高，相較之下，Together AI這次與IBM簽署的多年合約金額就達2.4億美元，約相當於IBM第2季底Distributed Infrastructure backlog的48%。",
+            "以單一客戶來看，合約規模已接近當時backlog的一半，而且初期約2,000顆B300預計在上線前就被客戶訂滿，顯示AI推論使用量增加，已開始轉化為數億美元等級的基礎設施需求。",
+            "過去市場追蹤GPU需求，主要觀察大型科技公司的資本支出，以及新模型需要多少GPU訓練。隨AI逐步進入企業日常應用，Token使用量可能成為另一項值得追蹤的指標。",
+            "如果企業與使用者持續增加AI使用頻率，即使模型已經完成訓練，推論仍需要大量GPU持續運作。Together AI的案例顯示，GPU需求不只取決於下一個大型模型何時開始訓練，也開始取決於已經上線的AI服務每天被使用多少次。",
+            "※ 本文經「優分析」授權轉載，原文出處:原文連結",
+            "※ 免責聲明：文中所提的個股、基金、期貨商品內容僅供參考，並非投資建議，投資人應獨立判斷，審慎評估風險。"
+          ],
+          "paras_en": [
+            "August 16, 2026 (Optimization Analysis / Industry Data Center Report) - Historically, the market has judged GPU demand based on the computational power required to train large AI models. However, as AI moves from model development to enterprise-level usage, the usage of tokens by end-user enterprises has become increasingly important.",
+            "US-based AI cloud startup Together AI has processed approximately 400 terabytes of tokens per month, recently signing a $240 million multi-year contract with IBM (IBM-US). IBM plans to deploy around 2,000 NVIDIA (NVDA-US) Blackwell B300 GPUs in the US in the first quarter of 2027, specifically to provide Together AI with execution of open-source models for inference.",
+            "Notably, this batch of GPUs has not yet gone online, and demand may be met before they even start operating. Together AI's revenue growth leader Kai Mak expects the new cluster to be sold out 2-3 months before it officially provides services and finds enough customers to use all the computational power before it goes online.",
+            "Together AI primarily provides training and inference services for open-source AI models for enterprises. Enterprises do not need to purchase GPUs themselves and can directly use DeepSeek, MiniMax, and Kimi through Together AI, highlighting a lower computational cost compared to closed systems.",
+            "This type of service and model training differs in that demand will continue to increase as AI usage grows. Models may only require concentrated training for a short period, but after deployment, each user query, content generation, or AI agent execution requires GPU inference.",
+            "Therefore, as AI usage increases, the number of tokens processed will also grow, and vendors must prepare more GPUs to meet the inference demand. Together AI's current monthly token usage of 400 terabytes has driven the deployment of approximately 2,000 B300 GPUs, and this batch of computational power is expected to be fully booked before it goes online, making it clear how token growth translates into GPU demand.",
+            "This demand is also reflected in IBM's infrastructure business. IBM's second-quarter Distributed Infrastructure revenue grew 37% year-over-year, setting a historical best growth record, with a backlog of around $500 million at the end of the second quarter, also a historical high. In comparison, the $240 million multi-year contract signed by Together AI with IBM is equivalent to approximately 48% of IBM's second-quarter Distributed Infrastructure backlog.",
+            "From a single customer perspective, the contract scale has approached half of the backlog at the time, and the initial 2,000 B300 GPUs are expected to be fully booked before they go online, indicating that the increasing AI inference usage has begun to translate into billions of dollars in infrastructure demand.",
+            "In the past, the market has tracked GPU demand by observing the capital expenditures of large tech companies and the number of GPUs required to train new models. As AI gradually enters enterprise daily applications, token usage may become another indicator worth tracking.",
+            "If enterprises and users continue to increase AI usage frequency, even if models have completed training, inference still requires a large number of GPUs to operate continuously. Together AI's case shows that GPU demand is no longer solely dependent on when the next large model will begin training but also on how often the AI service is used every day after deployment.",
+            "※ This article is reproduced with permission from Optimization Analysis, original source: original link",
+            "※ Disclaimer: The stocks, funds, and futures products mentioned in this article are for reference only and are not investment recommendations. Investors should make their own judgments and assess the risks independently."
+          ]
+        },
+        {
           "news_id": "6578329",
           "title": "Anthropic傳最快10月IPO！估值衝上2兆美元、有望超越SpaceX",
           "title_en": "",
@@ -1191,47 +1226,6 @@
             "It is noteworthy that despite OpenAI’s valuation of $852 billion, the company remains loss‑making, and its ability to fund a 10‑GW‑scale infrastructure commitment is still under market scrutiny.",
             "Reuters noted in its report: “The company’s ability to make such large‑scale commitments to AI infrastructure remains in doubt.”"
           ]
-        },
-        {
-          "news_id": "6578035",
-          "title": "美伊海峽控制權「各說各話」！伊朗稱已與阿曼就通行方案達成協議",
-          "title_en": "",
-          "publish_at": 1786853402,
-          "url": "https://news.cnyes.com/news/id/6578035",
-          "paras": [
-            "針對荷姆茲海峽，伊朗和美國正「各說各話」。在美國總統川普日前揚言將「很快宣布荷姆茲海峽為美國領土」後，伊朗隨即在週六（15日）宣布，已與阿曼就荷姆茲海峽航道通行方案達成協議。",
-            "伊朗外交部表示，儘管美國介入阻撓，伊朗與阿曼的磋商仍持續推進。伊朗外交部發言人巴加埃15日表示，伊朗與阿曼已就荷姆茲海峽航道通行方案達成協議。他並指稱，美國曾試圖干預伊朗與阿曼之間的協商。",
-            "伊朗過去也曾多次公布與阿曼針對荷姆茲海峽通航問題的磋商進展，並強調相關談判並沒有美方參與。",
-            "根據伊朗先前公布的磋商內容，新通行方案與過去約60年的航行慣例有所不同。",
-            "依照相關規畫，目前位於阿曼領海的南部航道，以及位於伊朗領海的北部航道，都將停止使用；商業船舶往返荷姆茲海峽時，部分航程則必須經過伊朗領海。",
-            "這套新航道安排屬於臨時性措施，預計實施約2至4個月。",
-            "伊朗國家通訊社《Defa Press》引述巴加埃說法指出，最終確定「航運圖」只是更廣泛協議的一部分，相關安排旨在維護兩國主權，同時確保船舶安全通行。",
-            "不過，目前仍不清楚船隻是否需要支付通行費，具體安全措施也尚未公布，雙方後續仍將展開新一輪談判。",
-            "值得注意的是，伊朗與阿曼達成通航方案，並不代表荷姆茲海峽將立即恢復正常通行。",
-            "伊朗外長阿拉格齊15日在Telegram表示，通航協議與海峽重新開放是兩件不同的事。他指出，海峽是否重新開放，仍取決於美國必須履行的其他條件。",
-            "根據《彭博》報導，阿拉格齊同時表示，伊朗目前尚未決定是否恢復與美國的談判。",
-            "他此前曾指稱，美國違反美伊之間的諒解備忘錄，使戰事重新爆發，因此「不存在所謂延長停火協議」。目前卡達與巴基斯坦仍在雙方之間傳遞訊息，但這並不代表談判已經恢復。",
-            "川普揚言將荷姆茲海峽列為美國領土\n\n伊朗公布通航協議的前一天，川普在紐約長島發表談話時宣稱，美國對伊朗港口實施的封鎖已形成一道「鋼鐵之牆」，讓美國得以有效管控荷姆茲海峽。",
-            "川普隨後表示，「很快我就會宣布荷姆茲海峽為美國領土」，並強調這並非玩笑。",
-            "他接受《福斯新聞》訪問時也表示，美國計畫進一步打擊伊朗經濟，且不在意衝突是否會延續至11月美國期中選舉前。",
-            "面對川普的說法，伊朗15日迅速反擊。伊朗副外長加里布阿巴迪表示，荷姆茲海峽過去、現在以及未來都屬於伊朗，海峽是否開放或關閉只能由伊朗掌控。",
-            "他並強調，荷姆茲海峽不可能透過一則社群貼文、一紙命令或一場演說就被奪走。",
-            "伊朗司法總監埃傑伊則批評川普相關言論是「個人幻覺」，並表示伊朗已透過軍事行動證明，荷姆茲海峽是伊朗領土與主權不可分割的一部分。",
-            "一名中東專家分析指出，目前美伊在荷姆茲海峽形成一種「看似都在主導、實際上誰也無法獨占」的局面。",
-            "對伊朗而言，其主要優勢來自地理位置，可以對進出海峽的船舶進行管控；美國則擁有海軍軍力優勢，可以在海峽外圍對伊朗港口與船隻實施封鎖。",
-            "該專家認為，雙方對海峽未來狀態的要求存在明顯衝突。美國要求海峽恢復至2月28日衝突爆發前的狀態；伊朗則要求美方承認伊朗對荷姆茲海峽的主導地位。",
-            "分析指出，這項要求是美國難以接受的，因此雙方圍繞海峽的角力仍可能持續。",
-            "船舶遭襲仍未停止　布蘭特原油本周漲近6%\n\n在外交與主權爭議升溫之際，荷姆茲海峽及中東水域的船舶襲擊事件仍未停止。",
-            "國際海事組織資料顯示，截至8月11日，衝突期間荷姆茲海峽及中東地區已確認約65起船舶遭襲事件，造成17名海員死亡。",
-            "英國海上貿易行動組織（UKMTO）15日表示，一艘散貨船遭拋射物擊中船體。阿拉伯聯合大公國官方通訊社WAM則報導，阿布達比國家石油公司旗下兩艘船舶週四通過荷姆茲海峽時遭到襲擊，另有一艘船於週五晚間遭擊中。",
-            "在相關風險持續升高之下，布蘭特原油本週上漲近6%。",
-            "美軍持續進行航母換防　「喬治・華盛頓」號傳將接替「林肯」號\n\n除了海峽通航與主權爭議，美軍在中東地區的軍事部署也同步調整。",
-            "川普14日證實，長期部署於中東地區的「林肯」號核動力航空母艦即將被替換。15日則傳出，「喬治・華盛頓」號航空母艦將接替「林肯」號，進一步維持對伊朗的海上封鎖。",
-            "「林肯」號此次部署時間即將滿9個月，並已連續250天未靠岸。相關報導稱，長時間海上部署使艦上環境與水兵心理壓力受到關注，期間甚至傳出水兵企圖跳海的事件。",
-            "部分軍眷也透露，家屬曾因持續延長海上任務而出現相關擔憂。不過，美軍中央司令部與美國國防部長赫格塞斯均否認上述負面消息。",
-            "此次換防也是美伊衝突爆發後，美軍在中東進行的第二次「航母接力」。此前，「福特」號航母於今年5月16日返回維吉尼亞州諾福克海軍基地，並創下越戰後美國航母最長連續海上部署紀錄，累計執行任務326天；接替「福特」號的「布希」號目前也已在海上執行任務超過4個月。"
-          ],
-          "paras_en": []
         }
       ]
     },
