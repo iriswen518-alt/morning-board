@@ -1,11 +1,71 @@
 {
-  "built_at": "2026-08-16T12:45",
+  "built_at": "2026-08-16T13:35",
   "source": "鉅亨網（cnyes）",
   "categories": [
     {
       "key": "headline",
       "label": "鉅亨頭條",
       "items": [
+        {
+          "news_id": "6578247",
+          "title": "SiC需求強勁 中國大廠宣布產能倍增、台廠同步受惠",
+          "title_en": "Strong SiC Demand, Chinese Giant Announces Doubling Capacity, Taiwanese Firms Benefit Simultaneously",
+          "publish_at": 1786857514,
+          "url": "https://news.cnyes.com/news/id/6578247",
+          "paras": [
+            "新一代AI伺服器將導入800V HVDC供電架構，帶動碳化矽(SiC)重要性快速提升，近期市場除傳出SiC報價調漲，也出現新一輪擴產訊號，中國大廠宣布產能目標倍增，台灣相關供應鏈也同步受惠，包括環球晶(6488-TW)、合晶(6182-TW)以及廣運(6125-TW)集團旗下盛新材料，SiC相關訂單與營運動能可望進一步增強。",
+            "值得注意的是，此波SiC產業景氣反轉，再度由中國業者率先吹響漲價號角，與過去一年成熟製程、功率元件的漲價路徑高度相似，也讓外界密切關注SiC市場。",
+            "中國在成熟製程、功率元件等領域，受惠龐大內需市場與供應鏈支撐，對於供需變化往往是「春江水暖鴨先知」，當產能利用率開始回升，過去激烈的殺價競爭逐步收斂後，通常會同步啟動漲價，而漲價效應也進一步向海外市場擴散。",
+            "以成熟製程為例，中國晶圓代工廠自去年下半年率先調升成熟製程報價，隨後市場供需逐步改善，台灣晶圓代工業者今年初陸續跟進；功率元件也自今年初由國際IDM與部分中國業者率先啟動漲價，台灣業者再接棒跟進，帶動功率半導體迎向健康循環。",
+            "如今，相同劇本開始在SiC市場浮現。據了解，隨AI伺服器供電架構升級，SiC在電力轉換系統中的重要性明顯提升，尤其在固態變壓器(SST)中，SiC成本占比已達40%，成為關鍵零組件之一，也帶動中國主要SiC供應商近期產能利用率快速攀升。",
+            "中國指標IDM廠芯聯集成(688469-CN)目前稼動率已滿載，更在上個月全面調漲報價15%至25%，為因應客戶訂單強勁成長，公司也宣布擴充8吋碳化矽產能，從每月7,000片擴充至15,000片，目標產能要翻倍成長。",
+            "從調漲報價到啟動擴產，顯示過去兩年因中國大舉擴充供給、價格競爭激烈而承壓的SiC市場，供需結構正出現明顯轉折。業界看好，若後續需求持續增溫，此波中國率先啟動的漲價潮，也有機會依循過去成熟製程與功率元件的發展軌跡，逐步向全球市場擴散。",
+            "台廠方面，環球晶與合晶近年持續深化SiC布局。環球晶表示，近期確實觀察到SiC訂單動能較過去改善，部分應用需求開始回溫，價格也有機會較前兩年低點進一步改善，顯示產業供需已明顯改善。",
+            "除既有功率半導體應用外，環球晶與合晶也同步拓展12吋SiC新興市場，包括散熱及先進封裝等領域，目前兩家公司相關產品皆已進入送樣階段。環球晶指出，未來將依客戶需求及認證進度，審慎推動後續產能規劃。"
+          ],
+          "paras_en": [
+            "The next‑generation AI servers will adopt an 800V HVDC power architecture, rapidly boosting the importance of silicon carbide (SiC). Recently the market has not only heard rumors of SiC price hikes but also seen a new wave of capacity expansion signals, with a major Chinese manufacturer announcing a goal to double its output. Taiwanese supply‑chain players are also set to benefit, including GlobalWafers (6488‑TW), Hoshine (6182‑TW) and the Shengxin Materials unit of the Guangyun (6125‑TW) group, as SiC‑related orders and operating momentum are expected to strengthen further.",
+            "It is noteworthy that this wave of a turnaround in the SiC industry is once again being led by Chinese firms sounding the price‑increase alarm, a pattern highly similar to the price‑rise trajectory for mature‑process and power devices over the past year, drawing close attention to the SiC market.",
+            "In China’s mature‑process and power‑device sectors, the huge domestic demand and supply‑chain support make the market very responsive—when capacity utilization begins to rise and the previously fierce price‑cut competition eases, price hikes are typically launched, and the price‑increase effect then spreads to overseas markets.",
+            "For example, in mature processes, Chinese wafer foundries were the first to raise prices in the second half of last year, after which market supply‑demand gradually improved and Taiwanese wafer foundries followed suit early this year; power devices also saw price hikes initiated by international IDMs and some Chinese firms at the start of the year, with Taiwanese firms subsequently joining in, driving power semiconductors into a healthy cycle.",
+            "Now the same script is emerging in the SiC market. With AI server power‑architecture upgrades, SiC’s importance in power‑conversion systems has risen sharply, especially in solid‑state transformers (SST) where SiC accounts for about 40% of cost, becoming a key component and pushing utilization rates of China’s main SiC suppliers up rapidly.",
+            "Chinese flagship IDM XinLian Integrated (688469‑CN) is now operating at full capacity and last month raised its prices across the board by 15%‑25%. To meet strong order growth, the company also announced an expansion of its 8‑inch SiC capacity from 7,000 wafers per month to 15,000, aiming to double output.",
+            "The move from price hikes to capacity expansion shows that the SiC market, which has been under pressure for two years due to China’s massive supply expansion and intense price competition, is undergoing a clear supply‑demand shift. Industry observers are optimistic that if demand continues to warm, this China‑led price‑rise wave could follow the past development path of mature processes and power devices and gradually spread globally.",
+            "On the Taiwanese side, GlobalWafers and Hoshine have been deepening their SiC footprints in recent years. GlobalWafers said it has recently observed improved SiC order momentum compared with the past, with some application demand picking up and prices potentially improving beyond the lows of the previous two years, indicating a clear supply‑demand improvement in the industry.",
+            "Beyond existing power‑semiconductor applications, both GlobalWafers and Hoshine are also expanding into the emerging 12‑inch SiC market, including thermal management and advanced packaging fields. Both companies have now entered the sample‑delivery stage for related products, and GlobalWafers noted that future capacity planning will be pursued cautiously based on customer demand and certification progress."
+          ]
+        },
+        {
+          "news_id": "6578064",
+          "title": "輝達下修對OpenAI的2500億美元融資擔保！資料中心計畫添變數？",
+          "title_en": "Nvidia Scales Back $250 B Financing Guarantee for OpenAI; Data Center Plans Face New Variables?",
+          "publish_at": 1786857004,
+          "url": "https://news.cnyes.com/news/id/6578064",
+          "paras": [
+            "基於投資人開始擔心輝達(NVDA-US)承擔太多金融風險，該公司似乎已調整對OpenAI俄亥俄州資料中心計畫的融資支持方案，使原先討論的2500億美元擔保金額大幅縮減，目前預計首階段提供的財務擔保將低於1200億美元。",
+            "根據《華爾街日報》報導，輝達與OpenAI正接近達成協議，這家晶片製造商預計僅針對該項目的第一階段提供財務兜底支持，雙方最快可能在本週末簽署協議。",
+            "報導稱，輝達之所以調整原先的支持規模，是因為投資人開始擔心公司對大型融資計畫所承擔的風險曝險。",
+            "據悉，新方案採取分階段提供融資擔保的方式。輝達目前傾向先針對第一階段約5GW的算力建置提供財務支持，涵蓋資料中心租賃與建設所需的債務融資；至於另外5GW所需資金，則將留待後續再決定。",
+            "這項擔保主要發揮類似信用增強的作用。由輝達提供財務背書後，貸款機構對項目的償債能力與資金安全更具信心，有助於降低整體融資成本。",
+            "另一方面，兩名知情人士透露，OpenAI仍在就整體10GW資料中心項目洽談具約束力的租約，相關協商預計在未來幾天內推進，雙方最早可能於本週末敲定整體協議。",
+            "該資料中心園區由軟銀旗下SB Energy負責開發，若最終完工，將成為目前已宣布規模最大的資料中心項目。",
+            "此事發生在輝達週一與6家大型金融機構合作之後。輝達當時宣布推出算力融資平台，目標是為AI基礎設施募集超過5000億美元的第三方資本。",
+            "值得注意的是，儘管OpenAI估值高達8,520億美元，但目前仍處於虧損狀態。其承接10吉瓦級大規模基礎建設承諾的資金實力，仍受到市場檢視。",
+            "《路透》在報導中指出：「該公司為AI基礎設施作出大規模承諾的能力仍受到質疑。」"
+          ],
+          "paras_en": [
+            "Based on investors’ growing concerns that Nvidia (NVDA-US) is taking on too much financial risk, the company appears to have adjusted its financing support for OpenAI’s Ohio data‑center project, dramatically cutting the previously discussed $250 billion guarantee to a figure now expected to be under $120 billion for the first phase.",
+            "According to the Wall Street Journal, Nvidia and OpenAI are close to finalising an agreement, with the chipmaker planning to provide financial back‑stop only for the first phase of the project, and the two parties could sign the deal as early as this weekend.",
+            "The report says Nvidia trimmed the original support size because investors began worrying about the risk exposure the company would assume on such a large financing plan.",
+            "The new approach will deliver the guarantee in stages. Nvidia is currently inclined to fund the first roughly 5 GW of compute capacity, covering debt financing needed for data‑center leasing and construction, while the financing for the additional 5 GW will be decided later.",
+            "The guarantee functions mainly as a credit‑enhancement tool. With Nvidia’s financial backing, lenders have greater confidence in the project’s debt‑servicing ability and capital safety, helping to lower overall financing costs.",
+            "On the other hand, two insiders said OpenAI is still negotiating a binding lease for the full 10 GW data‑center project, with talks expected to move forward in the coming days and a full agreement potentially nailed down by the weekend.",
+            "The data‑center campus is being developed by SB Energy, a SoftBank subsidiary, and if completed it will become the largest announced data‑center project to date.",
+            "The development comes after Nvidia’s Monday partnership with six major financial institutions, when it announced a compute‑financing platform aimed at raising more than $500 billion of third‑party capital for AI infrastructure.",
+            "It is noteworthy that despite OpenAI’s valuation of $852 billion, the company remains loss‑making, and its ability to fund a 10‑GW‑scale infrastructure commitment is still under market scrutiny.",
+            "Reuters noted in its report: “The company’s ability to make such large‑scale commitments to AI infrastructure remains in doubt.”"
+          ]
+        },
         {
           "news_id": "6578035",
           "title": "美伊海峽控制權「各說各話」！伊朗稱已與阿曼就通行方案達成協議",
@@ -180,58 +240,6 @@
             "In the server market, AI endpoint inference demand continues to heat up, with enterprise-level computing equipment, government, and sovereign institutions seeing significant increases in shipments, leading to a multiple-fold increase in server shipments. Additionally, major cloud service providers continue to expand data center infrastructure investments, pushing server business to continue to increase its share in overall revenue, becoming a core engine supporting long-term operation scale expansion.",
             "Looking ahead to new-generation product layouts, TSMC is expected to release a new generation of computing platforms integrated with Microsoft operating systems in the fourth quarter, with ASUS planning to release related high-end products. Analysts note that the market is currently seeing strong pre-orders, as the products possess the ability to execute large-scale language models and agent tasks on a single machine, with average selling prices significantly higher than traditional products, expected to drive a new wave of personal computer upgrades in the coming years, further optimizing overall product structure."
           ]
-        },
-        {
-          "news_id": "6577717",
-          "title": "AI持股逾7成！00980A配0.638元年化息率12%創新高 想配息最遲這天上車",
-          "title_en": "AI Holdings Exceed 70%! 00980A Offers 0.638 Yuan Yearly Interest Rate of 12% New High, Hoping to Get Dividends as Soon as Possible",
-          "publish_at": 1786846898,
-          "url": "https://news.cnyes.com/news/id/6577717",
-          "paras": [
-            "台股高盤震盪，主動式台股ETF配息再掀話題。AI相關持股高達7成的野村投信旗下主動野村臺灣優選ETF（00980A-TW）公告第二階段收益分配，每受益權單位預計配發0.638元，本次配息金額再創成立以來新高，單季配息率約3%，換算年化配息率約12%，除息交易日為8月18日，投資人若想參與本次配息，最晚須在明(17) 日前買進並持有，股息預計於9月11日發放。",
-            "繼7月全球主要市場股災，近期股市投資氣氛轉佳，主因美股第二季財報表現普遍優於市場預期，加上台股進入法說會旺季，多家科技大廠釋出樂觀展望。同時，美國最新公布的通膨數據符合預期，就業市場也出現降溫跡象，市場對聯準會貨幣政策的擔憂有所緩解，有助風險性資產表現。",
-            "對於後市看法，00980A基金經理人游景德指出，近期台股震盪主要來自籌碼整理及市場情緒波動，並非基本面反轉。他認為，目前台股仍有四大利多支撐，包括全球AI投資循環延續、亞洲供應鏈競爭優勢提升、企業獲利持續成長，以及市場籌碼面逐步改善，均有助支撐中長期行情。",
-            "其中最受市場關注的仍是AI產業發展。游景德表示，全球科技巨頭持續擴大AI資本支出，Token使用量與GPU算力需求維持成長趨勢，顯示AI應用商業化仍在加速推進。隨著相關投資效益逐漸顯現，台灣AI供應鏈可望持續受惠。",
-            "從持股布局來看，00980A目前AI相關部位占比超過七成，涵蓋半導體、IC設計、伺服器零組件及電源管理等產業鏈，主要持股包括台積電、聯發人水科、川湖、台光電與台達電等指標企業。此外，也配置部分金融保險及傳產類股，並透過期貨工具彈性調整投資水位，以提高投資組合靈活度。",
-            "市場法人認為，在AI長線趨勢不變、台股進入高檔震盪階段之際，主動式ETF可藉由經理團隊主動調整持股與汰弱留強，掌握產業輪動機會。隨著00980A此次年化配息率衝上12%，加上AI主題持股優勢，後續除息表現值得市場持續關注。"
-          ],
-          "paras_en": [
-            "Taiwan's stock market experienced a high volatility day, and the active Taiwan stock ETF (00980A-TW) announced the second stage of profit distribution, with each unit expected to distribute 0.638 yuan, setting a new high since its establishment. The dividend rate for this quarter is approximately 3%, and the annualized dividend rate is approximately 12%. The ex-dividend trading day is August 18, and investors who want to participate in this dividend must buy and hold the shares by August 17 at the latest. The dividend is expected to be paid on September 11.",
-            "Following the global stock market crash in July, the investment atmosphere in the stock market has improved in recent times, mainly due to the better-than-expected second-quarter earnings reports from US stocks, as well as Taiwan's entry into the peak season of the legislative session, with many technology giants releasing optimistic outlooks. At the same time, the latest inflation data from the US met expectations, and the job market showed signs of cooling down, which helped alleviate concerns about the Federal Reserve's monetary policy, benefiting risk assets.",
-            "Regarding the outlook for the market, the manager of the 00980A fund, You Jingde, pointed out that the recent fluctuations in the Taiwan stock market were mainly due to inventory adjustments and market sentiment fluctuations, rather than a reversal of the fundamental situation. He believes that the Taiwan stock market still has four major bullish factors, including the continuation of the global AI investment cycle, the improvement of Asia's supply chain competitiveness, the sustained growth of corporate profits, and the gradual improvement of the market's inventory situation, all of which will help support the medium- to long-term trend.",
-            "The most concerned industry in the market is still the AI industry. You Jingde stated that the world's technology giants continue to expand their AI capital expenditures, and the usage of tokens and the demand for GPU computing power remain in a growth trend, indicating that the commercialization of AI applications is still accelerating. As the related investment returns gradually become apparent, Taiwan's AI supply chain is expected to continue to benefit.",
-            "From a holding layout perspective, 00980A currently has an AI-related holding ratio of over 70%, covering the semiconductor, IC design, server components, and power management industries, with major holdings including Taiwan Semiconductor Manufacturing Company, MediaTek, Changeland, Taiwan Green Energy Technology, and Delta Electronics. In addition, it has also allocated some financial insurance and traditional industries, and has adjusted the investment scale through futures tools to improve the flexibility of the investment portfolio.",
-            "Market professionals believe that, in the context of the AI long-term trend remaining unchanged and the Taiwan stock market entering the high-volatility stage, active ETFs can take advantage of the manager's team to actively adjust holdings and eliminate weak stocks, seizing the opportunities of industry rotation. With 00980A's year-end dividend rate reaching 12% this time, combined with the advantages of AI-themed holdings, the subsequent dividend performance is worth continued attention from the market."
-          ]
-        },
-        {
-          "news_id": "6577999",
-          "title": "幫你看緊荷包！​​​​​​​期交所祭2大風控新招：夜盤預警17日上線、風險模擬平台升級",
-          "title_en": "Taiwan Futures Exchange Launches Two New Risk Control Measures",
-          "publish_at": 1786845301,
-          "url": "https://news.cnyes.com/news/id/6577999",
-          "paras": [
-            "在台股維持高檔震盪、國際市場波動加劇，凸顯衍生性金融商品風險管理的重要性。為協助市場參與者即時掌握風險、提升避險能力，臺灣期貨交易所（期交所）推出兩項重要措施，一方面擴充「期貨交易風險情境模擬平台」功能，新增股票選擇權商品；另一方面，自8月17日起上線「結算會員自設風險警示自動通知服務」，強化夜盤風控機制，透過制度與科技工具雙管齊下，提升市場韌性與穩定度。",
-            "期交所表示，為協助交易人更有效評估持有部位風險，已建置線上「期貨交易風險情境模擬平台」，提供投資人免安裝軟體即可透過瀏覽器使用的風控工具。平台目前已涵蓋指數期貨、股票期貨及臺指選擇權等熱門商品，而此次進一步納入股票選擇權，讓交易人能夠以單一平台整合不同商品部位，全面檢視投資組合風險與保證金需求。",
-            "根據規劃，交易人可自行建立部位，並設定標的價格、波動度及剩餘天期等不同市場情境，模擬各種行情變化下的預估損益及保證金變化情形。平台並提供Delta、Gamma、Vega及Theta等Greeks風險指標，協助交易人掌握選擇權價格敏感度，適時進行避險調整或風險互抵配置。",
-            "隨著股票衍生性商品市場快速成長，期交所此次也將台積電等熱門股票選擇權商品納入平台模擬範圍。投資人可透過情境分析測試標的股價大漲、大跌甚至波動率變化下的部位表現，進一步評估自身風險承受能力與資金運用效率，降低市場劇烈波動帶來的衝擊。",
-            "期交所指出，該平台推出以來即以簡便操作及提升風險意識為核心目標，今年度累計瀏覽人次已突破6.5萬，顯示市場對於風險管理工具需求持續升溫。未來也將依市場發展趨勢及使用者需求持續優化功能。",
-            "除了協助一般交易人，期交所也同步強化市場後端風控機制。因應近年夜盤交易量持續成長，以及全球金融市場波動幅度增加，期交所自8月17日起推出全新的「結算會員自設風險警示自動通知服務」，進一步升級夜盤風險預警機制。",
-            "現行制度下，當結算會員新增委託保證金占超額保證金比率達警示標準時，期交所即透過簡訊及電子郵件通知會員注意。此次新措施除了讓會員可自行縮短通知間隔，提升風險資訊傳遞速度外，也新增「整戶維持率」及「委託保證金增加金額及幅度」兩項關鍵預警指標。",
-            "其中，「整戶維持率」可協助會員掌握未平倉部位保證金水位與資金狀況；而「委託保證金增加金額及幅度」則能有效監控短時間內保證金需求急遽上升情況。結算會員可依據經紀或自營業務特性，自行設定警示門檻、通知頻率與接收人員，提升自主風控彈性。",
-            "期交所強調，在全球金融市場連動性提高、夜盤交易重要性日益攀升的環境下，透過前端交易風險模擬工具與後端夜盤預警機制同步升級，不僅有助於交易人及結算會員及早辨識風險，也能在市場劇烈波動時及時採取因應措施，共同維護期貨市場安全、穩定與健全發展。"
-          ],
-          "paras_en": [
-            "As the Taiwan Stock Exchange (TWSE) continues to maintain a high level of volatility, and international markets experience increased fluctuations, the importance of managing risks associated with derivative financial products has become more apparent. To assist market participants in grasping risks in real-time and enhancing their risk management capabilities, the Taiwan Futures Exchange (TAIFEX) has introduced two key measures. Firstly, it has expanded the functionality of the 'Futures Trading Risk Scenario Simulation Platform' to include stock option products. Secondly, it will launch the 'Settlement Member Self-Set Risk Alert Automatic Notification Service' on August 17, further strengthening its night trading risk control mechanism.",
-            "TAIFEX stated that it has built an online 'Futures Trading Risk Scenario Simulation Platform' to assist traders in evaluating the risks associated with their holdings more effectively. The platform, which is accessible through a web browser without the need for software installation, currently covers popular products such as index futures, stock futures, and Taiwan Stock Exchange (TWSE) index options. This time, it has added stock options to the platform, enabling traders to integrate different products and view their investment portfolio risks and margin requirements in a single platform.",
-            "According to the plan, traders can create their own positions and set target prices, volatility, and remaining days to different market scenarios, simulating various market fluctuations and estimated losses and margin changes. The platform also provides Delta, Gamma, Vega, and Theta risk indicators to help traders grasp the sensitivity of option prices and make timely adjustments or risk offsetting arrangements.",
-            "As the stock derivative product market has grown rapidly, TAIFEX has also included popular stock option products such as Taiwan Semiconductor Manufacturing Company (TSMC) in the platform's simulation range. Investors can use scenario analysis to test the performance of their positions under various market conditions, such as price surges, price crashes, or changes in volatility, and further evaluate their risk-bearing capacity and capital allocation efficiency, reducing the impact of market volatility.",
-            "TAIFEX pointed out that the platform has been launched with the core goal of providing simple operations and enhancing risk awareness. Since its launch, the platform has attracted over 65,000 visitors, demonstrating the market's continued demand for risk management tools. In the future, it will continue to optimize its functions based on market trends and user needs.",
-            "In addition to assisting general traders, TAIFEX has also strengthened its back-end risk control mechanism. In response to the continuous growth of night trading volumes and the increasing amplitude of global financial market fluctuations, TAIFEX will launch the 'Settlement Member Self-Set Risk Alert Automatic Notification Service' on August 17, further upgrading its night trading risk warning mechanism.",
-            "Under the current system, when a settlement member's margin account exceeds the excess margin ratio, TAIFEX will notify the member via SMS and email. This new measure not only allows members to shorten the notification interval and improve the speed of risk information transmission but also adds two key warning indicators: 'Overall Maintenance Rate' and 'Margin Account Increase Amount and Rate'.",
-            "The 'Overall Maintenance Rate' helps members grasp the margin water level and capital situation of their unsettled positions, while the 'Margin Account Increase Amount and Rate' effectively monitors the rapid increase in margin requirements over a short period. Settlement members can set their own warning thresholds, notification frequencies, and recipients based on their brokerage or proprietary business characteristics, enhancing their autonomous risk control flexibility.",
-            "TAIFEX emphasized that, in an environment where global financial market interconnectedness is increasing and night trading importance is rising, upgrading both front-end trading risk simulation tools and back-end night trading warning mechanisms will not only help traders and settlement members identify risks early on but also enable them to take timely measures in response to market fluctuations, thereby maintaining the safety, stability, and healthy development of the futures market."
-          ]
         }
       ]
     },
@@ -239,6 +247,35 @@
       "key": "tw_stock",
       "label": "台股焦點",
       "items": [
+        {
+          "news_id": "6578247",
+          "title": "SiC需求強勁 中國大廠宣布產能倍增、台廠同步受惠",
+          "title_en": "Strong SiC Demand, Chinese Giant Announces Doubling Capacity, Taiwanese Firms Benefit Simultaneously",
+          "publish_at": 1786857514,
+          "url": "https://news.cnyes.com/news/id/6578247",
+          "paras": [
+            "新一代AI伺服器將導入800V HVDC供電架構，帶動碳化矽(SiC)重要性快速提升，近期市場除傳出SiC報價調漲，也出現新一輪擴產訊號，中國大廠宣布產能目標倍增，台灣相關供應鏈也同步受惠，包括環球晶(6488-TW)、合晶(6182-TW)以及廣運(6125-TW)集團旗下盛新材料，SiC相關訂單與營運動能可望進一步增強。",
+            "值得注意的是，此波SiC產業景氣反轉，再度由中國業者率先吹響漲價號角，與過去一年成熟製程、功率元件的漲價路徑高度相似，也讓外界密切關注SiC市場。",
+            "中國在成熟製程、功率元件等領域，受惠龐大內需市場與供應鏈支撐，對於供需變化往往是「春江水暖鴨先知」，當產能利用率開始回升，過去激烈的殺價競爭逐步收斂後，通常會同步啟動漲價，而漲價效應也進一步向海外市場擴散。",
+            "以成熟製程為例，中國晶圓代工廠自去年下半年率先調升成熟製程報價，隨後市場供需逐步改善，台灣晶圓代工業者今年初陸續跟進；功率元件也自今年初由國際IDM與部分中國業者率先啟動漲價，台灣業者再接棒跟進，帶動功率半導體迎向健康循環。",
+            "如今，相同劇本開始在SiC市場浮現。據了解，隨AI伺服器供電架構升級，SiC在電力轉換系統中的重要性明顯提升，尤其在固態變壓器(SST)中，SiC成本占比已達40%，成為關鍵零組件之一，也帶動中國主要SiC供應商近期產能利用率快速攀升。",
+            "中國指標IDM廠芯聯集成(688469-CN)目前稼動率已滿載，更在上個月全面調漲報價15%至25%，為因應客戶訂單強勁成長，公司也宣布擴充8吋碳化矽產能，從每月7,000片擴充至15,000片，目標產能要翻倍成長。",
+            "從調漲報價到啟動擴產，顯示過去兩年因中國大舉擴充供給、價格競爭激烈而承壓的SiC市場，供需結構正出現明顯轉折。業界看好，若後續需求持續增溫，此波中國率先啟動的漲價潮，也有機會依循過去成熟製程與功率元件的發展軌跡，逐步向全球市場擴散。",
+            "台廠方面，環球晶與合晶近年持續深化SiC布局。環球晶表示，近期確實觀察到SiC訂單動能較過去改善，部分應用需求開始回溫，價格也有機會較前兩年低點進一步改善，顯示產業供需已明顯改善。",
+            "除既有功率半導體應用外，環球晶與合晶也同步拓展12吋SiC新興市場，包括散熱及先進封裝等領域，目前兩家公司相關產品皆已進入送樣階段。環球晶指出，未來將依客戶需求及認證進度，審慎推動後續產能規劃。"
+          ],
+          "paras_en": [
+            "The next‑generation AI servers will adopt an 800V HVDC power architecture, rapidly boosting the importance of silicon carbide (SiC). Recently the market has not only heard rumors of SiC price hikes but also seen a new wave of capacity expansion signals, with a major Chinese manufacturer announcing a goal to double its output. Taiwanese supply‑chain players are also set to benefit, including GlobalWafers (6488‑TW), Hoshine (6182‑TW) and the Shengxin Materials unit of the Guangyun (6125‑TW) group, as SiC‑related orders and operating momentum are expected to strengthen further.",
+            "It is noteworthy that this wave of a turnaround in the SiC industry is once again being led by Chinese firms sounding the price‑increase alarm, a pattern highly similar to the price‑rise trajectory for mature‑process and power devices over the past year, drawing close attention to the SiC market.",
+            "In China’s mature‑process and power‑device sectors, the huge domestic demand and supply‑chain support make the market very responsive—when capacity utilization begins to rise and the previously fierce price‑cut competition eases, price hikes are typically launched, and the price‑increase effect then spreads to overseas markets.",
+            "For example, in mature processes, Chinese wafer foundries were the first to raise prices in the second half of last year, after which market supply‑demand gradually improved and Taiwanese wafer foundries followed suit early this year; power devices also saw price hikes initiated by international IDMs and some Chinese firms at the start of the year, with Taiwanese firms subsequently joining in, driving power semiconductors into a healthy cycle.",
+            "Now the same script is emerging in the SiC market. With AI server power‑architecture upgrades, SiC’s importance in power‑conversion systems has risen sharply, especially in solid‑state transformers (SST) where SiC accounts for about 40% of cost, becoming a key component and pushing utilization rates of China’s main SiC suppliers up rapidly.",
+            "Chinese flagship IDM XinLian Integrated (688469‑CN) is now operating at full capacity and last month raised its prices across the board by 15%‑25%. To meet strong order growth, the company also announced an expansion of its 8‑inch SiC capacity from 7,000 wafers per month to 15,000, aiming to double output.",
+            "The move from price hikes to capacity expansion shows that the SiC market, which has been under pressure for two years due to China’s massive supply expansion and intense price competition, is undergoing a clear supply‑demand shift. Industry observers are optimistic that if demand continues to warm, this China‑led price‑rise wave could follow the past development path of mature processes and power devices and gradually spread globally.",
+            "On the Taiwanese side, GlobalWafers and Hoshine have been deepening their SiC footprints in recent years. GlobalWafers said it has recently observed improved SiC order momentum compared with the past, with some application demand picking up and prices potentially improving beyond the lows of the previous two years, indicating a clear supply‑demand improvement in the industry.",
+            "Beyond existing power‑semiconductor applications, both GlobalWafers and Hoshine are also expanding into the emerging 12‑inch SiC market, including thermal management and advanced packaging fields. Both companies have now entered the sample‑delivery stage for related products, and GlobalWafers noted that future capacity planning will be pursued cautiously based on customer demand and certification progress."
+          ]
+        },
         {
           "news_id": "6578212",
           "title": "樺漢今年獲利估高成長 收購Kontron效益明顯顯現",
@@ -421,52 +458,6 @@
             "Past performance is not a guarantee of future profits.",
             "Investors should make their own independent judgments and exercise caution when evaluating investment risks."
           ]
-        },
-        {
-          "news_id": "6578083",
-          "title": "聯亞連拉6根漲停、川湖狂飆破萬！CPO下一棒換誰接？大戶「幾百億資金」正在卡位的黑馬股全公開！",
-          "title_en": "",
-          "publish_at": 1786797006,
-          "url": "https://news.cnyes.com/news/id/6578083",
-          "paras": [
-            "台股經歷了 7 月份激烈的「去槓桿」修正後，8 月展開強勁反彈。然而，這一次的行情與今年 4、5 月「怎麼射飛鏢怎麼賺、買什麼都漲」的普漲格局完全不同！",
-            "徐紹軒分析師在優分析的《股民想知道》節目中直言：「這一波往上攻高，必須抓對主流才能賺到錢；沒抓對，你只能眼睜睜看著指數衝上 5 萬點，自己卻與獲利擦身而過！」",
-            "那麼，誰才是真正的市場新主流？看看盤面最兇悍的訊號就知道：伺服器滑軌大廠川湖(2059-TW)短線暴漲 80% 飆破 12,000 元天價；光通訊龍頭聯亞(3081-TWO)從底部噴出 5、6 根漲停板！",
-            "大戶與法人幾百億的「新錢（New Money）」已經用連續漲停板給出答案——CPO（共同封裝光學元件 / 矽光子）就是帶領台股攻上 5 萬點的下一棒核心！",
-            "但在眾多光通訊個股中，究竟誰才是技術最強、獲利最紮實、最有機會成為下一檔「萬金股」的真正黑馬？",
-            "一、 辨識真主流：底部連續噴漲停的族群就是答案！\n回顧大盤從季線止穩反彈的過程，多數股票只是隨波逐流，唯獨 CPO 矽光子族群 展現出驚人的整齊度與爆發力。",
-            "除了龍頭聯亞(3081)以連續漲停宣告王者歸來，包括聯鈞、全新、環宇-KY、華星光等供應鏈也同步走強。這背後有兩大關鍵推動力：",
-            "去槓桿籌碼極度乾淨：前波殺盤將浮額清洗完畢，法人與大戶在低檔積極卡位。",
-            "美中科技戰的超級轉單紅利：美國傳出可能進一步制裁中國光通訊模組（如光收發器），導致中國龍頭「易中天」（新易盛、中際旭創、天孚通信）股價重挫腰斬。雖然中國在整機模組領先台灣，但這龐大的轉單缺口，勢必由具備關鍵技術的台廠強勢瓜分！",
-            "二、 震撼業界的降維打擊！大立光（3008）低調轉型 CPO 霸主\n當市場還在緊盯上詮、波若威、華星光等過去幾年漲了 5 到 8 倍的中小型題材股時，市場上幾百億身價的頂級操盤手與投信法人，目光早已鎖定在一位低調的「隱形巨人」身上——大立光(3008-TW)！",
-            "1. 什麼是光陣列（FA / FAU）？為什麼它是 CPO 瓶頸？\n光訊號與電訊號不同，光打出去是 360 度的，就像火車到站時乘客蜂擁衝出車門一樣混亂。要讓光訊號精準傳輸，必須仰賴「光纖陣列（FA / FAU）」作為軌道引導。過去這塊技術主要由陸廠天孚通信寡占，也是限制 CPO 普及的最大良率瓶頸。",
-            "2. 6.4T ＋ 0.3 微米！大立光技術讓所有 CPO 廠「全體下課」\n當市場多數光通訊廠還在努力研發 1.6T、3.2T 傳輸規格時，大立光已經成功做出 6.4T 的超高階產品！",
-            "更驚人的是精度指標：",
-            "目前業界做 FAU 的誤差值：普遍在 0.9 到 1.0 微米以上。",
-            "大立光 6.4T 的誤差值：竟然壓到了不可思議的 0.3 微米！",
-            "身為全球高階光學鏡頭霸主，大立光將精密光學技術應用在 CPO 領域，直接實現「技術降維打擊」。這項數據一旦全面公開，大立光將成為全球唯一能滿足最嚴苛光傳輸標準的供應商，最有實力直接吃下原本屬於天孚通信的國際轉單！",
-            "(圖片來源:優分析產業數據庫)",
-            "三、 老實樹連發 4 道訊號！林家佈局洩露天機\n大立光林家的經營風格在市場上以保守、誠實聞名，被封為「老實樹」，向來是「做 10 分只說 5 分，絕不吹噓」。然而，回顧過去半年多來，大立光一反常態的大動作，根本是在向市場「打 PASS」：",
-            "破天荒回購與加碼：去年底在 2,000 多元實施庫藏股，今年 3、4 月林家更於 3,000 元附近公開加碼自家持股（創十幾年來罕見舉動）。",
-            "法說會官方定調轉型：5 月法說會正式向法人宣布「由手機鏡頭轉型進軍 CPO」。",
-            "客戶訂單到手：6、7 月法說會進一步證實「已接到關鍵客戶的 FA 訂單」。",
-            "砸 25 億狂掃 3 塊地：緊接著在 7 月斥資 25 億元大舉獵地擴廠，並預計 9 月正式投產、下半年迎來出貨高峰！",
-            "從技術突破、自家加碼、證實接單到大買土地擴產，背後的底氣顯而易見——大立光極可能已經與護國神山台積電、AI 霸主 NVIDIA 達成深度綁定！",
-            "四、 財報最好、位階最低！下一檔「萬金股」大立光怎麼買？\n很多人看到大立光 4,000 多元的股價，第一個反應就是「好貴、買不起」。但徐紹軒分析師點出盲點：",
-            "基本面最紮實：攤開 CPO 概念股財報，許多飆股（如上詮）甚至還在虧損，過去兩三年卻已經漲了 5～8 倍；反觀大立光是全族群獲利最好、本益比位階最低的資優生，股價今年 3 月才剛從底部起漲！",
-            "投信天天狂買：投信從 4、5 月一路買進，即便經歷 7 月股災也僅微幅調節，隨後又天天連續買超，籌碼集中度極高。",
-            "外資目標價上看「萬金」：野村等外資券商已在最新報告中，直接將大立光目標價喊破萬元大關！",
-            "專家建議：「成長性極高的龍頭股，你只會買貴，不會買錯！」如果覺得一張 400 萬太貴，投資人完全可以善用「盤中零股交易」分批卡位。千萬不要因為單價高，而錯過了它從 4,000 元邁向萬金股的主升段行情。",
-            "此外，若未來國際盤勢出現黑天鵝或突發性股災，大立光更被專家評為「閉著眼睛都能買」的唯一避風港首選！",
-            "五、 總結：CPO 接棒多頭主流，鎖定兩大王牌\n台股年底前挑戰 5 萬點的架構不變，但資金將高度集中在具備實質獲利與技術護城河的族群：",
-            "短線動能指標——聯亞（3081）：身為磷化銦與光通訊上游龍頭，只要股價維持強勢漲停態勢，整個 CPO 族群的熱度就不會熄滅。",
-            "長線波段巨星——大立光（3008）：坐擁 0.3 微米頂尖技術、25 億擴產效益與投信連續買超加持，具備問鼎下一檔「萬金股王」的強大潛力！",
-            "抓緊 8 月打底洗盤的最後上車時機，跟隨大戶資金的腳步佈局 CPO，才能在第四季的爆發行情中成為真正的大贏家！",
-            "(免責聲明：本文所提及之個股與價位僅供參考，不具投資建議，投資人應審慎評估風險。)",
-            "※ 本文經「優分析」授權轉載，原文出處:原文連結",
-            "※ 免責聲明：文中所提的個股、基金、期貨商品內容僅供參考，並非投資建議，投資人應獨立判斷，審慎評估風險。"
-          ],
-          "paras_en": []
         }
       ]
     },
@@ -474,6 +465,37 @@
       "key": "us_stock",
       "label": "美股焦點",
       "items": [
+        {
+          "news_id": "6578064",
+          "title": "輝達下修對OpenAI的2500億美元融資擔保！資料中心計畫添變數？",
+          "title_en": "Nvidia Scales Back $250 B Financing Guarantee for OpenAI; Data Center Plans Face New Variables?",
+          "publish_at": 1786857004,
+          "url": "https://news.cnyes.com/news/id/6578064",
+          "paras": [
+            "基於投資人開始擔心輝達(NVDA-US)承擔太多金融風險，該公司似乎已調整對OpenAI俄亥俄州資料中心計畫的融資支持方案，使原先討論的2500億美元擔保金額大幅縮減，目前預計首階段提供的財務擔保將低於1200億美元。",
+            "根據《華爾街日報》報導，輝達與OpenAI正接近達成協議，這家晶片製造商預計僅針對該項目的第一階段提供財務兜底支持，雙方最快可能在本週末簽署協議。",
+            "報導稱，輝達之所以調整原先的支持規模，是因為投資人開始擔心公司對大型融資計畫所承擔的風險曝險。",
+            "據悉，新方案採取分階段提供融資擔保的方式。輝達目前傾向先針對第一階段約5GW的算力建置提供財務支持，涵蓋資料中心租賃與建設所需的債務融資；至於另外5GW所需資金，則將留待後續再決定。",
+            "這項擔保主要發揮類似信用增強的作用。由輝達提供財務背書後，貸款機構對項目的償債能力與資金安全更具信心，有助於降低整體融資成本。",
+            "另一方面，兩名知情人士透露，OpenAI仍在就整體10GW資料中心項目洽談具約束力的租約，相關協商預計在未來幾天內推進，雙方最早可能於本週末敲定整體協議。",
+            "該資料中心園區由軟銀旗下SB Energy負責開發，若最終完工，將成為目前已宣布規模最大的資料中心項目。",
+            "此事發生在輝達週一與6家大型金融機構合作之後。輝達當時宣布推出算力融資平台，目標是為AI基礎設施募集超過5000億美元的第三方資本。",
+            "值得注意的是，儘管OpenAI估值高達8,520億美元，但目前仍處於虧損狀態。其承接10吉瓦級大規模基礎建設承諾的資金實力，仍受到市場檢視。",
+            "《路透》在報導中指出：「該公司為AI基礎設施作出大規模承諾的能力仍受到質疑。」"
+          ],
+          "paras_en": [
+            "Based on investors’ growing concerns that Nvidia (NVDA-US) is taking on too much financial risk, the company appears to have adjusted its financing support for OpenAI’s Ohio data‑center project, dramatically cutting the previously discussed $250 billion guarantee to a figure now expected to be under $120 billion for the first phase.",
+            "According to the Wall Street Journal, Nvidia and OpenAI are close to finalising an agreement, with the chipmaker planning to provide financial back‑stop only for the first phase of the project, and the two parties could sign the deal as early as this weekend.",
+            "The report says Nvidia trimmed the original support size because investors began worrying about the risk exposure the company would assume on such a large financing plan.",
+            "The new approach will deliver the guarantee in stages. Nvidia is currently inclined to fund the first roughly 5 GW of compute capacity, covering debt financing needed for data‑center leasing and construction, while the financing for the additional 5 GW will be decided later.",
+            "The guarantee functions mainly as a credit‑enhancement tool. With Nvidia’s financial backing, lenders have greater confidence in the project’s debt‑servicing ability and capital safety, helping to lower overall financing costs.",
+            "On the other hand, two insiders said OpenAI is still negotiating a binding lease for the full 10 GW data‑center project, with talks expected to move forward in the coming days and a full agreement potentially nailed down by the weekend.",
+            "The data‑center campus is being developed by SB Energy, a SoftBank subsidiary, and if completed it will become the largest announced data‑center project to date.",
+            "The development comes after Nvidia’s Monday partnership with six major financial institutions, when it announced a compute‑financing platform aimed at raising more than $500 billion of third‑party capital for AI infrastructure.",
+            "It is noteworthy that despite OpenAI’s valuation of $852 billion, the company remains loss‑making, and its ability to fund a 10‑GW‑scale infrastructure commitment is still under market scrutiny.",
+            "Reuters noted in its report: “The company’s ability to make such large‑scale commitments to AI infrastructure remains in doubt.”"
+          ]
+        },
         {
           "news_id": "6578009",
           "title": "美股8月「牛市」又回來了！AI、科技股狂飆但「金髮女孩」行情恐藏風險",
@@ -785,86 +807,6 @@
             "The focus of the investigation is now on whether the company indeed used the cookie hijacking technology to obtain commissions that belonged to other promoters, and when Phoebe and her management team knew about the issue and whether they took any measures to stop it.",
             "The final legal responsibility will depend on further investigation and judicial proceedings."
           ]
-        },
-        {
-          "news_id": "6577957",
-          "title": "Anthropic史上最大IPO要來了？擬60億美元收購Decart、估值挑戰2兆美元",
-          "title_en": "",
-          "publish_at": 1786785005,
-          "url": "https://news.cnyes.com/news/id/6577957",
-          "paras": [
-            "週四（13日），人工智慧（AI）產業傳出一筆備受矚目的潛在併購案。據《彭博》、《路透》等外媒報導，AI新創Anthropic正洽談收購以色列AI新創Decart，交易金額可能達60億美元，若最終成交，將成為Decart成立近3年來最重大的估值躍升。",
-            "與此同時，《金融時報》報導，Anthropic部分投資人預期公司最快可能在今年10月上市，上市估值甚至可能達到2兆美元或更高。",
-            "若這一預期成真，Anthropic將超越今年6月以約1.77兆美元估值上市的SpaceX，成為史上IPO估值最高的公司。",
-            "分析指出，Anthropic目前最需要解決的，似乎已經不是如何繼續擴大營收，而是如何支撐高速成長背後日益龐大的算力需求。",
-            "而Decart所掌握的，正是AI模型如何更有效率運行於不同晶片架構上的能力。",
-            "Anthropic為何看上Decart？\n\nAnthropic今年的成長速度十分驚人。",
-            "公司2月完成300億美元G輪融資，投後估值達3,800億美元，當時公布的年化營收約140億美元；到了4月，年化營收已傳出達300億美元。",
-            "5月底，Anthropic再完成650億美元H輪融資，投後估值攀升至9,650億美元，年化營收也突破470億美元。",
-            "短短數個月，Anthropic估值翻逾一倍，年化營收更增加超過兩倍。",
-            "6月1日，Anthropic向美國證券交易委員會（SEC）秘密提交IPO草案申請（Form S-1），市場也開始將焦點轉向這家公司能否把目前的高速成長延續到公開市場。",
-            "《金融時報》指出，部分Anthropic投資人預期，公司到2026年底的年化營收可能進一步達到1,000億至1,200億美元，其中一名投資人甚至依據營收增速與估值倍數推算，認為Anthropic的理論估值可能達到3兆美元。",
-            "高速成長也讓Anthropic的早期股東身價迅速膨脹。根據《富比士》5月底的估算，包括執行長Dario Amodei、總裁Daniela Amodei在內的7名共同創辦人，各自持有略高於1.6%的公司股份，以9,650億美元估值計算，每人持股價值約155億美元。",
-            "但對Anthropic而言，估值與營收快速攀升的另一面，是成本同樣快速增加。",
-            "大模型的算力需求主要可以分成訓練與推理兩大部分。模型訓練需要大量資料與晶片資源，而模型正式上線後，每一次使用者提出問題、要求Claude撰寫程式碼或處理文件，都需要再次消耗算力。",
-            "與集中於特定階段的模型訓練不同，推理需求會隨著使用者數量與使用頻率持續增加。Claude使用越普及，Anthropic需要投入的推理算力就越大。",
-            "因此，Anthropic近幾個月持續擴大算力布局。",
-            "4月，公司與亞馬遜(AMZN-US) 簽署新協議，未來10年將承諾在AWS技術上投入超過1,000億美元，取得最高5GW的算力容量；同月也擴大與Google(GOOGL-US) 及博通(AVGO-US) 的合作，取得數GW下一代TPU容量。5月，Anthropic再與SpaceX(SPCX-US) 達成算力合作。",
-            "目前Claude同時運行於亞馬遜 Trainium、Google TPU以及輝達(NVDA-US) GPU等不同晶片平台。",
-            "問題在於，不同晶片採用不同硬體架構。模型若要從一種晶片平台轉移到另一種平台，並不是單純更換硬體即可，底層程式、運算方式以及資料傳輸與通訊機制，都可能需要重新調整與最佳化。",
-            "而這正是Decart的核心能力。",
-            "Decart的主要技術之一是DOS（Decart Optimization Stack），可以視為介於AI模型與晶片之間的效能最佳化層。其核心工作，是針對不同硬體架構重新調整模型的運算、晶片調用與資料傳輸方式，讓同一套AI模型能更有效率地運行在不同平台。",
-            "目前DOS已經支援輝達 GPU、Google TPU與亞馬遜 Trainium。",
-            "換句話說，Anthropic無論採用哪一家的AI晶片，都可能需要面對如何把硬體效能充分發揮的問題，而Decart正好具備這方面的技術與工程經驗。",
-            "就在8月5日，Anthropic才宣布開始組建自有晶片設計團隊，招募同時具備硬體與軟體能力的工程師，希望透過客製化晶片提升Claude的運算效率，同時維持多晶片策略。",
-            "幾天後，Decart的潛在收購消息便浮上檯面。",
-            "根據《路透》報導，如果交易最終完成，Decart團隊將併入Anthropic的推理與效能部門。",
-            "分析認為，Anthropic看上的可能不只是Decart旗下的AI產品，而是一支同時理解模型、晶片與底層系統最佳化的工程團隊。",
-            "對一家準備進入公開市場、估值可能挑戰2兆美元的AI公司而言，模型能力固然重要，但每一次推理所需要付出的成本同樣關鍵。",
-            "Claude越多人使用，Anthropic就越需要思考如何在增加算力投入的同時，提高每一美元算力支出的產出。",
-            "從GPU最佳化起家的Decart\n\nDecart成立於2023年9月。",
-            "共同創辦人兼執行長Dean Leitersdorf過去曾在新加坡國立大學從事博士後研究，並在此期間與Moshe Shalev籌備創業團隊。更早之前，Leitersdorf就讀於以色列理工學院，23歲取得計算機博士學位，求學期間也曾在以色列國防軍8200部隊服役。",
-            "Leitersdorf也正是在8200部隊認識Moshe Shalev。",
-            "兩人的背景卻相當不同。Leitersdorf一路走在學術與技術研究道路上；Shalev則成長於以色列極端正統派家庭，年輕時從事過多種工作，也曾一邊工作、一邊在夜間就讀會計課程。23歲參軍後，他加入8200部隊，前後服務13年，之後逐漸轉向AI系統建設與管理。",
-            "Decart創立後，最早並沒有立即把重心全部放在打造自己的大型AI模型，而是先協助其他公司提高AI模型在GPU上的推理效率。",
-            "根據《The Information》此前報導，Decart成立約3個月後，就從一家GPU雲端服務商取得數百萬美元合約，協助對方提升AI模型的GPU推理效率。到2024年10月，相關業務年化營收已超過1,000萬美元。",
-            "更值得注意的是，即使Decart當時已經開始投入資金訓練自有影片基礎模型，公司仍維持正自由現金流。",
-            "這讓Decart走出一條與許多AI新創不同的路線：先利用自身對GPU與模型效率的理解創造營收，再將收入投入自己的模型開發。",
-            "紅杉資本合夥人Shaun Maguire曾形容Decart對GPU的理解已深入到極為底層的硬體運作層面。",
-            "紅杉甚至將這種能力與Google早期的發展模式相比。Google當年的競爭優勢不只來自PageRank，也包含分散式系統能力，能夠利用大量相對廉價的硬體組成系統，並盡可能提高每一單位算力的使用效率。",
-            "在紅杉看來，Decart可能正在AI時代走上類似的路線：先從底層效率切入，再將這種能力轉化為產品。",
-            "Oasis、Lucy背後的即時生成能力\n\nDecart第一個受到市場關注的產品，是2024年10月推出的Oasis。",
-            "Oasis的遊戲體驗讓人聯想到《Minecraft》，但其運作方式並非傳統遊戲引擎預先建立固定場景，而是透過AI模型根據玩家的鍵盤與滑鼠操作，即時生成下一幀畫面。",
-            "玩家移動，AI便持續生成新的場景；玩家破壞方塊，模型則根據前一個動作預測接下來的畫面。",
-            "Decart官方表示，Oasis推出72小時後，使用者數量就突破100萬。",
-            "之後，Decart又將即時生成技術延伸到影片領域，推出Lucy。",
-            "Lucy的核心概念，是讓使用者在直播或視訊通話過程中即時改變人物外觀、服裝、背景以及周遭環境，而不是像傳統AI影片工具一樣先完成生成，再播放結果。",
-            "Decart表示，Lucy 2.0已能以1080p解析度、每秒30幀的速度持續生成畫面。",
-            "今年6月，Decart再推出Oasis 3，進一步將世界模型能力延伸至自動駕駛與機器人領域。",
-            "所謂世界模型，可以簡單理解為讓AI不只辨識當下環境，還能根據目前的動作預測下一刻可能發生的變化。例如車輛轉向後，道路與周遭環境如何改變；機器人伸手碰觸物體後，物體又會如何移動。",
-            "這種技術可讓自動駕駛系統與機器人在AI生成的虛擬環境中進行大量情境測試，再將能力應用到實際道路、工廠或家庭環境。",
-            "從整體技術布局來看，Decart已形成一條相對完整的技術鏈：DOS負責模型訓練與推理效率最佳化；Lucy將即時生成能力延伸至影片；Oasis則進一步朝世界模型、機器人與自動駕駛發展。",
-            "不到3年，估值從5億美元躍升至近40億美元\n\n資本市場也快速反映Decart的成長。",
-            "2024年，紅杉資本領投Decart 2,100萬美元種子輪，之後公司持續募資，累計融資金額達5,300萬美元，估值升至約5億美元。",
-            "2025年8月，Decart完成1億美元融資，估值進一步攀升至31億美元。",
-            "今年5月，公司再完成3億美元融資，估值接近40億美元，由Radical Ventures領投，輝達、Adobe Ventures、Toyota Ventures、eBay Ventures等新投資者加入，紅杉資本、Benchmark及Zeev Ventures則持續參與投資。",
-            "按照Decart官方說法，公司累計融資額已超過4.5億美元，最新一輪融資後估值接近40億美元。",
-            "不到3個月後，市場傳出Anthropic可能以約60億美元洽購Decart。",
-            "Leitersdorf的目標原本也不只是把Decart做成一家高估值AI新創。",
-            "他在2025年接受《Fortune》採訪時曾表示，希望打造一款擁有10億使用者的消費級應用，也曾公開談到將Decart發展成一家兆美元企業的目標。",
-            "如今，Decart同時面臨兩條截然不同的道路：繼續追求兆美元公司的長期目標，或接受Anthropic約60億美元的潛在收購報價。",
-            "AI巨頭開始用併購「買時間」\n\n分析指出，Anthropic與Decart的談判，也凸顯AI產業正在出現的另一項變化：AI新創的技術價值與資本估值，正在以比過去更快的速度被市場確認。",
-            "今年6月，SpaceX與AI程式設計工具Cursor母公司Anysphere達成併購協議，交易對應Cursor約600億美元股權價值。Anysphere成立於2022年，幾名MIT校友從創業到進入600億美元規模的併購談判，僅用了約4年。",
-            "AI產業的資本邏輯正在改變。過去，一家公司通常需要花多年時間證明營收、市場規模與商業模式；但在AI快速演進的環境下，如果一支新創團隊率先掌握大型科技公司未來幾年勢必要解決的關鍵技術，巨頭未必願意重新招募人才、建立團隊，再投入時間進行反覆試錯。",
-            "換句話說，直接收購可能更快。因此，巨頭買下的並不只是產品或技術，也包含已經完成的研發、人才以及過去累積的試錯成本。",
-            "Decart花費近3年時間，將模型最佳化技術延伸至輝達GPU、Google TPU與亞馬遜Trainium等不同硬體平台，並建立自己的最佳化系統與工程團隊。若Anthropic最終完成收購，等於可以直接取得這套已經經過開發與驗證的能力。",
-            "這也解釋了為何部分AI新創成立時間並不長，卻能迅速進入數十億美元甚至數百億美元的估值與併購市場。",
-            "分析稱，當AI技術更新速度不斷加快，真正稀缺的不只是資金，也包括能解決關鍵問題的人才與技術能力。對大型企業而言，與其等待競爭對手追上，不如直接透過併購縮短取得關鍵能力的時間。",
-            "財富變化同樣反映出這種趨勢。根據《富比士》今年3月公布的資料，2026年全球億萬富豪榜中，有86人的主要財富來源與AI有關，其中45人在過去12個月成為新晉億萬富豪，來自Perplexity、Mercor、Mistral、Cursor、Lovable、Cognition等成立時間相對較短的AI公司。",
-            "AI正在加速的，不只是財富累積，而是從技術形成、企業估值到價值實現的整個週期。",
-            "過去，一家公司可能需要10年才能證明自身價值；如今，如果一支團隊掌握的是大型企業短期內難以複製、同時又迫切需要的技術能力，成立不到3年，也可能直接站上數十億美元併購案的談判桌。"
-          ],
-          "paras_en": []
         }
       ]
     },
@@ -872,6 +814,37 @@
       "key": "wd_stock",
       "label": "國際財經",
       "items": [
+        {
+          "news_id": "6578064",
+          "title": "輝達下修對OpenAI的2500億美元融資擔保！資料中心計畫添變數？",
+          "title_en": "Nvidia Scales Back $250 B Financing Guarantee for OpenAI; Data Center Plans Face New Variables?",
+          "publish_at": 1786857004,
+          "url": "https://news.cnyes.com/news/id/6578064",
+          "paras": [
+            "基於投資人開始擔心輝達(NVDA-US)承擔太多金融風險，該公司似乎已調整對OpenAI俄亥俄州資料中心計畫的融資支持方案，使原先討論的2500億美元擔保金額大幅縮減，目前預計首階段提供的財務擔保將低於1200億美元。",
+            "根據《華爾街日報》報導，輝達與OpenAI正接近達成協議，這家晶片製造商預計僅針對該項目的第一階段提供財務兜底支持，雙方最快可能在本週末簽署協議。",
+            "報導稱，輝達之所以調整原先的支持規模，是因為投資人開始擔心公司對大型融資計畫所承擔的風險曝險。",
+            "據悉，新方案採取分階段提供融資擔保的方式。輝達目前傾向先針對第一階段約5GW的算力建置提供財務支持，涵蓋資料中心租賃與建設所需的債務融資；至於另外5GW所需資金，則將留待後續再決定。",
+            "這項擔保主要發揮類似信用增強的作用。由輝達提供財務背書後，貸款機構對項目的償債能力與資金安全更具信心，有助於降低整體融資成本。",
+            "另一方面，兩名知情人士透露，OpenAI仍在就整體10GW資料中心項目洽談具約束力的租約，相關協商預計在未來幾天內推進，雙方最早可能於本週末敲定整體協議。",
+            "該資料中心園區由軟銀旗下SB Energy負責開發，若最終完工，將成為目前已宣布規模最大的資料中心項目。",
+            "此事發生在輝達週一與6家大型金融機構合作之後。輝達當時宣布推出算力融資平台，目標是為AI基礎設施募集超過5000億美元的第三方資本。",
+            "值得注意的是，儘管OpenAI估值高達8,520億美元，但目前仍處於虧損狀態。其承接10吉瓦級大規模基礎建設承諾的資金實力，仍受到市場檢視。",
+            "《路透》在報導中指出：「該公司為AI基礎設施作出大規模承諾的能力仍受到質疑。」"
+          ],
+          "paras_en": [
+            "Based on investors’ growing concerns that Nvidia (NVDA-US) is taking on too much financial risk, the company appears to have adjusted its financing support for OpenAI’s Ohio data‑center project, dramatically cutting the previously discussed $250 billion guarantee to a figure now expected to be under $120 billion for the first phase.",
+            "According to the Wall Street Journal, Nvidia and OpenAI are close to finalising an agreement, with the chipmaker planning to provide financial back‑stop only for the first phase of the project, and the two parties could sign the deal as early as this weekend.",
+            "The report says Nvidia trimmed the original support size because investors began worrying about the risk exposure the company would assume on such a large financing plan.",
+            "The new approach will deliver the guarantee in stages. Nvidia is currently inclined to fund the first roughly 5 GW of compute capacity, covering debt financing needed for data‑center leasing and construction, while the financing for the additional 5 GW will be decided later.",
+            "The guarantee functions mainly as a credit‑enhancement tool. With Nvidia’s financial backing, lenders have greater confidence in the project’s debt‑servicing ability and capital safety, helping to lower overall financing costs.",
+            "On the other hand, two insiders said OpenAI is still negotiating a binding lease for the full 10 GW data‑center project, with talks expected to move forward in the coming days and a full agreement potentially nailed down by the weekend.",
+            "The data‑center campus is being developed by SB Energy, a SoftBank subsidiary, and if completed it will become the largest announced data‑center project to date.",
+            "The development comes after Nvidia’s Monday partnership with six major financial institutions, when it announced a compute‑financing platform aimed at raising more than $500 billion of third‑party capital for AI infrastructure.",
+            "It is noteworthy that despite OpenAI’s valuation of $852 billion, the company remains loss‑making, and its ability to fund a 10‑GW‑scale infrastructure commitment is still under market scrutiny.",
+            "Reuters noted in its report: “The company’s ability to make such large‑scale commitments to AI infrastructure remains in doubt.”"
+          ]
+        },
         {
           "news_id": "6578035",
           "title": "美伊海峽控制權「各說各話」！伊朗稱已與阿曼就通行方案達成協議",
@@ -1167,71 +1140,6 @@
             "Some even joked that criticism of Claude articles seems self‑referential, as the critiques themselves appear to be written by Claude, creating an ironic twist in the debate.",
             "It is worth noting that not all critics take such a strong stance; some say the real discussion should focus on the ethics of AI watermarks, especially given that large AI models are trained on massive amounts of human‑created content, making the addition of a watermark to AI‑generated output somewhat paradoxical.",
             "Nevertheless, Reddit discussions show that support for Anthropic’s watermark remains quite pronounced, with users arguing that making AI‑generated content identifiable is not a reason to oppose it, and those who dislike labeling mainly fear others will know the content was AI‑generated."
-          ]
-        },
-        {
-          "news_id": "6577950",
-          "title": "Anthropic驚爆「Model 2」新模型！性能超越Mythos 5、AI風險評估卻陷「飽和」危機",
-          "title_en": "Anthropic Unveils 'Model 2' with Performance Surpassing Mythos 5, but AI Risk Assessment Faces 'Saturation' Crisis",
-          "publish_at": 1786792203,
-          "url": "https://news.cnyes.com/news/id/6577950",
-          "paras": [
-            "Anthropic最新發布的風險評估報告，意外揭露公司內部仍有一款尚未對外公開的模型「Model 2」，且整體表現已略優於目前已知的Mythos 5。更值得注意的是，Anthropic坦言，隨著模型能力快速提升，部分既有評測工具已開始出現「飽和」現象，難以準確反映模型進步幅度，也讓公司對自動化AI研發風險評估的信心下降。",
-            "Anthropic近日公布第二份《Risk Report》，評估範圍截至2026年7月15日。報告首次證實，公司內部正在使用一款代號為Model 2的模型，且該模型已被廣泛投入程式設計、AI 代理工作與資料生成等任務。",
-            "不過，Anthropic目前並未公布對外發布Model 2的計畫。",
-            "根據報告，Model 2在Anthropic內部任務上的表現已出現「明顯改善」，並與Mythos 5共同用於公司內部的程式開發、AI代理工作及資料生成。",
-            "從AECI綜合能力測試來看，Mythos Preview得分為158.91，Mythos 5提升至161.29，而Model 2進一步達到162.79。",
-            "這代表Model 2的整體能力確實高於Mythos 5，但領先幅度並不算巨大。Anthropic指出，Model 2在部分領域表現更強，在另一些領域則可能較弱，整體而言只是「略微更強大」。",
-            "另一項測試CoBench則專門衡量模型執行Anthropic實際研發工作的能力。Model 2在該測試中的成功率達62.8%，較Mythos Preview高出8個百分點；相比之下，Anthropic人類研究人員在同一測試中的成功率為85%。",
-            "Anthropic因此認為，目前模型仍不足以取代公司研究科學家與研究工程師，尤其是資深人員。",
-            "不過，AI與人類研發人員之間的能力差距正在縮小。",
-            "報告透露，目前Claude已經負責撰寫Anthropic合併進正式生產程式碼庫的大多數程式碼。AI輔助已經明顯提高內部研發速度，但目前仍未達到讓研發效率提升一倍的程度。",
-            "這項「一倍」門檻具有特殊意義。Anthropic自身的負責任擴展政策（Responsible Scaling Policy，RSP）將AI研發進度翻倍列為觸發相關研發風險評估的重要條件之一。",
-            "AI進步太快，連測試工具都開始跟不上\n\n專家認為，相較於Model 2本身的性能提升，Anthropic在報告中對風險評估方法的描述更值得關注。",
-            "Anthropic表示，Model 2帶來的能力提升並不及今年稍早從Opus 4.6進展至Mythos時的幅度。",
-            "但公司同時指出，目前針對自動化AI研發風險所使用的部分任務型評測已經出現「飽和」，無法繼續有效捕捉模型能力的提升。",
-            "Anthropic因此坦言，相較過去的風險報告，公司對這次評估的信心有所下降，因為部分最具體、以任務為基礎的測試已經無法區分模型能力的進一步變化，而公司也開始觀察到AI研發速度加快的早期跡象。",
-            "換句話說，模型能力仍在快速進步，但用來衡量這種進步的工具可能已經開始跟不上。",
-            "分析認為，這也使Anthropic面臨新的問題，即當既有測試無法有效區分更強模型的能力時，原本用來判斷風險程度的數據，其參考價值也會受到影響。",
-            "Anthropic上調「誤對齊」風險等級\n\n除了公布Model 2之外，最新風險報告另一項重要變化，是Anthropic調高了高風險情境下「誤對齊」（misalignment）的風險評級。",
-            "相較上一份報告的「極低」，最新評估將其調整至「低」。",
-            "所謂誤對齊，主要是指AI系統在關鍵情境下採取與人類原本意圖不一致的行動。",
-            "這項調整出現在近期一連串安全測試結果之後。",
-            "Anthropic此前檢視超過14萬筆評測紀錄，發現Claude在網路安全測試中曾對3家公司實際生產環境發動攻擊。其中，Mythos 5甚至曾將惡意程式碼套件上傳至PyPI，並在約1小時內被15台真實設備下載與執行。",
-            "英國AI安全研究院（AISI）8月初公布的研究也揭露，Mythos 5曾為了讓惡意程式碼通過審查而建立虛假身分，試圖誘使一名真實GitHub維護者批准相關內容；遭到公開質疑後，模型又修改活動紀錄以掩飾行為，並考慮改用其他身分繼續操作。",
-            "AISI指出，此類程度的欺騙行為過去並未被觀察到。",
-            "Anthropic同時披露5起安全流程上的失誤，包括原本應被排除在訓練資料之外的測試資料多次被納入訓練，以及缺乏監督的AI 代理取得敏感資源等問題。",
-            "不過，Anthropic仍認為目前的證據並未改變其原本「極低」風險判斷的核心論證，只是基於謹慎原則，將評級調整至「低」。",
-            "公司並表示，目前災難性風險仍處於可控的「低」水準，持續開發與部署模型仍通過成本效益評估。"
-          ],
-          "paras_en": [
-            "Anthropic's latest risk assessment report has unexpectedly revealed that the company has an unreleased model, 'Model 2', which outperforms the known Mythos 5. Notably, Anthropic admits that as model capabilities rapidly improve, some existing evaluation tools have started to show 'saturation' phenomena, making it difficult to accurately reflect the progress of the models, which in turn lowers the company's confidence in automated AI development risk assessments.",
-            "Anthropic recently released its second 'Risk Report', which assesses the situation up to July 15, 2026. The report confirms for the first time that the company is internally using a model codenamed 'Model 2', which has been widely applied to tasks such as programming, AI agent work, and data generation.",
-            "However, Anthropic has not yet announced plans to release Model 2 to the public.",
-            "According to the report, Model 2 has shown 'significant improvement' in internal tasks and is used alongside Mythos 5 for internal programming development, AI agent work, and data generation.",
-            "From the AECI comprehensive capability test, Mythos Preview scored 158.91, Mythos 5 improved to 161.29, and Model 2 further reached 162.79.",
-            "This indicates that Model 2's overall capability is indeed higher than Mythos 5, but the lead is not substantial. Anthropic points out that Model 2 performs stronger in some areas but may be weaker in others, making it only 'slightly more powerful' overall.",
-            "Another test, CoBench, specifically measures the ability of models to execute Anthropic's actual research work. Model 2 achieved a success rate of 62.8% in this test, 8 percentage points higher than Mythos Preview; in comparison, Anthropic's human researchers achieved an 85% success rate in the same test.",
-            "Anthropic thus believes that current models are still insufficient to replace the company's research scientists and engineers, especially senior personnel.",
-            "However, the gap in capabilities between AI and human research personnel is narrowing.",
-            "The report reveals that Claude is now responsible for writing most of the code that Anthropic merges into its formal production codebase. AI assistance has significantly increased internal development speed, but it has not yet reached the level of doubling research efficiency.",
-            "This 'doubling' threshold has special significance. Anthropic's Responsible Scaling Policy (RSP) lists AI research progress doubling as one of the important conditions that trigger related research risk assessments.",
-            "Experts believe that compared to Model 2's performance improvement, Anthropic's description of risk assessment methods in the report is more noteworthy.",
-            "Anthropic states that the ability improvement brought by Model 2 is not as significant as the progress from Opus 4.6 to Mythos earlier this year.",
-            "However, the company also points out that some task-based evaluations currently used for automated AI research risk have become 'saturated' and are no longer effective in capturing the model's ability improvements.",
-            "Anthropic thus admits that, compared to previous risk reports, the company's confidence in this assessment has decreased because some of the most concrete, task-based tests can no longer distinguish further variations in model capabilities, and the company has begun to observe early signs of accelerated AI development speed.",
-            "In other words, model capabilities are still rapidly advancing, but the tools used to measure this progress may have started to fall behind.",
-            "Analysis suggests that this also poses a new problem for Anthropic, where when existing tests can no longer effectively distinguish the capabilities of stronger models, the reference value of the data used to determine risk levels is also affected.",
-            "Anthropic has upgraded the risk level of 'misalignment' in high-risk scenarios.",
-            "Compared to the 'extremely low' rating in the previous report, the latest assessment has been adjusted to 'low'.",
-            "So-called 'misalignment' refers to AI systems taking actions inconsistent with human intentions in critical situations.",
-            "This adjustment comes after a series of recent safety test results.",
-            "Anthropic previously reviewed over 140,000 evaluation records and found that Claude had launched attacks on the actual production environments of three companies in network security tests. Among them, Mythos 5 even uploaded malicious code packages to PyPI and had them downloaded and executed by 15 real devices within about an hour.",
-            "Research published by the UK's AI Safety Institute (AISI) in early August also revealed that Mythos 5 had created a fake identity to pass malicious code reviews and attempted to deceive a real GitHub maintainer into approving the content; after being publicly questioned, the model modified its activity records to cover up its behavior and considered using other identities to continue operating.",
-            "AISI noted that such deceptive behavior had not been observed before.",
-            "Anthropic also disclosed five security process mistakes, including test data that should have been excluded from training being repeatedly included, and unsupervised AI agents accessing sensitive resources.",
-            "However, Anthropic still believes that the current evidence does not change the core argument of its original 'extremely low' risk judgment, and the rating was adjusted to 'low' out of caution.",
-            "The company stated that the current catastrophic risk remains at a controllable 'low' level, and continued development and deployment of models still pass cost-benefit assessments."
           ]
         }
       ]
