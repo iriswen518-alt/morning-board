@@ -3,7 +3,9 @@
   "tldr": [
     "週五三大法人買超近509億元、以外資為主力，惟台積電尾盤走弱，加權指數仍失守4.6萬點收45,811點。",
     "大摩調升台積電2026年CoWoS產能約79%，輝達、博通與傳出的微軟大單鎖定AI封裝產能。",
-    "金管會鬆綁保險型金控資本與配息壓力，同時強化對槓桿炒股貸款的監理與按月申報。"
+    "金管會鬆綁保險型金控資本與配息壓力，同時強化對槓桿炒股貸款的監理與按月申報。",
+    "主計總處因AI出口大幅上修2026年GDP展望，惟7月CPI年增2.54%、製造業PMI低於50，顯示關稅拖累。",
+    "週末期間，美股因7月PPI溫和收連三週漲，布蘭特原油則因美伊荷莫茲海峽對峙突破88美元。"
   ],
   "sections": [
     {
@@ -91,6 +93,113 @@
           "summary_en": "A CTBC × BCG study on Taiwan's ultra-high-net-worth clients finds that among the \"billion-NT-dollar\" tier, 86% already own offshore assets and more than half allocate at least 20% overseas, with the segment projected to grow at an 11% CAGR from 2025 to 2029. The findings point to sustained demand for cross-border wealth structuring, private banking and succession services among Taiwan's wealthiest families.",
           "source_name": "老喬報",
           "source_url": "https://joelin.cc/?p=8309"
+        }
+      ]
+    },
+    {
+      "section": "Tax & Regulations",
+      "section_zh": "稅務法規",
+      "items": [
+        {
+          "title_zh": "2026年遺贈稅免稅額與級距維持不變 因CPI未達調整門檻",
+          "title_en": "2026 estate and gift tax thresholds held unchanged as CPI stays below trigger",
+          "summary_zh": "財政部指出，115年適用的CPI與上次調整年度相比未達應調整標準，故2026年發生的繼承或贈與案件，其遺產稅、贈與稅免稅額、不計入遺產總額項目及各項扣除額、課稅級距金額均維持不變。贈與稅每人年度免稅額仍為244萬元，讓今年進行財產移轉規劃的家庭稅務參數保持穩定，可據以評估贈與與傳承節奏。",
+          "summary_en": "For inheritance and gift cases arising in 2026 (ROC year 115), the Ministry of Finance keeps estate- and gift-tax exemptions, deductions and rate brackets flat, because the cumulative CPI move since the last adjustment did not reach the statutory threshold. The gift-tax annual exemption stays at NT$2.44 million per giver, keeping planning parameters stable for families structuring transfers this year.",
+          "source_name": "商業周刊",
+          "source_url": "https://www.businessweekly.com.tw/business/blog/3018870"
+        },
+        {
+          "title_zh": "2026贈與稅規劃：夫妻合計488萬 另有婚嫁免稅額",
+          "title_en": "Gift-tax planning in 2026: NT$4.88 million per couple plus wedding allowance",
+          "summary_zh": "依2026年規定，父母各自享有244萬元年度贈與稅免稅額，一年合計可免稅贈與子女達488萬元；10%稅率適用至淨額2,811萬元、15%適用至5,621萬元。若子女於當年結婚，父母還可在結婚登記前後六個月內，每人再額外贈與100萬元免稅婚嫁禮金，不計入年度244萬額度，是加速財富傳承、分年移轉的常見節稅工具。",
+          "summary_en": "Under 2026 rules, each parent has a NT$2.44 million annual gift-tax exemption, so a couple can transfer up to NT$4.88 million tax-free to children in a year, with the 10% rate applying up to NT$28.11 million of net gifts and 15% up to NT$56.21 million. If a child marries, each parent may additionally gift NT$1 million tax-free within six months around the marriage registration, a commonly used tool for accelerating intergenerational transfers.",
+          "source_name": "代書101",
+          "source_url": "https://taishu945.tw/4999/"
+        }
+      ]
+    },
+    {
+      "section": "Macro & Policy",
+      "section_zh": "總經政策",
+      "items": [
+        {
+          "title_zh": "主計總處大幅上修2026 GDP 受惠AI需求與台美關稅明朗",
+          "title_en": "DGBAS lifts 2026 GDP forecast sharply as AI demand and US tariff clarity boost outlook",
+          "summary_zh": "主計總處將2026年經濟成長率大幅上修至遠高於先前預估的水準，人均GDP估突破4萬4千美元、改寫新高，主要受惠全球AI需求爆發，加上台美關稅談判趨於明朗、不確定因素消除。半導體業投資先進製程，單月資本設備進口年增約70.5%，強化投資對成長的貢獻，顯示景氣動能由出口延伸至內需投資。",
+          "summary_en": "Taiwan's statistics agency has raised its 2026 growth forecast well above prior estimates, with per-capita GDP projected to set a record above US$44,000, citing an AI-driven export boom and reduced uncertainty as Taiwan–US tariff talks became clearer. Capital-equipment imports jumped about 70.5% year-on-year in one month as chipmakers invest in advanced processes, reinforcing the investment leg of growth.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/10869/9329757"
+        },
+        {
+          "title_zh": "7月CPI年增2.54% 製造業PMI因關稅不確定回落",
+          "title_en": "July CPI up 2.54% while manufacturing PMI slips on tariff uncertainty",
+          "summary_zh": "台灣7月消費者物價指數年增2.54%，1至7月平均上漲1.81%，通膨溫和但仍高於2%。同時，製造業PMI回落至47.9%、為近期新低，反映美國關稅措施打壓業者信心。冷熱不均的數據凸顯台灣呈現雙軌經濟：AI帶動的電子業維持強勁，出口與關稅敏感的傳統製造業則轉趨保守，後續須留意關稅政策對景氣的遞延影響。",
+          "summary_en": "Taiwan's consumer price index rose 2.54% year-on-year in July, with the January–July average up 1.81%, keeping inflation modest but above 2%. At the same time, the manufacturing PMI eased to 47.9%, a recent low, as US tariff measures weighed on sentiment. The mixed data underscore a two-speed economy: AI-led electronics stay strong while tariff-exposed manufacturing turns cautious.",
+          "source_name": "中華民國統計資訊網",
+          "source_url": "https://www.stat.gov.tw/Point.aspx?sid=t.2&n=3581&sms=11480"
+        }
+      ]
+    },
+    {
+      "section": "Global Markets",
+      "section_zh": "國際財經",
+      "items": [
+        {
+          "title_zh": "美股週五自高檔回落 7月PPI溫和 降息預期不變",
+          "title_en": "US indices ease from records on Friday as tame PPI keeps Fed-cut hopes alive",
+          "summary_zh": "綜合陸媒與外電對紐約股市週五盤勢的報導，美股三大指數自紀錄高點小幅回落，惟7月生產者物價（PPI）數據溫和，市場對聯準會9月降息的預期維持不變。此前美股才於本週稍早改寫新高，週五雖收黑，標普500仍朝連續第三週上漲邁進，顯示多頭氣氛未散，投資人聚焦Fed政策路徑與通膨後續走向。",
+          "summary_en": "Chinese-language coverage of Wall Street's Friday session noted the three major US indices pulled back modestly from record territory, even as a benign July producer-price reading kept expectations for a September Federal Reserve rate cut intact. The retreat followed a strong run to fresh highs earlier in the week, leaving the S&P 500 on track for a third consecutive weekly gain.",
+          "source_name": "极目新闻",
+          "source_url": "https://www.ctdsb.net/c1666_202608/2831163.html"
+        },
+        {
+          "title_zh": "週五全球股市漲跌互見 油價與地緣風險牽動盤勢",
+          "title_en": "Global index board mixed on Friday amid rising oil and geopolitics",
+          "summary_zh": "週五全球股市行情漲跌互見，投資人一方面消化國際油價跳升、另一方面市場情緒大致平穩。布蘭特原油因中東荷莫茲海峽緊張而走高，壓抑部分風險性資產、卻支撐能源類股，使各區域主要指數在週末前缺乏明確方向。市場觀望氣氛濃厚，靜待地緣情勢與下週經濟數據指引後續走勢。",
+          "summary_en": "A Friday global-markets roundup showed indices trading mixed as investors weighed a jump in oil prices against otherwise steady sentiment. Brent's climb, driven by Middle East tensions around the Strait of Hormuz, pressured some risk assets while supporting energy names, leaving regional benchmarks without a clear direction heading into the weekend.",
+          "source_name": "金投網",
+          "source_url": "https://stock.cngold.org/c/2026-08-14/c10692253.html"
+        }
+      ]
+    },
+    {
+      "section": "International",
+      "section_zh": "國際",
+      "items": [
+        {
+          "title_zh": "標普500自高回落 仍收連三週漲（2026-08-14，最近交易日）",
+          "title_en": "S&P 500 slips from record but caps a third straight weekly gain (2026-08-14，最近交易日)",
+          "summary_zh": "美股週五小幅走低，標普500自約7,800點的紀錄高點回落，但全週仍收連續第三週上漲。7月生產者物價（PPI）整體月增幅極小、表現溫和，強化市場對聯準會可暫緩進一步緊縮的預期，使盤勢在週線收紅、氣氛偏多下，僅呈技術性回檔。",
+          "summary_en": "US stocks eased on Friday, pulling the S&P 500 back from its record high near the 7,800 level, but the benchmark still logged a third consecutive weekly advance. A tame July producer-price report — with headline PPI little changed on the month — reinforced hopes that the Federal Reserve can hold off on further tightening, keeping the tone constructive despite the late-week dip.",
+          "source_name": "Yahoo Finance",
+          "source_url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-august-14-dow-sp-500-nasdaq-102635519.html"
+        },
+        {
+          "title_zh": "布蘭特突破88美元 美伊荷莫茲海峽對峙升溫（2026-08-14）",
+          "title_en": "Brent tops US$88 as US–Iran Strait of Hormuz standoff escalates (2026-08-14)",
+          "summary_zh": "布蘭特原油週五升破每桶88美元、單週漲逾5%，因美方加大對伊朗施壓、要求重啟荷莫茲海峽。美國財長貝森特釋出將採取前所未有經濟措施、並維持對伊朗港口的海上封鎖；伊朗與阿曼尚未達成協議，使油價在週末前維持地緣風險溢價，中東供應中斷疑慮持續牽動全球能源與通膨預期。",
+          "summary_en": "Brent crude rose above US$88 a barrel on Friday, up more than 5% on the week, as Washington intensified economic pressure on Iran to reopen the Strait of Hormuz. Treasury Secretary Bessent signalled unprecedented measures alongside a naval blockade of Iranian ports, while Iran and Oman had yet to reach a deal, keeping a geopolitical premium in oil into the weekend.",
+          "source_name": "Forbes",
+          "source_url": "https://www.forbes.com/advisor/investing/oil-prices-today/",
+          "published": "2026-08-14"
+        },
+        {
+          "title_zh": "7月PPI溫和 市場加碼押注Fed九月降息（2026-08-14）",
+          "title_en": "Tame July PPI stokes bets on a September Fed rate cut (2026-08-14)",
+          "summary_zh": "美國7月最終需求生產者物價指數（PPI）月增率持平，低於市場預期的小幅上揚，緩解通膨再起的疑慮，惟核心PPI月增0.4%仍具僵固性。整體數據偏溫和，強化市場對聯準會最快9月降息1碼的押注；聯準會7月底已將政策利率維持在3.50%~3.75%區間，後續降息時點成為全球資金焦點。",
+          "summary_en": "The July producer price index for final demand was unchanged on the month, below expectations for a small rise, cooling fears of renewed pipeline inflation even as core PPI firmed 0.4%. The soft headline print bolstered market bets that the Federal Reserve — which held its policy rate at 3.50%–3.75% in late July — could deliver a 25-basis-point cut as soon as its September meeting.",
+          "source_name": "Yahoo Finance",
+          "source_url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-news-aug-14-103100309.html",
+          "published": "2026-08-14"
+        },
+        {
+          "title_zh": "IEA示警五年來最大供應缺口 胡塞武裝襲沙國煉油廠（2026-08-14）",
+          "title_en": "IEA warns of widest supply deficit in five years as Houthis strike Saudi refinery (2026-08-14)",
+          "summary_zh": "國際能源總署（IEA）警告2026年全球石油供應缺口擴大，恐創五年來最大短差，適逢中東風險升高。伊朗支持的胡塞武裝襲擊沙烏地阿拉伯Jazan煉油廠，在荷莫茲海峽對峙之際加深供應中斷疑慮，並推升布蘭特相對西德州原油（WTI）的價差——因中東原油更直接對應布蘭特計價，區域供應風險對其影響更大。",
+          "summary_en": "The International Energy Agency flagged a deepening global oil-supply deficit for 2026, projecting the widest shortfall in five years just as Middle East risks mount. Iran-backed Houthi militants targeted Saudi Arabia's Jazan refinery, adding to disruption fears during the Hormuz standoff and helping Brent trade at a wider premium to WTI, since Middle East barrels feed the Brent benchmark more directly.",
+          "source_name": "Forbes",
+          "source_url": "https://www.forbes.com/advisor/investing/oil-prices-today/",
+          "published": "2026-08-14"
         }
       ]
     }
