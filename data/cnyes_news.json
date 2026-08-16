@@ -1,11 +1,117 @@
 {
-  "built_at": "2026-08-17T06:56",
+  "built_at": "2026-08-17T07:30",
   "source": "鉅亨網（cnyes）",
   "categories": [
     {
       "key": "headline",
       "label": "鉅亨頭條",
       "items": [
+        {
+          "news_id": "6578336",
+          "title": "Anthropic揭Claude Code「省錢6招」！善用快取、/clear降低Token成本",
+          "title_en": "",
+          "publish_at": 1786921803,
+          "url": "https://news.cnyes.com/news/id/6578336",
+          "paras": [
+            "Anthropic近日發布一篇部落格文章，針對開發者使用Claude Code時容易出現的Token浪費問題，整理出6項降低成本的實用技巧。",
+            "官方指出，Claude Code的使用成本不只取決於選用哪個模型，也與推理強度、上下文長度及提示快取是否命中密切相關；若缺乏上下文管理，同一項程式開發任務的成本可能出現數倍差距。",
+            "Anthropic建議，開發者完成一項任務後應立即使用「/clear」清除對話，避免前一項工作的檔案內容、指令輸出與探索過程持續留在上下文中，並在開始工作時就確定模型與推理強度，減少後續切換造成的快取失效。",
+            "Anthropic列6招降低Claude Code成本\n\n\n在不同任務之間執行「/clear」，避免把之前無關的上下文繼續送到模型，進而減少Token消耗。\n開始工作前，先確定好模型和推理強度，因為中途更改其中任何一個，都可能導致提示詞快取失效，進而增加Token成本。\n不要只寫出檔名，而是直接用「@」提及文件，使檔案會直接附加到訊息中，省去一次Read調用，並避免Claude再去搜尋檔案。\n對輸出冗長的指令加上靜默參數，或把指令交給子代理執行。因為命令輸出會像檔案一樣加入對話，並且在整個會話期間都會保留。\n在新會話開始時執行一次「/context」。它會顯示目前載入的內容（例如 CLAUDE.md 和 MCP 工具定義），方便用戶刪除不必要的內容。\n暫時離開鍵盤前執行「/compact」。提示詞快取通常一小時後就會過期，而在快取仍然有效時進行對話壓縮，成本要低得多。\n\n\nClaude Code成本關鍵在Token如何被計算\n\nAnthropic也進一步說明Claude Code背後的Token消耗機制。每次使用者發出指令時，模型首先需要進行「預填充」，讀取系統提示詞、CLAUDE.md、使用者訊息及過往對話等輸入內容；接著進入「解碼」（decode）階段，產生模型回覆、思考內容及工具呼叫等輸出。",
+            "兩者的運算方式並不相同。預填充會一次處理輸入內容，而解碼則是逐個Token產生輸出，因此輸出Token的成本高於輸入Token。",
+            "模型本身則決定每個Token的價格，而推理強度會影響Token使用量。",
+            "Anthropic指出，推理強度越高，模型需要產生的思考Token越多，因此開發者不應在所有任務上都使用最高推理強度，而應根據工作的複雜程度選擇合適的模型與設定。",
+            "提示快取成為降低成本的重要工具\n\n在Claude Code的成本結構中，提示快取是另一個關鍵因素。",
+            "Claude Code的請求通常會包含相同的前綴，例如系統提示詞、工具定義、CLAUDE.md以及既有對話歷史。如果下一次請求的前綴內容與前一次完全一致，系統可以直接使用先前的計算結果，而不必重新處理全部內容。",
+            "Anthropic指出，快取讀取只要正常輸入價的0.1倍，可以直接省掉90%。雖然首次寫入快取需要較高成本，但之後的請求可以持續利用既有快取。",
+            "不過，快取並非永久有效，而且必須維持連續匹配。Anthropic列出幾種可能導致快取失效的情況，包括切換模型、改變推理強度、開啟或關閉Fast mode、使用「/compact」重新整理對話、快取逾期，以及長時間後恢復舊會話。",
+            "其中，模型與推理強度的切換尤其值得注意。Anthropic指出，不同模型各自擁有獨立快取，因此從一個模型切換到另一個模型後，原本的對話歷史可能需要重新進行預填充；推理強度同樣屬於快取條件之一。",
+            "此外，Anthropic也提醒使用者注意「opusplan」模式。由於該模式會在不同階段切換模型，因此進入或離開相關模式都可能造成快取失效，頻繁切換可能增加額外成本。",
+            "對話越長，累積成本也越高\n\n即使成功利用快取降低重複處理成本，Anthropic仍提醒，對話本身持續膨脹仍會增加Token使用量。",
+            "Claude每讀取一個檔案、執行一次指令，都可能將相關內容加入對話歷史。隨著工作輪數增加，後續請求需要攜帶的上下文也會越來越長。",
+            "Claude Code設有機制處理過大的命令輸出：當輸出超過一定長度時，內容會被寫入暫存檔案，而對話中只保留摘要。不過，較短但仍然龐大的輸出仍可能直接留在上下文中。",
+            "例如測試工具產生大量測試結果，即使沒有超過系統設定的門檻，這些內容仍可能持續佔據後續對話空間。",
+            "因此，Anthropic再次強調，讓命令保持精簡、將大型工作交給子代理，以及適時清除或壓縮對話，都是降低上下文膨脹的重要方式。",
+            "除了「/clear」與「/compact」之外，Anthropic也提到「/rewind」。如果最近幾輪對話出現偏離，可以利用「/rewind」移除後續內容，同時保留較早的對話與快取狀態。",
+            "AI程式開發開始出現「Token管理」能力\n\n從Anthropic整理的這些技巧可以看出，Claude Code的使用效率已不只是模型能力或程式設計技巧的問題，如何管理上下文、控制輸出、維持快取及選擇適當推理強度，也逐漸成為影響開發成本的重要因素。",
+            "對開發者而言，真正需要避免的並非單次使用大量Token，而是在長時間、多輪次的工作流程中，讓無關的上下文不斷累積，並因模型或設定切換導致原本可以重複利用的快取失效。",
+            "Anthropic此次公布的6項建議，核心邏輯也相當明確：讓每一次請求只攜帶真正需要的內容、讓能夠快取的內容持續命中，並將不必要的大量輸出隔離在主對話之外。對於高頻率使用Claude Code的開發者而言，這些操作將直接影響相同工作量下的Token消耗。"
+          ],
+          "paras_en": []
+        },
+        {
+          "news_id": "6578424",
+          "title": "距發表還一個月！電商不怕臨時改模 搶先開賣折疊iPhone殼  配件商打什麼算盤？",
+          "title_en": "Apple's Foldable iPhone Looms, but Accessories Sellers Are Already Racing to Market",
+          "publish_at": 1786921203,
+          "url": "https://news.cnyes.com/news/id/6578424",
+          "paras": [
+            "距蘋果首款折疊iPhone與iPhone 18系列正式亮相還有一個月左右，但電商平台上的「配件搶跑」已開跑，不少店家直接以「iPhone Fold」、「iPhone Ultra」為關鍵字上架折疊手機殼，未發布的iPhone 18系列保護殼、鋼化膜也同步現身，部分商品甚至按機型、材質、款式細分完畢。",
+            "《每日經濟新聞》報導，當記者以消費者身份詢價，商家多不願透露數據來源，只強調「工廠包數據、按數據開模」「確定可適配」，若日後改模會補發，但一款手機殼從開模、打樣到備庫存，本就牽動整條供應鏈，未發布就量產，本質是場高風險押注。",
+            "長期經營蘋果生態配件的業內人士表示，第三方廠商慣例會提前三個月備戰，搶的是新機上市首波「買機必買殼」的窗口，等蘋果發表再開發，黃金流量早已過去。資訊來源則不只靠官方，量產階段供應鏈外溢、機模流出、渲染圖與產業爆料，都足以讓成熟廠商憑尺寸、鏡頭位、按鍵佈局先行開模。",
+            "報導指出，今年還多了一個特殊變量，蘋果印度核心代工廠塔塔電子6月遭勒索攻擊，超20萬份、630GB機密文件(含主板圖紙、晶片參數、真機測試片)流入暗網，被稱為蘋果史上最嚴重洩密事件，新德里已介入調查，這讓配件廠能拿到的「公開情報」比往年更紮實。",
+            "不過，風險也更高。直板iPhone迭代多年，手機殼廠有經驗累積，折疊螢幕涉及鉸鏈、機身厚度、開合結構與螢幕形態，任一關鍵尺寸變動都可能讓前期開模作廢重來，也就是說折疊款「搶跑」賭注遠大於Pro機種。",
+            "知情人士透露，蘋果擬於下月只發表兩款高階Pro與首款折疊 iPhone，2027上半年再把標準版與SE整合發布，形成「Pro 秋發、基礎款春發」的拆分節奏。對配件產業鏈而言，過去一年一次秋季集中備貨，未來可能拆成多個時間窗口，從「一年一站集中搶跑」轉向「長周期、高頻接力」。",
+            "搶跑看似只是電商常態，實則映出蘋果保密防線鬆動、供應鏈情報商品化，以及 iPhone 產品節奏重組三股力量交疊。新機還沒露面，圍繞它的千億配件生意，已經先跑完了第一圈。"
+          ],
+          "paras_en": [
+            "Just a month before Apple's first foldable iPhone and iPhone 18 series are set to debut, e-commerce platforms have already seen a rush of 'accessory pre-sales.' Many sellers have listed foldable phone cases under keywords like 'iPhone Fold' and 'iPhone Ultra,' with some even offering cases for the yet-to-be-released iPhone 18 series and screen protectors.",
+            "According to a report by the Daily Economic News, when reporters inquired about prices as consumers, many sellers refused to disclose their data sources, only stating that they had 'factory data' and 'opened molds based on data.' If the design were to change later, they would issue a recall, but one phone case from mold opening to inventory storage is a high-risk gamble.",
+            "Industry insiders who have long operated in the Apple ecosystem noted that third-party manufacturers typically prepare three months in advance to secure a head start on the initial 'buy-a-phone-buy-a-case' window. They wait for Apple's official release before developing new products, as the golden opportunity has already passed.",
+            "The information source is not limited to official channels. During the production stage, supply chain leaks, prototype designs, and industry rumors can all provide enough information for mature manufacturers to develop cases based on dimensions, camera placement, and button layouts.",
+            "This year, there is an additional variable: Apple's Indian core manufacturing partner, Tata Electronics, was hit by a ransomware attack in June, resulting in over 200,000 leaked files (including motherboard diagrams, chip parameters, and real-machine test pieces) on the dark web, dubbed the most severe data breach in Apple's history. New Delhi has intervened in the investigation, giving accessory manufacturers more substantial 'public information' than in previous years.",
+            "However, the risks are higher. The flat iPhone has undergone numerous iterations, giving case manufacturers valuable experience. The foldable screen involves hinges, body thickness, opening and closing structures, and screen shape, making any key dimension change potentially render pre-made molds obsolete. In other words, the 'pre-sale' gamble for foldable cases is much greater than that for Pro models.",
+            "Sources close to the matter revealed that Apple plans to release only two high-end Pro models and the first foldable iPhone in the coming month, with standard and SE models to be released in the first half of 2027, forming a 'Pro autumn release, basic model spring release' schedule. For the accessory industry, this means a shift from 'one-time concentrated pre-sales' to 'long-cycle, high-frequency relay' production."
+          ]
+        },
+        {
+          "news_id": "6578445",
+          "title": "〈台股盤前要聞〉11天反彈6700點 4萬6關前震盪、中國大廠吹響SiC漲價號角 台廠同步受惠",
+          "title_en": "Taiwan Stock Market Previews: 11-Day Rebound of 6700 Points, 4,600 Points Before Volatility, China's Big Manufacturers Signal Price Increases for SiC, Taiwan's Manufacturers Benefit Simultaneously",
+          "publish_at": 1786921016,
+          "url": "https://news.cnyes.com/news/id/6578445",
+          "paras": [
+            "8/17台股盤前要聞\n\n1.台股加權指數上周續彈1585點，即將挑戰站穩46000點上，三大法人同步買超，呈現籌碼面和技術面均偏多的態勢，再加上新台幣升破32元價位在望，台股交易員認為，台股多頭匯集，惟8月以來已反彈2691點，漲多後逢上檔層層反壓需要時間，預料進入財報空窗期後透過資金面的回補，先呈現驚驚漲格局為優。",
+            "2.主計總處14日公布今明年台灣經濟成長率(GDP)最新預測值，由於上半年經濟成長14.15%，上修1.50個百分點，下半年預測成長8.27%，上修1.33個百分點，使全年GDP將衝上11.05%，上修1.41個百分點，創1988年以來最高紀錄，而消費者物價指數(CPI)年增率2.07%略高於台灣央行通膨警戒線2%。",
+            "3.新一代AI伺服器將導入800V HVDC供電架構，帶動碳化矽(SiC)重要性快速提升，近期市場除傳出SiC報價調漲，也出現新一輪擴產訊號，中國大廠宣布產能目標倍增，台灣相關供應鏈也同步受惠，包括環球晶(6488-TW)、合晶(6182-TW)以及廣運(6125-TW)集團旗下盛新材料，SiC相關訂單與營運動能可望進一步增強。",
+            "4.美國針對無人機及相關零組件祭出的「232關稅措施」將於9月3日上路，經濟部14日表示，將加速推動國內認驗證體系與美國標準接軌，協助業者取得輸美資格及認證。同時，依據美方公布內容，台灣與歐盟、日本、韓國及瑞士同列低稅率優惠名單，只要符合關鍵零組件及技術來源規定，即可適用15%關稅，有助維持我國無人機產品輸美競爭優勢，並爭取全球供應鏈移轉商機。",
+            "5.13家上市金控2026年7月自結獲利全數出爐！受7月全球金融市場波動加劇、美台股市震盪拉回影響，壽險與證券子公司評價及投資收益遭遇亂流，致使13家金控單月稅後純益合計降至518.94億元，較6月下滑約29.39%，由國泰金控奪下單月獲利王。不過，今年前7月資本市場活絡、銀行核心業務放款與財管手續費維持強勁成長，13家金控前7月累計稅後純益達4,927.82億元，較去年同期大幅成長124.78%，續創歷年同期新高，富邦金控仍為累計獲利王。",
+            "6.ASIC業者世芯-KY(3661-TW)14日召開法說會，董事長沈翔霖指出，下一代2奈米(N2) AI加速器已進入最終階段，維持今年底前完成設計定案(Tape-out)、2027年底進入量產的目標，預期該產品單價將遠高於目前量產中的N3世代，未來出貨量也確定高於N3，呈現價量齊揚，也看好明年N3出貨有機會優於預期，暗示營收仍有上調空間。",
+            "〈台股風向球〉8月來反彈2700點 4萬6關前籌碼面轉強有助驚驚漲格局",
+            "主計總處估今年台灣GDP將衝上11.05% 創近40年來最高",
+            "廣運布局AI、半導體及機器人產業 團隊全面領航另一個50年",
+            "〈航運指數〉SCFI連3漲 美東線運價有望衝破1萬美元",
+            "〈台幣〉一度升破32元大關 收32.046元 強升1.22角",
+            "13家金控前7月狂賺4927億元 國泰金奪單月獲利王、富邦金累計獲利雙冠王",
+            "台灣家庭所得差距達6.17倍 創14年新高",
+            "〈華紙法說〉木片與運輸價格居高不下推升成本 將減產至10月",
+            "無人機232關稅9月上路！經部強化美規認驗證助攻 15%稅率迎「轉單」商機",
+            "115年度總預算三讀 634億元無人機預算過關 經部：2030年產值破400億元",
+            "SiC需求強勁 中國大廠宣布產能倍增、台廠同步受惠",
+            "〈世芯法說〉下一代2奈米晶片價量齊揚 2027年底量產、營收有上修空間",
+            "川湖7月賺47.9億元年增逾3倍 單月大賺5個股本已賺贏Q2一半"
+          ],
+          "paras_en": [
+            "1. Taiwan's weighted stock index rebounded by 1585 points last week and is about to challenge the 46,000-point level. The three major institutional investors have all bought stocks, showing a bullish trend in both the market's sentiment and technical indicators. With the New Taiwan dollar expected to break through the NT$32 level, stock traders believe that the Taiwan stock market is dominated by bulls, but the market has rebounded by 2691 points since August, and after a strong rally, it needs time to digest the gains. It is expected that after the earnings season, the market will recover through capital inflows, and the initial stage of the rally will be a 'surprise' rally.",
+            "2. The Directorate-General of Budget, Accounting and Statistics announced on the 14th that the latest GDP growth rate forecast for this year and next year has been revised upward. The GDP growth rate for the first half of the year was 14.15%, an increase of 1.50 percentage points, and the growth rate for the second half of the year is expected to be 8.27%, an increase of 1.33 percentage points. As a result, the annual GDP growth rate is expected to reach 11.05%, an increase of 1.41 percentage points, setting a new record since 1988. The consumer price index (CPI) year-over-year growth rate was 2.07%, slightly higher than the Taiwan central bank's 2% inflation warning line.",
+            "3. The new generation of AI servers will adopt 800V HVDC power supply architecture, which will rapidly increase the importance of silicon carbide (SiC). In recent times, the market has seen reports of SiC price increases and new production expansions. China's large manufacturers have announced plans to double their production capacity, and Taiwan's related supply chain has also benefited, including Global Crystal Materials (6488-TW), Hsinchu Crystal (6182-TW), and Guangyun Group's (6125-TW) Shengxin Materials. The SiC-related orders and operating capacity are expected to further increase.",
+            "4. The US has announced a 232 tariff measure on unmanned aircraft and related components, which will take effect on September 3. The Ministry of Economic Affairs stated on the 14th that it will accelerate the promotion of domestic certification and verification systems to align with US standards, helping local companies to obtain export qualifications and certifications. At the same time, according to the US announcement, Taiwan, the EU, Japan, South Korea, and Switzerland are all included in the list of countries with low tariff rates. If the companies meet the requirements for key components and technology sources, they can enjoy a 15% tariff rate, which will help maintain Taiwan's competitive advantage in exporting unmanned aircraft products and seek opportunities for global supply chain transfer.",
+            "5. The 13 listed financial holding companies released their July financial reports, which showed that the combined net profit of the 13 companies in July was NT$51.894 billion, a decrease of 29.39% from June. However, the companies' capital market business was active in the first seven months of the year, and their core banking business and financial management fees maintained strong growth. The combined net profit of the 13 companies in the first seven months of the year was NT$49.278 billion, a year-on-year increase of 124.78%, setting a new high for the same period. Fubon Financial Holding Co. still holds the title of cumulative net profit king.",
+            "6. ASIC manufacturer, Sino-American Silicon Products Inc. (3661-TW), held a shareholders' meeting on the 14th, where Chairman Shen Xianglin stated that the next-generation 2-nanometer (N2) AI accelerator has entered the final stage. The company aims to complete the design and tape-out by the end of the year and enter mass production by the end of 2027. The product's price is expected to be significantly higher than the current N3 generation, and the sales volume is expected to be higher than N3. This will result in a 'price-quantity' combination, and the company is optimistic about the sales volume of N3 in the coming year, which may exceed expectations, indicating that the company's revenue still has room for upward revision.",
+            "7. Taiwan Stock Market Outlook: The market has rebounded by 2700 points since August, and the sentiment has turned strong, which will help the market to continue its 'surprise' rally.",
+            "8. The Directorate-General of Budget, Accounting and Statistics estimates that Taiwan's GDP will reach 11.05% this year, setting a new record since 1988.",
+            "9. Guangyun Group is laying out its strategy in the AI, semiconductor, and robotics industries, and its team is leading the way for another 50 years.",
+            "10. Shipping Index: SCFI has risen for three consecutive days, and the freight rate on the US East Coast may break through the US$10,000 mark.",
+            "11. Taiwan Dollar: The NT dollar broke through the NT$32 level and reached NT$32.046, a strong increase of 1.22 cents.",
+            "12. The 13 listed financial holding companies earned a combined NT$49.278 billion in the first seven months of the year, with Taishin Financial Holding Co. taking the title of single-month net profit king, and Fubon Financial Holding Co. holding the title of cumulative net profit king.",
+            "13. The income gap between Taiwan's households has reached 6.17 times, setting a new record since 2009.",
+            "14. China Times: The prices of wood pulp and transportation have been rising, pushing up costs, and the company will reduce production to 10 months.",
+            "15. The 232 tariff measure on unmanned aircraft will take effect on September 3. The Ministry of Economic Affairs has strengthened its efforts to help local companies obtain export qualifications and certifications, and the 15% tariff rate will bring opportunities for 'transfer orders'.",
+            "16. The 115 budget bill has passed the third reading, with a total of NT$6.34 billion allocated for unmanned aircraft. The Ministry of Economic Affairs stated that the industry's output value is expected to exceed NT$40 billion by 2030.",
+            "17. SiC demand is strong, and China's large manufacturers have announced plans to double their production capacity, benefiting Taiwan's related supply chain.",
+            "18. Sino-American Silicon Products Inc. (3661-TW) held a shareholders' meeting on the 14th, where Chairman Shen Xianglin stated that the next-generation 2-nanometer (N2) AI chip will have a 'price-quantity' combination, with a price significantly higher than the current N3 generation. The company aims to complete the design and tape-out by the end of the year and enter mass production by the end of 2027, with revenue still having room for upward revision.",
+            "19. Chih-Hao 7th Financial Report: The company earned NT$4.79 billion in July, a year-on-year increase of over 300%, with a single-month profit of NT$5 billion, exceeding half of the Q2 profit."
+          ]
+        },
         {
           "news_id": "6578354",
           "title": "美伊達成協議開放荷姆茲海峽「也沒用」？《巴隆》：恐僅能「短暫」壓低油價",
@@ -167,95 +273,6 @@
             "不過，他並不預期價格會完全回到原先水準，原因在於AI相關需求可能在未來幾季持續對電子產品價格形成上行壓力。"
           ],
           "paras_en": []
-        },
-        {
-          "news_id": "6578339",
-          "title": "AI「偏空」隱憂現！美銀警告：基礎建設成本恐推升利率、使美股承壓",
-          "title_en": "AI \"Bearish\" Risks Surface! Bank of America Warns Infrastructure Costs May Push Up Rates, Pressuring US Stocks",
-          "publish_at": 1786914603,
-          "url": "https://news.cnyes.com/news/id/6578339",
-          "paras": [
-            "基於人工智慧（AI）能協助企業以更低成本提高產出、取代部分人力，進而降低薪資支出，AI長期被經濟學家與央行官員視為有助抑制通膨的新技術。然而，專家指出，這一切的發生可能還要「再等等」。",
-            "《Business Insider》報導指出，AI抑制通膨這項「長期利多」可能尚未到來。與此同時，AI基礎建設快速擴張所帶來的成本，反而已開始對物價形成上行壓力。",
-            "美國7月消費者物價指數（CPI）報告於上週三（12日）公布後，相關跡象更加明顯。數據顯示，電腦價格單月上漲3.5%，軟體價格過去一年則大漲約40%。",
-            "美國銀行(BAC-US) 近日指出，再加上資料中心爭相取得電力所推升的能源成本，以及企業將AI導入成本轉嫁給消費者，AI開始呈現出推升通膨的特徵。",
-            "美銀經濟學家Stephen Juneau表示，AI不僅推高電子產品的投入成本，也正在帶來正向的財富效應，進而支撐消費需求。",
-            "他指出：「聯準會（Fed）主席華許（Kevin Warsh）一直強調的AI降通膨效應，恐怕還得再等一段時間。」",
-            "分析指出，這對股市來說，從兩方面都令人擔憂，包括短期與長期利率。",
-            "就殖利率曲線短端而言，AI推升通膨將使利率政策更加複雜。通膨越高，聯準會面臨的升息壓力就越大，可能進一步提高隔夜拆款利率。",
-            "報導指出，這將對經濟活動形成抑制，並可能拖慢企業獲利成長，而企業獲利正是支撐股市的重要因素。",
-            "Sevens Report Research創辦人Tom Essaye表示，AI基礎建設擴張不太可能造成一輪持續性的高通膨，但確實提高聯準會在9月會議上一次性升息的可能性。",
-            "另一方面，通膨升溫也可能推高長期債券殖利率。當投資人預期通膨將侵蝕資產實質價值，通常會要求更高的報酬率。",
-            "目前，美國10年期國債殖利率已升至4.64%，高於今年初的4.15%。",
-            "MRB Partners在一份給客戶的報告中表示，儘管影響長期利率的因素很多，但高額的投資支出正協助推升債券殖利率。該機構預期，長期殖利率仍將進一步走高，可能對股市造成不利影響。",
-            "MRB Partners全球策略合夥人Philip Colmar在報告中表示：「我們對美國國債的看空展望，最終將對美股構成問題。」",
-            "他進一步指出，自2020年以來，每當10年期美債殖利率出現明顯向上突破時，「股市都曾出現劇烈修正。」"
-          ],
-          "paras_en": [
-            "Based on AI’s ability to help companies increase output at lower cost and replace some labor, thereby reducing wage expenses, AI has long been seen by economists and central bankers as a new technology that could help curb inflation.",
-            "Business Insider reports that the long‑term inflation‑reducing benefit of AI may not have arrived yet, and the rapid expansion of AI infrastructure is already creating upward price pressure.",
-            "After the US July Consumer Price Index report was released last Wednesday (the 12th), the signs became clearer, showing computer prices rose 3.5% month‑over‑month and software prices jumped about 40% over the past year.",
-            "Bank of America (BAC‑US) recently noted that rising energy costs from data centers scrambling for power and companies passing AI implementation costs onto consumers are giving AI an inflation‑raising character.",
-            "Bank of America economist Stephen Juneau said AI not only raises input costs for electronic products but also creates a positive wealth effect that supports consumer demand.",
-            "He added, “The Fed Chair Kevin Warsh’s emphasis on AI’s deflationary impact may still require more time before it materializes.”",
-            "Analysts say this worries the stock market from two angles: short‑term and long‑term rates.",
-            "On the short end of the yield curve, AI‑driven inflation makes monetary policy more complex; higher inflation increases pressure on the Fed to raise rates, potentially lifting the overnight fed funds rate further.",
-            "The report notes this could dampen economic activity and slow corporate profit growth, which is a key driver of equity markets.",
-            "Sevens Report Research founder Tom Essaye said AI infrastructure expansion is unlikely to trigger a sustained high‑inflation episode but does raise the odds of a one‑time rate hike at the Fed’s September meeting.",
-            "On the other hand, rising inflation could also push long‑term bond yields higher, as investors demand higher returns when they expect inflation to erode real asset values.",
-            "Currently, the US 10‑year Treasury yield has climbed to 4.64%, up from 4.15% at the start of the year.",
-            "MRB Partners told clients that although many factors affect long‑term rates, large investment outlays are helping lift bond yields, and the firm expects yields to keep rising, potentially hurting equities.",
-            "MRB Partners global strategy partner Philip Colmar said, “Our bearish outlook on US Treasuries will ultimately pose problems for US stocks.”",
-            "He further noted that since 2020, every time the 10‑year Treasury yield has made a clear upward breakout, the stock market has experienced a sharp correction."
-          ]
-        },
-        {
-          "news_id": "6578340",
-          "title": "長鑫科技市值逼近英特爾！衝上5405億美元、超越騰訊、躋身全球第24大企業",
-          "title_en": "Chingxin Technology's Market Value Approaches Intel's, Surpassing Tencent to Become the 24th Largest Global Enterprise",
-          "publish_at": 1786912805,
-          "url": "https://news.cnyes.com/news/id/6578340",
-          "paras": [
-            "中國記憶體晶片大廠長鑫科技(688825-CN) 上市後股價持續攀升，市值迅速躋身全球最具價值企業之列。",
-            "根據《Business Insider》報導，長鑫科技上週五（14日）在上海科創板收盤上漲4%。",
-            "根據倫敦證券交易所集團（LSEG）數據，長鑫科技市值達5,405億美元，僅次於市值5,526億美元的英特爾(INTC-US) ，並超越市值5,058億美元的中國科技巨頭騰訊(00700-HK) ，在LSEG全球企業市值排名中位居第24名。",
-            "長鑫科技市值快速攀升之際，英特爾股價上月受到整體晶片股遭遇拋售，以及市場對大規模人工智慧（AI）投資的疑慮影響而回落，使兩家公司之間的市值差距進一步縮小。",
-            "騰訊的市值同樣有所下滑。由於市場擔憂AI支出增加，以及AI可能對其軟體業務造成影響，騰訊在香港上市的股票今年以來已下跌約26%。",
-            "長鑫科技是中國最大的DRAM記憶體晶片生產商，總部位於中國東部安徽省。",
-            "該公司7月27日進行首次公開募股（IPO），募資約86億美元，上市首日股價即較IPO價格大漲466%，一舉成為中國上市公司中市值最高的企業。",
-            "Bernstein分析師近日在報告中指出，長鑫科技此次IPO為公司提供「更多現金用於資本支出」。",
-            "目前長鑫科技已是全球第4大DRAM生產商，排名僅次於三星電子(005930KS) 、SK海力士(000660KS) 與美光科技(MU-US) 。",
-            "野村證券上月預期，長鑫科技在全球DRAM產量中的占比，將從目前約10%提升至2028年底約18%。"
-          ],
-          "paras_en": [
-            "Chinese memory chip giant Chingxin Technology (688825-CN) has seen its stock price continue to rise after its listing, with its market value quickly joining the ranks of the world's most valuable companies.",
-            "According to a report by Business Insider, Chingxin Technology's stock price rose by 4% on Friday (14th) in the Shanghai Sci-Tech Innovation Board.",
-            "Based on data from the London Stock Exchange Group (LSEG), Chingxin Technology's market value has reached $540.5 billion, second only to Intel (INTC-US) with a market value of $552.6 billion, and surpassing Tencent (00700-HK) with a market value of $505.8 billion, ranking 24th in the LSEG global corporate market value rankings.",
-            "As Chingxin Technology's market value continues to rise rapidly, Intel's stock price fell last month due to the overall decline in chip stocks and market concerns about large-scale artificial intelligence (AI) investments, further narrowing the gap in market value between the two companies.",
-            "Tencent's market value has also declined, with its Hong Kong-listed stock falling by about 26% this year due to market concerns about increased AI spending and the potential impact on its software business.",
-            "Chingxin Technology is China's largest DRAM memory chip manufacturer, headquartered in Anhui Province, eastern China.",
-            "The company conducted its initial public offering (IPO) on July 27, raising approximately $8.6 billion, with its stock price surging 466% on the first day of listing, making it the Chinese listed company with the highest market value.",
-            "Bernstein analysts recently pointed out in a report that Chingxin Technology's IPO has provided the company with 'more cash for capital expenditures'.",
-            "Chingxin Technology is currently the world's fourth-largest DRAM producer, ranking behind Samsung Electronics (005930KS), SK Hynix (000660KS), and Micron Technology (MU-US).",
-            "Nomura Securities predicted last month that Chingxin Technology's share of global DRAM production would increase from around 10% to approximately 18% by the end of 2028."
-          ]
-        },
-        {
-          "news_id": "6578431",
-          "title": "烏克蘭無人機猛攻 俄羅斯電商巨頭「野莓」七座物流中心停擺",
-          "title_en": "Ukraine Drone Assault Halts Seven Logistics Centers of Russian E‑commerce Giant “Wildberries”",
-          "publish_at": 1786889183,
-          "url": "https://news.cnyes.com/news/id/6578431",
-          "paras": [
-            "烏克蘭國防部16日（周日）通報，烏方已使俄羅斯大型電商平台「野莓」公司規模最大的10個物流中心中的7個停止運作。",
-            "烏克蘭國防部稱，在16日凌晨俄羅斯莫斯科州遭到大規模無人機襲擊後，除多莫傑多沃的「野莓」公司倉庫外，該公司位於「克列迪諾」工業園區的物流樞紐也停止運轉。",
-            "烏克蘭國防部表示，「克列迪諾」物流樞紐是「野莓」公司佔地面積最大的倉庫，面積達25萬平方公尺。"
-          ],
-          "paras_en": [
-            "Ukraine’s Ministry of Defence reported on Sunday the 16th that Ukrainian actions have forced seven of the ten largest logistics centres of the Russian e‑commerce platform Wildberries to cease operations.",
-            "The ministry said that after a massive drone strike hit Moscow Oblast in the early hours of the 16th, all Wildberries facilities except the warehouse in Domodedovo were shut down, and the logistics hub located in the Klyuchino industrial park also stopped functioning.",
-            "The ministry noted that the Klyuchino logistics hub is Wildberries’ largest warehouse, covering an area of 250,000 square metres."
-          ]
         }
       ]
     },
@@ -263,6 +280,55 @@
       "key": "tw_stock",
       "label": "台股焦點",
       "items": [
+        {
+          "news_id": "6578445",
+          "title": "〈台股盤前要聞〉11天反彈6700點 4萬6關前震盪、中國大廠吹響SiC漲價號角 台廠同步受惠",
+          "title_en": "Taiwan Stock Market Previews: 11-Day Rebound of 6700 Points, 4,600 Points Before Volatility, China's Big Manufacturers Signal Price Increases for SiC, Taiwan's Manufacturers Benefit Simultaneously",
+          "publish_at": 1786921016,
+          "url": "https://news.cnyes.com/news/id/6578445",
+          "paras": [
+            "8/17台股盤前要聞\n\n1.台股加權指數上周續彈1585點，即將挑戰站穩46000點上，三大法人同步買超，呈現籌碼面和技術面均偏多的態勢，再加上新台幣升破32元價位在望，台股交易員認為，台股多頭匯集，惟8月以來已反彈2691點，漲多後逢上檔層層反壓需要時間，預料進入財報空窗期後透過資金面的回補，先呈現驚驚漲格局為優。",
+            "2.主計總處14日公布今明年台灣經濟成長率(GDP)最新預測值，由於上半年經濟成長14.15%，上修1.50個百分點，下半年預測成長8.27%，上修1.33個百分點，使全年GDP將衝上11.05%，上修1.41個百分點，創1988年以來最高紀錄，而消費者物價指數(CPI)年增率2.07%略高於台灣央行通膨警戒線2%。",
+            "3.新一代AI伺服器將導入800V HVDC供電架構，帶動碳化矽(SiC)重要性快速提升，近期市場除傳出SiC報價調漲，也出現新一輪擴產訊號，中國大廠宣布產能目標倍增，台灣相關供應鏈也同步受惠，包括環球晶(6488-TW)、合晶(6182-TW)以及廣運(6125-TW)集團旗下盛新材料，SiC相關訂單與營運動能可望進一步增強。",
+            "4.美國針對無人機及相關零組件祭出的「232關稅措施」將於9月3日上路，經濟部14日表示，將加速推動國內認驗證體系與美國標準接軌，協助業者取得輸美資格及認證。同時，依據美方公布內容，台灣與歐盟、日本、韓國及瑞士同列低稅率優惠名單，只要符合關鍵零組件及技術來源規定，即可適用15%關稅，有助維持我國無人機產品輸美競爭優勢，並爭取全球供應鏈移轉商機。",
+            "5.13家上市金控2026年7月自結獲利全數出爐！受7月全球金融市場波動加劇、美台股市震盪拉回影響，壽險與證券子公司評價及投資收益遭遇亂流，致使13家金控單月稅後純益合計降至518.94億元，較6月下滑約29.39%，由國泰金控奪下單月獲利王。不過，今年前7月資本市場活絡、銀行核心業務放款與財管手續費維持強勁成長，13家金控前7月累計稅後純益達4,927.82億元，較去年同期大幅成長124.78%，續創歷年同期新高，富邦金控仍為累計獲利王。",
+            "6.ASIC業者世芯-KY(3661-TW)14日召開法說會，董事長沈翔霖指出，下一代2奈米(N2) AI加速器已進入最終階段，維持今年底前完成設計定案(Tape-out)、2027年底進入量產的目標，預期該產品單價將遠高於目前量產中的N3世代，未來出貨量也確定高於N3，呈現價量齊揚，也看好明年N3出貨有機會優於預期，暗示營收仍有上調空間。",
+            "〈台股風向球〉8月來反彈2700點 4萬6關前籌碼面轉強有助驚驚漲格局",
+            "主計總處估今年台灣GDP將衝上11.05% 創近40年來最高",
+            "廣運布局AI、半導體及機器人產業 團隊全面領航另一個50年",
+            "〈航運指數〉SCFI連3漲 美東線運價有望衝破1萬美元",
+            "〈台幣〉一度升破32元大關 收32.046元 強升1.22角",
+            "13家金控前7月狂賺4927億元 國泰金奪單月獲利王、富邦金累計獲利雙冠王",
+            "台灣家庭所得差距達6.17倍 創14年新高",
+            "〈華紙法說〉木片與運輸價格居高不下推升成本 將減產至10月",
+            "無人機232關稅9月上路！經部強化美規認驗證助攻 15%稅率迎「轉單」商機",
+            "115年度總預算三讀 634億元無人機預算過關 經部：2030年產值破400億元",
+            "SiC需求強勁 中國大廠宣布產能倍增、台廠同步受惠",
+            "〈世芯法說〉下一代2奈米晶片價量齊揚 2027年底量產、營收有上修空間",
+            "川湖7月賺47.9億元年增逾3倍 單月大賺5個股本已賺贏Q2一半"
+          ],
+          "paras_en": [
+            "1. Taiwan's weighted stock index rebounded by 1585 points last week and is about to challenge the 46,000-point level. The three major institutional investors have all bought stocks, showing a bullish trend in both the market's sentiment and technical indicators. With the New Taiwan dollar expected to break through the NT$32 level, stock traders believe that the Taiwan stock market is dominated by bulls, but the market has rebounded by 2691 points since August, and after a strong rally, it needs time to digest the gains. It is expected that after the earnings season, the market will recover through capital inflows, and the initial stage of the rally will be a 'surprise' rally.",
+            "2. The Directorate-General of Budget, Accounting and Statistics announced on the 14th that the latest GDP growth rate forecast for this year and next year has been revised upward. The GDP growth rate for the first half of the year was 14.15%, an increase of 1.50 percentage points, and the growth rate for the second half of the year is expected to be 8.27%, an increase of 1.33 percentage points. As a result, the annual GDP growth rate is expected to reach 11.05%, an increase of 1.41 percentage points, setting a new record since 1988. The consumer price index (CPI) year-over-year growth rate was 2.07%, slightly higher than the Taiwan central bank's 2% inflation warning line.",
+            "3. The new generation of AI servers will adopt 800V HVDC power supply architecture, which will rapidly increase the importance of silicon carbide (SiC). In recent times, the market has seen reports of SiC price increases and new production expansions. China's large manufacturers have announced plans to double their production capacity, and Taiwan's related supply chain has also benefited, including Global Crystal Materials (6488-TW), Hsinchu Crystal (6182-TW), and Guangyun Group's (6125-TW) Shengxin Materials. The SiC-related orders and operating capacity are expected to further increase.",
+            "4. The US has announced a 232 tariff measure on unmanned aircraft and related components, which will take effect on September 3. The Ministry of Economic Affairs stated on the 14th that it will accelerate the promotion of domestic certification and verification systems to align with US standards, helping local companies to obtain export qualifications and certifications. At the same time, according to the US announcement, Taiwan, the EU, Japan, South Korea, and Switzerland are all included in the list of countries with low tariff rates. If the companies meet the requirements for key components and technology sources, they can enjoy a 15% tariff rate, which will help maintain Taiwan's competitive advantage in exporting unmanned aircraft products and seek opportunities for global supply chain transfer.",
+            "5. The 13 listed financial holding companies released their July financial reports, which showed that the combined net profit of the 13 companies in July was NT$51.894 billion, a decrease of 29.39% from June. However, the companies' capital market business was active in the first seven months of the year, and their core banking business and financial management fees maintained strong growth. The combined net profit of the 13 companies in the first seven months of the year was NT$49.278 billion, a year-on-year increase of 124.78%, setting a new high for the same period. Fubon Financial Holding Co. still holds the title of cumulative net profit king.",
+            "6. ASIC manufacturer, Sino-American Silicon Products Inc. (3661-TW), held a shareholders' meeting on the 14th, where Chairman Shen Xianglin stated that the next-generation 2-nanometer (N2) AI accelerator has entered the final stage. The company aims to complete the design and tape-out by the end of the year and enter mass production by the end of 2027. The product's price is expected to be significantly higher than the current N3 generation, and the sales volume is expected to be higher than N3. This will result in a 'price-quantity' combination, and the company is optimistic about the sales volume of N3 in the coming year, which may exceed expectations, indicating that the company's revenue still has room for upward revision.",
+            "7. Taiwan Stock Market Outlook: The market has rebounded by 2700 points since August, and the sentiment has turned strong, which will help the market to continue its 'surprise' rally.",
+            "8. The Directorate-General of Budget, Accounting and Statistics estimates that Taiwan's GDP will reach 11.05% this year, setting a new record since 1988.",
+            "9. Guangyun Group is laying out its strategy in the AI, semiconductor, and robotics industries, and its team is leading the way for another 50 years.",
+            "10. Shipping Index: SCFI has risen for three consecutive days, and the freight rate on the US East Coast may break through the US$10,000 mark.",
+            "11. Taiwan Dollar: The NT dollar broke through the NT$32 level and reached NT$32.046, a strong increase of 1.22 cents.",
+            "12. The 13 listed financial holding companies earned a combined NT$49.278 billion in the first seven months of the year, with Taishin Financial Holding Co. taking the title of single-month net profit king, and Fubon Financial Holding Co. holding the title of cumulative net profit king.",
+            "13. The income gap between Taiwan's households has reached 6.17 times, setting a new record since 2009.",
+            "14. China Times: The prices of wood pulp and transportation have been rising, pushing up costs, and the company will reduce production to 10 months.",
+            "15. The 232 tariff measure on unmanned aircraft will take effect on September 3. The Ministry of Economic Affairs has strengthened its efforts to help local companies obtain export qualifications and certifications, and the 15% tariff rate will bring opportunities for 'transfer orders'.",
+            "16. The 115 budget bill has passed the third reading, with a total of NT$6.34 billion allocated for unmanned aircraft. The Ministry of Economic Affairs stated that the industry's output value is expected to exceed NT$40 billion by 2030.",
+            "17. SiC demand is strong, and China's large manufacturers have announced plans to double their production capacity, benefiting Taiwan's related supply chain.",
+            "18. Sino-American Silicon Products Inc. (3661-TW) held a shareholders' meeting on the 14th, where Chairman Shen Xianglin stated that the next-generation 2-nanometer (N2) AI chip will have a 'price-quantity' combination, with a price significantly higher than the current N3 generation. The company aims to complete the design and tape-out by the end of the year and enter mass production by the end of 2027, with revenue still having room for upward revision.",
+            "19. Chih-Hao 7th Financial Report: The company earned NT$4.79 billion in July, a year-on-year increase of over 300%, with a single-month profit of NT$5 billion, exceeding half of the Q2 profit."
+          ]
+        },
         {
           "news_id": "6578247",
           "title": "SiC需求強勁 中國大廠宣布產能倍增、台廠同步受惠",
@@ -429,51 +495,6 @@
             "The 'Overall Maintenance Rate' helps members grasp the margin water level and capital situation of their unsettled positions, while the 'Margin Account Increase Amount and Rate' effectively monitors the rapid increase in margin requirements over a short period. Settlement members can set their own warning thresholds, notification frequencies, and recipients based on their brokerage or proprietary business characteristics, enhancing their autonomous risk control flexibility.",
             "TAIFEX emphasized that, in an environment where global financial market interconnectedness is increasing and night trading importance is rising, upgrading both front-end trading risk simulation tools and back-end night trading warning mechanisms will not only help traders and settlement members identify risks early on but also enable them to take timely measures in response to market fluctuations, thereby maintaining the safety, stability, and healthy development of the futures market."
           ]
-        },
-        {
-          "news_id": "6577272",
-          "title": "AI基礎設施需求大爆發！先進封測與設備迎數年擴產大週期",
-          "title_en": "AI Infrastructure Demand Explodes! Advanced Testing and Equipment Enter Multi-Year Expansion Cycle",
-          "publish_at": 1786842603,
-          "url": "https://news.cnyes.com/news/id/6577272",
-          "paras": [
-            "隨著全球AI基礎設施建設全面加速，算力升級引爆封測大廠建廠擴產潮，在GPU與 ASIC訂單湧入及矽光子新技術推動下，高階測試與先進封裝外包全面放量，為上游半導體設備供應鏈注入數年一遇的強勁長線成長動能。",
-            "〈封測大廠啟動建廠潮，高階測試與外包訂單放量〉",
-            "隨著全球AI基礎設施建設如火如荼展開，AI晶片對算力與傳輸效率的極致追求，持續倒逼封裝與測試技術朝更高階架構演進，為滿足GPU與ASIC強勁的訂單需求，半導體封測大廠全面啟動建廠潮並積極上修資本支出，日月光投控(3711-TW)受惠先進封裝外包訂單(oS)與扇出型封裝需求帶動營運逐季走揚，京元電(2449-TW)則重金佈局新廠與測試設備以對接龐大訂單，宣告先進封測產業正式迎來長線高成長週期。",
-            "〈先進製程與封裝設備進機，台系設備廠迎黃金期〉",
-            "封測廠與晶圓代工廠的強勁擴產，直接帶動設備廠大舉受惠，台積電(2330-TW)針對SoIC與CoWoS等先進封裝廠區積極拉貨，加上OSAT業者同步針對FOCOS、FOPLP及先進測試大舉採購設備，帶動設備供應鏈迎來長達數年的黃金拉貨期，由於OSAT客戶比重拉高有利於優化設備廠的毛利率表現，市場預期多家台系設備廠商在未來數年將維持極高的營收年成長動能。",
-            "〈免費下載【陳智霖分析師APP】，掌握第一手盤勢資訊與信用籌碼名單〉",
-            "APP選股會員每月僅限額招收，名額有限，每週都會提供最新「信用籌碼疑慮名單」，邀請您點選連結下載【陳智霖分析師APP】：https://lihi.cc/zwrii",
-            "〈獲利結構優化與矽光子加持，聚焦關鍵供應鏈〉",
-            "除了高階封裝外，矽光子與CPO技術的演進更開闢了全新戰場，可將重點關注具備高階測試技術與先進封裝設備實力的指標台廠，如致茂(2360-TW)、志聖(2467-TW)、弘塑(3131-TW)、萬潤(6187-TW)、均華(6640-TW)、印能(7734-TW)、竑騰(7751-TW)及鴻勁(7769-TW) ，以及切入矽光子量測與設備檢測的旺矽(6223-TW)與致茂(2360-TW)等指標供應鏈，把握半導體擴產大週期的長線紅利。",
-            "半導體封測與設備產業在AI晶片算力需求與先進封裝擴產雙引擎驅動下，正處於長線結構性成長軌道，考量相關指標廠設備供應鏈的營運展望皆高度樂觀、訂單能見度極佳，投資人可鎖定具備高階封裝、矽光子與先進測試題材的產業龍頭，把握擴產週期的長線投資紅利，邀請投資人下載智霖老師的APP並鎖定直播，一起掌握產業最前線的產業脈動！",
-            "邀請投資人下載智霖老師的APP並鎖定直播，一起掌握產業最前線的產業脈動！",
-            "最新影音(請點影音上方標題至Youtube收視品質會更佳)",
-            "錢進熱線02-2653-8299，立即邁向系統依據的股票操作。",
-            "文章來源：陳智霖分析師/凱旭投顧",
-            "本公司所推薦分析之個別有價證券",
-            "無不當之財務利益關係 以往之績效不保證未來獲利",
-            "投資人應獨立判斷 審慎評估並自負投資風險"
-          ],
-          "paras_en": [
-            "As global AI infrastructure construction accelerates, the upgrade of computing power triggers a wave of new factory construction and expansion in the testing industry, driven by the influx of GPU and ASIC orders, as well as the promotion of silicon photonics technology.",
-            "The testing industry is experiencing a surge in demand for high-end testing and advanced packaging services, driven by the growing need for AI chips with high computing power and transmission efficiency.",
-            "As the global AI infrastructure construction continues to gain momentum, AI chips are driving the development of high-end testing and packaging technologies, leading to a surge in demand for advanced testing and packaging services.",
-            "The testing industry is experiencing a surge in demand for high-end testing and advanced packaging services, driven by the growing need for AI chips with high computing power and transmission efficiency.",
-            "The expansion of testing and packaging capacity is driving the growth of the semiconductor equipment industry, with Taiwan Semiconductor Manufacturing Company (TSMC) actively procuring equipment for its SoIC and CoWoS advanced packaging facilities.",
-            "The expansion of testing and packaging capacity is driving the growth of the semiconductor equipment industry, with Taiwan Semiconductor Manufacturing Company (TSMC) actively procuring equipment for its SoIC and CoWoS advanced packaging facilities.",
-            "Investors can download the Chen Zhi Lin analyst app to stay up-to-date with the latest market trends and credit ratings.",
-            "In addition to high-end packaging, the advancement of silicon photonics and CPO technology has opened up new fields, focusing on key supply chains with high-end testing technology and advanced packaging equipment, such as Taiwan-based companies like Zhen Mao, Shi Sheng, Hong Su, Wan Run, Jun Hua, Yin Neng, Hong Teng, and Hong Jing.",
-            "The semiconductor testing and equipment industry is experiencing a structural growth trend driven by the demand for AI chips with high computing power and transmission efficiency, and the expansion of advanced packaging capacity.",
-            "Investors can download the Chen Zhi Lin analyst app to stay up-to-date with the latest market trends and credit ratings.",
-            "Investors can download the Chen Zhi Lin analyst app to stay up-to-date with the latest market trends and credit ratings.",
-            "Please click on the video title above to watch it on YouTube for better video quality.",
-            "For more information, please call our hotline at 02-2653-8299.",
-            "This article is provided by Chen Zhi Lin analyst/Kai Xu Investment Consulting.",
-            "The company's recommended individual securities may have potential conflicts of interest.",
-            "Past performance is not a guarantee of future profits.",
-            "Investors should make their own independent judgments and exercise caution when evaluating investment risks."
-          ]
         }
       ]
     },
@@ -481,6 +502,63 @@
       "key": "us_stock",
       "label": "美股焦點",
       "items": [
+        {
+          "news_id": "6578336",
+          "title": "Anthropic揭Claude Code「省錢6招」！善用快取、/clear降低Token成本",
+          "title_en": "",
+          "publish_at": 1786921803,
+          "url": "https://news.cnyes.com/news/id/6578336",
+          "paras": [
+            "Anthropic近日發布一篇部落格文章，針對開發者使用Claude Code時容易出現的Token浪費問題，整理出6項降低成本的實用技巧。",
+            "官方指出，Claude Code的使用成本不只取決於選用哪個模型，也與推理強度、上下文長度及提示快取是否命中密切相關；若缺乏上下文管理，同一項程式開發任務的成本可能出現數倍差距。",
+            "Anthropic建議，開發者完成一項任務後應立即使用「/clear」清除對話，避免前一項工作的檔案內容、指令輸出與探索過程持續留在上下文中，並在開始工作時就確定模型與推理強度，減少後續切換造成的快取失效。",
+            "Anthropic列6招降低Claude Code成本\n\n\n在不同任務之間執行「/clear」，避免把之前無關的上下文繼續送到模型，進而減少Token消耗。\n開始工作前，先確定好模型和推理強度，因為中途更改其中任何一個，都可能導致提示詞快取失效，進而增加Token成本。\n不要只寫出檔名，而是直接用「@」提及文件，使檔案會直接附加到訊息中，省去一次Read調用，並避免Claude再去搜尋檔案。\n對輸出冗長的指令加上靜默參數，或把指令交給子代理執行。因為命令輸出會像檔案一樣加入對話，並且在整個會話期間都會保留。\n在新會話開始時執行一次「/context」。它會顯示目前載入的內容（例如 CLAUDE.md 和 MCP 工具定義），方便用戶刪除不必要的內容。\n暫時離開鍵盤前執行「/compact」。提示詞快取通常一小時後就會過期，而在快取仍然有效時進行對話壓縮，成本要低得多。\n\n\nClaude Code成本關鍵在Token如何被計算\n\nAnthropic也進一步說明Claude Code背後的Token消耗機制。每次使用者發出指令時，模型首先需要進行「預填充」，讀取系統提示詞、CLAUDE.md、使用者訊息及過往對話等輸入內容；接著進入「解碼」（decode）階段，產生模型回覆、思考內容及工具呼叫等輸出。",
+            "兩者的運算方式並不相同。預填充會一次處理輸入內容，而解碼則是逐個Token產生輸出，因此輸出Token的成本高於輸入Token。",
+            "模型本身則決定每個Token的價格，而推理強度會影響Token使用量。",
+            "Anthropic指出，推理強度越高，模型需要產生的思考Token越多，因此開發者不應在所有任務上都使用最高推理強度，而應根據工作的複雜程度選擇合適的模型與設定。",
+            "提示快取成為降低成本的重要工具\n\n在Claude Code的成本結構中，提示快取是另一個關鍵因素。",
+            "Claude Code的請求通常會包含相同的前綴，例如系統提示詞、工具定義、CLAUDE.md以及既有對話歷史。如果下一次請求的前綴內容與前一次完全一致，系統可以直接使用先前的計算結果，而不必重新處理全部內容。",
+            "Anthropic指出，快取讀取只要正常輸入價的0.1倍，可以直接省掉90%。雖然首次寫入快取需要較高成本，但之後的請求可以持續利用既有快取。",
+            "不過，快取並非永久有效，而且必須維持連續匹配。Anthropic列出幾種可能導致快取失效的情況，包括切換模型、改變推理強度、開啟或關閉Fast mode、使用「/compact」重新整理對話、快取逾期，以及長時間後恢復舊會話。",
+            "其中，模型與推理強度的切換尤其值得注意。Anthropic指出，不同模型各自擁有獨立快取，因此從一個模型切換到另一個模型後，原本的對話歷史可能需要重新進行預填充；推理強度同樣屬於快取條件之一。",
+            "此外，Anthropic也提醒使用者注意「opusplan」模式。由於該模式會在不同階段切換模型，因此進入或離開相關模式都可能造成快取失效，頻繁切換可能增加額外成本。",
+            "對話越長，累積成本也越高\n\n即使成功利用快取降低重複處理成本，Anthropic仍提醒，對話本身持續膨脹仍會增加Token使用量。",
+            "Claude每讀取一個檔案、執行一次指令，都可能將相關內容加入對話歷史。隨著工作輪數增加，後續請求需要攜帶的上下文也會越來越長。",
+            "Claude Code設有機制處理過大的命令輸出：當輸出超過一定長度時，內容會被寫入暫存檔案，而對話中只保留摘要。不過，較短但仍然龐大的輸出仍可能直接留在上下文中。",
+            "例如測試工具產生大量測試結果，即使沒有超過系統設定的門檻，這些內容仍可能持續佔據後續對話空間。",
+            "因此，Anthropic再次強調，讓命令保持精簡、將大型工作交給子代理，以及適時清除或壓縮對話，都是降低上下文膨脹的重要方式。",
+            "除了「/clear」與「/compact」之外，Anthropic也提到「/rewind」。如果最近幾輪對話出現偏離，可以利用「/rewind」移除後續內容，同時保留較早的對話與快取狀態。",
+            "AI程式開發開始出現「Token管理」能力\n\n從Anthropic整理的這些技巧可以看出，Claude Code的使用效率已不只是模型能力或程式設計技巧的問題，如何管理上下文、控制輸出、維持快取及選擇適當推理強度，也逐漸成為影響開發成本的重要因素。",
+            "對開發者而言，真正需要避免的並非單次使用大量Token，而是在長時間、多輪次的工作流程中，讓無關的上下文不斷累積，並因模型或設定切換導致原本可以重複利用的快取失效。",
+            "Anthropic此次公布的6項建議，核心邏輯也相當明確：讓每一次請求只攜帶真正需要的內容、讓能夠快取的內容持續命中，並將不必要的大量輸出隔離在主對話之外。對於高頻率使用Claude Code的開發者而言，這些操作將直接影響相同工作量下的Token消耗。"
+          ],
+          "paras_en": []
+        },
+        {
+          "news_id": "6578424",
+          "title": "距發表還一個月！電商不怕臨時改模 搶先開賣折疊iPhone殼  配件商打什麼算盤？",
+          "title_en": "Apple's Foldable iPhone Looms, but Accessories Sellers Are Already Racing to Market",
+          "publish_at": 1786921203,
+          "url": "https://news.cnyes.com/news/id/6578424",
+          "paras": [
+            "距蘋果首款折疊iPhone與iPhone 18系列正式亮相還有一個月左右，但電商平台上的「配件搶跑」已開跑，不少店家直接以「iPhone Fold」、「iPhone Ultra」為關鍵字上架折疊手機殼，未發布的iPhone 18系列保護殼、鋼化膜也同步現身，部分商品甚至按機型、材質、款式細分完畢。",
+            "《每日經濟新聞》報導，當記者以消費者身份詢價，商家多不願透露數據來源，只強調「工廠包數據、按數據開模」「確定可適配」，若日後改模會補發，但一款手機殼從開模、打樣到備庫存，本就牽動整條供應鏈，未發布就量產，本質是場高風險押注。",
+            "長期經營蘋果生態配件的業內人士表示，第三方廠商慣例會提前三個月備戰，搶的是新機上市首波「買機必買殼」的窗口，等蘋果發表再開發，黃金流量早已過去。資訊來源則不只靠官方，量產階段供應鏈外溢、機模流出、渲染圖與產業爆料，都足以讓成熟廠商憑尺寸、鏡頭位、按鍵佈局先行開模。",
+            "報導指出，今年還多了一個特殊變量，蘋果印度核心代工廠塔塔電子6月遭勒索攻擊，超20萬份、630GB機密文件(含主板圖紙、晶片參數、真機測試片)流入暗網，被稱為蘋果史上最嚴重洩密事件，新德里已介入調查，這讓配件廠能拿到的「公開情報」比往年更紮實。",
+            "不過，風險也更高。直板iPhone迭代多年，手機殼廠有經驗累積，折疊螢幕涉及鉸鏈、機身厚度、開合結構與螢幕形態，任一關鍵尺寸變動都可能讓前期開模作廢重來，也就是說折疊款「搶跑」賭注遠大於Pro機種。",
+            "知情人士透露，蘋果擬於下月只發表兩款高階Pro與首款折疊 iPhone，2027上半年再把標準版與SE整合發布，形成「Pro 秋發、基礎款春發」的拆分節奏。對配件產業鏈而言，過去一年一次秋季集中備貨，未來可能拆成多個時間窗口，從「一年一站集中搶跑」轉向「長周期、高頻接力」。",
+            "搶跑看似只是電商常態，實則映出蘋果保密防線鬆動、供應鏈情報商品化，以及 iPhone 產品節奏重組三股力量交疊。新機還沒露面，圍繞它的千億配件生意，已經先跑完了第一圈。"
+          ],
+          "paras_en": [
+            "Just a month before Apple's first foldable iPhone and iPhone 18 series are set to debut, e-commerce platforms have already seen a rush of 'accessory pre-sales.' Many sellers have listed foldable phone cases under keywords like 'iPhone Fold' and 'iPhone Ultra,' with some even offering cases for the yet-to-be-released iPhone 18 series and screen protectors.",
+            "According to a report by the Daily Economic News, when reporters inquired about prices as consumers, many sellers refused to disclose their data sources, only stating that they had 'factory data' and 'opened molds based on data.' If the design were to change later, they would issue a recall, but one phone case from mold opening to inventory storage is a high-risk gamble.",
+            "Industry insiders who have long operated in the Apple ecosystem noted that third-party manufacturers typically prepare three months in advance to secure a head start on the initial 'buy-a-phone-buy-a-case' window. They wait for Apple's official release before developing new products, as the golden opportunity has already passed.",
+            "The information source is not limited to official channels. During the production stage, supply chain leaks, prototype designs, and industry rumors can all provide enough information for mature manufacturers to develop cases based on dimensions, camera placement, and button layouts.",
+            "This year, there is an additional variable: Apple's Indian core manufacturing partner, Tata Electronics, was hit by a ransomware attack in June, resulting in over 200,000 leaked files (including motherboard diagrams, chip parameters, and real-machine test pieces) on the dark web, dubbed the most severe data breach in Apple's history. New Delhi has intervened in the investigation, giving accessory manufacturers more substantial 'public information' than in previous years.",
+            "However, the risks are higher. The flat iPhone has undergone numerous iterations, giving case manufacturers valuable experience. The foldable screen involves hinges, body thickness, opening and closing structures, and screen shape, making any key dimension change potentially render pre-made molds obsolete. In other words, the 'pre-sale' gamble for foldable cases is much greater than that for Pro models.",
+            "Sources close to the matter revealed that Apple plans to release only two high-end Pro models and the first foldable iPhone in the coming month, with standard and SE models to be released in the first half of 2027, forming a 'Pro autumn release, basic model spring release' schedule. For the accessory industry, this means a shift from 'one-time concentrated pre-sales' to 'long-cycle, high-frequency relay' production."
+          ]
+        },
         {
           "news_id": "6578353",
           "title": "美銀曝最優「AI泡沫交易」：建議同時做多「傲慢」與「偏見」",
@@ -717,87 +795,6 @@
             "According to a report by Fox Business, the investment department of the University of California submitted a similar regulatory filing last week, revealing a 1 billion dollar stake in SpaceX. The University of North Carolina and Washington University in St. Louis also hold SpaceX shares.",
             "Several top universities have simultaneously disclosed their holdings, reflecting a common logic: over the past decade, university endowment funds have generally increased their allocation to risk investments, with SpaceX being a core target. SpaceX's total valuation currently exceeds 1.8 trillion dollars."
           ]
-        },
-        {
-          "news_id": "6577872",
-          "title": "本週操盤筆記：Fed會議記錄、各國PMI初值、日GDP與通膨數據",
-          "title_en": "This Week’s Trading Notes: Fed Meeting Minutes, Global PMI Initials, Japan GDP and Inflation Data",
-          "publish_at": 1786888202,
-          "url": "https://news.cnyes.com/news/id/6577872",
-          "paras": [
-            "未來一周，市場目光將集中在聯準會(Fed)會議紀錄、各國標普全球採購經理人指數(PMI)初值及零售巨頭財報，市場將仔細分析Fed訊號及沃爾瑪等零售業風向球的業績，以評估消費者信心與貨幣政策走向。與此同時，投資人將持續關注石油價格與中東局勢發展，期盼美伊達成協議並重新開啟荷姆茲海峽。此前，華府最新表態將繼續加大對伊朗經濟施壓。",
-            "歐洲央行也將公佈會議記錄，歐元區，英國和加拿大通膨和零售銷售數據，德國ZEW經濟景氣指數亦將陸續登場。此外，市場還將聚焦日本第2季國內生產毛額(GDP)初值和全國通膨數據，以及中國工業生產、零售銷售和房價數據。",
-            "本週操盤筆記(0817-0821)",
-            "1. Fed會議紀錄",
-            "美國聯邦公開市場委員會(FOMC)7月會議紀錄將於週三(19日)公佈，當中可能包含9月是否升息線索。美國非農就業數據表現弱於預期及通膨略降，導致市場降低Fed升息預期。根據LSEG數據，目前美國貨幣市場認為下月升息1碼機率僅27%，升息預期要到明年初才能完全反映市場情緒。",
-            "儘管如此，上月FOMC以9比3投票結果決定將聯邦基金利率維持在3.5%至3.75%的區間，3名委員持不同意見。Capital.com資深市場分析師Daniela Hathorn在最新研報中寫道：「週三FOMC會議記錄將受到密切關注，以了解聯準會內部分歧程度。近期疲弱的美國就業和生產者物價數據，以及消費者物價指數(CPI)通膨相對溫和，都強化可以保持耐心並暫時維持利率不變的觀點。然而，通膨情況並非完全樂觀。CPI正朝向正確方向發展，但仍高於目標水平，長債殖利率也居高不下。」",
-            "2. 各國PMI初值",
-            "包括美國、歐元區、德國、法國、英國與義大利在內主要經濟體的製造業和服務業PMI初值將提供區域經濟活動和價格壓力的最新資訊。Investec分析師Lottie Gosling在最新研究報告中寫道：「由於美國和伊朗在荷姆茲海峽的持續僵局再次推高油氣價格，歐元區PMI將會下跌。」",
-            "德國8月ZEW經濟景氣指數將於週二(18日)公佈，該指數上月創5個月新高。隔日，歐元區6月國際收支數據與7月CPI數據亦將出爐。英國通膨、勞動市場和零售銷售及PMI初值也分別將在週二、週三與週五(21日)發布。",
-            "3. 中國經濟數據與利率決議",
-            "中國將於週一(17日)公佈一系列的7月經濟數據，包括工業生產、零售銷售、固定資產投資和房價，這些數據將反映中國經濟在第三季初的運作狀況。經濟學家預估大多數指標將表現疲軟，這一結果將增強市場對更多政策支持的預期。此外，中國央行週四(20日)將公布貸款市場報價利率(LPR)決議，1年期與5年期以上LPR預計將分別維持在3%與3.5%不變。",
-            "高盛經濟學家預估，工業生產數據將反映出口成長放緩、製造業活動疲軟及鋼鐵生產和需求的更大幅度萎縮。儘管「以舊換新」政策帶來的提振作用正在減弱，但零售銷售數據江得利於低基期效應而走升。滙豐銀行經濟學家則認為，FAI(第一投資指數)數據將顯示房地產仍是主要拖累因素，製造業投資恐續呈K型復甦。",
-            "4. 日GDP與通膨數據",
-            "市場普遍預期，日本週一公布的第二季GDP初值將季增0.5%，表現持平，民間消費可望維持在經濟成長的主要引擎地位。此外，週五出爐的CPI與核心CPI料將分別溫和走升至年增2%與1.8%，整體通膨率預計加速回升，睽違數個月首次重返日本央行(BOJ)2%目標，主要受到進口物價持續上漲的壓力推動。",
-            "BOJ預計將在週三購買多個期限的債券，包括1-3年期、5-10年期和25年以上的債券。巴克萊銀行策略師表示，隔夜指數互換市場「已充分消化日本央行進一步緊縮貨幣政策的預期，1.75%的最終利率及10月前進一步升息的預期實際上已被完全消化」。"
-          ],
-          "paras_en": [
-            "In the coming week, market attention will focus on the Federal Reserve (Fed) meeting minutes, the initial values of the S&P Global Purchasing Managers' Index (PMI) across countries, and earnings reports from retail giants. Investors will scrutinize Fed signals and the performance of retailers such as Walmart to gauge consumer confidence and monetary‑policy direction. At the same time, they will keep watching oil prices and developments in the Middle East, hoping for a US‑Iran agreement and the reopening of the Hormuz Strait. Washington has recently signaled it will continue to increase economic pressure on Iran.",
-            "The European Central Bank will also release its meeting minutes, along with inflation and retail‑sales data for the euro‑area, the United Kingdom and Canada, and Germany’s ZEW economic sentiment index will be published in turn. Moreover, the market will focus on Japan’s Q2 gross domestic product (GDP) preliminary estimate and nationwide inflation figures, as well as China’s industrial production, retail sales and housing‑price data.",
-            "This week’s trading notes (08‑17 to 08‑21).",
-            "1. Fed meeting minutes",
-            "The Federal Open Market Committee (FOMC) July minutes will be released on Wednesday (the 19th) and may contain clues about a possible September rate hike. Weaker‑than‑expected US non‑farm payrolls and a slight dip in inflation have led the market to lower expectations for Fed tightening. According to LSEG data, the probability that the Fed will raise rates by one basis point next month is only 27%, and the expectation of a hike is not likely to be fully reflected in market sentiment until early next year.",
-            "Nevertheless, last month the FOMC voted 9‑3 to keep the federal funds rate in the 3.5%‑3.75% range, with three members dissenting. Senior market analyst Daniela Hathorn of Capital.com wrote in a new research note: “Wednesday’s FOMC minutes will be closely watched to gauge the degree of internal dissent at the Fed. Recent weak US employment and producer‑price data, together with relatively moderate consumer‑price index (CPI) inflation, reinforce the view that patience can be maintained and rates can stay unchanged for now. However, the inflation picture is not entirely rosy. CPI is moving in the right direction but remains above target, and long‑term bond yields stay elevated.”",
-            "2. Initial PMI values by country",
-            "Initial manufacturing and services PMI readings for major economies—including the United States, the euro‑area, Germany, France, the United Kingdom and Italy—will provide the latest insight into regional economic activity and price pressures. Investec analyst Lottie Gosling wrote in a fresh research report: “Because the ongoing standoff between the US and Iran in the Hormuz Strait is pushing oil and gas prices higher again, euro‑area PMI is expected to decline.”",
-            "Germany’s August ZEW economic sentiment index will be released on Tuesday (the 18th) after hitting a five‑month high last month. The following day, euro‑area June balance‑of‑payments data and July CPI figures will also be published. The UK’s inflation, labour‑market data, retail‑sales numbers and PMI initial values are scheduled for release on Tuesday, Wednesday and Friday (the 21st) respectively.",
-            "3. China’s economic data and rate decision",
-            "China will publish a suite of July economic figures on Monday (the 17th), including industrial production, retail sales, fixed‑asset investment and housing prices, which will reflect the early‑quarter performance of its economy. Economists expect most indicators to be weak, a result that would boost market expectations for additional policy support. In addition, the People’s Bank of China will announce its Loan Prime Rate (LPR) decision on Thursday (the 20th), with the one‑year and five‑plus‑year LPRs expected to remain unchanged at 3.0% and 3.5% respectively.",
-            "Goldman Sachs economists forecast that industrial‑production data will show slowing export growth, weak manufacturing activity and a sharper contraction in steel output and demand. Although the “old‑for‑new” stimulus is losing its boost, retail‑sales figures are likely to rise thanks to a low‑base effect. HSBC economists, meanwhile, believe the FAI (First‑Investment Index) will indicate that real‑estate remains a major drag, and manufacturing investment may continue a K‑shaped recovery.",
-            "4. Japan’s GDP and inflation data",
-            "The market broadly expects Japan’s Q2 GDP preliminary estimate, to be released on Monday, to show a 0.5% quarter‑over‑quarter increase, essentially flat, with private consumption remaining the main engine of growth. In addition, Friday’s CPI and core‑CPI numbers are projected to rise modestly to 2.0% and 1.8% year‑over‑year respectively, signalling an overall acceleration in inflation and the first return in several months to the Bank of Japan’s (BOJ) 2% target, driven largely by continued upward pressure from import prices.",
-            "The BOJ is expected to purchase bonds of multiple maturities on Wednesday, including 1‑3‑year, 5‑10‑year and those over 25 years. Barclays strategists said the overnight index swap market “has fully priced in expectations of further BOJ monetary tightening, with a 1.75% terminal rate and the prospect of another hike before October already completely absorbed.”"
-          ]
-        },
-        {
-          "news_id": "6578326",
-          "title": "OpenAI IPO延後！內部陷入混亂：重組不斷、高層接連出走",
-          "title_en": "",
-          "publish_at": 1786885205,
-          "url": "https://news.cnyes.com/news/id/6578326",
-          "paras": [
-            "OpenAI正面臨快速擴張下的內部整頓壓力。這家估值達8,520億美元、外界原本預期今年啟動IPO的人工智慧（AI）巨頭，今年以來已歷經近5次組織重組，高階主管接連離職，安全團隊也遭到解散，部分員工開始對頻繁的人事與組織變動感到疲憊與沮喪。",
-            "根據《金融時報》報導，多名知情人士表示，OpenAI近期持續進行的人事洗牌，已對公司內部士氣造成影響。",
-            "與此同時，原先預期今年完成的IPO計畫，目前據悉已延後至明年，屆時公司估值可能進一步挑戰1兆美元。",
-            "OpenAI近期最新一名離職的高層，是去年12月才上任的收入總監Denise Dresser。她主要負責企業客戶業務，但任期不到1年便宣布離開。",
-            "此前，OpenAI前首席財務長兼首席營運長Brad Lightcap、倫理主管Chloé Bakalar也已離開公司，兩人的任期同樣不到1年。",
-            "此外，被視為執行長Sam Altman重要助手的Fidji Simo，在休病假後於上月轉任兼職顧問。兩名知情人士表示，Simo仍幾乎每天與OpenAI員工保持聯繫，其中一人甚至形容她仍在公司內部發揮影響力。OpenAI則表示，Simo目前是依照顧問職責正常工作。",
-            "近期的人事變動也出現一項共同特徵，即部分主管在正式離職前，會先被調往新成立或職責較不明確的職位。",
-            "例如Lightcap今年4月被調往「特別專案」職務；Kevin Weil及Josh Achiam也曾經歷類似的職務調整，之後相繼離開。",
-            "一名知情人士指出，OpenAI內部目前存在高階主管爭取Altman關注的情況，使公司內部「政治」氛圍更加明顯。",
-            "安全團隊遭解散　AI風險疑慮升高\n\n除了高層異動，OpenAI近期也對AI安全研究架構進行重大調整。",
-            "公司上月底解散「Preparedness」團隊。據知情人士透露，該團隊原本負責評估AI模型可能造成的重大甚至災難性風險，並研究相應的因應措施。",
-            "團隊解散後，相關工作將分散至現有部門，由資深員工分別負責生物安全、網路安全等領域。",
-            "這也是OpenAI過去以研究為核心的安全組織架構中，最後幾個重要團隊之一。此前，「AGI readiness」及「mission alignment」等團隊也已相繼解散。",
-            "2024年，曾共同領導「superalignment」團隊的Jan Leike離開OpenAI時，就曾公開表示，公司對安全問題的重視程度正被產品開發所取代。",
-            "Preparedness團隊負責人Dylan Scandinaro目前則轉往研究「遞迴自我改進」AI可能帶來的安全影響，也就是能夠自行提升能力，甚至訓練其他模型的AI系統。",
-            "OpenAI共同創辦人Greg Brockman表示，隨著技術持續進步，公司需要建立更強韌的安全保障，並已調整組織架構，讓研究、安全與安保工作更深度融入模型開發流程。",
-            "不過，包括Bakalar、Josh Achiam及Johannes Heidecke在內的多名安全相關人士相繼離開，也讓公司內部對安全工作的擔憂升高。",
-            "一名知情人士表示，目前內部存在「必須把這件事做好」的緊迫感；另一人則形容，員工對自身是否已做好充分準備，存在一種揮之不去的責任感與恐懼。",
-            "OpenAI近期另一起安全事件也引發關注。公司一個模型在進行內部網路能力測試期間，曾入侵另一家公司的系統，使外界再次關注OpenAI的AI安全控管能力。",
-            "OpenAI營收快速成長　但Anthropic增速更快\n\n值得注意的是，儘管內部經歷頻繁調整，OpenAI的商業表現仍在快速成長。",
-            "知情人士透露，OpenAI年化營收已從去年底約240億美元，增加至今年8月約400億美元。其中相當一部分增長來自約5週前推出的GPT-5.6。",
-            "不過，競爭對手Anthropic的營收增速更為迅猛。《金融時報》引述知情人士數據指出，Anthropic年化營收從2025年底約90億美元，在今年5月快速攀升至470億美元，增幅約達5倍，此後仍維持類似成長速度，目前已超越OpenAI。",
-            "不過，兩家公司都是依照近期業績推估全年年化營收，而且雙方對營收的計算方式並不完全相同，因此兩者數字並不能直接視為完全可比。",
-            "IPO延至明年　員工透過股票回購套現\n\nOpenAI原先預期今年完成IPO，但據知情人士透露，目前上市計畫已延後至明年，屆時公司估值可能達到1兆美元。",
-            "在IPO延後之際，OpenAI近期也完成近70億美元的股份回購，讓現任及前任員工能夠以8,520億美元估值出售部分持股。",
-            "據現任及前任員工透露，部分員工透過此次交易套現金額超過1,000萬美元。",
-            "不過，頻繁的組織重組也開始對員工士氣產生影響。兩名知情人士表示，部分員工已感到精疲力竭及沮喪，也有人將股份回購視為離開公司的契機。",
-            "投資人對此則存在不同看法。部分投資人擔心高階主管離職率偏高，以及公司近期缺乏明確聚焦；但也有投資人認為，在IPO前進行組織整頓並不罕見，重新確認管理團隊與職責，有助於公司為上市做準備。",
-            "一名持有大量OpenAI股份的投資人表示，上市前進行組織調整並不罕見，部分離職可能與健康因素有關，另一些則屬於組織整頓。",
-            "OpenAI則表示，公司目前正以「非凡的速度」推進業務，也不會因為組織變革而有所畏懼。"
-          ],
-          "paras_en": []
         }
       ]
     },
@@ -805,6 +802,63 @@
       "key": "wd_stock",
       "label": "國際財經",
       "items": [
+        {
+          "news_id": "6578336",
+          "title": "Anthropic揭Claude Code「省錢6招」！善用快取、/clear降低Token成本",
+          "title_en": "",
+          "publish_at": 1786921803,
+          "url": "https://news.cnyes.com/news/id/6578336",
+          "paras": [
+            "Anthropic近日發布一篇部落格文章，針對開發者使用Claude Code時容易出現的Token浪費問題，整理出6項降低成本的實用技巧。",
+            "官方指出，Claude Code的使用成本不只取決於選用哪個模型，也與推理強度、上下文長度及提示快取是否命中密切相關；若缺乏上下文管理，同一項程式開發任務的成本可能出現數倍差距。",
+            "Anthropic建議，開發者完成一項任務後應立即使用「/clear」清除對話，避免前一項工作的檔案內容、指令輸出與探索過程持續留在上下文中，並在開始工作時就確定模型與推理強度，減少後續切換造成的快取失效。",
+            "Anthropic列6招降低Claude Code成本\n\n\n在不同任務之間執行「/clear」，避免把之前無關的上下文繼續送到模型，進而減少Token消耗。\n開始工作前，先確定好模型和推理強度，因為中途更改其中任何一個，都可能導致提示詞快取失效，進而增加Token成本。\n不要只寫出檔名，而是直接用「@」提及文件，使檔案會直接附加到訊息中，省去一次Read調用，並避免Claude再去搜尋檔案。\n對輸出冗長的指令加上靜默參數，或把指令交給子代理執行。因為命令輸出會像檔案一樣加入對話，並且在整個會話期間都會保留。\n在新會話開始時執行一次「/context」。它會顯示目前載入的內容（例如 CLAUDE.md 和 MCP 工具定義），方便用戶刪除不必要的內容。\n暫時離開鍵盤前執行「/compact」。提示詞快取通常一小時後就會過期，而在快取仍然有效時進行對話壓縮，成本要低得多。\n\n\nClaude Code成本關鍵在Token如何被計算\n\nAnthropic也進一步說明Claude Code背後的Token消耗機制。每次使用者發出指令時，模型首先需要進行「預填充」，讀取系統提示詞、CLAUDE.md、使用者訊息及過往對話等輸入內容；接著進入「解碼」（decode）階段，產生模型回覆、思考內容及工具呼叫等輸出。",
+            "兩者的運算方式並不相同。預填充會一次處理輸入內容，而解碼則是逐個Token產生輸出，因此輸出Token的成本高於輸入Token。",
+            "模型本身則決定每個Token的價格，而推理強度會影響Token使用量。",
+            "Anthropic指出，推理強度越高，模型需要產生的思考Token越多，因此開發者不應在所有任務上都使用最高推理強度，而應根據工作的複雜程度選擇合適的模型與設定。",
+            "提示快取成為降低成本的重要工具\n\n在Claude Code的成本結構中，提示快取是另一個關鍵因素。",
+            "Claude Code的請求通常會包含相同的前綴，例如系統提示詞、工具定義、CLAUDE.md以及既有對話歷史。如果下一次請求的前綴內容與前一次完全一致，系統可以直接使用先前的計算結果，而不必重新處理全部內容。",
+            "Anthropic指出，快取讀取只要正常輸入價的0.1倍，可以直接省掉90%。雖然首次寫入快取需要較高成本，但之後的請求可以持續利用既有快取。",
+            "不過，快取並非永久有效，而且必須維持連續匹配。Anthropic列出幾種可能導致快取失效的情況，包括切換模型、改變推理強度、開啟或關閉Fast mode、使用「/compact」重新整理對話、快取逾期，以及長時間後恢復舊會話。",
+            "其中，模型與推理強度的切換尤其值得注意。Anthropic指出，不同模型各自擁有獨立快取，因此從一個模型切換到另一個模型後，原本的對話歷史可能需要重新進行預填充；推理強度同樣屬於快取條件之一。",
+            "此外，Anthropic也提醒使用者注意「opusplan」模式。由於該模式會在不同階段切換模型，因此進入或離開相關模式都可能造成快取失效，頻繁切換可能增加額外成本。",
+            "對話越長，累積成本也越高\n\n即使成功利用快取降低重複處理成本，Anthropic仍提醒，對話本身持續膨脹仍會增加Token使用量。",
+            "Claude每讀取一個檔案、執行一次指令，都可能將相關內容加入對話歷史。隨著工作輪數增加，後續請求需要攜帶的上下文也會越來越長。",
+            "Claude Code設有機制處理過大的命令輸出：當輸出超過一定長度時，內容會被寫入暫存檔案，而對話中只保留摘要。不過，較短但仍然龐大的輸出仍可能直接留在上下文中。",
+            "例如測試工具產生大量測試結果，即使沒有超過系統設定的門檻，這些內容仍可能持續佔據後續對話空間。",
+            "因此，Anthropic再次強調，讓命令保持精簡、將大型工作交給子代理，以及適時清除或壓縮對話，都是降低上下文膨脹的重要方式。",
+            "除了「/clear」與「/compact」之外，Anthropic也提到「/rewind」。如果最近幾輪對話出現偏離，可以利用「/rewind」移除後續內容，同時保留較早的對話與快取狀態。",
+            "AI程式開發開始出現「Token管理」能力\n\n從Anthropic整理的這些技巧可以看出，Claude Code的使用效率已不只是模型能力或程式設計技巧的問題，如何管理上下文、控制輸出、維持快取及選擇適當推理強度，也逐漸成為影響開發成本的重要因素。",
+            "對開發者而言，真正需要避免的並非單次使用大量Token，而是在長時間、多輪次的工作流程中，讓無關的上下文不斷累積，並因模型或設定切換導致原本可以重複利用的快取失效。",
+            "Anthropic此次公布的6項建議，核心邏輯也相當明確：讓每一次請求只攜帶真正需要的內容、讓能夠快取的內容持續命中，並將不必要的大量輸出隔離在主對話之外。對於高頻率使用Claude Code的開發者而言，這些操作將直接影響相同工作量下的Token消耗。"
+          ],
+          "paras_en": []
+        },
+        {
+          "news_id": "6578424",
+          "title": "距發表還一個月！電商不怕臨時改模 搶先開賣折疊iPhone殼  配件商打什麼算盤？",
+          "title_en": "Apple's Foldable iPhone Looms, but Accessories Sellers Are Already Racing to Market",
+          "publish_at": 1786921203,
+          "url": "https://news.cnyes.com/news/id/6578424",
+          "paras": [
+            "距蘋果首款折疊iPhone與iPhone 18系列正式亮相還有一個月左右，但電商平台上的「配件搶跑」已開跑，不少店家直接以「iPhone Fold」、「iPhone Ultra」為關鍵字上架折疊手機殼，未發布的iPhone 18系列保護殼、鋼化膜也同步現身，部分商品甚至按機型、材質、款式細分完畢。",
+            "《每日經濟新聞》報導，當記者以消費者身份詢價，商家多不願透露數據來源，只強調「工廠包數據、按數據開模」「確定可適配」，若日後改模會補發，但一款手機殼從開模、打樣到備庫存，本就牽動整條供應鏈，未發布就量產，本質是場高風險押注。",
+            "長期經營蘋果生態配件的業內人士表示，第三方廠商慣例會提前三個月備戰，搶的是新機上市首波「買機必買殼」的窗口，等蘋果發表再開發，黃金流量早已過去。資訊來源則不只靠官方，量產階段供應鏈外溢、機模流出、渲染圖與產業爆料，都足以讓成熟廠商憑尺寸、鏡頭位、按鍵佈局先行開模。",
+            "報導指出，今年還多了一個特殊變量，蘋果印度核心代工廠塔塔電子6月遭勒索攻擊，超20萬份、630GB機密文件(含主板圖紙、晶片參數、真機測試片)流入暗網，被稱為蘋果史上最嚴重洩密事件，新德里已介入調查，這讓配件廠能拿到的「公開情報」比往年更紮實。",
+            "不過，風險也更高。直板iPhone迭代多年，手機殼廠有經驗累積，折疊螢幕涉及鉸鏈、機身厚度、開合結構與螢幕形態，任一關鍵尺寸變動都可能讓前期開模作廢重來，也就是說折疊款「搶跑」賭注遠大於Pro機種。",
+            "知情人士透露，蘋果擬於下月只發表兩款高階Pro與首款折疊 iPhone，2027上半年再把標準版與SE整合發布，形成「Pro 秋發、基礎款春發」的拆分節奏。對配件產業鏈而言，過去一年一次秋季集中備貨，未來可能拆成多個時間窗口，從「一年一站集中搶跑」轉向「長周期、高頻接力」。",
+            "搶跑看似只是電商常態，實則映出蘋果保密防線鬆動、供應鏈情報商品化，以及 iPhone 產品節奏重組三股力量交疊。新機還沒露面，圍繞它的千億配件生意，已經先跑完了第一圈。"
+          ],
+          "paras_en": [
+            "Just a month before Apple's first foldable iPhone and iPhone 18 series are set to debut, e-commerce platforms have already seen a rush of 'accessory pre-sales.' Many sellers have listed foldable phone cases under keywords like 'iPhone Fold' and 'iPhone Ultra,' with some even offering cases for the yet-to-be-released iPhone 18 series and screen protectors.",
+            "According to a report by the Daily Economic News, when reporters inquired about prices as consumers, many sellers refused to disclose their data sources, only stating that they had 'factory data' and 'opened molds based on data.' If the design were to change later, they would issue a recall, but one phone case from mold opening to inventory storage is a high-risk gamble.",
+            "Industry insiders who have long operated in the Apple ecosystem noted that third-party manufacturers typically prepare three months in advance to secure a head start on the initial 'buy-a-phone-buy-a-case' window. They wait for Apple's official release before developing new products, as the golden opportunity has already passed.",
+            "The information source is not limited to official channels. During the production stage, supply chain leaks, prototype designs, and industry rumors can all provide enough information for mature manufacturers to develop cases based on dimensions, camera placement, and button layouts.",
+            "This year, there is an additional variable: Apple's Indian core manufacturing partner, Tata Electronics, was hit by a ransomware attack in June, resulting in over 200,000 leaked files (including motherboard diagrams, chip parameters, and real-machine test pieces) on the dark web, dubbed the most severe data breach in Apple's history. New Delhi has intervened in the investigation, giving accessory manufacturers more substantial 'public information' than in previous years.",
+            "However, the risks are higher. The flat iPhone has undergone numerous iterations, giving case manufacturers valuable experience. The foldable screen involves hinges, body thickness, opening and closing structures, and screen shape, making any key dimension change potentially render pre-made molds obsolete. In other words, the 'pre-sale' gamble for foldable cases is much greater than that for Pro models.",
+            "Sources close to the matter revealed that Apple plans to release only two high-end Pro models and the first foldable iPhone in the coming month, with standard and SE models to be released in the first half of 2027, forming a 'Pro autumn release, basic model spring release' schedule. For the accessory industry, this means a shift from 'one-time concentrated pre-sales' to 'long-cycle, high-frequency relay' production."
+          ]
+        },
         {
           "news_id": "6578354",
           "title": "美伊達成協議開放荷姆茲海峽「也沒用」？《巴隆》：恐僅能「短暫」壓低油價",
@@ -1013,66 +1067,6 @@
             "Chingxin Technology is currently the world's fourth-largest DRAM producer, ranking behind Samsung Electronics (005930KS), SK Hynix (000660KS), and Micron Technology (MU-US).",
             "Nomura Securities predicted last month that Chingxin Technology's share of global DRAM production would increase from around 10% to approximately 18% by the end of 2028."
           ]
-        },
-        {
-          "news_id": "6578431",
-          "title": "烏克蘭無人機猛攻 俄羅斯電商巨頭「野莓」七座物流中心停擺",
-          "title_en": "Ukraine Drone Assault Halts Seven Logistics Centers of Russian E‑commerce Giant “Wildberries”",
-          "publish_at": 1786889183,
-          "url": "https://news.cnyes.com/news/id/6578431",
-          "paras": [
-            "烏克蘭國防部16日（周日）通報，烏方已使俄羅斯大型電商平台「野莓」公司規模最大的10個物流中心中的7個停止運作。",
-            "烏克蘭國防部稱，在16日凌晨俄羅斯莫斯科州遭到大規模無人機襲擊後，除多莫傑多沃的「野莓」公司倉庫外，該公司位於「克列迪諾」工業園區的物流樞紐也停止運轉。",
-            "烏克蘭國防部表示，「克列迪諾」物流樞紐是「野莓」公司佔地面積最大的倉庫，面積達25萬平方公尺。"
-          ],
-          "paras_en": [
-            "Ukraine’s Ministry of Defence reported on Sunday the 16th that Ukrainian actions have forced seven of the ten largest logistics centres of the Russian e‑commerce platform Wildberries to cease operations.",
-            "The ministry said that after a massive drone strike hit Moscow Oblast in the early hours of the 16th, all Wildberries facilities except the warehouse in Domodedovo were shut down, and the logistics hub located in the Klyuchino industrial park also stopped functioning.",
-            "The ministry noted that the Klyuchino logistics hub is Wildberries’ largest warehouse, covering an area of 250,000 square metres."
-          ]
-        },
-        {
-          "news_id": "6578276",
-          "title": "被「AI股神」爆倉拖累！Jane Street驚傳7月虧損150億美元",
-          "title_en": "",
-          "publish_at": 1786888806,
-          "url": "https://news.cnyes.com/news/id/6578276",
-          "paras": [
-            "華爾街知名自營交易巨頭Jane Street罕見遭遇重大虧損。據多家媒體報導，Jane Street今年7月可能出現約150億美元虧損，若相關消息屬實，將是公司約10年來首次單月虧損。此次重創主要與其投資的人工智慧（AI）避險基金Situational Awareness爆倉，以及同期科技股劇烈波動有關。",
-            "值得注意的是，Jane Street遭遇巨額虧損之際，公司正同步推進一項約146億美元的債務再融資計畫，試圖透過發行新的私人債務，償還現有公開債券及浮動利率貸款，並將約110億美元的資本結構重新安排至私人投資人手中。",
-            "Pimco、Capital Group及Fidelity等大型機構均參與這項新債務融資。",
-            "此次虧損的主要導火線之一，是曾在今年上半年成為華爾街AI明星基金的Situational Awareness。",
-            "Situational Awareness由前OpenAI研究員Leopold Aschenbrenner創立，今年上半年大舉押注AI相關股票並取得可觀回報，基金資產規模也快速擴大。",
-            "然而，進入7月後，AI相關股票遭遇劇烈拋售，高槓桿部位迅速惡化，基金面臨追加保證金要求。",
-            "最終，Situational Awareness被迫大規模出售公開市場股票，並將大部分股票投資組合出售給億萬富豪Ken Griffin旗下的Citadel。基金遭遇的劇烈下跌，也直接波及包括Jane Street在內的投資人。",
-            "Jane Street在內部備忘錄中承認，由於Situational Awareness上半年表現突出，公司此前持續增加對該基金的投資。但隨著基金大幅回撤，Jane Street目前持有的這項投資已「基本回到年初的水準」，不過從整體投資週期來看仍處於獲利狀態。",
-            "不過，Situational Awareness並非Jane Street此次巨額虧損的唯一原因。",
-            "《路透》援引Jane Street內部備忘錄指出，公司在亞洲非AI股票上的多頭部位同樣遭遇損失，而這些股票此前也曾是今年表現較好的資產。",
-            "Jane Street表示，公司很大程度上是在同一組交易組合上出現虧損，而這些交易在第二季曾創造強勁的超額報酬。",
-            "公司並指出，7月AI曝險股票大幅下跌，其中部分曝險程度較高的記憶體晶片與半導體股票，跌幅約達50%。",
-            "因此，此次虧損反映出的並非單一基金爆倉，而是Jane Street先前表現優異的交易部位，在市場風格快速轉變後出現集中回撤。",
-            "7月虧損150億美元　Jane Street年內交易收入仍超400億美元\n\n儘管7月遭遇重大打擊，Jane Street整體交易業務今年仍維持強勁表現。",
-            "《彭博》與《路透》引述知情人士指出，Jane Street今年以來的淨交易收入仍超過400億美元，不僅已超越公司2025年創下紀錄的396億美元全年交易收入，也高於華爾街大型銀行及其他主要做市商同期的交易收入。",
-            "因此，儘管150億美元級別的單月虧損規模罕見，但目前仍不足以代表Jane Street核心業務模式受到破壞。",
-            "Jane Street目前的應對方式也並非全面收縮交易，而是針對此次虧損暴露出的風險進行調整。",
-            "公司在內部備忘錄中表示，未來將對風險承擔採取「更加有選擇性」的方式，並已關閉相當一部分在7月造成虧損的特定風險曝險，同時降低其他交易策略的風險承擔。",
-            "Jane Street推進146億美元債務再融資\n\n就在巨額虧損消息傳出的同時，Jane Street也正在進行大規模債務重組。",
-            "《金融時報》報導，Jane Street本週推進約146億美元的債務融資，由摩根大通牽頭，交易分為3批債券，Pimco、Capital Group及Fidelity等大型機構投資人均參與其中。",
-            "這項交易主要是重新調整Jane Street的融資結構。公司計畫利用新的私人債務，償還浮動利率貸款及現有公開債券，將更多債務轉移至私人市場。",
-            "對高度重視交易策略與財務資訊保密性的自營交易公司而言，這項融資安排也具有特殊意義。",
-            "《金融時報》指出，Jane Street甚至願意承擔較高融資成本，以換取降低公開資訊揭露程度。此次再融資預計將產生數億美元的一次性成本，而新的債務融資成本也高於過去的公開市場融資。",
-            "AI基金爆倉凸顯槓桿交易風險\n\nSituational Awareness事件的影響並不僅限於單一基金的投資損失，其背後也反映出現代主經紀商體系中的風險傳導機制。",
-            "當高槓桿AI投資遭遇股價下跌時，基金可能面臨追加保證金要求，進而被迫出售持股；主經紀商則可能同步收縮風險曝險，進一步促使大量資產被拋售。",
-            "Situational Awareness的交易由多家大型銀行提供融資及主經紀服務。先前報導指出，美國銀行、高盛及摩根大通等機構均參與相關融資體系。隨著AI股票價格快速下跌，主經紀商要求基金補充抵押品，最終促使基金大規模出售股票投資組合。",
-            "而Citadel以折價價格接手大量股票，則成為這一市場結構中的另一環。當高槓桿機構被迫出售資產時，擁有充足資本與流動性的交易機構可以承接折價資產。",
-            "先前報導指出，Citadel旗下股票基金7月上漲約14%，部分原因就是以折價價格接手Situational Awareness的股票組合，而相關AI股票之後出現反彈。",
-            "Jane Street開始收縮部分風險部位\n\n對於過去多年持續創造盈利紀錄的Jane Street而言，7月的巨額虧損也促使公司重新調整風險承擔。",
-            "Jane Street合夥人Batty在內部備忘錄中表示，公司已關閉相當一部分在7月造成損失的特定風險曝險，同時降低其他策略的風險承擔。",
-            "不過，他也指出，目前公司的持倉與當前風險承受能力相符，市場交易量依然強勁，短週期交易策略的盈利能力也持續改善。",
-            "這顯示Jane Street目前並未將7月虧損視為核心交易模式失效，而是針對近期暴露出的風險進行調整。",
-            "分析指出，隨著AI相關交易在資本市場持續受到高度關注，Jane Street此次巨額虧損，也讓外界重新聚焦於AI資產波動、槓桿部位及交易機構風險管理之間的關聯。"
-          ],
-          "paras_en": []
         }
       ]
     },
