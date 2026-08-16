@@ -1,21 +1,7 @@
 {
-  "generated_at": "2026-08-16T09:50:08+08:00",
+  "generated_at": "2026-08-16T11:08:44+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
-    {
-      "symbol": "WING",
-      "name_zh": "Wingstop",
-      "kind": "US",
-      "price": 126.12,
-      "change_pct": 10.73,
-      "mtd_pct": -2.6,
-      "ytd_pct": -47.12,
-      "market_date": "2026-08-14",
-      "per": 26.2292,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=WING.US",
-      "error": null
-    },
     {
       "symbol": "QQQI",
       "name_zh": "NEOS Nasdaq 100 High Income ETF",
@@ -28,6 +14,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QQQI.US",
+      "error": null
+    },
+    {
+      "symbol": "WING",
+      "name_zh": "Wingstop",
+      "kind": "US",
+      "price": 126.12,
+      "change_pct": 10.73,
+      "mtd_pct": -2.6,
+      "ytd_pct": -47.12,
+      "market_date": "2026-08-14",
+      "per": 26.2292,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=WING.US",
       "error": null
     },
     {
@@ -45,6 +45,76 @@
       "error": null
     },
     {
+      "symbol": "KHC",
+      "name_zh": "The Kraft Heinz",
+      "kind": "US",
+      "price": 25.51,
+      "change_pct": 0.51,
+      "mtd_pct": -1.32,
+      "ytd_pct": 5.2,
+      "market_date": "2026-08-14",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=KHC.US",
+      "error": null
+    },
+    {
+      "symbol": "BABA",
+      "name_zh": "阿里巴巴",
+      "kind": "US",
+      "price": 123.81,
+      "change_pct": 1.35,
+      "mtd_pct": 1.28,
+      "ytd_pct": -15.53,
+      "market_date": "2026-08-14",
+      "per": 18.9574,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BABA.US",
+      "error": null
+    },
+    {
+      "symbol": "JEPQ",
+      "name_zh": "JPMorgan Nasdaq Equity Premium",
+      "kind": "US",
+      "price": 60.53,
+      "change_pct": 0.18,
+      "mtd_pct": 3.91,
+      "ytd_pct": 4.15,
+      "market_date": "2026-08-14",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=JEPQ.US",
+      "error": null
+    },
+    {
+      "symbol": "UBER",
+      "name_zh": "Uber",
+      "kind": "US",
+      "price": 75.95,
+      "change_pct": 0.09,
+      "mtd_pct": 7.94,
+      "ytd_pct": -7.05,
+      "market_date": "2026-08-14",
+      "per": 16.1972,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=UBER.US",
+      "error": null
+    },
+    {
+      "symbol": "O",
+      "name_zh": "Realty Income",
+      "kind": "US",
+      "price": 62.74,
+      "change_pct": -0.33,
+      "mtd_pct": -1.77,
+      "ytd_pct": 11.3,
+      "market_date": "2026-08-14",
+      "per": 47.1475,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=O.US",
+      "error": null
+    },
+    {
       "symbol": "SCHD",
       "name_zh": "Schwab US Dividend Equity ETF",
       "kind": "US",
@@ -56,20 +126,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SCHD.US",
-      "error": null
-    },
-    {
-      "symbol": "QQQM",
-      "name_zh": "Invesco NASDAQ 100 ETF",
-      "kind": "US",
-      "price": 301.01,
-      "change_pct": -0.13,
-      "mtd_pct": 6.26,
-      "ytd_pct": 19.01,
-      "market_date": "2026-08-14",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QQQM.US",
       "error": null
     },
     {
