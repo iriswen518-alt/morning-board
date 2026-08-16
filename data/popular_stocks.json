@@ -1,7 +1,21 @@
 {
-  "generated_at": "2026-08-16T15:38:48+08:00",
+  "generated_at": "2026-08-16T16:39:15+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
+    {
+      "symbol": "PATH",
+      "name_zh": "UiPath",
+      "kind": "US",
+      "price": 16.01,
+      "change_pct": -4.02,
+      "mtd_pct": 25.47,
+      "ytd_pct": -2.32,
+      "market_date": "2026-08-14",
+      "per": 26.3958,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PATH.US",
+      "error": null
+    },
     {
       "symbol": "QQQI",
       "name_zh": "NEOS Nasdaq 100 High Income ETF",
@@ -17,17 +31,45 @@
       "error": null
     },
     {
-      "symbol": "PATH",
-      "name_zh": "UiPath",
+      "symbol": "UBER",
+      "name_zh": "Uber",
       "kind": "US",
-      "price": 16.01,
-      "change_pct": -4.02,
-      "mtd_pct": 25.47,
-      "ytd_pct": -2.32,
+      "price": 75.95,
+      "change_pct": 0.09,
+      "mtd_pct": 7.94,
+      "ytd_pct": -7.05,
       "market_date": "2026-08-14",
-      "per": 26.3958,
+      "per": 16.1972,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PATH.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=UBER.US",
+      "error": null
+    },
+    {
+      "symbol": "ARM",
+      "name_zh": "Arm",
+      "kind": "US",
+      "price": 279.44,
+      "change_pct": 0.28,
+      "mtd_pct": 16.58,
+      "ytd_pct": 155.64,
+      "market_date": "2026-08-14",
+      "per": 278.1199,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ARM.US",
+      "error": null
+    },
+    {
+      "symbol": "NKE",
+      "name_zh": "Nike",
+      "kind": "US",
+      "price": 40.73,
+      "change_pct": -1.21,
+      "mtd_pct": -2.35,
+      "ytd_pct": -36.07,
+      "market_date": "2026-08-14",
+      "per": 19.4702,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NKE.US",
       "error": null
     },
     {
