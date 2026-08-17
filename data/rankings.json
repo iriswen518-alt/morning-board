@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-17T10:02:05+08:00",
+  "generated_at": "2026-08-17T12:01:47+08:00",
   "tw": {
     "as_of": "2026-08-17",
     "top_marketcap": [
@@ -779,7 +779,138 @@
         "source_url": "https://finance.yahoo.com/quote/BAC"
       }
     ],
-    "top_gainers": [],
+    "top_gainers": [
+      {
+        "symbol": "HTFL",
+        "name": "Heartflow, Inc.",
+        "price": 42.08,
+        "daily_pct": 35.7,
+        "market_cap": 3659008768,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": 66.79,
+        "ytd_pct": 44.36,
+        "yahoo": "HTFL",
+        "source_url": "https://finance.yahoo.com/quote/HTFL"
+      },
+      {
+        "symbol": "AAOI",
+        "name": "Applied Optoelectronics, Inc.",
+        "price": 150.28,
+        "daily_pct": 15.53,
+        "market_cap": 12709065728,
+        "pe": 32.655365,
+        "pe_kind": "forward",
+        "mtd_pct": 59.33,
+        "ytd_pct": 331.1,
+        "yahoo": "AAOI",
+        "source_url": "https://finance.yahoo.com/quote/AAOI"
+      },
+      {
+        "symbol": "RDDT",
+        "name": "Reddit, Inc.",
+        "price": 178.09,
+        "daily_pct": 12.63,
+        "market_cap": 34263894016,
+        "pe": 41.51282,
+        "pe_kind": "trailing",
+        "mtd_pct": 26.6,
+        "ytd_pct": -22.53,
+        "yahoo": "RDDT",
+        "source_url": "https://finance.yahoo.com/quote/RDDT"
+      },
+      {
+        "symbol": "WING",
+        "name": "Wingstop Inc.",
+        "price": 126.12,
+        "daily_pct": 10.73,
+        "market_cap": 3435830016,
+        "pe": 29.815603,
+        "pe_kind": "trailing",
+        "mtd_pct": -2.6,
+        "ytd_pct": -47.12,
+        "yahoo": "WING",
+        "source_url": "https://finance.yahoo.com/quote/WING"
+      },
+      {
+        "symbol": "MXL",
+        "name": "MaxLinear, Inc",
+        "price": 84.84,
+        "daily_pct": 10.68,
+        "market_cap": 7694410240,
+        "pe": 32.84489,
+        "pe_kind": "forward",
+        "mtd_pct": 26.97,
+        "ytd_pct": 386.75,
+        "yahoo": "MXL",
+        "source_url": "https://finance.yahoo.com/quote/MXL"
+      },
+      {
+        "symbol": "STDN",
+        "name": "Standard Nuclear, Inc.",
+        "price": 13.31,
+        "daily_pct": 10.09,
+        "market_cap": 2138564864,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": 68.69,
+        "ytd_pct": null,
+        "yahoo": "STDN",
+        "source_url": "https://finance.yahoo.com/quote/STDN"
+      },
+      {
+        "symbol": "VERA",
+        "name": "Vera Therapeutics, Inc.",
+        "price": 31.63,
+        "daily_pct": 9.48,
+        "market_cap": 2279363328,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": -1.46,
+        "ytd_pct": -37.54,
+        "yahoo": "VERA",
+        "source_url": "https://finance.yahoo.com/quote/VERA"
+      },
+      {
+        "symbol": "NU",
+        "name": "Nu Holdings Ltd.",
+        "price": 15.23,
+        "daily_pct": 9.33,
+        "market_cap": 73571385344,
+        "pe": 20.863012,
+        "pe_kind": "trailing",
+        "mtd_pct": 6.28,
+        "ytd_pct": -9.02,
+        "yahoo": "NU",
+        "source_url": "https://finance.yahoo.com/quote/NU"
+      },
+      {
+        "symbol": "AVAH",
+        "name": "Aveanna Healthcare Holdings Inc",
+        "price": 12.32,
+        "daily_pct": 9.12,
+        "market_cap": 2682744064,
+        "pe": 9.777778,
+        "pe_kind": "trailing",
+        "mtd_pct": 31.2,
+        "ytd_pct": 50.8,
+        "yahoo": "AVAH",
+        "source_url": "https://finance.yahoo.com/quote/AVAH"
+      },
+      {
+        "symbol": "ALM",
+        "name": "Almonty Industries Inc.",
+        "price": 15.09,
+        "daily_pct": 8.95,
+        "market_cap": 4353174528,
+        "pe": 68.59091,
+        "pe_kind": "trailing",
+        "mtd_pct": 36.44,
+        "ytd_pct": 71.28,
+        "yahoo": "ALM",
+        "source_url": "https://finance.yahoo.com/quote/ALM"
+      }
+    ],
     "top_losers": [
       {
         "symbol": "BLSH",
@@ -1005,19 +1136,6 @@
         "source_url": "https://finance.yahoo.com/quote/IWM"
       },
       {
-        "symbol": "XLP",
-        "name": "State Street Consumer Staples S",
-        "price": 86.09,
-        "daily_pct": 1.14,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": 1.22,
-        "ytd_pct": 10.83,
-        "yahoo": "XLP",
-        "source_url": "https://finance.yahoo.com/quote/XLP"
-      },
-      {
         "symbol": "QQQ",
         "name": "Invesco QQQ Trust, Series 1",
         "price": 731.07,
@@ -1042,6 +1160,19 @@
         "ytd_pct": 31.98,
         "yahoo": "XLK",
         "source_url": "https://finance.yahoo.com/quote/XLK"
+      },
+      {
+        "symbol": "XLV",
+        "name": "State Street Health Care Select",
+        "price": 167.37,
+        "daily_pct": 1.02,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": 2.97,
+        "ytd_pct": 8.12,
+        "yahoo": "XLV",
+        "source_url": "https://finance.yahoo.com/quote/XLV"
       }
     ],
     "sectors": [
@@ -1086,20 +1217,6 @@
         "yahoo": "XLC",
         "source_url": "https://finance.yahoo.com/quote/XLC",
         "name_zh": "通訊"
-      },
-      {
-        "symbol": "XLP",
-        "name": "State Street Consumer Staples S",
-        "price": 86.09,
-        "daily_pct": 1.14,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": 1.22,
-        "ytd_pct": 10.83,
-        "yahoo": "XLP",
-        "source_url": "https://finance.yahoo.com/quote/XLP",
-        "name_zh": "必需消費"
       },
       {
         "symbol": "XLK",
@@ -1156,6 +1273,20 @@
         "yahoo": "XLI",
         "source_url": "https://finance.yahoo.com/quote/XLI",
         "name_zh": "工業"
+      },
+      {
+        "symbol": "XLRE",
+        "name": "State Street Real Estate Select",
+        "price": 45.27,
+        "daily_pct": 0.64,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": 0.44,
+        "ytd_pct": 12.19,
+        "yahoo": "XLRE",
+        "source_url": "https://finance.yahoo.com/quote/XLRE",
+        "name_zh": "房地產"
       },
       {
         "symbol": "XLB",
