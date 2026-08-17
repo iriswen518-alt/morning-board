@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-17T15:02:16+08:00",
+  "generated_at": "2026-08-17T17:02:07+08:00",
   "tw": {
     "as_of": "2026-08-17",
     "top_marketcap": [
@@ -1123,6 +1123,19 @@
         "source_url": "https://finance.yahoo.com/quote/SOXX"
       },
       {
+        "symbol": "IWM",
+        "name": "iShares Russell 2000 Index Fund",
+        "price": 305.09,
+        "daily_pct": 1.17,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": 4.77,
+        "ytd_pct": 23.94,
+        "yahoo": "IWM",
+        "source_url": "https://finance.yahoo.com/quote/IWM"
+      },
+      {
         "symbol": "XLP",
         "name": "State Street Consumer Staples S",
         "price": 86.09,
@@ -1160,19 +1173,6 @@
         "ytd_pct": 31.98,
         "yahoo": "XLK",
         "source_url": "https://finance.yahoo.com/quote/XLK"
-      },
-      {
-        "symbol": "XLV",
-        "name": "State Street Health Care Select",
-        "price": 167.37,
-        "daily_pct": 1.02,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": 2.97,
-        "ytd_pct": 8.12,
-        "yahoo": "XLV",
-        "source_url": "https://finance.yahoo.com/quote/XLV"
       }
     ],
     "sectors": [
@@ -1287,6 +1287,20 @@
         "yahoo": "XLI",
         "source_url": "https://finance.yahoo.com/quote/XLI",
         "name_zh": "工業"
+      },
+      {
+        "symbol": "XLRE",
+        "name": "State Street Real Estate Select",
+        "price": 45.27,
+        "daily_pct": 0.64,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": 0.44,
+        "ytd_pct": 12.19,
+        "yahoo": "XLRE",
+        "source_url": "https://finance.yahoo.com/quote/XLRE",
+        "name_zh": "房地產"
       },
       {
         "symbol": "XLB",
