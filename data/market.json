@@ -15,7 +15,7 @@
       "name_zh": null,
       "close": 26729.16015625,
       "daily_pct": -0.28,
-      "mtd_pct": 6.4,
+      "mtd_pct": 5.34,
       "ytd_pct": 15.0,
       "closing_date": "2026-08-14"
     },
@@ -33,7 +33,7 @@
       "name_zh": null,
       "close": 12417.0498046875,
       "daily_pct": -0.31,
-      "mtd_pct": 9.86,
+      "mtd_pct": 9.78,
       "ytd_pct": 75.3,
       "closing_date": "2026-08-14"
     },
@@ -42,7 +42,7 @@
       "name_zh": null,
       "close": 6539.58984375,
       "daily_pct": -0.09,
-      "mtd_pct": 3.08,
+      "mtd_pct": 2.86,
       "ytd_pct": 12.83,
       "closing_date": "2026-08-14"
     },
@@ -60,7 +60,7 @@
       "name_zh": null,
       "close": 10750.099609375,
       "daily_pct": -0.21,
-      "mtd_pct": -1.35,
+      "mtd_pct": -1.09,
       "ytd_pct": 8.24,
       "closing_date": "2026-08-14"
     },
@@ -87,7 +87,7 @@
       "name_zh": null,
       "close": 45857.27,
       "daily_pct": 0.1,
-      "mtd_pct": 14.72,
+      "mtd_pct": 6.24,
       "ytd_pct": 58.17,
       "closing_date": "2026-08-17"
     },
@@ -114,32 +114,32 @@
       "name_zh": null,
       "close": 6977.93994140625,
       "daily_pct": 2.42,
-      "mtd_pct": 24.75,
+      "mtd_pct": 5.8,
       "ytd_pct": 65.58,
       "closing_date": "2026-08-14"
     },
     {
       "name": "Hang Seng 恆生",
       "name_zh": null,
-      "close": 25116.849609375,
-      "daily_pct": -1.1,
-      "mtd_pct": -2.87,
+      "close": 25453.23046875,
+      "daily_pct": 1.34,
+      "mtd_pct": -2.97,
       "ytd_pct": -2.0,
-      "closing_date": "2026-08-14"
+      "closing_date": "2026-08-17"
     },
     {
       "name": "Shanghai 上證",
       "name_zh": null,
-      "close": 3981.115478515625,
-      "daily_pct": 1.37,
-      "mtd_pct": 3.22,
+      "close": 3982.653564453125,
+      "daily_pct": 1.41,
+      "mtd_pct": 2.48,
       "ytd_pct": -1.05,
       "closing_date": "2026-08-17"
     },
     {
       "name": "CSI 300 滬深300",
       "name_zh": null,
-      "close": 4740.03125,
+      "close": 4741.09814453125,
       "daily_pct": null,
       "mtd_pct": -9.04,
       "ytd_pct": -2.18,
@@ -195,10 +195,10 @@
     },
     {
       "name": "UK 10-Year",
-      "yield_pct": 5.04,
-      "daily_bps": 1.64,
-      "mtd_bps": -6.02,
-      "closing_date": "2026-08-12"
+      "yield_pct": 5.03,
+      "daily_bps": -1.69,
+      "mtd_bps": -7.71,
+      "closing_date": "2026-08-13"
     },
     {
       "name": "TW 10-Year",
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 99.66999816894531,
       "daily_pct": -0.29,
-      "mtd_pct": -0.38,
-      "ytd_pct": 1.16,
+      "mtd_pct": -0.45,
+      "ytd_pct": 1.09,
       "closing_date": "2026-08-14"
     },
     {
@@ -243,11 +243,11 @@
     },
     {
       "name": "USD/CNY 人民幣",
-      "close": 6.743299961090088,
-      "daily_pct": -0.03,
-      "mtd_pct": -0.17,
-      "ytd_pct": -3.61,
-      "closing_date": "2026-08-13"
+      "close": 6.742800235748291,
+      "daily_pct": -0.01,
+      "mtd_pct": -0.18,
+      "ytd_pct": -3.62,
+      "closing_date": "2026-08-14"
     },
     {
       "name": "USD/TWD 新台幣",
@@ -301,11 +301,11 @@
     },
     {
       "name": "比特幣 (USD)",
-      "close": 63024.3203125,
-      "daily_pct": 0.08,
-      "mtd_pct": 0.34,
-      "ytd_pct": -27.98,
-      "closing_date": "2026-08-15"
+      "close": 62818.65234375,
+      "daily_pct": -0.33,
+      "mtd_pct": 0.01,
+      "ytd_pct": -28.21,
+      "closing_date": "2026-08-16"
     }
   ],
   "bond_etfs": [
@@ -314,7 +314,7 @@
       "name_zh": null,
       "close": 106.12000274658203,
       "daily_pct": -0.4,
-      "mtd_pct": -0.27,
+      "mtd_pct": -0.12,
       "ytd_pct": -3.69,
       "closing_date": "2026-08-14"
     },
@@ -416,7 +416,7 @@
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 3.82,
+      "implied_rate": 3.83,
       "delta_rate": 0.11,
       "delta_bps": 11.0,
       "p_hike": 44.0,
@@ -425,5 +425,5 @@
       "is_reference": false
     }
   ],
-  "summary": "8/14 KOSPI +2.42%、8/17 Shanghai 上證 +1.37%、8/17 Nikkei 225 +0.74% 領漲；8/14 Hang Seng 恆生 -1.10%、8/17 S&P/ASX 200 -0.46% 走弱。"
+  "summary": "8/14 KOSPI +2.42%、8/17 Shanghai 上證 +1.41%、8/17 Hang Seng 恆生 +1.34% 領漲；8/17 S&P/ASX 200 -0.46%、8/14 台指期(近月) -0.40% 走弱。"
 }
