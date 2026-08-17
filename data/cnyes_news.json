@@ -1,11 +1,103 @@
 {
-  "built_at": "2026-08-17T13:02",
+  "built_at": "2026-08-17T13:46",
   "source": "鉅亨網（cnyes）",
   "categories": [
     {
       "key": "headline",
       "label": "鉅亨頭條",
       "items": [
+        {
+          "news_id": "6579054",
+          "title": "DeepSeek今天正式漲價 採用峰谷定價",
+          "title_en": "DeepSeek Raises Prices Today, Implements Peak‑Off‑Peak Pricing",
+          "publish_at": 1786944674,
+          "url": "https://news.cnyes.com/news/id/6579054",
+          "paras": [
+            "近日DeepSeek官方宣布對DeepSeek API價格進行更新調整，並採用峰谷定價，空閒時段價格為高峰時段價格的一半，新價格已於17日（周一）零時正式生效。",
+            "根據DeepSeek的最新定價，對於DeepSeek-V4-Flash模型，百萬tokens輸入（緩存命中）空閒時段價格為人民幣（下同）0.05元，高峰時段價格0.1元；百萬tokens輸入（緩存未命中）空閒時段價格1.5元，高峰時段3元；百萬tokens輸出空閒時段價格4.5元，高峰時段價格9元。",
+            "對於DeepSeek-V4-Pro模型，百萬tokens輸入（緩存命中）空閒時段價格為0.15元，高峰時段價格0.3元；百萬tokens輸入（緩存未命中）空閒時段價格4.5元，高峰時段9元；百萬tokens輸出空閒時段價格13.5元，高峰時段價格27元。",
+            "高峰時段為台灣時間9:00～12:00、14:00～18:00，其餘為空閒時段。",
+            "據《觀察者網》報導，業界人士將DeepSeek引入峰谷定價機制，解讀為其在算力資源稀缺背景下的標準化調度工具，漲價決定則被分析理解為算力成本高漲壓力下的應對策略。",
+            "受算力供需影響，近半年來多家中國國產大模型服務商都採取了漲價、調整付費模式等舉措。例如，智譜執行長張鵬4月表示，2026年第一季智譜API調用定價提升83%。豆包專業版於6月也宣布，採用標準/加強/高級套餐連續包月分別為68元、200元、500元三級階梯定價模式。"
+          ],
+          "paras_en": [
+            "DeepSeek announced a price update for its API, introducing a peak‑off‑peak model where the off‑peak rate is half the peak rate. The new pricing took effect at midnight on Monday the 17th.",
+            "Under the new rates for the DeepSeek‑V4‑Flash model, the off‑peak price for cached input is RMB 0.05 per million tokens and RMB 0.10 during peak hours; uncached input costs RMB 1.5 off‑peak and RMB 3.0 peak; output costs RMB 4.5 off‑peak and RMB 9.0 peak.",
+            "For the DeepSeek‑V4‑Pro model, cached input is priced at RMB 0.15 off‑peak and RMB 0.30 peak; uncached input is RMB 4.5 off‑peak and RMB 9.0 peak; output is RMB 13.5 off‑peak and RMB 27.0 peak.",
+            "Peak hours are defined as 09:00‑12:00 and 14:00‑18:00 Taiwan time, with all other times considered off‑peak.",
+            "According to Observer.com, industry insiders view DeepSeek’s adoption of peak‑off‑peak pricing as a standardized scheduling tool amid scarce compute resources, and see the price hike as a response to rising compute‑cost pressures.",
+            "Due to compute supply‑demand dynamics, several Chinese domestic large‑model providers have raised prices or altered payment models in the past six months. For example, Zhipu CEO Zhang Peng said in April that Zhipu API pricing would increase by 83% in Q1 2026, and Doubao’s professional tier announced in June a three‑tier monthly plan of RMB 68, 200 and 500 for standard, enhanced and premium packages."
+          ]
+        },
+        {
+          "news_id": "6579046",
+          "title": "支出正在轉化為收益？華爾街科技巨頭AI投資變現",
+          "title_en": "Is Spending Turning into Profit? Wall Street Tech Giants' AI Investment Begins to Bear Fruit",
+          "publish_at": 1786944605,
+          "url": "https://news.cnyes.com/news/id/6579046",
+          "paras": [
+            "隨著股市重回歷史新高，華爾街策略師觀察到大型科技公司在人工智慧(AI)領域的巨額投資正開始產生回報，特別是擁有龐大雲端業務的「超大規模業者」(hyperscalers)。",
+            "Truist 首席投資策略師 Keith Lerner 指出，「支出正在引領獲利」，這顯示出 AI 投資的變現能力正逐步顯現。",
+            "基於強勁的盈餘展望與雲端需求，摩根大通已將標普 500 指數的目標價從 7,800 點調升至 8,000 點。",
+            "在各大科技巨頭中，雲端業務的表現尤為亮眼。微軟(MSFT-US)的 Azure 業務年銷售額首次突破 1,000 億美元，帶動其雲端營收創下歷史紀錄，並預計本季將進一步加速成長。亞馬遜(AMZN-US)旗下的 AWS 成長率達到 36.7%，創下 18 季以來的最快增速。Alphabet (GOOGL-US)的雲端業務同樣呈現爆發式成長，而 Meta (META-US)甚至在考慮出租其部分的計算能力。",
+            "所有這些承諾都需要更多投資，根據美銀研究報告，前四大雲端服務商的積壓訂單金額已超過 2.3 兆美元，較第一季增長 16%。",
+            "為應對強勁需求，Alphabet、亞馬遜、微軟和 Meta 今年預計將集體投入約 7,250 億至 7,600 億美元的資本支出用於建構 AI 基礎設施。",
+            "摩根大通策略師 Dubravko Lakos-Bujas 指出，雖然多數業者的自由現金流在 2027 財年可能仍為負值，但其業務增長速度已超過支出增長，這是一個需求開始追上龐大資本支出的信號。分析師預測，貨幣化進程可能開始比支出增長更快，這將支撐未來的營收成長並緩解投資者對投資報酬率(ROIC)的疑慮。",
+            "此外，Sevens Report Research 創辦人 Tom Essaye 認為，在半導體和記憶體之後，雲端容量將成為 AI 數據建設的下一個瓶頸。"
+          ],
+          "paras_en": [
+            "As the stock market returns to historical highs, Wall Street strategists have observed that large tech companies' massive investments in artificial intelligence (AI) are starting to yield returns, particularly among \"hyperscalers\" with significant cloud businesses.",
+            "Truist Chief Investment Strategist Keith Lerner notes that \"spending is leading to profits,\" indicating that the payback potential of AI investments is gradually emerging.",
+            "Based on strong earnings outlooks and cloud demand, JPMorgan has raised its target price for the S&P 500 index to 8,000 from 7,800.",
+            "Among the major tech giants, cloud businesses have shone particularly brightly. Microsoft's (MSFT-US) Azure business has surpassed $100 billion in annual sales for the first time, driving its cloud revenue to a historical record and expected to accelerate further this quarter. Amazon's (AMZN-US) AWS growth rate reached 36.7%, the fastest pace in 18 quarters. Alphabet (GOOGL-US) cloud business has also shown explosive growth, while Meta (META-US) is even considering renting out some of its computing capacity.",
+            "All these commitments require more investment, according to a Goldman Sachs report, which found that the accumulated backlogged orders of the top four cloud service providers have exceeded $230 billion, up 16% from the first quarter.",
+            "To meet the strong demand, Alphabet, Amazon, Microsoft, and Meta are expected to collectively invest around $725 billion to $760 billion in capital expenditures to build AI infrastructure this year.",
+            "JPMorgan strategist Dubravko Lakos-Bujas notes that while most companies' free cash flow may still be negative in the 2027 fiscal year, their business growth rate has already surpassed spending growth, signaling that demand is catching up with massive capital expenditures. Analysts predict that the monetization process may begin to outpace spending growth, supporting future revenue growth and alleviating concerns about return on investment (ROIC).",
+            "Furthermore, Sevens Report Research founder Tom Essaye believes that cloud capacity will become the next bottleneck in AI data construction, following semiconductors and memory."
+          ]
+        },
+        {
+          "news_id": "6578945",
+          "title": "伊朗懸賞3萬美元「殺美軍」！女性出手獎金翻倍",
+          "title_en": "",
+          "publish_at": 1786943268,
+          "url": "https://news.cnyes.com/news/id/6578945",
+          "paras": [
+            "伊朗軍方週日（16日）宣布，將提供最高3萬美元（約新台幣96萬）的獎金，鼓勵民眾殺死或俘虜美國軍人；若由女性完成相關行動，獎金將提高至兩倍。伊朗陸軍司令哈塔米（Amir Hatami）表示，這項計畫是在收到「大量請求」後制定。",
+            "根據《南華早報》引述伊朗國營通訊社《IRNA》報導，哈塔米表示：「任何殺死或俘虜並將入侵的美國軍事人員交給伊朗方面的人，都將獲得伊朗伊斯蘭共和國陸軍提供的相當於3萬美元或50億伊朗土曼（Iranian toman）的獎勵。」",
+            "土曼是伊朗民間使用的貨幣單位，1土曼相當於1萬伊朗里亞爾。",
+            "他還表示：「勇敢的伊朗女性若完成這類行動，將獲得雙倍獎勵。」",
+            "哈塔米同時重申伊朗要求美國撤出中東的立場，並表示美軍「不再獲准進入波斯灣、阿曼灣或荷姆茲海峽」。",
+            "目前已知在這場中東戰爭期間，美軍並未在伊朗境內部署地面部隊，唯一例外是4月為救援一名墜落的美軍飛行員而執行的行動。",
+            "戰事爆發一個多月後，美軍展開大規模救援行動，試圖救出一架F-15戰機的武器系統官。當時約有200名美軍人員及超過170架軍機投入行動，爭取在伊朗部隊找到這名軍人之前將其救出。",
+            "救援行動期間，伊朗部隊擊傷一架A-10攻擊機，該機最終在友軍控制區域棄置。",
+            "據報導，美軍也放棄並摧毀了部分參與這次任務的軍機，其中包括一架C-130運輸機。",
+            "經過近40天的戰鬥後，戰事於4月透過停火暫時告一段落，雙方隨後在6月建立和平談判框架，但該框架最終宣告破裂。",
+            "此後，伊朗與美國仍不時發生交火，戰鬥主要集中在伊朗南部以及荷姆茲海峽周邊。",
+            "雙方透過中間人維持間接接觸，但目前幾乎看不到外交取得突破的跡象。伊朗也提出重新開放荷姆茲海峽的條件，包括要求賠償戰爭造成的損失。",
+            "自戰爭爆發以來，共有17名美軍人員死亡，最近一批死亡事件發生於7月。這些人員全部是在伊朗境外喪生，包括約旦與伊拉克等國家。"
+          ],
+          "paras_en": []
+        },
+        {
+          "news_id": "6579023",
+          "title": "〈焦點股〉凌巨Q2財報未如期申報 股價跳空鎖跌停",
+          "title_en": "Ling Jyu's Q2 Financial Report Fails to Meet Deadline, Stock Price Plummets",
+          "publish_at": 1786942104,
+          "url": "https://news.cnyes.com/news/id/6579023",
+          "paras": [
+            "中小尺寸凌巨(8105-TW)因董事會僅有1人，導致第二季財報無法如期申報，今(17)日股價開盤即跳空跌停鎖住。",
+            "證交所上周五公告，本國上市公司(不含金融保險公司)應於14日完成年第二季財務報告申報，本次應申報的 961 家公司中，除凌巨無法如期申報外，其餘 960 家均已順利完成作業。",
+            "據了解，凌巨董事會原有6席董事及3席獨董，但自6月25日股東會解任1席董事，隔日法人董事日商凸版控股因轉讓凌巨私募股權，4席法人董事及代表人當然解任，3名獨董也於7月8日至13日相繼辭任，導致董事會僅剩1人。",
+            "凌巨表示，由於目前現任董事僅有1人，能否組成董事會議決第二季財報有疑義，公司也曾於7月17日去函證期局申請延長財務報告公告申報期限，但未獲核准展延；凌巨也擬於8月24日召開股東臨時會，全面改選董事。"
+          ],
+          "paras_en": [
+            "Ling Jyu (8105-TW), a small to medium-sized company, has only one board member, resulting in its inability to submit its Q2 financial report on time. As a result, its stock price plummeted and was locked at the lower limit on the 17th.",
+            "The Taiwan Stock Exchange announced last Friday that domestic listed companies (excluding financial and insurance companies) should have completed their second-quarter financial report submissions by the 14th. Among the 961 companies that were required to submit reports, all 960 companies except Ling Jyu have completed the process.",
+            "It is understood that Ling Jyu's board of directors originally had six seats and three independent directors. However, after the shareholders' meeting on June 25, one director was removed, and the next day, the corporate director, Toppan Inc., transferred Ling Jyu's private placement shares, resulting in the removal of four corporate directors and their representatives. The three independent directors also resigned between July 8 and 13, leaving only one director on the board.",
+            "Ling Jyu stated that since there is currently only one director, there is uncertainty about whether the board can convene to decide on the Q2 financial report. The company had applied to the Financial Supervisory Commission to extend the deadline for submitting the financial report on July 17 but was not approved. Ling Jyu plans to hold an extraordinary shareholders' meeting on August 24 to fully elect new directors."
+          ]
+        },
         {
           "news_id": "6578974",
           "title": "〈焦點股〉汎瑋Q2獲利年增翻倍 激勵股價亮燈飆漲停",
@@ -106,107 +198,6 @@
             "不過，這類高成長標的本身也伴隨較高波動與不確定性。SpaceX、生技公司及加密金融相關企業均仍處於快速發展階段，因此ARK第2季近30%的單季報酬，也與其集中布局高成長創新題材的投資風格密切相關。"
           ],
           "paras_en": []
-        },
-        {
-          "news_id": "6578965",
-          "title": "光電拐點來了？中國多晶矽一天暴漲近24% 全產業鏈掀漲價潮",
-          "title_en": "",
-          "publish_at": 1786939204,
-          "url": "https://news.cnyes.com/news/id/6578965",
-          "paras": [
-            "中國光電產業價格出現久違的全面反彈。多晶矽市場連續兩週幾乎無成交、企業暫停報價後，上周五（14日）現貨價格突然暴漲23.81%，重返每噸3.9萬元(人民幣，下同)，並帶動電池片、光電玻璃同步走高。隨著「反內捲」政策加速落地、龍頭企業承諾不低於成本銷售，市場開始關注，深陷價格戰多時的光電產業是否已迎來轉捩點。",
-            "百川盈孚數據顯示，中國多晶矽上周五價格一口氣上調每噸7500元，單日漲幅達23.81%，最新報價來到每噸3.9萬元；電池片報價升至每瓦0.34元，一周累計漲幅接近26%；光電玻璃報價則來到每平方公尺9.5元，一周累計上漲10.46%，產業鏈漲價態勢明顯。",
-            "期貨市場也同步走強，廣州期貨交易所多晶矽主力期貨上周五收盤站上每噸3.9萬元，結算價報3.83萬元，自7月31日以來累計漲幅已超過20%。",
-            "在此之前，八家多晶矽企業已聯合倡議，要求杜絕低於成本銷售，並嚴格執行能耗標準。",
-            "摩根大通8月9日發布研究預計，矽料價格潛在上漲空間可達每噸5萬至5.5萬元，相當於邊際生產商的完全成本加上13%增值稅水準。",
-            "「反內捲」走進深水區",
-            "這波價格反彈背後，中國官方針對光電產業「反內捲」的整治正持續深入。今年4月召開的中共中央政治局會議提出，深入整治「內捲式」競爭，而光電產業因階段性供需失衡、價格持續承壓，成為「反內捲」治理的重點產業之一。",
-            "今年以來，中國工業和資訊化部已多次召開會議推動光電產業治理。今年1月召開光電產業企業家座談會，4月工信部、國家發改委、市場監管總局及國家能源局等部門再度聯合召開光電產業座談會，部署規範產業競爭秩序。",
-            "制度面也同步收緊。今年7月，《矽單晶單位產品能源消耗限額》等三項光電領域強制性國家標準發布，藉由提高綠色准入門檻，推動落後產能出清及產業升級。",
-            "同月發布的《光電產業成本會計模型通則》，則首次統一矽料、矽片、電池及組件四大環節的成本核算口徑，解決過去不同企業成本認定不一、低價傾銷難以判定的問題。",
-            "監管力道也進一步延伸至價格競爭。中國國家市場監督管理總局7月對光電產業進行價格合規指導，透過提醒敦促、合規約談及行政指導等方式，引導企業規範價格競爭行為，對嚴重擾亂市場秩序且經提醒、約談後仍未整改的業者，將依法處置。",
-            "八大矽料龍頭聯手 杜絕低於成本銷售",
-            "除了政策介入，產業自律也同步升級。8月6日，中國八大多晶矽龍頭企業共同簽署《反內卷倡議書》，承諾產品售價不得低於完全成本，並提出嚴格執行《價格法》、設立產業價格紅線等建議；對低於價格紅線銷售的企業，倡議全產業不得向其供貨，並建議金融機構停止對低於成本銷售、進行惡性競爭的企業提供融資支持。",
-            "在政策與產業自律同步推進下，資本市場已率先反映改善預期。自7月21日以來，Wind光電指數震盪走高，區間累計漲幅超過12%；同期有25檔光電類股漲幅超過10%，其中羅博特科累計漲逾38%，弘元綠能上漲超過30%，通威股份、拉普拉斯漲幅均超過20%。",
-            "需求回溫仍待觀察 產業押注困境反轉",
-            "企業端對產業前景也出現較積極訊號。晶科能源7月底表示，近期某央企公開招標結果顯示，公司以較高報價成為TOPCon標段第一候選人，反映央企、國企招標正逐漸擺脫單純追求最低價格，轉向綜合考量全生命週期發電量、品牌保固、企業長期營運穩定性及履約能力。",
-            "阿特斯則指出，長期來看，清潔、低成本的光電需求仍將穩定成長，預計明年需求將恢復成長。隨著落後產能出清、產業自律增強以及需求穩定恢復，產業鏈獲利可望逐步回到合理水準。",
-            "市場也開始押注光電業「困境反轉」。在至少獲5家機構評級的企業中，目前已有12家被機構一致預測可望在2027年轉虧為盈。",
-            "其中，隆基綠能獲13家機構參與評級，2027年預測淨利中位數達36.19億元；晶科能源、通威股份、天合光能及TCL中環等公司，2027年預測淨利中位數也都超過20億元。",
-            "從現貨一天暴漲近24%、產業鏈同步漲價，到政策「反內捲」、企業自律及落後產能出清逐步推進，光電產業的價格環境確實正出現變化。不過，產業能否真正走出長期供需失衡與虧損局面，仍取決於產能出清進度、價格秩序能否維持，以及終端需求能否如預期恢復成長。"
-          ],
-          "paras_en": []
-        },
-        {
-          "news_id": "6578930",
-          "title": "AI盛宴正如火如荼進行 華爾街卻盯著30年美債冷汗直流",
-          "title_en": "AI Frenzy Continues to Fuel Market Rally, But Wall Street Worries About 30-Year Treasury Yields",
-          "publish_at": 1786939204,
-          "url": "https://news.cnyes.com/news/id/6578930",
-          "paras": [
-            "投資人對大型科技股與AI資本開支的樂觀情緒，近日再次將美股推上歷史新高。在經濟展現韌性、需求不墜的背景下，這波漲勢幾乎只有一個真正對手：利率上行。",
-            "科技股歷來對美債殖利率敏感，因其高市值建立在「未來成長折現」之上，AI相關資本支出往往需時數年才能回本，而利率決定華爾街如何把未來利潤折回當下價值。當通膨推升利率，遠期收益現值就被壓低，估值倍數高的股票首當其衝遭拋售。",
-            "Domini Impact Investments金融研究主管 Maria Llerena說：「評價倍數高的股票，通常在利率上升時被出脫。」",
-            "上週，美國核心CPI與PPI溫和，削弱聯準會(Fed)9月升息押注，標普500再寫新高，那斯達克100距6月來收盤高點僅差約 2%，但美國通膨率仍明顯高於2%目標，交易員仍賭年底Fed至少再升息一次。",
-            "更關鍵的是長端殖利率，30年期美債殖利率徘徊2007年以來高位，上週四(13日)30年期美債拍賣得標殖利率更創下2001年來最高。",
-            "對AI基建巨頭來說，利率走高是實質風險。Alphabet有270億美元債券在2056年後到期，亞馬遜約320億、Meta約210億；四家加上微軟，2026 年合計資本開支預估7400 億美元，2027年再攀至1兆美元。",
-            "過去資本支出多靠現金流自籌，如今逐漸舉債，Llerena警告：「利率及其對估值的影響，會有更多疑問。」",
-            "AI支出週期能跑多遠，不只看需求，也看30年美債殖利率肯不肯退。若長端利率居高不下，即便是Alphabet、微軟等現金牛，也得面對「未來利潤折現被砍」的估值逆風。"
-          ],
-          "paras_en": [
-            "Investors' optimism about large-cap tech stocks and AI capital expenditures has pushed the US stock market to new highs recently. Against the backdrop of economic resilience and unrelenting demand, this rally has almost only one true opponent: rising interest rates.",
-            "Tech stocks have historically been sensitive to US Treasury yields, as their high valuations are built on 'discounted future growth.' AI-related capital expenditures often take years to break even, and interest rates determine how Wall Street values future profits in the present. As inflation pushes up interest rates, the present value of future returns is compressed, and stocks with high valuation multiples are the first to be sold off.",
-            "Domini Impact Investments' research director Maria Llerena said, 'Stocks with high valuation multiples are usually the ones that get dumped when interest rates rise.'",
-            "Last week, the US core CPI and PPI were mild, weakening the Fed's 9 September rate hike bet, and the S&P 500 wrote new highs. The Nasdaq 100 was just 2% away from its June closing high, but the US inflation rate remains significantly above the 2% target, and traders still bet on at least one more rate hike by the end of the year.",
-            "More importantly, long-term Treasury yields are a concern. The 30-year Treasury yield has been hovering at a high since 2007, and last Thursday (13th), the 30-year Treasury auction yield reached a new high since 2001.",
-            "For AI infrastructure giants, rising interest rates are a real risk. Alphabet has $27 billion in debt maturing after 2056, Amazon has around $32 billion, and Meta has around $21 billion. The four companies, plus Microsoft, are expected to spend a combined $740 trillion in 2026 and $1 trillion in 2027.",
-            "In the past, capital expenditures were largely self-funded through cash flow, but now they are increasingly relying on debt. Llerena warned, 'The impact of interest rates on valuation will raise more questions.'",
-            "The duration of AI spending cycles is not just about demand, but also about whether 30-year Treasury yields will come down. If long-term interest rates remain high, even cash-rich companies like Alphabet and Microsoft will face the headwind of 'discounted future profits being cut.'"
-          ]
-        },
-        {
-          "news_id": "6578976",
-          "title": "終於要賺了！商湯上市以來首度預告轉盈 股價一度飆漲13%",
-          "title_en": "Finally Profitable! Commercial Soup Announces First-Ever Profit Forecast After Listing, Stock Price Surges 13%",
-          "publish_at": 1786939052,
-          "url": "https://news.cnyes.com/news/id/6578976",
-          "paras": [
-            "中國AI新創商湯(00020-HK) 迎來上市後重要獲利轉折，首度預告合併業績轉虧為盈，成為市場焦點。利多消息激勵商湯股價周一（17日）盤中一度大漲逾13%，投資人對公司獲利前景的期待明顯升溫。",
-            "根據商湯公告，公司預計2026年上半年淨利潤約5億至7億元人民幣，相較2025年同期虧損約14.89億元人民幣大幅改善，正式跨過損益平衡點。若最終業績符合預期，也將寫下商湯上市以來首次實現合併盈利的紀錄。",
-            "商湯指出，上半年業績改善主要來自兩大因素。首先是集團主營業務虧損持續收窄，2026年上半年相較去年同期，核心業務的虧損程度進一步降低，帶動整體財務表現改善。",
-            "另一方面，商湯多年來策略性布局AI生態企業，也開始反映在財務收益上。公司表示，相關投資的公允價值變動帶來收益，成為此次轉虧為盈的重要推力。換言之，此次預告轉盈除了本業虧損縮減，也受惠於AI生態投資價值上升。",
-            "商湯過去長期處於虧損狀態，此次預告上半年最多可獲利7億元人民幣，意味財務表現出現明顯轉折。市場也迅速反映這項利多，商湯股價17日盤中一度勁揚逾13%，投資人關注公司能否在本業改善與AI投資收益挹注下，進一步延續獲利表現。"
-          ],
-          "paras_en": [
-            "Commercial Soup (00020.HK) has reached a crucial turning point in its profitability after listing, announcing its first-ever profit forecast, making it a market focus. The positive news has driven Commercial Soup's stock price up by over 13% on Monday (17th), indicating investors' growing expectations for the company's profitability.",
-            "According to Commercial Soup's announcement, the company expects a net profit of approximately 500 million to 700 million yuan in the first half of 2026, a significant improvement from the net loss of approximately 1.489 billion yuan in the same period last year. If the final results meet expectations, it will be the first time Commercial Soup has achieved a combined profit since its listing.",
-            "Commercial Soup attributes the improvement in its first-half performance to two main factors. Firstly, the company's core business has seen a significant reduction in losses, with the loss level in the first half of 2026 being lower than that of the same period last year, driving overall financial performance improvement.",
-            "On the other hand, Commercial Soup's strategic layout of AI ecosystem companies has started to reflect in its financial performance. The company states that the change in the fair value of related investments has brought in profits, becoming an important driving force for this profit forecast. In other words, this profit forecast is not only due to the reduction in losses from core business, but also benefited from the increase in value of AI ecosystem investments.",
-            "Commercial Soup has been in a state of loss for a long time, and this time it expects to make a maximum profit of 700 million yuan in the first half of 2026, indicating a significant turning point in its financial performance. The market has quickly reflected this positive news, with Commercial Soup's stock price surging by over 13% on the 17th, with investors paying attention to whether the company can continue to sustain its profitability performance with the improvement in core business and the injection of AI investment profits."
-          ]
-        },
-        {
-          "news_id": "6578933",
-          "title": "〈房產〉六都預售屋市場結構重組 台北價量齊躍升 高雄交易量慘減半",
-          "title_en": "<Real Estate> Six Metropolitan Areas Restructure Pre-sale Housing Market: Taipei Prices and Volume Surge, Kaohsiung Volume Halved",
-          "publish_at": 1786937322,
-          "url": "https://news.cnyes.com/news/id/6578933",
-          "paras": [
-            "全台房市仍冰冷，但由房仲業者統計顯示，2026年1-6月的全台六都預售案交易案件，唯有台北市平交易量年增4.2%，交易價格上漲高達7%。而交易量萎縮最為嚴重的高雄，交易件數則呈現腰斬，下滑高達50.2%",
-            "中信房屋研展室彙整實價登錄資料，對比六都2025年上半年與2026年上半年預售屋市場表現，台北市平均房價上漲7%、交易量增加4.2%，新北市平均房價上漲4.4%、交易量減少5.5%，桃園市平均房價上漲2.4%、交易量減少21.6%，台中市平均房價上漲1.5、交易量減少24.9%，台南市平均房價上漲3.1%、交易量減少23.6%，高雄市平均房價上漲1.9%、交易量減少50.2%，整體而言，六都預售房價仍維持上行趨勢，成交量卻普遍下滑，僅台北市仍呈現「價量俱增」的局面。",
-            "中信房屋研展室副理莊思敏指出，從六都數據來看，當前預售市場已從過去的熱絡行情，逐步轉向「價格有撐、交易量收斂」的格局。房價方面，在土地成本、營造成本仍處於高檔的情況下，建商讓利空間相對有限，因此價格並未出現修正。然而，在交易量方面，受到信用管制與房貸資金環境影響，市場觀望氣氛瀰漫，買方心態轉趨保守，購屋決策時間也相應拉長，進而使得市場成交動能受到壓抑，交易量同步走弱。",
-            "莊思敏示，六都中僅台北市仍呈現「價量俱增」的態勢，主要是因為台北市寸土寸金、土地供給有限、新屋供不應求，加上住宅市場客群多元，除了自住需求之外，也有一定比例的資產配置及長期置產需求，因此即使整體市況降溫，台北市仍能展現相對穩健的韌性。",
-            "相較之下，桃園、台中、台南及高雄等地的預售屋交易量則出現了較為明顯的量縮，以上區域的新建案多集中於新興重劃區或蛋白區，雖具備重大建設、交通項目或產業進駐等長期利多，惟部分區塊的生活機能仍處於起步階段，而房價卻已超前反映未來願景，如今隨著市場回歸剛性需求，買方出手更加謹慎，追價意願大幅降低，交易量自然隨之縮減。",
-            "莊思敏表示，目前房市仍處於盤整期，建議消費者應保持理性，審慎評估自身需求和財務狀況，避免盲目追價。此外，由於交易量持續走低、建商資金周轉壓力加重，市面上偶有建商財務危機或工程延宕的消息出現，消費者在挑選預售案時，務必要多加留意建商口碑與履約能力，以降低交易風險。"
-          ],
-          "paras_en": [
-            "The nationwide housing market remains cold, but data from real‑estate agents shows that for pre‑sale projects in the six major cities during the first half of 2026, only Taipei City recorded a 4.2% year‑over‑year increase in transaction volume and a price jump of up to 7%. In Kaohsiung, where the decline was most severe, the number of transactions was cut in half, dropping 50.2%.",
-            "The research department of CTBC Real Estate compiled official transaction‑price data and compared the pre‑sale market performance of the six cities between the first half of 2025 and the first half of 2026. Taipei’s average price rose 7% with a 4.2% rise in volume; New Taipei’s average price rose 4.4% while volume fell 5.5%; Taoyuan’s average price rose 2.4% with volume down 21.6%; Taichung’s average price rose 1.5% with volume down 24.9%; Tainan’s average price rose 3.1% with volume down 23.6%; Kaohsiung’s average price rose 1.9% with volume down 50.2%. Overall, pre‑sale prices in the six cities kept climbing, but transaction volumes generally fell, with only Taipei showing a “price‑and‑volume increase” scenario.",
-            "Zhuang Simin, deputy manager of CTBC Real Estate’s research department, said that the data from the six cities indicate the pre‑sale market has shifted from a previously hot climate to a pattern of “prices holding up while transaction volume contracts.” With land and construction costs still high, developers have limited room to cut prices, so prices have not been corrected. However, transaction volume is being squeezed by credit controls and the mortgage funding environment, creating a pervasive wait‑and‑see mood. Buyers are becoming more conservative and taking longer to decide, which dampens market momentum and weakens volume.",
-            "Zhuang noted that only Taipei still shows a “price‑and‑volume increase” because the city’s land is extremely scarce, supply of new homes cannot meet demand, and the residential market serves a diverse clientele. Besides owner‑occupiers, there is a sizable segment of investors and long‑term property‑placement demand, so even as overall conditions cool, Taipei can still demonstrate relatively robust resilience.",
-            "In contrast, Taoyuan, Taichung, Tainan and Kaohsiung have seen a more pronounced contraction in pre‑sale transaction volume. New projects in these areas are largely concentrated in emerging redevelopment zones or “egg‑white” districts that, while promising major infrastructure, transport projects or industry entry in the long run, still have nascent living‑amenity infrastructure. Prices have already priced in future expectations, and as the market returns to rigid demand, buyers are far more cautious, their willingness to chase prices has dropped sharply, and transaction volume has naturally shrunk.",
-            "Zhuang said the housing market remains in a consolidation phase and advised consumers to stay rational, carefully assess their own needs and financial situation, and avoid blindly chasing prices. Moreover, as transaction volumes continue to fall and developers face tighter cash flow, occasional news of developer financial distress or project delays emerges. Buyers should therefore pay close attention to a developer’s reputation and ability to fulfill contracts when selecting pre‑sale projects, to reduce transaction risk."
-          ]
         }
       ]
     },
@@ -214,6 +205,25 @@
       "key": "tw_stock",
       "label": "台股焦點",
       "items": [
+        {
+          "news_id": "6579023",
+          "title": "〈焦點股〉凌巨Q2財報未如期申報 股價跳空鎖跌停",
+          "title_en": "Ling Jyu's Q2 Financial Report Fails to Meet Deadline, Stock Price Plummets",
+          "publish_at": 1786942104,
+          "url": "https://news.cnyes.com/news/id/6579023",
+          "paras": [
+            "中小尺寸凌巨(8105-TW)因董事會僅有1人，導致第二季財報無法如期申報，今(17)日股價開盤即跳空跌停鎖住。",
+            "證交所上周五公告，本國上市公司(不含金融保險公司)應於14日完成年第二季財務報告申報，本次應申報的 961 家公司中，除凌巨無法如期申報外，其餘 960 家均已順利完成作業。",
+            "據了解，凌巨董事會原有6席董事及3席獨董，但自6月25日股東會解任1席董事，隔日法人董事日商凸版控股因轉讓凌巨私募股權，4席法人董事及代表人當然解任，3名獨董也於7月8日至13日相繼辭任，導致董事會僅剩1人。",
+            "凌巨表示，由於目前現任董事僅有1人，能否組成董事會議決第二季財報有疑義，公司也曾於7月17日去函證期局申請延長財務報告公告申報期限，但未獲核准展延；凌巨也擬於8月24日召開股東臨時會，全面改選董事。"
+          ],
+          "paras_en": [
+            "Ling Jyu (8105-TW), a small to medium-sized company, has only one board member, resulting in its inability to submit its Q2 financial report on time. As a result, its stock price plummeted and was locked at the lower limit on the 17th.",
+            "The Taiwan Stock Exchange announced last Friday that domestic listed companies (excluding financial and insurance companies) should have completed their second-quarter financial report submissions by the 14th. Among the 961 companies that were required to submit reports, all 960 companies except Ling Jyu have completed the process.",
+            "It is understood that Ling Jyu's board of directors originally had six seats and three independent directors. However, after the shareholders' meeting on June 25, one director was removed, and the next day, the corporate director, Toppan Inc., transferred Ling Jyu's private placement shares, resulting in the removal of four corporate directors and their representatives. The three independent directors also resigned between July 8 and 13, leaving only one director on the board.",
+            "Ling Jyu stated that since there is currently only one director, there is uncertainty about whether the board can convene to decide on the Q2 financial report. The company had applied to the Financial Supervisory Commission to extend the deadline for submitting the financial report on July 17 but was not approved. Ling Jyu plans to hold an extraordinary shareholders' meeting on August 24 to fully elect new directors."
+          ]
+        },
         {
           "news_id": "6578974",
           "title": "〈焦點股〉汎瑋Q2獲利年增翻倍 激勵股價亮燈飆漲停",
@@ -372,31 +382,6 @@
             "In contrast, Taoyuan, Taichung, Tainan and Kaohsiung have seen a more pronounced contraction in pre‑sale transaction volume. New projects in these areas are largely concentrated in emerging redevelopment zones or “egg‑white” districts that, while promising major infrastructure, transport projects or industry entry in the long run, still have nascent living‑amenity infrastructure. Prices have already priced in future expectations, and as the market returns to rigid demand, buyers are far more cautious, their willingness to chase prices has dropped sharply, and transaction volume has naturally shrunk.",
             "Zhuang said the housing market remains in a consolidation phase and advised consumers to stay rational, carefully assess their own needs and financial situation, and avoid blindly chasing prices. Moreover, as transaction volumes continue to fall and developers face tighter cash flow, occasional news of developer financial distress or project delays emerges. Buyers should therefore pay close attention to a developer’s reputation and ability to fulfill contracts when selecting pre‑sale projects, to reduce transaction risk."
           ]
-        },
-        {
-          "news_id": "6578929",
-          "title": "〈焦點股〉資本利得配息占比逾9成 00881、00878除息前夕爆大量",
-          "title_en": "Focus Stock: Capital Gains Distribution Ratio Exceeds 90% for 00881 and 00878 Before Dividend Payment",
-          "publish_at": 1786936887,
-          "url": "https://news.cnyes.com/news/id/6578929",
-          "paras": [
-            "科技大廠財報與營運數據陸續報喜，帶動市場資金持續湧入台股。國泰投信旗下 2 檔高人氣 ETF—國泰台灣科技龍頭(00881-TW)與國泰永續高股息(00878-TW)即將於明(18)日正式除息，今(17)日為參與本次收益分配的最後買進日，由於 2 檔資本利得配息占比均突破 9 成，吸引買盤強勢卡位，00881 盤中成交量衝破 5 萬張，00878 更爆出逾 8.6 萬張大量，雙雙展現強勁交投氣勢。",
-            "據國泰投信公告，00881 本次每單位預計配發 4.6 元，00878 每單位則配發 1.01 元。受高額配息與 AI 題材激勵，兩檔 ETF 人氣同步飆升，自 7 月底公告預估配息以來，00881 單周受益人數增加約 1.5 萬人，00878 受益人數亦大增逾 1.1 萬人，顯示市場關注度持續居高不下。",
-            "針對市場關注的「收益分配來源」，00881 基金經理人蘇鼎宇表示，根據官方公布之組成占比，00881 本次配息中，已實現資本利得高達 98.91%，股利所得僅占 1.09%；而 00878 基金經理人江宇騰亦指出，00878 本次資本利得占比同樣高達 90.10%，股利所得占 9.90%。",
-            "蘇鼎宇分析，配息主要來自基金投資部位累積並實現的資本利得，充分反映近年台灣科技龍頭股價成長的成果。依現行稅制，個人投資人取得之已實現資本利得免納所得稅，且不計入二代健保補充保費。兩檔 ETF 配息結構皆有逾 9 成來自資本利得，成為吸引投資人青睞的一大稅務亮點(實際課稅仍依投資人個別身分及相關法令規定為準)。",
-            "在基本面表現上，蘇鼎宇進一步指出，近期科技龍頭營運成績為 AI 產業提供強烈支撐。台積電 7 月營收再創單月新高；鴻海公布第二季財報，單季營收達新台幣 2.53 兆元，稅後淨利約 600 億元、年增 35%，營收與獲利均創歷年同期新高，展現 AI 伺服器的強勁需求。",
-            "隨著全球 AI 投資從資本支出擴張進入「獲利驗證」階段，市場焦點已轉向企業能否將需求轉化為實質營收。台灣科技供應鏈憑藉完整的產業聚落與技術優勢，長線仍將是全球 AI 發展趨勢下的最大受惠者。",
-            "※免責聲明：文中所提的個股、基金、期貨商品內容僅供參考，並非投資建議，投資人應獨立判斷，審慎評估風險，自負盈虧。"
-          ],
-          "paras_en": [
-            "The technology giant's financial reports and operating data have been released one after another, driving continuous capital inflows into the Taiwan Stock Exchange. Two popular ETFs under Cathay Securities Investment Trust, Cathay Taiwan Tech Leaders (00881-TW) and Cathay Sustainable High Dividend (00878-TW), are scheduled to officially pay dividends on August 18. Today, August 17, is the last trading day for participating in this round of profit distribution. Due to the two ETFs' capital gains distribution ratio exceeding 90%, they have attracted strong buying pressure, with 00881's trading volume exceeding 50,000 shares and 00878's trading volume reaching over 86,000 shares, both showing strong trading momentum.",
-            "According to Cathay Securities Investment Trust's announcement, 00881 is expected to distribute NT$4.6 per unit, while 00878 is expected to distribute NT$1.01 per unit. With high dividend payments and AI-themed attractions, the two ETFs' popularity has skyrocketed simultaneously. Since the announcement of estimated dividend payments in late July, 00881 has gained approximately 15,000 new investors, while 00878 has gained over 11,000 new investors, indicating that market attention remains high.",
-            "Regarding the market's concern about 'profit distribution sources', Cathay Taiwan Tech Leaders' fund manager, Su Ding-yu, stated that, based on the official composition ratio, 00881's capital gains distribution ratio for this round of dividend payment reached 98.91%, while the dividend income accounted for only 1.09%. Similarly, Cathay Sustainable High Dividend's fund manager, Jiang Yu-teng, pointed out that 00878's capital gains distribution ratio also reached 90.10%, while the dividend income accounted for 9.90%.",
-            "Su Ding-yu analyzed that the dividend payment mainly comes from the accumulated and realized capital gains from the fund's investment portfolio, fully reflecting the growth of Taiwan's tech leaders' stock prices in recent years. Under the current tax system, individual investors who have realized capital gains are exempt from income tax, and the gains are not included in the supplementary premium for the second-generation national health insurance. Both ETFs have more than 90% of their dividend payments coming from capital gains, making them a significant tax advantage for investors.",
-            "From a fundamental perspective, Su Ding-yu further pointed out that the recent operating performance of tech leaders has provided strong support for the AI industry. Taiwan Semiconductor Manufacturing Company (TSMC) reported a new high in July sales, while Hon Hai Group announced its second-quarter financial report, with a single-quarter revenue of NT$253 billion and a net profit of NT$60 billion, a year-on-year increase of 35%. Both revenue and profit reached new highs, demonstrating the strong demand for AI servers.",
-            "As global AI investment has expanded from capital expenditure to the 'profit verification' stage, the market's focus has shifted to whether companies can convert demand into actual revenue. Taiwan's technology supply chain, with its complete industry cluster and technological advantages, will continue to be the biggest beneficiary of the global AI development trend in the long run.",
-            "Disclaimer: The contents of individual stocks, funds, and futures commodities mentioned in this article are for reference only and are not investment recommendations. Investors should make their own judgments and carefully evaluate the risks before making investment decisions."
-          ]
         }
       ]
     },
@@ -404,6 +389,33 @@
       "key": "us_stock",
       "label": "美股焦點",
       "items": [
+        {
+          "news_id": "6579046",
+          "title": "支出正在轉化為收益？華爾街科技巨頭AI投資變現",
+          "title_en": "Is Spending Turning into Profit? Wall Street Tech Giants' AI Investment Begins to Bear Fruit",
+          "publish_at": 1786944605,
+          "url": "https://news.cnyes.com/news/id/6579046",
+          "paras": [
+            "隨著股市重回歷史新高，華爾街策略師觀察到大型科技公司在人工智慧(AI)領域的巨額投資正開始產生回報，特別是擁有龐大雲端業務的「超大規模業者」(hyperscalers)。",
+            "Truist 首席投資策略師 Keith Lerner 指出，「支出正在引領獲利」，這顯示出 AI 投資的變現能力正逐步顯現。",
+            "基於強勁的盈餘展望與雲端需求，摩根大通已將標普 500 指數的目標價從 7,800 點調升至 8,000 點。",
+            "在各大科技巨頭中，雲端業務的表現尤為亮眼。微軟(MSFT-US)的 Azure 業務年銷售額首次突破 1,000 億美元，帶動其雲端營收創下歷史紀錄，並預計本季將進一步加速成長。亞馬遜(AMZN-US)旗下的 AWS 成長率達到 36.7%，創下 18 季以來的最快增速。Alphabet (GOOGL-US)的雲端業務同樣呈現爆發式成長，而 Meta (META-US)甚至在考慮出租其部分的計算能力。",
+            "所有這些承諾都需要更多投資，根據美銀研究報告，前四大雲端服務商的積壓訂單金額已超過 2.3 兆美元，較第一季增長 16%。",
+            "為應對強勁需求，Alphabet、亞馬遜、微軟和 Meta 今年預計將集體投入約 7,250 億至 7,600 億美元的資本支出用於建構 AI 基礎設施。",
+            "摩根大通策略師 Dubravko Lakos-Bujas 指出，雖然多數業者的自由現金流在 2027 財年可能仍為負值，但其業務增長速度已超過支出增長，這是一個需求開始追上龐大資本支出的信號。分析師預測，貨幣化進程可能開始比支出增長更快，這將支撐未來的營收成長並緩解投資者對投資報酬率(ROIC)的疑慮。",
+            "此外，Sevens Report Research 創辦人 Tom Essaye 認為，在半導體和記憶體之後，雲端容量將成為 AI 數據建設的下一個瓶頸。"
+          ],
+          "paras_en": [
+            "As the stock market returns to historical highs, Wall Street strategists have observed that large tech companies' massive investments in artificial intelligence (AI) are starting to yield returns, particularly among \"hyperscalers\" with significant cloud businesses.",
+            "Truist Chief Investment Strategist Keith Lerner notes that \"spending is leading to profits,\" indicating that the payback potential of AI investments is gradually emerging.",
+            "Based on strong earnings outlooks and cloud demand, JPMorgan has raised its target price for the S&P 500 index to 8,000 from 7,800.",
+            "Among the major tech giants, cloud businesses have shone particularly brightly. Microsoft's (MSFT-US) Azure business has surpassed $100 billion in annual sales for the first time, driving its cloud revenue to a historical record and expected to accelerate further this quarter. Amazon's (AMZN-US) AWS growth rate reached 36.7%, the fastest pace in 18 quarters. Alphabet (GOOGL-US) cloud business has also shown explosive growth, while Meta (META-US) is even considering renting out some of its computing capacity.",
+            "All these commitments require more investment, according to a Goldman Sachs report, which found that the accumulated backlogged orders of the top four cloud service providers have exceeded $230 billion, up 16% from the first quarter.",
+            "To meet the strong demand, Alphabet, Amazon, Microsoft, and Meta are expected to collectively invest around $725 billion to $760 billion in capital expenditures to build AI infrastructure this year.",
+            "JPMorgan strategist Dubravko Lakos-Bujas notes that while most companies' free cash flow may still be negative in the 2027 fiscal year, their business growth rate has already surpassed spending growth, signaling that demand is catching up with massive capital expenditures. Analysts predict that the monetization process may begin to outpace spending growth, supporting future revenue growth and alleviating concerns about return on investment (ROIC).",
+            "Furthermore, Sevens Report Research founder Tom Essaye believes that cloud capacity will become the next bottleneck in AI data construction, following semiconductors and memory."
+          ]
+        },
         {
           "news_id": "6578775",
           "title": "「木頭姐」Q2大砍輝達、AMD、台積電！砸4.43億美元押SpaceX",
@@ -607,31 +619,6 @@
             "Anthropic此次公布的6項建議，核心邏輯也相當明確：讓每一次請求只攜帶真正需要的內容、讓能夠快取的內容持續命中，並將不必要的大量輸出隔離在主對話之外。對於高頻率使用Claude Code的開發者而言，這些操作將直接影響相同工作量下的Token消耗。"
           ],
           "paras_en": []
-        },
-        {
-          "news_id": "6578424",
-          "title": "距發表還一個月！電商不怕臨時改模 搶先開賣折疊iPhone殼  配件商打什麼算盤？",
-          "title_en": "Apple's Foldable iPhone Looms, but Accessories Sellers Are Already Racing to Market",
-          "publish_at": 1786921203,
-          "url": "https://news.cnyes.com/news/id/6578424",
-          "paras": [
-            "距蘋果首款折疊iPhone與iPhone 18系列正式亮相還有一個月左右，但電商平台上的「配件搶跑」已開跑，不少店家直接以「iPhone Fold」、「iPhone Ultra」為關鍵字上架折疊手機殼，未發布的iPhone 18系列保護殼、鋼化膜也同步現身，部分商品甚至按機型、材質、款式細分完畢。",
-            "《每日經濟新聞》報導，當記者以消費者身份詢價，商家多不願透露數據來源，只強調「工廠包數據、按數據開模」「確定可適配」，若日後改模會補發，但一款手機殼從開模、打樣到備庫存，本就牽動整條供應鏈，未發布就量產，本質是場高風險押注。",
-            "長期經營蘋果生態配件的業內人士表示，第三方廠商慣例會提前三個月備戰，搶的是新機上市首波「買機必買殼」的窗口，等蘋果發表再開發，黃金流量早已過去。資訊來源則不只靠官方，量產階段供應鏈外溢、機模流出、渲染圖與產業爆料，都足以讓成熟廠商憑尺寸、鏡頭位、按鍵佈局先行開模。",
-            "報導指出，今年還多了一個特殊變量，蘋果印度核心代工廠塔塔電子6月遭勒索攻擊，超20萬份、630GB機密文件(含主板圖紙、晶片參數、真機測試片)流入暗網，被稱為蘋果史上最嚴重洩密事件，新德里已介入調查，這讓配件廠能拿到的「公開情報」比往年更紮實。",
-            "不過，風險也更高。直板iPhone迭代多年，手機殼廠有經驗累積，折疊螢幕涉及鉸鏈、機身厚度、開合結構與螢幕形態，任一關鍵尺寸變動都可能讓前期開模作廢重來，也就是說折疊款「搶跑」賭注遠大於Pro機種。",
-            "知情人士透露，蘋果擬於下月只發表兩款高階Pro與首款折疊 iPhone，2027上半年再把標準版與SE整合發布，形成「Pro 秋發、基礎款春發」的拆分節奏。對配件產業鏈而言，過去一年一次秋季集中備貨，未來可能拆成多個時間窗口，從「一年一站集中搶跑」轉向「長周期、高頻接力」。",
-            "搶跑看似只是電商常態，實則映出蘋果保密防線鬆動、供應鏈情報商品化，以及 iPhone 產品節奏重組三股力量交疊。新機還沒露面，圍繞它的千億配件生意，已經先跑完了第一圈。"
-          ],
-          "paras_en": [
-            "Just a month before Apple's first foldable iPhone and iPhone 18 series are set to debut, e-commerce platforms have already seen a rush of 'accessory pre-sales.' Many sellers have listed foldable phone cases under keywords like 'iPhone Fold' and 'iPhone Ultra,' with some even offering cases for the yet-to-be-released iPhone 18 series and screen protectors.",
-            "According to a report by the Daily Economic News, when reporters inquired about prices as consumers, many sellers refused to disclose their data sources, only stating that they had 'factory data' and 'opened molds based on data.' If the design were to change later, they would issue a recall, but one phone case from mold opening to inventory storage is a high-risk gamble.",
-            "Industry insiders who have long operated in the Apple ecosystem noted that third-party manufacturers typically prepare three months in advance to secure a head start on the initial 'buy-a-phone-buy-a-case' window. They wait for Apple's official release before developing new products, as the golden opportunity has already passed.",
-            "The information source is not limited to official channels. During the production stage, supply chain leaks, prototype designs, and industry rumors can all provide enough information for mature manufacturers to develop cases based on dimensions, camera placement, and button layouts.",
-            "This year, there is an additional variable: Apple's Indian core manufacturing partner, Tata Electronics, was hit by a ransomware attack in June, resulting in over 200,000 leaked files (including motherboard diagrams, chip parameters, and real-machine test pieces) on the dark web, dubbed the most severe data breach in Apple's history. New Delhi has intervened in the investigation, giving accessory manufacturers more substantial 'public information' than in previous years.",
-            "However, the risks are higher. The flat iPhone has undergone numerous iterations, giving case manufacturers valuable experience. The foldable screen involves hinges, body thickness, opening and closing structures, and screen shape, making any key dimension change potentially render pre-made molds obsolete. In other words, the 'pre-sale' gamble for foldable cases is much greater than that for Pro models.",
-            "Sources close to the matter revealed that Apple plans to release only two high-end Pro models and the first foldable iPhone in the coming month, with standard and SE models to be released in the first half of 2027, forming a 'Pro autumn release, basic model spring release' schedule. For the accessory industry, this means a shift from 'one-time concentrated pre-sales' to 'long-cycle, high-frequency relay' production."
-          ]
         }
       ]
     },
@@ -639,6 +626,56 @@
       "key": "wd_stock",
       "label": "國際財經",
       "items": [
+        {
+          "news_id": "6579046",
+          "title": "支出正在轉化為收益？華爾街科技巨頭AI投資變現",
+          "title_en": "Is Spending Turning into Profit? Wall Street Tech Giants' AI Investment Begins to Bear Fruit",
+          "publish_at": 1786944605,
+          "url": "https://news.cnyes.com/news/id/6579046",
+          "paras": [
+            "隨著股市重回歷史新高，華爾街策略師觀察到大型科技公司在人工智慧(AI)領域的巨額投資正開始產生回報，特別是擁有龐大雲端業務的「超大規模業者」(hyperscalers)。",
+            "Truist 首席投資策略師 Keith Lerner 指出，「支出正在引領獲利」，這顯示出 AI 投資的變現能力正逐步顯現。",
+            "基於強勁的盈餘展望與雲端需求，摩根大通已將標普 500 指數的目標價從 7,800 點調升至 8,000 點。",
+            "在各大科技巨頭中，雲端業務的表現尤為亮眼。微軟(MSFT-US)的 Azure 業務年銷售額首次突破 1,000 億美元，帶動其雲端營收創下歷史紀錄，並預計本季將進一步加速成長。亞馬遜(AMZN-US)旗下的 AWS 成長率達到 36.7%，創下 18 季以來的最快增速。Alphabet (GOOGL-US)的雲端業務同樣呈現爆發式成長，而 Meta (META-US)甚至在考慮出租其部分的計算能力。",
+            "所有這些承諾都需要更多投資，根據美銀研究報告，前四大雲端服務商的積壓訂單金額已超過 2.3 兆美元，較第一季增長 16%。",
+            "為應對強勁需求，Alphabet、亞馬遜、微軟和 Meta 今年預計將集體投入約 7,250 億至 7,600 億美元的資本支出用於建構 AI 基礎設施。",
+            "摩根大通策略師 Dubravko Lakos-Bujas 指出，雖然多數業者的自由現金流在 2027 財年可能仍為負值，但其業務增長速度已超過支出增長，這是一個需求開始追上龐大資本支出的信號。分析師預測，貨幣化進程可能開始比支出增長更快，這將支撐未來的營收成長並緩解投資者對投資報酬率(ROIC)的疑慮。",
+            "此外，Sevens Report Research 創辦人 Tom Essaye 認為，在半導體和記憶體之後，雲端容量將成為 AI 數據建設的下一個瓶頸。"
+          ],
+          "paras_en": [
+            "As the stock market returns to historical highs, Wall Street strategists have observed that large tech companies' massive investments in artificial intelligence (AI) are starting to yield returns, particularly among \"hyperscalers\" with significant cloud businesses.",
+            "Truist Chief Investment Strategist Keith Lerner notes that \"spending is leading to profits,\" indicating that the payback potential of AI investments is gradually emerging.",
+            "Based on strong earnings outlooks and cloud demand, JPMorgan has raised its target price for the S&P 500 index to 8,000 from 7,800.",
+            "Among the major tech giants, cloud businesses have shone particularly brightly. Microsoft's (MSFT-US) Azure business has surpassed $100 billion in annual sales for the first time, driving its cloud revenue to a historical record and expected to accelerate further this quarter. Amazon's (AMZN-US) AWS growth rate reached 36.7%, the fastest pace in 18 quarters. Alphabet (GOOGL-US) cloud business has also shown explosive growth, while Meta (META-US) is even considering renting out some of its computing capacity.",
+            "All these commitments require more investment, according to a Goldman Sachs report, which found that the accumulated backlogged orders of the top four cloud service providers have exceeded $230 billion, up 16% from the first quarter.",
+            "To meet the strong demand, Alphabet, Amazon, Microsoft, and Meta are expected to collectively invest around $725 billion to $760 billion in capital expenditures to build AI infrastructure this year.",
+            "JPMorgan strategist Dubravko Lakos-Bujas notes that while most companies' free cash flow may still be negative in the 2027 fiscal year, their business growth rate has already surpassed spending growth, signaling that demand is catching up with massive capital expenditures. Analysts predict that the monetization process may begin to outpace spending growth, supporting future revenue growth and alleviating concerns about return on investment (ROIC).",
+            "Furthermore, Sevens Report Research founder Tom Essaye believes that cloud capacity will become the next bottleneck in AI data construction, following semiconductors and memory."
+          ]
+        },
+        {
+          "news_id": "6578945",
+          "title": "伊朗懸賞3萬美元「殺美軍」！女性出手獎金翻倍",
+          "title_en": "",
+          "publish_at": 1786943268,
+          "url": "https://news.cnyes.com/news/id/6578945",
+          "paras": [
+            "伊朗軍方週日（16日）宣布，將提供最高3萬美元（約新台幣96萬）的獎金，鼓勵民眾殺死或俘虜美國軍人；若由女性完成相關行動，獎金將提高至兩倍。伊朗陸軍司令哈塔米（Amir Hatami）表示，這項計畫是在收到「大量請求」後制定。",
+            "根據《南華早報》引述伊朗國營通訊社《IRNA》報導，哈塔米表示：「任何殺死或俘虜並將入侵的美國軍事人員交給伊朗方面的人，都將獲得伊朗伊斯蘭共和國陸軍提供的相當於3萬美元或50億伊朗土曼（Iranian toman）的獎勵。」",
+            "土曼是伊朗民間使用的貨幣單位，1土曼相當於1萬伊朗里亞爾。",
+            "他還表示：「勇敢的伊朗女性若完成這類行動，將獲得雙倍獎勵。」",
+            "哈塔米同時重申伊朗要求美國撤出中東的立場，並表示美軍「不再獲准進入波斯灣、阿曼灣或荷姆茲海峽」。",
+            "目前已知在這場中東戰爭期間，美軍並未在伊朗境內部署地面部隊，唯一例外是4月為救援一名墜落的美軍飛行員而執行的行動。",
+            "戰事爆發一個多月後，美軍展開大規模救援行動，試圖救出一架F-15戰機的武器系統官。當時約有200名美軍人員及超過170架軍機投入行動，爭取在伊朗部隊找到這名軍人之前將其救出。",
+            "救援行動期間，伊朗部隊擊傷一架A-10攻擊機，該機最終在友軍控制區域棄置。",
+            "據報導，美軍也放棄並摧毀了部分參與這次任務的軍機，其中包括一架C-130運輸機。",
+            "經過近40天的戰鬥後，戰事於4月透過停火暫時告一段落，雙方隨後在6月建立和平談判框架，但該框架最終宣告破裂。",
+            "此後，伊朗與美國仍不時發生交火，戰鬥主要集中在伊朗南部以及荷姆茲海峽周邊。",
+            "雙方透過中間人維持間接接觸，但目前幾乎看不到外交取得突破的跡象。伊朗也提出重新開放荷姆茲海峽的條件，包括要求賠償戰爭造成的損失。",
+            "自戰爭爆發以來，共有17名美軍人員死亡，最近一批死亡事件發生於7月。這些人員全部是在伊朗境外喪生，包括約旦與伊拉克等國家。"
+          ],
+          "paras_en": []
+        },
         {
           "news_id": "6578775",
           "title": "「木頭姐」Q2大砍輝達、AMD、台積電！砸4.43億美元押SpaceX",
@@ -817,68 +854,6 @@
             "Pyongyang has repeatedly condemned the US-South Korea joint military exercises, calling them a preparation for an invasion of North Korea. South Korean and Japanese military officials said that North Korea fired a ballistic missile towards the Sea of Japan from its eastern coast last Wednesday; just six days earlier, on August 6, North Korea also fired a similar short-range ballistic missile.",
             "US military officials said that North Korean troops, who had fought alongside Russia in the invasion of Ukraine, have accumulated combat experience, including the increasing use of unmanned systems, electronic warfare, and network warfare capabilities.",
             "Ukraine said last week that Russia used North Korean-made missiles in a ballistic missile attack on a steel plant in Zaporizhzhia, killing seven workers and forcing the plant to suspend production. Russia also used 'Zircon' hypersonic missiles in this attack."
-          ]
-        },
-        {
-          "news_id": "6578743",
-          "title": "「光進銅退」時代來了！輝達CPO交換器正式出貨：功耗暴降80%、頻寬衝上409.6Tb/s",
-          "title_en": "The Era of 'Optical Over Copper' Has Arrived! HUAWEI's CPO Interchangeable Module Officially Delivered: Power Consumption Drops 80%, Bandwidth Reaches 409.6Tb/s",
-          "publish_at": 1786931716,
-          "url": "https://news.cnyes.com/news/id/6578743",
-          "paras": [
-            "輝達上週五(14日)透過官方社群帳號宣布，全球首款進入量產的200G/lane CPO乙太網路交換器系統「Spectrum-X Ethernet Photonics」正式出貨，CoreWeave、Lambda 與甲骨文為首批採用客戶，該產品在今年5-7月進入生產階段，標誌著資料中心網路架構正式邁入「光進銅退」的新紀元。",
-            "Spectrum-X基於新一代 Spectrum-6交換晶片打造，採用共封裝光學(CPO)技術，將光學引擎與交換ASIC直接整合於同一模組內，電訊號傳輸路徑從傳統的 15 至 30 公分 PCB 走線縮短至毫米級。",
-            "相較於傳統可插拔收發器架構，光損耗從約22dB大幅降至4dB，訊號完整性提升64倍。單顆Spectrum-6晶片交換容量達 102.4Tb/s，為上一代兩倍；旗艦機型SN6800可配置為512個 800Gb/s或2048個200Gb/s埠，總頻寬高達409.6Tb/s，同時雷射數量減少75%、功耗降低80%，平均故障間隔時間提升十倍。",
-            "這項技術突破背後，是輝達與全球供應鏈的深度協同：台積電提供先進矽光子製程，矽品負責晶圓級與晶片級封測，Lumentum供應雷射晶片，天孚通信完成模組子組件組裝，鴻海則擔綱整機交換器系統組裝，輝達並在自有設施執行出貨前最終測試，確保產品良率與可靠性。",
-            "值得關注的是，輝達近月在CPO領域的投資動作頻頻。今年3月分別向Lumentum與Coherent各投資20億美元，並簽署多年供應協議，5月再跟康寧達成策略合作，透過最高 27 億美元投資在美新建三座先進工廠，短短三個月累計投資至少65億美元，顯示輝達將光互連技術視為下一代AI工廠的核心戰略。",
-            "隨著AI算力叢集從萬卡擴張至十萬卡、百萬卡規模，資料中心瓶頸已從單顆GPU算力轉向叢集互聯能力。市場研究機構數據顯示，今年全球CPO市場規模預計達20億美元，年增逾400%，高盛更預測2028年將衝上910億美元。",
-            "隨著輝達Vera Rubin平台量產持續推進，矽光互連可望成為標準配備，相關供應鏈景氣度持續看升。"
-          ],
-          "paras_en": [
-            "HUAWEI announced on Friday last week (14th) through its official social media account that the world's first 200G/lane CPO Ethernet network exchange system, 'Spectrum-X Ethernet Photonics', has officially been delivered. CoreWeave, Lambda, and Oracle are the first batch of customers to adopt this product, which entered the production stage in May-July this year, marking the beginning of the era of 'optical over copper' in data center network architecture.",
-            "Spectrum-X is based on the new-generation Spectrum-6 exchange chip, using the CPO technology to integrate the optical engine and exchange ASIC directly into the same module. The transmission path of the electrical signal is shortened from the traditional 15-30 cm PCB line to millimeter-level.",
-            "Compared to traditional plug-and-play transceiver architectures, the optical loss has been significantly reduced from approximately 22 dB to 4 dB, with signal integrity improved by 64 times. A single Spectrum-6 chip can exchange 102.4Tb/s, which is twice that of the previous generation. The flagship model SN6800 can be configured with 512 800Gb/s or 2048 200Gb/s ports, with a total bandwidth of up to 409.6Tb/s, while reducing laser numbers by 75% and power consumption by 80%, and increasing average time between failures by ten times.",
-            "Behind this technology breakthrough is the deep collaboration between HUAWEI and the global supply chain: TSMC provides advanced silicon photonics processes, SilTerra is responsible for wafer-level and chip-level packaging, Lumentum supplies laser chips, and Foxconn completes module component assembly, while HUAWEI assembles the entire exchange system and performs final testing at its own facilities to ensure product yield and reliability.",
-            "Notably, HUAWEI has been actively investing in the CPO field in recent months. In March, it invested $2 billion each in Lumentum and Coherent, signing multi-year supply agreements, and in May, it reached a strategic cooperation with Corning, investing up to $2.7 billion to build three advanced factories in the US. In just three months, HUAWEI has invested at least $6.5 billion, demonstrating its vision of optical interconnect technology as a core strategy for the next-generation AI factory.",
-            "As AI computing clusters expand from tens of thousands to hundreds of thousands of cards, data center bottlenecks have shifted from individual GPU performance to cluster interconnect capabilities. Market research data shows that the global CPO market is expected to reach $2 billion this year, with a year-over-year growth of over 400%, and Goldman Sachs predicts that it will reach $9.1 billion in 2028.",
-            "With the continuous progress of HUAWEI's Vera Rubin platform, silicon photonics interconnects are expected to become standard equipment, and the supply chain outlook remains optimistic."
-          ]
-        },
-        {
-          "news_id": "6578561",
-          "title": "CNN：川普麻煩事還在增加",
-          "title_en": "CNN: Trump’s Troubles Keep Growing",
-          "publish_at": 1786931580,
-          "url": "https://news.cnyes.com/news/id/6578561",
-          "paras": [
-            "《CNN》指出，美國總統川普在伊朗戰爭問題上的麻煩越積越多，而且很多已經超出戰場和談判桌之外。",
-            "最近有如下一些動向：",
-            "日前報導的川普因伊朗潛在威脅而在土耳其祕密換飛機一事，讓人嚴重懷疑，這屆政府是不是拿工作人員和媒體記者當誘餌。這一爆料也削弱了政府關於伊朗能力已被大幅削弱的說法。",
-            "美國的彈藥短缺問題似乎也迫在眉睫。對於這一問題，有人在戰前就警告過川普。",
-            "越來越多跡象顯示，川普政府官員及盟友對這場戰爭感到厭倦，正在尋找或敦促尋找退出路徑。",
-            "「林肯號」航母因支援戰事而超長部署，有關航母上生活條件糟糕和官兵心理健康惡化的報導越來越多。",
-            "上述每一條都在削弱川普讓這場戰爭繼續下去的能力。戰爭已打到第六個月。川普堅稱沒感到時間壓力，但他黨內一些人恐怕不敢苟同，畢竟期中選舉正在臨近。",
-            "「換飛機」一事最有可能在這場本就不受歡迎的戰爭上再疊加一層醜聞。更重要的是，它動搖了政府「已在軍事上重創伊朗」的說法。",
-            "彈藥供應問題一直是個潛在巨大隱患。參謀長聯席會議主席丹·凱恩及其他軍方領導人在戰前就警告過川普：若伊朗戰爭打成持久戰，彈藥庫存會是個大問題。",
-            "川普當時預期的戰爭時間似乎要短得多，僅持續四到六周。但現實並未如他所願。越來越多的報導表明，凱恩的警告有根據，關鍵彈藥消耗巨大。美國軍方在衝突中已消耗近80%「薩德」反飛彈系統攔截彈。",
-            "凱恩已私下向川普的其他高級顧問表示，政府得給這場戰爭找個退出路徑，因為擺在桌面上的那些用來升級衝突的軍事選項可能會適得其反，單靠空襲也難以實現川普的目標。",
-            "還有跡象顯示，川普的鐵桿盟友也越來越擔心，這場戰爭會在2026年期中選舉上拖累共和黨。眾議院議長強生最近說：「我們得儘快了結此事。」《Fox News》主持人勞拉·英格拉哈姆也說：「時間不多了。」",
-            "戰爭拖長似乎還製造了另一重麻煩：疲勞、生活條件差、心理健康惡化正在困擾那些承擔作戰任務的美軍官兵。"
-          ],
-          "paras_en": [
-            "CNN reports that U.S. President Trump’s problems over the Iran war are mounting and many have already spilled beyond the battlefield and the negotiating table.",
-            "Recent developments include the following:",
-            "A recent report about Trump secretly swapping aircraft in Turkey due to a potential Iranian threat has raised serious doubts about whether the administration is using staff and journalists as bait. The revelation also undermines the government’s claim that Iran’s capabilities have been significantly weakened.",
-            "The United States’ ammunition shortage appears to be imminent, and someone warned Trump about this issue before the war began.",
-            "Increasing evidence shows that Trump administration officials and allies are growing weary of the war and are seeking—or urging the search for—an exit strategy.",
-            "The USS Lincoln aircraft carrier has been on an extended deployment to support the war, and reports of poor living conditions and deteriorating mental health among its crew are mounting.",
-            "Each of these points erodes Trump’s ability to keep the war going. The conflict is now in its sixth month. Trump insists he feels no time pressure, but some members of his party are unlikely to agree, especially with the midterm elections looming.",
-            "The aircraft‑swap incident is likely to add another scandal to an already unpopular war and, more importantly, it shakes the administration’s claim that Iran has been “militarily crippled.”",
-            "Ammunition supply has long been a potential huge risk. Joint Chiefs of Staff Chairman Dan Keen and other military leaders warned Trump before the war that if the Iran conflict turned into a protracted fight, ammunition stockpiles would become a major problem.",
-            "Trump had originally expected the war to be much shorter—only four to six weeks—but reality has not matched his expectations. More reports confirm Keen’s warning was warranted, as key munitions have been consumed at a massive rate. The U.S. military has already used nearly 80% of the interceptors for the THAAD missile‑defense system in the conflict.",
-            "Keen has privately told other senior Trump advisers that the administration must find a way out of the war, because the military options on the table to escalate the conflict could backfire, and air strikes alone are unlikely to achieve Trump’s objectives.",
-            "There are also signs that Trump’s staunch allies are increasingly worried the war will hurt the Republican Party in the 2026 midterm elections. House Speaker Johnson recently said, “We need to wrap this up as soon as possible.” Fox News host Laura Ingraham added, “Time is running out.”",
-            "The prolonged war appears to be creating another set of problems: fatigue, poor living conditions, and deteriorating mental health are plaguing the U.S. service members tasked with combat operations."
           ]
         }
       ]
