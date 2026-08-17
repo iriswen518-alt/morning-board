@@ -139,7 +139,7 @@
     {
       "name": "CSI 300 滬深300",
       "name_zh": null,
-      "close": 4692.2919921875,
+      "close": 4701.18798828125,
       "daily_pct": null,
       "mtd_pct": -9.04,
       "ytd_pct": -2.18,
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 99.66999816894531,
       "daily_pct": -0.29,
-      "mtd_pct": -0.27,
-      "ytd_pct": 1.28,
+      "mtd_pct": -0.31,
+      "ytd_pct": 1.23,
       "closing_date": "2026-08-14"
     },
     {
@@ -269,35 +269,35 @@
   "commodities": [
     {
       "name": "黃金 (USD/oz)",
-      "close": 4448.5,
-      "daily_pct": 1.55,
-      "mtd_pct": 9.86,
-      "ytd_pct": 2.84,
-      "closing_date": "2026-08-16"
+      "close": 4380.39990234375,
+      "daily_pct": 0.38,
+      "mtd_pct": 8.18,
+      "ytd_pct": 1.27,
+      "closing_date": "2026-08-14"
     },
     {
       "name": "白銀 (USD/oz)",
-      "close": 65.73500061035156,
-      "daily_pct": 1.15,
-      "mtd_pct": 14.14,
-      "ytd_pct": -6.27,
-      "closing_date": "2026-08-16"
+      "close": 64.98799896240234,
+      "daily_pct": 0.18,
+      "mtd_pct": 12.84,
+      "ytd_pct": -7.34,
+      "closing_date": "2026-08-14"
     },
     {
       "name": "WTI 原油 (USD/bbl)",
-      "close": 82.37000274658203,
-      "daily_pct": -0.04,
-      "mtd_pct": -2.72,
-      "ytd_pct": 43.45,
-      "closing_date": "2026-08-16"
+      "close": 82.4000015258789,
+      "daily_pct": 1.42,
+      "mtd_pct": -2.68,
+      "ytd_pct": 43.5,
+      "closing_date": "2026-08-14"
     },
     {
       "name": "布蘭特原油 (USD/bbl)",
-      "close": 88.76000213623047,
-      "daily_pct": 0.27,
-      "mtd_pct": -1.51,
-      "ytd_pct": 45.87,
-      "closing_date": "2026-08-16"
+      "close": 88.5199966430664,
+      "daily_pct": 1.67,
+      "mtd_pct": -1.78,
+      "ytd_pct": 45.47,
+      "closing_date": "2026-08-14"
     },
     {
       "name": "比特幣 (USD)",
@@ -388,8 +388,8 @@
     "yield_curve_10y2y": 0.53,
     "yield_curve_10y2y_bps": 53,
     "curve_shape": "正斜率",
-    "dxy": 99.53399658203125,
-    "dxy_daily_pct": -0.14,
+    "dxy": 99.66999816894531,
+    "dxy_daily_pct": -0.29,
     "closing_date": "2026-08-14"
   },
   "fedwatch": [
@@ -417,10 +417,10 @@
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
       "implied_rate": 3.83,
-      "delta_rate": 0.12,
-      "delta_bps": 12.0,
-      "p_hike": 48.0,
-      "p_hold": 52.0,
+      "delta_rate": 0.11,
+      "delta_bps": 11.0,
+      "p_hike": 44.0,
+      "p_hold": 56.0,
       "p_cut": 0,
       "is_reference": false
     }
