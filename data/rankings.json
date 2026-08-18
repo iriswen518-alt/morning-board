@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-18T09:01:54+08:00",
+  "generated_at": "2026-08-18T10:01:52+08:00",
   "tw": {
     "as_of": "2026-08-18",
     "top_marketcap": [
@@ -680,7 +680,7 @@
         "price": 480.35,
         "daily_pct": -3.04,
         "market_cap": 3566861025280,
-        "pe": 26.790295,
+        "pe": 27.622198,
         "pe_kind": "trailing",
         "mtd_pct": 3.36,
         "ytd_pct": -0.68,
@@ -825,7 +825,7 @@
         "price": 35.755,
         "daily_pct": 13.76,
         "market_cap": 7995864576,
-        "pe": 43.078316,
+        "pe": 38.037235,
         "pe_kind": "trailing",
         "mtd_pct": 43.54,
         "ytd_pct": -12.45,
@@ -944,7 +944,7 @@
         "price": 19.53,
         "daily_pct": -9.63,
         "market_cap": 3307025408,
-        "pe": 93.00001,
+        "pe": 102.78948,
         "pe_kind": "trailing",
         "mtd_pct": -12.03,
         "ytd_pct": null,
@@ -957,7 +957,7 @@
         "price": 10.76,
         "daily_pct": -8.81,
         "market_cap": 3211866624,
-        "pe": 10.868687,
+        "pe": 11.955556,
         "pe_kind": "trailing",
         "mtd_pct": -17.23,
         "ytd_pct": -42.61,
@@ -1097,6 +1097,19 @@
         "source_url": "https://finance.yahoo.com/quote/EEM"
       },
       {
+        "symbol": "XLU",
+        "name": "State Street Utilities Select S",
+        "price": 44.18,
+        "daily_pct": 2.43,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": -0.38,
+        "ytd_pct": 3.49,
+        "yahoo": "XLU",
+        "source_url": "https://finance.yahoo.com/quote/XLU"
+      },
+      {
         "symbol": "XLK",
         "name": "State Street Technology Select ",
         "price": 190.32,
@@ -1108,6 +1121,19 @@
         "ytd_pct": 32.19,
         "yahoo": "XLK",
         "source_url": "https://finance.yahoo.com/quote/XLK"
+      },
+      {
+        "symbol": "VEA",
+        "name": "Vanguard FTSE Developed Markets",
+        "price": 73.69,
+        "daily_pct": 1.64,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": 4.35,
+        "ytd_pct": 17.96,
+        "yahoo": "VEA",
+        "source_url": "https://finance.yahoo.com/quote/VEA"
       },
       {
         "symbol": "ARKK",
@@ -1147,32 +1173,6 @@
         "ytd_pct": 18.81,
         "yahoo": "QQQ",
         "source_url": "https://finance.yahoo.com/quote/QQQ"
-      },
-      {
-        "symbol": "XLRE",
-        "name": "State Street Real Estate Select",
-        "price": 44.83,
-        "daily_pct": 0.97,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": -0.53,
-        "ytd_pct": 11.1,
-        "yahoo": "XLRE",
-        "source_url": "https://finance.yahoo.com/quote/XLRE"
-      },
-      {
-        "symbol": "XLI",
-        "name": "State Street Industrial Select ",
-        "price": 186.32,
-        "daily_pct": 0.93,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": 3.6,
-        "ytd_pct": 20.11,
-        "yahoo": "XLI",
-        "source_url": "https://finance.yahoo.com/quote/XLI"
       }
     ],
     "sectors": [
@@ -1189,6 +1189,20 @@
         "yahoo": "XLE",
         "source_url": "https://finance.yahoo.com/quote/XLE",
         "name_zh": "能源"
+      },
+      {
+        "symbol": "XLU",
+        "name": "State Street Utilities Select S",
+        "price": 44.18,
+        "daily_pct": 2.43,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": -0.38,
+        "ytd_pct": 3.49,
+        "yahoo": "XLU",
+        "source_url": "https://finance.yahoo.com/quote/XLU",
+        "name_zh": "公用事業"
       },
       {
         "symbol": "XLK",
