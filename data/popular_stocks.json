@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-18T16:47:52+08:00",
+  "generated_at": "2026-08-18T17:42:11+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -31,17 +31,17 @@
       "error": null
     },
     {
-      "symbol": "FN",
-      "name_zh": "Fabrinet",
+      "symbol": "HSAI",
+      "name_zh": "Hesai",
       "kind": "US",
-      "price": 598.58,
-      "change_pct": 4.97,
-      "mtd_pct": 30.96,
-      "ytd_pct": 25.25,
+      "price": 18.07,
+      "change_pct": -0.77,
+      "mtd_pct": 7.75,
+      "ytd_pct": -18.71,
       "market_date": "2026-08-14",
-      "per": 48.2148,
+      "per": 43.045,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FN.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HSAI.US",
       "error": null
     },
     {
@@ -59,31 +59,17 @@
       "error": null
     },
     {
-      "symbol": "STLA",
-      "name_zh": "Stellantis",
+      "symbol": "FN",
+      "name_zh": "Fabrinet",
       "kind": "US",
-      "price": 5.12,
-      "change_pct": -4.48,
-      "mtd_pct": -6.94,
-      "ytd_pct": -50.78,
+      "price": 598.58,
+      "change_pct": 4.97,
+      "mtd_pct": 30.96,
+      "ytd_pct": 25.25,
       "market_date": "2026-08-14",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=STLA.US",
-      "error": null
-    },
-    {
-      "symbol": "IPST",
-      "name_zh": "IP Strategy",
-      "kind": "US",
-      "price": 7.39,
-      "change_pct": 235.89,
-      "mtd_pct": 1.85,
-      "ytd_pct": -92.95,
-      "market_date": "2026-08-14",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IPST.US",
+      "per": 48.2148,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FN.US",
       "error": null
     },
     {
@@ -101,17 +87,17 @@
       "error": null
     },
     {
-      "symbol": "OXY",
-      "name_zh": "西方石油",
+      "symbol": "SPY",
+      "name_zh": "State Street SPDR S&P 500 ETF T",
       "kind": "US",
-      "price": 59.04,
-      "change_pct": 1.17,
-      "mtd_pct": 2.26,
-      "ytd_pct": 41.93,
+      "price": 772.67,
+      "change_pct": -0.47,
+      "mtd_pct": 3.92,
+      "ytd_pct": 13.85,
       "market_date": "2026-08-14",
-      "per": 7.9555,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=OXY.US",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPY.US",
       "error": null
     },
     {
@@ -129,17 +115,31 @@
       "error": null
     },
     {
-      "symbol": "SPY",
-      "name_zh": "SPDR S&P 500 ETF",
+      "symbol": "STLA",
+      "name_zh": "Stellantis",
       "kind": "US",
-      "price": 772.67,
-      "change_pct": -0.47,
-      "mtd_pct": 3.92,
-      "ytd_pct": 13.85,
+      "price": 5.12,
+      "change_pct": -4.48,
+      "mtd_pct": -6.94,
+      "ytd_pct": -50.78,
       "market_date": "2026-08-14",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPY.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=STLA.US",
+      "error": null
+    },
+    {
+      "symbol": "DUOT",
+      "name_zh": "Duos Technologies",
+      "kind": "US",
+      "price": 10.28,
+      "change_pct": 12.84,
+      "mtd_pct": 5.81,
+      "ytd_pct": -19.02,
+      "market_date": "2026-08-14",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DUOT.US",
       "error": null
     },
     {
