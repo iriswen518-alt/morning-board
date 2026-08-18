@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-18T13:01:42+08:00",
+  "generated_at": "2026-08-18T15:01:39+08:00",
   "source": "manual curation (targets.json)",
   "version": 3,
   "updated": "2026-08-18",
@@ -187,7 +187,7 @@
         {
           "k": "Nasdaq Composite YTD",
           "v": "+15.00%",
-          "sub": "MTD +6.40%・今日 -0.32%・截至 08/17",
+          "sub": "MTD +5.34%・今日 -0.32%・截至 08/17",
           "url": "https://finance.yahoo.com/quote/%5EIXIC"
         }
       ],
@@ -358,6 +358,12 @@
       "ytd": "+18% (基建1Y)",
       "stats": [
         {
+          "k": "WTI 原油 YTD",
+          "v": "+48.83%",
+          "sub": "今日 +0.96%・截至 08/18",
+          "url": "https://finance.yahoo.com/quote/CL=F"
+        },
+        {
           "k": "建議部位",
           "v": "3–5%",
           "sub": "油電雙引擎、攻守兼備"
@@ -402,7 +408,7 @@
         {
           "k": "DAX YTD",
           "v": "+7.96%",
-          "sub": "MTD +3.23%・今日 -0.38%・截至 08/17",
+          "sub": "MTD +3.16%・今日 -0.38%・截至 08/17",
           "url": "https://finance.yahoo.com/quote/%5EGDAXI"
         },
         {
@@ -443,8 +449,8 @@
       "stats": [
         {
           "k": "近1年績效",
-          "v": "-3.21%",
-          "sub": "利安資金越南 A 級別美元・截至 08/14",
+          "v": "-2.64%",
+          "sub": "利安資金越南 A 級別美元・截至 08/17",
           "url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=LIC28-LI01"
         },
         {
@@ -485,8 +491,8 @@
       "stats": [
         {
           "k": "STI 海峽時報 YTD",
-          "v": "+22.40%",
-          "sub": "今日 -0.78%・截至 08/18",
+          "v": "+22.28%",
+          "sub": "今日 -0.87%・截至 08/18",
           "url": "https://finance.yahoo.com/quote/%5ESTI"
         },
         {
@@ -805,16 +811,16 @@
       "tagline": "FDI 轉移之長期選擇權；MSCI 升等催化",
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=LIC28-LI01",
       "fund_id": "uob_vietnam",
-      "nav": 0.813,
-      "nav_date": "2026-08-14",
-      "change_pct": -2.52,
+      "nav": 0.812,
+      "nav_date": "2026-08-17",
+      "change_pct": -0.12,
       "perf": {
-        "1m": -2.28,
-        "3m": -8.96,
-        "6m": -6.98,
-        "ytd": -5.24,
-        "1y": -3.21,
-        "3y": 13.55
+        "1m": -0.98,
+        "3m": -8.46,
+        "6m": -7.09,
+        "ytd": -5.36,
+        "1y": -2.64,
+        "3y": 14.04
       },
       "bop_name_zh": "利安資金越南基金A級別美元"
     },
