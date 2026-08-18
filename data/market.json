@@ -24,7 +24,7 @@
       "name_zh": null,
       "close": 53459.78,
       "daily_pct": -0.51,
-      "mtd_pct": 2.92,
+      "mtd_pct": 2.38,
       "ytd_pct": 11.8,
       "closing_date": "2026-08-17"
     },
@@ -33,7 +33,7 @@
       "name_zh": null,
       "close": 12621.005,
       "daily_pct": 1.64,
-      "mtd_pct": 9.86,
+      "mtd_pct": 9.78,
       "ytd_pct": 75.3,
       "closing_date": "2026-08-17"
     },
@@ -78,7 +78,7 @@
       "name_zh": null,
       "close": 67460.7265625,
       "daily_pct": null,
-      "mtd_pct": 11.07,
+      "mtd_pct": 6.76,
       "ytd_pct": 36.5,
       "closing_date": "2026-08-18"
     },
@@ -87,7 +87,7 @@
       "name_zh": null,
       "close": 45308.68,
       "daily_pct": -1.2,
-      "mtd_pct": 14.72,
+      "mtd_pct": 6.24,
       "ytd_pct": 58.17,
       "closing_date": "2026-08-18"
     },
@@ -130,16 +130,16 @@
     {
       "name": "Shanghai 上證",
       "name_zh": null,
-      "close": 3989.08349609375,
+      "close": 3990.3037109375,
       "daily_pct": null,
-      "mtd_pct": 3.22,
+      "mtd_pct": 2.48,
       "ytd_pct": -1.05,
       "closing_date": "2026-08-18"
     },
     {
       "name": "CSI 300 滬深300",
       "name_zh": null,
-      "close": 4724.6455078125,
+      "close": 4725.8134765625,
       "daily_pct": null,
       "mtd_pct": -9.04,
       "ytd_pct": -2.18,
@@ -169,7 +169,7 @@
       "name": "US 10-Year",
       "yield_pct": 4.72,
       "daily_bps": 2.8,
-      "mtd_bps": 6.1,
+      "mtd_bps": -2.1,
       "closing_date": "2026-08-17"
     },
     {
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 99.6,
       "daily_pct": -0.07,
-      "mtd_pct": -0.32,
-      "ytd_pct": 1.43,
+      "mtd_pct": -0.17,
+      "ytd_pct": 1.37,
       "closing_date": "2026-08-17"
     },
     {
@@ -301,11 +301,11 @@
     },
     {
       "name": "比特幣 (USD)",
-      "close": 62818.65234375,
-      "daily_pct": -0.33,
-      "mtd_pct": 0.01,
-      "ytd_pct": -28.21,
-      "closing_date": "2026-08-16"
+      "close": 64506.25390625,
+      "daily_pct": 2.69,
+      "mtd_pct": 2.69,
+      "ytd_pct": -26.29,
+      "closing_date": "2026-08-17"
     }
   ],
   "bond_etfs": [
@@ -314,7 +314,7 @@
       "name_zh": null,
       "close": 106.12000274658203,
       "daily_pct": -0.4,
-      "mtd_pct": -0.27,
+      "mtd_pct": -0.12,
       "ytd_pct": -3.69,
       "closing_date": "2026-08-14"
     },
@@ -323,7 +323,7 @@
       "name_zh": null,
       "close": 78.63999938964844,
       "daily_pct": -0.08,
-      "mtd_pct": -0.04,
+      "mtd_pct": 0.03,
       "ytd_pct": -1.37,
       "closing_date": "2026-08-14"
     },
@@ -341,7 +341,7 @@
       "name_zh": null,
       "close": 95.97000122070312,
       "daily_pct": -0.07,
-      "mtd_pct": 0.32,
+      "mtd_pct": 0.3,
       "ytd_pct": -1.28,
       "closing_date": "2026-08-14"
     },
@@ -350,7 +350,7 @@
       "name_zh": null,
       "close": 95.05000305175781,
       "daily_pct": -0.33,
-      "mtd_pct": 0.27,
+      "mtd_pct": 0.41,
       "ytd_pct": -1.28,
       "closing_date": "2026-08-14"
     },
@@ -377,7 +377,7 @@
       "name_zh": null,
       "close": 97.4800033569336,
       "daily_pct": -0.21,
-      "mtd_pct": -0.14,
+      "mtd_pct": 0.11,
       "ytd_pct": -2.4,
       "closing_date": "2026-08-14"
     }
@@ -406,21 +406,21 @@
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
       "implied_rate": 3.73,
-      "delta_rate": 0.06,
-      "delta_bps": 6.0,
-      "p_hike": 24.0,
-      "p_hold": 76.0,
+      "delta_rate": 0.05,
+      "delta_bps": 5.0,
+      "p_hike": 20.0,
+      "p_hold": 80.0,
       "p_cut": 0,
       "is_reference": false
     },
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 3.85,
-      "delta_rate": 0.12,
-      "delta_bps": 12.0,
-      "p_hike": 48.0,
-      "p_hold": 52.0,
+      "implied_rate": 3.84,
+      "delta_rate": 0.11,
+      "delta_bps": 11.0,
+      "p_hike": 44.0,
+      "p_hold": 56.0,
       "p_cut": 0,
       "is_reference": false
     }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-18T15:05:43+08:00",
+  "generated_at": "2026-08-18T15:57:03+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -36,12 +36,26 @@
       "kind": "US",
       "price": 598.58,
       "change_pct": 4.97,
-      "mtd_pct": 29.79,
+      "mtd_pct": 30.96,
       "ytd_pct": 25.25,
       "market_date": "2026-08-14",
       "per": 48.2148,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FN.US",
+      "error": null
+    },
+    {
+      "symbol": "BABA",
+      "name_zh": "阿里巴巴",
+      "kind": "US",
+      "price": 124.71,
+      "change_pct": 0.73,
+      "mtd_pct": 1.28,
+      "ytd_pct": -15.53,
+      "market_date": "2026-08-14",
+      "per": 18.9574,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BABA.US",
       "error": null
     },
     {
@@ -59,17 +73,17 @@
       "error": null
     },
     {
-      "symbol": "SPY",
-      "name_zh": "State Street SPDR S&P 500 ETF T",
+      "symbol": "STLA",
+      "name_zh": "Stellantis",
       "kind": "US",
-      "price": 772.67,
-      "change_pct": -0.47,
-      "mtd_pct": 3.92,
-      "ytd_pct": 13.85,
+      "price": 5.12,
+      "change_pct": -4.48,
+      "mtd_pct": -6.94,
+      "ytd_pct": -50.78,
       "market_date": "2026-08-14",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPY.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=STLA.US",
       "error": null
     },
     {
@@ -87,45 +101,45 @@
       "error": null
     },
     {
-      "symbol": "KLAR",
-      "name_zh": "Klarna",
+      "symbol": "BHP",
+      "name_zh": "BHP",
       "kind": "US",
-      "price": 19.51,
-      "change_pct": -6.16,
-      "mtd_pct": 9.77,
-      "ytd_pct": -28.09,
+      "price": 88.37,
+      "change_pct": 1.83,
+      "mtd_pct": 2.71,
+      "ytd_pct": 43.75,
       "market_date": "2026-08-14",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=KLAR.US",
-      "error": null
-    },
-    {
-      "symbol": "STLA",
-      "name_zh": "Stellantis",
-      "kind": "US",
-      "price": 5.12,
-      "change_pct": -4.48,
-      "mtd_pct": -6.94,
-      "ytd_pct": -50.78,
-      "market_date": "2026-08-14",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=STLA.US",
-      "error": null
-    },
-    {
-      "symbol": "FIGR",
-      "name_zh": "Figure Technology Solutions, In",
-      "kind": "US",
-      "price": 35.76,
-      "change_pct": 13.76,
-      "mtd_pct": 26.17,
-      "ytd_pct": -23.04,
-      "market_date": "2026-08-14",
-      "per": 39.1378,
+      "per": 22.267,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FIGR.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BHP.US",
+      "error": null
+    },
+    {
+      "symbol": "TLT",
+      "name_zh": "iShares 20+ Year Treasury Bond",
+      "kind": "US",
+      "price": 81.35,
+      "change_pct": -0.84,
+      "mtd_pct": -0.26,
+      "ytd_pct": -5.87,
+      "market_date": "2026-08-14",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TLT.US",
+      "error": null
+    },
+    {
+      "symbol": "MO",
+      "name_zh": "Altria",
+      "kind": "US",
+      "price": 63.96,
+      "change_pct": -2.65,
+      "mtd_pct": -3.85,
+      "ytd_pct": 13.94,
+      "market_date": "2026-08-14",
+      "per": 13.7487,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MO.US",
       "error": null
     },
     {
@@ -143,17 +157,17 @@
       "error": null
     },
     {
-      "symbol": "CVNA",
-      "name_zh": "Carvana",
+      "symbol": "SPY",
+      "name_zh": "SPDR S&P 500 ETF",
       "kind": "US",
-      "price": 70.09,
-      "change_pct": -7.28,
-      "mtd_pct": 21.22,
-      "ytd_pct": -10.44,
+      "price": 772.67,
+      "change_pct": -0.47,
+      "mtd_pct": 3.92,
+      "ytd_pct": 13.85,
       "market_date": "2026-08-14",
-      "per": 52.3843,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CVNA.US",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPY.US",
       "error": null
     },
     {
@@ -280,20 +294,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GLD.US",
-      "error": null
-    },
-    {
-      "symbol": "TLT",
-      "name_zh": "iShares 20+ 年公債 ETF",
-      "kind": "US",
-      "price": 81.35,
-      "change_pct": -0.84,
-      "mtd_pct": -0.26,
-      "ytd_pct": -5.87,
-      "market_date": "2026-08-14",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TLT.US",
       "error": null
     }
   ]
