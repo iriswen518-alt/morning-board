@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-18T15:57:03+08:00",
+  "generated_at": "2026-08-18T16:47:52+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -59,20 +59,6 @@
       "error": null
     },
     {
-      "symbol": "IPST",
-      "name_zh": "IP Strategy",
-      "kind": "US",
-      "price": 7.39,
-      "change_pct": 235.89,
-      "mtd_pct": 1.85,
-      "ytd_pct": -92.95,
-      "market_date": "2026-08-14",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IPST.US",
-      "error": null
-    },
-    {
       "symbol": "STLA",
       "name_zh": "Stellantis",
       "kind": "US",
@@ -84,6 +70,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=STLA.US",
+      "error": null
+    },
+    {
+      "symbol": "IPST",
+      "name_zh": "IP Strategy",
+      "kind": "US",
+      "price": 7.39,
+      "change_pct": 235.89,
+      "mtd_pct": 1.85,
+      "ytd_pct": -92.95,
+      "market_date": "2026-08-14",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IPST.US",
       "error": null
     },
     {
@@ -101,59 +101,31 @@
       "error": null
     },
     {
-      "symbol": "BHP",
-      "name_zh": "BHP",
+      "symbol": "OXY",
+      "name_zh": "西方石油",
       "kind": "US",
-      "price": 88.37,
-      "change_pct": 1.83,
-      "mtd_pct": 2.71,
-      "ytd_pct": 43.75,
+      "price": 59.04,
+      "change_pct": 1.17,
+      "mtd_pct": 2.26,
+      "ytd_pct": 41.93,
       "market_date": "2026-08-14",
-      "per": 22.267,
+      "per": 7.9555,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BHP.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=OXY.US",
       "error": null
     },
     {
-      "symbol": "TLT",
-      "name_zh": "iShares 20+ Year Treasury Bond",
+      "symbol": "KLAR",
+      "name_zh": "Klarna",
       "kind": "US",
-      "price": 81.35,
-      "change_pct": -0.84,
-      "mtd_pct": -0.26,
-      "ytd_pct": -5.87,
+      "price": 19.51,
+      "change_pct": -6.16,
+      "mtd_pct": 9.77,
+      "ytd_pct": -28.09,
       "market_date": "2026-08-14",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TLT.US",
-      "error": null
-    },
-    {
-      "symbol": "MO",
-      "name_zh": "Altria",
-      "kind": "US",
-      "price": 63.96,
-      "change_pct": -2.65,
-      "mtd_pct": -3.85,
-      "ytd_pct": 13.94,
-      "market_date": "2026-08-14",
-      "per": 13.7487,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MO.US",
-      "error": null
-    },
-    {
-      "symbol": "MCD",
-      "name_zh": "麥當勞",
-      "kind": "US",
-      "price": 265.53,
-      "change_pct": -2.68,
-      "mtd_pct": 0.81,
-      "ytd_pct": -10.73,
-      "market_date": "2026-08-14",
-      "per": 22.3141,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MCD.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=KLAR.US",
       "error": null
     },
     {
@@ -294,6 +266,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GLD.US",
+      "error": null
+    },
+    {
+      "symbol": "TLT",
+      "name_zh": "iShares 20+ 年公債 ETF",
+      "kind": "US",
+      "price": 81.35,
+      "change_pct": -0.84,
+      "mtd_pct": -0.26,
+      "ytd_pct": -5.87,
+      "market_date": "2026-08-14",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TLT.US",
       "error": null
     }
   ]
