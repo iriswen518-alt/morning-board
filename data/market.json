@@ -6,7 +6,7 @@
       "name_zh": null,
       "close": 7691.759765625,
       "daily_pct": -0.69,
-      "mtd_pct": 2.7,
+      "mtd_pct": 3.42,
       "ytd_pct": 12.36,
       "closing_date": "2026-08-18"
     },
@@ -15,7 +15,7 @@
       "name_zh": null,
       "close": 26289.7109375,
       "daily_pct": -1.33,
-      "mtd_pct": 3.61,
+      "mtd_pct": 4.65,
       "ytd_pct": 13.11,
       "closing_date": "2026-08-18"
     },
@@ -33,7 +33,7 @@
       "name_zh": null,
       "close": 11992.4599609375,
       "daily_pct": -4.98,
-      "mtd_pct": 6.02,
+      "mtd_pct": 6.1,
       "ytd_pct": 69.31,
       "closing_date": "2026-08-18"
     },
@@ -51,7 +51,7 @@
       "name_zh": null,
       "close": 26128.359375,
       "daily_pct": -0.8,
-      "mtd_pct": 1.95,
+      "mtd_pct": 2.02,
       "ytd_pct": 6.69,
       "closing_date": "2026-08-18"
     },
@@ -123,7 +123,7 @@
       "name_zh": null,
       "close": 25495.0703125,
       "daily_pct": 0.09,
-      "mtd_pct": -1.6,
+      "mtd_pct": -1.5,
       "ytd_pct": -0.62,
       "closing_date": "2026-08-19"
     },
@@ -150,7 +150,7 @@
       "name_zh": null,
       "close": 24078.30078125,
       "daily_pct": -0.32,
-      "mtd_pct": -0.94,
+      "mtd_pct": -0.67,
       "ytd_pct": -7.56,
       "closing_date": "2026-08-19"
     },
@@ -159,7 +159,7 @@
       "name_zh": null,
       "close": 9053.7998046875,
       "daily_pct": -0.18,
-      "mtd_pct": 1.04,
+      "mtd_pct": 1.14,
       "ytd_pct": 4.08,
       "closing_date": "2026-08-19"
     }
@@ -169,7 +169,7 @@
       "name": "US 10-Year",
       "yield_pct": 4.71,
       "daily_bps": -1.8,
-      "mtd_bps": -3.9,
+      "mtd_bps": 4.3,
       "closing_date": "2026-08-18"
     },
     {
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 99.6500015258789,
       "daily_pct": 0.01,
-      "mtd_pct": -0.43,
-      "ytd_pct": 1.11,
+      "mtd_pct": -0.6,
+      "ytd_pct": 1.15,
       "closing_date": "2026-08-18"
     },
     {
@@ -314,7 +314,7 @@
       "name_zh": null,
       "close": 105.83999633789062,
       "daily_pct": 0.13,
-      "mtd_pct": -0.39,
+      "mtd_pct": -0.54,
       "ytd_pct": -3.95,
       "closing_date": "2026-08-18"
     },
@@ -323,7 +323,7 @@
       "name_zh": null,
       "close": 78.62000274658203,
       "daily_pct": 0.03,
-      "mtd_pct": 0.0,
+      "mtd_pct": -0.06,
       "ytd_pct": -1.39,
       "closing_date": "2026-08-18"
     },
@@ -350,7 +350,7 @@
       "name_zh": null,
       "close": 94.63999938964844,
       "daily_pct": -0.06,
-      "mtd_pct": -0.02,
+      "mtd_pct": -0.16,
       "ytd_pct": -1.7,
       "closing_date": "2026-08-18"
     },
@@ -405,11 +405,11 @@
     {
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
-      "implied_rate": 3.71,
-      "delta_rate": 0.05,
-      "delta_bps": 5.0,
-      "p_hike": 20.0,
-      "p_hold": 80.0,
+      "implied_rate": 3.72,
+      "delta_rate": 0.06,
+      "delta_bps": 6.0,
+      "p_hike": 24.0,
+      "p_hold": 76.0,
       "p_cut": 0,
       "is_reference": false
     },
@@ -417,10 +417,10 @@
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
       "implied_rate": 3.83,
-      "delta_rate": 0.12,
-      "delta_bps": 12.0,
-      "p_hike": 48.0,
-      "p_hold": 52.0,
+      "delta_rate": 0.11,
+      "delta_bps": 11.0,
+      "p_hike": 44.0,
+      "p_hold": 56.0,
       "p_cut": 0,
       "is_reference": false
     }
