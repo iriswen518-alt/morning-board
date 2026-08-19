@@ -139,7 +139,7 @@
     {
       "name": "CSI 300 滬深300",
       "name_zh": null,
-      "close": 4725.8134765625,
+      "close": 4632.27880859375,
       "daily_pct": null,
       "mtd_pct": -9.04,
       "ytd_pct": -2.18,
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 99.6500015258789,
       "daily_pct": 0.01,
-      "mtd_pct": -0.15,
-      "ytd_pct": 1.4,
+      "mtd_pct": -0.22,
+      "ytd_pct": 1.32,
       "closing_date": "2026-08-18"
     },
     {
@@ -269,34 +269,34 @@
   "commodities": [
     {
       "name": "黃金 (USD/oz)",
-      "close": 4399.0,
-      "daily_pct": -0.43,
-      "mtd_pct": 8.64,
-      "ytd_pct": 1.7,
+      "close": 4408.0,
+      "daily_pct": -0.22,
+      "mtd_pct": 8.86,
+      "ytd_pct": 1.9,
       "closing_date": "2026-08-18"
     },
     {
       "name": "白銀 (USD/oz)",
-      "close": 63.04999923706055,
-      "daily_pct": -4.64,
-      "mtd_pct": 9.48,
-      "ytd_pct": -10.1,
+      "close": 63.06999969482422,
+      "daily_pct": -1.36,
+      "mtd_pct": 9.51,
+      "ytd_pct": -10.07,
       "closing_date": "2026-08-18"
     },
     {
       "name": "WTI 原油 (USD/bbl)",
-      "close": 84.95999908447266,
-      "daily_pct": 0.54,
-      "mtd_pct": 0.34,
-      "ytd_pct": 47.96,
+      "close": 84.77999877929688,
+      "daily_pct": 0.33,
+      "mtd_pct": 0.13,
+      "ytd_pct": 47.65,
       "closing_date": "2026-08-18"
     },
     {
       "name": "布蘭特原油 (USD/bbl)",
-      "close": 91.81999969482422,
-      "daily_pct": 1.05,
-      "mtd_pct": 1.89,
-      "ytd_pct": 50.9,
+      "close": 91.69999694824219,
+      "daily_pct": 0.91,
+      "mtd_pct": 1.75,
+      "ytd_pct": 50.7,
       "closing_date": "2026-08-18"
     },
     {
@@ -388,8 +388,8 @@
     "yield_curve_10y2y": 0.52,
     "yield_curve_10y2y_bps": 52,
     "curve_shape": "正斜率",
-    "dxy": 99.65399932861328,
-    "dxy_daily_pct": 0.0,
+    "dxy": 99.5780029296875,
+    "dxy_daily_pct": -0.07,
     "closing_date": "2026-08-18"
   },
   "fedwatch": [
@@ -405,18 +405,18 @@
     {
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
-      "implied_rate": 3.73,
-      "delta_rate": 0.06,
-      "delta_bps": 6.0,
-      "p_hike": 24.0,
-      "p_hold": 76.0,
+      "implied_rate": 3.72,
+      "delta_rate": 0.05,
+      "delta_bps": 5.0,
+      "p_hike": 20.0,
+      "p_hold": 80.0,
       "p_cut": 0,
       "is_reference": false
     },
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 3.84,
+      "implied_rate": 3.83,
       "delta_rate": 0.11,
       "delta_bps": 11.0,
       "p_hike": 44.0,
