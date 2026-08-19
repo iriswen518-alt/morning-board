@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-19T14:01:25+08:00",
+  "generated_at": "2026-08-19T14:58:20+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -45,20 +45,6 @@
       "error": null
     },
     {
-      "symbol": "BIDU",
-      "name_zh": "百度",
-      "kind": "US",
-      "price": 90.87,
-      "change_pct": -12.73,
-      "mtd_pct": -18.22,
-      "ytd_pct": -30.45,
-      "market_date": "2026-08-18",
-      "per": 609.2322,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BIDU.US",
-      "error": null
-    },
-    {
       "symbol": "KLAR",
       "name_zh": "Klarna",
       "kind": "US",
@@ -87,6 +73,20 @@
       "error": null
     },
     {
+      "symbol": "BIDU",
+      "name_zh": "百度",
+      "kind": "US",
+      "price": 90.87,
+      "change_pct": -12.73,
+      "mtd_pct": -18.22,
+      "ytd_pct": -30.45,
+      "market_date": "2026-08-18",
+      "per": 609.2322,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BIDU.US",
+      "error": null
+    },
+    {
       "symbol": "KEYS",
       "name_zh": "Keysight Technologies",
       "kind": "US",
@@ -98,34 +98,6 @@
       "per": 57.3732,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=KEYS.US",
-      "error": null
-    },
-    {
-      "symbol": "CCXI",
-      "name_zh": "Churchill Capital Corp XI",
-      "kind": "US",
-      "price": 15.65,
-      "change_pct": -9.01,
-      "mtd_pct": 12.91,
-      "ytd_pct": null,
-      "market_date": "2026-08-18",
-      "per": 253.7754,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CCXI.US",
-      "error": null
-    },
-    {
-      "symbol": "JNJ",
-      "name_zh": "嬌生",
-      "kind": "US",
-      "price": 271.11,
-      "change_pct": 3.33,
-      "mtd_pct": 5.76,
-      "ytd_pct": 31.0,
-      "market_date": "2026-08-18",
-      "per": 29.9333,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=JNJ.US",
       "error": null
     },
     {
@@ -143,45 +115,17 @@
       "error": null
     },
     {
-      "symbol": "BE",
-      "name_zh": "Bloom Energy",
+      "symbol": "JNJ",
+      "name_zh": "嬌生",
       "kind": "US",
-      "price": 209.01,
-      "change_pct": -9.97,
-      "mtd_pct": 1.55,
-      "ytd_pct": 140.55,
+      "price": 271.11,
+      "change_pct": 3.33,
+      "mtd_pct": 5.76,
+      "ytd_pct": 31.0,
       "market_date": "2026-08-18",
-      "per": 11588.5016,
+      "per": 29.9333,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BE.US",
-      "error": null
-    },
-    {
-      "symbol": "SOXX",
-      "name_zh": "iShares PHLX SOX Semiconductor",
-      "kind": "US",
-      "price": 531.39,
-      "change_pct": -4.96,
-      "mtd_pct": 5.25,
-      "ytd_pct": 76.45,
-      "market_date": "2026-08-18",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOXX.US",
-      "error": null
-    },
-    {
-      "symbol": "XLE",
-      "name_zh": "State Street Energy Select Sect",
-      "kind": "US",
-      "price": 63.68,
-      "change_pct": 1.76,
-      "mtd_pct": 6.94,
-      "ytd_pct": 42.43,
-      "market_date": "2026-08-18",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=XLE.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=JNJ.US",
       "error": null
     },
     {
@@ -196,6 +140,34 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOXL.US",
+      "error": null
+    },
+    {
+      "symbol": "BE",
+      "name_zh": "Bloom Energy",
+      "kind": "US",
+      "price": 209.01,
+      "change_pct": -9.97,
+      "mtd_pct": 1.55,
+      "ytd_pct": 140.55,
+      "market_date": "2026-08-18",
+      "per": 11588.5016,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BE.US",
+      "error": null
+    },
+    {
+      "symbol": "CIFR",
+      "name_zh": "Cipher Digital",
+      "kind": "US",
+      "price": 16.09,
+      "change_pct": -13,
+      "mtd_pct": -27.89,
+      "ytd_pct": 9.04,
+      "market_date": "2026-08-18",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CIFR.US",
       "error": null
     },
     {
@@ -308,6 +280,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SMH.US",
+      "error": null
+    },
+    {
+      "symbol": "SOXX",
+      "name_zh": "iShares 半導體 ETF",
+      "kind": "US",
+      "price": 531.39,
+      "change_pct": -4.96,
+      "mtd_pct": 5.25,
+      "ytd_pct": 76.45,
+      "market_date": "2026-08-18",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOXX.US",
       "error": null
     },
     {

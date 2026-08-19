@@ -76,11 +76,11 @@
     {
       "name": "Nikkei 225",
       "name_zh": null,
-      "close": 67460.7265625,
-      "daily_pct": -2.54,
+      "close": 65326.421875,
+      "daily_pct": -3.16,
       "mtd_pct": 4.81,
       "ytd_pct": 34.01,
-      "closing_date": "2026-08-18"
+      "closing_date": "2026-08-19"
     },
     {
       "name": "TAIEX 加權指數",
@@ -112,8 +112,8 @@
     {
       "name": "KOSPI",
       "name_zh": null,
-      "close": 6495.27978515625,
-      "daily_pct": -5.45,
+      "close": 6471.169921875,
+      "daily_pct": -5.8,
       "mtd_pct": 4.16,
       "ytd_pct": 63.02,
       "closing_date": "2026-08-19"
@@ -139,7 +139,7 @@
     {
       "name": "CSI 300 滬深300",
       "name_zh": null,
-      "close": 4603.43505859375,
+      "close": 4568.10693359375,
       "daily_pct": null,
       "mtd_pct": -9.04,
       "ytd_pct": -2.18,
@@ -157,11 +157,11 @@
     {
       "name": "S&P/ASX 200",
       "name_zh": null,
-      "close": 9070.0,
-      "daily_pct": -0.04,
+      "close": 9053.7998046875,
+      "daily_pct": -0.18,
       "mtd_pct": 1.04,
       "ytd_pct": 4.08,
-      "closing_date": "2026-08-18"
+      "closing_date": "2026-08-19"
     }
   ],
   "bonds": [
@@ -175,9 +175,9 @@
     {
       "name": "US 2-Year",
       "yield_pct": 4.19,
-      "daily_bps": 2.0,
+      "daily_bps": 0.0,
       "mtd_bps": -9.0,
-      "closing_date": "2026-08-17"
+      "closing_date": "2026-08-18"
     },
     {
       "name": "Germany 10-Year",
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 99.6500015258789,
       "daily_pct": 0.01,
-      "mtd_pct": -0.27,
-      "ytd_pct": 1.27,
+      "mtd_pct": -0.32,
+      "ytd_pct": 1.22,
       "closing_date": "2026-08-18"
     },
     {
@@ -405,11 +405,11 @@
     {
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
-      "implied_rate": 3.73,
-      "delta_rate": 0.06,
-      "delta_bps": 6.0,
-      "p_hike": 24.0,
-      "p_hold": 76.0,
+      "implied_rate": 3.72,
+      "delta_rate": 0.05,
+      "delta_bps": 5.0,
+      "p_hike": 20.0,
+      "p_hold": 80.0,
       "p_cut": 0,
       "is_reference": false
     },
@@ -425,5 +425,5 @@
       "is_reference": false
     }
   ],
-  "summary": "8/18 Shanghai 上證 +0.19%、8/17 台指期(近月) +0.17%、8/18 FTSE 100 +0.07% 領漲；8/19 KOSPI -5.45%、8/18 PHLX Semiconductor -4.98% 走弱。"
+  "summary": "8/18 Shanghai 上證 +0.19%、8/17 台指期(近月) +0.17%、8/18 FTSE 100 +0.07% 領漲；8/19 KOSPI -5.80%、8/18 PHLX Semiconductor -4.98% 走弱。"
 }
