@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-08-20T15:11",
+  "built_at": "2026-08-20T16:00",
   "indices": [
     {
       "ok": true,
@@ -190,9 +190,9 @@
     {
       "ok": true,
       "symbol": "^DJI",
-      "last": 53463.1,
+      "last": 53463.05,
       "prev_close": 53343.4,
-      "change": 119.7,
+      "change": 119.65,
       "change_pct": 0.22,
       "points": [
         53443.06,
@@ -273,10 +273,10 @@
         53447.39,
         53450.56,
         53467.34,
-        53463.1
+        53463.05
       ],
       "market_state": "PRE",
-      "asof": "08/19 16:00",
+      "asof": "08/19 16:38",
       "tz": "America/New_York",
       "name_zh": "道瓊工業"
     },
@@ -374,27 +374,99 @@
       "name_zh": "費城半導"
     },
     {
-      "ok": false,
+      "ok": true,
       "symbol": "^STOXX50E",
-      "error": "empty series",
+      "last": 6444.36,
+      "prev_close": 6444.46,
+      "change": -0.1,
+      "change_pct": -0.0,
+      "points": [
+        6442.45,
+        6449.68,
+        6442.97,
+        6440.0,
+        6439.55,
+        6438.57,
+        6437.09,
+        6441.88,
+        6444.16,
+        6444.36
+      ],
+      "market_state": "REGULAR",
+      "asof": "08/20 09:45",
+      "tz": "Europe/Zurich",
       "name_zh": "歐洲50"
     },
     {
-      "ok": false,
+      "ok": true,
       "symbol": "^GDAXI",
-      "error": "empty series",
+      "last": 26001.34,
+      "prev_close": 26091.33,
+      "change": -89.99,
+      "change_pct": -0.34,
+      "points": [
+        26050.3,
+        26055.6,
+        26012.51,
+        26015.67,
+        26011.0,
+        25989.17,
+        25987.53,
+        26003.32,
+        26001.34,
+        26001.34
+      ],
+      "market_state": "REGULAR",
+      "asof": "08/20 09:45",
+      "tz": "Europe/Berlin",
       "name_zh": "德國DAX"
     },
     {
-      "ok": false,
+      "ok": true,
       "symbol": "^FTSE",
-      "error": "empty series",
+      "last": 10722.22,
+      "prev_close": 10743.35,
+      "change": -21.13,
+      "change_pct": -0.2,
+      "points": [
+        10739.17,
+        10733.54,
+        10721.7,
+        10711.67,
+        10717.37,
+        10717.96,
+        10713.63,
+        10717.11,
+        10722.26,
+        10722.22
+      ],
+      "market_state": "REGULAR",
+      "asof": "08/20 08:45",
+      "tz": "Europe/London",
       "name_zh": "英國FTSE"
     },
     {
-      "ok": false,
+      "ok": true,
       "symbol": "^FCHI",
-      "error": "empty series",
+      "last": 8505.49,
+      "prev_close": 8501.91,
+      "change": 3.58,
+      "change_pct": 0.04,
+      "points": [
+        8504.4,
+        8510.4,
+        8506.97,
+        8497.02,
+        8499.95,
+        8496.42,
+        8493.06,
+        8498.51,
+        8505.26,
+        8505.49
+      ],
+      "market_state": "REGULAR",
+      "asof": "08/20 09:45",
+      "tz": "Europe/Paris",
       "name_zh": "法國CAC"
     },
     {
@@ -483,10 +555,10 @@
     {
       "ok": true,
       "symbol": "^TWII",
-      "last": 44855.9,
+      "last": 44933.74,
       "prev_close": 45308.7,
-      "change": -452.8,
-      "change_pct": -1.0,
+      "change": -374.96,
+      "change_pct": -0.83,
       "points": [
         45090.86,
         44931.34,
@@ -541,10 +613,11 @@
         44793.65,
         44797.02,
         44896.22,
-        44855.9
+        44855.9,
+        44933.74
       ],
       "market_state": "CLOSED",
-      "asof": "08/19 13:30",
+      "asof": "08/20 13:33",
       "tz": "Asia/Taipei",
       "name_zh": "台股加權"
     },
@@ -620,17 +693,26 @@
     {
       "ok": true,
       "symbol": "TWF:TXF",
-      "last": 44963.0,
+      "last": 44834.0,
       "prev_close": null,
       "change": null,
       "change_pct": null,
       "points": [
         44874.0,
         44944.0,
-        44963.0
+        44908.0,
+        44904.0,
+        44840.0,
+        44862.0,
+        44868.0,
+        44865.0,
+        44848.0,
+        44899.0,
+        44867.0,
+        44834.0
       ],
       "market_state": "REGULAR",
-      "asof": "08/20 15:10",
+      "asof": "08/20 15:55",
       "tz": "Asia/Taipei",
       "name_zh": "台指期近"
     },
@@ -724,10 +806,10 @@
     {
       "ok": true,
       "symbol": "^HSI",
-      "last": 25821.74,
+      "last": 25743.92,
       "prev_close": 25471.2,
-      "change": 350.54,
-      "change_pct": 1.38,
+      "change": 272.72,
+      "change_pct": 1.07,
       "points": [
         25779.25,
         25708.46,
@@ -784,21 +866,30 @@
         25831.22,
         25832.39,
         25814.81,
-        25818.68,
-        25821.74
+        25822.52,
+        25784.22,
+        25781.84,
+        25776.94,
+        25765.0,
+        25750.21,
+        25753.92,
+        25744.87,
+        25740.41,
+        25748.03,
+        25743.92
       ],
       "market_state": "REGULAR",
-      "asof": "08/20 14:56",
+      "asof": "08/20 15:45",
       "tz": "Asia/Hong_Kong",
       "name_zh": "恆生指數"
     },
     {
       "ok": true,
       "symbol": "000001.SS",
-      "last": 3902.78,
+      "last": 3903.72,
       "prev_close": 3990.3,
-      "change": -87.52,
-      "change_pct": -2.19,
+      "change": -86.58,
+      "change_pct": -2.17,
       "points": [
         3913.19,
         3910.95,
@@ -848,20 +939,21 @@
         3903.93,
         3904.33,
         3902.18,
-        3902.78
+        3904.37,
+        3903.72
       ],
       "market_state": "CLOSED",
-      "asof": "08/20 14:56",
+      "asof": "08/20 15:00",
       "tz": "Asia/Shanghai",
       "name_zh": "上證指數"
     },
     {
       "ok": true,
       "symbol": "000300.SS",
-      "last": 4589.61,
+      "last": 4592.75,
       "prev_close": 4588.7,
-      "change": 0.91,
-      "change_pct": 0.02,
+      "change": 4.05,
+      "change_pct": 0.09,
       "points": [
         4614.62,
         4615.82,
@@ -911,20 +1003,21 @@
         4589.15,
         4591.75,
         4588.69,
-        4589.61
+        4592.39,
+        4592.75
       ],
       "market_state": "CLOSED",
-      "asof": "08/20 14:56",
+      "asof": "08/20 15:00",
       "tz": "Asia/Shanghai",
       "name_zh": "滬深300"
     },
     {
       "ok": true,
       "symbol": "^NSEI",
-      "last": 24218.0,
+      "last": 24249.3,
       "prev_close": 24154.9,
-      "change": 63.1,
-      "change_pct": 0.26,
+      "change": 94.4,
+      "change_pct": 0.39,
       "points": [
         24192.85,
         24185.5,
@@ -967,11 +1060,20 @@
         24213.75,
         24209.95,
         24216.95,
-        24219.45,
-        24218.0
+        24217.2,
+        24241.45,
+        24244.3,
+        24244.25,
+        24244.95,
+        24248.5,
+        24246.8,
+        24241.0,
+        24250.3,
+        24247.55,
+        24249.3
       ],
       "market_state": "REGULAR",
-      "asof": "08/20 12:41",
+      "asof": "08/20 13:30",
       "tz": "Asia/Kolkata",
       "name_zh": "印度Nifty"
     },
@@ -1057,10 +1159,11 @@
         9074.9,
         9076.1,
         9076.1,
+        9083.8,
         9083.8
       ],
       "market_state": "CLOSED",
-      "asof": "08/19 16:12",
+      "asof": "08/20 17:14",
       "tz": "Australia/Sydney",
       "name_zh": "澳洲200"
     }
