@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T09:01:35+08:00",
+  "generated_at": "2026-08-20T10:01:37+08:00",
   "tw": {
     "as_of": "2026-08-20",
     "top_marketcap": [
@@ -647,7 +647,138 @@
   },
   "us": {
     "as_of": "2026-08-20",
-    "top_marketcap": [],
+    "top_marketcap": [
+      {
+        "symbol": "NVDA",
+        "name": "NVIDIA Corporation",
+        "price": 217.56,
+        "daily_pct": -0.99,
+        "market_cap": 5269520646144,
+        "pe": 33.678017,
+        "pe_kind": "trailing",
+        "mtd_pct": 8.37,
+        "ytd_pct": 16.65,
+        "yahoo": "NVDA",
+        "source_url": "https://finance.yahoo.com/quote/NVDA"
+      },
+      {
+        "symbol": "AAPL",
+        "name": "Apple Inc.",
+        "price": 316.83,
+        "daily_pct": 2.19,
+        "market_cap": 4623874129920,
+        "pe": 36.375427,
+        "pe_kind": "trailing",
+        "mtd_pct": 2.56,
+        "ytd_pct": 16.54,
+        "yahoo": "AAPL",
+        "source_url": "https://finance.yahoo.com/quote/AAPL"
+      },
+      {
+        "symbol": "AMZN",
+        "name": "Amazon.com, Inc.",
+        "price": 265.84,
+        "daily_pct": 2.46,
+        "market_cap": 2867433570304,
+        "pe": 20.882954,
+        "pe_kind": "trailing",
+        "mtd_pct": -2.11,
+        "ytd_pct": 15.17,
+        "yahoo": "AMZN",
+        "source_url": "https://finance.yahoo.com/quote/AMZN"
+      },
+      {
+        "symbol": "SPCX",
+        "name": "Space Exploration Technologies ",
+        "price": 139.65,
+        "daily_pct": -2.57,
+        "market_cap": 1840835461120,
+        "pe": 84.17975,
+        "pe_kind": "forward",
+        "mtd_pct": 28.86,
+        "ytd_pct": null,
+        "yahoo": "SPCX",
+        "source_url": "https://finance.yahoo.com/quote/SPCX"
+      },
+      {
+        "symbol": "AVGO",
+        "name": "Broadcom Inc.",
+        "price": 362.48,
+        "daily_pct": -4.57,
+        "market_cap": 1724527804416,
+        "pe": 60.413334,
+        "pe_kind": "trailing",
+        "mtd_pct": -6.88,
+        "ytd_pct": 4.73,
+        "yahoo": "AVGO",
+        "source_url": "https://finance.yahoo.com/quote/AVGO"
+      },
+      {
+        "symbol": "TSLA",
+        "name": "Tesla, Inc.",
+        "price": 351.12,
+        "daily_pct": 4.23,
+        "market_cap": 1386765090816,
+        "pe": 325.11108,
+        "pe_kind": "trailing",
+        "mtd_pct": 12.82,
+        "ytd_pct": -21.92,
+        "yahoo": "TSLA",
+        "source_url": "https://finance.yahoo.com/quote/TSLA"
+      },
+      {
+        "symbol": "SKHY",
+        "name": "SK hynix Inc.",
+        "price": 156.16,
+        "daily_pct": 0.35,
+        "market_cap": 1108509458432,
+        "pe": 9.663366,
+        "pe_kind": "trailing",
+        "mtd_pct": 8.65,
+        "ytd_pct": null,
+        "yahoo": "SKHY",
+        "source_url": "https://finance.yahoo.com/quote/SKHY"
+      },
+      {
+        "symbol": "WMT",
+        "name": "Walmart Inc.",
+        "price": 114.3,
+        "daily_pct": -0.78,
+        "market_cap": 909608419328,
+        "pe": 40.105267,
+        "pe_kind": "trailing",
+        "mtd_pct": 2.79,
+        "ytd_pct": 2.59,
+        "yahoo": "WMT",
+        "source_url": "https://finance.yahoo.com/quote/WMT"
+      },
+      {
+        "symbol": "INTC",
+        "name": "Intel Corporation",
+        "price": 92.8,
+        "daily_pct": -4.02,
+        "market_cap": 490550558720,
+        "pe": 45.4873,
+        "pe_kind": "forward",
+        "mtd_pct": 2.88,
+        "ytd_pct": 151.49,
+        "yahoo": "INTC",
+        "source_url": "https://finance.yahoo.com/quote/INTC"
+      },
+      {
+        "symbol": "PLTR",
+        "name": "Palantir Technologies Inc.",
+        "price": 175.19,
+        "daily_pct": 2.13,
+        "market_cap": 420991827968,
+        "pe": 149.73505,
+        "pe_kind": "trailing",
+        "mtd_pct": 42.36,
+        "ytd_pct": -1.44,
+        "yahoo": "PLTR",
+        "source_url": "https://finance.yahoo.com/quote/PLTR"
+      }
+    ],
     "top_gainers": [
       {
         "symbol": "MRNA",
@@ -953,19 +1084,6 @@
         "source_url": "https://finance.yahoo.com/quote/ARKK"
       },
       {
-        "symbol": "GLD",
-        "name": "SPDR Gold Shares",
-        "price": 413.84,
-        "daily_pct": 2.2,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": 11.39,
-        "ytd_pct": 4.42,
-        "yahoo": "GLD",
-        "source_url": "https://finance.yahoo.com/quote/GLD"
-      },
-      {
         "symbol": "XLP",
         "name": "State Street Consumer Staples S",
         "price": 86.54,
@@ -1042,6 +1160,19 @@
         "ytd_pct": 3.12,
         "yahoo": "XLU",
         "source_url": "https://finance.yahoo.com/quote/XLU"
+      },
+      {
+        "symbol": "HYG",
+        "name": "iShares iBoxx $ High Yield Corp",
+        "price": 79.71,
+        "daily_pct": 0.13,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": 0.29,
+        "ytd_pct": -1.14,
+        "yahoo": "HYG",
+        "source_url": "https://finance.yahoo.com/quote/HYG"
       }
     ],
     "sectors": [
@@ -1184,20 +1315,6 @@
         "yahoo": "XLI",
         "source_url": "https://finance.yahoo.com/quote/XLI",
         "name_zh": "工業"
-      },
-      {
-        "symbol": "XLK",
-        "name": "State Street Technology Select ",
-        "price": 183.64,
-        "daily_pct": -2.76,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": 4.73,
-        "ytd_pct": 27.55,
-        "yahoo": "XLK",
-        "source_url": "https://finance.yahoo.com/quote/XLK",
-        "name_zh": "科技"
       }
     ]
   }
