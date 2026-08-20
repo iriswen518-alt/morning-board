@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T15:39:25+08:00",
+  "generated_at": "2026-08-20T17:01:47+08:00",
   "tw": {
     "as_of": "2026-08-20",
     "top_marketcap": [
@@ -838,7 +838,7 @@
         "price": 98.01,
         "daily_pct": 16.3,
         "market_cap": 35459518464,
-        "pe": 24.770142,
+        "pe": 25.278162,
         "pe_kind": "forward",
         "mtd_pct": 16.82,
         "ytd_pct": -6.41,
@@ -1084,6 +1084,19 @@
         "source_url": "https://finance.yahoo.com/quote/ARKK"
       },
       {
+        "symbol": "GLD",
+        "name": "SPDR Gold Shares",
+        "price": 413.84,
+        "daily_pct": 2.2,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": 11.39,
+        "ytd_pct": 4.42,
+        "yahoo": "GLD",
+        "source_url": "https://finance.yahoo.com/quote/GLD"
+      },
+      {
         "symbol": "XLP",
         "name": "State Street Consumer Staples S",
         "price": 86.54,
@@ -1110,6 +1123,19 @@
         "source_url": "https://finance.yahoo.com/quote/XLRE"
       },
       {
+        "symbol": "TLT",
+        "name": "iShares 20+ Year Treasury Bond ",
+        "price": 83.02,
+        "daily_pct": 1.11,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": 0.94,
+        "ytd_pct": -4.75,
+        "yahoo": "TLT",
+        "source_url": "https://finance.yahoo.com/quote/TLT"
+      },
+      {
         "symbol": "XLC",
         "name": "State Street Communication Serv",
         "price": 111.32,
@@ -1123,6 +1149,19 @@
         "source_url": "https://finance.yahoo.com/quote/XLC"
       },
       {
+        "symbol": "XLY",
+        "name": "State Street Consumer Discretio",
+        "price": 118.59,
+        "daily_pct": 0.59,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": 2.15,
+        "ytd_pct": -0.69,
+        "yahoo": "XLY",
+        "source_url": "https://finance.yahoo.com/quote/XLY"
+      },
+      {
         "symbol": "XLU",
         "name": "State Street Utilities Select S",
         "price": 44.02,
@@ -1134,45 +1173,6 @@
         "ytd_pct": 3.12,
         "yahoo": "XLU",
         "source_url": "https://finance.yahoo.com/quote/XLU"
-      },
-      {
-        "symbol": "HYG",
-        "name": "iShares iBoxx $ High Yield Corp",
-        "price": 79.71,
-        "daily_pct": 0.13,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": 0.29,
-        "ytd_pct": -1.14,
-        "yahoo": "HYG",
-        "source_url": "https://finance.yahoo.com/quote/HYG"
-      },
-      {
-        "symbol": "XLB",
-        "name": "State Street Materials Select S",
-        "price": 52.52,
-        "daily_pct": -0.11,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": 4.14,
-        "ytd_pct": 15.81,
-        "yahoo": "XLB",
-        "source_url": "https://finance.yahoo.com/quote/XLB"
-      },
-      {
-        "symbol": "SPY",
-        "name": "State Street SPDR S&P 500 ETF T",
-        "price": 769.06,
-        "daily_pct": -0.44,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": 2.95,
-        "ytd_pct": 12.78,
-        "yahoo": "SPY",
-        "source_url": "https://finance.yahoo.com/quote/SPY"
       }
     ],
     "sectors": [
@@ -1247,6 +1247,20 @@
         "name_zh": "通訊"
       },
       {
+        "symbol": "XLY",
+        "name": "State Street Consumer Discretio",
+        "price": 118.59,
+        "daily_pct": 0.59,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": 2.15,
+        "ytd_pct": -0.69,
+        "yahoo": "XLY",
+        "source_url": "https://finance.yahoo.com/quote/XLY",
+        "name_zh": "非必需消費"
+      },
+      {
         "symbol": "XLU",
         "name": "State Street Utilities Select S",
         "price": 44.02,
@@ -1259,20 +1273,6 @@
         "yahoo": "XLU",
         "source_url": "https://finance.yahoo.com/quote/XLU",
         "name_zh": "公用事業"
-      },
-      {
-        "symbol": "XLB",
-        "name": "State Street Materials Select S",
-        "price": 52.52,
-        "daily_pct": -0.11,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": 4.14,
-        "ytd_pct": 15.81,
-        "yahoo": "XLB",
-        "source_url": "https://finance.yahoo.com/quote/XLB",
-        "name_zh": "原物料"
       },
       {
         "symbol": "XLF",
