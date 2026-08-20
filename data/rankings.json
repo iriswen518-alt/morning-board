@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T13:03:53+08:00",
+  "generated_at": "2026-08-20T15:39:25+08:00",
   "tw": {
     "as_of": "2026-08-20",
     "top_marketcap": [
@@ -667,7 +667,7 @@
         "price": 316.83,
         "daily_pct": 2.19,
         "market_cap": 4623874129920,
-        "pe": 36.375427,
+        "pe": 35.598877,
         "pe_kind": "trailing",
         "mtd_pct": 2.56,
         "ytd_pct": 16.54,
@@ -838,7 +838,7 @@
         "price": 98.01,
         "daily_pct": 16.3,
         "market_cap": 35459518464,
-        "pe": 25.56118,
+        "pe": 24.770142,
         "pe_kind": "forward",
         "mtd_pct": 16.82,
         "ytd_pct": -6.41,
@@ -1058,6 +1058,19 @@
         "source_url": "https://finance.yahoo.com/quote/XLV"
       },
       {
+        "symbol": "XLE",
+        "name": "State Street Energy Select Sect",
+        "price": 63.58,
+        "daily_pct": 4.18,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": 6.77,
+        "ytd_pct": 42.21,
+        "yahoo": "XLE",
+        "source_url": "https://finance.yahoo.com/quote/XLE"
+      },
+      {
         "symbol": "ARKK",
         "name": "ARK Innovation ETF",
         "price": 83.31,
@@ -1069,19 +1082,6 @@
         "ytd_pct": 8.31,
         "yahoo": "ARKK",
         "source_url": "https://finance.yahoo.com/quote/ARKK"
-      },
-      {
-        "symbol": "GLD",
-        "name": "SPDR Gold Shares",
-        "price": 413.84,
-        "daily_pct": 2.2,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": 11.39,
-        "ytd_pct": 4.42,
-        "yahoo": "GLD",
-        "source_url": "https://finance.yahoo.com/quote/GLD"
       },
       {
         "symbol": "XLP",
@@ -1110,30 +1110,17 @@
         "source_url": "https://finance.yahoo.com/quote/XLRE"
       },
       {
-        "symbol": "TLT",
-        "name": "iShares 20+ Year Treasury Bond ",
-        "price": 83.02,
-        "daily_pct": 1.11,
+        "symbol": "XLC",
+        "name": "State Street Communication Serv",
+        "price": 111.32,
+        "daily_pct": 0.95,
         "market_cap": null,
         "pe": null,
         "pe_kind": null,
-        "mtd_pct": 0.94,
-        "ytd_pct": -4.75,
-        "yahoo": "TLT",
-        "source_url": "https://finance.yahoo.com/quote/TLT"
-      },
-      {
-        "symbol": "XLY",
-        "name": "State Street Consumer Discretio",
-        "price": 118.59,
-        "daily_pct": 0.59,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": 2.15,
-        "ytd_pct": -0.69,
-        "yahoo": "XLY",
-        "source_url": "https://finance.yahoo.com/quote/XLY"
+        "mtd_pct": 2.85,
+        "ytd_pct": -5.44,
+        "yahoo": "XLC",
+        "source_url": "https://finance.yahoo.com/quote/XLC"
       },
       {
         "symbol": "XLU",
@@ -1173,6 +1160,19 @@
         "ytd_pct": 15.81,
         "yahoo": "XLB",
         "source_url": "https://finance.yahoo.com/quote/XLB"
+      },
+      {
+        "symbol": "SPY",
+        "name": "State Street SPDR S&P 500 ETF T",
+        "price": 769.06,
+        "daily_pct": -0.44,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": 2.95,
+        "ytd_pct": 12.78,
+        "yahoo": "SPY",
+        "source_url": "https://finance.yahoo.com/quote/SPY"
       }
     ],
     "sectors": [
@@ -1189,6 +1189,20 @@
         "yahoo": "XLV",
         "source_url": "https://finance.yahoo.com/quote/XLV",
         "name_zh": "醫療"
+      },
+      {
+        "symbol": "XLE",
+        "name": "State Street Energy Select Sect",
+        "price": 63.58,
+        "daily_pct": 4.18,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": 6.77,
+        "ytd_pct": 42.21,
+        "yahoo": "XLE",
+        "source_url": "https://finance.yahoo.com/quote/XLE",
+        "name_zh": "能源"
       },
       {
         "symbol": "XLP",
@@ -1219,18 +1233,18 @@
         "name_zh": "房地產"
       },
       {
-        "symbol": "XLY",
-        "name": "State Street Consumer Discretio",
-        "price": 118.59,
-        "daily_pct": 0.59,
+        "symbol": "XLC",
+        "name": "State Street Communication Serv",
+        "price": 111.32,
+        "daily_pct": 0.95,
         "market_cap": null,
         "pe": null,
         "pe_kind": null,
-        "mtd_pct": 2.15,
-        "ytd_pct": -0.69,
-        "yahoo": "XLY",
-        "source_url": "https://finance.yahoo.com/quote/XLY",
-        "name_zh": "非必需消費"
+        "mtd_pct": 2.85,
+        "ytd_pct": -5.44,
+        "yahoo": "XLC",
+        "source_url": "https://finance.yahoo.com/quote/XLC",
+        "name_zh": "通訊"
       },
       {
         "symbol": "XLU",
