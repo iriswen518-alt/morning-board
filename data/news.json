@@ -1,9 +1,11 @@
 {
   "news_date": "2026-08-21",
   "tldr": [
-    "台股最新交易日回落，全球債券殖利率走高壓抑科技權值股，AI 供應鏈仍是盤面主軸。",
+    "台股高檔整理，全球債券殖利率走高壓抑科技權值股，AI 供應鏈仍是盤面主軸。",
     "台積電 AI 營收挑戰兆元、訂單能見度直達 2028 年，輝達更把 AI 導入晶圓廠製程。",
-    "金管會為接軌 IFRS 17 重塑壽險業，台灣高資產人口與財富管理規模持續擴張。"
+    "金管會為接軌 IFRS 17 重塑壽險業，台灣高資產人口與財富管理規模持續擴張。",
+    "台灣 7 月出口 753 億美元、史上第 3 高，主計總處將 2026 年 GDP 成長上修至約 11%。",
+    "美股收黑，美國財政部倍增長天期公債回購但殖利率仍逼近 19 年高點，美債總額突破 40 兆美元。"
   ],
   "sections": [
     {
@@ -91,6 +93,114 @@
           "summary_en": "At a regional asset-management forum, bankers said high-net-worth clients need integrated wealth services rather than more products, urging expansion into alternative assets — private equity, private credit, hedge funds and family-office structures — and deeper cross-border wealth management. Taiwan's fund and insurance products are mature, but alternatives lag international private banks, marking the next competitive frontier.",
           "source_name": "工商時報",
           "source_url": "https://www.ctee.com.tw/news/20260708701136-430304"
+        }
+      ]
+    },
+    {
+      "section": "Tax & Regulations",
+      "section_zh": "稅務法規",
+      "items": [
+        {
+          "title_zh": "遺產稅新法上路，減輕繼承人負擔",
+          "title_en": "New estate-tax rules ease the burden on heirs",
+          "summary_zh": "台灣修正後的遺產稅制度，讓「擬制遺產」得以分開課稅，不再由單一繼承人一次承擔，且連小額稅款都可申請分期。此舉旨在使資產傳承更公平、對家庭現金流更友善，避免單一受益人為繼承資產背負不成比例的稅負。",
+          "summary_en": "Taiwan's revised estate-tax framework lets \"deemed estate\" assets be taxed separately rather than piled onto a single heir, and even small liabilities can now be paid in instalments. The change aims to make succession fairer and cash-flow friendlier for families, reducing cases where one beneficiary shoulders a disproportionate tax bill on inherited assets.",
+          "source_name": "Yahoo 股市",
+          "source_url": "https://tw.stock.yahoo.com/news/%E9%81%BA%E7%94%A2%E7%A8%85%E4%B8%8D%E5%86%8D%E7%B9%BC%E6%89%BF%E4%BA%BA%E4%B8%80%E6%AC%A1%E6%89%9B%EF%BC%81%E6%96%B0%E6%B3%95%E4%B8%8A%E8%B7%AF%E6%93%AC%E5%88%B6%E9%81%BA%E7%94%A2%E5%88%86%E9%96%8B%E8%AA%B2%E7%A8%85-%E9%80%A3%E5%B0%8F%E9%A1%8D%E9%83%BD%E8%83%BD%E7%94%B3%E8%AB%8B%E5%88%86%E6%9C%9F-041000543.html"
+        },
+        {
+          "title_zh": "遺產稅級距隨累計通膨調整",
+          "title_en": "Estate-tax brackets adjusted for cumulative inflation",
+          "summary_zh": "因累計 CPI 較上次調整上漲 12.42%，2026 年遺產稅課稅級距上調：淨額 5,621 萬元以下 10%、5,621 萬至 1 億 1,242 萬元 15%、超過部分 20%，而 1,333 萬元免稅額維持不變。此調整緩解通膨造成的級距擠壓，略為降低中等規模遺產的有效稅率。",
+          "summary_en": "With cumulative CPI up 12.42% since the last revision, Taiwan's estate-tax brackets have been raised for 2026: 10% up to NT$56.21m, 15% on NT$56.21m–112.42m, and 20% above that, while the NT$13.33m exemption stays unchanged. The move eases bracket creep for estates, marginally lowering effective rates on mid-sized inheritances.",
+          "source_name": "Clause 法律",
+          "source_url": "https://www.clause.tw/articles/estate-tax-calculation-2026"
+        }
+      ]
+    },
+    {
+      "section": "Macro & Policy",
+      "section_zh": "總經政策",
+      "items": [
+        {
+          "title_zh": "7 月出口 753 億美元、史上第 3 高",
+          "title_en": "July exports hit US$75.3bn, third-highest on record",
+          "summary_zh": "台灣 7 月出口達 753 億美元、年增 32.9%，連續 33 個月正成長，受 AI 需求帶動、電子零組件出口創單月新高。財政部預估全年出口可望輕鬆突破 8,500 億美元；惟傳統產業受關稅與全球需求放緩影響、動能承壓。",
+          "summary_en": "Taiwan's July exports reached US$75.3 billion, up 32.9% year-on-year and a 33rd straight month of growth, driven by record electronic-component shipments amid AI demand. The finance ministry expects full-year exports to comfortably exceed US$850 billion, though traditional sectors face pressure from tariffs and softer global demand.",
+          "source_name": "中央社",
+          "source_url": "https://www.cna.com.tw/news/afe/202608070250.aspx"
+        },
+        {
+          "title_zh": "主計總處上修 2026 GDP 至約 11%",
+          "title_en": "Statistics agency lifts 2026 GDP forecast toward 11%",
+          "summary_zh": "台灣主計總處將 2026 年 GDP 成長預測上修至約 11%，可望創 1987 年以來最強，受 AI 帶動出口與內需回溫推升。上修同時牽動通膨疑慮，使下半年是否升息成為市場關注焦點。",
+          "summary_en": "Taiwan's budget agency raised its 2026 GDP growth forecast to about 11%, poised to be the strongest since 1987, as AI-driven exports and a recovery in domestic demand power the economy. The upgrade also stokes inflation concerns, keeping a possible second-half rate hike squarely in market focus.",
+          "source_name": "Yahoo 財經",
+          "source_url": "https://hk.finance.yahoo.com/news/%E5%8F%B0%E7%81%A3%E4%B8%8A%E8%AA%BF2026%E5%B9%B4%E7%B6%93%E6%BF%9F%E6%88%90%E9%95%B7%E9%A0%90%E6%B8%AC%E8%87%B311-%E5%85%A7%E9%9C%80%E5%9B%9E%E6%BA%AB%E7%89%BD%E5%8B%95%E9%80%9A%E8%86%A8%E5%A3%93%E5%8A%9B-082704628.html"
+        }
+      ]
+    },
+    {
+      "section": "Global Markets",
+      "section_zh": "國際財經",
+      "items": [
+        {
+          "title_zh": "費半重挫約 5% 拖累美股",
+          "title_en": "Philadelphia Semiconductor Index dives ~5%, dragging US stocks",
+          "summary_zh": "台灣媒體報導，美債殖利率走揚使原本偏高的 AI 期待反成壓力，費城半導體指數重挫約 5%、拖累美股大盤。晶片股領跌效應擴散至亞洲科技供應鏈，也加深台灣半導體投資人的觀望心態。",
+          "summary_en": "Taiwanese media reported that rising US Treasury yields turned lofty AI expectations into a headwind, sending the Philadelphia Semiconductor Index down about 5% and weighing on the broader US market. The chip-led selloff rippled through Asia's tech supply chain, reinforcing caution among Taiwan's semiconductor investors.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/123398/9700183"
+        },
+        {
+          "title_zh": "美債突破 40 兆美元、殖利率測試多年高點",
+          "title_en": "US debt tops US$40 trillion as yields test multi-year highs",
+          "summary_zh": "台灣媒體聚焦美國聯邦債務突破 40 兆美元、以疫情以來最快速度膨脹，形成「債愈高、息愈重、借更多」的循環。美國財政部宣布長天期公債回購規模至少倍增以壓抑借貸成本，此動向為台灣債市與股市投資人密切關注。",
+          "summary_en": "Taiwanese outlets highlighted that US federal debt has crossed US$40 trillion and is swelling at its fastest pace since the pandemic, driving a \"higher debt, heavier interest, more borrowing\" spiral. The US Treasury's move to at least double long-dated bond buybacks aims to cap borrowing costs, a dynamic closely watched by Taiwan's bond and equity investors.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/123398/9693885"
+        }
+      ]
+    },
+    {
+      "section": "International",
+      "section_zh": "國際",
+      "items": [
+        {
+          "title_zh": "美股收黑，債券殖利率壓力再起（2026-08-20）",
+          "title_en": "US stocks fall as bond-yield relief evaporates (2026-08-20)",
+          "summary_zh": "儘管財政部加大回購，美債殖利率仍再度走揚，美股回落。標普 500 跌 0.87% 收 7,641.16 點，那斯達克跌約 1% 收 26,067.17 點，道瓊跌 703.84 點（1.32%）收 52,759.21 點；投資人憂心較高借貸成本恐拖累多頭行情。",
+          "summary_en": "Wall Street dropped as Treasury yields resumed climbing despite the Treasury's buyback push. The S&P 500 fell 0.87% to 7,641.16, the Nasdaq slid about 1% to 26,067.17, and the Dow lost 703.84 points (1.32%) to 52,759.21, as investors fretted that higher borrowing costs could throttle the bull market.",
+          "source_name": "TheStreet",
+          "source_url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-aug-20-2026",
+          "published": "2026-08-20"
+        },
+        {
+          "title_zh": "財政部倍增回購，長天期殖利率仍走高（2026-08-20）",
+          "title_en": "Treasury doubles buybacks but long yields keep rising (2026-08-20)",
+          "summary_zh": "美國財政部將長天期公債流動性回購規模倍增至每次至少 40 億美元，但緩解僅曇花一現。10 年期殖利率升 4.7 個基點至 4.70%，30 年期升 5.5 個基點至 5.249%、逼近 19 年高點，市場對政府債務膨脹的疑慮未消。",
+          "summary_en": "The US Treasury doubled liquidity-support buybacks of longer-dated notes to at least US$4bn per operation, but relief proved brief. The 10-year yield climbed 4.7bp to 4.70% and the 30-year rose 5.5bp to 5.249%, near a 19-year high, as worries over swelling government debt persisted.",
+          "source_name": "CNBC",
+          "source_url": "https://www.cnbc.com/2026/08/20/treasury-bond-buybacks-long-term-yields.html",
+          "published": "2026-08-20"
+        },
+        {
+          "title_zh": "沃爾瑪第 2 季財報優於預期（2026-08-20）",
+          "title_en": "Walmart's Q2 earnings top estimates (2026-08-20)",
+          "summary_zh": "沃爾瑪公布第 2 季每股盈餘 0.81 美元，優於市場預期的 0.74 美元、超出 7 美分，股東權益報酬率 21.25%、淨利率 3.13%。這份優於預期的財報顯示消費支出仍具韌性，在大盤因利率疑慮走跌之際提供一抹亮點。",
+          "summary_en": "Walmart reported second-quarter EPS of US$0.81, beating the US$0.74 consensus by seven cents, with return on equity of 21.25% and a 3.13% net margin. The retailer's beat signalled resilient consumer spending, offering a bright spot even as broader indices sold off on rate worries.",
+          "source_name": "MarketBeat",
+          "source_url": "https://www.marketbeat.com/instant-alerts/walmart-nasdaqwmt-releases-earnings-results-beats-estimates-by-007-eps-2026-08-20/",
+          "published": "2026-08-20"
+        },
+        {
+          "title_zh": "美債突破 40 兆美元、聯準會壓力升高（2026-08-19）",
+          "title_en": "US debt tops US$40tn, piling pressure on the Fed (2026-08-19)",
+          "summary_zh": "隨聯邦債務突破 40 兆美元，財政部長貝森特擴大公債回購一度壓低殖利率，卻也對沃許主政的聯準會形成維持寬鬆的政治壓力。分析師警告，此干預頂多是全球債市壓力的「斷路器」，而非根本解方。",
+          "summary_en": "With federal debt crossing US$40 trillion, Treasury Secretary Bessent's move to upscale buybacks initially sent yields lower but added political pressure on Warsh's Fed to keep policy accommodative. Analysts warned the intervention is at best a circuit-breaker, not a cure, for the global bond-market strains.",
+          "source_name": "CNBC",
+          "source_url": "https://www.cnbc.com/2026/08/19/bessent-treasury-buybacks-yields-warsh-fed.html",
+          "published": "2026-08-19"
         }
       ]
     }
