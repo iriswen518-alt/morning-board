@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T09:44:23+08:00",
+  "generated_at": "2026-08-20T12:46:54+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -17,20 +17,6 @@
       "error": null
     },
     {
-      "symbol": "BULL",
-      "name_zh": "Webull",
-      "kind": "US",
-      "price": 8.64,
-      "change_pct": 8.95,
-      "mtd_pct": 22.38,
-      "ytd_pct": 11.2,
-      "market_date": "2026-08-19",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BULL.US",
-      "error": null
-    },
-    {
       "symbol": "MRK",
       "name_zh": "默克",
       "kind": "US",
@@ -42,6 +28,20 @@
       "per": 103.8615,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MRK.US",
+      "error": null
+    },
+    {
+      "symbol": "BULL",
+      "name_zh": "Webull",
+      "kind": "US",
+      "price": 8.64,
+      "change_pct": 8.95,
+      "mtd_pct": 22.38,
+      "ytd_pct": 11.2,
+      "market_date": "2026-08-19",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BULL.US",
       "error": null
     },
     {
@@ -59,20 +59,6 @@
       "error": null
     },
     {
-      "symbol": "MSTR",
-      "name_zh": "MicroStrategy",
-      "kind": "US",
-      "price": 104.25,
-      "change_pct": 12.68,
-      "mtd_pct": 11.76,
-      "ytd_pct": -31.39,
-      "market_date": "2026-08-19",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MSTR.US",
-      "error": null
-    },
-    {
       "symbol": "TEM",
       "name_zh": "Tempus AI",
       "kind": "US",
@@ -87,6 +73,20 @@
       "error": null
     },
     {
+      "symbol": "MSTR",
+      "name_zh": "MicroStrategy",
+      "kind": "US",
+      "price": 104.25,
+      "change_pct": 12.68,
+      "mtd_pct": 11.76,
+      "ytd_pct": -31.39,
+      "market_date": "2026-08-19",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MSTR.US",
+      "error": null
+    },
+    {
       "symbol": "COIN",
       "name_zh": "Coinbase",
       "kind": "US",
@@ -98,34 +98,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=COIN.US",
-      "error": null
-    },
-    {
-      "symbol": "MRVL",
-      "name_zh": "邁威爾",
-      "kind": "US",
-      "price": 237.27,
-      "change_pct": 9.85,
-      "mtd_pct": 26.5,
-      "ytd_pct": 179.21,
-      "market_date": "2026-08-19",
-      "per": 77.0087,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MRVL.US",
-      "error": null
-    },
-    {
-      "symbol": "CRCL",
-      "name_zh": "Circle Internet",
-      "kind": "US",
-      "price": 78.59,
-      "change_pct": 9.56,
-      "mtd_pct": 25.52,
-      "ytd_pct": -0.9,
-      "market_date": "2026-08-19",
-      "per": 42.4069,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRCL.US",
       "error": null
     },
     {
@@ -157,17 +129,31 @@
       "error": null
     },
     {
-      "symbol": "WOLF",
-      "name_zh": "Wolfspeed",
+      "symbol": "BNTX",
+      "name_zh": "BioNTech SE",
       "kind": "US",
-      "price": 29.09,
-      "change_pct": -7.53,
-      "mtd_pct": 23.16,
-      "ytd_pct": 67.09,
+      "price": 113.12,
+      "change_pct": 21.96,
+      "mtd_pct": 21.83,
+      "ytd_pct": 18.82,
       "market_date": "2026-08-19",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=WOLF.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BNTX.US",
+      "error": null
+    },
+    {
+      "symbol": "CRCL",
+      "name_zh": "Circle Internet",
+      "kind": "US",
+      "price": 78.59,
+      "change_pct": 9.56,
+      "mtd_pct": 25.52,
+      "ytd_pct": -0.9,
+      "market_date": "2026-08-19",
+      "per": 42.4069,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRCL.US",
       "error": null
     },
     {
@@ -185,17 +171,17 @@
       "error": null
     },
     {
-      "symbol": "BNTX",
-      "name_zh": "BioNTech SE",
+      "symbol": "NVAX",
+      "name_zh": "Novavax",
       "kind": "US",
-      "price": 113.12,
-      "change_pct": 21.96,
-      "mtd_pct": 24.88,
-      "ytd_pct": 18.82,
+      "price": 8.79,
+      "change_pct": 10.84,
+      "mtd_pct": 20.08,
+      "ytd_pct": 30.8,
       "market_date": "2026-08-19",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BNTX.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NVAX.US",
       "error": null
     },
     {
@@ -213,34 +199,6 @@
       "error": null
     },
     {
-      "symbol": "HOOD",
-      "name_zh": "Robinhood",
-      "kind": "US",
-      "price": 95.77,
-      "change_pct": 4.63,
-      "mtd_pct": 10.64,
-      "ytd_pct": -15.32,
-      "market_date": "2026-08-19",
-      "per": 43.1186,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HOOD.US",
-      "error": null
-    },
-    {
-      "symbol": "NVAX",
-      "name_zh": "Novavax",
-      "kind": "US",
-      "price": 8.79,
-      "change_pct": 10.84,
-      "mtd_pct": 20.08,
-      "ytd_pct": 30.8,
-      "market_date": "2026-08-19",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NVAX.US",
-      "error": null
-    },
-    {
       "symbol": "CRSP",
       "name_zh": "CRISPR Therapeutics AG",
       "kind": "US",
@@ -252,6 +210,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRSP.US",
+      "error": null
+    },
+    {
+      "symbol": "MRVL",
+      "name_zh": "邁威爾",
+      "kind": "US",
+      "price": 237.27,
+      "change_pct": 9.85,
+      "mtd_pct": 26.5,
+      "ytd_pct": 179.21,
+      "market_date": "2026-08-19",
+      "per": 77.0087,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MRVL.US",
       "error": null
     },
     {
