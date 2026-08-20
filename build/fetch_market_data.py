@@ -686,12 +686,19 @@ def validate(payload: dict, prev: Optional[dict]) -> dict:
     warnings: list[str] = list(payload.get("_fetch_warnings", []))
 
     # 1. 核心欄位不可缺(指數/匯率/商品:收盤+日漲跌)
+    #    例外:^TWOII(櫃買加權)、000300.SS(CSI 300)在 Yahoo 上長期/間歇性缺 bar
+    #    (見 refresh_taiex.py 的說明),下游 refresh_taiex.py 會用 TWSE MIS /
+    #    退化保留舊值等方式補正 → 這裡的抓取失敗不該擋住整份報告發佈,降級為 warning。
+    KNOWN_FLAKY_YAHOO_EQUITY = {"^TWOII", "000300.SS"}
     for table in ("equity", "fx", "commodities"):
         for r in payload[table]:
+            is_flaky = table == "equity" and r["symbol"] in KNOWN_FLAKY_YAHOO_EQUITY
             if r["close"] is None:
-                errors.append(f"[{table}] {r['name']} 收盤缺失")
+                msg = f"[{table}] {r['name']} 收盤缺失"
+                (warnings if is_flaky else errors).append(msg)
             if r["daily_pct"] is None:
-                errors.append(f"[{table}] {r['name']} 日漲跌缺失")
+                msg = f"[{table}] {r['name']} 日漲跌缺失"
+                (warnings if is_flaky else errors).append(msg)
 
     # 2. 衍生欄位整欄空 → warning
     for table in ("equity", "fx", "commodities"):
