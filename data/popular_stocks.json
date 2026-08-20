@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T07:30:48+08:00",
+  "generated_at": "2026-08-20T09:44:23+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -59,20 +59,6 @@
       "error": null
     },
     {
-      "symbol": "TEM",
-      "name_zh": "Tempus AI",
-      "kind": "US",
-      "price": 61.25,
-      "change_pct": 24.09,
-      "mtd_pct": 39.62,
-      "ytd_pct": 3.73,
-      "market_date": "2026-08-19",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TEM.US",
-      "error": null
-    },
-    {
       "symbol": "MSTR",
       "name_zh": "MicroStrategy",
       "kind": "US",
@@ -84,6 +70,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MSTR.US",
+      "error": null
+    },
+    {
+      "symbol": "TEM",
+      "name_zh": "Tempus AI",
+      "kind": "US",
+      "price": 61.25,
+      "change_pct": 24.09,
+      "mtd_pct": 39.62,
+      "ytd_pct": 3.73,
+      "market_date": "2026-08-19",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TEM.US",
       "error": null
     },
     {
@@ -101,20 +101,6 @@
       "error": null
     },
     {
-      "symbol": "PURR",
-      "name_zh": "Hyperliquid Strategies",
-      "kind": "US",
-      "price": 9.39,
-      "change_pct": 30.42,
-      "mtd_pct": 51.21,
-      "ytd_pct": 163.76,
-      "market_date": "2026-08-19",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PURR.US",
-      "error": null
-    },
-    {
       "symbol": "MRVL",
       "name_zh": "邁威爾",
       "kind": "US",
@@ -126,20 +112,6 @@
       "per": 77.0087,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MRVL.US",
-      "error": null
-    },
-    {
-      "symbol": "WOLF",
-      "name_zh": "Wolfspeed",
-      "kind": "US",
-      "price": 29.09,
-      "change_pct": -7.53,
-      "mtd_pct": 23.16,
-      "ytd_pct": 67.09,
-      "market_date": "2026-08-19",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=WOLF.US",
       "error": null
     },
     {
@@ -157,6 +129,20 @@
       "error": null
     },
     {
+      "symbol": "PURR",
+      "name_zh": "Hyperliquid Strategies",
+      "kind": "US",
+      "price": 9.39,
+      "change_pct": 30.42,
+      "mtd_pct": 51.21,
+      "ytd_pct": 163.76,
+      "market_date": "2026-08-19",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PURR.US",
+      "error": null
+    },
+    {
       "symbol": "IBIT",
       "name_zh": "iShares Bitcoin Trust ETF",
       "kind": "US",
@@ -171,17 +157,17 @@
       "error": null
     },
     {
-      "symbol": "BNTX",
-      "name_zh": "BioNTech SE",
+      "symbol": "WOLF",
+      "name_zh": "Wolfspeed",
       "kind": "US",
-      "price": 113.12,
-      "change_pct": 21.96,
-      "mtd_pct": 24.88,
-      "ytd_pct": 18.82,
+      "price": 29.09,
+      "change_pct": -7.53,
+      "mtd_pct": 23.16,
+      "ytd_pct": 67.09,
       "market_date": "2026-08-19",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BNTX.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=WOLF.US",
       "error": null
     },
     {
@@ -199,6 +185,34 @@
       "error": null
     },
     {
+      "symbol": "BNTX",
+      "name_zh": "BioNTech SE",
+      "kind": "US",
+      "price": 113.12,
+      "change_pct": 21.96,
+      "mtd_pct": 24.88,
+      "ytd_pct": 18.82,
+      "market_date": "2026-08-19",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BNTX.US",
+      "error": null
+    },
+    {
+      "symbol": "SOFI",
+      "name_zh": "SoFi",
+      "kind": "US",
+      "price": 18.42,
+      "change_pct": 4.3,
+      "mtd_pct": 12.94,
+      "ytd_pct": -29.64,
+      "market_date": "2026-08-19",
+      "per": 37.4116,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOFI.US",
+      "error": null
+    },
+    {
       "symbol": "HOOD",
       "name_zh": "Robinhood",
       "kind": "US",
@@ -213,20 +227,6 @@
       "error": null
     },
     {
-      "symbol": "ETHU",
-      "name_zh": "2x Ether ETF",
-      "kind": "US",
-      "price": 19.48,
-      "change_pct": 19.8,
-      "mtd_pct": 25.03,
-      "ytd_pct": -64.39,
-      "market_date": "2026-08-19",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ETHU.US",
-      "error": null
-    },
-    {
       "symbol": "NVAX",
       "name_zh": "Novavax",
       "kind": "US",
@@ -238,20 +238,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NVAX.US",
-      "error": null
-    },
-    {
-      "symbol": "HIMS",
-      "name_zh": "Hims & Hers Health",
-      "kind": "US",
-      "price": 31.09,
-      "change_pct": 13.51,
-      "mtd_pct": 11.96,
-      "ytd_pct": -4.25,
-      "market_date": "2026-08-19",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HIMS.US",
       "error": null
     },
     {
