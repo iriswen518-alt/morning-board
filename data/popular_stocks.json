@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T17:43:32+08:00",
+  "generated_at": "2026-08-20T18:39:36+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -14,6 +14,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MRNA.US",
+      "error": null
+    },
+    {
+      "symbol": "BABA",
+      "name_zh": "阿里巴巴",
+      "kind": "US",
+      "price": 128.9,
+      "change_pct": 0.59,
+      "mtd_pct": 5.44,
+      "ytd_pct": -12.06,
+      "market_date": "2026-08-19",
+      "per": 18.9574,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BABA.US",
       "error": null
     },
     {
@@ -87,34 +101,6 @@
       "error": null
     },
     {
-      "symbol": "SOFI",
-      "name_zh": "SoFi",
-      "kind": "US",
-      "price": 18.42,
-      "change_pct": 4.3,
-      "mtd_pct": 12.94,
-      "ytd_pct": -29.64,
-      "market_date": "2026-08-19",
-      "per": 37.4116,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOFI.US",
-      "error": null
-    },
-    {
-      "symbol": "IBIT",
-      "name_zh": "iShares Bitcoin Trust ETF",
-      "kind": "US",
-      "price": 38.78,
-      "change_pct": 5.96,
-      "mtd_pct": 8.81,
-      "ytd_pct": -21.89,
-      "market_date": "2026-08-19",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IBIT.US",
-      "error": null
-    },
-    {
       "symbol": "CRCL",
       "name_zh": "Circle Internet",
       "kind": "US",
@@ -126,6 +112,20 @@
       "per": 42.4069,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRCL.US",
+      "error": null
+    },
+    {
+      "symbol": "SOFI",
+      "name_zh": "SoFi",
+      "kind": "US",
+      "price": 18.42,
+      "change_pct": 4.3,
+      "mtd_pct": 12.94,
+      "ytd_pct": -29.64,
+      "market_date": "2026-08-19",
+      "per": 37.4116,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOFI.US",
       "error": null
     },
     {
@@ -143,6 +143,20 @@
       "error": null
     },
     {
+      "symbol": "IBIT",
+      "name_zh": "iShares Bitcoin Trust ETF",
+      "kind": "US",
+      "price": 38.78,
+      "change_pct": 5.96,
+      "mtd_pct": 8.81,
+      "ytd_pct": -21.89,
+      "market_date": "2026-08-19",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IBIT.US",
+      "error": null
+    },
+    {
       "symbol": "TEM",
       "name_zh": "Tempus AI",
       "kind": "US",
@@ -154,48 +168,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TEM.US",
-      "error": null
-    },
-    {
-      "symbol": "ASST",
-      "name_zh": "Strive",
-      "kind": "US",
-      "price": 14.73,
-      "change_pct": 15.08,
-      "mtd_pct": 32.58,
-      "ytd_pct": -0.2,
-      "market_date": "2026-08-19",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ASST.US",
-      "error": null
-    },
-    {
-      "symbol": "BNTX",
-      "name_zh": "BioNTech SE",
-      "kind": "US",
-      "price": 113.12,
-      "change_pct": 21.96,
-      "mtd_pct": 21.83,
-      "ytd_pct": 18.82,
-      "market_date": "2026-08-19",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BNTX.US",
-      "error": null
-    },
-    {
-      "symbol": "MARA",
-      "name_zh": "Marathon Digital",
-      "kind": "US",
-      "price": 9.65,
-      "change_pct": 7.7,
-      "mtd_pct": -14.75,
-      "ytd_pct": 7.46,
-      "market_date": "2026-08-19",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MARA.US",
       "error": null
     },
     {
@@ -213,6 +185,34 @@
       "error": null
     },
     {
+      "symbol": "ASST",
+      "name_zh": "Strive",
+      "kind": "US",
+      "price": 14.73,
+      "change_pct": 15.08,
+      "mtd_pct": 32.58,
+      "ytd_pct": -0.2,
+      "market_date": "2026-08-19",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ASST.US",
+      "error": null
+    },
+    {
+      "symbol": "MARA",
+      "name_zh": "Marathon Digital",
+      "kind": "US",
+      "price": 9.65,
+      "change_pct": 7.7,
+      "mtd_pct": -14.75,
+      "ytd_pct": 7.46,
+      "market_date": "2026-08-19",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MARA.US",
+      "error": null
+    },
+    {
       "symbol": "ETHA",
       "name_zh": "iShares Ethereum Trust ETF",
       "kind": "US",
@@ -227,17 +227,17 @@
       "error": null
     },
     {
-      "symbol": "BABA",
-      "name_zh": "阿里巴巴",
+      "symbol": "BNTX",
+      "name_zh": "BioNTech SE",
       "kind": "US",
-      "price": 128.9,
-      "change_pct": 0.59,
-      "mtd_pct": 5.44,
-      "ytd_pct": -12.06,
+      "price": 113.12,
+      "change_pct": 21.96,
+      "mtd_pct": 21.83,
+      "ytd_pct": 18.82,
       "market_date": "2026-08-19",
-      "per": 18.9574,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BABA.US",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BNTX.US",
       "error": null
     },
     {
