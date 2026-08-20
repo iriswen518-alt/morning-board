@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T12:01:40+08:00",
+  "generated_at": "2026-08-20T13:03:53+08:00",
   "tw": {
     "as_of": "2026-08-20",
     "top_marketcap": [
@@ -719,7 +719,7 @@
         "price": 351.12,
         "daily_pct": 4.23,
         "market_cap": 1386765090816,
-        "pe": 325.11108,
+        "pe": 313.5,
         "pe_kind": "trailing",
         "mtd_pct": 12.82,
         "ytd_pct": -21.92,
@@ -771,7 +771,7 @@
         "price": 175.19,
         "daily_pct": 2.13,
         "market_cap": 420991827968,
-        "pe": 149.73505,
+        "pe": 147.21848,
         "pe_kind": "trailing",
         "mtd_pct": 42.36,
         "ytd_pct": -1.44,
@@ -957,7 +957,7 @@
         "price": 217.35,
         "daily_pct": -10.34,
         "market_cap": 10021298176,
-        "pe": 69.440895,
+        "pe": 77.625,
         "pe_kind": "trailing",
         "mtd_pct": 4.81,
         "ytd_pct": 98.31,
@@ -1058,19 +1058,6 @@
         "source_url": "https://finance.yahoo.com/quote/XLV"
       },
       {
-        "symbol": "XLE",
-        "name": "State Street Energy Select Sect",
-        "price": 63.58,
-        "daily_pct": 4.18,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": 6.77,
-        "ytd_pct": 42.21,
-        "yahoo": "XLE",
-        "source_url": "https://finance.yahoo.com/quote/XLE"
-      },
-      {
         "symbol": "ARKK",
         "name": "ARK Innovation ETF",
         "price": 83.31,
@@ -1097,6 +1084,19 @@
         "source_url": "https://finance.yahoo.com/quote/GLD"
       },
       {
+        "symbol": "XLP",
+        "name": "State Street Consumer Staples S",
+        "price": 86.54,
+        "daily_pct": 1.72,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": 1.75,
+        "ytd_pct": 11.41,
+        "yahoo": "XLP",
+        "source_url": "https://finance.yahoo.com/quote/XLP"
+      },
+      {
         "symbol": "XLRE",
         "name": "State Street Real Estate Select",
         "price": 44.99,
@@ -1121,19 +1121,6 @@
         "ytd_pct": -4.75,
         "yahoo": "TLT",
         "source_url": "https://finance.yahoo.com/quote/TLT"
-      },
-      {
-        "symbol": "XLC",
-        "name": "State Street Communication Serv",
-        "price": 111.32,
-        "daily_pct": 0.95,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": 2.85,
-        "ytd_pct": -5.44,
-        "yahoo": "XLC",
-        "source_url": "https://finance.yahoo.com/quote/XLC"
       },
       {
         "symbol": "XLY",
@@ -1173,6 +1160,19 @@
         "ytd_pct": -1.14,
         "yahoo": "HYG",
         "source_url": "https://finance.yahoo.com/quote/HYG"
+      },
+      {
+        "symbol": "XLB",
+        "name": "State Street Materials Select S",
+        "price": 52.52,
+        "daily_pct": -0.11,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": 4.14,
+        "ytd_pct": 15.81,
+        "yahoo": "XLB",
+        "source_url": "https://finance.yahoo.com/quote/XLB"
       }
     ],
     "sectors": [
@@ -1191,18 +1191,18 @@
         "name_zh": "醫療"
       },
       {
-        "symbol": "XLE",
-        "name": "State Street Energy Select Sect",
-        "price": 63.58,
-        "daily_pct": 4.18,
+        "symbol": "XLP",
+        "name": "State Street Consumer Staples S",
+        "price": 86.54,
+        "daily_pct": 1.72,
         "market_cap": null,
         "pe": null,
         "pe_kind": null,
-        "mtd_pct": 6.77,
-        "ytd_pct": 42.21,
-        "yahoo": "XLE",
-        "source_url": "https://finance.yahoo.com/quote/XLE",
-        "name_zh": "能源"
+        "mtd_pct": 1.75,
+        "ytd_pct": 11.41,
+        "yahoo": "XLP",
+        "source_url": "https://finance.yahoo.com/quote/XLP",
+        "name_zh": "必需消費"
       },
       {
         "symbol": "XLRE",
@@ -1217,20 +1217,6 @@
         "yahoo": "XLRE",
         "source_url": "https://finance.yahoo.com/quote/XLRE",
         "name_zh": "房地產"
-      },
-      {
-        "symbol": "XLC",
-        "name": "State Street Communication Serv",
-        "price": 111.32,
-        "daily_pct": 0.95,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": 2.85,
-        "ytd_pct": -5.44,
-        "yahoo": "XLC",
-        "source_url": "https://finance.yahoo.com/quote/XLC",
-        "name_zh": "通訊"
       },
       {
         "symbol": "XLY",
