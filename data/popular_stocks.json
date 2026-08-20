@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T18:39:36+08:00",
+  "generated_at": "2026-08-20T19:35:01+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -73,34 +73,6 @@
       "error": null
     },
     {
-      "symbol": "BULL",
-      "name_zh": "Webull",
-      "kind": "US",
-      "price": 8.64,
-      "change_pct": 8.95,
-      "mtd_pct": 22.38,
-      "ytd_pct": 11.2,
-      "market_date": "2026-08-19",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BULL.US",
-      "error": null
-    },
-    {
-      "symbol": "MRK",
-      "name_zh": "默克",
-      "kind": "US",
-      "price": 152.2,
-      "change_pct": 12.6,
-      "mtd_pct": 16.9,
-      "ytd_pct": 44.59,
-      "market_date": "2026-08-19",
-      "per": 103.8615,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MRK.US",
-      "error": null
-    },
-    {
       "symbol": "CRCL",
       "name_zh": "Circle Internet",
       "kind": "US",
@@ -112,20 +84,6 @@
       "per": 42.4069,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRCL.US",
-      "error": null
-    },
-    {
-      "symbol": "SOFI",
-      "name_zh": "SoFi",
-      "kind": "US",
-      "price": 18.42,
-      "change_pct": 4.3,
-      "mtd_pct": 12.94,
-      "ytd_pct": -29.64,
-      "market_date": "2026-08-19",
-      "per": 37.4116,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOFI.US",
       "error": null
     },
     {
@@ -143,6 +101,20 @@
       "error": null
     },
     {
+      "symbol": "SOFI",
+      "name_zh": "SoFi",
+      "kind": "US",
+      "price": 18.42,
+      "change_pct": 4.3,
+      "mtd_pct": 12.94,
+      "ytd_pct": -29.64,
+      "market_date": "2026-08-19",
+      "per": 37.4116,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOFI.US",
+      "error": null
+    },
+    {
       "symbol": "IBIT",
       "name_zh": "iShares Bitcoin Trust ETF",
       "kind": "US",
@@ -154,6 +126,48 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IBIT.US",
+      "error": null
+    },
+    {
+      "symbol": "BULL",
+      "name_zh": "Webull",
+      "kind": "US",
+      "price": 8.64,
+      "change_pct": 8.95,
+      "mtd_pct": 22.38,
+      "ytd_pct": 11.2,
+      "market_date": "2026-08-19",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BULL.US",
+      "error": null
+    },
+    {
+      "symbol": "DE",
+      "name_zh": "強鹿",
+      "kind": "US",
+      "price": 580.63,
+      "change_pct": -1.37,
+      "mtd_pct": -2.03,
+      "ytd_pct": 24.71,
+      "market_date": "2026-08-19",
+      "per": 34.799,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DE.US",
+      "error": null
+    },
+    {
+      "symbol": "MRK",
+      "name_zh": "默克",
+      "kind": "US",
+      "price": 152.2,
+      "change_pct": 12.6,
+      "mtd_pct": 16.9,
+      "ytd_pct": 44.59,
+      "market_date": "2026-08-19",
+      "per": 103.8615,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MRK.US",
       "error": null
     },
     {
@@ -213,6 +227,20 @@
       "error": null
     },
     {
+      "symbol": "NTES",
+      "name_zh": "NetEase",
+      "kind": "US",
+      "price": 127.25,
+      "change_pct": 2.0,
+      "mtd_pct": -4.52,
+      "ytd_pct": -7.54,
+      "market_date": "2026-08-19",
+      "per": 15.5452,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NTES.US",
+      "error": null
+    },
+    {
       "symbol": "ETHA",
       "name_zh": "iShares Ethereum Trust ETF",
       "kind": "US",
@@ -224,20 +252,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ETHA.US",
-      "error": null
-    },
-    {
-      "symbol": "BNTX",
-      "name_zh": "BioNTech SE",
-      "kind": "US",
-      "price": 113.12,
-      "change_pct": 21.96,
-      "mtd_pct": 21.83,
-      "ytd_pct": 18.82,
-      "market_date": "2026-08-19",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BNTX.US",
       "error": null
     },
     {
