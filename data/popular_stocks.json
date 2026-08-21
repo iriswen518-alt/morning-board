@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21T19:34:30+08:00",
+  "generated_at": "2026-08-21T21:03:36+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -17,17 +17,31 @@
       "error": null
     },
     {
-      "symbol": "LUNR",
-      "name_zh": "Intuitive Machines",
+      "symbol": "JUNS",
+      "name_zh": "Jupiter Neurosciences",
       "kind": "US",
-      "price": 17.93,
-      "change_pct": -3.19,
-      "mtd_pct": 45.3,
-      "ytd_pct": 10.47,
+      "price": 5.17,
+      "change_pct": 7.71,
+      "mtd_pct": -23.41,
+      "ytd_pct": 406.86,
       "market_date": "2026-08-20",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LUNR.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=JUNS.US",
+      "error": null
+    },
+    {
+      "symbol": "RFAI",
+      "name_zh": "RF Acquisition Corp II",
+      "kind": "US",
+      "price": 12.73,
+      "change_pct": 13.71,
+      "mtd_pct": 15.0,
+      "ytd_pct": 18.42,
+      "market_date": "2026-08-20",
+      "per": 37.8713,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RFAI.US",
       "error": null
     },
     {
@@ -45,17 +59,31 @@
       "error": null
     },
     {
-      "symbol": "CRWV",
-      "name_zh": "CoreWeave",
+      "symbol": "SLV",
+      "name_zh": "iShares Silver Trust",
       "kind": "US",
-      "price": 89.76,
-      "change_pct": -1.22,
-      "mtd_pct": 25.07,
-      "ytd_pct": 25.35,
+      "price": 61.66,
+      "change_pct": 2.75,
+      "mtd_pct": 17.76,
+      "ytd_pct": -4.28,
       "market_date": "2026-08-20",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRWV.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SLV.US",
+      "error": null
+    },
+    {
+      "symbol": "LUNR",
+      "name_zh": "Intuitive Machines",
+      "kind": "US",
+      "price": 17.93,
+      "change_pct": -3.19,
+      "mtd_pct": 45.3,
+      "ytd_pct": 10.47,
+      "market_date": "2026-08-20",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LUNR.US",
       "error": null
     },
     {
@@ -70,20 +98,6 @@
       "per": 33.299,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FCX.US",
-      "error": null
-    },
-    {
-      "symbol": "GDX",
-      "name_zh": "VanEck Gold Miners ETF",
-      "kind": "US",
-      "price": 99.85,
-      "change_pct": 2.59,
-      "mtd_pct": 34.75,
-      "ytd_pct": 16.42,
-      "market_date": "2026-08-20",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GDX.US",
       "error": null
     },
     {
