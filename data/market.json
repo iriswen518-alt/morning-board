@@ -4,44 +4,44 @@
     {
       "name": "S&P 500",
       "name_zh": null,
-      "close": 7641.16015625,
-      "daily_pct": -0.87,
+      "close": 7674.3701171875,
+      "daily_pct": 0.43,
       "mtd_pct": 2.02,
       "ytd_pct": 11.62,
-      "closing_date": "2026-08-20"
+      "closing_date": "2026-08-21"
     },
     {
       "name": "Nasdaq Composite",
       "name_zh": null,
-      "close": 26067.169921875,
-      "daily_pct": -1.0,
+      "close": 26180.455078125,
+      "daily_pct": 0.43,
       "mtd_pct": 2.73,
       "ytd_pct": 12.16,
-      "closing_date": "2026-08-20"
+      "closing_date": "2026-08-21"
     },
     {
       "name": "Dow Jones",
       "name_zh": null,
-      "close": 52759.2109375,
-      "daily_pct": -1.32,
+      "close": 53277.01171875,
+      "daily_pct": 0.98,
       "mtd_pct": 0.52,
       "ytd_pct": 9.77,
-      "closing_date": "2026-08-20"
+      "closing_date": "2026-08-21"
     },
     {
       "name": "PHLX Semiconductor",
       "name_zh": null,
-      "close": 11800.01953125,
-      "daily_pct": 0.53,
+      "close": 11740.3740234375,
+      "daily_pct": -0.51,
       "mtd_pct": 4.32,
       "ytd_pct": 66.59,
-      "closing_date": "2026-08-20"
+      "closing_date": "2026-08-21"
     },
     {
       "name": "Euro Stoxx 50",
       "name_zh": null,
-      "close": 6458.06005859375,
-      "daily_pct": 0.56,
+      "close": 6462.22,
+      "daily_pct": 0.63,
       "mtd_pct": 1.01,
       "ytd_pct": 10.8,
       "closing_date": "2026-08-21"
@@ -49,8 +49,8 @@
     {
       "name": "DAX",
       "name_zh": null,
-      "close": 26122.140625,
-      "daily_pct": 0.54,
+      "close": 26136.56,
+      "daily_pct": 0.59,
       "mtd_pct": 1.38,
       "ytd_pct": 6.09,
       "closing_date": "2026-08-21"
@@ -58,8 +58,8 @@
     {
       "name": "FTSE 100",
       "name_zh": null,
-      "close": 10810.669921875,
-      "daily_pct": 0.58,
+      "close": 10816.5595703125,
+      "daily_pct": 0.64,
       "mtd_pct": -1.1,
       "ytd_pct": 8.22,
       "closing_date": "2026-08-21"
@@ -67,8 +67,8 @@
     {
       "name": "CAC 40",
       "name_zh": null,
-      "close": 8480.580078125,
-      "daily_pct": 0.33,
+      "close": 8484.43,
+      "daily_pct": 0.37,
       "mtd_pct": -0.66,
       "ytd_pct": 3.73,
       "closing_date": "2026-08-21"
@@ -85,7 +85,7 @@
     {
       "name": "TAIEX 加權指數",
       "name_zh": null,
-      "close": 45224.2890625,
+      "close": 45224.29,
       "daily_pct": 0.65,
       "mtd_pct": 4.21,
       "ytd_pct": 55.14,
@@ -121,7 +121,7 @@
     {
       "name": "Hang Seng 恆生",
       "name_zh": null,
-      "close": 26009.4609375,
+      "close": 26009.46,
       "daily_pct": 1.21,
       "mtd_pct": -0.72,
       "ytd_pct": 0.27,
@@ -130,7 +130,7 @@
     {
       "name": "Shanghai 上證",
       "name_zh": null,
-      "close": 3905.20263671875,
+      "close": 3905.203,
       "daily_pct": 0.04,
       "mtd_pct": 1.86,
       "ytd_pct": -1.64,
@@ -141,8 +141,8 @@
       "name_zh": null,
       "close": 4618.89501953125,
       "daily_pct": null,
-      "mtd_pct": -9.04,
-      "ytd_pct": -2.18,
+      "mtd_pct": null,
+      "ytd_pct": null,
       "closing_date": "2026-08-21"
     },
     {
@@ -167,10 +167,10 @@
   "bonds": [
     {
       "name": "US 10-Year",
-      "yield_pct": 4.7,
-      "daily_bps": 4.3,
-      "mtd_bps": -4.9,
-      "closing_date": "2026-08-20"
+      "yield_pct": 4.74,
+      "daily_bps": 4.2,
+      "mtd_bps": -0.7,
+      "closing_date": "2026-08-21"
     },
     {
       "name": "US 2-Year",
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 98.9000015258789,
       "daily_pct": 0.07,
-      "mtd_pct": -0.95,
-      "ytd_pct": 0.58,
+      "mtd_pct": -0.96,
+      "ytd_pct": 0.57,
       "closing_date": "2026-08-20"
     },
     {
@@ -405,18 +405,18 @@
     {
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
-      "implied_rate": 3.73,
-      "delta_rate": 0.05,
-      "delta_bps": 5.0,
-      "p_hike": 20.0,
-      "p_hold": 80.0,
+      "implied_rate": 3.74,
+      "delta_rate": 0.06,
+      "delta_bps": 6.0,
+      "p_hike": 24.0,
+      "p_hold": 76.0,
       "p_cut": 0,
       "is_reference": false
     },
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 3.85,
+      "implied_rate": 3.87,
       "delta_rate": 0.12,
       "delta_bps": 12.0,
       "p_hike": 48.0,
@@ -425,5 +425,5 @@
       "is_reference": false
     }
   ],
-  "summary": "8/21 Hang Seng 恆生 +1.21%、8/21 KOSPI +0.88%、8/21 TAIEX 加權指數 +0.65% 領漲；8/20 Dow Jones -1.32%、8/19 台指期(近月) -1.06% 走弱。"
+  "summary": "8/21 Hang Seng 恆生 +1.21%、8/21 Dow Jones +0.98%、8/21 KOSPI +0.88% 領漲；8/19 台指期(近月) -1.06%、8/21 OTC 櫃買加權 -0.69% 走弱。"
 }
