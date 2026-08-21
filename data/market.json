@@ -96,8 +96,8 @@
       "name_zh": null,
       "close": 387.27,
       "daily_pct": -0.69,
-      "mtd_pct": -11.37,
-      "ytd_pct": 37.0,
+      "mtd_pct": null,
+      "ytd_pct": null,
       "closing_date": "2026-08-21"
     },
     {
@@ -130,8 +130,8 @@
     {
       "name": "Shanghai 上證",
       "name_zh": null,
-      "close": 3906.735107421875,
-      "daily_pct": 0.08,
+      "close": 3905.20263671875,
+      "daily_pct": 0.04,
       "mtd_pct": 1.86,
       "ytd_pct": -1.64,
       "closing_date": "2026-08-21"
@@ -139,10 +139,10 @@
     {
       "name": "CSI 300 滬深300",
       "name_zh": null,
-      "close": 4620.1630859375,
+      "close": 4618.89501953125,
       "daily_pct": null,
-      "mtd_pct": -9.04,
-      "ytd_pct": -2.18,
+      "mtd_pct": null,
+      "ytd_pct": null,
       "closing_date": "2026-08-21"
     },
     {
@@ -405,11 +405,11 @@
     {
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
-      "implied_rate": 3.73,
-      "delta_rate": 0.06,
-      "delta_bps": 6.0,
-      "p_hike": 24.0,
-      "p_hold": 76.0,
+      "implied_rate": 3.72,
+      "delta_rate": 0.05,
+      "delta_bps": 5.0,
+      "p_hike": 20.0,
+      "p_hold": 80.0,
       "p_cut": 0,
       "is_reference": false
     },

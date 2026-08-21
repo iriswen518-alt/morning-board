@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21T15:08:50+08:00",
+  "generated_at": "2026-08-21T15:53:30+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -14,20 +14,6 @@
       "per": 75.9917,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AAP.US",
-      "error": null
-    },
-    {
-      "symbol": "ROST",
-      "name_zh": "Ross Stores",
-      "kind": "US",
-      "price": 228.99,
-      "change_pct": -2.43,
-      "mtd_pct": -8.79,
-      "ytd_pct": 27.12,
-      "market_date": "2026-08-20",
-      "per": 33.6183,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ROST.US",
       "error": null
     },
     {
@@ -59,6 +45,20 @@
       "error": null
     },
     {
+      "symbol": "ROST",
+      "name_zh": "Ross Stores",
+      "kind": "US",
+      "price": 228.99,
+      "change_pct": -2.43,
+      "mtd_pct": -8.79,
+      "ytd_pct": 27.12,
+      "market_date": "2026-08-20",
+      "per": 33.6183,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ROST.US",
+      "error": null
+    },
+    {
       "symbol": "IBIT",
       "name_zh": "iShares Bitcoin Trust ETF",
       "kind": "US",
@@ -70,6 +70,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IBIT.US",
+      "error": null
+    },
+    {
+      "symbol": "COIN",
+      "name_zh": "Coinbase",
+      "kind": "US",
+      "price": 172.35,
+      "change_pct": 7.58,
+      "mtd_pct": 17.84,
+      "ytd_pct": -23.79,
+      "market_date": "2026-08-20",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=COIN.US",
       "error": null
     },
     {
@@ -101,45 +115,31 @@
       "error": null
     },
     {
-      "symbol": "RIOT",
-      "name_zh": "Riot Platforms",
+      "symbol": "GDXU",
+      "name_zh": "MicroSectors Gold Miners 3X Lev",
       "kind": "US",
-      "price": 20.98,
-      "change_pct": 8.26,
-      "mtd_pct": 4.02,
-      "ytd_pct": 65.59,
+      "price": 170.52,
+      "change_pct": 7.5,
+      "mtd_pct": 127.33,
+      "ytd_pct": -30.02,
       "market_date": "2026-08-20",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RIOT.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GDXU.US",
       "error": null
     },
     {
-      "symbol": "SPCX",
-      "name_zh": "Space Exploration Technologies",
+      "symbol": "MSTX",
+      "name_zh": "Defiance Daily Target 2x Long M",
       "kind": "US",
-      "price": 134,
-      "change_pct": -4.05,
-      "mtd_pct": 23.65,
-      "ytd_pct": null,
+      "price": 11.12,
+      "change_pct": 15.47,
+      "mtd_pct": 38.31,
+      "ytd_pct": -71.12,
       "market_date": "2026-08-20",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPCX.US",
-      "error": null
-    },
-    {
-      "symbol": "BITX",
-      "name_zh": "2x Bitcoin ETF",
-      "kind": "US",
-      "price": 15.36,
-      "change_pct": 12.45,
-      "mtd_pct": 31.73,
-      "ytd_pct": -44.63,
-      "market_date": "2026-08-20",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BITX.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MSTX.US",
       "error": null
     },
     {
@@ -154,34 +154,6 @@
       "per": 45.1637,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ISRG.US",
-      "error": null
-    },
-    {
-      "symbol": "CLSK",
-      "name_zh": "CleanSpark",
-      "kind": "US",
-      "price": 12.6,
-      "change_pct": 7.97,
-      "mtd_pct": -8.43,
-      "ytd_pct": 24.51,
-      "market_date": "2026-08-20",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CLSK.US",
-      "error": null
-    },
-    {
-      "symbol": "WULF",
-      "name_zh": "TeraWulf",
-      "kind": "US",
-      "price": 16.45,
-      "change_pct": 6.13,
-      "mtd_pct": -6.85,
-      "ytd_pct": 43.17,
-      "market_date": "2026-08-20",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=WULF.US",
       "error": null
     },
     {
