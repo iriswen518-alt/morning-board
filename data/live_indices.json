@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-08-22T04:58",
+  "built_at": "2026-08-22T05:32",
   "indices": [
     {
       "ok": true,
@@ -183,7 +183,7 @@
         26180.46
       ],
       "market_state": "CLOSED",
-      "asof": "08/21 16:58",
+      "asof": "08/21 17:15",
       "tz": "America/New_York",
       "name_zh": "那斯達克"
     },
@@ -369,7 +369,7 @@
         11740.37
       ],
       "market_state": "CLOSED",
-      "asof": "08/21 16:58",
+      "asof": "08/21 17:15",
       "tz": "America/New_York",
       "name_zh": "費城半導"
     },
@@ -905,9 +905,9 @@
       "ok": true,
       "symbol": "^TWOII",
       "last": 387.27,
-      "prev_close": null,
-      "change": null,
-      "change_pct": null,
+      "prev_close": 389.96,
+      "change": -2.69,
+      "change_pct": -0.69,
       "points": [
         388.13,
         386.86,
@@ -973,7 +973,7 @@
     {
       "ok": true,
       "symbol": "TWF:TXF",
-      "last": 45052.0,
+      "last": 45063.0,
       "prev_close": null,
       "change": null,
       "change_pct": null,
@@ -1057,9 +1057,9 @@
         45049.0,
         45034.0,
         45044.0,
-        45052.0
+        45063.0
       ],
-      "market_state": "REGULAR",
+      "market_state": "CLOSED",
       "asof": "08/22 04:55",
       "tz": "Asia/Taipei",
       "name_zh": "台指期近"
