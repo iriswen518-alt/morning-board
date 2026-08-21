@@ -76,11 +76,11 @@
     {
       "name": "Nikkei 225",
       "name_zh": null,
-      "close": 66216.7890625,
-      "daily_pct": 1.36,
+      "close": 66016.359375,
+      "daily_pct": -0.3,
       "mtd_pct": 2.88,
       "ytd_pct": 31.54,
-      "closing_date": "2026-08-20"
+      "closing_date": "2026-08-21"
     },
     {
       "name": "TAIEX 加權指數",
@@ -112,8 +112,8 @@
     {
       "name": "KOSPI",
       "name_zh": null,
-      "close": 6925.9501953125,
-      "daily_pct": 1.07,
+      "close": 6912.9501953125,
+      "daily_pct": 0.88,
       "mtd_pct": 3.9,
       "ytd_pct": 62.61,
       "closing_date": "2026-08-21"
@@ -139,7 +139,7 @@
     {
       "name": "CSI 300 滬深300",
       "name_zh": null,
-      "close": 4607.470703125,
+      "close": 4619.580078125,
       "daily_pct": null,
       "mtd_pct": -9.04,
       "ytd_pct": -2.18,
@@ -157,11 +157,11 @@
     {
       "name": "S&P/ASX 200",
       "name_zh": null,
-      "close": 9083.7998046875,
-      "daily_pct": 0.33,
+      "close": 9058.900390625,
+      "daily_pct": -0.27,
       "mtd_pct": 1.19,
       "ytd_pct": 4.24,
-      "closing_date": "2026-08-20"
+      "closing_date": "2026-08-21"
     }
   ],
   "bonds": [
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 98.9000015258789,
       "daily_pct": 0.07,
-      "mtd_pct": -1.1,
-      "ytd_pct": 0.43,
+      "mtd_pct": -1.08,
+      "ytd_pct": 0.45,
       "closing_date": "2026-08-20"
     },
     {
@@ -405,7 +405,7 @@
     {
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
-      "implied_rate": 3.73,
+      "implied_rate": 3.72,
       "delta_rate": 0.05,
       "delta_bps": 5.0,
       "p_hike": 20.0,
@@ -416,7 +416,7 @@
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 3.84,
+      "implied_rate": 3.83,
       "delta_rate": 0.11,
       "delta_bps": 11.0,
       "p_hike": 44.0,
@@ -425,5 +425,5 @@
       "is_reference": false
     }
   ],
-  "summary": "8/20 Nikkei 225 +1.36%、8/21 KOSPI +1.07%、8/20 Hang Seng 恆生 +0.80% 領漲；8/20 Dow Jones -1.32%、8/19 台指期(近月) -1.06% 走弱。"
+  "summary": "8/21 KOSPI +0.88%、8/20 Hang Seng 恆生 +0.80%、8/21 TAIEX 加權指數 +0.65% 領漲；8/20 Dow Jones -1.32%、8/19 台指期(近月) -1.06% 走弱。"
 }
