@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21T09:01:50+08:00",
+  "generated_at": "2026-08-21T10:01:36+08:00",
   "source": "manual curation (targets.json)",
   "version": 3,
   "updated": "2026-08-21",
@@ -90,7 +90,7 @@
         },
         {
           "k": "近1年績效",
-          "v": "+4.93%",
+          "v": "+4.76%",
           "sub": "富蘭克林公司債・截至 08/20",
           "url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLZA9-FR76"
         },
@@ -132,14 +132,14 @@
       "stats": [
         {
           "k": "近1年績效",
-          "v": "+92.15%",
+          "v": "+94.53%",
           "sub": "富蘭克林黃金美元 A・截至 08/20",
           "url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLZ01-FA01"
         },
         {
           "k": "近1年績效",
-          "v": "+83.83%",
-          "sub": "晉達環球策略-環球黃金 C 收益股份・截至 08/19",
+          "v": "+88.64%",
+          "sub": "晉達環球策略-環球黃金 C 收益股份・截至 08/20",
           "url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=GSF17-IG14"
         },
         {
@@ -180,14 +180,14 @@
       "stats": [
         {
           "k": "S&P 500 YTD",
-          "v": "+12.60%",
-          "sub": "MTD +3.63%・今日 -0.87%・截至 08/20",
+          "v": "+11.62%",
+          "sub": "MTD +2.02%・今日 -0.87%・截至 08/20",
           "url": "https://finance.yahoo.com/quote/%5EGSPC"
         },
         {
           "k": "Nasdaq Composite YTD",
-          "v": "+13.29%",
-          "sub": "MTD +4.81%・今日 -1.00%・截至 08/20",
+          "v": "+12.16%",
+          "sub": "MTD +2.73%・今日 -1.00%・截至 08/20",
           "url": "https://finance.yahoo.com/quote/%5EIXIC"
         }
       ],
@@ -359,8 +359,8 @@
       "stats": [
         {
           "k": "WTI 原油 YTD",
-          "v": "+50.72%",
-          "sub": "今日 +0.65%・截至 08/21",
+          "v": "+51.41%",
+          "sub": "今日 +1.12%・截至 08/21",
           "url": "https://finance.yahoo.com/quote/CL=F"
         },
         {
@@ -401,14 +401,14 @@
       "stats": [
         {
           "k": "Euro Stoxx 50 YTD",
-          "v": "+11.18%",
-          "sub": "MTD +1.58%・今日 -0.35%・截至 08/20",
+          "v": "+10.80%",
+          "sub": "MTD +1.01%・今日 -0.35%・截至 08/20",
           "url": "https://finance.yahoo.com/quote/%5ESTOXX50E"
         },
         {
           "k": "DAX YTD",
-          "v": "+6.54%",
-          "sub": "MTD +1.87%・今日 -0.42%・截至 08/20",
+          "v": "+6.09%",
+          "sub": "MTD +1.38%・今日 -0.42%・截至 08/20",
           "url": "https://finance.yahoo.com/quote/%5EGDAXI"
         },
         {
@@ -491,8 +491,8 @@
       "stats": [
         {
           "k": "STI 海峽時報 YTD",
-          "v": "+21.82%",
-          "sub": "今日 -0.39%・截至 08/20",
+          "v": "+21.92%",
+          "sub": "今日 +0.09%・截至 08/21",
           "url": "https://finance.yahoo.com/quote/%5ESTI"
         },
         {
@@ -533,7 +533,7 @@
       "stats": [
         {
           "k": "近1年績效",
-          "v": "-11.39%",
+          "v": "-11.53%",
           "sub": "富蘭克林坦伯頓印度・截至 08/20",
           "url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLZ79-FR59"
         },
@@ -575,9 +575,15 @@
       "stats": [
         {
           "k": "Shanghai 上證 YTD",
-          "v": "-1.88%",
-          "sub": "MTD +2.36%・今日 +0.24%・截至 08/20",
+          "v": "-1.64%",
+          "sub": "MTD +1.86%・今日 +0.24%・截至 08/20",
           "url": "https://finance.yahoo.com/quote/000001.SS"
+        },
+        {
+          "k": "CSI 300 滬深300 YTD",
+          "v": "-2.18%",
+          "sub": "MTD -9.04%・截至 08/21",
+          "url": "https://finance.yahoo.com/quote/000300.SS"
         },
         {
           "k": "fwd P/E",
@@ -639,14 +645,14 @@
       "fund_id": "franklin_corporate_bond",
       "nav": 25.73,
       "nav_date": "2026-08-20",
-      "change_pct": 0.19,
+      "change_pct": -0.16,
       "perf": {
-        "1m": 0.43,
-        "3m": 1.82,
-        "6m": 1.18,
-        "ytd": 2.14,
-        "1y": 4.93,
-        "3y": 27.01
+        "1m": 0.31,
+        "3m": 1.26,
+        "6m": 0.98,
+        "ytd": 1.98,
+        "1y": 4.76,
+        "3y": 26.81
       },
       "bop_name_zh": "富蘭克林坦伯頓全球投資系列公司債基金美元A(acc)"
     },
@@ -681,14 +687,14 @@
       "fund_id": "franklin_gold",
       "nav": 53.25,
       "nav_date": "2026-08-20",
-      "change_pct": 6.74,
+      "change_pct": 2.76,
       "perf": {
-        "1m": 32.7,
-        "3m": 9.53,
-        "6m": -5.49,
-        "ytd": 12.31,
-        "1y": 92.15,
-        "3y": 336.07
+        "1m": 37.03,
+        "3m": 11.08,
+        "6m": -4.3,
+        "ytd": 15.41,
+        "1y": 94.53,
+        "3y": 348.11
       },
       "bop_name_zh": "富蘭克林黃金基金美元A"
     },
@@ -700,16 +706,16 @@
       "tagline": "黃金產業含配息收益版",
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=GSF17-IG14",
       "fund_id": "investec_gold",
-      "nav": 191.81,
-      "nav_date": "2026-08-19",
-      "change_pct": 6.85,
+      "nav": 199.85,
+      "nav_date": "2026-08-20",
+      "change_pct": 4.19,
       "perf": {
-        "1m": 34.22,
-        "3m": 15.36,
-        "6m": -6.57,
-        "ytd": 10.17,
-        "1y": 83.83,
-        "3y": 271.58
+        "1m": 40.83,
+        "3m": 17.66,
+        "6m": -4.67,
+        "ytd": 14.78,
+        "1y": 88.64,
+        "3y": 287.16
       },
       "bop_name_zh": "晉達環球策略基金-環球黃金基金C收益股份"
     },
@@ -828,14 +834,14 @@
       "fund_id": "franklin_india",
       "nav": 61.64,
       "nav_date": "2026-08-20",
-      "change_pct": 0.38,
+      "change_pct": 0.28,
       "perf": {
-        "1m": 3.26,
-        "3m": 9.09,
-        "6m": -3.43,
-        "ytd": -9.04,
-        "1y": -11.39,
-        "3y": 14.51
+        "1m": 4.85,
+        "3m": 8.69,
+        "6m": -3.93,
+        "ytd": -8.79,
+        "1y": -11.53,
+        "3y": 14.83
       },
       "bop_name_zh": "富蘭克林坦伯頓全球投資系列印度基金美元A(acc)"
     }
