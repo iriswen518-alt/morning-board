@@ -3,7 +3,9 @@
   "tldr": [
     "台股收漲 0.65% 至 45,224.29 點，台積電領軍、三大法人買超 320.5 億元站回季線，逆勢消化美股利空。",
     "台日深化「民主」半導體供應鏈合作、日月光加碼在地供應鏈，強化 AI 帶動的在地化趨勢。",
-    "國際私銀持續搶攻台灣 8 兆美元財管市場，金管會則為 2026 接軌新制優化壽險揭露規範。"
+    "國際私銀持續搶攻台灣 8 兆美元財管市場，金管會則為 2026 接軌新制優化壽險揭露規範。",
+    "行政院遺贈稅修法讓死亡前 2 年「擬制遺產」由受贈人負擔，課稅級距並隨累計通膨上調。",
+    "美股週五反彈（標普 +0.43%、道瓊 +0.98%），美債殖利率於多年高點附近趨穩，油價因伊朗緊張連二週漲約 5%。"
   ],
   "sections": [
     {
@@ -99,12 +101,20 @@
       "section_zh": "稅務法規",
       "items": [
         {
-          "title_zh": "— 本日無重大新聞 —",
-          "title_en": "— No major news confirmed —",
-          "summary_zh": "內容待補。",
-          "summary_en": "Placeholder pending update.",
-          "source_name": "",
-          "source_url": ""
+          "title_zh": "遺贈稅修法將「擬制遺產」稅負移轉至受贈人",
+          "title_en": "Estate-tax overhaul shifts \"deemed estate\" burden onto recipients",
+          "summary_zh": "行政院通過《遺產及贈與稅法》修正草案，明定死亡前 2 年贈與特定親屬的財產須併入遺產總額課稅，並由受贈人按比例單獨負擔、上限以其受贈財產價值為限，不再由全體繼承人分攤。草案並取消分期繳納門檻，讓即使小額稅款也能申請分期，使資產傳承的稅負分配更公平、對繼承人現金流更友善。",
+          "summary_en": "The Executive Yuan approved amendments to the Estate and Gift Tax Act under which assets gifted to specified relatives within two years before death are added back to the taxable estate and taxed on the recipient, capped at the value of what they received, rather than shared among all heirs. The draft also removes the threshold for instalment payments, letting even small tax bills be paid over time.",
+          "source_name": "ETtoday 財經雲",
+          "source_url": "https://finance.ettoday.net/news/3105961"
+        },
+        {
+          "title_zh": "2026 遺贈稅級距隨累計通膨上調",
+          "title_en": "2026 gift/estate brackets lifted for cumulative inflation",
+          "summary_zh": "2026 年贈與稅免稅額維持每人 244 萬元，父母各有額度、一年合計可免稅贈與子女 488 萬元；因累計 CPI 漲幅逾 10%，課稅級距上調：贈與稅 10% 稅率級距上限升至 2,811 萬元、15% 級距上限至 5,621 萬元。遺產稅免稅額則未調整，故此次調整主要緩解通膨造成的級距擠壓，略減中等規模移轉的有效稅負。",
+          "summary_en": "For 2026 the gift-tax exemption stays at NT$2.44 million per parent (NT$4.88 million combined for a couple), while cumulative CPI gains above 10% triggered an upward adjustment of the tax brackets: the 10% gift-tax band now extends to NT$28.11 million and the 15% band to NT$56.21 million. The estate-tax exemption is unchanged, so the bracket shift mainly eases \"bracket creep\" on mid-sized transfers.",
+          "source_name": "商業周刊",
+          "source_url": "https://www.businessweekly.com.tw/business/blog/3018870"
         }
       ]
     },
@@ -113,12 +123,20 @@
       "section_zh": "總經政策",
       "items": [
         {
-          "title_zh": "— 本日無重大新聞 —",
-          "title_en": "— No major news confirmed —",
-          "summary_zh": "內容待補。",
-          "summary_en": "Placeholder pending update.",
-          "source_name": "",
-          "source_url": ""
+          "title_zh": "主計總處上修 2026 GDP 至 9.64%",
+          "title_en": "DGBAS lifts 2026 GDP growth forecast to 9.64%",
+          "summary_zh": "主計總處將 2026 年經濟成長率上修至 9.64%，較 2 月預測的 7.71% 上調 1.93 個百分點，每人 GDP 估約 4 萬 5,610 美元。人工智慧、高效能運算與雲端服務需求推升出口，帶動整體成長軌跡上移；惟基期墊高與物價升溫，使下半年是否升息的政策風險仍為市場關注焦點，牽動股債資金布局。",
+          "summary_en": "Taiwan's statistics agency (DGBAS) raised its 2026 economic-growth forecast to 9.64%, up 1.93 percentage points from its February estimate of 7.71%, with per-capita GDP projected around US$45,610. AI, high-performance computing and cloud demand are powering exports and lifting the whole growth trajectory, though a rising base and firmer inflation keep policy-tightening risk in focus.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/10869/9329757"
+        },
+        {
+          "title_zh": "出口連 32 個月正成長、上半年出超暴增 74.9%",
+          "title_en": "Exports extend 32-month streak; H1 surplus jumps 74.9%",
+          "summary_zh": "受 AI 與雲端需求帶動，台灣出口已連續 32 個月正成長，2026 年上半年出口年增 47.1%，半年出超金額暴增 74.9% 至 974.4 億美元。資通與視聽產品、電子零組件合計占總出口比重達 78.7%；6 月整體 CPI 年增率升至 2.60%、核心 CPI 至 2.45%，同時反映外需暢旺與物價壓力升溫，成為央行政策的兩難。",
+          "summary_en": "Driven by AI and cloud demand, Taiwan's exports have grown for 32 straight months, with first-half 2026 exports up 47.1% year-on-year and the half-year trade surplus swelling 74.9% to US$97.44 billion. Information/communications and electronic components now make up 78.7% of total exports, while June CPI rose to 2.60% and core CPI to 2.45%, underscoring both booming external demand and creeping price pressure.",
+          "source_name": "海基會兩岸經貿網",
+          "source_url": "https://www.seftb.org/cp-4-2652-1088e-1.html"
         }
       ]
     },
@@ -127,12 +145,20 @@
       "section_zh": "國際財經",
       "items": [
         {
-          "title_zh": "— 本日無重大新聞 —",
-          "title_en": "— No major news confirmed —",
-          "summary_zh": "內容待補。",
-          "summary_en": "Placeholder pending update.",
-          "source_name": "",
-          "source_url": ""
+          "title_zh": "台灣券商示警美債殖利率彈升重挫道瓊",
+          "title_en": "Taiwan brokers flag overnight yield spike that hammered the Dow",
+          "summary_zh": "台灣盤前晨報聚焦美債殖利率再度彈升，使前一交易日道瓊重挫逾 700 點，全球股債持續震盪、利率敏感的科技股承壓。台灣業者提醒此對以半導體為主的台股恐有牽動，惟隨後買盤回補、加權指數仍站回季線，顯示市場在高殖利率環境下的觀望與逢低承接並存。",
+          "summary_en": "Local pre-market notes highlighted that a renewed jump in US Treasury yields sent the Dow tumbling more than 700 points in the prior session, keeping global stocks and bonds volatile and pressuring rate-sensitive tech. Taiwanese houses warned the read-through for the island's semiconductor-heavy market, even as buyers later stepped back in to reclaim the quarterly line.",
+          "source_name": "新光證券",
+          "source_url": "https://www.skis.com.tw/Report/market/TSM20260821.html"
+        },
+        {
+          "title_zh": "台媒關注美債突破 40 兆美元的結構性風險",
+          "title_en": "Taiwanese media track US debt topping US$40tn as a structural risk",
+          "summary_zh": "台灣媒體持續聚焦美國聯邦債務突破 40 兆美元、以疫情以來最快速度膨脹，形成「債愈高、息愈重、借更多」的循環。財政部擴大長天期公債回購，在台灣被解讀為壓抑殖利率的「斷路器」而非根本解方。此動向牽動全球資金成本，仍是台灣債市與股市投資人密切關注的擺盪因子。",
+          "summary_en": "Local outlets continued to spotlight US federal debt crossing US$40 trillion and swelling at its fastest pace since the pandemic, feeding a \"higher debt, heavier interest, more borrowing\" spiral. The Treasury's move to scale up long-dated bond buybacks is read in Taiwan as a circuit-breaker rather than a cure, and remains a key swing factor for local bond and equity investors.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/123398/9693885"
         }
       ]
     },
@@ -141,12 +167,40 @@
       "section_zh": "國際",
       "items": [
         {
-          "title_zh": "— 本日無重大新聞 —",
-          "title_en": "— No major news confirmed —",
-          "summary_zh": "內容待補。",
-          "summary_en": "Placeholder pending update.",
-          "source_name": "",
-          "source_url": ""
+          "title_zh": "美股反彈、美債亂局趨緩（2026-08-21）",
+          "title_en": "US stocks rebound as Treasury turmoil eases (2026-08-21)",
+          "summary_zh": "美股週五止跌反彈，標普 500 漲 0.43% 收 7,674.37 點，那斯達克漲 0.43% 收 26,180.45 點，道瓊漲 517.80 點（0.98%）收 53,277.01 點。默克、嬌生等醫療股撐盤，投資人在本週稍早殖利率飆升引發的重挫後逐步回穩，風險偏好略見修復。",
+          "summary_en": "Wall Street snapped a losing run on Friday, with the S&P 500 up 0.43% to 7,674.37, the Nasdaq Composite up 0.43% to 26,180.45 and the Dow up 517.80 points (0.98%) to 53,277.01. Healthcare names such as Merck and Johnson & Johnson supported the Dow as investors steadied after a bruising, yield-driven selloff earlier in the week.",
+          "source_name": "TheStreet",
+          "source_url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-aug-21-2026",
+          "published": "2026-08-21"
+        },
+        {
+          "title_zh": "那斯達克 100 終結連五黑、市場靜待輝達（2026-08-21）",
+          "title_en": "Nasdaq 100 ends five-day slide as traders await Nvidia (2026-08-21)",
+          "summary_zh": "美股走高，那斯達克 100 指數終結連五個交易日的跌勢，投資人在輝達 8 月 26 日公布會計年度第 2 季財報前提前布局。輝達今年來上漲約 18%、股價約 219 美元，領銜一波晶片財報潮，其後馬維爾（8/27）、博通（9/2）接續登場，被視為科技股下一個重大催化劑。",
+          "summary_en": "US equities rose, with the Nasdaq 100 breaking a five-session losing streak as investors positioned ahead of Nvidia's fiscal Q2 results due August 26. Nvidia, up roughly 18% year-to-date near US$219, headlines a chip-earnings cluster — followed by Marvell on August 27 and Broadcom on September 2 — seen as the next major catalyst for tech.",
+          "source_name": "GuruFocus",
+          "source_url": "https://www.gurufocus.com/news/9047754/us-markets-rise-as-nasdaq-100-ends-fiveday-slide-nvidia-nvda-earnings-awaited",
+          "published": "2026-08-21"
+        },
+        {
+          "title_zh": "油價因伊朗緊張連二週上漲（2026-08-21）",
+          "title_en": "Oil heads for second weekly gain on Iran tensions (2026-08-21)",
+          "summary_zh": "原油週五走勢穩健，西德州中級原油（WTI）約每桶 86.65 美元、布蘭特約 93.86 美元，兩者均可望連續第二週上漲約 5%。市場預期美國將對伊朗施加更多壓力，加上中東能源供應受衝突干擾、仍無明確落幕跡象，持續為油價提供支撐。",
+          "summary_en": "Crude held firm on Friday, with WTI near US$86.65 a barrel and Brent around US$93.86, both on track for a second straight weekly gain of roughly 5%. Prices stayed supported by expectations of further US pressure on Iran and no clear resolution to a conflict disrupting Middle Eastern energy flows.",
+          "source_name": "Fortune",
+          "source_url": "https://fortune.com/article/price-of-oil-08-21-2026/",
+          "published": "2026-08-21"
+        },
+        {
+          "title_zh": "長天期美債殖利率在貝森特回購後回彈（2026-08-20）",
+          "title_en": "Long-dated Treasury yields rebound after Bessent's buyback push (2026-08-20)",
+          "summary_zh": "美債殖利率再度走高，抹去財政部長貝森特倍增長天期公債回購所帶來的緩解，交易員認為此干預僅是暫時解方，難抵大量發債與赤字擴大帶來的壓力。10 年期殖利率約 4.7%、30 年期約 5.25%，逼近多年高點，反映市場對政府債務的疑慮尚未消退。",
+          "summary_en": "US Treasury yields climbed back, erasing the relief that followed Treasury Secretary Bessent's move to double long-dated bond buybacks, as traders judged the intervention only a temporary fix for pressures tied to heavy debt issuance and rising deficits. The 10-year yield hovered around 4.7% and the 30-year near 5.25%, close to multi-year highs.",
+          "source_name": "CNBC",
+          "source_url": "https://www.cnbc.com/2026/08/20/bond-yields-edge-higher-as-traders-digest-treasury-debt-buyback-plan.html",
+          "published": "2026-08-20"
         }
       ]
     }
