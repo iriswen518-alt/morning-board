@@ -130,16 +130,16 @@
     {
       "name": "Shanghai 上證",
       "name_zh": null,
-      "close": 3903.720947265625,
-      "daily_pct": 0.24,
+      "close": 3906.735107421875,
+      "daily_pct": 0.08,
       "mtd_pct": 1.86,
       "ytd_pct": -1.64,
-      "closing_date": "2026-08-20"
+      "closing_date": "2026-08-21"
     },
     {
       "name": "CSI 300 滬深300",
       "name_zh": null,
-      "close": 4619.580078125,
+      "close": 4620.1630859375,
       "daily_pct": null,
       "mtd_pct": -9.04,
       "ytd_pct": -2.18,
@@ -301,11 +301,11 @@
     },
     {
       "name": "比特幣 (USD)",
-      "close": 69266.1875,
-      "daily_pct": 7.09,
-      "mtd_pct": 10.27,
-      "ytd_pct": -20.85,
-      "closing_date": "2026-08-19"
+      "close": 73032.7578125,
+      "daily_pct": 5.44,
+      "mtd_pct": 16.27,
+      "ytd_pct": -16.54,
+      "closing_date": "2026-08-20"
     }
   ],
   "bond_etfs": [
@@ -405,11 +405,11 @@
     {
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
-      "implied_rate": 3.72,
-      "delta_rate": 0.05,
-      "delta_bps": 5.0,
-      "p_hike": 20.0,
-      "p_hold": 80.0,
+      "implied_rate": 3.73,
+      "delta_rate": 0.06,
+      "delta_bps": 6.0,
+      "p_hike": 24.0,
+      "p_hold": 76.0,
       "p_cut": 0,
       "is_reference": false
     },
