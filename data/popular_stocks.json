@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-08-21T16:59:28+08:00",
+  "generated_at": "2026-08-21T17:46:48+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
-      "symbol": "MSTR",
-      "name_zh": "MicroStrategy",
+      "symbol": "AAP",
+      "name_zh": "Advance Auto Parts",
       "kind": "US",
-      "price": 112.39,
-      "change_pct": 7.81,
-      "mtd_pct": 20.49,
-      "ytd_pct": -26.03,
+      "price": 42.39,
+      "change_pct": -24.55,
+      "mtd_pct": -23.68,
+      "ytd_pct": 7.86,
       "market_date": "2026-08-20",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MSTR.US",
+      "per": 75.9917,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AAP.US",
       "error": null
     },
     {
@@ -31,48 +31,6 @@
       "error": null
     },
     {
-      "symbol": "AAP",
-      "name_zh": "Advance Auto Parts",
-      "kind": "US",
-      "price": 42.39,
-      "change_pct": -24.55,
-      "mtd_pct": -23.68,
-      "ytd_pct": 7.86,
-      "market_date": "2026-08-20",
-      "per": 75.9917,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AAP.US",
-      "error": null
-    },
-    {
-      "symbol": "IBIT",
-      "name_zh": "iShares Bitcoin Trust ETF",
-      "kind": "US",
-      "price": 41.2,
-      "change_pct": 6.24,
-      "mtd_pct": 15.6,
-      "ytd_pct": -17.02,
-      "market_date": "2026-08-20",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IBIT.US",
-      "error": null
-    },
-    {
-      "symbol": "COIN",
-      "name_zh": "Coinbase",
-      "kind": "US",
-      "price": 172.35,
-      "change_pct": 7.58,
-      "mtd_pct": 17.84,
-      "ytd_pct": -23.79,
-      "market_date": "2026-08-20",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=COIN.US",
-      "error": null
-    },
-    {
       "symbol": "ROST",
       "name_zh": "Ross Stores",
       "kind": "US",
@@ -84,6 +42,34 @@
       "per": 33.6183,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ROST.US",
+      "error": null
+    },
+    {
+      "symbol": "MSTR",
+      "name_zh": "MicroStrategy",
+      "kind": "US",
+      "price": 112.39,
+      "change_pct": 7.81,
+      "mtd_pct": 20.49,
+      "ytd_pct": -26.03,
+      "market_date": "2026-08-20",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MSTR.US",
+      "error": null
+    },
+    {
+      "symbol": "ISRG",
+      "name_zh": "Intuitive Surgical",
+      "kind": "US",
+      "price": 374.48,
+      "change_pct": -5.84,
+      "mtd_pct": 5.99,
+      "ytd_pct": -33.88,
+      "market_date": "2026-08-20",
+      "per": 45.1637,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ISRG.US",
       "error": null
     },
     {
