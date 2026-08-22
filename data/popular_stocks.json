@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-22T13:58:58+08:00",
+  "generated_at": "2026-08-22T14:53:47+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -17,20 +17,6 @@
       "error": null
     },
     {
-      "symbol": "HOOD",
-      "name_zh": "Robinhood",
-      "kind": "US",
-      "price": 108.13,
-      "change_pct": 13.7,
-      "mtd_pct": 24.92,
-      "ytd_pct": -4.39,
-      "market_date": "2026-08-21",
-      "per": 43.1186,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HOOD.US",
-      "error": null
-    },
-    {
       "symbol": "USAR",
       "name_zh": "USA Rare Earth",
       "kind": "US",
@@ -42,6 +28,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=USAR.US",
+      "error": null
+    },
+    {
+      "symbol": "CRML",
+      "name_zh": "Critical Metals",
+      "kind": "US",
+      "price": 7.11,
+      "change_pct": 22.59,
+      "mtd_pct": 29.51,
+      "ytd_pct": 2.45,
+      "market_date": "2026-08-21",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRML.US",
       "error": null
     },
     {
