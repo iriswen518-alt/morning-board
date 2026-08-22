@@ -3,7 +3,9 @@
   "tldr": [
     "最近交易日（8/21 週五）加權指數大漲 291 點、0.65% 收 45,224 點站回 45,000 關卡，外資連二買、加碼貨櫃三雄。",
     "台積電指引 2026 營收成長約三成、AI 相關營收 2029 年前年複合增速近 60%，帶動 CoWoS 封裝、液冷、PCB 與 HBM 供應鏈全面受惠。",
-    "金管會優化銀行與金控財報準則、推動保險資金投入公共建設，國際私銀則加大搶攻台灣高資產財管市場的力道。"
+    "金管會優化銀行與金控財報準則、推動保險資金投入公共建設，國際私銀則加大搶攻台灣高資產財管市場的力道。",
+    "立法院 8/21 三讀通過《遺產及贈與稅法》與《所得稅法》修正，收緊死亡前 2 年贈與併計遺產規定並調整免稅額，牽動高資產傳承與家庭稅務規劃。",
+    "最近交易日（8/21 週五）美股三大指數在殖利率趨穩下同步反彈，市場焦點轉向輝達 8/26 財報與聯準會 Jackson Hole 談話。"
   ],
   "sections": [
     {
@@ -91,6 +93,104 @@
           "summary_en": "KPMG's 2026 Taiwan Wealth Management Report projects continued structural growth in the island's high-net-worth population and assets, driven by tech-sector entrepreneurs and new wealth. The report positions Taiwan as an emerging Asian asset-management hub and urges banks to broaden alternatives, offshore products and succession planning to capture the fast-growing pool.",
           "source_name": "KPMG 台灣財富管理趨勢報告 2026",
           "source_url": "https://assets.kpmg.com/content/dam/kpmgsites/tw/pdf/2026/06/taiwan-wealth-management-report-2026.pdf"
+        }
+      ]
+    },
+    {
+      "section": "Tax & Regulations",
+      "section_zh": "稅務法規",
+      "items": [
+        {
+          "title_zh": "立法院修法收緊死亡前 2 年贈與、併計遺產課稅",
+          "title_en": "Legislature tightens two-year deathbed-gift rules in estate-tax overhaul",
+          "summary_zh": "立法院於 8/21（週五）三讀通過《遺產及贈與稅法》部分條文修正，明定被繼承人死亡前 2 年內贈與特定親屬的財產須併計遺產課稅，並由受贈人負擔稅負，課稅級距亦隨累計通膨調整。此修法收緊臨終前贈與的套利空間，對高資產族群的傳承、信託與保單布局影響重大，家族財富規劃須及早因應新制。",
+          "summary_en": "On Friday, Aug 21, Taiwan's legislature passed amendments to the Estate and Gift Tax Act, formalising that gifts of certain property to specified relatives within two years before death are counted back into the taxable estate, with the recipient bearing the tax; brackets were also adjusted for cumulative inflation. The change curbs deathbed-gifting arbitrage and is material for high-net-worth succession and trust planning.",
+          "source_name": "財政部",
+          "source_url": "https://www.mof.gov.tw/"
+        },
+        {
+          "title_zh": "《所得稅法》修正、調整子女免稅額與保費扣除",
+          "title_en": "Income Tax Act amendments revise child exemption and insurance-premium deductions",
+          "summary_zh": "立法院同日（8/21）三讀通過《所得稅法》第 17 條、第 126 條修正，調整未成年子女免稅額與保險費列舉扣除額規定。此調整可望減輕家庭稅負，並為本週密集的財稅立法再添一項。家庭理財與保險規劃可留意相關額度變化，及早試算對明年報稅的影響，妥善配置保單與扣除項目。",
+          "summary_en": "The legislature also passed amendments to Articles 17 and 126 of the Income Tax Act on Aug 21, revising rules on the exemption for minor children and the itemised deduction for insurance premiums. The adjustments ease the household tax burden and add to a busy week of fiscal legislation; households should watch the applicable thresholds when planning next year's filing.",
+          "source_name": "財政部",
+          "source_url": "https://www.mof.gov.tw/"
+        }
+      ]
+    },
+    {
+      "section": "Macro & Policy",
+      "section_zh": "總經政策",
+      "items": [
+        {
+          "title_zh": "台灣出口續強、AI 帶動電子出口年增 55.5%",
+          "title_en": "Taiwan exports stay red-hot as AI demand lifts electronics shipments 55.5%",
+          "summary_zh": "台灣出口動能強勁，8 月電子與資通訊產品出口年增 55.5%，連續第 4 個月成長逾 50%，推升整體商品出口約 34.1%。動能來自 AI、高效能運算（HPC）與半導體先進製程的強勁需求，為經濟成長與企業資本支出提供支撐。此趨勢強化市場對下半年景氣的信心，也使出口導向類股與供應鏈續受資金青睞。",
+          "summary_en": "Taiwan's exports remained strong, with electronics and ICT product exports up 55.5% year-on-year in August — a fourth straight month above 50% — helping push total goods exports about 34.1% higher. The momentum is driven by AI, high-performance computing and advanced-semiconductor demand, underpinning GDP growth and corporate capex into the second half.",
+          "source_name": "中華經濟研究院",
+          "source_url": "https://www.cier.edu.tw/eco/2026%E5%B9%B4%E8%87%BA%E7%81%A3%E7%B6%93%E6%BF%9F%E9%A0%90%E6%B8%AC/"
+        },
+        {
+          "title_zh": "通膨可控近 2%、智庫看政策穩定",
+          "title_en": "Inflation seen contained near 2% as think-tanks flag steady policy",
+          "summary_zh": "智庫預測台灣 2026 全年 CPI 年增率約 1.98%，受油價補貼與電費凍漲抑制物價；7 月 CPI 年增 2.54%。經濟成長走勢「前高後穩」，在外需強勁下，央行有空間維持利率不變。整體總經環境對股市與內需偏向有利，惟仍須留意國際油價、地緣政治與主要央行政策對後續物價與資金面的影響，審慎看待波動。",
+          "summary_en": "Forecasters expect Taiwan's 2026 CPI to run near 1.98%, with fuel subsidies and frozen electricity tariffs capping price pressure; July CPI rose 2.54% year-on-year. Growth is projected to be front-loaded across the year, giving the central bank room to keep rates steady amid robust external demand, a broadly supportive backdrop for equities and domestic consumption.",
+          "source_name": "中華經濟研究院",
+          "source_url": "https://www.cier.edu.tw/eco/2026%E5%B9%B4%E8%87%BA%E7%81%A3%E7%B6%93%E6%BF%9F%E9%A0%90%E6%B8%AC/"
+        }
+      ]
+    },
+    {
+      "section": "Global Markets",
+      "section_zh": "國際財經",
+      "items": [
+        {
+          "title_zh": "貝森特擬擴大美債回購、油價登一個月高點主導風險情緒",
+          "title_en": "Treasury buybacks and a one-month oil high steer global risk mood",
+          "summary_zh": "台灣媒體引述外電報導，美國財長貝森特釋出可能擴大美債回購以穩定長天期殖利率的訊號；同期油價升至一個月高位、金價走勢不定，美股當日收跌，反映美債經歷震盪的一週。此發展凸顯債市管理與地緣政治正主導全球風險情緒，牽動資金在股、債與商品之間的配置，投資人對利率與供給面消息高度敏感。",
+          "summary_en": "Taiwanese media, citing overseas wires, reported that US Treasury Secretary Bessent signalled potentially larger Treasury buybacks to steady long-end yields, while oil climbed to a one-month high and gold traded choppily and US stocks slipped in one session during a volatile week for bonds. The moves highlight how debt-market management and geopolitics are driving cross-asset sentiment.",
+          "source_name": "新浪財經",
+          "source_url": "https://finance.sina.com.cn/stock/usstock/c/2026-08-21/doc-ininziif1690336.shtml"
+        },
+        {
+          "title_zh": "沃爾瑪重挫拖累道瓊、消息敏感週分化明顯",
+          "title_en": "Walmart plunge drags Dow lower earlier in a headline-sensitive week",
+          "summary_zh": "本週稍早，台灣媒體引述美媒報導，沃爾瑪因財測不佳暴跌約 9%，拖累道瓊重挫逾 700 點，但費城半導體指數續強、台積電 ADR 收紅，抗跌力道較佳。此分化凸顯盤面題材輪動、對消息面高度敏感；在科技股財報與央行談話焦點週登場前，市場保持謹慎，台灣相關 AI 供應鏈仍受海外資金關注。",
+          "summary_en": "Earlier in the week, US media relayed by Taiwanese outlets reported the Dow tumbling more than 700 points as Walmart sank about 9% on a weak outlook, though Taiwan-linked chip names such as TSMC's ADR and the SOX index held up better. The split underscored a rotation-heavy, headline-sensitive tape ahead of a pivotal stretch of tech earnings and central-bank commentary.",
+          "source_name": "壹蘋新聞網",
+          "source_url": "https://news.nextapple.com/finance/20260821/50C661EF0A1A9D78FCDE6859EF3DF254"
+        }
+      ]
+    },
+    {
+      "section": "International",
+      "section_zh": "國際",
+      "items": [
+        {
+          "title_zh": "美股週五反彈、殖利率趨穩（2026-08-21，最近交易日）",
+          "title_en": "US stocks rebound Friday as Treasury yields steady (2026-08-21, most recent trading day)",
+          "summary_zh": "最近交易日（8/21 週五）美股三大指數同步走高，標普 500 漲 0.43% 收 7,674.37 點、那斯達克漲 0.43% 收 26,180.45 點，道瓊上漲 517.80 點、0.98% 收 53,277.01 點，收復債市震盪一週的部分失地。默克、嬌生等醫療類股撐盤，美債殖利率回穩帶動風險情緒改善。",
+          "summary_en": "In the most recent US session (Friday, Aug 21) the S&P 500 rose 0.43% to 7,674.37 and the Nasdaq gained 0.43% to 26,180.45, while the Dow added 517.80 points, or 0.98%, to 53,277.01, clawing back after a tumultuous week for Treasurys. Healthcare names such as Merck and Johnson & Johnson supported the blue-chip index as bond yields stabilised.",
+          "source_name": "TheStreet",
+          "source_url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-aug-21-2026"
+        },
+        {
+          "title_zh": "輝達 8/26 財報登場、市場下一個 AI 大考（2026-08-21）",
+          "title_en": "Nvidia's Aug 26 earnings loom as the market's next big AI test (2026-08-21)",
+          "summary_zh": "輝達將於美東 8/26（週三）盤後公布會計年度第二季財報，華爾街預估營收約 930～950 億美元、年增近 96%。投資人聚焦 Blackwell 平台放量與需求展望；財報若優於預期，可望重燃晶片族群的 AI 行情，反之則恐引發科技股回檔。此財報為近期全球風險情緒的關鍵變數，牽動台鏈 AI 供應商後市表現，值得密切留意。",
+          "summary_en": "Nvidia is set to report fiscal second-quarter results on Wednesday, Aug 26 after the close, with Wall Street modelling roughly US$93–95 billion in revenue, near 96% year-on-year growth. Investors are focused on the Blackwell ramp and the demand outlook; a strong print could reignite the AI rally across chip peers, while a disappointment risks a broader technology pullback.",
+          "source_name": "The Motley Fool",
+          "source_url": "https://www.fool.com/investing/2026/08/21/prediction-nvidia-stock-will-go-parabolic-after-aug-26-here-are-2-3-trillion-reasons-why/",
+          "published": "2026-08-21"
+        },
+        {
+          "title_zh": "市場等待聯準會 Jackson Hole 談話尋找利率線索（2026-08-21）",
+          "title_en": "Markets await the Fed's Jackson Hole address for rate-path clues (2026-08-21)",
+          "summary_zh": "投資人聚焦聯準會在 Jackson Hole 全球央行年會的談話，尋找利率路徑與央行獨立性訊號；此前美債震盪，10 年期殖利率一度逼近多年高點。市場正評估 9 月政策動向的機率，若語氣偏鴿，可望壓低殖利率、弱化美元並激勵股市，反之若偏審慎，則可能再度加劇市場波動，牽動全球股債走向。",
+          "summary_en": "Investors are looking to the Federal Reserve's Jackson Hole remarks for signals on the interest-rate path and central-bank independence, after a volatile stretch that pushed the 10-year Treasury yield near multi-year highs. Markets are debating the odds of a September policy move; a dovish tone could ease yields, soften the dollar and lift equities, while a cautious message risks renewed volatility.",
+          "source_name": "TechTimes",
+          "source_url": "https://www.techtimes.com/articles/325228/20260821/jackson-hole-2026-what-watch-when-warsh-steps-podium-friday.htm",
+          "published": "2026-08-21"
         }
       ]
     }
