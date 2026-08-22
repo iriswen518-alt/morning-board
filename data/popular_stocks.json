@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-22T07:32:18+08:00",
+  "generated_at": "2026-08-22T09:42:49+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -45,34 +45,6 @@
       "error": null
     },
     {
-      "symbol": "MSTR",
-      "name_zh": "MicroStrategy",
-      "kind": "US",
-      "price": 119.25,
-      "change_pct": 6.1,
-      "mtd_pct": 27.84,
-      "ytd_pct": -21.52,
-      "market_date": "2026-08-21",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MSTR.US",
-      "error": null
-    },
-    {
-      "symbol": "PLTR",
-      "name_zh": "Palantir",
-      "kind": "US",
-      "price": 179.94,
-      "change_pct": 3.44,
-      "mtd_pct": 46.22,
-      "ytd_pct": 1.23,
-      "market_date": "2026-08-21",
-      "per": 143.2245,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PLTR.US",
-      "error": null
-    },
-    {
       "symbol": "SDOT",
       "name_zh": "Sadot",
       "kind": "US",
@@ -87,17 +59,17 @@
       "error": null
     },
     {
-      "symbol": "USDE",
-      "name_zh": "StablecoinX",
+      "symbol": "PLTR",
+      "name_zh": "Palantir",
       "kind": "US",
-      "price": 7.41,
-      "change_pct": 85.25,
-      "mtd_pct": 371.97,
-      "ytd_pct": null,
+      "price": 179.94,
+      "change_pct": 3.44,
+      "mtd_pct": 46.22,
+      "ytd_pct": 1.23,
       "market_date": "2026-08-21",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=USDE.US",
+      "per": 143.2245,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PLTR.US",
       "error": null
     },
     {
@@ -129,31 +101,17 @@
       "error": null
     },
     {
-      "symbol": "USAR",
-      "name_zh": "USA Rare Earth",
+      "symbol": "MP",
+      "name_zh": "MP Materials",
       "kind": "US",
-      "price": 19.26,
-      "change_pct": 12.57,
-      "mtd_pct": 28.83,
-      "ytd_pct": 61.85,
+      "price": 60.05,
+      "change_pct": 9.1,
+      "mtd_pct": 45.15,
+      "ytd_pct": 18.86,
       "market_date": "2026-08-21",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=USAR.US",
-      "error": null
-    },
-    {
-      "symbol": "SOFI",
-      "name_zh": "SoFi",
-      "kind": "US",
-      "price": 18.91,
-      "change_pct": 5.52,
-      "mtd_pct": 15.94,
-      "ytd_pct": -27.77,
-      "market_date": "2026-08-21",
-      "per": 37.4116,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOFI.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MP.US",
       "error": null
     },
     {
