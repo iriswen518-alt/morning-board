@@ -85,7 +85,7 @@
     {
       "name": "TAIEX 加權指數",
       "name_zh": null,
-      "close": 45224.2890625,
+      "close": 45224.29,
       "daily_pct": 0.65,
       "mtd_pct": 4.88,
       "ytd_pct": 56.14,
@@ -94,11 +94,11 @@
     {
       "name": "OTC 櫃買加權",
       "name_zh": null,
-      "close": null,
-      "daily_pct": null,
+      "close": 387.27,
+      "daily_pct": -0.69,
       "mtd_pct": null,
       "ytd_pct": null,
-      "closing_date": null
+      "closing_date": "2026-08-21"
     },
     {
       "name": "台指期(近月)",
@@ -425,5 +425,5 @@
       "is_reference": false
     }
   ],
-  "summary": "8/21 Hang Seng 恆生 +1.21%、8/21 Dow Jones +0.98%、8/21 KOSPI +0.88% 領漲；8/19 台指期(近月) -1.06%、8/21 PHLX Semiconductor -0.51% 走弱。"
+  "summary": "8/21 Hang Seng 恆生 +1.21%、8/21 Dow Jones +0.98%、8/21 KOSPI +0.88% 領漲；8/19 台指期(近月) -1.06%、8/21 OTC 櫃買加權 -0.69% 走弱。"
 }

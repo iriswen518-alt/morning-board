@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-22T17:35:39+08:00",
+  "generated_at": "2026-08-22T18:32:50+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -31,45 +31,17 @@
       "error": null
     },
     {
-      "symbol": "SLS",
-      "name_zh": "SELLAS Life Sciences",
+      "symbol": "INFQ",
+      "name_zh": "Infleqtion",
       "kind": "US",
-      "price": 15.46,
-      "change_pct": 15.37,
-      "mtd_pct": 54.45,
-      "ytd_pct": 310.08,
+      "price": 14.12,
+      "change_pct": 12.51,
+      "mtd_pct": 43.64,
+      "ytd_pct": null,
       "market_date": "2026-08-21",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SLS.US",
-      "error": null
-    },
-    {
-      "symbol": "MP",
-      "name_zh": "MP Materials",
-      "kind": "US",
-      "price": 60.05,
-      "change_pct": 9.1,
-      "mtd_pct": 45.15,
-      "ytd_pct": 18.86,
-      "market_date": "2026-08-21",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MP.US",
-      "error": null
-    },
-    {
-      "symbol": "USAR",
-      "name_zh": "USA Rare Earth",
-      "kind": "US",
-      "price": 19.26,
-      "change_pct": 12.57,
-      "mtd_pct": 28.83,
-      "ytd_pct": 61.85,
-      "market_date": "2026-08-21",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=USAR.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=INFQ.US",
       "error": null
     },
     {
@@ -84,6 +56,34 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TTWO.US",
+      "error": null
+    },
+    {
+      "symbol": "HD",
+      "name_zh": "家得寶",
+      "kind": "US",
+      "price": 335.61,
+      "change_pct": 0.33,
+      "mtd_pct": 1.1,
+      "ytd_pct": -2.47,
+      "market_date": "2026-08-21",
+      "per": 24.4148,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HD.US",
+      "error": null
+    },
+    {
+      "symbol": "MP",
+      "name_zh": "MP Materials",
+      "kind": "US",
+      "price": 60.05,
+      "change_pct": 9.1,
+      "mtd_pct": 45.15,
+      "ytd_pct": 18.86,
+      "market_date": "2026-08-21",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MP.US",
       "error": null
     },
     {
