@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-22T22:30:42+08:00",
+  "generated_at": "2026-08-22T23:30:02+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -17,6 +17,20 @@
       "error": null
     },
     {
+      "symbol": "TTWO",
+      "name_zh": "Take-Two Interactive Software,",
+      "kind": "US",
+      "price": 239.62,
+      "change_pct": -0.22,
+      "mtd_pct": -1.36,
+      "ytd_pct": -6.41,
+      "market_date": "2026-08-21",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TTWO.US",
+      "error": null
+    },
+    {
       "symbol": "FNMA",
       "name_zh": "Fannie Mae",
       "kind": "US",
@@ -31,17 +45,17 @@
       "error": null
     },
     {
-      "symbol": "TTWO",
-      "name_zh": "Take-Two Interactive Software,",
+      "symbol": "HD",
+      "name_zh": "家得寶",
       "kind": "US",
-      "price": 239.62,
-      "change_pct": -0.22,
-      "mtd_pct": -1.36,
-      "ytd_pct": -6.41,
+      "price": 335.61,
+      "change_pct": 0.33,
+      "mtd_pct": 1.1,
+      "ytd_pct": -2.47,
       "market_date": "2026-08-21",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TTWO.US",
+      "per": 24.4148,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HD.US",
       "error": null
     },
     {
