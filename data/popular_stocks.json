@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-22T21:38:52+08:00",
+  "generated_at": "2026-08-22T22:30:42+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -17,17 +17,17 @@
       "error": null
     },
     {
-      "symbol": "CRML",
-      "name_zh": "Critical Metals",
+      "symbol": "FNMA",
+      "name_zh": "Fannie Mae",
       "kind": "US",
-      "price": 7.11,
-      "change_pct": 22.59,
-      "mtd_pct": 29.51,
-      "ytd_pct": 2.45,
+      "price": 6.29,
+      "change_pct": 1.62,
+      "mtd_pct": 8.64,
+      "ytd_pct": -41.38,
       "market_date": "2026-08-21",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRML.US",
+      "per": 0.4767,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FNMA.US",
       "error": null
     },
     {
@@ -42,20 +42,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TTWO.US",
-      "error": null
-    },
-    {
-      "symbol": "AAOI",
-      "name_zh": "Applied Optoelectronics",
-      "kind": "US",
-      "price": 124.82,
-      "change_pct": -3.32,
-      "mtd_pct": 32.34,
-      "ytd_pct": 258.06,
-      "market_date": "2026-08-21",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AAOI.US",
       "error": null
     },
     {
