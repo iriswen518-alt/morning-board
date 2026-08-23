@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T06:31:15+08:00",
+  "generated_at": "2026-08-24T07:29:18+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -14,6 +14,20 @@
       "per": 24.4798,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AWR.US",
+      "error": null
+    },
+    {
+      "symbol": "SNDK",
+      "name_zh": "Sandisk",
+      "kind": "US",
+      "price": 1596.08,
+      "change_pct": -0.28,
+      "mtd_pct": 31.38,
+      "ytd_pct": 572.37,
+      "market_date": "2026-08-21",
+      "per": 19.7934,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SNDK.US",
       "error": null
     },
     {
