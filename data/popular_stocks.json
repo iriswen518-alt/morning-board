@@ -1,21 +1,7 @@
 {
-  "generated_at": "2026-08-23T21:39:13+08:00",
+  "generated_at": "2026-08-23T22:32:04+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
-    {
-      "symbol": "VST",
-      "name_zh": "Vistra",
-      "kind": "US",
-      "price": 136.21,
-      "change_pct": -1.96,
-      "mtd_pct": -8.08,
-      "ytd_pct": -15.57,
-      "market_date": "2026-08-21",
-      "per": 22.0696,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VST.US",
-      "error": null
-    },
     {
       "symbol": "QUBT",
       "name_zh": "Quantum Computing",
@@ -28,6 +14,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QUBT.US",
+      "error": null
+    },
+    {
+      "symbol": "TEM",
+      "name_zh": "Tempus AI",
+      "kind": "US",
+      "price": 72.69,
+      "change_pct": 9.06,
+      "mtd_pct": 65.69,
+      "ytd_pct": 23.1,
+      "market_date": "2026-08-21",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TEM.US",
       "error": null
     },
     {
@@ -45,87 +45,17 @@
       "error": null
     },
     {
-      "symbol": "PYPL",
-      "name_zh": "PayPal",
+      "symbol": "MA",
+      "name_zh": "萬事達",
       "kind": "US",
-      "price": 61.55,
-      "change_pct": -1.2,
-      "mtd_pct": 7.59,
-      "ytd_pct": 5.43,
+      "price": 580.63,
+      "change_pct": 1.18,
+      "mtd_pct": 1.31,
+      "ytd_pct": 1.71,
       "market_date": "2026-08-21",
-      "per": 10.436,
+      "per": 30.187,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PYPL.US",
-      "error": null
-    },
-    {
-      "symbol": "SKHY",
-      "name_zh": "SK hynix",
-      "kind": "US",
-      "price": 163.41,
-      "change_pct": 0.2,
-      "mtd_pct": 13.69,
-      "ytd_pct": null,
-      "market_date": "2026-08-21",
-      "per": 14.5885,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SKHY.US",
-      "error": null
-    },
-    {
-      "symbol": "VGT",
-      "name_zh": "Vanguard Information Tech ETF",
-      "kind": "US",
-      "price": 118.42,
-      "change_pct": 0.05,
-      "mtd_pct": 4.66,
-      "ytd_pct": 25.68,
-      "market_date": "2026-08-21",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VGT.US",
-      "error": null
-    },
-    {
-      "symbol": "UBER",
-      "name_zh": "Uber",
-      "kind": "US",
-      "price": 78.8,
-      "change_pct": 0.32,
-      "mtd_pct": 12.0,
-      "ytd_pct": -3.56,
-      "market_date": "2026-08-21",
-      "per": 16.1972,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=UBER.US",
-      "error": null
-    },
-    {
-      "symbol": "SMR",
-      "name_zh": "NuScale Power",
-      "kind": "US",
-      "price": 9.4,
-      "change_pct": 3.64,
-      "mtd_pct": 11.64,
-      "ytd_pct": -33.66,
-      "market_date": "2026-08-21",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SMR.US",
-      "error": null
-    },
-    {
-      "symbol": "TLT",
-      "name_zh": "iShares 20+ Year Treasury Bond",
-      "kind": "US",
-      "price": 82.05,
-      "change_pct": -0.35,
-      "mtd_pct": -0.24,
-      "ytd_pct": -5.86,
-      "market_date": "2026-08-21",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TLT.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MA.US",
       "error": null
     },
     {
@@ -266,6 +196,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GLD.US",
+      "error": null
+    },
+    {
+      "symbol": "TLT",
+      "name_zh": "iShares 20+ 年公債 ETF",
+      "kind": "US",
+      "price": 82.05,
+      "change_pct": -0.35,
+      "mtd_pct": -0.24,
+      "ytd_pct": -5.86,
+      "market_date": "2026-08-21",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TLT.US",
       "error": null
     }
   ]
