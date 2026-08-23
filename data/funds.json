@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-22T17:03:19+08:00",
+  "generated_at": "2026-08-23T09:03:11+08:00",
   "source": "bopfund.moneydj.com",
   "funds": [
     {
@@ -670,8 +670,28 @@
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLZ79-FR59",
       "match_score": 1.0,
       "error": null,
-      "distribution_yield_pct": null
+      "distribution_yield_pct": null,
+      "perf_single": {
+        "1m": 4.17,
+        "3m": 8.32,
+        "6m": -3.85,
+        "1y": -11.15,
+        "2y": -14.22,
+        "3y": 14.33,
+        "5y": 20.94
+      },
+      "perf_dca": {
+        "1m": 4.17,
+        "3m": 5.96,
+        "6m": 4.67,
+        "1y": -2.13,
+        "2y": -6.52,
+        "3y": -3.97,
+        "5y": 6.81
+      },
+      "perf_date": "08-21",
+      "perf_url": "https://bopfund.moneydj.com/w/wb/wb03.djhtm?a=FLZ79-FR59"
     }
   ],
-  "dca_generated_at": "2026-08-22T17:14:55+08:00"
+  "dca_generated_at": "2026-08-23T09:03:21+08:00"
 }
