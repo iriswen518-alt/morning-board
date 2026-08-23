@@ -1,11 +1,80 @@
 {
-  "built_at": "2026-08-23T10:54",
+  "built_at": "2026-08-23T11:59",
   "source": "鉅亨網（cnyes）",
   "categories": [
     {
       "key": "headline",
       "label": "鉅亨頭條",
       "items": [
+        {
+          "news_id": "6584072",
+          "title": "智易5G拉貨與Wi-Fi 7升級雙動能加持 下半年營運優於上半年",
+          "title_en": "ZhiYi's 5G Order Pull and Wi‑Fi 7 Upgrade Dual‑Engine Boost Outlook, H2 Operations Better Than H1",
+          "publish_at": 1787453844,
+          "url": "https://news.cnyes.com/news/id/6584072",
+          "paras": [
+            "網通大廠智易(3596-TW)受惠於美國兩大電信運營商客戶5G產品拉貨，以及Wi-Fi 7升級雙動能加持，法人看好，下半年營收表現將優於上半年，第3季營收可望持續向上墊高。",
+            "在產業前景與產品線展望方面，智易旗下三大產品線中以移動通訊Mobility表現最為突出，優於智慧家庭Smart Home與寬頻Broadband業務，惟受到上游PCB等材料交期拉長影響，營收成長幅度略微下修。",
+            "在規格升級趨勢下，2026年邁入Wi-Fi 7出貨第二年，美洲與歐洲市場的Wi-Fi 7出貨占比預計將由去年的初期階段大幅攀升至80%以上，有助於拉抬平均銷售單價與毛利表現。",
+            "在業務轉型與新產品布局端，智易正加速由傳統家用網通設備跨足企業市場，旗下交換器Switch及企業級Wi-Fi Access Point預計自今年下半年起逐步出貨，預估明年企業級產品占營收比重有望挑戰雙位數水準。",
+            "針對美國新客戶的XGS-PON光纖相關設備與Cable產品，則因記憶體價格波動因素，預計將遞延至2027年正式出貨。",
+            "在供應鏈備料策略上，智易第2季存貨攀升至277億元，季增44%且年增118%，占總資產比重達51%。其中約46%存貨為包含Dram與Flash在內的記憶體零組件，主要是因應市場價格上漲與供應吃緊而提前備妥至2027年的需求，儘管備料導致短期借款增加，但公司已與客戶達成協議由對方支付部分款項或補貼資金成本，有效降低財務負擔。"
+          ],
+          "paras_en": [
+            "Network equipment giant ZhiYi (3596‑TW) is benefiting from increased 5G product orders from two major US telecom operators and the dual‑engine boost of Wi‑Fi 7 upgrades. Analysts are optimistic that revenue in the second half of the year will outperform the first half, with Q3 revenue expected to keep rising.",
+            "Regarding industry outlook and product line prospects, ZhiYi’s three main product lines show that the Mobility segment for mobile communications performs the best, outpacing the Smart Home and Broadband businesses. However, longer lead times for upstream materials such as PCBs have slightly trimmed the revenue growth rate.",
+            "With the trend of specification upgrades, 2026 marks the second year of Wi‑Fi 7 shipments. The share of Wi‑Fi 7 shipments in the Americas and Europe is expected to jump from the early‑stage level last year to over 80%, helping lift average selling prices and gross margin performance.",
+            "In terms of business transformation and new product rollout, ZhiYi is accelerating its move from traditional home networking equipment into the enterprise market. Its switches and enterprise‑grade Wi‑Fi access points are slated to ship gradually from the second half of this year, and the share of enterprise products in revenue is projected to reach double‑digit levels next year.",
+            "For new US customers’ XGS‑PON fiber‑related equipment and cable products, delivery is expected to be deferred to 2027 due to memory price volatility.",
+            "Regarding supply‑chain inventory strategy, ZhiYi’s Q2 inventory rose to NT$27.7 billion, up 44% quarter‑over‑quarter and 118% year‑over‑year, representing 51% of total assets. About 46% of this inventory consists of memory components such as DRAM and flash, stocked in advance to meet demand through 2027 amid rising market prices and tight supply. Although the stocking increased short‑term borrowings, the company has reached agreements with customers for partial payment or cost‑subsidy, effectively reducing its financial burden."
+          ]
+        },
+        {
+          "news_id": "6583408",
+          "title": "算力吞噬電網！資料中心引爆供電革命：從自備電網到晶片垂直供電的千億新局",
+          "title_en": "",
+          "publish_at": 1787453774,
+          "url": "https://news.cnyes.com/news/id/6583408",
+          "paras": [
+            "AI蛋糕理論中，能源為AI產業發展的最底層基石，電力即算力為全球共識，隨著新一代AI晶片與機櫃功耗呈指數級飆升，從前端現場自備發電、機房高壓直流傳輸到晶片端垂直供電，一場全鏈路的供電架構大革命已全面展開，重塑算力時代的能源新局。",
+            "〈設施端現場發電崛起，SOFC與SST開創高效供電〉",
+            "面對傳統電網併網排隊延宕與容量飽和的挑戰，部署現場自主能源的「表後自備發電」成為加速算力落地的戰略首選，其中固態氧化物燃料電池藉由建置期短、低噪音且無需用水等優勢脫穎而出，需求迎來爆發性成長，固態變壓器能將中壓交流電一步直轉為高壓直流直送機櫃，大幅減少轉換階段並提升系統能效與節省機房空間，成為未來微電網架構的關鍵核心。",
+            "〈高壓直流成必然趨勢，BBU與垂直供電重構機櫃〉",
+            "在機房內部，傳統48V低壓供電因龐大電流面臨線路損耗與銅排過重的物理限制，推動供電系統向高壓直流轉型，目前美系CSP大廠偏好符合既有安規的±400VDC先行導入，800VDC則隨次世代高功耗晶片放量，具備低損耗與微秒級反應優勢的電池備援單元(BBU)正加速取代傳統UPS，搭配獨立Power Rack電源櫃設計，板端電源也走向模組化垂直供電，結合SiC與GaN寬能隙材料，將電阻與傳輸損耗降至最低。",
+            "〈免費下載【陳智霖分析師APP】，掌握第一手盤勢資訊與信用籌碼名單〉",
+            "APP選股會員每月僅限額招收，名額有限，每週都會提供最新「信用籌碼疑慮名單」，邀請您點選連結下載【陳智霖分析師APP】：https://lihi.cc/zwrii",
+            "〈電力供應鏈迎結構性紅利，台廠全面卡位受惠〉",
+            "在資料中心電力革新浪潮下，具備系統整合與關鍵零組件實力的台系供應鏈迎來長線成長動能，台達電(2308-TW)與光寶科(2301-TW)深耕高功率電源櫃、液冷整合及微電網方案，穩居高壓直流市場領先地位；高力(8996-TW)受惠國際大廠SOFC熱反應盒訂單強勁放量，展現顯著成長爆發力；順達(3211-TW)、新盛力(4931-TW)與AES-KY(6781-TW)則全面掌握BBU滲透率攀升與模組化商機；華城(1519-TW)亦持續受惠變壓器與電網設備升級需求，未來應著眼於資料中心能源轉型紅利，長線布局關鍵受惠指標廠。邀請投資人下載智霖老師的APP並鎖定直播，一起掌握產業最前線的產業脈動！",
+            "最新影音(請點影音上方標題至Youtube收視品質會更佳)",
+            "錢進熱線02-2653-8299，立即邁向系統依據的股票操作。",
+            "文章來源：陳智霖分析師/凱旭投顧",
+            "本公司所推薦分析之個別有價證券",
+            "無不當之財務利益關係 以往之績效不保證未來獲利",
+            "投資人應獨立判斷 審慎評估並自負投資風險"
+          ],
+          "paras_en": []
+        },
+        {
+          "news_id": "6584291",
+          "title": "南下建立協同機制 迅得擬投資友上科技1.5億元拿下逾20%股權",
+          "title_en": "",
+          "publish_at": 1787453411,
+          "url": "https://news.cnyes.com/news/id/6584291",
+          "paras": [
+            "在南台灣半導體S 廊帶的成型之下，設備業在爭取更進一步的生產協同機制，也陸續展開在台灣的生產投資，台積電(2330-TW)供應鏈的迅得(6438-TW)通過將出資1.5億元資金，參與在南科設立的友上科技(6998-TW)的增資案，預計年底前將拿下友上的逾20%股權。",
+            "而這迅得的此一投資案件如果成行，也將成為繼設備業牧德(3563-TW)以2.74億元投資鏵友益(6877-TW)及志聖(2467-TW)以10.17億元投資東捷(8064-TW)私募案後，另一件設備廠南下建立協同機制的案例。",
+            "設立於台灣南科園區 ，目前以生產AMHS智能工廠系統、智慧製造設備及機器手臂系統整合的友上科技，目前股本爲3.64億元，自2023年起連續虧損3年，而友上 科技 2026年上半年營收6253萬元，毛利率14.94%，稅後仍虧損4890萬元，每股淨損1.34元。",
+            "友上科技目前也是迅得的合作供應鏈，而迅得經董事會通過將出資1.5億元投資，迅得董事長王年清指出，預計迅得將在友上科技減資彌補虧損後以1.5億元參與其現金增資，預計將取得友上科技逾20%的股權。",
+            "王年清指出，友上科技在AMHS智能工廠系統核心技術上有十足成長潛力，也看好友上科技在2027年的營運將可望轉盈，而目前股本3.64億元的友上科技已股票公開發行，規劃2029年登錄興櫃交易。",
+            "迅得2026年1-6月營收35.68億元，毛利率26.13%，稅後純益3.11億元，每股純益3.79元。而迅得公布最新營收資訊，迅得2026 年 7 月營收以 6.38 億元改寫歷年同期新高。迅得 2026 年 7 月營收 6.38 億元，月增 7.61%，年增 5.38%。2026 年 1-7 月營收 42.07 億元，年增 10.97%。",
+            "迅得營運總部也在遷入的新生廠，產能已進人滿載，將推升 2026 年獲利成長幅度攀高。迅得機械在 2026 年第二季營收 18.24 億元創新高，法人估計迅得 2026 年第三季單月平均營收在 6 億元之上 ，有機會再創新高，第四季由於安排出貨的半導體設備出貨逐步步入高峰，預估下半年營運勝過 上半年，全年營收將再較 2025 年的 64.67 億元再增 10-15%，再創新高。",
+            "迅得擁有在半導體及 PCB 設備需求雙重成長動能，同時，迅得在 PCB 設備指向高階產品廠商的需求，也與臻鼎 - KY(4958-TW) 及景碩 (3189-TW) 有大單確立，其中臻鼎 - KY 下單 10.2 億元，而景碩也在 7 億元之上。。",
+            "迅得 2026 年上半年營收 35.68 億元，年增 11.99%，2026 下半年預估在出貨產品組合的有利因素加持下超過上半年表現 ，全年營收估成長 10-15%，而在獲利成長幅度可望以優於營收成長幅度倍數成長呈現。",
+            "同時，迅得半導體相關設備出貨上將在第四季起出現明顯成長，半導體設備營收在 2027 年也將維持此一營運旺盛態勢。",
+            "而志聖以10.17億元投資東捷私募案，也在整合其台南南科與樹谷萬坪廠房，提供高度靈活組裝產線，擴大生產韌性。在服務上更將強化在 S 廊帶關鍵據點提供零時差的技術支援與維護，提升服務彈性。"
+          ],
+          "paras_en": []
+        },
         {
           "news_id": "6583862",
           "title": "矽晶圓終於翻身！徐秀蘭證實現貨、長約都上漲",
@@ -154,128 +223,6 @@
             "At the end of last month, OpenAI also sharply lowered prices for its smaller models, cutting the mid‑tier GPT‑5.6 Terra by 20% and slashing the lower‑cost Luna model by 80%.",
             "Anthropic’s flagship model Claude Fable 5 is currently priced at $10 per million input tokens and $50 per million output tokens, while Claude Opus 5 costs $5 per million input tokens and $25 per million output tokens."
           ]
-        },
-        {
-          "news_id": "6584240",
-          "title": "特斯拉Cybercab 9/3德州亮相！無方向盤Robotaxi上路在即  能否取代Model Y？",
-          "title_en": "Tesla Cybercab Debuts in Texas on Sep 3! Steering‑less Robotaxi Nears Road Launch – Can It Replace the Model Y?",
-          "publish_at": 1787400483,
-          "url": "https://news.cnyes.com/news/id/6584240",
-          "paras": [
-            "特斯拉(TSLA-US) 正加速推進專為無人駕駛打造的Robotaxi車款Cybercab，並計畫進一步擴大在美國奧斯汀的自動駕駛車隊規模。特斯拉週六（22日）宣布，將於當地時間9月3日在德州奧斯汀舉行Cybercab發布活動，這款沒有方向盤與煞車踏板的全自動駕駛車，可能成為特斯拉Robotaxi服務下一階段的重要車型。",
-            "特斯拉透過X平台公布活動日期。Cybercab是特斯拉首款專為Robotaxi打造的車款，與目前主要採用Model Y改裝車輛提供服務的模式不同，Cybercab從車輛設計之初便以全無人駕駛為核心。",
-            "根據《The Information》先前報導，特斯拉可能採取分階段方式推進Cybercab服務，先讓員工在公共道路上搭乘，經過數天測試後，再進一步向一般消費者開放。",
-            "在正式發布之前，特斯拉已陸續展開Cybercab的道路測試。自6月起，Cybercab便在包括奧斯汀在內的美國多個地區公共道路上進行測試；7月起，特斯拉也讓員工在奧斯汀園區的私人道路試乘，並蒐集使用回饋。",
-            "此外，特斯拉近期也針對奧斯汀當地急救人員進行培訓，說明在緊急狀況下應如何處理及移動Cybercab。",
-            "Cybercab與一般汽車最大的差異之一，在於車內沒有方向盤與煞車踏板，因此當自動駕駛系統發生異常時，乘客無法像傳統車輛一樣由人類駕駛接手。",
-            "特斯拉表示，公司設置遠端操作人員，必要時可以介入處理緊急狀況。不過，這種完全取消人工駕駛控制裝置的設計，也讓Cybercab面臨額外的監管要求。",
-            "亞馬遜旗下自動駕駛公司Zoox今年7月才獲得美國國家公路交通安全管理局（NHTSA）批准，使用同樣沒有方向盤與踏板的車輛進行商業載客，在此之前主要提供免費試乘服務。",
-            "目前外界仍無法確認特斯拉是否已取得相同類型的監管批准，以及Cybercab正式投入服務後是否能直接進行收費載客。",
-            "目前特斯拉在奧斯汀的Robotaxi服務主要採用改裝版Model Y，包括增加自清潔攝影機及第二套通訊單元。",
-            "根據德州機動車輛管理局資料，特斯拉目前在當地註冊186輛Model Y，用於Robotaxi服務。",
-            "Cybercab則從設計階段便針對無人駕駛需求打造，不需要像Model Y一樣進行額外改裝。若未來大規模部署，這種車型設計理論上可簡化Robotaxi車隊的營運方式。",
-            "不過，特斯拉目前並未說明Cybercab投入服務後，是否會逐步取代現有Model Y車隊，或是讓兩種車型並行營運。",
-            "特斯拉已於上月開始在德州生產Cybercab，但公司隨後表示，2026年內仍不會達到大規模量產階段。",
-            "執行長馬斯克在7月財報會議上指出，由於Cybercab採用全新平台，特斯拉需要先累積專屬的自動駕駛資料，之後才能進一步擴大部署規模。"
-          ],
-          "paras_en": [
-            "Tesla (TSLA-US) is accelerating the rollout of its Robotaxi‑specific Cybercab and plans to further expand its autonomous fleet in Austin, Texas. On Saturday (the 22nd), Tesla announced a Cybercab launch event in Austin on September 3 local time. The fully autonomous vehicle, which lacks a steering wheel and brake pedal, could become a key model for the next phase of Tesla’s Robotaxi service.",
-            "Tesla posted the event date on its X platform. The Cybercab is Tesla’s first vehicle built specifically for Robotaxi use, differing from the current model that relies on modified Model Y cars; the Cybercab was designed from the ground up for driverless operation.",
-            "According to a prior report by The Information, Tesla may roll out Cybercab service in stages, first allowing employees to ride on public roads, testing for several days, and then opening it to the general public.",
-            "Before the official launch, Tesla has already begun road testing the Cybercab. Since June, the Cybercab has been tested on public roads in several U.S. locations, including Austin; in July, Tesla also let employees ride on private roads at its Austin campus and collected feedback.",
-            "In addition, Tesla recently trained local Austin emergency responders on how to handle and move a Cybercab in emergency situations.",
-            "One of the biggest differences between the Cybercab and a conventional car is the absence of a steering wheel and brake pedal, meaning that if the autonomous system fails, passengers cannot take over as they could in a traditional vehicle.",
-            "Tesla says it has remote operators who can intervene in emergencies if needed. However, the complete removal of human‑control interfaces also subjects the Cybercab to additional regulatory requirements.",
-            "Amazon’s autonomous‑driving unit Zoox only received approval from the U.S. National Highway Traffic Safety Administration (NHTSA) in July to operate commercially with vehicles that also lack steering wheels and pedals, after previously offering only free trial rides.",
-            "It remains unclear whether Tesla has secured the same type of regulatory approval and whether the Cybercab will be able to charge passengers directly once it enters service.",
-            "Tesla’s current Robotaxi service in Austin primarily uses modified Model Y vehicles, which have added self‑cleaning cameras and a second communications unit.",
-            "According to the Texas Department of Motor Vehicles, Tesla has 186 Model Y cars registered locally for Robotaxi service.",
-            "The Cybercab is designed from the outset for driverless use and does not require the extra modifications that Model Y conversions need. If deployed at scale, this design could theoretically simplify Robotaxi fleet operations.",
-            "Tesla has not indicated whether the Cybercab will eventually replace the existing Model Y fleet or operate alongside it.",
-            "Tesla began producing the Cybercab in Texas last month, but the company later said it will not reach large‑scale production until 2026.",
-            "CEO Elon Musk told investors at the July earnings call that because the Cybercab uses an entirely new platform, Tesla must first gather dedicated autonomous‑driving data before it can expand deployment."
-          ]
-        },
-        {
-          "news_id": "6584282",
-          "title": "川普暗示可出動美軍干預債市 引發網友熱議",
-          "title_en": "Trump Hints He Could Deploy the U.S. Military to Intervene in the Bond Market, Sparking Online Debate",
-          "publish_at": 1787399905,
-          "url": "https://news.cnyes.com/news/id/6584282",
-          "paras": [
-            "美國總統川普21日（周五）表示，他本周並未指示財長貝森特干預債券市場，被問及「面對美國長期債券殖利率再回升還有什麼干預手段」時，川普說，「終極干預手段是美軍，如果需要，將出動美軍」。",
-            "記者追問：「您是否曾與他（貝森特）討論過另一種干預方式？他有可能採取其他干預方式嗎？」川普回答：「我國有多種干預方式，終極干預就是美軍，如果我國必須使用這個手段，就會用。」",
-            "目前外界尚不清楚川普究竟是什麼意思，但終極手段或派美軍上場的說法一出，引發網路批評者一陣嘲弄。",
-            "網友稱，「川普的意思是，只要他挑起一場真正的全面戰爭，就能逼出個『避險買盤』，好給美債接盤。」",
-            "網友指出，「誰要避險去買這樣一個國家的公債？它正靠發動毫無意義的戰爭來宣洩，卻連支撐戰事的工業產能都沒有，還日漸暴露出政治與財政的雙重潰爛。」",
-            "還有網友稱，「美國這是想直接佔領頭號持債國日本，然後把欠他們的債一筆勾銷嗎？邏輯滿分啊！」",
-            "美國財政部日前罕見增強對長期公債市場的干預力道。貝森特在20日說，可能進一步擴大長期公債回購的規模。",
-            "此前，美國財政部剛剛宣布將把回購規模「至少擴大一倍」，這被視為美國政府對長期債券殖利率持續處於高檔的救市之舉。不過貝森特聲明帶來的殖利率下行已基本回吐。"
-          ],
-          "paras_en": [
-            "U.S. President Donald Trump said on Friday the 21st that he did not direct Treasury Secretary Janet Yellen to intervene in the bond market this week, and when asked what \"intervention tools\" are available as long‑term Treasury yields rise again, Trump replied, \"The ultimate tool is the military; if needed, we will deploy the U.S. military.\"",
-            "A reporter followed up, \"Did you discuss another form of intervention with her? Could she take other actions?\" Trump answered, \"We have many tools; the ultimate one is the military, and if we have to use it, we will.\"",
-            "It is still unclear what Trump meant, but the suggestion of an \"ultimate\" measure involving troops sparked a wave of online ridicule.",
-            "Netizens mocked, \"Trump’s point is that if he starts a genuine all‑out war, it will generate a 'flight‑to‑safety' buying spree, giving his administration a buyer for U.S. debt.\"",
-            "Another commenter asked, \"Who wants to buy the bonds of a country that resorts to meaningless wars for relief, yet lacks the industrial capacity to sustain such conflicts and is increasingly showing both political and fiscal decay?\"",
-            "One user added, \"Is the U.S. trying to directly occupy its top creditor, Japan, and write off the debt it owes them? The logic is flawless!\"",
-            "The U.S. Treasury recently took the rare step of intensifying its intervention in the long‑term Treasury market. Treasury Secretary Janet Yellen said on the 20th that the Treasury may further expand the scale of its long‑term bond buybacks.",
-            "Earlier, the Treasury announced it would at least double the size of its buyback program, a move seen as a market‑stabilizing effort amid persistently high long‑term yields. However, the yield‑softening effect of Yellen’s statement has largely been undone."
-          ]
-        },
-        {
-          "news_id": "6584202",
-          "title": "玻璃基板進入量產關鍵期！三星、英特爾、藍思競逐TGV  良率與客戶認證成勝負關鍵",
-          "title_en": "",
-          "publish_at": 1787397002,
-          "url": "https://news.cnyes.com/news/id/6584202",
-          "paras": [
-            "AI、高效能運算（HPC）持續推動先進封裝升級，玻璃基板產業也從過去強調材料性能，逐步進入更關鍵的工程驗證階段。近期產業鏈出現截然不同的進展，有業者推進合作與中試線，也有廠商因客戶可靠性測試出現瓶頸而調整量產時程，顯示玻璃基板真正的競爭焦點，已從「誰最早宣布」轉向「誰能穩定通過驗證並按時交付」。",
-            "7月底，英特爾(INTC-US) 與藍思科技(06613-HK) 推進TGV（玻璃通孔）先進封裝合作；8月11日，南韓設備商Avaco及關聯公司AVATEC啟動TGV工藝驗證中試線。",
-            "另一方面，市場傳出三星電機面向客戶的樣品可靠性評估遇到瓶頸，合資公司GlaSSEM建線計畫可能延後，量產時間甚至可能推遲至2028年以後。",
-            "這些看似不同的消息，其實反映同一項產業現況：玻璃基板已經從材料性能競賽，進入以客戶可靠性認證、製程穩定度與良率為核心的量產前驗證階段。",
-            "三星電機量產時程調整　客戶驗證成關鍵瓶頸\n\n三星電機的案例凸顯玻璃基板商業化面臨的挑戰。",
-            "市場流出的供應鏈資訊顯示，三星電機早在2025年11月便向供應商傳達GlaSSEM產線設備採購意向，但設備下單時間從原先的2025年12月延至2026年3月，之後又推遲至6月，此後尚未公布新的時間節點。",
-            "雖然鍍膜、蝕刻、雷射鑽孔及檢測等主要設備供應商大致已確定，但訂單尚未正式落地。",
-            "GlaSSEM並非沒有擴大投入。該公司7月初與日本住友化學旗下東友精細化學簽署最終協議，註冊資本為4821億韓元，三星電機持股66%。合資公司目標是在2026年成立，並於2027會計年度下半年建立供貨體系。",
-            "不過，建立供貨體系與全面量產並非同一件事。設備導入、工廠建線以及最終量產時程，仍取決於客戶驗證進度。",
-            "目前市場消息將瓶頸指向樣品可靠性測試，但三星電機尚未公開具體測試項目、失效原因或客戶身分。",
-            "對玻璃基板而言，真正困難的並不只是完成TGV微孔加工，而是完成填銅、布線及晶片貼裝後，仍能在熱循環、濕熱等測試下維持結構與電氣性能。",
-            "SKC及旗下美國Absolics的商業化進度也曾出現調整，市場目前預期其2026年完成最終可靠性測試、2027年推進全面生產。",
-            "這顯示產業目前最大的限制，已從「實驗室能否做出來」，轉向「能否以穩定良率大量生產並取得客戶認證」。",
-            "玻璃基板量產時間表持續調整\n\n目前業界對玻璃基板的量產時程普遍採取較保守態度。",
-            "Absolics目前規劃2026年完成可靠性測試、2027年推進全面生產；三星電機旗下GlaSSEM則以2027會計年度下半年建立供貨體系為目標。",
-            "大日本印刷（DNP）的TGV中試線已經完成，目標是在2028會計年度建立全面量產所需的製造體系。LG Innotek過去則將量產目標設定在2027年至2028年，但實際商業化速度仍取決於技術與市場需求。",
-            "台積電則將2026年視為CoPoS設備與材料驗證的重要時間窗口，後續試產與量產時間仍存在不同判斷。",
-            "另一方面，藍思科技已披露建設相關中試線，並進行樣品試製及客戶技術測試，但要進入大規模生產，仍須經過後續協議與認證。",
-            "部分產業研究機構認為，TGV玻璃基板真正成為先進封裝主流，可能要等到2030年以後，目前仍處於早期驗證階段，短期更可能扮演補充角色，而非全面取代既有封裝方案。",
-            "因此，近期量產時間表向後調整，並不代表市場需求消失。AI基礎建設與高效能運算持續推升高階封裝需求，玻璃基板目前最大的挑戰仍在於供應端的技術成熟度。",
-            "英特爾攜手藍思　從合作走向封裝驗證\n\n英特爾與藍思科技的合作，則反映玻璃基板正在更早進入晶片封裝設計流程。",
-            "根據藍思科技公告，雙方簽署合作備忘錄，合作重點包括TGV先進封裝。藍思科技負責玻璃基板穿孔成型、高精度雷射加工、通孔金屬化及多層互連布線；英特爾則計畫提供架構資訊、可製造性設計指南、基準測試及驗證方法。",
-            "這項合作的重要性不只在於是否產生訂單，更在於玻璃基板製造商能否更早參與實際封裝架構的設計與驗證。",
-            "藍思科技已披露建設相關中試線、進行樣品試製並向部分潛在客戶送樣，部分客戶也已進入技術測試階段。不過，目前市場流傳的部分產能與製程數據，尚未全部獲得公司正式確認，因此不能直接視為量產能力。",
-            "同樣地，合作備忘錄也不等同於正式訂單。藍思科技已提醒，後續是否簽署正式協議仍存在不確定性，TGV業務目前也尚未對公司業績形成實質影響。",
-            "日本持續推進驗證　中國面板廠加速布局\n\n日本廠商目前仍積極推進玻璃基板的工程驗證。",
-            "新光電氣7月展示22層玻璃核心基板，透過在玻璃兩側各堆疊11層銅布線，進一步提高多層封裝能力。其技術重點之一，是利用玻璃邊緣的保護材料分散熱應力，以降低加工及熱循環過程中出現裂紋與分層的風險。",
-            "大日本印刷則已於2025年12月在埼玉啟動TGV玻璃核心基板中試線，目標是在2028會計年度建立全面量產體系。",
-            "中國企業則從材料、TGV加工、金屬化到先進封裝等環節切入。",
-            "其中，京東方A(000725-CN) 已披露玻璃基封裝載板試驗線於2026年上半年完成全自動化設備通線，設計產能每月1000片，並完成大尺寸、高層數玻璃基載板樣品開發與送樣，部分國內客戶已進入技術測試階段。",
-            "設備端也開始提前驗證。Avaco與AVATEC啟動的TGV中試線支援515×510毫米大尺寸玻璃，並串聯雷射鑽孔、蝕刻、種子層沉積及光學檢測等流程。",
-            "這些布局最終都指向同一項問題：如何把玻璃加工技術轉化為可複製、可量產的半導體製造流程。",
-            "玻璃基板不只瞄準ABF　CPO可能成另一條路徑\n\n玻璃基板的應用也不只限於取代傳統ABF載板。",
-            "肖特已布局玻璃基板及先進封裝相關產品，應用涵蓋高密度TGV、先進異質封裝與高效能互連。",
-            "康寧(GLW-US) 的布局則提供另一條觀察路徑。業界關注的「Glass Bridge」概念，是將TGV技術延伸至CPO架構，讓玻璃的角色從傳統封裝載板進一步拓展至光互連領域。",
-            "康寧近期與輝達(NVDA-US) 簽署多年期商業及技術合作協議，官方公布的合作重點主要集中在擴大美國光連接與光纖製造能力，並不能直接視為雙方已就玻璃基板或Glass Bridge展開合作。",
-            "此前，京東方則已與康寧簽署為期3年的合作備忘錄，涵蓋玻璃基封裝載板及光互連等技術方向。",
-            "隨著CPO逐步走向實際部署，玻璃在光互連領域的應用也受到更多關注。輝達已公開說明CPO相關技術方向，博通(AVGO-US) 則將第二代Tomahawk 5-Bailly定位為業界首個量產型CPO解決方案，顯示相關技術正從概念驗證逐步邁向工程化。",
-            "相較於玻璃核心載板仍面臨較長的客戶認證與量產驗證週期，以CPO為切入點的玻璃光互連應用，可能成為玻璃技術較早實現商業化的方向之一。英特爾同樣將玻璃視為整合電氣與光學功能的平台材料。",
-            "不過，玻璃要真正進入大規模半導體應用，仍須跨過多項技術門檻。從TGV微孔製作、銅填孔、低損耗線路，到熱膨脹控制及大尺寸製造，每個環節都需要長期的製程與專利累積。隨著產業逐漸成熟，誰掌握關鍵製程、專利與量產技術，可能比單純擁有玻璃材料本身更具競爭力。",
-            "良率才是玻璃基板能否量產的關鍵\n\n分析指出，從整個產業鏈來看，所有量產時間表最終都繞不開同一個核心問題：良率。",
-            "TGV需要在玻璃中利用雷射形成微小垂直通孔，再填充銅材料傳導訊號。一片基板需要處理大量通孔，而玻璃本身又具有脆性，因此微小裂紋或加工偏差都可能造成整片基板報廢。",
-            "目前玻璃核心封裝良率仍低於傳統有機ABF基板，成本也相對較高。這也是為什麼即使玻璃在平整度、尺寸穩定性及高密度互連等方面具備潛在優勢，距離大規模商業化仍有一段距離。",
-            "2026年下半年的一連串產業動態，顯示玻璃基板正進入從實驗室走向工廠的關鍵階段。接下來決定產業勝負的，恐怕不再是誰最早宣布玻璃基板計畫，而是誰能率先通過客戶認證、拉高良率，並把產品穩定交到客戶手中。"
-          ],
-          "paras_en": []
         }
       ]
     },
@@ -283,6 +230,75 @@
       "key": "tw_stock",
       "label": "台股焦點",
       "items": [
+        {
+          "news_id": "6584072",
+          "title": "智易5G拉貨與Wi-Fi 7升級雙動能加持 下半年營運優於上半年",
+          "title_en": "ZhiYi's 5G Order Pull and Wi‑Fi 7 Upgrade Dual‑Engine Boost Outlook, H2 Operations Better Than H1",
+          "publish_at": 1787453844,
+          "url": "https://news.cnyes.com/news/id/6584072",
+          "paras": [
+            "網通大廠智易(3596-TW)受惠於美國兩大電信運營商客戶5G產品拉貨，以及Wi-Fi 7升級雙動能加持，法人看好，下半年營收表現將優於上半年，第3季營收可望持續向上墊高。",
+            "在產業前景與產品線展望方面，智易旗下三大產品線中以移動通訊Mobility表現最為突出，優於智慧家庭Smart Home與寬頻Broadband業務，惟受到上游PCB等材料交期拉長影響，營收成長幅度略微下修。",
+            "在規格升級趨勢下，2026年邁入Wi-Fi 7出貨第二年，美洲與歐洲市場的Wi-Fi 7出貨占比預計將由去年的初期階段大幅攀升至80%以上，有助於拉抬平均銷售單價與毛利表現。",
+            "在業務轉型與新產品布局端，智易正加速由傳統家用網通設備跨足企業市場，旗下交換器Switch及企業級Wi-Fi Access Point預計自今年下半年起逐步出貨，預估明年企業級產品占營收比重有望挑戰雙位數水準。",
+            "針對美國新客戶的XGS-PON光纖相關設備與Cable產品，則因記憶體價格波動因素，預計將遞延至2027年正式出貨。",
+            "在供應鏈備料策略上，智易第2季存貨攀升至277億元，季增44%且年增118%，占總資產比重達51%。其中約46%存貨為包含Dram與Flash在內的記憶體零組件，主要是因應市場價格上漲與供應吃緊而提前備妥至2027年的需求，儘管備料導致短期借款增加，但公司已與客戶達成協議由對方支付部分款項或補貼資金成本，有效降低財務負擔。"
+          ],
+          "paras_en": [
+            "Network equipment giant ZhiYi (3596‑TW) is benefiting from increased 5G product orders from two major US telecom operators and the dual‑engine boost of Wi‑Fi 7 upgrades. Analysts are optimistic that revenue in the second half of the year will outperform the first half, with Q3 revenue expected to keep rising.",
+            "Regarding industry outlook and product line prospects, ZhiYi’s three main product lines show that the Mobility segment for mobile communications performs the best, outpacing the Smart Home and Broadband businesses. However, longer lead times for upstream materials such as PCBs have slightly trimmed the revenue growth rate.",
+            "With the trend of specification upgrades, 2026 marks the second year of Wi‑Fi 7 shipments. The share of Wi‑Fi 7 shipments in the Americas and Europe is expected to jump from the early‑stage level last year to over 80%, helping lift average selling prices and gross margin performance.",
+            "In terms of business transformation and new product rollout, ZhiYi is accelerating its move from traditional home networking equipment into the enterprise market. Its switches and enterprise‑grade Wi‑Fi access points are slated to ship gradually from the second half of this year, and the share of enterprise products in revenue is projected to reach double‑digit levels next year.",
+            "For new US customers’ XGS‑PON fiber‑related equipment and cable products, delivery is expected to be deferred to 2027 due to memory price volatility.",
+            "Regarding supply‑chain inventory strategy, ZhiYi’s Q2 inventory rose to NT$27.7 billion, up 44% quarter‑over‑quarter and 118% year‑over‑year, representing 51% of total assets. About 46% of this inventory consists of memory components such as DRAM and flash, stocked in advance to meet demand through 2027 amid rising market prices and tight supply. Although the stocking increased short‑term borrowings, the company has reached agreements with customers for partial payment or cost‑subsidy, effectively reducing its financial burden."
+          ]
+        },
+        {
+          "news_id": "6583408",
+          "title": "算力吞噬電網！資料中心引爆供電革命：從自備電網到晶片垂直供電的千億新局",
+          "title_en": "",
+          "publish_at": 1787453774,
+          "url": "https://news.cnyes.com/news/id/6583408",
+          "paras": [
+            "AI蛋糕理論中，能源為AI產業發展的最底層基石，電力即算力為全球共識，隨著新一代AI晶片與機櫃功耗呈指數級飆升，從前端現場自備發電、機房高壓直流傳輸到晶片端垂直供電，一場全鏈路的供電架構大革命已全面展開，重塑算力時代的能源新局。",
+            "〈設施端現場發電崛起，SOFC與SST開創高效供電〉",
+            "面對傳統電網併網排隊延宕與容量飽和的挑戰，部署現場自主能源的「表後自備發電」成為加速算力落地的戰略首選，其中固態氧化物燃料電池藉由建置期短、低噪音且無需用水等優勢脫穎而出，需求迎來爆發性成長，固態變壓器能將中壓交流電一步直轉為高壓直流直送機櫃，大幅減少轉換階段並提升系統能效與節省機房空間，成為未來微電網架構的關鍵核心。",
+            "〈高壓直流成必然趨勢，BBU與垂直供電重構機櫃〉",
+            "在機房內部，傳統48V低壓供電因龐大電流面臨線路損耗與銅排過重的物理限制，推動供電系統向高壓直流轉型，目前美系CSP大廠偏好符合既有安規的±400VDC先行導入，800VDC則隨次世代高功耗晶片放量，具備低損耗與微秒級反應優勢的電池備援單元(BBU)正加速取代傳統UPS，搭配獨立Power Rack電源櫃設計，板端電源也走向模組化垂直供電，結合SiC與GaN寬能隙材料，將電阻與傳輸損耗降至最低。",
+            "〈免費下載【陳智霖分析師APP】，掌握第一手盤勢資訊與信用籌碼名單〉",
+            "APP選股會員每月僅限額招收，名額有限，每週都會提供最新「信用籌碼疑慮名單」，邀請您點選連結下載【陳智霖分析師APP】：https://lihi.cc/zwrii",
+            "〈電力供應鏈迎結構性紅利，台廠全面卡位受惠〉",
+            "在資料中心電力革新浪潮下，具備系統整合與關鍵零組件實力的台系供應鏈迎來長線成長動能，台達電(2308-TW)與光寶科(2301-TW)深耕高功率電源櫃、液冷整合及微電網方案，穩居高壓直流市場領先地位；高力(8996-TW)受惠國際大廠SOFC熱反應盒訂單強勁放量，展現顯著成長爆發力；順達(3211-TW)、新盛力(4931-TW)與AES-KY(6781-TW)則全面掌握BBU滲透率攀升與模組化商機；華城(1519-TW)亦持續受惠變壓器與電網設備升級需求，未來應著眼於資料中心能源轉型紅利，長線布局關鍵受惠指標廠。邀請投資人下載智霖老師的APP並鎖定直播，一起掌握產業最前線的產業脈動！",
+            "最新影音(請點影音上方標題至Youtube收視品質會更佳)",
+            "錢進熱線02-2653-8299，立即邁向系統依據的股票操作。",
+            "文章來源：陳智霖分析師/凱旭投顧",
+            "本公司所推薦分析之個別有價證券",
+            "無不當之財務利益關係 以往之績效不保證未來獲利",
+            "投資人應獨立判斷 審慎評估並自負投資風險"
+          ],
+          "paras_en": []
+        },
+        {
+          "news_id": "6584291",
+          "title": "南下建立協同機制 迅得擬投資友上科技1.5億元拿下逾20%股權",
+          "title_en": "",
+          "publish_at": 1787453411,
+          "url": "https://news.cnyes.com/news/id/6584291",
+          "paras": [
+            "在南台灣半導體S 廊帶的成型之下，設備業在爭取更進一步的生產協同機制，也陸續展開在台灣的生產投資，台積電(2330-TW)供應鏈的迅得(6438-TW)通過將出資1.5億元資金，參與在南科設立的友上科技(6998-TW)的增資案，預計年底前將拿下友上的逾20%股權。",
+            "而這迅得的此一投資案件如果成行，也將成為繼設備業牧德(3563-TW)以2.74億元投資鏵友益(6877-TW)及志聖(2467-TW)以10.17億元投資東捷(8064-TW)私募案後，另一件設備廠南下建立協同機制的案例。",
+            "設立於台灣南科園區 ，目前以生產AMHS智能工廠系統、智慧製造設備及機器手臂系統整合的友上科技，目前股本爲3.64億元，自2023年起連續虧損3年，而友上 科技 2026年上半年營收6253萬元，毛利率14.94%，稅後仍虧損4890萬元，每股淨損1.34元。",
+            "友上科技目前也是迅得的合作供應鏈，而迅得經董事會通過將出資1.5億元投資，迅得董事長王年清指出，預計迅得將在友上科技減資彌補虧損後以1.5億元參與其現金增資，預計將取得友上科技逾20%的股權。",
+            "王年清指出，友上科技在AMHS智能工廠系統核心技術上有十足成長潛力，也看好友上科技在2027年的營運將可望轉盈，而目前股本3.64億元的友上科技已股票公開發行，規劃2029年登錄興櫃交易。",
+            "迅得2026年1-6月營收35.68億元，毛利率26.13%，稅後純益3.11億元，每股純益3.79元。而迅得公布最新營收資訊，迅得2026 年 7 月營收以 6.38 億元改寫歷年同期新高。迅得 2026 年 7 月營收 6.38 億元，月增 7.61%，年增 5.38%。2026 年 1-7 月營收 42.07 億元，年增 10.97%。",
+            "迅得營運總部也在遷入的新生廠，產能已進人滿載，將推升 2026 年獲利成長幅度攀高。迅得機械在 2026 年第二季營收 18.24 億元創新高，法人估計迅得 2026 年第三季單月平均營收在 6 億元之上 ，有機會再創新高，第四季由於安排出貨的半導體設備出貨逐步步入高峰，預估下半年營運勝過 上半年，全年營收將再較 2025 年的 64.67 億元再增 10-15%，再創新高。",
+            "迅得擁有在半導體及 PCB 設備需求雙重成長動能，同時，迅得在 PCB 設備指向高階產品廠商的需求，也與臻鼎 - KY(4958-TW) 及景碩 (3189-TW) 有大單確立，其中臻鼎 - KY 下單 10.2 億元，而景碩也在 7 億元之上。。",
+            "迅得 2026 年上半年營收 35.68 億元，年增 11.99%，2026 下半年預估在出貨產品組合的有利因素加持下超過上半年表現 ，全年營收估成長 10-15%，而在獲利成長幅度可望以優於營收成長幅度倍數成長呈現。",
+            "同時，迅得半導體相關設備出貨上將在第四季起出現明顯成長，半導體設備營收在 2027 年也將維持此一營運旺盛態勢。",
+            "而志聖以10.17億元投資東捷私募案，也在整合其台南南科與樹谷萬坪廠房，提供高度靈活組裝產線，擴大生產韌性。在服務上更將強化在 S 廊帶關鍵據點提供零時差的技術支援與維護，提升服務彈性。"
+          ],
+          "paras_en": []
+        },
         {
           "news_id": "6583862",
           "title": "矽晶圓終於翻身！徐秀蘭證實現貨、長約都上漲",
@@ -404,67 +420,6 @@
             "On the fundamentals side, Far Eastern New posted Q2 revenue of NT$69.272 billion, up 15% year‑on‑year, and net profit after tax of NT$2.732 billion, a 1.8‑fold increase year‑on‑year, translating to earnings of NT$0.54 per share. For the first half of the year, revenue reached NT$130.564 billion, up 5% YoY, with net profit after tax of NT$5.825 billion, up 76.3% YoY, or NT$1.15 earnings per share.",
             "In July, Far Eastern New recorded revenue of NT$23.366 billion, up 1.9% month‑over‑month and 20.6% year‑over‑year; cumulative revenue for the first seven months was NT$153.88 billion, a 7.4% increase year‑on‑year.",
             "Far Eastern New noted that although many uncertainties remain, the overall macro environment this year appears better than last year. The high oil price has allowed the company’s polyester sheet products used in food packaging to pass on costs, and its green product lines have seen price increases without a corresponding rise in costs, which should help improve profitability."
-          ]
-        },
-        {
-          "news_id": "6584104",
-          "title": "〈熱門股〉富喬上半年EPS達2.24元 外資單周買超45607張漲幅22%",
-          "title_en": "Hot Stock: Fu Qiao's H1 EPS reaches NT$2.24, foreign investors net bought 45,607 lots this week, price up 22%",
-          "publish_at": 1787374171,
-          "url": "https://news.cnyes.com/news/id/6584104",
-          "paras": [
-            "玻纖一貫廠富喬工業 (1815-TW)2026年1-6月稅後純益13億元，年增8.31倍，每股純益達2.24元 。富喬預估 2026 年下半年動能續強，外資全力在本周天天買超，合計買超45607張，一周股價漲幅22.4%。",
-            "2026年1-6月富喬營收40.12億元，毛利率38.09%，年增10.99個百分點，稅後純益13億元，年增8.31倍，每股純益達2.24元 。富喬在泰國的投資已經啟動，富僑於泰國北柳府 Apex Green 工業園第一期新廠已經動土。富喬本次在泰國總投資金額約 31 億元，產能都已被客戶訂滿。新廠預計於 2027 年第三季量產。",
-            "富喬股價本周獲外資買45607張，股價收在112元，一周漲幅22.4%，並站上 所有均線，股價短線支撐在5日線101.76元。"
-          ],
-          "paras_en": [
-            "Fiberglass manufacturer Fu Qiao Industrial (1815-TW) posted a net profit after tax of NT$1.3 billion for January‑June 2026, an 8.31‑fold year‑over‑year increase, resulting in earnings per share of NT$2.24. Fu Qiao forecasts continued strong momentum in the second half of 2026, and foreign investors bought aggressively every day this week, netting a total of 45,607 lots, lifting the stock 22.4% in a week.",
-            "For the first half of 2026, Fu Qiao recorded revenue of NT$4.012 billion, a gross margin of 38.09%—up 10.99 percentage points year‑over‑year—and net profit after tax of NT$1.3 billion, an 8.31‑fold increase, with EPS of NT$2.24. The company’s investment in Thailand has been launched; the first phase of a new plant at the Apex Green Industrial Park in Phitsanulok Province has broken ground. The total investment in Thailand is about NT$3.1 billion, and the plant’s capacity is already fully booked by customers, with mass production expected in Q3 2027.",
-            "Fu Qiao’s share price this week was supported by foreign investors buying 45,607 lots, closing at NT$112, a 22.4% weekly gain, and it rose above all moving averages. In the short term, the stock finds support at the 5‑day moving average of NT$101.76."
-          ]
-        },
-        {
-          "news_id": "6584067",
-          "title": "〈熱門股〉立碁矽光子1.6T模組拚Q4出貨 外資買盤力挺周漲17%",
-          "title_en": "Hot Stock: Lih Kuei Silicon Photonics 1.6T Module Targets Q4 Shipments, Foreign Buying Fuels 17% Weekly Gain",
-          "publish_at": 1787374118,
-          "url": "https://news.cnyes.com/news/id/6584067",
-          "paras": [
-            "LED封裝廠立碁(8111-TW)積極推動營運轉型，旗下1.6T共同封裝光學元件CPO模組已切入北美AI供應鏈並獲歐洲客戶認證。本周股價勁揚，21日收65元，周漲幅達17%，周成交量27,296張，其中外資連二買，共買超584張。",
-            "立碁已加入由台積電與日月光主導的矽光子產業聯盟，並與工研院合作開發單通道達200G的1.6T光收發器與3.2T模組原型，直接跳過800G規格。旗下與工研院合作的原型機預計於9月亮相，新建無塵室實驗室則於8月啟用以支援產品驗證與量產前置，若歐美客戶認證進度順利，最快第四季將展開小量出貨，並於明年第一季逐步放量。",
-            "在產品結構轉型層面，立碁今年將SiP產品線劃分為低階與高階兩大應用，低階涵蓋AI網通、消費性電子與生醫，高階則鎖定矽光子資料中心與生醫感測。加上耕耘多年的機器人影像辨識模組，AI與矽光子核心業務占今年營收比重已提高至約45%，成為降低傳統LED比重後的關鍵成長支柱。",
-            "除矽光子與光通訊核心外，立碁持續拓展紅外線IR與應用模組客戶，同時切入無人機整機組裝與Remote ID辨識系統，並著手爭取台灣商用及軍規訂單。隨著全球AI資料中心對高速傳輸與降低功耗需求大幅攀升。"
-          ],
-          "paras_en": [
-            "LED packaging company Lih Kuei (8111‑TW) is actively driving an operational transformation. Its 1.6‑terabit (1.6T) co‑packaged optical component CPO module has entered the North American AI supply chain and earned certification from European customers. The stock surged this week, closing at NT$65 on the 21st, up 17% for the week, with a weekly volume of 27,296 lots, of which foreign investors bought consecutively for two days, netting a purchase of 584 lots.",
-            "Lih Kuei has joined the silicon photonics industry alliance led by TSMC and ASE, and is collaborating with the Industrial Technology Research Institute (ITRI) to develop a single‑channel 200‑Gb/s 1.6T optical transceiver and a 3.2T module prototype, bypassing the 800‑Gb/s specification. The ITRI‑partnered prototype is slated to be unveiled in September, and a new clean‑room laboratory will be operational in August to support product verification and pre‑mass‑production activities. If European and U.S. customer certifications proceed smoothly, small‑volume shipments could begin as early as Q4, with gradual volume ramp‑up in Q1 next year.",
-            "In terms of product‑portfolio restructuring, Lih Kuei is dividing its SiP line this year into low‑end and high‑end applications. The low‑end segment covers AI networking, consumer electronics and biomedical fields, while the high‑end segment targets silicon‑photonic data‑center and biomedical sensing markets. Combined with its long‑standing robot‑vision‑recognition modules, AI and silicon‑photonic core businesses now account for roughly 45% of this year’s revenue, becoming a key growth pillar after reducing the share of traditional LED products.",
-            "Beyond silicon photonics and optical‑communication cores, Lih Kuei continues to expand its infrared (IR) and application‑module customer base, while also entering drone full‑system integration and Remote ID identification systems, and is pursuing Taiwanese commercial and military contracts. This comes as global AI data‑center demand for high‑speed transmission and lower power consumption rises sharply."
-          ]
-        },
-        {
-          "news_id": "6582343",
-          "title": "〈熱門股〉本周最狂飆股世紀*搭無人機題材起飛 除權後連拉6根漲停",
-          "title_en": "Hot Stock: This Week’s Top Gainer Century* Soars on Unmanned‑Vehicle Theme, Posts Six Consecutive Limit‑Ups After Ex‑Rights",
-          "publish_at": 1787373965,
-          "url": "https://news.cnyes.com/news/id/6582343",
-          "paras": [
-            "世紀*(5314-TW)8月14日除權，祭出高比例配股策略，每仟股無償配發3157.03股，吸引市場資金湧入，除權以來連拉6根漲停，同時，也宣布將水面無人載具(USV)納入AI無人載具系統事業發展核心，激勵世紀*本周漲6成，成為近期最狂飆股。",
-            "世紀*本周漲60.49%，周五(21日)漲停鎖死26元，拉出第6根漲停。不過三大法人本周並無太多著墨，合計賣超563張。",
-            "世紀*每仟股無償配發3157.03股，等同於每張增為4.157張，自8月14日除權交易以來天天漲停。世紀*除權參考價為14.75元，除權交易前最後一個交易日收盤價則為61.3元，除權缺口為46.55元，以周五收26元計算，填權幅度超過24%。",
-            "不過世紀*近6個營業日累積最後成交價漲幅達59.43%，遭列為處置股，自下周一(24日)至8月28日止。",
-            "同時，世紀*公告相關財務訊息，*7月營收5.51億元，年增1.5倍；稅後純益4900萬元，年減36%，每股純益0.17元。第二季營收15.8億元，年增1.54倍；稅後純益8300萬元，年減65%，每股純益0.29元。",
-            "世紀*將水面無人載具納入AI無人載具系統事業發展核心，啟動自主導控、通訊鏈路、邊緣AI與系統整合驗證等技術，並攜手國內外製造夥伴，鎖定政府規劃中的1320艘小型無人艇籌獲案。",
-            "世紀*指出，其無人載具建置的共通技術將涵蓋六大核心，包括自主導控與高階導航、端側邊緣AI辨識、SDR抗干擾通訊、EO/IR全天候光電、多載具協同群控，以及非紅供應鏈。"
-          ],
-          "paras_en": [
-            "Century* (5314‑TW) went ex‑rights on August 14 and launched a high‑ratio bonus‑share plan, issuing 3,157.03 bonus shares for every 1,000 shares held. The move attracted a flood of market capital, and since the ex‑rights date the stock has posted six straight limit‑up days. It also announced that surface unmanned vessels (USV) will be incorporated into its AI unmanned‑vehicle system business, driving a 60% rise this week and making it the most wildly soaring stock recently.",
-            "The stock surged 60.49% this week, hitting a limit‑up at NT$26 on Friday (the 21st), its sixth consecutive limit‑up. However, the three major institutional investors were largely silent, collectively selling 563 lots during the week.",
-            "The bonus‑share ratio of 3,157.03 shares per 1,000 shares translates to 4.157 shares per lot, and the stock has hit a limit‑up every trading day since the ex‑rights trade on August 14. The ex‑rights reference price was NT$14.75, while the closing price on the last day before ex‑rights was NT$61.30, creating a gap of NT$46.55. With the Friday close at NT$26, the rights‑fill exceeds 24%.",
-            "Nevertheless, over the past six trading days the cumulative price increase reached 59.43%, leading to the stock being classified as a disposal stock from next Monday (the 24th) through August 28.",
-            "Century* also disclosed financial details: July revenue was NT$5.51 billion, a 1.5‑times year‑over‑year increase; after‑tax profit was NT$49 million, down 36% YoY, yielding earnings of NT$0.17 per share. For Q2, revenue was NT$15.8 billion, up 1.54‑times YoY; after‑tax profit was NT$83 million, down 65% YoY, with earnings of NT$0.29 per share.",
-            "The company is making surface unmanned vessels a core part of its AI unmanned‑vehicle system development, launching technologies such as autonomous navigation, communication links, edge AI, and system‑integration verification, and partnering with domestic and overseas manufacturers to target a government‑planned procurement of 1,320 small unmanned boats.",
-            "Century* stated that the common technologies for its unmanned‑vehicle platforms will cover six core areas: autonomous navigation and advanced guidance, edge‑side AI recognition, SDR anti‑jamming communications, EO/IR all‑weather electro‑optics, multi‑vehicle coordinated control, and a non‑red (non‑China) supply chain."
           ]
         }
       ]
