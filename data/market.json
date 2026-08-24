@@ -139,7 +139,7 @@
     {
       "name": "CSI 300 滬深300",
       "name_zh": null,
-      "close": 4559.4033203125,
+      "close": 4560.84716796875,
       "daily_pct": null,
       "mtd_pct": null,
       "ytd_pct": null,
@@ -188,8 +188,8 @@
     },
     {
       "name": "Japan 10-Year",
-      "yield_pct": 2.89,
-      "daily_bps": 0.8,
+      "yield_pct": 2.88,
+      "daily_bps": -0.6,
       "mtd_bps": 8.1,
       "closing_date": "2026-08-24"
     },
@@ -269,35 +269,35 @@
   "commodities": [
     {
       "name": "黃金 (USD/oz)",
-      "close": 4699.89990234375,
-      "daily_pct": 1.64,
-      "mtd_pct": 16.07,
-      "ytd_pct": 8.65,
-      "closing_date": "2026-08-23"
+      "close": 4624.10009765625,
+      "daily_pct": 2.39,
+      "mtd_pct": 14.2,
+      "ytd_pct": 6.9,
+      "closing_date": "2026-08-21"
     },
     {
       "name": "白銀 (USD/oz)",
-      "close": 68.94000244140625,
-      "daily_pct": -0.76,
-      "mtd_pct": 19.71,
-      "ytd_pct": -1.7,
-      "closing_date": "2026-08-23"
+      "close": 69.46600341796875,
+      "daily_pct": 2.12,
+      "mtd_pct": 20.62,
+      "ytd_pct": -0.95,
+      "closing_date": "2026-08-21"
     },
     {
       "name": "WTI 原油 (USD/bbl)",
-      "close": 85.66999816894531,
-      "daily_pct": -1.6,
-      "mtd_pct": 1.18,
-      "ytd_pct": 49.2,
-      "closing_date": "2026-08-23"
+      "close": 87.05999755859375,
+      "daily_pct": -0.88,
+      "mtd_pct": 2.82,
+      "ytd_pct": 51.62,
+      "closing_date": "2026-08-21"
     },
     {
       "name": "布蘭特原油 (USD/bbl)",
-      "close": 93.08000183105469,
-      "daily_pct": -1.39,
-      "mtd_pct": 3.28,
-      "ytd_pct": 52.97,
-      "closing_date": "2026-08-23"
+      "close": 94.38999938964844,
+      "daily_pct": 0.65,
+      "mtd_pct": 4.74,
+      "ytd_pct": 55.12,
+      "closing_date": "2026-08-21"
     },
     {
       "name": "比特幣 (USD)",
@@ -388,8 +388,8 @@
     "yield_curve_10y2y": 0.5,
     "yield_curve_10y2y_bps": 50,
     "curve_shape": "正斜率",
-    "dxy": 98.81700134277344,
-    "dxy_daily_pct": 0.02,
+    "dxy": 98.80000305175781,
+    "dxy_daily_pct": -0.1,
     "closing_date": "2026-08-21"
   },
   "fedwatch": [
