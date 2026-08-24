@@ -96,8 +96,8 @@
       "name_zh": null,
       "close": 386.1,
       "daily_pct": -0.3,
-      "mtd_pct": -11.37,
-      "ytd_pct": 37.0,
+      "mtd_pct": null,
+      "ytd_pct": null,
       "closing_date": "2026-08-24"
     },
     {
@@ -121,11 +121,11 @@
     {
       "name": "Hang Seng 恆生",
       "name_zh": null,
-      "close": 26009.4609375,
-      "daily_pct": 1.21,
+      "close": 25517.330078125,
+      "daily_pct": -1.89,
       "mtd_pct": 0.48,
       "ytd_pct": 1.48,
-      "closing_date": "2026-08-21"
+      "closing_date": "2026-08-24"
     },
     {
       "name": "Shanghai 上證",
@@ -141,8 +141,8 @@
       "name_zh": null,
       "close": 4563.12646484375,
       "daily_pct": null,
-      "mtd_pct": -9.04,
-      "ytd_pct": -2.18,
+      "mtd_pct": null,
+      "ytd_pct": null,
       "closing_date": "2026-08-24"
     },
     {
@@ -174,10 +174,10 @@
     },
     {
       "name": "US 2-Year",
-      "yield_pct": 4.22,
-      "daily_bps": -1.1,
+      "yield_pct": 4.24,
+      "daily_bps": 5.0,
       "mtd_bps": -4.0,
-      "closing_date": "2026-08-24"
+      "closing_date": "2026-08-21"
     },
     {
       "name": "Germany 10-Year",
@@ -195,10 +195,10 @@
     },
     {
       "name": "UK 10-Year",
-      "yield_pct": 5.05,
-      "daily_bps": -1.4,
-      "mtd_bps": 1.97,
-      "closing_date": "2026-08-24"
+      "yield_pct": 5.13,
+      "daily_bps": 0.39,
+      "mtd_bps": 2.36,
+      "closing_date": "2026-08-20"
     },
     {
       "name": "TW 10-Year",
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 98.80000305175781,
       "daily_pct": -0.1,
-      "mtd_pct": -0.85,
-      "ytd_pct": 0.68,
+      "mtd_pct": -0.81,
+      "ytd_pct": 0.72,
       "closing_date": "2026-08-21"
     },
     {
@@ -425,5 +425,5 @@
       "is_reference": false
     }
   ],
-  "summary": "8/21 Hang Seng 恆生 +1.21%、8/21 Dow Jones +0.98%、8/21 FTSE 100 +0.64% 領漲；8/24 KOSPI -3.12%、8/24 TAIEX 加權指數 -1.02% 走弱。"
+  "summary": "8/21 Dow Jones +0.98%、8/21 FTSE 100 +0.64%、8/21 Euro Stoxx 50 +0.63% 領漲；8/24 KOSPI -3.12%、8/24 Hang Seng 恆生 -1.89% 走弱。"
 }
