@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T15:13:30+08:00",
+  "generated_at": "2026-08-24T15:22:19+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -45,6 +45,20 @@
       "error": null
     },
     {
+      "symbol": "SOXL",
+      "name_zh": "Direxion Daily Semiconductor Bu",
+      "kind": "US",
+      "price": 120.6,
+      "change_pct": -1.32,
+      "mtd_pct": 5.13,
+      "ytd_pct": 186.94,
+      "market_date": "2026-08-21",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOXL.US",
+      "error": null
+    },
+    {
       "symbol": "SDOT",
       "name_zh": "Sadot",
       "kind": "US",
@@ -56,76 +70,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SDOT.US",
-      "error": null
-    },
-    {
-      "symbol": "SNDK",
-      "name_zh": "Sandisk",
-      "kind": "US",
-      "price": 1596.08,
-      "change_pct": -0.28,
-      "mtd_pct": 31.38,
-      "ytd_pct": 572.37,
-      "market_date": "2026-08-21",
-      "per": 19.7934,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SNDK.US",
-      "error": null
-    },
-    {
-      "symbol": "IQMX",
-      "name_zh": "IQM Quantum Computers Oyj",
-      "kind": "US",
-      "price": 11.11,
-      "change_pct": 14.77,
-      "mtd_pct": 12.22,
-      "ytd_pct": 8.71,
-      "market_date": "2026-08-21",
-      "per": 434.0942,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IQMX.US",
-      "error": null
-    },
-    {
-      "symbol": "IESC",
-      "name_zh": "IES",
-      "kind": "US",
-      "price": 685.04,
-      "change_pct": 0.26,
-      "mtd_pct": -16.52,
-      "ytd_pct": 57.64,
-      "market_date": "2026-07-17",
-      "per": 33.8736,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IESC.US",
-      "error": null
-    },
-    {
-      "symbol": "PDD",
-      "name_zh": "拼多多",
-      "kind": "US",
-      "price": 88.38,
-      "change_pct": -1.27,
-      "mtd_pct": -0.2,
-      "ytd_pct": -22.06,
-      "market_date": "2026-08-21",
-      "per": 8.9542,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PDD.US",
-      "error": null
-    },
-    {
-      "symbol": "SOXS",
-      "name_zh": "Direxion Daily Semiconductor Be",
-      "kind": "US",
-      "price": 47.03,
-      "change_pct": 1.69,
-      "mtd_pct": -13.34,
-      "ytd_pct": -99.5,
-      "market_date": "2026-08-21",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOXS.US",
       "error": null
     },
     {
@@ -143,6 +87,76 @@
       "error": null
     },
     {
+      "symbol": "SNDK",
+      "name_zh": "Sandisk",
+      "kind": "US",
+      "price": 1596.08,
+      "change_pct": -0.28,
+      "mtd_pct": 31.38,
+      "ytd_pct": 572.37,
+      "market_date": "2026-08-21",
+      "per": 19.7934,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SNDK.US",
+      "error": null
+    },
+    {
+      "symbol": "SOXS",
+      "name_zh": "Direxion Daily Semiconductor Be",
+      "kind": "US",
+      "price": 47.03,
+      "change_pct": 1.69,
+      "mtd_pct": -13.34,
+      "ytd_pct": -99.5,
+      "market_date": "2026-08-21",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOXS.US",
+      "error": null
+    },
+    {
+      "symbol": "IQMX",
+      "name_zh": "IQM Quantum Computers Oyj",
+      "kind": "US",
+      "price": 11.11,
+      "change_pct": 14.77,
+      "mtd_pct": 12.22,
+      "ytd_pct": 8.71,
+      "market_date": "2026-08-21",
+      "per": 434.0942,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IQMX.US",
+      "error": null
+    },
+    {
+      "symbol": "QQQ",
+      "name_zh": "Invesco QQQ Trust, Series 1",
+      "kind": "US",
+      "price": 713.44,
+      "change_pct": 0.35,
+      "mtd_pct": 3.7,
+      "ytd_pct": 16.14,
+      "market_date": "2026-08-21",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QQQ.US",
+      "error": null
+    },
+    {
+      "symbol": "IESC",
+      "name_zh": "IES",
+      "kind": "US",
+      "price": 685.04,
+      "change_pct": 0.26,
+      "mtd_pct": -16.52,
+      "ytd_pct": 57.64,
+      "market_date": "2026-07-17",
+      "per": 33.8736,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IESC.US",
+      "error": null
+    },
+    {
       "symbol": "AXTI",
       "name_zh": "AXT",
       "kind": "US",
@@ -154,6 +168,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AXTI.US",
+      "error": null
+    },
+    {
+      "symbol": "SOXX",
+      "name_zh": "iShares PHLX SOX Semiconductor",
+      "kind": "US",
+      "price": 520.05,
+      "change_pct": -0.44,
+      "mtd_pct": 3.0,
+      "ytd_pct": 72.69,
+      "market_date": "2026-08-21",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOXX.US",
       "error": null
     },
     {
@@ -171,31 +199,17 @@
       "error": null
     },
     {
-      "symbol": "USAR",
-      "name_zh": "USA Rare Earth",
+      "symbol": "PLTR",
+      "name_zh": "Palantir",
       "kind": "US",
-      "price": 19.26,
-      "change_pct": 12.57,
-      "mtd_pct": 28.83,
-      "ytd_pct": 61.85,
+      "price": 179.94,
+      "change_pct": 3.44,
+      "mtd_pct": 46.22,
+      "ytd_pct": 1.23,
       "market_date": "2026-08-21",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=USAR.US",
-      "error": null
-    },
-    {
-      "symbol": "JD",
-      "name_zh": "京東",
-      "kind": "US",
-      "price": 29.37,
-      "change_pct": -0.14,
-      "mtd_pct": -11.03,
-      "ytd_pct": 2.33,
-      "market_date": "2026-08-21",
-      "per": 18.529,
+      "per": 143.2245,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=JD.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PLTR.US",
       "error": null
     },
     {
@@ -213,6 +227,20 @@
       "error": null
     },
     {
+      "symbol": "CRWV",
+      "name_zh": "CoreWeave",
+      "kind": "US",
+      "price": 87.85,
+      "change_pct": -2.13,
+      "mtd_pct": 22.4,
+      "ytd_pct": 22.68,
+      "market_date": "2026-08-21",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRWV.US",
+      "error": null
+    },
+    {
       "symbol": "SPY",
       "name_zh": "SPDR S&P 500 ETF",
       "kind": "US",
@@ -224,20 +252,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPY.US",
-      "error": null
-    },
-    {
-      "symbol": "QQQ",
-      "name_zh": "Invesco 那斯達克 100 ETF",
-      "kind": "US",
-      "price": 713.44,
-      "change_pct": 0.35,
-      "mtd_pct": 3.7,
-      "ytd_pct": 16.14,
-      "market_date": "2026-08-21",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QQQ.US",
       "error": null
     },
     {
@@ -322,20 +336,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SMH.US",
-      "error": null
-    },
-    {
-      "symbol": "SOXX",
-      "name_zh": "iShares 半導體 ETF",
-      "kind": "US",
-      "price": 520.05,
-      "change_pct": -0.44,
-      "mtd_pct": 3.0,
-      "ytd_pct": 72.69,
-      "market_date": "2026-08-21",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOXX.US",
       "error": null
     },
     {
