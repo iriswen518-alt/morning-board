@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T07:29:18+08:00",
+  "generated_at": "2026-08-24T09:50:11+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -28,6 +28,34 @@
       "per": 19.7934,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SNDK.US",
+      "error": null
+    },
+    {
+      "symbol": "BABA",
+      "name_zh": "阿里巴巴",
+      "kind": "US",
+      "price": 119.34,
+      "change_pct": -8.57,
+      "mtd_pct": -2.38,
+      "ytd_pct": -18.58,
+      "market_date": "2026-08-21",
+      "per": 18.9574,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BABA.US",
+      "error": null
+    },
+    {
+      "symbol": "SOXL",
+      "name_zh": "Direxion Daily Semiconductor Bu",
+      "kind": "US",
+      "price": 120.6,
+      "change_pct": -1.32,
+      "mtd_pct": 5.13,
+      "ytd_pct": 186.94,
+      "market_date": "2026-08-21",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOXL.US",
       "error": null
     },
     {
