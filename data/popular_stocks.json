@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T19:37:40+08:00",
+  "generated_at": "2026-08-24T21:06:16+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -39,7 +39,7 @@
       "mtd_pct": -2.38,
       "ytd_pct": -18.58,
       "market_date": "2026-08-21",
-      "per": 18.9574,
+      "per": 27.5774,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BABA.US",
       "error": null
@@ -59,20 +59,6 @@
       "error": null
     },
     {
-      "symbol": "XPEV",
-      "name_zh": "小鵬",
-      "kind": "US",
-      "price": 12.19,
-      "change_pct": 1.58,
-      "mtd_pct": -6.23,
-      "ytd_pct": -39.89,
-      "market_date": "2026-08-21",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=XPEV.US",
-      "error": null
-    },
-    {
       "symbol": "PDD",
       "name_zh": "拼多多",
       "kind": "US",
@@ -84,6 +70,20 @@
       "per": 8.8435,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PDD.US",
+      "error": null
+    },
+    {
+      "symbol": "XPEV",
+      "name_zh": "小鵬",
+      "kind": "US",
+      "price": 12.19,
+      "change_pct": 1.58,
+      "mtd_pct": -6.23,
+      "ytd_pct": -39.89,
+      "market_date": "2026-08-21",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=XPEV.US",
       "error": null
     },
     {
@@ -101,34 +101,6 @@
       "error": null
     },
     {
-      "symbol": "IQMX",
-      "name_zh": "IQM Quantum Computers Oyj",
-      "kind": "US",
-      "price": 11.11,
-      "change_pct": 14.77,
-      "mtd_pct": 12.22,
-      "ytd_pct": 8.71,
-      "market_date": "2026-08-21",
-      "per": 434.0942,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IQMX.US",
-      "error": null
-    },
-    {
-      "symbol": "RY",
-      "name_zh": "Royal Bank Of Canada",
-      "kind": "US",
-      "price": 205.23,
-      "change_pct": 0.01,
-      "mtd_pct": -2.04,
-      "ytd_pct": 20.38,
-      "market_date": "2026-08-21",
-      "per": 18.6802,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RY.US",
-      "error": null
-    },
-    {
       "symbol": "SNDK",
       "name_zh": "Sandisk",
       "kind": "US",
@@ -143,31 +115,45 @@
       "error": null
     },
     {
-      "symbol": "RIVN",
-      "name_zh": "Rivian",
+      "symbol": "IQMX",
+      "name_zh": "IQM Quantum Computers Oyj",
       "kind": "US",
-      "price": 16.97,
-      "change_pct": 6.0,
-      "mtd_pct": 11.5,
-      "ytd_pct": -13.9,
+      "price": 11.11,
+      "change_pct": 14.77,
+      "mtd_pct": 12.22,
+      "ytd_pct": 8.71,
       "market_date": "2026-08-21",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RIVN.US",
+      "per": 434.0942,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IQMX.US",
       "error": null
     },
     {
-      "symbol": "YUM",
-      "name_zh": "Yum! Brands",
+      "symbol": "RGNX",
+      "name_zh": "REGENXBIO",
       "kind": "US",
-      "price": 152.99,
-      "change_pct": 0.43,
-      "mtd_pct": -0.19,
-      "ytd_pct": 1.13,
+      "price": 10.72,
+      "change_pct": -3.07,
+      "mtd_pct": 10.63,
+      "ytd_pct": -25.56,
       "market_date": "2026-08-21",
-      "per": 19.0198,
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RGNX.US",
+      "error": null
+    },
+    {
+      "symbol": "NSSC",
+      "name_zh": "NAPCO Security Technologies, In",
+      "kind": "US",
+      "price": 38.09,
+      "change_pct": 0.85,
+      "mtd_pct": 2.72,
+      "ytd_pct": -8.66,
+      "market_date": "2026-08-21",
+      "per": 37.6429,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=YUM.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NSSC.US",
       "error": null
     },
     {
