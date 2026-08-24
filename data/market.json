@@ -139,7 +139,7 @@
     {
       "name": "CSI 300 滬深300",
       "name_zh": null,
-      "close": 4606.845703125,
+      "close": 4559.4033203125,
       "daily_pct": null,
       "mtd_pct": null,
       "ytd_pct": null,
@@ -174,31 +174,31 @@
     },
     {
       "name": "US 2-Year",
-      "yield_pct": 4.24,
-      "daily_bps": 5.0,
+      "yield_pct": 4.23,
+      "daily_bps": -0.7,
       "mtd_bps": -4.0,
-      "closing_date": "2026-08-21"
+      "closing_date": "2026-08-24"
     },
     {
       "name": "Germany 10-Year",
-      "yield_pct": 3.28,
-      "daily_bps": 0.09,
+      "yield_pct": 3.26,
+      "daily_bps": 0.1,
       "mtd_bps": 5.19,
-      "closing_date": "2026-08-20"
+      "closing_date": "2026-08-24"
     },
     {
       "name": "Japan 10-Year",
-      "yield_pct": 2.88,
-      "daily_bps": 2.8,
+      "yield_pct": 2.89,
+      "daily_bps": 0.8,
       "mtd_bps": 8.1,
-      "closing_date": "2026-08-21"
+      "closing_date": "2026-08-24"
     },
     {
       "name": "UK 10-Year",
-      "yield_pct": 5.12,
-      "daily_bps": -2.77,
+      "yield_pct": 5.07,
+      "daily_bps": -0.3,
       "mtd_bps": 1.97,
-      "closing_date": "2026-08-19"
+      "closing_date": "2026-08-24"
     },
     {
       "name": "TW 10-Year",
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 98.80000305175781,
       "daily_pct": -0.1,
-      "mtd_pct": -0.95,
-      "ytd_pct": 0.58,
+      "mtd_pct": -0.98,
+      "ytd_pct": 0.55,
       "closing_date": "2026-08-21"
     },
     {
@@ -269,34 +269,34 @@
   "commodities": [
     {
       "name": "黃金 (USD/oz)",
-      "close": 4675.2001953125,
-      "daily_pct": 1.11,
-      "mtd_pct": 15.46,
-      "ytd_pct": 8.08,
+      "close": 4699.89990234375,
+      "daily_pct": 1.64,
+      "mtd_pct": 16.07,
+      "ytd_pct": 8.65,
       "closing_date": "2026-08-23"
     },
     {
       "name": "白銀 (USD/oz)",
-      "close": 68.71499633789062,
-      "daily_pct": -1.08,
-      "mtd_pct": 19.32,
-      "ytd_pct": -2.02,
+      "close": 68.94000244140625,
+      "daily_pct": -0.76,
+      "mtd_pct": 19.71,
+      "ytd_pct": -1.7,
       "closing_date": "2026-08-23"
     },
     {
       "name": "WTI 原油 (USD/bbl)",
-      "close": 85.31999969482422,
-      "daily_pct": -2.0,
-      "mtd_pct": 0.77,
-      "ytd_pct": 48.59,
+      "close": 85.66999816894531,
+      "daily_pct": -1.6,
+      "mtd_pct": 1.18,
+      "ytd_pct": 49.2,
       "closing_date": "2026-08-23"
     },
     {
       "name": "布蘭特原油 (USD/bbl)",
-      "close": 92.58000183105469,
-      "daily_pct": -1.92,
-      "mtd_pct": 2.73,
-      "ytd_pct": 52.14,
+      "close": 93.08000183105469,
+      "daily_pct": -1.39,
+      "mtd_pct": 3.28,
+      "ytd_pct": 52.97,
       "closing_date": "2026-08-23"
     },
     {
@@ -388,8 +388,8 @@
     "yield_curve_10y2y": 0.5,
     "yield_curve_10y2y_bps": 50,
     "curve_shape": "正斜率",
-    "dxy": 98.85099792480469,
-    "dxy_daily_pct": 0.05,
+    "dxy": 98.81700134277344,
+    "dxy_daily_pct": 0.02,
     "closing_date": "2026-08-21"
   },
   "fedwatch": [
