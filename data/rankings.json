@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T12:04:08+08:00",
+  "generated_at": "2026-08-24T13:03:36+08:00",
   "tw": {
     "as_of": "2026-08-24",
     "top_marketcap": [
@@ -913,6 +913,19 @@
     ],
     "top_losers": [
       {
+        "symbol": "IESC",
+        "name": "IES Holdings, Inc.",
+        "price": 342.52,
+        "daily_pct": -49.87,
+        "market_cap": 13648979968,
+        "pe": 30.419182,
+        "pe_kind": "trailing",
+        "mtd_pct": -16.52,
+        "ytd_pct": 57.64,
+        "yahoo": "IESC",
+        "source_url": "https://finance.yahoo.com/quote/IESC"
+      },
+      {
         "symbol": "SA",
         "name": "Seabridge Gold, Inc.",
         "price": 30.16,
@@ -1028,19 +1041,6 @@
         "ytd_pct": 178.94,
         "yahoo": "MRVL",
         "source_url": "https://finance.yahoo.com/quote/MRVL"
-      },
-      {
-        "symbol": "RIOT",
-        "name": "Riot Platforms, Inc.",
-        "price": 19.83,
-        "daily_pct": -5.48,
-        "market_cap": 7441384960,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": -1.69,
-        "ytd_pct": 56.51,
-        "yahoo": "RIOT",
-        "source_url": "https://finance.yahoo.com/quote/RIOT"
       }
     ],
     "top_etf": [
@@ -1095,19 +1095,6 @@
         "ytd_pct": 42.34,
         "yahoo": "XLE",
         "source_url": "https://finance.yahoo.com/quote/XLE"
-      },
-      {
-        "symbol": "XLB",
-        "name": "State Street Materials Select S",
-        "price": 53.54,
-        "daily_pct": 1.9,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": 6.17,
-        "ytd_pct": 18.06,
-        "yahoo": "XLB",
-        "source_url": "https://finance.yahoo.com/quote/XLB"
       },
       {
         "symbol": "EEM",
@@ -1173,6 +1160,19 @@
         "ytd_pct": -1.27,
         "yahoo": "HYG",
         "source_url": "https://finance.yahoo.com/quote/HYG"
+      },
+      {
+        "symbol": "XLY",
+        "name": "State Street Consumer Discretio",
+        "price": 118.02,
+        "daily_pct": -0.15,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": 1.66,
+        "ytd_pct": -1.16,
+        "yahoo": "XLY",
+        "source_url": "https://finance.yahoo.com/quote/XLY"
       }
     ],
     "sectors": [
@@ -1203,20 +1203,6 @@
         "yahoo": "XLE",
         "source_url": "https://finance.yahoo.com/quote/XLE",
         "name_zh": "能源"
-      },
-      {
-        "symbol": "XLB",
-        "name": "State Street Materials Select S",
-        "price": 53.54,
-        "daily_pct": 1.9,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": 6.17,
-        "ytd_pct": 18.06,
-        "yahoo": "XLB",
-        "source_url": "https://finance.yahoo.com/quote/XLB",
-        "name_zh": "原物料"
       },
       {
         "symbol": "XLP",
