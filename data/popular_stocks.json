@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T06:36:46+08:00",
+  "generated_at": "2026-08-25T07:30:06+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -31,6 +31,34 @@
       "error": null
     },
     {
+      "symbol": "AVEX",
+      "name_zh": "AEVEX",
+      "kind": "US",
+      "price": 18,
+      "change_pct": -1.69,
+      "mtd_pct": 8.24,
+      "ytd_pct": null,
+      "market_date": "2026-08-24",
+      "per": 79.7587,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AVEX.US",
+      "error": null
+    },
+    {
+      "symbol": "CRCL",
+      "name_zh": "Circle Internet",
+      "kind": "US",
+      "price": 87.72,
+      "change_pct": -0.3,
+      "mtd_pct": 40.11,
+      "ytd_pct": 10.62,
+      "market_date": "2026-08-24",
+      "per": 42.4069,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRCL.US",
+      "error": null
+    },
+    {
       "symbol": "XPON",
       "name_zh": "Expion360",
       "kind": "US",
@@ -42,20 +70,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=XPON.US",
-      "error": null
-    },
-    {
-      "symbol": "GRRR",
-      "name_zh": "Gorilla Technology",
-      "kind": "US",
-      "price": 15.83,
-      "change_pct": -1.43,
-      "mtd_pct": 42.74,
-      "ytd_pct": 44.96,
-      "market_date": "2026-08-24",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GRRR.US",
       "error": null
     },
     {
@@ -73,17 +87,17 @@
       "error": null
     },
     {
-      "symbol": "EXPE",
-      "name_zh": "Expedia",
+      "symbol": "GRRR",
+      "name_zh": "Gorilla Technology",
       "kind": "US",
-      "price": 339.12,
-      "change_pct": 5.44,
-      "mtd_pct": 15.06,
-      "ytd_pct": 19.7,
+      "price": 15.83,
+      "change_pct": -1.43,
+      "mtd_pct": 42.74,
+      "ytd_pct": 44.96,
       "market_date": "2026-08-24",
-      "per": 19.1747,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=EXPE.US",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GRRR.US",
       "error": null
     },
     {
@@ -101,31 +115,17 @@
       "error": null
     },
     {
-      "symbol": "ETSY",
-      "name_zh": "Etsy",
+      "symbol": "EXPE",
+      "name_zh": "Expedia",
       "kind": "US",
-      "price": 87.03,
-      "change_pct": 7.4,
-      "mtd_pct": 6.55,
-      "ytd_pct": 56.98,
+      "price": 339.12,
+      "change_pct": 5.44,
+      "mtd_pct": 15.06,
+      "ytd_pct": 19.7,
       "market_date": "2026-08-24",
-      "per": 35.0561,
+      "per": 19.1747,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ETSY.US",
-      "error": null
-    },
-    {
-      "symbol": "XPEV",
-      "name_zh": "小鵬",
-      "kind": "US",
-      "price": 11.15,
-      "change_pct": -8.53,
-      "mtd_pct": -14.23,
-      "ytd_pct": -45.02,
-      "market_date": "2026-08-24",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=XPEV.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=EXPE.US",
       "error": null
     },
     {
@@ -143,45 +143,17 @@
       "error": null
     },
     {
-      "symbol": "ASTS",
-      "name_zh": "AST SpaceMobile",
+      "symbol": "XPEV",
+      "name_zh": "小鵬",
       "kind": "US",
-      "price": 62.35,
-      "change_pct": -9.18,
-      "mtd_pct": 5.71,
-      "ytd_pct": -14.15,
+      "price": 11.15,
+      "change_pct": -8.53,
+      "mtd_pct": -14.23,
+      "ytd_pct": -45.02,
       "market_date": "2026-08-24",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ASTS.US",
-      "error": null
-    },
-    {
-      "symbol": "PICS",
-      "name_zh": "PicS",
-      "kind": "US",
-      "price": 10.9,
-      "change_pct": 2.83,
-      "mtd_pct": -17.42,
-      "ytd_pct": null,
-      "market_date": "2026-08-24",
-      "per": 6.5607,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PICS.US",
-      "error": null
-    },
-    {
-      "symbol": "SDOT",
-      "name_zh": "Sadot",
-      "kind": "US",
-      "price": 23.16,
-      "change_pct": 75.72,
-      "mtd_pct": 74.79,
-      "ytd_pct": -4.3,
-      "market_date": "2026-08-24",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SDOT.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=XPEV.US",
       "error": null
     },
     {
@@ -196,6 +168,34 @@
       "per": 24.4798,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AWR.US",
+      "error": null
+    },
+    {
+      "symbol": "WMB",
+      "name_zh": "Williams Companies, Inc. (The)",
+      "kind": "US",
+      "price": 70.97,
+      "change_pct": 0.68,
+      "mtd_pct": -0.8,
+      "ytd_pct": 18.07,
+      "market_date": "2026-08-24",
+      "per": 29.3313,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=WMB.US",
+      "error": null
+    },
+    {
+      "symbol": "SDOT",
+      "name_zh": "Sadot",
+      "kind": "US",
+      "price": 23.16,
+      "change_pct": 75.72,
+      "mtd_pct": 74.79,
+      "ytd_pct": -4.3,
+      "market_date": "2026-08-24",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SDOT.US",
       "error": null
     },
     {
