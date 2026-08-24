@@ -1,12 +1,9 @@
 {
-  "news_date": "2026-08-24",
+  "news_date": "2026-08-25",
   "tldr": [
-    "最近交易日（8/21 週五）加權指數漲約 290 點收 45,224 點站回 45,000 關卡，外資回補、貨櫃三雄領漲。",
-    "市場迎接重量級一週：輝達美股週三盤後財報與 8/27 登場的聯準會 Jackson Hole 年會，恐重設利率預期。",
-    "台積電 2026 CoWoS 產能售罄，輝達、博通吃下二至三成擴產大部分，AI 先進封裝續為主流題材。",
-    "金管會優化銀行與金控財報準則，並為壽險業接軌 IFRS 17 與新清償制度提供過渡緩衝。",
-    "立院 8/21 修正遺贈稅法死前 2 年贈與課稅規定、並減輕育兒家庭所得稅負，牽動高資產傳承規劃。",
-    "美股週五收高（標普 +0.4%、道瓊 +1%）但連二週收黑，比特幣寫兩年最強單週，市場靜待 Jackson Hole 年會。"
+    "台股週一跌 1% 收 44,762 點，失守 45,000 與季線，外資賣超約 157.5 億元、連 4 賣台積電。",
+    "AI 需求續旺，台積電 CoWoS 產能 2027 年前將倍增，半導體設備出口年增 44.75%。",
+    "金管會政策動作頻頻，修正金控與銀行財報準則、引導保險資金投入公共建設，並研擬「資產管理專法」推動亞資中心。"
   ],
   "sections": [
     {
@@ -14,20 +11,20 @@
       "section_zh": "股市行情",
       "items": [
         {
-          "title_zh": "台股週五收 45,224 點、外資回補站回 45,000 關卡",
-          "title_en": "TAIEX closes Friday at 45,224 as foreign buyers return, reclaiming the 45,000 mark",
-          "summary_zh": "最近交易日（8/21 週五）加權指數開低走高、低量收漲約 290 點至 45,224 點，重返 45,000 點。三大法人合計買超約 331 億元，外資及陸資買超約 283 億元；台積電漲 35 元收 2,410 元，貨櫃三雄勁揚，金融與航運股助攻。資金在 AI 權值股之外轉進景氣循環族群，盤面題材輪動、多方氣勢延續進入週末。",
-          "summary_en": "In the most recent trading session (Fri, Aug 21) the benchmark opened lower but closed up around 290 points at 45,224 on thin volume, retaking 45,000. The three major institutions net-bought about NT$331 billion, with foreign investors adding roughly NT$283 billion. TSMC rose NT$35 to NT$2,410, while container shippers led the gains, signalling a rotation into cyclicals alongside AI heavyweights heading into the weekend.",
-          "source_name": "中央社",
-          "source_url": "https://www.cna.com.tw/news/afe/202608210129.aspx"
+          "title_zh": "台股週一跌 1%、失守 45,000 與季線，外資轉為賣方",
+          "title_en": "TAIEX slides 1% on Monday, losing 45,000 and its quarterly line as foreign investors turn sellers",
+          "summary_zh": "加權指數週一（8/24）開高走低，終場跌 461.97 點、跌幅 1.02%，收 44,762.32 點，同時跌破 45,000 關卡與季線，單日成交量約 6,519 億元。三大法人合計賣超約 163.77 億元，其中外資賣超約 157.51 億元，為近期最大單日賣壓。市場在輝達財報與聯準會 Jackson Hole 年會前趨於保守，資金觀望氣氛升溫，盤面權值與傳產同步承壓。",
+          "summary_en": "Taiwan's benchmark opened higher but reversed to close down 461.97 points, or 1.02%, at 44,762.32 on Monday (Aug 24), slipping below both the 45,000 mark and its quarterly moving average. Turnover was about NT$651.9 billion. The three major institutional investors were net sellers of roughly NT$163.8 billion, led by foreign investors offloading about NT$157.5 billion — the heaviest single-day selling in recent sessions — as caution built ahead of a data- and event-heavy week.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6585486"
         },
         {
-          "title_zh": "本週焦點：輝達財報與 Jackson Hole 央行年會",
-          "title_en": "Week ahead: markets brace for Nvidia earnings and Jackson Hole",
-          "summary_zh": "台股週一開盤在即，市場聚焦事件與數據密集的一週。重頭戲為輝達美股週三盤後財報，以及 8/27 登場的聯準會 Jackson Hole 全球央行年會，主席談話可能重設利率預期。市場關注長天期殖利率能否續降、高beta科技與半導體族群是否守穩支撐，牽動台灣 AI 供應鏈的評價面與後續資金動能。",
-          "summary_en": "With Taiwan markets reopening Monday, investors are positioning for a data- and event-heavy week. Focus falls on Nvidia's results due after the US close on Wednesday and the Fed's Jackson Hole symposium from Aug 27, where Chair remarks could reset rate expectations. Traders are watching whether long-end yields keep easing and whether high-beta tech and semiconductor names hold support amid valuation pressure on the AI supply chain.",
-          "source_name": "東森新聞",
-          "source_url": "https://news.ebc.net.tw/news/business/566785"
+          "title_zh": "投信終結連 23 買超、外資連 4 賣台積電",
+          "title_en": "Investment trusts end 23-day buying streak as foreign funds dump TSMC for a fourth session",
+          "summary_zh": "盤面資金結構轉弱，投信終結連 23 個交易日買超，外資則連續第 4 個交易日賣超台積電。外資單日買超最多為 DRAM 廠力積電、加碼約 3.8 萬張，同時大砍台塑四寶。外資期貨空單略增至約 8.25 萬口，顯示對後市轉趨保守。法人資金在權值股與傳產族群間輪動、短線觀望，靜待輝達財報與央行年會等關鍵事件提供方向指引。",
+          "summary_en": "Beneath the headline drop, domestic investment trusts snapped a 23-session net-buying run, while foreign investors sold Taiwan Semiconductor for a fourth straight day. Foreigners' biggest purchase was DRAM maker Powerchip, adding about 38,000 lots, even as they hit the Formosa Plastics group hard. Foreign net short positions in index futures edged up to around 82,500 contracts, underscoring a cautious near-term stance.",
+          "source_name": "優分析",
+          "source_url": "https://uanalyze.com.tw/articles/8952753955"
         }
       ]
     },
@@ -36,20 +33,20 @@
       "section_zh": "產業動態",
       "items": [
         {
-          "title_zh": "台積電 2026 CoWoS 產能售罄、輝達博通吃下多數擴產",
-          "title_en": "TSMC's 2026 CoWoS capacity sells out as Nvidia and Broadcom book most of the expansion",
-          "summary_zh": "先進封裝需求遠超供給，台積電 2026 年 CoWoS 產能規劃擴增二至三成、月產能上看約 12.5 萬片。新增量能在開出前多已被輝達與博通預訂，僅留部分配置給聯發科等客戶。大摩並將 2026 年輝達 CoWoS-L 需求上修至約 70 萬片。此指引凸顯 AI 硬體建置需求續強，為台積電與整條台廠先進封裝供應鏈的中長期成長定錨。",
-          "summary_en": "Advanced-packaging demand is running well ahead of supply, with TSMC guided to expand CoWoS output by 20%-30% to roughly 125,000 wafers a month in 2026. Most of the new capacity has already been reserved by Nvidia and Broadcom, leaving only a slice for others such as MediaTek. Morgan Stanley lifted its 2026 Nvidia CoWoS-L demand estimate to around 700,000 wafers, underscoring the durability of the AI hardware build-out.",
-          "source_name": "財報狗",
-          "source_url": "https://statementdog.com/news/15201"
+          "title_zh": "台積電 CoWoS 先進封裝產能將倍增、AI 需求續強",
+          "title_en": "TSMC's CoWoS advanced-packaging capacity set to more than double as AI demand runs hot",
+          "summary_zh": "法人估台積電 CoWoS 先進封裝月產能今、明年底將分別達約 7～7.5 萬片、10～10.5 萬片，對應年產能約 63.6 萬、106.2 萬片，年增幅分別約 104%、67%。此積極擴產反映 AI 加速器客戶需求仍旺，先進封裝續為台積電與台廠半導體供應鏈的結構性主流題材，並帶動 CoWoS、散熱、ABF 載板等相關次族群的中長期成長動能。",
+          "summary_en": "TSMC's monthly CoWoS capacity is projected to reach roughly 70,000-75,000 wafers by end-2026 and 100,000-105,000 by end-2027, implying annual output of about 636,000 and 1.06 million wafers — year-on-year growth of around 104% and 67%. The aggressive build-out reflects still-surging demand from AI accelerator customers, keeping advanced packaging the structural leadership theme for TSMC and Taiwan's broader semiconductor supply chain.",
+          "source_name": "玉山證券",
+          "source_url": "https://www.esunsec.com.tw/article/post/478"
         },
         {
-          "title_zh": "AI 題材由 GPU 外溢至散熱、電源與先進封裝",
-          "title_en": "AI theme broadens from GPUs to cooling, power and advanced packaging",
-          "summary_zh": "2026 年市場焦點自 GPU、AI 伺服器擴散至整櫃式伺服器、液冷散熱、PCB／CCL、電源供應與 48V 高壓供電、HBM／CoWoS、矽光子與高速傳輸。由於部分低毛利後段封裝製程外包，AI 受惠族群由運算晶片向更廣泛台廠零組件延伸。此趨勢帶動散熱、材料、電源與連接介面等次族群輪番表現，使 AI 供應鏈的成長動能更為分散而全面。",
-          "summary_en": "Market focus in 2026 is spreading beyond GPUs and AI servers to rack-scale systems, liquid cooling, PCB/CCL, power supply and 48V high-voltage delivery, HBM/CoWoS, silicon photonics and high-speed transmission. As lower-margin back-end packaging steps are partly outsourced, the set of Taiwanese hardware names riding the AI capex wave keeps widening, spreading gains across materials, thermal, power and interconnect suppliers.",
-          "source_name": "豐雲學堂",
-          "source_url": "https://www.sinotrade.com.tw/richclub/hotstock/2026%E5%B9%B4AI%E6%A6%82%E5%BF%B5%E8%82%A1%E6%9C%89%E5%93%AA%E4%BA%9B%E5%85%AC%E5%8F%B8-%E9%82%84%E5%80%BC%E5%BE%97%E6%8A%95%E8%B3%87%E5%97%8E-4%E5%9C%96%E8%A1%A8%E5%B8%B6%E4%BD%A0%E7%9C%8B%E6%87%82%E4%B8%8A%E4%B8%AD%E4%B8%8B%E6%B8%B8%E7%94%A2%E6%A5%AD%E8%B6%A8%E5%8B%A2--65af4cb1880d9e29902a677f"
+          "title_zh": "半導體設備領軍、台灣機械出口受 AI 擴產浪潮帶動大增",
+          "title_en": "Taiwan's machinery and equipment exports surge on the AI capacity-expansion wave",
+          "summary_zh": "台灣機械產業乘 AI 建置浪潮，半導體與平面顯示器設備出口額達約 28.57 億美元、年增 44.75%，主因全球 AI 算力需求爆發與半導體擴產持續。整體機械出口年增 18.51%，由半導體設備與 AI 相關機器人領軍。數據顯示 AI 供應鏈受惠面正由晶片業者向上游設備、自動化與零組件供應商擴散，帶動台廠中上游族群同步受惠、出口動能延續。",
+          "summary_en": "Taiwan's machinery exports are riding the AI build-out: semiconductor and flat-panel-display equipment shipments reached about US$2.857 billion, up 44.75% year on year, as global compute demand and chip-capacity expansion accelerate. Overall machinery exports rose 18.51%, led by semiconductor tooling and AI-related robotics. The data underscore how the AI supply chain is broadening beyond chipmakers into upstream equipment and automation suppliers.",
+          "source_name": "台灣機械公會 PMC",
+          "source_url": "https://www.pmc.org.tw/tw/news/show.aspx?num=2601"
         }
       ]
     },
@@ -58,20 +55,20 @@
       "section_zh": "金融業",
       "items": [
         {
-          "title_zh": "金管會優化銀行與金控財報編製準則",
-          "title_en": "FSC refines financial-report standards for banks and financial holdings",
-          "summary_zh": "金管會 8 月中修正公開發行銀行及金融控股公司財務報告編製準則，以提升資訊揭露的透明度與可比較性。相關調整為金融業接軌新一代會計與清償能力制度鋪路，促使機構提升資產負債表揭露品質。此舉為後續多項新制上路預作準備，牽動整體金融業體質與監理節奏，也讓投資人更易比較各行庫的財務體質與經營成果。",
-          "summary_en": "The Financial Supervisory Commission amended in mid-August the preparation standards for financial reports of publicly issued banks and financial holding companies, aiming to lift disclosure transparency and comparability. The changes form part of the groundwork as the sector moves toward next-generation accounting and solvency frameworks, nudging institutions toward cleaner, more consistent balance-sheet reporting ahead of a broader run of new rules due to take effect.",
-          "source_name": "聯合新聞網",
-          "source_url": "https://udn.com/news/story/7239/9235703"
+          "title_zh": "金管會修正金控與銀行財報編製準則",
+          "title_en": "FSC amends financial-report preparation standards for financial holdings and banks",
+          "summary_zh": "金管會 8 月 18 日修正「金融控股公司財務報告編製準則」與「公開發行銀行財務報告編製準則」，以提升資訊揭露透明度與可比較性。相關調整為金融業接軌新一代會計與清償能力制度鋪路，促使機構提升資產負債表揭露品質。此舉為後續多項新制上路預作準備，牽動金融業整體體質與監理節奏，也讓投資人更易比較各金控與行庫的財務狀況與經營成果。",
+          "summary_en": "The Financial Supervisory Commission amended on Aug 18 the preparation standards for the financial reports of financial holding companies and publicly issued banks, aiming to lift disclosure transparency and comparability. The revisions form part of the groundwork as the sector converges toward next-generation accounting and solvency frameworks, nudging institutions toward cleaner, more consistent balance-sheet reporting ahead of a broader run of new rules taking effect.",
+          "source_name": "金管會",
+          "source_url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2"
         },
         {
-          "title_zh": "壽險業接軌 IFRS 17 與新清償制度、獲過渡緩衝",
-          "title_en": "Life insurers get transition relief as sector converges toward IFRS 17 and the new solvency regime",
-          "summary_zh": "主管機關推出分階段暫行措施，協助壽險業平順接軌 IFRS 17 與新一代風險資本制度，包括為金控旗下壽險減壓、允許部分業者延後申報資本適足率。相關安排旨在避免接軌過程出現一次性衝擊，給予壽險業更充裕的資本重建與體質調整空間。此為壽險業迎接明年多項新制上路的重要鋪墊，牽動業者資本規劃與商品策略。",
-          "summary_en": "Regulators have rolled out phased measures to smooth life insurers' adoption of IFRS 17 and the incoming risk-based capital framework, including relief that eases capital pressure for holding-company-owned insurers and allows several firms to defer capital-adequacy filings. The steps aim to prevent disruptive one-off hits as the industry transitions, giving insurers more runway to rebuild capital buffers.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6472396"
+          "title_zh": "金管會引導保險資金挹注公共建設",
+          "title_en": "Regulators move to channel insurance capital into Taiwan's public infrastructure",
+          "summary_zh": "金管會 8 月 20 日發布新聞稿指出，正跨部會擴大公共建設可投資標的範圍，導引壽險業長期資金活水挹注國內基礎建設。此舉在提供壽險業穩定、長天期的投資去化管道，同時支持國家重大建設，兼顧保險業資產負債配置與公共政策目標。隨壽險業接軌 IFRS 17 與新清償制度，長期公建投資可望成為業者調整資產配置的重要方向。",
+          "summary_en": "In an Aug 20 statement, the FSC said it is working across agencies to widen the pool of eligible public-construction projects so insurers' long-term capital can be directed into domestic infrastructure. The initiative aims to give life insurers stable, long-duration investment targets while supporting national building programmes — a policy that could reshape insurers' asset allocation as they adapt to IFRS 17 and the new solvency regime.",
+          "source_name": "金管會",
+          "source_url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2"
         }
       ]
     },
@@ -80,127 +77,20 @@
       "section_zh": "財富管理",
       "items": [
         {
-          "title_zh": "中信 × BCG 報告：台灣超高資產客群快速成長",
-          "title_en": "CTBC-BCG report maps Taiwan's fast-growing ultra-high-net-worth pool",
-          "summary_zh": "中國信託與波士頓顧問公司（BCG）發布的財富洞察報告指出，台灣超高資產客群規模龐大且快速增長，核心投資組合約以股票與 ETF、債券型商品各半配置，投資積極但配置相對均衡。各銀行加速深化私人銀行、信託與傳承規劃服務，搶攻高資產家庭財管商機，也呼應政府將台灣打造為區域財富管理中心的政策方向。",
-          "summary_en": "A wealth-insight study by CTBC and Boston Consulting Group highlights a large and rapidly expanding ultra-high-net-worth client base in Taiwan, with core portfolios split roughly evenly between equities/ETFs and bond products — an actively invested but relatively balanced allocation. Banks are racing to deepen private-banking, trust and succession services, positioning Taiwan as a regional wealth-management hub for high-asset families.",
-          "source_name": "老喬報",
-          "source_url": "https://joelin.cc/?p=8309"
+          "title_zh": "8 月台股 ETF 配息潮起、資金轉進息收商品",
+          "title_en": "August brings a wave of Taiwan ETF payouts as investors chase income amid volatility",
+          "summary_zh": "本月超過 60 檔台股 ETF 公告配息，在關稅、財政與地緣情勢牽動、大盤震盪加劇之際，吸引投資人轉向穩定領息標的。高股息產品領先，00881 以年化殖利率近 9% 居配息排行之冠。此波配息潮反映散戶與財管客戶在盤勢震盪下，將資金轉進高股息 ETF 作為偏防禦、重現金流的資產配置選擇，也帶動相關 ETF 規模與受益人數持續成長。",
+          "summary_en": "More than 60 Taiwan-listed equity ETFs have declared distributions this month, drawing investors toward steady income as the market swings sharply on tariff, fiscal and geopolitical headlines. High-yield products lead the pack, with 00881 topping the rankings at an annualised yield near 9%. The rush reflects a broader rotation by retail and wealth clients into dividend ETFs as a defensive, cash-flow-oriented allocation during choppy conditions.",
+          "source_name": "豐雲學堂",
+          "source_url": "https://www.sinotrade.com.tw/richclub/aiinvest/2026%E5%B9%B47%E6%9C%88%E5%8F%B0%E8%82%A1ETF%E9%85%8D%E6%81%AF%E6%8E%92%E8%A1%8C-00961%E5%A5%AA%E5%86%A0-00892%E6%AE%96%E5%88%A9%E7%8E%87%E7%A0%B410--00929-0056-0050-006208%E6%8A%95%E8%B3%87%E4%BA%AE%E9%BB%9E%E8%88%87%E7%B8%BE%E6%95%88%E6%95%B4%E7%90%86--6a4dbd88a93c5ce592b8d18b"
         },
         {
-          "title_zh": "財管中心政策推升銀行搶攻高資產客群",
-          "title_en": "Banks intensify competition for high-asset clients under the wealth-management hub push",
-          "summary_zh": "在高資產財富管理方案下，符合資格的銀行可為資產達新臺幣 1 億元以上客戶提供更多元的商品與諮詢服務，各銀行紛紛強化私人銀行分級與優惠條件以搶占市占。亞洲資產管理中心計畫則將政策資源導向人才、商品與跨境能力建置，深化本地高資產家庭市場。此趨勢有助壯大台灣財富管理生態，也帶動信託、結構型商品與海外資產配置需求。",
-          "summary_en": "Under the regulator's high-asset wealth-management scheme, banks meeting the threshold can offer NT$100-million-plus clients a wider menu of products and advisory services, and lenders are sharpening private-banking tiers and preferential terms to win share. The Asia Asset Management Center initiative is channelling policy support toward talent, products and cross-border capabilities, deepening the onshore market for high-net-worth families.",
+          "title_zh": "金管會推亞洲資產管理中心、研擬「資產管理專法」",
+          "title_en": "FSC advances Asia Asset Management Center with a draft Asset Management Act",
+          "summary_zh": "金管會打造台灣為亞洲資產管理中心的政策已邁入關鍵階段，正研議專屬的「資產管理專法」，並於 7 月底公布草案架構，推動亞資中心由試辦創新走向制度化。此舉旨在深化本地在基金管理、私募市場與跨境服務的能量，回應高資產客戶與家族辦公室對整合式財富管理與另類投資的需求，強化台灣財管生態的國際競爭力與資金留存動能。",
+          "summary_en": "The FSC's push to build Taiwan into an Asia asset-management hub has entered a decisive phase, with regulators drafting a dedicated Asset Management Act and publishing the framework of the draft in late July. The move aims to shift the initiative from pilot-stage innovation toward an institutionalised regime, deepening onshore capabilities in fund management, private markets and cross-border services for high-net-worth and family-office clients.",
           "source_name": "亞洲資產管理中心",
           "source_url": "https://www.aamc.tw/zh/five3-1.html"
-        }
-      ]
-    },
-    {
-      "section": "Tax & Regulations",
-      "section_zh": "稅務法規",
-      "items": [
-        {
-          "title_zh": "立院三讀修正遺贈稅法、調整死前 2 年贈與課稅",
-          "title_en": "Legislature overhauls deathbed-gift rules in Estate & Gift Tax Act",
-          "summary_zh": "立法院 8/21 三讀通過《遺產及贈與稅法》修正，回應 2024 年憲法法庭判決——原規定由單一繼承人獨扛死亡前 2 年贈與併計遺產稅違反平等原則。新法改由受贈人按比例為納稅義務人、以所受財產價值為限，並取消遺產稅分期繳納門檻，連小額都可申請分期。此修法牽動高資產家庭的傳承與稅務規劃布局。",
-          "summary_en": "On Aug 21 the Legislative Yuan passed amendments to the Estate & Gift Tax Act, responding to a 2024 Constitutional Court ruling that struck down the old rule forcing a single heir to shoulder the entire estate-tax bill on gifts made within two years of death. Beneficiaries now become taxpayers in proportion, capped at the value each received, and the threshold for paying estate tax in instalments is removed — material changes for high-net-worth succession planning.",
-          "source_name": "Yahoo 股市",
-          "source_url": "https://tw.stock.yahoo.com/news/%E9%81%BA%E7%94%A2%E7%A8%85%E4%B8%8D%E5%86%8D%E7%B9%BC%E6%89%BF%E4%BA%BA%E4%B8%80%E6%AC%A1%E6%89%9B%EF%BC%81%E6%96%B0%E6%B3%95%E4%B8%8A%E8%B7%AF%E6%93%AC%E5%88%B6%E9%81%BA%E7%94%A2%E5%88%86%E9%96%8B%E8%AA%B2%E7%A8%85-%E9%80%A3%E5%B0%8F%E9%A1%8D%E9%83%BD%E8%83%BD%E7%94%B3%E8%AB%8B%E5%88%86%E6%9C%9F-041000543.html"
-        },
-        {
-          "title_zh": "所得稅法修正、減輕育兒家庭稅負",
-          "title_en": "Income Tax Act amended to ease the burden on families with children",
-          "summary_zh": "除遺贈稅外，立法院 8/21 同步三讀通過《所得稅法》第 17 條、第 126 條修正，聚焦減輕育兒家庭稅負，調整扶養子女免稅額與保險費列舉扣除等規定。此次修法與遺贈稅調整搭配，體現改善個人所得稅制公平性、支持家庭財務的政策方向，也影響一般家庭的年度綜所稅試算與扣除額規劃。",
-          "summary_en": "Alongside the estate-tax changes, lawmakers on Aug 21 passed amendments to Articles 17 and 126 of the Income Tax Act aimed at lightening the load on households raising children, adjusting provisions for dependent-child exemptions and the treatment of insurance premiums as itemised deductions. The package rounds out a broader push to improve fairness in the personal tax code and support family finances.",
-          "source_name": "勤業眾信/TICPA 稅務懶人包",
-          "source_url": "https://ticpa.com.tw/import-and-export-registration/"
-        }
-      ]
-    },
-    {
-      "section": "Macro & Policy",
-      "section_zh": "總經政策",
-      "items": [
-        {
-          "title_zh": "AI 出口強勁推升成長預測、升息議題升溫",
-          "title_en": "Strong AI-driven exports fuel upgraded growth forecasts and rate-hike talk",
-          "summary_zh": "台灣經濟受 AI 供應鏈出口熱潮帶動而動能強勁，首季 GDP 成長率創數十年來新高，官方大幅上修全年預測。上半年對美、對中出口年增幅度可觀，反映晶片業者加速擴產。強勁表現使市場重新臆測央行是否可能收緊政策，利率預期成為觀察焦點，也牽動新台幣匯率與資金環境。",
-          "summary_en": "Taiwan's economy is running hot, powered by an AI-supply-chain export boom, with first-quarter GDP growth reported at a multi-decade high and full-year forecasts revised sharply upward. First-half exports to the US and China posted large year-on-year gains as chipmakers expand capacity. The strength has revived market speculation over whether the central bank could tighten policy, keeping rate expectations in focus.",
-          "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/5613/9533944"
-        },
-        {
-          "title_zh": "成長引擎由單一外需轉向多元支撐",
-          "title_en": "Growth engine shifts from single external driver toward broader base",
-          "summary_zh": "經濟學者預期台灣成長動能將由過度倚賴單一外需引擎，轉向由出口、投資與消費共同支撐的均衡模式；內需回溫、外需趨緩。在 2025 年高基期下，未來數年整體成長率估收斂，凸顯擴大公共建設、數位轉型與產業升級投資對維繫動能的重要性，也為總經政策定調方向。",
-          "summary_en": "Economists expect Taiwan's expansion to rebalance from an over-reliance on a single external engine toward one supported jointly by exports, investment and consumption, as domestic demand warms while external demand gradually moderates. With a high 2025 base, headline growth is seen converging in coming years, putting a premium on public-construction, digital-transformation and industrial-upgrade investment to sustain momentum.",
-          "source_name": "中華經濟研究院",
-          "source_url": "https://www.cier.edu.tw/eco/2026%E5%B9%B4%E8%87%BA%E7%81%A3%E7%B6%93%E6%BF%9F%E9%A0%90%E6%B8%AC-2/"
-        }
-      ]
-    },
-    {
-      "section": "Global Markets",
-      "section_zh": "國際財經",
-      "items": [
-        {
-          "title_zh": "市場屏息迎接 Jackson Hole、Fed 主席談話成焦點",
-          "title_en": "Markets brace for Jackson Hole as Fed chair's keynote takes centre stage",
-          "summary_zh": "台灣財經媒體聚焦 8/27～29 登場的聯準會 Jackson Hole 全球央行年會，視為本週關鍵事件，決策者將闡述對通膨與成長的看法。由於近期美國就業與通膨數據分歧，投資人高度關注 Fed 主席談話偏鷹、或暗示降息可能，其訊號恐重設全球風險偏好與資金流向，牽動科技股與新興市場評價。",
-          "summary_en": "Taiwanese financial media are highlighting the Fed's Jackson Hole symposium (Aug 27-29) as the week's pivotal event, with policymakers set to lay out their views on inflation and growth. With recent US jobs and inflation data sending mixed signals, investors are watching closely for whether the Fed chair's keynote leans hawkish or hints at the possibility of rate cuts — a message that could reset global risk appetite.",
-          "source_name": "玉山證券",
-          "source_url": "https://www.esunsec.com.tw/article/post/390"
-        },
-        {
-          "title_zh": "聯準會路徑不明、投資人轉向財報找方向",
-          "title_en": "With Fed path murky, investors pivot to earnings for direction",
-          "summary_zh": "面對聯準會政策動向不明，投資人轉而倚賴企業財報，以驗證樂觀預期並抵銷宏觀風險。美股本季財報整體亮眼，多數標普 500 企業優於預期，市場焦點集中於輝達即將公布的財報，視為 AI 交易的風向球，也是牽動華爾街與台灣科技供應鏈後市的關鍵變數。",
-          "summary_en": "Amid uncertainty over the Fed's policy trajectory, investors are leaning on corporate earnings to validate optimism and offset macro risk. Reporting from the current US season has been broadly upbeat, with a large majority of S&P 500 companies beating expectations, and attention now centres on Nvidia's upcoming results as a bellwether for the AI trade and a key swing factor for both Wall Street and Taiwan's tech supply chain.",
-          "source_name": "Yahoo 股市",
-          "source_url": "https://tw.stock.yahoo.com/news/%E8%81%AF%E9%82%A6%E6%BA%96%E5%82%99%E5%88%B6%E5%BA%A6%E5%8B%95%E5%90%91%E4%B8%8D%E6%98%8E-%E6%8A%95%E8%B3%87%E4%BA%BA%E8%BD%89%E5%B0%8B%E8%B2%A1%E5%A0%B1%E6%B4%9E%E5%AF%9F%E8%82%A1%E5%B8%82%E6%96%B9%E5%90%91-230927512.html"
-        }
-      ]
-    },
-    {
-      "section": "International",
-      "section_zh": "國際",
-      "items": [
-        {
-          "title_zh": "美股週五收高、但連二週收黑（2026-08-21，最近交易日）",
-          "title_en": "US stocks close higher Friday but post back-to-back weekly losses (2026-08-21，最近交易日)",
-          "summary_zh": "最近交易日美股三大指數在經濟數據穩健下同步收高：標普 500 漲 0.4% 收 7,674.37 點，道瓊漲約 1%（約 518 點）收 53,277.01 點，那斯達克漲 0.4% 收 26,180.45 點。一份顯示美國商業活動創四年多來最快擴張的報告激勵股市，惟受債市賣壓拖累風險性資產，三大指數本週仍同步收黑。",
-          "summary_en": "Wall Street's major indexes rose in the most recent session as solid economic data steadied sentiment: the S&P 500 gained 0.4% to 7,674.37, the Dow added 1% (about 518 points) to 53,277.01 and the Nasdaq rose 0.4% to 26,180.45. A report showing US business activity growing at its fastest pace in over four years lifted stocks, though all three benchmarks still finished the week lower after a bond sell-off pressured riskier assets.",
-          "source_name": "TheStreet",
-          "source_url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-aug-21-2026"
-        },
-        {
-          "title_zh": "比特幣飆向 7.7 萬美元、寫兩年最強單週（2026-08-21）",
-          "title_en": "Bitcoin surges toward $77,000 for its best week in two years (2026-08-21)",
-          "summary_zh": "加密貨幣週末前強勁反彈，比特幣升至約 7.7 萬美元，即使股市因債市波動震盪，仍締造兩年來最強單週漲幅。此走勢凸顯在聯準會 Jackson Hole 年會前，投資人於利率預期轉變之際，資金轉進另類資產的傾向。",
-          "summary_en": "Cryptocurrency rallied hard into the weekend, with bitcoin climbing to around $77,000 and logging its strongest weekly gain in two years even as equities wobbled on bond-market volatility. The move underscored a rotation into alternative assets as investors weighed shifting rate expectations ahead of the Fed's Jackson Hole gathering.",
-          "source_name": "Yahoo Finance",
-          "source_url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-august-21-dow-sp-500-nasdaq-bitcoin-080533702.html",
-          "published": "2026-08-21"
-        },
-        {
-          "title_zh": "油價因伊朗緊張守穩近 94 美元、拚連二週上漲（2026-08-20）",
-          "title_en": "Oil holds near $94 on Iran tensions, heading for a second weekly gain (2026-08-20)",
-          "summary_zh": "布蘭特原油上週稍晚交投於每桶近 94 美元，可望連續第二週約漲 6%，受美國可能加大對伊朗施壓的預期，以及烏克蘭攻擊俄羅斯煉油廠與港口引發的供應疑慮支撐。隨華府釋出孤立伊朗經濟的新措施訊號，地緣政治風險溢價仍是能源市場主要驅動因素。",
-          "summary_en": "Brent crude traded just below $94 a barrel late last week, on course for a second straight weekly gain of around 6%, supported by expectations of fresh US pressure on Iran and supply worries after Ukrainian strikes on Russian refineries and ports. With Washington signalling new measures to isolate Iran's economy, geopolitical risk premium remains a key driver for energy markets.",
-          "source_name": "Fortune",
-          "source_url": "https://fortune.com/article/price-of-oil-08-20-2026/",
-          "published": "2026-08-20"
-        },
-        {
-          "title_zh": "全球緊盯 Jackson Hole、Fed 主席重頭演說登場（2026-08-21）",
-          "title_en": "All eyes on Jackson Hole as the Fed chair's first keynote looms (2026-08-21)",
-          "summary_zh": "市場為聯準會 Jackson Hole 年會布局，主席的重頭演說將被逐字解讀政策方向。上次 FOMC 會議以來美國數據轉弱，投資人在「利率長期偏高」與「終將降息」之間分歧。歷來新任主席在 Jackson Hole 的首場演說格外受矚目，使今年談話可能成為牽動利率、美元與全球股市的重要催化劑。",
-          "summary_en": "Markets are positioning for the Fed's Jackson Hole symposium, where the chair's keynote will be parsed hard for policy direction. US data has softened since the last FOMC meeting, leaving investors split between fears of prolonged higher rates and hopes for eventual cuts. First-time chair addresses at Jackson Hole tend to draw outsized scrutiny, making this year's remarks a potential catalyst for rates, the dollar and global equities.",
-          "source_name": "TechTimes",
-          "source_url": "https://www.techtimes.com/articles/325228/20260821/jackson-hole-2026-what-watch-when-warsh-steps-podium-friday.htm",
-          "published": "2026-08-21"
         }
       ]
     }
