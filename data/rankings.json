@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T10:30:27+08:00",
+  "generated_at": "2026-08-24T12:04:08+08:00",
   "tw": {
     "as_of": "2026-08-24",
     "top_marketcap": [
@@ -1097,6 +1097,19 @@
         "source_url": "https://finance.yahoo.com/quote/XLE"
       },
       {
+        "symbol": "XLB",
+        "name": "State Street Materials Select S",
+        "price": 53.54,
+        "daily_pct": 1.9,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": 6.17,
+        "ytd_pct": 18.06,
+        "yahoo": "XLB",
+        "source_url": "https://finance.yahoo.com/quote/XLB"
+      },
+      {
         "symbol": "EEM",
         "name": "iShares MSCI Emerging Index Fun",
         "price": 67.12,
@@ -1160,19 +1173,6 @@
         "ytd_pct": -1.27,
         "yahoo": "HYG",
         "source_url": "https://finance.yahoo.com/quote/HYG"
-      },
-      {
-        "symbol": "XLY",
-        "name": "State Street Consumer Discretio",
-        "price": 118.02,
-        "daily_pct": -0.15,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": 1.66,
-        "ytd_pct": -1.16,
-        "yahoo": "XLY",
-        "source_url": "https://finance.yahoo.com/quote/XLY"
       }
     ],
     "sectors": [
@@ -1203,6 +1203,20 @@
         "yahoo": "XLE",
         "source_url": "https://finance.yahoo.com/quote/XLE",
         "name_zh": "能源"
+      },
+      {
+        "symbol": "XLB",
+        "name": "State Street Materials Select S",
+        "price": 53.54,
+        "daily_pct": 1.9,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": 6.17,
+        "ytd_pct": 18.06,
+        "yahoo": "XLB",
+        "source_url": "https://finance.yahoo.com/quote/XLB",
+        "name_zh": "原物料"
       },
       {
         "symbol": "XLP",
