@@ -3,7 +3,9 @@
   "tldr": [
     "台股週一跌 1% 收 44,762 點，失守 45,000 與季線，外資賣超約 157.5 億元、連 4 賣台積電。",
     "AI 需求續旺，台積電 CoWoS 產能 2027 年前將倍增，半導體設備出口年增 44.75%。",
-    "金管會政策動作頻頻，修正金控與銀行財報準則、引導保險資金投入公共建設，並研擬「資產管理專法」推動亞資中心。"
+    "金管會政策動作頻頻，修正金控與銀行財報準則、引導保險資金投入公共建設，並研擬「資產管理專法」推動亞資中心。",
+    "稅務面，財政部強化房地合一反避稅規定，立院修正遺贈稅與所得稅，牽動高資產傳承與家庭稅務規劃。",
+    "海外方面，晶片股賣壓拖累那斯達克，油價因美國對伊朗新制裁下跌，金價創三個月高點，市場聚焦輝達財報與 Jackson Hole 年會。"
   ],
   "sections": [
     {
@@ -91,6 +93,114 @@
           "summary_en": "The FSC's push to build Taiwan into an Asia asset-management hub has entered a decisive phase, with regulators drafting a dedicated Asset Management Act and publishing the framework of the draft in late July. The move aims to shift the initiative from pilot-stage innovation toward an institutionalised regime, deepening onshore capabilities in fund management, private markets and cross-border services for high-net-worth and family-office clients.",
           "source_name": "亞洲資產管理中心",
           "source_url": "https://www.aamc.tw/zh/five3-1.html"
+        }
+      ]
+    },
+    {
+      "section": "Tax & Regulations",
+      "section_zh": "稅務法規",
+      "items": [
+        {
+          "title_zh": "財政部修正房地合一稅、強化防杜避稅",
+          "title_en": "MOF tightens anti-avoidance rules in the house-and-land transaction income tax",
+          "summary_zh": "財政部 8 月 21 日修正「房地合一課徵所得稅申報作業要點」，就股權價值認定等反避稅規定加以調整，並自即日生效。此次修正針對以移轉不動產占比高的股權方式規避房地合一課稅的漏洞加以防堵，收緊個人與營利事業間接移轉不動產的稅務認定，牽動高資產族群與企業的不動產交易與稅務規劃布局，未來以股權形式處分不動產須更審慎評估稅負。",
+          "summary_en": "The Ministry of Finance amended on Aug 21 the filing guidelines for the consolidated house-and-land income tax, refining anti-avoidance provisions on how the value of property-heavy equity is recognised, effective the same day. The change targets loopholes where real estate is transferred via share deals to sidestep the property-gains regime, tightening the net around indirect property transactions for both individuals and corporate sellers.",
+          "source_name": "財政部賦稅署",
+          "source_url": "https://www.dot.gov.tw/singlehtml/ch26?cntId=76a2af5134a34ea49384516632e93e1d"
+        },
+        {
+          "title_zh": "立院修正遺贈稅與所得稅、牽動傳承與家庭稅務規劃",
+          "title_en": "Legislature's estate-, gift- and income-tax overhaul reshapes succession planning",
+          "summary_zh": "立法院 8 月 21 日三讀修正《遺產及贈與稅法》死前 2 年贈與課稅規定，改由受贈人按比例、以所受財產價值為限為納稅義務人，並取消遺產稅分期繳納門檻；同步修正《所得稅法》減輕育兒家庭稅負。相關修法對高資產家庭的傳承布局與一般家庭的綜所稅規劃均有實質影響，牽動財富傳承與節稅策略，也讓贈與時點與資產移轉方式的規劃更趨重要。",
+          "summary_en": "Amendments passed on Aug 21 revised the Estate & Gift Tax Act's deathbed-gift rules — making beneficiaries proportional taxpayers capped at what they received and removing the threshold for paying estate tax in instalments — while changes to the Income Tax Act eased the burden on families raising children. Together the measures materially affect high-net-worth succession and household tax planning.",
+          "source_name": "財政部全球資訊網",
+          "source_url": "https://www.mof.gov.tw/"
+        }
+      ]
+    },
+    {
+      "section": "Macro & Policy",
+      "section_zh": "總經政策",
+      "items": [
+        {
+          "title_zh": "AI 需求續旺、台灣出口連逾 32 個月正成長",
+          "title_en": "Taiwan's exports stay red-hot as AI demand powers another monthly gain",
+          "summary_zh": "7 月出口約 753 億美元，為歷年單月第 3 高、年增約 32.9%，出口連續正成長已逾 32 個月；累計 1～7 月出口年增約 44.7%。受 AI、高效能運算與雲端服務熱潮帶動，資通與視聽產品、電子零組件維持高檔成長，兩者合計占總出口比重約 78.7%。強勁外需為台灣經濟提供支撐，但也使成長高度集中於科技供應鏈，須留意高基期後的動能變化與匯率影響。",
+          "summary_en": "July exports reached about US$75.3 billion, the third-highest monthly total on record and up roughly 32.9% year on year, extending the run of consecutive monthly increases beyond 32 months. Cumulative January-July exports rose about 44.7% from a year earlier. Information-and-communications and electronic-component products — buoyed by AI, high-performance computing and cloud demand — now make up around 78.7% of total shipments.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/10869/9329757"
+        },
+        {
+          "title_zh": "AI 榮景推升成長預測、學者估動能將再平衡",
+          "title_en": "Forecasts upgraded on the AI boom, but economists see momentum rebalancing",
+          "summary_zh": "AI 供應鏈出口強勁帶動官方上修台灣成長預測，也再度引發央行是否收緊政策的討論。惟經濟學者預期，成長動能將由過度倚賴單一外需引擎，逐步轉向由出口、投資與消費共同支撐的均衡模式；隨內需回溫、2025 年高基期壓抑，整體成長率估收斂。政策焦點落在利率路徑與新台幣匯率，牽動資金環境與產業投資布局。",
+          "summary_en": "Strong AI-supply-chain exports have prompted upward revisions to Taiwan's growth outlook, reviving debate over whether the central bank could tighten. Yet economists expect the expansion to rebalance over time from an over-reliance on a single external engine toward one supported jointly by exports, investment and consumption, as domestic demand warms and a high 2025 base caps headline growth — keeping the rate path and the NT dollar in focus.",
+          "source_name": "海基會兩岸經貿網",
+          "source_url": "https://www.seftb.org/cp-4-2652-1088e-1.html"
+        }
+      ]
+    },
+    {
+      "section": "Global Markets",
+      "section_zh": "國際財經",
+      "items": [
+        {
+          "title_zh": "台媒示警美股本週三大關卡：輝達、華許、PCE",
+          "title_en": "Taiwan media flag a three-hurdle week for US stocks: Nvidia, Warsh and PCE",
+          "summary_zh": "台灣財經媒體聚焦本週華爾街三大考驗：輝達美股週三盤後財報、聯準會主席華許週五 Jackson Hole 首場主題演說，以及 7 月 PCE 物價數據。市場預期輝達繳出另一季 AI 帶動的強勁成長，營收市場預估約 920 億美元，其財測被視為 AI 交易與台灣科技供應鏈的風向球，牽動台股權值與 AI 族群後續評價與資金動能。",
+          "summary_en": "Local financial outlets are framing the week around three key tests for Wall Street: Nvidia's earnings after Wednesday's US close, Fed Chair Kevin Warsh's first Jackson Hole keynote on Friday, and the July PCE inflation print. Markets expect Nvidia to post another quarter of strong AI-driven growth, with consensus revenue around US$92 billion, making its guidance a bellwether for the AI trade and Taiwan's tech supply chain.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6583974"
+        },
+        {
+          "title_zh": "輝達財報牽動 AI 投資、Fed 主席將赴 Jackson Hole 發聲",
+          "title_en": "Nvidia's results to sway AI investment as the Fed chair heads to Jackson Hole",
+          "summary_zh": "報導指出，輝達已被市場視為整個 AI 生態系的代表而非單純半導體公司，其業績可反映晶片、資料中心及相關融資需求是否依舊強勁。報導並聚焦華許在 Jackson Hole 的演說，投資人關注其對通膨、就業市場與貨幣政策走向的看法；因近期美國數據分歧，談話訊號恐牽動全球風險偏好與資金流向。",
+          "summary_en": "Coverage highlights how Nvidia — now viewed as a proxy for the entire AI ecosystem rather than just a chipmaker — will show whether demand for chips, data centres and related financing remains robust. Reports also spotlight Warsh's Jackson Hole address, with investors watching for cues on inflation, the labour market and the policy path amid mixed US data.",
+          "source_name": "Yahoo 股市",
+          "source_url": "https://tw.stock.yahoo.com/news/%E8%BC%9D%E9%81%94%E8%B2%A1%E5%A0%B1%E7%89%BD%E5%8B%95ai%E6%8A%95%E8%B3%87%E9%9C%80%E6%B1%82-%E8%81%AF%E6%BA%96%E6%9C%83%E4%B8%BB%E5%B8%AD%E5%B0%87%E6%96%BC%E6%9D%B0%E5%85%8B%E9%81%9C%E8%B0%B7%E5%9C%B0%E8%AB%96%E5%A3%87%E7%99%BC%E8%81%B2-065737862.html"
+        }
+      ]
+    },
+    {
+      "section": "International",
+      "section_zh": "國際",
+      "items": [
+        {
+          "title_zh": "美股週一漲跌互見、晶片股賣壓拖累那斯達克（2026-08-24）",
+          "title_en": "US stocks close mixed on Monday as a chip-stock sell-off drags the Nasdaq (2026-08-24)",
+          "summary_zh": "華爾街本週開盤表現分歧：標普 500 跌 0.3% 收 7,652.86 點，那斯達克因半導體賣壓跌 0.8% 收 25,980.19 點，道瓊則漲 0.3% 收 53,417.16 點。美光重挫約 5.8%，超微、博通分別跌逾 3%、2%；輝達在週三財報前跌 2.9%。美國對伊朗祭出新制裁亦增添市場保守氣氛。",
+          "summary_en": "Wall Street was mixed to start the week: the S&P 500 slipped 0.3% to 7,652.86 and the Nasdaq fell 0.8% to 25,980.19 as semiconductors sold off, while the Dow rose 0.3% to 53,417.16. Micron dropped about 5.8%, with AMD and Broadcom down more than 3% and 2%; Nvidia fell 2.9% ahead of its Wednesday earnings. New US sanctions on Iran added to the cautious tone.",
+          "source_name": "Yahoo Finance",
+          "source_url": "https://finance.yahoo.com/markets/live/stock-market-today-monday-august-24-dow-sp-500-nasdaq-080306047.html",
+          "published": "2026-08-24"
+        },
+        {
+          "title_zh": "美國對伊朗發動「經濟放逐行動」、油價下跌（2026-08-24）",
+          "title_en": "Oil falls as the US launches 'Operation Economic Outcast' against Iran (2026-08-24)",
+          "summary_zh": "原油週一走跌，布蘭特原油跌約 2.5% 至每桶約 92 美元，因美國財政部長貝森特正式啟動「Operation Economic Outcast（經濟放逐行動）」，以大規模次級制裁切斷伊朗經濟命脈。首波鎖定近 60 個個人、實體與船隻，華府並表明中國不會豁免。地緣政治風險續為能源市場焦點，市場觀望制裁後續對供給面的影響。",
+          "summary_en": "Crude slid on Monday, with Brent down about 2.5% to roughly $92 a barrel, after Treasury Secretary Scott Bessent formally launched \"Operation Economic Outcast,\" a sweeping campaign of secondary sanctions aimed at severing Iran's economic lifelines. The first round targeted nearly 60 individuals, entities and vessels, and Washington signalled China would not be exempt, keeping geopolitical risk front of mind for energy markets.",
+          "source_name": "CNBC",
+          "source_url": "https://www.cnbc.com/2026/08/24/oil-price-today-wti-brent-us-sanctions-iran.html",
+          "published": "2026-08-24"
+        },
+        {
+          "title_zh": "金價攻抵三個月高點、殖利率與美元走弱（2026-08-24）",
+          "title_en": "Gold hits a three-month high as yields and the dollar slide before PCE and Jackson Hole (2026-08-24)",
+          "summary_zh": "黃金週一升至每盎司約 4,630 美元、創 5 月中以來新高，因美國財政部意外將長天期公債回購規模加倍，壓低債券殖利率與美元，重新點燃「貨幣貶值交易」。在投資人等待週三 7 月 PCE 通膨數據與週五華許 Jackson Hole 演說之際，黃金作為另類價值儲存的吸引力增強，避險與抗通膨買盤同步進場。",
+          "summary_en": "Gold climbed to around $4,630 an ounce on Monday, its highest since mid-May, after the US Treasury unexpectedly doubled its long-dated bond-buyback programme, pushing yields and the dollar lower and reviving the \"debasement trade.\" Bullion's appeal as an alternative store of value strengthened as investors awaited Wednesday's July PCE inflation data and Warsh's Friday Jackson Hole speech.",
+          "source_name": "CNBC",
+          "source_url": "https://www.cnbc.com/2026/08/24/gold-reaches-3-month-high-ahead-of-us-inflation-data-fed-speech.html",
+          "published": "2026-08-24"
+        },
+        {
+          "title_zh": "市場屏息迎 Jackson Hole、押注偏向 Fed 短期不降息（2026-08-24）",
+          "title_en": "Markets brace for Jackson Hole as bets tilt away from near-term Fed cuts (2026-08-24)",
+          "summary_zh": "投資人為聯準會 8/27～29 的 Jackson Hole 年會布局，主席華許將以「金融創新」為題發表上任後首場主題演說。在美國數據分歧下，市場已收斂對近期降息的預期，甚至對今年升息給予一定機率，分析師預期談話將維持「數據依賴」基調。即使前瞻指引有限，任何政策訊號仍可能牽動利率、美元與全球股市走向。",
+          "summary_en": "Investors are positioning for the Fed's Aug 27-29 Jackson Hole symposium, where Chair Kevin Warsh delivers his first keynote on the theme \"Financial Innovation.\" With US data mixed, markets have pared expectations for imminent easing — pricing meaningful odds of a hike rather than a cut this year — and analysts expect a data-dependent message. Even a scarce forward-guidance signal could still move rates, the dollar and global equities.",
+          "source_name": "NewsNation",
+          "source_url": "https://www.newsnationnow.com/business/your-money/rate-cut-expected-fed-jackson-hole-symposium/",
+          "published": "2026-08-24"
         }
       ]
     }
