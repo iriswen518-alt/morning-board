@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T13:03:39+08:00",
+  "generated_at": "2026-08-24T15:02:01+08:00",
   "source": "manual curation (targets.json)",
   "version": 3,
   "updated": "2026-08-21",
@@ -313,8 +313,8 @@
       "stats": [
         {
           "k": "近1年績效",
-          "v": "+172.56%",
-          "sub": "利安資金韓國（美元）・截至 08/20",
+          "v": "+176.27%",
+          "sub": "利安資金韓國（美元）・截至 08/21",
           "url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=LIC04-LI02"
         },
         {
@@ -355,8 +355,8 @@
       "stats": [
         {
           "k": "WTI 原油 YTD",
-          "v": "+49.53%",
-          "sub": "今日 -1.55%・截至 08/24",
+          "v": "+48.71%",
+          "sub": "今日 -2.09%・截至 08/24",
           "url": "https://finance.yahoo.com/quote/CL=F"
         },
         {
@@ -445,8 +445,8 @@
       "stats": [
         {
           "k": "近1年績效",
-          "v": "-1.33%",
-          "sub": "利安資金越南 A 級別美元・截至 08/20",
+          "v": "-0.12%",
+          "sub": "利安資金越南 A 級別美元・截至 08/21",
           "url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=LIC28-LI01"
         },
         {
@@ -487,8 +487,8 @@
       "stats": [
         {
           "k": "STI 海峽時報 YTD",
-          "v": "+21.96%",
-          "sub": "今日 -0.18%・截至 08/24",
+          "v": "+22.02%",
+          "sub": "今日 -0.14%・截至 08/24",
           "url": "https://finance.yahoo.com/quote/%5ESTI"
         },
         {
@@ -574,6 +574,12 @@
           "v": "-1.60%",
           "sub": "MTD +1.90%・今日 +0.04%・截至 08/21",
           "url": "https://finance.yahoo.com/quote/000001.SS"
+        },
+        {
+          "k": "CSI 300 滬深300 YTD",
+          "v": "-2.18%",
+          "sub": "MTD -9.04%・截至 08/24",
+          "url": "https://finance.yahoo.com/quote/000300.SS"
         },
         {
           "k": "fwd P/E",
@@ -780,16 +786,16 @@
       "tagline": "MSCI Korea Value-Up 改革題材；近一年 +220%",
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=LIC04-LI02",
       "fund_id": "uob_korea",
-      "nav": 3.05,
-      "nav_date": "2026-08-20",
-      "change_pct": 6.57,
+      "nav": 3.097,
+      "nav_date": "2026-08-21",
+      "change_pct": 1.54,
       "perf": {
-        "1m": 11.19,
-        "3m": 10.39,
-        "6m": 43.19,
-        "ytd": 95.51,
-        "1y": 172.56,
-        "3y": 259.25
+        "1m": 8.25,
+        "3m": 2.82,
+        "6m": 45.4,
+        "ytd": 98.53,
+        "1y": 176.27,
+        "3y": 265.64
       },
       "bop_name_zh": "利安資金韓國基金(美元)"
     },
@@ -801,16 +807,16 @@
       "tagline": "FDI 轉移之長期選擇權；MSCI 升等催化",
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=LIC28-LI01",
       "fund_id": "uob_vietnam",
-      "nav": 0.818,
-      "nav_date": "2026-08-20",
-      "change_pct": 0.74,
+      "nav": 0.838,
+      "nav_date": "2026-08-21",
+      "change_pct": 2.45,
       "perf": {
-        "1m": 2.76,
-        "3m": -7.47,
-        "6m": -6.41,
-        "ytd": -4.66,
-        "1y": -1.33,
-        "3y": 18.9
+        "1m": 5.54,
+        "3m": -4.99,
+        "6m": -4.12,
+        "ytd": -2.33,
+        "1y": -0.12,
+        "3y": 22.16
       },
       "bop_name_zh": "利安資金越南基金A級別美元"
     },
