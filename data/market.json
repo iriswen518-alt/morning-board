@@ -85,20 +85,20 @@
     {
       "name": "TAIEX 加權指數",
       "name_zh": null,
-      "close": 45224.2890625,
-      "daily_pct": 0.65,
+      "close": 44762.32,
+      "daily_pct": -1.02,
       "mtd_pct": 4.88,
       "ytd_pct": 56.14,
-      "closing_date": "2026-08-21"
+      "closing_date": "2026-08-24"
     },
     {
       "name": "OTC 櫃買加權",
       "name_zh": null,
-      "close": null,
-      "daily_pct": null,
+      "close": 386.1,
+      "daily_pct": -0.3,
       "mtd_pct": null,
       "ytd_pct": null,
-      "closing_date": null
+      "closing_date": "2026-08-24"
     },
     {
       "name": "台指期(近月)",
@@ -139,7 +139,7 @@
     {
       "name": "CSI 300 滬深300",
       "name_zh": null,
-      "close": 4560.84716796875,
+      "close": 4543.927734375,
       "daily_pct": null,
       "mtd_pct": null,
       "ytd_pct": null,
@@ -175,7 +175,7 @@
     {
       "name": "US 2-Year",
       "yield_pct": 4.23,
-      "daily_bps": -0.7,
+      "daily_bps": -0.5,
       "mtd_bps": -4.0,
       "closing_date": "2026-08-24"
     },
@@ -189,7 +189,7 @@
     {
       "name": "Japan 10-Year",
       "yield_pct": 2.88,
-      "daily_bps": -0.6,
+      "daily_bps": -0.3,
       "mtd_bps": 8.1,
       "closing_date": "2026-08-24"
     },
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 98.80000305175781,
       "daily_pct": -0.1,
-      "mtd_pct": -0.98,
-      "ytd_pct": 0.55,
+      "mtd_pct": -0.96,
+      "ytd_pct": 0.57,
       "closing_date": "2026-08-21"
     },
     {
@@ -425,5 +425,5 @@
       "is_reference": false
     }
   ],
-  "summary": "8/21 Hang Seng 恆生 +1.21%、8/21 Dow Jones +0.98%、8/21 KOSPI +0.88% 領漲；8/19 台指期(近月) -1.06%、8/21 PHLX Semiconductor -0.51% 走弱。"
+  "summary": "8/21 Hang Seng 恆生 +1.21%、8/21 Dow Jones +0.98%、8/21 KOSPI +0.88% 領漲；8/19 台指期(近月) -1.06%、8/24 TAIEX 加權指數 -1.02% 走弱。"
 }
