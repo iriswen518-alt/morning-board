@@ -44,7 +44,7 @@ CATEGORIES = [
 
 GROQ_API = "https://api.groq.com/openai/v1/chat/completions"
 # 依序嘗試；各模型在 Groq 免費層有獨立配額，前面額度用盡自動退下一個
-GROQ_MODELS = ["openai/gpt-oss-120b", "llama-3.3-70b-versatile", "llama-3.1-8b-instant"]
+GROQ_MODELS = ["openai/gpt-oss-120b", "openai/gpt-oss-20b", "qwen/qwen3.6-27b"]
 MAX_TRANSLATE = 24  # 每輪最多翻譯篇數（雲端 cron 稀疏，一次多翻清 backlog）
 SLEEP_BETWEEN = 22  # 每篇之間秒數（TPM 8000 節流）
 BODY_CHAR_CAP = 6000  # 單篇全文上限（極長文截斷，避免撐爆 token）
