@@ -1,11 +1,62 @@
 {
-  "built_at": "2026-08-24T23:45",
+  "built_at": "2026-08-25T00:34",
   "source": "鉅亨網（cnyes）",
   "categories": [
     {
       "key": "headline",
       "label": "鉅亨頭條",
       "items": [
+        {
+          "news_id": "6585590",
+          "title": "1兆美元AI晶片大戰開打！輝達霸主地位遭挑戰 台積電成勝負關鍵",
+          "title_en": "",
+          "publish_at": 1787586603,
+          "url": "https://news.cnyes.com/news/id/6585590",
+          "paras": [
+            "人工智慧(AI)晶片市場規模正朝1兆美元邁進，輝達(NVDA-US)目前仍占據主導地位，但競爭者正從四面八方逼近。傳統晶片大廠、新創公司、雲端服務巨頭乃至OpenAI、Anthropic等AI實驗室，都在試圖降低對輝達的依賴，瓜分這塊快速膨脹的市場。",
+            "亞馬遜(AMZN-US)執行長賈西(Andy Jassy)日前表示，若將公司旗下晶片部門視為獨立事業，年營收已超過250億美元，且銷售額正以三位數百分比成長。儘管亞馬遜仍是輝達最大客戶之一，卻也已成為全球規模最大的資料中心晶片業者之一。",
+            "輝達周三(26日)美股盤後公布的財報預料將再次展現領先優勢。分析師估計，上季營收年增近一倍至920億美元，甚至超過多數競爭對手全年的營收。然而，輝達高達約75%的利潤率，以及部分搭載其AI晶片的伺服器價格漲幅超過15%，也讓更多業者加速搶進。",
+            "傳統晶片大廠從不同戰線進逼\n\n輝達憑藉原本用於遊戲的繪圖處理器(GPU)，在開發人員發現其適合訓練AI模型後登上半導體業龍頭。ChatGPT於2022年底問世後，GPU需求爆發，更讓傳統競爭對手看到機會。",
+            "全球第二大GPU業者超微(AMD-US)上季資料中心營收成長逾一倍，達67億美元。執行長蘇姿丰預估，AI加速器市場到2030年將擴大至1.4兆美元，但輝達目前仍掌握約90%的市場，超微能取得多少市占仍有待觀察。",
+            "英特爾(INTC-US)推出AI加速器的成效有限，但也受惠於AI資料中心投資熱潮，帶動營收及股價回升。博通(AVGO-US)與邁威爾(MRVL-US)則另闢蹊徑，協助Google等超大規模雲端業者設計客製化晶片。",
+            "中國市場同樣成為競爭戰場。美國出口管制禁止輝達向中國客戶出售最先進產品，反而加快中國發展國產替代方案，包括遭美國列入黑名單的華為，均在快速推進可直接與輝達競爭的產品。",
+            "AI推論市場替新創打開缺口\n\nAI產業正從大量資料訓練模型，逐漸轉向讓模型回應實際需求的「推論」階段。輝達GPU雖是訓練模型的強大工具，但推論工作更加多元，為其他處理器創造切入空間。",
+            "Jon Peddie Research統計，目前約有150家公司開發超過200種AI半導體設計，希望針對不同模型提供速度更快或效率更高的推論晶片。新創公司d-Matrix執行長Sid Sheth指出，AI推論並非一體適用，無法只靠單一晶片以強大運算能力處理所有需求。",
+            "市場也希望AI晶片產業能從輝達一家獨大，轉向寡占格局。輝達高階AI加速器每顆售價約3萬美元，豐厚利潤促使資金大量湧向挑戰者。",
+            "Cerebras今年5月完成半導體業史上最大規模首次公開募股(IPO)，其主打餐盤大小的晶片，宣稱處理AI提示的速度快於輝達，並已與OpenAI及亞馬遜達成合作。Positron、Fractile與Etched等原本名不見經傳的新創公司，估值也隨融資快速攀升。",
+            "不過，晶片設計耗時數年，成本可能高達數億美元，而且鮮少一次就能成功。資金充足不代表能立即轉化為產品，更不代表能撼動輝達已建立的軟硬體生態系。",
+            "雲端巨頭加速打造自研晶片\n\n超大規模雲端服務商正在以晶片供應難以追上的速度擴建資料中心，使尋找輝達替代方案幾乎成為必要選擇，許多業者因而轉向自行設計晶片。",
+            "博通已成為雲端業者開發自研晶片的主要合作夥伴，目前正協助Google與Meta(META-US)等公司設計AI晶片，預估今年相關產品銷售額將達560億美元。這些業者透過特殊應用積體電路(ASIC)，執行原本由輝達GPU負責的部分工作。",
+            "不過，雲端巨頭也不願只依賴博通。Google近期與邁威爾達成合作，共同推進張量處理器(TPU)研發，並將首度在同一年同步推出兩款TPU，其中一款鎖定高速推論市場。Google也開始允許客戶在自家雲端與資料中心以外使用TPU，商業模式變得更接近輝達。",
+            "與此同時，亞馬遜與Google等雲端巨頭已不再只為內部需求開發晶片，也逐步向第三方出售產品。這項轉變來得比市場預期更快，可能進一步侵蝕輝達的市場空間。",
+            "AI實驗室也想掌控整套基礎設施\n\nOpenAI與Anthropic等頂尖AI開發商不只積極建造資料中心，也希望擁有可針對自身需求調整的晶片，全面掌控AI基礎設施。",
+            "Anthropic已透過與Google、亞馬遜和超微簽訂總額達數百億美元的合約，降低對輝達的依賴，同時籌畫自研AI加速器，並曾接洽SK海力士(000660-KS)，討論供應配套記憶體晶片。",
+            "OpenAI則已提出更明確的自研晶片藍圖。公司與博通共同開發代號「Jalapeno」的處理器，預計今年稍晚部署至資料中心，初期專注AI推論，模型訓練仍使用輝達GPU。新版晶片預計2028年推出，此後每年更新，未來也可能開放其他企業使用。",
+            "Meta則簽下幾乎所有主要AI零組件供應商，包括較晚進入市場的高通(QCOM-US)，並規畫多款自研半導體。不過，其自研晶片仍處於早期階段，近月投入輝達產品的支出反而增加。",
+            "面對推論市場競爭，輝達也已展開反擊，去年12月據報斥資200億美元取得推論晶片新創Groq的技術與人才。公司並將晶片架構更新周期縮短至每年一次，同時擴大資料中心散熱、網路及儲存產品布局。",
+            "晶片產能則是另一道護城河。台積電(2330-TW)(TSM-US)主導全球先進晶片製造，堪稱AI處理器競賽的造王者。輝達與台積電關係深厚，供應承諾超過1,000億美元，可提前數季鎖定關鍵產能，龐大規模與採購能力本身已成為競爭優勢。",
+            "輝達今年股價上漲15%，雖落後費城半導體指數的66%，但多數挑戰者距離真正威脅其地位仍十分遙遠。就連積極發展自研晶片的亞馬遜，仍將約四分之一資本支出交給輝達。Positron執行長Mitesh Agrawal直言，在營收至少達到輝達十分之一以前，任何業者都很難自稱是輝達的真正對手。"
+          ],
+          "paras_en": []
+        },
+        {
+          "news_id": "6585657",
+          "title": "比特幣直逼8萬美元！三天狂飆逾20% 加密空頭爆倉40億美元",
+          "title_en": "",
+          "publish_at": 1787584802,
+          "url": "https://news.cnyes.com/news/id/6585657",
+          "paras": [
+            "比特幣與加密貨幣概念股周一(24日)延續漲勢。在市場日益擔心通膨與財政赤字之際，比特幣突破先前盤整區間，投資人開始評估這波反彈是否代表長期低迷走勢迎來轉折。",
+            "比特幣周一上漲2%，逼近80,000美元，來到5月以來未見水準；以太幣同步上漲2%至約2,500美元，創1月以來新高。",
+            "加密貨幣儲備概念股跟隨走高。Strategy(MSTR-US)與Strive(ASST-US)分別上漲2%及4%，持有大量以太幣的BitMine(BMNR-US)和SharpLink Gaming(SBET-US)則分別上漲3%與2%。",
+            "比特幣自去年10月以來長期低迷，如今即將進入傳統上較有利於幣價的季節，市場因此關注本輪漲勢能否成為轉折點。",
+            "BTIG市場技術分析師Jonathan Krinsky指出，比特幣2023年1月也曾在三天內上漲約20%，並突破下降趨勢線，但漲勢隨後消退，幣價一度回測200日移動平均線，並在該處獲得支撐，顯示這次突破仍可能面臨震盪。",
+            "本輪漲勢源於上周總體環境轉變，引發大規模空頭回補。比特幣三天累計上漲逾20%，創2023年以來最大三日漲幅。美國財政部宣布將長天期公債回購規模提高一倍後，美債殖利率一度下降，重新帶動市場對比特幣等風險資產，以及黃金等稀缺資產的需求。",
+            "機構資金也重新進場。比特幣現貨ETF上周吸引19.2億美元資金流入，創去年10月比特幣觸及本輪周期高點以來最大單周流入。同一期間，隨著幣價急升，超過40億美元的加密貨幣空頭部位遭到清算。",
+            "橋水基金創辦人達里歐(Ray Dalio)近日警告，主要經濟體可能在未來數年爆發債務危機，並建議投資人持有「少量」比特幣，也進一步強化市場買盤。"
+          ],
+          "paras_en": []
+        },
         {
           "news_id": "6585656",
           "title": "美加真的撕破臉了！川普揚言加拿大汽車關稅翻倍至50%",
@@ -130,48 +181,6 @@
             "※免責聲明：文中所提的個股、基金、期貨商品內容僅供參考，並非投資建議，投資人應獨立判斷，審慎評估風險，自負盈虧。"
           ],
           "paras_en": []
-        },
-        {
-          "news_id": "6585532",
-          "title": "〈財報前瞻〉邁威爾最大亮點不是營收！全場只盯Google這張大單",
-          "title_en": "",
-          "publish_at": 1787577003,
-          "url": "https://news.cnyes.com/news/id/6585532",
-          "paras": [
-            "晶片設計業者邁威爾科技(Marvell Technology)(MRVL-US)將於周四(27日)美股盤後公布2027會計年度第二季財報。華爾街預料，投資人可能不會過度關注單季營收與獲利，而是將焦點放在財測，以及公司近期與Google母公司Alphabet(GOOGL-US)達成的合作協議。",
-            "邁威爾周一盤前下跌3.7%，報228.50美元，延續上周五收跌5.6%的頹勢。不過，該股上周仍累計上漲6.8%，主因邁威爾宣布向Google發行認股權證，後者可按每股206.58美元的價格，購入最多5,897萬股普通股，對應持股價值約121.9億美元。",
-            "這項認股權證是雙方客製化晶片商業合作的一部分，合作範圍涵蓋Google多項需求強勁的晶片，包括張量處理器(TPU)。",
-            "Benchmark Equity Research分析師Cody Acree周一指出，Google合作案可能成為邁威爾財報會議的最大焦點。相較7月一季的些微業績差異，資料中心營收組合、10月一季財測，以及管理層如何說明與Google的新關係，對股價的影響更為重要。",
-            "Acree認為，邁威爾初期較可能從特定AI推論加速器，以及與TPU相連的記憶體、網路和儲存元件著手，未來則有機會擴大在加速器領域的角色，且不必要求Google取代現有合作夥伴。",
-            "他表示，這項協議大幅擴張邁威爾客製化晶片業務的長期商機，公司未來甚至可能再取得另一款Google TPU的設計訂單。",
-            "不過，邁威爾財報前的股價門檻相當高。該股8月以來已上漲22%，有望寫下2026年6月以來最佳單月表現；今年迄今累計飆升169%，過去12個月漲幅更達214%。",
-            "此外，超微(AMD-US)與英特爾(INTC-US)資料中心業務強勁成長，加上Coherent(COHR-US)及Lumentum(LITE-US)釋出正面財測，也進一步拉高市場對邁威爾的期待。",
-            "Acree仍看好公司有能力達標，重申「買進」評等與275美元目標價，較上周五收盤價237.04美元仍有約16%的上漲空間。"
-          ],
-          "paras_en": []
-        },
-        {
-          "news_id": "6585421",
-          "title": "大摩：油價飆升成美股最大威脅 建議以能源股與優質股避險",
-          "title_en": "Morgan Stanley: Oil Price Surge Is the Greatest Threat to U.S. Stocks, Recommend Hedging with Energy and Quality Stocks",
-          "publish_at": 1787576408,
-          "url": "https://news.cnyes.com/news/id/6585421",
-          "paras": [
-            "摩根士丹利策略師Michael Wilson警告，原油價格再度飆升是目前美國股市面臨的最大風險。",
-            "由於中東衝突再度爆發以及美伊永久和平協議進程延宕，布蘭特原油價格自7月初以來已上漲約30%，達到每桶93美元左右。與此同時，美國30年期公債殖利率上週飆升至近二十年新高，促使財政部增加債務回購。",
-            "Wilson指出，當油價上漲時，股市所受到的打擊，遠大於油價下跌時所獲得的益處，因此穩定的原油價格對市場安全至關重要。他強烈建議投資人利用能源股來對沖投資組合的潛在風險。",
-            "今年以來，埃克森美孚(XOM-US)與雪佛龍(CVX-US)的股價均已累計上漲超過30%，漲幅是標普500指數的一倍以上。若油價持續走高並進一步推升殖利率，聯準會(Fed)主席華許(Kevin Warsh)為將通膨帶回目標值，勢必會被迫採取行動，屆時市場恐在聯準會出手前先經歷一段動盪期。",
-            "除了能源產業，Wilson也重申其對「優質股」的偏好。這些公司具備穩健的獲利、強勁的利潤率與高效的營運能力，正是標普500指數在7月半導體股賣壓中未遭受更重創的原因，目前指數距離歷史高點僅差不到2%。",
-            "Wilson強調，半導體等晶片股短期內難以奪回市場主導地位，這也是他相較於國際股市，更看好美股的主因。"
-          ],
-          "paras_en": [
-            "Morgan Stanley strategist Michael Wilson warned that the recent surge in oil prices presents the greatest risk to the U.S. stock market at present.",
-            "Because the Middle‑East conflict has flared again and the permanent peace process between the U.S. and Iran has been delayed, Brent crude has risen about 30% since early July, reaching roughly $93 a barrel. At the same time, the 30‑year U.S. Treasury yield jumped last week to a near‑20‑year high, prompting the Treasury to increase debt buybacks.",
-            "Wilson noted that when oil prices rise, the damage to the stock market is far greater than the benefit when prices fall, so a stable oil price is critical for market safety. He strongly recommends investors use energy stocks to hedge the potential risk in their portfolios.",
-            "Since the start of the year, Exxon Mobil (XOM‑US) and Chevron (CVX‑US) have each gained more than 30%, a gain more than double the S&P 500’s performance. If oil prices keep climbing and push yields higher, Fed Chair Kevin Warsh will be forced to act to bring inflation back to target, and the market may experience a turbulent period before the Fed steps in.",
-            "In addition to the energy sector, Wilson reiterated his preference for “quality stocks.” These companies have solid earnings, strong profit margins and efficient operations, which is why the S&P 500 has not suffered a deeper blow amid the July semiconductor sell‑off; the index is now less than 2% away from its historical peak.",
-            "Wilson emphasized that semiconductor and other chip stocks are unlikely to regain market leadership in the short term, which is a key reason he is more bullish on U.S. equities than on international markets."
-          ]
         }
       ]
     },
@@ -179,6 +188,39 @@
       "key": "tw_stock",
       "label": "台股焦點",
       "items": [
+        {
+          "news_id": "6585590",
+          "title": "1兆美元AI晶片大戰開打！輝達霸主地位遭挑戰 台積電成勝負關鍵",
+          "title_en": "",
+          "publish_at": 1787586603,
+          "url": "https://news.cnyes.com/news/id/6585590",
+          "paras": [
+            "人工智慧(AI)晶片市場規模正朝1兆美元邁進，輝達(NVDA-US)目前仍占據主導地位，但競爭者正從四面八方逼近。傳統晶片大廠、新創公司、雲端服務巨頭乃至OpenAI、Anthropic等AI實驗室，都在試圖降低對輝達的依賴，瓜分這塊快速膨脹的市場。",
+            "亞馬遜(AMZN-US)執行長賈西(Andy Jassy)日前表示，若將公司旗下晶片部門視為獨立事業，年營收已超過250億美元，且銷售額正以三位數百分比成長。儘管亞馬遜仍是輝達最大客戶之一，卻也已成為全球規模最大的資料中心晶片業者之一。",
+            "輝達周三(26日)美股盤後公布的財報預料將再次展現領先優勢。分析師估計，上季營收年增近一倍至920億美元，甚至超過多數競爭對手全年的營收。然而，輝達高達約75%的利潤率，以及部分搭載其AI晶片的伺服器價格漲幅超過15%，也讓更多業者加速搶進。",
+            "傳統晶片大廠從不同戰線進逼\n\n輝達憑藉原本用於遊戲的繪圖處理器(GPU)，在開發人員發現其適合訓練AI模型後登上半導體業龍頭。ChatGPT於2022年底問世後，GPU需求爆發，更讓傳統競爭對手看到機會。",
+            "全球第二大GPU業者超微(AMD-US)上季資料中心營收成長逾一倍，達67億美元。執行長蘇姿丰預估，AI加速器市場到2030年將擴大至1.4兆美元，但輝達目前仍掌握約90%的市場，超微能取得多少市占仍有待觀察。",
+            "英特爾(INTC-US)推出AI加速器的成效有限，但也受惠於AI資料中心投資熱潮，帶動營收及股價回升。博通(AVGO-US)與邁威爾(MRVL-US)則另闢蹊徑，協助Google等超大規模雲端業者設計客製化晶片。",
+            "中國市場同樣成為競爭戰場。美國出口管制禁止輝達向中國客戶出售最先進產品，反而加快中國發展國產替代方案，包括遭美國列入黑名單的華為，均在快速推進可直接與輝達競爭的產品。",
+            "AI推論市場替新創打開缺口\n\nAI產業正從大量資料訓練模型，逐漸轉向讓模型回應實際需求的「推論」階段。輝達GPU雖是訓練模型的強大工具，但推論工作更加多元，為其他處理器創造切入空間。",
+            "Jon Peddie Research統計，目前約有150家公司開發超過200種AI半導體設計，希望針對不同模型提供速度更快或效率更高的推論晶片。新創公司d-Matrix執行長Sid Sheth指出，AI推論並非一體適用，無法只靠單一晶片以強大運算能力處理所有需求。",
+            "市場也希望AI晶片產業能從輝達一家獨大，轉向寡占格局。輝達高階AI加速器每顆售價約3萬美元，豐厚利潤促使資金大量湧向挑戰者。",
+            "Cerebras今年5月完成半導體業史上最大規模首次公開募股(IPO)，其主打餐盤大小的晶片，宣稱處理AI提示的速度快於輝達，並已與OpenAI及亞馬遜達成合作。Positron、Fractile與Etched等原本名不見經傳的新創公司，估值也隨融資快速攀升。",
+            "不過，晶片設計耗時數年，成本可能高達數億美元，而且鮮少一次就能成功。資金充足不代表能立即轉化為產品，更不代表能撼動輝達已建立的軟硬體生態系。",
+            "雲端巨頭加速打造自研晶片\n\n超大規模雲端服務商正在以晶片供應難以追上的速度擴建資料中心，使尋找輝達替代方案幾乎成為必要選擇，許多業者因而轉向自行設計晶片。",
+            "博通已成為雲端業者開發自研晶片的主要合作夥伴，目前正協助Google與Meta(META-US)等公司設計AI晶片，預估今年相關產品銷售額將達560億美元。這些業者透過特殊應用積體電路(ASIC)，執行原本由輝達GPU負責的部分工作。",
+            "不過，雲端巨頭也不願只依賴博通。Google近期與邁威爾達成合作，共同推進張量處理器(TPU)研發，並將首度在同一年同步推出兩款TPU，其中一款鎖定高速推論市場。Google也開始允許客戶在自家雲端與資料中心以外使用TPU，商業模式變得更接近輝達。",
+            "與此同時，亞馬遜與Google等雲端巨頭已不再只為內部需求開發晶片，也逐步向第三方出售產品。這項轉變來得比市場預期更快，可能進一步侵蝕輝達的市場空間。",
+            "AI實驗室也想掌控整套基礎設施\n\nOpenAI與Anthropic等頂尖AI開發商不只積極建造資料中心，也希望擁有可針對自身需求調整的晶片，全面掌控AI基礎設施。",
+            "Anthropic已透過與Google、亞馬遜和超微簽訂總額達數百億美元的合約，降低對輝達的依賴，同時籌畫自研AI加速器，並曾接洽SK海力士(000660-KS)，討論供應配套記憶體晶片。",
+            "OpenAI則已提出更明確的自研晶片藍圖。公司與博通共同開發代號「Jalapeno」的處理器，預計今年稍晚部署至資料中心，初期專注AI推論，模型訓練仍使用輝達GPU。新版晶片預計2028年推出，此後每年更新，未來也可能開放其他企業使用。",
+            "Meta則簽下幾乎所有主要AI零組件供應商，包括較晚進入市場的高通(QCOM-US)，並規畫多款自研半導體。不過，其自研晶片仍處於早期階段，近月投入輝達產品的支出反而增加。",
+            "面對推論市場競爭，輝達也已展開反擊，去年12月據報斥資200億美元取得推論晶片新創Groq的技術與人才。公司並將晶片架構更新周期縮短至每年一次，同時擴大資料中心散熱、網路及儲存產品布局。",
+            "晶片產能則是另一道護城河。台積電(2330-TW)(TSM-US)主導全球先進晶片製造，堪稱AI處理器競賽的造王者。輝達與台積電關係深厚，供應承諾超過1,000億美元，可提前數季鎖定關鍵產能，龐大規模與採購能力本身已成為競爭優勢。",
+            "輝達今年股價上漲15%，雖落後費城半導體指數的66%，但多數挑戰者距離真正威脅其地位仍十分遙遠。就連積極發展自研晶片的亞馬遜，仍將約四分之一資本支出交給輝達。Positron執行長Mitesh Agrawal直言，在營收至少達到輝達十分之一以前，任何業者都很難自稱是輝達的真正對手。"
+          ],
+          "paras_en": []
+        },
         {
           "news_id": "6585593",
           "title": "32萬股東注意！00940月配息調高至0.055元 創掛牌新高",
@@ -312,31 +354,6 @@
             "媒體關注，富邦人壽上半年投資績效亮眼，似乎大幅超越保險本業表現。對此，執行副總經理董采苓表示，經營保險公司向來以累積 CSM 為主，希望逐年成長，內部設定目標必須年增 10% 以上，以年初開帳數字來推估，今年目標是 4400-4500 億元，而每年CSM攤銷率約落在6%。"
           ],
           "paras_en": []
-        },
-        {
-          "news_id": "6585359",
-          "title": "AI行情進入基本面驗證階段！聯博：同一產業鏈表現可能進一步分化",
-          "title_en": "AI Market Enters Fundamental Validation Phase! Lianbo: Performance Within the Same Supply Chain May Further Diverge",
-          "publish_at": 1787573775,
-          "url": "https://news.cnyes.com/news/id/6585359",
-          "paras": [
-            "台股今(24)日呈現震盪打底走勢，早盤受AI權值股回神帶動一度衝高，隨後高檔獲利賣壓出籠，終場下跌461.97點。上周17日至21日的盤勢，台股全周重挫586.72點、跌幅1.28%，終止連2周上漲，法人表示主要係受全球科技股漲多獲利了結、美聯準會降息時程不確定性及AI個股評價偏高等三大影響。外資上周雖仍買超274.45億元，但資金明顯由前期領漲的電子成長股流向航運、金融等防禦族群，市場投資風格轉變，AI族群內部分化趨勢日益加劇。",
-            "聯博投信副總經理林炳魁表示，上周盤面最大的特徵在於科技與傳產走勢明顯分化。航運類指數單周大漲13.45%，居上市各產業之冠；相較之下，電腦及周邊設備類指數下跌5.97%，跌幅最大。過去1年受惠AI伺服器、高效能運算、ASIC、高階PCB及先進封裝等題材大幅上漲的電子股，近期普遍面臨獲利了結壓力，市場開始重新檢視未來2至3年的成長動能，能否支撐目前較高的評價水準。",
-            "林炳魁指出，科技股近期修正並未改變AI長期發展方向，現階段較偏向高評價個股的重新定價。全球大型科技企業仍持續投入AI基礎建設，雲端服務供應商資本支出維持高檔，AI伺服器、先進製程與高效能運算需求亦具支撐。隨著AI行情逐步由題材驅動進入獲利驗證階段，即使同屬AI供應鏈，企業表現也可能進一步分化，實質訂單、獲利能力、技術門檻與產業地位將成為更重要的選股依據。",
-            "相較之下，傳產族群上周表現相對突出。除了受運價回升及下半年出貨旺季預期帶動的航運類股外，油電燃氣、綠能環保、觀光餐旅、生技醫療及紡織纖維等類股亦上漲；金融股則憑藉獲利與股息相對穩定吸引買盤。整體而言，市場風格由追逐高成長轉向重視評價與收益，產業輪動更加鮮明。",
-            "因應盤勢變化，聯博台灣動能收益50主動式ETF （00404A-TW)  近期亦動態調整投資組合。增加半導體配置，並適度提高電子通路、通信網路及電腦與周邊設備等次產業比重，同時降低金融保險、電子零組件及其他電子等部位。林炳魁表示，隨著科技產業進入基本面驗證階段，配置策略更著重企業成長能見度、技術競爭力與評價合理性。",
-            "值得注意的是，儘管短線買盤偏向航運與金融，00404A仍著眼於中長期基本面。林炳魁指出，在類股輪動加快、個股分化擴大的環境下，主動式ETF可透過研究與選股，彈性調整產業及個股部位，有助降低單純跟隨指數權重可能產生的集中風險，並掌握市場重新定價所帶來的投資機會。",
-            "展望未來1至3個月，林炳魁表示，市場焦點包括全球大型科技公司AI資本支出能否延續高成長、美聯準會降息路徑，以及第4季傳統電子旺季需求表現。雖然短期波動可能延續，但目前較偏向漲多後的整理，基本面尚未出現反轉訊號，台灣在全球AI供應鏈仍扮演關鍵角色，中長期投資機會值得持續關注。"
-          ],
-          "paras_en": [
-            "Taiwan stocks today (the 24th) showed a volatile, bottom‑testing pattern. Early trading was lifted by a rebound in AI‑related heavyweight stocks, pushing the market higher, but profit‑taking at higher levels capped gains and the session closed down 461.97 points. In the previous week (17‑21), the market fell 586.72 points, a 1.28% decline, ending a two‑week rally. Institutional investors said the drop was driven by three main factors: profit‑taking after global tech gains, uncertainty over the Fed’s rate‑cut timeline, and lofty valuations of AI stocks. Although foreign investors still net‑bought NT$27.445 billion last week, funds shifted from previously leading electronic growth stocks to defensive sectors such as shipping and finance, reflecting a change in market style and an intensifying split within the AI segment.",
-            "Lianbo Investment Trust’s deputy general manager Lin Bing‑kui noted that the week’s biggest feature was the clear divergence between technology and traditional industries. The shipping index surged 13.45% for the week, the top performer among all sectors, while the computer and peripheral equipment index fell 5.97%, the steepest decline. Electronic stocks that had surged over the past year on AI‑related themes—servers, high‑performance computing, ASICs, advanced PCBs and packaging—are now facing profit‑taking pressure, prompting the market to reassess growth momentum over the next two to three years and whether it can sustain current high valuations.",
-            "Lin explained that the recent correction in tech stocks does not alter the long‑term AI development trajectory; it mainly reflects a re‑pricing of high‑valuation names. Global tech giants continue to pour money into AI infrastructure, cloud providers keep capex at elevated levels, and demand for AI servers, advanced processes and high‑performance computing remains supportive. As the AI rally shifts from a hype‑driven phase to one of profit validation, even companies within the same AI supply chain may see their performance diverge further, with actual orders, profitability, technological barriers and industry positioning becoming the key stock‑selection criteria.",
-            "In contrast, traditional‑industry stocks performed relatively well last week. Besides shipping stocks, which benefited from rising freight rates and expectations of a strong second‑half shipping season, sectors such as oil & gas, green energy, tourism & hospitality, biotech & medical and textiles also rose; financial stocks attracted buyers with stable earnings and dividends. Overall, market style moved from chasing high growth to emphasizing valuation and yield, making sector rotation more pronounced.",
-            "In response to the market shift, Lianbo’s Taiwan Momentum Yield 50 Active ETF (00404A‑TW) has recently rebalanced its portfolio. It increased exposure to semiconductors and modestly raised allocations to electronic distribution, communications networks, and computer‑peripheral sub‑sectors, while reducing holdings in finance & insurance, electronic components and other electronics. Lin said that as the tech sector enters a fundamentals‑validation stage, the allocation strategy now focuses more on corporate growth visibility, technological competitiveness and reasonable valuations.",
-            "It is worth noting that despite short‑term buying favoring shipping and finance, 00404A remains focused on the medium‑ to long‑term fundamentals. Lin pointed out that in an environment of accelerating sector rotation and widening stock‑level divergence, an active ETF can use research and stock‑picking to flexibly adjust sector and stock positions, helping to lower the concentration risk of simply tracking index weights and to capture investment opportunities arising from market re‑pricing.",
-            "Looking ahead 1‑3 months, Lin said market attention will center on whether global tech giants can sustain high AI capex growth, the Fed’s rate‑cut path, and demand performance during the fourth‑quarter traditional electronics peak season. While short‑term volatility may persist, the market is currently in a post‑rally consolidation phase with no fundamental reversal signals. Taiwan continues to play a key role in the global AI supply chain, and medium‑ to long‑term investment opportunities merit ongoing attention."
-          ]
         }
       ]
     },
@@ -344,6 +361,57 @@
       "key": "us_stock",
       "label": "美股焦點",
       "items": [
+        {
+          "news_id": "6585590",
+          "title": "1兆美元AI晶片大戰開打！輝達霸主地位遭挑戰 台積電成勝負關鍵",
+          "title_en": "",
+          "publish_at": 1787586603,
+          "url": "https://news.cnyes.com/news/id/6585590",
+          "paras": [
+            "人工智慧(AI)晶片市場規模正朝1兆美元邁進，輝達(NVDA-US)目前仍占據主導地位，但競爭者正從四面八方逼近。傳統晶片大廠、新創公司、雲端服務巨頭乃至OpenAI、Anthropic等AI實驗室，都在試圖降低對輝達的依賴，瓜分這塊快速膨脹的市場。",
+            "亞馬遜(AMZN-US)執行長賈西(Andy Jassy)日前表示，若將公司旗下晶片部門視為獨立事業，年營收已超過250億美元，且銷售額正以三位數百分比成長。儘管亞馬遜仍是輝達最大客戶之一，卻也已成為全球規模最大的資料中心晶片業者之一。",
+            "輝達周三(26日)美股盤後公布的財報預料將再次展現領先優勢。分析師估計，上季營收年增近一倍至920億美元，甚至超過多數競爭對手全年的營收。然而，輝達高達約75%的利潤率，以及部分搭載其AI晶片的伺服器價格漲幅超過15%，也讓更多業者加速搶進。",
+            "傳統晶片大廠從不同戰線進逼\n\n輝達憑藉原本用於遊戲的繪圖處理器(GPU)，在開發人員發現其適合訓練AI模型後登上半導體業龍頭。ChatGPT於2022年底問世後，GPU需求爆發，更讓傳統競爭對手看到機會。",
+            "全球第二大GPU業者超微(AMD-US)上季資料中心營收成長逾一倍，達67億美元。執行長蘇姿丰預估，AI加速器市場到2030年將擴大至1.4兆美元，但輝達目前仍掌握約90%的市場，超微能取得多少市占仍有待觀察。",
+            "英特爾(INTC-US)推出AI加速器的成效有限，但也受惠於AI資料中心投資熱潮，帶動營收及股價回升。博通(AVGO-US)與邁威爾(MRVL-US)則另闢蹊徑，協助Google等超大規模雲端業者設計客製化晶片。",
+            "中國市場同樣成為競爭戰場。美國出口管制禁止輝達向中國客戶出售最先進產品，反而加快中國發展國產替代方案，包括遭美國列入黑名單的華為，均在快速推進可直接與輝達競爭的產品。",
+            "AI推論市場替新創打開缺口\n\nAI產業正從大量資料訓練模型，逐漸轉向讓模型回應實際需求的「推論」階段。輝達GPU雖是訓練模型的強大工具，但推論工作更加多元，為其他處理器創造切入空間。",
+            "Jon Peddie Research統計，目前約有150家公司開發超過200種AI半導體設計，希望針對不同模型提供速度更快或效率更高的推論晶片。新創公司d-Matrix執行長Sid Sheth指出，AI推論並非一體適用，無法只靠單一晶片以強大運算能力處理所有需求。",
+            "市場也希望AI晶片產業能從輝達一家獨大，轉向寡占格局。輝達高階AI加速器每顆售價約3萬美元，豐厚利潤促使資金大量湧向挑戰者。",
+            "Cerebras今年5月完成半導體業史上最大規模首次公開募股(IPO)，其主打餐盤大小的晶片，宣稱處理AI提示的速度快於輝達，並已與OpenAI及亞馬遜達成合作。Positron、Fractile與Etched等原本名不見經傳的新創公司，估值也隨融資快速攀升。",
+            "不過，晶片設計耗時數年，成本可能高達數億美元，而且鮮少一次就能成功。資金充足不代表能立即轉化為產品，更不代表能撼動輝達已建立的軟硬體生態系。",
+            "雲端巨頭加速打造自研晶片\n\n超大規模雲端服務商正在以晶片供應難以追上的速度擴建資料中心，使尋找輝達替代方案幾乎成為必要選擇，許多業者因而轉向自行設計晶片。",
+            "博通已成為雲端業者開發自研晶片的主要合作夥伴，目前正協助Google與Meta(META-US)等公司設計AI晶片，預估今年相關產品銷售額將達560億美元。這些業者透過特殊應用積體電路(ASIC)，執行原本由輝達GPU負責的部分工作。",
+            "不過，雲端巨頭也不願只依賴博通。Google近期與邁威爾達成合作，共同推進張量處理器(TPU)研發，並將首度在同一年同步推出兩款TPU，其中一款鎖定高速推論市場。Google也開始允許客戶在自家雲端與資料中心以外使用TPU，商業模式變得更接近輝達。",
+            "與此同時，亞馬遜與Google等雲端巨頭已不再只為內部需求開發晶片，也逐步向第三方出售產品。這項轉變來得比市場預期更快，可能進一步侵蝕輝達的市場空間。",
+            "AI實驗室也想掌控整套基礎設施\n\nOpenAI與Anthropic等頂尖AI開發商不只積極建造資料中心，也希望擁有可針對自身需求調整的晶片，全面掌控AI基礎設施。",
+            "Anthropic已透過與Google、亞馬遜和超微簽訂總額達數百億美元的合約，降低對輝達的依賴，同時籌畫自研AI加速器，並曾接洽SK海力士(000660-KS)，討論供應配套記憶體晶片。",
+            "OpenAI則已提出更明確的自研晶片藍圖。公司與博通共同開發代號「Jalapeno」的處理器，預計今年稍晚部署至資料中心，初期專注AI推論，模型訓練仍使用輝達GPU。新版晶片預計2028年推出，此後每年更新，未來也可能開放其他企業使用。",
+            "Meta則簽下幾乎所有主要AI零組件供應商，包括較晚進入市場的高通(QCOM-US)，並規畫多款自研半導體。不過，其自研晶片仍處於早期階段，近月投入輝達產品的支出反而增加。",
+            "面對推論市場競爭，輝達也已展開反擊，去年12月據報斥資200億美元取得推論晶片新創Groq的技術與人才。公司並將晶片架構更新周期縮短至每年一次，同時擴大資料中心散熱、網路及儲存產品布局。",
+            "晶片產能則是另一道護城河。台積電(2330-TW)(TSM-US)主導全球先進晶片製造，堪稱AI處理器競賽的造王者。輝達與台積電關係深厚，供應承諾超過1,000億美元，可提前數季鎖定關鍵產能，龐大規模與採購能力本身已成為競爭優勢。",
+            "輝達今年股價上漲15%，雖落後費城半導體指數的66%，但多數挑戰者距離真正威脅其地位仍十分遙遠。就連積極發展自研晶片的亞馬遜，仍將約四分之一資本支出交給輝達。Positron執行長Mitesh Agrawal直言，在營收至少達到輝達十分之一以前，任何業者都很難自稱是輝達的真正對手。"
+          ],
+          "paras_en": []
+        },
+        {
+          "news_id": "6585657",
+          "title": "比特幣直逼8萬美元！三天狂飆逾20% 加密空頭爆倉40億美元",
+          "title_en": "",
+          "publish_at": 1787584802,
+          "url": "https://news.cnyes.com/news/id/6585657",
+          "paras": [
+            "比特幣與加密貨幣概念股周一(24日)延續漲勢。在市場日益擔心通膨與財政赤字之際，比特幣突破先前盤整區間，投資人開始評估這波反彈是否代表長期低迷走勢迎來轉折。",
+            "比特幣周一上漲2%，逼近80,000美元，來到5月以來未見水準；以太幣同步上漲2%至約2,500美元，創1月以來新高。",
+            "加密貨幣儲備概念股跟隨走高。Strategy(MSTR-US)與Strive(ASST-US)分別上漲2%及4%，持有大量以太幣的BitMine(BMNR-US)和SharpLink Gaming(SBET-US)則分別上漲3%與2%。",
+            "比特幣自去年10月以來長期低迷，如今即將進入傳統上較有利於幣價的季節，市場因此關注本輪漲勢能否成為轉折點。",
+            "BTIG市場技術分析師Jonathan Krinsky指出，比特幣2023年1月也曾在三天內上漲約20%，並突破下降趨勢線，但漲勢隨後消退，幣價一度回測200日移動平均線，並在該處獲得支撐，顯示這次突破仍可能面臨震盪。",
+            "本輪漲勢源於上周總體環境轉變，引發大規模空頭回補。比特幣三天累計上漲逾20%，創2023年以來最大三日漲幅。美國財政部宣布將長天期公債回購規模提高一倍後，美債殖利率一度下降，重新帶動市場對比特幣等風險資產，以及黃金等稀缺資產的需求。",
+            "機構資金也重新進場。比特幣現貨ETF上周吸引19.2億美元資金流入，創去年10月比特幣觸及本輪周期高點以來最大單周流入。同一期間，隨著幣價急升，超過40億美元的加密貨幣空頭部位遭到清算。",
+            "橋水基金創辦人達里歐(Ray Dalio)近日警告，主要經濟體可能在未來數年爆發債務危機，並建議投資人持有「少量」比特幣，也進一步強化市場買盤。"
+          ],
+          "paras_en": []
+        },
         {
           "news_id": "6585592",
           "title": "阿里巴巴高層出手 蔡崇信、吳泳銘增持1.2億港元股票",
@@ -473,56 +541,6 @@
             "前國際貨幣基金(IMF)首席經濟學家奧布斯菲爾德(Maurice Obstfeld)表示，華許正處於政治與債市高度緊繃的環境，本周演說將是他澄清政策思路的絕佳機會。"
           ],
           "paras_en": []
-        },
-        {
-          "news_id": "6585493",
-          "title": "貝森特還有近兆美元銀彈！美債回購火力可能超乎預期",
-          "title_en": "Bessent Holds Near-Terra-Dollar Silver Bullet! Treasury Repo Power May Exceed Expectations",
-          "publish_at": 1787571758,
-          "url": "https://news.cnyes.com/news/id/6585493",
-          "paras": [
-            "《CNBC》周一(24日)報導，美國財政部可能動用規模接近1兆美元的財政部一般帳戶(Treasury General Account, TGA)，為近期宣布擴大公債回購的計畫提供資金，藉此增加干預長期公債殖利率的籌碼。",
-            "兩名財政部高階官員透露，TGA資金已被視為可用選項，但尚未決定實際動用金額，也未說明何時可能公布相關安排。",
-            "財政部上周意外宣布，將長天期非指標公債(off-the-run securities)的單次回購規模，從20億美元提高一倍至至少40億美元。美國財政部長貝森特(Scott Bessent)先前表示，實際回購金額甚至可能超過新的最低門檻。",
-            "市場原先普遍推測，財政部將透過增發短期國庫券籌措回購資金。官員並未排除這項做法，貝森特也將相關操作稱為「財政部扭轉操作」(Treasury Twist)，意指買進長期公債、同時透過短期債券籌資。",
-            "近兆美元TGA成為潛在銀彈\n\n然而，財政部先前並未交代回購資金來源，加上市場分析師質疑操作效果及財政部資源有限，美債在短暫上漲後再度回落，殖利率隨之走高。若動用TGA，可能改變市場對財政部火力不足的看法。",
-            "TGA相當於美國政府設於聯準會(Fed)的支票帳戶，資金主要來自既有稅收，目前規模約9,500億美元。相較之下，拜登政府時期設定的目標水準約為5,500億至6,000億美元。",
-            "官員未暗示TGA資金會被用於回購計畫以外的用途，但明確表示，這筆資金可支應先前宣布的非指標公債回購。",
-            "若財政部動用TGA後仍希望將餘額維持在接近1兆美元，未來就必須額外發債補回資金。不過，短期內降低帳戶餘額似乎不會帶來立即風險。最新估計顯示，美國最快要到明年冬季、甚至隔年初春才會再度觸及債務上限，財政部仍有時間重新累積現金。",
-            "財政部強調不需聯準會協助\n\n即使只動用一小部分TGA，或僅讓市場確認財政部願意以這項資金買債，也可能對長期殖利率產生影響，同時降低外界對聯準會可能被要求協助財政部的疑慮。聯準會雖負責保管TGA，但並未將其視為貨幣政策工具。",
-            "針對外界批評財政部突襲宣布擴大回購，違背公債發行「規律且可預測」的傳統，官員則強調，官方標售時程並未改變，相關計畫也在9月9日首次操作前近三周公布，市場仍有充分準備時間，因此現在判斷成效仍言之過早。",
-            "貝森特表示，財政部希望市場聚焦基本面，而非在交易清淡期間追逐新聞標題，目標是維持市場平衡。他並預期，待法院要求退還的關稅收入由新關稅取代後，財政赤字將出現改善，高階官員近期也將開會研擬強化財政狀況的方案。"
-          ],
-          "paras_en": [
-            "CNBC reported on Monday (24) that the U.S. Treasury may tap a Treasury General Account (TGA) close to $1 trillion to fund a recently announced expansion of Treasury bond repurchase plans, thereby increasing its leverage to influence long‑term Treasury yields.",
-            "Two senior Treasury officials said the TGA funds are considered an available option, but no decision has been made on the actual amount to be used, nor when any related arrangements might be announced.",
-            "Last week, the Treasury unexpectedly announced that the single‑transaction repo size for long‑term off‑the‑run securities would be doubled from $2 billion to at least $4 billion. Treasury Secretary Scott Bessent had previously indicated that the actual repo amount could even exceed the new minimum threshold.",
-            "Market participants had largely speculated that the Treasury would raise repo funds by issuing short‑term Treasury bills. Officials did not rule out that approach, and Bessent referred to the operation as a “Treasury Twist,” meaning buying long‑term bonds while raising funds through short‑term securities.",
-            "The near‑trillion‑dollar TGA becomes a potential silver bullet. However, the Treasury had not disclosed the source of the repo funds, and market analysts questioned the operation’s effectiveness and the Treasury’s limited resources. U.S. Treasury yields rose briefly before falling again, and yields subsequently climbed. Using the TGA could change market perceptions of the Treasury’s limited firepower.",
-            "The TGA is essentially a U.S. government checking account at the Federal Reserve, with funds primarily coming from existing tax receipts, currently about $950 billion. By contrast, the target level set during the Biden administration was roughly $550–$600 billion.",
-            "Officials did not suggest that TGA funds would be used for purposes other than the repo plan, but they did state that the funds could cover the previously announced off‑the‑run repo program.",
-            "If the Treasury uses the TGA and still wants to keep the balance near $1 trillion, it would need to issue additional debt to replenish the account in the future. However, reducing the account balance in the short term does not appear to pose immediate risk. The latest estimates show that the U.S. will not hit the debt ceiling again until next winter, or even early next spring, giving the Treasury time to rebuild cash reserves.",
-            "The Treasury emphasized that it does not need Federal Reserve assistance. Even if only a small portion of the TGA is used, or if the market simply confirms the Treasury’s willingness to buy bonds with this money, it could affect long‑term yields and reduce concerns that the Fed might be asked to help the Treasury. The Fed holds the TGA but does not treat it as a monetary‑policy tool.",
-            "In response to criticism that the Treasury’s surprise announcement of an expanded repo program violates the traditional “regular and predictable” issuance of Treasury securities, officials stressed that the official sale schedule had not changed, and the plan was announced roughly three weeks before the first operation on September 9, giving the market ample preparation time. It is therefore too early to judge the effectiveness.",
-            "Bessent said the Treasury wants the market to focus on fundamentals rather than chase headlines during a quiet trading period, aiming to maintain market balance. He also expects that once tariff revenues required to be returned are replaced by new tariffs, the fiscal deficit will improve, and senior officials will soon meet to devise plans to strengthen the fiscal position."
-          ]
-        },
-        {
-          "news_id": "6585413",
-          "title": "因車門把手安全隱憂 中國祭近430萬輛電動車召回 相關股價集體重挫",
-          "title_en": "",
-          "publish_at": 1787571604,
-          "url": "https://news.cnyes.com/news/id/6585413",
-          "paras": [
-            "特斯拉(TSLA-US)及另外八家汽車製造商近日宣布，因電子隱藏式車門把手在緊急狀況下可能難以開啟的安全隱憂，將在中國召回共約430萬輛汽車，寫下中國汽車史上最大規模的召回紀錄。此一安全風暴隨即衝擊資本市場，引發周一中國電動車概念股全線重挫。",
-            "在個股表現方面，小米集團(01810-HK)股價領跌約4%，理想汽車(02015-HK)下跌3%，小鵬汽車(09868-HK)跌2.66%，零跑汽車(09863-HK)與吉利汽車(00175-HK)分別下跌1.7%及1.1%，蔚來與比亞迪也分別跌約1%至2%。特斯拉股價在美股開盤前也受到市場高度關注。",
-            "本次召回的核心在於近年電動車廣泛採用的「電子隱藏式車門把手」。監管機構指出，當車輛在碰撞事故中失去電力時，若缺乏明顯且易操作的機械釋放裝置，可能導致車內乘客受困，外部救援人員也難以破門。先前，中國官媒曾報導指出，有小米SU7車主在車禍起火後，因路人無法從外部合力開門而遺憾身亡。",
-            "在召回規模上，特斯拉因在中國銷量龐大，召回數量高達298萬輛，涵蓋進口及國產的Model 3、Model Y、Model S與Model X。特斯拉的補救措施包括加貼警告標籤，並透過OTA遠端更新，在車輛發生嚴重碰撞後自動降低車窗以利逃生。",
-            "此外，小米、零跑、小鵬及吉利也宣布了各自史上最大規模的召回計畫，其中小米召回約39萬輛，零跑約37.1萬輛，小鵬約26.4萬輛。",
-            "分析指出，由於多數車商可透過黏貼警示貼紙與低成本的OTA遠端升級解決，直接的財務衝擊預期相對有限。然而，隨著中國官方加強對高速發展之電動車產業的監管，北京已宣布將於2027年起全面禁用隱藏式車門把手，成為全球首個明令禁止這一設計的國家。",
-            "美國及歐洲監管機構目前也對此類車門安全進行審查，未來恐將對全球車輛設計規範帶來長遠影響。"
-          ],
-          "paras_en": []
         }
       ]
     },
@@ -530,6 +548,57 @@
       "key": "wd_stock",
       "label": "國際財經",
       "items": [
+        {
+          "news_id": "6585590",
+          "title": "1兆美元AI晶片大戰開打！輝達霸主地位遭挑戰 台積電成勝負關鍵",
+          "title_en": "",
+          "publish_at": 1787586603,
+          "url": "https://news.cnyes.com/news/id/6585590",
+          "paras": [
+            "人工智慧(AI)晶片市場規模正朝1兆美元邁進，輝達(NVDA-US)目前仍占據主導地位，但競爭者正從四面八方逼近。傳統晶片大廠、新創公司、雲端服務巨頭乃至OpenAI、Anthropic等AI實驗室，都在試圖降低對輝達的依賴，瓜分這塊快速膨脹的市場。",
+            "亞馬遜(AMZN-US)執行長賈西(Andy Jassy)日前表示，若將公司旗下晶片部門視為獨立事業，年營收已超過250億美元，且銷售額正以三位數百分比成長。儘管亞馬遜仍是輝達最大客戶之一，卻也已成為全球規模最大的資料中心晶片業者之一。",
+            "輝達周三(26日)美股盤後公布的財報預料將再次展現領先優勢。分析師估計，上季營收年增近一倍至920億美元，甚至超過多數競爭對手全年的營收。然而，輝達高達約75%的利潤率，以及部分搭載其AI晶片的伺服器價格漲幅超過15%，也讓更多業者加速搶進。",
+            "傳統晶片大廠從不同戰線進逼\n\n輝達憑藉原本用於遊戲的繪圖處理器(GPU)，在開發人員發現其適合訓練AI模型後登上半導體業龍頭。ChatGPT於2022年底問世後，GPU需求爆發，更讓傳統競爭對手看到機會。",
+            "全球第二大GPU業者超微(AMD-US)上季資料中心營收成長逾一倍，達67億美元。執行長蘇姿丰預估，AI加速器市場到2030年將擴大至1.4兆美元，但輝達目前仍掌握約90%的市場，超微能取得多少市占仍有待觀察。",
+            "英特爾(INTC-US)推出AI加速器的成效有限，但也受惠於AI資料中心投資熱潮，帶動營收及股價回升。博通(AVGO-US)與邁威爾(MRVL-US)則另闢蹊徑，協助Google等超大規模雲端業者設計客製化晶片。",
+            "中國市場同樣成為競爭戰場。美國出口管制禁止輝達向中國客戶出售最先進產品，反而加快中國發展國產替代方案，包括遭美國列入黑名單的華為，均在快速推進可直接與輝達競爭的產品。",
+            "AI推論市場替新創打開缺口\n\nAI產業正從大量資料訓練模型，逐漸轉向讓模型回應實際需求的「推論」階段。輝達GPU雖是訓練模型的強大工具，但推論工作更加多元，為其他處理器創造切入空間。",
+            "Jon Peddie Research統計，目前約有150家公司開發超過200種AI半導體設計，希望針對不同模型提供速度更快或效率更高的推論晶片。新創公司d-Matrix執行長Sid Sheth指出，AI推論並非一體適用，無法只靠單一晶片以強大運算能力處理所有需求。",
+            "市場也希望AI晶片產業能從輝達一家獨大，轉向寡占格局。輝達高階AI加速器每顆售價約3萬美元，豐厚利潤促使資金大量湧向挑戰者。",
+            "Cerebras今年5月完成半導體業史上最大規模首次公開募股(IPO)，其主打餐盤大小的晶片，宣稱處理AI提示的速度快於輝達，並已與OpenAI及亞馬遜達成合作。Positron、Fractile與Etched等原本名不見經傳的新創公司，估值也隨融資快速攀升。",
+            "不過，晶片設計耗時數年，成本可能高達數億美元，而且鮮少一次就能成功。資金充足不代表能立即轉化為產品，更不代表能撼動輝達已建立的軟硬體生態系。",
+            "雲端巨頭加速打造自研晶片\n\n超大規模雲端服務商正在以晶片供應難以追上的速度擴建資料中心，使尋找輝達替代方案幾乎成為必要選擇，許多業者因而轉向自行設計晶片。",
+            "博通已成為雲端業者開發自研晶片的主要合作夥伴，目前正協助Google與Meta(META-US)等公司設計AI晶片，預估今年相關產品銷售額將達560億美元。這些業者透過特殊應用積體電路(ASIC)，執行原本由輝達GPU負責的部分工作。",
+            "不過，雲端巨頭也不願只依賴博通。Google近期與邁威爾達成合作，共同推進張量處理器(TPU)研發，並將首度在同一年同步推出兩款TPU，其中一款鎖定高速推論市場。Google也開始允許客戶在自家雲端與資料中心以外使用TPU，商業模式變得更接近輝達。",
+            "與此同時，亞馬遜與Google等雲端巨頭已不再只為內部需求開發晶片，也逐步向第三方出售產品。這項轉變來得比市場預期更快，可能進一步侵蝕輝達的市場空間。",
+            "AI實驗室也想掌控整套基礎設施\n\nOpenAI與Anthropic等頂尖AI開發商不只積極建造資料中心，也希望擁有可針對自身需求調整的晶片，全面掌控AI基礎設施。",
+            "Anthropic已透過與Google、亞馬遜和超微簽訂總額達數百億美元的合約，降低對輝達的依賴，同時籌畫自研AI加速器，並曾接洽SK海力士(000660-KS)，討論供應配套記憶體晶片。",
+            "OpenAI則已提出更明確的自研晶片藍圖。公司與博通共同開發代號「Jalapeno」的處理器，預計今年稍晚部署至資料中心，初期專注AI推論，模型訓練仍使用輝達GPU。新版晶片預計2028年推出，此後每年更新，未來也可能開放其他企業使用。",
+            "Meta則簽下幾乎所有主要AI零組件供應商，包括較晚進入市場的高通(QCOM-US)，並規畫多款自研半導體。不過，其自研晶片仍處於早期階段，近月投入輝達產品的支出反而增加。",
+            "面對推論市場競爭，輝達也已展開反擊，去年12月據報斥資200億美元取得推論晶片新創Groq的技術與人才。公司並將晶片架構更新周期縮短至每年一次，同時擴大資料中心散熱、網路及儲存產品布局。",
+            "晶片產能則是另一道護城河。台積電(2330-TW)(TSM-US)主導全球先進晶片製造，堪稱AI處理器競賽的造王者。輝達與台積電關係深厚，供應承諾超過1,000億美元，可提前數季鎖定關鍵產能，龐大規模與採購能力本身已成為競爭優勢。",
+            "輝達今年股價上漲15%，雖落後費城半導體指數的66%，但多數挑戰者距離真正威脅其地位仍十分遙遠。就連積極發展自研晶片的亞馬遜，仍將約四分之一資本支出交給輝達。Positron執行長Mitesh Agrawal直言，在營收至少達到輝達十分之一以前，任何業者都很難自稱是輝達的真正對手。"
+          ],
+          "paras_en": []
+        },
+        {
+          "news_id": "6585657",
+          "title": "比特幣直逼8萬美元！三天狂飆逾20% 加密空頭爆倉40億美元",
+          "title_en": "",
+          "publish_at": 1787584802,
+          "url": "https://news.cnyes.com/news/id/6585657",
+          "paras": [
+            "比特幣與加密貨幣概念股周一(24日)延續漲勢。在市場日益擔心通膨與財政赤字之際，比特幣突破先前盤整區間，投資人開始評估這波反彈是否代表長期低迷走勢迎來轉折。",
+            "比特幣周一上漲2%，逼近80,000美元，來到5月以來未見水準；以太幣同步上漲2%至約2,500美元，創1月以來新高。",
+            "加密貨幣儲備概念股跟隨走高。Strategy(MSTR-US)與Strive(ASST-US)分別上漲2%及4%，持有大量以太幣的BitMine(BMNR-US)和SharpLink Gaming(SBET-US)則分別上漲3%與2%。",
+            "比特幣自去年10月以來長期低迷，如今即將進入傳統上較有利於幣價的季節，市場因此關注本輪漲勢能否成為轉折點。",
+            "BTIG市場技術分析師Jonathan Krinsky指出，比特幣2023年1月也曾在三天內上漲約20%，並突破下降趨勢線，但漲勢隨後消退，幣價一度回測200日移動平均線，並在該處獲得支撐，顯示這次突破仍可能面臨震盪。",
+            "本輪漲勢源於上周總體環境轉變，引發大規模空頭回補。比特幣三天累計上漲逾20%，創2023年以來最大三日漲幅。美國財政部宣布將長天期公債回購規模提高一倍後，美債殖利率一度下降，重新帶動市場對比特幣等風險資產，以及黃金等稀缺資產的需求。",
+            "機構資金也重新進場。比特幣現貨ETF上周吸引19.2億美元資金流入，創去年10月比特幣觸及本輪周期高點以來最大單周流入。同一期間，隨著幣價急升，超過40億美元的加密貨幣空頭部位遭到清算。",
+            "橋水基金創辦人達里歐(Ray Dalio)近日警告，主要經濟體可能在未來數年爆發債務危機，並建議投資人持有「少量」比特幣，也進一步強化市場買盤。"
+          ],
+          "paras_en": []
+        },
         {
           "news_id": "6585656",
           "title": "美加真的撕破臉了！川普揚言加拿大汽車關稅翻倍至50%",
@@ -583,7 +652,7 @@
         {
           "news_id": "6585645",
           "title": "鉅亨速報 - Factset 最新調查：Coinbase Global Inc - Class ACOIN-US的目標價調升至199元，幅度約3.92%",
-          "title_en": "",
+          "title_en": "Juheng Flash – FactSet’s Latest Survey: Coinbase Global Inc. Class A (COIN‑US) Target Price Raised to 199, About 3.92%",
           "publish_at": 1787580931,
           "url": "https://news.cnyes.com/news/id/6585645",
           "paras": [
@@ -592,7 +661,12 @@
             "Coinbase Global Inc - Class A今(24日)收盤價為186.835元。近5日股價上漲3.92%，標普指數下跌1.43%股價漲幅表現優於大盤。",
             "資料來源：Factset，數據僅供參考，不作為投資建議。"
           ],
-          "paras_en": []
+          "paras_en": [
+            "According to FactSet’s latest survey of 30 analysts covering Coinbase Global Inc. Class A (COIN‑US), the median target price was increased from 191.5 to 199, a rise of 3.92%. The highest estimate is 330 and the lowest is 85.",
+            "Overall ratings – a total of 39 analysts rated Coinbase Global Inc. Class A: 24 are bullish, 11 are neutral, and 4 are bearish.",
+            "Coinbase Global Inc. Class A closed at 186.835 on the 24th. Over the past five trading days the stock gained 3.92% while the S&P 500 fell 1.43%, indicating the stock outperformed the broader market.",
+            "Source: FactSet. Data are for reference only and do not constitute investment advice."
+          ]
         },
         {
           "news_id": "6585644",
@@ -645,44 +719,6 @@
             "近 1 週：-15.75%    近 1 月：-5.73%    近 3 月：-30.93%    近 6 月：+8.59%    今年以來：+55.66%"
           ],
           "paras_en": []
-        },
-        {
-          "news_id": "6585641",
-          "title": "盤中速報 - 英特爾(INTC-US)大跌5.04%，報85.52美元",
-          "title_en": "Intraday Flash - Intel (INTC-US) Plunges 5.04% to $85.52",
-          "publish_at": 1787580434,
-          "url": "https://news.cnyes.com/news/id/6585641",
-          "paras": [
-            "英特爾(INTC-US)截至台北時間24日21:52股價下跌4.54美元，報85.52美元，跌幅5.04%，成交量17,628,165（股），盤中最高價88.91美元、最低價85.47美元。",
-            "美股指數盤中表現",
-            "道瓊指數：+0.32%S&P 500指數：-0.29%NASDAQ指數：-0.96%費城半導體指數：-3.87%英特爾(INTC-US)歷史漲跌幅",
-            "近 1 週：-12.13%    近 1 月：-10.14%    近 3 月：-24.84%    近 6 月：+106.44%    今年以來：+144.09%"
-          ],
-          "paras_en": [
-            "As of 21:52 Taipei Time on the 24th, Intel (INTC-US) shares fell by $4.54 to $85.52, down 5.04%, with a trading volume of 17,628,165 shares. The intraday high was $88.91 and the low was $85.47.",
-            "Intraday Performance of U.S. Stock Indices",
-            "Dow Jones Index: +0.32% S&P 500 Index: -0.29% NASDAQ Index: -0.96% Philadelphia Semiconductor Index: -3.87% Intel (INTC-US) Historical Price Changes",
-            "Past 1 Week: -12.13%    Past 1 Month: -10.14%    Past 3 Months: -24.84%    Past 6 Months: +106.44%    Year-to-Date: +144.09%"
-          ]
-        },
-        {
-          "news_id": "6585639",
-          "title": "盤中速報 - 英特格(ENTG-US)大跌5.1%，報136.16美元",
-          "title_en": "Intraday Update - Entarge (ENTG-US) drops 5.1% to $136.16",
-          "publish_at": 1787580288,
-          "url": "https://news.cnyes.com/news/id/6585639",
-          "paras": [
-            "英特格(ENTG-US)截至台北時間24日21:49股價下跌7.33美元，報136.16美元，跌幅5.1%，成交量236,615（股），盤中最高價139.75美元、最低價136.33美元。",
-            "美股指數盤中表現",
-            "道瓊指數：+0.35%S&P 500指數：-0.28%NASDAQ指數：-0.9%費城半導體指數：-3.53%英特格(ENTG-US)歷史漲跌幅",
-            "近 1 週：-11.19%    近 1 月：+6.18%    近 3 月：+6.19%    近 6 月：+5.31%    今年以來：+70.52%"
-          ],
-          "paras_en": [
-            "Entarge (ENTG-US) was down $7.33 at $136.16 as of 21:49 Taipei time on the 24th, a decline of 5.1%, with a volume of 236,615 shares. The intraday high was $139.75 and the low was $136.33.",
-            "U.S. stock index performance intraday",
-            "Dow Jones Index: +0.35% S&P 500 Index: -0.28% NASDAQ Index: -0.9% Philadelphia Semiconductor Index: -3.53% Entarge (ENTG-US) historical price change",
-            "1‑week: -11.19% 1‑month: +6.18% 3‑month: +6.19% 6‑month: +5.31% Year‑to‑date: +70.52%"
-          ]
         }
       ]
     },
