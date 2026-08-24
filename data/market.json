@@ -40,43 +40,43 @@
     {
       "name": "Euro Stoxx 50",
       "name_zh": null,
-      "close": 6462.22021484375,
-      "daily_pct": 0.63,
+      "close": 6453.330078125,
+      "daily_pct": -0.14,
       "mtd_pct": 1.64,
       "ytd_pct": 11.49,
-      "closing_date": "2026-08-21"
+      "closing_date": "2026-08-24"
     },
     {
       "name": "DAX",
       "name_zh": null,
-      "close": 26136.560546875,
-      "daily_pct": 0.59,
+      "close": 26118.990234375,
+      "daily_pct": -0.07,
       "mtd_pct": 1.98,
       "ytd_pct": 6.72,
-      "closing_date": "2026-08-21"
+      "closing_date": "2026-08-24"
     },
     {
       "name": "FTSE 100",
       "name_zh": null,
-      "close": 10816.599609375,
-      "daily_pct": 0.64,
+      "close": 10857.8896484375,
+      "daily_pct": 0.38,
       "mtd_pct": -0.47,
       "ytd_pct": 8.91,
-      "closing_date": "2026-08-21"
+      "closing_date": "2026-08-24"
     },
     {
       "name": "CAC 40",
       "name_zh": null,
-      "close": 8484.4296875,
-      "daily_pct": 0.37,
+      "close": 8464.75,
+      "daily_pct": -0.23,
       "mtd_pct": -0.3,
       "ytd_pct": 4.11,
-      "closing_date": "2026-08-21"
+      "closing_date": "2026-08-24"
     },
     {
       "name": "Nikkei 225",
       "name_zh": null,
-      "close": 65528.08984375,
+      "close": 65528.09,
       "daily_pct": -0.74,
       "mtd_pct": 2.57,
       "ytd_pct": 31.14,
@@ -112,7 +112,7 @@
     {
       "name": "KOSPI",
       "name_zh": null,
-      "close": 6696.9599609375,
+      "close": 6696.96,
       "daily_pct": -3.12,
       "mtd_pct": 4.81,
       "ytd_pct": 64.04,
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 98.80000305175781,
       "daily_pct": -0.1,
-      "mtd_pct": -0.85,
-      "ytd_pct": 0.69,
+      "mtd_pct": -0.86,
+      "ytd_pct": 0.67,
       "closing_date": "2026-08-21"
     },
     {
@@ -405,25 +405,25 @@
     {
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
-      "implied_rate": 3.73,
-      "delta_rate": 0.05,
-      "delta_bps": 5.0,
-      "p_hike": 20.0,
-      "p_hold": 80.0,
+      "implied_rate": 3.74,
+      "delta_rate": 0.06,
+      "delta_bps": 6.0,
+      "p_hike": 24.0,
+      "p_hold": 76.0,
       "p_cut": 0,
       "is_reference": false
     },
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 3.87,
-      "delta_rate": 0.14,
-      "delta_bps": 14.0,
-      "p_hike": 56.0,
-      "p_hold": 44.0,
+      "implied_rate": 3.88,
+      "delta_rate": 0.13,
+      "delta_bps": 13.0,
+      "p_hike": 52.0,
+      "p_hold": 48.0,
       "p_cut": 0,
       "is_reference": false
     }
   ],
-  "summary": "8/21 Dow Jones +0.98%、8/21 FTSE 100 +0.64%、8/21 Euro Stoxx 50 +0.63% 領漲；8/24 KOSPI -3.12%、8/24 Hang Seng 恆生 -1.89% 走弱。"
+  "summary": "8/21 Dow Jones +0.98%、8/21 台指期(近月) +0.55%、8/24 S&P/ASX 200 +0.49% 領漲；8/24 KOSPI -3.12%、8/24 Hang Seng 恆生 -1.89% 走弱。"
 }
