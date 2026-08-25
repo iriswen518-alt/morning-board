@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T18:41:49+08:00",
+  "generated_at": "2026-08-25T19:36:43+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -45,20 +45,6 @@
       "error": null
     },
     {
-      "symbol": "NVTS",
-      "name_zh": "Navitas Semiconductor Corporati",
-      "kind": "US",
-      "price": 12.23,
-      "change_pct": -5.71,
-      "mtd_pct": 12.62,
-      "ytd_pct": 71.29,
-      "market_date": "2026-08-24",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NVTS.US",
-      "error": null
-    },
-    {
       "symbol": "FLNC",
       "name_zh": "Fluence Energy",
       "kind": "US",
@@ -73,17 +59,31 @@
       "error": null
     },
     {
-      "symbol": "VIPS",
-      "name_zh": "Vipshop",
+      "symbol": "DKS",
+      "name_zh": "Dick's Sporting Goods",
       "kind": "US",
-      "price": 14.32,
-      "change_pct": -1.45,
-      "mtd_pct": -6.65,
-      "ytd_pct": -19.05,
+      "price": 179.33,
+      "change_pct": -2.13,
+      "mtd_pct": -8.46,
+      "ytd_pct": -9.42,
       "market_date": "2026-08-24",
-      "per": 6.2382,
+      "per": 19.8875,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VIPS.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DKS.US",
+      "error": null
+    },
+    {
+      "symbol": "NVTS",
+      "name_zh": "Navitas Semiconductor Corporati",
+      "kind": "US",
+      "price": 12.23,
+      "change_pct": -5.71,
+      "mtd_pct": 12.62,
+      "ytd_pct": 71.29,
+      "market_date": "2026-08-24",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NVTS.US",
       "error": null
     },
     {
@@ -98,48 +98,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=XPON.US",
-      "error": null
-    },
-    {
-      "symbol": "OKLO",
-      "name_zh": "Oklo",
-      "kind": "US",
-      "price": 39.69,
-      "change_pct": -5.7,
-      "mtd_pct": 2.21,
-      "ytd_pct": -44.69,
-      "market_date": "2026-08-24",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=OKLO.US",
-      "error": null
-    },
-    {
-      "symbol": "ASST",
-      "name_zh": "Strive",
-      "kind": "US",
-      "price": 19.73,
-      "change_pct": 8.29,
-      "mtd_pct": 77.59,
-      "ytd_pct": 33.67,
-      "market_date": "2026-08-24",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ASST.US",
-      "error": null
-    },
-    {
-      "symbol": "EH",
-      "name_zh": "EHang",
-      "kind": "US",
-      "price": 5.2,
-      "change_pct": -5.63,
-      "mtd_pct": 1.36,
-      "ytd_pct": -60.55,
-      "market_date": "2026-08-24",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=EH.US",
       "error": null
     },
     {
