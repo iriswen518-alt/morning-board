@@ -1,11 +1,96 @@
 {
-  "built_at": "2026-08-25T23:23",
+  "built_at": "2026-08-26T00:21",
   "source": "鉅亨網（cnyes）",
   "categories": [
     {
       "key": "headline",
       "label": "鉅亨頭條",
       "items": [
+        {
+          "news_id": "6586720",
+          "title": "OpenAI自研晶片超車輝達？Jalapeno兩項測試擊敗GB300",
+          "title_en": "OpenAI’s Self‑Designed Jalapeno Chip Beats Nvidia? Jalapeno Wins Two Tests Against GB300",
+          "publish_at": 1787671803,
+          "url": "https://news.cnyes.com/news/id/6586720",
+          "paras": [
+            "OpenAI表示，自研的Jalapeno人工智慧(AI)晶片在測試中，部分效能優於輝達(NVDA-US)現有GB300處理器，顯示其自行開發AI基礎設施取得進展。OpenAI預計今年稍晚開始使用這款晶片支援旗下AI模型，藉此降低資料中心成本，並讓客戶依需求選擇價格較低或回應速度更快的模型。",
+            "Jalapeno由OpenAI與博通(AVGO-US)合作開發，雙方去年宣布合作，並於今年6月表示，這款晶片以創紀錄速度完成設計。博通目前也替多家客戶開發客製化晶片。",
+            "OpenAI晶片負責人Richard Ho表示，在公開基準測試中，Jalapeno與當時表現領先的輝達GB300比較，並在兩項指標取得優勢，分別是單位功耗能處理的AI工作量，以及向使用者傳回答案的速度。",
+            "兼顧高吞吐量與低延遲\n\n一般AI晶片通常偏重其中一種能力，有些適合同時處理大量工作，有些則以快速回應見長。Ho表示，Jalapeno能同時提供高吞吐量與低延遲，可用較低成本服務大量使用者，也能為重視速度的客戶提供更快回應。",
+            "OpenAI將決定旗下哪些模型由Jalapeno支援，客戶則可選擇偏重成本效益或運算效能的模型。這款晶片在約700瓦功耗下就能取得良好測試結果，有助降低資料中心電力支出。隨著OpenAI在全球興建大量AI基礎設施，電力已成為最重要的營運成本之一。",
+            "不過，這次測試並未將Jalapeno與輝達剛開始出貨的新一代Vera Rubin晶片比較，而且Jalapeno也不是用來訓練AI模型。其主要用途是AI推論，也就是模型完成訓練後，處理使用者提示詞並執行任務的階段。AI模型訓練仍是輝達技術最具優勢的領域。",
+            "OpenAI表示，Jalapeno的速度足以實現過去通常需要特殊記憶體及晶片架構才能達到的效能。公司目前使用Cerebras Systems的技術運行部分模型，但Ho指出，這類晶片較適合規模較小的模型，Jalapeno則可以處理更大型、工作負載更重的AI模型。",
+            "OpenAI以旗下較小型的開源模型，以及DeepSeek和Moonshot AI的第三方模型公開測試Jalapeno。在測試規模最大的Moonshot Kimi模型上，Jalapeno展現更明顯的效能優勢；內部測試也顯示，它能有效運行OpenAI尚未發布的大型先進模型。",
+            "OpenAI因此認為，隨著模型及工作負載規模增加，Jalapeno的設計價值將更加明顯。不過，Ho強調，由於OpenAI對運算資源的需求極為龐大，短期內不會因此取代Cerebras等其他供應商。",
+            "第二代晶片進入設計最後階段\n\nOpenAI表示，公司在開發Jalapeno的過程中也使用自家AI模型，加快晶片設計速度。第二代產品目前已進入後期階段，預計未來數月完成設計定案並送交製造；第三代晶片的初步概念也已開始規畫。",
+            "Ho表示，Jalapeno在成本及功耗方面的表現，有望降低OpenAI的基礎設施支出，但這僅是自研晶片計畫的第一步。OpenAI加入自行開發AI晶片的科技企業行列，試圖降低對輝達的依賴，並針對自家模型設計更有效率的硬體。",
+            "市場也有多家新創公司投入類似產品。近期以210億美元估值募資的Etched開始出貨低功耗晶片；由兩名前Google晶片業務成員創辦的MatX，也正開發同時具備高吞吐量及低延遲的處理器。",
+            "Ho預計周二在史丹佛大學舉行的Hot Chips大會發表演說。他表示，OpenAI選擇公開晶片研發成果，是希望促進AI半導體領域的創新。",
+            "儘管OpenAI宣稱Jalapeno在部分測試中優於輝達GB300，Ho仍強調，輝達是OpenAI的重要合作夥伴，公司未來仍需要大量輝達晶片。這也意味著，Jalapeno短期內更可能扮演補充運算資源及降低推論成本的角色，而非全面取代輝達處理器。"
+          ],
+          "paras_en": [
+            "OpenAI says its in‑house Jalapeno AI chip outperforms Nvidia’s existing GB300 processor in some tests, showing progress in its self‑developed AI infrastructure. The company plans to start using the chip later this year to support its models, aiming to cut data‑center costs and let customers choose lower‑price or faster‑response models as needed.",
+            "Jalapeno was co‑developed by OpenAI and Broadcom (AVGO‑US); the partners announced the collaboration last year and in June said the chip was designed at record speed. Broadcom also builds custom chips for many customers.",
+            "OpenAI chip lead Richard Ho said that in public benchmark tests, Jalapeno outperformed the then‑leading Nvidia GB300 on two metrics: AI workload per unit power and the speed of delivering answers to users.",
+            "Balancing high throughput and low latency",
+            "Most AI chips favor one capability over the other; some handle large workloads, others excel at quick responses. Ho said Jalapeno can deliver both high throughput and low latency, enabling cost‑effective service for many users while offering faster replies to speed‑sensitive customers.",
+            "OpenAI will decide which models use Jalapeno, and customers can pick models that emphasize cost‑effectiveness or compute performance. The chip achieves good results at about 700 W, helping reduce data‑center power spend. As OpenAI builds massive AI infrastructure worldwide, power has become one of the most important operating costs.",
+            "However, the tests did not compare Jalapeno to Nvidia’s newly shipped Vera Rubin chip, and Jalapeno is not intended for training AI models. Its main use is inference, the stage where a trained model processes user prompts and performs tasks. Training still remains Nvidia’s strongest domain.",
+            "OpenAI said Jalapeno’s speed is enough to achieve performance that previously required special memory and chip architecture. The company currently runs some models on Cerebras Systems technology, but Ho noted those chips suit smaller models, while Jalapeno can handle larger, heavier workloads.",
+            "OpenAI tested Jalapeno publicly with its own smaller open‑source models and third‑party models from DeepSeek and Moonshot AI. On the largest Moonshot Kimi model, Jalapeno showed a clearer performance advantage; internal tests also showed it can run OpenAI’s yet‑unreleased large advanced models efficiently.",
+            "OpenAI believes that as model and workload sizes grow, Jalapeno’s design value will become even clearer. Still, Ho emphasized that due to OpenAI’s enormous compute needs, it will not replace Cerebras or other suppliers in the short term.",
+            "Second‑generation chip enters final design stage",
+            "OpenAI said it also used its own AI models during Jalapeno’s development to accelerate chip design. The second‑generation product is now in the late stage, expected to finalize design and go to manufacturing in the coming months; preliminary concepts for a third‑generation chip have also begun planning.",
+            "Ho said Jalapeno’s performance in cost and power could lower OpenAI’s infrastructure spend, but this is only the first step of the self‑made chip program. By joining the ranks of companies developing their own AI chips, OpenAI aims to reduce dependence on Nvidia and design more efficient hardware for its own models.",
+            "Several startups are also entering the market. Recently, Etched, raised $21 billion in funding, began shipping low‑power chips; MatX, founded by two former Google chip‑business executives, is developing a processor that also offers high throughput and low latency."
+          ]
+        },
+        {
+          "news_id": "6586740",
+          "title": "加拿大不忍了！對200億美元美國商品祭報復性關稅",
+          "title_en": "",
+          "publish_at": 1787670977,
+          "url": "https://news.cnyes.com/news/id/6586740",
+          "paras": [
+            "加拿大政府周二(25日)宣布，將對價值約200億美元的美國商品徵收報復性關稅，以「一美元對一美元」方式回應美國總統川普上周末對加拿大產品加徵的50%關稅，象徵美加貿易衝突進一步升級。",
+            "加拿大新措施涵蓋逾700項美國商品，稅率介於15%至50%，包括鋼鐵、鋁、乳製品、海鮮、家電、木材、紙製品及服飾。其中，金屬及木材被列入清單，主要是反制美國先前對加拿大鋼鋁、木材及其他產品加徵的關稅。",
+            "新關稅預計9月8日生效。加拿大政府另公布一項規模75億美元的援助方案，協助因美國關稅受創的企業與勞工。",
+            "川普上周末對加拿大葡萄酒、水泥、曲棍球桿等商品加徵50%關稅，涉及貿易額約200億美元。若美加雙方能在上周六前達成貿易協議，這些關稅原可避免。",
+            "川普上周稍早曾宣稱協議已接近完成，但加拿大周五晚間暫停談判，認為美方要求過多、讓步過少。川普政府則反控加拿大在最後一刻提出不合理的修改要求，導致談判破局。",
+            "川普周二在Truth Social接連抨擊加拿大，不僅暗示美國可能停止與安大略省做生意，還多次揚言將安大略湖改名為「美國湖」。他也指控加拿大針對美國農民，並抱怨美國對加貿易逆差，不過相關逆差主要來自美國大量進口加拿大原油。",
+            "加拿大貿易部長勒布朗(Dominic LeBlanc)表示，渥太華仍希望與美國達成一項對雙方都有利的協議，但在談判恢復前，「加拿大不會守在電話旁等待」。",
+            "持續更新..."
+          ],
+          "paras_en": []
+        },
+        {
+          "news_id": "6586546",
+          "title": "〈財報前瞻〉輝達上季營收估近翻倍 Rubin出貨與客戶多元化成關鍵",
+          "title_en": "",
+          "publish_at": 1787670008,
+          "url": "https://news.cnyes.com/news/id/6586546",
+          "paras": [
+            "輝達(NVDA-US)將於周三(26日)美股盤後公布2027會計年度第二季財報，華爾街預期營收將較去年同期接近翻倍，但投資人的關注重點已不只是業績能否再創新高，而是AI支出熱潮能否延續、輝達能否降低對少數超大型雲端服務商的依賴，以及新一代Vera Rubin晶片能否接棒Blackwell，開啟下一波成長周期。",
+            "根據LSEG彙整的分析師預估，輝達第二季營收可望年增近一倍至921.8億美元，創近7季最快增速。StreetAccount預估，資料中心部門營收將達863億美元，占總營收約94%，高於第一季的92%。",
+            "分析師預估，輝達第三季營收將年增82.8%至1,042億美元，第二、三季調整後毛利率則維持在75%左右。全年營收預料成長83%至3,960億美元，但明年增幅可能放緩至44%，市場也開始質疑輝達能否在市值突破5兆美元後繼續維持爆炸性成長。",
+            "超大規模雲端客戶還能買多少\n\n輝達長期仰賴亞馬遜(AMZN-US)、Google母公司Alphabet(GOOGL-US)、微軟(MSFT-US)、Meta(META-US)及SpaceX等大型客戶大量採購繪圖處理器(GPU)，用於訓練自有AI模型及提供雲端運算服務。客戶過度集中的風險，因此一直是投資人最主要的疑慮之一。",
+            "輝達在5月公布財報時調整揭露方式，將客戶分為超大規模雲端服務商，以及AI雲端、工業與企業客戶(ACIE)兩大類。執行長黃仁勳當時表示，超大規模雲端服務商只有5至6家，是最容易切入的市場，但其他產業客戶則涵蓋全球約25萬家公司。",
+            "第一季兩大客群的營收幾乎相當，超大規模雲端服務商貢獻379億美元，ACIE營收接近375億美元。ACIE營收季增31%，高於超大規模客戶的12%，但過去一年，超大規模客戶仍占輝達資料中心營收約55%。",
+            "StreetAccount預估，第二季ACIE營收將年增149%至430億美元，增速超越超大規模雲端服務商的83%，後者營收估達436億美元。投資人希望看到更多企業及AI雲端客戶接棒成長，降低輝達對少數科技巨擘的依賴。",
+            "Deepwater Asset Management管理合夥人Gene Munster表示，市場擔憂超大規模雲端服務商的採購能力接近極限，投資人迫切希望看到其他客群開始發揮作用。",
+            "相關疑慮並非毫無根據。亞馬遜及Alphabet第二季自由現金流轉為負值，Meta創造現金的能力較去年同期萎縮逾九成，SpaceX及特斯拉(TSLA-US)也在擴大AI投資之際出現負自由現金流。大型科技公司今年資料中心支出預計超過7,300億美元，但如此龐大的投資能否持續產生足夠報酬，已成為市場檢視重點。",
+            "輝達股價周一收跌2.9%，連續第7個交易日下挫，創2022年以來最長連跌，期間累計下跌7.5%。今年以來股價仍上漲11.8%，但表現落後部分主要競爭對手，並曾在上月短暫將全球市值最高企業寶座讓給蘋果(AAPL-US)。",
+            "Rubin接棒與AI融資模式受檢驗\n\n另一項財報焦點是Vera Rubin晶片的出貨進度。輝達正準備將客戶從Blackwell平台轉向新一代Rubin處理器，相關產品預計今年秋季開始出貨。黃仁勳先前預估，現有Blackwell及Vera Rubin產品至2027年累計銷售額可達1兆美元。",
+            "Morgan Stanley分析師估計，Rubin晶片在截至10月的第三季即可貢獻近90億美元營收。分析師認為，輝達可能強調Rubin可大幅改善AI工廠的經濟效益，但其能否抵擋超微(AMD-US)、英特爾(INTC-US)，以及大型科技公司自研AI晶片的競爭，仍需時間驗證。",
+            "Rubin能否順利放量對輝達格外重要。隨著AI市場從訓練逐步走向推論，超微、英特爾及科技巨擘的客製化晶片都在爭奪市場。KeyBanc分析師仍看好輝達財報及財測，認為Rubin GPU出貨成長將成為業績優於預期的主要動力。",
+            "除晶片銷售外，輝達投入AI融資的規模也受到市場高度關注。由於多數企業缺乏足夠現金或資產負債表能力購買整套機櫃級系統，輝達正與華爾街合作，嘗試將GPU轉變為類似不動產、可供投資及融資的資產。",
+            "輝達本月宣布與6家大型金融機構合作，最多可為AI基礎建設籌措5,000億美元資金，讓客戶以較低利率借款購買GPU。公司上周另同意提供最高1,050億美元擔保，協助OpenAI承租俄亥俄州一座大型資料中心長達20年。",
+            "Zacks Investment Management首席市場策略師Brian Mulberry表示，輝達正成為AI產業類似「中央銀行」的角色，最大風險是資金過度集中於AI且缺乏分散，相關模式能否成功，關鍵仍是AI工具採用率必須持續成長。",
+            "市場也擔心，輝達一方面投資及融資AI客戶，另一方面再向這些客戶銷售晶片，可能形成推高需求的「循環交易」。黃仁勳則否認相關安排屬於循環融資，強調OpenAI將自行支付租金，輝達只是利用充沛現金協助客戶取得資料中心、電力及設施，以容納未來數十年使用的晶片。",
+            "Bernstein分析師Stacy Rasgon指出，目前市場只看到龐大的融資數字，卻缺少具體運作細節。若輝達能在財報會議上進一步說明資金結構、風險承擔及客戶需求，將有助緩解投資人的疑慮。"
+          ],
+          "paras_en": []
+        },
         {
           "news_id": "6586689",
           "title": "大立光第四度出手以30.8億元向科宏工業取得大面積工業地產",
@@ -117,62 +202,6 @@
             "半導體類股周二盤前普遍走高，英特爾(INTC-US)上漲逾3%，輝達(NVDA-US)也漲近1%，VanEck半導體ETF(SMH-US)則上揚逾1%。",
             "今日關鍵經濟數據：\n\n\n美國8月經濟評議會消費者信心指數預期90.3，前值90.8\n\n\n華爾街分析：\n\nCounterpoint報告指出，由於AI資料中心需求持續成長導致記憶體價格暴漲，終端設備(含手機、平板)受到波及，全球平板顯示器出貨量預計年減4.7%。",
             "Counterpoint Research研究總監Bob O' Brien對此表示，記憶體晶片價格高企正推動一系列電子產品漲價，導致市場需求下降。尤其是在智慧型手機和PC的中低階市場，OEM廠商已經無法維持過去幾年的激進定價，而消費者則開始延後購買，或轉向二手市場。"
-          ],
-          "paras_en": []
-        },
-        {
-          "news_id": "6586549",
-          "title": "日債風暴代價浮現！日本明年償債成本飆至2300億美元 創歷史新高",
-          "title_en": "",
-          "publish_at": 1787664005,
-          "url": "https://news.cnyes.com/news/id/6586549",
-          "paras": [
-            "日本財政負擔持續惡化。日本財務省預估，2027會計年度國債付息及償還成本將攀升至創紀錄的36.6兆日元(約2,300億美元)，較本會計年度初始預算編列的31.28兆日元大增17%，凸顯利率上升正迅速推高日本政府的舉債成本。",
-            "《彭博》周二(25日)引述文件報導，這筆債務支出中，約16.6兆日元將用於支付利息，另有20兆日元用於償還到期國債。日本財務省在估算時採用3.8%的暫定利率，創近29年最高水準，反映日本公債殖利率持續攀升，政府再融資成本也隨之增加。",
-            "近期日本債市賣壓加劇，除了受到中東衝突及全球主要經濟體財政疑慮升溫影響，市場也擔憂日本首相高市早苗推動擴張性財政政策，包括經濟成長戰略、調降消費稅及擴大公共投資，但相關措施的財源仍未明朗，進一步加深投資人對日本財政紀律的疑慮。",
-            "在高市政府重整預算制度下，日本各部會及政府機構提出的2027會計年度預算需求，預料將首度突破130兆日元，明顯高於本會計年度約122兆日元，再創歷史新高。",
-            "預算規模膨脹的原因之一，是政府設立未預先設定上限的公共投資計畫，允許各部會提出更多資金需求。此外，過去經常透過追加預算支應的項目，今後也將盡可能納入年度初始預算，使表面支出規模進一步擴大。",
-            "日本長年依賴追加預算支應政策，外界因此認為東京對政府支出態度過於寬鬆。高市政府則希望提高初始預算的完整性，降低日後頻繁追加預算的依賴。",
-            "日本各部會預計本月底前完成預算申請，財務省隨後將進行審查並編製政府預算草案，預計於今年底交由內閣批准。隨著殖利率持續處於高檔，日本龐大債務所衍生的利息負擔，勢必進一步壓縮其他政策支出的空間。"
-          ],
-          "paras_en": []
-        },
-        {
-          "news_id": "6586647",
-          "title": "微軟員工自曝AI開銷 有人一個月燒掉2.8萬美元",
-          "title_en": "",
-          "publish_at": 1787663934,
-          "url": "https://news.cnyes.com/news/id/6586647",
-          "paras": [
-            "微軟(MSFT-US) 員工今年不僅在比薪資，還開始比用了多少AI。一份外洩微軟內部試算表顯示，數百名員工自願匿名揭露自己的加薪、獎金和股票獎勵，還有過去一個月AI工具開銷。",
-            "目前微軟正向員工提供一款內部工具，用於追蹤他們的AI使用情況和相關支出。微軟發言人表示，這款AI使用追蹤工具仍處於早期測試階段。",
-            "微軟正加速追趕Meta(META-US) 、Google、OpenAI、Anthropic等競爭對手，積極開發AI產品，微軟在AI基礎設施上投入數千億美元，並推動員工將AI融入日常工作。",
-            "與往年相比，今年試算表新增一欄，要求員工透過內部工具自行填寫「每月AI使用金額」（AI $ Usage Per Month）。",
-            "據《Business Insider》25日（周二）報導，這份試算表洩露時，共有近600名微軟美國員工的紀錄，內容包括員工自稱今年獲得的基本薪資、加薪、現金獎金、股票獎勵等。其中約350人已經填寫了自己的AI使用金額。",
-            "微軟員工通常會自願、匿名分享這些訊息，以促進薪酬透明度，但這也意味著相關數據並非官方數據，也不完整。",
-            "截至6月30日，微軟共有22.3萬名員工，這份僅包含約350名員工的表格，只是一個非常有限的樣本。",
-            "在這些數據中，過去28天每位員工AI使用金額的中位數約300美元。最高紀錄是微軟「客戶與合作夥伴解決方案部門」一名員工，達到2.8萬美元。",
-            "數據還顯示，不同團隊之間的AI使用量差異巨大：有些員工每月只花幾美元，有些人的使用金額達到數萬美元。",
-            "在這份試算表中，員工的AI使用金額與獲得的獎勵之間不存在明顯關聯。",
-            "簡單來說，更高AI使用量並未對應更高獎金評級、更大幅度績效加薪，也沒有顯示出更高晉升機率。"
-          ],
-          "paras_en": []
-        },
-        {
-          "news_id": "6586646",
-          "title": "馬雲連日增持 與管理層合計買入阿里巴巴8億港元",
-          "title_en": "",
-          "publish_at": 1787662913,
-          "url": "https://news.cnyes.com/news/id/6586646",
-          "paras": [
-            "消息人士透露，隨著阿里巴巴(09988-HK) (BABA-US) 發起配售融資，創始人馬雲連日增持阿里港股，總額超過6億港元，展現對阿里AI發展的信心。",
-            "蔡崇信、吳泳銘連續兩日已合計增持2億港元，至此馬雲與阿里管理層近日合計增持超過8億港元。",
-            "據《科創板日報》25日（周二）報導，蔡崇信在買入72萬股阿里巴巴港股後，今日再次增持約8,200萬港元阿里巴巴股票，兩日累計增持金額已達1.6億港元。",
-            "執行長吳泳銘買入35萬股阿里巴巴港股，均價約111.6港元，耗資約4,000萬港元。",
-            "阿里23日宣布800億港元新股配售，所得款項全部投入AI建設。此次配售獲全球主權財富基金等長線投資者追捧。",
-            "接近交易消息人士稱，本次配售獲近三倍超額認購，超過2,000億港元。主權和長線基金最終認購比例超過40%。中東、歐洲、亞洲等地區的主要主權基金均積極參與認購。",
-            "近年來阿里巴巴加大AI投入。2025年2月，吳泳銘宣布未來三年投入3,800億元用於雲端與AI硬體基礎設施建設，這一投入規模超過了當年阿里巴巴過去十年投入總和。",
-            "截至2026年6月，上述計畫資本開支進度已接近一半，約1,900億元；單看2026年6月結束的2027年度第一季，阿里單季資本開支達677億元，較去年同期激增75%。"
           ],
           "paras_en": []
         }
@@ -358,6 +387,73 @@
       "label": "美股焦點",
       "items": [
         {
+          "news_id": "6586720",
+          "title": "OpenAI自研晶片超車輝達？Jalapeno兩項測試擊敗GB300",
+          "title_en": "OpenAI’s Self‑Designed Jalapeno Chip Beats Nvidia? Jalapeno Wins Two Tests Against GB300",
+          "publish_at": 1787671803,
+          "url": "https://news.cnyes.com/news/id/6586720",
+          "paras": [
+            "OpenAI表示，自研的Jalapeno人工智慧(AI)晶片在測試中，部分效能優於輝達(NVDA-US)現有GB300處理器，顯示其自行開發AI基礎設施取得進展。OpenAI預計今年稍晚開始使用這款晶片支援旗下AI模型，藉此降低資料中心成本，並讓客戶依需求選擇價格較低或回應速度更快的模型。",
+            "Jalapeno由OpenAI與博通(AVGO-US)合作開發，雙方去年宣布合作，並於今年6月表示，這款晶片以創紀錄速度完成設計。博通目前也替多家客戶開發客製化晶片。",
+            "OpenAI晶片負責人Richard Ho表示，在公開基準測試中，Jalapeno與當時表現領先的輝達GB300比較，並在兩項指標取得優勢，分別是單位功耗能處理的AI工作量，以及向使用者傳回答案的速度。",
+            "兼顧高吞吐量與低延遲\n\n一般AI晶片通常偏重其中一種能力，有些適合同時處理大量工作，有些則以快速回應見長。Ho表示，Jalapeno能同時提供高吞吐量與低延遲，可用較低成本服務大量使用者，也能為重視速度的客戶提供更快回應。",
+            "OpenAI將決定旗下哪些模型由Jalapeno支援，客戶則可選擇偏重成本效益或運算效能的模型。這款晶片在約700瓦功耗下就能取得良好測試結果，有助降低資料中心電力支出。隨著OpenAI在全球興建大量AI基礎設施，電力已成為最重要的營運成本之一。",
+            "不過，這次測試並未將Jalapeno與輝達剛開始出貨的新一代Vera Rubin晶片比較，而且Jalapeno也不是用來訓練AI模型。其主要用途是AI推論，也就是模型完成訓練後，處理使用者提示詞並執行任務的階段。AI模型訓練仍是輝達技術最具優勢的領域。",
+            "OpenAI表示，Jalapeno的速度足以實現過去通常需要特殊記憶體及晶片架構才能達到的效能。公司目前使用Cerebras Systems的技術運行部分模型，但Ho指出，這類晶片較適合規模較小的模型，Jalapeno則可以處理更大型、工作負載更重的AI模型。",
+            "OpenAI以旗下較小型的開源模型，以及DeepSeek和Moonshot AI的第三方模型公開測試Jalapeno。在測試規模最大的Moonshot Kimi模型上，Jalapeno展現更明顯的效能優勢；內部測試也顯示，它能有效運行OpenAI尚未發布的大型先進模型。",
+            "OpenAI因此認為，隨著模型及工作負載規模增加，Jalapeno的設計價值將更加明顯。不過，Ho強調，由於OpenAI對運算資源的需求極為龐大，短期內不會因此取代Cerebras等其他供應商。",
+            "第二代晶片進入設計最後階段\n\nOpenAI表示，公司在開發Jalapeno的過程中也使用自家AI模型，加快晶片設計速度。第二代產品目前已進入後期階段，預計未來數月完成設計定案並送交製造；第三代晶片的初步概念也已開始規畫。",
+            "Ho表示，Jalapeno在成本及功耗方面的表現，有望降低OpenAI的基礎設施支出，但這僅是自研晶片計畫的第一步。OpenAI加入自行開發AI晶片的科技企業行列，試圖降低對輝達的依賴，並針對自家模型設計更有效率的硬體。",
+            "市場也有多家新創公司投入類似產品。近期以210億美元估值募資的Etched開始出貨低功耗晶片；由兩名前Google晶片業務成員創辦的MatX，也正開發同時具備高吞吐量及低延遲的處理器。",
+            "Ho預計周二在史丹佛大學舉行的Hot Chips大會發表演說。他表示，OpenAI選擇公開晶片研發成果，是希望促進AI半導體領域的創新。",
+            "儘管OpenAI宣稱Jalapeno在部分測試中優於輝達GB300，Ho仍強調，輝達是OpenAI的重要合作夥伴，公司未來仍需要大量輝達晶片。這也意味著，Jalapeno短期內更可能扮演補充運算資源及降低推論成本的角色，而非全面取代輝達處理器。"
+          ],
+          "paras_en": [
+            "OpenAI says its in‑house Jalapeno AI chip outperforms Nvidia’s existing GB300 processor in some tests, showing progress in its self‑developed AI infrastructure. The company plans to start using the chip later this year to support its models, aiming to cut data‑center costs and let customers choose lower‑price or faster‑response models as needed.",
+            "Jalapeno was co‑developed by OpenAI and Broadcom (AVGO‑US); the partners announced the collaboration last year and in June said the chip was designed at record speed. Broadcom also builds custom chips for many customers.",
+            "OpenAI chip lead Richard Ho said that in public benchmark tests, Jalapeno outperformed the then‑leading Nvidia GB300 on two metrics: AI workload per unit power and the speed of delivering answers to users.",
+            "Balancing high throughput and low latency",
+            "Most AI chips favor one capability over the other; some handle large workloads, others excel at quick responses. Ho said Jalapeno can deliver both high throughput and low latency, enabling cost‑effective service for many users while offering faster replies to speed‑sensitive customers.",
+            "OpenAI will decide which models use Jalapeno, and customers can pick models that emphasize cost‑effectiveness or compute performance. The chip achieves good results at about 700 W, helping reduce data‑center power spend. As OpenAI builds massive AI infrastructure worldwide, power has become one of the most important operating costs.",
+            "However, the tests did not compare Jalapeno to Nvidia’s newly shipped Vera Rubin chip, and Jalapeno is not intended for training AI models. Its main use is inference, the stage where a trained model processes user prompts and performs tasks. Training still remains Nvidia’s strongest domain.",
+            "OpenAI said Jalapeno’s speed is enough to achieve performance that previously required special memory and chip architecture. The company currently runs some models on Cerebras Systems technology, but Ho noted those chips suit smaller models, while Jalapeno can handle larger, heavier workloads.",
+            "OpenAI tested Jalapeno publicly with its own smaller open‑source models and third‑party models from DeepSeek and Moonshot AI. On the largest Moonshot Kimi model, Jalapeno showed a clearer performance advantage; internal tests also showed it can run OpenAI’s yet‑unreleased large advanced models efficiently.",
+            "OpenAI believes that as model and workload sizes grow, Jalapeno’s design value will become even clearer. Still, Ho emphasized that due to OpenAI’s enormous compute needs, it will not replace Cerebras or other suppliers in the short term.",
+            "Second‑generation chip enters final design stage",
+            "OpenAI said it also used its own AI models during Jalapeno’s development to accelerate chip design. The second‑generation product is now in the late stage, expected to finalize design and go to manufacturing in the coming months; preliminary concepts for a third‑generation chip have also begun planning.",
+            "Ho said Jalapeno’s performance in cost and power could lower OpenAI’s infrastructure spend, but this is only the first step of the self‑made chip program. By joining the ranks of companies developing their own AI chips, OpenAI aims to reduce dependence on Nvidia and design more efficient hardware for its own models.",
+            "Several startups are also entering the market. Recently, Etched, raised $21 billion in funding, began shipping low‑power chips; MatX, founded by two former Google chip‑business executives, is developing a processor that also offers high throughput and low latency."
+          ]
+        },
+        {
+          "news_id": "6586546",
+          "title": "〈財報前瞻〉輝達上季營收估近翻倍 Rubin出貨與客戶多元化成關鍵",
+          "title_en": "",
+          "publish_at": 1787670008,
+          "url": "https://news.cnyes.com/news/id/6586546",
+          "paras": [
+            "輝達(NVDA-US)將於周三(26日)美股盤後公布2027會計年度第二季財報，華爾街預期營收將較去年同期接近翻倍，但投資人的關注重點已不只是業績能否再創新高，而是AI支出熱潮能否延續、輝達能否降低對少數超大型雲端服務商的依賴，以及新一代Vera Rubin晶片能否接棒Blackwell，開啟下一波成長周期。",
+            "根據LSEG彙整的分析師預估，輝達第二季營收可望年增近一倍至921.8億美元，創近7季最快增速。StreetAccount預估，資料中心部門營收將達863億美元，占總營收約94%，高於第一季的92%。",
+            "分析師預估，輝達第三季營收將年增82.8%至1,042億美元，第二、三季調整後毛利率則維持在75%左右。全年營收預料成長83%至3,960億美元，但明年增幅可能放緩至44%，市場也開始質疑輝達能否在市值突破5兆美元後繼續維持爆炸性成長。",
+            "超大規模雲端客戶還能買多少\n\n輝達長期仰賴亞馬遜(AMZN-US)、Google母公司Alphabet(GOOGL-US)、微軟(MSFT-US)、Meta(META-US)及SpaceX等大型客戶大量採購繪圖處理器(GPU)，用於訓練自有AI模型及提供雲端運算服務。客戶過度集中的風險，因此一直是投資人最主要的疑慮之一。",
+            "輝達在5月公布財報時調整揭露方式，將客戶分為超大規模雲端服務商，以及AI雲端、工業與企業客戶(ACIE)兩大類。執行長黃仁勳當時表示，超大規模雲端服務商只有5至6家，是最容易切入的市場，但其他產業客戶則涵蓋全球約25萬家公司。",
+            "第一季兩大客群的營收幾乎相當，超大規模雲端服務商貢獻379億美元，ACIE營收接近375億美元。ACIE營收季增31%，高於超大規模客戶的12%，但過去一年，超大規模客戶仍占輝達資料中心營收約55%。",
+            "StreetAccount預估，第二季ACIE營收將年增149%至430億美元，增速超越超大規模雲端服務商的83%，後者營收估達436億美元。投資人希望看到更多企業及AI雲端客戶接棒成長，降低輝達對少數科技巨擘的依賴。",
+            "Deepwater Asset Management管理合夥人Gene Munster表示，市場擔憂超大規模雲端服務商的採購能力接近極限，投資人迫切希望看到其他客群開始發揮作用。",
+            "相關疑慮並非毫無根據。亞馬遜及Alphabet第二季自由現金流轉為負值，Meta創造現金的能力較去年同期萎縮逾九成，SpaceX及特斯拉(TSLA-US)也在擴大AI投資之際出現負自由現金流。大型科技公司今年資料中心支出預計超過7,300億美元，但如此龐大的投資能否持續產生足夠報酬，已成為市場檢視重點。",
+            "輝達股價周一收跌2.9%，連續第7個交易日下挫，創2022年以來最長連跌，期間累計下跌7.5%。今年以來股價仍上漲11.8%，但表現落後部分主要競爭對手，並曾在上月短暫將全球市值最高企業寶座讓給蘋果(AAPL-US)。",
+            "Rubin接棒與AI融資模式受檢驗\n\n另一項財報焦點是Vera Rubin晶片的出貨進度。輝達正準備將客戶從Blackwell平台轉向新一代Rubin處理器，相關產品預計今年秋季開始出貨。黃仁勳先前預估，現有Blackwell及Vera Rubin產品至2027年累計銷售額可達1兆美元。",
+            "Morgan Stanley分析師估計，Rubin晶片在截至10月的第三季即可貢獻近90億美元營收。分析師認為，輝達可能強調Rubin可大幅改善AI工廠的經濟效益，但其能否抵擋超微(AMD-US)、英特爾(INTC-US)，以及大型科技公司自研AI晶片的競爭，仍需時間驗證。",
+            "Rubin能否順利放量對輝達格外重要。隨著AI市場從訓練逐步走向推論，超微、英特爾及科技巨擘的客製化晶片都在爭奪市場。KeyBanc分析師仍看好輝達財報及財測，認為Rubin GPU出貨成長將成為業績優於預期的主要動力。",
+            "除晶片銷售外，輝達投入AI融資的規模也受到市場高度關注。由於多數企業缺乏足夠現金或資產負債表能力購買整套機櫃級系統，輝達正與華爾街合作，嘗試將GPU轉變為類似不動產、可供投資及融資的資產。",
+            "輝達本月宣布與6家大型金融機構合作，最多可為AI基礎建設籌措5,000億美元資金，讓客戶以較低利率借款購買GPU。公司上周另同意提供最高1,050億美元擔保，協助OpenAI承租俄亥俄州一座大型資料中心長達20年。",
+            "Zacks Investment Management首席市場策略師Brian Mulberry表示，輝達正成為AI產業類似「中央銀行」的角色，最大風險是資金過度集中於AI且缺乏分散，相關模式能否成功，關鍵仍是AI工具採用率必須持續成長。",
+            "市場也擔心，輝達一方面投資及融資AI客戶，另一方面再向這些客戶銷售晶片，可能形成推高需求的「循環交易」。黃仁勳則否認相關安排屬於循環融資，強調OpenAI將自行支付租金，輝達只是利用充沛現金協助客戶取得資料中心、電力及設施，以容納未來數十年使用的晶片。",
+            "Bernstein分析師Stacy Rasgon指出，目前市場只看到龐大的融資數字，卻缺少具體運作細節。若輝達能在財報會議上進一步說明資金結構、風險承擔及客戶需求，將有助緩解投資人的疑慮。"
+          ],
+          "paras_en": []
+        },
+        {
           "news_id": "6586684",
           "title": "蘋果桌機全面升級！Mac mini首搭台積電2奈米M6晶片",
           "title_en": "",
@@ -504,52 +600,6 @@
             "In contrast to the strong consensus on financial stocks, institutional investors are clearly divided on AI investments. Mutual funds are underweight AI infrastructure stocks relative to their benchmark, while hedge funds’ performance and hot holdings remain highly correlated with AI volatility.",
             "Goldman Sachs points out that the stocks favored by both fund types are more volatile, yet they have delivered an annualized return of 17% since 2013, a remarkably strong long‑term performance."
           ]
-        },
-        {
-          "news_id": "6586486",
-          "title": "市場大輪轉！美股近期「軟體漲、晶片跌」 績效差距創歷史新高",
-          "title_en": "",
-          "publish_at": 1787659837,
-          "url": "https://news.cnyes.com/news/id/6586486",
-          "paras": [
-            "美股科技類股正上演一場歷史性的黃金交叉。等權重軟體 ETF近期強勁反彈，而等權重晶片 ETF則陷入熊市，兩者表現差距已拉開至近50個百分點，創下 2011 年以來兩檔 ETF 歷史上的最大差距。",
-            "這場高達數兆美元的市場大輪轉，轉折點幾乎落在同一天。晶片股於 6 月 22 日觸頂，軟體股則在同一時間觸底，隨後朝相反方向狂飆與重挫。自 6 月 22 日以來，等權重的標普軟體與服務 ETF(XSW-US)上漲約 24%，而等權重的標普半導體 ETF(XSD-US)則重挫約 24%。",
-            "在Yahoo財經追蹤的 45 檔軟體股中，有 37 檔上漲；相反地，60 檔晶片股中有多達 59 檔下跌，顯示這並非指數設計的巧合，而是行業趨勢的全面逆轉。",
-            "在此期間，軟體行業市值暴增約 1.5 兆美元，而晶片行業則蒸發了約 2.6 兆美元。微軟(MSFT-US)市值增加了近 9,000 億美元，Salesforce、Adobe 和 ServiceNow 也在 6 月 22 日後的三個交易日內陸續觸底。",
-            "相較之下，晶片股慘遭拋售，美光(MU-US)、台積電(TSM-US)(2330-TW)、ARM(ARM-US)與AMD(AMD-US)四家巨頭，市值合計蒸發了約 9,500 億美元，其中美光是在 6 月 25 日見頂後回落。",
-            "數據顯示，自 6 月 22 日至上周五，標普北美科技軟體指數上漲約 19%，而費城半導體指數下跌約 20%。在 1994 年以來的歷史紀錄中，唯一出現過更大雙月差距的時期是網路泡沫頂峰，但當時是兩者皆上漲，而本次則是歷史上首次出現「軟體上漲、晶片下跌」所造成的最大差距。",
-            "在這波晶片股浩劫中，唯獨輝達(NVDA-US)表現特殊，雖然周一遭遇了 7 月以來最慘烈跌幅，但其股價自 4 月下旬以來已橫盤整理約四個月，並未跟隨晶片股全面崩盤。",
-            "Fundstrat 技術策略主管 Mark Newton 指出，軟體股只是先經歷了修正，現在交易表現開始好轉，但他依然認為半導體終將回歸。"
-          ],
-          "paras_en": []
-        },
-        {
-          "news_id": "6586551",
-          "title": "伊朗「經濟版D-Day」雷聲大？美國最狠一刀不敢砍向中國",
-          "title_en": "",
-          "publish_at": 1787658603,
-          "url": "https://news.cnyes.com/news/id/6586551",
-          "paras": [
-            "美國政府本周啟動號稱「前所未有」的對伊朗經濟施壓行動，試圖切斷支撐德黑蘭的「每一條剩餘生命線」。然而，美國財政部長貝森特(Scott Bessent)宣布這項「經濟放逐行動」(Operation Economic Outcast)時，卻幾乎沒有提到多年來協助伊朗抵禦美國制裁的最大靠山——中國。",
-            "《華爾街日報》(WSJ)報導，美國周一制裁逾60個實體，包括協助伊朗取得核武與飛彈技術、賺取石油收入及發動網路行動的中國企業，但並未對中國大型銀行或企業祭出更具殺傷力的措施，凸顯華府一方面想重創伊朗經濟，另一方面又不願與北京全面攤牌的兩難。",
-            "大西洋理事會(Atlantic Council)資深研究員、前美國外交官Daniel Fried表示，這次行動的「言辭猛烈，但實際出拳力道較弱」，若要真正癱瘓伊朗經濟，美國恐怕必須對中國大型企業與銀行下手。",
-            "中國撐起伊朗最大石油生命線\n\n伊朗高度依賴中國購買其石油，中國也建立一套複雜的交易與資金轉移網路，協助伊朗在不觸發美國制裁的情況下，將售油所得轉移至全球各地。美國官員指出，中國買下伊朗逾八成的石油出口，伊朗空殼公司則透過中國銀行購買中國商品，並利用外匯兌換商將資金轉移至中東及伊朗。",
-            "美國對伊朗發動戰爭後，已制裁部分中國油輪及石油基礎設施，但中國仍持續進口伊朗原油。儘管美國海上封鎖近期限制伊朗石油出口，根據大宗商品數據公司Kpler統計，中國8月至今平均每天仍進口逾50萬桶伊朗原油。",
-            "這些原油多透過海上船對船轉運，先由受到制裁的油輪轉移至未遭制裁的船隻，再運往中國。伊朗逐漸改用人民幣進行貿易，也降低其對美元金融體系的依賴，進一步削弱美國制裁效果。",
-            "華府打擊伊朗制裁規避網路的行動，因此愈來愈像一場「打地鼠」遊戲。美國財政部陸續制裁位於香港、中國、阿聯及土耳其的無名企業與空殼公司，但舊有管道遭切斷後，往往很快又有新業者接替，持續協助伊朗出售石油、轉移資金並從中國進口商品。",
-            "本輪制裁避開中國大型銀行\n\n美國本周制裁一艘中國企業擁有的油輪，指控該船今年已將數百萬桶伊朗原油運往中國，也鎖定協助伊朗取得飛彈導航儀器等敏感物資的中國及香港企業與個人。但華府並未制裁與美國主導的全球金融體系關係更密切的中國大型銀行或知名企業。",
-            "前美國財政部官員Kerri Bitsoff認為，美方刻意保留空間，讓中國能夠在銀行未直接遭到制裁的情況下，低調調整與伊朗的往來。最終能否奏效，取決於中國銀行及煉油商是否相信貝森特的威脅並非虛張聲勢。",
-            "貝森特在記者會上兩度被問及，美國是否將加強制裁中國銀行與企業。他僅警告，所有國家及實體都應做好面對美國制裁的準備，「沒有人能夠例外」。",
-            "美國財政部表示，未來將對在數位資產、科技、黃金、航空及航運等五大領域與伊朗交易的國家和實體祭出懲罰。美國總統川普也正致電各國領袖，要求停止與伊朗做生意。貝森特另透露，美方近期將制裁一家涉嫌協助規避制裁的金融機構，但未公布其名稱。",
-            "這項新行動建立在川普政府去年重新執政後，對伊朗祭出的逾1,000項制裁之上。配合軍事行動及對伊朗港口的海上封鎖，相關措施已重創伊朗經濟並造成該國貨幣暴跌，但迄今仍未改變德黑蘭在中東的強硬軍事立場，也未能阻止其追求核武。",
-            "美中峰會牽制制裁力道\n\n華府之所以對中國保持克制，也與川普尋求改善美中關係有關。美中去年爆發大規模關稅戰後，中國以限制稀土出口等手段反擊，嚴重衝擊美國製造商，讓華府更加警惕北京的報復能力。",
-            "美國外交關係協會(Council on Foreign Relations)資深研究員Edward Fishman表示，中國報復如今已成為「真實威脅」，也是去年以來美中關係出現的新變數。",
-            "川普今年5月曾赴北京與中國國家主席習近平會面，習近平預計下月前往華盛頓舉行後續峰會。分析人士認為，華府可能不願在峰會前直接制裁中國大型金融機構，以免破壞兩國關係回穩的努力。",
-            "中國外交部則重申，反對美國「非法且不合理的單邊制裁」。發言人林劍周二表示，經濟戰只會加劇緊張局勢，並可能擾亂全球經濟，中國將採取一切必要措施，堅定維護自身權益。",
-            "貝森特曾將這場行動稱為「經濟版D-Day」，並表示新一輪極限施壓旨在創造促使伊朗政權垮台的條件。不過，倡議組織「反核伊朗聯盟」(United Against Nuclear Iran)研究員Charlie Brown批評，目前公布的措施「與宣傳聲勢相去甚遠」，並呼籲美國制裁協助購買伊朗石油的中國及其他國家銀行。",
-            "Bitsoff則認為，即使沒有直接制裁中國大型銀行，公開施壓仍可能促使北京約束與伊朗的往來，有時甚至比實際制裁更有效。真正的考驗，可能要等美中峰會結束後才會到來。"
-          ],
-          "paras_en": []
         }
       ]
     },
@@ -558,153 +608,159 @@
       "label": "國際財經",
       "items": [
         {
-          "news_id": "6586684",
-          "title": "蘋果桌機全面升級！Mac mini首搭台積電2奈米M6晶片",
+          "news_id": "6586745",
+          "title": "AI需求向上游延伸，MLCC粉體迎來量價成長機會",
           "title_en": "",
-          "publish_at": 1787666991,
-          "url": "https://news.cnyes.com/news/id/6586684",
+          "publish_at": 1787671804,
+          "url": "https://news.cnyes.com/news/id/6586745",
           "paras": [
-            "蘋果(AAPL-US)周二(25日)發表新一代Mac mini與Mac Studio桌上型電腦，全面升級處理器、無線連線及人工智慧(AI)運算能力。其中，Mac mini首度搭載M6晶片，Mac Studio則可選配目前蘋果性能最強的M5 Ultra，鎖定AI開發者及需要在本機運行大型模型的專業使用者。",
-            "美國地區的兩款產品周二起開放預購，9月22日正式上市，並將預載最新作業系統macOS 27 Golden Gate。新系統預計今年秋季向其他Mac使用者推送。",
-            "至於台灣方面，Mac mini於周四(27日)上午9點開始預訂，9月22日開始發售，M6晶片版本售價為新台幣29,900元起、M5 Pro售價則為新台幣59,900元起。Mac Studio也是同樣時間開始預訂與發售，M5 Max 或 M5 Ultra的售價分別為新台幣84,900元起和199,900元起。",
-            "蘋果選在新款iPhone發表前數周更新Mac產品線，顯示桌上型電腦在其AI策略中的地位日益重要。部分開發者使用OpenClaw等軟體建立AI代理時，偏好透過獨立Mac mini在本機運行，而非仰賴雲端；Mac Studio也逐漸成為AI研究人員訓練及部署本地模型的選擇。",
-            "首款M6 Mac登場售價同步上調\n\n新款Mac mini提供M6及M5 Pro兩種晶片版本，起售價為899美元，較前一代再提高100美元。M6是蘋果首款採用這一代晶片的Mac，委由台積電(2330-TW)(TSM-US)使用2奈米製程生產。",
-            "M6配備12核心中央處理器(CPU)及12核心圖形處理器(GPU)。蘋果宣稱，其單執行緒效能為全球最快，AI運算速度則提升至前一代的4倍。M6版Mac mini標準配備16GB統一記憶體，最高可升級至32GB；M5 Pro版本最高則可配置64GB記憶體。",
-            "蘋果表示，M5 Pro版處理大型語言模型(LLM)提示詞的速度，最高可達舊款Pro版Mac mini的8.5倍。兩款新機也加入Wi-Fi 7及Bluetooth 6，但外觀延續2024年M4及M4 Pro版本首次採用的精巧機身設計。",
-            "Mac mini價格持續調漲，也反映AI熱潮引發的記憶體晶片短缺。這款產品推出時原以599美元售價獲得市場好評，但蘋果5月取消原有的599美元入門配置，使起售價實質提高至799美元，如今又進一步漲至899美元。",
-            "儘管售價上升，Mac mini近月在蘋果及多數授權零售商通路仍長期缺貨，有時甚至數周或數月無法供應。定位更高階的Mac Studio同樣面臨供應吃緊，累積需求可能使新產品上市後迅速湧入大量訂單。",
-            "Mac Studio最高售價突破1.8萬美元\n\nMac Studio提供M5 Max及M5 Ultra晶片，前者起售價維持2,499美元，後者則從5,499美元起跳，高於上一代搭載M3 Ultra機型的5,299美元起售價。",
-            "蘋果表示，M5 Max執行大型語言模型的速度接近前一代的4倍。最高階M5 Ultra版本可配備36核心CPU、80核心GPU及最高512GB統一記憶體，若選擇所有頂級配置，售價最高可達18,299美元。",
-            "多台配備M5 Ultra的Mac Studio還能互相連接，共用記憶體並作為單一運算系統使用，可在本機執行擁有兆級參數的前沿AI模型。這也讓Mac Studio成為Mac Pro今年稍早停產後，蘋果性能最強、未內建螢幕的電腦。",
-            "蘋果強調，旗下iPhone及Mac晶片均配備專門運行AI模型的神經網路引擎，統一記憶體架構則可減少資料搬移造成的瓶頸。搭配相關開發框架及新晶片，開發者可直接在Mac上運行及微調大型AI模型，降低對外部雲端服務的依賴。",
-            "這次新品發布也正值蘋果管理層即將交棒。曾將記憶體供應危機形容為「百年洪水」的執行長庫克(Tim Cook)，預計9月初將職務交給接班人特納斯(John Ternus)。",
-            "蘋果隨後可能於9月9日前後舉行發表會，推出新一代iPhone及首款摺疊機。更新版HomePod mini與智慧家庭顯示器也可能在近期亮相，用以展示AI強化版Siri的功能。"
+            "2026年08月25日（優分析／產業數據中心報導）⸺ AI伺服器與高階電子設備需求持續成長，不只推升積層陶瓷電容(MLCC)用量，也進一步帶動上游MLCC粉體需求。加上氧化鋯、氧化釔等原料價格走高，MLCC粉體市場呈現需求增加、成本上升的趨勢，相關材料供應商國瓷材料(300285-CN)可望受惠。",
+            "MLCC粉體是製造MLCC的重要原料。隨AI伺服器運算能力與功耗提高，對高容量、高可靠度MLCC需求增加，上游粉體材料使用量也同步成長。若需求持續擴張，加上原料價格維持高檔，MLCC粉體後續具備量價同步成長的條件。",
+            "國瓷材料主要布局電子陶瓷材料，包括MLCC介質材料等產品，因此在高階MLCC需求升溫下，成為相關上游材料供應鏈的受惠業者之一。",
+            "※ 本文經「優分析」授權轉載，原文出處:原文連結",
+            "※ 免責聲明：文中所提的個股、基金、期貨商品內容僅供參考，並非投資建議，投資人應獨立判斷，審慎評估風險。"
           ],
           "paras_en": []
         },
         {
-          "news_id": "6586703",
-          "title": "盤中速報 - 目標百貨(TGT-US)大跌5.01%，報161.25美元",
-          "title_en": "Intraday Flash - Target (TGT-US) Drops 5.01%, Trading at $161.25",
-          "publish_at": 1787666662,
-          "url": "https://news.cnyes.com/news/id/6586703",
+          "news_id": "6586720",
+          "title": "OpenAI自研晶片超車輝達？Jalapeno兩項測試擊敗GB300",
+          "title_en": "OpenAI’s Self‑Designed Jalapeno Chip Beats Nvidia? Jalapeno Wins Two Tests Against GB300",
+          "publish_at": 1787671803,
+          "url": "https://news.cnyes.com/news/id/6586720",
           "paras": [
-            "目標百貨(TGT-US)截至台北時間25日21:49股價下跌8.51美元，報161.25美元，跌幅5.01%，成交量1,368,650（股），盤中最高價166.75美元、最低價161.22美元。",
-            "美股指數盤中表現",
-            "道瓊指數：+0.03%S&P 500指數：+0.36%NASDAQ指數：+0.95%費城半導體指數：+2.46%目標百貨(TGT-US)歷史漲跌幅",
-            "近 1 週：+12.5%    近 1 月：+24.21%    近 3 月：+35.26%    近 6 月：+47.07%    今年以來：+73.8%"
+            "OpenAI表示，自研的Jalapeno人工智慧(AI)晶片在測試中，部分效能優於輝達(NVDA-US)現有GB300處理器，顯示其自行開發AI基礎設施取得進展。OpenAI預計今年稍晚開始使用這款晶片支援旗下AI模型，藉此降低資料中心成本，並讓客戶依需求選擇價格較低或回應速度更快的模型。",
+            "Jalapeno由OpenAI與博通(AVGO-US)合作開發，雙方去年宣布合作，並於今年6月表示，這款晶片以創紀錄速度完成設計。博通目前也替多家客戶開發客製化晶片。",
+            "OpenAI晶片負責人Richard Ho表示，在公開基準測試中，Jalapeno與當時表現領先的輝達GB300比較，並在兩項指標取得優勢，分別是單位功耗能處理的AI工作量，以及向使用者傳回答案的速度。",
+            "兼顧高吞吐量與低延遲\n\n一般AI晶片通常偏重其中一種能力，有些適合同時處理大量工作，有些則以快速回應見長。Ho表示，Jalapeno能同時提供高吞吐量與低延遲，可用較低成本服務大量使用者，也能為重視速度的客戶提供更快回應。",
+            "OpenAI將決定旗下哪些模型由Jalapeno支援，客戶則可選擇偏重成本效益或運算效能的模型。這款晶片在約700瓦功耗下就能取得良好測試結果，有助降低資料中心電力支出。隨著OpenAI在全球興建大量AI基礎設施，電力已成為最重要的營運成本之一。",
+            "不過，這次測試並未將Jalapeno與輝達剛開始出貨的新一代Vera Rubin晶片比較，而且Jalapeno也不是用來訓練AI模型。其主要用途是AI推論，也就是模型完成訓練後，處理使用者提示詞並執行任務的階段。AI模型訓練仍是輝達技術最具優勢的領域。",
+            "OpenAI表示，Jalapeno的速度足以實現過去通常需要特殊記憶體及晶片架構才能達到的效能。公司目前使用Cerebras Systems的技術運行部分模型，但Ho指出，這類晶片較適合規模較小的模型，Jalapeno則可以處理更大型、工作負載更重的AI模型。",
+            "OpenAI以旗下較小型的開源模型，以及DeepSeek和Moonshot AI的第三方模型公開測試Jalapeno。在測試規模最大的Moonshot Kimi模型上，Jalapeno展現更明顯的效能優勢；內部測試也顯示，它能有效運行OpenAI尚未發布的大型先進模型。",
+            "OpenAI因此認為，隨著模型及工作負載規模增加，Jalapeno的設計價值將更加明顯。不過，Ho強調，由於OpenAI對運算資源的需求極為龐大，短期內不會因此取代Cerebras等其他供應商。",
+            "第二代晶片進入設計最後階段\n\nOpenAI表示，公司在開發Jalapeno的過程中也使用自家AI模型，加快晶片設計速度。第二代產品目前已進入後期階段，預計未來數月完成設計定案並送交製造；第三代晶片的初步概念也已開始規畫。",
+            "Ho表示，Jalapeno在成本及功耗方面的表現，有望降低OpenAI的基礎設施支出，但這僅是自研晶片計畫的第一步。OpenAI加入自行開發AI晶片的科技企業行列，試圖降低對輝達的依賴，並針對自家模型設計更有效率的硬體。",
+            "市場也有多家新創公司投入類似產品。近期以210億美元估值募資的Etched開始出貨低功耗晶片；由兩名前Google晶片業務成員創辦的MatX，也正開發同時具備高吞吐量及低延遲的處理器。",
+            "Ho預計周二在史丹佛大學舉行的Hot Chips大會發表演說。他表示，OpenAI選擇公開晶片研發成果，是希望促進AI半導體領域的創新。",
+            "儘管OpenAI宣稱Jalapeno在部分測試中優於輝達GB300，Ho仍強調，輝達是OpenAI的重要合作夥伴，公司未來仍需要大量輝達晶片。這也意味著，Jalapeno短期內更可能扮演補充運算資源及降低推論成本的角色，而非全面取代輝達處理器。"
           ],
           "paras_en": [
-            "As of 21:49 Taipei Time on the 25th, Target (TGT-US) shares fell by $8.51 to $161.25, a decline of 5.01%, with a trading volume of 1,368,650 shares. The intraday high was $166.75 and the low was $161.22.",
+            "OpenAI says its in‑house Jalapeno AI chip outperforms Nvidia’s existing GB300 processor in some tests, showing progress in its self‑developed AI infrastructure. The company plans to start using the chip later this year to support its models, aiming to cut data‑center costs and let customers choose lower‑price or faster‑response models as needed.",
+            "Jalapeno was co‑developed by OpenAI and Broadcom (AVGO‑US); the partners announced the collaboration last year and in June said the chip was designed at record speed. Broadcom also builds custom chips for many customers.",
+            "OpenAI chip lead Richard Ho said that in public benchmark tests, Jalapeno outperformed the then‑leading Nvidia GB300 on two metrics: AI workload per unit power and the speed of delivering answers to users.",
+            "Balancing high throughput and low latency",
+            "Most AI chips favor one capability over the other; some handle large workloads, others excel at quick responses. Ho said Jalapeno can deliver both high throughput and low latency, enabling cost‑effective service for many users while offering faster replies to speed‑sensitive customers.",
+            "OpenAI will decide which models use Jalapeno, and customers can pick models that emphasize cost‑effectiveness or compute performance. The chip achieves good results at about 700 W, helping reduce data‑center power spend. As OpenAI builds massive AI infrastructure worldwide, power has become one of the most important operating costs.",
+            "However, the tests did not compare Jalapeno to Nvidia’s newly shipped Vera Rubin chip, and Jalapeno is not intended for training AI models. Its main use is inference, the stage where a trained model processes user prompts and performs tasks. Training still remains Nvidia’s strongest domain.",
+            "OpenAI said Jalapeno’s speed is enough to achieve performance that previously required special memory and chip architecture. The company currently runs some models on Cerebras Systems technology, but Ho noted those chips suit smaller models, while Jalapeno can handle larger, heavier workloads.",
+            "OpenAI tested Jalapeno publicly with its own smaller open‑source models and third‑party models from DeepSeek and Moonshot AI. On the largest Moonshot Kimi model, Jalapeno showed a clearer performance advantage; internal tests also showed it can run OpenAI’s yet‑unreleased large advanced models efficiently.",
+            "OpenAI believes that as model and workload sizes grow, Jalapeno’s design value will become even clearer. Still, Ho emphasized that due to OpenAI’s enormous compute needs, it will not replace Cerebras or other suppliers in the short term.",
+            "Second‑generation chip enters final design stage",
+            "OpenAI said it also used its own AI models during Jalapeno’s development to accelerate chip design. The second‑generation product is now in the late stage, expected to finalize design and go to manufacturing in the coming months; preliminary concepts for a third‑generation chip have also begun planning.",
+            "Ho said Jalapeno’s performance in cost and power could lower OpenAI’s infrastructure spend, but this is only the first step of the self‑made chip program. By joining the ranks of companies developing their own AI chips, OpenAI aims to reduce dependence on Nvidia and design more efficient hardware for its own models.",
+            "Several startups are also entering the market. Recently, Etched, raised $21 billion in funding, began shipping low‑power chips; MatX, founded by two former Google chip‑business executives, is developing a processor that also offers high throughput and low latency."
+          ]
+        },
+        {
+          "news_id": "6586744",
+          "title": "盤中速報 - 思佳訊半導體(SWKS-US)大跌5.07%，報63.47美元",
+          "title_en": "",
+          "publish_at": 1787671150,
+          "url": "https://news.cnyes.com/news/id/6586744",
+          "paras": [
+            "思佳訊半導體(SWKS-US)截至台北時間25日23:04股價下跌3.39美元，報63.47美元，跌幅5.07%，成交量1,114,545（股），盤中最高價66.97美元、最低價63.47美元。",
+            "美股指數盤中表現",
+            "道瓊指數：+0.12%S&P 500指數：+0.15%NASDAQ指數：+0.34%費城半導體指數：+1.11%思佳訊半導體(SWKS-US)歷史漲跌幅",
+            "近 1 週：-1.28%    近 1 月：+11.04%    近 3 月：-18.88%    近 6 月：+11.62%    今年以來：+5.44%"
+          ],
+          "paras_en": []
+        },
+        {
+          "news_id": "6586740",
+          "title": "加拿大不忍了！對200億美元美國商品祭報復性關稅",
+          "title_en": "",
+          "publish_at": 1787670977,
+          "url": "https://news.cnyes.com/news/id/6586740",
+          "paras": [
+            "加拿大政府周二(25日)宣布，將對價值約200億美元的美國商品徵收報復性關稅，以「一美元對一美元」方式回應美國總統川普上周末對加拿大產品加徵的50%關稅，象徵美加貿易衝突進一步升級。",
+            "加拿大新措施涵蓋逾700項美國商品，稅率介於15%至50%，包括鋼鐵、鋁、乳製品、海鮮、家電、木材、紙製品及服飾。其中，金屬及木材被列入清單，主要是反制美國先前對加拿大鋼鋁、木材及其他產品加徵的關稅。",
+            "新關稅預計9月8日生效。加拿大政府另公布一項規模75億美元的援助方案，協助因美國關稅受創的企業與勞工。",
+            "川普上周末對加拿大葡萄酒、水泥、曲棍球桿等商品加徵50%關稅，涉及貿易額約200億美元。若美加雙方能在上周六前達成貿易協議，這些關稅原可避免。",
+            "川普上周稍早曾宣稱協議已接近完成，但加拿大周五晚間暫停談判，認為美方要求過多、讓步過少。川普政府則反控加拿大在最後一刻提出不合理的修改要求，導致談判破局。",
+            "川普周二在Truth Social接連抨擊加拿大，不僅暗示美國可能停止與安大略省做生意，還多次揚言將安大略湖改名為「美國湖」。他也指控加拿大針對美國農民，並抱怨美國對加貿易逆差，不過相關逆差主要來自美國大量進口加拿大原油。",
+            "加拿大貿易部長勒布朗(Dominic LeBlanc)表示，渥太華仍希望與美國達成一項對雙方都有利的協議，但在談判恢復前，「加拿大不會守在電話旁等待」。",
+            "持續更新..."
+          ],
+          "paras_en": []
+        },
+        {
+          "news_id": "6586743",
+          "title": "盤中速報 - 超微半導體(AMD-US)大漲5.01%，報479.49美元",
+          "title_en": "Intraday Flash - Advanced Micro Devices (AMD-US) Surges 5.01%, Trading at $479.49",
+          "publish_at": 1787670976,
+          "url": "https://news.cnyes.com/news/id/6586743",
+          "paras": [
+            "超微半導體(AMD-US)截至台北時間25日23:01股價上漲22.87美元，報479.49美元，漲幅5.01%，成交量7,947,629（股），盤中最高價479.65美元、最低價469.07美元。",
+            "美股指數盤中表現",
+            "道瓊指數：+0.09%S&P 500指數：+0.14%NASDAQ指數：+0.4%費城半導體指數：+1.21%超微半導體(AMD-US)歷史漲跌幅",
+            "近 1 週：-9.73%    近 1 月：-12.49%    近 3 月：-2.3%    近 6 月：+113.59%    今年以來：+113.27%"
+          ],
+          "paras_en": [
+            "As of 23:01 Taipei Time on the 25th, shares of Advanced Micro Devices (AMD-US) rose by $22.87 to $479.49, a gain of 5.01%. Trading volume reached 7,947,629 shares, with an intraday high of $479.65 and a low of $469.07.",
             "U.S. Stock Index Intraday Performance",
-            "Dow Jones Index: +0.03% S&P 500 Index: +0.36% NASDAQ Index: +0.95% Philadelphia Semiconductor Index: +2.46% Target (TGT-US) Historical Price Changes",
-            "Past 1 Week: +12.5%    Past 1 Month: +24.21%    Past 3 Months: +35.26%    Past 6 Months: +47.07%    Year-to-Date: +73.8%"
+            "Dow Jones Index: +0.09% S&P 500 Index: +0.14% NASDAQ Index: +0.4% Philadelphia Semiconductor Index: +1.21% Advanced Micro Devices (AMD-US) Historical Price Changes",
+            "Past 1 Week: -9.73%    Past 1 Month: -12.49%    Past 3 Months: -2.3%    Past 6 Months: +113.59%    Year-to-Date: +113.27%"
           ]
         },
         {
-          "news_id": "6586659",
-          "title": "美國要把中國銀行踢出美元圈？北京早已留好一條後路",
+          "news_id": "6586729",
+          "title": "蘋果更新Mac Studio與Mac mini，主打AI直接在電腦上運算",
           "title_en": "",
-          "publish_at": 1787666403,
-          "url": "https://news.cnyes.com/news/id/6586659",
+          "publish_at": 1787670012,
+          "url": "https://news.cnyes.com/news/id/6586729",
           "paras": [
-            "美國威脅將協助伊朗規避制裁的企業及金融機構逐出美元體系，使中國大型銀行陷入兩難。北京雖公開反對美國單邊制裁，但中國的貿易及金融活動仍高度依賴美元，主要銀行也有強烈誘因維持與美國金融體系的連結。",
-            "美國財政部長貝森特(Scott Bessent)本周一宣布，任何替伊朗洗錢或規避制裁的實體，都可能被切斷與美國金融體系的聯繫。這項措施是美國總統川普對伊朗發動「經濟版D-Day」的一部分。",
-            "貝森特被問及中國銀行是否可能成為制裁目標時表示，若相關銀行協助進行交易，參與將伊朗石油轉換成資金、再用於鎮壓活動的金融生態系，美國就會採取行動。",
-            "中國外交部周二(25日)回應，北京一貫反對未獲國際法依據或聯合國安理會授權的非法單邊制裁，並將採取「一切必要措施」維護自身權益。",
-            "中國高度依賴伊朗石油。美中經濟暨安全檢討委員會分析師3月指出，在美伊戰爭爆發前，中國買下伊朗約九成出口原油，相當於中國原油進口總量約12%，也是伊朗最大貿易夥伴。",
-            "人民幣支付系統成地緣避險工具\n\n美國擴大實施「經濟放逐行動」(Operation Economic Outcast)，點名多家中國企業及個人涉嫌協助伊朗軍方，並表示將給予各國一定期限停止相關活動，但未公開具體日期。",
-            "儘管北京態度強硬，分析人士認為，中國仍會設法留在美元融資體系，同時加速建立降低制裁風險的替代管道。Z-Ben駐上海董事總經理Peter Alexander指出，人民幣跨境支付系統(CIPS)顯示中國正尋求分散對美元金融體系的依賴，但並非完全放棄美元。",
-            "中國人民銀行2012年開始建設CIPS，恰逢美國財政部因涉及伊朗非法交易制裁中國規模較小的崑崙銀行。俄烏戰爭2022年爆發後，CIPS交易量明顯增加，今年整體也持續成長。",
-            "目前CIPS在全球共有210家直接參與機構，多數是中國國有銀行的海外分支機構。中國也藉由雙邊貨幣互換擴大人民幣使用，阿根廷及澳洲本月均與中國續簽貨幣互換協議，使雙方央行可交換價值數百億美元的人民幣。",
-            "Alexander表示，新興金融體系不代表各國將拋棄美元，而是提供一種「地緣政治避險工具」。",
-            "美元目前仍占全球支付主導地位。根據國際銀行金融電信協會(SWIFT)資料，美元7月占全球支付比重逾五成，人民幣則以3.1%排名第五，低於2025年初的逾4%。在貿易融資方面，美元占比接近八成，人民幣以8.4%排名第二。",
-            "制裁與稀土籌碼牽制美中雙方\n\n經濟學人智庫(EIU)資深經濟學家Tianchen Xu表示，中國希望留在有利其出口引擎運作的美元體系內，但不代表北京會全面配合美國不斷擴大的制裁。若華府對中國大型企業下手，中國可能利用稀土出口管制及其他措施反擊。",
-            "美國同樣需要中國掌握的關鍵礦產，因此也有維持雙邊關係穩定的誘因。川普5月訪問北京後，預計下月底在美國再次與中國國家主席習近平會面。Eurasia Group中國區主任Dan Wang認為，華府不希望伊朗問題破壞這場峰會。",
-            "她指出，美中關係的核心仍是台灣問題，中伊關係並沒有外界想像中緊密，北京自2018年以來基本上已停止對伊朗提供國家支持的基礎建設投資。",
-            "不過，若美國將中國大型銀行逐出SWIFT，將大幅增加人民幣貶值壓力，這是北京難以接受的結果。自2月28日美伊戰爭爆發以來，美元指數上漲約1.5%，人民幣兌美元則升值近2%，兌歐元升值逾3%。",
-            "中國今年曾協助美伊在巴基斯坦展開初步和平談判，但分析人士認為，北京既缺乏能力，也沒有意願迫使任何一方談判。Alexander表示，中國甚至還沒開始真正對美國採取強硬手段；問題並非華府可以做什麼，而是美國最終是否真的敢執行制裁。"
+            "2026年08月25日（優分析／產業數據中心報導）⸺ 蘋果Apple(AAPL-US)週二推出新一代Mac Studio與Mac mini，最大亮點是大幅提升AI運算能力，讓更多AI工作可以直接在電腦上完成，減少對雲端伺服器的依賴。",
+            "其中，Mac Studio提供M5 Max與M5 Ultra晶片，AI效能最高可達前一代的4.3倍。M5 Ultra最高搭載36核心CPU、80核心GPU及512 GB統一記憶體，足以在電腦本機執行大型語言模型(LLM)，特別鎖定AI開發、3D設計、影像製作等高效能需求。",
+            "Mac mini則提供M6與M5 Pro兩種晶片版本。搭載M6後，AI效能最高提升至4倍，儲存速度提高至2倍，CPU效能提升40%，讓體積較小的Mac mini也能處理更複雜的AI工作。",
+            "蘋果這次升級的方向，就是讓AI「直接在Mac裡跑」。除了提高運算速度，也能減少資料傳送到雲端的需求，反映裝置端AI正逐漸成為新一代個人電腦的重要競爭焦點。",
+            "※ 本文經「優分析」授權轉載，原文出處:原文連結",
+            "※ 免責聲明：文中所提的個股、基金、期貨商品內容僅供參考，並非投資建議，投資人應獨立判斷，審慎評估風險。"
           ],
           "paras_en": []
         },
         {
-          "news_id": "6586690",
-          "title": "盤中速報 - 連貫(COHR-US)大漲5.01%，報289.14美元",
+          "news_id": "6586728",
+          "title": "比特幣重返80,000美元大關，單週大漲23%創3年最大漲幅",
           "title_en": "",
-          "publish_at": 1787666388,
-          "url": "https://news.cnyes.com/news/id/6586690",
+          "publish_at": 1787670012,
+          "url": "https://news.cnyes.com/news/id/6586728",
           "paras": [
-            "連貫(COHR-US)截至台北時間25日21:44股價上漲13.8美元，報289.14美元，漲幅5.01%，成交量718,234（股），盤中最高價289.43美元、最低價283.10美元。",
-            "美股指數盤中表現",
-            "道瓊指數：+0.02%S&P 500指數：+0.42%NASDAQ指數：+0.77%費城半導體指數：+1.92%連貫(COHR-US)歷史漲跌幅",
-            "近 1 週：-21.56%    近 1 月：-2.44%    近 3 月：-27.04%    近 6 月：+8.09%    今年以來：+49.26%"
+            "2026年08月25日（優分析／產業數據中心報導）⸺ 比特幣(Bitcoin)價格突破80,000美元，為5月中旬以來首度重返這一水準。市場對加密貨幣的信心回升，加上美元走弱與美國政府債券回購政策重新帶動「貨幣貶值交易」，推升資金回流比特幣與黃金。",
+            "截至目前為止，比特幣報80,607美元，單日上漲3.9%。此前比特幣截至週日的7天累計大漲23%，創近3年最大單週漲幅。不過，目前價格仍明顯低於2025年10月創下約126,000美元的歷史高點。",
+            "近期漲勢與美國總體經濟政策變化有關。美國財政部長貝森特(Scott Bessent)上週表示，美國正增加債券購買，以降低長期公債殖利率。市場認為，擴大回購長天期公債有助壓低殖利率並削弱美元，重新提高比特幣及黃金等資產的吸引力。",
+            "市場普遍認為，美國財政部擴大長天期債券回購計畫後，總體經濟環境轉趨有利，美元走弱也帶動比特幣與黃金的「貨幣貶值交易」重新升溫。",
+            "政策面同樣為市場提供支撐。美國總統川普近期與加密貨幣產業領袖會面，使市場重新期待政府推動加密貨幣監管政策。由於參議院進入8月休會期前，規範市場結構的Clarity Act未能進入表決，川普已呼籲眾議院通過法案，預計9月中旬將再次進入討論。",
+            "比特幣自2025年10月創下歷史高點後一路回檔，2026年大部分時間維持弱勢，因此市場近期持續尋找價格觸底訊號。Bitfire研究主管Alan Dean認為，近期反彈已呈現部分多頭市場初期特徵，但目前仍不足以確認趨勢反轉。",
+            "後續觀察重點將是現貨買盤能否接替空頭回補，成為推動比特幣上漲的主要力量。若資金需求持續增強，將有助確認這波反彈是否能進一步轉化為較長期的上升趨勢。",
+            "※ 本文經「優分析」授權轉載，原文出處:原文連結",
+            "※ 免責聲明：文中所提的個股、基金、期貨商品內容僅供參考，並非投資建議，投資人應獨立判斷，審慎評估風險。"
           ],
           "paras_en": []
         },
         {
-          "news_id": "6586688",
-          "title": "盤中速報 - 超微電腦(SMCI-US)大漲5.69%，報37.17美元",
-          "title_en": "Intra-Day Update – Super Micro Computer (SMCI-US) Rises 5.69% to $37.17",
-          "publish_at": 1787665989,
-          "url": "https://news.cnyes.com/news/id/6586688",
-          "paras": [
-            "超微電腦(SMCI-US)截至台北時間25日21:38股價上漲2美元，報37.17美元，漲幅5.69%，成交量4,662,855（股），盤中最高價37.25美元、最低價36.01美元。",
-            "美股指數盤中表現",
-            "道瓊指數：+0.17%S&P 500指數：+0.37%NASDAQ指數：+0.74%費城半導體指數：+2.22%超微電腦(SMCI-US)歷史漲跌幅",
-            "近 1 週：-8.12%    近 1 月：+16.84%    近 3 月：-1.15%    近 6 月：+12.98%    今年以來：+20.16%"
-          ],
-          "paras_en": [
-            "Super Micro Computer (SMCI-US) was up $2.00 at $37.17, a 5.69% gain, as of 21:38 Taipei time on the 25th, with a volume of 4,662,855 shares. The intraday high was $37.25 and the low was $36.01.",
-            "U.S. stock indices during the session",
-            "Dow Jones: +0.17% | S&P 500: +0.37% | NASDAQ: +0.74% | Philadelphia Semiconductor: +2.22% | Super Micro Computer (SMCI-US) historical performance",
-            "Past 1 week: -8.12% | Past 1 month: +16.84% | Past 3 months: -1.15% | Past 6 months: +12.98% | Year-to-date: +20.16%"
-          ]
-        },
-        {
-          "news_id": "6586687",
-          "title": "盤中速報 - 邁威爾科技(MRVL-US)大漲7.35%，報245.98美元",
-          "title_en": "Midday Update – Mavell Technology (MRVL-US) Surges 7.35% to $245.98",
-          "publish_at": 1787665989,
-          "url": "https://news.cnyes.com/news/id/6586687",
-          "paras": [
-            "邁威爾科技(MRVL-US)截至台北時間25日21:38股價上漲16.86美元，報245.98美元，漲幅7.35%，成交量3,205,213（股），盤中最高價246.33美元、最低價235.93美元。",
-            "美股指數盤中表現",
-            "道瓊指數：+0.17%S&P 500指數：+0.37%NASDAQ指數：+0.74%費城半導體指數：+2.22%邁威爾科技(MRVL-US)歷史漲跌幅",
-            "近 1 週：-2.15%    近 1 月：+18.05%    近 3 月：+16.79%    近 6 月：+192.5%    今年以來：+169.82%"
-          ],
-          "paras_en": [
-            "Mavell Technology (MRVL-US) was up $16.86 to $245.98 at 21:38 Taipei time, a 7.35% gain, with a volume of 3,205,213 shares. The intraday high was $246.33 and the low was $235.93.",
-            "U.S. stock indices during the session",
-            "Dow Jones: +0.17% | S&P 500: +0.37% | NASDAQ: +0.74% | Philadelphia Semiconductor: +2.22% | Mavell Technology (MRVL-US) historical performance",
-            "Past 1 week: -2.15% | Past 1 month: +18.05% | Past 3 months: +16.79% | Past 6 months: +192.5% | Year-to-date: +169.82%"
-          ]
-        },
-        {
-          "news_id": "6586686",
-          "title": "盤中速報 - 莫德納(MRNA-US)大漲6.13%，報147.09美元",
+          "news_id": "6586727",
+          "title": "市場淡化美國對伊朗制裁衝擊，國際油價重挫逾3%至一週低點",
           "title_en": "",
-          "publish_at": 1787665988,
-          "url": "https://news.cnyes.com/news/id/6586686",
+          "publish_at": 1787670011,
+          "url": "https://news.cnyes.com/news/id/6586727",
           "paras": [
-            "莫德納(MRNA-US)截至台北時間25日21:38股價上漲8.52美元，報147.09美元，漲幅6.13%，成交量3,466,501（股），盤中最高價149.89美元、最低價141.21美元。",
-            "美股指數盤中表現",
-            "道瓊指數：+0.17%S&P 500指數：+0.37%NASDAQ指數：+0.74%費城半導體指數：+2.22%莫德納(MRNA-US)歷史漲跌幅",
-            "近 1 週：+115.47%    近 1 月：+156.87%    近 3 月：+196.27%    近 6 月：+174.92%    今年以來：+370.97%"
-          ],
-          "paras_en": []
-        },
-        {
-          "news_id": "6586685",
-          "title": "盤中速報 - 費城半導體大漲2.18%，報11672.67點",
-          "title_en": "",
-          "publish_at": 1787665961,
-          "url": "https://news.cnyes.com/news/id/6586685",
-          "paras": [
-            "截至台北時間25日09:37，費城半導體上漲249.5點（或2.18%），暫報11672.67點。",
-            "歷史漲跌幅",
-            "近 1 週：-9.49%近 1 月：-3.35%近 3 月：-6.39%近 6 月：+37.09%今年以來：+61.27%焦點個股",
-            "費城半導體成分股以邁威爾科技(MRVL-US)領漲。邁威爾科技(MRVL-US)上漲6.9%；連貫(COHR-US)上漲4.28%；超微半導體(AMD-US)上漲4.02%；和康電訊(MTSI-US)上漲3.23%；安謀控股公司(ARM-US)上漲3.02%。",
-            "部分成分股表現相對疲軟，思佳訊半導體(SWKS-US)下跌1.74%；科沃(QRVO-US)下跌0.8%。"
+            "2026年08月25日（優分析／產業數據中心報導）⸺ 國際油價週二重挫逾3%，跌至8月17日以來最低。市場認為，美國對伊朗策略由軍事衝突轉向經濟制裁，短期對原油供應的直接威脅降低，帶動地緣政治風險溢價降溫。",
+            "布蘭特原油期貨下跌3.33%至每桶89.10美元；西德州中級原油(WTI)下跌3.45%至82.08美元。",
+            "美國財政部長貝森特(Scott Bessent)週一公布新一輪對伊朗制裁，但未說明具體制裁國家及生效時間，力道不如部分交易員預期。伊朗則揚言反制，而美國國防部長赫格塞斯(Pete Hegseth)仍未排除動用軍事力量。",
+            "供應風險仍未完全解除。週二一艘油輪在阿曼附近遭不明飛行物擊中；週一僅2艘油輪通過荷莫茲海峽，降至5月初以來單日最低。該航道在2月28日美以與伊朗戰爭爆發前，通常承擔約全球五分之一石油消費量的運輸。",
+            "此外，俄羅斯Novoshakhtinsk煉油廠遭烏克蘭無人機攻擊後暫停營運，哈薩克Atyrau煉油廠也發生火災，使全球能源供應中斷風險仍受到市場關注。",
+            "※ 本文經「優分析」授權轉載，原文出處:原文連結",
+            "※ 免責聲明：文中所提的個股、基金、期貨商品內容僅供參考，並非投資建議，投資人應獨立判斷，審慎評估風險。"
           ],
           "paras_en": []
         }
