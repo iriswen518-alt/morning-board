@@ -121,11 +121,11 @@
     {
       "name": "Hang Seng 恆生",
       "name_zh": null,
-      "close": 25517.330078125,
-      "daily_pct": -1.89,
+      "close": 25511.099609375,
+      "daily_pct": -0.02,
       "mtd_pct": -1.42,
       "ytd_pct": -0.44,
-      "closing_date": "2026-08-24"
+      "closing_date": "2026-08-25"
     },
     {
       "name": "Shanghai 上證",
@@ -196,9 +196,9 @@
     {
       "name": "UK 10-Year",
       "yield_pct": 5.13,
-      "daily_bps": 0.39,
-      "mtd_bps": 2.36,
-      "closing_date": "2026-08-20"
+      "daily_bps": 0.64,
+      "mtd_bps": 3.0,
+      "closing_date": "2026-08-21"
     },
     {
       "name": "TW 10-Year",
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 99.0,
       "daily_pct": 0.2,
-      "mtd_pct": -0.73,
-      "ytd_pct": 0.8,
+      "mtd_pct": -0.77,
+      "ytd_pct": 0.77,
       "closing_date": "2026-08-24"
     },
     {
@@ -405,11 +405,11 @@
     {
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
-      "implied_rate": 3.74,
-      "delta_rate": 0.06,
-      "delta_bps": 6.0,
-      "p_hike": 24.0,
-      "p_hold": 76.0,
+      "implied_rate": 3.73,
+      "delta_rate": 0.05,
+      "delta_bps": 5.0,
+      "p_hike": 20.0,
+      "p_hold": 80.0,
       "p_cut": 0,
       "is_reference": false
     },
@@ -417,13 +417,13 @@
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
       "implied_rate": 3.88,
-      "delta_rate": 0.13,
-      "delta_bps": 13.0,
-      "p_hike": 52.0,
-      "p_hold": 48.0,
+      "delta_rate": 0.14,
+      "delta_bps": 14.0,
+      "p_hike": 56.0,
+      "p_hold": 44.0,
       "p_cut": 0,
       "is_reference": false
     }
   ],
-  "summary": "8/25 TAIEX 加權指數 +0.91%、8/25 OTC 櫃買加權 +0.86%、8/25 KOSPI +0.68% 領漲；8/24 PHLX Semiconductor -2.70%、8/24 Hang Seng 恆生 -1.89% 走弱。"
+  "summary": "8/25 TAIEX 加權指數 +0.91%、8/25 OTC 櫃買加權 +0.86%、8/25 KOSPI +0.68% 領漲；8/24 PHLX Semiconductor -2.70%、8/24 台指期(近月) -0.83% 走弱。"
 }

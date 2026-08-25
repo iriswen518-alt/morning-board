@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T16:02:03+08:00",
+  "generated_at": "2026-08-25T16:53:36+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -87,6 +87,20 @@
       "error": null
     },
     {
+      "symbol": "DFNS",
+      "name_zh": "T3 Defense",
+      "kind": "US",
+      "price": 11.01,
+      "change_pct": -46.58,
+      "mtd_pct": -60.22,
+      "ytd_pct": 173.2,
+      "market_date": "2026-08-24",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DFNS.US",
+      "error": null
+    },
+    {
       "symbol": "CRCL",
       "name_zh": "Circle Internet",
       "kind": "US",
@@ -101,17 +115,87 @@
       "error": null
     },
     {
-      "symbol": "DFNS",
-      "name_zh": "T3 Defense",
+      "symbol": "SDOT",
+      "name_zh": "Sadot",
       "kind": "US",
-      "price": 11.01,
-      "change_pct": -46.58,
-      "mtd_pct": -60.22,
-      "ytd_pct": 173.2,
+      "price": 23.16,
+      "change_pct": 75.72,
+      "mtd_pct": 74.79,
+      "ytd_pct": -4.3,
       "market_date": "2026-08-24",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DFNS.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SDOT.US",
+      "error": null
+    },
+    {
+      "symbol": "IBIT",
+      "name_zh": "iShares Bitcoin Trust ETF",
+      "kind": "US",
+      "price": 44.64,
+      "change_pct": 2.2,
+      "mtd_pct": 25.25,
+      "ytd_pct": -10.09,
+      "market_date": "2026-08-24",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IBIT.US",
+      "error": null
+    },
+    {
+      "symbol": "CELH",
+      "name_zh": "Celsius",
+      "kind": "US",
+      "price": 35.03,
+      "change_pct": 5.01,
+      "mtd_pct": 19.92,
+      "ytd_pct": -23.41,
+      "market_date": "2026-08-24",
+      "per": 55.4605,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CELH.US",
+      "error": null
+    },
+    {
+      "symbol": "OKLO",
+      "name_zh": "Oklo",
+      "kind": "US",
+      "price": 39.69,
+      "change_pct": -5.7,
+      "mtd_pct": 2.21,
+      "ytd_pct": -44.69,
+      "market_date": "2026-08-24",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=OKLO.US",
+      "error": null
+    },
+    {
+      "symbol": "INOD",
+      "name_zh": "Innodata",
+      "kind": "US",
+      "price": 57.13,
+      "change_pct": -11.03,
+      "mtd_pct": -9.07,
+      "ytd_pct": 12.13,
+      "market_date": "2026-08-24",
+      "per": 52.9933,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=INOD.US",
+      "error": null
+    },
+    {
+      "symbol": "GRRR",
+      "name_zh": "Gorilla Technology",
+      "kind": "US",
+      "price": 15.83,
+      "change_pct": -1.43,
+      "mtd_pct": 42.74,
+      "ytd_pct": 44.96,
+      "market_date": "2026-08-24",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GRRR.US",
       "error": null
     },
     {
@@ -129,17 +213,17 @@
       "error": null
     },
     {
-      "symbol": "CELH",
-      "name_zh": "Celsius",
+      "symbol": "MA",
+      "name_zh": "萬事達",
       "kind": "US",
-      "price": 35.03,
-      "change_pct": 5.01,
-      "mtd_pct": 19.92,
-      "ytd_pct": -23.41,
+      "price": 599.86,
+      "change_pct": 3.31,
+      "mtd_pct": 4.67,
+      "ytd_pct": 5.08,
       "market_date": "2026-08-24",
-      "per": 55.4605,
+      "per": 30.187,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CELH.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MA.US",
       "error": null
     },
     {
