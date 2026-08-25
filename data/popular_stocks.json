@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T14:03:21+08:00",
+  "generated_at": "2026-08-25T15:01:13+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -31,20 +31,6 @@
       "error": null
     },
     {
-      "symbol": "ASST",
-      "name_zh": "Strive",
-      "kind": "US",
-      "price": 19.73,
-      "change_pct": 8.29,
-      "mtd_pct": 77.59,
-      "ytd_pct": 33.67,
-      "market_date": "2026-08-24",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ASST.US",
-      "error": null
-    },
-    {
       "symbol": "MSTR",
       "name_zh": "MicroStrategy",
       "kind": "US",
@@ -56,20 +42,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MSTR.US",
-      "error": null
-    },
-    {
-      "symbol": "XPON",
-      "name_zh": "Expion360",
-      "kind": "US",
-      "price": 6.2,
-      "change_pct": 80.49,
-      "mtd_pct": 71.75,
-      "ytd_pct": -23.8,
-      "market_date": "2026-08-24",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=XPON.US",
       "error": null
     },
     {
@@ -87,17 +59,31 @@
       "error": null
     },
     {
-      "symbol": "YUM",
-      "name_zh": "Yum! Brands",
+      "symbol": "ASST",
+      "name_zh": "Strive",
       "kind": "US",
-      "price": 157.35,
-      "change_pct": 2.85,
-      "mtd_pct": 2.66,
-      "ytd_pct": 4.01,
+      "price": 19.73,
+      "change_pct": 8.29,
+      "mtd_pct": 77.59,
+      "ytd_pct": 33.67,
       "market_date": "2026-08-24",
-      "per": 19.0198,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=YUM.US",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ASST.US",
+      "error": null
+    },
+    {
+      "symbol": "XPON",
+      "name_zh": "Expion360",
+      "kind": "US",
+      "price": 6.2,
+      "change_pct": 80.49,
+      "mtd_pct": 71.75,
+      "ytd_pct": -23.8,
+      "market_date": "2026-08-24",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=XPON.US",
       "error": null
     },
     {
@@ -112,48 +98,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DFNS.US",
-      "error": null
-    },
-    {
-      "symbol": "IBIT",
-      "name_zh": "iShares Bitcoin Trust ETF",
-      "kind": "US",
-      "price": 44.64,
-      "change_pct": 2.2,
-      "mtd_pct": 25.25,
-      "ytd_pct": -10.09,
-      "market_date": "2026-08-24",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IBIT.US",
-      "error": null
-    },
-    {
-      "symbol": "MA",
-      "name_zh": "萬事達",
-      "kind": "US",
-      "price": 599.86,
-      "change_pct": 3.31,
-      "mtd_pct": 4.67,
-      "ytd_pct": 5.08,
-      "market_date": "2026-08-24",
-      "per": 30.187,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MA.US",
-      "error": null
-    },
-    {
-      "symbol": "GRRR",
-      "name_zh": "Gorilla Technology",
-      "kind": "US",
-      "price": 15.83,
-      "change_pct": -1.43,
-      "mtd_pct": 42.74,
-      "ytd_pct": 44.96,
-      "market_date": "2026-08-24",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GRRR.US",
       "error": null
     },
     {
@@ -182,6 +126,62 @@
       "per": 55.4605,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CELH.US",
+      "error": null
+    },
+    {
+      "symbol": "IBIT",
+      "name_zh": "iShares Bitcoin Trust ETF",
+      "kind": "US",
+      "price": 44.64,
+      "change_pct": 2.2,
+      "mtd_pct": 25.25,
+      "ytd_pct": -10.09,
+      "market_date": "2026-08-24",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IBIT.US",
+      "error": null
+    },
+    {
+      "symbol": "BITX",
+      "name_zh": "2x Bitcoin ETF",
+      "kind": "US",
+      "price": 17.95,
+      "change_pct": 4.48,
+      "mtd_pct": 53.95,
+      "ytd_pct": -35.29,
+      "market_date": "2026-08-24",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BITX.US",
+      "error": null
+    },
+    {
+      "symbol": "GRRR",
+      "name_zh": "Gorilla Technology",
+      "kind": "US",
+      "price": 15.83,
+      "change_pct": -1.43,
+      "mtd_pct": 42.74,
+      "ytd_pct": 44.96,
+      "market_date": "2026-08-24",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GRRR.US",
+      "error": null
+    },
+    {
+      "symbol": "CRCL",
+      "name_zh": "Circle Internet",
+      "kind": "US",
+      "price": 87.72,
+      "change_pct": -0.3,
+      "mtd_pct": 40.11,
+      "ytd_pct": 10.62,
+      "market_date": "2026-08-24",
+      "per": 42.4069,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRCL.US",
       "error": null
     },
     {
