@@ -57,7 +57,7 @@
 //   並把底部導覽列提升為獨立合成層——修捲動時底部列飄到畫面中間。
 // v71（2026-08-10）：撤回 v70 給 .tabbar 加的 translateZ(0)——WebKit 會把帶 transform 的
 //   fixed 元素改成相對文件定位，導致全站每一頁的底部導覽列都跑掉。
-const CACHE = "morning-board-v71";
+const CACHE = "morning-board-v72";
 
 self.addEventListener("install", e => {
   self.skipWaiting();

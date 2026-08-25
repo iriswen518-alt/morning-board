@@ -3596,3 +3596,20 @@ table.mc-table td.mc-fc { font-weight: 600; color: var(--brand-primary); }
 @media (max-width: 768px) {
   #mc-regs { grid-template-columns: repeat(3, 1fr); }
 }
+
+/* === 2026-08-25 分頁改按鈕呈現（比照工作資料站：次底＋框線＋圓角8，選中實心深藍白字，不粗體） === */
+@media (min-width: 769px) {
+  .main-nav { gap: 8px; padding: 10px 16px; border-bottom: 1px solid var(--border); box-shadow: none; }
+  .main-tab {
+    padding: 10px 12px;
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-mute);
+    font-weight: 500;
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  }
+  .main-tab + .main-tab::before { display: none; }
+  .main-tab:hover { color: var(--brand-deep); border-color: var(--brand-primary); background: var(--surface-hover); }
+  .main-tab.active { background: var(--brand-deep); border-color: var(--brand-deep); color: #fff; font-weight: 500; }
+}
