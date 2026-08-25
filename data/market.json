@@ -58,7 +58,7 @@
     {
       "name": "FTSE 100",
       "name_zh": null,
-      "close": 10886.16015625,
+      "close": 10886.16,
       "daily_pct": 0.29,
       "mtd_pct": -0.13,
       "ytd_pct": 9.29,
@@ -94,11 +94,11 @@
     {
       "name": "OTC 櫃買加權",
       "name_zh": null,
-      "close": 389.41,
-      "daily_pct": 0.86,
+      "close": null,
+      "daily_pct": null,
       "mtd_pct": null,
       "ytd_pct": null,
-      "closing_date": "2026-08-25"
+      "closing_date": null
     },
     {
       "name": "台指期(近月)",
@@ -425,5 +425,5 @@
       "is_reference": false
     }
   ],
-  "summary": "8/25 PHLX Semiconductor +1.44%、8/25 TAIEX 加權指數 +0.91%、8/25 OTC 櫃買加權 +0.86% 領漲；8/24 台指期(近月) -0.83%、8/25 CAC 40 -0.16% 走弱。"
+  "summary": "8/25 PHLX Semiconductor +1.44%、8/25 TAIEX 加權指數 +0.91%、8/25 KOSPI +0.68% 領漲；8/24 台指期(近月) -0.83%、8/25 CAC 40 -0.16% 走弱。"
 }

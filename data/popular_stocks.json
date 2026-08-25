@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-26T06:36:33+08:00",
+  "generated_at": "2026-08-26T07:32:46+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -101,6 +101,20 @@
       "error": null
     },
     {
+      "symbol": "NKE",
+      "name_zh": "Nike",
+      "kind": "US",
+      "price": 39.48,
+      "change_pct": -3.12,
+      "mtd_pct": -5.35,
+      "ytd_pct": -38.03,
+      "market_date": "2026-08-25",
+      "per": 19.4702,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NKE.US",
+      "error": null
+    },
+    {
       "symbol": "MRNA",
       "name_zh": "莫德納",
       "kind": "US",
@@ -115,17 +129,17 @@
       "error": null
     },
     {
-      "symbol": "BOX",
-      "name_zh": "Box",
+      "symbol": "CRWD",
+      "name_zh": "CrowdStrike",
       "kind": "US",
-      "price": 33,
-      "change_pct": -1.4,
-      "mtd_pct": 4.6,
-      "ytd_pct": 10.33,
+      "price": 185.38,
+      "change_pct": -2.78,
+      "mtd_pct": -2.87,
+      "ytd_pct": 58.19,
       "market_date": "2026-08-25",
-      "per": 37.3073,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BOX.US",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRWD.US",
       "error": null
     },
     {
@@ -143,17 +157,31 @@
       "error": null
     },
     {
-      "symbol": "CRWD",
-      "name_zh": "CrowdStrike",
+      "symbol": "STDN",
+      "name_zh": "Standard Nuclear",
       "kind": "US",
-      "price": 185.38,
-      "change_pct": -2.78,
-      "mtd_pct": -2.87,
-      "ytd_pct": 58.19,
+      "price": 13.94,
+      "change_pct": 16.75,
+      "mtd_pct": 76.68,
+      "ytd_pct": null,
       "market_date": "2026-08-25",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRWD.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=STDN.US",
+      "error": null
+    },
+    {
+      "symbol": "BOX",
+      "name_zh": "Box",
+      "kind": "US",
+      "price": 33,
+      "change_pct": -1.4,
+      "mtd_pct": 4.6,
+      "ytd_pct": 10.33,
+      "market_date": "2026-08-25",
+      "per": 37.3073,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BOX.US",
       "error": null
     },
     {
@@ -182,48 +210,6 @@
       "per": 54.3977,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HEI.US",
-      "error": null
-    },
-    {
-      "symbol": "STDN",
-      "name_zh": "Standard Nuclear",
-      "kind": "US",
-      "price": 13.94,
-      "change_pct": 16.75,
-      "mtd_pct": 76.68,
-      "ytd_pct": null,
-      "market_date": "2026-08-25",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=STDN.US",
-      "error": null
-    },
-    {
-      "symbol": "QFIN",
-      "name_zh": "Qfin",
-      "kind": "US",
-      "price": 11.53,
-      "change_pct": 4.91,
-      "mtd_pct": -16.93,
-      "ytd_pct": -40.17,
-      "market_date": "2026-08-25",
-      "per": 2.0559,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QFIN.US",
-      "error": null
-    },
-    {
-      "symbol": "NKE",
-      "name_zh": "Nike",
-      "kind": "US",
-      "price": 39.48,
-      "change_pct": -3.12,
-      "mtd_pct": -5.35,
-      "ytd_pct": -38.03,
-      "market_date": "2026-08-25",
-      "per": 19.4702,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NKE.US",
       "error": null
     },
     {
