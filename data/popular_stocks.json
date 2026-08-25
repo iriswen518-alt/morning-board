@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T07:30:06+08:00",
+  "generated_at": "2026-08-25T09:44:43+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -31,6 +31,20 @@
       "error": null
     },
     {
+      "symbol": "SNDK",
+      "name_zh": "Sandisk",
+      "kind": "US",
+      "price": 1493.12,
+      "change_pct": -6.45,
+      "mtd_pct": 22.91,
+      "ytd_pct": 529.0,
+      "market_date": "2026-08-24",
+      "per": 19.7934,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SNDK.US",
+      "error": null
+    },
+    {
       "symbol": "AVEX",
       "name_zh": "AEVEX",
       "kind": "US",
@@ -45,20 +59,6 @@
       "error": null
     },
     {
-      "symbol": "CRCL",
-      "name_zh": "Circle Internet",
-      "kind": "US",
-      "price": 87.72,
-      "change_pct": -0.3,
-      "mtd_pct": 40.11,
-      "ytd_pct": 10.62,
-      "market_date": "2026-08-24",
-      "per": 42.4069,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRCL.US",
-      "error": null
-    },
-    {
       "symbol": "XPON",
       "name_zh": "Expion360",
       "kind": "US",
@@ -70,20 +70,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=XPON.US",
-      "error": null
-    },
-    {
-      "symbol": "SNDK",
-      "name_zh": "Sandisk",
-      "kind": "US",
-      "price": 1493.12,
-      "change_pct": -6.45,
-      "mtd_pct": 22.91,
-      "ytd_pct": 529.0,
-      "market_date": "2026-08-24",
-      "per": 19.7934,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SNDK.US",
       "error": null
     },
     {
@@ -115,20 +101,6 @@
       "error": null
     },
     {
-      "symbol": "EXPE",
-      "name_zh": "Expedia",
-      "kind": "US",
-      "price": 339.12,
-      "change_pct": 5.44,
-      "mtd_pct": 15.06,
-      "ytd_pct": 19.7,
-      "market_date": "2026-08-24",
-      "per": 19.1747,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=EXPE.US",
-      "error": null
-    },
-    {
       "symbol": "TOP",
       "name_zh": "TOP Financial",
       "kind": "US",
@@ -143,59 +115,59 @@
       "error": null
     },
     {
-      "symbol": "XPEV",
-      "name_zh": "小鵬",
+      "symbol": "EXPE",
+      "name_zh": "Expedia",
       "kind": "US",
-      "price": 11.15,
-      "change_pct": -8.53,
-      "mtd_pct": -14.23,
-      "ytd_pct": -45.02,
+      "price": 339.12,
+      "change_pct": 5.44,
+      "mtd_pct": 15.06,
+      "ytd_pct": 19.7,
+      "market_date": "2026-08-24",
+      "per": 19.1747,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=EXPE.US",
+      "error": null
+    },
+    {
+      "symbol": "ETSY",
+      "name_zh": "Etsy",
+      "kind": "US",
+      "price": 87.03,
+      "change_pct": 7.4,
+      "mtd_pct": 6.55,
+      "ytd_pct": 56.98,
+      "market_date": "2026-08-24",
+      "per": 35.0561,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ETSY.US",
+      "error": null
+    },
+    {
+      "symbol": "CRCL",
+      "name_zh": "Circle Internet",
+      "kind": "US",
+      "price": 87.72,
+      "change_pct": -0.3,
+      "mtd_pct": 40.11,
+      "ytd_pct": 10.62,
+      "market_date": "2026-08-24",
+      "per": 42.4069,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRCL.US",
+      "error": null
+    },
+    {
+      "symbol": "KURA",
+      "name_zh": "Kura Oncology",
+      "kind": "US",
+      "price": 12.4,
+      "change_pct": 4.29,
+      "mtd_pct": 37.62,
+      "ytd_pct": 19.35,
       "market_date": "2026-08-24",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=XPEV.US",
-      "error": null
-    },
-    {
-      "symbol": "AWR",
-      "name_zh": "American States Water",
-      "kind": "US",
-      "price": 91.1,
-      "change_pct": 2.79,
-      "mtd_pct": 6.38,
-      "ytd_pct": 25.69,
-      "market_date": "2026-08-24",
-      "per": 24.4798,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AWR.US",
-      "error": null
-    },
-    {
-      "symbol": "WMB",
-      "name_zh": "Williams Companies, Inc. (The)",
-      "kind": "US",
-      "price": 70.97,
-      "change_pct": 0.68,
-      "mtd_pct": -0.8,
-      "ytd_pct": 18.07,
-      "market_date": "2026-08-24",
-      "per": 29.3313,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=WMB.US",
-      "error": null
-    },
-    {
-      "symbol": "SDOT",
-      "name_zh": "Sadot",
-      "kind": "US",
-      "price": 23.16,
-      "change_pct": 75.72,
-      "mtd_pct": 74.79,
-      "ytd_pct": -4.3,
-      "market_date": "2026-08-24",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SDOT.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=KURA.US",
       "error": null
     },
     {
