@@ -130,8 +130,8 @@
     {
       "name": "Shanghai 上證",
       "name_zh": null,
-      "close": 3914.02294921875,
-      "daily_pct": 0.63,
+      "close": 3912.5234375,
+      "daily_pct": 0.59,
       "mtd_pct": 1.49,
       "ytd_pct": -2.0,
       "closing_date": "2026-08-26"
@@ -139,7 +139,7 @@
     {
       "name": "CSI 300 滬深300",
       "name_zh": null,
-      "close": 4593.64208984375,
+      "close": 4590.79345703125,
       "daily_pct": null,
       "mtd_pct": null,
       "ytd_pct": null,
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 98.91999816894531,
       "daily_pct": -0.08,
-      "mtd_pct": -0.81,
-      "ytd_pct": 0.72,
+      "mtd_pct": -0.84,
+      "ytd_pct": 0.69,
       "closing_date": "2026-08-25"
     },
     {
@@ -301,11 +301,11 @@
     },
     {
       "name": "比特幣 (USD)",
-      "close": 78964.484375,
-      "daily_pct": 1.56,
-      "mtd_pct": 25.71,
-      "ytd_pct": -9.76,
-      "closing_date": "2026-08-24"
+      "close": 78564.9765625,
+      "daily_pct": -0.51,
+      "mtd_pct": 25.08,
+      "ytd_pct": -10.22,
+      "closing_date": "2026-08-25"
     }
   ],
   "bond_etfs": [
@@ -416,11 +416,11 @@
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 3.85,
-      "delta_rate": 0.12,
-      "delta_bps": 12.0,
-      "p_hike": 48.0,
-      "p_hold": 52.0,
+      "implied_rate": 3.86,
+      "delta_rate": 0.13,
+      "delta_bps": 13.0,
+      "p_hike": 52.0,
+      "p_hold": 48.0,
       "p_cut": 0,
       "is_reference": false
     }
