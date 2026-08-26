@@ -157,7 +157,7 @@
     {
       "name": "S&P/ASX 200",
       "name_zh": null,
-      "close": 9127.7998046875,
+      "close": 9127.8,
       "daily_pct": -0.4,
       "mtd_pct": 2.09,
       "ytd_pct": 5.17,
@@ -181,10 +181,10 @@
     },
     {
       "name": "Germany 10-Year",
-      "yield_pct": 3.24,
-      "daily_bps": -3.56,
-      "mtd_bps": 1.75,
-      "closing_date": "2026-08-25"
+      "yield_pct": null,
+      "daily_bps": null,
+      "mtd_bps": null,
+      "closing_date": null
     },
     {
       "name": "Japan 10-Year",
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 98.91999816894531,
       "daily_pct": -0.08,
-      "mtd_pct": -0.72,
-      "ytd_pct": 0.82,
+      "mtd_pct": -0.62,
+      "ytd_pct": 0.91,
       "closing_date": "2026-08-25"
     },
     {
@@ -396,7 +396,7 @@
     {
       "label": "Sep 2026",
       "fomc_date": "2026-09-17",
-      "implied_rate": 3.68,
+      "implied_rate": 3.67,
       "delta_rate": null,
       "p_hike": null,
       "p_cut": null,
@@ -405,7 +405,7 @@
     {
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
-      "implied_rate": 3.74,
+      "implied_rate": 3.73,
       "delta_rate": 0.06,
       "delta_bps": 6.0,
       "p_hike": 24.0,
@@ -416,7 +416,7 @@
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 3.88,
+      "implied_rate": 3.87,
       "delta_rate": 0.13,
       "delta_bps": 13.0,
       "p_hike": 52.0,
