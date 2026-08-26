@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-26T18:43:14+08:00",
+  "generated_at": "2026-08-26T19:38:14+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -73,6 +73,20 @@
       "error": null
     },
     {
+      "symbol": "BBWI",
+      "name_zh": "Bath & Body Works",
+      "kind": "US",
+      "price": 17.58,
+      "change_pct": -8.29,
+      "mtd_pct": -12.62,
+      "ytd_pct": -12.45,
+      "market_date": "2026-08-25",
+      "per": 5.0571,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BBWI.US",
+      "error": null
+    },
+    {
       "symbol": "SMR",
       "name_zh": "NuScale Power",
       "kind": "US",
@@ -98,6 +112,34 @@
       "per": 16.1972,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=UBER.US",
+      "error": null
+    },
+    {
+      "symbol": "BHVN",
+      "name_zh": "Biohaven",
+      "kind": "US",
+      "price": 14.38,
+      "change_pct": 5.12,
+      "mtd_pct": 6.52,
+      "ytd_pct": 27.37,
+      "market_date": "2026-08-25",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BHVN.US",
+      "error": null
+    },
+    {
+      "symbol": "SEDG",
+      "name_zh": "SolarEdge Technologies",
+      "kind": "US",
+      "price": 29.88,
+      "change_pct": -0.7,
+      "mtd_pct": -27.48,
+      "ytd_pct": 3.57,
+      "market_date": "2026-08-25",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SEDG.US",
       "error": null
     },
     {
@@ -129,59 +171,17 @@
       "error": null
     },
     {
-      "symbol": "BBWI",
-      "name_zh": "Bath & Body Works",
+      "symbol": "BSX",
+      "name_zh": "Boston Scientific",
       "kind": "US",
-      "price": 17.58,
-      "change_pct": -8.29,
-      "mtd_pct": -12.62,
-      "ytd_pct": -12.45,
+      "price": 49.86,
+      "change_pct": 1.73,
+      "mtd_pct": 6.7,
+      "ytd_pct": -47.71,
       "market_date": "2026-08-25",
-      "per": 5.0571,
+      "per": 20.3957,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BBWI.US",
-      "error": null
-    },
-    {
-      "symbol": "SEDG",
-      "name_zh": "SolarEdge Technologies",
-      "kind": "US",
-      "price": 29.88,
-      "change_pct": -0.7,
-      "mtd_pct": -27.48,
-      "ytd_pct": 3.57,
-      "market_date": "2026-08-25",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SEDG.US",
-      "error": null
-    },
-    {
-      "symbol": "BHVN",
-      "name_zh": "Biohaven",
-      "kind": "US",
-      "price": 14.38,
-      "change_pct": 5.12,
-      "mtd_pct": 6.52,
-      "ytd_pct": 27.37,
-      "market_date": "2026-08-25",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BHVN.US",
-      "error": null
-    },
-    {
-      "symbol": "UUUU",
-      "name_zh": "Energy Fuels",
-      "kind": "US",
-      "price": 15.97,
-      "change_pct": 7.33,
-      "mtd_pct": 39.6,
-      "ytd_pct": 9.83,
-      "market_date": "2026-08-25",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=UUUU.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BSX.US",
       "error": null
     },
     {
@@ -196,20 +196,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=STDN.US",
-      "error": null
-    },
-    {
-      "symbol": "SAP",
-      "name_zh": "SAP  SE",
-      "kind": "US",
-      "price": 216.93,
-      "change_pct": -0.79,
-      "mtd_pct": 18.14,
-      "ytd_pct": -10.7,
-      "market_date": "2026-08-25",
-      "per": 26.3524,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SAP.US",
       "error": null
     },
     {
