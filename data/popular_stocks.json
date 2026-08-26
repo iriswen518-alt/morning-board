@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-26T17:52:42+08:00",
+  "generated_at": "2026-08-26T18:43:14+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -73,6 +73,34 @@
       "error": null
     },
     {
+      "symbol": "SMR",
+      "name_zh": "NuScale Power",
+      "kind": "US",
+      "price": 9.81,
+      "change_pct": 8.4,
+      "mtd_pct": 16.51,
+      "ytd_pct": -30.77,
+      "market_date": "2026-08-25",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SMR.US",
+      "error": null
+    },
+    {
+      "symbol": "UBER",
+      "name_zh": "Uber",
+      "kind": "US",
+      "price": 80.35,
+      "change_pct": 1.34,
+      "mtd_pct": 14.2,
+      "ytd_pct": -1.66,
+      "market_date": "2026-08-25",
+      "per": 16.1972,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=UBER.US",
+      "error": null
+    },
+    {
       "symbol": "SMTC",
       "name_zh": "Semtech",
       "kind": "US",
@@ -84,6 +112,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SMTC.US",
+      "error": null
+    },
+    {
+      "symbol": "NKE",
+      "name_zh": "Nike",
+      "kind": "US",
+      "price": 39.48,
+      "change_pct": -3.12,
+      "mtd_pct": -5.35,
+      "ytd_pct": -38.03,
+      "market_date": "2026-08-25",
+      "per": 19.4702,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NKE.US",
       "error": null
     },
     {
@@ -115,87 +157,17 @@
       "error": null
     },
     {
-      "symbol": "UBER",
-      "name_zh": "Uber",
+      "symbol": "BHVN",
+      "name_zh": "Biohaven",
       "kind": "US",
-      "price": 80.35,
-      "change_pct": 1.34,
-      "mtd_pct": 14.2,
-      "ytd_pct": -1.66,
-      "market_date": "2026-08-25",
-      "per": 16.1972,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=UBER.US",
-      "error": null
-    },
-    {
-      "symbol": "NKE",
-      "name_zh": "Nike",
-      "kind": "US",
-      "price": 39.48,
-      "change_pct": -3.12,
-      "mtd_pct": -5.35,
-      "ytd_pct": -38.03,
-      "market_date": "2026-08-25",
-      "per": 19.4702,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NKE.US",
-      "error": null
-    },
-    {
-      "symbol": "CRM",
-      "name_zh": "Salesforce",
-      "kind": "US",
-      "price": 205.69,
-      "change_pct": -1.61,
-      "mtd_pct": 11.78,
-      "ytd_pct": -22.35,
-      "market_date": "2026-08-25",
-      "per": 19.8896,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRM.US",
-      "error": null
-    },
-    {
-      "symbol": "SMR",
-      "name_zh": "NuScale Power",
-      "kind": "US",
-      "price": 9.81,
-      "change_pct": 8.4,
-      "mtd_pct": 16.51,
-      "ytd_pct": -30.77,
+      "price": 14.38,
+      "change_pct": 5.12,
+      "mtd_pct": 6.52,
+      "ytd_pct": 27.37,
       "market_date": "2026-08-25",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SMR.US",
-      "error": null
-    },
-    {
-      "symbol": "USAR",
-      "name_zh": "USA Rare Earth",
-      "kind": "US",
-      "price": 19.41,
-      "change_pct": 6.12,
-      "mtd_pct": 29.83,
-      "ytd_pct": 63.11,
-      "market_date": "2026-08-25",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=USAR.US",
-      "error": null
-    },
-    {
-      "symbol": "ABCL",
-      "name_zh": "AbCellera Biologics",
-      "kind": "US",
-      "price": 12.5,
-      "change_pct": 17.81,
-      "mtd_pct": 118.91,
-      "ytd_pct": 265.5,
-      "market_date": "2026-08-25",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ABCL.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BHVN.US",
       "error": null
     },
     {
@@ -210,6 +182,34 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=UUUU.US",
+      "error": null
+    },
+    {
+      "symbol": "STDN",
+      "name_zh": "Standard Nuclear",
+      "kind": "US",
+      "price": 13.94,
+      "change_pct": 16.75,
+      "mtd_pct": 76.68,
+      "ytd_pct": null,
+      "market_date": "2026-08-25",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=STDN.US",
+      "error": null
+    },
+    {
+      "symbol": "SAP",
+      "name_zh": "SAP  SE",
+      "kind": "US",
+      "price": 216.93,
+      "change_pct": -0.79,
+      "mtd_pct": 18.14,
+      "ytd_pct": -10.7,
+      "market_date": "2026-08-25",
+      "per": 26.3524,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SAP.US",
       "error": null
     },
     {
