@@ -76,11 +76,11 @@
     {
       "name": "Nikkei 225",
       "name_zh": null,
-      "close": 66262.15625,
-      "daily_pct": 0.62,
+      "close": 66131.98,
+      "daily_pct": -0.2,
       "mtd_pct": 2.95,
       "ytd_pct": 31.63,
-      "closing_date": "2026-08-26"
+      "closing_date": "2026-08-27"
     },
     {
       "name": "TAIEX 加權指數",
@@ -112,34 +112,34 @@
     {
       "name": "KOSPI",
       "name_zh": null,
-      "close": 6808.2099609375,
-      "daily_pct": 0.97,
+      "close": 6912.37,
+      "daily_pct": 1.53,
       "mtd_pct": 3.23,
       "ytd_pct": 61.56,
-      "closing_date": "2026-08-26"
+      "closing_date": "2026-08-27"
     },
     {
       "name": "Hang Seng 恆生",
       "name_zh": null,
-      "close": 25652.970703125,
-      "daily_pct": 0.56,
+      "close": 25565.740234375,
+      "daily_pct": -0.34,
       "mtd_pct": -0.89,
       "ytd_pct": 0.09,
-      "closing_date": "2026-08-26"
+      "closing_date": "2026-08-27"
     },
     {
       "name": "Shanghai 上證",
       "name_zh": null,
-      "close": 3912.52294921875,
-      "daily_pct": 0.59,
+      "close": 3956.571044921875,
+      "daily_pct": 1.13,
       "mtd_pct": 2.09,
       "ytd_pct": -1.42,
-      "closing_date": "2026-08-26"
+      "closing_date": "2026-08-27"
     },
     {
       "name": "CSI 300 滬深300",
       "name_zh": null,
-      "close": 4611.1201171875,
+      "close": 4630.27685546875,
       "daily_pct": null,
       "mtd_pct": null,
       "ytd_pct": null,
@@ -148,20 +148,20 @@
     {
       "name": "Nifty 50",
       "name_zh": null,
-      "close": 24207.75,
-      "daily_pct": -0.52,
+      "close": 24090.849609375,
+      "daily_pct": -0.48,
       "mtd_pct": -0.72,
       "ytd_pct": -7.36,
-      "closing_date": "2026-08-26"
+      "closing_date": "2026-08-27"
     },
     {
       "name": "S&P/ASX 200",
       "name_zh": null,
-      "close": 9127.7998046875,
-      "daily_pct": -0.4,
+      "close": 9038.2,
+      "daily_pct": -0.98,
       "mtd_pct": 1.68,
       "ytd_pct": 4.75,
-      "closing_date": "2026-08-26"
+      "closing_date": "2026-08-27"
     }
   ],
   "bonds": [
@@ -181,10 +181,10 @@
     },
     {
       "name": "Germany 10-Year",
-      "yield_pct": 3.24,
-      "daily_bps": -3.56,
-      "mtd_bps": 1.75,
-      "closing_date": "2026-08-25"
+      "yield_pct": 3.25,
+      "daily_bps": 0.37,
+      "mtd_bps": 2.12,
+      "closing_date": "2026-08-26"
     },
     {
       "name": "Japan 10-Year",
@@ -195,10 +195,10 @@
     },
     {
       "name": "UK 10-Year",
-      "yield_pct": 5.13,
-      "daily_bps": -0.22,
-      "mtd_bps": 2.78,
-      "closing_date": "2026-08-24"
+      "yield_pct": 5.08,
+      "daily_bps": -5.43,
+      "mtd_bps": -2.65,
+      "closing_date": "2026-08-25"
     },
     {
       "name": "TW 10-Year",
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 99.16999816894531,
       "daily_pct": 0.25,
-      "mtd_pct": -0.67,
-      "ytd_pct": 0.87,
+      "mtd_pct": -0.63,
+      "ytd_pct": 0.9,
       "closing_date": "2026-08-26"
     },
     {
@@ -301,11 +301,11 @@
     },
     {
       "name": "比特幣 (USD)",
-      "close": 78564.9765625,
-      "daily_pct": -0.51,
-      "mtd_pct": 25.08,
-      "ytd_pct": -10.22,
-      "closing_date": "2026-08-25"
+      "close": 79027.421875,
+      "daily_pct": 0.59,
+      "mtd_pct": 25.81,
+      "ytd_pct": -9.69,
+      "closing_date": "2026-08-26"
     }
   ],
   "bond_etfs": [
@@ -405,11 +405,11 @@
     {
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
-      "implied_rate": 3.73,
-      "delta_rate": 0.06,
-      "delta_bps": 6.0,
-      "p_hike": 24.0,
-      "p_hold": 76.0,
+      "implied_rate": 3.72,
+      "delta_rate": 0.05,
+      "delta_bps": 5.0,
+      "p_hike": 20.0,
+      "p_hold": 80.0,
       "p_cut": 0,
       "is_reference": false
     },
@@ -417,13 +417,13 @@
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
       "implied_rate": 3.87,
-      "delta_rate": 0.14,
-      "delta_bps": 14.0,
-      "p_hike": 56.0,
-      "p_hold": 44.0,
+      "delta_rate": 0.15,
+      "delta_bps": 15.0,
+      "p_hike": 60.0,
+      "p_hold": 40.0,
       "p_cut": 0,
       "is_reference": false
     }
   ],
-  "summary": "8/26 台指期(近月) +2.17%、8/27 OTC 櫃買加權 +1.19%、8/26 KOSPI +0.97% 領漲；8/26 Nifty 50 -0.52%、8/26 S&P/ASX 200 -0.40% 走弱。"
+  "summary": "8/26 台指期(近月) +2.17%、8/27 KOSPI +1.53%、8/27 OTC 櫃買加權 +1.19% 領漲；8/27 S&P/ASX 200 -0.98%、8/27 Nifty 50 -0.48% 走弱。"
 }
