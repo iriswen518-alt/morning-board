@@ -13,7 +13,7 @@
     {
       "name": "Nasdaq Composite",
       "name_zh": null,
-      "close": 26130.197265625,
+      "close": 26130.19921875,
       "daily_pct": -0.08,
       "mtd_pct": 2.98,
       "ytd_pct": 12.43,
@@ -31,7 +31,7 @@
     {
       "name": "PHLX Semiconductor",
       "name_zh": null,
-      "close": 11611.23828125,
+      "close": 11611.240234375,
       "daily_pct": 0.2,
       "mtd_pct": 2.65,
       "ytd_pct": 63.93,
@@ -85,20 +85,20 @@
     {
       "name": "TAIEX 加權指數",
       "name_zh": null,
-      "close": 45832.62109375,
-      "daily_pct": 1.47,
+      "close": 45975.22,
+      "daily_pct": 0.31,
       "mtd_pct": 6.29,
       "ytd_pct": 58.24,
-      "closing_date": "2026-08-26"
+      "closing_date": "2026-08-27"
     },
     {
       "name": "OTC 櫃買加權",
       "name_zh": null,
-      "close": null,
-      "daily_pct": null,
+      "close": 400.38,
+      "daily_pct": 1.19,
       "mtd_pct": null,
       "ytd_pct": null,
-      "closing_date": null
+      "closing_date": "2026-08-27"
     },
     {
       "name": "台指期(近月)",
@@ -139,7 +139,7 @@
     {
       "name": "CSI 300 滬深300",
       "name_zh": null,
-      "close": 4600.56298828125,
+      "close": 4611.1201171875,
       "daily_pct": null,
       "mtd_pct": null,
       "ytd_pct": null,
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 99.16999816894531,
       "daily_pct": 0.25,
-      "mtd_pct": -0.66,
-      "ytd_pct": 0.88,
+      "mtd_pct": -0.67,
+      "ytd_pct": 0.87,
       "closing_date": "2026-08-26"
     },
     {
@@ -269,34 +269,34 @@
   "commodities": [
     {
       "name": "黃金 (USD/oz)",
-      "close": 4683.89990234375,
-      "daily_pct": 1.86,
-      "mtd_pct": 15.68,
-      "ytd_pct": 8.28,
+      "close": 4598.2001953125,
+      "daily_pct": -0.86,
+      "mtd_pct": 13.56,
+      "ytd_pct": 6.3,
       "closing_date": "2026-08-26"
     },
     {
       "name": "白銀 (USD/oz)",
-      "close": 69.16000366210938,
-      "daily_pct": 1.72,
-      "mtd_pct": 20.09,
-      "ytd_pct": -1.39,
+      "close": 67.98999786376953,
+      "daily_pct": -0.94,
+      "mtd_pct": 18.06,
+      "ytd_pct": -3.06,
       "closing_date": "2026-08-26"
     },
     {
       "name": "WTI 原油 (USD/bbl)",
-      "close": 81.48999786376953,
-      "daily_pct": -0.9,
-      "mtd_pct": -3.76,
-      "ytd_pct": 41.92,
+      "close": 82.2300033569336,
+      "daily_pct": -0.16,
+      "mtd_pct": -2.88,
+      "ytd_pct": 43.21,
       "closing_date": "2026-08-26"
     },
     {
       "name": "布蘭特原油 (USD/bbl)",
-      "close": 86.19000244140625,
-      "daily_pct": -1.88,
-      "mtd_pct": -4.36,
-      "ytd_pct": 41.64,
+      "close": 87.83999633789062,
+      "daily_pct": -0.84,
+      "mtd_pct": -2.53,
+      "ytd_pct": 44.35,
       "closing_date": "2026-08-26"
     },
     {
@@ -388,8 +388,8 @@
     "yield_curve_10y2y": 0.47,
     "yield_curve_10y2y_bps": 47,
     "curve_shape": "正斜率",
-    "dxy": 99.13400268554688,
-    "dxy_daily_pct": -0.04,
+    "dxy": 99.16999816894531,
+    "dxy_daily_pct": 0.25,
     "closing_date": "2026-08-26"
   },
   "fedwatch": [
@@ -425,5 +425,5 @@
       "is_reference": false
     }
   ],
-  "summary": "8/26 台指期(近月) +2.17%、8/26 TAIEX 加權指數 +1.47%、8/26 KOSPI +0.97% 領漲；8/26 Nifty 50 -0.52%、8/26 S&P/ASX 200 -0.40% 走弱。"
+  "summary": "8/26 台指期(近月) +2.17%、8/27 OTC 櫃買加權 +1.19%、8/26 KOSPI +0.97% 領漲；8/26 Nifty 50 -0.52%、8/26 S&P/ASX 200 -0.40% 走弱。"
 }
