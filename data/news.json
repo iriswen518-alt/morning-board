@@ -3,7 +3,9 @@
   "tldr": [
     "上週五台股收紅356點至46,331點、成交量重返兆元關卡，台積電走揚至2,420元。",
     "台積電先進封裝擴產仍是盤面主軸，CoWoS產能續倍增，帶旺設備、載板與封測供應鏈。",
-    "金管會推進清償能力與金融科技政策，銀行財管2.0高資產規模達2.7兆元，凸顯私銀熱戰。"
+    "金管會推進清償能力與金融科技政策，銀行財管2.0高資產規模達2.7兆元，凸顯私銀熱戰。",
+    "7月外銷訂單979.4億美元創新高、AI帶動連18紅，主計總處同步上修全年經濟成長預測。",
+    "聯準會主席華許傑克森霍爾放鷹，9月升息機率破五成，拖累晶片股與台積電ADR，美股週五收黑。"
   ],
   "sections": [
     {
@@ -91,6 +93,114 @@
           "summary_en": "Bank-side high-net-worth assets under the \"Wealth 2.0\" regime have grown to NT$2.7 trillion across some 25,000 clients as of end-May, and lenders are concentrating in Kaohsiung's asset-management zone to win share. Private banking, family offices and offshore asset-management platforms (OAMU) have become the three core battlegrounds in the fight to retain and attract capital.",
           "source_name": "工商時報",
           "source_url": "https://www.chinatimes.com/newspapers/20260708000560-260210"
+        }
+      ]
+    },
+    {
+      "section": "Tax & Regulations",
+      "section_zh": "稅務法規",
+      "items": [
+        {
+          "title_zh": "2026報稅綜所稅減稅上路 免稅額升至10.1萬",
+          "title_en": "Individual income-tax relief takes effect for the 2026 filing season",
+          "summary_zh": "配合物價指數連動調整，個人免稅額調高至10.1萬元、單身標準扣除額13.6萬元（有配偶27.2萬元），70歲以上受扶養親屬免稅額升至15.15萬元，每人基本生活費調高至21.3萬元。相關新制於民眾5月申報114年度綜所稅時適用，可小幅減輕薪資族與扶養家庭稅負。",
+          "summary_en": "Inflation-indexed adjustments lift the personal exemption to NT$101,000 and the standard deduction to NT$136,000 for single filers (NT$272,000 for couples), with the elderly-dependant exemption raised to NT$151,500 and the basic living expense set at NT$213,000 per person. The changes, applied when residents file 2025 income in May, modestly ease the burden on wage earners and larger households.",
+          "source_name": "Money101",
+          "source_url": "https://www.money101.com.tw/blog/%E6%89%80%E5%BE%97%E7%A8%85-%E5%85%8D%E7%A8%85%E9%A1%8D-%E6%89%A3%E9%99%A4%E9%A1%8D-%E7%A8%85%E7%8E%87-%E7%B4%9A%E8%B7%9D"
+        },
+        {
+          "title_zh": "房地合一稅2.0 短期交易維持高稅率",
+          "title_en": "House-and-land Tax 2.0 keeps short-term flips under high tiered rates",
+          "summary_zh": "房地合一所得稅維持差別稅率：個人持有2年以內課45%、逾2年未滿5年課35%，預售屋及符合條件之股份交易亦視為房地交易課稅。自住房地享課稅所得400萬元以內免稅、超過部分按10%最低稅率課徵。制度設計在抑制短期炒作之餘，兼顧真正自住需求者的租稅權益。",
+          "summary_en": "Under the consolidated real-estate income tax, individuals face a 45% rate on properties held two years or less and 35% for over two to five years, with pre-sale contracts and qualifying share transfers treated as property deals. Owner-occupiers keep the NT$4 million exemption on gains, with only the excess taxed at a 10% minimum rate — a framework aimed at curbing speculation while protecting genuine homeowners.",
+          "source_name": "財政部",
+          "source_url": "https://www.mof.gov.tw/houseandland/multiplehtml/de144e74630c4ac59f2d84a068c889c9"
+        }
+      ]
+    },
+    {
+      "section": "Macro & Policy",
+      "section_zh": "總經政策",
+      "items": [
+        {
+          "title_zh": "7月外銷訂單979.4億美元創新高 連18紅",
+          "title_en": "July export orders hit a record on AI demand, an 18th straight monthly gain",
+          "summary_zh": "經濟部公布7月外銷訂單979.4億美元、年增61.9%，創歷年單月新高並連18紅。AI浪潮帶動資通與電子產品接單分別年增89.5%、71.7%，伺服器與散熱模組拉貨超乎預期。累計1至7月達6,020.3億美元、年增52.5%，經濟部預估8月仍達970至990億美元，動能延續、可望連七紅，顯示外需維持強勁。",
+          "summary_en": "Taiwan's July export orders reached a record US$97.94 billion, up 61.9% year-on-year and the 18th consecutive month of growth, as AI-driven info-comms and electronics orders jumped 89.5% and 71.7% respectively. Server and thermal-module pull-in ran ahead of expectations; cumulative Jan–Jul orders reached US$602 billion, and officials expect August to stay strong at US$97–99 billion.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6582605"
+        },
+        {
+          "title_zh": "主計總處上修全年GDP 人均GDP拚創高",
+          "title_en": "Officials lift full-year growth forecast as AI powers the economy",
+          "summary_zh": "受AI帶動的出口與投資循環推升，主計總處上修台灣全年經濟成長預測，並估人均GDP有望突破4.4萬美元、再創新高。此次上修反映AI相關需求正由「AI集中成長」逐步擴散至多元產業共同受惠，但也墊高下半年續強的比較基期，後續能否維持動能仍待觀察內外需表現。",
+          "summary_en": "Boosted by the AI-driven export and investment cycle, statistics officials have raised Taiwan's full-year GDP growth outlook and see per-capita GDP climbing toward a fresh high above US$44,000. The upgrade reflects how AI-related demand is broadening from a concentrated tech surge toward wider industrial participation, though it also lifts the bar for the second half to sustain momentum.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/10869/9329757"
+        }
+      ]
+    },
+    {
+      "section": "Global Markets",
+      "section_zh": "國際財經",
+      "items": [
+        {
+          "title_zh": "輝達財報創高 台廠供應鏈全面受惠",
+          "title_en": "Nvidia's record results reinforce AI momentum for Taiwan's supply chain",
+          "summary_zh": "輝達最新一季營收創新高並優於預期，盤後股價一度漲逾5%，財務長並估2028財年營收成長約70%。Blackwell與新一代晶片供不應求，執行長黃仁勳揭示逾5,000億美元訂單能見度。台積電、鴻海、廣達等台廠供應鏈成為AI基礎建設投資加速下的最大受惠者，鞏固台股AI主軸行情的基本面支撐。",
+          "summary_en": "Nvidia's latest quarterly revenue came in at a record level and beat estimates, with the after-hours stock rising as much as 5% and management guiding for around 70% revenue growth in fiscal 2028. Blackwell and next-gen chips remain sold out against demand, positioning Taiwan suppliers such as TSMC, Foxconn and Quanta as prime beneficiaries as AI infrastructure spending accelerates.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6588046"
+        },
+        {
+          "title_zh": "華許傑克森霍爾放鷹 9月升息機率破五成",
+          "title_en": "Warsh's hawkish Jackson Hole debut lifts September rate-hike bets",
+          "summary_zh": "聯準會主席華許在傑克森霍爾年會重申2%通膨目標，並稱物價若未夠快回落、Fed「還有工作要做」，被華爾街解讀偏鷹。市場對9月升息押注由約35%升至逾五成，美股三大指數收黑，費城半導體指數重挫近3.5%，台積電ADR收黑，晶片股承壓，市場波動風險升高。",
+          "summary_en": "Fed Chair Kevin Warsh reaffirmed the 2% inflation goal and signalled the Fed still has \"work to do\" if prices don't fall fast enough, a message Wall Street read as hawkish. Odds of a September rate hike jumped above 50%, US indices closed lower, the Philadelphia Semiconductor Index tumbled nearly 3.5%, and TSMC's ADR ended in the red.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6591250"
+        }
+      ]
+    },
+    {
+      "section": "International",
+      "section_zh": "國際",
+      "items": [
+        {
+          "title_zh": "美股週五收黑但仍收紅一週（2026-08-28）",
+          "title_en": "US stocks slip Friday but hold weekly gains after hawkish Warsh (2026-08-28)",
+          "summary_zh": "標普500下跌0.25%至7,711.76點，那斯達克跌0.52%至26,402.42點，道瓊小跌0.02%至53,559.99點。聯準會主席華許在傑克森霍爾年會釋出偏鷹訊號，引發近期升息疑慮，帶動美股由漲轉跌，但標普500全週仍收紅、守住週線漲幅。",
+          "summary_en": "The S&P 500 fell 0.25% to 7,711.76 and the Nasdaq Composite dropped 0.52% to 26,402.42, while the Dow eased just 0.02% to 53,559.99. Stocks turned lower after Fed Chair Kevin Warsh's mildly hawkish Jackson Hole keynote raised near-term rate-hike concerns, though the S&P still notched a winning week.",
+          "source_name": "Yahoo Finance",
+          "source_url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-august-28-dow-sp-500-nasdaq-dip-fed-warsh-jackson-hole-speech-081514091.html",
+          "published": "2026-08-28"
+        },
+        {
+          "title_zh": "布蘭特原油跌破90美元 週線挫逾5%（2026-08-28）",
+          "title_en": "Brent extends weekly slide below $90 as supply fears ease (2026-08-28)",
+          "summary_zh": "布蘭特原油週五收在每桶約89.3美元，單週跌幅擴大至逾5%。市場逐漸將伊朗情勢視為制裁與經濟議題，而非立即的供給威脅，加上荷莫茲海峽輸出改善及伊朗－阿曼走廊構想降低供應風險疑慮，油價因而承壓走弱，反映地緣風險溢價明顯收斂。",
+          "summary_en": "Brent crude settled around $89.3 a barrel on Friday, extending its weekly loss to more than 5%. Prices fell as traders increasingly treated the Iran standoff as a sanctions and economic matter rather than an immediate supply threat, with improving flows through the Strait of Hormuz and a proposed Iran-Oman corridor easing perceived risks.",
+          "source_name": "Fortune",
+          "source_url": "https://fortune.com/article/price-of-oil-08-28-2026/",
+          "published": "2026-08-28"
+        },
+        {
+          "title_zh": "亞股走揚 AI樂觀帶動東京（2026-08-28）",
+          "title_en": "Asian markets firm as AI optimism lifts Tokyo (2026-08-28)",
+          "summary_zh": "日本日經指數上漲0.41%至66,405.56點，東證指數漲0.72%；香港恒生指數微升0.07%，上海綜合指數跌0.11%。東京股市受輝達樂觀AI展望激勵，日本7月失業率降至一年低點2.4%，東京通膨升至五個月高點，愛德萬測試等晶片股走強，亞洲市場整體維持偏多氛圍。",
+          "summary_en": "Japan's Nikkei rose 0.41% to 66,405.56 and the Topix gained 0.72%, while Hong Kong's Hang Seng edged up 0.07% and the Shanghai Composite slipped 0.11%. Tokyo drew support from Nvidia's upbeat AI outlook; Japan's July jobless rate fell to a one-year low of 2.4% and Tokyo inflation accelerated to a five-month high, with chip names such as Advantest advancing.",
+          "source_name": "ARMENPRESS",
+          "source_url": "https://armenpress.am/en/article/1259148",
+          "published": "2026-08-28"
+        },
+        {
+          "title_zh": "歐股收盤漲跌互見 CAC、FTSE走弱（2026-08-28）",
+          "title_en": "European stocks close mixed as CAC and FTSE lag (2026-08-28)",
+          "summary_zh": "歐股週五漲跌互見：德國DAX上漲0.27%至26,356點，英國富時100下跌0.79%至10,793點，歐洲Stoxx 50跌0.73%，法國CAC 40重挫1.68%至8,320點。南歐與瑞士主要指數同步收低，多數區域指數收黑，僅德股小幅收紅，反映市場對升息預期升溫下的謹慎情緒。",
+          "summary_en": "Europe ended Friday mixed: Germany's DAX rose 0.27% to 26,356 while the UK's FTSE 100 fell 0.79% to 10,793, the Euro Stoxx 50 dropped 0.73% and France's CAC 40 slid 1.68% to 8,320. Southern-European and Swiss benchmarks also finished lower, leaving most regional indices in the red despite the DAX's modest gain.",
+          "source_name": "ARMENPRESS",
+          "source_url": "https://armenpress.am/en/article/1259180",
+          "published": "2026-08-28"
         }
       ]
     }
