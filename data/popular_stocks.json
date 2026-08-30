@@ -1,21 +1,7 @@
 {
-  "generated_at": "2026-08-30T18:40:56+08:00",
+  "generated_at": "2026-08-30T19:57:12+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
-    {
-      "symbol": "MCD",
-      "name_zh": "麥當勞",
-      "kind": "US",
-      "price": 265,
-      "change_pct": 1.9,
-      "mtd_pct": -2.08,
-      "ytd_pct": -13.29,
-      "market_date": "2026-08-28",
-      "per": 22.3141,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MCD.US",
-      "error": null
-    },
     {
       "symbol": "BA",
       "name_zh": "波音",
@@ -28,34 +14,6 @@
       "per": 75.2572,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BA.US",
-      "error": null
-    },
-    {
-      "symbol": "BE",
-      "name_zh": "Bloom Energy",
-      "kind": "US",
-      "price": 210.77,
-      "change_pct": -3.24,
-      "mtd_pct": 2.41,
-      "ytd_pct": 142.57,
-      "market_date": "2026-08-28",
-      "per": 11588.5016,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BE.US",
-      "error": null
-    },
-    {
-      "symbol": "SCHD",
-      "name_zh": "Schwab US Dividend Equity ETF",
-      "kind": "US",
-      "price": 34.9,
-      "change_pct": 0.2,
-      "mtd_pct": 4.27,
-      "ytd_pct": 27.23,
-      "market_date": "2026-08-28",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SCHD.US",
       "error": null
     },
     {
@@ -73,17 +31,45 @@
       "error": null
     },
     {
-      "symbol": "TTWO",
-      "name_zh": "Take-Two Interactive Software,",
+      "symbol": "MCD",
+      "name_zh": "麥當勞",
       "kind": "US",
-      "price": 235.39,
-      "change_pct": 1.03,
-      "mtd_pct": -3.1,
-      "ytd_pct": -8.06,
+      "price": 265,
+      "change_pct": 1.9,
+      "mtd_pct": -2.08,
+      "ytd_pct": -13.29,
       "market_date": "2026-08-28",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TTWO.US",
+      "per": 22.3141,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MCD.US",
+      "error": null
+    },
+    {
+      "symbol": "BE",
+      "name_zh": "Bloom Energy",
+      "kind": "US",
+      "price": 210.77,
+      "change_pct": -3.24,
+      "mtd_pct": 2.41,
+      "ytd_pct": 142.57,
+      "market_date": "2026-08-28",
+      "per": 11588.5016,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BE.US",
+      "error": null
+    },
+    {
+      "symbol": "GOOG",
+      "name_zh": "谷歌 C",
+      "kind": "US",
+      "price": 342.88,
+      "change_pct": 1.53,
+      "mtd_pct": -3.86,
+      "ytd_pct": 9.27,
+      "market_date": "2026-08-28",
+      "per": 17.3095,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GOOG.US",
       "error": null
     },
     {
