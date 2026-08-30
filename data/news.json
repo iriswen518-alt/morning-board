@@ -3,7 +3,9 @@
   "tldr": [
     "台股上一交易日收紅356點至46,331點、成交量重返兆元關卡，台積電走揚至2,420元，帶量氣勢延續至本週。",
     "台積電CoWoS先進封裝產能2026年全數售罄，月產能將自約7萬片擴至11.5萬片，AI封裝仍是盤面主軸。",
-    "金管會推進2026年八大金融新制，銀行財管2.0高資產規模達2.7兆元，私銀爭奪戰白熱化。"
+    "金管會推進2026年八大金融新制，銀行財管2.0高資產規模達2.7兆元，私銀爭奪戰白熱化。",
+    "主計總處將2026年GDP成長預測上修至11.05%、創39年新高，AI帶動7月外銷訂單年增61.9%、美國訂單暴增近89%。",
+    "聯準會主席華許示警通膨，美股週五收低但週線收紅；中國8月官方製造業PMI今日公布，7月為49.2續呈萎縮。"
   ],
   "sections": [
     {
@@ -91,6 +93,96 @@
           "summary_en": "SinoPac Bank's upgraded Wealth 2.0 service targets clients with investable net worth and insurance value above NT$100 million, pairing them with a dedicated \"1+N\" team to deliver private-banking service, customised structured products, family trusts and succession planning. The move underscores how banks are racing to differentiate through bespoke high-end solutions as competition for ultra-high-net-worth clients intensifies.",
           "source_name": "永豐銀行",
           "source_url": "https://bank.sinopac.com/sinopacBT/about/news-center/news/content/2025082501.html"
+        }
+      ]
+    },
+    {
+      "section": "Tax & Regulations",
+      "section_zh": "稅務法規",
+      "items": [
+        {
+          "title_zh": "CPI累積漲12.42% 2026遺贈稅級距上調",
+          "title_en": "2026 estate- and gift-tax brackets nudge higher as CPI passes the reset trigger",
+          "summary_zh": "財政部公告2026年遺產稅與贈與稅免稅額維持不變，但因消費者物價指數累積上漲12.42%、達到法定調整標準，各課稅級距金額同步調升。此調整使中高資產遺產的實質稅負略為減輕，對資產傳承與贈與時點規劃具實務影響，為高資產家庭年度稅務安排的關注重點之一。",
+          "summary_en": "Taiwan's estate- and gift-tax exemption amounts stay unchanged for 2026, but a cumulative consumer-price rise of 12.42% has cleared the statutory threshold that triggers a bracket adjustment, lifting the monetary boundaries of each tax band. The change modestly eases the effective burden on middle- and higher-asset estates and matters for succession and gifting timing, a recurring planning point for high-net-worth families.",
+          "source_name": "財政部",
+          "source_url": "https://www.mof.gov.tw/"
+        },
+        {
+          "title_zh": "自住房地交易維持400萬免稅額",
+          "title_en": "Self-use home sales keep the NT$4mn income exemption under the house-and-land tax",
+          "summary_zh": "依房地合一所得稅制，個人出售符合條件之自住房地，課稅所得400萬元以內免納所得稅，超過部分按10%最低稅率課徵。此優惠仍是家庭評估房產處分的重要考量，影響稅後實得金額與自住房地交易時點，在房市維持穩健之際，牽動民眾售屋決策與資產配置節奏。",
+          "summary_en": "Under Taiwan's consolidated house-and-land income tax, individuals selling a qualifying owner-occupied property may exempt up to NT$4 million of taxable gain, with any excess taxed at a preferential 10% minimum rate. The relief remains a key consideration for households weighing property disposals, shaping after-tax proceeds and the timing of self-use home transactions in a firm housing market.",
+          "source_name": "財政部房地合一稅專區",
+          "source_url": "https://www.mof.gov.tw/houseandland/multiplehtml/de144e74630c4ac59f2d84a068c889c9"
+        }
+      ]
+    },
+    {
+      "section": "Macro & Policy",
+      "section_zh": "總經政策",
+      "items": [
+        {
+          "title_zh": "主計總處上修2026 GDP至11.05% 創39年新高",
+          "title_en": "DGBAS lifts Taiwan's 2026 GDP growth forecast to a 39-year high of 11.05%",
+          "summary_zh": "主計總處將2026年經濟成長率預測上修至11.05%，較5月預估增加1.41個百分點、為39年來最高；上半年成長14.15%、第2季實質GDP年增12.93%。AI帶動出口為最大動能，預估2026年商品出口達9,036億美元、年增41.19%，2027年估成長6.04%。數據亮眼但成長高度集中於出口，內外需動能落差為後續觀察重點。",
+          "summary_en": "The statistics agency raised its 2026 economic-growth projection to 11.05%, up 1.41 points from its May estimate and the strongest pace in 39 years, after first-half growth reached 14.15% and Q2 real GDP rose 12.93%. AI-driven exports are the main engine, with 2026 merchandise exports seen at US$903.6 billion (+41.19%); 2027 growth is pencilled in at 6.04%, underscoring a powerful but export-concentrated expansion.",
+          "source_name": "Newtalk 新聞",
+          "source_url": "https://newtalk.tw/news/view/2026-08-14/1053465"
+        },
+        {
+          "title_zh": "7月外銷訂單年增61.9% 美國訂單狂增88.9%",
+          "title_en": "July export orders jump 61.9% as US demand surges nearly 89%",
+          "summary_zh": "台灣7月外銷訂單較上年同月增61.9%、優於預期，其中美國訂單暴增88.9%，成為最強引擎，反映AI與高效能運算需求熱絡。此創高動能鞏固AI供應鏈對台灣成長的主導地位；惟訂單高度集中，也使景氣對美國科技資本支出與庫存循環變化的敏感度同步升高，後市須留意需求可持續性。",
+          "summary_en": "Taiwan's July export orders rose 61.9% from a year earlier, beating expectations, with orders from the United States soaring 88.9% to become the strongest driver amid booming AI and high-performance-computing demand. The record momentum reinforces the AI supply chain's grip on Taiwan's growth story, even as the concentration heightens sensitivity to any shift in US tech-capex and inventory cycles.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6582613"
+        }
+      ]
+    },
+    {
+      "section": "Global Markets",
+      "section_zh": "國際財經",
+      "items": [
+        {
+          "title_zh": "美股週五收黑但週線收紅 9月升息機率升溫",
+          "title_en": "US indices slip Friday but log a winning week; Sept Fed-hike odds edge up",
+          "summary_zh": "據台灣財經媒體整理，美股最近交易日收低，道瓊跌92.02點（−0.20%）至45,544.88點、標普500跌41.60點（−0.64%）至6,460.26點、那斯達克跌249.61點（−1.15%）至21,455.55點，但三大指數全週仍收紅。聯準會維持利率不變、鷹派談話成焦點，報導指市場定價的9月行動機率升高，牽動台積電ADR與台股科技股評價。",
+          "summary_en": "Taiwan-language market wraps noted Wall Street closed lower in the latest session—the Dow off 92.02 points (−0.20%) at 45,544.88, the S&P 500 down 41.60 (−0.64%) at 6,460.26 and the Nasdaq off 249.61 (−1.15%) at 21,455.55—yet all three still finished the week higher. With the Fed holding rates steady and hawkish rhetoric in focus, coverage flagged rising market-implied odds of a September rate move, a swing factor for TSMC's ADR and Taiwan tech.",
+          "source_name": "群益期貨",
+          "source_url": "https://www.capitalfutures.com.tw/zh-tw/financial/breakingnewsarticle?contentid=c25083000074"
+        },
+        {
+          "title_zh": "中東與荷莫茲海峽情勢 牽動油價震盪",
+          "title_en": "Oil stays choppy on Middle East and Strait of Hormuz headlines",
+          "summary_zh": "中文媒體追蹤原油走勢，市場在伊朗相關緊張與荷莫茲海峽外交訊號、以及供給改善前景之間拉鋸，使能源價格成為全球通膨與股市情緒的變數。地緣風險溢價與波灣出口回升相互抵銷，令油價維持震盪，並成為影響央行政策預期與風險偏好的重要跨市場變數，後續中東進展仍須密切觀察。",
+          "summary_en": "Chinese-language coverage tracked crude's swings as traders weighed Iran-related tensions and diplomatic signals around the Strait of Hormuz against improving supply prospects, keeping energy a wildcard for global inflation and equity sentiment. The push-and-pull between geopolitical risk premia and recovering Gulf exports leaves oil an important cross-current for central-bank policy expectations and risk appetite.",
+          "source_name": "聯合新聞網",
+          "source_url": "https://udn.com/news/story/6811/9659170"
+        }
+      ]
+    },
+    {
+      "section": "International",
+      "section_zh": "國際",
+      "items": [
+        {
+          "title_zh": "Fed主席華許示警通膨 標普週五收低但週線收紅（2026-08-28，最近交易日）",
+          "title_en": "S&P 500 falls Friday after Fed's Warsh highlights inflation worries, but index posts positive week (2026-08-28)",
+          "summary_zh": "聯準會主席華許強調近期通膨改善未能確認基調實質好轉，壓抑降息預期，標普500指數週五收低。儘管最近交易日回檔，該指數全週仍收紅，反映投資人在通膨僵固訊號與企業獲利韌性、AI需求之間權衡；市場對聯準會9月路徑的分歧，成為後續美股與科技股波動的主要來源。",
+          "summary_en": "The S&P 500 slipped on Friday after Federal Reserve Chair Kevin Warsh underscored that recent inflation improvement does not confirm a meaningful shift in underlying trends, tempering rate-cut hopes. Despite the pullback in the most recent session, the benchmark still finished the week higher, as investors balanced sticky-inflation signals against resilient corporate earnings and AI-driven demand.",
+          "source_name": "CNBC",
+          "source_url": "https://www.cnbc.com/2026/08/27/stock-market-today-live-updates.html",
+          "published": "2026-08-28"
+        },
+        {
+          "title_zh": "中國8月官方製造業PMI今日公布 7月降至49.2（2026-08-31）",
+          "title_en": "China's official August factory PMI due Monday after July slid to 49.2 (2026-08-31)",
+          "summary_zh": "中國國家統計局預定週一公布8月官方製造業PMI，7月數值為49.2、月減1.1個百分點，且連續第五個月低於景氣榮枯線50。若8月數據疲弱，將加深市場對區域最大經濟體製造業動能轉弱的疑慮，並可能壓抑亞洲原物料與出口連動類股情緒；此為當日亞洲時段的關鍵總經數據。",
+          "summary_en": "China's National Bureau of Statistics is set to release its official manufacturing PMI for August on Monday, following July's reading of 49.2—down 1.1 points and a fifth straight month below the 50 line that separates expansion from contraction. A soft print would reinforce concerns about weak factory momentum in the region's largest economy and could weigh on commodity and export-linked sentiment across Asia.",
+          "source_name": "TradingEconomics",
+          "source_url": "https://tradingeconomics.com/china/business-confidence/news/481587",
+          "published": "2026-08-31"
         }
       ]
     }
