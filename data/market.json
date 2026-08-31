@@ -1,5 +1,5 @@
 {
-  "closing_date": "2026-08-28",
+  "closing_date": "2026-08-31",
   "indices": [
     {
       "name": "S&P 500",
@@ -85,20 +85,20 @@
     {
       "name": "TAIEX 加權指數",
       "name_zh": null,
-      "close": 46331.44921875,
-      "daily_pct": 0.77,
+      "close": 46128.47,
+      "daily_pct": -0.44,
       "mtd_pct": 7.45,
       "ytd_pct": 59.96,
-      "closing_date": "2026-08-28"
+      "closing_date": "2026-08-31"
     },
     {
       "name": "OTC 櫃買加權",
       "name_zh": null,
-      "close": null,
-      "daily_pct": null,
+      "close": 401.7,
+      "daily_pct": -0.28,
       "mtd_pct": null,
       "ytd_pct": null,
-      "closing_date": null
+      "closing_date": "2026-08-31"
     },
     {
       "name": "台指期(近月)",
@@ -139,11 +139,11 @@
     {
       "name": "CSI 300 滬深300",
       "name_zh": null,
-      "close": 4609.17626953125,
+      "close": 4602.783203125,
       "daily_pct": null,
       "mtd_pct": null,
       "ytd_pct": null,
-      "closing_date": "2026-08-28"
+      "closing_date": "2026-08-31"
     },
     {
       "name": "Nifty 50",
@@ -188,10 +188,10 @@
     },
     {
       "name": "Japan 10-Year",
-      "yield_pct": 2.9,
-      "daily_bps": 0.5,
-      "mtd_bps": 9.6,
-      "closing_date": "2026-08-27"
+      "yield_pct": 2.93,
+      "daily_bps": 3.3,
+      "mtd_bps": 12.9,
+      "closing_date": "2026-08-28"
     },
     {
       "name": "UK 10-Year",
@@ -214,7 +214,7 @@
       "close": 99.69999694824219,
       "daily_pct": 0.54,
       "mtd_pct": -0.19,
-      "ytd_pct": 1.36,
+      "ytd_pct": 1.35,
       "closing_date": "2026-08-28"
     },
     {
@@ -269,35 +269,35 @@
   "commodities": [
     {
       "name": "黃金 (USD/oz)",
-      "close": 4507.7998046875,
-      "daily_pct": 0.66,
-      "mtd_pct": 11.33,
-      "ytd_pct": 4.21,
-      "closing_date": "2026-08-30"
+      "close": 4478.10009765625,
+      "daily_pct": -2.85,
+      "mtd_pct": 10.59,
+      "ytd_pct": 3.53,
+      "closing_date": "2026-08-28"
     },
     {
       "name": "白銀 (USD/oz)",
-      "close": 67.17500305175781,
-      "daily_pct": 0.27,
-      "mtd_pct": 16.64,
-      "ytd_pct": -4.22,
-      "closing_date": "2026-08-30"
+      "close": 66.99500274658203,
+      "daily_pct": -3.51,
+      "mtd_pct": 16.33,
+      "ytd_pct": -4.48,
+      "closing_date": "2026-08-28"
     },
     {
       "name": "WTI 原油 (USD/bbl)",
-      "close": 84.6500015258789,
-      "daily_pct": 1.5,
-      "mtd_pct": -0.02,
-      "ytd_pct": 47.42,
-      "closing_date": "2026-08-30"
+      "close": 83.4000015258789,
+      "daily_pct": -0.16,
+      "mtd_pct": -1.5,
+      "ytd_pct": 45.25,
+      "closing_date": "2026-08-28"
     },
     {
       "name": "布蘭特原油 (USD/bbl)",
-      "close": 89.44999694824219,
-      "daily_pct": 0.16,
-      "mtd_pct": -0.74,
-      "ytd_pct": 47.0,
-      "closing_date": "2026-08-30"
+      "close": 89.30999755859375,
+      "daily_pct": -0.43,
+      "mtd_pct": -0.9,
+      "ytd_pct": 46.77,
+      "closing_date": "2026-08-28"
     },
     {
       "name": "比特幣 (USD)",
@@ -388,8 +388,8 @@
     "yield_curve_10y2y": 0.38,
     "yield_curve_10y2y_bps": 38,
     "curve_shape": "正斜率",
-    "dxy": 99.60700225830078,
-    "dxy_daily_pct": -0.09,
+    "dxy": 99.69999694824219,
+    "dxy_daily_pct": 0.54,
     "closing_date": "2026-08-28"
   },
   "fedwatch": [
@@ -406,21 +406,21 @@
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
       "implied_rate": 3.79,
-      "delta_rate": 0.09,
-      "delta_bps": 9.0,
-      "p_hike": 36.0,
-      "p_hold": 64.0,
+      "delta_rate": 0.08,
+      "delta_bps": 8.0,
+      "p_hike": 32.0,
+      "p_hold": 68.0,
       "p_cut": 0,
       "is_reference": false
     },
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 3.97,
-      "delta_rate": 0.18,
-      "delta_bps": 18.0,
-      "p_hike": 72.0,
-      "p_hold": 28.0,
+      "implied_rate": 3.96,
+      "delta_rate": 0.17,
+      "delta_bps": 17.0,
+      "p_hike": 68.0,
+      "p_hold": 32.0,
       "p_cut": 0,
       "is_reference": false
     }
