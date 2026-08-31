@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-31T14:54:36+08:00",
+  "generated_at": "2026-08-31T19:49:17+08:00",
   "source": "finnhub (US price+daily) + Yahoo (US MTD/YTD) + TWSE (TW)",
   "us_stocks": [
     {
@@ -15,9 +15,9 @@
       "perf_5y": 898.67,
       "market_date": "2026-08-28",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NVDA.US",
-      "error": null,
-      "per": 33.9758,
-      "per_kind": "trailing"
+      "error": "stale",
+      "per": null,
+      "per_kind": null
     },
     {
       "symbol": "AAPL",
@@ -32,7 +32,7 @@
       "perf_5y": 111.23,
       "market_date": "2026-08-28",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AAPL.US",
-      "error": null,
+      "error": "stale",
       "per": 34.3608,
       "per_kind": "trailing"
     },
@@ -49,7 +49,7 @@
       "perf_5y": 68.41,
       "market_date": "2026-08-28",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MSFT.US",
-      "error": null,
+      "error": "stale",
       "per": 27.6621,
       "per_kind": "trailing"
     },
@@ -66,7 +66,7 @@
       "perf_5y": 136.63,
       "market_date": "2026-08-28",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GOOGL.US",
-      "error": null,
+      "error": "stale",
       "per": 17.3095,
       "per_kind": "trailing"
     },
@@ -83,9 +83,9 @@
       "perf_5y": 52.65,
       "market_date": "2026-08-28",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AMZN.US",
-      "error": null,
-      "per": 21.1395,
-      "per_kind": "trailing"
+      "error": "stale",
+      "per": null,
+      "per_kind": null
     },
     {
       "symbol": "META",
@@ -100,9 +100,9 @@
       "perf_5y": 52.8,
       "market_date": "2026-08-28",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=META.US",
-      "error": null,
-      "per": 22.2575,
-      "per_kind": "trailing"
+      "error": "stale",
+      "per": null,
+      "per_kind": null
     },
     {
       "symbol": "TSLA",
@@ -117,7 +117,7 @@
       "perf_5y": 49.63,
       "market_date": "2026-08-28",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TSLA.US",
-      "error": null,
+      "error": "stale",
       "per": 352.782,
       "per_kind": "trailing"
     },
@@ -134,9 +134,9 @@
       "perf_5y": 354.63,
       "market_date": "2026-08-28",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LLY.US",
-      "error": null,
-      "per": 43.1715,
-      "per_kind": "trailing"
+      "error": "stale",
+      "per": null,
+      "per_kind": null
     },
     {
       "symbol": "JPM",
@@ -151,9 +151,9 @@
       "perf_5y": 116.98,
       "market_date": "2026-08-28",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=JPM.US",
-      "error": null,
-      "per": 14.8015,
-      "per_kind": "trailing"
+      "error": "stale",
+      "per": null,
+      "per_kind": null
     },
     {
       "symbol": "V",
@@ -168,7 +168,7 @@
       "perf_5y": 63.38,
       "market_date": "2026-08-28",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=V.US",
-      "error": null,
+      "error": "stale",
       "per": 30.3562,
       "per_kind": "trailing"
     },
@@ -185,7 +185,7 @@
       "perf_5y": -5.75,
       "market_date": "2026-08-28",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=UNH.US",
-      "error": null,
+      "error": "stale",
       "per": 25.6264,
       "per_kind": "trailing"
     },
@@ -202,9 +202,9 @@
       "perf_5y": 110.41,
       "market_date": "2026-08-28",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=WMT.US",
-      "error": null,
-      "per": 40.6059,
-      "per_kind": "trailing"
+      "error": "stale",
+      "per": null,
+      "per_kind": null
     },
     {
       "symbol": "GS",
@@ -220,8 +220,8 @@
       "market_date": "2026-08-28",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GS.US",
       "error": null,
-      "per": 14.5495,
-      "per_kind": "trailing"
+      "per": null,
+      "per_kind": null
     },
     {
       "symbol": "KO",
@@ -236,9 +236,9 @@
       "perf_5y": 60.82,
       "market_date": "2026-08-28",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=KO.US",
-      "error": null,
-      "per": 26.2553,
-      "per_kind": "trailing"
+      "error": "stale",
+      "per": null,
+      "per_kind": null
     },
     {
       "symbol": "CAT",
@@ -253,9 +253,9 @@
       "perf_5y": 284.47,
       "market_date": "2026-08-28",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CAT.US",
-      "error": null,
-      "per": 36.3041,
-      "per_kind": "trailing"
+      "error": "stale",
+      "per": null,
+      "per_kind": null
     },
     {
       "symbol": "AVGO",
@@ -270,7 +270,7 @@
       "perf_5y": 644.63,
       "market_date": "2026-08-28",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AVGO.US",
-      "error": null,
+      "error": "stale",
       "per": 68.3526,
       "per_kind": "trailing"
     },
@@ -287,9 +287,9 @@
       "perf_5y": 258.36,
       "market_date": "2026-08-28",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TSM.US",
-      "error": null,
-      "per": 27.867,
-      "per_kind": "trailing"
+      "error": "stale",
+      "per": null,
+      "per_kind": null
     },
     {
       "symbol": "AMD",
@@ -304,9 +304,9 @@
       "perf_5y": 322.76,
       "market_date": "2026-08-28",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AMD.US",
-      "error": null,
-      "per": 123.2831,
-      "per_kind": "trailing"
+      "error": "stale",
+      "per": null,
+      "per_kind": null
     },
     {
       "symbol": "QCOM",
@@ -321,9 +321,9 @@
       "perf_5y": 13.41,
       "market_date": "2026-08-28",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QCOM.US",
-      "error": null,
-      "per": 18.6879,
-      "per_kind": "trailing"
+      "error": "stale",
+      "per": null,
+      "per_kind": null
     },
     {
       "symbol": "TXN",
@@ -338,9 +338,9 @@
       "perf_5y": 39.2,
       "market_date": "2026-08-28",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TXN.US",
-      "error": null,
-      "per": 41.6877,
-      "per_kind": "trailing"
+      "error": "stale",
+      "per": null,
+      "per_kind": null
     },
     {
       "symbol": "INTC",
@@ -355,7 +355,7 @@
       "perf_5y": 67.71,
       "market_date": "2026-08-28",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=INTC.US",
-      "error": null,
+      "error": "stale",
       "per": null,
       "per_kind": null
     },
@@ -389,9 +389,9 @@
       "perf_5y": 248.71,
       "market_date": "2026-08-28",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AMAT.US",
-      "error": null,
-      "per": 45.7972,
-      "per_kind": "trailing"
+      "error": "stale",
+      "per": null,
+      "per_kind": null
     },
     {
       "symbol": "ASML",
@@ -406,9 +406,9 @@
       "perf_5y": 107.29,
       "market_date": "2026-08-28",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ASML.US",
-      "error": null,
-      "per": 57.4581,
-      "per_kind": "trailing"
+      "error": "stale",
+      "per": null,
+      "per_kind": null
     }
   ],
   "tw_stocks": [
