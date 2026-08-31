@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-31T13:47:19+08:00",
+  "generated_at": "2026-08-31T14:55:24+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -59,31 +59,17 @@
       "error": null
     },
     {
-      "symbol": "GLD",
-      "name_zh": "SPDR Gold Shares",
+      "symbol": "OXY",
+      "name_zh": "西方石油",
       "kind": "US",
-      "price": 408.89,
-      "change_pct": -3.24,
-      "mtd_pct": 10.05,
-      "ytd_pct": 3.17,
+      "price": 59.1,
+      "change_pct": -0.12,
+      "mtd_pct": 3.56,
+      "ytd_pct": 43.73,
       "market_date": "2026-08-28",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GLD.US",
-      "error": null
-    },
-    {
-      "symbol": "QNT",
-      "name_zh": "Quantinuum",
-      "kind": "US",
-      "price": 49.92,
-      "change_pct": -7.56,
-      "mtd_pct": -2.9,
-      "ytd_pct": null,
-      "market_date": "2026-08-28",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QNT.US",
+      "per": 7.9555,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=OXY.US",
       "error": null
     },
     {
@@ -224,6 +210,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOXX.US",
+      "error": null
+    },
+    {
+      "symbol": "GLD",
+      "name_zh": "SPDR 黃金 ETF",
+      "kind": "US",
+      "price": 408.89,
+      "change_pct": -3.24,
+      "mtd_pct": 10.05,
+      "ytd_pct": 3.17,
+      "market_date": "2026-08-28",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GLD.US",
       "error": null
     },
     {
