@@ -40,20 +40,20 @@
     {
       "name": "Euro Stoxx 50",
       "name_zh": null,
-      "close": 6485.669921875,
-      "daily_pct": 0.95,
+      "close": 6420.16015625,
+      "daily_pct": -1.01,
       "mtd_pct": 2.01,
       "ytd_pct": 11.89,
-      "closing_date": "2026-08-28"
+      "closing_date": "2026-08-31"
     },
     {
       "name": "DAX",
       "name_zh": null,
-      "close": 26569.990234375,
-      "daily_pct": 0.77,
+      "close": 26258.109375,
+      "daily_pct": -1.17,
       "mtd_pct": 3.67,
       "ytd_pct": 8.49,
-      "closing_date": "2026-08-28"
+      "closing_date": "2026-08-31"
     },
     {
       "name": "FTSE 100",
@@ -67,11 +67,11 @@
     {
       "name": "CAC 40",
       "name_zh": null,
-      "close": 8401.1796875,
-      "daily_pct": 0.98,
+      "close": 8334.5,
+      "daily_pct": -0.79,
       "mtd_pct": -1.27,
       "ytd_pct": 3.09,
-      "closing_date": "2026-08-28"
+      "closing_date": "2026-08-31"
     },
     {
       "name": "Nikkei 225",
@@ -121,7 +121,7 @@
     {
       "name": "Hang Seng 恆生",
       "name_zh": null,
-      "close": 25566.990234375,
+      "close": 25566.99,
       "daily_pct": -0.07,
       "mtd_pct": -1.16,
       "ytd_pct": -0.18,
@@ -130,7 +130,7 @@
     {
       "name": "Shanghai 上證",
       "name_zh": null,
-      "close": 3986.298095703125,
+      "close": 3986.298,
       "daily_pct": 0.86,
       "mtd_pct": 3.13,
       "ytd_pct": -0.42,
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 99.69999694824219,
       "daily_pct": 0.54,
-      "mtd_pct": -0.32,
-      "ytd_pct": 1.22,
+      "mtd_pct": -0.37,
+      "ytd_pct": 1.17,
       "closing_date": "2026-08-28"
     },
     {
@@ -405,18 +405,18 @@
     {
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
-      "implied_rate": 3.8,
-      "delta_rate": 0.09,
-      "delta_bps": 9.0,
-      "p_hike": 36.0,
-      "p_hold": 64.0,
+      "implied_rate": 3.81,
+      "delta_rate": 0.1,
+      "delta_bps": 10.0,
+      "p_hike": 40.0,
+      "p_hold": 60.0,
       "p_cut": 0,
       "is_reference": false
     },
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 3.96,
+      "implied_rate": 3.97,
       "delta_rate": 0.16,
       "delta_bps": 16.0,
       "p_hike": 64.0,
@@ -425,5 +425,5 @@
       "is_reference": false
     }
   ],
-  "summary": "8/28 CAC 40 +0.98%、8/28 Euro Stoxx 50 +0.95%、8/31 Shanghai 上證 +0.86% 領漲；8/28 PHLX Semiconductor -3.47%、8/28 Nasdaq Composite -0.52% 走弱。"
+  "summary": "8/31 Shanghai 上證 +0.86%、8/28 台指期(近月) +0.64%、8/31 KOSPI +0.46% 領漲；8/28 PHLX Semiconductor -3.47%、8/31 DAX -1.17% 走弱。"
 }
