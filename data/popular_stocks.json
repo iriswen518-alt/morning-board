@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-01T13:47:07+08:00",
+  "generated_at": "2026-09-01T15:41:54+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -31,17 +31,17 @@
       "error": null
     },
     {
-      "symbol": "ASST",
-      "name_zh": "Strive",
+      "symbol": "HOOD",
+      "name_zh": "Robinhood",
       "kind": "US",
-      "price": 24.22,
-      "change_pct": 11.41,
-      "mtd_pct": 118.0,
-      "ytd_pct": 64.09,
+      "price": 104.81,
+      "change_pct": 0.53,
+      "mtd_pct": 21.08,
+      "ytd_pct": -7.33,
       "market_date": "2026-08-31",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ASST.US",
+      "per": 43.1186,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HOOD.US",
       "error": null
     },
     {
@@ -59,31 +59,17 @@
       "error": null
     },
     {
-      "symbol": "HOOD",
-      "name_zh": "Robinhood",
+      "symbol": "ASST",
+      "name_zh": "Strive",
       "kind": "US",
-      "price": 104.81,
-      "change_pct": 0.53,
-      "mtd_pct": 21.08,
-      "ytd_pct": -7.33,
+      "price": 24.22,
+      "change_pct": 11.41,
+      "mtd_pct": 118.0,
+      "ytd_pct": 64.09,
       "market_date": "2026-08-31",
-      "per": 43.1186,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HOOD.US",
-      "error": null
-    },
-    {
-      "symbol": "HWM",
-      "name_zh": "Howmet Aerospace",
-      "kind": "US",
-      "price": 244.95,
-      "change_pct": -7.51,
-      "mtd_pct": -13.22,
-      "ytd_pct": 19.48,
-      "market_date": "2026-08-31",
-      "per": 59.9183,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HWM.US",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ASST.US",
       "error": null
     },
     {
@@ -101,34 +87,6 @@
       "error": null
     },
     {
-      "symbol": "STDN",
-      "name_zh": "Standard Nuclear",
-      "kind": "US",
-      "price": 16.11,
-      "change_pct": 14.26,
-      "mtd_pct": 104.18,
-      "ytd_pct": null,
-      "market_date": "2026-08-31",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=STDN.US",
-      "error": null
-    },
-    {
-      "symbol": "WETO",
-      "name_zh": "Wetour Robotics",
-      "kind": "US",
-      "price": 5.48,
-      "change_pct": -4.2,
-      "mtd_pct": -39.11,
-      "ytd_pct": -93.62,
-      "market_date": "2026-08-31",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=WETO.US",
-      "error": null
-    },
-    {
       "symbol": "RBLX",
       "name_zh": "Roblox",
       "kind": "US",
@@ -140,6 +98,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RBLX.US",
+      "error": null
+    },
+    {
+      "symbol": "STDN",
+      "name_zh": "Standard Nuclear",
+      "kind": "US",
+      "price": 16.11,
+      "change_pct": 14.26,
+      "mtd_pct": 104.18,
+      "ytd_pct": null,
+      "market_date": "2026-08-31",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=STDN.US",
       "error": null
     },
     {
@@ -171,20 +143,6 @@
       "error": null
     },
     {
-      "symbol": "PANW",
-      "name_zh": "Palo Alto Networks",
-      "kind": "US",
-      "price": 382.13,
-      "change_pct": 2.84,
-      "mtd_pct": 15.16,
-      "ytd_pct": 107.45,
-      "market_date": "2026-08-31",
-      "per": 382.9378,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PANW.US",
-      "error": null
-    },
-    {
       "symbol": "MDT",
       "name_zh": "Medtronic",
       "kind": "US",
@@ -199,17 +157,45 @@
       "error": null
     },
     {
-      "symbol": "DELL",
-      "name_zh": "Dell Technologies",
+      "symbol": "WETO",
+      "name_zh": "Wetour Robotics",
       "kind": "US",
-      "price": 456.01,
-      "change_pct": -0.05,
-      "mtd_pct": 12.49,
-      "ytd_pct": 262.26,
+      "price": 5.48,
+      "change_pct": -4.2,
+      "mtd_pct": -39.11,
+      "ytd_pct": -93.62,
       "market_date": "2026-08-31",
-      "per": 38.1013,
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=WETO.US",
+      "error": null
+    },
+    {
+      "symbol": "GME",
+      "name_zh": "GameStop",
+      "kind": "US",
+      "price": 18.38,
+      "change_pct": 2.85,
+      "mtd_pct": -15.38,
+      "ytd_pct": -8.47,
+      "market_date": "2026-08-31",
+      "per": 10.8146,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DELL.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GME.US",
+      "error": null
+    },
+    {
+      "symbol": "SNDK",
+      "name_zh": "Sandisk",
+      "kind": "US",
+      "price": 1566.7,
+      "change_pct": 5.5,
+      "mtd_pct": 28.96,
+      "ytd_pct": 560.0,
+      "market_date": "2026-08-31",
+      "per": 19.7934,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SNDK.US",
       "error": null
     },
     {
