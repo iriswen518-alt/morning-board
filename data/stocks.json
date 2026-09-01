@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-01T15:40:23+08:00",
+  "generated_at": "2026-09-01T18:24:49+08:00",
   "source": "finnhub (US price+daily) + Yahoo (US MTD/YTD) + TWSE (TW)",
   "us_stocks": [
     {
@@ -186,8 +186,8 @@
       "market_date": "2026-08-31",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=UNH.US",
       "error": null,
-      "per": null,
-      "per_kind": null
+      "per": 25.6264,
+      "per_kind": "trailing"
     },
     {
       "symbol": "WMT",
@@ -203,8 +203,8 @@
       "market_date": "2026-08-31",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=WMT.US",
       "error": null,
-      "per": null,
-      "per_kind": null
+      "per": 40.6059,
+      "per_kind": "trailing"
     },
     {
       "symbol": "GS",
