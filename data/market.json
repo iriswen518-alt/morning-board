@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 99.43000030517578,
       "daily_pct": -0.27,
-      "mtd_pct": 0.17,
-      "ytd_pct": 1.35,
+      "mtd_pct": 0.19,
+      "ytd_pct": 1.36,
       "closing_date": "2026-08-31"
     },
     {
@@ -405,11 +405,11 @@
     {
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
-      "implied_rate": 3.8,
-      "delta_rate": 0.09,
-      "delta_bps": 9.0,
-      "p_hike": 36.0,
-      "p_hold": 64.0,
+      "implied_rate": 3.81,
+      "delta_rate": 0.1,
+      "delta_bps": 10.0,
+      "p_hike": 40.0,
+      "p_hold": 60.0,
       "p_cut": 0,
       "is_reference": false
     },
@@ -417,10 +417,10 @@
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
       "implied_rate": 3.96,
-      "delta_rate": 0.17,
-      "delta_bps": 17.0,
-      "p_hike": 68.0,
-      "p_hold": 32.0,
+      "delta_rate": 0.16,
+      "delta_bps": 16.0,
+      "p_hike": 64.0,
+      "p_hold": 36.0,
       "p_cut": 0,
       "is_reference": false
     }
