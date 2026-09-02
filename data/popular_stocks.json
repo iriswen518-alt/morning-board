@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-02T07:59:07+08:00",
+  "generated_at": "2026-09-02T12:18:45+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -17,20 +17,6 @@
       "error": null
     },
     {
-      "symbol": "PANW",
-      "name_zh": "Palo Alto Networks",
-      "kind": "US",
-      "price": 362.09,
-      "change_pct": -5.24,
-      "mtd_pct": -5.24,
-      "ytd_pct": 96.57,
-      "market_date": "2026-09-01",
-      "per": 382.9378,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PANW.US",
-      "error": null
-    },
-    {
       "symbol": "CRDO",
       "name_zh": "Credo Technology Group Holding",
       "kind": "US",
@@ -42,6 +28,20 @@
       "per": 105.0253,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRDO.US",
+      "error": null
+    },
+    {
+      "symbol": "PANW",
+      "name_zh": "Palo Alto Networks",
+      "kind": "US",
+      "price": 362.09,
+      "change_pct": -5.24,
+      "mtd_pct": -5.24,
+      "ytd_pct": 96.57,
+      "market_date": "2026-09-01",
+      "per": 382.9378,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PANW.US",
       "error": null
     },
     {
@@ -101,20 +101,6 @@
       "error": null
     },
     {
-      "symbol": "BIAF",
-      "name_zh": "bioAffinity Technologies",
-      "kind": "US",
-      "price": 6.59,
-      "change_pct": 44.52,
-      "mtd_pct": 44.52,
-      "ytd_pct": 458.47,
-      "market_date": "2026-09-01",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BIAF.US",
-      "error": null
-    },
-    {
       "symbol": "MRNA",
       "name_zh": "莫德納",
       "kind": "US",
@@ -143,62 +129,6 @@
       "error": null
     },
     {
-      "symbol": "PS",
-      "name_zh": "Pershing Square",
-      "kind": "US",
-      "price": 38.52,
-      "change_pct": -10.25,
-      "mtd_pct": -10.25,
-      "ytd_pct": null,
-      "market_date": "2026-09-01",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PS.US",
-      "error": null
-    },
-    {
-      "symbol": "DLLL",
-      "name_zh": "GraniteShares 2x Long DELL Dail",
-      "kind": "US",
-      "price": 21.53,
-      "change_pct": -14.43,
-      "mtd_pct": -14.43,
-      "ytd_pct": 650.8,
-      "market_date": "2026-09-01",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DLLL.US",
-      "error": null
-    },
-    {
-      "symbol": "ALMS",
-      "name_zh": "Alumis",
-      "kind": "US",
-      "price": 9.47,
-      "change_pct": -56.58,
-      "mtd_pct": -56.58,
-      "ytd_pct": -2.97,
-      "market_date": "2026-09-01",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ALMS.US",
-      "error": null
-    },
-    {
-      "symbol": "BWXT",
-      "name_zh": "BWX Technologies",
-      "kind": "US",
-      "price": 161.54,
-      "change_pct": 6.07,
-      "mtd_pct": 6.07,
-      "ytd_pct": -6.54,
-      "market_date": "2026-09-01",
-      "per": 43.7838,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BWXT.US",
-      "error": null
-    },
-    {
       "symbol": "NVAX",
       "name_zh": "Novavax",
       "kind": "US",
@@ -213,17 +143,73 @@
       "error": null
     },
     {
-      "symbol": "CRK",
-      "name_zh": "Comstock Resources",
+      "symbol": "SOXS",
+      "name_zh": "Direxion Daily Semiconductor Be",
       "kind": "US",
-      "price": 16.02,
-      "change_pct": 11.02,
-      "mtd_pct": 11.02,
-      "ytd_pct": -30.89,
+      "price": 52.22,
+      "change_pct": 6.53,
+      "mtd_pct": 6.53,
+      "ytd_pct": -99.44,
       "market_date": "2026-09-01",
-      "per": 7.8855,
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOXS.US",
+      "error": null
+    },
+    {
+      "symbol": "RKLB",
+      "name_zh": "Rocket Lab",
+      "kind": "US",
+      "price": 62.54,
+      "change_pct": -2.16,
+      "mtd_pct": -2.16,
+      "ytd_pct": -10.35,
+      "market_date": "2026-09-01",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RKLB.US",
+      "error": null
+    },
+    {
+      "symbol": "HD",
+      "name_zh": "家得寶",
+      "kind": "US",
+      "price": 319.77,
+      "change_pct": -2.46,
+      "mtd_pct": -2.46,
+      "ytd_pct": -7.07,
+      "market_date": "2026-09-01",
+      "per": 24.4148,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRK.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HD.US",
+      "error": null
+    },
+    {
+      "symbol": "USO",
+      "name_zh": "United States Oil Fund",
+      "kind": "US",
+      "price": 141,
+      "change_pct": 5.46,
+      "mtd_pct": 5.46,
+      "ytd_pct": 103.88,
+      "market_date": "2026-09-01",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=USO.US",
+      "error": null
+    },
+    {
+      "symbol": "JNJ",
+      "name_zh": "嬌生",
+      "kind": "US",
+      "price": 271.19,
+      "change_pct": 2.01,
+      "mtd_pct": 2.01,
+      "ytd_pct": 31.04,
+      "market_date": "2026-09-01",
+      "per": 29.9333,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=JNJ.US",
       "error": null
     },
     {
