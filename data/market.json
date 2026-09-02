@@ -59,8 +59,8 @@
       "name": "FTSE 100",
       "name_zh": null,
       "close": 10789.2998046875,
-      "daily_pct": null,
-      "mtd_pct": -0.03,
+      "daily_pct": -0.32,
+      "mtd_pct": -0.32,
       "ytd_pct": 8.64,
       "closing_date": "2026-09-01"
     },
@@ -148,11 +148,11 @@
     {
       "name": "Nifty 50",
       "name_zh": null,
-      "close": 24055.80078125,
-      "daily_pct": -0.1,
+      "close": 23914.44921875,
+      "daily_pct": -0.59,
       "mtd_pct": -0.1,
       "ytd_pct": -7.94,
-      "closing_date": "2026-09-01"
+      "closing_date": "2026-09-02"
     },
     {
       "name": "S&P/ASX 200",
@@ -181,10 +181,10 @@
     },
     {
       "name": "Germany 10-Year",
-      "yield_pct": 3.34,
-      "daily_bps": 6.07,
-      "mtd_bps": 11.23,
-      "closing_date": "2026-08-31"
+      "yield_pct": 3.36,
+      "daily_bps": 1.56,
+      "mtd_bps": 1.56,
+      "closing_date": "2026-09-01"
     },
     {
       "name": "Japan 10-Year",
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 99.66999816894531,
       "daily_pct": 0.24,
-      "mtd_pct": 0.38,
-      "ytd_pct": 1.55,
+      "mtd_pct": 0.39,
+      "ytd_pct": 1.57,
       "closing_date": "2026-09-01"
     },
     {
@@ -417,10 +417,10 @@
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
       "implied_rate": 3.98,
-      "delta_rate": 0.17,
-      "delta_bps": 17.0,
-      "p_hike": 68.0,
-      "p_hold": 32.0,
+      "delta_rate": 0.18,
+      "delta_bps": 18.0,
+      "p_hike": 72.0,
+      "p_hold": 28.0,
       "p_cut": 0,
       "is_reference": false
     }
