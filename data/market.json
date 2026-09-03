@@ -60,7 +60,7 @@
       "name_zh": null,
       "close": 10756.5,
       "daily_pct": -0.3,
-      "mtd_pct": -0.33,
+      "mtd_pct": -0.63,
       "ytd_pct": 8.31,
       "closing_date": "2026-09-02"
     },
@@ -76,11 +76,11 @@
     {
       "name": "Nikkei 225",
       "name_zh": null,
-      "close": 64325.640625,
-      "daily_pct": -2.85,
+      "close": 64214.48046875,
+      "daily_pct": -0.17,
       "mtd_pct": -3.0,
       "ytd_pct": 27.78,
-      "closing_date": "2026-09-02"
+      "closing_date": "2026-09-03"
     },
     {
       "name": "TAIEX 加權指數",
@@ -101,36 +101,45 @@
       "closing_date": "2026-09-03"
     },
     {
+      "name": "台指期(近月)",
+      "name_zh": null,
+      "close": 46189.0,
+      "daily_pct": -2.14,
+      "mtd_pct": null,
+      "ytd_pct": null,
+      "closing_date": "2026-09-02"
+    },
+    {
       "name": "KOSPI",
       "name_zh": null,
-      "close": 6562.72021484375,
-      "daily_pct": -3.99,
+      "close": 6579.47998046875,
+      "daily_pct": 0.26,
       "mtd_pct": -3.77,
       "ytd_pct": 55.73,
-      "closing_date": "2026-09-02"
+      "closing_date": "2026-09-03"
     },
     {
       "name": "Hang Seng 恆生",
       "name_zh": null,
-      "close": 25311.2109375,
-      "daily_pct": -0.07,
+      "close": 25213.310546875,
+      "daily_pct": -0.39,
       "mtd_pct": -1.0,
       "ytd_pct": -1.25,
-      "closing_date": "2026-09-02"
+      "closing_date": "2026-09-03"
     },
     {
       "name": "Shanghai 上證",
       "name_zh": null,
-      "close": 3941.385986328125,
-      "daily_pct": -0.97,
+      "close": 3942.087890625,
+      "daily_pct": 0.02,
       "mtd_pct": -1.13,
       "ytd_pct": -0.69,
-      "closing_date": "2026-09-02"
+      "closing_date": "2026-09-03"
     },
     {
       "name": "CSI 300 滬深300",
       "name_zh": null,
-      "close": 4541.77197265625,
+      "close": 4552.57861328125,
       "daily_pct": null,
       "mtd_pct": -9.04,
       "ytd_pct": -2.18,
@@ -148,11 +157,11 @@
     {
       "name": "S&P/ASX 200",
       "name_zh": null,
-      "close": 8978.400390625,
-      "daily_pct": -0.97,
+      "close": 9020.099609375,
+      "daily_pct": 0.46,
       "mtd_pct": -1.08,
       "ytd_pct": 3.03,
-      "closing_date": "2026-09-02"
+      "closing_date": "2026-09-03"
     }
   ],
   "bonds": [
@@ -165,30 +174,30 @@
     },
     {
       "name": "US 2-Year",
-      "yield_pct": 4.36,
-      "daily_bps": -2.3,
+      "yield_pct": 4.37,
+      "daily_bps": -1.5,
       "mtd_bps": 5.0,
       "closing_date": "2026-09-03"
     },
     {
       "name": "Germany 10-Year",
-      "yield_pct": 3.38,
-      "daily_bps": -0.0,
+      "yield_pct": 3.36,
+      "daily_bps": -1.7,
       "mtd_bps": 1.56,
       "closing_date": "2026-09-03"
     },
     {
       "name": "Japan 10-Year",
-      "yield_pct": 2.96,
-      "daily_bps": -4.2,
+      "yield_pct": 2.97,
+      "daily_bps": -3.5,
       "mtd_bps": 6.3,
       "closing_date": "2026-09-03"
     },
     {
       "name": "UK 10-Year",
-      "yield_pct": 5.23,
-      "daily_bps": 1.0,
-      "mtd_bps": 3.7,
+      "yield_pct": 5.19,
+      "daily_bps": -4.8,
+      "mtd_bps": 6.58,
       "closing_date": "2026-09-03"
     },
     {
@@ -204,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 99.55999755859375,
       "daily_pct": -0.11,
-      "mtd_pct": -0.04,
-      "ytd_pct": 1.13,
+      "mtd_pct": -0.19,
+      "ytd_pct": 0.98,
       "closing_date": "2026-09-02"
     },
     {
@@ -292,11 +301,11 @@
     },
     {
       "name": "比特幣 (USD)",
-      "close": 77403.625,
-      "daily_pct": -1.46,
-      "mtd_pct": -1.46,
-      "ytd_pct": -11.55,
-      "closing_date": "2026-09-01"
+      "close": 77300.4765625,
+      "daily_pct": -0.13,
+      "mtd_pct": -1.59,
+      "ytd_pct": -11.67,
+      "closing_date": "2026-09-02"
     }
   ],
   "bond_etfs": [
@@ -416,5 +425,5 @@
       "is_reference": false
     }
   ],
-  "summary": "9/2 Dow Jones +0.56%、9/2 S&P 500 +0.46%、9/2 Nasdaq Composite +0.45% 領漲；9/2 KOSPI -3.99%、9/3 OTC 櫃買加權 -2.88% 走弱。"
+  "summary": "9/2 Dow Jones +0.56%、9/2 S&P 500 +0.46%、9/3 S&P/ASX 200 +0.46% 領漲；9/3 OTC 櫃買加權 -2.88%、9/2 台指期(近月) -2.14% 走弱。"
 }
