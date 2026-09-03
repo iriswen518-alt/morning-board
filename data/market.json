@@ -101,6 +101,15 @@
       "closing_date": "2026-09-03"
     },
     {
+      "name": "台指期(近月)",
+      "name_zh": null,
+      "close": 46189.0,
+      "daily_pct": -2.14,
+      "mtd_pct": null,
+      "ytd_pct": null,
+      "closing_date": "2026-09-02"
+    },
+    {
       "name": "KOSPI",
       "name_zh": null,
       "close": 6579.47998046875,
@@ -166,14 +175,14 @@
     {
       "name": "US 2-Year",
       "yield_pct": 4.37,
-      "daily_bps": -1.3,
+      "daily_bps": -1.9,
       "mtd_bps": 5.0,
       "closing_date": "2026-09-03"
     },
     {
       "name": "Germany 10-Year",
-      "yield_pct": 3.36,
-      "daily_bps": -2.1,
+      "yield_pct": 3.35,
+      "daily_bps": -2.5,
       "mtd_bps": 5.23,
       "closing_date": "2026-09-03"
     },
@@ -186,8 +195,8 @@
     },
     {
       "name": "UK 10-Year",
-      "yield_pct": 5.2,
-      "daily_bps": -4.1,
+      "yield_pct": 5.18,
+      "daily_bps": -6.0,
       "mtd_bps": 6.58,
       "closing_date": "2026-09-03"
     },
@@ -204,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 99.55999755859375,
       "daily_pct": -0.11,
-      "mtd_pct": -0.22,
-      "ytd_pct": 0.95,
+      "mtd_pct": -0.29,
+      "ytd_pct": 0.87,
       "closing_date": "2026-09-02"
     },
     {
@@ -416,5 +425,5 @@
       "is_reference": false
     }
   ],
-  "summary": "9/2 Dow Jones +0.56%、9/2 S&P 500 +0.46%、9/3 S&P/ASX 200 +0.46% 領漲；9/3 OTC 櫃買加權 -2.88%、9/3 TAIEX 加權指數 -0.67% 走弱。"
+  "summary": "9/2 Dow Jones +0.56%、9/2 S&P 500 +0.46%、9/3 S&P/ASX 200 +0.46% 領漲；9/3 OTC 櫃買加權 -2.88%、9/2 台指期(近月) -2.14% 走弱。"
 }
