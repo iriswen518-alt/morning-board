@@ -85,20 +85,20 @@
     {
       "name": "TAIEX 加權指數",
       "name_zh": null,
-      "close": 45857.66,
-      "daily_pct": -0.67,
+      "close": 46551.13,
+      "daily_pct": 1.51,
       "mtd_pct": 0.08,
       "ytd_pct": 59.39,
-      "closing_date": "2026-09-03"
+      "closing_date": "2026-09-04"
     },
     {
       "name": "OTC 櫃買加權",
       "name_zh": null,
-      "close": null,
-      "daily_pct": null,
+      "close": 402.48,
+      "daily_pct": 1.83,
       "mtd_pct": null,
       "ytd_pct": null,
-      "closing_date": null
+      "closing_date": "2026-09-04"
     },
     {
       "name": "台指期(近月)",
@@ -139,7 +139,7 @@
     {
       "name": "CSI 300 滬深300",
       "name_zh": null,
-      "close": 4572.27880859375,
+      "close": 4576.94580078125,
       "daily_pct": null,
       "mtd_pct": null,
       "ytd_pct": null,
@@ -174,8 +174,8 @@
     },
     {
       "name": "US 2-Year",
-      "yield_pct": 4.35,
-      "daily_bps": 1.3,
+      "yield_pct": 4.33,
+      "daily_bps": 0.1,
       "mtd_bps": 0.0,
       "closing_date": "2026-09-04"
     },
@@ -188,8 +188,8 @@
     },
     {
       "name": "Japan 10-Year",
-      "yield_pct": 2.91,
-      "daily_bps": -4.2,
+      "yield_pct": 2.9,
+      "daily_bps": -4.9,
       "mtd_bps": 2.3,
       "closing_date": "2026-09-04"
     },
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 98.92,
       "daily_pct": -0.64,
-      "mtd_pct": -0.4,
-      "ytd_pct": 0.77,
+      "mtd_pct": -0.42,
+      "ytd_pct": 0.75,
       "closing_date": "2026-09-03"
     },
     {
@@ -384,13 +384,13 @@
   ],
   "rate_outlook": {
     "us2y": 4.34,
-    "us10y": 4.76,
-    "yield_curve_10y2y": 0.42,
-    "yield_curve_10y2y_bps": 42,
+    "us10y": 4.8,
+    "yield_curve_10y2y": 0.46,
+    "yield_curve_10y2y_bps": 46,
     "curve_shape": "正斜率",
     "dxy": 99.55999755859375,
     "dxy_daily_pct": -0.11,
-    "closing_date": "2026-09-03"
+    "closing_date": "2026-09-02"
   },
   "fedwatch": [
     {
@@ -416,11 +416,11 @@
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 3.97,
-      "delta_rate": 0.21,
-      "delta_bps": 21.0,
-      "p_hike": 84.0,
-      "p_hold": 16.0,
+      "implied_rate": 3.92,
+      "delta_rate": 0.15,
+      "delta_bps": 15.0,
+      "p_hike": 60.0,
+      "p_hold": 40.0,
       "p_cut": 0,
       "is_reference": false
     }
