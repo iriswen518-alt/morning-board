@@ -4,43 +4,43 @@
     {
       "name": "S&P 500",
       "name_zh": null,
-      "close": 7666.60009765625,
-      "daily_pct": 0.46,
+      "close": 7747.7099609375,
+      "daily_pct": 1.06,
       "mtd_pct": -0.25,
       "ytd_pct": 11.99,
-      "closing_date": "2026-09-02"
+      "closing_date": "2026-09-03"
     },
     {
       "name": "Nasdaq Composite",
       "name_zh": null,
-      "close": 26217.830078125,
-      "daily_pct": 0.45,
+      "close": 26584.060546875,
+      "daily_pct": 1.4,
       "mtd_pct": -0.58,
       "ytd_pct": 12.8,
-      "closing_date": "2026-09-02"
+      "closing_date": "2026-09-03"
     },
     {
       "name": "Dow Jones",
       "name_zh": null,
-      "close": 53061.94921875,
-      "daily_pct": 0.56,
+      "close": 53686.109375,
+      "daily_pct": 1.18,
       "mtd_pct": -0.23,
       "ytd_pct": 10.4,
-      "closing_date": "2026-09-02"
+      "closing_date": "2026-09-03"
     },
     {
       "name": "PHLX Semiconductor",
       "name_zh": null,
-      "close": 11339.25,
-      "daily_pct": 0.45,
+      "close": 11352.12890625,
+      "daily_pct": 0.11,
       "mtd_pct": -1.7,
       "ytd_pct": 60.09,
-      "closing_date": "2026-09-02"
+      "closing_date": "2026-09-03"
     },
     {
       "name": "Euro Stoxx 50",
       "name_zh": null,
-      "close": 6382.58984375,
+      "close": 6382.59,
       "daily_pct": 0.32,
       "mtd_pct": -0.9,
       "ytd_pct": 9.76,
@@ -49,7 +49,7 @@
     {
       "name": "DAX",
       "name_zh": null,
-      "close": 26003.3203125,
+      "close": 26003.32,
       "daily_pct": 0.63,
       "mtd_pct": -1.59,
       "ytd_pct": 5.51,
@@ -58,7 +58,7 @@
     {
       "name": "FTSE 100",
       "name_zh": null,
-      "close": 10831.51953125,
+      "close": 10831.52,
       "daily_pct": 0.7,
       "mtd_pct": -0.63,
       "ytd_pct": 8.31,
@@ -67,7 +67,7 @@
     {
       "name": "CAC 40",
       "name_zh": null,
-      "close": 8286.400390625,
+      "close": 8286.4,
       "daily_pct": 0.07,
       "mtd_pct": -0.65,
       "ytd_pct": 1.61,
@@ -103,11 +103,11 @@
     {
       "name": "台指期(近月)",
       "name_zh": null,
-      "close": 46189.0,
-      "daily_pct": -2.14,
+      "close": 45837.0,
+      "daily_pct": -0.71,
       "mtd_pct": null,
       "ytd_pct": null,
-      "closing_date": "2026-09-02"
+      "closing_date": "2026-09-03"
     },
     {
       "name": "KOSPI",
@@ -148,7 +148,7 @@
     {
       "name": "Nifty 50",
       "name_zh": null,
-      "close": 23873.44921875,
+      "close": 23873.45,
       "daily_pct": -0.17,
       "mtd_pct": -0.69,
       "ytd_pct": -8.48,
@@ -167,36 +167,36 @@
   "bonds": [
     {
       "name": "US 10-Year",
-      "yield_pct": 4.8,
-      "daily_bps": 0.0,
-      "mtd_bps": 3.8,
-      "closing_date": "2026-09-02"
+      "yield_pct": 4.76,
+      "daily_bps": -3.4,
+      "mtd_bps": 0.4,
+      "closing_date": "2026-09-03"
     },
     {
       "name": "US 2-Year",
-      "yield_pct": 4.33,
-      "daily_bps": -5.6,
+      "yield_pct": 4.34,
+      "daily_bps": 0.6,
       "mtd_bps": 5.0,
       "closing_date": "2026-09-04"
     },
     {
       "name": "Germany 10-Year",
       "yield_pct": 3.35,
-      "daily_bps": 0.2,
+      "daily_bps": -2.6,
       "mtd_bps": 5.23,
       "closing_date": "2026-09-04"
     },
     {
       "name": "Japan 10-Year",
       "yield_pct": 2.95,
-      "daily_bps": -5.4,
+      "daily_bps": 0.0,
       "mtd_bps": 6.3,
       "closing_date": "2026-09-04"
     },
     {
       "name": "UK 10-Year",
-      "yield_pct": 5.15,
-      "daily_bps": 0.9,
+      "yield_pct": 5.14,
+      "daily_bps": -9.4,
       "mtd_bps": 6.58,
       "closing_date": "2026-09-04"
     },
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 99.55999755859375,
       "daily_pct": -0.11,
-      "mtd_pct": -0.54,
-      "ytd_pct": 0.62,
+      "mtd_pct": -0.44,
+      "ytd_pct": 0.73,
       "closing_date": "2026-09-02"
     },
     {
@@ -425,5 +425,5 @@
       "is_reference": false
     }
   ],
-  "summary": "9/3 FTSE 100 +0.70%、9/3 DAX +0.63%、9/2 Dow Jones +0.56% 領漲；9/3 OTC 櫃買加權 -2.88%、9/2 台指期(近月) -2.14% 走弱。"
+  "summary": "9/3 Nasdaq Composite +1.40%、9/3 Dow Jones +1.18%、9/3 S&P 500 +1.06% 領漲；9/3 OTC 櫃買加權 -2.88%、9/3 台指期(近月) -0.71% 走弱。"
 }
