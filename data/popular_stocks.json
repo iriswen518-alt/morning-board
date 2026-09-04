@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T20:10:49+08:00",
+  "generated_at": "2026-09-04T20:44:57+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -31,20 +31,6 @@
       "error": null
     },
     {
-      "symbol": "MSTR",
-      "name_zh": "MicroStrategy",
-      "kind": "US",
-      "price": 144.82,
-      "change_pct": 17.56,
-      "mtd_pct": 8.94,
-      "ytd_pct": -4.69,
-      "market_date": "2026-09-03",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MSTR.US",
-      "error": null
-    },
-    {
       "symbol": "PL",
       "name_zh": "Planet Labs PBC",
       "kind": "US",
@@ -56,48 +42,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PL.US",
-      "error": null
-    },
-    {
-      "symbol": "PATH",
-      "name_zh": "UiPath",
-      "kind": "US",
-      "price": 18.22,
-      "change_pct": 1.28,
-      "mtd_pct": -2.41,
-      "ytd_pct": 11.17,
-      "market_date": "2026-09-03",
-      "per": 26.3958,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PATH.US",
-      "error": null
-    },
-    {
-      "symbol": "SNDK",
-      "name_zh": "Sandisk",
-      "kind": "US",
-      "price": 1554.99,
-      "change_pct": 0.1,
-      "mtd_pct": -0.75,
-      "ytd_pct": 555.06,
-      "market_date": "2026-09-03",
-      "per": 19.7934,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SNDK.US",
-      "error": null
-    },
-    {
-      "symbol": "GME",
-      "name_zh": "GameStop",
-      "kind": "US",
-      "price": 19.23,
-      "change_pct": 1.37,
-      "mtd_pct": 4.62,
-      "ytd_pct": -4.23,
-      "market_date": "2026-09-03",
-      "per": 11.2008,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GME.US",
       "error": null
     },
     {
@@ -115,6 +59,20 @@
       "error": null
     },
     {
+      "symbol": "MSTR",
+      "name_zh": "MicroStrategy",
+      "kind": "US",
+      "price": 144.82,
+      "change_pct": 17.56,
+      "mtd_pct": 8.94,
+      "ytd_pct": -4.69,
+      "market_date": "2026-09-03",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MSTR.US",
+      "error": null
+    },
+    {
       "symbol": "BE",
       "name_zh": "Bloom Energy",
       "kind": "US",
@@ -126,6 +84,34 @@
       "per": 11541.8797,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BE.US",
+      "error": null
+    },
+    {
+      "symbol": "SNDK",
+      "name_zh": "Sandisk",
+      "kind": "US",
+      "price": 1554.99,
+      "change_pct": 0.1,
+      "mtd_pct": -0.75,
+      "ytd_pct": 555.06,
+      "market_date": "2026-09-03",
+      "per": 19.7934,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SNDK.US",
+      "error": null
+    },
+    {
+      "symbol": "FICO",
+      "name_zh": "Fair Isaac",
+      "kind": "US",
+      "price": 1118.93,
+      "change_pct": 1.77,
+      "mtd_pct": -2.47,
+      "ytd_pct": -33.82,
+      "market_date": "2026-09-03",
+      "per": 29.6752,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FICO.US",
       "error": null
     },
     {
@@ -143,31 +129,45 @@
       "error": null
     },
     {
-      "symbol": "ZS",
-      "name_zh": "Zscaler",
+      "symbol": "PATH",
+      "name_zh": "UiPath",
       "kind": "US",
-      "price": 177.8,
-      "change_pct": 2.94,
-      "mtd_pct": -5.62,
-      "ytd_pct": -20.95,
+      "price": 18.22,
+      "change_pct": 1.28,
+      "mtd_pct": -2.41,
+      "ytd_pct": 11.17,
       "market_date": "2026-09-03",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ZS.US",
+      "per": 26.3958,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PATH.US",
       "error": null
     },
     {
-      "symbol": "ADBE",
-      "name_zh": "Adobe",
+      "symbol": "GME",
+      "name_zh": "GameStop",
       "kind": "US",
-      "price": 285.75,
-      "change_pct": 2.13,
-      "mtd_pct": -2.4,
-      "ytd_pct": -18.35,
+      "price": 19.23,
+      "change_pct": 1.37,
+      "mtd_pct": 4.62,
+      "ytd_pct": -4.23,
       "market_date": "2026-09-03",
-      "per": 15.3848,
+      "per": 11.2008,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ADBE.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GME.US",
+      "error": null
+    },
+    {
+      "symbol": "VRT",
+      "name_zh": "Vertiv Holdings, LLC",
+      "kind": "US",
+      "price": 268.83,
+      "change_pct": 4.73,
+      "mtd_pct": 3.91,
+      "ytd_pct": 65.93,
+      "market_date": "2026-09-03",
+      "per": 59.7554,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VRT.US",
       "error": null
     },
     {
