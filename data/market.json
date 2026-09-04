@@ -85,7 +85,7 @@
     {
       "name": "TAIEX 加權指數",
       "name_zh": null,
-      "close": 46551.13,
+      "close": 46551.12890625,
       "daily_pct": 1.51,
       "mtd_pct": -0.59,
       "ytd_pct": 58.33,
@@ -94,11 +94,11 @@
     {
       "name": "OTC 櫃買加權",
       "name_zh": null,
-      "close": 402.48,
-      "daily_pct": 1.83,
+      "close": null,
+      "daily_pct": null,
       "mtd_pct": null,
       "ytd_pct": null,
-      "closing_date": "2026-09-04"
+      "closing_date": null
     },
     {
       "name": "台指期(近月)",
@@ -141,8 +141,8 @@
       "name_zh": null,
       "close": 4548.0498046875,
       "daily_pct": null,
-      "mtd_pct": -9.04,
-      "ytd_pct": -2.18,
+      "mtd_pct": null,
+      "ytd_pct": null,
       "closing_date": "2026-09-04"
     },
     {
@@ -174,29 +174,29 @@
     },
     {
       "name": "US 2-Year",
-      "yield_pct": 4.34,
-      "daily_bps": 0.9,
+      "yield_pct": 4.35,
+      "daily_bps": 1.8,
       "mtd_bps": 0.0,
       "closing_date": "2026-09-04"
     },
     {
       "name": "Germany 10-Year",
-      "yield_pct": 3.35,
-      "daily_bps": -0.1,
+      "yield_pct": 3.34,
+      "daily_bps": -0.9,
       "mtd_bps": 2.5,
       "closing_date": "2026-09-04"
     },
     {
       "name": "Japan 10-Year",
       "yield_pct": 2.91,
-      "daily_bps": -3.9,
+      "daily_bps": -4.2,
       "mtd_bps": 2.3,
       "closing_date": "2026-09-04"
     },
     {
       "name": "UK 10-Year",
-      "yield_pct": 5.15,
-      "daily_bps": 1.6,
+      "yield_pct": 5.14,
+      "daily_bps": 0.5,
       "mtd_bps": 10.06,
       "closing_date": "2026-09-04"
     },
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 99.0,
       "daily_pct": -0.56,
-      "mtd_pct": -0.35,
-      "ytd_pct": 0.82,
+      "mtd_pct": -0.36,
+      "ytd_pct": 0.81,
       "closing_date": "2026-09-03"
     },
     {
@@ -301,11 +301,11 @@
     },
     {
       "name": "比特幣 (USD)",
-      "close": 81271.7421875,
-      "daily_pct": 5.14,
-      "mtd_pct": 3.47,
-      "ytd_pct": -7.13,
-      "closing_date": "2026-09-03"
+      "close": 77300.4765625,
+      "daily_pct": -0.13,
+      "mtd_pct": -1.59,
+      "ytd_pct": -11.67,
+      "closing_date": "2026-09-02"
     }
   ],
   "bond_etfs": [
@@ -425,5 +425,5 @@
       "is_reference": false
     }
   ],
-  "summary": "9/4 OTC 櫃買加權 +1.83%、9/4 Hang Seng 恆生 +1.74%、9/4 KOSPI +1.64% 領漲；9/3 台指期(近月) -0.71%、9/4 Shanghai 上證 -0.30% 走弱。"
+  "summary": "9/4 Hang Seng 恆生 +1.74%、9/4 KOSPI +1.64%、9/4 TAIEX 加權指數 +1.51% 領漲；9/3 台指期(近月) -0.71%、9/4 Shanghai 上證 -0.30% 走弱。"
 }

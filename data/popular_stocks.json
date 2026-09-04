@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T19:19:51+08:00",
+  "generated_at": "2026-09-04T20:10:49+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -31,17 +31,17 @@
       "error": null
     },
     {
-      "symbol": "PATH",
-      "name_zh": "UiPath",
+      "symbol": "MSTR",
+      "name_zh": "MicroStrategy",
       "kind": "US",
-      "price": 18.22,
-      "change_pct": 1.28,
-      "mtd_pct": -2.41,
-      "ytd_pct": 11.17,
+      "price": 144.82,
+      "change_pct": 17.56,
+      "mtd_pct": 8.94,
+      "ytd_pct": -4.69,
       "market_date": "2026-09-03",
-      "per": 26.3958,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PATH.US",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MSTR.US",
       "error": null
     },
     {
@@ -59,17 +59,17 @@
       "error": null
     },
     {
-      "symbol": "MSTR",
-      "name_zh": "MicroStrategy",
+      "symbol": "PATH",
+      "name_zh": "UiPath",
       "kind": "US",
-      "price": 144.82,
-      "change_pct": 17.56,
-      "mtd_pct": 8.94,
-      "ytd_pct": -4.69,
+      "price": 18.22,
+      "change_pct": 1.28,
+      "mtd_pct": -2.41,
+      "ytd_pct": 11.17,
       "market_date": "2026-09-03",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MSTR.US",
+      "per": 26.3958,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PATH.US",
       "error": null
     },
     {
@@ -84,20 +84,6 @@
       "per": 19.7934,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SNDK.US",
-      "error": null
-    },
-    {
-      "symbol": "ZS",
-      "name_zh": "Zscaler",
-      "kind": "US",
-      "price": 177.8,
-      "change_pct": 2.94,
-      "mtd_pct": -5.62,
-      "ytd_pct": -20.95,
-      "market_date": "2026-09-03",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ZS.US",
       "error": null
     },
     {
@@ -129,6 +115,20 @@
       "error": null
     },
     {
+      "symbol": "BE",
+      "name_zh": "Bloom Energy",
+      "kind": "US",
+      "price": 235.55,
+      "change_pct": 8.41,
+      "mtd_pct": 14.18,
+      "ytd_pct": 171.09,
+      "market_date": "2026-09-03",
+      "per": 11541.8797,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BE.US",
+      "error": null
+    },
+    {
       "symbol": "IOT",
       "name_zh": "Samsara",
       "kind": "US",
@@ -143,6 +143,20 @@
       "error": null
     },
     {
+      "symbol": "ZS",
+      "name_zh": "Zscaler",
+      "kind": "US",
+      "price": 177.8,
+      "change_pct": 2.94,
+      "mtd_pct": -5.62,
+      "ytd_pct": -20.95,
+      "market_date": "2026-09-03",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ZS.US",
+      "error": null
+    },
+    {
       "symbol": "ADBE",
       "name_zh": "Adobe",
       "kind": "US",
@@ -154,34 +168,6 @@
       "per": 15.3848,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ADBE.US",
-      "error": null
-    },
-    {
-      "symbol": "DOCU",
-      "name_zh": "DocuSign",
-      "kind": "US",
-      "price": 65.97,
-      "change_pct": 0.89,
-      "mtd_pct": -0.45,
-      "ytd_pct": -3.55,
-      "market_date": "2026-09-03",
-      "per": 40.3995,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DOCU.US",
-      "error": null
-    },
-    {
-      "symbol": "CHPT",
-      "name_zh": "ChargePoint",
-      "kind": "US",
-      "price": 9.08,
-      "change_pct": 74.95,
-      "mtd_pct": 65.09,
-      "ytd_pct": 36.75,
-      "market_date": "2026-09-03",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CHPT.US",
       "error": null
     },
     {
