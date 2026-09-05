@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T17:01:41+08:00",
+  "generated_at": "2026-09-05T09:16:29+08:00",
   "source": "manual curation (targets.json)",
   "version": 3,
   "updated": "2026-09-04",
@@ -180,14 +180,14 @@
       "stats": [
         {
           "k": "S&P 500 YTD",
-          "v": "+11.99%",
-          "sub": "MTD -0.25%・今日 +1.06%・截至 09/03",
+          "v": "+13.18%",
+          "sub": "MTD +0.80%・今日 -0.38%・截至 09/04",
           "url": "https://finance.yahoo.com/quote/%5EGSPC"
         },
         {
           "k": "Nasdaq Composite YTD",
-          "v": "+12.80%",
-          "sub": "MTD -0.58%・今日 +1.40%・截至 09/03",
+          "v": "+14.38%",
+          "sub": "MTD +0.81%・今日 -0.29%・截至 09/04",
           "url": "https://finance.yahoo.com/quote/%5EIXIC"
         }
       ],
@@ -224,8 +224,8 @@
       "stats": [
         {
           "k": "近1年績效",
-          "v": "+13.38%",
-          "sub": "柏瑞日本多重資產・截至 09/02",
+          "v": "+15.27%",
+          "sub": "柏瑞日本多重資產・截至 09/03",
           "url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACAI451-WA17"
         },
         {
@@ -266,8 +266,8 @@
       "stats": [
         {
           "k": "近1年績效",
-          "v": "+186.40%",
-          "sub": "安聯台灣科技・截至 09/03",
+          "v": "+189.70%",
+          "sub": "安聯台灣科技・截至 09/04",
           "url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACDD04-2602"
         },
         {
@@ -356,8 +356,8 @@
       "stats": [
         {
           "k": "WTI 原油 YTD",
-          "v": "+58.34%",
-          "sub": "今日 -0.59%・截至 09/04",
+          "v": "+59.14%",
+          "sub": "今日 -0.09%・截至 09/04",
           "url": "https://finance.yahoo.com/quote/CL=F"
         },
         {
@@ -398,14 +398,14 @@
       "stats": [
         {
           "k": "Euro Stoxx 50 YTD",
-          "v": "+9.76%",
-          "sub": "MTD -0.90%・今日 +0.32%・截至 09/03",
+          "v": "+10.12%",
+          "sub": "MTD -0.59%・今日 +0.16%・截至 09/04",
           "url": "https://finance.yahoo.com/quote/%5ESTOXX50E"
         },
         {
           "k": "DAX YTD",
-          "v": "+5.51%",
-          "sub": "MTD -1.59%・今日 +0.63%・截至 09/03",
+          "v": "+6.18%",
+          "sub": "MTD -0.97%・今日 +0.17%・截至 09/04",
           "url": "https://finance.yahoo.com/quote/%5EGDAXI"
         },
         {
@@ -488,8 +488,8 @@
       "stats": [
         {
           "k": "STI 海峽時報 YTD",
-          "v": "+24.73%",
-          "sub": "今日 +1.04%・截至 09/04",
+          "v": "+23.44%",
+          "sub": "今日 +0.06%・截至 09/03",
           "url": "https://finance.yahoo.com/quote/%5ESTI"
         },
         {
@@ -572,9 +572,15 @@
       "stats": [
         {
           "k": "Shanghai 上證 YTD",
-          "v": "-0.69%",
-          "sub": "MTD -1.13%・今日 -1.51%・截至 09/03",
+          "v": "-0.67%",
+          "sub": "MTD -1.11%・今日 -0.30%・截至 09/04",
           "url": "https://finance.yahoo.com/quote/000001.SS"
+        },
+        {
+          "k": "CSI 300 滬深300 YTD",
+          "v": "-2.18%",
+          "sub": "MTD -9.04%・截至 09/04",
+          "url": "https://finance.yahoo.com/quote/000300.SS"
         },
         {
           "k": "估值",
@@ -655,14 +661,14 @@
       "tagline": "無指標限制之靈活彈性債券策略",
       "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACCF304-1813",
       "fund_id": "amundi_global_strategic",
-      "nav": 10.05,
-      "nav_date": "2026-09-02",
+      "nav": 10.08,
+      "nav_date": "2026-09-03",
       "change_pct": 0.3,
       "perf": {
-        "1m": -1.86,
-        "3m": 0.6,
+        "1m": -2.33,
+        "3m": 1.1,
         "6m": null,
-        "ytd": 0.5,
+        "ytd": 0.8,
         "1y": null,
         "3y": null
       },
@@ -718,15 +724,15 @@
       "tagline": "參與日本重估行情與降低單一波動",
       "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACAI451-WA17",
       "fund_id": "pinebridge_japan_multi_asset",
-      "nav": 11.3486,
-      "nav_date": "2026-09-02",
-      "change_pct": -1.08,
+      "nav": 11.4886,
+      "nav_date": "2026-09-03",
+      "change_pct": 1.23,
       "perf": {
-        "1m": -1.17,
-        "3m": 0.34,
-        "6m": -1.97,
-        "ytd": 6.98,
-        "1y": 13.38,
+        "1m": -1.22,
+        "3m": 0.86,
+        "6m": 1.17,
+        "ytd": 8.3,
+        "1y": 15.27,
         "3y": null
       },
       "bop_name_zh": "柏瑞日本多重資產基金A不配息(台幣)"
@@ -739,16 +745,16 @@
       "tagline": "台股 AI 與半導體供應鏈主動選股",
       "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACDD04-2602",
       "fund_id": "allianz_tw_tech",
-      "nav": 744.85,
-      "nav_date": "2026-09-03",
-      "change_pct": -3.58,
+      "nav": 758.83,
+      "nav_date": "2026-09-04",
+      "change_pct": 1.88,
       "perf": {
-        "1m": 7.86,
-        "3m": -8.6,
-        "6m": 58.77,
-        "ytd": 92.2,
-        "1y": 186.4,
-        "3y": 375.97
+        "1m": 6.64,
+        "3m": -5.44,
+        "6m": 71.14,
+        "ytd": 95.81,
+        "1y": 189.7,
+        "3y": 380.42
       },
       "bop_name_zh": "安聯台灣科技基金"
     },
