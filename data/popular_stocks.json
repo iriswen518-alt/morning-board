@@ -1,21 +1,7 @@
 {
-  "generated_at": "2026-09-05T18:37:18+08:00",
+  "generated_at": "2026-09-05T19:18:36+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
-    {
-      "symbol": "BE",
-      "name_zh": "Bloom Energy",
-      "kind": "US",
-      "price": 252.87,
-      "change_pct": 7.35,
-      "mtd_pct": 22.57,
-      "ytd_pct": 191.02,
-      "market_date": "2026-09-04",
-      "per": 11541.8797,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BE.US",
-      "error": null
-    },
     {
       "symbol": "NFLX",
       "name_zh": "網飛",
@@ -28,6 +14,20 @@
       "per": 25.1429,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NFLX.US",
+      "error": null
+    },
+    {
+      "symbol": "BE",
+      "name_zh": "Bloom Energy",
+      "kind": "US",
+      "price": 252.87,
+      "change_pct": 7.35,
+      "mtd_pct": 22.57,
+      "ytd_pct": 191.02,
+      "market_date": "2026-09-04",
+      "per": 11541.8797,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BE.US",
       "error": null
     },
     {
@@ -45,45 +45,17 @@
       "error": null
     },
     {
-      "symbol": "TTD",
-      "name_zh": "The Trade Desk",
+      "symbol": "P",
+      "name_zh": "Everpure",
       "kind": "US",
-      "price": 14.43,
-      "change_pct": -4.37,
-      "mtd_pct": 5.17,
-      "ytd_pct": -61.99,
+      "price": 99.51,
+      "change_pct": 1.39,
+      "mtd_pct": 7.06,
+      "ytd_pct": 48.5,
       "market_date": "2026-09-04",
-      "per": 17.3382,
+      "per": 127.3266,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TTD.US",
-      "error": null
-    },
-    {
-      "symbol": "GE",
-      "name_zh": "奇異",
-      "kind": "US",
-      "price": 337.12,
-      "change_pct": 1.09,
-      "mtd_pct": 0.42,
-      "ytd_pct": 9.44,
-      "market_date": "2026-09-04",
-      "per": 38.4847,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GE.US",
-      "error": null
-    },
-    {
-      "symbol": "SCHD",
-      "name_zh": "Schwab US Dividend Equity ETF",
-      "kind": "US",
-      "price": 34.8,
-      "change_pct": -0.8,
-      "mtd_pct": -0.26,
-      "ytd_pct": 26.87,
-      "market_date": "2026-09-04",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SCHD.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=P.US",
       "error": null
     },
     {
@@ -101,6 +73,34 @@
       "error": null
     },
     {
+      "symbol": "O",
+      "name_zh": "Realty Income",
+      "kind": "US",
+      "price": 61.25,
+      "change_pct": -0.79,
+      "mtd_pct": -0.05,
+      "ytd_pct": 8.66,
+      "market_date": "2026-09-04",
+      "per": 46.1211,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=O.US",
+      "error": null
+    },
+    {
+      "symbol": "SCHD",
+      "name_zh": "Schwab US Dividend Equity ETF",
+      "kind": "US",
+      "price": 34.8,
+      "change_pct": -0.8,
+      "mtd_pct": -0.26,
+      "ytd_pct": 26.87,
+      "market_date": "2026-09-04",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SCHD.US",
+      "error": null
+    },
+    {
       "symbol": "TTWO",
       "name_zh": "Take-Two Interactive Software,",
       "kind": "US",
@@ -115,45 +115,17 @@
       "error": null
     },
     {
-      "symbol": "CBRS",
-      "name_zh": "Cerebras Systems",
+      "symbol": "MCD",
+      "name_zh": "麥當勞",
       "kind": "US",
-      "price": 210.05,
-      "change_pct": 10.3,
-      "mtd_pct": 14.01,
-      "ytd_pct": null,
+      "price": 255.69,
+      "change_pct": -1.52,
+      "mtd_pct": -2.98,
+      "ytd_pct": -16.34,
       "market_date": "2026-09-04",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CBRS.US",
-      "error": null
-    },
-    {
-      "symbol": "VST",
-      "name_zh": "Vistra",
-      "kind": "US",
-      "price": 149.3,
-      "change_pct": 3.52,
-      "mtd_pct": 8.68,
-      "ytd_pct": -7.46,
-      "market_date": "2026-09-04",
-      "per": 21.814,
+      "per": 20.9095,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VST.US",
-      "error": null
-    },
-    {
-      "symbol": "POET",
-      "name_zh": "POET Technologies",
-      "kind": "US",
-      "price": 7.92,
-      "change_pct": 8.05,
-      "mtd_pct": 6.17,
-      "ytd_pct": 25.12,
-      "market_date": "2026-09-04",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=POET.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MCD.US",
       "error": null
     },
     {
@@ -168,6 +140,20 @@
       "per": 20.3623,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=XOM.US",
+      "error": null
+    },
+    {
+      "symbol": "BA",
+      "name_zh": "波音",
+      "kind": "US",
+      "price": 212.25,
+      "change_pct": 0.83,
+      "mtd_pct": 2.15,
+      "ytd_pct": -2.24,
+      "market_date": "2026-09-04",
+      "per": 67.8777,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BA.US",
       "error": null
     },
     {
