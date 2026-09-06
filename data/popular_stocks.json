@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-06T17:18:29+08:00",
+  "generated_at": "2026-09-06T17:39:56+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -31,45 +31,17 @@
       "error": null
     },
     {
-      "symbol": "SMH",
-      "name_zh": "VanEck Semiconductor ETF",
+      "symbol": "BA",
+      "name_zh": "波音",
       "kind": "US",
-      "price": 567.01,
-      "change_pct": 2.61,
-      "mtd_pct": 1.86,
-      "ytd_pct": 57.45,
+      "price": 212.25,
+      "change_pct": 0.83,
+      "mtd_pct": 2.15,
+      "ytd_pct": -2.24,
       "market_date": "2026-09-04",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SMH.US",
-      "error": null
-    },
-    {
-      "symbol": "RKLB",
-      "name_zh": "Rocket Lab",
-      "kind": "US",
-      "price": 64.26,
-      "change_pct": 0.71,
-      "mtd_pct": 0.53,
-      "ytd_pct": -7.88,
-      "market_date": "2026-09-04",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RKLB.US",
-      "error": null
-    },
-    {
-      "symbol": "GOOG",
-      "name_zh": "谷歌 C",
-      "kind": "US",
-      "price": 335.31,
-      "change_pct": -1.11,
-      "mtd_pct": -0.03,
-      "ytd_pct": 6.85,
-      "market_date": "2026-09-04",
-      "per": 16.9504,
+      "per": 68.8936,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GOOG.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BA.US",
       "error": null
     },
     {
@@ -84,6 +56,20 @@
       "per": 16.1545,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=UBER.US",
+      "error": null
+    },
+    {
+      "symbol": "GOOG",
+      "name_zh": "谷歌 C",
+      "kind": "US",
+      "price": 335.31,
+      "change_pct": -1.11,
+      "mtd_pct": -0.03,
+      "ytd_pct": 6.85,
+      "market_date": "2026-09-04",
+      "per": 16.9504,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GOOG.US",
       "error": null
     },
     {
@@ -196,6 +182,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ARKK.US",
+      "error": null
+    },
+    {
+      "symbol": "SMH",
+      "name_zh": "VanEck 半導體 ETF",
+      "kind": "US",
+      "price": 567.01,
+      "change_pct": 2.61,
+      "mtd_pct": 1.86,
+      "ytd_pct": 57.45,
+      "market_date": "2026-09-04",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SMH.US",
       "error": null
     },
     {
