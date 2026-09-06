@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-09-06T23:46",
+  "built_at": "2026-09-07T02:09",
   "source": "鉅亨網（cnyes）",
   "categories": [
     {
@@ -863,7 +863,7 @@
         {
           "news_id": "6598581",
           "title": "OpenAI已進入AGI時代？布羅克曼：Astra是首個「在10萬塊GPU上訓練的模型」、跨越了「應用門檻」",
-          "title_en": "",
+          "title_en": "Has OpenAI Entered the AGI Era? Brockman: Astra Is the First Model Trained on 100,000 GPUs and Crosses the Application Threshold",
           "publish_at": 1788684003,
           "url": "https://news.cnyes.com/news/id/6598581",
           "paras": [
@@ -897,7 +897,37 @@
             "他並透露，在Jalapeño晶片開發進入最後一個月、面臨期限壓力時，團隊曾直接讓AI執行最佳化工作。事後檢視AI提出的方案時，發現其中包含大量原本已列入待辦清單、但團隊自身一直沒有實際執行的最佳化項目。",
             "這也成為OpenAI觀察AI參與晶片設計能力的一項實際案例。"
           ],
-          "paras_en": []
+          "paras_en": [
+            "OpenAI president and co‑founder Greg Brockman told Stratechery, in an interview ahead of Astra’s official launch, that OpenAI may already be in the AGI era. Astra is OpenAI’s first model trained using more than 100,000 GPUs, setting a new company record for training scale.",
+            "Brockman noted that Astra has crossed a key application threshold in its \"computer‑use\" capability, allowing AI to operate software directly instead of relying on separate APIs or connectors for each application.",
+            "This capability has prompted OpenAI to rethink the large number of \"skills\" and operational guidelines it previously built for AI.",
+            "Brockman said Astra is the first model trained at a scale exceeding 100,000 GPUs. For OpenAI, deploying such massive compute is not only a symbol of improved model ability but also an engineering challenge.",
+            "He added that a comparable amount of compute is being devoted to safety and alignment work, making Astra the most aligned model OpenAI has produced to date. As AI capabilities grow, safety and alignment become increasingly important and are now core, unavoidable aspects of model development.",
+            "AI Moves From the \"Connector Era\" to Direct Software Operation\nBrockman believes one of Astra’s major breakthroughs is its computer‑use ability.",
+            "He explained that for the past two years AI applications have largely been in a \"connector era.\" Because AI could not directly use everyday software, developers had to build connectors for each program and grant AI access via APIs; many applications lack APIs altogether, making them hard to incorporate into AI workflows.",
+            "Now that models can directly operate a computer, that limitation is loosening. Brockman likens it to a \"universal connector\" technology—AI is no longer confined to pre‑defined environments but can act on a broader range of software.",
+            "This shift is already affecting how OpenAI works internally. Brockman thinks such capabilities could later boost efficiency for businesses and individuals alike.",
+            "However, he stressed that the ability to operate a computer does not solve every problem. Companies still need to build appropriate safety guardrails, including supervision, management, tracking and observability mechanisms.",
+            "Brockman: OpenAI \"Has Entered the AGI Era\"\nWhen discussing artificial general intelligence (AGI), Brockman gave a decidedly optimistic assessment. He believes OpenAI may have crossed the majority of commonly accepted AGI thresholds at some point in the previous generation (Astra) or the next generation of models.",
+            "He even said that, from a certain perspective, OpenAI \"is now in the AGI era.\"",
+            "In Brockman’s view, once AI reaches this stage, capability, safety and alignment should not be treated as trade‑offs but must be advanced together. These factors are increasingly becoming key bottlenecks in AI development.",
+            "AI Capability Surpasses Existing Norms – Previously Built \"Skills\" Become Constraints\nAstra’s training process has also led OpenAI to re‑examine the operational guidelines it created for models.",
+            "Brockman revealed that many of the \"skills\" OpenAI spent a lot of time building this year were originally intended to demonstrate the correct way for the model to handle internal tasks, but as model capability improves, those guidelines sometimes hinder performance.",
+            "He said Astra can now generalize more effectively than existing rules and even discover better solutions than those pre‑designed by humans. The \"skill scaffolding\" that once helped the model learn may become a limitation as capability rises.",
+            "ChatGPT User Scale Is a Long‑Term \"Investment\" for OpenAI\nRegarding whether ChatGPT’s massive consumer user base will dilute OpenAI’s resources, Brockman sees it as a long‑term investment.",
+            "He noted that roughly one‑third of the U.S. population uses ChatGPT weekly, a level of adoption rare for advanced technology products. Brockman believes the value generated by this large consumer base will pay off as model capabilities continue to improve.",
+            "Nevertheless, he admitted that presenting AI solely as a chat interface may not let users fully appreciate the improvements in model ability.",
+            "Therefore, OpenAI aims to further integrate consumer and enterprise applications, ultimately building a single AGI system rather than developing two separate technology stacks.",
+            "He also highlighted the health sector, stating, \"3 hundred million people use ChatGPT for health queries each week—3 hundred million, a huge number. \"",
+            "Letting AI Turn the Lens on OpenAI – Directly Finding System Vulnerabilities\nSecurity was another major topic of the interview. Brockman disclosed that OpenAI has begun having Astra directly inspect its own systems to locate potential security flaws.",
+            "He explained that Astra does more than analyze code; it examines the end‑to‑end operation of systems, identifies verified vulnerabilities, and helps OpenAI patch them.",
+            "Regarding the earlier Hugging Face security incident, Brockman admitted OpenAI still has gaps in defensive preparation and response speed. He said that as model capability grows, the need to focus on such risks has become more pressing.",
+            "In‑House Jalapeño Chip – Not Meant to Replace Nvidia\nOn AI compute and chip strategy, Brockman also discussed OpenAI’s in‑house Jalapeño chip project.",
+            "He emphasized that Nvidia (NVDA‑US) remains OpenAI’s primary compute partner, and the collaboration will not change because OpenAI is developing its own chip; instead, the partnership will deepen.",
+            "Brockman believes the expertise built through an internal chip effort complements Nvidia collaboration rather than replacing it, creating a \"multiplicative effect.\"",
+            "He revealed that when Jalapeño chip development entered its final month under deadline pressure, the team let AI perform optimization tasks directly. Reviewing the AI‑suggested solutions, they found many items that had been on the backlog for a long time but had never been executed by the team.",
+            "This serves as a concrete example of OpenAI observing AI’s ability to contribute to chip design."
+          ]
         },
         {
           "news_id": "6597016",
