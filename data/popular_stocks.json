@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-08T19:06:01+08:00",
+  "generated_at": "2026-09-08T19:21:17+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -45,6 +45,20 @@
       "error": null
     },
     {
+      "symbol": "SPCX",
+      "name_zh": "Space Exploration Technologies",
+      "kind": "US",
+      "price": 147.95,
+      "change_pct": -1.2,
+      "mtd_pct": 2.96,
+      "ytd_pct": null,
+      "market_date": "2026-09-04",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPCX.US",
+      "error": null
+    },
+    {
       "symbol": "SKHY",
       "name_zh": "SK hynix",
       "kind": "US",
@@ -59,17 +73,17 @@
       "error": null
     },
     {
-      "symbol": "SPCX",
-      "name_zh": "Space Exploration Technologies",
+      "symbol": "MRVL",
+      "name_zh": "邁威爾",
       "kind": "US",
-      "price": 147.95,
-      "change_pct": -1.2,
-      "mtd_pct": 2.96,
-      "ytd_pct": null,
+      "price": 223.55,
+      "change_pct": 7.05,
+      "mtd_pct": 5.62,
+      "ytd_pct": 163.06,
       "market_date": "2026-09-04",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPCX.US",
+      "per": 74.257,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MRVL.US",
       "error": null
     },
     {
@@ -101,45 +115,17 @@
       "error": null
     },
     {
-      "symbol": "NBIS",
-      "name_zh": "Nebius",
+      "symbol": "NVS",
+      "name_zh": "Novartis AG",
       "kind": "US",
-      "price": 226.39,
-      "change_pct": 7.48,
-      "mtd_pct": 9.73,
-      "ytd_pct": 170.46,
+      "price": 159.99,
+      "change_pct": -1.9,
+      "mtd_pct": 5.22,
+      "ytd_pct": 16.04,
       "market_date": "2026-09-04",
-      "per": 1451.5403,
+      "per": 23.2666,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NBIS.US",
-      "error": null
-    },
-    {
-      "symbol": "IONQ",
-      "name_zh": "IonQ",
-      "kind": "US",
-      "price": 39.52,
-      "change_pct": 1.28,
-      "mtd_pct": 0.53,
-      "ytd_pct": -11.92,
-      "market_date": "2026-09-04",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IONQ.US",
-      "error": null
-    },
-    {
-      "symbol": "NOK",
-      "name_zh": "Nokia Corporation Sponsored",
-      "kind": "US",
-      "price": 10.03,
-      "change_pct": 2.66,
-      "mtd_pct": -1.08,
-      "ytd_pct": 55.02,
-      "market_date": "2026-09-04",
-      "per": 66.488,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NOK.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NVS.US",
       "error": null
     },
     {
@@ -157,17 +143,31 @@
       "error": null
     },
     {
-      "symbol": "ZIM",
-      "name_zh": "ZIM Integrated Shipping Service",
+      "symbol": "NOK",
+      "name_zh": "Nokia Corporation Sponsored",
       "kind": "US",
-      "price": 28.58,
-      "change_pct": 3.59,
-      "mtd_pct": 4.31,
-      "ytd_pct": 34.62,
+      "price": 10.03,
+      "change_pct": 2.66,
+      "mtd_pct": -1.08,
+      "ytd_pct": 55.02,
       "market_date": "2026-09-04",
-      "per": 24.9598,
+      "per": 66.488,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ZIM.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NOK.US",
+      "error": null
+    },
+    {
+      "symbol": "NBIS",
+      "name_zh": "Nebius",
+      "kind": "US",
+      "price": 226.39,
+      "change_pct": 7.48,
+      "mtd_pct": 9.73,
+      "ytd_pct": 170.46,
+      "market_date": "2026-09-04",
+      "per": 1451.5403,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NBIS.US",
       "error": null
     },
     {
@@ -185,17 +185,31 @@
       "error": null
     },
     {
-      "symbol": "NVS",
-      "name_zh": "Novartis AG",
+      "symbol": "CRDO",
+      "name_zh": "Credo Technology Group Holding",
       "kind": "US",
-      "price": 159.99,
-      "change_pct": -1.9,
-      "mtd_pct": 5.22,
-      "ytd_pct": 16.04,
+      "price": 170.57,
+      "change_pct": 3.9,
+      "mtd_pct": -24.59,
+      "ytd_pct": 18.54,
       "market_date": "2026-09-04",
-      "per": 23.2666,
+      "per": 59.5554,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NVS.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRDO.US",
+      "error": null
+    },
+    {
+      "symbol": "IONQ",
+      "name_zh": "IonQ",
+      "kind": "US",
+      "price": 39.52,
+      "change_pct": 1.28,
+      "mtd_pct": 0.53,
+      "ytd_pct": -11.92,
+      "market_date": "2026-09-04",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IONQ.US",
       "error": null
     },
     {
