@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-09T19:11:07+08:00",
+  "generated_at": "2026-09-09T19:25:16+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -45,20 +45,6 @@
       "error": null
     },
     {
-      "symbol": "NOK",
-      "name_zh": "Nokia Corporation Sponsored",
-      "kind": "US",
-      "price": 10.65,
-      "change_pct": 6.18,
-      "mtd_pct": 5.03,
-      "ytd_pct": 64.61,
-      "market_date": "2026-09-08",
-      "per": 66.488,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NOK.US",
-      "error": null
-    },
-    {
       "symbol": "CASY",
       "name_zh": "Caseys General Stores",
       "kind": "US",
@@ -70,34 +56,6 @@
       "per": 39.1618,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CASY.US",
-      "error": null
-    },
-    {
-      "symbol": "GLW",
-      "name_zh": "Corning Incorporated",
-      "kind": "US",
-      "price": 165.96,
-      "change_pct": 7.56,
-      "mtd_pct": 11.58,
-      "ytd_pct": 89.54,
-      "market_date": "2026-09-08",
-      "per": 69.9538,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GLW.US",
-      "error": null
-    },
-    {
-      "symbol": "UBER",
-      "name_zh": "Uber",
-      "kind": "US",
-      "price": 73.13,
-      "change_pct": -3.47,
-      "mtd_pct": -3.33,
-      "ytd_pct": -10.5,
-      "market_date": "2026-09-08",
-      "per": 16.1545,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=UBER.US",
       "error": null
     },
     {
@@ -115,17 +73,17 @@
       "error": null
     },
     {
-      "symbol": "ROIV",
-      "name_zh": "Roivant Sciences",
+      "symbol": "SYK",
+      "name_zh": "Stryker",
       "kind": "US",
-      "price": 41.48,
-      "change_pct": 18.75,
-      "mtd_pct": 19.75,
-      "ytd_pct": 91.15,
+      "price": 276.43,
+      "change_pct": -8.81,
+      "mtd_pct": -14.63,
+      "ytd_pct": -21.35,
       "market_date": "2026-09-08",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ROIV.US",
+      "per": 31.1806,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SYK.US",
       "error": null
     },
     {
@@ -154,6 +112,34 @@
       "per": 27.1434,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RH.US",
+      "error": null
+    },
+    {
+      "symbol": "METU",
+      "name_zh": "Direxion Daily META Bull 2X ETF",
+      "kind": "US",
+      "price": 22.61,
+      "change_pct": -1.05,
+      "mtd_pct": 14.25,
+      "ytd_pct": -29.59,
+      "market_date": "2026-09-08",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=METU.US",
+      "error": null
+    },
+    {
+      "symbol": "CHWY",
+      "name_zh": "Chewy",
+      "kind": "US",
+      "price": 23.27,
+      "change_pct": -1.65,
+      "mtd_pct": -2.23,
+      "ytd_pct": -29.59,
+      "market_date": "2026-09-08",
+      "per": 37.9584,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CHWY.US",
       "error": null
     },
     {
