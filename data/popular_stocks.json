@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T19:07:06+08:00",
+  "generated_at": "2026-09-10T19:21:32+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -45,17 +45,17 @@
       "error": null
     },
     {
-      "symbol": "ENB",
-      "name_zh": "Enbridge",
+      "symbol": "VRT",
+      "name_zh": "Vertiv Holdings, LLC",
       "kind": "US",
-      "price": 50.15,
-      "change_pct": -0.65,
-      "mtd_pct": -0.83,
-      "ytd_pct": 4.85,
+      "price": 262.89,
+      "change_pct": -9.61,
+      "mtd_pct": 1.61,
+      "ytd_pct": 62.27,
       "market_date": "2026-09-09",
-      "per": 24.8423,
+      "per": 58.4351,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ENB.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VRT.US",
       "error": null
     },
     {
@@ -70,34 +70,6 @@
       "per": 55.9286,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=COO.US",
-      "error": null
-    },
-    {
-      "symbol": "IRD",
-      "name_zh": "Opus Genetics",
-      "kind": "US",
-      "price": 5.73,
-      "change_pct": 32.03,
-      "mtd_pct": 58.29,
-      "ytd_pct": 185.07,
-      "market_date": "2026-09-09",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IRD.US",
-      "error": null
-    },
-    {
-      "symbol": "VRT",
-      "name_zh": "Vertiv Holdings, LLC",
-      "kind": "US",
-      "price": 262.89,
-      "change_pct": -9.61,
-      "mtd_pct": 1.61,
-      "ytd_pct": 62.27,
-      "market_date": "2026-09-09",
-      "per": 58.4351,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VRT.US",
       "error": null
     },
     {
@@ -129,17 +101,31 @@
       "error": null
     },
     {
-      "symbol": "PINS",
-      "name_zh": "Pinterest",
+      "symbol": "BHVN",
+      "name_zh": "Biohaven",
       "kind": "US",
-      "price": 18.28,
-      "change_pct": -9.24,
-      "mtd_pct": -15.8,
-      "ytd_pct": -29.39,
+      "price": 15,
+      "change_pct": 1.9,
+      "mtd_pct": -1.77,
+      "ytd_pct": 32.86,
       "market_date": "2026-09-09",
-      "per": 42.1455,
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BHVN.US",
+      "error": null
+    },
+    {
+      "symbol": "ENB",
+      "name_zh": "Enbridge",
+      "kind": "US",
+      "price": 50.15,
+      "change_pct": -0.65,
+      "mtd_pct": -0.83,
+      "ytd_pct": 4.85,
+      "market_date": "2026-09-09",
+      "per": 24.8423,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PINS.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ENB.US",
       "error": null
     },
     {
@@ -157,6 +143,20 @@
       "error": null
     },
     {
+      "symbol": "IRD",
+      "name_zh": "Opus Genetics",
+      "kind": "US",
+      "price": 5.73,
+      "change_pct": 32.03,
+      "mtd_pct": 58.29,
+      "ytd_pct": 185.07,
+      "market_date": "2026-09-09",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IRD.US",
+      "error": null
+    },
+    {
       "symbol": "CMCSA",
       "name_zh": "Comcast",
       "kind": "US",
@@ -171,31 +171,31 @@
       "error": null
     },
     {
-      "symbol": "GOOG",
-      "name_zh": "谷歌 C",
+      "symbol": "PINS",
+      "name_zh": "Pinterest",
       "kind": "US",
-      "price": 328.38,
-      "change_pct": -2.09,
-      "mtd_pct": -2.1,
-      "ytd_pct": 4.65,
+      "price": 18.28,
+      "change_pct": -9.24,
+      "mtd_pct": -15.8,
+      "ytd_pct": -29.39,
       "market_date": "2026-09-09",
-      "per": 16.5698,
+      "per": 42.1455,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GOOG.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PINS.US",
       "error": null
     },
     {
-      "symbol": "IBM",
-      "name_zh": "International Business Machines",
+      "symbol": "ET",
+      "name_zh": "Energy Transfer LP",
       "kind": "US",
-      "price": 239.94,
-      "change_pct": 3.38,
-      "mtd_pct": 2.6,
-      "ytd_pct": -19.0,
+      "price": 21.68,
+      "change_pct": 0.79,
+      "mtd_pct": 0.79,
+      "ytd_pct": 31.47,
       "market_date": "2026-09-09",
-      "per": 20.3398,
+      "per": 14.0037,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IBM.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ET.US",
       "error": null
     },
     {
