@@ -40,43 +40,43 @@
     {
       "name": "Euro Stoxx 50",
       "name_zh": null,
-      "close": 6268.97021484375,
-      "daily_pct": -0.67,
+      "close": 6325.1298828125,
+      "daily_pct": 0.9,
       "mtd_pct": -2.35,
       "ytd_pct": 8.16,
-      "closing_date": "2026-09-10"
+      "closing_date": "2026-09-11"
     },
     {
       "name": "DAX",
       "name_zh": null,
-      "close": 25361.150390625,
-      "daily_pct": -0.84,
+      "close": 25568.560546875,
+      "daily_pct": 0.82,
       "mtd_pct": -3.42,
       "ytd_pct": 3.56,
-      "closing_date": "2026-09-10"
+      "closing_date": "2026-09-11"
     },
     {
       "name": "FTSE 100",
       "name_zh": null,
-      "close": 10608.900390625,
-      "daily_pct": -0.57,
+      "close": 10650.4404296875,
+      "daily_pct": 0.39,
       "mtd_pct": -1.99,
       "ytd_pct": 6.82,
-      "closing_date": "2026-09-10"
+      "closing_date": "2026-09-11"
     },
     {
       "name": "CAC 40",
       "name_zh": null,
-      "close": 8116.759765625,
-      "daily_pct": -0.49,
+      "close": 8179.77001953125,
+      "daily_pct": 0.78,
       "mtd_pct": -2.61,
       "ytd_pct": -0.4,
-      "closing_date": "2026-09-10"
+      "closing_date": "2026-09-11"
     },
     {
       "name": "Nikkei 225",
       "name_zh": null,
-      "close": 64011.33984375,
+      "close": 64011.34,
       "daily_pct": -1.93,
       "mtd_pct": -1.57,
       "ytd_pct": 29.66,
@@ -112,7 +112,7 @@
     {
       "name": "KOSPI",
       "name_zh": null,
-      "close": 6909.91015625,
+      "close": 6909.91,
       "daily_pct": -1.76,
       "mtd_pct": 3.14,
       "ytd_pct": 66.91,
@@ -121,7 +121,7 @@
     {
       "name": "Hang Seng 恆生",
       "name_zh": null,
-      "close": 24805.630859375,
+      "close": 24805.63,
       "daily_pct": -0.6,
       "mtd_pct": -2.4,
       "ytd_pct": -2.64,
@@ -130,7 +130,7 @@
     {
       "name": "Shanghai 上證",
       "name_zh": null,
-      "close": 3888.110595703125,
+      "close": 3888.111,
       "daily_pct": -1.18,
       "mtd_pct": -1.3,
       "ytd_pct": -0.87,
@@ -174,31 +174,31 @@
     },
     {
       "name": "US 2-Year",
-      "yield_pct": 4.56,
-      "daily_bps": 13.0,
+      "yield_pct": 4.62,
+      "daily_bps": 7.1,
       "mtd_bps": 22.0,
-      "closing_date": "2026-09-10"
+      "closing_date": "2026-09-12"
     },
     {
       "name": "Germany 10-Year",
-      "yield_pct": 3.5,
-      "daily_bps": 7.66,
+      "yield_pct": 3.52,
+      "daily_bps": 1.7,
       "mtd_bps": 16.36,
-      "closing_date": "2026-09-10"
+      "closing_date": "2026-09-12"
     },
     {
       "name": "Japan 10-Year",
-      "yield_pct": 2.92,
-      "daily_bps": 2.9,
+      "yield_pct": 2.99,
+      "daily_bps": 6.4,
       "mtd_bps": -2.3,
-      "closing_date": "2026-09-10"
+      "closing_date": "2026-09-12"
     },
     {
       "name": "UK 10-Year",
-      "yield_pct": 5.25,
-      "daily_bps": 8.67,
+      "yield_pct": 5.35,
+      "daily_bps": 0.0,
       "mtd_bps": 10.83,
-      "closing_date": "2026-09-09"
+      "closing_date": "2026-09-12"
     },
     {
       "name": "TW 10-Year",
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 99.08999633789062,
       "daily_pct": 0.32,
-      "mtd_pct": -0.45,
-      "ytd_pct": 0.72,
+      "mtd_pct": -0.33,
+      "ytd_pct": 0.83,
       "closing_date": "2026-09-10"
     },
     {
@@ -405,7 +405,7 @@
     {
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
-      "implied_rate": 3.85,
+      "implied_rate": 3.86,
       "delta_rate": 0.13,
       "delta_bps": 13.0,
       "p_hike": 52.0,
@@ -416,14 +416,14 @@
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 4.05,
-      "delta_rate": 0.19,
-      "delta_bps": 19.0,
-      "p_hike": 76.0,
-      "p_hold": 24.0,
+      "implied_rate": 4.09,
+      "delta_rate": 0.23,
+      "delta_bps": 23.0,
+      "p_hike": 92.0,
+      "p_hold": 8.0,
       "p_cut": 0,
       "is_reference": false
     }
   ],
-  "summary": "9/10 PHLX Semiconductor -2.66%、9/11 OTC 櫃買加權 -2.40% 走弱。"
+  "summary": "9/11 Euro Stoxx 50 +0.90%、9/11 DAX +0.82%、9/11 CAC 40 +0.78% 領漲；9/10 PHLX Semiconductor -2.66%、9/11 OTC 櫃買加權 -2.40% 走弱。"
 }
