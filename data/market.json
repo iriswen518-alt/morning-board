@@ -85,20 +85,20 @@
     {
       "name": "TAIEX 加權指數",
       "name_zh": null,
-      "close": 46940.48828125,
-      "daily_pct": -0.51,
+      "close": 46184.85,
+      "daily_pct": -1.61,
       "mtd_pct": 1.76,
       "ytd_pct": 62.07,
-      "closing_date": "2026-09-10"
+      "closing_date": "2026-09-11"
     },
     {
       "name": "OTC 櫃買加權",
       "name_zh": null,
-      "close": 402.48,
-      "daily_pct": 1.83,
-      "mtd_pct": null,
-      "ytd_pct": null,
-      "closing_date": "2026-09-04"
+      "close": 395.52,
+      "daily_pct": -2.4,
+      "mtd_pct": -11.37,
+      "ytd_pct": 37.0,
+      "closing_date": "2026-09-11"
     },
     {
       "name": "台指期(近月)",
@@ -139,7 +139,7 @@
     {
       "name": "CSI 300 滬深300",
       "name_zh": null,
-      "close": 4476.17578125,
+      "close": 4493.74853515625,
       "daily_pct": null,
       "mtd_pct": -9.04,
       "ytd_pct": -2.18,
@@ -174,22 +174,22 @@
     },
     {
       "name": "US 2-Year",
-      "yield_pct": 4.58,
-      "daily_bps": 2.5,
+      "yield_pct": 4.57,
+      "daily_bps": 1.6,
       "mtd_bps": 22.0,
       "closing_date": "2026-09-11"
     },
     {
       "name": "Germany 10-Year",
       "yield_pct": 3.5,
-      "daily_bps": 5.8,
+      "daily_bps": 0.6,
       "mtd_bps": 8.7,
       "closing_date": "2026-09-11"
     },
     {
       "name": "Japan 10-Year",
       "yield_pct": 2.98,
-      "daily_bps": 5.9,
+      "daily_bps": 5.8,
       "mtd_bps": -2.3,
       "closing_date": "2026-09-11"
     },
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 99.08999633789062,
       "daily_pct": 0.32,
-      "mtd_pct": -0.33,
-      "ytd_pct": 0.83,
+      "mtd_pct": -0.39,
+      "ytd_pct": 0.77,
       "closing_date": "2026-09-10"
     },
     {
@@ -416,7 +416,7 @@
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 4.02,
+      "implied_rate": 4.01,
       "delta_rate": 0.2,
       "delta_bps": 20.0,
       "p_hike": 80.0,
@@ -425,5 +425,5 @@
       "is_reference": false
     }
   ],
-  "summary": "9/4 OTC 櫃買加權 +1.83%、9/10 Nikkei 225 +0.20%、9/10 Nifty 50 +0.20% 領漲；9/10 PHLX Semiconductor -2.66%、9/10 Hang Seng 恆生 -1.27% 走弱。"
+  "summary": "9/10 Nikkei 225 +0.20%、9/10 Nifty 50 +0.20% 領漲；9/10 PHLX Semiconductor -2.66%、9/11 OTC 櫃買加權 -2.40% 走弱。"
 }
