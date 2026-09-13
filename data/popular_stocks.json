@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-13T18:37:01+08:00",
+  "generated_at": "2026-09-13T19:54:56+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -17,20 +17,6 @@
       "error": null
     },
     {
-      "symbol": "NKE",
-      "name_zh": "Nike",
-      "kind": "US",
-      "price": 36.8,
-      "change_pct": 0.49,
-      "mtd_pct": -5.79,
-      "ytd_pct": -42.24,
-      "market_date": "2026-09-11",
-      "per": 17.5652,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NKE.US",
-      "error": null
-    },
-    {
       "symbol": "QQQI",
       "name_zh": "NEOS Nasdaq 100 High Income ETF",
       "kind": "US",
@@ -45,17 +31,31 @@
       "error": null
     },
     {
-      "symbol": "CRWD",
-      "name_zh": "CrowdStrike",
+      "symbol": "NKE",
+      "name_zh": "Nike",
       "kind": "US",
-      "price": 206.74,
-      "change_pct": -1.01,
-      "mtd_pct": -10.5,
-      "ytd_pct": 76.41,
+      "price": 36.8,
+      "change_pct": 0.49,
+      "mtd_pct": -5.79,
+      "ytd_pct": -42.24,
       "market_date": "2026-09-11",
-      "per": 3621.079,
+      "per": 17.5652,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRWD.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NKE.US",
+      "error": null
+    },
+    {
+      "symbol": "NBIS",
+      "name_zh": "Nebius",
+      "kind": "US",
+      "price": 224.55,
+      "change_pct": -1.56,
+      "mtd_pct": 8.84,
+      "ytd_pct": 168.26,
+      "market_date": "2026-09-11",
+      "per": 1439.7428,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NBIS.US",
       "error": null
     },
     {
@@ -84,6 +84,48 @@
       "per": 56.8948,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRDO.US",
+      "error": null
+    },
+    {
+      "symbol": "PANW",
+      "name_zh": "Palo Alto Networks",
+      "kind": "US",
+      "price": 330.65,
+      "change_pct": -2.32,
+      "mtd_pct": -13.47,
+      "ytd_pct": 79.51,
+      "market_date": "2026-09-11",
+      "per": 877.7842,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PANW.US",
+      "error": null
+    },
+    {
+      "symbol": "CRWD",
+      "name_zh": "CrowdStrike",
+      "kind": "US",
+      "price": 206.74,
+      "change_pct": -1.01,
+      "mtd_pct": -10.5,
+      "ytd_pct": 76.41,
+      "market_date": "2026-09-11",
+      "per": 3621.079,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRWD.US",
+      "error": null
+    },
+    {
+      "symbol": "VRT",
+      "name_zh": "Vertiv Holdings, LLC",
+      "kind": "US",
+      "price": 257.06,
+      "change_pct": 3.6,
+      "mtd_pct": -0.64,
+      "ytd_pct": 58.67,
+      "market_date": "2026-09-11",
+      "per": 57.1392,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VRT.US",
       "error": null
     },
     {
