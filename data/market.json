@@ -101,15 +101,6 @@
       "closing_date": "2026-09-14"
     },
     {
-      "name": "台指期(近月)",
-      "name_zh": null,
-      "close": 46218.0,
-      "daily_pct": -1.39,
-      "mtd_pct": null,
-      "ytd_pct": null,
-      "closing_date": "2026-09-11"
-    },
-    {
       "name": "KOSPI",
       "name_zh": null,
       "close": 6684.3701171875,
@@ -213,8 +204,8 @@
       "name": "DXY 美元指數",
       "close": 99.12000274658203,
       "daily_pct": 0.03,
-      "mtd_pct": 0.21,
-      "ytd_pct": 1.38,
+      "mtd_pct": 0.23,
+      "ytd_pct": 1.4,
       "closing_date": "2026-09-11"
     },
     {
@@ -406,10 +397,10 @@
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
       "implied_rate": 3.87,
-      "delta_rate": 0.13,
-      "delta_bps": 13.0,
-      "p_hike": 52.0,
-      "p_hold": 48.0,
+      "delta_rate": 0.14,
+      "delta_bps": 14.0,
+      "p_hike": 56.0,
+      "p_hold": 44.0,
       "p_cut": 0,
       "is_reference": false
     },
@@ -417,13 +408,13 @@
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
       "implied_rate": 4.09,
-      "delta_rate": 0.23,
-      "delta_bps": 23.0,
-      "p_hike": 92.0,
-      "p_hold": 8.0,
+      "delta_rate": 0.22,
+      "delta_bps": 22.0,
+      "p_hike": 88.0,
+      "p_hold": 12.0,
       "p_cut": 0,
       "is_reference": false
     }
   ],
-  "summary": "9/11 PHLX Semiconductor +1.81%、9/11 Dow Jones +0.98%、9/11 Nasdaq Composite +0.96% 領漲；9/14 KOSPI -3.26%、9/11 台指期(近月) -1.39% 走弱。"
+  "summary": "9/11 PHLX Semiconductor +1.81%、9/11 Dow Jones +0.98%、9/11 Nasdaq Composite +0.96% 領漲；9/14 KOSPI -3.26%、9/14 Nikkei 225 -0.81% 走弱。"
 }
