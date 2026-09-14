@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-14T07:57:25+08:00",
+  "generated_at": "2026-09-14T09:01:38+08:00",
   "tw": {
-    "as_of": "2026-09-13",
+    "as_of": "2026-09-14",
     "top_marketcap": [
       {
         "symbol": "2330",
@@ -646,7 +646,7 @@
     ]
   },
   "us": {
-    "as_of": "2026-09-13",
+    "as_of": "2026-09-14",
     "top_marketcap": [
       {
         "symbol": "NVDA",
@@ -1058,6 +1058,19 @@
         "source_url": "https://finance.yahoo.com/quote/SOXX"
       },
       {
+        "symbol": "SMH",
+        "name": "VanEck Semiconductor ETF",
+        "price": 568.53,
+        "daily_pct": 2.88,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": 2.14,
+        "ytd_pct": 57.87,
+        "yahoo": "SMH",
+        "source_url": "https://finance.yahoo.com/quote/SMH"
+      },
+      {
         "symbol": "XLK",
         "name": "State Street Technology Select ",
         "price": 187.67,
@@ -1160,19 +1173,6 @@
         "ytd_pct": 12.26,
         "yahoo": "VWO",
         "source_url": "https://finance.yahoo.com/quote/VWO"
-      },
-      {
-        "symbol": "SPY",
-        "name": "State Street SPDR S&P 500 ETF T",
-        "price": 764.29,
-        "daily_pct": -1.15,
-        "market_cap": null,
-        "pe": null,
-        "pe_kind": null,
-        "mtd_pct": -0.36,
-        "ytd_pct": 12.08,
-        "yahoo": "SPY",
-        "source_url": "https://finance.yahoo.com/quote/SPY"
       }
     ],
     "sectors": [
@@ -1301,6 +1301,20 @@
         "yahoo": "XLY",
         "source_url": "https://finance.yahoo.com/quote/XLY",
         "name_zh": "非必需消費"
+      },
+      {
+        "symbol": "XLB",
+        "name": "State Street Materials Select S",
+        "price": 50.95,
+        "daily_pct": -3.17,
+        "market_cap": null,
+        "pe": null,
+        "pe_kind": null,
+        "mtd_pct": -3.3,
+        "ytd_pct": 12.35,
+        "yahoo": "XLB",
+        "source_url": "https://finance.yahoo.com/quote/XLB",
+        "name_zh": "原物料"
       },
       {
         "symbol": "XLV",
