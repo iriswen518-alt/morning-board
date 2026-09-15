@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-15T19:46:31+08:00",
+  "generated_at": "2026-09-15T20:37:55+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -101,6 +101,20 @@
       "error": null
     },
     {
+      "symbol": "FLEX",
+      "name_zh": "Flex",
+      "kind": "US",
+      "price": 108.32,
+      "change_pct": -6.44,
+      "mtd_pct": -0.85,
+      "ytd_pct": 79.28,
+      "market_date": "2026-09-14",
+      "per": 41.4164,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FLEX.US",
+      "error": null
+    },
+    {
       "symbol": "TEVA",
       "name_zh": "Teva Pharmaceutical Industries",
       "kind": "US",
@@ -115,17 +129,17 @@
       "error": null
     },
     {
-      "symbol": "NTSK",
-      "name_zh": "Netskope",
+      "symbol": "CCXI",
+      "name_zh": "Churchill Capital Corp XI",
       "kind": "US",
-      "price": 17,
-      "change_pct": 15.65,
-      "mtd_pct": 11.04,
-      "ytd_pct": -3.08,
+      "price": 12,
+      "change_pct": -2.6,
+      "mtd_pct": -10.31,
+      "ytd_pct": null,
       "market_date": "2026-09-14",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NTSK.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CCXI.US",
       "error": null
     },
     {
@@ -157,31 +171,17 @@
       "error": null
     },
     {
-      "symbol": "TER",
-      "name_zh": "Teradyne",
+      "symbol": "NTSK",
+      "name_zh": "Netskope",
       "kind": "US",
-      "price": 329.2,
-      "change_pct": -13.3,
-      "mtd_pct": -5.9,
-      "ytd_pct": 70.08,
+      "price": 17,
+      "change_pct": 15.65,
+      "mtd_pct": 11.04,
+      "ytd_pct": -3.08,
       "market_date": "2026-09-14",
-      "per": 51.6125,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TER.US",
-      "error": null
-    },
-    {
-      "symbol": "TRMD",
-      "name_zh": "TORM",
-      "kind": "US",
-      "price": 35.34,
-      "change_pct": 0.74,
-      "mtd_pct": 7.71,
-      "ytd_pct": 80.49,
-      "market_date": "2026-09-14",
-      "per": 5.5968,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TRMD.US",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NTSK.US",
       "error": null
     },
     {
@@ -199,17 +199,17 @@
       "error": null
     },
     {
-      "symbol": "SNAP",
-      "name_zh": "Snap",
+      "symbol": "AXON",
+      "name_zh": "Axon Enterprise",
       "kind": "US",
-      "price": 5.84,
-      "change_pct": 2.82,
-      "mtd_pct": 5.23,
-      "ytd_pct": -27.63,
+      "price": 490.18,
+      "change_pct": 2.26,
+      "mtd_pct": -13.48,
+      "ytd_pct": -13.69,
       "market_date": "2026-09-14",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SNAP.US",
+      "per": 195.3875,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AXON.US",
       "error": null
     },
     {
