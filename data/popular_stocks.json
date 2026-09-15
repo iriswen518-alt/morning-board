@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-15T18:25:48+08:00",
+  "generated_at": "2026-09-15T19:46:31+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -45,6 +45,20 @@
       "error": null
     },
     {
+      "symbol": "FPS",
+      "name_zh": "Forgent Power Solutions",
+      "kind": "US",
+      "price": 28.64,
+      "change_pct": -9.99,
+      "mtd_pct": -6.22,
+      "ytd_pct": null,
+      "market_date": "2026-09-14",
+      "per": 221.456,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FPS.US",
+      "error": null
+    },
+    {
       "symbol": "ZS",
       "name_zh": "Zscaler",
       "kind": "US",
@@ -56,6 +70,34 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ZS.US",
+      "error": null
+    },
+    {
+      "symbol": "VERA",
+      "name_zh": "Vera Therapeutics",
+      "kind": "US",
+      "price": 34.05,
+      "change_pct": -2.85,
+      "mtd_pct": -0.09,
+      "ytd_pct": -32.76,
+      "market_date": "2026-09-14",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VERA.US",
+      "error": null
+    },
+    {
+      "symbol": "PLAY",
+      "name_zh": "Dave & Buster's Entertainment,",
+      "kind": "US",
+      "price": 8.47,
+      "change_pct": 4.05,
+      "mtd_pct": -5.57,
+      "ytd_pct": -47.75,
+      "market_date": "2026-09-14",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PLAY.US",
       "error": null
     },
     {
@@ -73,17 +115,17 @@
       "error": null
     },
     {
-      "symbol": "RBLX",
-      "name_zh": "Roblox",
+      "symbol": "NTSK",
+      "name_zh": "Netskope",
       "kind": "US",
-      "price": 51.29,
-      "change_pct": 12.73,
-      "mtd_pct": 24.22,
-      "ytd_pct": -36.7,
+      "price": 17,
+      "change_pct": 15.65,
+      "mtd_pct": 11.04,
+      "ytd_pct": -3.08,
       "market_date": "2026-09-14",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RBLX.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NTSK.US",
       "error": null
     },
     {
@@ -98,20 +140,6 @@
       "per": 50.9693,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRCL.US",
-      "error": null
-    },
-    {
-      "symbol": "FPS",
-      "name_zh": "Forgent Power Solutions",
-      "kind": "US",
-      "price": 28.64,
-      "change_pct": -9.99,
-      "mtd_pct": -6.22,
-      "ytd_pct": null,
-      "market_date": "2026-09-14",
-      "per": 221.456,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FPS.US",
       "error": null
     },
     {
@@ -143,87 +171,45 @@
       "error": null
     },
     {
-      "symbol": "RBRK",
-      "name_zh": "Rubrik",
+      "symbol": "TRMD",
+      "name_zh": "TORM",
       "kind": "US",
-      "price": 100.2,
-      "change_pct": 15.64,
-      "mtd_pct": 7.7,
-      "ytd_pct": 31.01,
+      "price": 35.34,
+      "change_pct": 0.74,
+      "mtd_pct": 7.71,
+      "ytd_pct": 80.49,
+      "market_date": "2026-09-14",
+      "per": 5.5968,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TRMD.US",
+      "error": null
+    },
+    {
+      "symbol": "IOVA",
+      "name_zh": "Iovance Biotherapeutics",
+      "kind": "US",
+      "price": 9.26,
+      "change_pct": 7.67,
+      "mtd_pct": 13.34,
+      "ytd_pct": 239.19,
       "market_date": "2026-09-14",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RBRK.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IOVA.US",
       "error": null
     },
     {
-      "symbol": "TLT",
-      "name_zh": "iShares 20+ Year Treasury Bond",
+      "symbol": "SNAP",
+      "name_zh": "Snap",
       "kind": "US",
-      "price": 80.93,
-      "change_pct": 0.07,
-      "mtd_pct": -1.93,
-      "ytd_pct": -7.15,
+      "price": 5.84,
+      "change_pct": 2.82,
+      "mtd_pct": 5.23,
+      "ytd_pct": -27.63,
       "market_date": "2026-09-14",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TLT.US",
-      "error": null
-    },
-    {
-      "symbol": "NTSK",
-      "name_zh": "Netskope",
-      "kind": "US",
-      "price": 17,
-      "change_pct": 15.65,
-      "mtd_pct": 11.04,
-      "ytd_pct": -3.08,
-      "market_date": "2026-09-14",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NTSK.US",
-      "error": null
-    },
-    {
-      "symbol": "BN",
-      "name_zh": "Brookfield",
-      "kind": "US",
-      "price": 37.61,
-      "change_pct": -1.6,
-      "mtd_pct": -8.76,
-      "ytd_pct": -18.04,
-      "market_date": "2026-09-14",
-      "per": 59.2949,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BN.US",
-      "error": null
-    },
-    {
-      "symbol": "GLW",
-      "name_zh": "Corning Incorporated",
-      "kind": "US",
-      "price": 143.6,
-      "change_pct": -13.7,
-      "mtd_pct": -3.45,
-      "ytd_pct": 64.0,
-      "market_date": "2026-09-14",
-      "per": 68.4985,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GLW.US",
-      "error": null
-    },
-    {
-      "symbol": "SPOT",
-      "name_zh": "Spotify",
-      "kind": "US",
-      "price": 556.31,
-      "change_pct": 5.81,
-      "mtd_pct": 2.33,
-      "ytd_pct": -4.2,
-      "market_date": "2026-09-14",
-      "per": 29.7227,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPOT.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SNAP.US",
       "error": null
     },
     {
@@ -364,6 +350,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GLD.US",
+      "error": null
+    },
+    {
+      "symbol": "TLT",
+      "name_zh": "iShares 20+ 年公債 ETF",
+      "kind": "US",
+      "price": 80.93,
+      "change_pct": 0.07,
+      "mtd_pct": -1.93,
+      "ytd_pct": -7.15,
+      "market_date": "2026-09-14",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TLT.US",
       "error": null
     }
   ]
