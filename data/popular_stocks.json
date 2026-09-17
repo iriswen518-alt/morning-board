@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-17T18:25:50+08:00",
+  "generated_at": "2026-09-17T19:34:43+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -17,34 +17,6 @@
       "error": null
     },
     {
-      "symbol": "GNRC",
-      "name_zh": "Generac Holdlings",
-      "kind": "US",
-      "price": 175.11,
-      "change_pct": 0.05,
-      "mtd_pct": -5.54,
-      "ytd_pct": 28.41,
-      "market_date": "2026-09-16",
-      "per": 39.9935,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GNRC.US",
-      "error": null
-    },
-    {
-      "symbol": "MEDS",
-      "name_zh": "DataMeds AI",
-      "kind": "US",
-      "price": 6.07,
-      "change_pct": 274.69,
-      "mtd_pct": 530.32,
-      "ytd_pct": -69.65,
-      "market_date": "2026-09-16",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MEDS.US",
-      "error": null
-    },
-    {
       "symbol": "CRWV",
       "name_zh": "CoreWeave",
       "kind": "US",
@@ -56,6 +28,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRWV.US",
+      "error": null
+    },
+    {
+      "symbol": "GNRC",
+      "name_zh": "Generac Holdlings",
+      "kind": "US",
+      "price": 175.11,
+      "change_pct": 0.05,
+      "mtd_pct": -5.54,
+      "ytd_pct": 28.41,
+      "market_date": "2026-09-16",
+      "per": 39.9935,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GNRC.US",
       "error": null
     },
     {
@@ -101,6 +87,20 @@
       "error": null
     },
     {
+      "symbol": "MEDS",
+      "name_zh": "DataMeds AI",
+      "kind": "US",
+      "price": 6.07,
+      "change_pct": 274.69,
+      "mtd_pct": 530.32,
+      "ytd_pct": -69.65,
+      "market_date": "2026-09-16",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MEDS.US",
+      "error": null
+    },
+    {
       "symbol": "SPCX",
       "name_zh": "Space Exploration Technologies",
       "kind": "US",
@@ -112,20 +112,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPCX.US",
-      "error": null
-    },
-    {
-      "symbol": "BA",
-      "name_zh": "波音",
-      "kind": "US",
-      "price": 201.96,
-      "change_pct": -3.69,
-      "mtd_pct": -2.8,
-      "ytd_pct": -6.98,
-      "market_date": "2026-09-16",
-      "per": 68.0513,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BA.US",
       "error": null
     },
     {
@@ -157,20 +143,6 @@
       "error": null
     },
     {
-      "symbol": "AXTI",
-      "name_zh": "AXT",
-      "kind": "US",
-      "price": 64.3,
-      "change_pct": 11.44,
-      "mtd_pct": 6.09,
-      "ytd_pct": 293.27,
-      "market_date": "2026-09-16",
-      "per": 955.6155,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AXTI.US",
-      "error": null
-    },
-    {
       "symbol": "MRNA",
       "name_zh": "莫德納",
       "kind": "US",
@@ -199,6 +171,76 @@
       "error": null
     },
     {
+      "symbol": "AXTI",
+      "name_zh": "AXT",
+      "kind": "US",
+      "price": 64.3,
+      "change_pct": 11.44,
+      "mtd_pct": 6.09,
+      "ytd_pct": 293.27,
+      "market_date": "2026-09-16",
+      "per": 955.6155,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AXTI.US",
+      "error": null
+    },
+    {
+      "symbol": "VICR",
+      "name_zh": "Vicor",
+      "kind": "US",
+      "price": 183.91,
+      "change_pct": -0.03,
+      "mtd_pct": -2.01,
+      "ytd_pct": 67.8,
+      "market_date": "2026-09-16",
+      "per": 58.3742,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VICR.US",
+      "error": null
+    },
+    {
+      "symbol": "AEHL",
+      "name_zh": "Antelope Enterprise Holdings Li",
+      "kind": "US",
+      "price": 9.22,
+      "change_pct": 78.68,
+      "mtd_pct": 42.06,
+      "ytd_pct": -94.57,
+      "market_date": "2026-09-16",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AEHL.US",
+      "error": null
+    },
+    {
+      "symbol": "APLD",
+      "name_zh": "Applied Digital",
+      "kind": "US",
+      "price": 24.39,
+      "change_pct": 4.14,
+      "mtd_pct": -4.01,
+      "ytd_pct": -0.53,
+      "market_date": "2026-09-16",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=APLD.US",
+      "error": null
+    },
+    {
+      "symbol": "BA",
+      "name_zh": "波音",
+      "kind": "US",
+      "price": 201.96,
+      "change_pct": -3.69,
+      "mtd_pct": -2.8,
+      "ytd_pct": -6.98,
+      "market_date": "2026-09-16",
+      "per": 68.0513,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BA.US",
+      "error": null
+    },
+    {
       "symbol": "GME",
       "name_zh": "GameStop",
       "kind": "US",
@@ -213,22 +255,8 @@
       "error": null
     },
     {
-      "symbol": "SOFI",
-      "name_zh": "SoFi",
-      "kind": "US",
-      "price": 16.84,
-      "change_pct": -1.35,
-      "mtd_pct": -5.82,
-      "ytd_pct": -35.68,
-      "market_date": "2026-09-16",
-      "per": 34.6509,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOFI.US",
-      "error": null
-    },
-    {
       "symbol": "SPY",
-      "name_zh": "SPDR S&P 500 ETF",
+      "name_zh": "State Street SPDR S&P 500 ETF T",
       "kind": "US",
       "price": 754.05,
       "change_pct": -0.44,
