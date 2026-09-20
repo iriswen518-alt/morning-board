@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-20T18:05:38+08:00",
+  "generated_at": "2026-09-20T19:15:26+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -45,6 +45,20 @@
       "error": null
     },
     {
+      "symbol": "SCHD",
+      "name_zh": "Schwab US Dividend Equity ETF",
+      "kind": "US",
+      "price": 33.68,
+      "change_pct": -0.62,
+      "mtd_pct": -3.47,
+      "ytd_pct": 22.79,
+      "market_date": "2026-09-18",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SCHD.US",
+      "error": null
+    },
+    {
       "symbol": "MP",
       "name_zh": "MP Materials",
       "kind": "US",
@@ -59,17 +73,17 @@
       "error": null
     },
     {
-      "symbol": "SCHD",
-      "name_zh": "Schwab US Dividend Equity ETF",
+      "symbol": "DIS",
+      "name_zh": "迪士尼",
       "kind": "US",
-      "price": 33.68,
-      "change_pct": -0.62,
-      "mtd_pct": -3.47,
-      "ytd_pct": 22.79,
+      "price": 102.67,
+      "change_pct": -2.54,
+      "mtd_pct": -4.54,
+      "ytd_pct": -9.76,
       "market_date": "2026-09-18",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SCHD.US",
+      "per": 20.6138,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DIS.US",
       "error": null
     },
     {
