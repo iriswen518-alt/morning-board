@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-23T19:40:04+08:00",
+  "generated_at": "2026-09-23T20:48:57+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -28,6 +28,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=JAGX.US",
+      "error": null
+    },
+    {
+      "symbol": "GIS",
+      "name_zh": "General Mills",
+      "kind": "US",
+      "price": 35.45,
+      "change_pct": 0.11,
+      "mtd_pct": -14.05,
+      "ytd_pct": -23.85,
+      "market_date": "2026-09-21",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GIS.US",
       "error": null
     },
     {
@@ -101,6 +115,48 @@
       "error": null
     },
     {
+      "symbol": "QUBT",
+      "name_zh": "Quantum Computing",
+      "kind": "US",
+      "price": 9.08,
+      "change_pct": 1.34,
+      "mtd_pct": 8.87,
+      "ytd_pct": -12.67,
+      "market_date": "2026-09-21",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QUBT.US",
+      "error": null
+    },
+    {
+      "symbol": "CBRL",
+      "name_zh": "Cracker Barrel Old Country Stor",
+      "kind": "US",
+      "price": 45.48,
+      "change_pct": 1.36,
+      "mtd_pct": -18.77,
+      "ytd_pct": 76.65,
+      "market_date": "2026-09-21",
+      "per": 38.805,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CBRL.US",
+      "error": null
+    },
+    {
+      "symbol": "QNT",
+      "name_zh": "Quantinuum",
+      "kind": "US",
+      "price": 51.39,
+      "change_pct": 0.47,
+      "mtd_pct": 2.1,
+      "ytd_pct": null,
+      "market_date": "2026-09-21",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QNT.US",
+      "error": null
+    },
+    {
       "symbol": "XNDU",
       "name_zh": "Xanadu Quantum Technologies Lim",
       "kind": "US",
@@ -129,20 +185,6 @@
       "error": null
     },
     {
-      "symbol": "QUBT",
-      "name_zh": "Quantum Computing",
-      "kind": "US",
-      "price": 9.08,
-      "change_pct": 1.34,
-      "mtd_pct": 8.87,
-      "ytd_pct": -12.67,
-      "market_date": "2026-09-21",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QUBT.US",
-      "error": null
-    },
-    {
       "symbol": "SCHW",
       "name_zh": "嘉信理財",
       "kind": "US",
@@ -157,59 +199,31 @@
       "error": null
     },
     {
-      "symbol": "QNT",
-      "name_zh": "Quantinuum",
+      "symbol": "CTAS",
+      "name_zh": "Cintas",
       "kind": "US",
-      "price": 51.39,
-      "change_pct": 0.47,
-      "mtd_pct": 2.1,
-      "ytd_pct": null,
+      "price": 198.8,
+      "change_pct": 0.98,
+      "mtd_pct": -2.43,
+      "ytd_pct": 4.68,
       "market_date": "2026-09-21",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QNT.US",
-      "error": null
-    },
-    {
-      "symbol": "SLS",
-      "name_zh": "SELLAS Life Sciences",
-      "kind": "US",
-      "price": 12.02,
-      "change_pct": 5.72,
-      "mtd_pct": -14.77,
-      "ytd_pct": 201.59,
-      "market_date": "2026-09-21",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SLS.US",
-      "error": null
-    },
-    {
-      "symbol": "IBRX",
-      "name_zh": "ImmunityBio",
-      "kind": "US",
-      "price": 9.29,
-      "change_pct": 9.94,
-      "mtd_pct": 6.29,
-      "ytd_pct": 326.77,
-      "market_date": "2026-09-21",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IBRX.US",
-      "error": null
-    },
-    {
-      "symbol": "PAYX",
-      "name_zh": "Paychex",
-      "kind": "US",
-      "price": 114.53,
-      "change_pct": -0.42,
-      "mtd_pct": -9.68,
-      "ytd_pct": 2.52,
-      "market_date": "2026-09-21",
-      "per": 23.2689,
+      "per": 39.3134,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PAYX.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CTAS.US",
+      "error": null
+    },
+    {
+      "symbol": "SLV",
+      "name_zh": "iShares Silver Trust",
+      "kind": "US",
+      "price": 60.73,
+      "change_pct": 1.84,
+      "mtd_pct": -0.83,
+      "ytd_pct": -7.44,
+      "market_date": "2026-09-21",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SLV.US",
       "error": null
     },
     {
