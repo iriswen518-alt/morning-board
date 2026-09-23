@@ -1,21 +1,7 @@
 {
-  "generated_at": "2026-09-23T18:17:13+08:00",
+  "generated_at": "2026-09-23T19:22:22+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
-    {
-      "symbol": "JAGX",
-      "name_zh": "Jaguar Health",
-      "kind": "US",
-      "price": 34.46,
-      "change_pct": 1190.64,
-      "mtd_pct": -77.5,
-      "ytd_pct": -99.45,
-      "market_date": "2026-09-21",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=JAGX.US",
-      "error": null
-    },
     {
       "symbol": "IONQ",
       "name_zh": "IonQ",
@@ -28,6 +14,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IONQ.US",
+      "error": null
+    },
+    {
+      "symbol": "JAGX",
+      "name_zh": "Jaguar Health",
+      "kind": "US",
+      "price": 34.46,
+      "change_pct": 1190.64,
+      "mtd_pct": -77.5,
+      "ytd_pct": -99.45,
+      "market_date": "2026-09-21",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=JAGX.US",
       "error": null
     },
     {
@@ -157,6 +157,20 @@
       "error": null
     },
     {
+      "symbol": "QNT",
+      "name_zh": "Quantinuum",
+      "kind": "US",
+      "price": 51.39,
+      "change_pct": 0.47,
+      "mtd_pct": 2.1,
+      "ytd_pct": null,
+      "market_date": "2026-09-21",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QNT.US",
+      "error": null
+    },
+    {
       "symbol": "SLS",
       "name_zh": "SELLAS Life Sciences",
       "kind": "US",
@@ -168,20 +182,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SLS.US",
-      "error": null
-    },
-    {
-      "symbol": "SMCI",
-      "name_zh": "美超微",
-      "kind": "US",
-      "price": 41.54,
-      "change_pct": 0.83,
-      "mtd_pct": 10.52,
-      "ytd_pct": 40.76,
-      "market_date": "2026-09-21",
-      "per": 12.1941,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SMCI.US",
       "error": null
     },
     {
@@ -199,31 +199,17 @@
       "error": null
     },
     {
-      "symbol": "CSCO",
-      "name_zh": "Cisco Systems",
+      "symbol": "PAYX",
+      "name_zh": "Paychex",
       "kind": "US",
-      "price": 106.44,
-      "change_pct": -4.5,
-      "mtd_pct": 0.88,
-      "ytd_pct": 44.7,
+      "price": 114.53,
+      "change_pct": -0.42,
+      "mtd_pct": -9.68,
+      "ytd_pct": 2.52,
       "market_date": "2026-09-21",
-      "per": 31.631,
+      "per": 23.2689,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CSCO.US",
-      "error": null
-    },
-    {
-      "symbol": "SLV",
-      "name_zh": "iShares Silver Trust",
-      "kind": "US",
-      "price": 60.73,
-      "change_pct": 1.84,
-      "mtd_pct": -0.83,
-      "ytd_pct": -7.44,
-      "market_date": "2026-09-21",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SLV.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PAYX.US",
       "error": null
     },
     {
