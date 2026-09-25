@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T12:47:12+08:00",
+  "generated_at": "2026-09-25T13:06:18+08:00",
   "static_as_of": "2026-03-31",
   "as_of_note": "風險指標及同基金報酬截至 2026-03-31；同類別平均截至 2026-04-30",
   "fx_usdtwd": 31.789499282836914,
@@ -555,7 +555,7 @@
       "category": "balanced",
       "morningstar_category": "美元平衡型股債混合",
       "morningstar_rating": 4,
-      "rr": "RR3",
+      "rr": null,
       "currency": "美元",
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=PYZR9-SC88",
       "self": {
@@ -573,9 +573,9 @@
         "aum_unit": "百萬",
         "aum_ccy": "美元",
         "aum_date": "2026-03-31",
-        "inception_date": "2015-03-11",
-        "inception_years": 11.5,
-        "expense_ratio": 1.55,
+        "inception_date": null,
+        "inception_years": null,
+        "expense_ratio": null,
         "distribution_yield": null,
         "top10_concentration": null,
         "top_holdings": [],
@@ -644,7 +644,7 @@
       "category": "balanced",
       "morningstar_category": "新台幣平衡型股債混合",
       "morningstar_rating": null,
-      "rr": null,
+      "rr": "RR3",
       "currency": "台幣",
       "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACAI451-WA17",
       "self": {
@@ -662,12 +662,53 @@
         "aum_unit": "億元",
         "aum_ccy": "台幣",
         "aum_date": "2026-04-30",
-        "inception_date": null,
-        "inception_years": null,
-        "expense_ratio": null,
+        "inception_date": "2025-08-20",
+        "inception_years": 1.1,
+        "expense_ratio": 1.97,
         "distribution_yield": null,
-        "top10_concentration": null,
-        "top_holdings": [],
+        "top10_concentration": 32.2,
+        "top_holdings": [
+          {
+            "name": "NEXT FUNDS TOPIX連動型上場投信ETF",
+            "pct": 7.19
+          },
+          {
+            "name": "MIZUHO 5.382 07/10/30",
+            "pct": 4.15
+          },
+          {
+            "name": "MITSUBISHI UFJ FINANCIAL GRO",
+            "pct": 3.3
+          },
+          {
+            "name": "TOYOTA MOTOR CORP",
+            "pct": 2.71
+          },
+          {
+            "name": "ITOCHU CORP",
+            "pct": 2.68
+          },
+          {
+            "name": "JBIC 3 1/4 07/20/28",
+            "pct": 2.63
+          },
+          {
+            "name": "NIPPON TELEGRAPH & TELEPHONE",
+            "pct": 2.6
+          },
+          {
+            "name": "SUMITOMO MITSUI FINANCIAL GR",
+            "pct": 2.5
+          },
+          {
+            "name": "JBIC 4 3/8 01/23/36",
+            "pct": 2.22
+          },
+          {
+            "name": "NTT 4.876 07/16/30",
+            "pct": 2.21
+          }
+        ],
         "sector_top3": [],
         "aum_twd_yi": 45.6
       },
@@ -733,7 +774,7 @@
       "category": "balanced",
       "morningstar_category": "行業股票－基礎建設",
       "morningstar_rating": 3,
-      "rr": null,
+      "rr": "RR3",
       "currency": "台幣",
       "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACNC70-1228",
       "self": {
@@ -751,12 +792,53 @@
         "aum_unit": "億元",
         "aum_ccy": "台幣",
         "aum_date": "2026-04-30",
-        "inception_date": null,
-        "inception_years": null,
-        "expense_ratio": null,
+        "inception_date": "2017-09-28",
+        "inception_years": 9.0,
+        "expense_ratio": 2.06,
         "distribution_yield": null,
-        "top10_concentration": null,
-        "top_holdings": [],
+        "top10_concentration": 33.7,
+        "top_holdings": [
+          {
+            "name": "NEXTERA ENERGY INC",
+            "pct": 6.08
+          },
+          {
+            "name": "CHENIERE ENERGY INC",
+            "pct": 3.58
+          },
+          {
+            "name": "WILLIAMS COS INC",
+            "pct": 3.42
+          },
+          {
+            "name": "National Grid PLC",
+            "pct": 3.32
+          },
+          {
+            "name": "Entergy Corp",
+            "pct": 3.05
+          },
+          {
+            "name": "Sempra Energy",
+            "pct": 3.0
+          },
+          {
+            "name": "UNION PACIFIC CORP",
+            "pct": 2.88
+          },
+          {
+            "name": "Enbridge Inc",
+            "pct": 2.88
+          },
+          {
+            "name": "Xcel Energy Inc",
+            "pct": 2.78
+          },
+          {
+            "name": "SOUTHERN CO/THE",
+            "pct": 2.74
+          }
+        ],
         "sector_top3": [],
         "aum_twd_yi": 123.4
       },
@@ -822,7 +904,7 @@
       "category": "tech",
       "morningstar_category": "行業股票－科技",
       "morningstar_rating": 5,
-      "rr": null,
+      "rr": "RR5",
       "currency": "台幣",
       "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACDD04-2602",
       "self": {
@@ -840,12 +922,53 @@
         "aum_unit": "億元",
         "aum_ccy": "台幣",
         "aum_date": "2026-04-30",
-        "inception_date": null,
-        "inception_years": null,
-        "expense_ratio": null,
+        "inception_date": "2001-04-03",
+        "inception_years": 25.5,
+        "expense_ratio": 1.75,
         "distribution_yield": null,
-        "top10_concentration": null,
-        "top_holdings": [],
+        "top10_concentration": 50.3,
+        "top_holdings": [
+          {
+            "name": "旺矽",
+            "pct": 6.04
+          },
+          {
+            "name": "台積電",
+            "pct": 5.63
+          },
+          {
+            "name": "創意",
+            "pct": 5.52
+          },
+          {
+            "name": "台光電",
+            "pct": 5.32
+          },
+          {
+            "name": "欣興",
+            "pct": 5.16
+          },
+          {
+            "name": "奇鋐",
+            "pct": 4.99
+          },
+          {
+            "name": "金像電",
+            "pct": 4.93
+          },
+          {
+            "name": "台燿",
+            "pct": 4.5
+          },
+          {
+            "name": "南電",
+            "pct": 4.28
+          },
+          {
+            "name": "聯電",
+            "pct": 3.97
+          }
+        ],
         "sector_top3": [],
         "aum_twd_yi": 2072.4
       },
@@ -867,13 +990,13 @@
       "benchmark": {
         "name": "元大台灣卓越50基金（0050）",
         "return": {
-          "1y": 71.75,
-          "3y": 155.28,
-          "5y": 145.82
+          "1y": 96.37,
+          "3y": 292.75,
+          "5y": 271.49
         },
         "std_3y": null,
         "sharpe_3y": null,
-        "url": null
+        "url": "https://www.moneydj.com/ETF/X/Basic/Basic0008.xdjhtm?etfid=0050.TW"
       },
       "peers": [
         {
@@ -911,7 +1034,7 @@
       "category": "tech",
       "morningstar_category": "行業股票－科技",
       "morningstar_rating": 4,
-      "rr": null,
+      "rr": "RR4",
       "currency": "美元",
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=ALZ03-AL08",
       "self": {
@@ -929,9 +1052,9 @@
         "aum_unit": "百萬",
         "aum_ccy": "美元",
         "aum_date": "2026-03-31",
-        "inception_date": null,
-        "inception_years": null,
-        "expense_ratio": null,
+        "inception_date": "1995-10-02",
+        "inception_years": 31.0,
+        "expense_ratio": 2.5,
         "distribution_yield": null,
         "top10_concentration": null,
         "top_holdings": [],
@@ -956,13 +1079,13 @@
       "benchmark": {
         "name": "富邦NASDAQ-100基金（00662）",
         "return": {
-          "1y": 18.92,
-          "3y": 89.11,
-          "5y": 103.52
+          "1y": 29.29,
+          "3y": 104.19,
+          "5y": 122.47
         },
         "std_3y": null,
         "sharpe_3y": null,
-        "url": null
+        "url": "https://www.moneydj.com/ETF/X/Basic/Basic0008.xdjhtm?etfid=00662.TW"
       },
       "peers": [
         {
@@ -1000,7 +1123,7 @@
       "category": "equity",
       "morningstar_category": "行業股票－貴金屬",
       "morningstar_rating": 4,
-      "rr": null,
+      "rr": "RR5",
       "currency": "美元",
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLZ01-FA01",
       "self": {
@@ -1018,9 +1141,9 @@
         "aum_unit": "百萬",
         "aum_ccy": "美元",
         "aum_date": "2026-03-31",
-        "inception_date": null,
-        "inception_years": null,
-        "expense_ratio": null,
+        "inception_date": "1969-05-19",
+        "inception_years": 57.4,
+        "expense_ratio": 0.63,
         "distribution_yield": null,
         "top10_concentration": null,
         "top_holdings": [],
@@ -1089,7 +1212,7 @@
       "category": "equity",
       "morningstar_category": "行業股票－貴金屬",
       "morningstar_rating": 3,
-      "rr": null,
+      "rr": "RR5",
       "currency": "美元",
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=GSF17-IG14",
       "self": {
@@ -1107,9 +1230,9 @@
         "aum_unit": "百萬",
         "aum_ccy": "美元",
         "aum_date": "2026-03-31",
-        "inception_date": null,
-        "inception_years": null,
-        "expense_ratio": null,
+        "inception_date": "2004-12-23",
+        "inception_years": 21.8,
+        "expense_ratio": 2.3,
         "distribution_yield": null,
         "top10_concentration": null,
         "top_holdings": [],
@@ -1178,7 +1301,7 @@
       "category": "equity",
       "morningstar_category": "韓國股票",
       "morningstar_rating": 4,
-      "rr": null,
+      "rr": "RR5",
       "currency": "美元",
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=LIC04-LI02",
       "self": {
@@ -1196,9 +1319,9 @@
         "aum_unit": "百萬",
         "aum_ccy": "美元",
         "aum_date": "2026-03-31",
-        "inception_date": null,
-        "inception_years": null,
-        "expense_ratio": null,
+        "inception_date": "2004-08-16",
+        "inception_years": 22.1,
+        "expense_ratio": 2.15,
         "distribution_yield": null,
         "top10_concentration": null,
         "top_holdings": [],
@@ -1267,7 +1390,7 @@
       "category": "equity",
       "morningstar_category": "越南股票",
       "morningstar_rating": 4,
-      "rr": null,
+      "rr": "RR5",
       "currency": "美元",
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=LIC28-LI01",
       "self": {
@@ -1285,9 +1408,9 @@
         "aum_unit": "百萬",
         "aum_ccy": "美元",
         "aum_date": "2026-03-31",
-        "inception_date": null,
-        "inception_years": null,
-        "expense_ratio": null,
+        "inception_date": "2007-02-02",
+        "inception_years": 19.6,
+        "expense_ratio": 2.25,
         "distribution_yield": null,
         "top10_concentration": null,
         "top_holdings": [],
@@ -1312,13 +1435,13 @@
       "benchmark": {
         "name": "富邦富時越南ETF（00885）",
         "return": {
-          "1y": 37.3,
-          "3y": 52.42,
-          "5y": 15.41
+          "1y": 15.94,
+          "3y": 39.31,
+          "5y": 11.29
         },
         "std_3y": null,
         "sharpe_3y": null,
-        "url": null
+        "url": "https://www.moneydj.com/ETF/X/Basic/Basic0008.xdjhtm?etfid=00885.TW"
       },
       "peers": [
         {
@@ -1356,7 +1479,7 @@
       "category": "equity",
       "morningstar_category": "印度股票",
       "morningstar_rating": 3,
-      "rr": null,
+      "rr": "RR5",
       "currency": "美元",
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLZ79-FR59",
       "self": {
@@ -1374,9 +1497,9 @@
         "aum_unit": "百萬",
         "aum_ccy": "美元",
         "aum_date": "2026-03-31",
-        "inception_date": null,
-        "inception_years": null,
-        "expense_ratio": null,
+        "inception_date": "2005-10-25",
+        "inception_years": 20.9,
+        "expense_ratio": 1.14,
         "distribution_yield": null,
         "top10_concentration": null,
         "top_holdings": [],
@@ -1401,13 +1524,13 @@
       "benchmark": {
         "name": "富邦印度ETF（00652）",
         "return": {
-          "1y": -16.27,
-          "3y": 10.6,
-          "5y": 21.66
+          "1y": -10.35,
+          "3y": -4.23,
+          "5y": 7.27
         },
         "std_3y": null,
         "sharpe_3y": null,
-        "url": null
+        "url": "https://www.moneydj.com/ETF/X/Basic/Basic0008.xdjhtm?etfid=00652.TW"
       },
       "peers": [
         {
