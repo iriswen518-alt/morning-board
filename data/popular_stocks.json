@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-26T20:11:39+08:00",
+  "generated_at": "2026-09-26T20:16:56+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -31,20 +31,6 @@
       "error": null
     },
     {
-      "symbol": "LEN",
-      "name_zh": "Lennar",
-      "kind": "US",
-      "price": 82.15,
-      "change_pct": 0.83,
-      "mtd_pct": -2.33,
-      "ytd_pct": -20.09,
-      "market_date": "2026-09-25",
-      "per": 11.9819,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LEN.US",
-      "error": null
-    },
-    {
       "symbol": "DIS",
       "name_zh": "迪士尼",
       "kind": "US",
@@ -73,59 +59,17 @@
       "error": null
     },
     {
-      "symbol": "CRCL",
-      "name_zh": "Circle Internet",
+      "symbol": "ABBV",
+      "name_zh": "艾伯維",
       "kind": "US",
-      "price": 89,
-      "change_pct": -4.3,
-      "mtd_pct": -6.86,
-      "ytd_pct": 12.23,
+      "price": 264.34,
+      "change_pct": -0.29,
+      "mtd_pct": 3.09,
+      "ytd_pct": 15.69,
       "market_date": "2026-09-25",
-      "per": 52.5744,
+      "per": 74.2469,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRCL.US",
-      "error": null
-    },
-    {
-      "symbol": "GE",
-      "name_zh": "奇異",
-      "kind": "US",
-      "price": 327.09,
-      "change_pct": 2.29,
-      "mtd_pct": -2.57,
-      "ytd_pct": 6.19,
-      "market_date": "2026-09-25",
-      "per": 37.4535,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GE.US",
-      "error": null
-    },
-    {
-      "symbol": "VOO",
-      "name_zh": "Vanguard S&P 500 ETF",
-      "kind": "US",
-      "price": 710.79,
-      "change_pct": 0.54,
-      "mtd_pct": 0.84,
-      "ytd_pct": 13.34,
-      "market_date": "2026-09-25",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VOO.US",
-      "error": null
-    },
-    {
-      "symbol": "O",
-      "name_zh": "Realty Income",
-      "kind": "US",
-      "price": 55.54,
-      "change_pct": 0.23,
-      "mtd_pct": -9.37,
-      "ytd_pct": -1.47,
-      "market_date": "2026-09-25",
-      "per": 41.3698,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=O.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ABBV.US",
       "error": null
     },
     {
@@ -143,17 +87,45 @@
       "error": null
     },
     {
-      "symbol": "ADBE",
-      "name_zh": "Adobe",
+      "symbol": "CSCO",
+      "name_zh": "Cisco Systems",
       "kind": "US",
-      "price": 235.47,
-      "change_pct": -1.45,
-      "mtd_pct": -19.58,
-      "ytd_pct": -32.72,
+      "price": 106.7,
+      "change_pct": -0.25,
+      "mtd_pct": -3.43,
+      "ytd_pct": 38.52,
       "market_date": "2026-09-25",
-      "per": 12.7666,
+      "per": 31.7083,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ADBE.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CSCO.US",
+      "error": null
+    },
+    {
+      "symbol": "GE",
+      "name_zh": "奇異",
+      "kind": "US",
+      "price": 327.09,
+      "change_pct": 2.29,
+      "mtd_pct": -2.57,
+      "ytd_pct": 6.19,
+      "market_date": "2026-09-25",
+      "per": 37.4535,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GE.US",
+      "error": null
+    },
+    {
+      "symbol": "TEST",
+      "name_zh": "YieldMax TSLA Performance & Dis",
+      "kind": "US",
+      "price": 37.68,
+      "change_pct": -0.98,
+      "mtd_pct": -1.97,
+      "ytd_pct": -28.71,
+      "market_date": "2026-09-25",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TEST.US",
       "error": null
     },
     {
@@ -210,6 +182,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DIA.US",
+      "error": null
+    },
+    {
+      "symbol": "VOO",
+      "name_zh": "Vanguard S&P 500 ETF",
+      "kind": "US",
+      "price": 710.79,
+      "change_pct": 0.54,
+      "mtd_pct": 0.84,
+      "ytd_pct": 13.34,
+      "market_date": "2026-09-25",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VOO.US",
       "error": null
     },
     {
