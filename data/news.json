@@ -3,7 +3,9 @@
   "tldr": [
     "台股中秋連假前最後交易日（9/24）收在48,024點、跌約0.28%，權值股台積電逆勢漲1%，連假期間休市。",
     "SEMICON Taiwan盛會與台積電營收指引使AI、半導體續居市場核心，但建廠人力與機台交期瓶頸凸顯執行面風險。",
-    "金管會為壽險業接軌TIS新制、迎接9月底資本大考鬆綁過渡措施；亞洲資產管理中心與主動式ETF延續財管動能。"
+    "金管會為壽險業接軌TIS新制、迎接9月底資本大考鬆綁過渡措施；亞洲資產管理中心與主動式ETF延續財管動能。",
+    "台灣遺贈稅法修正上路，CPI連4月破2%，稅務規劃與通膨續為市場關注焦點。",
+    "華爾街收下三週來首見週線紅，AI買盤與油價回落抵銷逼近廿年高的公債殖利率；好市多財報勝估、耐吉遭降評。"
   ],
   "sections": [
     {
@@ -91,6 +93,114 @@
           "summary_en": "**Taiwan's Asia asset-management hub push hits its two-year AUM goal early.** The government's asset-management centre initiative, launched in 2024 with five programmes and cross-agency coordination, saw managed assets reach the policy's two-year target ahead of schedule by end-2025. High-net-worth wealth management remains a core engine, with regulators easing rules for clients holding over NT$100m in assets.",
           "source_name": "亞洲資產管理中心",
           "source_url": "https://www.aamc.tw/zh/five3-1.html"
+        }
+      ]
+    },
+    {
+      "section": "Tax & Regulations",
+      "section_zh": "稅務法規",
+      "items": [
+        {
+          "title_zh": "遺贈稅法修正正式上路、財政部列4大重點",
+          "title_en": "",
+          "summary_zh": "賴總統於9月11日公布遺產及贈與稅法部分條文修正，涉及擬制遺產稅額分算、配偶剩餘財產差額分配、經法院判決確定遺產權屬案件的申報期間，以及繳納方式放寬等。財政部表示將加強宣導，協助繼承人掌握新制下的納稅義務與可運用選項。",
+          "summary_en": "**Amended Estate and Gift Tax Act takes effect with four key changes.** President Lai promulgated the amendment on Sept 11, revising rules on deemed-estate tax apportionment, the spousal remainder-property claim, filing periods for estate-ownership cases settled by court, and payment flexibility. The Ministry of Finance says it will step up public outreach so heirs understand the new obligations and options.",
+          "source_name": "客新聞 HakkaNews",
+          "source_url": "https://hakkanews.tw/2026/09/11/302743/"
+        },
+        {
+          "title_zh": "取消分期繳納門檻、繳稅方式同步放寬",
+          "title_en": "",
+          "summary_zh": "修法刪除遺贈稅應納稅額須達新台幣30萬元以上始可申請分期繳納的限制，擴大適用範圍；並增訂繼承人得以多數決方式，動用遺產中的存款繳稅。此舉降低繼承人對繳稅方式難以達成共識時的阻力，讓資金安排更具彈性。",
+          "summary_en": "**Installment-payment threshold scrapped to ease taxpayers' burden.** The amendment removes the previous rule that only estate- and gift-tax bills of NT$300,000 or more could be paid in installments, broadening access to deferred payment. It also lets heirs decide by majority to settle tax using bank deposits within the estate, reducing friction when beneficiaries cannot immediately agree on how to fund the liability.",
+          "source_name": "恒立地政士事務所",
+          "source_url": "https://hanley.tw/2232/"
+        }
+      ]
+    },
+    {
+      "section": "Macro & Policy",
+      "section_zh": "總經政策",
+      "items": [
+        {
+          "title_zh": "CPI連4月破2%、主計總處估9月漲幅恐擴大",
+          "title_en": "",
+          "summary_zh": "主計總處公布8月消費者物價指數（CPI）年增2.04%，扣除蔬果、能源的核心CPI升至2.3%，雙雙高於2%通膨警戒線。主計總處預期9月漲幅將續擴大，主因蔬菜批發行情每公斤逾40元，加上外食與旅遊相關費用調高，推升物價壓力。",
+          "summary_en": "**Taiwan's CPI stays above the 2% alert line for a fourth month.** August consumer prices rose 2.04% year-on-year while core CPI, excluding fruit, vegetables and energy, climbed to 2.3%, both above the 2% inflation-warning threshold. The DGBAS expects September's increase to widen further, citing vegetable prices topping NT$40 per kilogram and higher dining-out and travel costs.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/10869/9742204"
+        },
+        {
+          "title_zh": "外食費衝3.17%創8個月最大漲幅、物價壓力擴散",
+          "title_en": "",
+          "summary_zh": "8月外食費年增3.17%，為8個月來最大漲幅，反映廠商轉嫁人事與租金成本。油料費漲約1成、燃油附加費推升國際機票價格，加上旅遊團費調高，帶動服務類物價走高，使9月CPI估連5月突破通膨警戒線。",
+          "summary_en": "**Dining-out costs post largest rise in eight months as price pressure broadens.** Restaurant-meal prices jumped 3.17% year-on-year in August, the biggest gain in eight months, as firms passed on higher labour and rent costs. Fuel prices rose around 10% and surcharges lifted international airfares, while pricier travel packages added to services inflation, keeping September CPI on track to breach 2% for a fifth straight month.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/10869/9742165"
+        }
+      ]
+    },
+    {
+      "section": "Global Markets",
+      "section_zh": "國際財經",
+      "items": [
+        {
+          "title_zh": "華爾街收紅、道瓊漲近1%",
+          "title_en": "",
+          "summary_zh": "台灣媒體報導，美股道瓊指數上漲約0.93%至51,862點，微軟、宣偉、安進等科技與權值股領漲，AI股買盤回籠、油價回落，帶動美股克服公債殖利率高檔壓力，於週末前收紅，牽動台股節後開盤的市場情緒。",
+          "summary_en": "**Wall Street closes higher with the Dow up nearly 1%, as Taiwan media track the rally.** Local outlets reported that the Dow jumped about 0.93% to 51,862, with tech and blue chips such as Microsoft, Sherwin-Williams and Amgen leading gains, as renewed AI buying and softer oil helped U.S. stocks overcome pressure from high bond yields into the weekend.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6616207"
+        },
+        {
+          "title_zh": "市場關注美股「9月魔咒」歷史最弱月份",
+          "title_en": "",
+          "summary_zh": "台灣財經媒體指出，9月歷來為美股最弱月份，標普500與道瓊平均約下跌1.1%，投資人關注季節性因素與高殖利率是否壓抑漲勢；惟AI相關需求仍為市場情緒提供支撐，成為觀察第四季走勢的關鍵。",
+          "summary_en": "**Investors weigh Wall Street's \"September curse\" as the historically weakest month.** Taiwan financial media flagged that September has historically been the U.S. market's weakest month, with the S&P 500 and Dow averaging declines of around 1.1%, prompting local investors to watch whether seasonality and elevated yields could cap gains even as AI-related demand underpins sentiment heading into the fourth quarter.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6592613"
+        }
+      ]
+    },
+    {
+      "section": "International",
+      "section_zh": "國際",
+      "items": [
+        {
+          "title_zh": "美股收高、寫下三週來首見週線紅（2026-09-26）",
+          "title_en": "U.S. stocks end higher, notching first winning week in three (2026-09-26)",
+          "summary_zh": "美股上週五收紅，道瓊漲約0.93%至51,828點、標普500漲0.49%至7,742點、那斯達克漲0.48%至27,069點。AI相關個股買盤回籠、油價回落，協助美股抵銷公債殖利率走高的壓力，三大指數同步收下三週來首見的週線紅。",
+          "summary_en": "Wall Street closed higher Friday, with the Dow up about 0.93% to 51,828, the S&P 500 up 0.49% to 7,742 and the Nasdaq up 0.48% to 27,069. Renewed buying in AI-related shares and easing oil prices helped the market shrug off another week of pressure from rising Treasury yields.",
+          "source_name": "STL News",
+          "source_url": "https://www.stl.news/u-s-stocks-end-higher-after-volatile-week-sept-26/",
+          "published": "2026-09-26"
+        },
+        {
+          "title_zh": "美債殖利率逼近廿年高、油價隨美伊消息震盪（2026-09-25）",
+          "title_en": "Treasury yields hover near two-decade highs as oil swings on Iran headlines (2026-09-25)",
+          "summary_zh": "美國30年期公債殖利率一度升抵約5.47%、創22年新高，10年期週五回落至約5.17%。油價先前因美伊衝突升破每桶百美元，之後傳出雙方或洽談分階段重啟荷莫茲海峽的協議而回落，殖利率與油價牽動市場對通膨與Fed政策預期。",
+          "summary_en": "The 30-year U.S. Treasury yield touched about 5.47%, a 22-year high, while the 10-year eased to around 5.17% Friday. Oil, which had spiked above $100 on the U.S.-Iran conflict, pulled back on reports negotiators may explore a phased deal to reopen the Strait of Hormuz.",
+          "source_name": "NBC News",
+          "source_url": "https://www.nbcnews.com/business/markets/bond-yields-oil-treasury-buyback-bessent-rcna599604",
+          "published": "2026-09-25"
+        },
+        {
+          "title_zh": "好市多第四季財報優於預期、高盛看後市（2026-09-25）",
+          "title_en": "Costco beats on fiscal Q4 as Goldman sees further upside (2026-09-25)",
+          "summary_zh": "好市多（Costco）公布本財年第四季財報優於預期，每股盈餘6.60美元高於市場預估的6.53美元，營收957.2億美元同樣勝估。高盛維持買進評等，認為這家量販龍頭正有效因應總經壓力，看好股價仍有上行空間。",
+          "summary_en": "Costco reported better-than-expected fiscal fourth-quarter results, with earnings of $6.60 a share topping the $6.53 consensus and revenue of $95.72 billion also beating estimates. Goldman Sachs kept a buy rating, saying the warehouse retailer is navigating macro pressures well and sees room for the stock to move higher.",
+          "source_name": "CNBC",
+          "source_url": "https://www.cnbc.com/2026/09/25/costco-just-reported-strong-earnings-goldman-sachs-sees-big-gains.html",
+          "published": "2026-09-25"
+        },
+        {
+          "title_zh": "美銀轉趨保守、耐吉財報前股價走弱（2026-09-25）",
+          "title_en": "Nike slips as Bank of America turns bearish before results (2026-09-25)",
+          "summary_zh": "耐吉（Nike）股價承壓，美銀（BofA）下修評等並調降目標價，警告這家運動用品龍頭的轉型面臨風險升高。在財報公布前，投資人消化此一轉趨保守的看法，股價下跌約0.7%，市場關注其後續營運能否重回成長軌道。",
+          "summary_en": "Nike shares came under pressure after Bank of America downgraded the stock, warning that risks to the sportswear giant's turnaround are rising and cutting its price target. The stock eased about 0.7% as investors weighed the cautious call ahead of Nike's upcoming quarterly report.",
+          "source_name": "CNBC",
+          "source_url": "https://www.cnbc.com/2026/09/25/risks-are-rising-for-nikes-turnaround-bank-of-america-says.html",
+          "published": "2026-09-25"
         }
       ]
     }
