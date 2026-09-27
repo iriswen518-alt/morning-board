@@ -3,7 +3,9 @@
   "tldr": [
     "台股中秋連假前量縮走弱，權值股承壓，台積電隨美股回檔收低。",
     "AI 與先進製程需求不墜，高通新旗艦晶片採台積電 2 奈米，供應鏈續受關注。",
-    "監理面同步推進：壽險 TIS 資本首考可望全數過關，金管會並放寬股票型基金與主動式 ETF 單一持股上限。"
+    "監理面同步推進：壽險 TIS 資本首考可望全數過關，金管會並放寬股票型基金與主動式 ETF 單一持股上限。",
+    "台灣前八月稅收突破 3 兆元、年增 25.2% 創新高，再度點燃年底超徵、地方分配的討論。",
+    "華爾街 9 月 25 日在油價回落、殖利率下滑下收紅作收一週；惟聯準會 9 月升息並暗示年底前再升，政策動向仍是焦點。"
   ],
   "sections": [
     {
@@ -91,6 +93,104 @@
           "summary_en": "As of May 2026, ten insurers — including Shin Kong, Nan Shan, Fubon, Cathay, KGI, Taiwan Life, Chubb, BNP Paribas Cardif and Yuanta — have won FSC approval to offer wealth-management services, expanding high-net-worth product channels beyond banks. Separately, Nan Shan's one-year hospitalisation-and-home-acute-care health policy was approved this month, illustrating continued product innovation aimed at affluent and protection-focused clients.",
           "source_name": "聯合新聞網",
           "source_url": "https://udn.com/news/story/7239/9742463"
+        }
+      ]
+    },
+    {
+      "section": "Tax & Regulations",
+      "section_zh": "稅務法規",
+      "items": [
+        {
+          "title_zh": "台灣前八月稅收破 3 兆創新高",
+          "title_en": "Taiwan tax take tops NT$3tn in first eight months, a record",
+          "summary_zh": "財政部公布 8 月全國賦稅實徵淨額 1,982 億元、創同月新高、年增 28.9%，累計前八月達 3 兆 749 億元、同創新高、年增 25.2%。證交稅連 13 個月正成長，反映股市交投熱絡；營所稅年增 24.9%，顯示企業獲利強勁挹注國庫，為財政穩健打下基礎。",
+          "summary_en": "The Ministry of Finance reported August net tax revenue of NT$198.2bn, a same-month record and up 28.9% year on year, lifting the January-August cumulative haul to NT$3.075tn, also a record and up 25.2%. Securities transaction tax logged a 13th straight month of annual gains, reflecting buoyant equity turnover, while corporate income tax rose 24.9%, signalling strong corporate profitability feeding the fiscal position.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/6710/9748953"
+        },
+        {
+          "title_zh": "稅收亮眼 地方「超徵紅包」有望",
+          "title_en": "Robust revenue revives hopes of a local \"over-collection dividend\"",
+          "summary_zh": "中央統籌分配稅款截至 8 月底累計實收 6,463 億元，已達全年原估 8,841 億元的 73.1%，官員表示依達成率「可樂觀期待」年底超徵、分配予地方。強勁的稅收進度延續了超徵款應如何返還或運用的討論，是台灣反覆出現的財政政策與租稅公平議題。",
+          "summary_en": "With central-government allocated tax revenue reaching NT$646.3bn by end-August — 73.1% of the full-year estimate of NT$884.1bn — officials suggest a year-end surplus that could flow to local governments is realistically in prospect. The strong run rate keeps alive debate over how any over-collection should be returned or spent, a recurring fiscal-policy and tax-fairness issue in Taiwan.",
+          "source_name": "聯合新聞網",
+          "source_url": "https://udn.com/news/story/7243/9761739"
+        }
+      ]
+    },
+    {
+      "section": "Macro & Policy",
+      "section_zh": "總經政策",
+      "items": [
+        {
+          "title_zh": "聯準會 9 月升息 並暗示年底前再升一次",
+          "title_en": "Fed hikes in September and signals another move before year-end",
+          "summary_zh": "美國聯準會 9 月會議升息 1 碼（25bps），最新利率點陣圖顯示 18 位官員中有 16 位預期 2026 年至少再升一次、部分預估兩次。官員並將 2026 年整體與核心 PCE 通膨預估分別上修至 3.7%、3.4%，在通膨僵固、經濟具韌性下，確立「較高利率維持更久」的政策基調。",
+          "summary_en": "The Federal Reserve raised rates by 25bps at its September meeting, and updated projections showed 16 of 18 officials expecting at least one more hike in 2026, with a few penciling in two. Policymakers nudged 2026 headline and core PCE forecasts up to 3.7% and 3.4%, framing a \"higher-for-longer\" stance as inflation proves sticky against a resilient economy.",
+          "source_name": "Chase",
+          "source_url": "https://www.chase.com/personal/investments/learning-and-insights/article/federal-reserve-raises-rates-officials-signal-one-more-hike-in-2026"
+        },
+        {
+          "title_zh": "市場升高 10 月升息預期 聚焦關鍵 PCE 數據",
+          "title_en": "Markets lift odds of an October Fed hike ahead of key PCE data",
+          "summary_zh": "利率期貨反映 10 月 27-28 日會議再升息機率明顯升高，年底聯邦資金利率上看約 4.2%。投資人聚焦 9 月 30 日將公布的 PCE 物價指數，作為通膨是否降溫的下一個檢驗；若數據偏熱，將強化進一步緊縮的理由，並使美債殖利率續承上行壓力。",
+          "summary_en": "Futures pricing points to a meaningful chance of another rate increase at the Oct 27-28 meeting, with fed funds seen near 4.2% by December. Investors are focused on the PCE price index due Sept 30 as the next test of whether inflation is cooling; a hot reading would harden the case for further tightening and keep upward pressure on Treasury yields.",
+          "source_name": "Charles Schwab",
+          "source_url": "https://www.schwab.com/learn/story/fomc-meeting"
+        }
+      ]
+    },
+    {
+      "section": "Global Markets",
+      "section_zh": "國際財經",
+      "items": [
+        {
+          "title_zh": "美股週五收紅 油價回落緩和殖利率",
+          "title_en": "US indices close higher Friday as oil retreat calms yields",
+          "summary_zh": "中文財經媒體報導，紐約三大指數 9 月 25 日同步收漲，道瓊漲約 478 點（+0.93%）至 51,828 點，標普 500 漲 0.51%，那斯達克漲約 0.48%。油價回落帶動美債殖利率自數十年高檔降溫，美股得以終止連三黑並收紅一週，激勵亞股與台股連假後開盤氣氛。",
+          "summary_en": "Chinese-language wires reported that New York's three major indices rose on Sept 25, with the Dow up about 478 points (+0.93%) to 51,828, the S&P 500 up 0.51% and the Nasdaq up around 0.48%. A pullback in oil prices helped Treasury yields ease from multi-decade highs, letting equities snap a three-day losing streak and close out a winning week.",
+          "source_name": "新華網",
+          "source_url": "https://www.news.cn/world/20260926/2d66365db256479384d2a0b17fabf89d/c.html"
+        },
+        {
+          "title_zh": "台灣分析：十月美國恐再升息 但市場無所畏懼",
+          "title_en": "Taiwan commentators eye October US rate risk but see calm markets",
+          "summary_zh": "台灣投資分析將聯準會 10 月可能升息視為市場已充分預期，認為只要經濟成長與企業獲利到位，市場「無所畏懼」。對台北的意涵是：出口與 AI 供應鏈仍是主要驅動力，已被充分反映的美國緊縮路徑，被視為可控的逆風而非對台股的衝擊。",
+          "summary_en": "Taiwan investment commentary framed the Fed's likely October hike as broadly anticipated, arguing markets are \"unafraid\" so long as growth holds and earnings deliver. The read-through for Taipei: exporters and AI-chain names remain the key driver, and a well-flagged US tightening path is seen as a manageable headwind rather than a shock for local equities.",
+          "source_name": "方格子 vocus",
+          "source_url": "https://vocus.cc/article/6ab67519fd89780001bc94f5"
+        }
+      ]
+    },
+    {
+      "section": "International",
+      "section_zh": "國際",
+      "items": [
+        {
+          "title_zh": "華爾街收紅 為震盪一週劃下句點（2026-09-25，最近交易日）",
+          "title_en": "Wall Street ends a winning week as oil eases (2026-09-25, 最近交易日)",
+          "summary_zh": "美股週五收高，道瓊漲 478.64 點（+0.93%）收 51,828.62 點，標普 500 漲 0.51% 收 7,743.41 點，那斯達克漲約 0.5% 收 27,068.72 點。10 年期美債殖利率隨油價下跌回落至約 5.15%，助標普終止因債市賣壓而起、連三日的震盪跌勢。",
+          "summary_en": "U.S. stocks closed higher Friday, with the Dow up 478.64 points (+0.93%) to 51,828.62, the S&P 500 up 0.51% to 7,743.41 and the Nasdaq up about 0.5% to 27,068.72. The 10-year Treasury yield eased to around 5.15% as oil prices fell, helping the S&P snap a volatile three-day losing streak driven by a bond-market sell-off.",
+          "source_name": "The Washington Times (AP)",
+          "source_url": "https://www.washingtontimes.com/news/2026/sep/25/reprieve-increasing-oil-prices-helps-us-stocks-finish-week-higher/"
+        },
+        {
+          "title_zh": "油價下跌 因荷莫茲海峽可能重啟露曙光（2026-09-25）",
+          "title_en": "Oil slides on hopes the Strait of Hormuz could reopen (2026-09-25)",
+          "summary_zh": "原油週五走跌，布蘭特原油跌約 2.8% 至每桶約 97 美元，因伊朗釋出願重返 6 月備忘錄的訊號，市場對荷莫茲海峽可能重啟轉趨樂觀。油價回落緩解了通膨與殖利率壓力，對緊盯中東能源流向的股市而言是一項利多。",
+          "summary_en": "Crude prices fell Friday, with Brent down about 2.8% to roughly US$97 a barrel, as optimism grew that the Strait of Hormuz could reopen after Iran signalled willingness to return to a June memorandum of understanding. The retreat eased inflation and yield pressures, a relief for equity markets watching Middle East energy flows.",
+          "source_name": "BNN Bloomberg (AP)",
+          "source_url": "https://www.bnnbloomberg.ca/markets/2026/09/25/us-stocks-drift-toward-the-finish-of-a-winning-week/",
+          "published": "2026-09-25"
+        },
+        {
+          "title_zh": "美消費者預期通膨升至 4.6% 支撐升息預期（2026-09-25）",
+          "title_en": "US consumers brace for 4.6% inflation, keeping rate-hike bets alive (2026-09-25)",
+          "summary_zh": "密西根大學調查顯示，美國消費者對未來一年的通膨預期升至 4.6%、高於前月的 4.0%，為 6 月以來最高。此數據一度推升美債殖利率，隨後因油價下跌而回落；居高的通膨預期強化了市場對聯準會可能再度緊縮的看法。",
+          "summary_en": "A University of Michigan survey showed U.S. consumers now expect inflation of 4.6% over the coming year, up from 4.0% a month earlier, the highest reading since June. The jump initially pushed Treasury yields higher before oil's decline reversed the move, and it reinforces expectations that the Fed could tighten again as price pressures prove stubborn.",
+          "source_name": "Yahoo Finance",
+          "source_url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-september-25-dow-sp-500-nasdaq-081738529.html",
+          "published": "2026-09-25"
         }
       ]
     }
