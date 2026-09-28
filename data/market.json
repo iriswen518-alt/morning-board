@@ -40,8 +40,8 @@
     {
       "name": "Euro Stoxx 50",
       "name_zh": null,
-      "close": 6307.39013671875,
-      "daily_pct": 0.07,
+      "close": 6301.27978515625,
+      "daily_pct": -0.02,
       "mtd_pct": -1.83,
       "ytd_pct": 8.74,
       "closing_date": "2026-09-28"
@@ -49,8 +49,8 @@
     {
       "name": "DAX",
       "name_zh": null,
-      "close": 25414.359375,
-      "daily_pct": 0.02,
+      "close": 25374.419921875,
+      "daily_pct": -0.13,
       "mtd_pct": -3.24,
       "ytd_pct": 3.75,
       "closing_date": "2026-09-28"
@@ -58,8 +58,8 @@
     {
       "name": "FTSE 100",
       "name_zh": null,
-      "close": 10709.5498046875,
-      "daily_pct": 0.13,
+      "close": 10684.8798828125,
+      "daily_pct": -0.1,
       "mtd_pct": -1.19,
       "ytd_pct": 7.69,
       "closing_date": "2026-09-28"
@@ -67,8 +67,8 @@
     {
       "name": "CAC 40",
       "name_zh": null,
-      "close": 8090.5498046875,
-      "daily_pct": 0.16,
+      "close": 8078.47998046875,
+      "daily_pct": 0.01,
       "mtd_pct": -3.08,
       "ytd_pct": -0.88,
       "closing_date": "2026-09-28"
@@ -121,7 +121,7 @@
     {
       "name": "Hang Seng 恆生",
       "name_zh": null,
-      "close": 24642.509765625,
+      "close": 24642.51,
       "daily_pct": 0.54,
       "mtd_pct": -4.13,
       "ytd_pct": -4.37,
@@ -130,7 +130,7 @@
     {
       "name": "Shanghai 上證",
       "name_zh": null,
-      "close": 3823.62060546875,
+      "close": 3823.6206,
       "daily_pct": -1.67,
       "mtd_pct": -2.46,
       "ytd_pct": -2.03,
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 100.97000122070312,
       "daily_pct": -0.32,
-      "mtd_pct": 1.79,
-      "ytd_pct": 2.98,
+      "mtd_pct": 1.7,
+      "ytd_pct": 2.89,
       "closing_date": "2026-09-25"
     },
     {
@@ -405,7 +405,7 @@
     {
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
-      "implied_rate": 3.89,
+      "implied_rate": 3.9,
       "delta_rate": 0.15,
       "delta_bps": 15.0,
       "p_hike": 60.0,
