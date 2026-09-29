@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-29T09:46:24+08:00",
+  "generated_at": "2026-09-29T13:47:21+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -73,20 +73,6 @@
       "error": null
     },
     {
-      "symbol": "NU",
-      "name_zh": "Nu",
-      "kind": "US",
-      "price": 12.23,
-      "change_pct": -10.01,
-      "mtd_pct": -15.95,
-      "ytd_pct": -26.94,
-      "market_date": "2026-09-28",
-      "per": 16.3779,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NU.US",
-      "error": null
-    },
-    {
       "symbol": "FICO",
       "name_zh": "Fair Isaac",
       "kind": "US",
@@ -98,6 +84,20 @@
       "per": 22.2708,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FICO.US",
+      "error": null
+    },
+    {
+      "symbol": "NU",
+      "name_zh": "Nu",
+      "kind": "US",
+      "price": 12.23,
+      "change_pct": -10.01,
+      "mtd_pct": -15.95,
+      "ytd_pct": -26.94,
+      "market_date": "2026-09-28",
+      "per": 16.3779,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NU.US",
       "error": null
     },
     {
@@ -115,17 +115,17 @@
       "error": null
     },
     {
-      "symbol": "HHH",
-      "name_zh": "Howard Hughes",
+      "symbol": "XPEV",
+      "name_zh": "小鵬",
       "kind": "US",
-      "price": 73.95,
-      "change_pct": 8.07,
-      "mtd_pct": 15.31,
-      "ytd_pct": -7.3,
+      "price": 9.95,
+      "change_pct": -1.68,
+      "mtd_pct": -12.41,
+      "ytd_pct": -50.94,
       "market_date": "2026-09-28",
-      "per": 13.9905,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HHH.US",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=XPEV.US",
       "error": null
     },
     {
@@ -143,17 +143,31 @@
       "error": null
     },
     {
-      "symbol": "RBLX",
-      "name_zh": "Roblox",
+      "symbol": "ISRG",
+      "name_zh": "Intuitive Surgical",
       "kind": "US",
-      "price": 41.86,
-      "change_pct": -9.86,
-      "mtd_pct": 1.38,
-      "ytd_pct": -48.34,
+      "price": 414.79,
+      "change_pct": 2.37,
+      "mtd_pct": 10.06,
+      "ytd_pct": -26.76,
       "market_date": "2026-09-28",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RBLX.US",
+      "per": 45.8604,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ISRG.US",
+      "error": null
+    },
+    {
+      "symbol": "NFLX",
+      "name_zh": "網飛",
+      "kind": "US",
+      "price": 69.23,
+      "change_pct": -2.69,
+      "mtd_pct": -14.58,
+      "ytd_pct": -26.16,
+      "market_date": "2026-09-28",
+      "per": 21.2046,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NFLX.US",
       "error": null
     },
     {
@@ -171,17 +185,59 @@
       "error": null
     },
     {
-      "symbol": "CLF",
-      "name_zh": "Cleveland-Cliffs",
+      "symbol": "JEPQ",
+      "name_zh": "JPMorgan Nasdaq Equity Premium",
       "kind": "US",
-      "price": 11.22,
-      "change_pct": -7.88,
-      "mtd_pct": -2.86,
-      "ytd_pct": -15.51,
+      "price": 61.11,
+      "change_pct": -0.21,
+      "mtd_pct": 1.48,
+      "ytd_pct": 5.14,
       "market_date": "2026-09-28",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CLF.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=JEPQ.US",
+      "error": null
+    },
+    {
+      "symbol": "AGNC",
+      "name_zh": "AGNC Investment",
+      "kind": "US",
+      "price": 9.46,
+      "change_pct": -1.66,
+      "mtd_pct": -11.84,
+      "ytd_pct": -11.75,
+      "market_date": "2026-09-28",
+      "per": 4.9831,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AGNC.US",
+      "error": null
+    },
+    {
+      "symbol": "RBLX",
+      "name_zh": "Roblox",
+      "kind": "US",
+      "price": 41.86,
+      "change_pct": -9.86,
+      "mtd_pct": 1.38,
+      "ytd_pct": -48.34,
+      "market_date": "2026-09-28",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RBLX.US",
+      "error": null
+    },
+    {
+      "symbol": "CRM",
+      "name_zh": "Salesforce",
+      "kind": "US",
+      "price": 227.27,
+      "change_pct": -2.88,
+      "mtd_pct": -11.75,
+      "ytd_pct": -14.21,
+      "market_date": "2026-09-28",
+      "per": 18.9724,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRM.US",
       "error": null
     },
     {
