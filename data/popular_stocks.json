@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-29T16:19:17+08:00",
+  "generated_at": "2026-09-29T19:34:05+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -45,20 +45,6 @@
       "error": null
     },
     {
-      "symbol": "BA",
-      "name_zh": "波音",
-      "kind": "US",
-      "price": 184.39,
-      "change_pct": -6.91,
-      "mtd_pct": -11.26,
-      "ytd_pct": -15.07,
-      "market_date": "2026-09-28",
-      "per": 61.4703,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BA.US",
-      "error": null
-    },
-    {
       "symbol": "SMMT",
       "name_zh": "Summit Therapeutics",
       "kind": "US",
@@ -70,6 +56,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SMMT.US",
+      "error": null
+    },
+    {
+      "symbol": "FICO",
+      "name_zh": "Fair Isaac",
+      "kind": "US",
+      "price": 840.89,
+      "change_pct": -2.57,
+      "mtd_pct": -26.7,
+      "ytd_pct": -50.26,
+      "market_date": "2026-09-28",
+      "per": 22.2708,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FICO.US",
       "error": null
     },
     {
@@ -87,17 +87,31 @@
       "error": null
     },
     {
-      "symbol": "FICO",
-      "name_zh": "Fair Isaac",
+      "symbol": "BA",
+      "name_zh": "波音",
       "kind": "US",
-      "price": 840.89,
-      "change_pct": -2.57,
-      "mtd_pct": -26.7,
-      "ytd_pct": -50.26,
+      "price": 184.39,
+      "change_pct": -6.91,
+      "mtd_pct": -11.26,
+      "ytd_pct": -15.07,
       "market_date": "2026-09-28",
-      "per": 22.2708,
+      "per": 61.4703,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FICO.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BA.US",
+      "error": null
+    },
+    {
+      "symbol": "KMX",
+      "name_zh": "CarMax",
+      "kind": "US",
+      "price": 56.55,
+      "change_pct": -1.15,
+      "mtd_pct": -7.79,
+      "ytd_pct": 46.35,
+      "market_date": "2026-09-28",
+      "per": 36.2341,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=KMX.US",
       "error": null
     },
     {
@@ -129,31 +143,17 @@
       "error": null
     },
     {
-      "symbol": "XPEV",
-      "name_zh": "小鵬",
+      "symbol": "UEC",
+      "name_zh": "Uranium Energy",
       "kind": "US",
-      "price": 9.95,
-      "change_pct": -1.68,
-      "mtd_pct": -12.41,
-      "ytd_pct": -50.94,
+      "price": 9.21,
+      "change_pct": -2.13,
+      "mtd_pct": -24.75,
+      "ytd_pct": -21.15,
       "market_date": "2026-09-28",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=XPEV.US",
-      "error": null
-    },
-    {
-      "symbol": "NFLX",
-      "name_zh": "網飛",
-      "kind": "US",
-      "price": 69.23,
-      "change_pct": -2.69,
-      "mtd_pct": -14.58,
-      "ytd_pct": -26.16,
-      "market_date": "2026-09-28",
-      "per": 21.2046,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NFLX.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=UEC.US",
       "error": null
     },
     {
@@ -171,45 +171,31 @@
       "error": null
     },
     {
-      "symbol": "STX",
-      "name_zh": "Seagate Technology",
+      "symbol": "BB",
+      "name_zh": "BlackBerry",
       "kind": "US",
-      "price": 921.51,
-      "change_pct": 0.51,
-      "mtd_pct": 11.24,
-      "ytd_pct": 234.62,
+      "price": 8.8,
+      "change_pct": 7.19,
+      "mtd_pct": 7.98,
+      "ytd_pct": 132.19,
       "market_date": "2026-09-28",
-      "per": 65.8119,
+      "per": 80.1878,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=STX.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BB.US",
       "error": null
     },
     {
-      "symbol": "CRM",
-      "name_zh": "Salesforce",
+      "symbol": "AUR",
+      "name_zh": "Aurora Innovation",
       "kind": "US",
-      "price": 227.27,
-      "change_pct": -2.88,
-      "mtd_pct": -11.75,
-      "ytd_pct": -14.21,
-      "market_date": "2026-09-28",
-      "per": 18.9724,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRM.US",
-      "error": null
-    },
-    {
-      "symbol": "MUU",
-      "name_zh": "Direxion Daily MU Bull 2X ETF",
-      "kind": "US",
-      "price": 35.91,
-      "change_pct": -5.13,
-      "mtd_pct": 17.28,
-      "ytd_pct": 612.92,
+      "price": 5.29,
+      "change_pct": -12.42,
+      "mtd_pct": -6.04,
+      "ytd_pct": 37.76,
       "market_date": "2026-09-28",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MUU.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AUR.US",
       "error": null
     },
     {
