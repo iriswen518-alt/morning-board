@@ -1,11 +1,9 @@
 {
-  "news_date": "2026-09-29",
+  "news_date": "2026-09-30",
   "tldr": [
-    "台股9/28收46,331點（+0.77%），成交量重返兆元，台積電漲至2,420元。",
-    "台積電2奈米五廠齊發，AI相關營收明年挑戰千億美元。",
-    "金管會9/28鬆綁金控資本規範，助壽險業平順接軌清償能力新制。",
-    "美股9/28收黑（標普-0.77%、那指-0.92%），10年期美債殖利率升破5.2%；波音因FAA延後認證重挫7%。",
-    "聯準會主席華許示警通膨僵固，市場傾向9月升息；台灣央行則預料按兵不動。"
+    "台積電領軍半導體走強，加權指數攻上波段新高，市場聚焦9月30日台積電台灣技術論壇。",
+    "玉山金完成併購三商美邦人壽，躍居第五大上市金控；金管會協助壽險業平穩接軌新制。",
+    "台灣高資產財富預估年均成長約一成，超高資產客群境外配置持續加深。"
   ],
   "sections": [
     {
@@ -13,20 +11,20 @@
       "section_zh": "股市行情",
       "items": [
         {
-          "title_zh": "台股攻上46,331點 成交量重返兆元",
-          "title_en": "Taiwan stocks close above 46,300 as turnover tops NT$1 trillion",
-          "summary_zh": "台股9月28日開高走高，加權指數終場大漲356點、漲幅0.77%，收在46,331點，成交量放大至1兆230億元，為8月18日以來再度站上兆元；權值龍頭台積電上漲10元至2,420元。量能回升顯示資金風險偏好回溫、由大型科技股領軍，但盤面高度集中於少數權值股，一旦AI需求出現雜音，指數波動恐將加劇。",
-          "summary_en": "Taiwan's benchmark TAIEX jumped 356 points, or 0.77%, to close at 46,331 on Sept 28, with turnover swelling past NT$1 trillion (NT$1.023tn) for the first time since mid-August. Market bellwether TSMC added NT$10 to NT$2,420. The heavy volume signals renewed risk appetite led by large-cap tech, though concentration in a few heavyweights keeps the index sensitive to any wobble in AI demand.",
-          "source_name": "ETtoday財經雲",
-          "source_url": "https://finance.ettoday.net/news/3227386"
+          "title_zh": "半導體領漲 加權指數攻上兩個半月新高",
+          "title_en": "Semiconductors power TAIEX to a multi-week high as TSMC leads",
+          "summary_zh": "台股加權指數強勢上攻，單日大漲約775點，改寫近兩個半月新高，權值半導體族群走強、台積電領軍衝鋒。這波以科技股為主的漲勢反映市場risk appetite回穩、資金重返大型股，但指數高度集中於少數晶片權值股，一旦AI相關需求或市場情緒生變，指數波動風險仍不容忽視，投資人須留意集中度過高的隱憂。",
+          "summary_en": "Taiwan's benchmark index rallied sharply, climbing around 775 points to its highest level in about two and a half months, driven by strength in heavyweight semiconductor names with TSMC at the front of the charge. The broad-based tech advance signals resilient risk appetite, though the index's heavy reliance on a handful of chip giants keeps it exposed to swings in AI-related demand and sentiment.",
+          "source_name": "uAnalyze優分析",
+          "source_url": "https://uanalyze.com.tw/articles/4034754778"
         },
         {
-          "title_zh": "台積電權重逾四成 大盤命脈繫於單一個股",
-          "title_en": "TSMC's index weight leaves TAIEX hostage to one stock",
-          "summary_zh": "台積電占加權指數市值比重已逾四成，股價每變動1元、牽動大盤約8點，使台股指數走勢高度綁定單一權值股。在外資圍繞AI題材進出下，大盤漲跌愈來愈反映台積電的訂單與展望，而非整體經濟基本面；對指數型基金與ETF投資人而言，這意味報酬與風險同步被放大，須留意集中度風險與追高殺低。",
-          "summary_en": "TSMC now accounts for well over 40% of the TAIEX by market value, so each NT$1 move in the chipmaker shifts the index by roughly 8 points. With foreign funds rotating around the AI theme, that single-stock concentration means Taiwan's headline index increasingly tracks TSMC's order outlook rather than the broader economy—amplifying both rallies and pullbacks for index and ETF investors.",
-          "source_name": "財報狗",
-          "source_url": "https://statementdog.com/taiex"
+          "title_zh": "台積電再創新高 法人：2026成長動能不只AI",
+          "title_en": "TSMC hits fresh record as analysts see 2026 growth beyond AI",
+          "summary_zh": "台積電股價再攀歷史新高，法人指出公司2026年成長動能不僅來自AI，更擴及高效能運算與先進製程的整體需求，訂單能見度佳。此看法鞏固市場對台灣晶片供應鏈的樂觀預期；惟台積電指數權重龐大，股價上漲雖同步推升大盤，卻也使指數型基金與ETF投資人的單一個股風險同步放大，追高時須審慎評估。",
+          "summary_en": "TSMC's shares scaled a new all-time high, with institutional investors arguing the company's 2026 growth momentum extends beyond artificial intelligence into broader high-performance computing and advanced-node demand. The call underpins bullish expectations for Taiwan's chip supply chain, but with TSMC commanding an outsized index weight, its rally simultaneously lifts the market and concentrates single-stock risk for index and ETF holders.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/amp/story/5607/9233028"
         }
       ]
     },
@@ -35,20 +33,20 @@
       "section_zh": "產業動態",
       "items": [
         {
-          "title_zh": "先進製程需求熱 台積電AI業績明年拚千億美元",
-          "title_en": "TSMC's AI revenue seen topping US$100bn as advanced-node demand booms",
-          "summary_zh": "受惠先進製程需求強勁，台積電AI相關營收明年可望挑戰千億美元，先進製程產能已被客戶預訂一空；董事長魏哲家並預期2028年AI伺服器處理器營收占比將逾20%。龐大的客戶訂單能見度，鞏固台積電在AI供應鏈的主導地位，也支撐台灣半導體產業鏈的資本支出與擴產動能持續維持高檔。",
-          "summary_en": "Strong pull for leading-edge processes is set to lift TSMC's AI-related revenue toward US$100 billion next year, with advanced-node capacity fully booked. Chairman C.C. Wei has flagged that AI server processors could exceed 20% of revenue by 2028. The scale of committed orders underscores TSMC's grip on the AI supply chain and supports sustained capex across Taiwan's chip ecosystem.",
-          "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/5612/9782072"
+          "title_zh": "台積電技術論壇台灣場登場 聚焦2奈米與先進封裝",
+          "title_en": "TSMC holds Taiwan technology forum with 2nm and advanced packaging in focus",
+          "summary_zh": "台積電9月30日以線上線下混合模式舉辦技術論壇台灣場次，展示最新製程藍圖。市場關注是否釋出更多2奈米量產進度、先進封裝產能擴張及開放創新平台生態系的訊息。若釋出正向展望，將進一步鞏固台灣在先進製程的領先地位，並支撐國內晶片設備、材料供應鏈的資本支出動能延續，帶動相關供應鏈題材。",
+          "summary_en": "TSMC stages the Taiwan leg of its technology symposium on Sept 30 in a hybrid online-offline format, spotlighting its latest process roadmap. Investors are watching for fresh detail on the 2-nanometer node ramp, advanced packaging capacity and its open-innovation platform ecosystem. Any upbeat guidance would reinforce Taiwan's leading-edge dominance and support sustained capex across the domestic chip equipment and materials supply chain.",
+          "source_name": "INSIDE",
+          "source_url": "https://www.inside.com.tw/article/28752-tsmc-stocks"
         },
         {
-          "title_zh": "台積電2奈米量產衝里程碑 業績季季高",
-          "title_en": "TSMC's 2nm ramp hits milestone as quarterly earnings climb",
-          "summary_zh": "台積電最先進的2奈米製程在台灣五座廠快速推進，其中晶圓20廠月產能已達2萬片里程碑；法人看好公司攜手AI應用客戶共同成長，單季業績可望持續改寫新高。2奈米快速放量鞏固台灣技術領先地位，但也使台灣經濟成長更集中於單一、資本密集的產品週期，須留意景氣循環與地緣風險。",
-          "summary_en": "TSMC's most advanced 2-nanometer node is ramping fast across five Taiwan fabs, with its Fab 20 reaching a monthly output milestone of 20,000 wafers. Analysts expect quarterly results to keep setting records as the company grows alongside its AI-application customers. The rapid 2nm scale-up cements Taiwan's technology lead but also concentrates the island's growth on a single, capital-intensive product cycle.",
-          "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/5612/9652412"
+          "title_zh": "台積電2026營收估成長逾三成 資本支出上看560億美元",
+          "title_en": "TSMC seen growing 2026 revenue over 30% with capex near US$56bn",
+          "summary_zh": "法人預估台積電2026年營收成長率將「超過」30%，資本支出同步衝高至約560億美元，反映先進製程與AI需求持續強勁。積極的資本支出計畫顯示公司對多年期訂單能見度深具信心，鞏固台灣在全球AI硬體建置的核心地位；但也墊高供應鏈門檻，並使台灣經濟成長更集中於單一、資本密集的產業循環，須留意景氣循環風險。",
+          "summary_en": "Analysts project TSMC's 2026 revenue growth to exceed 30%, with capital expenditure climbing toward roughly US$56 billion as leading-edge and AI demand stays robust. The aggressive spending plan signals confidence in multi-year order visibility and cements Taiwan's role at the core of the global AI hardware buildout, while raising the bar for suppliers and reinforcing the island's economic dependence on a single, capital-intensive cycle.",
+          "source_name": "uAnalyze優分析",
+          "source_url": "https://uanalyze.com.tw/articles/2501850730"
         }
       ]
     },
@@ -57,20 +55,20 @@
       "section_zh": "金融業",
       "items": [
         {
-          "title_zh": "金管會鬆綁金控資本規範 因應清償能力新制",
-          "title_en": "FSC eases capital rules for financial holdings ahead of new solvency regime",
-          "summary_zh": "金管會9月28日預告「金控合併資本適足性管理辦法」修正草案，配合2026年保險業接軌新一代清償能力制度（TIS），給予監理彈性；其中8家壽險型金控可獲資本減壓，11家保險型金控得延後1個月申報資本適足率。此舉旨在避免子公司帳目重估導致母金控接軌初期資本適足率驟降，穩定金控體系資本結構與市場信心。",
-          "summary_en": "Taiwan's FSC on Sept 28 previewed amendments to the group capital-adequacy rules for financial holding companies, granting supervisory flexibility as the insurance industry transitions to the new-generation TIS solvency regime in 2026. Eight life-insurance-led holdcos will get capital relief and 11 insurance-type holdcos may defer their CAR filing by a month, cushioning the initial hit from subsidiary revaluations.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6472396"
+          "title_zh": "玉山金完成併購三商美邦人壽 躍居第五大上市金控",
+          "title_en": "E.Sun Financial completes Mercuries Life takeover to become fifth-largest listed holdco",
+          "summary_zh": "玉山金控正式完成成立33年的三商美邦人壽併購案，將其納為子公司。此案使玉山金從以「銀行」為單一核心，轉型為兼具銀行、壽險、證券三大支柱的綜合型金控，總資產規模突破6.5兆元，躍升為國內第五大上市金控。此併購重塑中型金控競爭版圖，也牽動壽險市場市占與後續整併態勢，市場關注其綜效發揮與資本配置成效。",
+          "summary_en": "E.Sun Financial has finalized its acquisition of Mercuries Life, folding the 33-year-old insurer in as a subsidiary. The deal transforms E.Sun from a bank-centric group into a diversified holding company spanning banking, life insurance and securities, lifting total assets past NT$6.5 trillion and making it Taiwan's fifth-largest listed financial holding company. The move reshapes the competitive map among mid-tier holdcos.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/5613/9199813"
         },
         {
-          "title_zh": "壽險業接軌IFRS 17與清償能力新制 金管會提3暫行措施",
-          "title_en": "Life insurers begin transition to IFRS 17 and new solvency framework",
-          "summary_zh": "隨壽險業正式接軌IFRS 17與新一代清償能力制度（TIS），金管會提出3大暫行措施協助平順轉換，避免接軌期間帳列資本與準備金劇烈波動。過渡安排讓壽險公司有餘裕逐步強化資本體質；長期而言，新制提升財報透明度與可比性，將牽動保險商品的定價與準備金提存方式，重塑產業經營樣貌與競爭格局。",
-          "summary_en": "As Taiwan's life insurers move onto IFRS 17 and the TIS solvency regime, the FSC has rolled out three transitional measures to smooth the switch. The phased approach aims to prevent sharp swings in reported capital and reserves during adoption. Insurers gain room to rebuild capital buffers, while the reforms lift long-term transparency and comparability, reshaping how the sector prices and reserves for policies.",
-          "source_name": "金管會",
-          "source_url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2"
+          "title_zh": "金管會三面向強化壽險體質 引導資金投入國內公建",
+          "title_en": "FSC moves on three fronts to shore up life insurers ahead of 2026 transition",
+          "summary_zh": "因應壽險業2026年接軌IFRS 17與新一代清償能力制度，金管會從資產、負債、淨值三大面向同步引導業者調整，強化財務體質。金管會並研議引導保險資金投入國內公共建設的管道，惟坦言涉及跨部會協調，仍需時間推動。相關安排旨在緩衝接軌期間的資本波動，穩定壽險體系，兼顧安全與長期發展並進的政策方向。",
+          "summary_en": "With Taiwan's life insurers due to adopt IFRS 17 and the new-generation solvency regime in 2026, the FSC is pressing measures on three fronts—assets, liabilities and net worth—to strengthen the sector's financial footing. Regulators are also studying channels to steer insurance funds into domestic public-infrastructure projects, though cross-agency coordination will take time. The framework aims to cushion capital swings during the changeover.",
+          "source_name": "鉅亨網",
+          "source_url": "https://m.cnyes.com/news/id/6020380"
         }
       ]
     },
@@ -79,128 +77,20 @@
       "section_zh": "財富管理",
       "items": [
         {
-          "title_zh": "台灣超高資產客群大舉海外布局 中信、BCG報告揭86%配置境外",
-          "title_en": "Ultra-rich Taiwanese pile into offshore assets, CTBC-BCG study finds",
-          "summary_zh": "中國信託攜手BCG發布《2026台灣超高資產客群財富洞察》指出，進入十億元超高資產層級後，境外資產配置幾乎成為標配，達86%；該客群2025至2029年預估年複合成長率達11%。報告反映高資產家族對跨境財富架構、信託與私人銀行服務需求升溫，台灣頂端財富正加速走向全球化與多元化配置，帶動財管業者積極搶進布局。",
-          "summary_en": "A CTBC–BCG report on Taiwan's ultra-high-net-worth clients shows offshore asset allocation has become standard at the billion-NT-dollar tier, with 86% of such clients holding overseas assets. The segment is projected to grow at an 11% CAGR through 2025–2029. The findings point to rising demand for cross-border wealth structures, trusts and private-banking services as Taiwan's wealthiest diversify beyond the domestic market.",
-          "source_name": "老喬報",
-          "source_url": "https://joelin.cc/?p=8309"
+          "title_zh": "台灣高資產財富估年均成長約一成 直至2029年",
+          "title_en": "Taiwan's high-net-worth wealth seen growing ~10% a year through 2029",
+          "summary_zh": "KPMG報告預估，台灣高資產客群個人財富總額2025至2029年將以年均約10%成長，人數由約12.3萬人增至15.5萬人；其中10億級超高資產客群成長更快，預估由8,000人增至1.1萬人，速度明顯高於整體。此趨勢反映高資產家族對私人銀行、信託及跨境財富架構需求升溫，帶動財管業者積極布局頂端客群，深化跨世代傳承與海外配置服務。",
+          "summary_en": "A KPMG study projects the personal wealth of Taiwan's high-net-worth individuals to expand at roughly 10% annually from 2025 to 2029, with the population rising from about 123,000 to 155,000. The billion-NT-dollar ultra-rich tier is set to grow faster, from around 8,000 to 11,000 people. The findings point to swelling demand for private banking, trusts and cross-border wealth structures as affluent families diversify.",
+          "source_name": "KPMG",
+          "source_url": "https://kpmg.com/tw/zh/media/press-releases/2026/06/2026-taiwan-wealth-management-trends-high-net-worth-growth.html"
         },
         {
-          "title_zh": "10家壽險獲准辦理財管業務 高資產專法擴大商品範圍",
-          "title_en": "Ten life insurers cleared for wealth-management business as high-asset rules widen",
-          "summary_zh": "截至2026年5月，已有新光、南山、富邦、國泰、凱基等10家壽險公司獲金管會核准辦理財富管理業務，使財管戰局由銀行延伸至保險業。在放寬資產達1億元以上高資產客戶商品條件的專法下，業者得提供結構型商品、海外債、基金與保險型方案等多元選擇。此舉呼應政府打造亞洲資產管理中心政策，深化高資產客群的產品供給與競爭。",
-          "summary_en": "As of May 2026, ten life insurers have won FSC approval to offer wealth-management services, extending competition beyond banks. Under rules that ease product access for clients with NT$100mn or more in assets, insurers and banks are broadening offerings—structured products, offshore bonds, funds and insurance-based solutions. The push supports Taiwan's ambition to build a regional asset-management hub and deepens the high-net-worth product shelf.",
-          "source_name": "亞洲資產管理中心",
-          "source_url": "https://www.aamc.tw/zh/five3-1.html"
-        }
-      ]
-    },
-    {
-      "section": "Tax & Regulations",
-      "section_zh": "稅務法規",
-      "items": [
-        {
-          "title_zh": "2026年遺產稅、贈與稅免稅額與級距 定調全年財富傳承規劃",
-          "title_en": "2026 estate and gift tax thresholds set the year's wealth-transfer planning",
-          "summary_zh": "財政部公告2026年（適用115年度發生案件）遺產稅、贈與稅之免稅額、課稅級距、不計入遺產總額及各項扣除額標準；其中日常生活必需器具及用具總值100萬元以下、職業上使用工具總值56萬元以下，均不計入遺產總額。稅制參數確定後，高資產家庭在生前贈與與身後繼承之間，得以據此規劃今年度財富移轉的節奏與稅負。",
-          "summary_en": "For estates and gifts arising in 2026, Taiwan applies the current exemptions, tax brackets and deductions under the Estate and Gift Tax Act. Everyday household items worth up to NT$1mn and occupational tools up to NT$560k are excluded from the taxable estate. With the parameters fixed, families weighing lifetime gifting versus inheritance have a clear framework for timing transfers this year.",
-          "source_name": "財政部賦稅署",
-          "source_url": "https://www.dot.gov.tw/singlehtml/ch26?cntId=fae59b5407394d3989e2db2121c59af3"
-        },
-        {
-          "title_zh": "遺產稅申報期限與扣除實務 攸關繼承權益",
-          "title_en": "Estate-tax filing window and exclusions worth watching",
-          "summary_zh": "依遺產及贈與稅法，納稅義務人應於被繼承人死亡日起6個月內，向死亡時戶籍所在地之國稅局或所屬分局、稽徵所申報遺產稅；除基本免稅額外，日常器具、職業工具等特定項目可不計入遺產總額。若逾期申報或誤判扣除項目，恐面臨罰鍰;因此妥善備妥文件並諮詢專業，仍是家族順利傳承的關鍵一步。",
-          "summary_en": "Under Taiwan's rules, heirs must file estate tax within six months of the decedent's death at the National Taxation Bureau covering the household registration address. Beyond the standard exemption, specific items—modest household goods and occupational tools—fall outside the taxable estate. Missing the window or misjudging exclusions can trigger penalties, so proactive documentation and professional advice remain essential for orderly succession.",
-          "source_name": "財政部臺北國稅局",
-          "source_url": "https://www.ntbt.gov.tw/singlehtml/0baa381b53034993a08862dfde2243b9?cntId=cabf41336d564011b185b4535130ded5"
-        }
-      ]
-    },
-    {
-      "section": "Macro & Policy",
-      "section_zh": "總經政策",
-      "items": [
-        {
-          "title_zh": "通膨連4月破2% 央行料按兵不動但轉鷹",
-          "title_en": "CBC seen holding rates as inflation stays above 2%",
-          "summary_zh": "台灣央行本周理監事會議預料維持重貼現率於2.00%，儘管8月消費者物價指數（CPI）年增2.04%，已連續第4個月突破2%政策警戒線。會中已有2名理事主張升息，政策基調轉趨偏鷹。維持利率有助延續成長動能，但物價壓力揮之不去，使未來緊縮的可能性仍未完全排除，牽動房市與資金成本。",
-          "summary_en": "Taiwan's central bank is expected to keep its discount rate at 2.00% at this week's board meeting, even as August CPI rose 2.04%—a fourth straight month above the 2% policy alert line. Two board members have argued for a hike, tilting the tone hawkish. Steady rates support growth momentum, but persistent price pressure keeps a future tightening on the table.",
-          "source_name": "中央銀行",
-          "source_url": "https://www.cbc.gov.tw/tw/cp-302-189508-c6f08-1.html"
-        },
-        {
-          "title_zh": "AI出口熱 國泰台大團隊上修今年台灣經濟成長",
-          "title_en": "Forecasters lift Taiwan's 2026 growth on AI-led export boom",
-          "summary_zh": "國泰金與台大產學團隊大幅上修2026年台灣經濟成長率（GDP）預測，主因全球AI投資熱潮與出口動能強勁帶動，並預估明年成長放緩至5.1%；該團隊同時研判央行9月將維持利率不變。此次上修凸顯台灣本波景氣擴張高度集中於AI硬體供應鏈，一旦AI資本支出降溫，成長動能恐同步收斂，須留意循環風險。",
-          "summary_en": "The Cathay–NTU research team has sharply raised its 2026 GDP growth forecast for Taiwan, citing a surge in AI-driven investment and robust exports, while pencilling in a cooler 5.1% for next year. The team also expects the central bank to stand pat in September. The upgrade underscores how concentrated Taiwan's cyclical upswing has become around the AI hardware supply chain.",
-          "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/5613/9753947"
-        }
-      ]
-    },
-    {
-      "section": "Global Markets",
-      "section_zh": "國際財經",
-      "items": [
-        {
-          "title_zh": "華許轉鷹 市場重燃升息預期 費半承壓",
-          "title_en": "Warsh's hawkish turn revives Fed hike bets, pressuring chip stocks",
-          "summary_zh": "台灣媒體報導，聯準會主席華許強調通膨並未明顯降溫，暗示可能重啟升息，市場預期Fed 9月調高利率的機率，由不到4成一夕竄升至近6成。鷹派轉向震撼美股與費城半導體指數，並牽動台股AI權值股情緒，提醒投資人利率循環尚未結束，須提防評價面回檔與資金輪動的風險。",
-          "summary_en": "Taiwanese media report that Fed Chair Warsh has flagged that inflation has not cooled meaningfully, hinting at renewed tightening; market-implied odds of a September rate hike jumped from under 40% to near 60%. The shift rattled US equities and the Philadelphia Semiconductor Index, feeding through to Taiwan's AI-heavy heavyweights and reminding investors that the rate cycle is far from over.",
-          "source_name": "自由財經",
-          "source_url": "https://ec.ltn.com.tw/article/breakingnews/5556654"
-        },
-        {
-          "title_zh": "Fed轉向 台灣央行動向受矚目",
-          "title_en": "Fed's pivot puts Taiwan's central bank in the spotlight",
-          "summary_zh": "隨部分數據顯示美國升息機率突破9成，台灣財經評論指出，台灣央行因國內通膨相對溫和、成長強勁，9月仍可能按兵不動，形成台美貨幣政策分歧。利差變化恐持續牽動新台幣匯率與跨境資金流動，此一動態將是出口商與債券投資人在年底前緊盯的關鍵變數，影響匯兌與避險布局。",
-          "summary_en": "With US rate-hike odds above 90% in some readings, Taiwanese commentators note the divergence with Taiwan's central bank, which is still expected to hold in September thanks to relatively mild domestic inflation and strong growth. The gap could keep pressure on the Taiwan dollar and cross-border flows, a dynamic exporters and bond investors will watch closely into year-end.",
-          "source_name": "Yahoo奇摩股市",
-          "source_url": "https://tw.stock.yahoo.com/news/fed%E5%8D%87%E6%81%AF%E6%A9%9F%E7%8E%87%E7%A0%B4%E4%B9%9D%E6%88%90-%E6%83%9F%E5%8F%B0%E5%A4%AE%E8%A1%8C9%E6%9C%88%E4%BB%8D%E5%8F%AF%E8%83%BD%E6%8C%89%E5%85%B5%E4%B8%8D%E5%8B%95-102000033.html"
-        }
-      ]
-    },
-    {
-      "section": "International",
-      "section_zh": "國際",
-      "items": [
-        {
-          "title_zh": "美債殖利率飆升壓抑美股 波音拖累道瓊（2026-09-28）",
-          "title_en": "US stocks fall as Treasury yields spike; Boeing weighs on Dow (2026-09-28)",
-          "summary_zh": "美股週一收黑，標普500指數下跌0.77%至7,683.69點，那斯達克指數跌0.92%至26,820.38點，道瓊工業指數跌347點、跌幅0.67%至51,481.51點。10年期美債殖利率升破5.2%、逼近2007年以來高點，壓抑股市風險偏好；波音則因FAA認證受挫重挫約7%，成為指數重要拖累來源。",
-          "summary_en": "Wall Street closed lower Monday, with the S&P 500 down 0.77% to 7,683.69, the Nasdaq off 0.92% to 26,820.38 and the Dow down 347 points, or 0.67%, to 51,481.51. A jump in the 10-year Treasury yield above 5.2%—near levels last seen in 2007—pressured equities, while Boeing tumbled about 7% after an FAA certification setback.",
-          "source_name": "CNBC",
-          "source_url": "https://www.cnbc.com/2026/09/27/stock-market-today-live-updates.html",
-          "published": "2026-09-28"
-        },
-        {
-          "title_zh": "中東風險未消 油價小幅走高（2026-09-28）",
-          "title_en": "Oil edges up as Middle East risk lingers (2026-09-28)",
-          "summary_zh": "國際油價週一走高，布蘭特原油期貨上漲96美分至每桶105.28美元，美國西德州中級原油（WTI）上漲19美分至92.60美元，交易員持續評估波灣與伊朗周邊的地緣政治風險。油價居高不下，使原物料成本與整體通膨續受上行壓力，也成為各國央行在權衡利率走向時緊盯的關鍵變數，牽動輸入性通膨預期。",
-          "summary_en": "Crude prices firmed on Monday, with Brent futures up 96 cents at $105.28 a barrel and US West Texas Intermediate adding 19 cents to $92.60, as traders weighed persistent geopolitical risk around the Persian Gulf and Iran. Elevated crude keeps upward pressure on input costs and headline inflation, a factor central banks are watching as they debate the path of interest rates.",
-          "source_name": "CNBC",
-          "source_url": "https://www.cnbc.com/2026/09/28/oil-price-today-wti-brent-trump-iran.html",
-          "published": "2026-09-28"
-        },
-        {
-          "title_zh": "軟體瑕疵 FAA延後波音737 Max 10認證（2026-09-28）",
-          "title_en": "FAA delays Boeing 737 Max 10 certification on software flaw (2026-09-28)",
-          "summary_zh": "美國聯邦航空總署（FAA）表示，將暫緩認證波音737 Max 10機型，以評估一項新出現的軟體瑕疵，該問題影響重飛後自動導航功能。波音原預期數週內取得核可;受此拖累，波音股價週一重挫近7%，反映投資人對這款屢遭延誤機型再度跳票的失望。FAA強調飛行員已受相關情境訓練，仍能掌控飛機安全。",
-          "summary_en": "The FAA said it will hold off certifying Boeing's 737 Max 10 while it assesses a newly introduced software bug affecting an automated go-around navigation function. Boeing had expected approval within weeks; its shares fell nearly 7% Monday as investors absorbed yet another delay for the long-troubled programme. The FAA said pilots are trained for the scenario and remain in control.",
-          "source_name": "CNBC",
-          "source_url": "https://www.cnbc.com/2026/09/28/faa-boeing-737-max-10-certification-delay-software-issue.html",
-          "published": "2026-09-28"
-        },
-        {
-          "title_zh": "北方之星拒絕金田270億美元收購（2026-09-28）",
-          "title_en": "Northern Star rejects Gold Fields' $27bn takeover bid (2026-09-28)",
-          "summary_zh": "澳洲最大金礦商北方之星資源（Northern Star）董事會一致否決南非金田公司（Gold Fields）提出、未經徵詢的387億澳元（約270億美元）收購案，指其現金加換股方案「嚴重低估」公司價值且「高度投機」。北方之星股價週一盤中一度大漲逾9%，終場收高約6%。此案凸顯全球黃金產業在金價高檔下的整併壓力升溫，後續動向受關注。",
-          "summary_en": "Australia's Northern Star Resources, the country's largest gold miner, unanimously rejected an unsolicited A$38.7 billion ($27bn) approach from South Africa's Gold Fields, saying the cash-and-share offer \"materially undervalues\" the company and was \"highly opportunistic.\" Northern Star shares closed about 6% higher Monday after jumping more than 9% intraday, as the deal spotlights consolidation pressure across the gold sector.",
-          "source_name": "CNBC",
-          "source_url": "https://www.cnbc.com/2026/09/28/northern-star-shares-gold-fields-takeover-bid.html",
-          "published": "2026-09-28"
+          "title_zh": "台新銀行奪財管三大獎 私銀競爭白熱化",
+          "title_en": "Taishin sweeps top wealth-management honors as private-banking rivalry heats up",
+          "summary_zh": "台新銀行在2026年《財訊》財富管理大獎中一舉奪下「最佳財富管理」、「最佳財富增值」與「最佳私人銀行」三項大獎；中國信託銀行則拿下「最佳AI應用私人銀行」與「最佳數位化客戶體驗私人銀行」。獎項結果凸顯台灣各銀行搶攻高資產客群競爭白熱化，業者透過跨世代傳承規劃、海外商品與AI智能顧問服務深化差異化，爭取頂端財富客戶的錢包份額。",
+          "summary_en": "Taishin Bank claimed a trio of top prizes—best wealth management, best wealth appreciation and best private bank—in the 2026 Wealth Magazine awards, while CTBC Bank took best AI-application private bank and best digital private-banking client experience. The results underscore intensifying competition among Taiwan's lenders to win high-net-worth clients through cross-generational succession planning, offshore products and AI-driven advisory services.",
+          "source_name": "台新銀行",
+          "source_url": "https://www.taishinbank.com.tw/TSB/personal/common/news/TSBankNews-007889/"
         }
       ]
     }
