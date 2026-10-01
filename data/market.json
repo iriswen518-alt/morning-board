@@ -40,38 +40,38 @@
     {
       "name": "Euro Stoxx 50",
       "name_zh": null,
-      "close": 6269.02001953125,
-      "daily_pct": -0.81,
+      "close": 6175.4501953125,
+      "daily_pct": -1.49,
       "mtd_pct": -2.35,
       "ytd_pct": 8.16,
-      "closing_date": "2026-09-30"
+      "closing_date": "2026-10-01"
     },
     {
       "name": "DAX",
       "name_zh": null,
-      "close": 25199.189453125,
-      "daily_pct": -0.79,
+      "close": 24939.349609375,
+      "daily_pct": -1.03,
       "mtd_pct": -4.03,
       "ytd_pct": 2.89,
-      "closing_date": "2026-09-30"
+      "closing_date": "2026-10-01"
     },
     {
       "name": "FTSE 100",
       "name_zh": null,
-      "close": 10606.0,
-      "daily_pct": -0.29,
+      "close": 10428.26953125,
+      "daily_pct": -1.68,
       "mtd_pct": -2.02,
       "ytd_pct": 6.79,
-      "closing_date": "2026-09-30"
+      "closing_date": "2026-10-01"
     },
     {
       "name": "CAC 40",
       "name_zh": null,
-      "close": 7964.509765625,
-      "daily_pct": -0.89,
+      "close": 7835.31005859375,
+      "daily_pct": -1.62,
       "mtd_pct": -4.44,
       "ytd_pct": -2.27,
-      "closing_date": "2026-09-30"
+      "closing_date": "2026-10-01"
     },
     {
       "name": "Nikkei 225",
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 101.44999694824219,
       "daily_pct": 0.08,
-      "mtd_pct": 0.48,
-      "ytd_pct": 3.72,
+      "mtd_pct": 0.59,
+      "ytd_pct": 3.84,
       "closing_date": "2026-09-30"
     },
     {
@@ -405,7 +405,7 @@
     {
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
-      "implied_rate": 3.89,
+      "implied_rate": 3.88,
       "delta_rate": 0.14,
       "delta_bps": 14.0,
       "p_hike": 56.0,
@@ -416,14 +416,14 @@
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 4.09,
-      "delta_rate": 0.21,
-      "delta_bps": 21.0,
-      "p_hike": 84.0,
-      "p_hold": 16.0,
+      "implied_rate": 4.08,
+      "delta_rate": 0.2,
+      "delta_bps": 20.0,
+      "p_hike": 80.0,
+      "p_hold": 20.0,
       "p_cut": 0,
       "is_reference": false
     }
   ],
-  "summary": "10/1 Nikkei 225 +3.30%、10/1 KOSPI +1.95%、9/30 台指期(近月) +1.15% 領漲；10/1 S&P/ASX 200 -1.99%、9/30 CAC 40 -0.89% 走弱。"
+  "summary": "10/1 Nikkei 225 +3.30%、10/1 KOSPI +1.95%、9/30 台指期(近月) +1.15% 領漲；10/1 S&P/ASX 200 -1.99%、10/1 FTSE 100 -1.68% 走弱。"
 }
