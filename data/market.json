@@ -76,11 +76,11 @@
     {
       "name": "Nikkei 225",
       "name_zh": null,
-      "close": 66753.71875,
-      "daily_pct": 1.94,
+      "close": 68956.71875,
+      "daily_pct": 3.3,
       "mtd_pct": 0.67,
       "ytd_pct": 32.61,
-      "closing_date": "2026-09-30"
+      "closing_date": "2026-10-01"
     },
     {
       "name": "TAIEX 加權指數",
@@ -112,11 +112,11 @@
     {
       "name": "KOSPI",
       "name_zh": null,
-      "close": 6838.0400390625,
-      "daily_pct": -0.48,
+      "close": 6971.35009765625,
+      "daily_pct": 1.95,
       "mtd_pct": 0.26,
       "ytd_pct": 62.26,
-      "closing_date": "2026-09-30"
+      "closing_date": "2026-10-01"
     },
     {
       "name": "Hang Seng 恆生",
@@ -157,11 +157,11 @@
     {
       "name": "S&P/ASX 200",
       "name_zh": null,
-      "close": 8789.2998046875,
-      "daily_pct": 0.92,
+      "close": 8614.400390625,
+      "daily_pct": -1.99,
       "mtd_pct": -3.16,
       "ytd_pct": 0.86,
-      "closing_date": "2026-09-30"
+      "closing_date": "2026-10-01"
     }
   ],
   "bonds": [
@@ -195,10 +195,10 @@
     },
     {
       "name": "UK 10-Year",
-      "yield_pct": 5.41,
-      "daily_bps": 2.81,
-      "mtd_bps": 27.13,
-      "closing_date": "2026-09-28"
+      "yield_pct": 5.38,
+      "daily_bps": -3.16,
+      "mtd_bps": 23.97,
+      "closing_date": "2026-09-29"
     },
     {
       "name": "TW 10-Year",
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 101.44999694824219,
       "daily_pct": 0.08,
-      "mtd_pct": 0.17,
-      "ytd_pct": 3.4,
+      "mtd_pct": 0.32,
+      "ytd_pct": 3.56,
       "closing_date": "2026-09-30"
     },
     {
@@ -301,11 +301,11 @@
     },
     {
       "name": "比特幣 (USD)",
-      "close": 83622.4296875,
-      "daily_pct": 0.14,
-      "mtd_pct": 6.46,
-      "ytd_pct": -4.44,
-      "closing_date": "2026-09-29"
+      "close": 83553.8515625,
+      "daily_pct": -0.08,
+      "mtd_pct": 6.37,
+      "ytd_pct": -4.52,
+      "closing_date": "2026-09-30"
     }
   ],
   "bond_etfs": [
@@ -417,13 +417,13 @@
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
       "implied_rate": 4.12,
-      "delta_rate": 0.23,
-      "delta_bps": 23.0,
-      "p_hike": 92.0,
-      "p_hold": 8.0,
+      "delta_rate": 0.24,
+      "delta_bps": 24.0,
+      "p_hike": 96.0,
+      "p_hold": 4.0,
       "p_cut": 0,
       "is_reference": false
     }
   ],
-  "summary": "9/30 Nikkei 225 +1.94%、9/30 台指期(近月) +1.15%、9/30 S&P/ASX 200 +0.92% 領漲；9/30 CAC 40 -0.89%、9/30 Dow Jones -0.86% 走弱。"
+  "summary": "10/1 Nikkei 225 +3.30%、10/1 KOSPI +1.95%、9/30 台指期(近月) +1.15% 領漲；10/1 S&P/ASX 200 -1.99%、9/30 CAC 40 -0.89% 走弱。"
 }
