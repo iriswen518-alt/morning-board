@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-02T16:21:25+08:00",
+  "generated_at": "2026-10-02T19:21:11+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -45,6 +45,20 @@
       "error": null
     },
     {
+      "symbol": "BMNR",
+      "name_zh": "BitMine Immersion Technologies,",
+      "kind": "US",
+      "price": 26.73,
+      "change_pct": 1.14,
+      "mtd_pct": 1.14,
+      "ytd_pct": -1.55,
+      "market_date": "2026-10-01",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BMNR.US",
+      "error": null
+    },
+    {
       "symbol": "MAT",
       "name_zh": "Mattel",
       "kind": "US",
@@ -56,20 +70,6 @@
       "per": 8.4767,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MAT.US",
-      "error": null
-    },
-    {
-      "symbol": "ACN",
-      "name_zh": "Accenture",
-      "kind": "US",
-      "price": 212.3,
-      "change_pct": 15.78,
-      "mtd_pct": 15.78,
-      "ytd_pct": -20.87,
-      "market_date": "2026-10-01",
-      "per": 17.477,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ACN.US",
       "error": null
     },
     {
@@ -87,17 +87,17 @@
       "error": null
     },
     {
-      "symbol": "ASST",
-      "name_zh": "Strive",
+      "symbol": "IBIT",
+      "name_zh": "iShares Bitcoin Trust ETF",
       "kind": "US",
-      "price": 30.11,
-      "change_pct": 2.38,
-      "mtd_pct": 2.38,
-      "ytd_pct": 104.0,
+      "price": 47.96,
+      "change_pct": 1.31,
+      "mtd_pct": 1.31,
+      "ytd_pct": -3.4,
       "market_date": "2026-10-01",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ASST.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IBIT.US",
       "error": null
     },
     {
@@ -115,45 +115,17 @@
       "error": null
     },
     {
-      "symbol": "IBIT",
-      "name_zh": "iShares Bitcoin Trust ETF",
+      "symbol": "ASST",
+      "name_zh": "Strive",
       "kind": "US",
-      "price": 47.96,
-      "change_pct": 1.31,
-      "mtd_pct": 1.31,
-      "ytd_pct": -3.4,
+      "price": 30.11,
+      "change_pct": 2.38,
+      "mtd_pct": 2.38,
+      "ytd_pct": 104.0,
       "market_date": "2026-10-01",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IBIT.US",
-      "error": null
-    },
-    {
-      "symbol": "ONON",
-      "name_zh": "On Holding AG",
-      "kind": "US",
-      "price": 30.2,
-      "change_pct": 1.99,
-      "mtd_pct": 1.99,
-      "ytd_pct": -35.03,
-      "market_date": "2026-10-01",
-      "per": 20.9759,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ONON.US",
-      "error": null
-    },
-    {
-      "symbol": "BMNR",
-      "name_zh": "BitMine Immersion Technologies,",
-      "kind": "US",
-      "price": 26.73,
-      "change_pct": 1.14,
-      "mtd_pct": 1.14,
-      "ytd_pct": -1.55,
-      "market_date": "2026-10-01",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BMNR.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ASST.US",
       "error": null
     },
     {
@@ -171,17 +143,17 @@
       "error": null
     },
     {
-      "symbol": "LULU",
-      "name_zh": "lululemon athletica",
+      "symbol": "ACN",
+      "name_zh": "Accenture",
       "kind": "US",
-      "price": 95.86,
-      "change_pct": -0.34,
-      "mtd_pct": -0.34,
-      "ytd_pct": -53.87,
+      "price": 212.3,
+      "change_pct": 15.78,
+      "mtd_pct": 15.78,
+      "ytd_pct": -20.87,
       "market_date": "2026-10-01",
-      "per": 7.9707,
+      "per": 17.477,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LULU.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ACN.US",
       "error": null
     },
     {
@@ -196,6 +168,76 @@
       "per": 40.2975,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TWLO.US",
+      "error": null
+    },
+    {
+      "symbol": "LITE",
+      "name_zh": "Lumentum",
+      "kind": "US",
+      "price": 1045.78,
+      "change_pct": 7.67,
+      "mtd_pct": 7.67,
+      "ytd_pct": 183.72,
+      "market_date": "2026-10-01",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LITE.US",
+      "error": null
+    },
+    {
+      "symbol": "INOD",
+      "name_zh": "Innodata",
+      "kind": "US",
+      "price": 71.85,
+      "change_pct": 9.26,
+      "mtd_pct": 9.26,
+      "ytd_pct": 41.02,
+      "market_date": "2026-10-01",
+      "per": 48.3584,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=INOD.US",
+      "error": null
+    },
+    {
+      "symbol": "COIN",
+      "name_zh": "Coinbase",
+      "kind": "US",
+      "price": 189.29,
+      "change_pct": 1.54,
+      "mtd_pct": 1.54,
+      "ytd_pct": -16.3,
+      "market_date": "2026-10-01",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=COIN.US",
+      "error": null
+    },
+    {
+      "symbol": "PLTR",
+      "name_zh": "Palantir",
+      "kind": "US",
+      "price": 190.04,
+      "change_pct": 1.6,
+      "mtd_pct": 1.6,
+      "ytd_pct": 6.91,
+      "market_date": "2026-10-01",
+      "per": 151.3834,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PLTR.US",
+      "error": null
+    },
+    {
+      "symbol": "LULU",
+      "name_zh": "lululemon athletica",
+      "kind": "US",
+      "price": 95.86,
+      "change_pct": -0.34,
+      "mtd_pct": -0.34,
+      "ytd_pct": -53.87,
+      "market_date": "2026-10-01",
+      "per": 7.9707,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LULU.US",
       "error": null
     },
     {

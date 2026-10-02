@@ -85,7 +85,7 @@
     {
       "name": "TAIEX 加權指數",
       "name_zh": null,
-      "close": 48475.74,
+      "close": 48475.73828125,
       "daily_pct": 0.25,
       "mtd_pct": 0.86,
       "ytd_pct": 66.95,
@@ -94,11 +94,11 @@
     {
       "name": "OTC 櫃買加權",
       "name_zh": null,
-      "close": 426.93,
-      "daily_pct": 1.94,
+      "close": null,
+      "daily_pct": null,
       "mtd_pct": null,
       "ytd_pct": null,
-      "closing_date": "2026-10-02"
+      "closing_date": null
     },
     {
       "name": "台指期(近月)",
@@ -121,8 +121,8 @@
     {
       "name": "Hang Seng 恆生",
       "name_zh": null,
-      "close": 23945.01953125,
-      "daily_pct": -2.71,
+      "close": 23972.2890625,
+      "daily_pct": -2.6,
       "mtd_pct": -3.73,
       "ytd_pct": -3.97,
       "closing_date": "2026-10-02"
@@ -181,10 +181,10 @@
     },
     {
       "name": "Germany 10-Year",
-      "yield_pct": 3.58,
-      "daily_bps": -2.6,
-      "mtd_bps": 24.21,
-      "closing_date": "2026-09-30"
+      "yield_pct": 3.59,
+      "daily_bps": 1.05,
+      "mtd_bps": 1.05,
+      "closing_date": "2026-10-01"
     },
     {
       "name": "Japan 10-Year",
@@ -195,10 +195,10 @@
     },
     {
       "name": "UK 10-Year",
-      "yield_pct": 5.38,
-      "daily_bps": -3.16,
-      "mtd_bps": 23.97,
-      "closing_date": "2026-09-29"
+      "yield_pct": 5.4,
+      "daily_bps": 2.21,
+      "mtd_bps": 26.18,
+      "closing_date": "2026-09-30"
     },
     {
       "name": "TW 10-Year",
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 102.0999984741211,
       "daily_pct": 0.64,
-      "mtd_pct": 0.35,
-      "ytd_pct": 3.59,
+      "mtd_pct": 0.6,
+      "ytd_pct": 3.85,
       "closing_date": "2026-10-01"
     },
     {
@@ -416,7 +416,7 @@
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 4.07,
+      "implied_rate": 4.08,
       "delta_rate": 0.19,
       "delta_bps": 19.0,
       "p_hike": 76.0,
@@ -425,5 +425,5 @@
       "is_reference": false
     }
   ],
-  "summary": "10/2 OTC 櫃買加權 +1.94%、10/1 PHLX Semiconductor +1.59%、10/2 S&P/ASX 200 +0.79% 領漲；10/2 Hang Seng 恆生 -2.71%、10/1 FTSE 100 -1.68% 走弱。"
+  "summary": "10/1 PHLX Semiconductor +1.59%、10/2 S&P/ASX 200 +0.79%、10/1 台指期(近月) +0.73% 領漲；10/2 Hang Seng 恆生 -2.60%、10/1 FTSE 100 -1.68% 走弱。"
 }
