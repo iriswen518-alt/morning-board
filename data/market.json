@@ -40,43 +40,43 @@
     {
       "name": "Euro Stoxx 50",
       "name_zh": null,
-      "close": 6175.4501953125,
-      "daily_pct": -1.49,
+      "close": 6224.990234375,
+      "daily_pct": 0.8,
       "mtd_pct": -1.49,
       "ytd_pct": 6.54,
-      "closing_date": "2026-10-01"
+      "closing_date": "2026-10-02"
     },
     {
       "name": "DAX",
       "name_zh": null,
-      "close": 24939.349609375,
-      "daily_pct": -1.03,
+      "close": 25192.75,
+      "daily_pct": 1.02,
       "mtd_pct": -1.03,
       "ytd_pct": 1.83,
-      "closing_date": "2026-10-01"
+      "closing_date": "2026-10-02"
     },
     {
       "name": "FTSE 100",
       "name_zh": null,
-      "close": 10428.2998046875,
-      "daily_pct": -1.68,
+      "close": 10445.919921875,
+      "daily_pct": 0.17,
       "mtd_pct": -1.68,
       "ytd_pct": 5.0,
-      "closing_date": "2026-10-01"
+      "closing_date": "2026-10-02"
     },
     {
       "name": "CAC 40",
       "name_zh": null,
-      "close": 7835.31005859375,
-      "daily_pct": -1.62,
+      "close": 7881.3798828125,
+      "daily_pct": 0.59,
       "mtd_pct": -1.62,
       "ytd_pct": -3.86,
-      "closing_date": "2026-10-01"
+      "closing_date": "2026-10-02"
     },
     {
       "name": "Nikkei 225",
       "name_zh": null,
-      "close": 68309.4609375,
+      "close": 68309.46,
       "daily_pct": -0.94,
       "mtd_pct": 3.3,
       "ytd_pct": 36.98,
@@ -112,7 +112,7 @@
     {
       "name": "KOSPI",
       "name_zh": null,
-      "close": 7003.740234375,
+      "close": 7003.74,
       "daily_pct": 0.46,
       "mtd_pct": 1.95,
       "ytd_pct": 65.43,
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 102.0999984741211,
       "daily_pct": 0.64,
-      "mtd_pct": 0.24,
-      "ytd_pct": 3.47,
+      "mtd_pct": 0.43,
+      "ytd_pct": 3.67,
       "closing_date": "2026-10-01"
     },
     {
@@ -406,10 +406,10 @@
       "label": "Nov 2026",
       "fomc_date": "2026-11-05",
       "implied_rate": 3.88,
-      "delta_rate": 0.13,
-      "delta_bps": 13.0,
-      "p_hike": 52.0,
-      "p_hold": 48.0,
+      "delta_rate": 0.14,
+      "delta_bps": 14.0,
+      "p_hike": 56.0,
+      "p_hold": 44.0,
       "p_cut": 0,
       "is_reference": false
     },
@@ -425,5 +425,5 @@
       "is_reference": false
     }
   ],
-  "summary": "10/2 OTC 櫃買加權 +1.94%、10/1 PHLX Semiconductor +1.59%、10/2 S&P/ASX 200 +0.79% 領漲；10/2 Hang Seng 恆生 -2.60%、10/1 FTSE 100 -1.68% 走弱。"
+  "summary": "10/2 OTC 櫃買加權 +1.94%、10/1 PHLX Semiconductor +1.59%、10/2 DAX +1.02% 領漲；10/2 Hang Seng 恆生 -2.60%、10/2 Nikkei 225 -0.94% 走弱。"
 }
