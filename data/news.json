@@ -1,11 +1,9 @@
 {
-  "news_date": "2026-10-03",
+  "news_date": "2026-10-04",
   "tldr": [
-    "台股收在48,476點改寫收盤新高、漲122點，權值王台積電逆勢回檔。",
-    "SEMICON Taiwan 2026登場，SEMI估2030年全球半導體營收上看2兆美元。",
-    "金管會10月政策接力上路：高雄專區、虛擬資產監理與銀行券商跨業信用查詢。",
-    "美股攻頂創高，9月就業疲弱鞏固聯準會按兵不動的市場預期。",
-    "台灣8月出口達824億美元創歷史新高、年增41%，AI需求強勁帶動。"
+    "台股週五收漲0.25%至48,475點，今年來約漲67%，櫃買指數強漲1.94%，被動元件族群領軍。",
+    "台積電傳探索美國第二園區，並評估參與馬斯克Terafab晶圓項目，雙方稱仍處於討論階段。",
+    "壽險業2026年接軌IFRS 17、金管會增訂四項揭露指標；美債低迷，全球資金轉向替代資產。"
   ],
   "sections": [
     {
@@ -13,12 +11,20 @@
       "section_zh": "股市行情",
       "items": [
         {
-          "title_zh": "台股收盤改寫新高、加權指數漲122點",
-          "title_en": "Taiwan stocks close at a record high as the index adds 122 points",
-          "summary_zh": "10月2日加權指數上漲122點、漲幅0.25%，收在48,476點的收盤歷史新高，成交量放大至約8,981億元。權值王台積電逆勢下跌10元至2,500元、跌幅0.4%，顯示在指數創高之際，資金正轉向台積電以外的個股進行輪動。",
-          "summary_en": "The Taiex rose 122 points (0.25%) on Oct 2 to end at a record closing high of 48,476, with turnover swelling to about NT$898.1 billion. Market heavyweight TSMC bucked the trend, slipping NT$10 to NT$2,500 (-0.4%), a sign that money is rotating into non-TSMC names even as the broad index pushes to fresh peaks.",
-          "source_name": "ETtoday財經",
-          "source_url": "https://finance.ettoday.net/news/3247799"
+          "title_zh": "台股週五收紅、今年來漲約67%",
+          "title_en": "TAIEX ends higher Friday, extends a 67% YTD run",
+          "summary_zh": "台股加權指數週五收盤上漲0.25%至48,475.74點，櫃買（OTC）指數強漲1.94%，台指期近月收在48,671點。指數今年來受AI晶片需求帶動累漲約67%。週末前量能平穩收紅，顯示風險胃納仍穩；惟台指期小幅逆價差，透露市場對下週美國數據仍留一分謹慎。",
+          "summary_en": "Taiwan's benchmark TAIEX closed the Friday session up 0.25% at 48,475.74, while the broader OTC index jumped 1.94% and the near-month TAIEX futures settled at 48,671. The index is up roughly 67% year-to-date, powered by AI-chip demand. The steady close before the weekend signals resilient risk appetite, though the futures' slight discount hints at some caution into next week's US data.",
+          "source_name": "鉅亨網 台股",
+          "source_url": "https://www.cnyes.com/twstock/index"
+        },
+        {
+          "title_zh": "被動元件族群10月開門紅、華新科連二漲停",
+          "title_en": "Passive-component stocks lead an upbeat October open",
+          "summary_zh": "被動元件類股十月開高走強，華新科連兩根漲停、創近兩個半月新高。族群回神反映供給趨緊與AI伺服器、手機拉貨的回補需求，資金輪動也讓盤面在權值晶片股之外擴散、增添多方底氣。",
+          "summary_en": "Passive-component makers opened October strongly, with Walsin Technology (華新科) locking in a second straight limit-up to hit a near two-and-a-half-month high. The group's rebound reflects tightening supply and restocking demand tied to AI server and handset builds, and the leadership broadens the market beyond the dominant large-cap chip names.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6620965"
         }
       ]
     },
@@ -27,20 +33,12 @@
       "section_zh": "產業動態",
       "items": [
         {
-          "title_zh": "SEMICON Taiwan 2026登場、AI重塑半導體版圖",
-          "title_en": "SEMICON Taiwan 2026 opens as AI redraws the chip map",
-          "summary_zh": "2026國際半導體展在台北開幕，共19國、4,300個攤位參展，估吸引逾10萬名產業人士。主辦方以AI為主軸，揭示智造與先進封裝為未來十年雙主軸，並指AI正重新定義晶片製造的投資規模與生產樣貌，牽動台廠擴產與資本支出布局。",
-          "summary_en": "The international semiconductor show opened in Taipei with exhibitors from 19 countries across 4,300 booths, drawing an estimated 100,000-plus industry professionals. Organizers framed AI as the force reshaping chip manufacturing, with smart manufacturing and advanced packaging set as the twin axes for the next decade, pointing to heavier capex and expansion by Taiwanese suppliers.",
-          "source_name": "風傳媒",
-          "source_url": "https://www.storm.mg/article/11146260"
-        },
-        {
-          "title_zh": "SEMI：台灣是AI重鎮、2030半導體營收拚2兆美元",
-          "title_en": "SEMI sees Taiwan at the center of a US$2tn chip market by 2030",
-          "summary_zh": "SEMI總裁指台灣為全球AI重鎮，估2030年全球半導體營收上看2兆美元。行政院長卓榮泰表示，政府將從土地、能源、人才與金融面做好準備，滿足國內外大廠在台投資需求；半導體列為13項國家戰略產業之首，並編列逾400億元推動AI相關建設。",
-          "summary_en": "SEMI's president called Taiwan a global AI hub and projected worldwide semiconductor revenue reaching US$2 trillion by 2030. Premier Cho Jung-tai pledged that the government will ready land, energy, talent and financing to meet investment demand, with semiconductors topping the list of 13 national strategic industries and over NT$40 billion earmarked for AI infrastructure.",
-          "source_name": "聯合新聞網",
-          "source_url": "https://udn.com/news/story/7240/9729512"
+          "title_zh": "台積電評估美國第二園區、傳與馬斯克洽Terafab合作",
+          "title_en": "TSMC weighs a second US campus and Terafab talks with Musk",
+          "summary_zh": "台積電傳正初步討論參與馬斯克主導的Terafab晶圓項目，並評估在美國設立第二座製造園區。馬斯克稱仍在討論階段、但可能有所進展。若成局，赴美擴產將重塑台積電版圖、鞏固其與美系AI客戶的連結，但也再度牽動成本與供應鏈外移的疑慮。",
+          "summary_en": "TSMC is reported to be in early discussions over participating in Elon Musk's Terafab wafer initiative and is considering a second manufacturing campus in the United States. Musk called the talks preliminary but said progress is possible. If realized, deeper US capacity would reshape TSMC's geographic footprint and strengthen its position with American AI customers, while raising fresh questions about cost and supply-chain migration.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6620964"
         }
       ]
     },
@@ -49,20 +47,20 @@
       "section_zh": "金融業",
       "items": [
         {
-          "title_zh": "金管會10月政策大爆發、高雄專區與虛擬資產接力上路",
-          "title_en": "Taiwan's FSC rolls out a packed October agenda",
-          "summary_zh": "金管會多項措施將自10月起一路排至明年首季，包括亞資中心高雄專區與虛擬資產監理制度。《虛擬資產服務法》九大子法已完成內部討論，預計10月啟動公聽程序、11至12月進入法規預告，為業者合規與市場發展定調。",
-          "summary_en": "Taiwan's Financial Supervisory Commission is launching a cluster of measures from October into early next year, including the Kaohsiung asset-management special zone and a virtual-asset supervisory regime. Draft rules under the Virtual Asset Service Act head to public hearings in October, with regulatory pre-announcement slated for November and December, setting the compliance roadmap for operators.",
-          "source_name": "聯合新聞網",
-          "source_url": "https://udn.com/news/story/7239/9771565"
+          "title_zh": "壽險2026接軌IFRS 17、金管會增訂四項指標",
+          "title_en": "Life insurers adopt IFRS 17 in 2026 as FSC adds four metrics",
+          "summary_zh": "台灣壽險業2026年起適用IFRS 17新制，金管會並增訂四項關鍵揭露比率，涵蓋保險服務結果、合約服務邊際釋放、新契約邊際與虧損性合約損失。新制引導業者多賣保障型商品、少靠儲蓄險，保費收入將「正常化」，過去年年吸金近兆元的榮景恐難再現，保單真實獲利也將更透明。",
+          "summary_en": "Taiwan's life insurance industry moves onto IFRS 17 accounting in 2026, and the Financial Supervisory Commission has added four key disclosure ratios covering insurance-service results, contractual-service-margin release, new-contract margins and onerous-contract losses. The overhaul pushes insurers toward protection-type products over savings policies, meaning premium income should \"normalize\" and the long run of near-trillion-dollar annual inflows is unlikely to repeat.",
+          "source_name": "uAnalyze",
+          "source_url": "https://uanalyze.com.tw/articles/3863638729"
         },
         {
-          "title_zh": "銀行、券商跨業信用查詢10月底上路",
-          "title_en": "Banks and brokers to share credit data from late October",
-          "summary_zh": "銀行與證券商跨業信用查詢機制將於10月底上線，金管會澄清這並非「四貸同堂」管制、僅為信用資訊交流，助掌握客戶負債與信用風險。另要求本國銀行自10月起按月申報個人理財周轉金貸款，鎖定掛名周轉金卻流入股票、基金的資金，強化授信控管。",
-          "summary_en": "A cross-industry credit-inquiry mechanism between banks and securities firms goes live at end-October; the FSC stressed it is information-sharing, not a \"four-loan\" lending cap. Separately, domestic banks must file monthly reports on personal working-capital loans from October, targeting funds booked as working capital but funneled into stocks and funds, tightening credit oversight.",
-          "source_name": "NOWnews",
-          "source_url": "https://nownews.com/news/6879792"
+          "title_zh": "下一場金融危機恐源自金融體系之外",
+          "title_en": "Next financial crisis may erupt outside the banking system",
+          "summary_zh": "分析示警，下一場金融衝擊可能並非來自傳統銀行體系，而是地緣政治衝突與網路攻擊等被低估的風險。相較槓桿型危機，這類外部觸發點更難以壓力測試，且可能透過高度連動的支付與市場基礎設施快速擴散，提醒監理機關與金融機構須強化營運與資安韌性。",
+          "summary_en": "Analysts warn the next financial shock could originate outside the traditional banking system, with geopolitical conflict and cyber-attacks cited as the most underpriced risks. Unlike leverage-driven crises, these external triggers are harder to stress-test and could transmit quickly through interconnected payment and market infrastructure, a reminder for regulators and institutions to harden operational and cyber resilience.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6621022"
         }
       ]
     },
@@ -71,120 +69,20 @@
       "section_zh": "財富管理",
       "items": [
         {
-          "title_zh": "高雄亞資中心進駐57家機構、家族辦公室受託逾712億",
-          "title_en": "Kaohsiung asset-management zone draws 57 firms and 21 banks",
-          "summary_zh": "亞資中心高雄專區自2025年7月掛牌以來已有57家金融機構進駐、其中21家為銀行，核心「家族辦公室」業務已服務161家客戶、受託管理近712億元。金管會近期再核准臺灣銀行、臺灣企銀與遠東銀行辦理高資產財管2.0，推動高資產傳承與跨境配置新藍海。",
-          "summary_en": "Taiwan's Kaohsiung asset-management special zone has attracted 57 financial institutions (21 of them banks) since its July 2025 launch; its core family-office business now serves 161 clients with nearly NT$71.2 billion under mandate. The FSC recently approved Bank of Taiwan, Taiwan Business Bank and Far Eastern Bank for high-asset wealth 2.0 operations.",
-          "source_name": "自由時報財經週報",
-          "source_url": "https://ec.ltn.com.tw/article/paper/1757000"
+          "title_zh": "美債低迷、資金轉向三大替代資產避險",
+          "title_en": "Investors rotate to three alternatives amid a soft Treasury market",
+          "summary_zh": "美國公債陷入約五年的低迷，投資人轉向三類替代性避險工具以分散對政府債的曝險。此舉反映市場對美國財政路徑與實質報酬侵蝕的疑慮，也顯示在傳統避風港表現失色之際，黃金、精選信用等保值型資產在高資產與法人配置中的需求升溫。",
+          "summary_en": "With US Treasuries stuck in a five-year slump, investors are shifting toward three alternative hedges to diversify away from government bonds. The move reflects persistent concerns over the US fiscal path and real-return erosion, and signals demand for gold, select credit and other store-of-value assets in high-net-worth and institutional portfolios as traditional safe havens disappoint.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6615587"
         },
         {
-          "title_zh": "民營銀行搶灘高資產財管新藍海",
-          "title_en": "Private banks race into the high-net-worth wealth hub",
-          "summary_zh": "民營銀行競相布局高資產「新藍海」，於高雄專區推出家族辦公室與一站式傳承服務。彰銀高雄高資產財管中心揭幕，主打槓桿優化與家族傳承一站式服務；凱基銀行亞資中心進駐屆滿週年，高資產客戶資產管理規模已逼近400億元，顯示跨境配置與傳承商機持續升溫。",
-          "summary_en": "Private-sector banks are jostling for the high-net-worth \"blue ocean,\" rolling out family-office and one-stop succession services in the Kaohsiung zone. Chang Hwa Bank opened a Kaohsiung high-asset wealth center offering leverage optimization and succession planning, while KGI Bank's zone operation marked its first anniversary with assets under management nearing NT$40 billion.",
-          "source_name": "uAnalyze",
-          "source_url": "https://uanalyze.com.tw/articles/1108449696"
-        }
-      ]
-    },
-    {
-      "section": "Tax & Regulations",
-      "section_zh": "稅務法規",
-      "items": [
-        {
-          "title_zh": "2026年遺產稅、贈與稅免稅額維持不變",
-          "title_en": "2026 estate- and gift-tax thresholds held unchanged",
-          "summary_zh": "財政部公告，2026年度遺產稅免稅額維持1,333萬元，配偶扣除額553萬元；課稅級距為10%（5,621萬元以下）、15%與20%。今年免稅額與各項扣除額未隨物價上漲調整，高資產家庭在規劃世代傳承時，應留意級距門檻與移轉時點的稅負影響。",
-          "summary_en": "Taiwan's 2026 estate-tax exemption stays at NT$13.33 million, with a spousal deduction of NT$5.53 million and brackets of 10% (up to NT$56.21m), 15% and 20%. The parameters were not adjusted for inflation this year, so high-net-worth families should mind bracket thresholds and timing when planning intergenerational transfers.",
-          "source_name": "財政部賦稅署",
-          "source_url": "https://www.dot.gov.tw/singlehtml/ch26?cntId=4c40feb43876418f94ac0cb8dbe4ea86"
-        }
-      ]
-    },
-    {
-      "section": "Macro & Policy",
-      "section_zh": "總經政策",
-      "items": [
-        {
-          "title_zh": "台灣8月出口824億美元創歷史新高、年增41%",
-          "title_en": "Taiwan's August exports hit a record US$82.4bn, up 41%",
-          "summary_zh": "8月出口衝上824.0億美元、月增9.4%、年增41.0%，連34個月正成長。電子零組件以創紀錄的322.2億美元（年增58%）領軍，受先進晶片與記憶體需求強勁帶動；資通與視聽產品亦年增41.8%，反映AI伺服器與網通設備需求延續，外需為台灣經濟提供強勁動能。",
-          "summary_en": "Exports jumped to a monthly record of US$82.4 billion in August, rising 9.4% on the month and 41.0% on the year for a 34th straight annual gain. Electronic components led with a record US$32.22bn (+58% y/y) on strong advanced-chip and memory demand, while ICT shipments rose 41.8% on AI servers and networking gear.",
-          "source_name": "uAnalyze 進出口統計",
-          "source_url": "https://uanalyze.com.tw/articles/5400254964"
-        },
-        {
-          "title_zh": "央行上修2026年通膨預測",
-          "title_en": "Central bank lifts its 2026 inflation forecast",
-          "summary_zh": "央行9月理監事會上修今年預測，估全年消費者物價指數（CPI）年增率約2.03%、核心CPI約2.16%，反映內需具韌性與出口動能強勁。此次上修顯示政策當局認為物價壓力略高於先前預期，但整體經濟成長動能仍維持穩健。",
-          "summary_en": "At its September board meeting, Taiwan's central bank revised up its 2026 forecasts, putting headline CPI at about 2.03% and core CPI at 2.16%, citing resilient domestic demand and robust export-driven activity. The upward revision signals policymakers see price pressures running slightly firmer than earlier projected while growth momentum holds.",
-          "source_name": "工商時報",
-          "source_url": "https://www.ctee.com.tw/news/20260917701662-430301"
-        }
-      ]
-    },
-    {
-      "section": "Global Markets",
-      "section_zh": "國際財經",
-      "items": [
-        {
-          "title_zh": "台媒：美國就業疲弱、Fed按兵預期升溫帶動美股",
-          "title_en": "Taiwan media: weak US jobs data lifts Fed-hold bets, boosting Wall Street",
-          "summary_zh": "台灣媒體報導，美國9月非農意外疲弱、失業率走高，壓低美債殖利率並強化市場對聯準會維持利率不變的預期，推升美股收高。偏鴿的解讀被視為有利於以出口與科技股為主的台股後市氛圍。",
-          "summary_en": "Local coverage highlighted that a surprisingly soft US September payrolls print and a rise in unemployment pushed Treasury yields lower and reinforced expectations that the Fed will keep rates steady, helping US equities close higher. The dovish read is seen as supportive for Taiwan's export- and tech-heavy market.",
-          "source_name": "Yahoo奇摩股市",
-          "source_url": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E5%82%B5%E6%AE%96%E5%88%A9%E7%8E%87%E6%80%A5%E6%8C%AB-10%E6%9C%88%E9%9D%9E%E8%BE%B2%E6%81%90%E8%BD%89%E8%B2%A0-fed%E9%99%8D%E6%81%AF%E6%8A%BC%E6%B3%A8%E5%86%8D%E5%8D%87%E6%BA%AB-173005439.html"
-        },
-        {
-          "title_zh": "台媒探討美債殖利率與美股變數",
-          "title_en": "Taiwan media weighs US yields and equity risks",
-          "summary_zh": "台灣媒體引述分析指出，美國10年期公債殖利率的走勢反映市場對經濟強弱的拉鋸，並牽動美股評價面。相關討論凸顯美國利率路徑——無論是受成長韌性或勞動市場降溫主導——仍是左右全球與台灣股市的關鍵變數。",
-          "summary_en": "Analysts cited in local outlets have debated how far US Treasury yields reflect an economy running hotter than expected, and what that means for equity valuations. The discussion underscores that the path of US rates — whether driven by growth resilience or a cooling labor market — remains the key swing factor for global and Taiwan markets.",
-          "source_name": "聯合新聞網",
-          "source_url": "https://udn.com/news/story/7239/9780077"
-        }
-      ]
-    },
-    {
-      "section": "International",
-      "section_zh": "國際",
-      "items": [
-        {
-          "title_zh": "美股攻頂創高、疲弱就業數據強化Fed按兵押注（2026-10-02）",
-          "title_en": "US stocks rally to records as weak jobs data lifts rate-hold bets (2026-10-02)",
-          "summary_zh": "週五美股走高，9月非農不如預期令市場更確信聯準會10月維持利率不變。標普500指數上漲約0.7%至7,722.57點改寫新高，那斯達克在晶片與科技股領軍下漲約1.1%，道瓊漲約0.5%至約51,176點。",
-          "summary_en": "Wall Street climbed Friday after a soft September payrolls report hardened expectations the Fed will stay on hold. The S&P 500 rose about 0.7% to a record 7,722.57, the Nasdaq added roughly 1.1% led by chip and tech names, and the Dow gained about 0.5% to around 51,176.",
-          "source_name": "TheStreet",
-          "source_url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-02-2026",
-          "published": "2026-10-02"
-        },
-        {
-          "title_zh": "9月非農遠低於預期、Fed升息機率驟降（2026-10-02）",
-          "title_en": "Fed rate-hike odds collapse after September payrolls miss (2026-10-02)",
-          "summary_zh": "美國9月就業僅增2.9萬人、遠低於市場預估的9萬人，失業率升至4.2%。芝商所FedWatch顯示，市場預期10月升息1碼的機率由一週前約36%降至約17%，市場幾乎篤定聯準會本月按兵不動。",
-          "summary_en": "US employers added just 29,000 jobs in September versus the 90,000 expected, and the unemployment rate rose to 4.2%. CME's FedWatch tool showed the probability of an October quarter-point hike falling to roughly 17% from 36% a week earlier, cementing views that the Fed will hold steady.",
-          "source_name": "CNBC",
-          "source_url": "https://cnbc.com/2026/10/02/fed-rate-hike-odds-decline-after-september-jobs-report.html",
-          "published": "2026-10-02"
-        },
-        {
-          "title_zh": "中國暫停多數10月成品油出口、原油供給收緊（2026-10-02）",
-          "title_en": "Oil market tightens as China suspends most October fuel exports (2026-10-02)",
-          "summary_zh": "中國煉廠暫停大部分10月成品油出口，使本已緊俏的全球汽油與柴油供給雪上加霜，為油價提供支撐。交易員並指出，美伊外交停滯及美國可能限制柴油出口的不確定性，也是推升油價的額外因素。",
-          "summary_en": "Crude drew support after Chinese refiners halted the bulk of October fuel exports, squeezing already-tight global gasoline and diesel supplies. Traders also pointed to stalled US-Iran diplomacy and uncertainty over possible US diesel-export curbs as additional props for prices.",
-          "source_name": "EnergyNow",
-          "source_url": "https://energynow.com/2026/10/oil-jumps-about-2-as-china-halts-fuel-exports-tightening-an-already-strained-global-market/",
-          "published": "2026-10-02"
-        },
-        {
-          "title_zh": "金價守穩約4,218美元、避險與寬鬆預期撐盤（2026-10-02）",
-          "title_en": "Gold holds near $4,218 on safe-haven and easing bets (2026-10-02)",
-          "summary_zh": "現貨黃金每盎司約4,218美元、小幅收高，受避險需求、美元走弱及市場對美國持續貨幣寬鬆的預期支撐。金價雖仍低於1月逾5,600美元的歷史高點，但仍高於一年前的水準。",
-          "summary_en": "Spot gold traded around $4,218 an ounce, up slightly on the day, supported by safe-haven demand, a weaker US dollar and expectations of continued US monetary easing. Prices remain below January's record above $5,600 but sit higher than a year ago.",
-          "source_name": "CNBC",
-          "source_url": "https://www.cnbc.com/select/the-price-of-gold-today-oct-2-2026/",
-          "published": "2026-10-02"
+          "title_zh": "9月AI債券融資急凍、大摩估第四季回溫",
+          "title_en": "AI bond financing froze in September before an expected Q4 thaw",
+          "summary_zh": "全球AI相關債券發行在9月急凍，發行額僅約230億美元，發行人因利率不確定而觀望；摩根士丹利預期第四季將回溫。對固定收益配置者而言，這段發行空窗凸顯AI資本支出融資的集中度，也說明年底前初級市場的進場時點與信用篩選，對追求收益的投資組合格外關鍵。",
+          "summary_en": "Global AI-related bond issuance froze in September, with worldwide volume at just US$23 billion, as issuers paused amid rate uncertainty; Morgan Stanley expects a fourth-quarter rebound. For fixed-income allocators, the air-pocket highlights how concentrated AI capex financing has become and why primary-market timing and credit selection matter for yield-seeking portfolios heading into year-end.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6621025"
         }
       ]
     }
