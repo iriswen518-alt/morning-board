@@ -85,7 +85,7 @@
     {
       "name": "TAIEX 加權指數",
       "name_zh": null,
-      "close": 48475.74,
+      "close": 48475.73828125,
       "daily_pct": 0.25,
       "mtd_pct": 1.12,
       "ytd_pct": 67.37,
@@ -94,11 +94,11 @@
     {
       "name": "OTC 櫃買加權",
       "name_zh": null,
-      "close": 426.93,
-      "daily_pct": 1.94,
+      "close": null,
+      "daily_pct": null,
       "mtd_pct": null,
       "ytd_pct": null,
-      "closing_date": "2026-10-02"
+      "closing_date": null
     },
     {
       "name": "台指期(近月)",
@@ -175,30 +175,30 @@
     {
       "name": "US 2-Year",
       "yield_pct": 4.83,
-      "daily_bps": 5.0,
+      "daily_bps": 3.8,
       "mtd_bps": -5.0,
-      "closing_date": "2026-10-02"
+      "closing_date": "2026-10-04"
     },
     {
       "name": "Germany 10-Year",
-      "yield_pct": null,
-      "daily_bps": null,
-      "mtd_bps": null,
-      "closing_date": null
+      "yield_pct": 3.45,
+      "daily_bps": -6.6,
+      "mtd_bps": 1.05,
+      "closing_date": "2026-10-04"
     },
     {
       "name": "Japan 10-Year",
-      "yield_pct": 3.09,
-      "daily_bps": 3.5,
+      "yield_pct": 3.1,
+      "daily_bps": 0.2,
       "mtd_bps": 3.5,
-      "closing_date": "2026-10-01"
+      "closing_date": "2026-10-04"
     },
     {
       "name": "UK 10-Year",
-      "yield_pct": 5.4,
-      "daily_bps": 2.21,
-      "mtd_bps": 26.18,
-      "closing_date": "2026-09-30"
+      "yield_pct": 5.37,
+      "daily_bps": -3.1,
+      "mtd_bps": null,
+      "closing_date": "2026-10-04"
     },
     {
       "name": "TW 10-Year",
@@ -227,11 +227,11 @@
     },
     {
       "name": "USD/JPY 日圓",
-      "close": 157.927001953125,
-      "daily_pct": 0.23,
-      "mtd_pct": 0.33,
-      "ytd_pct": 0.97,
-      "closing_date": "2026-10-02"
+      "close": 157.8300018310547,
+      "daily_pct": -0.06,
+      "mtd_pct": 0.27,
+      "ytd_pct": 0.91,
+      "closing_date": "2026-10-03"
     },
     {
       "name": "GBP/USD 英鎊",
@@ -243,11 +243,11 @@
     },
     {
       "name": "USD/CNY 人民幣",
-      "close": 6.704500198364258,
-      "daily_pct": 0.0,
-      "mtd_pct": 0.02,
-      "ytd_pct": -4.17,
-      "closing_date": "2026-10-02"
+      "close": 6.698699951171875,
+      "daily_pct": -0.09,
+      "mtd_pct": -0.06,
+      "ytd_pct": -4.25,
+      "closing_date": "2026-10-03"
     },
     {
       "name": "USD/TWD 新台幣",
@@ -425,5 +425,5 @@
       "is_reference": false
     }
   ],
-  "summary": "10/2 PHLX Semiconductor +2.40%、10/2 OTC 櫃買加權 +1.94%、10/2 Nasdaq Composite +1.19% 領漲；10/2 Hang Seng 恆生 -2.60%、10/2 Nikkei 225 -0.94% 走弱。"
+  "summary": "10/2 PHLX Semiconductor +2.40%、10/2 Nasdaq Composite +1.19%、10/2 DAX +1.17% 領漲；10/2 Hang Seng 恆生 -2.60%、10/2 Nikkei 225 -0.94% 走弱。"
 }
