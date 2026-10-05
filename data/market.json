@@ -94,11 +94,11 @@
     {
       "name": "OTC 櫃買加權",
       "name_zh": null,
-      "close": 425.71,
-      "daily_pct": -0.29,
+      "close": null,
+      "daily_pct": null,
       "mtd_pct": null,
       "ytd_pct": null,
-      "closing_date": "2026-10-04"
+      "closing_date": null
     },
     {
       "name": "台指期(近月)",
@@ -174,31 +174,31 @@
     },
     {
       "name": "US 2-Year",
-      "yield_pct": 4.83,
-      "daily_bps": 5.0,
+      "yield_pct": 4.81,
+      "daily_bps": -1.1,
       "mtd_bps": -5.0,
-      "closing_date": "2026-10-02"
+      "closing_date": "2026-10-05"
     },
     {
       "name": "Germany 10-Year",
-      "yield_pct": 3.59,
-      "daily_bps": 1.05,
-      "mtd_bps": 1.05,
-      "closing_date": "2026-10-01"
+      "yield_pct": 3.45,
+      "daily_bps": -6.6,
+      "mtd_bps": null,
+      "closing_date": "2026-10-05"
     },
     {
       "name": "Japan 10-Year",
-      "yield_pct": 3.09,
-      "daily_bps": 3.5,
-      "mtd_bps": 3.5,
-      "closing_date": "2026-10-01"
+      "yield_pct": 3.1,
+      "daily_bps": 1.6,
+      "mtd_bps": 4.0,
+      "closing_date": "2026-10-05"
     },
     {
       "name": "UK 10-Year",
-      "yield_pct": 5.4,
-      "daily_bps": 2.21,
+      "yield_pct": 5.37,
+      "daily_bps": -3.1,
       "mtd_bps": 26.18,
-      "closing_date": "2026-09-30"
+      "closing_date": "2026-10-05"
     },
     {
       "name": "TW 10-Year",
@@ -213,16 +213,16 @@
       "name": "DXY 美元指數",
       "close": 101.93000030517578,
       "daily_pct": -0.17,
-      "mtd_pct": 0.47,
-      "ytd_pct": 3.71,
+      "mtd_pct": 0.48,
+      "ytd_pct": 3.72,
       "closing_date": "2026-10-02"
     },
     {
       "name": "EUR/USD 歐元",
-      "close": 1.1257457733154297,
-      "daily_pct": 0.07,
-      "mtd_pct": -0.74,
-      "ytd_pct": -4.17,
+      "close": 1.124985933303833,
+      "daily_pct": -0.68,
+      "mtd_pct": -0.8,
+      "ytd_pct": -4.23,
       "closing_date": "2026-10-02"
     },
     {
@@ -235,10 +235,10 @@
     },
     {
       "name": "GBP/USD 英鎊",
-      "close": 1.324047327041626,
-      "daily_pct": 0.31,
-      "mtd_pct": 0.06,
-      "ytd_pct": -1.68,
+      "close": 1.3199577331542969,
+      "daily_pct": -0.49,
+      "mtd_pct": -0.25,
+      "ytd_pct": -1.99,
       "closing_date": "2026-10-02"
     },
     {
@@ -259,45 +259,45 @@
     },
     {
       "name": "JPY/TWD 日圓兌台幣",
-      "close": 0.19920000433921814,
-      "daily_pct": -1.34,
-      "mtd_pct": -1.55,
-      "ytd_pct": -0.27,
+      "close": 0.2019069939851761,
+      "daily_pct": -0.17,
+      "mtd_pct": -0.21,
+      "ytd_pct": 1.08,
       "closing_date": "2026-10-02"
     }
   ],
   "commodities": [
     {
       "name": "黃金 (USD/oz)",
-      "close": 4162.2998046875,
-      "daily_pct": -0.95,
-      "mtd_pct": -0.58,
-      "ytd_pct": -4.12,
-      "closing_date": "2026-10-02"
+      "close": 4182.7001953125,
+      "daily_pct": 0.49,
+      "mtd_pct": -0.1,
+      "ytd_pct": -3.65,
+      "closing_date": "2026-10-04"
     },
     {
       "name": "白銀 (USD/oz)",
-      "close": 60.415000915527344,
-      "daily_pct": -0.51,
-      "mtd_pct": 0.53,
-      "ytd_pct": -13.86,
-      "closing_date": "2026-10-02"
+      "close": 61.43000030517578,
+      "daily_pct": 2.42,
+      "mtd_pct": 2.22,
+      "ytd_pct": -12.41,
+      "closing_date": "2026-10-04"
     },
     {
       "name": "WTI 原油 (USD/bbl)",
-      "close": 91.11000061035156,
-      "daily_pct": -1.9,
-      "mtd_pct": 0.76,
-      "ytd_pct": 58.67,
-      "closing_date": "2026-10-02"
+      "close": 90.61000061035156,
+      "daily_pct": -0.55,
+      "mtd_pct": 0.21,
+      "ytd_pct": 57.8,
+      "closing_date": "2026-10-04"
     },
     {
       "name": "布蘭特原油 (USD/bbl)",
-      "close": 102.25,
-      "daily_pct": -0.06,
-      "mtd_pct": -1.24,
-      "ytd_pct": 68.04,
-      "closing_date": "2026-10-02"
+      "close": 102.0,
+      "daily_pct": -0.24,
+      "mtd_pct": -1.48,
+      "ytd_pct": 67.63,
+      "closing_date": "2026-10-04"
     },
     {
       "name": "比特幣 (USD)",
@@ -388,39 +388,28 @@
     "yield_curve_10y2y": 0.45,
     "yield_curve_10y2y_bps": 45,
     "curve_shape": "正斜率",
-    "dxy": 101.93000030517578,
-    "dxy_daily_pct": -0.17,
+    "dxy": 101.94200134277344,
+    "dxy_daily_pct": 0.01,
     "closing_date": "2026-10-02"
   },
   "fedwatch": [
     {
-      "label": "Sep 2026",
-      "fomc_date": "2026-09-17",
-      "implied_rate": 3.75,
+      "label": "Nov 2026",
+      "fomc_date": "2026-11-05",
+      "implied_rate": 3.88,
       "delta_rate": null,
       "p_hike": null,
       "p_cut": null,
       "is_reference": true
     },
     {
-      "label": "Nov 2026",
-      "fomc_date": "2026-11-05",
-      "implied_rate": 3.88,
-      "delta_rate": 0.13,
-      "delta_bps": 13.0,
-      "p_hike": 52.0,
-      "p_hold": 48.0,
-      "p_cut": 0,
-      "is_reference": false
-    },
-    {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 4.08,
-      "delta_rate": 0.2,
-      "delta_bps": 20.0,
-      "p_hike": 80.0,
-      "p_hold": 20.0,
+      "implied_rate": 4.07,
+      "delta_rate": 0.19,
+      "delta_bps": 19.0,
+      "p_hike": 76.0,
+      "p_hold": 24.0,
       "p_cut": 0,
       "is_reference": false
     }
