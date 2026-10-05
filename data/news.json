@@ -1,11 +1,9 @@
 {
-  "news_date": "2026-10-05",
+  "news_date": "2026-10-06",
   "tldr": [
-    "台股十月開紅盤，大漲約413點至48,353.49點，台積電與晶片股領軍重返48K。",
-    "鴻海、台積電營收與大立光法說等密集財報，將主導本週「光輝十月」行情。",
-    "AI封裝使IC載板與玻纖布持續吃緊；金管會同步推進IFRS 17、VASP專法與亞洲資產管理中心。",
-    "美股上週收紅、輝達創新高；9月非農疲弱將10月聯準會按兵機率推升至約78%。",
-    "地緣風險推升油價，美傳增派第三艘航艦赴中東，布蘭特原油單日勁揚逾4%。"
+    "台積電獨撐大局，加權指數守住 47,000，其餘權值股熄火、外資調節。",
+    "AI 伺服器需求強勁，加上工研院 7 兆元產值預估，凸顯台灣供應鏈實力。",
+    "金管會聚焦防詐與資安韌性，逾 12.4 萬名高資產族群重塑財富管理版圖。"
   ],
   "sections": [
     {
@@ -13,20 +11,20 @@
       "section_zh": "股市行情",
       "items": [
         {
-          "title_zh": "台股十月開紅盤、強漲逾400點重返48K",
-          "title_en": "TAIEX storms back above 48K to open October",
-          "summary_zh": "台股十月首個交易日開出紅盤，加權指數大漲約413點（近0.9%）收在48,353.49點，一舉站回48,000點關卡，由大型電子權值股領軍。權王台積電收2,510元、漲1.21%，與載板及AI伺服器供應鏈同步走強撐盤。強勢開高顯示資金對AI概念台股的承接意願仍旺，為進入財報密集的「光輝十月」行情點火。",
-          "summary_en": "Taiwan's benchmark TAIEX opened the new month with a powerful rally, surging about 413 points (near 0.9%) to close at 48,353.49 and retaking the 48,000 level as large-cap tech names led. TSMC rose 1.21% to NT$2,510, anchoring the advance alongside strength in IC-substrate and AI-server supply names. The firm open signals resilient appetite for AI-leveraged Taiwan equities heading into an earnings-heavy \"golden October.\"",
-          "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/5607/9787381"
+          "title_zh": "台積電獨撐大局 權值股熄火 加權指數守住 47,000",
+          "title_en": "TSMC Single-Handedly Holds the TAIEX Above 47,000",
+          "summary_zh": "近期盤勢權值股普遍熄火，加權指數一度下跌約 220 點，所幸台積電獨強，撐住 47,000 點關卡。盤面顯示台股對單一權值股依賴度升高，若 AI 族群休息，大盤恐缺乏支撐，後續須留意電子權值股輪動與外資動向。",
+          "summary_en": "The TAIEX slipped around 220 points in a recent session as most heavyweight stocks lost momentum, yet TSMC's strength alone kept the benchmark above the 47,000 mark. The split performance highlights how reliant Taiwan's index has become on its largest chipmaker, leaving the broader market exposed if AI-related leaders pause.",
+          "source_name": "uanalyze 玩股網",
+          "source_url": "https://uanalyze.com.tw/articles/4675454863"
         },
         {
-          "title_zh": "營收與法說接棒、點火光輝十月行情",
-          "title_en": "Earnings and analyst meetings set to fuel a \"golden October\"",
-          "summary_zh": "市場焦點轉向密集的9月營收與法人說明會，本週以鴻海、台積電營收及大立光法說為重頭戲。分析師認為這些催化劑可望延續AI驅動的多頭趨勢，台指期夜盤並一度突破49,000點。若AI伺服器與晶片需求續獲確認，將支撐市場偏高的評價、並讓盤面主流由權值股向外擴散，惟仍須留意追高後的震盪風險。",
-          "summary_en": "Market attention turns to a dense slate of September revenue releases and analyst briefings, with Hon Hai (Foxconn) and TSMC monthly sales plus Largan's earnings call headlining the week. Strategists see these catalysts sustaining the AI-driven uptrend, and overnight TAIEX futures briefly cleared 49,000. Confirmation of robust AI-server and chip demand would validate the market's rich valuations and broaden leadership beyond the mega-cap names.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6621275"
+          "title_zh": "外資調節 被動元件逆勢強攻",
+          "title_en": "Foreign Investors Sell as Passive Components Buck the Trend",
+          "summary_zh": "外資近期於全市場大舉調節，賣超數百億元，加權指數震盪回檔並一度逼近 47,000 關卡；惟被動元件類股逆勢強攻，資金出現由高檔權值轉進落後補漲族群的跡象，顯示盤面進入類股輪動階段，投資人宜留意資金流向變化。",
+          "summary_en": "Overseas funds sold heavily across the market in a recent session, pressuring the index back toward the 47,000 level, while passive-component makers rallied against the broader pullback. The rotation suggests investors are trimming crowded large-caps and selectively hunting laggards for catch-up gains.",
+          "source_name": "uanalyze 玩股網",
+          "source_url": "https://uanalyze.com.tw/articles/2318755073"
         }
       ]
     },
@@ -35,20 +33,20 @@
       "section_zh": "產業動態",
       "items": [
         {
-          "title_zh": "台積電2026成長動能不只AI",
-          "title_en": "TSMC's 2026 growth seen broadening beyond AI",
-          "summary_zh": "法人預期台積電2026年仍是半導體上行週期最大受惠者，且成長動能不再侷限於AI加速器。2奈米（N2）製程的非AI應用可望顯著挹注，N2月產能估於年底倍增至8~10萬片。需求基礎擴大有助穩定產能利用率與報價，鞏固台積電的領導地位，也將帶動台灣先進封裝與設備供應鏈的連動成長。",
-          "summary_en": "Analysts expect TSMC to remain the prime beneficiary of the semiconductor upcycle in 2026, with momentum no longer confined to AI accelerators. Non-AI applications on the 2-nanometer (N2) node are projected to add meaningfully, as N2 capacity roughly doubles toward 80,000–100,000 wafers per month by year-end. Broader demand would stabilize utilization and pricing, reinforcing TSMC's leadership and its pull-through effect on Taiwan's advanced-packaging and equipment suppliers.",
+          "title_zh": "工研院：2026 台灣半導體產值上看 7 兆元",
+          "title_en": "ITRI Sees Taiwan Chip Output Topping NT$7 Trillion in 2026",
+          "summary_zh": "工研院預估，2026 年台灣半導體產值可突破 7 兆元、約 7.13 兆元，年增約一成，其中 IC 製造受惠 3 奈米滿載與 2 奈米放量，動能最強。顯示 AI 需求持續帶動先進製程，鞏固台灣在全球晶片供應鏈的關鍵地位，相關供應鏈營運可望同步受惠。",
+          "summary_en": "Taiwan's Industrial Technology Research Institute projects the island's semiconductor output value will exceed NT$7 trillion (about NT$7.13tn) in 2026, up roughly 10% year-on-year, led by IC manufacturing as 3nm runs at full capacity and 2nm ramps. The outlook shows AI-driven demand keeping Taiwan central to global chip supply.",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/5607/9233028"
+          "source_url": "https://udn.com/news/story/7240/9336826"
         },
         {
-          "title_zh": "AI封裝需求拉動、IC載板與玻纖布缺貨趨緊",
-          "title_en": "IC-substrate and glass-fabric shortages tighten on AI packaging",
-          "summary_zh": "AI封裝需求使IC載板供應鏈吃緊，ABF載板與低介電（Low-Dk）玻纖布供不應求，BT載板用的T-glass材料亦見短缺。供需缺口讓載板與上游材料廠取得結構性的報價優勢；SEMICON Taiwan亦將AI客製晶片、先進封裝、HBM與ABF載板列為核心主題。缺貨態勢延續，有利中游封裝材料族群2026年的獲利能見度。",
-          "summary_en": "AI packaging demand is straining the IC-substrate supply chain, with ABF substrates and low-Dk glass fabric in short supply and BT-substrate T-glass also tight. The squeeze is handing structural pricing power to substrate and material makers, and SEMICON Taiwan has spotlighted AI custom chips, advanced packaging, HBM and ABF substrates as core themes. Persistent tightness supports earnings visibility across the mid-stream packaging-materials group into 2026.",
-          "source_name": "uAnalyze",
-          "source_url": "https://uanalyze.com.tw/articles/3280553281"
+          "title_zh": "AI 伺服器熱潮 台廠營收續創高",
+          "title_en": "AI-Server Boom Lifts Taiwan Hardware Makers to Record Revenue",
+          "summary_zh": "AI 伺服器需求強勁，帶動台灣主要 IT 廠營收連月成長，伺服器組裝、載板、高階 PCB、散熱與電源供應等供應鏈同步受惠。顯示台灣供應鏈橫跨設計、製造、封測與零組件，持續扮演全球 AI 硬體建置樞紐，惟須留意終端需求與庫存變化對後續動能的影響。",
+          "summary_en": "Surging AI-server demand has driven major Taiwan IT makers to months of consecutive revenue growth, with assemblers plus advanced-PCB, substrate, cooling and power-supply suppliers all benefiting. The broad-based strength shows Taiwan's chain—spanning design, fabrication, packaging and components—remains the hub of the AI hardware build-out.",
+          "source_name": "科技新報",
+          "source_url": "https://finance.technews.tw/2026/08/26/taiwan-major-it-firms-revenue-surges-over-50-exceeds-2-trillion-sets-new-record-high/"
         }
       ]
     },
@@ -57,20 +55,20 @@
       "section_zh": "金融業",
       "items": [
         {
-          "title_zh": "金管會揭2026七大施政重點",
-          "title_en": "FSC lays out seven policy priorities for 2026",
-          "summary_zh": "金管會公布2026年七大施政主軸，涵蓋強化打詐法制、推動亞洲創新融資平台、虛擬資產（VASP）專法、壽險業接軌IFRS 17的資產負債管理、金融資安韌性藍圖、金融創新監理調適平台，以及打造亞洲資產管理中心的各項措施。整體方向顯示監理重心偏向數位資產監管、保險業清償能力與銀行、保險的營運韌性，牽動金融業未來的合規與布局。",
-          "summary_en": "Taiwan's Financial Supervisory Commission has outlined seven major initiatives for 2026, spanning stronger anti-fraud legislation, an Asian innovative-financing platform, virtual-asset (VASP) legislation, life-insurer asset-liability management under IFRS 17, a financial cybersecurity-resilience blueprint, the regulatory-sandbox adjustment platform, and measures to build an Asian asset-management hub. The agenda signals a regulatory tilt toward digital-asset oversight, insurer solvency and operational resilience across banks and insurers.",
-          "source_name": "金管會",
-          "source_url": "https://www.fsc.gov.tw/ch/home.jsp?id=96"
-        },
-        {
-          "title_zh": "IFRS 17過渡、金管會放寬保險業月營收申報期限",
-          "title_en": "IFRS 17 transition eases insurers' monthly reporting deadline",
-          "summary_zh": "配合壽險業2026年接軌IFRS 17，金管會放寬保險業及保險控股集團的每月營收申報期限，由每月10日延至15日，讓業者有更充裕時間依新會計制度彙編數字。此舉反映IFRS 17衡量作業負擔加重，目的在於讓揭露更順暢、精確；隨產業轉向保障型商品，保費認列與獲利呈現方式也將更貼近實質。",
-          "summary_en": "As Taiwan's life insurers move onto IFRS 17 in 2026, the FSC has relaxed the monthly revenue-filing deadline for insurers and insurance-holding groups from the 10th to the 15th of each month, giving them more time to compile figures under the new accounting regime. The change acknowledges the heavier measurement burden of IFRS 17 and aims for smoother, more accurate disclosure as the industry shifts toward protection-type products.",
+          "title_zh": "金管會：安全與發展並進 防詐、資安韌性列重點",
+          "title_en": "FSC Keeps \"Safety and Development in Parallel,\" Puts Anti-Fraud and Cyber-Resilience First",
+          "summary_zh": "金管會施政延續「安全與發展並進」，強化金融機構資本韌性與風險管理，並將防詐列為重點工作。資安方面新增監理要求，包括明定金融資安長權責、零信任架構由鼓勵改為必備，以及建立軟體供應鏈安全（SBOM）機制，推升金融業合規與資安投入。",
+          "summary_en": "Taiwan's Financial Supervisory Commission says its agenda continues to balance stability with growth—strengthening banks' capital resilience and risk management while elevating fraud prevention. New cyber rules define responsibilities for financial CISOs, make zero-trust architecture mandatory rather than encouraged, and require software-supply-chain security (SBOM) mechanisms.",
           "source_name": "金管會",
           "source_url": "https://www.fsc.gov.tw/ch/home.jsp?id=128"
+        },
+        {
+          "title_zh": "金融三業獲利居高 金管會推金融科技創新",
+          "title_en": "Record Sector Profits Set Backdrop as FSC Advances Fintech Reform",
+          "summary_zh": "金融三業稅前獲利居歷史高檔，為監理單位推動金融科技創新提供空間。金管會規劃修訂金融科技發展與創新實驗條例、發展數位保險公司，並設「金融行動創新法規調適平台」，由銀行、保險、證券期貨與科技創新工作小組建立產官學溝通管道，兼顧創新與穩定。",
+          "summary_en": "Taiwan's three major financial sectors posted among their highest-ever pre-tax earnings, giving regulators room to push fintech priorities: amending the fintech innovation-and-experimentation act, developing digital insurers, and a new regulatory-adaptation platform linking banking, insurance, securities and tech working groups to modernise supervision while safeguarding stability.",
+          "source_name": "uanalyze 玩股網",
+          "source_url": "https://uanalyze.com.tw/articles/6397346877"
         }
       ]
     },
@@ -79,127 +77,20 @@
       "section_zh": "財富管理",
       "items": [
         {
-          "title_zh": "高雄亞資專區吸金2,732億、資產管理專法將上路",
-          "title_en": "Kaohsiung wealth hub draws NT$273bn as asset-management law looms",
-          "summary_zh": "亞洲資產管理中心高雄專區自2025年年中開辦以來，已吸引18家銀行進駐、高資產客戶2,269位，管理資產規模衝上2,732億元；全國銀行承作高資產業務的管理規模則突破2.1兆元、年增達53%。隨金管會研擬「資產管理專法」，針對高資產客群的私人銀行與跨境服務可望深化，銀行在家族財富傳承與全權委託代操業務的競爭也將更激烈。",
-          "summary_en": "The Kaohsiung pilot zone of Taiwan's Asian asset-management center has attracted 18 banks, 2,269 high-net-worth clients and NT$273.2 billion in assets under management since its mid-2025 launch, while bank-run high-asset AUM nationwide has topped NT$2.1 trillion (up 53% year-on-year). With the FSC drafting a dedicated asset-management law, private-banking and cross-border services for wealthy clients are set to deepen, intensifying competition among banks for family-succession and discretionary-mandate business.",
-          "source_name": "自由時報財經",
-          "source_url": "https://ec.ltn.com.tw/article/paper/1756997"
+          "title_zh": "台灣億級富豪逾 12.4 萬人 掌握 46.1 兆元財富",
+          "title_en": "Taiwan's Ultra-Rich to Top 124,000, Commanding NT$46 Trillion",
+          "summary_zh": "據金融業者與會計師事務所調查，2026 年台灣資產逾 1 億元的高資產客戶將成長至逾 12.4 萬人，合計掌握約 46.1 兆元財富，且人數以年均約一成成長，2029 年上看 15.5 萬人。龐大高資產族群帶動私人銀行、信託與跨境配置需求，成為財管業兵家必爭之地。",
+          "summary_en": "A bank-and-accountancy study cited in local media projects Taiwan will have more than 124,000 individuals with assets over NT$100 million in 2026, together holding some NT$46.1 trillion, with the high-net-worth population growing about 10% a year toward 155,000 by 2029. The expanding pool is reshaping demand for private banking, trusts and cross-border allocation.",
+          "source_name": "uanalyze 玩股網",
+          "source_url": "https://uanalyze.com.tw/articles/4310248242"
         },
         {
-          "title_zh": "高股息ETF息率回歸5~6%、配置轉向總報酬",
-          "title_en": "High-yield ETF payouts seen normalizing toward 5–6%",
-          "summary_zh": "台灣基金產業規模已突破22兆元，台股ETF亦逾4.5兆元；惟法人預期，在股價漲幅領先企業獲利下，高股息ETF殖利率將回歸5~6%的健康水準。對投資人的訊息是：從單純「追高息」轉向兼顧資本利得與穩定現金流的「總報酬」與資產配置思維。隨類股輪動加速，純高息策略恐面臨配息率下滑壓力，多元布局更顯重要。",
-          "summary_en": "Taiwan's fund industry has swelled past NT$22 trillion, with equity ETFs above NT$4.5 trillion, but strategists expect high-dividend ETF yields to normalize toward a healthier 5–6% as prices run ahead of earnings. The message to investors is a shift from chasing yield alone toward a total-return, asset-allocation approach that blends capital growth with stable income—especially as sector rotation quickens and pure high-dividend strategies face falling distribution rates.",
-          "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/5607/9479332"
-        }
-      ]
-    },
-    {
-      "section": "Tax & Regulations",
-      "section_zh": "稅務法規",
-      "items": [
-        {
-          "title_zh": "遺產稅修法：過世前兩年內贈與將併入遺產課稅",
-          "title_en": "Estate-tax reform to fold two-year pre-death gifts into the estate",
-          "summary_zh": "財政部推動修法，往生者過世前兩年內贈與親屬的財產，將併入遺產總額課稅，並由受贈人單獨負擔該筆遺產稅，不再由全體繼承人分攤。此舉收緊常見的傳承節稅空間，使贈與時點與文件安排的重要性大增，也促使顧問端更早、更完整地規劃分年贈與與資產移轉策略，降低日後遭補稅的風險。",
-          "summary_en": "Taiwan's Ministry of Finance is advancing rules under which assets gifted to relatives within two years before death are pulled back into the taxable estate, with the recipient—rather than all heirs collectively—bearing the resulting estate tax. The change tightens a common succession loophole and raises the stakes for timing and documentation in family wealth transfers, pushing advisers toward earlier, better-structured gifting plans.",
-          "source_name": "中央社",
-          "source_url": "https://www.cna.com.tw/news/afe/202608210289.aspx"
-        },
-        {
-          "title_zh": "遺產稅收創高、年底傳承規劃升溫",
-          "title_en": "Record estate-tax take spurs year-end succession planning",
-          "summary_zh": "遺產稅收2025年創歷史新高、2026年續攀，凸顯財富傳承潮。2026年贈與稅每人每年免稅額為244萬元，2027年遺產稅免稅額可望隨物價連動調升至約1,478萬元。顧問建議，與其直接贈與或繼承房地（下一代日後出售恐面臨高額土增稅與房地合一稅），不如善用免稅額分年贈與現金、再由子女自行購屋，以兼顧稅負與資產配置。",
-          "summary_en": "Estate-tax revenue hit a record in 2025 and kept climbing in 2026, underscoring a wave of wealth transfer. With the annual gift-tax exemption at NT$2.44 million per donor and the estate-tax exemption projected to rise toward NT$14.78 million in 2027 via inflation indexing, planners are urging families to use multi-year cash gifting and careful structuring rather than directly transferring property that later triggers heavy land-value and consolidated housing-and-land taxes.",
-          "source_name": "聯合新聞網",
-          "source_url": "https://udn.com/news/story/6839/9547804"
-        }
-      ]
-    },
-    {
-      "section": "Macro & Policy",
-      "section_zh": "總經政策",
-      "items": [
-        {
-          "title_zh": "9月非農疲弱、聯準會傾向10月按兵",
-          "title_en": "Soft September payrolls shift the Fed toward an October hold",
-          "summary_zh": "美國9月非農意外疲弱，僅增2.9萬人、遠低於市場預期約8.4萬人，失業率升至4.2%，重塑利率路徑的爭論。市場目前定價聯準會10月按兵機率約78%，較一週前的約36%大幅跳升，法人也更傾向認為Fed將先暫停、下一步才是降息。數據緩和了短線緊縮疑慮，但通膨與勞動市場訊號仍是後續政策的關鍵觀察點。",
-          "summary_en": "A surprisingly weak US September jobs report—just 29,000 added versus an expected ~84,000, with unemployment ticking up to 4.2%—has reshaped the rate-path debate. Markets now price roughly a 78% chance the Federal Reserve holds in October, up from about 36% a week earlier, and strategists increasingly see the Fed pausing before its next move is a cut. The data tempers near-term tightening fears but keeps inflation and labor-market signals firmly in focus.",
-          "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/5607/9012842"
-        },
-        {
-          "title_zh": "台灣央行利率連凍、不跟進聯準會",
-          "title_en": "Taiwan's central bank holds rates, declining to follow the Fed",
-          "summary_zh": "台灣央行維持政策利率不變，選擇不跟進美國動作；考量國內通膨緩步回降至2%以下，加上出口與成長強勁，降息需求降低。央行改以針對性的房市管理措施為主，經濟學家預期利率至少將連凍至明年上半年。在全球利率路徑分歧之際，此一穩健立場有助支撐新台幣與國內資金成本，也為金融市場提供政策定錨。",
-          "summary_en": "Taiwan's central bank has kept its policy rate unchanged, choosing not to track US moves as domestic inflation eases toward below 2% and robust exports and growth reduce the need for easing. Officials are instead leaning on targeted housing-market measures, and economists expect rates to stay on hold into at least the first half of next year. The steady stance supports the Taiwan dollar and local funding costs even as global rate paths diverge.",
-          "source_name": "ETtoday",
-          "source_url": "https://finance.ettoday.net/news/3034801"
-        }
-      ]
-    },
-    {
-      "section": "Global Markets",
-      "section_zh": "國際財經",
-      "items": [
-        {
-          "title_zh": "美股上週收高、輝達與美光領軍",
-          "title_en": "Wall Street caps the week higher as Nvidia and Micron shine",
-          "summary_zh": "美股上週收高作收，疲弱就業數據緩解緊縮疑慮，輝達創新高、那斯達克領漲。美光繳出亮眼財報——營收年增379%至542.3億美元、調整後每股盈餘33.42美元；輝達並新增1,500億美元庫藏股額度。AI記憶體與加速器族群再度主導盤面，對台灣晶片與供應鏈股形成題材與資金面的順風。",
-          "summary_en": "US stocks ended last week on a firm note, with Nvidia hitting a record and the Nasdaq leading after a soft jobs report eased Fed-tightening worries. Micron capped the stretch with a blowout quarter—revenue up 379% year-on-year to US$54.23 billion and adjusted EPS of US$33.42—while Nvidia authorized an additional US$150 billion buyback. The AI-memory and accelerator complex again drove leadership, a tailwind for Taiwan's chip and supply-chain names.",
-          "source_name": "CNBC",
-          "source_url": "https://www.cnbc.com/2026/10/03/how-nvidia-micron-and-a-surprising-jobs-report-drove-last-weeks-stock-action.html"
-        },
-        {
-          "title_zh": "原油供應回穩、油品端仍偏緊",
-          "title_en": "Crude flows normalize even as refined-fuel supply stays tight",
-          "summary_zh": "原油市場的供給壓力趨緩：通過荷莫茲海峽的原油運量已回到戰前每日約1,350萬桶的七日均值。然而精煉油品供應仍受限，柴油零售價逼近歷史高點。此一分歧顯示原油端的地緣風險溢價正在消退，但下游瓶頸使燃料成本居高，對消費者與運輸密集產業的通膨傳導效應仍在，值得留意後續對物價與企業成本的影響。",
-          "summary_en": "Oil-market stress is easing on the supply side: crude transiting the Strait of Hormuz has returned to a prewar seven-day average of about 13.5 million barrels per day. Yet refined products remain constrained, with diesel prices near record highs at the pump. The split signals that geopolitical risk premia are receding in crude even as downstream bottlenecks keep fuel costs—and inflation pass-through—elevated for consumers and transport-heavy industries.",
-          "source_name": "CNBC",
-          "source_url": "https://www.cnbc.com/2026/10/01/daily-open-crude-flows-prewar-levels.html"
-        }
-      ]
-    },
-    {
-      "section": "International",
-      "section_zh": "國際",
-      "items": [
-        {
-          "title_zh": "美股週五收高、疲弱就業數據點燃按兵預期（2026-10-02，最近交易日）",
-          "title_en": "US stocks close the week higher as soft jobs data fuels Fed-hold bets (2026-10-02, latest session)",
-          "summary_zh": "9月非農意外疲弱，推升市場對聯準會10月按兵的預期，美股週五收漲。標普500上漲約0.7%至7,722.72點，那斯達克綜合指數漲1.2%、創下27,190.86點新高，道瓊勁揚約250點至51,176.46點。輝達終場收在歷史新高（約234美元）、盤中一度逼近238美元，帶動科技股全面走強。",
-          "summary_en": "Wall Street advanced Friday after a surprisingly weak September jobs report raised hopes the Fed will hold rates steady in October. The S&P 500 rose about 0.7% to 7,722.72, the Nasdaq Composite climbed 1.2% to a record 27,190.86, and the Dow added roughly 250 points to 51,176.46. Nvidia closed at a record (around US$234) after touching an intraday high near US$238, leading a broad tech rally.",
-          "source_name": "CNBC",
-          "source_url": "https://www.cnbc.com/2026/10/01/stock-market-today-live-updates-.html"
-        },
-        {
-          "title_zh": "美股期指平盤、殖利率居高、聚焦聯準會會議紀要（2026-10-04）",
-          "title_en": "US stock futures steady as yields stay elevated and investors await Fed minutes (2026-10-04)",
-          "summary_zh": "新一週開盤之際，美股期指變動不大，投資人一方面權衡偏高的長天期美債殖利率，一方面等待聯準會最新會議紀要出爐。偏審慎的氛圍反映市場雖已定價10月按兵，但對利率路徑的任何鷹派訊號及財政面變數仍相當敏感，短線觀望氣氛濃厚。",
-          "summary_en": "US equity futures were little changed as the new week opened, with investors weighing higher long-term Treasury yields and looking ahead to the release of the Federal Reserve's latest meeting minutes. The cautious tone reflects a market that has priced in an October hold but remains sensitive to any hawkish signals on the rate path and to the fiscal backdrop.",
-          "source_name": "CNBC",
-          "source_url": "https://www.cnbc.com/2026/10/04/stock-market-today-live-updates.html",
-          "published": "2026-10-04"
-        },
-        {
-          "title_zh": "布蘭特原油單日漲逾4%、美傳增派第三艘航艦赴中東（2026-10-01）",
-          "title_en": "Brent crude jumps over 4% after the US reportedly sends a third carrier to the Middle East (2026-10-01)",
-          "summary_zh": "有報導指美國將增派第三艘航空母艦打擊群前往中東，重新點燃地緣風險溢價，油價應聲跳漲。布蘭特原油勁揚約4.4%、結算價逼近每桶102.31美元，美國西德州中級原油（WTI）亦漲2.7%至約92.87美元。油價走高對通膨預期與能源敏感族群形成壓力，後續是否外溢至公債殖利率值得留意。",
-          "summary_en": "Oil prices spiked after a report that the United States is dispatching a third aircraft-carrier strike group to the Middle East, reviving geopolitical risk premia. Brent crude surged about 4.4% to settle near US$102.31 a barrel, while US WTI climbed 2.7% to about US$92.87. The move pressures inflation expectations and energy-sensitive sectors, and bears watching for any spillover into bond yields.",
-          "source_name": "CNBC",
-          "source_url": "https://www.cnbc.com/2026/10/01/oil-prices-today-wti-brent.html",
-          "published": "2026-10-01"
-        },
-        {
-          "title_zh": "花旗：聯準會可能先暫停、下一步才是降息（2026-10-01）",
-          "title_en": "Citi says the Fed is likely to pause before its next move is a cut (2026-10-01)",
-          "summary_zh": "花旗策略師Scott Chronert表示，聯準會似乎將進入觀望模式，其下一步政策動作較可能是最終降息、而非再度升息。此觀點與轉弱的勞動數據及偏鴿的市場預期一致，有助支撐股市風險胃納；惟策略師提醒，居高的殖利率與僵固的通膨，仍可能延後寬鬆的時間表。",
-          "summary_en": "Citi's Scott Chronert said the Federal Reserve appears set to move into a holding pattern, with its next policy step more likely an eventual rate cut than a further hike. The view aligns with softer labor data and dovish-leaning expectations, and supports risk appetite in equities, though strategists caution that elevated yields and sticky inflation could delay the easing timeline.",
-          "source_name": "CNBC",
-          "source_url": "https://www.cnbc.com/2026/10/01/fed-could-be-in-pause-mode-and-make-next-move-a-cut-says-citis-chronert.html",
-          "published": "2026-10-01"
+          "title_zh": "高資產族群重傳承 跨境與月配息為配置核心",
+          "title_en": "Succession Planning and Offshore Assets Dominate HNW Portfolios",
+          "summary_zh": "財富調查顯示，台灣高資產客戶將跨境配置視為支撐家族與企業傳承的基礎，約 74% 已持有境外資產，約 85% 已啟動或準備傳承規劃。核心配置以股票型基金為主，偏好台股與科技類股；債券則青睞新興市場債與月配息級別，顯示財管需求從單純投資轉向資產結構與世代傳承。",
+          "summary_en": "Wealth reports show Taiwan's high-net-worth clients increasingly treat cross-border allocation as core to family and business continuity, with about 74% already holding offshore assets and roughly 85% engaged in or preparing succession plans. Equity funds—especially Taiwan and tech names—anchor portfolios, while bond demand favours emerging-market and monthly-dividend share classes.",
+          "source_name": "Smart 智富",
+          "source_url": "https://smart.businessweekly.com.tw/Reading/IndepArticle.aspx?id=6021609"
         }
       ]
     }
