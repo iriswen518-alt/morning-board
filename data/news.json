@@ -1,11 +1,9 @@
 {
-  "news_date": "2026-10-06",
+  "news_date": "2026-10-07",
   "tldr": [
-    "台積電獨撐大局，加權指數守住 47,000，其餘權值股熄火、外資調節。",
-    "AI 伺服器需求與工研院 7 兆元產值預估鞏固台灣供應鏈，金管會則聚焦防詐與資安韌性。",
-    "央行利率連凍守 2% 但操作偏緊、通膨略過警戒線；CARF 與 CRS 2.0 擴大加密資產稅務申報。",
-    "華爾街改寫紀錄，那斯達克因 AI 交易收盤創高；油價因沙國調降對亞洲售價而下跌。",
-    "美債殖利率攀多年高點，金價回落逼近 4,100 美元；亞股走揚、日經逼近三個月高點。"
+    "台股10月6日漲110.51點收49,822.55點，叩關5萬點失利，台積電續創歷史新高。",
+    "工研院估2026台灣半導體產值破7.13兆元，全球AI伺服器出貨衝上450萬台。",
+    "金管會持續深化亞洲資產管理中心，高雄專區累計57家業者進駐。"
   ],
   "sections": [
     {
@@ -13,20 +11,20 @@
       "section_zh": "股市行情",
       "items": [
         {
-          "title_zh": "台積電獨撐大局 權值股熄火 加權指數守住 47,000",
-          "title_en": "TSMC Single-Handedly Holds the TAIEX Above 47,000",
-          "summary_zh": "近期盤勢權值股普遍熄火，加權指數一度下跌約 220 點，所幸台積電獨強，撐住 47,000 點關卡。盤面顯示台股對單一權值股依賴度升高，若 AI 族群休息，大盤恐缺乏支撐，後續須留意電子權值股輪動與外資動向。",
-          "summary_en": "The TAIEX slipped around 220 points in a recent session as most heavyweight stocks lost momentum, yet TSMC's strength alone kept the benchmark above the 47,000 mark. The split performance highlights how reliant Taiwan's index has become on its largest chipmaker, leaving the broader market exposed if AI-related leaders pause.",
-          "source_name": "uanalyze 玩股網",
-          "source_url": "https://uanalyze.com.tw/articles/4675454863"
+          "title_zh": "台股叩關5萬點失利 台積電領軍收斂漲勢",
+          "title_en": "TAIEX stalls just below 50,000 as TSMC leads late profit-taking",
+          "summary_zh": "加權指數10月6日上漲110.51點、漲幅0.22%，收在49,822.55點，成交量約9,759億元。盤中一度衝高至約49,968點，距5萬點整數關卡僅約32點，隨後半導體權值股走弱，漲勢收斂。台積電終場上漲10元、收2,585元，撐住指數維持高檔，市場屏息等待即將登場的財報季。",
+          "summary_en": "Taiwan's benchmark index rose 110.51 points, or 0.22%, to close at 49,822.55 on Oct 6, with turnover of about NT$975.9bn. The market briefly climbed to roughly 49,968 intraday, within about 32 points of the 50,000 mark, before heavyweight semiconductors softened and trimmed the advance. TSMC ended up NT$10 at NT$2,585, keeping the index near record territory ahead of the coming earnings season.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/5607/9797863"
         },
         {
-          "title_zh": "外資調節 被動元件逆勢強攻",
-          "title_en": "Foreign Investors Sell as Passive Components Buck the Trend",
-          "summary_zh": "外資近期於全市場大舉調節，賣超數百億元，加權指數震盪回檔並一度逼近 47,000 關卡；惟被動元件類股逆勢強攻，資金出現由高檔權值轉進落後補漲族群的跡象，顯示盤面進入類股輪動階段，投資人宜留意資金流向變化。",
-          "summary_en": "Overseas funds sold heavily across the market in a recent session, pressuring the index back toward the 47,000 level, while passive-component makers rallied against the broader pullback. The rotation suggests investors are trimming crowded large-caps and selectively hunting laggards for catch-up gains.",
-          "source_name": "uanalyze 玩股網",
-          "source_url": "https://uanalyze.com.tw/articles/2318755073"
+          "title_zh": "台積電市值達66.77兆 一檔貢獻594點",
+          "title_en": "TSMC market value tops NT$66.77tn, driving a fresh batch of records",
+          "summary_zh": "台積電10月6日創下多項紀錄，市值約達66.77兆元，單一個股即貢獻指數約594點。AI加速器帶動的先進製程產能需求持續強勁，支撐台積電股價維持高檔；由於權值占比龐大，大盤走勢高度連動台積電，投資人提前布局第3季財報行情。",
+          "summary_en": "TSMC set multiple records on Oct 6, with market capitalisation reaching about NT$66.77tn and the stock single-handedly contributing roughly 594 points to the index. Sustained demand for advanced-node capacity tied to AI accelerators continues to underpin the chipmaker, whose weighting leaves the broader TAIEX closely tracking its moves as investors position for the Q3 results.",
+          "source_name": "聯合新聞網",
+          "source_url": "https://udn.com/news/story/7251/9795983"
         }
       ]
     },
@@ -35,18 +33,18 @@
       "section_zh": "產業動態",
       "items": [
         {
-          "title_zh": "工研院：2026 台灣半導體產值上看 7 兆元",
-          "title_en": "ITRI Sees Taiwan Chip Output Topping NT$7 Trillion in 2026",
-          "summary_zh": "工研院預估，2026 年台灣半導體產值可突破 7 兆元、約 7.13 兆元，年增約一成，其中 IC 製造受惠 3 奈米滿載與 2 奈米放量，動能最強。顯示 AI 需求持續帶動先進製程，鞏固台灣在全球晶片供應鏈的關鍵地位，相關供應鏈營運可望同步受惠。",
-          "summary_en": "Taiwan's Industrial Technology Research Institute projects the island's semiconductor output value will exceed NT$7 trillion (about NT$7.13tn) in 2026, up roughly 10% year-on-year, led by IC manufacturing as 3nm runs at full capacity and 2nm ramps. The outlook shows AI-driven demand keeping Taiwan central to global chip supply.",
-          "source_name": "經濟日報",
+          "title_zh": "工研院估2026半導體產值破7兆 AI伺服器衝450萬台",
+          "title_en": "ITRI sees 2026 chip output above NT$7tn, AI servers at 4.5 million units",
+          "summary_zh": "工研院與資策會MIC預估，台灣2026年半導體產值將突破7.13兆元、年增約10%，其中IC製造受惠3奈米滿載與2奈米放量，動能最強。全球AI伺服器出貨預估達450萬台、滲透率近三成，帶動先進製程產能連續四年成長逾四成，確立台灣在AI供應鏈的核心地位。",
+          "summary_en": "Taiwan's Industrial Technology Research Institute and the MIC forecast the island's 2026 semiconductor output value will exceed NT$7.13tn, up about 10% on the year, led by IC manufacturing as 3nm runs full and 2nm ramps. Global AI-server shipments are projected to reach 4.5 million units with penetration near 30%, sustaining four straight years of 40%-plus growth in advanced-process capacity.",
+          "source_name": "聯合新聞網",
           "source_url": "https://udn.com/news/story/7240/9336826"
         },
         {
-          "title_zh": "AI 伺服器熱潮 台廠營收續創高",
-          "title_en": "AI-Server Boom Lifts Taiwan Hardware Makers to Record Revenue",
-          "summary_zh": "AI 伺服器需求強勁，帶動台灣主要 IT 廠營收連月成長，伺服器組裝、載板、高階 PCB、散熱與電源供應等供應鏈同步受惠。顯示台灣供應鏈橫跨設計、製造、封測與零組件，持續扮演全球 AI 硬體建置樞紐，惟須留意終端需求與庫存變化對後續動能的影響。",
-          "summary_en": "Surging AI-server demand has driven major Taiwan IT makers to months of consecutive revenue growth, with assemblers plus advanced-PCB, substrate, cooling and power-supply suppliers all benefiting. The broad-based strength shows Taiwan's chain—spanning design, fabrication, packaging and components—remains the hub of the AI hardware build-out.",
+          "title_zh": "台廠AI動能不墜 主要IT廠營收連29個月增長",
+          "title_en": "Taiwan's major IT makers extend record revenue streak on AI demand",
+          "summary_zh": "台灣主要IT廠（含台積電、鴻海等）營收連續第29個月成長，7月合計營收年增逾五成、突破2兆元，為史上數一數二的單月增幅。強勁表現反映AI伺服器與先進晶片需求持續暢旺，市場預期供應鏈動能可望延續至年底，產業基本面維持穩健。",
+          "summary_en": "Taiwan's leading IT manufacturers, including TSMC and Hon Hai, logged a 29th straight month of revenue growth, with July combined revenue jumping more than 50% year on year and topping NT$2tn, among the largest monthly gains on record. The surge reflects relentless AI-server and advanced-chip demand, reinforcing expectations that the supply chain will stay busy through year-end.",
           "source_name": "科技新報",
           "source_url": "https://finance.technews.tw/2026/08/26/taiwan-major-it-firms-revenue-surges-over-50-exceeds-2-trillion-sets-new-record-high/"
         }
@@ -57,19 +55,19 @@
       "section_zh": "金融業",
       "items": [
         {
-          "title_zh": "金管會：安全與發展並進 防詐、資安韌性列重點",
-          "title_en": "FSC Keeps \"Safety and Development in Parallel,\" Puts Anti-Fraud and Cyber-Resilience First",
-          "summary_zh": "金管會施政延續「安全與發展並進」，強化金融機構資本韌性與風險管理，並將防詐列為重點工作。資安方面新增監理要求，包括明定金融資安長權責、零信任架構由鼓勵改為必備，以及建立軟體供應鏈安全（SBOM）機制，推升金融業合規與資安投入。",
-          "summary_en": "Taiwan's Financial Supervisory Commission says its agenda continues to balance stability with growth—strengthening banks' capital resilience and risk management while elevating fraud prevention. New cyber rules define responsibilities for financial CISOs, make zero-trust architecture mandatory rather than encouraged, and require software-supply-chain security (SBOM) mechanisms.",
-          "source_name": "金管會",
-          "source_url": "https://www.fsc.gov.tw/ch/home.jsp?id=128"
+          "title_zh": "金管會新增三大試辦 將發布「金融大回饋指引」",
+          "title_en": "FSC adds three pilot schemes, plans a \"financial giveback\" guideline",
+          "summary_zh": "金管會主委彭金隆宣布為深化亞洲資產管理中心，新增「跨境服務」、「99人限制鬆綁」及「預繳保費帳戶」三大試辦項目，並將發布「金融大回饋指引」。截至4月底，相關政策已累計完成52項法規調適，金融業資產管理規模較2024年中增加10.62兆元，顯示資產管理制度逐步鬆綁與擴大。",
+          "summary_en": "Financial Supervisory Commission chair Peng Jin-lung announced new pilots to deepen the Asian Asset Management Centre, including cross-border services, relaxing the 99-investor cap and prepaid-premium accounts, alongside a forthcoming \"financial giveback\" guideline. By end-April the policy had completed 52 regulatory adjustments, with industry assets under management up NT$10.62tn since mid-2024, signalling a steady widening of Taiwan's wealth-management framework.",
+          "source_name": "自由時報",
+          "source_url": "https://ec.ltn.com.tw/article/breakingnews/5474360"
         },
         {
-          "title_zh": "金融三業獲利居高 金管會推金融科技創新",
-          "title_en": "Record Sector Profits Set Backdrop as FSC Advances Fintech Reform",
-          "summary_zh": "金融三業稅前獲利居歷史高檔，為監理單位推動金融科技創新提供空間。金管會規劃修訂金融科技發展與創新實驗條例、發展數位保險公司，並設「金融行動創新法規調適平台」，由銀行、保險、證券期貨與科技創新工作小組建立產官學溝通管道，兼顧創新與穩定。",
-          "summary_en": "Taiwan's three major financial sectors posted among their highest-ever pre-tax earnings, giving regulators room to push fintech priorities: amending the fintech innovation-and-experimentation act, developing digital insurers, and a new regulatory-adaptation platform linking banking, insurance, securities and tech working groups to modernise supervision while safeguarding stability.",
-          "source_name": "uanalyze 玩股網",
+          "title_zh": "金融三業2025稅前賺9880億 史上次高",
+          "title_en": "Taiwan's financial trio booked NT$988bn pre-tax profit in 2025, second-highest ever",
+          "summary_zh": "金管會統計，2025年銀行、保險、證券三業稅前盈餘合計約9,880億元，為史上次高。銀行業以6,279億元居冠、年增約11%；保險業1,937億元、年減約43%，主因提列外匯價格變動準備金。主管機關重申「安全與發展並進」，在推動制度革新的同時兼顧金融穩定與風險控管。",
+          "summary_en": "The banking, insurance and securities sectors posted combined pre-tax earnings of about NT$988bn in 2025, the second-highest on record. Banks led with NT$627.9bn, up about 11% year on year, while insurers' NT$193.7bn fell roughly 43% as firms set aside foreign-exchange volatility reserves. Regulators reiterated a balance of safety and development as the framework evolves.",
+          "source_name": "Yahoo／優分析",
           "source_url": "https://uanalyze.com.tw/articles/6397346877"
         }
       ]
@@ -79,128 +77,20 @@
       "section_zh": "財富管理",
       "items": [
         {
-          "title_zh": "台灣億級富豪逾 12.4 萬人 掌握 46.1 兆元財富",
-          "title_en": "Taiwan's Ultra-Rich to Top 124,000, Commanding NT$46 Trillion",
-          "summary_zh": "據金融業者與會計師事務所調查，2026 年台灣資產逾 1 億元的高資產客戶將成長至逾 12.4 萬人，合計掌握約 46.1 兆元財富，且人數以年均約一成成長，2029 年上看 15.5 萬人。龐大高資產族群帶動私人銀行、信託與跨境配置需求，成為財管業兵家必爭之地。",
-          "summary_en": "A bank-and-accountancy study cited in local media projects Taiwan will have more than 124,000 individuals with assets over NT$100 million in 2026, together holding some NT$46.1 trillion, with the high-net-worth population growing about 10% a year toward 155,000 by 2029. The expanding pool is reshaping demand for private banking, trusts and cross-border allocation.",
-          "source_name": "uanalyze 玩股網",
-          "source_url": "https://uanalyze.com.tw/articles/4310248242"
-        },
-        {
-          "title_zh": "高資產族群重傳承 跨境與月配息為配置核心",
-          "title_en": "Succession Planning and Offshore Assets Dominate HNW Portfolios",
-          "summary_zh": "財富調查顯示，台灣高資產客戶將跨境配置視為支撐家族與企業傳承的基礎，約 74% 已持有境外資產，約 85% 已啟動或準備傳承規劃。核心配置以股票型基金為主，偏好台股與科技類股；債券則青睞新興市場債與月配息級別，顯示財管需求從單純投資轉向資產結構與世代傳承。",
-          "summary_en": "Wealth reports show Taiwan's high-net-worth clients increasingly treat cross-border allocation as core to family and business continuity, with about 74% already holding offshore assets and roughly 85% engaged in or preparing succession plans. Equity funds—especially Taiwan and tech names—anchor portfolios, while bond demand favours emerging-market and monthly-dividend share classes.",
-          "source_name": "Smart 智富",
+          "title_zh": "台灣超高資產人數創高 配置偏向境外與月配息",
+          "title_en": "Taiwan's ultra-high-net-worth ranks hit a record, tilting to offshore assets",
+          "summary_zh": "依中國信託《2026台灣超高資產客群報告》，2025年淨資產逾新台幣1億元者約12.3萬人，較2021年增加1.7萬人。超高資產客戶中74%持有境外資產，資產逾10億元者更高達86%。核心配置以股票型基金為主，偏好台股與科技類股；債券則鍾情新興市場債與月配息級別，呈現分散與收益並重的趨勢。",
+          "summary_en": "CTBC's 2026 wealth report says the number of people with net assets above NT$100mn reached about 123,000 in 2025, up 17,000 from 2021. Some 74% of ultra-high-net-worth clients hold offshore assets, rising to 86% for those above NT$1bn. Core allocations centre on equity funds, especially Taiwan and tech names, with bonds favouring emerging-market and monthly-distribution tranches.",
+          "source_name": "商周財富網",
           "source_url": "https://smart.businessweekly.com.tw/Reading/IndepArticle.aspx?id=6021609"
-        }
-      ]
-    },
-    {
-      "section": "Tax & Regulations",
-      "section_zh": "稅務法規",
-      "items": [
-        {
-          "title_zh": "CARF、CRS 2.0 上路 加密資產申報全面擴大",
-          "title_en": "Crypto Reporting Widens as CARF and CRS 2.0 Take Hold",
-          "summary_zh": "OECD《加密資產申報框架》（CARF）正式啟動、《共同申報準則》改版（CRS 2.0）同步施行，全球稅務資訊交換已涵蓋加密資產，2026 年起再把電子貨幣與央行數位貨幣帳戶納入，參與地區逾 110 個。擴大範圍意在防堵透過數位資產跨境逃稅，也提高台灣持有人的申報與合規負擔。",
-          "summary_en": "With the OECD's Crypto-Asset Reporting Framework (CARF) live and the revised Common Reporting Standard (CRS 2.0) in force, global tax-information exchange now covers crypto assets and, from 2026, e-money and central-bank-digital-currency accounts, across 110-plus jurisdictions. The expansion tightens the net on cross-border tax avoidance via digital assets and raises compliance demands on Taiwan holders.",
-          "source_name": "科技新報（安永解析）",
-          "source_url": "https://finance.technews.tw/2026/01/12/prenuptial-agreement/"
         },
         {
-          "title_zh": "財政部研議加密貨幣課稅 最低稅負制維持從嚴",
-          "title_en": "Finance Ministry Weighs Crypto Tax Rules; AMT Scope Stays Broad",
-          "summary_zh": "財政部正研議加密貨幣交易課稅規定，涉及入出金時點、平台所在地與資產性質認定，後續解釋方向將直接影響個人與企業稅務規劃。同時最低稅負制仍全額計入私募證券投資信託基金受益憑證交易所得、非現金列舉捐贈，以及 2021 年以後未上市櫃證券交易所得等項目，高資產族群申報須留意。",
-          "summary_en": "Taiwan's Ministry of Finance is studying how to tax crypto transactions—weighing deposit/withdrawal timing, platform location and asset classification—guidance that will directly shape individual and corporate planning. Meanwhile the alternative minimum tax (AMT) continues to fully capture items such as private securities-fund gains, non-cash itemised donations and post-2021 unlisted-share transactions.",
-          "source_name": "理律法律事務所 Newsletter",
-          "source_url": "https://www.leeandli.com/TW/Newsletters/2538.htm"
-        }
-      ]
-    },
-    {
-      "section": "Macro & Policy",
-      "section_zh": "總經政策",
-      "items": [
-        {
-          "title_zh": "央行利率連凍守 2% 貨幣操作轉趨偏緊",
-          "title_en": "Central Bank Holds Rate at 2% but Leans Toward Tightening",
-          "summary_zh": "台灣央行政策利率已連續約十季按兵不動、維持 2%，惟總裁楊金龍釋出貨幣操作朝緊縮方向的訊號。在 AI 帶動成長強勁、市場資金充沛下，央行對過熱保持警覺，顯示後續動作偏向收緊市場流動性，而非降息，企業與房市資金成本短期難鬆。",
-          "summary_en": "Taiwan's central bank has kept its benchmark policy rate at 2% for roughly ten straight quarters, yet Governor Yang Chin-long signals monetary operations are tilting toward tightening. Robust AI-driven growth and ample liquidity leave policymakers wary of overheating, suggesting the next move is more likely a squeeze on liquidity than a cut.",
-          "source_name": "uanalyze 玩股網",
-          "source_url": "https://uanalyze.com.tw/articles/9516755544"
-        },
-        {
-          "title_zh": "通膨略超 2% 警戒區 楊金龍：仍有觀察時間",
-          "title_en": "Inflation Nudges Above the 2% Alert Line",
-          "summary_zh": "央行最新消費者物價（CPI）預測略高於 2% 警戒門檻，總裁楊金龍表示仍有時間觀察再決定，並維持偏緊基調。通膨微升使物價穩定重回焦點，即便經濟維持強勁成長，也強化市場對短期內不會降息的預期，後續須緊盯物價與國際情勢變化。",
-          "summary_en": "The central bank's latest CPI forecast has edged above its 2% warning threshold, prompting Governor Yang to say there is still time to observe before acting while keeping a tightening bias. The uptick keeps price stability in focus even as growth stays strong, reinforcing expectations that rate cuts remain off the table near term.",
-          "source_name": "uanalyze 玩股網",
-          "source_url": "https://uanalyze.com.tw/articles/9497355553"
-        }
-      ]
-    },
-    {
-      "section": "Global Markets",
-      "section_zh": "國際財經",
-      "items": [
-        {
-          "title_zh": "市場對聯準會 2026 降息次數看法分歧",
-          "title_en": "Market Split on How Many Fed Cuts 2026 Will Bring",
-          "summary_zh": "台灣財經媒體報導，市場對聯準會 2026 年政策路徑看法分歧：部分機構認為全年不降息，因美國就業與成長再加速、核心通膨仍高；CME FedWatch 利率期貨則押注一碼、兩碼甚至三碼降息機率不一。政策不確定性升高，使全球股市與台灣出口類股對每一次美國數據都高度敏感。",
-          "summary_en": "Taiwanese financial media report sharply divided views on the Fed's 2026 path: some houses see no cuts at all as US jobs and growth reaccelerate and core inflation runs above 3%, while CME FedWatch pricing still spreads across one, two or even three cuts. The uncertainty leaves global equities and Taiwan exporters sensitive to every US data release.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6308428"
-        },
-        {
-          "title_zh": "美債 Q4 淨流入近 800 億 法人政策焦點轉向",
-          "title_en": "Foreign Money Floods US Bonds in Q4 as Focus Shifts to Policy",
-          "summary_zh": "台灣媒體報導，第四季以來美債相關商品淨流入近新台幣 800 億元，法人將焦點轉向聯準會利率節奏，趕在可能降息前鎖利布局。此舉顯示台灣資金正為「較高利率維持更久」的環境定位，同時提前因應景氣循環後段可能出現的轉折，債市鎖利需求升溫。",
-          "summary_en": "Local reports note nearly NT$80bn of net inflows into US bond products early in Q4, as institutional investors pivot their focus toward the Fed's rate trajectory and lock in yields before any easing. The move signals Taiwanese capital is positioning for a higher-for-longer rate world while hedging against a later turn in the cycle.",
-          "source_name": "Yahoo 奇摩股市",
-          "source_url": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E5%82%B5q4%E5%B7%B2%E6%B7%A8%E6%B5%81%E5%85%A5%E8%BF%91800%E5%84%84-%E6%B3%95%E4%BA%BA-%E6%94%BF%E7%AD%96%E7%84%A6%E9%BB%9E%E8%BD%89%E5%90%91-%E9%99%8D%E6%81%AF%E7%AF%80%E5%A5%8F-%E5%82%B5%E5%B8%82%E9%8E%96%E5%88%A9%E5%80%92%E6%95%B8%E4%B8%AD-054336508.html"
-        }
-      ]
-    },
-    {
-      "section": "International",
-      "section_zh": "國際",
-      "items": [
-        {
-          "title_zh": "那斯達克收盤創高 AI 交易續撐華爾街（2026-10-05）",
-          "title_en": "Nasdaq Closes at a Record as the AI Trade Powers Wall Street (2026-10-05)",
-          "summary_zh": "美股週一走高，那斯達克指數收在約 27,477 點、漲 1.05% 創收盤新高，盤中一度觸及約 27,544 點；標普 500 漲約 0.66% 至約 7,774 點，道瓊漲 0.18% 至約 51,268 點。AI 相關個股領漲，輝達、特斯拉各漲約 2%，Meta、微軟同步走高，惟 ISM 數據公布後美債殖利率走升。",
-          "summary_en": "US stocks climbed Monday, with the Nasdaq Composite posting a record close around 27,477 (+1.05%) after an intraday high near 27,544. The S&P 500 rose about 0.66% to roughly 7,774 and the Dow added 0.18% to about 51,268. AI-linked names led, with Nvidia and Tesla up around 2% and Meta and Microsoft higher, even as Treasury yields firmed after ISM data.",
-          "source_name": "TheStreet",
-          "source_url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-05-2026",
-          "published": "2026-10-05"
-        },
-        {
-          "title_zh": "沙國調降對亞洲售價 國際油價下跌（2026-10-05）",
-          "title_en": "Oil Falls as Saudi Arabia Cuts Asia Prices (2026-10-05)",
-          "summary_zh": "國際油價週一走跌，沙烏地阿拉伯將指標原油阿拉伯輕原油對亞洲買家的官方售價調降約每桶 5 美元、低於區域基準，為 2020 年以來最大降幅。布蘭特原油收跌約 1.9%、逼近每桶 100 美元，西德州中級原油跌約 1.8% 至約 89 美元，反映市場對需求轉弱與供給充裕的預期。",
-          "summary_en": "Crude slid Monday after Saudi Arabia lowered the official selling price of its benchmark Arab Light grade to Asian buyers by about $5 versus the regional benchmark—the deepest cut since 2020. Brent settled down roughly 1.9% near $100 a barrel and WTI fell about 1.8% to around $89, signalling softer demand expectations and ample supply heading into the quarter.",
-          "source_name": "Bloomberg",
-          "source_url": "https://www.bloomberg.com/news/articles/2026-10-04/latest-oil-market-news-and-analysis-for-oct-5",
-          "published": "2026-10-05"
-        },
-        {
-          "title_zh": "亞股走揚 日經逼近三個月高點（2026-10-05）",
-          "title_en": "Asian Stocks Rally, Nikkei Nears Three-Month High (2026-10-05)",
-          "summary_zh": "亞洲股市走高，升息預期降溫帶動 AI 與晶片族群領漲。日本日經 225 指數上漲約 2.1%、逼近約 69,700 點，接近三個月高點；香港恆生指數則下跌約 0.5% 至約 23,850 點。區域表現分歧，凸顯 AI 硬體循環正主導資金流向，即便各地對利率路徑看法不一，科技權值仍是盤面主軸。",
-          "summary_en": "Asian equities advanced as bets on further rate hikes eased, led by AI and chip names. Japan's Nikkei 225 climbed about 2.1% toward roughly 69,700, near a three-month high, while Hong Kong's Hang Seng slipped about 0.5% to around 23,850. The divergence underscores how the AI-hardware cycle is steering regional flows even amid mixed rate expectations.",
-          "source_name": "Bloomberg",
-          "source_url": "https://www.bloomberg.com/news/articles/2026-10-04/asian-stocks-to-rise-as-hike-bets-ease-oil-climbs-markets-wrap",
-          "published": "2026-10-05"
-        },
-        {
-          "title_zh": "美債殖利率走升 金價回落逼近 4,100 美元（2026-10-05）",
-          "title_en": "Gold Slips Toward $4,100 as Treasury Yields Climb (2026-10-05)",
-          "summary_zh": "黃金價格承壓、逼近每盎司 4,100 美元關卡，美債殖利率攀至多年高點、加上美元轉強，削弱不孳息資產的吸引力，交易人在前波強勢上漲後獲利了結。此番回落反映「較高利率維持更久」的敘事重新主導市場，即便金價在 2026 年稍早曾創歷史新高，短線仍面臨修正壓力。",
-          "summary_en": "Gold came under pressure near the $4,100-an-ounce level as rising US Treasury yields—hovering near multi-year highs—and a firmer dollar sapped demand for the non-yielding metal, with traders also booking profits after a strong run. The pullback reflects a \"higher-for-longer\" rate narrative reasserting itself even after gold's record run earlier in 2026.",
-          "source_name": "altii Gold Report",
-          "source_url": "https://www.altii.de/the-altii-gold-report-2026-10-05/",
-          "published": "2026-10-05"
+          "title_zh": "台新打造高資產財富管理平台 進駐高雄專區",
+          "title_en": "Taishin builds a high-net-worth platform for the Kaohsiung asset hub",
+          "summary_zh": "台新銀行表示，為響應亞洲資產管理中心政策，攜手集團台新銀行、台新證券、台新投信及新光人壽共同進駐高雄資產管理專區，打造整合型高資產財富管理平台。透過跨子公司協作與集團資源整合，深化對高資產客群的信託、傳承與境外資產配置服務，呼應金融業搶進財富管理版圖的趨勢。",
+          "summary_en": "Taishin Bank said it is answering the Asian Asset Management Centre policy by teaming up across the group — Taishin Bank, Taishin Securities, Taishin Investment Trust and Shin Kong Life — to enter the Kaohsiung special zone and build an integrated high-net-worth wealth-management platform. The move leverages cross-subsidiary collaboration to serve affluent clients, part of a broader push by banks and insurers into trust, succession and offshore-focused services.",
+          "source_name": "台新銀行",
+          "source_url": "https://www.taishinbank.com.tw/TSB/personal/common/news/TSBankNews-008229/"
         }
       ]
     }
