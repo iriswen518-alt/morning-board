@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-08T13:47:42+08:00",
+  "generated_at": "2026-10-08T16:48:38+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -73,20 +73,6 @@
       "error": null
     },
     {
-      "symbol": "HESM",
-      "name_zh": "Hess Midstream LP",
-      "kind": "US",
-      "price": 33.03,
-      "change_pct": -14.63,
-      "mtd_pct": -11.61,
-      "ytd_pct": -4.26,
-      "market_date": "2026-10-07",
-      "per": 18.2756,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HESM.US",
-      "error": null
-    },
-    {
       "symbol": "LEVI",
       "name_zh": "Levi Strauss",
       "kind": "US",
@@ -98,20 +84,6 @@
       "per": 11.8038,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LEVI.US",
-      "error": null
-    },
-    {
-      "symbol": "SPOT",
-      "name_zh": "Spotify",
-      "kind": "US",
-      "price": 512.92,
-      "change_pct": 5.08,
-      "mtd_pct": 5.24,
-      "ytd_pct": -11.67,
-      "market_date": "2026-10-07",
-      "per": 28.3158,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPOT.US",
       "error": null
     },
     {
@@ -143,59 +115,45 @@
       "error": null
     },
     {
-      "symbol": "CELH",
-      "name_zh": "Celsius",
+      "symbol": "SPOT",
+      "name_zh": "Spotify",
       "kind": "US",
-      "price": 26.92,
-      "change_pct": -1.36,
-      "mtd_pct": -1.57,
-      "ytd_pct": -41.15,
+      "price": 512.92,
+      "change_pct": 5.08,
+      "mtd_pct": 5.24,
+      "ytd_pct": -11.67,
       "market_date": "2026-10-07",
-      "per": 52.9814,
+      "per": 28.3158,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CELH.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPOT.US",
       "error": null
     },
     {
-      "symbol": "MUU",
-      "name_zh": "Direxion Daily MU Bull 2X ETF",
+      "symbol": "DELL",
+      "name_zh": "Dell Technologies",
       "kind": "US",
-      "price": 37.88,
-      "change_pct": 7.8,
-      "mtd_pct": 2.88,
-      "ytd_pct": 652.03,
+      "price": 578.96,
+      "change_pct": 0.86,
+      "mtd_pct": 7.62,
+      "ytd_pct": 359.93,
+      "market_date": "2026-10-07",
+      "per": 32.3874,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DELL.US",
+      "error": null
+    },
+    {
+      "symbol": "SOXS",
+      "name_zh": "Direxion Daily Semiconductor Be",
+      "kind": "US",
+      "price": 30.65,
+      "change_pct": 3.44,
+      "mtd_pct": -7.35,
+      "ytd_pct": -95.1,
       "market_date": "2026-10-07",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MUU.US",
-      "error": null
-    },
-    {
-      "symbol": "LULU",
-      "name_zh": "lululemon athletica",
-      "kind": "US",
-      "price": 91.88,
-      "change_pct": -1.85,
-      "mtd_pct": -4.48,
-      "ytd_pct": -55.79,
-      "market_date": "2026-10-07",
-      "per": 7.47,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LULU.US",
-      "error": null
-    },
-    {
-      "symbol": "LMT",
-      "name_zh": "洛馬",
-      "kind": "US",
-      "price": 499.22,
-      "change_pct": -2.14,
-      "mtd_pct": -1.97,
-      "ytd_pct": 3.21,
-      "market_date": "2026-10-07",
-      "per": 18.4172,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LMT.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOXS.US",
       "error": null
     },
     {
