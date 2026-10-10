@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10T16:24:10+08:00",
+  "generated_at": "2026-10-10T19:22:26+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -17,17 +17,17 @@
       "error": null
     },
     {
-      "symbol": "PLTR",
-      "name_zh": "Palantir",
+      "symbol": "WFF",
+      "name_zh": "WF Holding",
       "kind": "US",
-      "price": 209.05,
-      "change_pct": 5.17,
-      "mtd_pct": 11.76,
-      "ytd_pct": 17.61,
+      "price": 12.29,
+      "change_pct": 499.51,
+      "mtd_pct": 393.57,
+      "ytd_pct": 434.35,
       "market_date": "2026-10-09",
-      "per": 165.483,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PLTR.US",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=WFF.US",
       "error": null
     },
     {
@@ -59,17 +59,17 @@
       "error": null
     },
     {
-      "symbol": "WFF",
-      "name_zh": "WF Holding",
+      "symbol": "CCI",
+      "name_zh": "Crown Castle",
       "kind": "US",
-      "price": 12.29,
-      "change_pct": 499.51,
-      "mtd_pct": 393.57,
-      "ytd_pct": 434.35,
+      "price": 79.64,
+      "change_pct": 15.6,
+      "mtd_pct": 19.49,
+      "ytd_pct": -10.39,
       "market_date": "2026-10-09",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=WFF.US",
+      "per": 38.2515,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CCI.US",
       "error": null
     },
     {
@@ -87,34 +87,6 @@
       "error": null
     },
     {
-      "symbol": "TEVA",
-      "name_zh": "Teva Pharmaceutical Industries",
-      "kind": "US",
-      "price": 41.1,
-      "change_pct": 4.71,
-      "mtd_pct": 3.79,
-      "ytd_pct": 31.69,
-      "market_date": "2026-10-09",
-      "per": 63.2972,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TEVA.US",
-      "error": null
-    },
-    {
-      "symbol": "GME",
-      "name_zh": "GameStop",
-      "kind": "US",
-      "price": 26.56,
-      "change_pct": 5.06,
-      "mtd_pct": 7.75,
-      "ytd_pct": 32.27,
-      "market_date": "2026-10-09",
-      "per": 14.3619,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GME.US",
-      "error": null
-    },
-    {
       "symbol": "SNOW",
       "name_zh": "Snowflake",
       "kind": "US",
@@ -126,34 +98,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SNOW.US",
-      "error": null
-    },
-    {
-      "symbol": "NU",
-      "name_zh": "Nu",
-      "kind": "US",
-      "price": 16.12,
-      "change_pct": 4.81,
-      "mtd_pct": 27.33,
-      "ytd_pct": -3.7,
-      "market_date": "2026-10-09",
-      "per": 21.5872,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NU.US",
-      "error": null
-    },
-    {
-      "symbol": "TMUS",
-      "name_zh": "T-Mobile US",
-      "kind": "US",
-      "price": 148.58,
-      "change_pct": -13.27,
-      "mtd_pct": -8.89,
-      "ytd_pct": -26.82,
-      "market_date": "2026-10-09",
-      "per": 15.0707,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TMUS.US",
       "error": null
     },
     {
@@ -171,17 +115,17 @@
       "error": null
     },
     {
-      "symbol": "JOBY",
-      "name_zh": "Joby Aviation",
+      "symbol": "TEVA",
+      "name_zh": "Teva Pharmaceutical Industries",
       "kind": "US",
-      "price": 5.44,
-      "change_pct": -5.39,
-      "mtd_pct": -10.08,
-      "ytd_pct": -58.79,
+      "price": 41.1,
+      "change_pct": 4.71,
+      "mtd_pct": 3.79,
+      "ytd_pct": 31.69,
       "market_date": "2026-10-09",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=JOBY.US",
+      "per": 63.2972,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TEVA.US",
       "error": null
     },
     {
@@ -199,17 +143,45 @@
       "error": null
     },
     {
-      "symbol": "PANW",
-      "name_zh": "Palo Alto Networks",
+      "symbol": "SNAP",
+      "name_zh": "Snap",
       "kind": "US",
-      "price": 418.78,
-      "change_pct": 5.09,
-      "mtd_pct": 5.4,
-      "ytd_pct": 127.35,
+      "price": 6.23,
+      "change_pct": 6.31,
+      "mtd_pct": 15.37,
+      "ytd_pct": -22.8,
       "market_date": "2026-10-09",
-      "per": 1061.8013,
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SNAP.US",
+      "error": null
+    },
+    {
+      "symbol": "JOBY",
+      "name_zh": "Joby Aviation",
+      "kind": "US",
+      "price": 5.44,
+      "change_pct": -5.39,
+      "mtd_pct": -10.08,
+      "ytd_pct": -58.79,
+      "market_date": "2026-10-09",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=JOBY.US",
+      "error": null
+    },
+    {
+      "symbol": "PYPL",
+      "name_zh": "PayPal",
+      "kind": "US",
+      "price": 55.53,
+      "change_pct": 0.93,
+      "mtd_pct": 5.71,
+      "ytd_pct": -4.88,
+      "market_date": "2026-10-09",
+      "per": 9.6837,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PANW.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PYPL.US",
       "error": null
     },
     {
@@ -227,17 +199,17 @@
       "error": null
     },
     {
-      "symbol": "TTWO",
-      "name_zh": "Take-Two Interactive Software,",
+      "symbol": "CSCO",
+      "name_zh": "Cisco Systems",
       "kind": "US",
-      "price": 213.44,
-      "change_pct": 1.94,
-      "mtd_pct": 2.86,
-      "ytd_pct": -16.63,
+      "price": 118.39,
+      "change_pct": 3.05,
+      "mtd_pct": 10.0,
+      "ytd_pct": 53.69,
       "market_date": "2026-10-09",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TTWO.US",
+      "per": 35.1822,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CSCO.US",
       "error": null
     },
     {
