@@ -1,11 +1,9 @@
 {
-  "news_date": "2026-10-11",
+  "news_date": "2026-10-12",
   "tldr": [
-    "> 週末彙整，部分台股／政策內容為上一交易日（週五）收盤後至今之要聞；國際外電為近1~2交易日確認。/ Weekend digest; some Taiwan and policy items reflect news since Friday's close, international wires from the latest 1-2 sessions.",
-    "台股收在49,313.44點、漲0.99%逼近歷史高檔，台積電漲至2,550元，法說會前Q3營收9,899億元創新高（季增6%）穩住市場人氣。",
-    "9月出口872.2億美元創新高、年增60.9%連35紅，電子與資通產品占出口80.5%，確立AI需求為出口主引擎。",
-    "金管會核准玉山金換股併購三商壽，並擴大保險業健康福祉事業投資範疇，引導長期資金投入高齡化經濟。",
-    "美股週五收紅為一週收官，惟聯準會9月會議紀要暗示年底前可能再升息一次，長天期美債殖利率攀抵24年高點。"
+    "台股高檔震盪，法人看第四季重回獲利驅動，被動元件成資金焦點。",
+    "鴻海等台廠遭美國337調查，格羅方德砸11億歐元擴建德國廠搶攻實體AI。",
+    "避險資金湧入貨幣市場基金達1538億美元，銅價逼近新高、12檔台股ETF規模創高。"
   ],
   "sections": [
     {
@@ -13,20 +11,20 @@
       "section_zh": "股市行情",
       "items": [
         {
-          "title_zh": "台股收盤站上49,300點 權值科技股領漲",
-          "title_en": "Taiwan's TAIEX closes above 49,300 as tech heavyweights lead",
-          "summary_zh": "加權指數最近交易日收漲492.93點（+0.99%）至49,313.44點，台積電上漲35元至2,550元，半導體權值股領軍走高。指數逼近歷史高檔，反映AI晶片需求持續主導大盤方向，法說旺季前買盤續強。",
-          "summary_en": "The benchmark TAIEX ended its latest session up 492.93 points (+0.99%) at 49,313.44, with TSMC rising NT$35 to NT$2,550 as semiconductor heavyweights led the advance. The close, in record territory, underscores how AI-driven chip demand continues to anchor index direction heading into earnings season.",
-          "source_name": "Yahoo股市 ^TWII",
-          "source_url": "https://tw.stock.yahoo.com/quote/%5ETWII"
+          "title_zh": "台股Q4有望重回獲利驅動 資金轉進被動元件",
+          "title_en": "Taiwan stocks seen returning to profit-driven gains in Q4 as capital rotates",
+          "summary_zh": "安聯投信指出，台股近期在美國利率政策、債券殖利率波動及地緣風險干擾下高檔震盪，上攻5萬點仍須整理。隨不確定因素逐步消化，第四季焦點可望重回企業營收與獲利基本面，轉為獲利驅動行情。大型權值股走勢疲軟之際，被動元件因AI伺服器與高效能運算推升高階MLCC、晶片電阻需求，加上旺季備貨與車用滲透提升，再現漲價題材而吸引資金青睞。",
+          "summary_en": "Allianz says Taiwan's market is consolidating at high levels, rattled by US rate policy, bond-yield swings and geopolitical risk, leaving the 50,000-point mark out of reach for now. As these uncertainties clear, Q4 focus should shift back to corporate revenue, earnings and fundamentals. With large-cap weights soft, passive-component names are drawing funds as AI servers and HPC lift demand for high-end MLCCs and chip resistors, reviving price-hike themes.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6627489"
         },
         {
-          "title_zh": "台積電第三季營收9,899億元創單季新高、季增6%",
-          "title_en": "TSMC posts record Q3 revenue of NT$989.9bn, up 6% QoQ",
-          "summary_zh": "台積電第三季合併營收9,899億元，季增6%且超越財測上緣，改寫單季歷史新高。數據於10月15日法說會前公布，印證AI需求續強，使台積電續為加權指數主要風向球。",
-          "summary_en": "TSMC reported third-quarter consolidated revenue of NT$989.9 billion, a 6% sequential gain that beat its own guidance and set an all-time quarterly high. Released ahead of the Oct 15 earnings call, the print reinforces AI-driven demand strength and keeps the stock pivotal to the weighted index's direction.",
-          "source_name": "優分析 uAnalyze",
-          "source_url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E7%A9%8D%E9%9B%BBq3%E7%87%9F%E6%94%B69899%E5%84%84%E5%85%83-%E5%AD%A3%E5%A2%9E6-%E8%B6%85%E6%A8%99-%E5%89%B5%E4%B8%8B%E5%96%AE%E5%AD%A3%E6%96%B0%E9%AB%98-061016263.html"
+          "title_zh": "電子五哥Q3股價三漲兩跌 伺服器帶動營收創高",
+          "title_en": "Taiwan's \"big five\" contract makers post record Q3 revenue on server demand",
+          "summary_zh": "第三季電子五哥股價呈三漲兩跌，緯創漲16.4%表現最佳，和碩、仁寶上漲，廣達、英業達下跌；三大法人同步加碼五檔，以緯創買超逾16萬張最多。受惠伺服器業務，廣達、緯創單季營收分別突破1.16與1.15兆元，英業達、和碩亦創新高。廣達新世代伺服器第三季底試產，第四季開始小量出貨，營運動能延續。",
+          "summary_en": "Among the five major electronics assemblers, Wistron, Pegatron and Compal rose in Q3 while Quanta and Inventec fell, a three-up, two-down split; Wistron led with a 16.4% gain. Institutions net-bought all five. Server business drove record or multi-quarter-high single-quarter revenue, with Quanta and Wistron both topping NT$1.1 trillion, as next-gen server products ramp toward small-volume Q4 shipments.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6626138"
         }
       ]
     },
@@ -35,20 +33,20 @@
       "section_zh": "產業動態",
       "items": [
         {
-          "title_zh": "台灣9月出口872.2億美元創新高、年增60.9%",
-          "title_en": "Taiwan's September exports hit record US$87.2bn, up 60.9% YoY",
-          "summary_zh": "財政部公布9月出口872.2億美元，創歷年單月新高、年增60.9%，連35紅刷新最長紀錄。電子零組件與資通視聽產品合占出口80.5%，積體電路年增46.1%，確立AI需求為出口主引擎，第四季動能料延續。",
-          "summary_en": "The Ministry of Finance reported September exports of US$87.22 billion, an all-time monthly high and a 60.9% annual jump that extended the record winning streak to 35 straight months. Electronics and ICT products made up 80.5% of shipments, with integrated-circuit exports up 46.1%, confirming AI demand as the dominant growth engine.",
-          "source_name": "優分析 uAnalyze",
-          "source_url": "https://uanalyze.com.tw/articles/9564756767"
+          "title_zh": "鴻海等台廠遭美國337專利調查 強調出貨正常",
+          "title_en": "Foxconn and Taiwan peers named in US ITC Section 337 patent probe",
+          "summary_zh": "美國國際貿易委員會10月9日就電源模組廠Vicor的專利侵權主張，正式啟動337調查（編號337-TA-1526），台達電、鴻海、廣達等多家台廠及關係企業被列被調查方，範圍涵蓋特定垂直供電系統及搭載該系統的運算系統。鴻海聲明指出，初步評估未對生產營運、產品出貨及客戶合作造成重大影響，營運維持正常，已組成團隊因應，並持續與客戶、供應鏈夥伴溝通。",
+          "summary_en": "The USITC on Oct 9 launched a Section 337 investigation (No. 337-TA-1526) over patent-infringement claims by US power-module maker Vicor, naming Delta Electronics, Foxconn, Quanta and affiliates as respondents. The probe covers certain vertical power-delivery systems and computing systems that use them. Foxconn said an initial review found no material impact on production, shipments or customer cooperation, operations remain normal, and it has formed a team to respond.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6627599"
         },
         {
-          "title_zh": "對美、對東協出口創高 反映AI供應鏈移轉",
-          "title_en": "Exports to US and ASEAN surge to records on AI supply-chain shift",
-          "summary_zh": "9月台灣對美國出口274.6億美元、年增1.1倍，對東協出口188.8億美元、年增93.4%，雙雙刷新單月新高。顯示AI伺服器建置與供應鏈移轉加速，出口動能向外擴散，區域布局更趨多元。",
-          "summary_en": "Taiwan's September exports to the United States jumped 106% YoY to US$27.46 billion, while shipments to ASEAN rose 93.4% to US$18.88 billion, both monthly records. The twin surges reflect accelerating AI-server build-outs and supply-chain relocation, broadening Taiwan's export strength beyond its core markets.",
-          "source_name": "經濟日報 money.udn",
-          "source_url": "https://money.udn.com/money/story/10869/9111549"
+          "title_zh": "格羅方德砸11億歐元擴建德國晶圓廠 搶攻實體AI",
+          "title_en": "GlobalFoundries to invest €1.1bn expanding its Dresden fab for \"physical AI\"",
+          "summary_zh": "晶圓代工廠格羅方德宣布德國德勒斯登SPRINT晶圓廠擴建計畫封頂，總投資11億歐元，並推出新一代FD-SOI平台FDX Fusion，鎖定機器人、智慧汽車與工業自動化。隨AI從雲端延伸至實體設備，晶片需求轉向低功耗、即時反應與感測整合。擴建後300毫米廠預計2028年底完成，年產能逾百萬片，可望成為歐洲最大晶圓代工基地，強化歐洲在地製造布局。",
+          "summary_en": "GlobalFoundries topped out the SPRINT expansion of its Dresden, Germany fab—a €1.1 billion project—and unveiled its FDX Fusion FD-SOI platform targeting robotics, smart vehicles and industrial automation. As AI spreads from cloud data centers to physical devices, chip demand shifts toward low power, real-time response and sensor integration. Due by end-2028, the 300mm site will exceed one million wafers a year, becoming Europe's largest foundry base.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6627514"
         }
       ]
     },
@@ -57,20 +55,20 @@
       "section_zh": "金融業",
       "items": [
         {
-          "title_zh": "金管會核准玉山金股份轉換併購三商美邦人壽",
-          "title_en": "FSC clears E.Sun Financial's share-swap takeover of Mercuries Life",
-          "summary_zh": "金管會核准玉山金以每0.2486股換發1股方式取得三商壽100%股權。金管會要求玉山金出具保戶權益不受影響聲明，並承諾員工全數留用、三年內勞動權益不變，推進今年金融業最大整併案之一。",
-          "summary_en": "The FSC approved E.Sun Financial Holding's acquisition of 100% of Mercuries Life via a share swap of 0.2486 E.Sun shares per Mercuries Life share. Regulators required pledges that policyholder rights stay intact and that all insurer staff be retained for three years, advancing one of the year's largest financial-sector consolidations.",
-          "source_name": "ETtoday財經",
-          "source_url": "https://finance.ettoday.net/news/3196891"
+          "title_zh": "資金湧向避險 全球貨幣市場基金單周吸金1538億美元",
+          "title_en": "Money-market funds pull in $153.8bn as investors flee to safety",
+          "summary_zh": "美債殖利率攀高、油價居高加深通膨疑慮，促使資金轉向避險。LSEG Lipper數據顯示，截至10月7日當周，全球貨幣市場基金淨流入1,538.1億美元，創5月以來最多；美國股票基金則轉為失血51.1億美元。美國10年期公債殖利率升抵5.3645%，創2002年以來新高，壓抑市場情緒，投資人在標普500創高後獲利了結，反映資金在股債間的避險輪動。",
+          "summary_en": "With global bond selling intensifying, US Treasury yields climbing and oil elevated, inflation worries drove cash into havens. LSEG Lipper data show global money-market funds took in $153.81bn in the week to Oct 7, the most since early May, while US equity funds saw $5.11bn of outflows. The US 10-year yield hit 5.3645%, a 2002 high, pressuring sentiment and prompting profit-taking after the S&P 500's record.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6626866"
         },
         {
-          "title_zh": "國銀放款月增1,341億元 個人放款成主力",
-          "title_en": "Bank lending rises NT$134.1bn in a month, led by personal loans",
-          "summary_zh": "國銀放款餘額單月增加1,341億元，個人放款為成長主力。金管會指出，國內外股市熱絡帶動投資理財需求，推升相關借貸。數據顯示多頭市況下信用成長穩健，持續支撐金融業營運動能。",
-          "summary_en": "Domestic banks' outstanding loans grew by NT$134.1 billion over the month, with personal lending the main driver as buoyant local and overseas equity markets spurred demand for investment- and wealth-related borrowing. The data point to resilient credit growth underpinning the financial sector against a strong market backdrop.",
-          "source_name": "Yahoo股市",
-          "source_url": "https://tw.stock.yahoo.com/news/%E5%9C%8B%E9%8A%8010%E6%9C%88%E6%94%BE%E6%AC%BE%E6%9C%88%E5%A2%9E1341%E5%84%84%E5%85%83-%E5%80%8B%E4%BA%BA%E6%94%BE%E6%AC%BE%E6%88%90%E4%B8%BB%E5%8A%9B-115945348.html"
+          "title_zh": "台新新光金獨家贊助台北101國慶展演",
+          "title_en": "Taishin Shin Kong Financial sponsors Taipei 101 National Day show for a second year",
+          "summary_zh": "台新新光金控獨家贊助的台北101國慶展演登場，以「Onward Taiwan 一起點亮台灣」為主題，結合無人機、大樓煙火及雷射燈光，長達14分鐘。總經理林維俊表示，能連續兩年獨家贊助深感榮幸。對金控業者而言，透過指標性公眾活動與吉祥物行銷強化品牌能見度，是深耕零售客群、提升集團形象的重要策略，也反映新光台新整併後品牌整合的推進。",
+          "summary_en": "Taishin Shin Kong Financial Holding exclusively sponsored the 14-minute Taipei 101 National Day display, themed \"Onward Taiwan,\" combining drones, building fireworks and laser effects. President Lin Wei-jun said the group was honored to back the event for a second straight year. The high-profile cultural sponsorship shows how Taiwan's financial-holding firms use marquee public events to build brand visibility among retail customers after sector consolidation.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6627494"
         }
       ]
     },
@@ -79,127 +77,20 @@
       "section_zh": "財富管理",
       "items": [
         {
-          "title_zh": "金管會擴大保險業「健康福祉事業」投資範疇",
-          "title_en": "FSC widens insurers' \"health and welfare\" investment scope",
-          "summary_zh": "金管會發布令釋即日生效，取消投資對象須與保單業務連結的限制，服務不再限於保戶。長照顧問、輔助服務與智慧生活輔具納入範圍，非上市櫃標的最高可100%持股，引導壽險長期資金投入高齡化經濟。",
-          "summary_en": "The FSC issued a ruling, effective immediately, letting insurers invest in health-and-welfare businesses without the prior requirement that the services link to their own policyholders. Long-term-care advisory, assistive-living and smart-aid ventures now qualify, and insurers may hold up to 100% of unlisted targets, channelling long-term capital into the aging-society economy.",
-          "source_name": "優分析 uAnalyze",
-          "source_url": "https://uanalyze.com.tw/articles/4063056619"
+          "title_zh": "台股ETF逆勢壯大 12檔規模創高、00927今年翻倍居冠",
+          "title_en": "Twelve Taiwan equity ETFs hit record size even as the index pulls back",
+          "summary_zh": "大盤創高後拉回整理，仍有12檔台股ETF規模逆勢創高，以市值型與高息型為主，包括群益半導體收益00927、國泰永續高股息00878、元大高股息0056。以今年以來含息績效計，00927上漲107.36%、績效翻倍居冠，成分股橫跨IC設計、晶圓代工與封測，兼具半導體成長與高息兩大主題。法人指出，ETF波動相對個股低，是盤面震盪時國人偏好的配置工具。",
+          "summary_en": "After the broad market set highs and retreated, 12 Taiwan-listed ETFs still reached record assets, led by market-cap and high-dividend products such as Capital TIP Semiconductor Income (00927), Cathay Sustainability High Dividend (00878) and Yuanta High Dividend (0056). By total return this year, 00927 leads with a 107.36% gain, more than doubling. Its holdings span the semiconductor supply chain while pairing growth with high-yield names.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6627497"
         },
         {
-          "title_zh": "因應高齡化 金管會將推法規鬆綁與保險定價放寬",
-          "title_en": "FSC signals looser rules and pricing flexibility for aging-society insurance",
-          "summary_zh": "金管會透露，因應超高齡社會將推動法規鬆綁並放寬保險商品定價彈性，鼓勵保障型與長照型保單。政策方向盼使保險業自單純理賠角色延伸至事前預防與長照服務，為財富與退休規劃開拓新型商品線。",
-          "summary_en": "Facing a super-aged society, the FSC said it will push regulatory easing and relax insurance-product pricing to encourage protection and long-term-care coverage. The direction aims to steer the industry from pure claims-payer toward prevention and elder-care services, opening new wealth- and retirement-planning product lines.",
-          "source_name": "經濟日報 money.udn",
-          "source_url": "https://money.udn.com/money/story/5613/9538696"
-        }
-      ]
-    },
-    {
-      "section": "Tax & Regulations",
-      "section_zh": "稅務法規",
-      "items": [
-        {
-          "title_zh": "立院三讀「擬制遺產」課稅修法 財部研擬修正子法",
-          "title_en": "Legislature passes \"deemed estate\" tax amendment; MOF drafts implementing rules",
-          "summary_zh": "立法院三讀通過擬制遺產課稅修正，收緊死亡前特定財產移轉計入遺產稅的認定。財政部表示正研擬修正遺產及贈與稅法施行細則與申報書表，待總統公布後加強宣導，牽動高資產族群的傳承與財富移轉規劃。",
-          "summary_en": "Taiwan's legislature gave final reading to amendments on the taxation of \"deemed estates,\" tightening how certain transfers before death are counted into taxable estates. The Ministry of Finance said it is revising the estate-and-gift tax enforcement rules and filing forms, and will step up guidance once the president promulgates the law, affecting succession and wealth-transfer planning.",
-          "source_name": "中央社 CNA",
-          "source_url": "https://www.cna.com.tw/news/afe/202608210289.aspx"
-        },
-        {
-          "title_zh": "房地合一稅躍居房地交易最大稅源 占比衝破5成",
-          "title_en": "Property transaction tax overtakes land value tax as top real-estate revenue",
-          "summary_zh": "財政部統計顯示，房地合一稅已超越土增稅成為房地交易最大稅源，2025年占比突破5成達52.4%，土增稅則跌至16年新低。顯示打炒房稅制已主導不動產相關稅收結構，影響房市交易與持有成本評估。",
-          "summary_en": "Finance Ministry data show the consolidated housing-and-land income tax has become the largest source of real-estate transaction revenue, with its share climbing above 50% to 52.4% in 2025, while land value increment tax fell to a 16-year low. The shift reflects how the anti-speculation regime now dominates property-related tax collection.",
-          "source_name": "聯合新聞網 udn",
-          "source_url": "https://udn.com/news/story/7243/9462693"
-        }
-      ]
-    },
-    {
-      "section": "Macro & Policy",
-      "section_zh": "總經政策",
-      "items": [
-        {
-          "title_zh": "央行連10季維持利率2% 上修今年CPI至2.03%",
-          "title_en": "Central bank holds rate at 2% for 10th straight quarter, lifts CPI forecast",
-          "summary_zh": "台灣央行連續第10季維持政策利率2%，並將2026年CPI預測由1.91%上修至2.03%，通膨續高於2%警戒線，維持偏緊基調。總裁楊金龍表示貨幣操作仍偏緊，顯示短期內不急於轉向寬鬆，即便經濟動能強勁。",
-          "summary_en": "Taiwan's central bank kept its policy rate at 2% for a 10th consecutive quarter and raised its 2026 CPI forecast to 2.03% from 1.91%, keeping a tightening bias as inflation stays above its 2% alert line. Governor Yang Chin-long said monetary operations remain on the tight side, signalling no near-term easing despite robust growth.",
-          "source_name": "優分析 uAnalyze",
-          "source_url": "https://uanalyze.com.tw/articles/9516755544"
-        },
-        {
-          "title_zh": "財政部：Q4出口可連闖三關 全年可望破9千億美元",
-          "title_en": "MOF sees exports clearing three NT$100bn months in Q4, topping US$900bn for year",
-          "summary_zh": "財政部預估第四季出口有望月月突破千億美元，推升2026全年出口首度突破9千億美元。官員指出AI、高效能運算與雲端需求仍為主力，使科技供應鏈持續扮演台灣貿易引擎，為總體經濟提供強力支撐。",
-          "summary_en": "The Ministry of Finance projected fourth-quarter exports could break the US$100 billion mark in each of the three months, putting full-year 2026 exports on track to exceed US$900 billion for the first time. Officials said AI, high-performance computing and cloud demand remain the main drivers, keeping the tech supply chain the engine of Taiwan's trade boom.",
-          "source_name": "科技新報 TechNews",
-          "source_url": "https://finance.technews.tw/2026/10/08/2609-export/"
-        }
-      ]
-    },
-    {
-      "section": "Global Markets",
-      "section_zh": "國際財經",
-      "items": [
-        {
-          "title_zh": "聯準會紀要暗示年底前恐再升息 市場押12月",
-          "title_en": "Fed minutes point to another possible hike by year-end, markets eye December",
-          "summary_zh": "台媒引述聯準會9月FOMC紀要，多數官員認為年底前可能再升息一次，但未必在10月；9月已升息1碼至3.75%~4.00%。因9月非農僅增2.9萬人，交易員將10月升息機率降至20%以下、12月約6成，聚焦10/28與12/9會議。",
-          "summary_en": "Taiwan media cited the Fed's September FOMC minutes showing most officials saw a potential further rate hike before year-end, though not necessarily in October; the Fed had lifted its target range to 3.75%-4.00% in September. With September payrolls adding just 29,000 jobs, traders put October-hike odds below 20% and December odds near 60%, ahead of the Oct 28 and Dec 9 meetings.",
-          "source_name": "科技新報 TechNews",
-          "source_url": "https://finance.technews.tw/2026/10/08/fed-officials-see-another-hike-coming/"
-        },
-        {
-          "title_zh": "美債殖利率飆24年高 拖累美股",
-          "title_en": "US bond yields spike to 24-year high, pressuring Wall Street",
-          "summary_zh": "台媒報導，長天期美國公債殖利率攀升至24年高點，再掀通膨與債務疑慮，近一交易日拖累美股四大指數收低、標普終止連四紅。殖利率走高使全球股市情緒轉趨謹慎，並壓抑對利率敏感的類股表現。",
-          "summary_en": "Taiwan media reported that rising long-dated US Treasury yields climbed to a 24-year high, reviving inflation and debt worries and dragging the main US indexes lower in a recent session, with the S&P 500 ending a four-day winning streak. The yield surge has kept global equity sentiment on guard and weighed on rate-sensitive sectors.",
-          "source_name": "鉅亨網 cnyes",
-          "source_url": "https://news.cnyes.com/news/id/6623900"
-        }
-      ]
-    },
-    {
-      "section": "International",
-      "section_zh": "國際",
-      "items": [
-        {
-          "title_zh": "道瓊週五漲0.83% 美股收官一週收紅（2026-10-09，最近交易日）",
-          "title_en": "Dow rises 0.83% on Friday as Wall Street caps a winning week (2026-10-09, latest session)",
-          "summary_zh": "美股週五收高為一週收官，道瓊漲0.83%收51,654.95點，標普500漲0.59%收7,811.54點，那斯達克漲0.64%收27,366.17點，油價與公債殖利率回穩。本週標普、道瓊、那指分別上漲1.2%、0.9%與0.6%。",
-          "summary_en": "US stocks closed higher Friday to cap a winning week, with the Dow up 0.83% to 51,654.95, the S&P 500 +0.59% to 7,811.54 and the Nasdaq +0.64% to 27,366.17 as oil prices and Treasury yields stabilized. For the week the S&P 500, Dow and Nasdaq rose 1.2%, 0.9% and 0.6% respectively.",
-          "source_name": "Yahoo Finance",
-          "source_url": "https://finance.yahoo.com/markets/stocks/articles/markets-news-oct-9-2026-105547352.html"
-        },
-        {
-          "title_zh": "科技股反彈 標普500重返紀錄高點附近（2026-10-09）",
-          "title_en": "Tech-led rebound lifts S&P 500 back toward record (2026-10-09)",
-          "summary_zh": "標普500在科技股反彈帶動下走高，重新逼近本週稍早締造的7,818.93點收盤紀錄，那斯達克本週高點為27,599.79點。此波回升接續週中急跌，顯示即便殖利率偏高，大型科技股仍見逢低買盤進場。",
-          "summary_en": "The S&P 500 rose as technology shares rebounded, pulling the index back toward its recent record close of 7,818.93 and the Nasdaq's all-time high of 27,599.79 set earlier in the week. The recovery followed a sharp mid-week pullback, showing dip-buying in megacap tech despite elevated yields.",
-          "source_name": "Yahoo Finance",
-          "source_url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-oct-9-135834993.html",
-          "published": "2026-10-09"
-        },
-        {
-          "title_zh": "標普、那指連二日收黑 AI交易熄火（2026-10-08）",
-          "title_en": "S&P 500 and Nasdaq fall for a second day as AI trade stumbles (2026-10-08)",
-          "summary_zh": "美股連續第二個交易日下跌，那斯達克跌幅居前，一則有關OpenAI營收的報導使AI交易降溫。此次回檔為那指自8月中以來最大單日跌幅，凸顯高評價科技股對AI成長敘事任何裂縫都格外敏感。",
-          "summary_en": "US stocks fell for a second straight session, with the Nasdaq leading declines, as the AI trade took a hit following a report about OpenAI's revenue. The pullback, the Nasdaq's biggest one-day loss since mid-August, underscored how sensitive richly valued tech names have become to any crack in the AI growth narrative.",
-          "source_name": "Yahoo Finance",
-          "source_url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-october-8-dow-sp-500-nasdaq-080537884.html",
-          "published": "2026-10-08"
-        },
-        {
-          "title_zh": "道瓊週五大漲逾400點 無視美債殖利率創24年新高（2026-10-08）",
-          "title_en": "Dow adds 400+ points Friday even as Treasury yields hit fresh 24-year highs (2026-10-08)",
-          "summary_zh": "道瓊勁揚逾400點，助華爾街收紅收官一週，無視本週長天期美債殖利率一度觸及24年新高。此一韌性顯示股市投資人暫時看過利率環境，轉而聚焦財報季前穩健的企業基本面。",
-          "summary_en": "The Dow climbed more than 400 points to help Wall Street score a winning week, shrugging off longer-dated Treasury yields that touched new 24-year highs during the week. The resilience showed equity investors looking past the rate backdrop toward solid corporate fundamentals heading into earnings season.",
-          "source_name": "CNBC",
-          "source_url": "https://www.cnbc.com/2026/10/08/stock-market-today-live-updates.html",
-          "published": "2026-10-08"
+          "title_zh": "銅價逼近歷史高點 瑞銀、德銀示警供應缺口延續",
+          "title_en": "Copper nears record highs as UBS and Deutsche Bank flag a lasting supply gap",
+          "summary_zh": "倫敦銅期貨上週五收報每公噸約14,622美元，逼近歷史高點。瑞銀、摩根大通與德意志銀行接連示警，電氣化與資料中心建設帶動需求，加上礦場罷工與全球庫存偏低，恐加劇供需失衡。瑞銀視銅為最具信心的大宗商品投資主題之一，預期供應缺口將延續至2030年代初；德銀喊價2.2萬美元。對高資產配置而言，銅等實物資產的結構性多頭題材值得留意。",
+          "summary_en": "LME copper closed Friday near all-time highs at about $14,622 a tonne. UBS, JPMorgan and Deutsche Bank warned that demand from electrification and data-center build-out, plus mine strikes and low inventories, could worsen the supply-demand imbalance. UBS calls copper one of its highest-conviction commodity themes and expects a global supply gap to persist into the early 2030s; Deutsche Bank set a $22,000 price target.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6627499"
         }
       ]
     }
