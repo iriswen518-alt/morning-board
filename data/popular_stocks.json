@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-14T19:54:46+08:00",
+  "generated_at": "2026-10-14T20:55:24+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -45,6 +45,20 @@
       "error": null
     },
     {
+      "symbol": "MS",
+      "name_zh": "摩根士丹利",
+      "kind": "US",
+      "price": 186.64,
+      "change_pct": -1.78,
+      "mtd_pct": -0.77,
+      "ytd_pct": 5.13,
+      "market_date": "2026-10-13",
+      "per": 14.6899,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MS.US",
+      "error": null
+    },
+    {
       "symbol": "CRWV",
       "name_zh": "CoreWeave",
       "kind": "US",
@@ -87,17 +101,17 @@
       "error": null
     },
     {
-      "symbol": "SKYD",
-      "name_zh": "Skydance",
+      "symbol": "FAST",
+      "name_zh": "Fastenal",
       "kind": "US",
-      "price": 9.27,
-      "change_pct": 1.2,
-      "mtd_pct": -10.26,
-      "ytd_pct": -30.82,
+      "price": 51.43,
+      "change_pct": -0.12,
+      "mtd_pct": 3.84,
+      "ytd_pct": 28.16,
       "market_date": "2026-10-13",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SKYD.US",
+      "per": 43.2391,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FAST.US",
       "error": null
     },
     {
@@ -115,6 +129,48 @@
       "error": null
     },
     {
+      "symbol": "SKYD",
+      "name_zh": "Skydance",
+      "kind": "US",
+      "price": 9.27,
+      "change_pct": 1.2,
+      "mtd_pct": -10.26,
+      "ytd_pct": -30.82,
+      "market_date": "2026-10-13",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SKYD.US",
+      "error": null
+    },
+    {
+      "symbol": "GOOG",
+      "name_zh": "谷歌 C",
+      "kind": "US",
+      "price": 349.52,
+      "change_pct": 0.16,
+      "mtd_pct": 2.58,
+      "ytd_pct": 11.38,
+      "market_date": "2026-10-13",
+      "per": 17.7612,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GOOG.US",
+      "error": null
+    },
+    {
+      "symbol": "STT",
+      "name_zh": "State Street",
+      "kind": "US",
+      "price": 174.1,
+      "change_pct": -0.47,
+      "mtd_pct": -0.28,
+      "ytd_pct": 34.95,
+      "market_date": "2026-10-13",
+      "per": 13.7172,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=STT.US",
+      "error": null
+    },
+    {
       "symbol": "CRML",
       "name_zh": "Critical Metals",
       "kind": "US",
@@ -126,20 +182,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRML.US",
-      "error": null
-    },
-    {
-      "symbol": "FAST",
-      "name_zh": "Fastenal",
-      "kind": "US",
-      "price": 51.43,
-      "change_pct": -0.12,
-      "mtd_pct": 3.84,
-      "ytd_pct": 28.16,
-      "market_date": "2026-10-13",
-      "per": 43.2391,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FAST.US",
       "error": null
     },
     {
@@ -157,6 +199,20 @@
       "error": null
     },
     {
+      "symbol": "ARWR",
+      "name_zh": "Arrowhead Pharmaceuticals",
+      "kind": "US",
+      "price": 58.13,
+      "change_pct": -4.28,
+      "mtd_pct": -11.18,
+      "ytd_pct": -12.44,
+      "market_date": "2026-10-13",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ARWR.US",
+      "error": null
+    },
+    {
       "symbol": "CIFR",
       "name_zh": "Cipher Digital",
       "kind": "US",
@@ -171,45 +227,17 @@
       "error": null
     },
     {
-      "symbol": "GME",
-      "name_zh": "GameStop",
+      "symbol": "GTLB",
+      "name_zh": "GitLab",
       "kind": "US",
-      "price": 27.22,
-      "change_pct": -0.04,
-      "mtd_pct": 10.43,
-      "ytd_pct": 35.56,
+      "price": 51.95,
+      "change_pct": -7.25,
+      "mtd_pct": 9.95,
+      "ytd_pct": 38.42,
       "market_date": "2026-10-13",
-      "per": 15.37,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GME.US",
-      "error": null
-    },
-    {
-      "symbol": "DELL",
-      "name_zh": "Dell Technologies",
-      "kind": "US",
-      "price": 572.47,
-      "change_pct": -0.74,
-      "mtd_pct": 6.42,
-      "ytd_pct": 354.77,
-      "market_date": "2026-10-13",
-      "per": 32.076,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DELL.US",
-      "error": null
-    },
-    {
-      "symbol": "GOOG",
-      "name_zh": "谷歌 C",
-      "kind": "US",
-      "price": 349.52,
-      "change_pct": 0.16,
-      "mtd_pct": 2.58,
-      "ytd_pct": 11.38,
-      "market_date": "2026-10-13",
-      "per": 17.7612,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GOOG.US",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GTLB.US",
       "error": null
     },
     {
