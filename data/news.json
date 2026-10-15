@@ -3,7 +3,9 @@
   "tldr": [
     "台積電第三季獲利創高，稅後淨利7,630億元、EPS 29.43元，營收年增約50.9%。",
     "台股重挫3.41%（跌1,656點）收46,970點，美CPI升溫與晶片股重挫拖累買盤，外資連七日賣超。",
-    "台積電財測第四季營收上看523至543億美元，2奈米比重升向8%，AI供應鏈獲利循環延續。"
+    "台積電財測第四季營收上看523至543億美元，2奈米比重升向8%，AI供應鏈獲利循環延續。",
+    "AI融資疑慮引爆全球科技股賣壓，SK海力士跌逾10%，輝達、超微、戴爾同步走弱，20檔AI晶片股本週市值蒸發逾1兆美元。",
+    "台灣央行利率連10季維持2%、上修2026年成長率至11.48%，美國聯準會則升息一碼至3.75%至4%。"
   ],
   "sections": [
     {
@@ -91,6 +93,114 @@
           "summary_en": "To support Taiwan's push to become an Asian asset-management hub, the Taiwan Futures Exchange has continued an incentive programme rewarding banks that issue NT dollar-denominated structured products for high-net-worth clients, with each qualifying product required to achieve NT$100m in actual sales. Taishin Bank, which issued a non-principal-guaranteed structured note linked to Taiwan equities and hedged via single-stock futures, was among the award recipients.",
           "source_name": "經濟日報",
           "source_url": "https://money.udn.com/money/story/5613/9783911"
+        }
+      ]
+    },
+    {
+      "section": "Tax & Regulations",
+      "section_zh": "稅務法規",
+      "items": [
+        {
+          "title_zh": "遺贈稅修法三讀 財政部研擬子法規配套",
+          "title_en": "Legislature overhauls estate-tax basis as Finance Ministry drafts implementing rules",
+          "summary_zh": "立法院三讀通過以「擬制遺產課稅」方式課徵遺產稅，財政部表示正研擬修正遺贈稅法施行細則等子法規，並將同步調整申報書表與線上申辦系統。總統公布修正條文後，財政部將加強宣導，以利徵納依循。新制聚焦強化對生前財產移轉的反避稅認定，牽動高資產族群的傳承與贈與規劃；實際施行日期與細節仍待子法與公告確認，納稅人宜留意後續法規進度與申報作業調整。",
+          "summary_en": "Taiwan's legislature passed amendments shifting estate taxation toward a \"deemed-estate\" basis, prompting the Ministry of Finance to revise sub-regulations such as the enforcement rules of the Estate and Gift Tax Act and to adjust filing forms and online systems. The ministry says it will step up public guidance once the president promulgates the changes, aiming to tighten anti-avoidance treatment of asset transfers ahead of death while easing compliance.",
+          "source_name": "中央社",
+          "source_url": "https://www.cna.com.tw/news/afe/202608210289.aspx"
+        },
+        {
+          "title_zh": "2026綜所稅調整 長照扣除額提高、基本生活費上調",
+          "title_en": "2026 income-tax relief raises long-term-care and basic-living deductions",
+          "summary_zh": "2026年度綜所稅調整，長期照顧特別扣除額由每人12萬元提高至18萬元，基本生活費則調整為21.3萬元；財政部並就網路創作者、網紅的課稅性質與扣繳義務發布作業規範。相關調整有助減輕長照家庭負擔，並使數位經濟所得課稅更明確。納稅人宜將提高後的扣除額與門檻納入年度報稅與節稅規劃，並留意線上申辦與扣繳相關作業變動，以免影響權益。",
+          "summary_en": "For the 2026 tax year, Taiwan lifts the special deduction for long-term care from NT$120,000 to NT$180,000 per person, while the basic living expense rises to NT$213,000. Authorities have also clarified income-tax treatment and withholding obligations for online creators and influencers. The adjustments ease the burden on caregiving households and sharpen rules for digital-economy income, and taxpayers should factor the higher thresholds into year-end planning.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/5877486"
+        }
+      ]
+    },
+    {
+      "section": "Macro & Policy",
+      "section_zh": "總經政策",
+      "items": [
+        {
+          "title_zh": "台灣央行利率連10季不動 大幅上修成長預測",
+          "title_en": "Taiwan's central bank holds rates for a 10th straight quarter and lifts growth forecast",
+          "summary_zh": "中央銀行9月理監事會維持政策利率2%，為連續第10季按兵不動，並未跟進美國聯準會動作。央行受AI相關半導體出口需求帶動，將2026年經濟成長率預估由6月的9.45%大幅上修至11.48%，並將今年CPI年增率預估小幅調高至2.03%。總裁楊金龍釋出貨幣操作仍朝緊縮方向的訊號。強勁出口與溫和通膨並存，使央行在維持利率的同時保留政策彈性，後續升息與否牽動資金與匯率走向。",
+          "summary_en": "Taiwan's central bank kept its policy rate at 2% at its September board meeting, the tenth consecutive quarter on hold, and declined to follow the US Federal Reserve. It sharply raised its 2026 GDP growth forecast to 11.48% from 9.45%, driven by AI-related semiconductor export demand, while nudging its 2026 CPI projection up to 2.03%. Governor Yang Chin-long signalled policy is still leaning toward tightening.",
+          "source_name": "優分析",
+          "source_url": "https://uanalyze.com.tw/articles/9516755544"
+        },
+        {
+          "title_zh": "美聯準會逾三年來首度升息 通膨居高不下",
+          "title_en": "Fed delivers first rate hike in over three years as US inflation runs hot",
+          "summary_zh": "美國聯準會將基準利率調升一碼至3.75%至4%區間，為逾三年來首度升息，背景是9月整體CPI年增3.7%、生產者物價（PPI）年增6.3%，均高於市場預期。利率期貨顯示，交易員目前預估10月27至28日會議按兵不動的機率約67%，部分官員表示可能等待更明朗的數據再行動。美國通膨僵固與升息路徑，持續牽動全球資金流向、美元與新興市場風險性資產表現。",
+          "summary_en": "The US Federal Reserve raised its benchmark rate by a quarter point to a 3.75%–4% target range, its first hike in more than three years, after September headline CPI rose 3.7% year-on-year and producer prices jumped 6.3%, both above forecasts. Traders now see about a 67% chance the Fed holds at its Oct 27–28 meeting, with officials signalling they may wait for more clarity.",
+          "source_name": "CNBC",
+          "source_url": "https://www.cnbc.com/2026/10/14/cpi-inflation-report-september-2026.html"
+        }
+      ]
+    },
+    {
+      "section": "Global Markets",
+      "section_zh": "國際財經",
+      "items": [
+        {
+          "title_zh": "美通膨升溫、AI融資疑慮 全球股市劇烈震盪晶片股重挫",
+          "title_en": "Global markets whipsawed as hot US inflation and AI-funding fears spark chip rout",
+          "summary_zh": "台灣媒體報導，美國9月通膨數據高於預期、重燃聯準會緊縮憂慮，費城半導體指數重挫，AI與晶片權值股領跌，全球科技股同步修正。賣壓外溢亞股，壓抑記憶體族群與台股電子權值股表現。市場評論將AI基礎建設融資風險視為核心疑慮，使近期全球股市投資氣氛轉趨脆弱，資金轉向防禦性資產，後續仍須觀察通膨、升息路徑與AI資本支出動向對風險性資產的影響。",
+          "summary_en": "Taiwanese media highlighted a sharp global tech sell-off after hotter-than-expected US September inflation revived Fed tightening worries, with the Philadelphia Semiconductor Index tumbling and AI and chip heavyweights leading losses. The rout spilled into Asia, pressuring memory names and Taiwan's weighting-heavy electronics stocks. Commentary flagged AI-infrastructure financing risk as a central concern, keeping global equity sentiment fragile into the latest sessions.",
+          "source_name": "慢叔金融市場早報",
+          "source_url": "https://vocus.cc/article/6acea282fd89780001256f24"
+        },
+        {
+          "title_zh": "美大型銀行財報分歧 摩根大通遜色、高盛與大摩優於預期",
+          "title_en": "US big-bank earnings diverge as JPMorgan misses while Goldman and Morgan Stanley beat",
+          "summary_zh": "美國大型銀行第三季財報表現分歧：摩根大通營收與每股盈餘低於市場預期，但上修2026年淨利息收入展望；高盛與摩根士丹利則因交易與投資銀行動能強勁優於預期，其中大摩以股票交易為主要成長引擎。財報為美國消費與資本市場健康度提供觀察指標。隨財報季加速，市場聚焦銀行獲利品質、放款與交易收入趨勢，作為研判美國經濟與風險胃納的重要依據。",
+          "summary_en": "Third-quarter results from major US banks were mixed: JPMorgan's revenue and EPS came in below forecasts though it raised 2026 net-interest-income guidance, while Goldman Sachs and Morgan Stanley beat estimates on strong trading and investment-banking momentum. Equities trading was a key driver at Morgan Stanley. The results offered a read on US consumer and capital-markets health as earnings season picked up pace.",
+          "source_name": "CNBC",
+          "source_url": "https://www.cnbc.com/2026/10/13/bank-earnings-live-updates.html"
+        }
+      ]
+    },
+    {
+      "section": "International",
+      "section_zh": "國際",
+      "items": [
+        {
+          "title_zh": "輝達、超微、戴爾重挫 AI融資疑慮引爆全球科技股賣壓（2026-10-15）",
+          "title_en": "Nvidia, AMD, Dell sink in global tech rout on AI funding worries (2026-10-15)",
+          "summary_zh": "全球科技股下挫，市場對AI基礎建設融資的疑慮加深，輝達、超微、英特爾與戴爾同步走弱，南韓SK海力士暴跌逾10%、三星下跌8.73%。全球市值最高的20檔AI與半導體股本週合計蒸發逾1兆美元。博通執行長警告，資金取得恐成為AI建置的下一個瓶頸，顯示AI投資熱潮的融資與估值風險正受到重新檢視。",
+          "summary_en": "Global technology stocks slid as fears over AI-infrastructure financing deepened, with Nvidia, AMD, Intel and Dell falling and South Korea's SK Hynix plunging more than 10% while Samsung dropped 8.73%. Collectively, 20 of the most valuable global AI and semiconductor stocks shed over $1 trillion this week. Broadcom's CEO warned access to capital could become the next constraint on the AI buildout.",
+          "source_name": "CNBC",
+          "source_url": "https://www.cnbc.com/2026/10/15/sk-hynix-samsung-softbank-stocks-asia-tech-rout-ai-funding-worries.html",
+          "published": "2026-10-15"
+        },
+        {
+          "title_zh": "美元自18個月高點回落 公債殖利率走低、升息押注降溫（2026-10-15）",
+          "title_en": "Dollar pulls back from 18-month high as Treasury yields fall and Fed hike bets ease (2026-10-15)",
+          "summary_zh": "美元自18個月高點回落，美國公債殖利率下滑，交易員在聯準會升息一碼至3.75%至4%區間後，調降對進一步緊縮的押注。市場目前預估10月下旬會議按兵不動的機率約67%，部分官員釋出將等待通膨數據更明朗再行動的訊號。美元與殖利率走勢牽動全球資金流向，對新興市場貨幣與風險性資產帶來喘息空間。",
+          "summary_en": "The US dollar retreated from an 18-month high as Treasury yields fell and traders pared bets on further Fed tightening following the central bank's quarter-point hike to a 3.75%–4% range. Markets now price roughly a 67% chance the Fed holds at its late-October meeting, with officials signalling they may await more clarity on inflation before acting again.",
+          "source_name": "CNBC",
+          "source_url": "https://www.cnbc.com/2026/10/15/dollar-pulls-back-from-18-month-high-as-treasury-yields-fall-fed-hike-bets-ease.html",
+          "published": "2026-10-15"
+        },
+        {
+          "title_zh": "油價漲跌互見 中東情勢使供給風險續受關注（2026-10-15）",
+          "title_en": "Oil prices mixed as Middle East tensions keep supply risk in focus (2026-10-15)",
+          "summary_zh": "國際油價維持高檔，沙烏地阿拉伯與伊朗支持的青年運動（Houthi）衝突升溫。美國西德州中級原油（WTI）期貨上漲約3%、每桶漲2.88美元至約97.97美元；布蘭特12月期貨則小跌14美分、收105.92美元。國際能源署（IEA）警告市場供給受限，加上傳出沙國設施遭攻擊與荷姆茲海峽航運受擾，使供給風險溢價持續，牽動全球通膨與能源類股表現。",
+          "summary_en": "Crude remained elevated amid escalating conflict between Saudi Arabia and Iran-backed Houthi forces. US WTI futures gained about 3%, or $2.88, to settle near $97.97 a barrel, while Brent for December slipped 14 cents to settle at $105.92. The IEA warned of market constraints, and reports of attacks on Saudi facilities and shipping disruptions in the Strait of Hormuz kept supply-risk premiums in play.",
+          "source_name": "CNBC",
+          "source_url": "https://www.cnbc.com/2026/10/15/oil-prices-today-brent-wti.html",
+          "published": "2026-10-15"
+        },
+        {
+          "title_zh": "金價維持高檔 投資人權衡通膨與利率路徑（2026-10-15）",
+          "title_en": "Gold holds near elevated levels as investors weigh inflation and rate path (2026-10-15)",
+          "summary_zh": "現貨黃金報每盎司約4,150美元，高於一週前的約4,096美元，投資人在美國通膨升溫、利率展望偏緊，與中東情勢推升避險需求之間權衡。金價9月自1月逾5,500美元的歷史高點回落逾8%。摩根士丹利仍將黃金列為首選原物料，目標價看2027年第二季每盎司5,000美元。通膨僵固與地緣風險使黃金在高檔震盪，續為資產配置關注焦點。",
+          "summary_en": "Spot gold traded around $4,150 an ounce, up from about $4,096 a week earlier, as investors balanced hot US inflation and a firmer rate outlook against safe-haven demand amid Middle East tensions. Gold had pulled back more than 8% in September from a January record above $5,500. Morgan Stanley still lists gold as its top commodity pick, targeting $5,000 an ounce by the second quarter of 2027.",
+          "source_name": "CNBC",
+          "source_url": "https://www.cnbc.com/select/the-price-of-gold-today-oct-15-2026/",
+          "published": "2026-10-15"
         }
       ]
     }
