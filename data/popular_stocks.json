@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-16T19:12:59+08:00",
+  "generated_at": "2026-10-16T19:26:52+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -17,20 +17,6 @@
       "error": null
     },
     {
-      "symbol": "SPCX",
-      "name_zh": "Space Exploration Technologies",
-      "kind": "US",
-      "price": 148.62,
-      "change_pct": -2.33,
-      "mtd_pct": -1.48,
-      "ytd_pct": null,
-      "market_date": "2026-10-15",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPCX.US",
-      "error": null
-    },
-    {
       "symbol": "FMC",
       "name_zh": "FMC",
       "kind": "US",
@@ -45,45 +31,17 @@
       "error": null
     },
     {
-      "symbol": "PEP",
-      "name_zh": "百事",
+      "symbol": "TFC",
+      "name_zh": "Truist Financial",
       "kind": "US",
-      "price": 128.38,
-      "change_pct": -0.69,
-      "mtd_pct": 1.31,
-      "ytd_pct": -10.55,
+      "price": 46.57,
+      "change_pct": 2.19,
+      "mtd_pct": 0.58,
+      "ytd_pct": -5.36,
       "market_date": "2026-10-15",
-      "per": 16.2432,
+      "per": 9.7239,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PEP.US",
-      "error": null
-    },
-    {
-      "symbol": "TSLL",
-      "name_zh": "Direxion Daily TSLA Bull 2X ETF",
-      "kind": "US",
-      "price": 9.32,
-      "change_pct": -2.71,
-      "mtd_pct": 3.44,
-      "ytd_pct": -51.23,
-      "market_date": "2026-10-15",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TSLL.US",
-      "error": null
-    },
-    {
-      "symbol": "NOW",
-      "name_zh": "ServiceNow",
-      "kind": "US",
-      "price": 148.57,
-      "change_pct": 6.14,
-      "mtd_pct": 10.86,
-      "ytd_pct": -3.02,
-      "market_date": "2026-10-15",
-      "per": 86.6702,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NOW.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TFC.US",
       "error": null
     },
     {
@@ -101,17 +59,45 @@
       "error": null
     },
     {
-      "symbol": "AA",
-      "name_zh": "Alcoa",
+      "symbol": "NOW",
+      "name_zh": "ServiceNow",
       "kind": "US",
-      "price": 40.42,
-      "change_pct": 0.85,
-      "mtd_pct": -3.76,
-      "ytd_pct": -23.94,
+      "price": 148.57,
+      "change_pct": 6.14,
+      "mtd_pct": 10.86,
+      "ytd_pct": -3.02,
       "market_date": "2026-10-15",
-      "per": 8.3182,
+      "per": 86.6702,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AA.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NOW.US",
+      "error": null
+    },
+    {
+      "symbol": "TSLL",
+      "name_zh": "Direxion Daily TSLA Bull 2X ETF",
+      "kind": "US",
+      "price": 9.32,
+      "change_pct": -2.71,
+      "mtd_pct": 3.44,
+      "ytd_pct": -51.23,
+      "market_date": "2026-10-15",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TSLL.US",
+      "error": null
+    },
+    {
+      "symbol": "SPCX",
+      "name_zh": "Space Exploration Technologies",
+      "kind": "US",
+      "price": 148.62,
+      "change_pct": -2.33,
+      "mtd_pct": -1.48,
+      "ytd_pct": null,
+      "market_date": "2026-10-15",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPCX.US",
       "error": null
     },
     {
@@ -129,6 +115,20 @@
       "error": null
     },
     {
+      "symbol": "PEP",
+      "name_zh": "百事",
+      "kind": "US",
+      "price": 128.38,
+      "change_pct": -0.69,
+      "mtd_pct": 1.31,
+      "ytd_pct": -10.55,
+      "market_date": "2026-10-15",
+      "per": 16.2432,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PEP.US",
+      "error": null
+    },
+    {
       "symbol": "ZETA",
       "name_zh": "Zeta Global",
       "kind": "US",
@@ -143,17 +143,31 @@
       "error": null
     },
     {
-      "symbol": "NFLX",
-      "name_zh": "網飛",
+      "symbol": "RF",
+      "name_zh": "Regions Financial",
       "kind": "US",
-      "price": 72.61,
-      "change_pct": 2.89,
-      "mtd_pct": 4.35,
-      "ytd_pct": -22.56,
+      "price": 27.31,
+      "change_pct": 1.56,
+      "mtd_pct": 1.6,
+      "ytd_pct": 0.77,
       "market_date": "2026-10-15",
-      "per": 22.1228,
+      "per": 10.2751,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NFLX.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RF.US",
+      "error": null
+    },
+    {
+      "symbol": "AA",
+      "name_zh": "Alcoa",
+      "kind": "US",
+      "price": 40.42,
+      "change_pct": 0.85,
+      "mtd_pct": -3.76,
+      "ytd_pct": -23.94,
+      "market_date": "2026-10-15",
+      "per": 8.3182,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AA.US",
       "error": null
     },
     {
@@ -171,17 +185,17 @@
       "error": null
     },
     {
-      "symbol": "IBKR",
-      "name_zh": "Interactive Brokers",
+      "symbol": "VEEV",
+      "name_zh": "Veeva Systems",
       "kind": "US",
-      "price": 86.03,
-      "change_pct": 2.25,
-      "mtd_pct": 0.71,
-      "ytd_pct": 33.77,
+      "price": 313.03,
+      "change_pct": 5.27,
+      "mtd_pct": 9.66,
+      "ytd_pct": 40.23,
       "market_date": "2026-10-15",
-      "per": 128.8736,
+      "per": 50.1424,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IBKR.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VEEV.US",
       "error": null
     },
     {
@@ -196,6 +210,20 @@
       "per": 15.1696,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TTD.US",
+      "error": null
+    },
+    {
+      "symbol": "USAR",
+      "name_zh": "USA Rare Earth",
+      "kind": "US",
+      "price": 11.09,
+      "change_pct": 7.46,
+      "mtd_pct": -21.24,
+      "ytd_pct": -6.81,
+      "market_date": "2026-10-15",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=USAR.US",
       "error": null
     },
     {
