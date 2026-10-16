@@ -3,7 +3,9 @@
   "tldr": [
     "台股技術性反彈，收漲141點至47,111點，惟台積電法說後反應平淡、收跌20元至2,420元。",
     "AI帶動的記憶體上行循環延續，第四季伺服器DRAM與NAND Flash合約價估再漲10%至20%。",
-    "國銀高資產財富管理規模突破3兆元，金管會並開放家辦顧問業務走出高雄。"
+    "國銀高資產財富管理規模突破3兆元，金管會並開放家辦顧問業務走出高雄。",
+    "美股週五收黑、那斯達克創6月來最差單週，資金撤出AI與晶片股，市場於10月28日會議前加大對聯準會升息的押注。",
+    "布蘭特原油盤中突破每桶110美元、為5月以來首見，因伊朗在荷姆茲海峽的攻擊升級。"
   ],
   "sections": [
     {
@@ -91,6 +93,66 @@
           "summary_en": "KGI Bank is integrating group resources to broaden its private-banking offering from individual asset management into family governance, drawing on China Development Financial's private-equity capabilities to give wealthy clients access to private-market investments. The expansion reflects a broader industry pivot among Taiwan's banks toward holistic services—covering succession, trusts and alternative assets—for high-net-worth families, as competition for top-tier clients intensifies amid the asset-management-hub drive.",
           "source_name": "遠見雜誌",
           "source_url": "https://www.gvm.com.tw/article/131157"
+        }
+      ]
+    },
+    {
+      "section": "Tax & Regulations",
+      "section_zh": "稅務法規",
+      "items": [
+        {
+          "title_zh": "2027年遺產稅免稅額可望隨通膨調升 減輕傳承稅負",
+          "title_en": "2027 estate-tax exemption set to rise with inflation, easing the burden on wealth transfers",
+          "summary_zh": "財政部預料將依消費者物價指數（CPI）累計漲幅，調升2027年遺產稅免稅額，推估新門檻約1,478萬元（部分報導估1,486萬元以上），較現行增加約145萬元。以稅率10%估算，可為民眾省下約14.5萬元稅金。最終金額仍須以財政部正式公告為準，但此調整為高資產族群的資產傳承與贈與規劃提供更多空間，納稅人宜將提高後的免稅額納入年度節稅與財富移轉安排。",
+          "summary_en": "Taiwan's Ministry of Finance is expected to lift the estate-tax exemption for 2027 in line with the cumulative rise in consumer prices, with estimates putting the new threshold around NT$14.78m (some reports suggest NT$14.86m or higher), up roughly NT$1.45m. At a 10% rate that could save taxpayers about NT$145,000. The final figure awaits the ministry's formal announcement, but the adjustment gives high-net-worth families more room in succession planning.",
+          "source_name": "經濟日報",
+          "source_url": "https://udn.com/news/story/6839/9547804"
+        },
+        {
+          "title_zh": "遺贈稅改採擬制遺產課稅 財政部研擬子法與稽徵配套",
+          "title_en": "Finance Ministry drafts sub-regulations after estate tax shifts to a \"deemed-estate\" basis",
+          "summary_zh": "立法院三讀通過以「擬制遺產」方式課徵遺產稅後，財政部正研擬修正遺贈稅法施行細則等子法規，並同步調整申報書表與線上申辦系統。財政部表示，待總統公布修正條文後將加強宣導，以利徵納依循。新制聚焦強化對生前財產移轉的反避稅認定，牽動高資產族群的傳承與贈與規劃；實際施行日期與細節仍待子法與公告確認，納稅人宜留意後續法規進度與申報作業調整。",
+          "summary_en": "Following the legislature's passage of amendments moving estate taxation toward a \"deemed-estate\" basis, the Ministry of Finance is drafting revisions to sub-regulations such as the enforcement rules of the Estate and Gift Tax Act and adjusting filing forms and systems. The ministry says it will step up public guidance once the president promulgates the changes, tightening anti-avoidance treatment of pre-death asset transfers while aiming to keep compliance manageable.",
+          "source_name": "中央社",
+          "source_url": "https://www.cna.com.tw/news/afe/202608210289.aspx"
+        }
+      ]
+    },
+    {
+      "section": "Macro & Policy",
+      "section_zh": "總經政策",
+      "items": [
+        {
+          "title_zh": "美9月通膨升溫 市場於10月28日會議前加大升息押注",
+          "title_en": "Fed rate-hike bets build ahead of Oct 28 meeting as September inflation runs hot",
+          "summary_zh": "美國9月消費者物價指數（CPI）月增0.6%，通膨續高於目標，市場重新加大對聯準會在10月27至28日會議升息的押注。美銀以「聯準會有升息必要」作為其偏空（risk-off）立場的理由之一；市場並憂心借貸成本走高恐壓抑AI相關的龐大資本支出，加重股市賣壓。利率路徑重估牽動全球資金流向與風險胃納，後續須密切觀察當月會議結果與官員談話對美元與風險性資產的影響。",
+          "summary_en": "Markets are rebuilding bets on a Federal Reserve rate hike at the Oct 27–28 meeting after September's consumer price index rose 0.6% month-on-month, keeping inflation above target. Bank of America cited the \"need for the Fed to hike\" as a reason for its risk-off stance, and concerns that higher borrowing costs could weigh on the heavy capital spending behind AI added to pressure on equities. The hawkish repricing is steering global capital flows and risk appetite into late October.",
+          "source_name": "Yahoo Finance",
+          "source_url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-oct-16-214934492.html"
+        }
+      ]
+    },
+    {
+      "section": "International",
+      "section_zh": "國際",
+      "items": [
+        {
+          "title_zh": "美股下挫 那斯達克創6月來最差單週（2026-10-16）",
+          "title_en": "US stocks slide, Nasdaq posts worst week since June in AI-led rout (2026-10-16)",
+          "summary_zh": "美股週五收黑，標普500指數下跌1.09%、收7,659.44點，那斯達克指數跌2.14%、收26,140.03點，道瓊工業指數跌175點、跌幅0.34%、收52,002.41點。那斯達克100指數寫下逾一年半來最差單週，投資人避開晶片股並撤出AI相關標的。恐慌指數（VIX）升破20、創6月來新高，顯示市場避險情緒明顯升溫，反映對AI估值與融資成本的疑慮持續發酵。",
+          "summary_en": "US equities fell on Friday, with the S&P 500 down 1.09% to 7,659.44 and the Nasdaq Composite off 2.14% to 26,140.03, while the Dow eased 175 points, or 0.34%, to 52,002.41. The Nasdaq 100 logged its worst week in over a year and a half as investors steered clear of chipmakers and rotated away from AI names. The VIX jumped above 20 to its highest since June, signalling rising fear in the market.",
+          "source_name": "Yahoo Finance",
+          "source_url": "https://finance.yahoo.com/markets/stocks/articles/nasdaq-100-records-worst-week-221534484.html",
+          "published": "2026-10-16"
+        },
+        {
+          "title_zh": "布蘭特原油突破110美元 伊朗荷姆茲海峽攻擊升級（2026-10-16）",
+          "title_en": "Brent crude tops US$110 as Iran escalates Strait of Hormuz attacks (2026-10-16)",
+          "summary_zh": "國際油價走高，因伊朗在荷姆茲海峽的攻擊升級，烏克蘭並矢言打擊俄羅斯煉油廠。美國西德州中級原油（WTI）上漲約3.5%、每桶收約101.41美元；布蘭特原油盤中觸及每桶110美元、為5月以來首見，後小幅回落收約109.86美元、漲3.7%。美國截至10月9日當週商業原油庫存大減逾800萬桶，高於市場預期，進一步支撐油價，使地緣供給風險溢價持續推升能源價格。",
+          "summary_en": "Oil surged as Iran escalated attacks in the Strait of Hormuz and Ukraine vowed to hit Russian refineries. US WTI rose about 3.5% to settle near US$101.41 a barrel, while Brent touched US$110 for the first time since May before easing to settle around US$109.86, up 3.7%. A larger-than-expected US crude inventory draw of more than 8 million barrels for the week ended Oct 9 added support, keeping geopolitical supply-risk premiums firmly in play.",
+          "source_name": "CNBC",
+          "source_url": "https://www.cnbc.com/2026/10/16/oil-price-today-iran-strait-hormuz-ukraine-russia.html",
+          "published": "2026-10-16"
         }
       ]
     }
