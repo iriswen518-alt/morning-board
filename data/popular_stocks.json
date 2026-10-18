@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-18T17:53:00+08:00",
+  "generated_at": "2026-10-18T19:07:44+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -31,31 +31,17 @@
       "error": null
     },
     {
-      "symbol": "SMH",
-      "name_zh": "VanEck Semiconductor ETF",
+      "symbol": "LITE",
+      "name_zh": "Lumentum",
       "kind": "US",
-      "price": 539.79,
-      "change_pct": -3.41,
-      "mtd_pct": -11.36,
-      "ytd_pct": 49.89,
+      "price": 824.13,
+      "change_pct": -5.22,
+      "mtd_pct": -15.15,
+      "ytd_pct": 123.59,
       "market_date": "2026-10-16",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SMH.US",
-      "error": null
-    },
-    {
-      "symbol": "CRDO",
-      "name_zh": "Credo Technology Group Holding",
-      "kind": "US",
-      "price": 169.7,
-      "change_pct": -4.93,
-      "mtd_pct": -12.88,
-      "ytd_pct": 17.94,
-      "market_date": "2026-10-16",
-      "per": 59.2516,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRDO.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LITE.US",
       "error": null
     },
     {
@@ -73,31 +59,17 @@
       "error": null
     },
     {
-      "symbol": "PFE",
-      "name_zh": "輝瑞",
+      "symbol": "SCHD",
+      "name_zh": "Schwab US Dividend Equity ETF",
       "kind": "US",
-      "price": 29.58,
-      "change_pct": 0.48,
-      "mtd_pct": 3.72,
-      "ytd_pct": 18.8,
+      "price": 34.35,
+      "change_pct": 0.73,
+      "mtd_pct": 5.59,
+      "ytd_pct": 25.23,
       "market_date": "2026-10-16",
-      "per": 38.9098,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PFE.US",
-      "error": null
-    },
-    {
-      "symbol": "MCD",
-      "name_zh": "麥當勞",
-      "kind": "US",
-      "price": 242.97,
-      "change_pct": 0.19,
-      "mtd_pct": 5.21,
-      "ytd_pct": -20.5,
-      "market_date": "2026-10-16",
-      "per": 19.5693,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MCD.US",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SCHD.US",
       "error": null
     },
     {
@@ -210,6 +182,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ARKK.US",
+      "error": null
+    },
+    {
+      "symbol": "SMH",
+      "name_zh": "VanEck 半導體 ETF",
+      "kind": "US",
+      "price": 539.79,
+      "change_pct": -3.41,
+      "mtd_pct": -11.36,
+      "ytd_pct": 49.89,
+      "market_date": "2026-10-16",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SMH.US",
       "error": null
     },
     {
