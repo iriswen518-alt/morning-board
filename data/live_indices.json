@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-10-18T22:20",
+  "built_at": "2026-10-19T01:28",
   "indices": [
     {
       "ok": true,
@@ -98,9 +98,9 @@
       "ok": true,
       "symbol": "^IXIC",
       "last": 26140.03,
-      "prev_close": 26713.03,
-      "change": -573.0,
-      "change_pct": -2.15,
+      "prev_close": 26713.0,
+      "change": -572.97,
+      "change_pct": -2.14,
       "points": [
         26639.7,
         26558.9,
@@ -191,8 +191,8 @@
       "ok": true,
       "symbol": "^DJI",
       "last": 52002.41,
-      "prev_close": 52177.69,
-      "change": -175.28,
+      "prev_close": 52177.7,
+      "change": -175.29,
       "change_pct": -0.34,
       "points": [
         52358.65,
@@ -284,8 +284,8 @@
       "ok": true,
       "symbol": "^SOX",
       "last": 11137.29,
-      "prev_close": 11581.22,
-      "change": -443.92,
+      "prev_close": 11581.2,
+      "change": -443.91,
       "change_pct": -3.83,
       "points": [
         11340.63,
@@ -471,8 +471,8 @@
       "ok": true,
       "symbol": "^GDAXI",
       "last": 25622.61,
-      "prev_close": 25382.62,
-      "change": 239.99,
+      "prev_close": 25382.6,
+      "change": 240.01,
       "change_pct": 0.95,
       "points": [
         25487.09,
@@ -753,8 +753,8 @@
       "ok": true,
       "symbol": "^N225",
       "last": 65324.29,
-      "prev_close": 64425.95,
-      "change": 898.34,
+      "prev_close": 64425.9,
+      "change": 898.39,
       "change_pct": 1.39,
       "points": [
         65199.91,
@@ -827,7 +827,7 @@
         65349.89,
         65324.29
       ],
-      "market_state": "CLOSED",
+      "market_state": "PRE",
       "asof": "10/16 15:45",
       "tz": "Asia/Tokyo",
       "name_zh": "日經225"
@@ -836,8 +836,8 @@
       "ok": true,
       "symbol": "^TWII",
       "last": 47111.26,
-      "prev_close": 46969.87,
-      "change": 141.39,
+      "prev_close": 46969.9,
+      "change": 141.36,
       "change_pct": 0.3,
       "points": [
         47239.24,
@@ -896,7 +896,7 @@
         47182.52,
         47111.26
       ],
-      "market_state": "CLOSED",
+      "market_state": "PRE",
       "asof": "10/16 13:33",
       "tz": "Asia/Taipei",
       "name_zh": "台股加權"
@@ -1146,7 +1146,7 @@
         5718.95,
         5668.05
       ],
-      "market_state": "CLOSED",
+      "market_state": "PRE",
       "asof": "10/16 20:05",
       "tz": "Asia/Seoul",
       "name_zh": "韓國綜合"
@@ -1294,7 +1294,7 @@
         3713.15,
         3716.28
       ],
-      "market_state": "CLOSED",
+      "market_state": "PRE",
       "asof": "10/16 15:00",
       "tz": "Asia/Shanghai",
       "name_zh": "上證指數"
@@ -1358,7 +1358,7 @@
         4168.09,
         4170.61
       ],
-      "market_state": "CLOSED",
+      "market_state": "PRE",
       "asof": "10/16 15:00",
       "tz": "Asia/Shanghai",
       "name_zh": "滬深300"
@@ -1367,11 +1367,11 @@
       "ok": true,
       "symbol": "^NSEI",
       "last": 23146.15,
-      "prev_close": 22997.35,
-      "change": 148.8,
+      "prev_close": 22997.3,
+      "change": 148.85,
       "change_pct": 0.65,
       "points": [
-        22955.95,
+        22956.3,
         22987.5,
         22952.45,
         22932.35,
