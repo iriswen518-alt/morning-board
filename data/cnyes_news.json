@@ -1,11 +1,32 @@
 {
-  "built_at": "2026-10-18T13:35",
+  "built_at": "2026-10-18T18:37",
   "source": "鉅亨網（cnyes）",
   "categories": [
     {
       "key": "headline",
       "label": "鉅亨頭條",
       "items": [
+        {
+          "news_id": "6632913",
+          "title": "2029年現記憶體「紅海」？韓國財長：半導體繁榮至少持續至明年",
+          "title_en": "Memory Market a “Red Sea” by 2029? South Korean Finance Minister: Semiconductor Boom Will Last at Least Until Next Year",
+          "publish_at": 1792302255,
+          "url": "https://news.cnyes.com/news/id/6632913",
+          "paras": [
+            "韓國財政部長李炯日（Lee Hyoung-Il）周六（17日）表示，半導體產業的繁榮勢頭至少會持續到2027年。",
+            "「目前我們認為增長至少可以持續到明年，這是因為半導體供需缺口仍然非常大，而且供應端仍在持續擴張。」李炯日在曼谷舉行的國際貨幣基金（IMF）和世界銀行年會期間接受媒體採訪時表示。",
+            "供應端擴張指的是資本開支、在建產能擴張，表明當下晶片產業景氣仍非常高，需求旺盛，儘管從長期來看，這意味著供需缺口將縮窄。",
+            "李炯日表示，今年晶片股引發了韓國股市劇烈波動。他將市場的劇烈震盪歸因於半導體產業佔韓國經濟的比重比其他國家高。儘管市場大幅波動，李炯日仍表示，韓國經濟「基本面穩健」。",
+            "韓國主要商業日報《每日經濟新聞》周四一篇評論文章呼籲政府為人工智慧熱潮即將到來的放緩做好準備。該文作者援引兩位專家的觀點，稱預計到2029年半導體將出現大量新增供應，屆時記憶體晶片市場將變成「紅海」。"
+          ],
+          "paras_en": [
+            "South Korean Finance Minister Lee Hyoung-Il said on Saturday (the 17th) that the momentum of the semiconductor industry’s prosperity is expected to continue at least until 2027.",
+            "“We currently believe that growth can last at least until next year because the semiconductor supply‑demand gap remains very large, and the supply side is still expanding,” Lee said in a media interview during the International Monetary Fund and World Bank annual meetings in Bangkok.",
+            "The expansion on the supply side refers to capital expenditures and construction of new capacity, indicating that the chip industry is still in a very strong cycle with robust demand, even though in the long run this will narrow the supply‑demand gap.",
+            "Lee noted that chip stocks have caused sharp volatility in the Korean stock market this year. He attributed the market’s turbulence to the semiconductor sector’s larger share of Korea’s economy compared with other countries, but he still maintained that the Korean economy’s fundamentals remain solid.",
+            "A commentary piece in Korea’s leading business daily, the Daily Economic News, published on Thursday, urged the government to prepare for a slowdown in the AI boom. Citing two experts, the article said that by 2029 a massive influx of semiconductor supply is expected, turning the memory‑chip market into a “red sea.”"
+          ]
+        },
         {
           "news_id": "6632798",
           "title": "搶救荷包看這裡！營所稅暫繳還沒辦 最遲「這天」補繳省利息",
@@ -189,49 +210,6 @@
             "Multi‑platform flexibility is also a key pillar for Taiwanese vendors’ push into the enterprise market. Both MSI and Asus set up multiple‑processor exhibition areas; MSI displayed a 21‑inch dual‑node open platform powered by AMD EPYC 9006 series CPUs, offering both air‑cooled and direct liquid‑cooled configurations and integrating PCIe 6.0 high‑speed links.",
             "Asus, in the AMD (AMD‑US) and Intel (INTC‑US) zones, introduced a dual‑socket platform with Xeon 6 processors and a high‑density air‑cooled server supporting eight AMD Instinct MI355X accelerators, providing enterprises with the flexibility to deploy without dedicated chilled‑water systems.",
             "To address on‑site deployment and edge‑computing opportunities, MSI extended its product line from rack level down to the desktop, unveiling the WS300 desktop supercomputer built on Nvidia DGX workstation architecture. It features a GB300 super‑chip and 748 GB of unified memory, enabling enterprise developers to fine‑tune large models and run prototype tests locally."
-          ]
-        },
-        {
-          "news_id": "6631919",
-          "title": "AI 吃電怪獸逼出「二次能源革命」！傳統電網飽和，電力基礎設施迎來十年一遇洗牌巨浪",
-          "title_en": "AI Power‑Hungry Monsters Drive a \"Secondary Energy Revolution\"! Traditional Grids Saturate, Power Infrastructure Faces a Decade‑Rare Reshuffle Wave",
-          "publish_at": 1792285803,
-          "url": "https://news.cnyes.com/news/id/6631919",
-          "paras": [
-            "受惠於全球AI資料中心(AIDC)算力規模呈幾何級數攀升，龐大的資料中心用電讓傳統電網不堪負荷，容量飽和與併網延宕等瓶頸正加速「二次能源轉型」，電力基礎設施面臨十年一遇的重構洗牌，焦點已從單一設備全面升級為整合高壓配電、自主基載與微電網的一體化架構。",
-            "〈配電架構朝高壓高密度演進，低碳環保設備成技術核心〉",
-            "為滿足AIDC園區百MW級別的用電負載，電力傳輸呈現「園區外部高壓化、機房內部直流化」的雙軌變革，外部引進中高壓電纜分散供電，機房內部則由傳統480V交流電加速轉向800VDC高壓直流與高密度匯流排，大幅降低銅材消耗並提升能源傳輸效率，為了因應全球淨零減碳趨勢，重電設備亦加速綠色升級，以無六氟化硫(SF6-free)的環保氣體絕緣開關(ECO-GIS)取代傳統高溫室效應介質，結合智慧能源管理系統(EMS)實現動態最佳化調度。",
-            "〈表後自備發電興起，供料施工一體化破除交付瓶頸〉",
-            "在供電缺口與施工人力短缺的雙重挑戰下，AIDC業主擴大導入以燃氣機組及固態氧化物燃料電池(SOFC)為主的現場自主發電，相較於傳統電網，具備高電能效率且建置期短的SOFC成為解決AI電能缺口的重要基載選項，海外高昂的人工與法規壁壘，倒逼供應鏈走向「境內模組預製、海外現場組裝」的工程統包模式，並朝向供料、敷設至安裝管理一體化服務深化，具備海外執照與在地交付能力的廠商得以享有更高的專案合約價值。",
-            "〈免費下載【陳智霖分析師APP】，掌握第一手盤勢資訊與信用籌碼名單〉",
-            "APP選股會員每月僅限額招收，名額有限，每週都會提供最新「信用籌碼疑慮名單」，邀請您點選連結下載【陳智霖分析師APP】：https://lihi.cc/zwrii",
-            "〈系統整合與海外交付實力掛帥，台系能源指標廠長線受惠〉",
-            "在電力設備價值鏈全面向系統整合與海外高規格工程轉移的趨勢下，具備核心技術與出海能力的台廠展現強勁營運動能：安葆(7792-TW)由傳統發電機與UPS跨足燃氣發電、SOFC及微電網整合，取得美國機電承商執照並推動模組化預製，在手訂單能見度直達長線，獲利結構顯著優化；華城(1519-TW)受惠北美大型變壓器供不應求，新產能稼動率維持高檔，AIDC訂單大幅成長，並領先推出環保型開關設備深化綠色布局；大東電(1623-TW)掌握AIDC中高壓線纜規格升級契機，擴大供料與施工一體化服務並布局海外儲能案場；士電(1503-TW)與東元(1504-TW)亦同步受惠電網強韌與能源轉型商機。",
-            "在微電網整合與海外交付紅利下，逢低布局相關重電及能源整合龍頭是個穩健的策略，邀請投資人下載智霖老師的APP並鎖定直播，一起掌握產業最前線的產業脈動！",
-            "最新影音(請點影音上方標題至Youtube收視品質會更佳)",
-            "錢進熱線02-2653-8299，立即邁向系統依據的股票操作。",
-            "文章來源：陳智霖分析師/凱旭投顧",
-            "本公司所推薦分析之個別有價證券",
-            "無不當之財務利益關係 以往之績效不保證未來獲利",
-            "投資人應獨立判斷 審慎評估並自負投資風險"
-          ],
-          "paras_en": [
-            "Benefiting from the geometric rise in global AI data center (AIDC) computing capacity, the massive electricity demand of data centers is overloading traditional power grids. Bottlenecks such as capacity saturation and delayed grid integration are accelerating a \"secondary energy transition,\" and power infrastructure is confronting a once‑in‑ten‑years restructuring. The focus has shifted from upgrading single pieces of equipment to an integrated architecture that combines high‑voltage distribution, autonomous baseload, and micro‑grids.",
-            "Distribution architecture is evolving toward high‑voltage, high‑density solutions, with low‑carbon, environmentally‑friendly equipment becoming the core technology.",
-            "To meet the hundred‑megawatt‑level loads of AIDC campuses, power transmission is undergoing a dual‑track transformation: \"high‑voltage at the campus perimeter and DC inside the data halls.\" Outside the campus, medium‑high voltage cables provide distributed supply, while inside the halls the traditional 480 V AC is rapidly being replaced by 800 V DC high‑voltage and high‑density busbars. This cuts copper usage dramatically and boosts transmission efficiency. In line with the global net‑zero push, heavy‑power equipment is also being green‑upgraded, replacing SF₆‑filled switchgear with SF₆‑free eco‑GIS insulated switches and integrating smart energy management systems (EMS) for dynamic optimal dispatch.",
-            "On‑site self‑generation is on the rise, and integrated material‑supply‑to‑construction services are breaking delivery bottlenecks.",
-            "Facing both power gaps and labor shortages, AIDC owners are expanding on‑site generation using gas turbines and solid‑oxide fuel cells (SOFC). Compared with the grid, SOFC offers high electrical efficiency and short construction time, making it a key baseload option to fill AI power gaps. High overseas labor costs and regulatory barriers are forcing the supply chain toward a \"domestic module prefabrication, overseas on‑site assembly\" turnkey model, deepening integrated services from material supply through cable laying to installation management. Vendors with overseas licenses and local delivery capabilities can command higher project contract values.",
-            "Free download of the Chen Zhilin Analyst APP to stay on top of market moves and credit‑chip lists.",
-            "APP membership for stock picking is limited each month; slots are scarce. Every week we provide the latest \"credit‑chip concern list.\" Click the link to download the Chen Zhilin Analyst APP: https://lihi.cc/zwrii",
-            "System integration and overseas delivery strength lead the way; Taiwanese energy‑sector leaders benefit in the long term.",
-            "As the power‑equipment value chain shifts toward system integration and high‑spec overseas projects, Taiwanese firms with core technology and overseas capability are showing strong operational momentum: Anbao (7792‑TW) moves from traditional generators and UPS into gas power, SOFC and micro‑grid integration, has obtained U.S. MEP contractor licenses and is pushing modular prefabrication, giving its order book long‑term visibility and markedly improved profit structure; Huacheng (1519‑TW) benefits from a North American transformer shortage, keeping new‑capacity utilization high, sees a surge in AIDC orders, and leads with eco‑friendly switchgear to deepen its green footprint; Da‑Dong Power (1623‑TW) seizes the upgrade opportunity of medium‑high voltage cable specs for AIDC, expands integrated supply‑and‑construction services and positions itself in overseas energy‑storage projects; Shidian (1503‑TW) and Tongyuan (1504‑TW) also ride the wave of grid resilience and energy‑transition opportunities.",
-            "With micro‑grid integration and overseas delivery dividends, building positions in leading heavy‑power and energy‑integration companies during market dips is a solid strategy. Investors are invited to download Professor Zhilin's APP and tune into the live broadcast to capture the industry's front‑line dynamics!",
-            "Latest video (click the title above for better YouTube quality).",
-            "Hotline for inquiries: 02‑2653‑8299 – start systematic stock trading now.",
-            "Article source: Analyst Chen Zhilin / Kai‑Xu Investment Advisory.",
-            "Securities recommended by our firm are individual listed securities.",
-            "No improper financial interest relationships; past performance does not guarantee future profits.",
-            "Investors should make independent judgments, assess prudently, and bear investment risks themselves."
           ]
         }
       ]
@@ -825,6 +803,156 @@
       "label": "國際財經",
       "items": [
         {
+          "news_id": "6632946",
+          "title": "中國AI算力版圖悄悄洗牌？阿里巴巴、華為、字節跳動搶進內蒙古，這座城市究竟有什麼吸引力？",
+          "title_en": "Is China’s AI Computing Landscape Quietly Shuffling? Alibaba, Huawei, and ByteDance Rush into Inner Mongolia—What Makes This City So Attractive?",
+          "publish_at": 1792310406,
+          "url": "https://news.cnyes.com/news/id/6632946",
+          "paras": [
+            "2026年10月18日（優分析／產業數據中心報導）⸺ 隨著人工智慧（AI）應用快速擴張，中國正加速在內蒙古等能源資源豐富的地區興建大型資料中心，試圖利用低廉電價、充足土地及快速施工能力，擴大AI算力基礎設施。其中，過去以農業及重工業為主的烏蘭察布，正迅速轉型為中國重要的AI算力中心，吸引阿里巴巴Alibaba(BABA-US)、華為Huawei、字節跳動ByteDance等科技企業投入建設。",
+            "中國發展AI的競爭優勢，已不僅限於演算法及晶片技術，也包括資料中心建設速度、電力供應與基礎設施成本。儘管中國仍面臨先進AI晶片供應不足的限制，但在土地取得、電網連接及施工效率方面，正展現明顯的成本與建設優勢。",
+            "研究機構SemiAnalysis估計，中國目前已投入營運的資料中心容量超過亞洲其他地區總和，另有約50 GW的新增資料中心電力容量處於規劃或開發階段。隨著建設持續推進，中國與美國在AI基礎設施規模方面的差距可能進一步縮小，但算力效能仍取決於高階AI晶片的取得能力。",
+            "阿里巴巴、華為與字節跳動進駐，烏蘭察布形成大型資料中心聚落\n烏蘭察布位於中國內蒙古自治區，距離北京約2小時高鐵車程。當地過去主要依賴馬鈴薯種植、畜牧業及傳統工業，如今隨著AI算力需求快速成長，正成為中國資料中心建設最密集的地區之一。",
+            "目前烏蘭察布郊區至少有4座大型資料中心園區正在施工，參與企業約12家，包括阿里巴巴、華為，以及專業資料中心營運商ZData與萬國數據服務同業VNET(VNET-US)等。其中，字節跳動是當地資料中心租賃服務的主要客戶，AI模型開發商DeepSeek及智譜AI（Z.ai）也正在當地建設運算設施。",
+            "華為目前在烏蘭察布擁有3座資料中心。華為輪值董事長徐直軍今年8月首次造訪當地時，對資料中心建設規模感到意外。他指出，當地具備低電價優勢，加上高鐵可快速連接北京，使烏蘭察布成為部署大型算力設施的理想地點。",
+            "烏蘭察布目前已承諾投入的資料中心電力容量約15 GW，而已建成及規劃中的設施合計涉及89座資料中心，擴張速度在亞洲主要資料中心聚落中名列前茅。",
+            "內蒙古電價僅北京約45%，充足電力成為AI算力擴張關鍵\n電力成本是烏蘭察布吸引科技企業投資的主要因素。截至今年6月，內蒙古已建置約117 GW風力發電裝置容量，為中國規模最大的風電基地，約相當於英國整體風電裝置容量的4倍。此外，內蒙古還擁有約130 GW化石燃料發電容量，其中以燃煤發電為主。",
+            "由於資源相當充足，內蒙古可能是全球地方行政區中電力供應過剩最明顯的地區之一。由於部分發電設施利用率偏低，大型資料中心的進駐有助於吸收當地剩餘電力，改善發電資產的使用效率。",
+            "從電價來看，烏蘭察布每度電約0.358 yuan，明顯低於中國許多城市超過0.60 yuan的工業電價，也只有北京約0.80 yuan電價的45%左右。",
+            "對於需全年持續運轉、耗電量龐大的AI資料中心而言，電力成本差距將直接影響長期營運費用，也使中國大型科技企業更有誘因將算力設施部署至能源成本較低的內陸地區。",
+            "除了電價優勢，內蒙古年平均氣溫約4.3°C，寒冷氣候有助於降低資料中心冷卻系統的能源消耗，進一步改善整體電力使用效率。",
+            "當地電網架構也提供額外優勢。內蒙古部分地區由獨立運作的蒙西電網供電，使部分資料中心專案能直接連接專用發電設施，降低電力傳輸限制及相關費用。",
+            "不過，內蒙古同時存在水資源不足的問題。由於大型資料中心需要冷卻設施維持伺服器運作，若未來算力容量持續快速增加，水資源供應可能成為限制當地資料中心擴張的重要因素。",
+            "建設成本低20%、施工期縮短至12至18個月，模組化設計加快擴張\n除了電力優勢，中國資料中心建設成本及施工速度也具有競爭力。",
+            "根據高盛Goldman Sachs(GS-US)估計，烏蘭察布資料中心的建設成本較中國主要城市低約20%。當地建設工程大量採用標準化模組設計，並從其他省分引進數千名工人，在工地周邊設置臨時住宿設施，以提高施工效率。",
+            "目前不少資料中心工程預計可在12至18個月內完成，相較之下，美國同類型設施一般需要18至24個月。",
+            "中國業者主要採用預製模組化資料中心設計，將伺服器機櫃及相關設備整合至標準化單元，再運送到現場快速組裝。這種建設方式被形容為「樂高式資料中心」，其概念也已被部分美國超大型雲端服務業者採用。",
+            "隨著資料中心建設規模持續擴大，烏蘭察布周邊也逐漸形成包含能源設備、冷卻系統及基礎設施工程的產業供應鏈。",
+            "例如，遠景科技集團Envision正在當地多座資料中心附近興建綠色能源專案，規劃完成後可提供約2 GW電力，理論上足以支援最多100萬張AI加速運算卡的電力需求。",
+            "此外，資料中心建設也帶動液冷設備需求。維諦技術Vertiv(VRT-US)的液冷系統已出現在ZData與Centrin Data System的資料中心設施中。",
+            "這反映AI算力基礎設施投資正在帶動上游電力設備、散熱系統、伺服器機櫃及模組化資料中心等相關產業需求。當能源供應、設備組裝及資料中心施工集中於同一區域時，也有助於縮短運輸距離與建置時間。",
+            "AI代理應用帶動算力需求，資料中心租賃價格上升\n儘管中國資料中心建設速度快速，市場仍關注是否可能出現投資過剩。",
+            "對此，部分分析師認為，AI應用需求成長仍可支撐新增算力供給。",
+            "傑富瑞分析師Edison Lee指出，隨著AI代理（AI Agents）應用快速發展，AI模型推論所需的運算量持續增加，帶動資料中心算力租賃需求與價格同步上升。",
+            "其中，AI模型處理的Token數量快速成長，是推升運算需求的重要因素。",
+            "相較於過去主要由AI模型訓練帶動的集中式運算需求，AI代理可自主執行多步驟任務，涉及反覆推理、工具調用及資訊處理，可能增加推論階段的算力消耗。",
+            "這也使AI基礎設施投資逐漸從單純擴充GPU運算設備，延伸至電力供應、冷卻系統、資料中心建設及算力租賃服務等領域。",
+            "先進AI晶片供應仍是瓶頸，中國以電價優惠推動國產晶片採用\n雖然中國在資料中心建設及能源成本方面具有優勢，但先進AI晶片供應仍是限制算力擴張的重要因素。",
+            "受到美國出口管制，以及中國本土晶圓代工廠先進製程產能有限的影響，中國科技企業取得高效能AI加速器仍面臨挑戰。",
+            "為降低對輝達Nvidia(NVDA-US)晶片的依賴，中國政府正透過財政及能源價格政策，鼓勵資料中心採用國產AI處理器。",
+            "採用中國本土晶片的資料中心，可獲得較優惠的稅務待遇，以及電力與用水價格折扣，藉此提高國產晶片的使用誘因。",
+            "這也使中國AI算力產業呈現兩種不同的發展速度：一方面，資料中心建築、電力設施及散熱基礎建設快速增加；另一方面，先進AI晶片的供應能力仍受到製程技術及產能限制。",
+            "對於烏蘭察布等快速擴張的算力中心而言，未來能否將新增資料中心容量有效轉化為實際運算能力，將取決於國產AI加速器的性能提升、先進晶片供應，以及AI推論需求能否持續成長。",
+            "※ 本文經「優分析」授權轉載，原文出處:原文連結",
+            "※ 免責聲明：文中所提的個股、基金、期貨商品內容僅供參考，並非投資建議，投資人應獨立判斷，審慎評估風險。"
+          ],
+          "paras_en": [
+            "On October 18, 2026 (Yuan Analysis/Industrial Data Center Report) – As AI applications expand rapidly, China is accelerating the construction of large data centers in energy-rich regions such as Inner Mongolia, aiming to leverage low electricity prices, ample land, and fast construction to expand its AI computing infrastructure. Formerly dominated by agriculture and heavy industry, Ulanqab is quickly transforming into a key AI computing hub, attracting tech giants Alibaba (BABA-US), Huawei, and ByteDance.",
+            "China’s competitive edge in AI development is no longer limited to algorithms and chip technology; it also includes the speed of data center construction, power supply, and infrastructure costs. Although China still faces shortages of advanced AI chips, it shows clear cost and construction advantages in land acquisition, grid connection, and construction efficiency.",
+            "Research firm SemiAnalysis estimates that China’s operating data center capacity now exceeds the total of other Asian regions, with about 50 GW of new data center power capacity in planning or development. As construction continues, the gap in AI infrastructure scale between China and the United States may narrow further, but computing performance still depends on access to high‑end AI chips.",
+            "Alibaba, Huawei, and ByteDance have entered Ulanqab, forming a large data center cluster. Ulanqab, located in Inner Mongolia Autonomous Region, is about a two‑hour high‑speed rail ride from Beijing. The area, once reliant on potato farming, livestock, and traditional industry, is now becoming one of China’s most densely built data center regions due to the rapid growth in AI computing demand.",
+            "Currently, at least four large data center parks are under construction in the outskirts of Ulanqab, involving about 12 companies, including Alibaba, Huawei, and specialized data center operators ZData and VNET (VNET-US). ByteDance is the main tenant for data center leasing services, and AI model developers DeepSeek and Z.ai are also building computing facilities there.",
+            "Huawei currently owns three data centers in Ulanqab. When Chairman‑in‑Residence Xu Zhijun visited the area in August, he was surprised by the scale of data center construction. He noted the region’s low electricity price advantage and the high‑speed rail link to Beijing, making Ulanqab an ideal location for deploying large computing facilities.",
+            "Ulanqab has pledged about 15 GW of data center power capacity, and the total of completed and planned facilities involves 89 data centers, placing it among the fastest‑growing data center clusters in Asia.",
+            "Inner Mongolia’s electricity price is only about 45% of Beijing’s, making abundant power a key factor in AI computing expansion. By June of this year, Inner Mongolia had installed about 117 GW of wind power capacity, the largest wind farm in China, roughly four times the total wind capacity of the UK. In addition, Inner Mongolia has about 130 GW of fossil‑fuel power capacity, mainly coal‑based.",
+            "With abundant resources, Inner Mongolia may be one of the most obvious regions of excess power supply among global local administrative areas. Because some power plants operate at low utilization, the arrival of large data centers helps absorb surplus electricity and improve the utilization of power assets.",
+            "In terms of price, Ulanqab’s electricity costs about 0.358 yuan per kWh, clearly lower than the industrial rates above 0.60 yuan in many Chinese cities and about 45% of Beijing’s roughly 0.80 yuan per kWh.",
+            "For AI data centers that must run continuously year‑round and consume massive power, the electricity cost gap directly impacts long‑term operating expenses, giving Chinese tech giants stronger incentives to deploy computing facilities in inland areas with lower energy costs.",
+            "Beyond electricity price advantages, Inner Mongolia’s average annual temperature of about 4.3°C provides a cold climate that helps reduce the energy consumption of data center cooling systems, further improving overall power efficiency.",
+            "The local grid structure also offers additional benefits. Parts of Inner Mongolia are powered by the independent Mongolian West Grid, allowing some data center projects to connect directly to dedicated power plants, reducing transmission constraints and related costs.",
+            "However, Inner Mongolia also faces water scarcity. As large data centers require cooling facilities to keep servers running, continued rapid growth in computing capacity could make water supply a limiting factor for local data center expansion.",
+            "Construction costs are 20% lower and construction periods shortened to 12–18 months, with modular design accelerating expansion. In addition to power advantages, China’s data center construction costs and speed are competitive.",
+            "According to Goldman Sachs (GS-US), construction costs for Ulanqab data centers are about 20% lower than in major Chinese cities. Local projects heavily use standardized modular designs and bring thousands of workers from other provinces, setting up temporary housing near sites to boost construction efficiency.",
+            "Many data center projects are expected to be completed within 12–18 months, compared with 18–24 months for similar facilities in the United States.",
+            "Chinese operators mainly use prefabricated modular data center designs, integrating server racks and related equipment into standardized units, then transporting them to the site for rapid assembly. This construction method is described as a “LEGO‑style data center” and has been adopted by some large US cloud providers.",
+            "As data center construction scales up, Ulanqab’s surrounding area is gradually forming an industrial supply chain that includes energy equipment, cooling systems, and infrastructure engineering.",
+            "For example, Envision Group is building green energy projects near several data centers in the area, which, once completed, can provide about 2 GW of power, theoretically enough to support up to one million AI accelerator cards.",
+            "In addition, data center construction has driven demand for liquid cooling equipment. Vertiv (VRT-US) liquid cooling systems have appeared in ZData and Centrin Data System facilities.",
+            "This reflects that AI computing infrastructure investment is driving upstream demand for power equipment, cooling systems, server racks, and modular data centers. When energy supply, equipment assembly, and data center construction are concentrated in the same region, it also helps shorten transportation distances and build times.",
+            "AI agent applications are driving computing demand, raising data center leasing prices. Despite the rapid pace of data center construction in China, the market still wonders whether investment surplus may occur.",
+            "Some analysts believe that the growth of AI application demand can still support additional computing supply.",
+            "Edison Lee, an analyst at Jirufei, pointed out that as AI agent applications rapidly develop, the computational load required for AI model inference continues to rise, driving data center computing rental demand and prices upward in tandem.",
+            "A key factor driving the increase in computational demand is the rapid growth in the number of tokens processed by AI models.",
+            "Compared with the past, where centralized computing demand was mainly driven by AI model training, AI agents can autonomously perform multi‑step tasks involving repeated inference, tool invocation, and information processing, potentially increasing inference‑stage computing consumption.",
+            "This also means that investment in AI infrastructure is gradually shifting from simply expanding GPU compute equipment to extending into power supply, cooling systems, data center construction, and compute‑rental services.",
+            "Advanced AI chip supply remains a bottleneck; China promotes domestic chip adoption with preferential electricity pricing. Although China has advantages in data center construction and energy costs, advanced AI chip supply still limits computing expansion.",
+            "Due to U.S. export controls and limited advanced process capacity at domestic wafer fabs, Chinese tech firms still face challenges in acquiring high‑performance AI accelerators.",
+            "To reduce reliance on Nvidia (NVDA-US) chips, the Chinese government is encouraging data centers to adopt domestic AI processors through fiscal and energy pricing policies.",
+            "Data centers using domestic chips can receive more favorable tax treatment and discounts on electricity and water prices, thereby increasing incentives to use domestic chips.",
+            "This has led to two different development speeds in China’s AI computing industry: on one hand, data center construction, power facilities, and cooling infrastructure are rapidly increasing; on the other hand, advanced AI chip supply remains constrained by process technology and capacity.",
+            "For rapidly expanding computing hubs like Ulanqab, whether future added data center capacity can be effectively translated into actual computing power will depend on performance improvements of domestic AI accelerators, advanced chip supply, and whether AI inference demand continues to grow.",
+            "* This article is reprinted with permission from Yuan Analysis, original source: original link",
+            "* Disclaimer: The stocks, funds, and futures mentioned in the article are for reference only and not investment advice. Investors should independently assess risks."
+          ]
+        },
+        {
+          "news_id": "6632941",
+          "title": "中國擬管制12項太陽能製造技術出口，先啟動登記、涵蓋關鍵設備",
+          "title_en": "China Plans to Regulate Export of 12 Solar Manufacturing Technologies, Starting with Registration and Covering Key Equipment",
+          "publish_at": 1792308620,
+          "url": "https://news.cnyes.com/news/id/6632941",
+          "paras": [
+            "2026年10月18日（優分析／產業數據中心報導）⸺ 中國擬收緊太陽能製造技術對外移轉。商務部與科技部10月16日公布修訂草案，計畫將多晶矽、矽晶圓及太陽能電池製造相關12項技術，納入禁止或限制出口範圍，並涵蓋承載相關技術的部分關鍵設備。草案徵詢意見至11月15日；正式管制內容尚待定案，但出口前登記已自公告日起實施。",
+            "草案採分級管理。厚度70微米以下的矽晶圓製造技術，以及達到指定量產效率、尺寸等條件的鈣鈦礦與疊層電池技術，擬列為禁止出口；符合門檻的TOPCon、背接觸及異質結電池製程，則擬列為限制出口，須依規定申請許可。商務部表示，太陽能技術在航太、國防及高安全等級基礎設施等領域的應用增加，是此次加強管理的考量。",
+            "影響將落在技術與產線移轉，而非利用這些技術製成的電池片或模組成品。商務部說明，相關技術往往隨產線出口、安裝、調校與升級移轉；因此，海外建廠若需引進列管製程及設備，規劃時也須納入技術出口程序。未達管制門檻的技術仍可自由出口，未列明的其他太陽能設備原則上不適用此次要求。",
+            "目前的登記要求涵蓋向境外轉讓技術所有權、授權海外使用，以及技術所有者或實際控制人改為境外主體等情況，已開始但尚未完成的出口也須登記。涉及相關技術的海外擴產案，在最終目錄公布前就需先完成申報。",
+            "※ 本文經「優分析」授權轉載，原文出處:原文連結",
+            "※ 免責聲明：文中所提的個股、基金、期貨商品內容僅供參考，並非投資建議，投資人應獨立判斷，審慎評估風險。"
+          ],
+          "paras_en": [
+            "On October 18, 2026 (U-Analysis/Industry Data Center report) – China intends to tighten the outward transfer of solar manufacturing technologies. The Ministry of Commerce and the Ministry of Science and Technology released a revised draft on October 16, proposing to place twelve technologies related to polysilicon, silicon wafers and solar cell manufacturing under a ban or export‑restriction regime, and to include certain key equipment that carries these technologies. The draft is open for comment until November 15; the final regulatory content is yet to be decided, but registration before export has been in effect since the announcement.",
+            "The draft adopts a tiered management approach. Manufacturing techniques for silicon wafers thinner than 70 micrometres, as well as perovskite and tandem cell technologies that meet specified mass‑production efficiency and size criteria, are slated for a ban on export; TOPCon, back‑contact and heterojunction cell processes that meet the thresholds are to be restricted, requiring a licence application. The Ministry of Commerce said the growing use of solar technology in aerospace, defence and high‑security infrastructure is a key reason for the tighter controls.",
+            "The impact will fall on the transfer of technology and production lines, not on solar cells or modules already made with those technologies. The ministry explained that the relevant know‑how usually moves together with the export, installation, commissioning and upgrade of production lines; therefore, overseas plants that wish to import the listed processes and equipment must incorporate the technology‑export procedures into their planning. Technologies that do not meet the control thresholds may still be exported freely, and other solar equipment not listed is generally not subject to this requirement.",
+            "The current registration requirement covers situations such as transferring technology ownership abroad, licensing overseas use, and cases where the technology owner or actual controller becomes a foreign entity; exports that have already started but are not yet completed must also be registered. Overseas expansion projects involving the relevant technologies must complete the filing before the final catalogue is published.",
+            "This article is reproduced with permission from “U‑Analysis”; original source: original link",
+            "Disclaimer: The stocks, funds and futures mentioned in the text are for reference only and do not constitute investment advice. Investors should make independent judgments and carefully assess risks."
+          ]
+        },
+        {
+          "news_id": "6632913",
+          "title": "2029年現記憶體「紅海」？韓國財長：半導體繁榮至少持續至明年",
+          "title_en": "Memory Market a “Red Sea” by 2029? South Korean Finance Minister: Semiconductor Boom Will Last at Least Until Next Year",
+          "publish_at": 1792302255,
+          "url": "https://news.cnyes.com/news/id/6632913",
+          "paras": [
+            "韓國財政部長李炯日（Lee Hyoung-Il）周六（17日）表示，半導體產業的繁榮勢頭至少會持續到2027年。",
+            "「目前我們認為增長至少可以持續到明年，這是因為半導體供需缺口仍然非常大，而且供應端仍在持續擴張。」李炯日在曼谷舉行的國際貨幣基金（IMF）和世界銀行年會期間接受媒體採訪時表示。",
+            "供應端擴張指的是資本開支、在建產能擴張，表明當下晶片產業景氣仍非常高，需求旺盛，儘管從長期來看，這意味著供需缺口將縮窄。",
+            "李炯日表示，今年晶片股引發了韓國股市劇烈波動。他將市場的劇烈震盪歸因於半導體產業佔韓國經濟的比重比其他國家高。儘管市場大幅波動，李炯日仍表示，韓國經濟「基本面穩健」。",
+            "韓國主要商業日報《每日經濟新聞》周四一篇評論文章呼籲政府為人工智慧熱潮即將到來的放緩做好準備。該文作者援引兩位專家的觀點，稱預計到2029年半導體將出現大量新增供應，屆時記憶體晶片市場將變成「紅海」。"
+          ],
+          "paras_en": [
+            "South Korean Finance Minister Lee Hyoung-Il said on Saturday (the 17th) that the momentum of the semiconductor industry’s prosperity is expected to continue at least until 2027.",
+            "“We currently believe that growth can last at least until next year because the semiconductor supply‑demand gap remains very large, and the supply side is still expanding,” Lee said in a media interview during the International Monetary Fund and World Bank annual meetings in Bangkok.",
+            "The expansion on the supply side refers to capital expenditures and construction of new capacity, indicating that the chip industry is still in a very strong cycle with robust demand, even though in the long run this will narrow the supply‑demand gap.",
+            "Lee noted that chip stocks have caused sharp volatility in the Korean stock market this year. He attributed the market’s turbulence to the semiconductor sector’s larger share of Korea’s economy compared with other countries, but he still maintained that the Korean economy’s fundamentals remain solid.",
+            "A commentary piece in Korea’s leading business daily, the Daily Economic News, published on Thursday, urged the government to prepare for a slowdown in the AI boom. Citing two experts, the article said that by 2029 a massive influx of semiconductor supply is expected, turning the memory‑chip market into a “red sea.”"
+          ]
+        },
+        {
+          "news_id": "6632912",
+          "title": "AI算力需求帶動營收暴增印度E2E Networks單季成長逾4倍",
+          "title_en": "AI Compute Demand Drives Revenue Surge as India's E2E Networks Grows Over Fourfold in a Single Quarter",
+          "publish_at": 1792301405,
+          "url": "https://news.cnyes.com/news/id/6632912",
+          "paras": [
+            "2026年10月18日（優分析／產業數據中心報導）⸺ 全球AI算力需求持續成長，印度雲端運算服務商E2E Networks( E2E-IN )受惠於GPU雲端服務擴張，2027會計年度第二季營收達22.38億盧比，年增410.8%、季增42.7%，稅後淨利達7.27億盧比。公司目前已有約5,100顆GPU投入服務，其中包括1,024顆輝達NVIDIA(NVDA-US) B200加速器，隨著算力部署逐步轉化為實際收入，AI雲端業務開始展現獲利能力。",
+            "E2E Networks當季EBITDA達17.15億盧比，EBITDA利潤率約76.6%，折舊費用約7.4億盧比，占營收約33%。儘管GPU設備帶來較高折舊負擔，公司仍維持稅後獲利，反映算力服務收入成長已足以支撐當期部分設備成本。不過，稅後獲利並不等於自由現金流，仍須觀察後續GPU採購與資本支出規模。",
+            "值得注意的是，E2E Networks前後兩季公布的GPU上線數量均約5,100顆，但第二季營收仍較前季成長42.7%。這顯示收入增加未必完全依賴新增GPU數量，也可能與既有算力使用率、客戶需求及服務價格變化有關。不過，公司尚未揭露實際GPU利用率及平均算力售價，因此仍無法確認各項因素的貢獻。",
+            "此外，E2E Networks已與印度主權AI相關企業簽署約100億盧比的具約束力條款書，規畫提供NVIDIA Blackwell GPU雲端服務，合作期限至2029年6月。這筆金額屬於未來服務安排，尚不能全部視為已實現營收。",
+            "※ 本文經「優分析」授權轉載，原文出處:原文連結",
+            "※ 免責聲明：文中所提的個股、基金、期貨商品內容僅供參考，並非投資建議，投資人應獨立判斷，審慎評估風險。"
+          ],
+          "paras_en": [
+            "October 18, 2026 (Youshi Analysis/Industry Data Center report) – Global AI compute demand continues to rise, and Indian cloud services provider E2E Networks (E2E‑IN) benefited from the expansion of GPU cloud services. In the second quarter of fiscal year 2027, revenue reached 2.238 billion rupees, up 410.8% year‑over‑year and 42.7% quarter‑over‑quarter, with net profit after tax of 727 million rupees. The company now has roughly 5,100 GPUs in service, including 1,024 NVIDIA (NVDA‑US) B200 accelerators. As compute deployment gradually translates into actual revenue, the AI cloud business is beginning to show profitability.",
+            "E2E Networks reported EBITDA of 1.715 billion rupees for the quarter, an EBITDA margin of about 76.6%, and depreciation expenses of roughly 740 million rupees, accounting for about 33% of revenue. Although GPU equipment creates a high depreciation burden, the company still maintained net profit after tax, indicating that the growth in compute‑service revenue is already sufficient to cover part of the equipment costs for the period. However, net profit does not equal free cash flow, and future GPU purchases and capital‑expenditure levels will need to be monitored.",
+            "It is noteworthy that the number of GPUs reported online by E2E Networks for the two consecutive quarters remained around 5,100, yet second‑quarter revenue still grew 42.7% from the prior quarter. This suggests that revenue growth is not solely dependent on adding new GPUs and may also be driven by higher utilization of existing compute capacity, customer demand, and changes in service pricing. The company has not disclosed actual GPU utilization rates or average compute pricing, so the contribution of each factor cannot be confirmed.",
+            "In addition, E2E Networks has signed a binding agreement worth about 10 billion rupees with an Indian sovereign AI‑related entity to provide NVIDIA Blackwell GPU cloud services, with the partnership running through June 2029. This amount represents future service arrangements and cannot be fully recognized as revenue at present.",
+            "* This article is reproduced with permission from Youshi Analysis; original source: link to the original article.",
+            "* Disclaimer: The individual stocks, funds, and futures mentioned in this article are for reference only and do not constitute investment advice. Investors should make independent judgments and carefully assess risks."
+          ]
+        },
+        {
           "news_id": "6632906",
           "title": "優分析｜美股觀察：AI投資疑慮升溫、那斯達克週跌4.5%Meta、特斯拉與SpaceX將公布財報",
           "title_en": "Analysis｜US Stock Watch: AI Investment Concerns Rise, Nasdaq Down 4.5% This Week, Meta, Tesla and SpaceX to Report Earnings",
@@ -1026,106 +1154,6 @@
             "Hayes also points out that the renewed appeal of the bond market is another key driver of the U.S. equity capital rotation.",
             "He argues that when the 10‑year U.S. Treasury yield reaches 5.30%, its return—about 5% and without guaranteed expectations—looks more attractive than the uncertain returns from stocks.",
             "However, while U.S. Treasuries held to maturity deliver coupon and principal as promised, they still carry price‑fluctuation risk during the holding period, so yields cannot be treated as a completely risk‑free total return."
-          ]
-        },
-        {
-          "news_id": "6632794",
-          "title": "藍思科技擬斥2500萬美元控股PMG，擴大AI伺服器機櫃與液冷布局",
-          "title_en": "Lens Technology Plans $25 Million Cash Deal to Control PMG, Expanding AI Server Racks and Liquid Cooling Portfolio",
-          "publish_at": 1792251005,
-          "url": "https://news.cnyes.com/news/id/6632794",
-          "paras": [
-            "2026年10月17日（優分析／產業數據中心報導）⸺ 精密製造廠藍思科技(300433-CN)加快切入AI伺服器市場。公司10月16日公告，已簽約以2,500萬美元現金收購裴美高國際（PMG）59.78%股權，擴大機櫃與液冷散熱業務。公司也透露，松山湖園區相關產品已取得正式訂單，正逐步拉高量產規模。",
-            "藍思原本主要從事消費電子防護玻璃等精密加工，今年6月先投入人民幣5,000萬元增資元拾科技（浙江），取得14.29%股權。由於PMG持有元拾81.53%股權，這次收購若完成，藍思將進一步掌握兩家公司的控制權，並將其納入合併報表。",
-            "伺服器業務的擴產與客戶驗證已先行展開。藍思9月2日在投資人說明會表示，東莞松山湖園區已完成擴產及客戶驗證，正增加新一代AI伺服器結構件與液冷系統產出。此次公告則進一步確認，相關公司已通過中國及海外主要客戶驗廠、取得正式訂單，但尚未公布客戶名稱、訂單金額及營收貢獻。",
-            "這筆收購仍待完成境外投資審批、解除相關抵押等程序。協議也要求完成機櫃技術移轉、確保核心人員留任，並由元拾取得特定客戶訂單、完成交貨與收款。藍思去年12月原本提出收購PMG全部股權的意向，目前先就近六成股權簽約，其餘40.22%的收購價格與方案仍在協商。",
-            "※ 本文經「優分析」授權轉載，原文出處:原文連結",
-            "※ 免責聲明：文中所提的個股、基金、期貨商品內容僅供參考，並非投資建議，投資人應獨立判斷，審慎評估風險。"
-          ],
-          "paras_en": [
-            "On October 17, 2026 (U-Analysis/Industry Data Center report) – Precision‑manufacturing firm Lens Technology (300433‑CN) is accelerating its entry into the AI server market. The company announced on October 16 that it has signed an agreement to acquire a 59.78% stake in PMG for $25 million in cash, aiming to expand its rack and liquid‑cooling businesses. Lens also disclosed that products from its Songshan Lake campus have secured formal orders, and production scale is being gradually ramped up.",
-            "Lens originally focused on precision processing such as protective glass for consumer electronics. In June this year it invested RMB 50 million to increase its stake in YuanShi Technology (Zhejiang), acquiring a 14.29% interest. Since PMG holds an 81.53% stake in YuanShi, the completion of this acquisition would give Lens further control over both companies and allow consolidation into its financial statements.",
-            "The expansion of the server business and customer validation have already begun. At a investors’ briefing on September 2, Lens said the Songshan Lake campus in Dongguan had completed capacity expansion and customer verification, and is increasing output of next‑generation AI server components and liquid‑cooling systems. The current announcement confirms that the related entities have passed factory audits by major domestic and overseas customers and have obtained formal orders, though the customer names, order values and revenue contributions have not been disclosed.",
-            "The deal still requires foreign‑investment approval and the release of related collateral. The agreement also mandates the transfer of rack technology, retention of key personnel, and that YuanShi secure specific customer orders, complete deliveries and receive payment. Lens had originally expressed interest in acquiring 100% of PMG in December last year; it now signed for roughly 60% of the shares, with the price and terms for the remaining 40.22% still under negotiation.",
-            "This article is reproduced with permission from U‑Analysis; original source link provided.",
-            "Disclaimer: The stock, fund and futures product information mentioned in this article is for reference only and does not constitute investment advice. Investors should make independent judgments and carefully assess risks."
-          ]
-        },
-        {
-          "news_id": "6632793",
-          "title": "變壓器擴產卡在絕緣材料，日立能源砸4.79億加元建加拿大新廠",
-          "title_en": "Transformer Expansion Stalled by Insulation Materials, Hitachi Energy Invests C$479 Million in New Canadian Plant",
-          "publish_at": 1792251004,
-          "url": "https://news.cnyes.com/news/id/6632793",
-          "paras": [
-            "2026年10月17日（優分析／產業數據中心報導）⸺ AI資料中心與電網擴建推升變壓器需求，供應瓶頸也延伸至上游絕緣材料。日立Hitachi(6501-JP)旗下日立能源2026年10月16日宣布，將投資4.79億加元，在加拿大安大略省倫敦市興建變壓器絕緣材料廠，預計2028年完工。",
-            "新廠規模約2.1萬平方公尺，將生產電氣絕緣壓紙板與層壓材料，建立加拿大首條壓紙板製造產線，也是日立能源在美洲的首條同類產線，廠內規劃四部將濕紙漿成形成片材的設備，年產能最高可達2萬噸；加拿大聯邦與省級資金支持合計最高5,000萬加元。",
-            "這類材料負責隔離變壓器內部帶電部件，並協助內部冷卻，品質與一致性會影響設備壽命及可靠度。日立能源指出，全球變壓器製造仍受特殊絕緣材料供應有限所限制。將材料生產移近北美市場，有助降低對進口的依賴，也讓變壓器廠擴產時取得更穩定的關鍵料源。",
-            "日立能源先前已在2025年9月宣布，追加2.7億加元擴建魁北克省Varennes大型電力變壓器廠，規劃將年產能提高至接近原來的三倍。此次加拿大布局進一步擴及上游材料，但新絕緣材料廠仍須等到2028年完工，相關供應改善尚需建廠時間。",
-            "※ 本文經「優分析」授權轉載，原文出處:原文連結",
-            "※ 免責聲明：文中所提的個股、基金、期貨商品內容僅供參考，並非投資建議，投資人應獨立判斷，審慎評估風險。"
-          ],
-          "paras_en": [
-            "On October 17, 2026 (U-Analysis/Industry Data Center report) – Growing demand for transformers driven by AI data centers and grid expansion is hitting a supply bottleneck that extends upstream to insulation materials. Hitachi Energy, a subsidiary of Hitachi (6501-JP), announced on October 16, 2026 that it will invest C$479 million to build a transformer insulation material plant in London, Ontario, Canada, slated for completion in 2028.",
-            "The new facility will cover about 21,000 square metres and will produce electrical insulation pressboard and laminated materials, establishing Canada’s first pressboard production line and Hitachi Energy’s first such line in the Americas. The plant will house four machines that convert wet pulp into sheet material, with a maximum annual capacity of 20,000 tonnes; federal and provincial funding will together provide up to C$50 million.",
-            "These materials isolate the energized components inside transformers and aid internal cooling, with quality and consistency affecting equipment lifespan and reliability. Hitachi Energy notes that global transformer manufacturing remains constrained by limited supplies of specialized insulation materials. Locating production closer to the North American market helps reduce import dependence and gives transformer makers a more stable source of critical material when expanding capacity.",
-            "Hitachi Energy previously announced in September 2025 an additional C$270 million expansion of its large power transformer plant in Varennes, Quebec, planning to raise annual output to nearly three times its original level. This new Canadian footprint further extends upstream to raw materials, but the new insulation material plant will not be operational until 2028, so supply improvements will still require construction time.",
-            "This article is reproduced with permission from U-Analysis; original source link provided.",
-            "Disclaimer: The stocks, funds, and futures mentioned are for reference only and do not constitute investment advice. Investors should make independent judgments and carefully assess risks."
-          ]
-        },
-        {
-          "news_id": "6632792",
-          "title": "Anthropic簽首筆加拿大資料中心租約，首期95MW目標2027年底啟用",
-          "title_en": "Anthropic Signs First Canadian Data Center Lease, Initial 95MW Target to Launch by End of 2027",
-          "publish_at": 1792251004,
-          "url": "https://news.cnyes.com/news/id/6632792",
-          "paras": [
-            "2026年10月17日（優分析／產業數據中心報導）⸺ AI模型開發商Anthropic將算力布局延伸至加拿大。公司已與能源開發商EverWind簽署租約，進駐新斯科細亞省Point Tupper資料中心園區，這是Anthropic首筆加拿大資料中心協議。EverWind同日宣布，將投入逾100億加元興建園區及配套風電，首期95MW容量目標於2027年底啟用。",
-            "這筆投資由EverWind規劃，其中逾80億加元用於資料中心園區，另20億加元投入四座陸域風場。目前簽訂的長期租約涵蓋園區首期開發；後續325MW容量則以2028年啟用為目標，全部完成後合計420MW，仍須滿足商業、技術及監管條件。",
-            "EverWind原本就經營Point Tupper能源碼頭，並開發再生能源及綠氫、綠氨計畫。此次把資料中心與風電一併布局，也反映AI算力擴張需要同步解決供電問題。公司規劃搭配數百MWh電池儲能，讓園區在電網吃緊時減少或停止向電網取電，同時維持運作。",
-            "電力配套也牽動這項投資的落地進度。EverWind表示，將負擔本案所需的電網連接與升級費用，避免把相關成本轉嫁給其他用電戶；擴大供電仍須完成電網評估及監管審批。",
-            "※ 本文經「優分析」授權轉載，原文出處:原文連結",
-            "※ 免責聲明：文中所提的個股、基金、期貨商品內容僅供參考，並非投資建議，投資人應獨立判斷，審慎評估風險。"
-          ],
-          "paras_en": [
-            "October 17, 2026 (U-Analysis/Industry Data Center Report) – AI model developer Anthropic is extending its compute footprint to Canada. The company has signed a lease with energy developer EverWind to occupy the Point Tupper data center campus in Nova Scotia, marking Anthropic’s first data center agreement in Canada. EverWind announced on the same day that it will invest more than CAD 10 billion to build the campus and associated wind power, with an initial 95 MW capacity slated for activation by the end of 2027.",
-            "The investment is planned by EverWind, with over CAD 8 billion allocated to the data center campus and an additional CAD 2 billion for four on‑shore wind farms. The signed long‑term lease covers the first phase of the campus development; a subsequent 325 MW capacity is targeted for 2028, bringing the total to 420 MW once all phases are completed, subject to commercial, technical and regulatory conditions.",
-            "EverWind already operates the Point Tupper energy terminal and develops renewable energy, green hydrogen and green ammonia projects. Combining the data center with wind power reflects the need to address power supply as AI compute expands. The company plans to pair the site with several hundred MWh of battery storage so that the campus can reduce or halt grid draw when the grid is strained while maintaining operations.",
-            "Power infrastructure also influences the investment’s rollout timeline. EverWind says it will bear the costs for the required grid connection and upgrades, avoiding passing those expenses onto other electricity users; expanding supply still requires grid assessments and regulatory approvals.",
-            "This article is reproduced with permission from U‑Analysis; original source: link to the original article.",
-            "Disclaimer: The stocks, funds, and futures mentioned are for reference only and do not constitute investment advice. Investors should make independent judgments and carefully assess risks."
-          ]
-        },
-        {
-          "news_id": "6632791",
-          "title": "加州電動車補助近1.2萬人使用，特斯拉配額用罄",
-          "title_en": "California EV Subsidy Used by Nearly 12,000 People, Tesla Quota Exhausted",
-          "publish_at": 1792251004,
-          "url": "https://news.cnyes.com/news/id/6632791",
-          "paras": [
-            "2026年10月17日（優分析／產業數據中心報導）⸺ 美國加州政府10月16日公布電動車補助計畫最新進展，針對首次購買零排放車的消費者推出的MyFirstEV補助計畫，自8月啟動以來已有近1.2萬人使用，但補助措施尚未扭轉當地電動車市場占比下滑的趨勢。2026年前三季零排放車占加州新車銷售比重約18%，低於2025年全年的23%及2024年全年的25%，第三季占比則為19.1%。",
-            "依加州能源委員會（California Energy Commission）定義，零排放車銷售統計涵蓋純電動車、插電式油電混合車及氫燃料電池車。雖然第三季市場占比高於前三季累計水準，但整體銷售滲透率仍不及前兩年，顯示加州電動車市場即使有補助政策支撐，需求復甦仍面臨挑戰。",
-            "加州MyFirstEV計畫於2026年8月啟動，符合資格、首次購買零排放車的消費者，若購買建議售價不超過5萬美元的新車，可直接折抵3,500美元；購買售價不超過2.5萬美元、經車廠認證的中古零排放車，則可獲得1,750美元補助。與購車後申請退稅的方式不同，這項計畫讓消費者在購車時即可享有折扣，降低初期購車負擔。",
-            "資金方面，加州政府投入1.355億美元公共資金，參與車廠另外提供同額資金，合計補助規模達2.71億美元。透過政府與車廠共同分攤補助成本，加州希望降低零排放車購車門檻，進一步帶動市場需求。",
-            "不過，各品牌的補助使用進度已出現差異。",
-            "特斯拉Tesla(TSLA-US)在MyFirstEV計畫下的補助額度已全數用罄，福特Ford(F-US)、通用汽車General Motors(GM-US)、豐田Toyota(7203-JP)、現代汽車Hyundai Motor(005380-KR)及Rivian(RIVN-US)等品牌則仍有補助資金可供消費者使用。這也反映各車廠的補助額度與實際使用情況不同，消費者能否取得優惠，仍取決於所選品牌的剩餘額度。",
-            "除了政府推動的首次購買零排放車補助，豐田與旗下豪華品牌Lexus也另外以自有資金推出優惠，將補助對象擴大至曾經持有電動車的消費者。符合條件的加州車主，購買或租賃指定車款可獲得2,500美元折扣，藉此吸引既有電動車用戶換購新車。",
-            "與MyFirstEV主要鎖定首次購買零排放車的消費者不同，豐田與Lexus的優惠著重既有車主換購需求。兩種措施分別涵蓋首次購車與換購市場，也讓加州零排放車補助政策逐步從降低購車門檻，延伸至刺激既有車主的汰換需求。",
-            "※ 本文經「優分析」授權轉載，原文出處:原文連結",
-            "※ 免責聲明：文中所提的個股、基金、期貨商品內容僅供參考，並非投資建議，投資人應獨立判斷，審慎評估風險。"
-          ],
-          "paras_en": [
-            "On October 16, the California government announced the latest progress of its electric‑vehicle subsidy program. The MyFirstEV incentive for first‑time zero‑emission vehicle buyers, launched in August, has already been used by nearly 12,000 people, but the measure has not reversed the decline in the state's EV market share. In the first three quarters of 2026, zero‑emission vehicles accounted for about 18% of new‑car sales in California, down from a full‑year share of 23% in 2025 and 25% in 2024, with the third‑quarter share at 19.1%.",
-            "According to the California Energy Commission, zero‑emission vehicle sales include pure electric cars, plug‑in hybrid electric vehicles and hydrogen fuel‑cell cars. Although the third‑quarter market share is higher than the cumulative share for the first three quarters, overall penetration remains below the levels of the previous two years, indicating that even with subsidy support, demand recovery in California’s EV market still faces challenges.",
-            "The MyFirstEV program, launched in August 2026, offers eligible first‑time zero‑emission vehicle buyers a $3,500 discount on new vehicles with a suggested retail price of up to $50,000, and a $1,750 incentive for certified pre‑owned zero‑emission vehicles priced at $25,000 or less. Unlike post‑purchase tax‑refund applications, this program provides an immediate discount at the point of sale, reducing the upfront cost burden.",
-            "Funding for the program consists of $135.5 million in public money from the state, matched by an equal amount from participating automakers, bringing the total subsidy pool to $271 million. By sharing the cost between government and manufacturers, California aims to lower the purchase barrier for zero‑emission vehicles and stimulate market demand.",
-            "However, the pace of subsidy utilization varies across brands.",
-            "Tesla (TSLA‑US) has exhausted its entire MyFirstEV allocation, while Ford (F‑US), General Motors (GM‑US), Toyota (7203‑JP), Hyundai Motor (005380‑KR) and Rivian (RIVN‑US) still have funds available for consumers. This reflects differing allocation sizes and usage rates among manufacturers, meaning a buyer’s ability to obtain a discount depends on the remaining balance of the chosen brand.",
-            "In addition to the government’s first‑time buyer incentive, Toyota and its luxury brand Lexus are offering a separate discount funded by their own capital, extending eligibility to consumers who have previously owned an electric vehicle. Qualified California owners can receive a $2,500 discount when purchasing or leasing designated models, aiming to entice existing EV users to upgrade.",
-            "Unlike MyFirstEV, which targets first‑time zero‑emission vehicle buyers, Toyota and Lexus’s offer focuses on owners looking to replace their current vehicle. The two measures together cover both the first‑purchase and replacement markets, gradually shifting California’s EV subsidy policy from merely lowering purchase barriers to also stimulating turnover among existing owners.",
-            "This article is reproduced with permission from \"You Analysis\"; original source link provided.",
-            "Disclaimer: The stock, fund and futures references in this article are for informational purposes only and do not constitute investment advice. Investors should make independent judgments and carefully assess risks."
           ]
         }
       ]
