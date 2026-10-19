@@ -3,7 +3,9 @@
   "tldr": [
     "台積電第三季法說報喜、營收創高並上修全年展望，AI晶片循環續為台股定調。",
     "記憶體上行循環加速，大廠轉進HBM推升DRAM報價，法人看旺並調升台廠記憶體股。",
-    "金管會提六大施政方向，國銀競逐高資產財管（遠東商銀獲財管2.0、台新銀獲PBI大獎）。"
+    "金管會提六大施政方向，國銀競逐高資產財管（遠東商銀獲財管2.0、台新銀獲PBI大獎）。",
+    "美股期指週一回穩，試圖在上週AI晶片股重挫（那斯達克單週跌4.48%）後反彈。",
+    "油價居高、WTI約103美元之上，中東變數使通膨與聯準會動向續為市場焦點。"
   ],
   "sections": [
     {
@@ -91,6 +93,92 @@
           "summary_en": "Industry reports point to robust growth in Taiwan's high-net-worth segment. KPMG and E.Sun estimate individuals with assets over NT$100m numbered about 118,000 in 2025 holding NT$43.7tn, projected to rise to roughly 124,000 and NT$46.1tn in 2026. Cross-border allocation and wealth-succession demand are pushing banks and regulators to expand family-office services.",
           "source_name": "經濟日報",
           "source_url": "https://money.udn.com/money/story/5613/9597844"
+        }
+      ]
+    },
+    {
+      "section": "Macro & Policy",
+      "section_zh": "總經政策",
+      "items": [
+        {
+          "title_zh": "央行利率維持2% 貨幣操作偏緊",
+          "title_en": "Central bank holds at 2% but leans hawkish",
+          "summary_zh": "中央銀行9月理監事會維持政策利率（重貼現率）2%不變，已連續第10季按兵不動，惟總裁楊金龍釋出貨幣操作偏緊訊號，因通膨仍高於2%警戒線。央行強調依本身通膨與經濟情勢決策、不跟隨聯準會，年底12月會議是否調整利率受關注。",
+          "summary_en": "Taiwan's central bank kept its policy (rediscount) rate at 2% at its September board meeting, a tenth straight quarter on hold, but Governor Yang Chin-long signalled a tightening bias as inflation stays above the 2% alert line. The bank says it is guiding on its own inflation and growth conditions rather than following the Fed, leaving December's meeting in focus.",
+          "source_name": "優分析 uAnalyze",
+          "source_url": "https://uanalyze.com.tw/articles/9516755544"
+        },
+        {
+          "title_zh": "AI熱潮帶動 機構上修台灣2026成長",
+          "title_en": "Forecasters lift Taiwan's 2026 growth on AI boom",
+          "summary_zh": "受AI出口與投資熱潮帶動，官方與民間機構大幅上修台灣2026年經濟成長預測。主計總處將GDP成長率上修至約11%、為近數十年最高；央行預估約11.5%，通膨率估略高於2%警戒線。AI相關需求成為成長主力，市場並關注基期墊高後明年動能是否趨緩。",
+          "summary_en": "Official and private forecasters have sharply raised Taiwan's 2026 growth outlook on an AI-driven export and investment boom. The statistics agency lifted its GDP forecast to about 11%, among the highest in decades, while the central bank sees around 11.5%; inflation is projected just above the 2% threshold, raising questions about momentum once the high base kicks in.",
+          "source_name": "優分析 uAnalyze",
+          "source_url": "https://uanalyze.com.tw/articles/1433153466"
+        }
+      ]
+    },
+    {
+      "section": "Global Markets",
+      "section_zh": "國際財經",
+      "items": [
+        {
+          "title_zh": "美股回檔、靜候聯準會 定調觀望氣氛",
+          "title_en": "Wall Street pullback and Fed watch set a cautious tone",
+          "summary_zh": "台灣媒體關注美股上週回檔，AI與晶片股領跌，投資人在通膨居高下靜候聯準會利率決策。美國科技股走弱為亞股定下觀望基調，也使台股權值型晶片出口股承壓，市場聚焦聯準會動向與企業財報對後市的指引。",
+          "summary_en": "Taiwanese media highlight last week's retreat on Wall Street, led by AI and chip names, with investors awaiting the Fed's rate decision amid firm inflation. The slide in US technology shares set a cautious backdrop for Asian markets and pressured Taiwan's heavyweight chip exporters heading into the new week.",
+          "source_name": "世界日報",
+          "source_url": "https://www.worldjournal.com/wj/story/121477/9659204"
+        },
+        {
+          "title_zh": "油價站上百元 通膨變數再起",
+          "title_en": "Oil above US$100 keeps inflation in play",
+          "summary_zh": "據台灣媒體報導，國際指標原油受中東地緣緊張推升、站上每桶100美元之上。能源成本攀高加劇通膨疑慮、壓抑風險偏好；台積電美國存託憑證（ADR）隨科技股回檔走弱，成為牽動台股開盤的變數之一。",
+          "summary_en": "International benchmark crude has traded above US$100 a barrel on Middle East tensions, Taiwanese coverage notes. Higher energy costs add to inflation worries and weigh on risk appetite, while TSMC's US-listed ADR eased alongside the broader technology pullback, a swing factor for the local market's open.",
+          "source_name": "自由時報",
+          "source_url": "https://ec.ltn.com.tw/article/breakingnews/5570090"
+        }
+      ]
+    },
+    {
+      "section": "International",
+      "section_zh": "國際",
+      "items": [
+        {
+          "title_zh": "美股期指在晶片股重挫後回穩（2026-10-19）",
+          "title_en": "US stock futures rebound after chip-led rout (2026-10-19)",
+          "summary_zh": "美股期指走高，買盤帶動指數在上週晶片股重挫後回穩。彭博報導，S&P 500期貨紐約早盤上漲約0.5%，投資人暫時淡化近期AI類股賣壓，留意即將公布的企業財報與經濟數據。",
+          "summary_en": "US stock-index futures rose as buyers drove a rebound following last week's rout in chipmakers. S&P 500 futures were up about 0.5% in early New York trading, Bloomberg reported, with investors looking past the recent AI-led sell-off ahead of key earnings and economic data.",
+          "source_name": "Bloomberg",
+          "source_url": "https://www.bloomberg.com/news/articles/2026-10-19/us-stock-futures-today-cleveland-cliffs-disc-nvidia-silgan",
+          "published": "2026-10-19"
+        },
+        {
+          "title_zh": "美股上週科技股領跌（2026-10-19）",
+          "title_en": "Wall Street's chip-led weekly slump (2026-10-19)",
+          "summary_zh": "美股上週收黑、科技股領跌：那斯達克單週下跌4.48%、標普500跌1.95%，道瓊逆勢小漲0.67%；費城半導體指數週五重挫3.8%。進入本週一，那斯達克期貨回升逾1%，市場嘗試在晶片股修正後尋求反彈。",
+          "summary_en": "US equities closed last week sharply lower, led by technology: the Nasdaq fell 4.48% and the S&P 500 lost 1.95% for the week, while the Dow eked out a 0.67% gain. The Philadelphia Semiconductor Index dropped 3.8% on Friday, though Nasdaq futures pointed up more than 1% into Monday.",
+          "source_name": "Investrade",
+          "source_url": "https://investrade.com/morning-preview-october-19-2026/",
+          "published": "2026-10-19"
+        },
+        {
+          "title_zh": "油價強勢、WTI站上103美元（2026-10-19）",
+          "title_en": "Oil holds firm as WTI tops US$103 (2026-10-19)",
+          "summary_zh": "原油維持強勢：據每日市場展望，西德州中質原油（WTI）上漲2.22%、約報每桶103.66美元，布蘭特原油在109.55美元附近。能源價格居高使通膨續受關注，惟那斯達克100與標普500期貨分別上漲約1.3%與0.8%。",
+          "summary_en": "Crude stayed firm: WTI settled up 2.22% at about US$103.66 a barrel while Brent hovered near US$109.55, according to a daily market outlook. Elevated energy prices kept inflation in focus even as Nasdaq-100 and S&P 500 futures advanced roughly 1.3% and 0.8% respectively.",
+          "source_name": "Tickmill",
+          "source_url": "https://tickmill.com/blog/daily-market-outlook-october-19-2026",
+          "published": "2026-10-19"
+        },
+        {
+          "title_zh": "通膨黏著疑慮壓抑開盤（2026-10-19）",
+          "title_en": "Sticky-inflation worries cloud the open (2026-10-19)",
+          "summary_zh": "並非所有訊號皆偏多：另一則盤前報導指出，美股期貨因通膨黏著的新跡象而走弱，凸顯市場雙向風險——在科技股反彈與物價壓力之間拉鋸，後續聯準會指引與經濟數據將是關鍵。",
+          "summary_en": "Not all signals were bullish: a separate morning update said US futures pointed lower on fresh signs of sticky inflation, underscoring two-sided risk as markets weigh price pressures against a tech rebound ahead of upcoming Fed guidance and economic releases.",
+          "source_name": "Yahoo Finance",
+          "source_url": "https://finance.yahoo.com/markets/stocks/articles/us-stock-market-today-p-081049033.html",
+          "published": "2026-10-19"
         }
       ]
     }
