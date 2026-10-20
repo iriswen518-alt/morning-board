@@ -1,11 +1,9 @@
 {
-  "news_date": "2026-10-20",
+  "news_date": "2026-10-21",
   "tldr": [
-    "台積電第三季法說報喜、營收創高並上修全年展望，AI晶片循環續為台股定調。",
-    "記憶體上行循環加速，大廠轉進HBM推升DRAM報價，法人看旺並調升台廠記憶體股。",
-    "金管會提六大施政方向，國銀競逐高資產財管（遠東商銀獲財管2.0、台新銀獲PBI大獎）。",
-    "美股期指週一回穩，試圖在上週AI晶片股重挫（那斯達克單週跌4.48%）後反彈。",
-    "油價居高、WTI約103美元之上，中東變數使通膨與聯準會動向續為市場焦點。"
+    "台股10/20重挫529點（1.13%）收46,293點，台積電跌15元至2,405元。",
+    "外資續賣超約767億元，近10個交易日累計提款約8,380億元。",
+    "AI伺服器股緯創逆勢漲約5%，金融權值股與中小型股領跌。"
   ],
   "sections": [
     {
@@ -13,20 +11,20 @@
       "section_zh": "股市行情",
       "items": [
         {
-          "title_zh": "台積電法說報喜，權值王定調大盤",
-          "title_en": "TSMC's Q3 beat lifts the market's heavyweight",
-          "summary_zh": "台積電第三季合併營收創新高達1兆4,942億元、年增50.9%，EPS 29.43元、毛利率66.4%，並將全年美元營收成長上修至約44%，第四季估523至543億美元。作為台股權值王，其AI訂單能見度持續為大盤定調。",
-          "summary_en": "TSMC posted a record Q3 with consolidated revenue of about NT$1.4942tn (+50.9% YoY), EPS of NT$29.43 and a 66.4% gross margin. Management raised full-year USD revenue growth guidance to around 44% and guided Q4 revenue of US$52.3–54.3bn, reinforcing the AI-chip cycle that anchors the TAIEX's largest constituent.",
-          "source_name": "優分析 uAnalyze",
-          "source_url": "https://uanalyze.com.tw/articles/7013345497"
+          "title_zh": "台股重挫529點 台積電逼近2,400元關卡",
+          "title_en": "Taiwan stocks tumble 529 points as TSMC slips toward NT$2,400",
+          "summary_zh": "加權指數10月20日收46,292.93點，下跌529.15點、跌幅1.13%，成交值約7,587億元，盤中震盪約800點。權王台積電收2,405元、跌15元（0.62%），盤中一度跌破2,400元，拖累大盤約118點；櫃買指數跌1.57%收387.88點。台指期結算在即加上新台幣走貶，使賣壓加劇。",
+          "summary_en": "Taiwan's benchmark TAIEX fell 529.15 points, or 1.13%, to close at 46,292.93 on Oct 20, with turnover near NT$758.7bn and an intraday swing of roughly 800 points. Chipmaking bellwether TSMC dropped NT$15 (0.62%) to NT$2,405, briefly breaking below NT$2,400 and shaving about 118 points off the index, while the OTC index fell 1.57% to 387.88. A looming index-futures settlement and a softer Taiwan dollar added to the selling pressure.",
+          "source_name": "中央社",
+          "source_url": "https://www.cna.com.tw/news/afe/202610200145.aspx"
         },
         {
-          "title_zh": "台積電9月營收創歷年同期新高",
-          "title_en": "TSMC September revenue hits record for the month",
-          "summary_zh": "台積電9月合併營收約5,118.57億元，月減0.6%、年增54.6%，創歷年同期新高；前三季累計約3兆8,987億元、年增41.1%，優於法人預期，鞏固AI供應鏈作為盤面主流的地位。",
-          "summary_en": "TSMC reported September consolidated revenue of about NT$511.9bn, up 54.6% year-on-year and a record for the month, with nine-month revenue near NT$3.9tn (+41.1%). The figures topped analyst estimates and kept the AI supply chain firmly in focus as the market's leadership group.",
-          "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/5607/9802747"
+          "title_zh": "外資連賣 近10日提款逾8,380億元",
+          "title_en": "Foreign funds extend aggressive retreat from Taiwan equities",
+          "summary_zh": "外資10月20日賣超台股約767億元（一說約795億元），連續賣超擴大，近10個交易日累計賣超約8,380億元；今年以來累計提款台股已突破2.04兆元。新台幣走貶與台指期結算在即加重外資撤離力道，盤面僅剩投信苦撐買盤。",
+          "summary_en": "Overseas investors sold a net NT$76.7bn of Taiwan shares on Oct 20 (one tally put it near NT$79.5bn), extending a retreat that has reached roughly NT$838bn over the past ten trading days. Cumulative foreign outflows from Taiwan equities have now topped NT$2.04trn year-to-date. A weakening Taiwan dollar and the approaching futures settlement amplified the exodus, leaving domestic investment trusts as the main buyers propping up the market.",
+          "source_name": "中時新聞網",
+          "source_url": "https://www.chinatimes.com/realtimenews/20261020003242-260410"
         }
       ]
     },
@@ -35,20 +33,12 @@
       "section_zh": "產業動態",
       "items": [
         {
-          "title_zh": "記憶體上行循環加速，產能轉進HBM",
-          "title_en": "Memory up-cycle accelerates as capacity shifts to HBM",
-          "summary_zh": "集邦科技指出，大廠將產能轉向高毛利HBM，使通用型DRAM供給吃緊、合約價漲勢擴大；Jefferies估第四季再漲30至40%。摩根士丹利看好供不應求延續，調升南亞科、華邦電、旺宏、力積電等台廠記憶體族群評級。",
-          "summary_en": "TrendForce says DRAM contract prices are rising sharply as leading makers divert capacity to high-margin HBM, tightening commodity DRAM supply; Jefferies projects a further 30–40% price increase in Q4 2026. Morgan Stanley upgraded Taiwan memory names Nanya, Winbond, Macronix and PSMC on the persistent shortage.",
-          "source_name": "經濟日報",
-          "source_url": "https://udn.com/news/story/7240/9347586"
-        },
-        {
-          "title_zh": "台積電先進製程領先地位難撼動",
-          "title_en": "TSMC's process-technology lead stays unrivalled",
-          "summary_zh": "產業分析指出，台積電2奈米（N2）今年進入量產、營收貢獻超越3奈米，A16與CoWoS先進封裝產能同步擴充以滿足AI需求。製程優勢擴大鞏固其定價能力，儘管2奈米放量初期將對毛利率造成稀釋。",
-          "summary_en": "Industry coverage notes TSMC's advanced-process edge remains hard to challenge, with 2nm (N2) entering volume production this year and its revenue contribution surpassing 3nm, while A16 and CoWoS advanced-packaging capacity expand to meet AI demand. The widening lead underpins pricing power even as the 2nm ramp temporarily dilutes margins.",
-          "source_name": "科技新報",
-          "source_url": "https://finance.technews.tw/2026/10/07/tsmcs-advanced-process-technology-has-no-rivals-recently/"
+          "title_zh": "緯創逆勢漲約5% AI伺服器族群相對抗跌",
+          "title_en": "Wistron bucks the sell-off as AI-server names stay resilient",
+          "summary_zh": "10月20日大盤重挫逾500點之際，AI伺服器組裝廠緯創逆勢上漲約5%，顯示資金在避險氛圍下仍聚焦AI硬體供應鏈；相對地，中小型股同步走弱，反映盤面資金向大型AI受惠股集中、其餘個股承壓的輪動格局。",
+          "summary_en": "While Taiwan's broad market sank more than 500 points on Oct 20, AI-server assembler Wistron bucked the trend with a gain of about 5%, underscoring continued investor appetite for the artificial-intelligence hardware supply chain even on a risk-off day. Small- and mid-cap stocks weakened broadly, highlighting how money rotated toward large-cap AI beneficiaries while the rest of the market retreated.",
+          "source_name": "Vocus",
+          "source_url": "https://vocus.cc/article/6ad7096efd89780001a4761e"
         }
       ]
     },
@@ -57,128 +47,12 @@
       "section_zh": "金融業",
       "items": [
         {
-          "title_zh": "金管會立院報告提六大施政方向",
-          "title_en": "FSC outlines six priorities in Legislative report",
-          "summary_zh": "金管會主委彭金隆10月19日赴立法院財委會業務報告，提出六大施政方向，包括預計2027年第一季發布金融業大型語言模型、銀行公會年底前報核虛擬資產保管業務規範。報告並揭露今年1至8月銀行、證券期貨、保險三業合計稅前盈餘達1兆1,702億元。",
-          "summary_en": "FSC Chairman Peng Jin-lung delivered a business report to the Legislature on Oct 19 setting out six policy priorities. Highlights include a financial-industry large language model slated for Q1 2027 and virtual-asset custody rules the Bankers Association plans to file by year-end. Pre-tax profit of the banking, securities and insurance sectors totalled NT$1.1702tn in Jan–Aug.",
-          "source_name": "NOWnews",
-          "source_url": "https://www.nownews.com/news/6884087"
-        },
-        {
-          "title_zh": "遠東商銀獲准開辦財管2.0",
-          "title_en": "Far Eastern Bank cleared for Wealth Management 2.0",
-          "summary_zh": "遠東商銀獲金管會核准開辦財富管理2.0業務，並以「十樂」品牌搶進私人銀行市場。此核准使取得高資產業務資格的銀行再添一家，國銀競逐富裕及高資產客群的態勢更趨白熱化，也反映財管2.0成為各行庫擴張手續費收入的重要戰場。",
-          "summary_en": "Far Eastern International Bank won FSC approval to launch Wealth Management 2.0 services, rolling out its \"Ten Joys\" (十樂) brand to compete in private banking. The approval widens the roster of banks cleared for high-asset business, intensifying competition among domestic lenders for affluent and high-net-worth clients.",
-          "source_name": "自由時報",
-          "source_url": "https://ec.ltn.com.tw/article/breakingnews/5487559"
-        }
-      ]
-    },
-    {
-      "section": "Wealth Management",
-      "section_zh": "財富管理",
-      "items": [
-        {
-          "title_zh": "台新銀行榮獲PBI全球財富管理大獎",
-          "title_en": "Taishin Bank wins PBI Global Wealth Awards",
-          "summary_zh": "台新銀行10月12日公告榮獲2026年「國際私人銀行家（PBI）全球財富管理大獎」兩項肯定，表彰其深化高資產服務與AI創新。此獎項凸顯台灣銀行業積極投入數位理財顧問與家族辦公室能力，以爭取富裕客群，呼應高資產財管市場競爭日趨激烈的趨勢。",
-          "summary_en": "Taishin Bank announced on Oct 12 that it won two honours at the 2026 Private Banker International (PBI) Global Wealth Awards, recognised for deepening high-net-worth services and AI-driven innovation. The accolade underscores how Taiwanese lenders are investing in digital advisory and family-office capabilities to serve affluent clients.",
-          "source_name": "台新銀行",
-          "source_url": "https://www.taishinbank.com.tw/TSB/personal/common/news/TSBankNews-008407/"
-        },
-        {
-          "title_zh": "台灣高資產客群持續擴大",
-          "title_en": "Taiwan's high-net-worth pool keeps growing",
-          "summary_zh": "多份報告顯示台灣高資產客群快速成長。KPMG與玉山銀行估計，資產逾億元者2025年約11.8萬人、持有43.7兆元，2026年估增至約12.4萬人、46.1兆元。跨境資產配置與家族傳承需求升溫，促使銀行與監理機關加速擴大家族辦公室與一站式財管服務。",
-          "summary_en": "Industry reports point to robust growth in Taiwan's high-net-worth segment. KPMG and E.Sun estimate individuals with assets over NT$100m numbered about 118,000 in 2025 holding NT$43.7tn, projected to rise to roughly 124,000 and NT$46.1tn in 2026. Cross-border allocation and wealth-succession demand are pushing banks and regulators to expand family-office services.",
-          "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/5613/9597844"
-        }
-      ]
-    },
-    {
-      "section": "Macro & Policy",
-      "section_zh": "總經政策",
-      "items": [
-        {
-          "title_zh": "央行利率維持2% 貨幣操作偏緊",
-          "title_en": "Central bank holds at 2% but leans hawkish",
-          "summary_zh": "中央銀行9月理監事會維持政策利率（重貼現率）2%不變，已連續第10季按兵不動，惟總裁楊金龍釋出貨幣操作偏緊訊號，因通膨仍高於2%警戒線。央行強調依本身通膨與經濟情勢決策、不跟隨聯準會，年底12月會議是否調整利率受關注。",
-          "summary_en": "Taiwan's central bank kept its policy (rediscount) rate at 2% at its September board meeting, a tenth straight quarter on hold, but Governor Yang Chin-long signalled a tightening bias as inflation stays above the 2% alert line. The bank says it is guiding on its own inflation and growth conditions rather than following the Fed, leaving December's meeting in focus.",
-          "source_name": "優分析 uAnalyze",
-          "source_url": "https://uanalyze.com.tw/articles/9516755544"
-        },
-        {
-          "title_zh": "AI熱潮帶動 機構上修台灣2026成長",
-          "title_en": "Forecasters lift Taiwan's 2026 growth on AI boom",
-          "summary_zh": "受AI出口與投資熱潮帶動，官方與民間機構大幅上修台灣2026年經濟成長預測。主計總處將GDP成長率上修至約11%、為近數十年最高；央行預估約11.5%，通膨率估略高於2%警戒線。AI相關需求成為成長主力，市場並關注基期墊高後明年動能是否趨緩。",
-          "summary_en": "Official and private forecasters have sharply raised Taiwan's 2026 growth outlook on an AI-driven export and investment boom. The statistics agency lifted its GDP forecast to about 11%, among the highest in decades, while the central bank sees around 11.5%; inflation is projected just above the 2% threshold, raising questions about momentum once the high base kicks in.",
-          "source_name": "優分析 uAnalyze",
-          "source_url": "https://uanalyze.com.tw/articles/1433153466"
-        }
-      ]
-    },
-    {
-      "section": "Global Markets",
-      "section_zh": "國際財經",
-      "items": [
-        {
-          "title_zh": "美股回檔、靜候聯準會 定調觀望氣氛",
-          "title_en": "Wall Street pullback and Fed watch set a cautious tone",
-          "summary_zh": "台灣媒體關注美股上週回檔，AI與晶片股領跌，投資人在通膨居高下靜候聯準會利率決策。美國科技股走弱為亞股定下觀望基調，也使台股權值型晶片出口股承壓，市場聚焦聯準會動向與企業財報對後市的指引。",
-          "summary_en": "Taiwanese media highlight last week's retreat on Wall Street, led by AI and chip names, with investors awaiting the Fed's rate decision amid firm inflation. The slide in US technology shares set a cautious backdrop for Asian markets and pressured Taiwan's heavyweight chip exporters heading into the new week.",
-          "source_name": "世界日報",
-          "source_url": "https://www.worldjournal.com/wj/story/121477/9659204"
-        },
-        {
-          "title_zh": "油價站上百元 通膨變數再起",
-          "title_en": "Oil above US$100 keeps inflation in play",
-          "summary_zh": "據台灣媒體報導，國際指標原油受中東地緣緊張推升、站上每桶100美元之上。能源成本攀高加劇通膨疑慮、壓抑風險偏好；台積電美國存託憑證（ADR）隨科技股回檔走弱，成為牽動台股開盤的變數之一。",
-          "summary_en": "International benchmark crude has traded above US$100 a barrel on Middle East tensions, Taiwanese coverage notes. Higher energy costs add to inflation worries and weigh on risk appetite, while TSMC's US-listed ADR eased alongside the broader technology pullback, a swing factor for the local market's open.",
-          "source_name": "自由時報",
-          "source_url": "https://ec.ltn.com.tw/article/breakingnews/5570090"
-        }
-      ]
-    },
-    {
-      "section": "International",
-      "section_zh": "國際",
-      "items": [
-        {
-          "title_zh": "美股期指在晶片股重挫後回穩（2026-10-19）",
-          "title_en": "US stock futures rebound after chip-led rout (2026-10-19)",
-          "summary_zh": "美股期指走高，買盤帶動指數在上週晶片股重挫後回穩。彭博報導，S&P 500期貨紐約早盤上漲約0.5%，投資人暫時淡化近期AI類股賣壓，留意即將公布的企業財報與經濟數據。",
-          "summary_en": "US stock-index futures rose as buyers drove a rebound following last week's rout in chipmakers. S&P 500 futures were up about 0.5% in early New York trading, Bloomberg reported, with investors looking past the recent AI-led sell-off ahead of key earnings and economic data.",
-          "source_name": "Bloomberg",
-          "source_url": "https://www.bloomberg.com/news/articles/2026-10-19/us-stock-futures-today-cleveland-cliffs-disc-nvidia-silgan",
-          "published": "2026-10-19"
-        },
-        {
-          "title_zh": "美股上週科技股領跌（2026-10-19）",
-          "title_en": "Wall Street's chip-led weekly slump (2026-10-19)",
-          "summary_zh": "美股上週收黑、科技股領跌：那斯達克單週下跌4.48%、標普500跌1.95%，道瓊逆勢小漲0.67%；費城半導體指數週五重挫3.8%。進入本週一，那斯達克期貨回升逾1%，市場嘗試在晶片股修正後尋求反彈。",
-          "summary_en": "US equities closed last week sharply lower, led by technology: the Nasdaq fell 4.48% and the S&P 500 lost 1.95% for the week, while the Dow eked out a 0.67% gain. The Philadelphia Semiconductor Index dropped 3.8% on Friday, though Nasdaq futures pointed up more than 1% into Monday.",
-          "source_name": "Investrade",
-          "source_url": "https://investrade.com/morning-preview-october-19-2026/",
-          "published": "2026-10-19"
-        },
-        {
-          "title_zh": "油價強勢、WTI站上103美元（2026-10-19）",
-          "title_en": "Oil holds firm as WTI tops US$103 (2026-10-19)",
-          "summary_zh": "原油維持強勢：據每日市場展望，西德州中質原油（WTI）上漲2.22%、約報每桶103.66美元，布蘭特原油在109.55美元附近。能源價格居高使通膨續受關注，惟那斯達克100與標普500期貨分別上漲約1.3%與0.8%。",
-          "summary_en": "Crude stayed firm: WTI settled up 2.22% at about US$103.66 a barrel while Brent hovered near US$109.55, according to a daily market outlook. Elevated energy prices kept inflation in focus even as Nasdaq-100 and S&P 500 futures advanced roughly 1.3% and 0.8% respectively.",
-          "source_name": "Tickmill",
-          "source_url": "https://tickmill.com/blog/daily-market-outlook-october-19-2026",
-          "published": "2026-10-19"
-        },
-        {
-          "title_zh": "通膨黏著疑慮壓抑開盤（2026-10-19）",
-          "title_en": "Sticky-inflation worries cloud the open (2026-10-19)",
-          "summary_zh": "並非所有訊號皆偏多：另一則盤前報導指出，美股期貨因通膨黏著的新跡象而走弱，凸顯市場雙向風險——在科技股反彈與物價壓力之間拉鋸，後續聯準會指引與經濟數據將是關鍵。",
-          "summary_en": "Not all signals were bullish: a separate morning update said US futures pointed lower on fresh signs of sticky inflation, underscoring two-sided risk as markets weigh price pressures against a tech rebound ahead of upcoming Fed guidance and economic releases.",
-          "source_name": "Yahoo Finance",
-          "source_url": "https://finance.yahoo.com/markets/stocks/articles/us-stock-market-today-p-081049033.html",
-          "published": "2026-10-19"
+          "title_zh": "金融權值股重挫 成10/20大盤重跌主因之一",
+          "title_en": "Financial heavyweights lead Taiwan's market lower",
+          "summary_zh": "10月20日台股大跌529點，金融保險類股為主要拖累之一，大型金控股跌勢明顯。在外資大量賣超、新台幣走貶的避險氛圍下，金融股與中小型股同步走弱，顯示市場風險意識明顯升高，類股資金動能轉弱。",
+          "summary_en": "Financial-holding and banking shares were among the biggest drags on Taiwan's market on Oct 20, with large-cap financial names falling sharply as the index shed 529 points. The weakness in financials, alongside broad declines in small- and mid-cap stocks, reflected risk-averse positioning amid heavy foreign selling and a softer local currency that pressured sentiment across the sector.",
+          "source_name": "Vocus",
+          "source_url": "https://vocus.cc/article/6ad7096efd89780001a4761e"
         }
       ]
     }
