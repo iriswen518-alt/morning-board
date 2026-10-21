@@ -40,43 +40,43 @@
     {
       "name": "Euro Stoxx 50",
       "name_zh": null,
-      "close": 6121.66015625,
-      "daily_pct": -0.38,
+      "close": 6207.52001953125,
+      "daily_pct": 1.4,
       "mtd_pct": -2.35,
       "ytd_pct": 5.61,
-      "closing_date": "2026-10-20"
+      "closing_date": "2026-10-21"
     },
     {
       "name": "DAX",
       "name_zh": null,
-      "close": 25304.419921875,
-      "daily_pct": -0.06,
+      "close": 25645.0390625,
+      "daily_pct": 1.35,
       "mtd_pct": 0.42,
       "ytd_pct": 3.32,
-      "closing_date": "2026-10-20"
+      "closing_date": "2026-10-21"
     },
     {
       "name": "FTSE 100",
       "name_zh": null,
-      "close": 10733.0,
-      "daily_pct": -0.29,
+      "close": 10752.8798828125,
+      "daily_pct": 0.19,
       "mtd_pct": 1.2,
       "ytd_pct": 8.07,
-      "closing_date": "2026-10-20"
+      "closing_date": "2026-10-21"
     },
     {
       "name": "CAC 40",
       "name_zh": null,
-      "close": 7838.490234375,
-      "daily_pct": -0.38,
+      "close": 7921.68017578125,
+      "daily_pct": 1.06,
       "mtd_pct": -1.58,
       "ytd_pct": -3.82,
-      "closing_date": "2026-10-20"
+      "closing_date": "2026-10-21"
     },
     {
       "name": "Nikkei 225",
       "name_zh": null,
-      "close": 64621.23828125,
+      "close": 64621.24,
       "daily_pct": 0.85,
       "mtd_pct": -4.01,
       "ytd_pct": 27.29,
@@ -101,18 +101,9 @@
       "closing_date": "2026-10-21"
     },
     {
-      "name": "台指期(近月)",
-      "name_zh": null,
-      "close": 46384.0,
-      "daily_pct": -0.82,
-      "mtd_pct": null,
-      "ytd_pct": null,
-      "closing_date": "2026-10-20"
-    },
-    {
       "name": "KOSPI",
       "name_zh": null,
-      "close": 5735.66015625,
+      "close": 5735.66,
       "daily_pct": 3.29,
       "mtd_pct": -18.8,
       "ytd_pct": 31.76,
@@ -121,7 +112,7 @@
     {
       "name": "Hang Seng 恆生",
       "name_zh": null,
-      "close": 23651.869140625,
+      "close": 23651.87,
       "daily_pct": -0.9,
       "mtd_pct": -3.03,
       "ytd_pct": -6.88,
@@ -130,7 +121,7 @@
     {
       "name": "Shanghai 上證",
       "name_zh": null,
-      "close": 3713.027587890625,
+      "close": 3713.028,
       "daily_pct": -0.6,
       "mtd_pct": -2.78,
       "ytd_pct": -5.88,
@@ -174,31 +165,31 @@
     },
     {
       "name": "US 2-Year",
-      "yield_pct": 4.77,
-      "daily_bps": -1.7,
+      "yield_pct": 4.79,
+      "daily_bps": 2.0,
       "mtd_bps": -9.0,
-      "closing_date": "2026-10-21"
+      "closing_date": "2026-10-20"
     },
     {
       "name": "Germany 10-Year",
-      "yield_pct": 3.4,
-      "daily_bps": 0.4,
+      "yield_pct": 3.44,
+      "daily_bps": -2.9,
       "mtd_bps": -14.16,
-      "closing_date": "2026-10-21"
+      "closing_date": "2026-10-20"
     },
     {
       "name": "Japan 10-Year",
-      "yield_pct": 2.89,
-      "daily_bps": -0.7,
+      "yield_pct": 2.93,
+      "daily_bps": -0.8,
       "mtd_bps": -13.0,
-      "closing_date": "2026-10-21"
+      "closing_date": "2026-10-20"
     },
     {
       "name": "UK 10-Year",
-      "yield_pct": 5.37,
-      "daily_bps": -4.9,
+      "yield_pct": 5.41,
+      "daily_bps": 7.63,
       "mtd_bps": 1.08,
-      "closing_date": "2026-10-21"
+      "closing_date": "2026-10-19"
     },
     {
       "name": "TW 10-Year",
@@ -405,7 +396,7 @@
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 4.07,
+      "implied_rate": 4.08,
       "delta_rate": 0.19,
       "delta_bps": 19.0,
       "p_hike": 76.0,
@@ -414,5 +405,5 @@
       "is_reference": false
     }
   ],
-  "summary": "10/21 KOSPI +3.29%、10/21 OTC 櫃買加權 +1.94%、10/21 TAIEX 加權指數 +1.28% 領漲；10/21 Hang Seng 恆生 -0.90%、10/20 台指期(近月) -0.82% 走弱。"
+  "summary": "10/21 KOSPI +3.29%、10/21 OTC 櫃買加權 +1.94%、10/21 Euro Stoxx 50 +1.40% 領漲；10/21 Hang Seng 恆生 -0.90%、10/21 Shanghai 上證 -0.60% 走弱。"
 }
