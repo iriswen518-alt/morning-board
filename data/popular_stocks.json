@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-22T13:58:12+08:00",
+  "generated_at": "2026-10-22T18:37:39+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -45,6 +45,34 @@
       "error": null
     },
     {
+      "symbol": "NOK",
+      "name_zh": "Nokia Corporation Sponsored",
+      "kind": "US",
+      "price": 9.25,
+      "change_pct": 2.55,
+      "mtd_pct": -8.78,
+      "ytd_pct": 42.97,
+      "market_date": "2026-10-21",
+      "per": 65.2461,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NOK.US",
+      "error": null
+    },
+    {
+      "symbol": "CRWV",
+      "name_zh": "CoreWeave",
+      "kind": "US",
+      "price": 61.82,
+      "change_pct": -0.5,
+      "mtd_pct": -29.04,
+      "ytd_pct": -13.67,
+      "market_date": "2026-10-21",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRWV.US",
+      "error": null
+    },
+    {
       "symbol": "GOOG",
       "name_zh": "谷歌 C",
       "kind": "US",
@@ -56,48 +84,6 @@
       "per": 16.7568,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GOOG.US",
-      "error": null
-    },
-    {
-      "symbol": "T",
-      "name_zh": "AT&T",
-      "kind": "US",
-      "price": 21.91,
-      "change_pct": -6.45,
-      "mtd_pct": -10.2,
-      "ytd_pct": -11.8,
-      "market_date": "2026-10-21",
-      "per": 7.0994,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=T.US",
-      "error": null
-    },
-    {
-      "symbol": "CMG",
-      "name_zh": "Chipotle Mexican Grill",
-      "kind": "US",
-      "price": 28.12,
-      "change_pct": -5.16,
-      "mtd_pct": -11.99,
-      "ytd_pct": -24.0,
-      "market_date": "2026-10-21",
-      "per": 25.3056,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CMG.US",
-      "error": null
-    },
-    {
-      "symbol": "SQQQ",
-      "name_zh": "ProShares UltraPro Short QQQ",
-      "kind": "US",
-      "price": 36.48,
-      "change_pct": -3.18,
-      "mtd_pct": 6.02,
-      "ytd_pct": -46.74,
-      "market_date": "2026-10-21",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SQQQ.US",
       "error": null
     },
     {
@@ -115,36 +101,8 @@
       "error": null
     },
     {
-      "symbol": "SAP",
-      "name_zh": "SAP  SE",
-      "kind": "US",
-      "price": 232.73,
-      "change_pct": 1.64,
-      "mtd_pct": 11.63,
-      "ytd_pct": -4.19,
-      "market_date": "2026-10-21",
-      "per": 30.1849,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SAP.US",
-      "error": null
-    },
-    {
-      "symbol": "SKYD",
-      "name_zh": "Skydance",
-      "kind": "US",
-      "price": 7.87,
-      "change_pct": 10.85,
-      "mtd_pct": -23.81,
-      "ytd_pct": -41.27,
-      "market_date": "2026-10-21",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SKYD.US",
-      "error": null
-    },
-    {
       "symbol": "SPY",
-      "name_zh": "SPDR S&P 500 ETF",
+      "name_zh": "State Street SPDR S&P 500 ETF T",
       "kind": "US",
       "price": 773.09,
       "change_pct": 0.53,
@@ -154,6 +112,62 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPY.US",
+      "error": null
+    },
+    {
+      "symbol": "SOXS",
+      "name_zh": "Direxion Daily Semiconductor Be",
+      "kind": "US",
+      "price": 44.29,
+      "change_pct": -6.03,
+      "mtd_pct": 33.89,
+      "ytd_pct": -92.92,
+      "market_date": "2026-10-21",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOXS.US",
+      "error": null
+    },
+    {
+      "symbol": "TLT",
+      "name_zh": "iShares 20+ Year Treasury Bond",
+      "kind": "US",
+      "price": 80.24,
+      "change_pct": 0.14,
+      "mtd_pct": 3.16,
+      "ytd_pct": -7.94,
+      "market_date": "2026-10-21",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TLT.US",
+      "error": null
+    },
+    {
+      "symbol": "SQQQ",
+      "name_zh": "ProShares UltraPro Short QQQ",
+      "kind": "US",
+      "price": 36.48,
+      "change_pct": -3.18,
+      "mtd_pct": 6.02,
+      "ytd_pct": -46.74,
+      "market_date": "2026-10-21",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SQQQ.US",
+      "error": null
+    },
+    {
+      "symbol": "VOO",
+      "name_zh": "Vanguard S&P 500 ETF",
+      "kind": "US",
+      "price": 710.72,
+      "change_pct": 0.55,
+      "mtd_pct": 1.41,
+      "ytd_pct": 13.33,
+      "market_date": "2026-10-21",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VOO.US",
       "error": null
     },
     {
@@ -196,20 +210,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VTI.US",
-      "error": null
-    },
-    {
-      "symbol": "VOO",
-      "name_zh": "Vanguard S&P 500 ETF",
-      "kind": "US",
-      "price": 710.72,
-      "change_pct": 0.55,
-      "mtd_pct": 1.41,
-      "ytd_pct": 13.33,
-      "market_date": "2026-10-21",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VOO.US",
       "error": null
     },
     {
@@ -266,20 +266,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GLD.US",
-      "error": null
-    },
-    {
-      "symbol": "TLT",
-      "name_zh": "iShares 20+ 年公債 ETF",
-      "kind": "US",
-      "price": 80.24,
-      "change_pct": 0.14,
-      "mtd_pct": 3.16,
-      "ytd_pct": -7.94,
-      "market_date": "2026-10-21",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TLT.US",
       "error": null
     }
   ]
