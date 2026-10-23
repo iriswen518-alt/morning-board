@@ -1,13 +1,13 @@
 {
-  "built_at": "2026-10-24T03:31",
+  "built_at": "2026-10-24T06:37",
   "indices": [
     {
       "ok": true,
       "symbol": "^GSPC",
-      "last": 7628.37,
+      "last": 7623.68,
       "prev_close": 7663.43,
-      "change": -35.06,
-      "change_pct": -0.46,
+      "change": -39.75,
+      "change_pct": -0.52,
       "points": [
         7623.12,
         7617.01,
@@ -81,21 +81,26 @@
         7630.13,
         7629.22,
         7629.64,
-        7628.99,
-        7628.37
+        7628.96,
+        7627.11,
+        7626.5,
+        7627.3,
+        7623.71,
+        7622.99,
+        7623.68
       ],
-      "market_state": "REGULAR",
-      "asof": "10/23 15:31",
+      "market_state": "CLOSED",
+      "asof": "10/23 16:38",
       "tz": "America/New_York",
       "name_zh": "標普500"
     },
     {
       "ok": true,
       "symbol": "^IXIC",
-      "last": 25975.49,
+      "last": 25955.34,
       "prev_close": 26008.86,
-      "change": -33.37,
-      "change_pct": -0.13,
+      "change": -53.52,
+      "change_pct": -0.21,
       "points": [
         25909.52,
         25893.24,
@@ -169,21 +174,26 @@
         25977.37,
         25972.94,
         25971.28,
-        25977.31,
-        25975.49
+        25973.14,
+        25963.17,
+        25960.0,
+        25966.43,
+        25957.36,
+        25954.02,
+        25955.34
       ],
-      "market_state": "REGULAR",
-      "asof": "10/23 15:31",
+      "market_state": "CLOSED",
+      "asof": "10/23 17:15",
       "tz": "America/New_York",
       "name_zh": "那斯達克"
     },
     {
       "ok": true,
       "symbol": "^DJI",
-      "last": 52263.16,
+      "last": 52215.16,
       "prev_close": 52867.98,
-      "change": -604.82,
-      "change_pct": -1.14,
+      "change": -652.82,
+      "change_pct": -1.23,
       "points": [
         52325.65,
         52248.8,
@@ -257,21 +267,26 @@
         52282.5,
         52280.6,
         52282.6,
-        52268.09,
-        52263.16
+        52261.22,
+        52261.68,
+        52259.98,
+        52260.24,
+        52234.99,
+        52209.16,
+        52215.16
       ],
-      "market_state": "REGULAR",
-      "asof": "10/23 15:31",
+      "market_state": "CLOSED",
+      "asof": "10/23 16:42",
       "tz": "America/New_York",
       "name_zh": "道瓊工業"
     },
     {
       "ok": true,
       "symbol": "^SOX",
-      "last": 10792.34,
+      "last": 10779.46,
       "prev_close": 10731.98,
-      "change": 60.36,
-      "change_pct": 0.56,
+      "change": 47.48,
+      "change_pct": 0.44,
       "points": [
         10716.72,
         10737.41,
@@ -345,11 +360,16 @@
         10800.61,
         10791.12,
         10787.73,
-        10798.17,
-        10792.34
+        10785.5,
+        10776.35,
+        10781.8,
+        10779.86,
+        10761.49,
+        10780.43,
+        10779.46
       ],
-      "market_state": "REGULAR",
-      "asof": "10/23 15:31",
+      "market_state": "CLOSED",
+      "asof": "10/23 17:15",
       "tz": "America/New_York",
       "name_zh": "費城半導"
     },
@@ -946,7 +966,7 @@
         45630.0,
         45674.0
       ],
-      "market_state": "REGULAR",
+      "market_state": "CLOSED",
       "asof": "10/23 04:55",
       "tz": "Asia/Taipei",
       "name_zh": "台指期近"
