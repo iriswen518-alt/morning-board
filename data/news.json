@@ -1,11 +1,9 @@
 {
-  "news_date": "2026-10-23",
+  "news_date": "2026-10-24",
   "tldr": [
-    "外資回補台積電、台達電，台股終結連日賣壓、重新叩關5萬點。",
-    "法人上修台積電CoWoS產能，AI需求使先進封裝續為瓶頸，外溢訂單挹注封測廠。",
-    "金管會揭六大施政、推亞洲資產管理中心與FinLLM，三業獲利創1.17兆、調高中小企業放款目標。",
-    "高資產財管需求轉向整合、跨境與傳承服務；遺贈稅修法將死亡前2年贈與併入遺產。",
-    "美股科技股因AI疑慮重挫，油價因荷莫茲海峽攻擊升破110美元、金價走弱，聯準會進入10/27-28會議前緘默期。"
+    "台股加權指數攻上約 47,800 點歷史新高，由半導體權值股領軍，台積電持續支撐 AI 行情。",
+    "金管會端出六大施政方向，預告 2027 年 Q1 金融業大語言模型與虛擬資產保管規範，本國銀行資本適足率達 15.16%。",
+    "高資產客戶需求轉向整合式財富與傳承規劃，台灣高資產財富估 2029 年達 59 兆元。"
   ],
   "sections": [
     {
@@ -13,20 +11,13 @@
       "section_zh": "股市行情",
       "items": [
         {
-          "title_zh": "外資回補台積電、台達電 台股叩關5萬點",
-          "title_en": "Foreign funds pile back into TSMC and Delta as TAIEX nears 50,000",
-          "summary_zh": "外資由賣轉買，單日大舉加碼權值股台積電與台達電，為近期最大買超，帶動加權指數再度逼近5萬點整數關卡。此前外資歷經逾10個交易日的調節賣壓，此番回補顯示資金風險偏好回溫，權值電子與AI半導體族群重新站上盤面主導地位，為指數挑戰新高提供動能，惟量能能否延續、外資買盤是否轉為持續性仍待觀察。",
-          "summary_en": "Foreign investors returned as large net buyers, loading up on index heavyweights TSMC and Delta Electronics in their biggest single-session purchases in weeks and pushing the benchmark TAIEX within striking distance of the 50,000-point mark. The rotation back into large-cap tech signals renewed risk appetite after an extended stretch of selling, keeping AI-driven semiconductor names in the market's leadership seat, though follow-through volume remains to be seen.",
-          "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/5607/9796097"
-        },
-        {
-          "title_zh": "台股大漲近595點 外資終結連賣轉買",
-          "title_en": "TAIEX jumps nearly 595 points as foreign selling streak ends",
-          "summary_zh": "加權指數單日勁揚約594.8點，收在46,888點附近，外資終結連續約10個交易日、合計逾8,300億元的賣超調節，轉為小幅買超，投信則延續連日加碼台積電。賣壓鬆動改善壓抑指數的籌碼面，使大盤重拾升勢；惟指數距10月初逾49,700點的歷史高點仍有落差，後續須觀察外資買盤力道與國際股市走向能否支撐指數再挑戰新高。",
-          "summary_en": "The TAIEX rallied about 594.8 points to close near 46,888, as foreign investors broke a run of roughly ten sessions that had drained more than NT$8,300 billion from the market and turned to modest net buying. Domestic investment trusts extended their own multi-session buying of TSMC, reinforcing the rebound. The shift eases the overhang that had capped the index below its early-October record high near 49,700.",
-          "source_name": "LINE TODAY",
-          "source_url": "https://today.line.me/tw/v3/article/nXpmBax"
+          "title_zh": "台股再創新高 權值晶片股領軍（2026-09-22，最近可確認交易日）",
+          "title_en": "TAIEX extends record run as chip giants lead (2026-09-22)",
+          "summary_zh": "台股加權指數攻上約 47,800 點的歷史新高，連續第五個交易日收紅，主要由大型半導體權值股帶動。占大盤市值逾四成的台積電當日小幅回檔，但指數仍收高，顯示 AI 相關需求持續支撐市場對台灣科技出口類股的信心，資金對高權值電子股偏好不變。",
+          "summary_en": "Taiwan's benchmark TAIEX climbed to a fresh record high near 47,800, a fifth straight session of gains driven by large-cap semiconductor names. TSMC, which accounts for more than 40% of total market capitalization, eased slightly on the day even as the broader index advanced, underscoring how AI-related demand continues to anchor investor sentiment toward Taiwan's export-heavy technology sector.",
+          "source_name": "Trading Economics",
+          "source_url": "https://tradingeconomics.com/taiwan/stock-market/news/585527",
+          "published": "2026-09-22"
         }
       ]
     },
@@ -35,20 +26,20 @@
       "section_zh": "產業動態",
       "items": [
         {
-          "title_zh": "法人上修台積電CoWoS產能 AI加速器需求強勁",
-          "title_en": "Analysts lift TSMC CoWoS capacity forecasts on strong AI accelerator demand",
-          "summary_zh": "AI加速器需求強勁，法人上修台積電CoWoS先進封裝產能預估，估2026年底達每月約14萬片以支應2027年第1季需求，待嘉義AP7、台南AP8全面運作後，2027年底總產能可達170kwpm。輝達預料持續預訂逾半產能、Google TPU居次。先進封裝仍是AI供應鏈最大瓶頸，擴產動能牽動載板、設備與封測等台廠外溢訂單與後市評價，為相關供應鏈注入中長期成長題材。",
-          "summary_en": "Robust demand for AI accelerators has prompted analysts to raise projections for TSMC's CoWoS advanced-packaging capacity, now seen reaching roughly 140,000 wafers per month by end-2026 to meet first-quarter 2027 needs, and up to 170kwpm by end-2027 as new Chiayi and Tainan fabs ramp. Nvidia is expected to reserve over half of output, with Google TPU next in line, keeping advanced packaging the key bottleneck in the AI supply chain.",
+          "title_zh": "SEMICON Taiwan 集結 65 國 聚焦 AI 時代晶片合作",
+          "title_en": "SEMICON Taiwan gathers 65 nations around AI-era chip collaboration",
+          "summary_zh": "SEMI 在 SEMICON Taiwan 指出，AI 浪潮持續推升半導體需求，全球約有 89 座晶圓廠興建中，2030 至 2035 年還將新增 80 多座。主辦方強調，台灣擁有完整產業聚落與 AI 供應鏈，仍是全球可信賴的合作夥伴；在晶片與 AI 相關硬體帶動下，台灣已躋身全球主要出口國之列，聚落優勢短期難以取代。",
+          "summary_en": "At SEMICON Taiwan, SEMI said AI-driven demand keeps lifting semiconductor needs, with roughly 89 fabs under construction worldwide and 80-plus more expected between 2030 and 2035. Officials stressed Taiwan's complete industry cluster and AI supply chain keep it a trusted partner, as the island ranks among the world's top exporters on the strength of chips and AI-related hardware.",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/5607/9343218"
+          "source_url": "https://udn.com/news/story/7240/9644383"
         },
         {
-          "title_zh": "CoWoS擴產仍供不應求 外溢訂單挹注OSAT封測廠",
-          "title_en": "CoWoS expansion still falls short, spilling orders to OSAT players",
-          "summary_zh": "台積電積極擴充CoWoS先進封裝產能，仍不足以滿足AI需求，使外溢訂單轉向專業封測（OSAT）業者。供給持續吃緊，嘉惠台灣封測廠與載板供應鏈，客戶競相鎖定產能。此現象凸顯先進封裝、而非僅晶圓製造，已成為AI晶片產出的關鍵瓶頸，相關台廠在2026至2027年擴產循環中可望延續接單與營收成長動能，營運與股價評價同步受惠。",
-          "summary_en": "Even with TSMC's aggressive CoWoS build-out, advanced-packaging supply remains unable to keep pace with AI demand, pushing overflow orders toward outsourced assembly and test (OSAT) houses. The persistent shortage benefits packaging-and-testing specialists and substrate suppliers across Taiwan's ecosystem as customers scramble to secure capacity. It underscores how advanced packaging, rather than wafer fabrication alone, has become the gating factor for AI chip output into 2027.",
-          "source_name": "科技新報",
-          "source_url": "https://technews.tw/?p=1505683"
+          "title_zh": "資策會 MIC 估台灣半導體產值衝 7.1 兆創高",
+          "title_en": "MIC sees Taiwan chip output hitting record NT$7.1 trillion",
+          "summary_zh": "資策會 MIC 預估，今年台灣半導體產值可望再創新高、達新台幣 7.1 兆元，其中晶圓代工約 4.6 兆元、封測約 7,787 億元。MIC 指出，台灣在晶圓代工與先進封裝具不可替代性，目前約占全球八成三產能。隨 AI 需求延續，相關供應鏈訂單可見度仍高，支撐產業維持成長動能與資本支出力道。",
+          "summary_en": "Taiwan's Market Intelligence & Consulting Institute projects the island's semiconductor output value will reach a record NT$7.1 trillion this year, with foundry output around NT$4.6 trillion and packaging-and-test near NT$779 billion. MIC estimates Taiwan still commands about 83% of global advanced capacity, highlighting the sector's central role as AI demand sustains orders across the chip supply chain.",
+          "source_name": "經濟日報",
+          "source_url": "https://udn.com/news/story/7240/9470063"
         }
       ]
     },
@@ -57,20 +48,20 @@
       "section_zh": "金融業",
       "items": [
         {
-          "title_zh": "金管會上調銀行中小企業放款目標 三業獲利創高",
-          "title_en": "FSC raises bank SME-lending target, reports record industry profits",
-          "summary_zh": "金管會召開本國銀行總經理會議，將2026年對中小企業放款餘額成長目標由4,600億元上調至5,000億元，並公布今年1至8月銀行、證券期貨與保險三業合計稅前盈餘約1.17兆元，年增顯著；本國銀行第2季底平均資本適足率約15.16%，優於法定門檻。政策引導信用資源挹注中小企業，同時凸顯金融體系獲利與資本體質維持穩健，亦為後續業務鬆綁與商品創新奠定基礎。",
-          "summary_en": "At a meeting of domestic bank presidents, the Financial Supervisory Commission lifted the 2026 growth target for small-and-medium-enterprise lending to NT$500 billion from NT$460 billion, while reporting that banking, securities and insurance posted combined pre-tax profit of about NT$1.17 trillion in the first eight months, up sharply year on year. Banks' average capital adequacy stayed above statutory minimums at roughly 15.16%. The moves channel credit toward SMEs while affirming sector stability.",
+          "title_zh": "金管會端出六大施政方向 銀行體質穩健",
+          "title_en": "FSC lays out six policy priorities in legislative report",
+          "summary_zh": "金管會主委彭金隆向立法院財委會提出書面報告，列出六大施政方向，涵蓋金融韌性與風險監理、市場發展與公司治理、消費者保護、亞洲資產管理中心及金融科技創新。報告指出，本國銀行第 2 季底平均資本適足率 15.16%，8 月底逾放比 0.14%，均符合法定標準，顯示整體銀行體質穩健，監理重心轉向韌性與創新並重。",
+          "summary_en": "FSC chair Peng Chin-lung's report to the legislature set six priorities: financial resilience and risk supervision, market development and corporate governance, consumer protection, the Asian asset-management hub, and fintech innovation. Officials noted domestic banks' average capital adequacy ratio stood at 15.16% in Q2, with an August NPL ratio of 0.14%, signalling a sound banking system heading into year-end.",
           "source_name": "工商時報",
-          "source_url": "https://wantrich.chinatimes.com/news/20261016900432-420501"
+          "source_url": "https://www.ctee.com.tw/news/20261016701613-430301"
         },
         {
-          "title_zh": "台灣擬推金融業大語言模型FinLLM 建亞洲資產管理中心",
-          "title_en": "Taiwan plans a financial-industry LLM and an Asian asset-management hub",
-          "summary_zh": "金管會規劃2027年第1季發布金融業大型語言模型（FinLLM），並推動將台灣打造為亞洲資產管理中心。此舉盼為銀行、保險與證券業提供共用且受監理的AI基礎，應用於法遵與客戶服務；同時2026年新增資安監理要求，明定資安長權責與軟體供應鏈安全機制。政策方向將影響金融業AI導入節奏與資安投資，並為資產管理業務與金融科技創新開拓成長空間。",
-          "summary_en": "The FSC outlined plans to publish a financial-industry large language model, dubbed FinLLM, in the first quarter of 2027, alongside a broader push to turn Taiwan into a regional asset-management centre. The initiative aims to give banks, insurers and brokers a shared, supervised AI foundation for compliance and services, while new cybersecurity rules define chief information security officer duties and software-supply-chain safeguards, reshaping how financial firms adopt AI.",
-          "source_name": "iThome",
-          "source_url": "https://www.ithome.com.tw/news/173594"
+          "title_zh": "金管會推金融業大語言模型與虛擬資產保管規範",
+          "title_en": "FSC targets finance-sector LLM and virtual-asset custody rules",
+          "summary_zh": "金管會表示，預計 2027 年第 1 季發布首版金融業務知識大語言模型，並由銀行公會規劃虛擬資產保管業務相關規範。金管會也將與相關部會研商適合本國特性的租稅鼓勵機制，擴大 TISA 參與，市場傳出最高免稅額以 2.4 萬元呼聲最高；同時強化資安監理，將零信任架構由鼓勵轉為必備，提升金融機構防護。",
+          "summary_en": "The FSC said it plans to release a first version of a financial-industry large language model in the first quarter of 2027, while the Bankers Association drafts rules for virtual-asset custody. The regulator is also weighing tax incentives to expand participation in the TISA savings scheme and tightening cybersecurity requirements, including making zero-trust architecture mandatory for financial institutions.",
+          "source_name": "NOWnews",
+          "source_url": "https://www.nownews.com/news/6884087"
         }
       ]
     },
@@ -79,127 +70,20 @@
       "section_zh": "財富管理",
       "items": [
         {
-          "title_zh": "台新奪全球財管大獎 高資產需求轉向資產負債整合",
-          "title_en": "Taishin wins global wealth awards as high-asset needs shift to balance-sheet management",
-          "summary_zh": "台新銀行以AI創新與深化高資產服務，一舉摘下PBI全球財富管理大獎雙獎。該行10月12日指出，高資產客戶需求已從傳統投資商品配置，轉向資產與負債整合管理，更重視資產保全、跨境配置、家族治理與世代傳承。此趨勢促使銀行財管業務從單純銷售商品，升級為顧問、信託與家族辦公室整合服務，牽動人才布局與數位平台投資，成為業者爭取頂端客群的關鍵戰場。",
-          "summary_en": "Taishin Bank took twin honours at the PBI global wealth-management awards, citing AI-driven innovation and deeper high-net-worth services. The bank said on Oct 12 that wealthy clients' needs have moved beyond traditional product allocation toward integrated asset-and-liability management, with greater emphasis on asset protection, cross-border allocation, family governance and generational succession. The trend pushes banks toward advisory, trust and family-office capabilities rather than simple product sales.",
+          "title_zh": "台新奪全球私銀大獎 高資產需求轉向整合管理",
+          "title_en": "Taishin wins global private-banking awards as HNW demand shifts",
+          "summary_zh": "台新銀行以深化高資產服務與 AI 創新，獲 PBI 全球財富管理大獎兩項肯定。台新指出，高資產客戶需求已從傳統投資商品配置，轉向資產與負債的整合管理；其私人銀行高資產客戶數與資產管理規模（AUM）在 2026 年上半年大幅成長，反映市場對全方位財富規劃與家族傳承服務的需求升溫，帶動業者加速升級服務。",
+          "summary_en": "Taishin Bank took two honours at the PBI Global Wealth Awards, citing deeper high-net-worth services and AI-driven innovation. The bank said HNW clients are moving from traditional product allocation toward integrated asset-and-liability management, and that its private-banking client count and assets under management grew sharply in the first half of 2026, reflecting rising demand for holistic wealth and succession planning.",
           "source_name": "台新銀行",
           "source_url": "https://www.taishinbank.com.tw/TSB/personal/common/news/TSBankNews-008407/"
         },
         {
-          "title_zh": "台灣高資產人口快速攀升 跨境配置成主流",
-          "title_en": "Taiwan's high-net-worth population swells, cross-border allocation goes mainstream",
-          "summary_zh": "KPMG與中信等機構報告估計，台灣資產逾新台幣1億元的高資產人數已突破12萬人，2026年可能達約12.4萬人，且逾七成已布局海外資產；超高資產族群個人財富總額預估至2029年將以年均約10%成長。人數與財富同步擴張，帶動家族辦公室服務、跨境資產結構規劃與世代傳承需求升溫，各私人銀行競相強化信託、海外債與結構型商品等高階服務，以爭取頂端客群並提升手續費收入。",
-          "summary_en": "Industry reports from KPMG and CTBC estimate Taiwan's population with assets above NT$100 million has climbed past 120,000 and could reach about 124,000 in 2026, with more than 70% already holding offshore assets. Total private wealth among the ultra-rich is projected to grow roughly 10% a year through 2029. The surge is driving demand for family-office services, cross-border structuring and succession planning across private banks.",
-          "source_name": "KPMG",
+          "title_zh": "台灣高資產財富估 2029 年達 59 兆",
+          "title_en": "Taiwan's high-net-worth wealth seen growing to NT$59 trillion",
+          "summary_zh": "多份產業報告預估，台灣高資產客群個人財富規模有望以年均約一成速度成長，至 2029 年達新台幣 59 兆元，且約 74% 高資產客戶已持有境外資產。截至 2025 年第 4 季，國內信託業務規模達 9.83 兆元、年增 7%。隨市場成長，各銀行加速升級跨境配置、ETF 投資平台與家族傳承服務，爭取高資產與私人銀行客群商機。",
+          "summary_en": "Industry reports project Taiwan's high-net-worth personal wealth could expand at roughly 10% a year to NT$59 trillion by 2029, with about 74% of HNW clients already holding offshore assets. Trust-business scale reached NT$9.83 trillion by Q4 2025, up 7% year on year, as banks race to upgrade cross-border allocation, ETF platforms and family-succession services to capture the growing affluent segment.",
+          "source_name": "KPMG Taiwan",
           "source_url": "https://kpmg.com/tw/zh/media/press-releases/2026/06/2026-taiwan-wealth-management-trends-high-net-worth-growth.html"
-        }
-      ]
-    },
-    {
-      "section": "Tax & Regulations",
-      "section_zh": "稅務法規",
-      "items": [
-        {
-          "title_zh": "遺贈稅修法三讀 死亡前2年贈與併入遺產",
-          "title_en": "Taiwan overhauls estate tax, folding pre-death gifts into estates",
-          "summary_zh": "立法院三讀通過遺贈稅修法，被繼承人死亡前2年內的贈與財產將併入遺產總額計算，且由受贈人承擔相關稅負。財政部表示正研擬施行細則與申報書表等子法規，俟總統公布後加強宣導。此一「擬制遺產」調整牽動高資產家庭的傳承與贈與規劃，須重新檢視資產移轉時點與架構以因應新制，避免衍生額外稅負爭議。",
-          "summary_en": "Lawmakers passed amendments reshaping how estates are taxed: gifts made within two years before death will be added back into the total estate, with the recipient bearing the related tax. The Finance Ministry says it is drafting enforcement rules and reporting forms and will step up guidance once the president promulgates the changes, affecting succession and gifting strategies for wealthy families.",
-          "source_name": "中央社",
-          "source_url": "https://cna.com.tw/news/afe/202608210289.aspx"
-        },
-        {
-          "title_zh": "房地合一稅躍最大稅源 土增稅創16年新低",
-          "title_en": "Property transaction tax becomes Taiwan's top land-related revenue",
-          "summary_zh": "房地合一稅收自2024年起超越土地增值稅，成為房地交易最大稅源，2025年占比突破5成，同期土增稅則跌至16年新低。持有未滿5年適用35%至45%高稅率，近3年高稅率案件減少近半，顯示短期炒作明顯降溫。稅收結構轉變反映不動產交易趨於中長期持有，也牽動地方財政收入與房市資金動向，為後續稅制與房市政策觀察重點。",
-          "summary_en": "Revenue from the consolidated housing-and-land tax has overtaken the land value increment tax to become the largest source of property-related tax, exceeding 50% in 2025, while the land increment tax fell to a 16-year low. High rates of 35%–45% on holdings under five years have curbed short-term speculation, with high-rate cases roughly halving over three years, reshaping the property market's tax landscape.",
-          "source_name": "經濟日報",
-          "source_url": "https://udn.com/news/story/7243/9462693"
-        }
-      ]
-    },
-    {
-      "section": "Macro & Policy",
-      "section_zh": "總經政策",
-      "items": [
-        {
-          "title_zh": "央行連10季凍利率 貨幣操作偏緊",
-          "title_en": "Taiwan's central bank holds rates for a 10th straight quarter, leans tighter",
-          "summary_zh": "中央銀行維持政策利率不變，重貼現率續為2%，為連續第10季按兵不動，並釋出貨幣操作朝緊縮方向移動的訊號；面對美國升息，央行基於經濟成長與通膨考量未跟進。央行同時將2026年CPI年增率預測上修至約2.03%，顯示通膨壓力仍在。穩定利率有助金融市場預期，但偏緊基調將影響資金成本與銀行放款動能，牽動股市與房市的資金環境。",
-          "summary_en": "The central bank kept its benchmark discount rate at 2%, extending an unchanged stretch to ten quarters, while signalling that liquidity operations are moving in a tightening direction. It declined to follow a US rate move, citing domestic growth and inflation. The bank nudged its 2026 CPI forecast up to about 2.03%, underscoring lingering price pressure.",
-          "source_name": "Anue鉅亨",
-          "source_url": "https://uanalyze.com.tw/articles/9516755544"
-        },
-        {
-          "title_zh": "央行大幅上修今年經濟成長預測",
-          "title_en": "Central bank sharply upgrades Taiwan's growth outlook",
-          "summary_zh": "中央銀行上修2026年台灣經濟成長率預測，反映AI相關出口與投資動能強勁，並預期2027年成長步調略為放緩但仍具韌性。此次上修延續上半年亮眼的產出表現，顯示央行對科技驅動的擴張仍具信心。在維持利率穩定之際，央行仍關注外需與通膨風險，後續須觀察全球景氣與AI投資循環能否延續，支撐出口與內需成長動能。",
-          "summary_en": "The central bank raised its forecast for Taiwan's 2026 economic growth, reflecting strong AI-related exports and investment, while projecting a slower but still solid pace into 2027. The upgrade follows robust first-half output and signals confidence that the tech-driven expansion has further to run, even as the bank keeps policy steady and watches external and inflation risks.",
-          "source_name": "自由財經",
-          "source_url": "https://ec.ltn.com.tw/article/breakingnews/5476654"
-        }
-      ]
-    },
-    {
-      "section": "Global Markets",
-      "section_zh": "國際財經",
-      "items": [
-        {
-          "title_zh": "華爾街最孤單空頭：看空輝達的三大理由",
-          "title_en": "Wall Street's loneliest bear: three reasons to stay short Nvidia",
-          "summary_zh": "台灣媒體引述外電，整理一位知名空頭在輝達股價屢創高下仍堅持看空的三大理由：估值偏高、AI行情過度集中，以及對雲端巨頭資本支出能否持續的疑慮。報導凸顯市場對AI驅動股市漲勢的爭論升溫，提醒投資人若市場預期重置，科技權值股恐面臨較大回檔風險，與近期全球科技股震盪相呼應。",
-          "summary_en": "Taiwanese market coverage highlighted a prominent contrarian case against Nvidia, laying out three reasons a well-known bear remains short despite the stock's relentless run: stretched valuations, concentration risk in the AI trade, and doubts over whether hyperscaler capital spending can be sustained. The piece frames the growing debate over AI-driven equity gains and the risk of a sharp correction if expectations reset.",
-          "source_name": "Yahoo奇摩股市",
-          "source_url": "https://tw.stock.yahoo.com/news/%E7%82%BA%E4%BD%95%E9%A0%90%E6%B8%AC%E5%A4%B1%E6%BA%96%E4%BB%8D%E7%9C%8B%E7%A9%BA%E8%BC%9D%E9%81%94-%E8%8F%AF%E7%88%BE%E8%A1%97%E6%9C%80%E5%AD%A4%E5%96%AE%E7%A9%BA%E9%A0%AD%E7%9A%84%E4%B8%89%E5%A4%A7%E7%90%86%E7%94%B1-110003973.html"
-        },
-        {
-          "title_zh": "美股再創新高 輝達市值逼近5兆美元",
-          "title_en": "Nvidia nears US$5 trillion as US indices set records",
-          "summary_zh": "台灣媒體報導美股一度三大指數同創新高、輝達市值逼近5兆美元，顯示AI龍頭持續推升全球股市。此一里程碑反映投資人對AI基礎建設擴張的信心，但在估值爭論加劇、科技巨頭財報前後波動放大之際，市場對高位追價轉趨謹慎，後續須觀察AI需求與獲利能否支撐偏高的評價水準。",
-          "summary_en": "Taiwanese media reported a US session in which the three major indices refreshed record highs and Nvidia's market value approached US$5 trillion, underscoring how AI leadership continues to drive global equities. The milestone illustrates investors' conviction in the AI build-out, even as valuation debates intensify and volatility picks up around major tech earnings.",
-          "source_name": "Yahoo奇摩股市",
-          "source_url": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E8%82%A1%E7%9B%A4%E5%BE%8C-%E7%BE%8E%E8%82%A1%E4%B8%89%E5%A4%A7%E6%8C%87%E6%95%B8%E5%86%8D%E5%89%B5%E6%96%B0%E7%8C%B7-%E8%BC%9D%E9%81%94%E5%B8%82%E5%80%BC%E9%80%BC%E8%BF%915%E5%85%86%E7%BE%8E%E5%85%83-205904495.html"
-        }
-      ]
-    },
-    {
-      "section": "International",
-      "section_zh": "國際",
-      "items": [
-        {
-          "title_zh": "美股科技股重挫 那斯達克跌逾2.6%（2026-10-22，最近交易日）",
-          "title_en": "Wall Street slides as tech sell-off deepens (2026-10-22, 最近交易日)",
-          "summary_zh": "美股下挫、科技股領跌，Meta與特斯拉財報後市場對AI交易疑慮再起。那斯達克指數收跌約2.6%至約26,009點，為6月來最糟單日表現；標普500下跌約1.2%，道瓊幾乎持平。投資人質疑估值偏高與龐大AI資本支出的回報，風險偏好轉趨保守。",
-          "summary_en": "US stocks fell, led by technology, as AI-trade worries resurfaced after Meta and Tesla earnings. The Nasdaq Composite dropped about 2.6% to around 26,009, its worst session since June, while the S&P 500 lost roughly 1.2% and the Dow ended little changed. Investors questioned stretched valuations and heavy AI capital spending.",
-          "source_name": "CNBC",
-          "source_url": "https://www.cnbc.com/2026/10/21/stock-market-today-live-updates.html"
-        },
-        {
-          "title_zh": "荷莫茲海峽攻擊 油價升破110美元（2026-10-22）",
-          "title_en": "Oil climbs above US$110 on Strait of Hormuz attacks (2026-10-22)",
-          "summary_zh": "荷莫茲海峽商船再遭攻擊、中東緊張升溫，引發供應疑慮，推升國際油價，布蘭特原油一度升破每桶110美元。油價走高加大能源相關風險，並在主要央行評估下一步政策之際，為通膨前景增添變數，壓抑全球風險性資產表現。",
-          "summary_en": "Crude prices jumped as renewed attacks on commercial shipping in the Strait of Hormuz and rising Middle East tensions stoked supply fears, with Brent trading above US$110 a barrel. The move lifted energy-related risks and added an inflationary impulse just as major central banks weigh their next policy steps.",
-          "source_name": "Fortune",
-          "source_url": "https://fortune.com/article/price-of-oil-10-22-2026",
-          "published": "2026-10-22"
-        },
-        {
-          "title_zh": "金價走弱 殖利率下滑仍難撐（2026-10-22）",
-          "title_en": "Gold slips despite falling yields (2026-10-22)",
-          "summary_zh": "儘管美債殖利率走低，黃金仍承壓，現貨金價約在每盎司4,040至4,125美元區間游走。分析師指出，利率可能長期維持高檔的預期持續壓抑金價，抵銷中東緊張帶來的避險需求，使貴金屬未能受惠於殖利率回落。",
-          "summary_en": "Gold came under pressure even as Treasury yields eased, with spot prices drifting toward the US$4,040–4,125 range. Analysts said the prospect of persistently elevated interest rates kept weighing on bullion, offsetting safe-haven demand tied to Middle East tensions and leaving precious metals unable to benefit from the pullback in yields.",
-          "source_name": "Kitco",
-          "source_url": "https://www.kitco.com/news/article/2026-10-22/gold-silver-pressured-despite-lower-yields-hormuz-attacks-send-crude-higher",
-          "published": "2026-10-22"
-        },
-        {
-          "title_zh": "聯準會進入會前緘默期 殖利率走低（2026-10-22）",
-          "title_en": "Fed enters blackout before Oct 27–28 meeting as yields ease (2026-10-22)",
-          "summary_zh": "聯準會進入10月27至28日會議前的緘默期，市場預期本月升息機率偏低，但12月行動機率仍高，政策利率區間維持3.75%至4.00%。當日美債殖利率下滑，10年期殖利率回落至約5.07%。在缺乏官員談話下，投資人聚焦後續經濟數據，作為研判貨幣政策路徑的依據。",
-          "summary_en": "With the Federal Reserve in its pre-meeting blackout, markets priced only a slim chance of an October hike but saw a December move as likely, with the funds target at 3.75%–4.00%. Treasury yields fell on the day, the 10-year easing toward roughly 5.07%, as investors leaned on incoming data ahead of the Oct 27–28 decision.",
-          "source_name": "Daily Cara Compass",
-          "source_url": "https://billcaradotcom.substack.com/p/daily-cara-compass-october-22-2026",
-          "published": "2026-10-22"
         }
       ]
     }
