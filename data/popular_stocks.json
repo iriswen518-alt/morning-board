@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T17:47:47+08:00",
+  "generated_at": "2026-10-24T18:46:32+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -17,17 +17,17 @@
       "error": null
     },
     {
-      "symbol": "T",
-      "name_zh": "AT&T",
+      "symbol": "PANW",
+      "name_zh": "Palo Alto Networks",
       "kind": "US",
-      "price": 20.93,
-      "change_pct": -7.96,
-      "mtd_pct": -14.22,
-      "ytd_pct": -15.74,
+      "price": 380.55,
+      "change_pct": 7.22,
+      "mtd_pct": -4.22,
+      "ytd_pct": 106.6,
       "market_date": "2026-10-23",
-      "per": 11.124,
+      "per": 945.6826,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=T.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PANW.US",
       "error": null
     },
     {
@@ -45,17 +45,45 @@
       "error": null
     },
     {
-      "symbol": "PANW",
-      "name_zh": "Palo Alto Networks",
+      "symbol": "UBER",
+      "name_zh": "Uber",
       "kind": "US",
-      "price": 380.55,
-      "change_pct": 7.22,
-      "mtd_pct": -4.22,
-      "ytd_pct": 106.6,
+      "price": 66.7,
+      "change_pct": -3.43,
+      "mtd_pct": -2.64,
+      "ytd_pct": -18.37,
       "market_date": "2026-10-23",
-      "per": 945.6826,
+      "per": 14.2546,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PANW.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=UBER.US",
+      "error": null
+    },
+    {
+      "symbol": "VOO",
+      "name_zh": "Vanguard S&P 500 ETF",
+      "kind": "US",
+      "price": 698.58,
+      "change_pct": -0.53,
+      "mtd_pct": -0.33,
+      "ytd_pct": 11.39,
+      "market_date": "2026-10-23",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VOO.US",
+      "error": null
+    },
+    {
+      "symbol": "T",
+      "name_zh": "AT&T",
+      "kind": "US",
+      "price": 20.93,
+      "change_pct": -7.96,
+      "mtd_pct": -14.22,
+      "ytd_pct": -15.74,
+      "market_date": "2026-10-23",
+      "per": 11.124,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=T.US",
       "error": null
     },
     {
@@ -73,17 +101,17 @@
       "error": null
     },
     {
-      "symbol": "UBER",
-      "name_zh": "Uber",
+      "symbol": "ET",
+      "name_zh": "Energy Transfer LP",
       "kind": "US",
-      "price": 66.7,
-      "change_pct": -3.43,
-      "mtd_pct": -2.64,
-      "ytd_pct": -18.37,
+      "price": 20.45,
+      "change_pct": 2.05,
+      "mtd_pct": 3.44,
+      "ytd_pct": 24.01,
       "market_date": "2026-10-23",
-      "per": 14.2546,
+      "per": 13.0466,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=UBER.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ET.US",
       "error": null
     },
     {
@@ -101,31 +129,17 @@
       "error": null
     },
     {
-      "symbol": "GE",
-      "name_zh": "奇異",
+      "symbol": "VGT",
+      "name_zh": "Vanguard Information Tech ETF",
       "kind": "US",
-      "price": 285.64,
-      "change_pct": -2.69,
-      "mtd_pct": -8.53,
-      "ytd_pct": -7.27,
-      "market_date": "2026-10-23",
-      "per": 31.9441,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GE.US",
-      "error": null
-    },
-    {
-      "symbol": "SCHD",
-      "name_zh": "Schwab US Dividend Equity ETF",
-      "kind": "US",
-      "price": 35.27,
-      "change_pct": -0.37,
-      "mtd_pct": 8.42,
-      "ytd_pct": 28.58,
+      "price": 119.17,
+      "change_pct": 0.48,
+      "mtd_pct": -5.17,
+      "ytd_pct": 26.48,
       "market_date": "2026-10-23",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SCHD.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VGT.US",
       "error": null
     },
     {
@@ -196,20 +210,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DIA.US",
-      "error": null
-    },
-    {
-      "symbol": "VOO",
-      "name_zh": "Vanguard S&P 500 ETF",
-      "kind": "US",
-      "price": 698.58,
-      "change_pct": -0.53,
-      "mtd_pct": -0.33,
-      "ytd_pct": 11.39,
-      "market_date": "2026-10-23",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VOO.US",
       "error": null
     },
     {
