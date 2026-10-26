@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26T13:59:01+08:00",
+  "generated_at": "2026-10-26T19:32:01+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -14,20 +14,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=EWZ.US",
-      "error": null
-    },
-    {
-      "symbol": "NBIS",
-      "name_zh": "Nebius",
-      "kind": "US",
-      "price": 158.74,
-      "change_pct": -0.27,
-      "mtd_pct": -32.7,
-      "ytd_pct": 89.64,
-      "market_date": "2026-10-23",
-      "per": 1017.79,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NBIS.US",
       "error": null
     },
     {
@@ -73,6 +59,20 @@
       "error": null
     },
     {
+      "symbol": "NBIS",
+      "name_zh": "Nebius",
+      "kind": "US",
+      "price": 158.74,
+      "change_pct": -0.27,
+      "mtd_pct": -32.7,
+      "ytd_pct": 89.64,
+      "market_date": "2026-10-23",
+      "per": 1017.79,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NBIS.US",
+      "error": null
+    },
+    {
       "symbol": "CRWV",
       "name_zh": "CoreWeave",
       "kind": "US",
@@ -84,20 +84,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRWV.US",
-      "error": null
-    },
-    {
-      "symbol": "IREN",
-      "name_zh": "IREN",
-      "kind": "US",
-      "price": 24.91,
-      "change_pct": -2.37,
-      "mtd_pct": -39.08,
-      "ytd_pct": -34.06,
-      "market_date": "2026-10-23",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IREN.US",
       "error": null
     },
     {
@@ -115,62 +101,6 @@
       "error": null
     },
     {
-      "symbol": "AIOK",
-      "name_zh": "AI OKTO",
-      "kind": "US",
-      "price": 12.02,
-      "change_pct": 182.82,
-      "mtd_pct": null,
-      "ytd_pct": null,
-      "market_date": "2026-10-23",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AIOK.US",
-      "error": null
-    },
-    {
-      "symbol": "APLD",
-      "name_zh": "Applied Digital",
-      "kind": "US",
-      "price": 18.25,
-      "change_pct": -4.4,
-      "mtd_pct": -25.11,
-      "ytd_pct": -25.57,
-      "market_date": "2026-10-23",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=APLD.US",
-      "error": null
-    },
-    {
-      "symbol": "CRWD",
-      "name_zh": "CrowdStrike",
-      "kind": "US",
-      "price": 257.57,
-      "change_pct": 8.25,
-      "mtd_pct": -2.71,
-      "ytd_pct": 119.79,
-      "market_date": "2026-10-23",
-      "per": 4511.3736,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRWD.US",
-      "error": null
-    },
-    {
-      "symbol": "CIFR",
-      "name_zh": "Cipher Digital",
-      "kind": "US",
-      "price": 7.94,
-      "change_pct": -4.57,
-      "mtd_pct": -49.83,
-      "ytd_pct": -46.21,
-      "market_date": "2026-10-23",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CIFR.US",
-      "error": null
-    },
-    {
       "symbol": "STNE",
       "name_zh": "Stone",
       "kind": "US",
@@ -185,17 +115,31 @@
       "error": null
     },
     {
-      "symbol": "BMNR",
-      "name_zh": "BitMine Immersion Technologies,",
+      "symbol": "XP",
+      "name_zh": "XP",
       "kind": "US",
-      "price": 22.4,
-      "change_pct": -0.44,
-      "mtd_pct": -15.25,
-      "ytd_pct": -17.5,
+      "price": 30.41,
+      "change_pct": 3.61,
+      "mtd_pct": 44.84,
+      "ytd_pct": 85.77,
+      "market_date": "2026-10-23",
+      "per": 14.0651,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=XP.US",
+      "error": null
+    },
+    {
+      "symbol": "IREN",
+      "name_zh": "IREN",
+      "kind": "US",
+      "price": 24.91,
+      "change_pct": -2.37,
+      "mtd_pct": -39.08,
+      "ytd_pct": -34.06,
       "market_date": "2026-10-23",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BMNR.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IREN.US",
       "error": null
     },
     {
@@ -213,6 +157,20 @@
       "error": null
     },
     {
+      "symbol": "CRWD",
+      "name_zh": "CrowdStrike",
+      "kind": "US",
+      "price": 257.57,
+      "change_pct": 8.25,
+      "mtd_pct": -2.71,
+      "ytd_pct": 119.79,
+      "market_date": "2026-10-23",
+      "per": 4511.3736,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRWD.US",
+      "error": null
+    },
+    {
       "symbol": "GGAL",
       "name_zh": "Grupo Financiero Galicia",
       "kind": "US",
@@ -227,31 +185,59 @@
       "error": null
     },
     {
-      "symbol": "CART",
-      "name_zh": "Maplebear",
+      "symbol": "EQT",
+      "name_zh": "EQT",
       "kind": "US",
-      "price": 56.44,
-      "change_pct": 9.21,
-      "mtd_pct": 30.89,
-      "ytd_pct": 25.48,
+      "price": 55.63,
+      "change_pct": 1.76,
+      "mtd_pct": 14.56,
+      "ytd_pct": 3.79,
       "market_date": "2026-10-23",
-      "per": 27.2205,
+      "per": 12.8327,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CART.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=EQT.US",
       "error": null
     },
     {
-      "symbol": "XP",
-      "name_zh": "XP",
+      "symbol": "RRC",
+      "name_zh": "Range Resources",
       "kind": "US",
-      "price": 30.41,
-      "change_pct": 3.61,
-      "mtd_pct": 44.84,
-      "ytd_pct": 85.77,
+      "price": 45.52,
+      "change_pct": 3.78,
+      "mtd_pct": 22.89,
+      "ytd_pct": 29.1,
       "market_date": "2026-10-23",
-      "per": 14.0651,
+      "per": 12.3637,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=XP.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RRC.US",
+      "error": null
+    },
+    {
+      "symbol": "PAGS",
+      "name_zh": "PagSeguro Digital",
+      "kind": "US",
+      "price": 11.44,
+      "change_pct": 1.42,
+      "mtd_pct": 28.54,
+      "ytd_pct": 18.67,
+      "market_date": "2026-10-23",
+      "per": 7.3462,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PAGS.US",
+      "error": null
+    },
+    {
+      "symbol": "XNCR",
+      "name_zh": "Xencor",
+      "kind": "US",
+      "price": 25.18,
+      "change_pct": -2.55,
+      "mtd_pct": 0.92,
+      "ytd_pct": 64.47,
+      "market_date": "2026-10-23",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=XNCR.US",
       "error": null
     },
     {
