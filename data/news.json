@@ -1,11 +1,11 @@
 {
-  "news_date": "2026-10-26",
+  "news_date": "2026-10-27",
   "tldr": [
-    "超級颱風樺加沙於10/23–24前後打亂台股交易週，隨後轉向日本。",
-    "台積電10/15法說公布第三季三率創新高並上修資本支出，凸顯AI需求。",
-    "10月為台股ETF配息高峰，21檔台股ETF合計配發逾421億元。",
-    "美股週五（10/23）收黑，國際油價因中東情勢升溫攀抵多年高點。",
-    "市場迎來聯準會會議與大型科技股財報的關鍵一週，將檢驗AI行情能否延續。"
+    "台股最近交易日站回5日線，台積電穩盤，AI晶片權值股續居多頭主軸。",
+    "台積電供應鏈焦點續聚CoWoS產能擴充、資本支出上修與海外先進封裝布局。",
+    "金管會端出六大施政面向，涵蓋金融韌性、亞洲資產管理中心與規劃中的金融業大語言模型。",
+    "高資產財富持續擴張，台灣淨資產逾億元族群估達約12.4萬人、持有資產約46兆元。",
+    "全球市場嚴陣以待聯準會決策與大型科技股財報，油價與中東風險仍是變數。"
   ],
   "sections": [
     {
@@ -13,13 +13,21 @@
       "section_zh": "股市行情",
       "items": [
         {
-          "title_zh": "超級颱風樺加沙打亂台股交易週（2026-10-21）",
-          "title_en": "Super Typhoon Champi disrupts Taiwan's trading week (2026-10-21)",
-          "summary_zh": "中央氣象署預報，超級颱風樺加沙將於週五、週六（10/23–24）最接近台灣，隨後減弱並轉向日本。颱風升高台股停盤與交割遞延的可能性，投資人須在逢假期縮短的交易週裡評估風災衝擊。市場同時權衡颱風干擾與仍撐盤的AI行情，資金觀望氣氛轉濃，短線波動與類股輪動風險同步升高。",
-          "summary_en": "Taiwan's Central Weather Administration forecast that Super Typhoon Champi would pass closest to the island on Friday and Saturday (Oct 23–24) before weakening and heading toward Japan on Sunday. The storm raised the prospect of suspended trading and settlement delays on the Taiwan Stock Exchange, leaving investors to weigh disruption risk through a holiday-shortened week even as the AI-led rally continued to underpin sentiment.",
-          "source_name": "The Star",
-          "source_url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/10/21/super-typhoon-champi-on-path-to-impact-china-taiwan-within-days",
+          "title_zh": "台股站回5日線、台積電守穩2,400元（2026-10-21）",
+          "title_en": "Taiwan shares reclaim the 5-day line as TSMC holds above NT$2,400 (2026-10-21)",
+          "summary_zh": "最近可確認交易日加權指數上漲594.84點，收在46,887.77點，重新站回5日線，成交值約8,331億元。權值龍頭台積電守住2,400元大關、收2,420元，穩住大盤，延續AI主導的多頭行情。此波反彈凸顯大盤對半導體權值股的高度依賴；在美國聯準會會議與全球科技股財報密集登場的一週，資金聚焦台積電等AI供應鏈動向，指數短線區間震盪與類股輪動風險同步升高。",
+          "summary_en": "Taiwan's benchmark TAIEX climbed 594.84 points to close at 46,887.77 in the latest confirmed session, recovering the 5-day moving average, with turnover of about NT$833 billion. Foundry heavyweight TSMC held above the NT$2,400 mark at NT$2,420, anchoring the index as the AI-led rally extended. The rebound underscored how dependent the broad market remains on semiconductor leadership heading into a week dominated by the U.S. Federal Reserve meeting and global tech earnings.",
+          "source_name": "Anue鉅亨／uAnalyze",
+          "source_url": "https://uanalyze.com.tw/articles/7166457511",
           "published": "2026-10-21"
+        },
+        {
+          "title_zh": "投顧估下半年台股區間43,000–53,000點，AI與資金流向定調（2026）",
+          "title_en": "Strategists see H2 TAIEX range of 43,000–53,000 with AI and fund flows as the key drivers (2026)",
+          "summary_zh": "群益投顧展望說明會預估台股下半年指數區間約43,000至53,000點，強調多頭焦點不在指數高低，而在「AI發展」與「資金流向」兩大主軸。該投顧指出電子與傳產個股表現分化，建議投資人聚焦AI供應鏈的選股，而非押注指數方向。在評價偏高、總經事件接連登場之際，資金輪動與個股基本面成為後市勝負關鍵，波動料維持高檔。",
+          "summary_en": "Capital Investment Advisory's outlook projected a second-half TAIEX trading band of roughly 43,000 to 53,000 points, arguing the real story is not the index level but the twin themes of AI development and liquidity rotation. The house flagged divergence between electronics and traditional sectors, urging investors to focus on stock selection within the AI supply chain rather than index direction, as valuations stay elevated and macro catalysts loom.",
+          "source_name": "NOWnews 今日新聞",
+          "source_url": "https://www.nownews.com/news/6847680"
         }
       ]
     },
@@ -28,13 +36,42 @@
       "section_zh": "產業動態",
       "items": [
         {
-          "title_zh": "台積電10/15法說Q3三率創新高、AI需求強勁（2026-10-15）",
-          "title_en": "TSMC posts record Q3 results on AI demand at its Oct 15 earnings call (2026-10-15)",
-          "summary_zh": "台積電第三季合併營收約新台幣1.49兆元，季增17.6%、年增50.9%；稅後純益7,631億元、每股盈餘29.43元，同創單季新高。以美元計營收達467.2億美元、優於財測上緣，毛利率66.4%。公司將2026年資本支出上修至600–640億美元，並估全年美元營收年增約44%，重申AI加速器需求穩健，鞏固台股AI權值股基本面，牽動後市資金聚焦先進製程與CoWoS封裝產能。",
-          "summary_en": "TSMC reported third-quarter consolidated revenue of about NT$1.49 trillion, up 17.6% sequentially and 50.9% year-on-year, with net profit of NT$763.1 billion and EPS of NT$29.43 — all quarterly records. In US-dollar terms revenue reached US$46.7 billion, above guidance, at a 66.4% gross margin. The foundry lifted 2026 capex to US$60–64 billion and guided full-year dollar revenue up about 44%, reaffirming resilient AI accelerator demand.",
+          "title_zh": "CoWoS產能、資本支出上修與2027 EPS期待撐台積電焦點（2026-10）",
+          "title_en": "CoWoS capacity, higher capex and 2027 EPS hopes keep TSMC in focus (2026-10)",
+          "summary_zh": "台積電法說週前後，法人持續聚焦先進封裝產能與資本支出。市場估2026年資本支出約640億美元，2027年可能上修至約850億美元，部分機構看2027年每股盈餘上看約150元，訂單能見度延伸至2028年。CoWoS月產能預估自2025年底約7萬片擴增至2026年約11.5萬片，支撐AI加速器供應鏈。產能擴張與客戶分配牽動台積電、封測廠與設備供應鏈後市，為台股AI主軸提供基本面依據。",
+          "summary_en": "Ahead of and around TSMC's earnings cycle, analysts kept attention on advanced-packaging capacity and capital spending. Estimates put 2026 capex near US$64 billion with 2027 potentially lifted toward US$85 billion, and some houses see 2027 EPS reaching around NT$150 as order visibility extends into 2028. CoWoS monthly capacity is projected to ramp from roughly 70k wafers at end-2025 toward about 115k in 2026, underpinning the AI accelerator supply chain.",
+          "source_name": "StatementDog 財報狗新聞",
+          "source_url": "https://statementdog.com/news/17880"
+        },
+        {
+          "title_zh": "AI加速器需求強勁，法人上修台積電CoWoS產能預期（2026-09）",
+          "title_en": "Analysts lift CoWoS capacity expectations on strong AI accelerator demand (2026-09)",
+          "summary_zh": "國內券商研究上修台積電CoWoS先進封裝產能預估，點名雲端大廠對AI加速器需求強勁。報導指出，台積電可能逐步把較成熟的CoWoS段位釋出給日月光投控、力成等封測廠，將產能外溢至供應鏈。相關上修強化市場看法：決定AI晶片供給的瓶頸不只在晶圓製造，更在先進封裝產能；此趨勢延伸至2027年，牽動封測族群接單與台股AI供應鏈的評價與資金聚焦方向。",
+          "summary_en": "Local brokerage research raised projections for TSMC's CoWoS advanced-packaging output, citing robust demand for AI accelerators from hyperscalers. Reports noted TSMC may gradually release more mature CoWoS segments to outsourced assembly and test (OSAT) houses such as ASE and Powertech, spreading capacity through the supply chain. The upgrades reinforced expectations that packaging bottlenecks, rather than wafer fabrication alone, will shape AI chip availability into 2027.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/5607/9343218"
+        }
+      ]
+    },
+    {
+      "section": "Financial Sector",
+      "section_zh": "金融業",
+      "items": [
+        {
+          "title_zh": "金管會端出六大施政面向，含亞洲資產管理中心與金融業大語言模型（2026-10）",
+          "title_en": "Taiwan's FSC outlines six policy priorities, including an Asian asset-management hub and a financial-sector LLM (2026-10)",
+          "summary_zh": "金管會主委彭金隆赴立法院的施政書面報告列出六大方向：金融韌性與風險監理、市場發展與公司治理、消費者保護，以及打造亞洲資產管理中心等。金管會表示，規劃於2027年第1季發布首版金融業大語言模型（FinLLM），並推動虛擬資產保管業務的主題式試辦，釋出偏向科技導向的監理路線。相關政策牽動資產管理、數位金融與虛擬資產業者的布局，市場關注後續子法與試辦細節的落地時程。",
+          "summary_en": "In its policy report to the legislature, the Financial Supervisory Commission under chair Peng Chin-lung set out six directions: financial resilience and risk supervision, market development and corporate governance, consumer protection, and building an Asian asset-management centre, among others. The FSC said it plans to release a first-generation financial-industry large language model (FinLLM) in the first quarter of 2027 and to pilot thematic virtual-asset custody services, signalling a tech-forward regulatory agenda.",
           "source_name": "NOWnews 今日新聞",
-          "source_url": "https://www.nownews.com/news/6883790",
-          "published": "2026-10-15"
+          "source_url": "https://www.nownews.com/news/6884087"
+        },
+        {
+          "title_zh": "金融三業1–8月稅前盈餘1.17兆元（2026-10）",
+          "title_en": "Taiwan's three financial sectors post NT$1.17tn pre-tax profit in Jan–Aug (2026-10)",
+          "summary_zh": "金管會指出，今年1至8月銀行業、證券期貨業、保險業三業合計稅前盈餘約新台幣1兆1,702億元，年增幅明顯。監理面上，首批7家本國銀行獲准自第4季起適用內部評等法（IRB），第二批最晚預計於下半年開放申請；金管會並持續檢討新一代保險清償能力制度與金控集團資本適足性的過渡措施。獲利穩健與資本監理趨嚴並進，牽動銀行、保險業的資本規劃與商品結構調整，市場關注對獲利與股利政策的後續影響。",
+          "summary_en": "The FSC reported combined pre-tax earnings of about NT$1.17 trillion for the banking, securities-and-futures, and insurance sectors over January to August, a notable year-on-year gain. Regulators also advanced the internal ratings-based (IRB) approach, approving the first batch of seven domestic banks to adopt it from the fourth quarter, while continuing to review a new-generation insurer solvency regime and transition measures for group capital adequacy. The data pointed to resilient sector profitability amid tighter capital oversight.",
+          "source_name": "Anue鉅亨／uAnalyze",
+          "source_url": "https://uanalyze.com.tw/articles/6397346877"
         }
       ]
     },
@@ -43,91 +80,20 @@
       "section_zh": "財富管理",
       "items": [
         {
-          "title_zh": "10月台股ETF配息高峰，存息族積極卡位（2026-10）",
-          "title_en": "October brings a peak of Taiwan ETF dividend payouts for income investors (2026-10)",
-          "summary_zh": "財經媒體報導，10月12至16日為台股ETF現金股利發放高峰期，21檔台股ETF合計配發逾421.76億元，其中群益台灣精選高息（00919）配發金額最多。密集的配息旺季吸引存股與領息族積極操作除息、填息行情；惟分析師提醒，應留意除息後個別標的填息力道與成分股表現，避免只看高配息率而忽略總報酬與資產配置原則。",
-          "summary_en": "Local media reported that Oct 12–16 marked a peak window for Taiwan-listed ETF cash distributions, with 21 equity ETFs paying out more than NT$42.1 billion combined. High-dividend products led the payouts, with Capital Taiwan Select High Dividend (00919) distributing the largest single amount. The heavy dividend season kept income-focused retail investors active in dividend-capture and fill-the-gap strategies, though analysts urged attention to post-ex-dividend price recovery.",
+          "title_zh": "台灣高資產族群估逼近12.4萬人、持有46兆元（2026）",
+          "title_en": "Taiwan's high-net-worth cohort seen nearing 124,000 people holding NT$46tn (2026)",
+          "summary_zh": "玉山銀行與KPMG報告估計，2026年台灣淨資產逾新台幣1億元的高資產族群可能達約12.4萬人，持有資產規模上看約46兆元。報告點出牽動此客群的四大趨勢，並指ETF與高資產財富管理是推升市場規模的重要引擎，私募股權、私募信貸等另類投資亦受關注。數據凸顯銀行搶攻富裕客群與跨境資產配置的競爭加劇，財管、信託與家族傳承需求同步升溫，牽動私銀與資產管理業務布局。",
+          "summary_en": "A report by E.SUN Bank and KPMG estimated that Taiwan's population with net assets above NT$100 million could reach about 124,000 in 2026, holding roughly NT$46 trillion in wealth. The study flagged four trends shaping the segment, with ETFs and high-net-worth wealth management cited as key engines of market growth, alongside rising interest in alternatives such as private equity and private credit. The findings underscore intensifying competition among banks for affluent clients and cross-border allocation.",
+          "source_name": "Anue鉅亨／uAnalyze",
+          "source_url": "https://uanalyze.com.tw/articles/4310248242"
+        },
+        {
+          "title_zh": "銀行強化私銀與另類投資，搶攻富裕客群（2026）",
+          "title_en": "Banks deepen private-banking and alternatives offerings for affluent clients (2026)",
+          "summary_zh": "報導指出，中信銀與EQT合作，引進增值型基礎建設投資策略，供符合資格的高資產客戶選擇；渣打銀行則在台灣打造第3座私人理財中心，顯示搶攻富裕客群的競爭升溫。調查顯示跨境配置已成主流，約74%高資產客戶已持有境外資產，偏好美國、新加坡、日本市場；商品偏好以股票型基金為核心，債券則偏好新興市場債與月配息級別。此趨勢牽動私銀、信託與海外投資平台的服務與產品布局。",
+          "summary_en": "Reports noted CTBC Bank partnering with EQT to bring value-add infrastructure investment strategies to qualified high-net-worth clients, while Standard Chartered built its third private-banking centre in Taiwan, signalling an intensifying race for the affluent segment. Surveys cited cross-border allocation as mainstream — with roughly 74% of high-net-worth clients already holding offshore assets and a preference for the U.S., Singapore and Japan — and equity funds, emerging-market bonds and monthly-distribution share classes as core holdings.",
           "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/amp/story/5607/9808617"
-        }
-      ]
-    },
-    {
-      "section": "Tax & Regulations",
-      "section_zh": "稅務法規",
-      "items": [
-        {
-          "title_zh": "台灣擬制遺產課稅修法三讀，免稅額2027擬調升（2026-08）",
-          "title_en": "Taiwan finalises deemed-estate tax reform; exemption seen rising in 2027 (2026-08)",
-          "summary_zh": "立法院三讀通過擬制遺產課稅方式修正：死亡前兩年內贈與配偶及特定親屬的財產，遺產稅改由受贈人負擔；拋棄繼承者亦不再免除受贈財產的相關稅負。財政部表示正研擬遺贈稅法施行細則等子法規，俟總統公布後加強宣導。官員估遺產稅免稅額可望自1,333萬元調升至2027年約1,478萬元，牽動高資產族群的傳承與贈與規劃，信託與保單安排須及早因應。",
-          "summary_en": "Taiwan's legislature passed amendments changing how \"deemed estate\" gifts are taxed: property gifted to a spouse or specified relatives within two years before death will now be taxed to the recipient, and heirs who renounce an inheritance no longer escape the related tax on gifts received. The Ministry of Finance is drafting enforcement rules, and officials estimate the estate-tax exemption could rise from NT$13.33 million to about NT$14.78 million in 2027.",
-          "source_name": "中央社",
-          "source_url": "https://cna.com.tw/news/afe/202608210289.aspx"
-        }
-      ]
-    },
-    {
-      "section": "Global Markets",
-      "section_zh": "國際財經",
-      "items": [
-        {
-          "title_zh": "油價飆升引通膨疑慮，美股收黑（2026-10-23）",
-          "title_en": "Wall Street slips as surging oil stokes inflation fears (2026-10-23)",
-          "summary_zh": "美股週五收低，國際原油攀抵多年高點，重新點燃能源成本推升通膨、使其高於目標的疑慮。能源成為少數上漲類股，利率敏感的科技股則落後。油價走勢外溢至全球市場，壓抑風險胃納，正值投資人為下週聯準會決策與大型權值股密集財報預作布局；高油價若延續，恐牽動各國央行政策路徑與全球資金輪動方向。",
-          "summary_en": "U.S. equities lost ground on Friday as crude oil jumped to multi-year highs, reviving worries that higher energy costs could keep inflation above target. Energy was the standout gaining sector while rate-sensitive technology shares lagged. The move rippled across global markets, pressuring risk appetite just as investors positioned for a Federal Reserve decision and a heavy slate of mega-cap earnings in the week ahead.",
-          "source_name": "The Washington Times",
-          "source_url": "https://www.washingtontimes.com/news/2026/oct/23/wall-street-loses-ground-friday-pressure-rising-oil-prices/",
-          "published": "2026-10-23"
-        },
-        {
-          "title_zh": "亞股本週看Fed與晶片財報定調（2026-10-26）",
-          "title_en": "Asian markets look to the Fed and chip earnings for direction this week (2026-10-26)",
-          "summary_zh": "亞洲股市本週走向繫於美國聯準會利率會議與一波半導體財報，南韓晶片大廠成焦點。SK海力士將於10月28日、三星電子10月29日公布第三季財報，被視為AI記憶體需求的檢驗指標。在美股上週後段回檔後，交易員關注強勁的晶片財報能否穩住區域市場情緒；若記憶體報價與展望樂觀，有助支撐亞股與台股AI供應鏈後市表現。",
-          "summary_en": "Asian equities head into the week keyed to the U.S. Federal Reserve's policy meeting and a wave of semiconductor earnings, with Korea's chipmakers in focus. SK hynix is due to report third-quarter results on Oct 28 and Samsung Electronics on Oct 29, outcomes seen as a test of AI-memory demand. Traders are watching whether resilient chip results can steady regional sentiment after Wall Street's late-week pullback.",
-          "source_name": "Seoul Economic Daily",
-          "source_url": "https://en.sedaily.com/finance/2026/10/26/us-fed-meeting-chip-earnings-set-direction-for-kospi-rebound",
-          "published": "2026-10-26"
-        }
-      ]
-    },
-    {
-      "section": "International",
-      "section_zh": "國際",
-      "items": [
-        {
-          "title_zh": "美股週五收黑、三大指數同步下跌（2026-10-23，最近交易日）",
-          "title_en": "U.S. stocks close lower Friday as all three major indexes slip (2026-10-23, 最近交易日)",
-          "summary_zh": "美股週五收低，道瓊工業指數下跌約1.23%（約652點）收52,215.16點，標普500下跌0.52%收7,623.68點，那斯達克下跌0.21%收25,955.34點。全週標普與那斯達克收黑，道瓊小漲約0.4%。油價走高與聯準會會議前的觀望氣氛壓抑盤勢，投資人對AI科技股評價轉趨謹慎。",
-          "summary_en": "Wall Street finished lower on Friday, with the Dow Jones Industrial Average down about 1.23% (roughly 652 points) to 52,215.16, the S&P 500 off 0.52% at 7,623.68 and the Nasdaq Composite down 0.21% at 25,955.34. For the week the S&P 500 and Nasdaq fell while the Dow edged up about 0.4%, as rising oil and caution ahead of the Fed meeting weighed on sentiment.",
-          "source_name": "KRMG",
-          "source_url": "https://krmg.com/2026/10/23/how-major-us-stock-indexes-fared-friday-10-23-2026/"
-        },
-        {
-          "title_zh": "中東情勢升溫油價破116美元，觸發週五賣壓（2026-10-23）",
-          "title_en": "Oil tops $116 on Middle East tensions, driving Friday's selloff (2026-10-23)",
-          "summary_zh": "原油週五急漲，因親伊朗勢力攻擊沙烏地油田，加上美國與以色列可能再度對伊朗動武的疑慮。布蘭特原油收漲3.1%至每桶116.72美元，西德州中級原油上漲約3.8%至近103美元。油價飆升嘉惠能源股，卻加劇通膨憂慮、壓抑大盤，推動道瓊下跌逾1%，凸顯地緣風險對市場的牽動。",
-          "summary_en": "Crude prices spiked on Friday after an attack by pro-Iran forces on a Saudi oil field and the prospect of renewed U.S. and Israeli strikes on Iran. Brent settled 3.1% higher at $116.72 a barrel and West Texas Intermediate rose about 3.8% to near $103. The surge lifted energy shares but stoked inflation concerns, pressuring the broader market and pushing the Dow down more than 1%.",
-          "source_name": "Invezz",
-          "source_url": "https://invezz.com/news/2026/10/23/dow-falls-1-25-as-oil-tops-117-and-investors-await-fed-big-tech-earnings/",
-          "published": "2026-10-23"
-        },
-        {
-          "title_zh": "財報洪流與Fed會議檢驗「搖晃」的AI行情（2026-10-25）",
-          "title_en": "Earnings flood and Fed meeting to test a 'rickety' AI rally (2026-10-25)",
-          "summary_zh": "路透報導，本週大量企業財報與聯準會利率會議，將檢驗近期看似不穩的AI驅動股市行情。聯準會9月自2023年以來首度升息，市場普遍預期本次按兵不動；惟若釋出因油價推升通膨而偏鷹的訊號，恐壓抑漲勢。投資人近期受部分科技股（如Meta）財報不如預期影響，情緒轉趨謹慎，後市波動料加大。",
-          "summary_en": "Reuters reported that a deluge of corporate results and a Federal Reserve policy meeting this week will test an AI-driven equity rally that has lately looked shaky. The Fed, which raised rates in September for the first time since 2023, is widely expected to hold, though any hawkish signal on oil-fueled inflation could cap gains. Investors have been unsettled by disappointing reports from names such as Meta.",
-          "source_name": "Investing.com / Reuters",
-          "source_url": "https://www.investing.com/news/economy-news/earnings-flood-fed-meeting-will-test-rickety-ai-market-rally-4971185",
-          "published": "2026-10-25"
-        },
-        {
-          "title_zh": "大型科技股財報成焦點，微軟Azure為關鍵（2026-10-25）",
-          "title_en": "Big-tech earnings in focus, with Microsoft's Azure the key test (2026-10-25)",
-          "summary_zh": "投資人迎來關鍵的大型科技股財報週，用以檢驗龐大AI支出能否轉化為獲利。微軟是重中之重，市場聚焦Azure雲端成長與AI變現能力；此前Meta與科林研發（Lam Research）財報不如預期，令市場不安。財報結果可能為評價偏高的AI相關股定調年底行情，若出現需求降溫跡象，恐引發新一輪波動。",
-          "summary_en": "Investors head into a pivotal week of mega-cap technology results that will gauge whether heavy AI spending is translating into profit. Microsoft is the marquee name, watched for Azure cloud growth and AI monetisation, after recent reports from Meta and Lam Research disappointed. The outcomes could set the tone for richly valued AI-linked shares into year-end, with any sign of cooling demand likely to spark fresh volatility.",
-          "source_name": "Invezz",
-          "source_url": "https://invezz.com/uk/news/2026/10/25/dow-jones-and-nasdaq-100-outlook-top-stock-market-news-for-this-week",
-          "published": "2026-10-25"
+          "source_url": "https://money.udn.com/money/story/5613/9597844"
         }
       ]
     }
