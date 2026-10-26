@@ -1,5 +1,5 @@
 {
-  "closing_date": "2026-10-23",
+  "closing_date": "2026-10-26",
   "indices": [
     {
       "name": "S&P 500",
@@ -139,11 +139,11 @@
     {
       "name": "CSI 300 滬深300",
       "name_zh": null,
-      "close": 4105.32861328125,
+      "close": 4092.48974609375,
       "daily_pct": null,
       "mtd_pct": null,
       "ytd_pct": null,
-      "closing_date": "2026-10-23"
+      "closing_date": "2026-10-26"
     },
     {
       "name": "Nifty 50",
@@ -157,11 +157,11 @@
     {
       "name": "S&P/ASX 200",
       "name_zh": null,
-      "close": 8795.2001953125,
-      "daily_pct": 0.02,
+      "close": 8809.900390625,
+      "daily_pct": null,
       "mtd_pct": 0.07,
       "ytd_pct": 0.93,
-      "closing_date": "2026-10-23"
+      "closing_date": "2026-10-26"
     }
   ],
   "bonds": [
@@ -188,10 +188,10 @@
     },
     {
       "name": "Japan 10-Year",
-      "yield_pct": 2.91,
-      "daily_bps": -0.9,
-      "mtd_bps": -14.3,
-      "closing_date": "2026-10-22"
+      "yield_pct": 2.84,
+      "daily_bps": -7.7,
+      "mtd_bps": -22.0,
+      "closing_date": "2026-10-23"
     },
     {
       "name": "UK 10-Year",
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 101.80999755859375,
       "daily_pct": 0.2,
-      "mtd_pct": 0.22,
-      "ytd_pct": 3.45,
+      "mtd_pct": 0.23,
+      "ytd_pct": 3.47,
       "closing_date": "2026-10-23"
     },
     {
@@ -243,19 +243,19 @@
     },
     {
       "name": "USD/CNY 人民幣",
-      "close": 6.660600185394287,
-      "daily_pct": -0.26,
-      "mtd_pct": -0.65,
-      "ytd_pct": -4.8,
-      "closing_date": "2026-10-25"
+      "close": 6.6778998374938965,
+      "daily_pct": 0.0,
+      "mtd_pct": -0.4,
+      "ytd_pct": -4.55,
+      "closing_date": "2026-10-22"
     },
     {
       "name": "USD/TWD 新台幣",
-      "close": 32.57699966430664,
-      "daily_pct": -0.06,
-      "mtd_pct": 2.23,
-      "ytd_pct": 4.27,
-      "closing_date": "2026-10-25"
+      "close": 32.59700012207031,
+      "daily_pct": 0.71,
+      "mtd_pct": 2.29,
+      "ytd_pct": 4.33,
+      "closing_date": "2026-10-22"
     },
     {
       "name": "JPY/TWD 日圓兌台幣",
@@ -269,35 +269,35 @@
   "commodities": [
     {
       "name": "黃金 (USD/oz)",
-      "close": 4008.800048828125,
-      "daily_pct": 0.02,
-      "mtd_pct": -4.25,
-      "ytd_pct": -7.65,
-      "closing_date": "2026-10-25"
+      "close": 4007.89990234375,
+      "daily_pct": -1.29,
+      "mtd_pct": -4.27,
+      "ytd_pct": -7.68,
+      "closing_date": "2026-10-23"
     },
     {
       "name": "白銀 (USD/oz)",
-      "close": 53.970001220703125,
-      "daily_pct": 0.48,
-      "mtd_pct": -10.2,
-      "ytd_pct": -23.05,
-      "closing_date": "2026-10-25"
+      "close": 53.71099853515625,
+      "daily_pct": -1.92,
+      "mtd_pct": -10.63,
+      "ytd_pct": -23.42,
+      "closing_date": "2026-10-23"
     },
     {
       "name": "WTI 原油 (USD/bbl)",
-      "close": 102.16000366210938,
-      "daily_pct": -1.07,
-      "mtd_pct": 12.98,
-      "ytd_pct": 77.92,
-      "closing_date": "2026-10-25"
+      "close": 103.2699966430664,
+      "daily_pct": 3.82,
+      "mtd_pct": 14.21,
+      "ytd_pct": 79.85,
+      "closing_date": "2026-10-23"
     },
     {
       "name": "布蘭特原油 (USD/bbl)",
-      "close": 110.68000030517578,
-      "daily_pct": -5.17,
-      "mtd_pct": 6.91,
-      "ytd_pct": 81.89,
-      "closing_date": "2026-10-25"
+      "close": 116.72000122070312,
+      "daily_pct": 3.14,
+      "mtd_pct": 12.74,
+      "ytd_pct": 91.82,
+      "closing_date": "2026-10-23"
     },
     {
       "name": "比特幣 (USD)",
@@ -388,8 +388,8 @@
     "yield_curve_10y2y": 0.3,
     "yield_curve_10y2y_bps": 30,
     "curve_shape": "正斜率",
-    "dxy": 101.67900085449219,
-    "dxy_daily_pct": -0.13,
+    "dxy": 101.80999755859375,
+    "dxy_daily_pct": 0.2,
     "closing_date": "2026-10-23"
   },
   "fedwatch": [
@@ -406,10 +406,10 @@
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
       "implied_rate": 4.04,
-      "delta_rate": 0.16,
-      "delta_bps": 16.0,
-      "p_hike": 64.0,
-      "p_hold": 36.0,
+      "delta_rate": 0.15,
+      "delta_bps": 15.0,
+      "p_hike": 60.0,
+      "p_hold": 40.0,
       "p_cut": 0,
       "is_reference": false
     }
