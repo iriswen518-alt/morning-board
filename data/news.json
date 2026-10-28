@@ -1,10 +1,10 @@
 {
-  "news_date": "2026-10-28",
+  "news_date": "2026-10-29",
   "tldr": [
-    "全球半導體與 AI 股在 10/27 續強，帶動那斯達克再創收盤新高。",
-    "博通與 Anthropic 的 AI 晶片大單是主要推手，強化市場對 AI 資料中心需求延續的預期。",
-    "聯準會 10/28 利率決議是本週焦點，市場傾向預期按兵不動。",
-    "台灣晶片供應鏈（台積電與相關族群）正處於全球 AI 晶片需求題材的核心。"
+    "台積電上調全年展望、AI 需求強勁，權值股續領台股。",
+    "法人上調台積電 2027 年 EPS 上看 150 元，CoWoS 產能加速擴充。",
+    "金管會開放壽險投資健康福祉事業，並訂定銀行家族辦公室顧問業務規範。",
+    "私人銀行動能強勁，台新高資產 AUM 上半年大增。"
   ],
   "sections": [
     {
@@ -12,12 +12,20 @@
       "section_zh": "股市行情",
       "items": [
         {
-          "title_zh": "全球晶片股勁揚 為台積電領軍的台股權值股定調",
-          "title_en": "Global chip rally sets an upbeat tone for TSMC-led Taiwan large-caps",
-          "summary_zh": "美股 10/27 在半導體與 AI 族群強勢帶動下續創新高，那斯達克單日漲逾 1%，市場同時受 Anthropic 遞交上市申請激勵。由於台積電與台灣晶圓代工、供應鏈大廠正是這波 AI 晶片需求的核心，國際盤的偏多氛圍通常牽動隔日台股權值股的開盤情緒，後續可留意外資對半導體龍頭的買賣超動向。",
-          "summary_en": "A powerful rally in semiconductor and AI names pushed the Nasdaq to fresh highs on Oct. 27, with chip strength and optimism over Anthropic's IPO filing lifting the broad market. Because TSMC and Taiwan's foundry and supply-chain giants sit at the center of that AI-chip demand, a constructive global session typically frames sentiment for Taiwan's heavyweight tech names at the following open.",
-          "source_name": "TheStreet",
-          "source_url": "https://thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-27-2026"
+          "title_zh": "台積電上調展望帶動權值股領漲",
+          "title_en": "TSMC's raised outlook keeps heavyweights leading the index",
+          "summary_zh": "台積電第三季營收獲利創高，並將全年營收成長上調至約 44%、第四季年增上看 61%，強化 AI 晶片題材。權值王走勢穩健，持續撐住加權指數於歷史高點區間，資金焦點集中在 AI 供應鏈，台股多頭結構未改。",
+          "summary_en": "TSMC's record third quarter and a lifted full-year revenue growth target of about 44% (with fourth-quarter growth seen as high as 61%) reinforced the AI-chip theme driving Taiwan equities. Strength in the semiconductor heavyweight continues to anchor the weighted index near record-high territory, keeping foreign-fund attention on the AI supply chain.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/5607/9343218"
+        },
+        {
+          "title_zh": "法人上修台積電 2027 獲利展望",
+          "title_en": "Analysts lift TSMC's 2027 earnings view",
+          "summary_zh": "投顧將台積電 2027 年 EPS 估值上看 150 元，看好先進製程與 CoWoS 需求延續，加上美國先進封裝布局瞄準 2028 年。獲利上修撐起台股第一大權值股評價，也連帶支撐整體晶圓代工與封測族群的市場信心。",
+          "summary_en": "Brokerages raised TSMC's 2027 EPS estimate toward NT$150, citing resilient advanced-node and CoWoS demand plus a US advanced-packaging build-out targeted for 2028. The upgraded earnings trajectory supports valuations for the index's largest constituent and underpins sentiment across the broader chip-making complex.",
+          "source_name": "StatementDog",
+          "source_url": "https://statementdog.com/news/17880"
         }
       ]
     },
@@ -26,72 +34,64 @@
       "section_zh": "產業動態",
       "items": [
         {
-          "title_zh": "博通與 Anthropic AI 大單 推升半導體需求",
-          "title_en": "Broadcom–Anthropic AI deal powers semiconductor demand",
-          "summary_zh": "博通與 AI 新創 Anthropic 達成大型 AI 晶片合作，成為近期科技股走強的關鍵動能，也強化市場對先進 AI 加速器與客製化晶片需求延續的預期。此案凸顯 AI 資料中心持續擴建，相關訂單可望外溢至負責製造與封測的台灣晶圓代工、先進封裝及零組件供應鏈，為相關族群中長期動能增添想像空間。",
-          "summary_en": "Broadcom's large new AI chip agreement with Anthropic has become a key driver of the current tech rally, reinforcing expectations of sustained demand for advanced AI accelerators and custom silicon. The news spotlights the deepening build-out of AI data-center capacity, a trend that flows directly to Taiwan's foundry, advanced-packaging and component suppliers that manufacture and assemble these high-end chips.",
-          "source_name": "Kiplinger",
-          "source_url": "https://www.kiplinger.com/investing/stocks/nasdaq-jumps-308-points-on-broadcoms-big-gains-stock-market-today"
+          "title_zh": "CoWoS 產能受 AI 訂單推動加速",
+          "title_en": "CoWoS capacity accelerates on AI orders",
+          "summary_zh": "供應鏈調查指出，台積電 CoWoS 先進封裝產能可望於 2026 年底達每月 14 萬片、2027 年底約 17 萬片，輝達預訂逾五成產能，Google TPU 緊追在後。顯示先進封裝仍是 AI 加速器出貨的關鍵瓶頸，產能擴充步調牽動整個 AI 伺服器供應鏈的供給節奏。",
+          "summary_en": "Supply-chain checks point to TSMC's CoWoS advanced-packaging capacity climbing toward 140k wafers per month by end-2026 and about 170k by end-2027, with Nvidia reserving more than half of total capacity and Google's TPU close behind. The ramp underscores how tight advanced packaging remains the key bottleneck for AI accelerator shipments.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/5607/9343218"
+        },
+        {
+          "title_zh": "高資本支出支撐先進製程擴產",
+          "title_en": "Heavy capex sustains advanced-node build-out",
+          "summary_zh": "台積電 2026 年資本支出維持在 600 至 640 億美元區間，用於擴充先進製程與封裝產能，美國先進封裝布局並延伸至 2028 年。持續的高投資顯示對多年期 AI 需求的信心，也讓設備與材料供應商成為市場焦點，帶動整體科技聚落的資本支出動能。",
+          "summary_en": "TSMC is keeping 2026 capital spending in the US$60–64 billion range to expand leading-edge and packaging capacity, while US advanced-packaging plans extend toward 2028. The sustained investment signals confidence in multi-year AI demand and keeps equipment and materials suppliers in focus across the island's tech cluster.",
+          "source_name": "StatementDog",
+          "source_url": "https://statementdog.com/news/17880"
         }
       ]
     },
     {
-      "section": "Macro & Policy",
-      "section_zh": "總經政策",
+      "section": "Financial Sector",
+      "section_zh": "金融業",
       "items": [
         {
-          "title_zh": "聯準會 10/28 利率決議 市場預期按兵不動",
-          "title_en": "Fed widely expected to hold rates at its Oct. 28 meeting",
-          "summary_zh": "投資人聚焦聯準會本週三的利率決策，在通膨與就業數據轉弱後，升息機率已明顯下滑，市場以「維持不動」為基本情境。目前政策利率區間為 3.75%～4.00%（9 月升息 1 碼後）。若如預期暫停並搭配主席前瞻指引，將牽動年底前的風險資產氛圍，並影響對美元敏感的亞洲股匯市走向。",
-          "summary_en": "Markets are positioning for the Federal Reserve's policy decision on Wednesday, with a hold seen as the base case after softer inflation and payroll data pushed hike odds sharply lower. The target range stands at 3.75%–4.00% following September's 25bp increase. A pause, paired with the Chair's guidance, would set the tone for risk assets into year-end and for USD-sensitive Asian markets.",
-          "source_name": "MNI Markets",
-          "source_url": "https://www.mnimarkets.com/articles/fomc-next-eyes-on-the-2026-outlook-1765343917593"
+          "title_zh": "金管會開放壽險投資健康福祉事業",
+          "title_en": "FSC opens insurers to health-and-wellness investments",
+          "summary_zh": "金管會取消投資須與保險本業結合的限制，開放保險公司持股至 100%，新增 5 大類、合計 13 種可投資標的，即日起實施。此舉放寬壽險資金運用範疇，引導長期資金投入國內健康照護與福祉產業，有助壽險業分散資產配置並對接高齡化社會的照護需求。",
+          "summary_en": "The Financial Supervisory Commission removed the requirement that such holdings link to insurance operations and now lets insurers take stakes of up to 100%, adding five categories covering 13 eligible asset types, effective immediately. The move broadens how life insurers deploy capital and channels long-term funds into domestic wellness and care infrastructure.",
+          "source_name": "NOWnews",
+          "source_url": "https://www.nownews.com/news/6884087"
         },
         {
-          "title_zh": "大華銀：縱使 10 月暫停 後續仍可能再升息",
-          "title_en": "UOB: more hikes may still lie ahead despite an October pause",
-          "summary_zh": "大華銀（UOB）解讀聯準會 9 月會議紀要指出，多數官員認為年底前至少再升息一次仍是較可能的情境，即使 10 月選擇暫停。此一「利率高檔更久」的路徑，將壓抑利率敏感族群的評價空間，並在區域貨幣間相對支撐美元，為後續資金流向增添變數。",
-          "summary_en": "A UOB reading of the Fed's September minutes argues policymakers generally still view at least one more hike as likely by year-end, even if October brings a pause. That keeps the door open to a higher-for-longer path, a backdrop that tempers valuations for rate-sensitive sectors and supports the US dollar against regional currencies.",
-          "source_name": "TMGM / UOB",
-          "source_url": "https://www.tmgm.com/es/analysis/market-news/article/federal-reserve-more-hikes-ahead-after-october-pause-uob-202610081303"
+          "title_zh": "金管會訂定銀行家族辦公室顧問業務規範",
+          "title_en": "New family-office advisory rules for banks",
+          "summary_zh": "金管會發布銀行辦理家族辦公室顧問業務規範，呼應打造亞洲資產管理中心、吸引高資產家族與家族辦公室進駐的政策。主管機關並表示將持續滾動檢討新一代清償能力制度，促請壽險業調整商品結構、強化資產與負債的幣別及期間匹配，以降低利率與匯率風險。",
+          "summary_en": "The FSC issued guidelines governing banks' family-office consulting services, part of a push to build an Asian asset-management hub and attract high-net-worth families and family offices. Regulators also flagged a rolling review of the new-generation solvency regime and urged insurers to adjust product mixes and tighten asset-liability currency and duration matching.",
+          "source_name": "金管會",
+          "source_url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2"
         }
       ]
     },
     {
-      "section": "International",
-      "section_zh": "國際",
+      "section": "Wealth Management",
+      "section_zh": "財富管理",
       "items": [
         {
-          "title_zh": "那斯達克與羅素 2000 齊揚 Anthropic 題材帶動科技股",
-          "title_en": "Nasdaq and Russell 2000 gain as Anthropic lifts the tech sector",
-          "summary_zh": "美股週二延續漲勢，那斯達克指數上漲約 1.2% 至 26,477 點附近，市場對 Anthropic 上市計畫的熱度延續 AI 與晶片股動能。小型股方面羅素 2000 同步走高，使漲勢更為全面，投資人同時留意即將登場的聯準會決策與密集財報。",
-          "summary_en": "US equities extended their advance on Tuesday, with the Nasdaq Composite climbing about 1.2% to around 26,477 as enthusiasm over Anthropic's IPO plans kept momentum in AI and chip names. Small-caps joined the move via gains in the Russell 2000, broadening participation ahead of the Fed decision and a dense week of corporate earnings.",
-          "source_name": "TheStreet",
-          "source_url": "https://thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-27-2026"
+          "title_zh": "金管會鬆綁財富管理保險商品規定",
+          "title_en": "FSC relaxes rules for wealth-management insurance products",
+          "summary_zh": "保險局開放財富管理保險商品不適用「人壽保險商品死亡給付對保單價值準備金」相關規定，讓業者設計鎖定高資產客群的商品更具彈性。此調整配合主管機關發展境內高端財富與傳承規劃的方向，可望帶動結構型與高保額保單商品的創新與市場需求。",
+          "summary_en": "The Insurance Bureau opened wealth-management insurance products to an exemption from the rule linking death-benefit payouts to policy reserves, giving insurers more flexibility to design products aimed at affluent clients. The change dovetails with regulators' broader effort to develop high-end wealth and estate-planning solutions onshore.",
+          "source_name": "金管會",
+          "source_url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2"
         },
         {
-          "title_zh": "標普 500 連二紅 晶片股勁揚、油價回落",
-          "title_en": "S&P 500 posts back-to-back winning days as chips rally and oil slides",
-          "summary_zh": "標普 500 指數連續第二個交易日收高，半導體族群強勢帶動大盤，油價走跌也舒緩通膨疑慮。晶片族群韌性搭配能源成本走低，強化了市場的偏多氛圍，不過在本週稍晚聯準會會議前，投資人態度仍偏審慎。",
-          "summary_en": "The S&P 500 notched a second straight gain as semiconductor strength powered the broad market and falling oil prices eased inflation concerns. The combination of a resilient chip complex and softer energy costs reinforced a risk-on tone, even as investors stayed cautious ahead of the Federal Reserve meeting later in the week.",
-          "source_name": "CNBC",
-          "source_url": "https://www.cnbc.com/2026/10/26/stock-market-today-live-updates.html"
-        },
-        {
-          "title_zh": "美股受 Anthropic 上市消息激勵走高 靜待聯準會與財報",
-          "title_en": "US stocks jump after Anthropic IPO announcement, with Fed and earnings ahead",
-          "summary_zh": "華爾街受 Anthropic 上市計畫消息帶動走高，科技股領軍推升那斯達克與標普 500 指數。投資人將此波漲勢放在關鍵一週的背景下檢視——本週有聯準會利率決策與大量財報登場，AI 相關個股再度成為盤面核心。",
-          "summary_en": "Wall Street rallied as news around Anthropic's planned listing propelled the technology sector, lifting the Nasdaq and S&P 500. Investors framed the move against a pivotal week featuring the Fed's rate decision and a heavy slate of earnings, with AI-linked names once again at the center of the advance.",
-          "source_name": "TheStreet",
-          "source_url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-26-2026"
-        },
-        {
-          "title_zh": "美股收高 Anthropic 遞件上市題材推升科技股",
-          "title_en": "Stocks close higher as excitement over Anthropic's IPO filing propels tech",
-          "summary_zh": "美股收高，Anthropic 朝公開上市邁進的消息激勵科技股，重燃市場對 AI 題材的興趣。這波漲勢凸顯 AI 相關催化劑持續帶動指數上行，晶片廠與大型科技股領軍推升大盤。",
-          "summary_en": "Equities finished higher as reports of Anthropic's move toward a public listing energized the technology sector and renewed appetite for AI exposure. The advance underscored how AI-related catalysts continue to drive index-level gains, with chipmakers and large-cap tech leading the broad market higher.",
-          "source_name": "CNBC",
-          "source_url": "https://www.cnbc.com/2026/10/25/stock-market-today-live-updates.html"
+          "title_zh": "私人銀行動能強勁",
+          "title_en": "Private-banking momentum stays strong",
+          "summary_zh": "台新銀行表示獲 PBI 全球財富管理大獎雙獎肯定，2026 年上半年高資產客戶數與 AUM 分別成長約 186% 與 176%。業界報告預估台灣高資產人口將由 2025 年約 12.3 萬人增至 2029 年約 15.5 萬人，逾七成已布局境外資產，跨境配置與傳承需求成為私人銀行成長主軸。",
+          "summary_en": "Taishin Bank said it won dual honours at the PBI global wealth-management awards, with high-net-worth client numbers and AUM up about 186% and 176% respectively in the first half of 2026. Industry reports project Taiwan's HNW population rising from roughly 123,000 in 2025 toward 155,000 by 2029, with over 70% already holding offshore assets.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/5636/9499607"
         }
       ]
     }
