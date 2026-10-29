@@ -1,11 +1,9 @@
 {
-  "news_date": "2026-10-29",
+  "news_date": "2026-10-30",
   "tldr": [
-    "聯準會以 10 比 2 票維持利率不變，美股收高續守高檔。",
-    "大型科技財報分歧：微軟靠 AI 雲端超預期，字母不如預期、盤後重挫約 9%。",
-    "台積電上調展望、CoWoS 產能加速，AI 權值股續領台股。",
-    "金管會開放壽險投資健康福祉事業，並訂定銀行家族辦公室顧問業務規範。",
-    "主計總處上修 2026 年 GDP 成長預估至約 11.05%，為近 40 年新高，AI 帶動出口大增。"
+    "台股加權指數收漲 0.59% 至約 46,368 點，日月光、瑞昱法說強化 AI 供應鏈題材。",
+    "美股走弱，字母（Google）營收不如預期、股價重挫約 12–13%，AI 資本支出疑慮再起。",
+    "在聯準會維持利率下，法人傾向以股債均衡、品質優先布局財富管理組合。"
   ],
   "sections": [
     {
@@ -13,20 +11,20 @@
       "section_zh": "股市行情",
       "items": [
         {
-          "title_zh": "台積電上調展望帶動權值股領漲",
-          "title_en": "TSMC's raised outlook keeps heavyweights leading the index",
-          "summary_zh": "台積電第三季營收獲利創高，並將全年營收成長上調至約 44%、第四季年增上看 61%，強化 AI 晶片題材。權值王走勢穩健，持續撐住加權指數於歷史高點區間，資金焦點集中在 AI 供應鏈，台股多頭結構未改。",
-          "summary_en": "TSMC's record third quarter and a lifted full-year revenue growth target of about 44% (with fourth-quarter growth seen as high as 61%) reinforced the AI-chip theme driving Taiwan equities. Strength in the semiconductor heavyweight continues to anchor the weighted index near record-high territory, keeping foreign-fund attention on the AI supply chain.",
-          "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/5607/9343218"
+          "title_zh": "日月光 Q3 純益季增 28%、封測毛利率首破 3 成",
+          "title_en": "ASE posts a 28% jump in Q3 net profit as packaging margins top 30%",
+          "summary_zh": "封測龍頭日月光投控第三季純益季增約 28%、EPS 6.13 元，封測（ATM）毛利率首度突破 30%，管理層視此為未來基準底線。公司估第四季營收季增 6–8% 並再度追加資本支出，LEAP 目標上修、明年可望翻倍，激勵台股 AI 先進封裝供應鏈買氣；加權指數前一交易日收 46,368 點、漲 0.59%。",
+          "summary_en": "Advanced packaging-and-test leader ASE reported third-quarter net profit up about 28% sequentially, with EPS of NT$6.13 and packaging/test gross margin breaking above 30% for the first time—a level management expects to become the new baseline. It guided fourth-quarter revenue up 6–8% quarter-on-quarter and raised capex again, lifting sentiment across Taiwan's AI advanced-packaging chain.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6640534"
         },
         {
-          "title_zh": "法人上修台積電 2027 獲利展望",
-          "title_en": "Analysts lift TSMC's 2027 earnings view",
-          "summary_zh": "投顧將台積電 2027 年 EPS 估值上看 150 元，看好先進製程與 CoWoS 需求延續，加上美國先進封裝布局瞄準 2028 年。獲利上修撐起台股第一大權值股評價，也連帶支撐整體晶圓代工與封測族群的市場信心。",
-          "summary_en": "Brokerages raised TSMC's 2027 EPS estimate toward NT$150, citing resilient advanced-node and CoWoS demand plus a US advanced-packaging build-out targeted for 2028. The upgraded earnings trajectory supports valuations for the index's largest constituent and underpins sentiment across the broader chip-making complex.",
-          "source_name": "StatementDog",
-          "source_url": "https://statementdog.com/news/17880"
+          "title_zh": "瑞昱法說：Q4 淡季不淡、Wi-Fi 8 明年下半年放量",
+          "title_en": "Realtek sees a resilient Q4 and Wi-Fi 8 ramp from late 2027",
+          "summary_zh": "IC 設計廠瑞昱法說指出，傳統淡季的第四季表現優於季節性，並預期 Wi-Fi 8 將於 2027 年下半年進入放量階段；公司訂出 2030 年 HPC 與邊緣 AI 營收占比目標，顯示 AI 連網需求正從資料中心晶片向台灣 IC 設計族群擴散，支撐類股評價與市場信心。",
+          "summary_en": "IC designer Realtek told its earnings call that the usually slow fourth quarter is holding up better than seasonal norms, and projected Wi-Fi 8 volume shipments from the second half of 2027. It set a target for HPC and edge-AI to form a meaningful share of revenue by 2030, showing AI-connectivity demand broadening beyond data-centre chips into Taiwan's design houses.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6612024"
         }
       ]
     },
@@ -35,20 +33,20 @@
       "section_zh": "產業動態",
       "items": [
         {
-          "title_zh": "CoWoS 產能受 AI 訂單推動加速",
-          "title_en": "CoWoS capacity accelerates on AI orders",
-          "summary_zh": "供應鏈調查指出，台積電 CoWoS 先進封裝產能可望於 2026 年底達每月 14 萬片、2027 年底約 17 萬片，輝達預訂逾五成產能，Google TPU 緊追在後。顯示先進封裝仍是 AI 加速器出貨的關鍵瓶頸，產能擴充步調牽動整個 AI 伺服器供應鏈的供給節奏。",
-          "summary_en": "Supply-chain checks point to TSMC's CoWoS advanced-packaging capacity climbing toward 140k wafers per month by end-2026 and about 170k by end-2027, with Nvidia reserving more than half of total capacity and Google's TPU close behind. The ramp underscores how tight advanced packaging remains the key bottleneck for AI accelerator shipments.",
-          "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/5607/9343218"
+          "title_zh": "集邦：MacBook Pro 新機入局，2027 年 OLED 筆電出貨估年增逾 40%",
+          "title_en": "TrendForce: OLED notebook shipments to grow over 40% in 2027 as a new MacBook Pro joins",
+          "summary_zh": "研調機構集邦科技預估，隨蘋果推出 OLED 版 MacBook Pro，2027 年全球 OLED 筆電出貨可望年增逾四成。此趨勢將為面板廠與顯示供應鏈帶來新一波換機需求，高階筆電加速由 LCD 轉向 OLED，面板、驅動 IC 等相關族群可望受惠。",
+          "summary_en": "Research firm TrendForce projects global OLED notebook shipments will rise more than 40% year-on-year in 2027, helped by Apple introducing an OLED MacBook Pro. The forecast signals a fresh demand wave for panel makers and the wider display supply chain as premium laptops shift away from LCD toward OLED.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6640956"
         },
         {
-          "title_zh": "高資本支出支撐先進製程擴產",
-          "title_en": "Heavy capex sustains advanced-node build-out",
-          "summary_zh": "台積電 2026 年資本支出維持在 600 至 640 億美元區間，用於擴充先進製程與封裝產能，美國先進封裝布局並延伸至 2028 年。持續的高投資顯示對多年期 AI 需求的信心，也讓設備與材料供應商成為市場焦點，帶動整體科技聚落的資本支出動能。",
-          "summary_en": "TSMC is keeping 2026 capital spending in the US$60–64 billion range to expand leading-edge and packaging capacity, while US advanced-packaging plans extend toward 2028. The sustained investment signals confidence in multi-year AI demand and keeps equipment and materials suppliers in focus across the island's tech cluster.",
-          "source_name": "StatementDog",
-          "source_url": "https://statementdog.com/news/17880"
+          "title_zh": "亞德客-KY 前三季 EPS 44.14 元，已賺贏去年全年",
+          "title_en": "Airtac's nine-month EPS already beats all of last year",
+          "summary_zh": "氣動元件廠亞德客-KY 公布前三季 EPS 達 44.14 元，已超越去年全年水準，並表示第四季營收可望與前季持平，呈現「淡季不淡」。受惠自動化與 AI 相關產能建置需求，傳統淡季獲得支撐，顯示工業自動化題材延續，為非電子傳產族群的一大亮點。",
+          "summary_en": "Pneumatic-components maker Airtac-KY reported nine-month EPS of NT$44.14, already surpassing its full-year figure a year earlier, and said fourth-quarter revenue should hold roughly flat despite the seasonal lull—\"a slow season that isn't slow.\" Demand tied to automation and AI-related capacity build-out is cushioning the traditional off-peak for the industrial name.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6641232"
         }
       ]
     },
@@ -57,20 +55,20 @@
       "section_zh": "金融業",
       "items": [
         {
-          "title_zh": "金管會開放壽險投資健康福祉事業",
-          "title_en": "FSC opens insurers to health-and-wellness investments",
-          "summary_zh": "金管會取消投資須與保險本業結合的限制，開放保險公司持股至 100%，新增 5 大類、合計 13 種可投資標的，即日起實施。此舉放寬壽險資金運用範疇，引導長期資金投入國內健康照護與福祉產業，有助壽險業分散資產配置並對接高齡化社會的照護需求。",
-          "summary_en": "The Financial Supervisory Commission removed the requirement that such holdings link to insurance operations and now lets insurers take stakes of up to 100%, adding five categories covering 13 eligible asset types, effective immediately. The move broadens how life insurers deploy capital and channels long-term funds into domestic wellness and care infrastructure.",
-          "source_name": "NOWnews",
-          "source_url": "https://www.nownews.com/news/6884087"
+          "title_zh": "央行動向／Fed 維持利率，銀行看美元漲勢減弱",
+          "title_en": "Fed's rate hold trims the dollar's upside, banks say",
+          "summary_zh": "美國聯準會如市場預期維持利率不變，國內銀行外匯部門指出，此舉使美元近期漲勢趨緩。由於主席華許對後續路徑著墨不多，匯市策略師認為年底前美元走勢將更趨雙向，牽動出口商避險成本與債券部位配置，金融機構對匯率波動保持觀望。",
+          "summary_en": "The US Federal Reserve left policy rates unchanged as expected, and Taiwan bank FX desks said the decision weakened the dollar's recent momentum. With Fed Chair Kevin Warsh offering little steer on the path ahead, strategists see a more two-sided dollar into year-end, affecting exporters' hedging costs and the positioning of bond portfolios.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6640272"
         },
         {
-          "title_zh": "金管會訂定銀行家族辦公室顧問業務規範",
-          "title_en": "New family-office advisory rules for banks",
-          "summary_zh": "金管會發布銀行辦理家族辦公室顧問業務規範，呼應打造亞洲資產管理中心、吸引高資產家族與家族辦公室進駐的政策。主管機關並表示將持續滾動檢討新一代清償能力制度，促請壽險業調整商品結構、強化資產與負債的幣別及期間匹配，以降低利率與匯率風險。",
-          "summary_en": "The FSC issued guidelines governing banks' family-office consulting services, part of a push to build an Asian asset-management hub and attract high-net-worth families and family offices. Regulators also flagged a rolling review of the new-generation solvency regime and urged insurers to adjust product mixes and tighten asset-liability currency and duration matching.",
-          "source_name": "金管會",
-          "source_url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2"
+          "title_zh": "台幣轉升，央行重申「柳樹理論」",
+          "title_en": "Taiwan dollar firms as the central bank reaffirms its \"willow theory\"",
+          "summary_zh": "新台幣兌美元收在 32.418 元、升值 3.4 分，成交量縮、市場偏觀望，央行再度重申「柳樹理論」，強調彈性漸進調整。此表態意味央行將持續平抑匯率劇烈波動，對進出口商報價與外幣存款族群具參考意義；短線台幣料在區間內隨國際美元變化。",
+          "summary_en": "The Taiwan dollar closed at 32.418 per US dollar, up 3.4 cents, on thinner turnover and the central bank's repeated reference to its \"willow theory\" of flexible, gradual adjustment. The stance signals continued smoothing of sharp swings, a factor for importers, exporters and foreign-currency depositors watching year-end flows.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6639554"
         }
       ]
     },
@@ -79,128 +77,20 @@
       "section_zh": "財富管理",
       "items": [
         {
-          "title_zh": "金管會鬆綁財富管理保險商品規定",
-          "title_en": "FSC relaxes rules for wealth-management insurance products",
-          "summary_zh": "保險局開放財富管理保險商品不適用「人壽保險商品死亡給付對保單價值準備金」相關規定，讓業者設計鎖定高資產客群的商品更具彈性。此調整配合主管機關發展境內高端財富與傳承規劃的方向，可望帶動結構型與高保額保單商品的創新與市場需求。",
-          "summary_en": "The Insurance Bureau opened wealth-management insurance products to an exemption from the rule linking death-benefit payouts to policy reserves, giving insurers more flexibility to design products aimed at affluent clients. The change dovetails with regulators' broader effort to develop high-end wealth and estate-planning solutions onshore.",
-          "source_name": "金管會",
-          "source_url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2"
+          "title_zh": "艾克曼選股法則：鎖定 20 年後仍值錢的企業",
+          "title_en": "Ackman's playbook: own a few businesses still valuable in 20 years",
+          "summary_zh": "億萬富豪投資人艾克曼重申集中持股策略，僅押注少數個股，並以「20 年後仍具價值」為篩選標準。對高資產族群而言，此思維傾向偏好品質優異、護城河深厚的長青企業與長線持有，而非追逐短線動能；在 AI 權值股評價劇烈波動之際，更凸顯長期品質投資的重要性。",
+          "summary_en": "Billionaire investor Bill Ackman reiterated a concentrated approach, holding only a handful of stocks and screening for companies likely to still be valuable two decades out. For high-net-worth portfolios the message favours quality, durable franchises and long holding periods over chasing short-term momentum—especially amid volatile AI-leader valuations.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6640066"
         },
         {
-          "title_zh": "私人銀行動能強勁",
-          "title_en": "Private-banking momentum stays strong",
-          "summary_zh": "台新銀行表示獲 PBI 全球財富管理大獎雙獎肯定，2026 年上半年高資產客戶數與 AUM 分別成長約 186% 與 176%。業界報告預估台灣高資產人口將由 2025 年約 12.3 萬人增至 2029 年約 15.5 萬人，逾七成已布局境外資產，跨境配置與傳承需求成為私人銀行成長主軸。",
-          "summary_en": "Taishin Bank said it won dual honours at the PBI global wealth-management awards, with high-net-worth client numbers and AUM up about 186% and 176% respectively in the first half of 2026. Industry reports project Taiwan's HNW population rising from roughly 123,000 in 2025 toward 155,000 by 2029, with over 70% already holding offshore assets.",
-          "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/5636/9499607"
-        }
-      ]
-    },
-    {
-      "section": "Tax & Regulations",
-      "section_zh": "稅務法規",
-      "items": [
-        {
-          "title_zh": "立院三讀通過擬制遺產課稅修法",
-          "title_en": "Legislature finalises deemed-estate tax change",
-          "summary_zh": "立法院三讀通過修法，將死亡前兩年內的贈與併入遺產總額，由受贈人承擔相應稅額；財政部正研擬修正施行細則與申報書表，待總統公布後加強宣導。2025 年遺產稅收達 443.3 億元創單年新高，目前免稅額 1,333 萬元，2027 年是否調升仍在評估，高資產族群傳承規劃須留意申報變動。",
-          "summary_en": "Taiwan's legislature passed amendments folding gifts made within two years before death into the taxable estate, with recipients bearing the corresponding tax. The Ministry of Finance is drafting enforcement rules and filing forms ahead of promulgation. Estate-tax revenue hit a record NT$44.33 billion in 2025, and the exemption threshold stands at NT$13.33 million, with a possible increase under review for 2027.",
-          "source_name": "中央社",
-          "source_url": "https://www.cna.com.tw/news/afe/202608210289.aspx"
-        },
-        {
-          "title_zh": "CRS 交換範圍仍窄、CARF 將上路",
-          "title_en": "CRS exchange scope stays narrow as CARF looms",
-          "summary_zh": "台灣 CRS 自動資訊交換對象目前仍僅日本、澳洲、英國三國，因無法加入 OECD 多邊架構，只能逐一簽署雙邊協定。財政部強調 CRS 取得的資訊不會直接據以課稅，而是供國稅局評估逃漏風險與選案。國際間 OECD 已推出加密資產申報框架 CARF，首次正式交換預計落在 2027 年，海外資產配置者宜及早檢視申報。",
-          "summary_en": "Taiwan's automatic CRS information exchange still covers only Japan, Australia and the UK, since it must sign bilateral deals outside the OECD's multilateral framework. The Ministry of Finance stresses CRS data is used for risk assessment and case selection, not direct taxation. Globally, the OECD's crypto-asset reporting framework (CARF) heads toward a first exchange in 2027.",
-          "source_name": "Stockfeel",
-          "source_url": "https://www.stockfeel.com.tw/%E4%BD%95%E8%AC%82crs%EF%BC%9F%E5%8F%B0%E7%81%A3%E5%8A%A0%E5%85%A5crs%E5%85%B1%E5%90%8C%E7%94%B3%E5%A0%B1%E6%BA%96%E5%89%87%E7%9A%84%E5%BD%B1%E9%9F%BF/"
-        }
-      ]
-    },
-    {
-      "section": "Macro & Policy",
-      "section_zh": "總經政策",
-      "items": [
-        {
-          "title_zh": "主計總處上修 2026 GDP 至近 40 年新高",
-          "title_en": "DGBAS lifts 2026 growth forecast to a near-40-year high",
-          "summary_zh": "主計總處將 2026 年經濟成長率預測上修至約 11.05%，為 1988 年以來最高，主因 AI 供應鏈帶動出口大增，全年商品出口上看 9,036 億美元、年增 41.19%。CPI 年增率預估 2.07%，略高於央行 2% 通膨警戒線；2027 年成長率估回落至約 6.04%，顯示高成長動能集中於科技出口，內需與物價仍是政策關注焦點。",
-          "summary_en": "The budget and statistics agency raised its 2026 GDP growth forecast to about 11.05%, the highest since 1988, driven by an AI-led export surge, with goods exports projected at US$903.6 billion (up 41.19%). It expects 2026 CPI of 2.07%, slightly above the central bank's 2% alert line, and growth moderating to about 6.04% in 2027.",
-          "source_name": "Uanalyze",
-          "source_url": "https://uanalyze.com.tw/articles/1433153466"
-        },
-        {
-          "title_zh": "聯準會以分歧票數維持利率不變",
-          "title_en": "Fed holds rates steady in split vote",
-          "summary_zh": "美國聯準會會後以 10 比 2 票決議維持政策利率於 3.75%～4.00% 區間，此前 9 月才完成 2023 年以來首度升息。官員釋出偏鷹訊號，部分與會者仍認為年底前可能再升息一次。此一全球貨幣政策基調牽動資金流向與匯率，也將影響台灣央行後續利率決策與市場資金情緒。",
-          "summary_en": "The US Federal Reserve voted 10-2 to keep its policy rate in the 3.75%–4.00% range after its two-day meeting, following September's first hike since 2023. Officials signalled a hawkish bias, with some participants still seeing a further increase as possible before year-end, keeping global monetary policy and Taiwan's own rate path in focus.",
-          "source_name": "Yahoo Finance",
-          "source_url": "https://finance.yahoo.com/markets/live/stock-market-today-dow-sp-500-nasdaq-rise-as-fed-holds-rates-steady-in-split-vote-185837696.html"
-        }
-      ]
-    },
-    {
-      "section": "Global Markets",
-      "section_zh": "國際財經",
-      "items": [
-        {
-          "title_zh": "聯準會按兵後美股連三日走高",
-          "title_en": "Wall Street climbs for a third day after the Fed hold",
-          "summary_zh": "聯準會維持利率不變後，美股主要指數連三個交易日收高，投資人對經濟韌性與升息疑慮降溫感到安心，風險偏好穩定，大盤續處歷史高點區間。不過官員偏鷹的政策語氣，使市場持續關注年底前是否再升息，以及後續通膨數據走向對資金情緒的影響。",
-          "summary_en": "US equities extended gains for a third straight session after the Federal Reserve kept rates steady, with investors encouraged by a resilient economy and easing hike fears. Record-high territory across major benchmarks reflected steady risk appetite, though a hawkish policy tone left markets watching year-end rate signals and incoming inflation data.",
-          "source_name": "CNBC",
-          "source_url": "https://www.cnbc.com/2026/10/27/stock-market-today-live-updates.html"
-        },
-        {
-          "title_zh": "AI 資本支出財報季牽動科技股情緒",
-          "title_en": "AI-capex earnings season drives tech sentiment",
-          "summary_zh": "美國大型科技股財報為全球科技股定調，微軟靠雲端強勁營收超預期，字母（Alphabet）則表現不如預期，凸顯市場高度看重 AI 投資回報。兩者分歧反映投資人嚴格檢視雲端成長、資本支出與自由現金流，相關題材也牽動台灣 AI 硬體供應鏈與全球半導體族群的市場氛圍。",
-          "summary_en": "Megacap results set the tone for global tech, with Microsoft beating on cloud strength while Alphabet disappointed, underscoring how heavily markets weigh AI investment returns. The divergence highlights investor scrutiny of cloud growth, capital spending and free cash flow, themes that ripple through Taiwan's AI hardware supply chain and global semiconductor sentiment.",
-          "source_name": "TheStreet",
-          "source_url": "https://pro.thestreet.com/market-commentary/microsoft-beats-alphabet-misses-and-fed-holds-steady"
-        }
-      ]
-    },
-    {
-      "section": "International",
-      "section_zh": "國際",
-      "items": [
-        {
-          "title_zh": "美股收高、指數續守高檔（2026-10-28）",
-          "title_en": "US stocks close higher as benchmarks hold near records (2026-10-28)",
-          "summary_zh": "聯準會決議維持利率後，美股三大指數同步收高：道瓊漲約 0.19% 至 52,475.10 點，標普 500 漲 0.28% 至 7,743.98 點，那斯達克綜合指數漲 0.27% 至 26,549.85 點。甲骨文（Oracle）為標普成分股中表現最亮眼者，大漲 10.73% 收在 144.54 美元。",
-          "summary_en": "All three major US indexes finished higher after the Fed's steady-rate decision: the Dow rose about 0.19% to 52,475.10, the S&P 500 gained 0.28% to 7,743.98, and the Nasdaq Composite added 0.27% to 26,549.85. Oracle was the standout S&P 500 gainer, jumping 10.73% to 144.54.",
-          "source_name": "Investing.com",
-          "source_url": "https://www.investing.com/news/stock-market-news/us-stocks-higher-at-close-of-trade-dow-jones-industrial-average-up-019-4980754",
-          "published": "2026-10-28"
-        },
-        {
-          "title_zh": "聯準會以 10 比 2 票維持利率不變（2026-10-28）",
-          "title_en": "Fed holds rates steady in 10-2 vote (2026-10-28)",
-          "summary_zh": "美國聯準會會後以 10 比 2 票決議將基準利率維持於 3.75%～4.00% 區間，於 9 月升息後暫停行動。官員維持偏鷹語氣，部分成員認為通膨仍高於目標、勞動市場降溫之際，年底前仍有再升息一次的空間，後續政策路徑成市場焦點。",
-          "summary_en": "The Federal Reserve voted 10-2 to keep its benchmark rate in the 3.75%–4.00% range after its two-day meeting, pausing after September's rate hike. Officials kept a hawkish tone, with some seeing room for a further increase before year-end as inflation runs above target and the labour market cools.",
-          "source_name": "Yahoo Finance",
-          "source_url": "https://finance.yahoo.com/markets/live/stock-market-today-dow-sp-500-nasdaq-rise-as-fed-holds-rates-steady-in-split-vote-185837696.html",
-          "published": "2026-10-28"
-        },
-        {
-          "title_zh": "微軟靠 AI 雲端成長財報超預期（2026-10-28）",
-          "title_en": "Microsoft beats on AI-driven cloud growth (2026-10-28)",
-          "summary_zh": "微軟公布會計年度第一季營收 922.8 億美元，優於市場預期的 906.9 億美元，調整後每股盈餘 4.89 美元也超標。Azure 營收在 AI 需求帶動下年增 48% 至 332 億美元，盤後股價上漲約 4%。不過受龐大 AI 資本支出影響，自由現金流較去年同期減少 27%，顯示投入與回報並進。",
-          "summary_en": "Microsoft reported fiscal first-quarter revenue of $92.28 billion, above the $90.69 billion expected, with adjusted EPS of $4.89 topping estimates. Azure revenue rose 48% to $33.2 billion on AI demand, sending shares up about 4% after hours, though free cash flow fell 27% from a year earlier amid heavy AI capital spending.",
-          "source_name": "CNBC",
-          "source_url": "https://www.cnbc.com/2026/10/28/microsoft-msft-q1-earnings-report-2027.html",
-          "published": "2026-10-28"
-        },
-        {
-          "title_zh": "字母近四年首度財報不如預期（2026-10-28）",
-          "title_en": "Alphabet misses for first time in nearly four years (2026-10-28)",
-          "summary_zh": "字母（Alphabet）第三季營收 1,275.8 億美元，低於預期的 1,282.2 億美元，為近四年首次營收與獲利雙雙不如預期。搜尋營收 633.5 億美元不及目標，雖然雲端營收倍增至 307 億美元。受自由現金流轉負影響，盤後股價重挫約 9%，反映市場對 AI 投資回收節奏的疑慮升高。",
-          "summary_en": "Alphabet posted third-quarter revenue of $127.58 billion, below the $128.22 billion expected, its first top-and-bottom-line miss in nearly four years. Search revenue of $63.35 billion fell short, even as cloud revenue more than doubled to $30.7 billion. Shares dropped about 9% in extended trading on a negative free-cash-flow print.",
-          "source_name": "CNBC",
-          "source_url": "https://www.cnbc.com/2026/10/28/alphabet-googl-earnings-q3-2026.html",
-          "published": "2026-10-28"
+          "title_zh": "Fed 利率凍漲，法人授「關鍵 3 招」布局美國股債雙贏",
+          "title_en": "With the Fed on hold, strategists pitch a three-step stock-bond play",
+          "summary_zh": "法人指出，聯準會利率「凍漲」加上選後氛圍，有望同時支撐美國股市與債市，並提出「關鍵 3 招」——在債券存續期間與選股之間取得平衡——力求掌握股債雙贏契機。此配置思維適合追求分散的財富管理組合，在利率不確定下兼顧收益與資本利得。",
+          "summary_en": "Taiwan institutional strategists argued the Fed's rate \"freeze\" and post-election backdrop could support both US equities and bonds, and laid out three tactical steps—balancing bond duration with selective equity exposure—to capture a potential \"win-win.\" The framing targets diversified wealth portfolios navigating rate uncertainty into year-end.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6640877"
         }
       ]
     }
