@@ -76,7 +76,7 @@
     {
       "name": "Nikkei 225",
       "name_zh": null,
-      "close": 64659.46875,
+      "close": 64659.47,
       "daily_pct": 1.1,
       "mtd_pct": -4.19,
       "ytd_pct": 27.05,
@@ -112,7 +112,7 @@
     {
       "name": "KOSPI",
       "name_zh": null,
-      "close": 5937.66015625,
+      "close": 5937.66,
       "daily_pct": -1.24,
       "mtd_pct": -12.07,
       "ytd_pct": 42.67,
@@ -174,29 +174,29 @@
     },
     {
       "name": "US 2-Year",
-      "yield_pct": 4.66,
-      "daily_bps": -7.7,
+      "yield_pct": 4.64,
+      "daily_bps": -9.8,
       "mtd_bps": -21.0,
       "closing_date": "2026-10-29"
     },
     {
       "name": "Germany 10-Year",
-      "yield_pct": 3.36,
-      "daily_bps": -2.1,
+      "yield_pct": 3.35,
+      "daily_bps": -3.5,
       "mtd_bps": -18.89,
       "closing_date": "2026-10-29"
     },
     {
       "name": "Japan 10-Year",
-      "yield_pct": 2.84,
-      "daily_bps": 1.4,
+      "yield_pct": 2.83,
+      "daily_bps": -0.1,
       "mtd_bps": -19.0,
       "closing_date": "2026-10-29"
     },
     {
       "name": "UK 10-Year",
-      "yield_pct": 5.29,
-      "daily_bps": -4.2,
+      "yield_pct": 5.28,
+      "daily_bps": -5.9,
       "mtd_bps": -8.05,
       "closing_date": "2026-10-29"
     },
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 102.19000244140625,
       "daily_pct": -0.13,
-      "mtd_pct": 0.76,
-      "ytd_pct": 4.01,
+      "mtd_pct": 0.59,
+      "ytd_pct": 3.83,
       "closing_date": "2026-10-28"
     },
     {
@@ -406,10 +406,10 @@
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
       "implied_rate": 4.03,
-      "delta_rate": 0.14,
-      "delta_bps": 14.0,
-      "p_hike": 56.0,
-      "p_hold": 44.0,
+      "delta_rate": 0.15,
+      "delta_bps": 15.0,
+      "p_hike": 60.0,
+      "p_hold": 40.0,
       "p_cut": 0,
       "is_reference": false
     }
