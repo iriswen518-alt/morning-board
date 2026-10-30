@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T19:37:01+08:00",
+  "generated_at": "2026-10-30T20:58:54+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -31,17 +31,17 @@
       "error": null
     },
     {
-      "symbol": "RIVN",
-      "name_zh": "Rivian",
+      "symbol": "SPCX",
+      "name_zh": "Space Exploration Technologies",
       "kind": "US",
-      "price": 11.45,
-      "change_pct": -1.89,
-      "mtd_pct": -23.36,
-      "ytd_pct": -41.91,
+      "price": 143.89,
+      "change_pct": -0.92,
+      "mtd_pct": -4.62,
+      "ytd_pct": null,
       "market_date": "2026-10-29",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RIVN.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPCX.US",
       "error": null
     },
     {
@@ -59,17 +59,17 @@
       "error": null
     },
     {
-      "symbol": "SPCX",
-      "name_zh": "Space Exploration Technologies",
+      "symbol": "DELL",
+      "name_zh": "Dell Technologies",
       "kind": "US",
-      "price": 143.89,
-      "change_pct": -0.92,
-      "mtd_pct": -4.62,
-      "ytd_pct": null,
+      "price": 475.51,
+      "change_pct": -3.7,
+      "mtd_pct": -11.61,
+      "ytd_pct": 277.75,
       "market_date": "2026-10-29",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPCX.US",
+      "per": 26.4877,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DELL.US",
       "error": null
     },
     {
@@ -87,17 +87,17 @@
       "error": null
     },
     {
-      "symbol": "DELL",
-      "name_zh": "Dell Technologies",
+      "symbol": "ABBV",
+      "name_zh": "艾伯維",
       "kind": "US",
-      "price": 475.51,
-      "change_pct": -3.7,
-      "mtd_pct": -11.61,
-      "ytd_pct": 277.75,
+      "price": 290.79,
+      "change_pct": 1.68,
+      "mtd_pct": 11.16,
+      "ytd_pct": 27.27,
       "market_date": "2026-10-29",
-      "per": 26.4877,
+      "per": 80.0916,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DELL.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ABBV.US",
       "error": null
     },
     {
@@ -115,17 +115,17 @@
       "error": null
     },
     {
-      "symbol": "ABBV",
-      "name_zh": "艾伯維",
+      "symbol": "RIVN",
+      "name_zh": "Rivian",
       "kind": "US",
-      "price": 290.79,
-      "change_pct": 1.68,
-      "mtd_pct": 11.16,
-      "ytd_pct": 27.27,
+      "price": 11.45,
+      "change_pct": -1.89,
+      "mtd_pct": -23.36,
+      "ytd_pct": -41.91,
       "market_date": "2026-10-29",
-      "per": 80.0916,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ABBV.US",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RIVN.US",
       "error": null
     },
     {
@@ -143,48 +143,6 @@
       "error": null
     },
     {
-      "symbol": "MSTR",
-      "name_zh": "MicroStrategy",
-      "kind": "US",
-      "price": 141.62,
-      "change_pct": -2.44,
-      "mtd_pct": -7.49,
-      "ytd_pct": -6.8,
-      "market_date": "2026-10-29",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MSTR.US",
-      "error": null
-    },
-    {
-      "symbol": "COIN",
-      "name_zh": "Coinbase",
-      "kind": "US",
-      "price": 160.59,
-      "change_pct": -1.07,
-      "mtd_pct": -13.85,
-      "ytd_pct": -28.99,
-      "market_date": "2026-10-29",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=COIN.US",
-      "error": null
-    },
-    {
-      "symbol": "TWLO",
-      "name_zh": "Twilio",
-      "kind": "US",
-      "price": 241.9,
-      "change_pct": -4.68,
-      "mtd_pct": -17.29,
-      "ytd_pct": 70.06,
-      "market_date": "2026-10-29",
-      "per": 31.8784,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TWLO.US",
-      "error": null
-    },
-    {
       "symbol": "SOXL",
       "name_zh": "Direxion Daily Semiconductor Bu",
       "kind": "US",
@@ -199,17 +157,17 @@
       "error": null
     },
     {
-      "symbol": "CROX",
-      "name_zh": "Crocs",
+      "symbol": "REGN",
+      "name_zh": "再生元",
       "kind": "US",
-      "price": 150.26,
-      "change_pct": 25.54,
-      "mtd_pct": 28.09,
-      "ytd_pct": 75.7,
+      "price": 818.77,
+      "change_pct": 0.68,
+      "mtd_pct": 7.98,
+      "ytd_pct": 6.08,
       "market_date": "2026-10-29",
-      "per": 12.0868,
+      "per": 19.5828,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CROX.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=REGN.US",
       "error": null
     },
     {
@@ -238,6 +196,48 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VOO.US",
+      "error": null
+    },
+    {
+      "symbol": "CCJ",
+      "name_zh": "Came",
+      "kind": "US",
+      "price": 83.49,
+      "change_pct": -0.42,
+      "mtd_pct": -3.67,
+      "ytd_pct": -8.74,
+      "market_date": "2026-10-29",
+      "per": 145.0921,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CCJ.US",
+      "error": null
+    },
+    {
+      "symbol": "AZN",
+      "name_zh": "AstraZeneca",
+      "kind": "US",
+      "price": 174.4,
+      "change_pct": 2.88,
+      "mtd_pct": 8.01,
+      "ytd_pct": -5.15,
+      "market_date": "2026-10-29",
+      "per": 25.2472,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AZN.US",
+      "error": null
+    },
+    {
+      "symbol": "TWLO",
+      "name_zh": "Twilio",
+      "kind": "US",
+      "price": 241.9,
+      "change_pct": -4.68,
+      "mtd_pct": -17.29,
+      "ytd_pct": 70.06,
+      "market_date": "2026-10-29",
+      "per": 31.8784,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TWLO.US",
       "error": null
     },
     {
