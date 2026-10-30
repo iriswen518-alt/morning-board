@@ -1,11 +1,9 @@
 {
-  "news_date": "2026-10-30",
+  "news_date": "2026-10-31",
   "tldr": [
-    "台股加權指數收漲 0.59% 至約 46,368 點，日月光、瑞昱法說強化 AI 供應鏈題材。",
-    "美股下跌，字母營收遜色、股價重挫約 12–13%，AI 資本支出疑慮再起；微軟財報優於預期、Azure 年增 48%。",
-    "聯準會以 10 比 2 票維持利率 3.75%–4.00%，9 月通膨升至 3.7%，對 12 月方向著墨不多。",
-    "歐洲央行維持存款利率 2.5%，拉加德宣布將於 2027 年 2 月提前卸任，油價與法債壓力升溫。",
-    "國內銀行與法人看美元趨雙向，傾向股債均衡、品質優先配置。"
+    "台股加權指數重挫 3.88% 至約 45,212 點，全球 AI 晶片賣壓衝擊亞股。",
+    "聯發科首顆 AI ASIC 放量，第四季雲端 ASIC 營收上修至約 25 億美元、2027 年目標達 160 億美元。",
+    "波動加劇下，高盛傾向以選擇權避險；美債固定利率走高吸引穩健收益型投資人。"
   ],
   "sections": [
     {
@@ -13,20 +11,20 @@
       "section_zh": "股市行情",
       "items": [
         {
-          "title_zh": "日月光 Q3 純益季增 28%、封測毛利率首破 3 成",
-          "title_en": "ASE posts a 28% jump in Q3 net profit as packaging margins top 30%",
-          "summary_zh": "封測龍頭日月光投控第三季純益季增約 28%、EPS 6.13 元，封測（ATM）毛利率首度突破 30%，管理層視此為未來基準底線。公司估第四季營收季增 6–8% 並再度追加資本支出，LEAP 目標上修、明年可望翻倍，激勵台股 AI 先進封裝供應鏈買氣；加權指數前一交易日收 46,368 點、漲 0.59%。",
-          "summary_en": "Advanced packaging-and-test leader ASE reported third-quarter net profit up about 28% sequentially, with EPS of NT$6.13 and packaging/test gross margin breaking above 30% for the first time—a level management expects to become the new baseline. It guided fourth-quarter revenue up 6–8% quarter-on-quarter and raised capex again, lifting sentiment across Taiwan's AI advanced-packaging chain.",
+          "title_zh": "台股重挫 3.88%，全球晶片賣壓擴散",
+          "title_en": "Taiwan shares tumble 3.88% as the global chip sell-off deepens",
+          "summary_zh": "台股加權指數 10 月 30 日收跌 3.88% 至約 45,212 點，櫃買指數下跌 4.4%，AI 晶片賣壓席捲亞股。盤後壓力延續，美股科技股走弱、那斯達克重挫逾 2% 創約兩個多月低點，台積電 ADR 跌逾 3%，台灣 AI 供應鏈短線仍偏弱。",
+          "summary_en": "Taiwan's weighted index closed down 3.88% at about 45,212 on Oct 30, with the OTC index off 4.4%, as a broad AI-chip rout spread across Asia. The pressure extended overnight: US tech stocks slid, the Nasdaq fell more than 2% to a roughly two-month low and TSMC's ADR dropped over 3%, leaving Taiwan's AI supply chain on the defensive.",
           "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6640534"
+          "source_url": "https://news.cnyes.com/news/id/6642199"
         },
         {
-          "title_zh": "瑞昱法說：Q4 淡季不淡、Wi-Fi 8 明年下半年放量",
-          "title_en": "Realtek sees a resilient Q4 and Wi-Fi 8 ramp from late 2027",
-          "summary_zh": "IC 設計廠瑞昱法說指出，傳統淡季的第四季表現優於季節性，並預期 Wi-Fi 8 將於 2027 年下半年進入放量階段；公司訂出 2030 年 HPC 與邊緣 AI 營收占比目標，顯示 AI 連網需求正從資料中心晶片向台灣 IC 設計族群擴散，支撐類股評價與市場信心。",
-          "summary_en": "IC designer Realtek told its earnings call that the usually slow fourth quarter is holding up better than seasonal norms, and projected Wi-Fi 8 volume shipments from the second half of 2027. It set a target for HPC and edge-AI to form a meaningful share of revenue by 2030, showing AI-connectivity demand broadening beyond data-centre chips into Taiwan's design houses.",
+          "title_zh": "〈聯發科法說〉首顆 AI ASIC 放量，Q4 貢獻上修至 25 億美元",
+          "title_en": "MediaTek's first AI ASIC ramps, lifting its Q4 cloud-revenue outlook to US$2.5bn",
+          "summary_zh": "聯發科執行長蔡力行於法說會表示，首款 AI 加速器 ASIC 已於 9 月出貨，受惠客戶需求強勁，第四季雲端 ASIC 營收可達約 25 億美元；2027 年該專案營收可望達目標高標約 160 億美元，約占整體 AI ASIC 市場兩成，基板產能仍是供應鏈較具挑戰的環節。",
+          "summary_en": "At its earnings call, MediaTek said its first AI-accelerator ASIC began shipping in September and that strong customer demand lifts Q4 cloud-ASIC revenue to about US$2.5bn. It expects the project to reach the high end of its target, roughly US$16bn, in 2027 — around 20% of the AI-ASIC market — while working with suppliers to secure scarce substrate capacity.",
           "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6612024"
+          "source_url": "https://news.cnyes.com/news/id/6642405"
         }
       ]
     },
@@ -35,20 +33,20 @@
       "section_zh": "產業動態",
       "items": [
         {
-          "title_zh": "集邦：MacBook Pro 新機入局，2027 年 OLED 筆電出貨估年增逾 40%",
-          "title_en": "TrendForce: OLED notebook shipments to grow over 40% in 2027 as a new MacBook Pro joins",
-          "summary_zh": "研調機構集邦科技預估，隨蘋果推出 OLED 版 MacBook Pro，2027 年全球 OLED 筆電出貨可望年增逾四成。此趨勢將為面板廠與顯示供應鏈帶來新一波換機需求，高階筆電加速由 LCD 轉向 OLED，面板、驅動 IC 等相關族群可望受惠。",
-          "summary_en": "Research firm TrendForce projects global OLED notebook shipments will rise more than 40% year-on-year in 2027, helped by Apple introducing an OLED MacBook Pro. The forecast signals a fresh demand wave for panel makers and the wider display supply chain as premium laptops shift away from LCD toward OLED.",
+          "title_zh": "蕭美琴提無人機三大方向，打造 100% 非紅信賴供應鏈",
+          "title_en": "Vice President Hsiao outlines three pillars for a \"100% non-red\" drone supply chain",
+          "summary_zh": "副總統蕭美琴於「2026 無人機國際論壇」表示，政府將無人系統列為國家戰略最優先項目之一，要打造世界級「無人機國家隊」。將以非紅、值得信賴的供應鏈、邊緣運算與軟體定義創新、無人機外交三大支柱推進，鞏固台灣作為民主無人機供應鏈亞洲中心，應用橫跨國防與農業、交通等民生領域。",
+          "summary_en": "At the 2026 International Drone Forum, Vice President Hsiao Mei-chin said unmanned systems are a top national-strategy priority and pledged a world-class \"drone national team.\" The plan rests on three pillars — a non-red, trusted supply chain, edge-computing and software-defined innovation, and \"drone diplomacy\" partnerships — positioning Taiwan as Asia's hub for a democratic drone supply chain across defence and civilian uses.",
           "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6640956"
+          "source_url": "https://news.cnyes.com/news/id/6642208"
         },
         {
-          "title_zh": "亞德客-KY 前三季 EPS 44.14 元，已賺贏去年全年",
-          "title_en": "Airtac's nine-month EPS already beats all of last year",
-          "summary_zh": "氣動元件廠亞德客-KY 公布前三季 EPS 達 44.14 元，已超越去年全年水準，並表示第四季營收可望與前季持平，呈現「淡季不淡」。受惠自動化與 AI 相關產能建置需求，傳統淡季獲得支撐，顯示工業自動化題材延續，為非電子傳產族群的一大亮點。",
-          "summary_en": "Pneumatic-components maker Airtac-KY reported nine-month EPS of NT$44.14, already surpassing its full-year figure a year earlier, and said fourth-quarter revenue should hold roughly flat despite the seasonal lull—\"a slow season that isn't slow.\" Demand tied to automation and AI-related capacity build-out is cushioning the traditional off-peak for the industrial name.",
+          "title_zh": "八貫前三季 EPS 5.7 元，已賺贏去年全年",
+          "title_en": "Baguang's nine-month EPS of NT$5.7 already tops all of 2025",
+          "summary_zh": "TPU 材料廠八貫公布第三季 EPS 1.6 元，前三季累計 EPS 達 5.7 元，已超越 2025 年全年獲利。受惠戶外、醫療應用擴大與航太、航海、軍工客戶強勁拉貨及標案出貨，單季營收 9.4 億元、年增 53.78%，毛利率升至 25.15%。公司表示新接訂單已排到 2027 年第二季後，訂單能見度強勁。",
+          "summary_en": "TPU-material maker Baguang reported Q3 EPS of NT$1.6 and cumulative nine-month EPS of NT$5.7, beating its full-year 2025 profit, as outdoor, medical, aerospace, marine and defence demand lifted Q3 revenue 53.8% YoY to NT$940m with gross margin rising to 25.15%. Management says new orders are now booked through Q2 2027, pointing to strong order visibility.",
           "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6641232"
+          "source_url": "https://news.cnyes.com/news/id/6642259"
         }
       ]
     },
@@ -57,20 +55,20 @@
       "section_zh": "金融業",
       "items": [
         {
-          "title_zh": "央行動向／Fed 維持利率，銀行看美元漲勢減弱",
-          "title_en": "Fed's rate hold trims the dollar's upside, banks say",
-          "summary_zh": "美國聯準會如市場預期維持利率不變，國內銀行外匯部門指出，此舉使美元近期漲勢趨緩。由於主席華許對後續路徑著墨不多，匯市策略師認為年底前美元走勢將更趨雙向，牽動出口商避險成本與債券部位配置，金融機構對匯率波動保持觀望。",
-          "summary_en": "The US Federal Reserve left policy rates unchanged as expected, and Taiwan bank FX desks said the decision weakened the dollar's recent momentum. With Fed Chair Kevin Warsh offering little steer on the path ahead, strategists see a more two-sided dollar into year-end, affecting exporters' hedging costs and the positioning of bond portfolios.",
+          "title_zh": "台中銀統籌 23 億元聯貸，支持高雄舊市議會都更案",
+          "title_en": "Taichung Bank leads NT$2.3bn syndicated loan for a Kaohsiung urban-renewal project",
+          "summary_zh": "台中銀行統籌主辦崇偉營造承攬之「高雄市舊市議會公辦都更新建工程主體工程」23 億元聯合授信案，攜手合庫、臺灣企銀、全國農業金庫共同主辦，並邀高雄銀行參貸，10 月 28 日完成簽約。本案結合歷史建築保存與都市機能再造，位於高雄亞洲資產管理中心專區，展現銀行同業合作支持重大公共建設。",
+          "summary_en": "Taichung Bank arranged a NT$2.3bn joint credit facility for Chong-Wei Construction's main-structure contract on the Kaohsiung Old City Council public urban-renewal project, co-organised with Cooperative Bank, Taiwan SME Bank and the National Agricultural Credit Union, with Kaohsiung Bank participating. Signed Oct 28, the deal shows domestic banks jointly financing major public construction tied to the city's asset-management-centre zone.",
           "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6640272"
+          "source_url": "https://news.cnyes.com/news/id/6642555"
         },
         {
-          "title_zh": "台幣轉升，央行重申「柳樹理論」",
-          "title_en": "Taiwan dollar firms as the central bank reaffirms its \"willow theory\"",
-          "summary_zh": "新台幣兌美元收在 32.418 元、升值 3.4 分，成交量縮、市場偏觀望，央行再度重申「柳樹理論」，強調彈性漸進調整。此表態意味央行將持續平抑匯率劇烈波動，對進出口商報價與外幣存款族群具參考意義；短線台幣料在區間內隨國際美元變化。",
-          "summary_en": "The Taiwan dollar closed at 32.418 per US dollar, up 3.4 cents, on thinner turnover and the central bank's repeated reference to its \"willow theory\" of flexible, gradual adjustment. The stance signals continued smoothing of sharp swings, a factor for importers, exporters and foreign-currency depositors watching year-end flows.",
+          "title_zh": "台灣金聯 25 週年啟動「永續三安 2.0」，跨足不動產控股",
+          "title_en": "Taiwan Jinlian marks 25 years, launching \"Sustainable San'an 2.0\" and a real-estate holding push",
+          "summary_zh": "台灣金聯舉辦 25 週年茶會，董事長宮文萍宣布推動「居住正義永續三安」2.0 版，定位「居住正義國家隊」，由資產處置業者轉型為具完整產業鏈的不動產控股公司。措施涵蓋都更全案管理與前期資金墊付、建商續建資金承諾以防爛尾樓，並結合安養信託擴大社宅參與，財政部、金管會等官員出席見證。",
+          "summary_en": "At its 25th-anniversary event, Chairperson Gong Wen-ping announced an upgraded \"Housing Justice\" programme and said the firm will reposition from an asset-disposal operator into a fully integrated real-estate holding company — a \"national team\" for housing justice. Measures span urban-renewal case management, construction-completion financing to avert stalled projects, and rent-management linked to retirement trusts.",
           "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6639554"
+          "source_url": "https://news.cnyes.com/news/id/6642403"
         }
       ]
     },
@@ -79,106 +77,20 @@
       "section_zh": "財富管理",
       "items": [
         {
-          "title_zh": "艾克曼選股法則：鎖定 20 年後仍值錢的企業",
-          "title_en": "Ackman's playbook: own a few businesses still valuable in 20 years",
-          "summary_zh": "億萬富豪投資人艾克曼重申集中持股策略，僅押注少數個股，並以「20 年後仍具價值」為篩選標準。對高資產族群而言，此思維傾向偏好品質優異、護城河深厚的長青企業與長線持有，而非追逐短線動能；在 AI 權值股評價劇烈波動之際，更凸顯長期品質投資的重要性。",
-          "summary_en": "Billionaire investor Bill Ackman reiterated a concentrated approach, holding only a handful of stocks and screening for companies likely to still be valuable two decades out. For high-net-worth portfolios the message favours quality, durable franchises and long holding periods over chasing short-term momentum—especially amid volatile AI-leader valuations.",
+          "title_zh": "美國抗通膨儲蓄債券利率升至 5.51%，固定利率創近 20 年新高",
+          "title_en": "US inflation-protected savings bonds now yield 5.51%, with the fixed rate at a near-20-year high",
+          "summary_zh": "美國抗通膨儲蓄債券（I Bonds）綜合年利率升至 5.51%，其中固定利率部分攀升至近 20 年新高。固定利率走高意味即使通膨回落，實質報酬仍較具支撐，對追求抗通膨與穩健現金流的投資人而言，是配置海外固定收益、分散資產時值得留意的選項。",
+          "summary_en": "The composite annual rate on US inflation-indexed savings bonds has risen to 5.51%, and the fixed-rate component has climbed to its highest in nearly two decades. A higher fixed rate makes the real return more durable even if inflation eases, drawing interest from income-focused and conservative investors weighing inflation-hedged, overseas fixed-income allocations.",
           "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6640066"
+          "source_url": "https://news.cnyes.com/news/id/6642573"
         },
         {
-          "title_zh": "Fed 利率凍漲，法人授「關鍵 3 招」布局美國股債雙贏",
-          "title_en": "With the Fed on hold, strategists pitch a three-step stock-bond play",
-          "summary_zh": "法人指出，聯準會利率「凍漲」加上選後氛圍，有望同時支撐美國股市與債市，並提出「關鍵 3 招」——在債券存續期間與選股之間取得平衡——力求掌握股債雙贏契機。此配置思維適合追求分散的財富管理組合，在利率不確定下兼顧收益與資本利得。",
-          "summary_en": "Taiwan institutional strategists argued the Fed's rate \"freeze\" and post-election backdrop could support both US equities and bonds, and laid out three tactical steps—balancing bond duration with selective equity exposure—to capture a potential \"win-win.\" The framing targets diversified wealth portfolios navigating rate uncertainty into year-end.",
+          "title_zh": "高盛調整 AI 布局：以選擇權「租用」上漲、買賣權當保險",
+          "title_en": "Goldman reshapes its AI trade: rent the upside with options, buy puts as insurance",
+          "summary_zh": "高盛建議投資人透過買進買權「租用」AI 反彈的上漲空間，並搭配賣權作為下跌保險，而非直接做多。該行指出，今年其動量股票籃子已有逾 30 次單日波動超過 5%，頻率甚至高於 2000 年網路泡沫、2008 年金融危機與疫情期間，因此傾向以限制損失方式參與年底行情，兼顧資產配置的抗震與參與度。",
+          "summary_en": "Goldman Sachs is advising clients to \"rent\" an AI rebound via call options while pairing them with puts for downside protection, rather than going outright long. With its momentum basket seeing more than 30 single-day swings above 5% this year — more frequent than in 2000, 2008 or the pandemic — the bank wants to join a year-end rally while capping losses.",
           "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6640877"
-        }
-      ]
-    },
-    {
-      "section": "Macro & Policy",
-      "section_zh": "總經政策",
-      "items": [
-        {
-          "title_zh": "華許保留升息底牌，重塑 Fed 決策模式",
-          "title_en": "Warsh keeps a rate-hike card in reserve, reshaping Fed decision-making",
-          "summary_zh": "市場解讀聯準會主席華許刻意不讓外界看透下一步，並調整委員會傳達政策的方式，在通膨仍偏高下保留 12 月升息的可能性。此一風格轉變牽動市場對美國利率路徑的預期，為後市增添不確定性，資金配置也更趨謹慎。",
-          "summary_en": "Reporting on Fed Chair Kevin Warsh suggests he is deliberately keeping markets guessing on the next move and reshaping how the committee signals policy, leaving a potential December hike on the table while inflation stays elevated. The shift adds uncertainty to expectations for the US rate path.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6641166"
-        },
-        {
-          "title_zh": "美國初領失業金人數意外下降，Fed 升息空間增",
-          "title_en": "US jobless claims unexpectedly fall, giving the Fed more room",
-          "summary_zh": "美國上周初領失業金人數意外減少、續領人數同步下滑，顯示勞動市場仍具韌性。就業數據偏強使聯準會在通膨黏著下，更有條件維持緊縮立場，強化市場對利率「higher for longer」的預期，壓抑風險性資產評價。",
-          "summary_en": "Initial US jobless claims dropped unexpectedly last week and continuing claims also eased, pointing to a still-resilient labour market. A firmer jobs picture gives the Fed more latitude to keep policy tight should inflation stay sticky, reinforcing a \"higher-for-longer\" reading among investors.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6640865"
-        }
-      ]
-    },
-    {
-      "section": "Global Markets",
-      "section_zh": "國際財經",
-      "items": [
-        {
-          "title_zh": "微軟擬發債至少 250 億美元，加入 AI 籌資大潮",
-          "title_en": "Microsoft to raise at least $25bn in debt, joining the AI-funding wave",
-          "summary_zh": "微軟計劃發行至少 250 億美元公司債，加入大型科技業為龐大 AI 基礎建設舉債的行列。此舉凸顯即使手握充沛現金的企業，也選擇向債市融資以支應資料中心擴建，反映 AI 投資的資金需求規模驚人，也牽動信用市場供給。",
-          "summary_en": "Microsoft plans to issue at least US$25 billion in bonds, joining a wave of big-tech borrowing to fund heavy AI-infrastructure spending. The move highlights how even cash-rich firms are tapping debt markets to finance the data-centre build-out, a sign of how large AI capital needs have become.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6641090"
-        },
-        {
-          "title_zh": "黃仁勳身邊人士疑涉中國情報遭美方監控，輝達稱客戶往來正常",
-          "title_en": "A Huang associate reportedly under US surveillance over China-intelligence concerns",
-          "summary_zh": "外媒報導，輝達執行長黃仁勳身邊一名人士因疑涉中國情報活動遭美方監控；輝達回應客戶往來一切正常。事件凸顯 AI 晶片供應鏈持續面臨地緣政治與出口管制的高度審視，為相關族群後市增添變數。",
-          "summary_en": "Reports say a person close to Nvidia CEO Jensen Huang is under US monitoring amid suspicions tied to Chinese intelligence activity; Nvidia said its customer dealings remain normal. The episode underscores the geopolitical scrutiny around AI-chip supply chains and export controls.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6641243"
-        }
-      ]
-    },
-    {
-      "section": "International",
-      "section_zh": "國際",
-      "items": [
-        {
-          "title_zh": "字母財報失色拖累美股收黑，AI 資本支出疑慮再起（2026-10-29）",
-          "title_en": "US stocks close lower as Alphabet's miss revives AI-capex jitters (2026-10-29)",
-          "summary_zh": "華爾街收低，那斯達克指數下跌約 1.4% 至 26,184 點，字母（Google）因營收不如預期、AI 支出加重重挫約 12%，標普 500 與道瓊小跌，資金轉向醫療與必需消費等防禦族群。",
-          "summary_en": "Wall Street fell, with the Nasdaq down about 1.4% to 26,184, as Alphabet slid roughly 12% after a revenue miss and heavier AI spending. The S&P 500 and Dow edged lower while money rotated toward healthcare and staples.",
-          "source_name": "Yahoo Finance",
-          "source_url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-october-29-dow-sp-500-nasdaq-alphabet-microsoft-earnings-130305714.html",
-          "published": "2026-10-29"
-        },
-        {
-          "title_zh": "微軟財報超預期，Azure 年增 48% 達 330 億美元（2026-10-28）",
-          "title_en": "Microsoft beats as Azure jumps 48% to $33bn (2026-10-28)",
-          "summary_zh": "微軟會計年度首季營收年增 19% 至約 923 億美元、調整後 EPS 4.89 美元，均優於預期，Azure 雲端年增 48% 至 332 億美元，股價漲約 4%；惟單季資本支出 452 億美元略低於原訂計畫。",
-          "summary_en": "Microsoft's fiscal Q1 revenue rose 19% to about $92.3 billion with adjusted EPS of $4.89, both above estimates, as Azure grew 48% year-on-year to $33.2 billion. Shares rose about 4%, though quarterly capex of $45.2 billion came in below plan.",
-          "source_name": "CNBC",
-          "source_url": "https://www.cnbc.com/2026/10/28/microsoft-msft-q1-earnings-report-2027.html",
-          "published": "2026-10-28"
-        },
-        {
-          "title_zh": "聯準會以 10 比 2 票維持利率 3.75%–4.00%（2026-10-28）",
-          "title_en": "Fed holds rates at 3.75%–4.00% in a 10-2 vote (2026-10-28)",
-          "summary_zh": "聯準會在主席華許主導下維持基準利率區間不變，表示需更多數據佐證，9 月通膨升至 3.7% 仍偏高；官員對 12 月會議是否行動著墨有限，政策路徑保留彈性。",
-          "summary_en": "The Federal Reserve kept its benchmark range unchanged under Chair Kevin Warsh, saying more data is needed as September inflation rose to 3.7%. Officials gave little clear signal on whether they might move at the December meeting.",
-          "source_name": "Bloomberg",
-          "source_url": "https://www.bloomberg.com/news/articles/2026-10-28/fed-holds-rates-says-more-data-will-help-next-decision",
-          "published": "2026-10-28"
-        },
-        {
-          "title_zh": "歐洲央行維持利率 2.5%，拉加德預告提前卸任（2026-10-29）",
-          "title_en": "ECB holds at 2.5% as Lagarde signals an early exit (2026-10-29)",
-          "summary_zh": "歐洲央行維持存款利率 2.5%，歐元區通膨約 3.8% 仍高於目標；總裁拉加德宣布將於 2027 年 2 月提前卸任。能源價格走高與法國公債遭拋售推升借貸成本，增添政策壓力。",
-          "summary_en": "The European Central Bank left its deposit rate at 2.5% with euro-area inflation near 3.8%, and President Christine Lagarde said she will step down in February 2027. Rising energy prices and a French government-bond sell-off added to the pressure.",
-          "source_name": "CNBC",
-          "source_url": "https://www.cnbc.com/2026/10/29/european-central-bank-interest-rates.html",
-          "published": "2026-10-29"
+          "source_url": "https://news.cnyes.com/news/id/6640689"
         }
       ]
     }
