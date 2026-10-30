@@ -13,7 +13,7 @@
     {
       "name": "Nasdaq Composite",
       "name_zh": null,
-      "close": 26184.724609375,
+      "close": 26184.720703125,
       "daily_pct": -1.38,
       "mtd_pct": -2.52,
       "ytd_pct": 12.66,
@@ -31,7 +31,7 @@
     {
       "name": "PHLX Semiconductor",
       "name_zh": null,
-      "close": 11518.19921875,
+      "close": 11518.2001953125,
       "daily_pct": -1.42,
       "mtd_pct": -8.79,
       "ytd_pct": 62.61,
@@ -85,20 +85,20 @@
     {
       "name": "TAIEX 加權指數",
       "name_zh": null,
-      "close": 46368.328125,
-      "daily_pct": -1.42,
+      "close": 45211.83,
+      "daily_pct": -2.49,
       "mtd_pct": -3.28,
       "ytd_pct": 60.09,
-      "closing_date": "2026-10-29"
+      "closing_date": "2026-10-30"
     },
     {
       "name": "OTC 櫃買加權",
       "name_zh": null,
-      "close": null,
-      "daily_pct": null,
+      "close": 370.26,
+      "daily_pct": -4.42,
       "mtd_pct": null,
       "ytd_pct": null,
-      "closing_date": null
+      "closing_date": "2026-10-30"
     },
     {
       "name": "台指期(近月)",
@@ -139,7 +139,7 @@
     {
       "name": "CSI 300 滬深300",
       "name_zh": null,
-      "close": 3993.804443359375,
+      "close": 4028.485595703125,
       "daily_pct": null,
       "mtd_pct": null,
       "ytd_pct": null,
@@ -157,11 +157,11 @@
     {
       "name": "S&P/ASX 200",
       "name_zh": null,
-      "close": 8891.7998046875,
-      "daily_pct": 0.5,
+      "close": 8908.099609375,
+      "daily_pct": null,
       "mtd_pct": 1.17,
       "ytd_pct": 2.04,
-      "closing_date": "2026-10-29"
+      "closing_date": "2026-10-30"
     }
   ],
   "bonds": [
@@ -174,8 +174,8 @@
     },
     {
       "name": "US 2-Year",
-      "yield_pct": 4.57,
-      "daily_bps": -8.9,
+      "yield_pct": 4.58,
+      "daily_bps": -7.5,
       "mtd_bps": -27.0,
       "closing_date": "2026-10-30"
     },
@@ -188,8 +188,8 @@
     },
     {
       "name": "Japan 10-Year",
-      "yield_pct": 2.77,
-      "daily_bps": -6.9,
+      "yield_pct": 2.79,
+      "daily_bps": -5.6,
       "mtd_bps": -18.1,
       "closing_date": "2026-10-30"
     },
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 102.04000091552734,
       "daily_pct": -0.15,
-      "mtd_pct": 0.24,
-      "ytd_pct": 3.47,
+      "mtd_pct": 0.39,
+      "ytd_pct": 3.62,
       "closing_date": "2026-10-29"
     },
     {
@@ -269,34 +269,34 @@
   "commodities": [
     {
       "name": "黃金 (USD/oz)",
-      "close": 4011.89990234375,
-      "daily_pct": -0.98,
-      "mtd_pct": -4.18,
-      "ytd_pct": -7.58,
+      "close": 4031.39990234375,
+      "daily_pct": -0.5,
+      "mtd_pct": -3.71,
+      "ytd_pct": -7.13,
       "closing_date": "2026-10-29"
     },
     {
       "name": "白銀 (USD/oz)",
-      "close": 51.43000030517578,
-      "daily_pct": -3.79,
-      "mtd_pct": -14.42,
-      "ytd_pct": -26.67,
+      "close": 52.191001892089844,
+      "daily_pct": -2.37,
+      "mtd_pct": -13.16,
+      "ytd_pct": -25.58,
       "closing_date": "2026-10-29"
     },
     {
       "name": "WTI 原油 (USD/bbl)",
-      "close": 103.75,
-      "daily_pct": 0.94,
-      "mtd_pct": 14.74,
-      "ytd_pct": 80.69,
+      "close": 102.0,
+      "daily_pct": -0.76,
+      "mtd_pct": 12.81,
+      "ytd_pct": 77.64,
       "closing_date": "2026-10-29"
     },
     {
       "name": "布蘭特原油 (USD/bbl)",
-      "close": 112.72000122070312,
-      "daily_pct": -2.25,
-      "mtd_pct": 8.88,
-      "ytd_pct": 85.24,
+      "close": 114.87999725341797,
+      "daily_pct": -0.38,
+      "mtd_pct": 10.96,
+      "ytd_pct": 88.79,
       "closing_date": "2026-10-29"
     },
     {
@@ -388,8 +388,8 @@
     "yield_curve_10y2y": 0.38,
     "yield_curve_10y2y_bps": 38,
     "curve_shape": "正斜率",
-    "dxy": 101.68900299072266,
-    "dxy_daily_pct": -0.34,
+    "dxy": 102.04000091552734,
+    "dxy_daily_pct": -0.15,
     "closing_date": "2026-10-29"
   },
   "fedwatch": [
@@ -405,14 +405,14 @@
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 4.0,
-      "delta_rate": 0.12,
-      "delta_bps": 12.0,
-      "p_hike": 48.0,
-      "p_hold": 52.0,
+      "implied_rate": 4.01,
+      "delta_rate": 0.13,
+      "delta_bps": 13.0,
+      "p_hike": 52.0,
+      "p_hold": 48.0,
       "p_cut": 0,
       "is_reference": false
     }
   ],
-  "summary": "10/29 DAX +1.31%、10/29 Nikkei 225 +1.10%、10/29 CAC 40 +1.05% 領漲；10/29 台指期(近月) -1.42%、10/29 TAIEX 加權指數 -1.42% 走弱。"
+  "summary": "10/29 DAX +1.31%、10/29 Nikkei 225 +1.10%、10/29 CAC 40 +1.05% 領漲；10/30 OTC 櫃買加權 -4.42%、10/30 TAIEX 加權指數 -2.49% 走弱。"
 }
