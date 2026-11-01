@@ -1,9 +1,11 @@
 {
   "news_date": "2026-11-02",
   "tldr": [
-    "台股上週五重挫2.49%收45,211.83點，美國科技股財報疲弱引發外資撤離。",
-    "AI伺服器需求續撐成長主軸，鴻海前三季AI伺服器營收破兆、全年營收挑戰新高。",
-    "金管會2026金檢趨嚴，台灣高資產財富管理市場持續擴張、信託規模達9.83兆元。"
+    "台股上週五重挫2.49%收45,211.83點（台積電跌至2,370元），兩日累挫逾1,800點、外資賣超逾1,800億元。",
+    "AI伺服器需求續撐成長主軸，鴻海前三季AI伺服器營收破兆、全年營收挑戰8.1兆元新高。",
+    "金管會2026金檢聚焦防詐、防洗錢與資安韌性，保險業導入IFRS與ICS新制，高資產信託規模達9.83兆元。",
+    "央行利率連10凍、上修2026 GDP至11.48%，通膨略超2%警戒、維持偏緊操作。",
+    "美股上週五科技股領跌，標普500跌1.82%創6月來最大跌幅，英特爾暴跌近29%，蘋果市值超車輝達。"
   ],
   "sections": [
     {
@@ -91,6 +93,114 @@
           "summary_en": "Taishin Bank secured two honours at the Private Banker International (PBI) global wealth-management awards, recognising its deepened high-net-worth services and AI-driven innovation. The bank noted affluent clients' needs have shifted from traditional product allocation toward integrated asset-and-liability management, asset preservation, cross-border allocation and generational transfer—trends reshaping Taiwan's private-banking competition.",
           "source_name": "台新銀行",
           "source_url": "https://www.taishinbank.com.tw/TSB/personal/common/news/TSBankNews-008407/"
+        }
+      ]
+    },
+    {
+      "section": "Tax & Regulations",
+      "section_zh": "稅務法規",
+      "items": [
+        {
+          "title_zh": "擬制遺產修法三讀 死亡前2年贈與併入遺產課稅",
+          "title_en": "Taiwan tightens estate-tax rules on gifts made before death",
+          "summary_zh": "立法院三讀通過《遺產及贈與稅法》修正，被繼承人死亡前2年內贈與配偶、各順序繼承人及其配偶的財產須併入遺產總額課稅，並改以受贈人為納稅義務人。此修正回應憲法法庭憲判字第11號判決，財政部正研擬施行細則與申辦系統，條文公布後將牽動高資產族群的傳承與贈與規劃布局。",
+          "summary_en": "Taiwan's legislature passed amendments to the Estate and Gift Tax Act requiring assets gifted to a spouse, heirs or their spouses within two years before death to be folded back into the taxable estate, with the recipient now liable for the related estate tax. Responding to a Constitutional Court ruling, the change will reshape succession planning once promulgated; the Finance Ministry is revising sub-regulations and filing systems.",
+          "source_name": "中央社",
+          "source_url": "https://www.cna.com.tw/news/afe/202608210289.aspx"
+        },
+        {
+          "title_zh": "2026遺贈稅免稅額維持不變 遺產稅收創新高",
+          "title_en": "2026 estate-tax thresholds unchanged as estate-tax revenue hits record",
+          "summary_zh": "財政部公告，2026年發生繼承或贈與案件適用的免稅額、各項扣除額及課稅級距均維持不變，因適用消費者物價指數漲幅未達調整門檻。遺產稅收續創高峰，2025年全年達443.3億元創史上新高，2026年前4月已達174.2億元，顯示高資產傳承與稅務規劃需求持續升溫。",
+          "summary_en": "The Finance Ministry confirmed 2026 exemption amounts, deductions and tax brackets for inheritance and gift tax stay unchanged because the relevant CPI move did not reach the adjustment threshold. Estate-tax revenue hit a record NT$44.33 billion in 2025 and stayed elevated, reaching NT$17.42 billion in the first four months of 2026, keeping wealth-transfer planning firmly in focus.",
+          "source_name": "ETtoday財經",
+          "source_url": "https://finance.ettoday.net/news/3105961"
+        }
+      ]
+    },
+    {
+      "section": "Macro & Policy",
+      "section_zh": "總經政策",
+      "items": [
+        {
+          "title_zh": "央行利率連10凍 上修2026成長率至11.48%",
+          "title_en": "Central bank holds rates again, lifts 2026 growth forecast",
+          "summary_zh": "中央銀行9月理監事會維持政策利率不變，已連續10個季度按兵不動，並未跟進聯準會降息，強調兼顧經濟成長與通膨。受惠AI相關出口與民間投資強勁，央行將2026年全年GDP成長率預估大幅上修至11.48%，上半年經濟成長約14.15%，顯示對AI帶動的擴張深具信心。",
+          "summary_en": "Taiwan's central bank left policy rates unchanged at its September board meeting—extending the hold to ten straight quarters—and declined to follow the Fed, citing both growth and inflation. Buoyed by AI-driven exports and private investment, it sharply raised its 2026 GDP growth forecast to 11.48% after first-half growth of about 14.15%, signalling confidence in the AI-led expansion.",
+          "source_name": "優分析",
+          "source_url": "https://uanalyze.com.tw/articles/1091633585"
+        },
+        {
+          "title_zh": "通膨略超警戒區 央行維持偏緊操作",
+          "title_en": "Inflation edges above alert line, keeping policy on the tight side",
+          "summary_zh": "央行將2026年CPI預估上修至2.03%、核心CPI上修至2.16%，指出通膨壓力仍略高於2%警戒區。總裁楊金龍表示還有時間觀察，貨幣政策操作維持偏緊以錨定通膨預期。顯示即便全球進入降息循環，台灣短期內寬鬆空間仍相對有限，市場須關注後續物價與匯率走勢。",
+          "summary_en": "The central bank nudged its 2026 CPI forecast up to 2.03% and core CPI to 2.16%, noting inflation remains above the 2% alert zone. Governor Yang Chin-long said there is still time to observe and that monetary operations stay on the tighter side to anchor inflation expectations, suggesting limited room for near-term easing even as global peers cut rates.",
+          "source_name": "優分析",
+          "source_url": "https://uanalyze.com.tw/articles/9497355553"
+        }
+      ]
+    },
+    {
+      "section": "Global Markets",
+      "section_zh": "國際財經",
+      "items": [
+        {
+          "title_zh": "美科技股賣壓再起 英特爾、亞馬遜展望疲弱",
+          "title_en": "US tech selloff deepens on weak Intel and Amazon outlooks",
+          "summary_zh": "台灣財經媒體報導，英特爾與亞馬遜財報後釋出的展望低於市場預期，引發美國科技股新一波賣壓。英特爾盤後股價重挫逾20%，第4季營收預估低於共識、毛利率估降至38%；亞馬遜則因核心網路零售成長疲弱，拖累那斯達克100期貨一度下跌1.7%，連動牽引台股電子權值股的情緒。",
+          "summary_en": "Taiwanese market coverage highlighted a second wave of selling in US tech after Intel and Amazon issued post-earnings guidance below expectations. Intel's shares slumped more than 20% after hours on a weaker Q4 revenue outlook and margins seen falling to 38%, while Amazon flagged soft core online-retail growth, dragging Nasdaq-100 futures down as much as 1.7%.",
+          "source_name": "優分析",
+          "source_url": "https://uanalyze.com.tw/articles/7370457998"
+        },
+        {
+          "title_zh": "道瓊挫至51,770點 科技股領跌衝擊華爾街",
+          "title_en": "Dow slides to 51,770 as tech-led rout hits Wall Street",
+          "summary_zh": "國際股市受科技股領跌拖累，道瓊工業指數下滑至51,770.31點，企業財報表現不如預期。大型科技與AI相關類股普遍走弱，風險趨避情緒蔓延全球，投資人重新評估偏高的評價與AI資本支出步調，並為接下來數據密集的一週預作準備，台股開盤料同步承壓。",
+          "summary_en": "Global equities were rattled as the Dow Jones Industrial Average fell to 51,770.31 amid a tech-led selloff and disappointing corporate earnings. Weakness across megacap technology and AI-linked names spread risk-off sentiment worldwide, with investors reassessing stretched valuations and the pace of AI capital spending heading into a data-heavy week.",
+          "source_name": "BBN Times",
+          "source_url": "https://bbntimes.com/global-economy/dow-jones-djia-falls-to-51-770-31-amid-tech-led-selloff-and-weak-corporate-earnings-in-wall-street"
+        }
+      ]
+    },
+    {
+      "section": "International",
+      "section_zh": "國際",
+      "items": [
+        {
+          "title_zh": "美股收盤回顧：10月以科技股重挫作收（2026-10-30，最近交易日）",
+          "title_en": "Wall Street closes a brutal week as October ends in a tech-led rout (2026-10-30)",
+          "summary_zh": "美股上週五收黑，為10月畫下沉重句點。標普500指數跌1.82%至7,580.07點，創6月以來最大單日跌幅；那斯達克綜合指數跌2.86%至25,437.00點，道瓊跌1.09%（約572點）至51,770.31點。這是連續第二個交易日下跌，導火線為科技巨頭財報不佳，市場重燃對AI支出可持續性的疑慮。",
+          "summary_en": "US stocks tumbled Friday to cap a brutal end to October. The S&P 500 fell 1.82% to 7,580.07—its worst day since June—while the Nasdaq Composite dropped 2.86% to 25,437.00 and the Dow slid 1.09% (about 572 points) to 51,770.31. A second straight day of selling followed disappointing big-tech earnings and renewed doubts about the sustainability of AI spending.",
+          "source_name": "Yahoo Finance",
+          "source_url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-october-30-dow-sp-500-nasdaq-amazon-intel-ai-sell-off-191429143.html",
+          "published": "2026-10-30"
+        },
+        {
+          "title_zh": "英特爾重挫近29% 創1974年來最慘單日（2026-10-30）",
+          "title_en": "Intel suffers worst day since 1974 on grim guidance (2026-10-30)",
+          "summary_zh": "英特爾股價上週五暴跌約28.6%，寫下1974年以來最大單日跌幅，起因為財報不佳與財測疲弱。英特爾的崩跌成為當日科技股災焦點，並拖累輝達(Nvidia)與超微(AMD)同步走低，凸顯投資人對半導體產業獲利能力與競爭態勢的憂慮，進一步打擊市場信心。",
+          "summary_en": "Intel shares cratered about 28.6% on Friday—its worst single-day drop since 1974—after disappointing results and weak forward guidance. The chipmaker's slump was a focal point of the session's tech wreckage, which also dragged down Nvidia and AMD, underscoring investor anxiety over profitability and competitive positioning across the semiconductor sector.",
+          "source_name": "TheStreet",
+          "source_url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-30-2026",
+          "published": "2026-10-30"
+        },
+        {
+          "title_zh": "亞馬遜、Alphabet財報不如預期 再掀AI支出疑慮（2026-10-30）",
+          "title_en": "Amazon and Alphabet earnings misses revive AI-spending doubts (2026-10-30)",
+          "summary_zh": "美股連續第二日下跌，導火線為亞馬遜與Alphabet罕見財報不如預期，再度引發市場對AI榮景可持續性的擔憂。亞馬遜每股盈餘1.89美元低於1.96美元的市場共識，惟AWS雲端業務營收年增39%；Alphabet搜尋營收則不及約649億美元的預期，衝擊大型科技股投資情緒與後市評價。",
+          "summary_en": "Stocks fell for a second day after Amazon and Alphabet posted rare earnings misses, reigniting worries over whether the AI boom is sustainable. Amazon's EPS of $1.89 came in below the $1.96 consensus, though AWS cloud sales grew 39% year-on-year, while Alphabet's search revenue fell short of the roughly $64.9 billion expected, pressuring megacap tech sentiment.",
+          "source_name": "StockTitan",
+          "source_url": "https://www.stocktitan.net/articles/stock-market-today-live-october-30-2026",
+          "published": "2026-10-30"
+        },
+        {
+          "title_zh": "蘋果超車輝達 重返全球市值王（2026-10-30）",
+          "title_en": "Apple overtakes Nvidia as world's most valuable company (2026-10-30)",
+          "summary_zh": "蘋果上週五重返全球市值最高企業寶座，以約5.03兆美元市值超越輝達(Nvidia)。此里程碑出現在蘋果將於隔週一公布財報之前，為市場帶來少見亮點。在AI驅動的評價重估席捲全球之際，投資人於大型科技股間重新輪動，蘋果相對抗跌凸顯資金尋求避風港的態勢。",
+          "summary_en": "Apple reclaimed the title of world's most valuable company on Friday, overtaking Nvidia with a market capitalisation of about $5.03 trillion. The milestone came ahead of Apple's own earnings report due the following Monday, offering a rare bright spot as investors rotated within megacap tech amid the broader AI-driven valuation reset sweeping the market.",
+          "source_name": "Business Standard",
+          "source_url": "https://business-standard.com/world-news/apple-overtakes-nvidia-to-become-world-s-most-valuable-company-at-5-03-trn-126103100103_1.html",
+          "published": "2026-10-30"
         }
       ]
     }
