@@ -1,10 +1,9 @@
 {
-  "news_date": "2026-11-01",
+  "news_date": "2026-11-02",
   "tldr": [
-    "最新交易日由全球科技股賣壓主導，那斯達克約跌3%，科技股市值單日蒸發逾1兆美元，AI支出疑慮加深。",
-    "英特爾因財測疲弱暴跌約29%、創1970年代以來最慘單日，Alphabet則寫下最慘單月，科技估值受壓。",
-    "台股重挫約千點，但研華、麗臺等AI相關個股受獲利與外資買盤支撐逆勢收紅。",
-    "總經面維持強美元與偏鷹基調，日銀利率守1.25%、市場估12月升息，美元拚近一年半最強單月。"
+    "台股上週五重挫2.49%收45,211.83點，美國科技股財報疲弱引發外資撤離。",
+    "AI伺服器需求續撐成長主軸，鴻海前三季AI伺服器營收破兆、全年營收挑戰新高。",
+    "金管會2026金檢趨嚴，台灣高資產財富管理市場持續擴張、信託規模達9.83兆元。"
   ],
   "sections": [
     {
@@ -12,20 +11,20 @@
       "section_zh": "股市行情",
       "items": [
         {
-          "title_zh": "研華Q3獲利創高、逆勢收紅",
-          "title_en": "Advantech bucks a sharp TAIEX plunge with record Q3 profit",
-          "summary_zh": "工業電腦與AIoT大廠研華公布第三季獲利創新高並釋出正向展望，股價無懼大盤單日重挫約千點逆勢翻紅。此表現凸顯在AI邊緣運算與自動化需求支撐下，基本面穩健的個股可與大盤弱勢脫鉤，提醒投資人於指數劇烈波動之際，更應回歸企業獲利品質作為選股核心。",
-          "summary_en": "Industrial-PC and AIoT maker Advantech closed higher even as Taiwan's benchmark index tumbled roughly a thousand points, after reporting record third-quarter earnings and offering an upbeat outlook. The resilient move underscores how firms with solid AI-edge and automation demand can decouple from broad market weakness, pulling investor focus back toward earnings quality rather than index-level swings.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6642927"
+          "title_zh": "台股上週五重挫2.49% 外資撤離殺低盤面",
+          "title_en": "TAIEX tumbles 2.5% Friday as foreign funds flee",
+          "summary_zh": "加權指數上週五(10/30)收45,211.83點，大跌1,156.5點、跌幅2.49%，權值王台積電收2,370元、跌45元。受美國科技巨頭財報不如預期與AI評價偏高拖累，市場風險趨避情緒升溫，資金全面撤出，終場指數勉強守住45,000點整數關卡，成交量維持高檔。",
+          "summary_en": "The benchmark TAIEX closed Friday at 45,211.83, down 1,156.5 points (-2.49%), its sharpest fall in weeks. Market heavyweight TSMC dropped NT$45 to NT$2,370 as disappointing US big-tech earnings and stretched AI valuations triggered broad risk-off selling. Turnover stayed heavy while the index clung just above the key 45,000 level into the weekend.",
+          "source_name": "ETtoday財經",
+          "source_url": "https://finance.ettoday.net/news/3263189"
         },
         {
-          "title_zh": "麗臺輝達工作站加持、外資逆勢買超",
-          "title_en": "Leadtek defies the pullback as foreign funds buy its Nvidia workstation push",
-          "summary_zh": "顯卡與工作站供應商麗臺受惠輝達新款工作站產品與獲利爆發，股價無懼大盤回檔逆勢走高，並獲外資轉為買超。此逆勢資金流入顯示市場對直接連結AI硬體建置的個股仍具選擇性偏好，即使大盤進入修正，AI相關強勢股與其餘類股的表現落差持續擴大。",
-          "summary_en": "Graphics-card and workstation supplier Leadtek rose against a falling market, lifted by new Nvidia-based workstation products and surging earnings, with foreign institutions turning net buyers. The counter-trend inflow signals selective appetite for names tied directly to AI hardware build-out even as the broader index corrects, highlighting a widening gap between AI-levered stocks and the rest of the board.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6642701"
+          "title_zh": "兩日累挫逾1,800點 45,000點保衛戰登場",
+          "title_en": "Two-day rout tops 1,800 points as 45,000 defense looms",
+          "summary_zh": "台股上週四、五兩個交易日合計重挫約1,824點，外資同期賣超逾1,800億元，資金自高評價的AI與半導體族群撤出。法人示警45,000點為後市關鍵支撐，若失守恐下探44,000甚至42,000點區間，提醒投資人密切留意量能與外資買賣超動向變化。",
+          "summary_en": "Across Thursday and Friday the TAIEX shed roughly 1,824 points combined, with foreign investors net-selling more than NT$180 billion as they rotated out of richly valued AI and semiconductor names. Analysts flagged 45,000 as the critical support to watch, warning that a decisive break could open the door toward the 44,000–42,000 zone.",
+          "source_name": "方格子 vocus",
+          "source_url": "https://vocus.cc/article/6ae04c1afd897800018e656e"
         }
       ]
     },
@@ -34,20 +33,20 @@
       "section_zh": "產業動態",
       "items": [
         {
-          "title_zh": "光寶科上修資本支出至197億元、押注AI電源",
-          "title_en": "Lite-On raises capex to NT$19.7bn as AI power demand builds",
-          "summary_zh": "光寶科將資本支出計畫上修至新台幣197億元，表示AI伺服器電源出貨將視客戶資料中心供電進度而定。此舉反映對AI基礎建設訂單延續性的信心，使台廠電源零組件供應商成為AI擴建主要受惠者；惟實際出貨節奏仍取決於雲端大廠為新資料中心取得電力的速度。",
-          "summary_en": "Lite-On Technology lifted its capital-expenditure plan to NT$19.7 billion, saying shipments of AI server power supplies will track customers' data-center power-provisioning schedules. The upgraded spending reflects confidence in sustained AI infrastructure orders and positions Taiwan's power-component makers as key beneficiaries of the build-out, though the pace will hinge on how quickly hyperscalers secure electricity for new facilities.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6643077"
+          "title_zh": "鴻海前三季AI伺服器營收破兆 Q4機櫃拚高雙位數成長",
+          "title_en": "Foxconn's AI server revenue tops NT$1 trillion in first nine months",
+          "summary_zh": "鴻海法說會表示，前三季AI伺服器營收已突破新台幣兆元，第四季機櫃出貨看高雙位數季增，全年營運動能維持強勁。顯示AI基礎建設需求仍是台灣電子供應鏈最重要的成長引擎，相關機櫃、散熱與電源供應鏈後市續受市場高度關注。",
+          "summary_en": "Hon Hai (Foxconn) told investors its AI server revenue has already exceeded NT$1 trillion through the first three quarters, with Q4 rack shipments guided to grow at a high double-digit sequential pace. The contract-manufacturing giant reaffirmed strong full-year momentum, underscoring that AI infrastructure demand remains the dominant growth engine for Taiwan's electronics supply chain.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/5612/9134826"
         },
         {
-          "title_zh": "SanDisk財報優於預期仍重挫13%、記憶體反轉警報",
-          "title_en": "Memory stocks wobble as SanDisk slides 13% despite an earnings beat",
-          "summary_zh": "SanDisk財報優於市場預期，股價卻重挫約13%，主因同業鎧俠示警NAND漲價動能降溫，引發記憶體類股反轉警訊。市場似乎開始反映本波記憶體景氣見頂的疑慮，台廠NAND相關供應鏈與模組業者須密切觀察後續接單與報價變化，以評估漲價循環是否接近尾聲。",
-          "summary_en": "SanDisk shares tumbled about 13% even after a better-than-expected report, as peer Kioxia flagged that the recent NAND price up-cycle is cooling, triggering a reversal warning across memory names. The move suggests the market is pricing in a peak in the current memory boom—a signal Taiwan's NAND-related suppliers and module makers will watch closely for order and pricing implications.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6642962"
+          "title_zh": "鴻海拚全年營收8.1兆創新高 AI機櫃挑大樑",
+          "title_en": "Foxconn on track for record NT$8.1 trillion revenue, led by AI racks",
+          "summary_zh": "受惠AI伺服器需求強勁，鴻海全年營收挑戰約8.1兆元、改寫歷史新高，雲端網路產品首度超車手機成為最大營收來源。公司由iPhone代工龍頭蛻變為AI機櫃要角，凸顯台灣AI硬體供應鏈結構性成長循環延續，帶動相關零組件廠商營運同步升溫。",
+          "summary_en": "Riding surging AI server demand, Hon Hai is heading for record annual revenue of around NT$8.1 trillion, with its cloud and networking segment overtaking smartphones as the top sales driver. The shift cements Foxconn's transformation from an iPhone assembler into a leading AI rack maker and reinforces the structural upcycle across Taiwan's AI hardware names.",
+          "source_name": "數位時代",
+          "source_url": "https://www.bnext.com.tw/article/90315/2026-foxconn-earnings-call"
         }
       ]
     },
@@ -56,20 +55,20 @@
       "section_zh": "金融業",
       "items": [
         {
-          "title_zh": "一銀開國銀首槍、紅利點數可兌USDT",
-          "title_en": "First Bank becomes the first local lender to convert loyalty points into USDT",
-          "summary_zh": "第一銀行攜手交易所HOYA BIT，推出粉獅幣點數可兌換穩定幣USDT的服務，為國內銀行首例。此合作象徵傳統銀行以謹慎方式跨入加密生態系，試探監理邊界，也顯示本土銀行可能藉由數位資產相關服務，爭取年輕及偏好虛擬資產的客群，為金融與幣圈結合揭開新頁。",
-          "summary_en": "First Commercial Bank partnered with exchange HOYA BIT to let customers redeem its \"Lion Coin\" reward points for the USDT stablecoin, a first among Taiwan's banks. The tie-up marks a cautious step by a traditional lender into the crypto ecosystem, testing regulatory boundaries and signaling how domestic banks may court younger, digital-asset-minded customers.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6642801"
+          "title_zh": "金管會2026金檢聚焦防詐、防洗錢與資安韌性",
+          "title_en": "FSC sets 2026 exam focus on fraud, AML and cyber-resilience",
+          "summary_zh": "金管會公布2026年金檢重點，將防制詐騙、防制洗錢、金融消費者權益保護及資通安全韌性列為四大特別關注領域，合計113項重點。國銀與外銀在台分行另須強化客戶開戶的地緣性與目的合理性審查，顯示主管機關對明年金融監理要求更趨嚴格，業者須提早布局因應。",
+          "summary_en": "Taiwan's Financial Supervisory Commission flagged four priority areas for its 2026 financial examinations—anti-fraud, anti-money-laundering, financial consumer protection and cyber-security resilience—spanning a combined 113 inspection points. Domestic banks and foreign branches will also face tighter account-opening scrutiny on customer location and purpose, signalling heightened supervisory expectations for the year ahead.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/5613/9222164"
         },
         {
-          "title_zh": "黑石示警：Anthropic上市後恐僅獲垃圾評級、融資成本攀升",
-          "title_en": "Blackstone warns Anthropic could draw 'junk' ratings post-IPO, lifting financing costs",
-          "summary_zh": "黑石警告，AI開發商Anthropic若完成首次公開發行，信用評級恐僅達垃圾等級，將推升其舉債成本。此說法凸顯市場對資本密集型AI企業籌資方式的關注升溫，對銀行放款、債券投資人及支撐AI融資熱潮的信用環境均有直接影響，提醒投資人留意相關信用風險。",
-          "summary_en": "Blackstone cautioned that AI developer Anthropic might only secure junk-grade credit ratings after a potential IPO, which would push up its borrowing costs. The remark spotlights growing scrutiny of how capital-intensive AI firms will fund themselves—a theme with direct implications for lenders, bond investors and the credit conditions underpinning the AI financing boom.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6642878"
+          "title_zh": "保險業2026導入IFRS與ICS新制 營收申報放寬至15日",
+          "title_en": "New insurance accounting regime and reporting relief take effect in 2026",
+          "summary_zh": "2026年起保險業正式適用IFRS與ICS清償能力新制，金管會預期長期保證型保單將逐步退場。考量新制使保險收入計算更繁瑣，多數金控月營收申報期限自每月10日放寬至15日，惟國票金、玉山金、永豐金等仍須於10日前公告，牽動壽險業商品策略與財報揭露節奏。",
+          "summary_en": "From 2026 Taiwan's insurers adopt the IFRS 17 and ICS solvency frameworks, which the FSC expects will gradually phase out long-term guaranteed policies. To ease the heavier revenue-calculation workload, most financial holding companies may delay monthly revenue disclosure from the 10th to the 15th, though groups such as Waterland, E.Sun and SinoPac must still report by the 10th.",
+          "source_name": "工商時報",
+          "source_url": "https://www.ctee.com.tw/news/20251231700696-430301"
         }
       ]
     },
@@ -78,105 +77,20 @@
       "section_zh": "財富管理",
       "items": [
         {
-          "title_zh": "科技債成「待發掘鑽石」、AI舉債潮創固收機會",
-          "title_en": "Tech bonds called a 'diamond in the rough' as AI giants ramp up borrowing",
-          "summary_zh": "策略師指出，隨著AI巨頭大舉發債籌措擴建資金，所衍生的科技類債券對追求收益的固定收益投資人而言，是一項被低估的機會。對財富管理客戶來說，此觀點凸顯可透過選擇性布局海外債與信用債，參與AI主題行情，同時避免直接承擔股票估值波動風險，兼顧收益與風險分散。",
-          "summary_en": "Strategists argue that as AI heavyweights issue large volumes of debt to fund build-outs, the resulting tech-sector bonds offer an underappreciated opportunity for fixed-income investors seeking yield from quality issuers. For wealth clients, the view flags selective overseas-bond and credit allocations as a way to join the AI theme without taking direct equity-valuation risk.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6642849"
+          "title_zh": "KPMG：台灣高資產族群2026持續擴張 信託規模達9.83兆",
+          "title_en": "Taiwan's high-net-worth pool keeps expanding into 2026, KPMG says",
+          "summary_zh": "KPMG引用信託公會統計指出，截至2025年第4季國內銀行信託業務規模達9.83兆元、年增7%。資產逾1億元的高資產人口估由2023年約9.3萬人增至2025年11.8萬人，2026年上看12.4萬人，其中約74%已持有境外資產，顯示跨境資產配置與世代傳承需求帶動財管業務成長。",
+          "summary_en": "A KPMG report citing trust-association data put domestic bank trust assets at NT$9.83 trillion as of Q4 2025, up 7% year-on-year. Residents with over NT$100 million in assets are estimated to have risen from about 93,000 in 2023 to 118,000 in 2025 and may reach 124,000 in 2026, with roughly 74% already holding offshore assets—underscoring demand for cross-border allocation and succession planning.",
+          "source_name": "KPMG Taiwan",
+          "source_url": "https://kpmg.com/tw/zh/media/press-releases/2026/06/2026-taiwan-wealth-management-trends-high-net-worth-growth.html"
         },
         {
-          "title_zh": "木頭姐大砍禮來、加碼Tempus AI與Coinbase",
-          "title_en": "Cathie Wood's ARK trims Eli Lilly, adds Tempus AI and Coinbase",
-          "summary_zh": "方舟投資（ARK）賣出約2421萬美元禮來持股，同時加碼Tempus AI與Coinbase，持倉轉向AI醫療與加密貨幣相關標的。這檔高知名度基金的調節，為財富管理投資人提供積極成長型經理人對下一波機會布局的參考；惟此類集中且主題式押注，也凸顯追逐顛覆性創新標的所伴隨的高波動風險。",
-          "summary_en": "Ark Invest sold about US$24.21 million of Eli Lilly while adding to Tempus AI and Coinbase, rotating toward AI-in-healthcare and crypto-linked exposure. The high-profile fund's reshuffle offers wealth investors a read on where an aggressive growth manager sees the next leg of opportunity, though such concentrated, thematic bets also underscore the volatility that comes with chasing disruptive-innovation names.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6642879"
-        }
-      ]
-    },
-    {
-      "section": "Macro & Policy",
-      "section_zh": "總經政策",
-      "items": [
-        {
-          "title_zh": "日銀利率暫守1.25%、市場估12月升息、終點上看2%",
-          "title_en": "BOJ holds at 1.25%, but analysts eye a December hike toward a 2% terminal rate",
-          "summary_zh": "日本央行維持政策利率於1.25%，但分析師預期最快12月升至1.5%，升息終點估約2%。日銀持續正常化將使日圓與全球殖利率維持上行壓力，牽動套利交易與日股表現；對匯率敏感的台灣出口商而言，亦須留意日圓波動對成本與競爭力的後續影響。",
-          "summary_en": "The Bank of Japan kept its policy rate at 1.25%, yet analysts expect a move to 1.5% as soon as December, with the eventual terminal rate seen around 2%. Continued normalization would keep upward pressure on the yen and global yields, a shift that matters for carry trades, Japanese equities and Taiwanese exporters sensitive to currency swings.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6641343"
-        },
-        {
-          "title_zh": "強通膨＋鷹派央行＋AI資金撐腰、美元拚近一年半最強月",
-          "title_en": "Dollar heads for its best month in about 18 months on sticky inflation and a hawkish Fed",
-          "summary_zh": "受通膨居高、央行立場偏鷹及AI相關資金流入帶動，美元正朝近一年半來最強單月漲幅邁進。美元走強將收緊全球金融情勢、壓抑新興市場與亞幣；台灣政策制定者與出口商須留意其透過新台幣匯率，傳導至資金面與出口競爭力的後續效應。",
-          "summary_en": "The US dollar is on track for its strongest monthly gain in roughly a year and a half, supported by elevated inflation, a hawkish central bank and AI-driven capital inflows. A firmer greenback tightens global financial conditions and pressures emerging-market and Asian currencies, a backdrop Taiwanese policymakers and exporters will watch as it feeds through to the New Taiwan dollar.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6641561"
-        }
-      ]
-    },
-    {
-      "section": "Global Markets",
-      "section_zh": "國際財經",
-      "items": [
-        {
-          "title_zh": "Alphabet黑色十月、市值單月蒸發7580億美元",
-          "title_en": "Alphabet suffers a brutal October, shedding about US$758bn in market value",
-          "summary_zh": "Alphabet經歷上市以來最慘的單月表現，市值蒸發約7580億美元，本益比降至十年新低。此跌勢反映投資人對大型科技股龐大AI支出及營收動能轉弱的疑慮，不僅拖累全球指數，也促使市場重新檢視科技類股偏高的估值，為近期行情增添不確定性。",
-          "summary_en": "Alphabet endured its worst month on record, with market capitalization evaporating by roughly US$758 billion and its price-to-earnings ratio sinking to a decade low. The slide reflects investor anxiety over heavy AI spending and softer revenue signals among megacap tech, dragging on global indices and prompting a reassessment of lofty valuations across the sector.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6642985"
-        },
-        {
-          "title_zh": "AI泡沫破了嗎？那斯達克單日重挫748點、歷史敲警鐘",
-          "title_en": "Is the AI bubble bursting? Nasdaq plunges 748 points as history offers warnings",
-          "summary_zh": "那斯達克指數單日重挫748點，引發與網路泡沫時期的比較，市場質疑AI行情是否已見頂。此劇跌凸顯由AI驅動、高度集中的漲勢使指數易遭快速反轉，相關風險亦將透過科技權重偏高的台股及其AI供應鏈個股向台灣市場傳導，投資人宜留意追高風險。",
-          "summary_en": "The Nasdaq tumbled 748 points in a single session, prompting comparisons with the dot-com era and questions over whether the AI-fueled rally has peaked. The sharp drop underscores how concentrated, AI-driven gains leave indices vulnerable to swift reversals, a risk that reverberates through Taiwan's heavily tech-weighted market and its AI supply-chain names.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6642876"
-        }
-      ]
-    },
-    {
-      "section": "International",
-      "section_zh": "國際",
-      "items": [
-        {
-          "title_zh": "華爾街以重挫作收、那斯達克約跌3%（2026-10-30，最近交易日）",
-          "title_en": "Wall Street closes out October with a brutal sell-off; Nasdaq sinks about 3%",
-          "summary_zh": "美股上週五收盤大跌，那斯達克指數下挫約2.9%，主因英特爾、Reddit等科技股財報令人失望，月底之際打擊市場信心；道瓊與標普500同步走低，為震盪的十月畫下句點，投資人於週末前重新評估偏高的AI估值。",
-          "summary_en": "US stocks ended Friday's session sharply lower, with the Nasdaq falling roughly 2.9% as disappointing tech earnings, led by Intel and Reddit, soured sentiment into month-end. The Dow and S&P 500 also retreated, capping a volatile October as investors reassessed stretched AI valuations heading into the weekend.",
-          "source_name": "TheStreet",
-          "source_url": "https://thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-30-2026"
-        },
-        {
-          "title_zh": "科技股單日蒸發逾1兆美元、AI熱潮疑慮加深（2026-10-30）",
-          "title_en": "Tech stocks shed more than US$1 trillion as AI-boom fears deepen",
-          "summary_zh": "科技股單日市值蒸發超過1兆美元，投資人對龐大AI支出的回報愈發存疑。NBC News報導，那斯達克100指數單日市值損失逾1兆美元，標普500科技類股表現最差，顯示市場正對AI交易的續航力進行更廣泛的重新評估，風險情緒明顯升溫。",
-          "summary_en": "Technology shares wiped out over a trillion dollars in value in a single day as investors grew more skeptical about the payoff from massive AI spending. NBC News reported the Nasdaq 100's one-day value loss topped US$1 trillion, with the S&P 500's tech sector the worst performer, signaling a broader reassessment of the AI trade's durability.",
-          "source_name": "NBC News",
-          "source_url": "https://www.nbcnews.com/business/markets/tech-stocks-nasdaq-ai-boom-fears-deepen-rcna606512",
-          "published": "2026-10-30"
-        },
-        {
-          "title_zh": "英特爾寫1970年代以來最慘單日、財測疲弱拖累（2026-10-30）",
-          "title_en": "Intel posts worst day since the 1970s after weak guidance",
-          "summary_zh": "英特爾股價暴跌約29%，創1970年代以來最大單日跌幅；儘管第三季獲利優於預期，但第四季營收財測僅150至160億美元、低於市場預期，蓋過財報亮點。CNBC指出，此跌勢也使美國政府持股市值蒸發約120億美元，加劇由AI支出疑慮引發的科技股賣壓。",
-          "summary_en": "Intel shares plunged about 29%—their steepest one-day drop since the 1970s—after fourth-quarter revenue guidance of US$15–16 billion fell short of expectations, overshadowing a Q3 earnings beat. CNBC noted the slump also dealt roughly a US$12 billion blow to the US government's stake, intensifying the AI-spending-driven tech rout.",
-          "source_name": "CNBC",
-          "source_url": "https://www.cnbc.com/2026/10/30/amazon-intel-earnings-big-tech-ai-spending-concerns.html",
-          "published": "2026-10-30"
-        },
-        {
-          "title_zh": "科技賣壓擴大、那斯達克100再度跌入修正區（2026-10-30）",
-          "title_en": "Nasdaq 100 slides into another correction as the tech sell-off broadens",
-          "summary_zh": "大規模科技股賣壓將那斯達克100指數推入修正區間，較近期高點回落逾10%，AI支出疑慮由晶片股向外擴散。此走勢凸顯在創高行情後市場情緒轉向之快，若財報與資本支出疑慮持續，科技權重偏高的指數恐面臨進一步波動風險。",
-          "summary_en": "A massive technology sell-off pushed the Nasdaq 100 into correction territory, down more than 10% from its recent high, as AI-spending worries spread beyond chipmakers. The move highlights how quickly sentiment has turned after a record-setting run, leaving the tech-heavy index exposed to further swings if earnings and capex concerns persist.",
-          "source_name": "Morning Brew",
-          "source_url": "https://www.morningbrew.com/stories/tech-sell-off-has-nasdaq-100-correction",
-          "published": "2026-10-30"
+          "title_zh": "台新銀行深化高資產服務 奪PBI全球財富管理雙獎",
+          "title_en": "Taishin Bank wins double PBI global wealth-management awards",
+          "summary_zh": "台新銀行以深化高資產客戶服務及AI創新，一舉拿下PBI（Private Banker International）全球財富管理大獎雙獎。該行指出，高資產客戶需求已從傳統投資商品配置，轉向資產負債整合管理，並更重視資產保全、跨境配置與世代傳承，反映國內私人銀行競爭主軸正加速轉變。",
+          "summary_en": "Taishin Bank secured two honours at the Private Banker International (PBI) global wealth-management awards, recognising its deepened high-net-worth services and AI-driven innovation. The bank noted affluent clients' needs have shifted from traditional product allocation toward integrated asset-and-liability management, asset preservation, cross-border allocation and generational transfer—trends reshaping Taiwan's private-banking competition.",
+          "source_name": "台新銀行",
+          "source_url": "https://www.taishinbank.com.tw/TSB/personal/common/news/TSBankNews-008407/"
         }
       ]
     }
