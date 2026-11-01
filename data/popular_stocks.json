@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T15:21:08+08:00",
+  "generated_at": "2026-11-01T20:01:47+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -17,31 +17,31 @@
       "error": null
     },
     {
-      "symbol": "HSY",
-      "name_zh": "The Hershey",
+      "symbol": "MRNA",
+      "name_zh": "莫德納",
       "kind": "US",
-      "price": 165.61,
-      "change_pct": 3.33,
-      "mtd_pct": 5.08,
-      "ytd_pct": -9.0,
-      "market_date": "2026-10-30",
-      "per": 28.414,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HSY.US",
-      "error": null
-    },
-    {
-      "symbol": "GLD",
-      "name_zh": "SPDR Gold Shares",
-      "kind": "US",
-      "price": 355.78,
-      "change_pct": -3.47,
-      "mtd_pct": -6.58,
-      "ytd_pct": -10.23,
+      "price": 221.72,
+      "change_pct": -0.47,
+      "mtd_pct": 15.14,
+      "ytd_pct": 651.85,
       "market_date": "2026-10-30",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GLD.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MRNA.US",
+      "error": null
+    },
+    {
+      "symbol": "F",
+      "name_zh": "福特",
+      "kind": "US",
+      "price": 12.25,
+      "change_pct": -0.89,
+      "mtd_pct": 1.58,
+      "ytd_pct": -6.63,
+      "market_date": "2026-10-30",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=F.US",
       "error": null
     },
     {
@@ -56,6 +56,20 @@
       "per": 146.6597,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PLTR.US",
+      "error": null
+    },
+    {
+      "symbol": "VRT",
+      "name_zh": "Vertiv Holdings, LLC",
+      "kind": "US",
+      "price": 232.5,
+      "change_pct": -5.46,
+      "mtd_pct": -3.65,
+      "ytd_pct": 43.51,
+      "market_date": "2026-10-30",
+      "per": 44.8832,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VRT.US",
       "error": null
     },
     {
@@ -196,6 +210,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOXX.US",
+      "error": null
+    },
+    {
+      "symbol": "GLD",
+      "name_zh": "SPDR 黃金 ETF",
+      "kind": "US",
+      "price": 355.78,
+      "change_pct": -3.47,
+      "mtd_pct": -6.58,
+      "ytd_pct": -10.23,
+      "market_date": "2026-10-30",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GLD.US",
       "error": null
     },
     {
