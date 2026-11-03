@@ -641,6 +641,7 @@ async function init() {
 
   SEARCH_INDEX = buildSearchIndex();
   wireSearch();
+  wireLastSubTracking();
 
   const hashRaw = location.hash.replace(/^#/, "");
   // 小學堂等子頁的搜尋框以 #q=關鍵字 深連結回主頁搜尋
@@ -694,16 +695,48 @@ function redirectToAlloc(body) {
   return "alloc";
 }
 
-// 聰明預設值：記住上次分頁（60 分鐘內回訪還原），否則依時段給預設分頁
+// 聰明預設值：重新打開一律回到上次離開的分頁（含次分頁／資產配置展開區塊）；
+// 沒有紀錄（第一次用）才依時段給預設分頁。
 const LAST_TAB_KEY = "mb_lastTab";
+const LAST_SUB_KEY = "mb_lastSub";
 function saveLastTab(name) {
   try { localStorage.setItem(LAST_TAB_KEY, JSON.stringify({ tab: name, ts: Date.now() })); } catch (_) { /* 略 */ }
+}
+// 次分頁：記住「哪個主分頁」的「哪個 data-xxtab 按鈕」被點；資產配置另記展開的折疊區塊
+function saveLastSub(tab, attr, val) {
+  try {
+    const all = JSON.parse(localStorage.getItem(LAST_SUB_KEY) || "{}") || {};
+    all[tab] = { attr, val, alloc: ALLOC_SUBTAB };
+    localStorage.setItem(LAST_SUB_KEY, JSON.stringify(all));
+  } catch (_) { /* 略 */ }
+}
+function loadLastSub(tab) {
+  try { return (JSON.parse(localStorage.getItem(LAST_SUB_KEY) || "{}") || {})[tab] || null; } catch (_) { return null; }
+}
+function wireLastSubTracking() {
+  const body = $("content");
+  if (!body) return;
+  body.addEventListener("click", (e) => {
+    const btn = e.target.closest(".tab");
+    if (!btn) return; // 按鈕自身 handler 可能已重渲染、此時已脫離 DOM，仍要記
+    const attr = Object.keys(btn.dataset).find(k => /tab$/i.test(k));
+    if (!attr) return;
+    saveLastSub(CURRENT_TAB, attr, btn.dataset[attr]);
+  });
+  // 資產配置折疊區塊切換（summary 點擊）也要記
+  body.addEventListener("click", (e) => {
+    if (e.target.closest("details.alloc-acc > summary")) {
+      setTimeout(() => {
+        const prev = loadLastSub("alloc") || {};
+        saveLastSub("alloc", prev.attr || null, prev.val || null);
+      }, 0);
+    }
+  });
 }
 function smartDefaultTab() {
   try {
     const saved = JSON.parse(localStorage.getItem(LAST_TAB_KEY) || "null");
-    if (saved && saved.tab && (Date.now() - saved.ts) < 60 * 60 * 1000 &&
-        document.querySelector(`.main-tab[data-tab="${saved.tab}"]`)) {
+    if (saved && saved.tab && document.querySelector(`.main-tab[data-tab="${saved.tab}"]`)) {
       return saved.tab;
     }
   } catch (_) { /* 略 */ }
@@ -745,7 +778,13 @@ function switchTab(name) {
       b.classList.toggle("active", b.dataset.tab === "funds");
     });
   }
-  else if (name === "alloc") body.innerHTML = renderAllocSheet();
+  else if (name === "alloc") {
+    if (!PENDING_SUBTAB && ALLOC_SUBTAB === null) {
+      const prev = loadLastSub("alloc");
+      if (prev && prev.alloc) ALLOC_SUBTAB = prev.alloc;
+    }
+    body.innerHTML = renderAllocSheet();
+  }
   else if (name === "targets") {
     // 舊「主題市場」分頁已併入「資產配置」
     ALLOC_SUBTAB = "targets";
@@ -785,10 +824,18 @@ function switchTab(name) {
   if (PENDING_SUBTAB) {
     const sub = PENDING_SUBTAB;
     PENDING_SUBTAB = null;
-    const sel = ["mtab", "atab", "ttab", "ctab", "wtab", "ntab", "ftab", "prtab", "otab"]
+    const sel = ["mtab", "atab", "ttab", "ctab", "wtab", "ntab", "ftab", "prtab", "otab", "bmtab", "mvtab", "tab"]
       .map(a => `.tab[data-${a}="${sub}"]`).join(",");
-    const subBtn = document.querySelector(sel);
+    const subBtn = body.querySelector(sel);
     if (subBtn) subBtn.click();
+  } else {
+    // 還原上次離開時的次分頁（dataset key → data-attr：mtab → data-mtab）
+    const prev = loadLastSub(name);
+    if (prev && prev.attr && prev.val != null) {
+      const dashed = prev.attr.replace(/[A-Z]/g, m => "-" + m.toLowerCase());
+      const subBtn = body.querySelector(`.tab[data-${dashed}="${CSS.escape(String(prev.val))}"]`);
+      if (subBtn && !subBtn.classList.contains("active")) subBtn.click();
+    }
   }
   if (PENDING_HIGHLIGHT) {
     const target = PENDING_HIGHLIGHT;
@@ -2610,7 +2657,7 @@ function renderPositionAnalysisPanel(items, title, isPreset) {
 
 function rerenderPortfolio() {
   // 投組分析現在內嵌於「資產配置」；只重畫內層 body，保留上層 section 切換器
-  const host = document.getElementById("alloc-sec-body") || $("content");
+  const host = document.querySelector('details.alloc-acc[data-asec-acc="portfolio"] .acc-sec-body') || $("content");
   host.innerHTML = renderPortfolioSheet();
   wirePortfolioTabs();
 }
