@@ -2,7 +2,9 @@
   "news_date": "2026-11-05",
   "tldr": [
     "台股11月4日連五黑收42,948.91點，外資匯出、新台幣走貶，形成股匯雙殺。",
-    "AI供應鏈動能延續，鴻海AI伺服器機櫃週產能倍增、聯發科首顆AI ASIC第4季放量。",
+    "美國期中選舉民主黨大勝，美股收紅，道瓊暴衝1,569點（+3.03%）收53,356.12點，為2025年4月來最佳單日表現。",
+    "油價因伊朗戰事可望提前結束重挫約8%，黃金回升站上4,000美元、比特幣反彈逼近8萬美元。",
+    "台廠AI動能延續，鴻海AI伺服器機櫃週產能倍增、聯發科首顆AI ASIC放量；但美股晶片與AI基建股因監管疑慮逆勢走跌。",
     "金管會預告穩定幣發行辦法，發行人限銀行及金融業主導合資，非銀行業者資本額至少3億元。"
   ],
   "sections": [
@@ -97,6 +99,117 @@
           "summary_en": "A CTBC–BCG wealth study found bond products topped the priority list for Taiwan's wealthy at 49% of allocations, followed by structured products and real estate at 28% each. Offshore allocation reached about 69% of ultra-high-net-worth portfolios, though heavy allocations (over 20% of total assets) stayed near 35%. Banks increasingly count offshore bonds, structured notes and DCI toward wealth-tier thresholds, signaling steady demand for yield-oriented, cross-border products.",
           "source_name": "老喬報",
           "source_url": "https://joelin.cc/?p=8309"
+        }
+      ]
+    },
+    {
+      "section": "Tax & Regulations",
+      "section_zh": "稅務法規",
+      "items": [
+        {
+          "title_zh": "金管會預告VASP授權命令及洗錢防制修正草案",
+          "title_en": "FSC unveils VASP licensing and anti-money-laundering draft rules (2026-11-03)",
+          "summary_zh": "配合穩定幣規範，金管會同步預告8項虛擬資產服務商（VASP）授權命令草案，以及金融機構洗錢防制辦法修正，落實7月公布的《虛擬資產服務法》。草案訂定治理、保管與法遵標準，業者被要求加速法遵、財務與治理轉軌；該法最快2027年第1季上路。",
+          "summary_en": "Alongside its stablecoin framework, the Financial Supervisory Commission pre-announced eight draft orders authorizing virtual-asset service providers (VASPs) and amendments tightening anti-money-laundering controls for financial institutions, implementing the Virtual Asset Service Act passed in July. The package sets governance, custody and compliance standards; operators are urged to accelerate legal, financial and governance readiness before the law takes effect, expected as early as Q1 2027.",
+          "source_name": "中央社",
+          "source_url": "https://www.cna.com.tw/business/chinese/448938",
+          "published": "2026-11-03"
+        },
+        {
+          "title_zh": "遺贈稅修法擬將死前2年贈與併入遺產課稅",
+          "title_en": "Estate-and-gift tax reform would fold pre-death gifts into the estate",
+          "summary_zh": "財政部已預告《遺產及贈與稅法》修正草案，回應憲法法庭判決。草案將被繼承人死亡前兩年內贈與親屬的財產（含房屋與股份）併入遺產總額課稅，並改由受贈人負擔相應稅負，而非由全體繼承人分攤，收緊常見的傳承節稅安排。",
+          "summary_en": "The Ministry of Finance has pre-announced a draft amendment to the Estate and Gift Tax Act responding to a Constitutional Court ruling. Under the proposal, assets gifted to relatives within two years before death — including property and shares — would be added to the taxable estate, with the recipient bearing the corresponding tax rather than the burden being split among all heirs, tightening a common succession-planning loophole.",
+          "source_name": "ETtoday",
+          "source_url": "https://finance.ettoday.net/news/3105961"
+        }
+      ]
+    },
+    {
+      "section": "Macro & Policy",
+      "section_zh": "總經政策",
+      "items": [
+        {
+          "title_zh": "台灣通膨升溫，10月CPI於11月5日公布",
+          "title_en": "Taiwan inflation picks up to 2.73% as October CPI is due Nov. 5",
+          "summary_zh": "台灣9月消費者物價指數年增率升至2.73%，高於8月的2.05%，重回央行2%警戒線之上，主因服務類價格僵固。10月數據訂於11月5日發布。通膨黏著使央行維持利率不變，並預期明年物價壓力可望減輕。",
+          "summary_en": "Taiwan's consumer price index rose to a 2.73% annual increase in September, up from 2.05% in August and back above the central bank's 2% alert line, driven by sticky service-sector prices. The October reading is scheduled for release on Nov. 5. Persistent inflation keeps pressure on the central bank, which has held its policy rate steady while projecting easing price pressure into 2027.",
+          "source_name": "Trading Economics",
+          "source_url": "https://zh.tradingeconomics.com/taiwan/inflation-cpi"
+        },
+        {
+          "title_zh": "AI需求推動出口續創新高",
+          "title_en": "Exports stay at record highs on AI-driven demand",
+          "summary_zh": "台灣9月出口達872.2億美元、年增60.9%，創歷年單月新高；1至9月累計出口6,615.5億美元、年增46.2%，動能來自AI、高效能運算與雲端需求。出口連續雙位數成長支撐今年經濟高度擴張，但高基期與匯率波動為後續添變數。",
+          "summary_en": "Taiwan's September exports reached a record US$87.22 billion, up 60.9% from a year earlier, with cumulative January–September shipments up 46.2% to US$661.55 billion, powered by AI, high-performance computing and cloud demand. The run of double-digit growth underpins the island's outsized 2026 expansion even as a strong base and currency swings cloud the outlook for coming months.",
+          "source_name": "MacroMicro",
+          "source_url": "https://en.macromicro.me/collections/6308/tai-wan_4496/54128/tai-wan-wai-xiao-ding-dan-chu-kou-e-bi-jiao"
+        }
+      ]
+    },
+    {
+      "section": "Global Markets",
+      "section_zh": "國際財經",
+      "items": [
+        {
+          "title_zh": "台媒報導美股因民主黨期中選舉大勝狂飆",
+          "title_en": "US indexes soar on Democratic midterm sweep, Taiwan media report (2026-11-04)",
+          "summary_zh": "台灣媒體報導，民主黨奪下國會參眾兩院，市場解讀為分裂政府、政策不確定性下降，帶動美股三大指數大漲。道瓊勁揚1,569.40點、漲3.03%收53,356.12點，標普500漲1.58%收7,688.62點，那斯達克漲1.44%收25,736.52點；惟費半與AI基建股逆勢走跌。",
+          "summary_en": "Taiwanese outlets reported that Wall Street's three main indexes jumped after Democrats won control of both chambers of Congress, a result markets read as a divided government that lowers policy uncertainty. The Dow surged 1,569.40 points, or 3.03%, to 53,356.12, the S&P 500 added 1.58% to 7,688.62 and the Nasdaq rose 1.44% to 25,736.52, though semiconductor and AI-infrastructure stocks bucked the rally and fell.",
+          "source_name": "經濟日報",
+          "source_url": "https://udn.com/news/story/6811/9858365",
+          "published": "2026-11-04"
+        },
+        {
+          "title_zh": "油價重挫約8%，布蘭特原油跌破100美元",
+          "title_en": "Oil tumbles about 8% as election clears, Brent breaks below US$100 (2026-11-04)",
+          "summary_zh": "中文媒體報導，油價隨選後行情同步重挫，紐約原油期貨跌7.97美元、跌幅8.3%，收每桶88.12美元，布蘭特原油跌破100美元關卡，市場預期伊朗戰事可望提早結束。能源股隨之下跌約4.8%，也為股市的風險偏好行情提供抗通膨助力。",
+          "summary_en": "Chinese-language media reported that oil prices plunged alongside the post-election rally, with New York crude futures down US$7.97, or 8.3%, to US$88.12 a barrel and Brent falling below US$100, as markets priced in hopes that the Iran conflict could end sooner. Energy shares slid about 4.8% on the drop, adding a disinflationary tailwind to the risk-on move in equities.",
+          "source_name": "世界日報",
+          "source_url": "https://www.worldjournal.com/wj/story/121477/9858305",
+          "published": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "section": "International",
+      "section_zh": "國際",
+      "items": [
+        {
+          "title_zh": "民主黨橫掃期中選舉，華爾街大漲",
+          "title_en": "Wall Street rallies after Democrats sweep midterms (2026-11-04)",
+          "summary_zh": "美股11月4日大漲，民主黨同時拿下眾議院與參議院，市場視此結果為對政策波動的制衡。道瓊工業指數上漲1,569.40點收53,356.12點，為2025年4月以來最佳單日表現，標普500與那斯達克同步收高。",
+          "summary_en": "US stocks jumped on Nov. 4 after Democrats won both the House and Senate, a result investors read as a check on policy volatility. The Dow Jones Industrial Average climbed 1,569.40 points to 53,356.12, its best session since April 2025, while the S&P 500 and Nasdaq also closed higher.",
+          "source_name": "WTOP",
+          "source_url": "https://wtop.com/national/2026/11/how-major-us-stock-indexes-fared-wednesday-11-4-2026",
+          "published": "2026-11-04"
+        },
+        {
+          "title_zh": "原油因地緣降溫預期重挫約8%",
+          "title_en": "Crude oil collapses about 8% on de-escalation hopes (2026-11-04)",
+          "summary_zh": "美國選後油價重挫約8%，西德州原油跌向每桶88美元、布蘭特原油跌破100美元，交易員押注與伊朗的緊張可望緩和。油價下跌壓抑能源股，卻強化整體風險偏好氛圍。",
+          "summary_en": "Oil prices tumbled roughly 8% after the US election, with WTI sliding toward US$88 a barrel and Brent dropping below US$100, as traders priced in expectations that tensions with Iran could ease. The slump weighed on energy shares but reinforced a broader risk-on tone.",
+          "source_name": "BabyPips",
+          "source_url": "https://babypips.com/news/daily-financial-forex-market-recap-2026-11-04",
+          "published": "2026-11-04"
+        },
+        {
+          "title_zh": "美元與公債殖利率回落，黃金重返4,000美元之上",
+          "title_en": "Gold climbs back above US$4,000 as dollar and yields ease (2026-11-04)",
+          "summary_zh": "黃金反彈約3%至每盎司約4,063美元，美元走弱與公債殖利率下滑重振買盤，收復前一交易日亞股主導賣壓時的失地。",
+          "summary_en": "Gold rebounded about 3% to near US$4,063 an ounce as a softer US dollar and falling Treasury yields revived demand for the metal, recovering ground lost during the prior session's Asia-led selloff.",
+          "source_name": "JournalArta",
+          "source_url": "https://journalarta.com/en/2026/11/05/dow-jumps-2-91-as-brent-slides-7-77-and-gold-climbs-3-73/",
+          "published": "2026-11-04"
+        },
+        {
+          "title_zh": "晶片與AI股和大盤背離",
+          "title_en": "Chip and AI stocks diverge from the broad rally (2026-11-04)",
+          "summary_zh": "道瓊暴衝之際，半導體與AI基建股落後，費城半導體指數收黑、輝達下跌，投資人權衡民主黨掌控國會後AI監管可能趨嚴的風險。那斯達克100期貨表現落後，凸顯景氣循環股上漲與科技股審慎並存的分化。",
+          "summary_en": "Even as the Dow soared, semiconductor and AI-infrastructure names lagged, with the Philadelphia Semiconductor Index lower and Nvidia falling, as investors weighed the risk of tighter AI oversight under a Democratic-controlled Congress. Nasdaq-100 futures underperformed, highlighting a split between cyclical gains and tech caution.",
+          "source_name": "Strategitz",
+          "source_url": "https://strategitz.substack.com/p/global-markets-close-november-4-2026",
+          "published": "2026-11-04"
         }
       ]
     }
