@@ -1,11 +1,9 @@
 {
-  "news_date": "2026-11-04",
+  "news_date": "2026-11-05",
   "tldr": [
-    "台股11月3日崩跌3.59%、1,612.60點收43,307.54點，創史上第7大單日點數跌幅，全球AI科技股賣壓重創晶片股。",
-    "外資單日賣超1,073.1億元、新台幣走弱，費城半導體指數近一個月跌21.35%、台積電ADR下跌15.68%。",
-    "官員認為屬情緒性修正：台積電第三季獲利仍增68.7%、在手訂單續增；央行會議紀要顯示理事對是否升息（現為2%）看法分歧，惟仍預估2026年GDP成長11.48%。",
-    "美股在期中選舉日（週二）止跌回穩（標普+0.36%、那斯達克+0.83%），擺脫週一科技股重挫；10年期公債殖利率升至4.96%，油價因美伊外交期待走跌至約96美元。",
-    "財富與政策面：高資產銀行客戶突破3.2萬戶、主動式ETF規模逼近兆元，行政院版遺產及贈與稅修法持續在立法院審議。"
+    "台股11月4日連五黑收42,948.91點，外資匯出、新台幣走貶，形成股匯雙殺。",
+    "AI供應鏈動能延續，鴻海AI伺服器機櫃週產能倍增、聯發科首顆AI ASIC第4季放量。",
+    "金管會預告穩定幣發行辦法，發行人限銀行及金融業主導合資，非銀行業者資本額至少3億元。"
   ],
   "sections": [
     {
@@ -13,20 +11,22 @@
       "section_zh": "股市行情",
       "items": [
         {
-          "title_zh": "台股重挫1,612點、寫史上第7大單日點數跌幅",
-          "title_en": "TAIEX suffers 7th-steepest point drop, diving 3.59% in global tech sell-off",
-          "summary_zh": "加權指數11月3日(週二)崩跌1,612.60點、跌幅3.59%，收43,307.54點，創史上第7大單日點數跌幅，全球AI與科技股賣壓重創以晶片為主的台股。此跌勢延續前一週五逾1,156點的重挫，使指數明顯回落於10月底高點之下，凸顯台股對美國科技股情緒及AI資本支出回報疑慮的高度連動與脆弱，市場觀望氣氛轉濃。",
-          "summary_en": "Taiwan's benchmark TAIEX plunged 1,612.60 points, or 3.59 percent, on Tuesday, Nov. 3 to close at 43,307.54, its seventh-steepest single-day point decline on record, as a worldwide sell-off in AI and technology shares battered the island's chip-heavy market. The slide extended losses from the prior Friday's 1,156-point drop, pulling the index sharply off its late-October highs and underscoring how exposed Taiwan equities remain to swings in US tech sentiment and worries over AI capital-spending returns.",
+          "title_zh": "台股連五黑收42,948.91點，創逾三個月新低",
+          "title_en": "TAIEX extends losing streak to five sessions, closing at 42,948.91 (2026-11-04)",
+          "summary_zh": "加權指數11月4日跌358.63點、跌幅0.83%，收42,948.91點，為連五個交易日下跌，盤中於41,855.82至43,741.54點大幅震盪，成交值約新台幣1.11兆元。權值王台積電終場跌1.53%收2,260元，但自盤中低點2,235元回升，收斂指數跌幅；市場同時觀望美國期中選舉。",
+          "summary_en": "Taiwan's benchmark index fell 358.63 points, or 0.83%, to 42,948.91 on Nov. 4, its fifth straight decline and lowest close in over three months, after swinging between 41,855.82 and 43,741.54. Turnover reached about NT$1.11 trillion as investors weighed US midterm elections. Heavyweight TSMC slipped 1.53% to NT$2,260 but rebounded off an intraday low of NT$2,235, trimming the index's losses.",
           "source_name": "Focus Taiwan",
-          "source_url": "https://focustaiwan.tw/business/202611030023"
+          "source_url": "https://focustaiwan.tw/business/202611040014",
+          "published": "2026-11-04"
         },
         {
-          "title_zh": "外資單日倒貨1,073億 台幣走貶加劇科技股殺盤",
-          "title_en": "Foreign investors dump NT$107bn as weak NT dollar compounds tech rout",
-          "summary_zh": "外資11月3日於集中市場賣超新台幣1,073.1億元，台股大跌3.59%之際新台幣同步走弱。費城半導體指數近一個月重挫21.35%、台積電ADR下跌15.68%，加深資金外流壓力；光是10月外資淨賣超即約9,943億元，顯示海外持續調節與匯率走弱正相互強化，壓抑台股後市表現。",
-          "summary_en": "Foreign institutional investors sold a net NT$107.31 billion of Taiwanese shares on the main board Tuesday as the TAIEX's 3.59 percent fall coincided with a softer New Taiwan dollar. The PHLX Semiconductor Index has tumbled 21.35 percent over the past month and TSMC's US-listed ADRs have slumped 15.68 percent, feeding the outflows. October alone saw foreign net sales of about NT$994.3 billion, highlighting how sustained overseas selling and currency weakness are reinforcing one another.",
-          "source_name": "Taipei Times",
-          "source_url": "https://www.taipeitimes.com/News/biz/archives/2026/11/04/2003867095"
+          "title_zh": "外資匯出、新台幣走貶引發股匯雙殺",
+          "title_en": "Foreign selling and a weak Taiwan dollar pressure Taipei shares (2026-11-04)",
+          "summary_zh": "外資持續匯出，台股與匯市同步承壓。新台幣11月3日收32.76元、貶1.68角創一年半新低，成交量52.75億美元為史上第四大；4日再貶3分開在32.79元，逼近33元整數關卡。匯銀人士指出，央行不死守特定價位，以「時間換取空間」因應資金外流。",
+          "summary_en": "A \"double kill\" in stocks and the currency gripped Taiwan as foreign investors kept pulling funds out. The Taiwan dollar closed at 32.76 per US dollar on Nov. 3, down 1.68 jiao to an 18-month low, with FX turnover of US$5.28 billion — the fourth-largest on record — then opened Nov. 4 three cents weaker at 32.79, approaching the 33 level. Dealers expect the central bank to \"trade time for space\" rather than defend a set rate.",
+          "source_name": "經濟日報",
+          "source_url": "https://udn.com/news/story/7238/9855381",
+          "published": "2026-11-04"
         }
       ]
     },
@@ -35,20 +35,22 @@
       "section_zh": "產業動態",
       "items": [
         {
-          "title_zh": "國發會主委：AI支出疑慮僅短暫衝擊台股",
-          "title_en": "NDC head says AI-spending jitters to rattle TAIEX only briefly",
-          "summary_zh": "國發會主委在科技股領跌重挫後出面喊話，強調此波賣壓反映的是投資人對AI資本支出回報的情緒，而非企業基本面轉壞，對台股衝擊應屬短期。官員指出，台灣硬體廠商的在手訂單仍相當強勁，預期到明年底前將持續成長，顯示即便市場動盪，以AI為核心的出口動能依然穩固，無需過度悲觀。",
-          "summary_en": "Taiwan's National Development Council minister sought to calm markets after the tech-led plunge, saying the sell-off reflects investor sentiment over AI capital-expenditure returns rather than any deterioration in corporate fundamentals, and that the hit to local shares should be short-lived. Officials pointed to still-robust order backlogs at Taiwan's hardware makers, expected to keep growing through the end of next year, as evidence the island's AI-driven export engine remains intact despite the turbulence.",
-          "source_name": "Taipei Times",
-          "source_url": "https://www.taipeitimes.com/News/biz/archives/2026/11/03/2003867033"
+          "title_zh": "鴻海AI伺服器機櫃週產能倍增，上修AI營收展望",
+          "title_en": "Foxconn doubles AI server rack capacity, lifts AI revenue outlook (2026-11-04)",
+          "summary_zh": "鴻海科技日表示，AI伺服器機櫃週產能已翻倍至每週2,000架，並上修今年資本支出規模。法人預期鴻海可維持逾四成AI伺服器市占，並優先取得新世代產品參考設計，公司估明年AI營收占比有望提高至四至五成。",
+          "summary_en": "At its tech day, Hon Hai (Foxconn) said weekly AI server rack capacity has doubled to 2,000 units and raised its 2026 capital-spending plan. Analysts expect the contract manufacturer to hold more than 40% of the AI server market and win early reference designs for next-generation products, with AI-related revenue potentially reaching 40–50% of the total next year.",
+          "source_name": "經濟日報",
+          "source_url": "https://udn.com/news/story/7240/9856773",
+          "published": "2026-11-04"
         },
         {
-          "title_zh": "社論：科技股修正源於AI回報焦慮、非基本面崩壞",
-          "title_en": "Editorial: tech sell-off reflects AI-return anxiety, not broken fundamentals",
-          "summary_zh": "《台北時報》社論指出，台股晶片股急挫主因在於市場憂慮龐大AI基礎建設投資能否回收，而非企業獲利基礎惡化。文章強調台積電基本面依舊強勁，第三季稅後純益年增68.7%，並已上修2026年營收成長預估，顯示此波回檔屬對偏高評價的情緒性重新定價，而非先進晶片需求降溫的訊號。",
-          "summary_en": "A Taipei Times editorial argued the sharp retreat in Taiwan's chip stocks stems from anxiety over whether heavy AI infrastructure spending will pay off, rather than any erosion in the underlying earnings story. It noted TSMC's fundamentals remain strong—third-quarter net profit jumped 68.7 percent year-on-year and the foundry has lifted its 2026 revenue-growth guidance—suggesting the correction is a sentiment-driven repricing of lofty valuations rather than a signal of fading demand for advanced chips.",
-          "source_name": "Taipei Times",
-          "source_url": "https://www.taipeitimes.com/News/editorials/archives/2026/11/04/2003867101"
+          "title_zh": "聯發科首顆AI ASIC出貨，Q4營收估季增最多32%",
+          "title_en": "MediaTek's first AI ASIC ships, Q4 revenue seen up as much as 32% (2026-11-02)",
+          "summary_zh": "聯發科首款資料中心AI加速器9月起出貨，第4季大幅放量，可望達成25億美元營收目標；管理層估該專案2027年營收上看160億美元、約占AI ASIC市場二成，並已取得第二家非中國資料中心客戶。公司財測第4季營收2,101至2,218億元、季增25%至32%。",
+          "summary_en": "MediaTek said its first data-center AI accelerator began shipping in September and will ramp sharply in Q4, keeping it on track for a US$2.5 billion revenue goal; management sees the program reaching the high end of US$16 billion by 2027, about 20% of the AI ASIC market, and has landed a second non-China data-center customer. Q4 revenue is guided at NT$210.1–221.8 billion, up 25–32% from the prior quarter.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/5612/9847629",
+          "published": "2026-11-02"
         }
       ]
     },
@@ -57,20 +59,22 @@
       "section_zh": "金融業",
       "items": [
         {
-          "title_zh": "高資產銀行客戶突破3.2萬 金管會財管專案見效",
-          "title_en": "High-asset bank clients top 32,000 as FSC wealth push gains traction",
-          "summary_zh": "金管會表示，截至9月底國內銀行服務資產逾新台幣1億元的客戶達32,326戶，單月增加1,730戶，目前已有25家銀行獲准承作高資產財管業務。此類客戶資產中，共同基金占17.6%、保險商品占13.6%，顯示主管機關推動本國高資產財富管理市場的政策逐步奏效，持續將富人資金導入由本地機構管理的金融商品。",
-          "summary_en": "Taiwan's banks served 32,326 clients holding more than NT$100 million each at the end of September, up 1,730 from a month earlier, the Financial Supervisory Commission said, with 25 banks now approved to offer high-asset wealth management. Mutual funds made up 17.6 percent of these clients' assets and insurance products 13.6 percent, showing how the regulator's drive to build a domestic high-net-worth banking market is steadily channelling wealthy Taiwanese money into locally managed products.",
-          "source_name": "Focus Taiwan",
-          "source_url": "https://focustaiwan.tw/business/202610270007"
+          "title_zh": "央行以「時間換空間」因應外資匯出、新台幣走貶",
+          "title_en": "Central bank chooses to \"trade time for space\" as outflows weaken the NT dollar (2026-11-04)",
+          "summary_zh": "外資加速匯出，新台幣貶至一年半低點、盤中逼近33元關卡。據報導，央行不死守特定價位，內部進行沙盤推演並「以時間換取空間」，並放寬出口商每日賣匯額度協助穩盤。這波資金外流凸顯銀行與壽險的外匯部位承壓。",
+          "summary_en": "With foreign investors accelerating withdrawals, the Taiwan dollar fell to an 18-month low and tested the 33-per-dollar level intraday. Reports say the central bank is not defending a specific exchange rate but running internal scenarios and \"trading time for space,\" reportedly easing exporters' daily FX-selling limits to help smooth the slide. The pressure highlights how capital flows are squeezing banks' and insurers' foreign-exchange positions.",
+          "source_name": "經濟日報",
+          "source_url": "https://udn.com/news/story/7238/9855381",
+          "published": "2026-11-04"
         },
         {
-          "title_zh": "金控海外曝險創高 匯率與美國風險牽動金融業",
-          "title_en": "Record overseas exposure leaves financial firms sensitive to FX, US risk",
-          "summary_zh": "監理資料顯示，台灣金控公司海外曝險升抵新台幣31.48兆元（約9,768.8億美元）歷史新高，其中美國為最大債務國。此一高度集中，說明何以新台幣走弱（今年因外資撤離股市貶約3%）與美股劇烈波動會迅速傳導至本國銀行與壽險；在全球科技股賣壓下，其龐大的海外資產部位同時面臨匯率與評價雙重風險。",
-          "summary_en": "Overseas exposure of Taiwan's financial holding companies hit a record NT$31.48 trillion (US$976.88 billion), with the United States the largest debtor country, regulatory data show. The concentration helps explain why a weaker New Taiwan dollar—down about 3 percent this year as foreign investors pull money from local equities—and swings in US markets ripple quickly through Taiwanese banks and insurers, whose large foreign-asset books face both currency and valuation risks as the global tech sell-off unfolds.",
-          "source_name": "Focus Taiwan",
-          "source_url": "https://focustaiwan.tw/business/202608100011"
+          "title_zh": "金管會預告穩定幣發行辦法，科技業不得獨資發行",
+          "title_en": "FSC pre-announces stablecoin issuance rules; tech firms barred from going solo (2026-11-03)",
+          "summary_zh": "金管會11月3日預告「穩定幣發行許可及管理辦法」草案，並同步預告8項VASP授權命令及洗錢防制修正。發行人限銀行、金控及金管會核准機構，非銀行發行人實收資本額至少3億元；採合資須由金融業持股過半，科技業無法單獨發行。幣別僅限與新台幣或單一外幣1:1連結，預告期40天。",
+          "summary_en": "Taiwan's Financial Supervisory Commission on Nov. 3 unveiled draft rules for licensing and managing stablecoin issuers, alongside eight VASP-related orders and anti-money-laundering amendments. Issuers are limited to banks, financial holding companies and approved institutions; non-bank issuers need at least NT$300 million in paid-in capital. Joint ventures must keep financial firms as majority owners, so technology companies cannot issue alone. Only stablecoins pegged 1:1 to the NT dollar or a single foreign currency are allowed, with a 40-day comment period.",
+          "source_name": "經濟日報",
+          "source_url": "https://udn.com/news/story/7239/9855145",
+          "published": "2026-11-03"
         }
       ]
     },
@@ -79,128 +83,20 @@
       "section_zh": "財富管理",
       "items": [
         {
-          "title_zh": "主動式ETF規模逼近兆元 台灣基金熱潮延燒",
-          "title_en": "Active ETFs near NT$1 trillion as Taiwan's fund boom rolls on",
-          "summary_zh": "截至9月底，台灣40檔主動式ETF合計規模達新台幣9,886億元，逼近兆元大關，惟績效明顯分歧。20檔聚焦台股的主動式ETF近三個月平均報酬僅0.60%，逾半數未能繳出正報酬。資金流向上，本土業者1至5月淨流入約136億美元，外商發行的ETF則淨流出約5.9億美元，凸顯本地投資人對國產商品的偏好。",
-          "summary_en": "Taiwan's active ETFs managed a combined NT$988.6 billion at the end of September across 40 funds, closing in on the NT$1 trillion milestone, even as performance diverged sharply. The 20 Taiwan-focused active ETFs averaged just a 0.60 percent return over three months, with fewer than half in positive territory. Domestic issuers dominated flows, pulling in about US$13.6 billion from January to May while foreign-firm ETFs saw roughly US$590 million of net outflows, underscoring local investors' appetite for homegrown products.",
-          "source_name": "Taipei Times",
-          "source_url": "https://www.taipeitimes.com/News/biz/archives/2026/10/27/2003866658"
+          "title_zh": "高資產族群持續布局境外資產，財管規模攀升",
+          "title_en": "Taiwan's wealthy keep shifting into offshore assets as high-asset AUM climbs",
+          "summary_zh": "玉山與KPMG報告預估，今年台灣資產逾1億元的高資產客戶將增至約12.4萬人，逾七成已布局境外資產。金管會資料顯示，截至5月底銀行高資產客戶達25,290人、管理資產2.66兆元；存款占比降至42.5%，債券、保險與境外結構型商品占比上升。",
+          "summary_en": "A KPMG–E.Sun report projects the number of Taiwanese with over NT$100 million in assets will rise to about 124,000 this year, with more than 70% already allocating to offshore assets. FSC data show banks' high-net-worth clients reached 25,290 by end-May with assets under management of NT$2.66 trillion, as deposits fell to 42.5% of holdings and bonds, insurance and offshore structured products gained share.",
+          "source_name": "ETtoday",
+          "source_url": "https://finance.ettoday.net/news/3125502"
         },
         {
-          "title_zh": "財富管理競逐升溫 聚焦家族辦公室與傳承",
-          "title_en": "High-net-worth wealth race heats up around family offices and succession",
-          "summary_zh": "截至8月底約26家銀行獲准承作高資產客戶、管理資產約新台幣3.11兆元，顧問業者看好資產委託、家族辦公室與跨世代傳承的新商機。私募基金餘額仍僅占相關資產約0.32%，金管會已承諾鬆綁上限；國泰等大型壽險規劃將旗下數兆元壽險資產移轉至資產管理子公司，政府並研議對特定家族信託給予稅務優惠，以留住高資產家族於境內布局。",
-          "summary_en": "With around 26 banks approved to serve high-net-worth clients managing NT$3.11 trillion by late August, advisers see fresh opportunity in asset guidance, family offices and intergenerational transfer. Private-fund balances remain tiny at about 0.32 percent of those assets—a cap the FSC has pledged to ease—while big insurers such as Cathay plan to move trillions of life-insurance assets to their asset-management arms, and Taiwan weighs tax relief for certain family trusts to anchor wealthy families onshore.",
-          "source_name": "Taipei Times",
-          "source_url": "https://www.taipeitimes.com/News/biz/archives/2026/10/29/2003866784"
-        }
-      ]
-    },
-    {
-      "section": "Tax & Regulations",
-      "section_zh": "稅務法規",
-      "items": [
-        {
-          "title_zh": "行政院版遺產及贈與稅修法 堵死亡前贈與漏洞",
-          "title_en": "Cabinet estate- and gift-tax overhaul targets pre-death gifting loopholes",
-          "summary_zh": "行政院通過《遺產及贈與稅法》修正案，規定被繼承人死亡前2年內所為贈與，受贈人即使拋棄繼承，仍須就該資產按其應繼分比例負擔遺產稅，剩餘稅額由全體繼承人分攤。此案回應2024年憲法法庭認定舊制違反平等與量能課稅原則的判決，並將上述贈與納入配偶扣除額計算，現送立法院審議。",
-          "summary_en": "The Executive Yuan has approved amendments to the Estate and Gift Tax Act requiring recipients of gifts made within two years of a giver's death to pay estate tax on those assets in proportion to their share, even if they decline to inherit, with any remaining tax split among heirs. The bill, a response to a 2024 Constitutional Court ruling that found the old framework unequal, also folds such gifts into the spousal deduction calculation and now awaits legislative review.",
-          "source_name": "Focus Taiwan",
-          "source_url": "https://focustaiwan.tw/politics/202607310019"
-        },
-        {
-          "title_zh": "育兒所得稅減稅三讀公布 2027報稅適用",
-          "title_en": "Child-friendly income-tax relief promulgated, effective for 2027 filings",
-          "summary_zh": "台灣已公布《所得稅法》修正案，調高有子女家庭的免稅額與扣除額，為減輕家庭負擔之系列措施之一。提高後的額度將適用於2027年5月申報的綜合所得稅，讓家庭享有更多可支配利益，同時在整體稅收因財富移轉熱絡而超徵之際，增加政府的稅式支出成本。",
-          "summary_en": "Taiwan has promulgated an Income Tax Act amendment raising exemption and deduction amounts for families with children, part of a package of relief measures aimed at easing the burden on households. The higher allowances will apply to income-tax returns filed in May 2027, giving families more take-home benefit while adding to the government's revenue cost at a time when overall tax collection has been running ahead of target on buoyant wealth transfers.",
-          "source_name": "Taipei Times",
-          "source_url": "https://www.taipeitimes.com/News/taiwan/archives/2026/09/11/2003864106"
-        }
-      ]
-    },
-    {
-      "section": "Macro & Policy",
-      "section_zh": "總經政策",
-      "items": [
-        {
-          "title_zh": "央行會議紀要曝光 理事對是否升息（現為2%）分歧",
-          "title_en": "Central bank minutes reveal board split over whether to lift 2% rate",
-          "summary_zh": "本週公布的央行9月理監事會議紀要顯示決策者意見分歧：部分理事主張升息以使貼現率正常化（現維持2%、為15年高點，已連10季不變），但多數反對，憂心衝擊出口商、傳統產業、中小企業及背負沉重房貸的年輕族群。此辯論之際，央行2026年CPI預估為2.03%，已高於2%的通膨警戒線。",
-          "summary_en": "Minutes from the central bank's September meeting, published this week, show directors divided on policy. Some favored a hike to normalize the discount rate—held at 2 percent, a 15-year high, for a 10th straight quarter—while a majority opposed raising it for fear of hurting exporters, traditional industries, SMEs and heavily mortgaged young households. The debate comes with the bank's 2026 CPI forecast at 2.03 percent, above its 2 percent alert threshold.",
-          "source_name": "Taipei Times",
-          "source_url": "https://www.taipeitimes.com/News/editorials/archives/2026/11/03/2003867039"
-        },
-        {
-          "title_zh": "IMF上修台灣2026成長率至10.7% 出口暢旺撐場",
-          "title_en": "IMF lifts Taiwan's 2026 growth forecast to 10.7% on export boom",
-          "summary_zh": "國際貨幣基金（IMF）大幅上修台灣2026年經濟成長率至10.7%，凸顯即便股市震盪，AI帶動的出口熱潮仍持續驅動經濟。此次上修與一連串樂觀預測一致——央行預估11.48%、主計總處11.05%、中經院更高達12.16%——若實現將是台灣近40年來最強勁的年度成長。",
-          "summary_en": "The International Monetary Fund has sharply raised its 2026 GDP growth forecast for Taiwan to 10.7 percent, underscoring how an AI-fueled export surge continues to power the economy even as equities wobble. The upgrade aligns with a run of bullish projections—the central bank sees 11.48 percent, statistics agency DGBAS 11.05 percent and think tank CIER as high as 12.16 percent—marking what would be Taiwan's strongest annual expansion in nearly four decades.",
-          "source_name": "Focus Taiwan",
-          "source_url": "https://focustaiwan.tw/business/202610130005"
-        }
-      ]
-    },
-    {
-      "section": "Global Markets",
-      "section_zh": "國際財經",
-      "items": [
-        {
-          "title_zh": "美科技股賣壓加期中選舉不確定 成亞股逆風",
-          "title_en": "US tech sell-off and midterm uncertainty pose headwind for Asian markets",
-          "summary_zh": "台灣媒體將近期區域弱勢解讀為外部輸入的衝擊：美國大型科技股財測疲弱、半導體股重挫外溢至亞洲盤面，美國期中選舉又增添政治不確定性。費城半導體指數隔夜重挫、那斯達克100指數跌入技術性修正區間（低於近期高點逾10%），壓抑包括台灣在內、以晶片股為主的區域股市。",
-          "summary_en": "Taiwanese media framed the latest regional weakness as an imported shock: weak US big-tech guidance and a slump in semiconductor shares spilled into Asian trading, while the US midterm elections added a layer of political uncertainty. The Philadelphia Semiconductor Index had tumbled sharply overnight and the Nasdaq-100 slipped into technical correction, more than 10 percent below its recent peak, pressuring chip-heavy bourses across the region including Taiwan.",
-          "source_name": "Taipei Times",
-          "source_url": "https://www.taipeitimes.com/News/biz/archives/2026/11/02/2003866974"
-        },
-        {
-          "title_zh": "AI交易反轉 衝擊擴及亞洲各地明星股",
-          "title_en": "AI-trade reversal spreads beyond chips to star stocks across Asia",
-          "summary_zh": "台灣媒體報導指出，AI交易的反轉已在亞洲市場蔓延，拖累的不僅是半導體，還包括一批曾領漲區域行情的動能熱門股。此反轉反映投資人重新評估偏高的評價，以及龐大AI基礎建設投資何時能轉化為獲利；此一重新校準，使先前漲勢凌厲的亞洲科技股更易出現突發性的劇烈回檔。",
-          "summary_en": "Reporting out of Taiwan highlighted how the unwinding of the AI trade has rippled across Asian markets, dragging down not just semiconductors but a broader set of momentum favorites that had led the regional rally. The reversal reflects investors reassessing stretched valuations and the pace at which heavy AI infrastructure spending will translate into profits, a recalibration that has made previously high-flying Asian technology names more vulnerable to sudden, sharp pullbacks.",
-          "source_name": "Taipei Times",
-          "source_url": "https://www.taipeitimes.com/News/biz/archives/2026/10/19/2003866193"
-        }
-      ]
-    },
-    {
-      "section": "International",
-      "section_zh": "國際",
-      "items": [
-        {
-          "title_zh": "標普止跌、期中選舉日晶片股反彈（2026-11-03）",
-          "title_en": "S&P 500 snaps three-day skid on Election Day as chip stocks rebound (2026-11-03)",
-          "summary_zh": "美股週二（期中選舉日）止跌回穩，標普500上漲0.36%收7,568.92點、那斯達克綜合指數漲0.83%收25,372.01點，重挫的晶片股領軍部分反彈；道瓊工業指數相對落後，下跌197.26點、跌幅0.38%收51,786.72點。此波反彈中斷連3日跌勢，惟策略師提醒在10月重挫後那斯達克100仍處修正區間，市場尚未脫離險境。",
-          "summary_en": "US stocks steadied on Tuesday, Election Day, with the S&P 500 rising 0.36 percent to 7,568.92 and the Nasdaq Composite adding 0.83 percent to 25,372.01 as battered chipmakers led a partial recovery; the Dow Jones Industrial Average lagged, slipping 197.26 points, or 0.38 percent, to 51,786.72. The bounce broke a three-day losing streak, though strategists cautioned the market is \"not out of the woods\" with the Nasdaq-100 still in correction after October's steep slide.",
-          "source_name": "CNBC",
-          "source_url": "https://www.cnbc.com/2026/11/02/stock-market-today-live-updates.html",
-          "published": "2026-11-03"
-        },
-        {
-          "title_zh": "10年期美債殖利率升至4.96% 市場關注期中選舉與伊朗（2026-11-03）",
-          "title_en": "10-year Treasury yield rises to 4.96% as traders weigh midterms and Iran (2026-11-03)",
-          "summary_zh": "美國公債殖利率週二走升，投資人消化期中選舉、即將公布的就業數據及未歇的伊朗緊張情勢。指標10年期殖利率上升逾6個基點至4.96%，對政策敏感的2年期殖利率上揚4個基點至4.623%。此走勢反映在聯準會官員示警通膨黏著、且對政策路徑分歧加深後，市場傾向利率「更高更久」的預期。",
-          "summary_en": "US Treasury yields climbed on Tuesday as investors digested the midterm elections, incoming jobs data and lingering Iran tensions. The benchmark 10-year yield rose more than six basis points to 4.96 percent, while the policy-sensitive 2-year yield added four basis points to 4.623 percent. The move reflected a market leaning toward higher-for-longer rates after Federal Reserve officials flagged persistent inflation worries and a deepening split over the policy path.",
-          "source_name": "CNBC",
-          "source_url": "https://www.cnbc.com/2026/11/03/us-treasury-yields-bonds.html",
-          "published": "2026-11-03"
-        },
-        {
-          "title_zh": "原油連2日走跌 市場押注美伊外交緩和（2026-11-03）",
-          "title_en": "Crude slides for a second day on hopes for US–Iran diplomacy (2026-11-03)",
-          "summary_zh": "國際油價週二連續第二個交易日下跌，市場押注美伊衝突將走向外交解決，儘管德黑蘭拒絕其所稱的脅迫式談判。美國西德州中級原油下跌37美分、收每桶96.09美元，盤中一度跌破95美元；布蘭特原油跌1.17美元至103.60美元。此前週一油價已重挫約7%，創7月底以來最大單日跌幅，略為紓解通膨壓力。",
-          "summary_en": "Oil prices fell for a second straight session on Tuesday as markets wagered on a diplomatic resolution to the US–Iran conflict, even as Tehran rejected talks it called coercive. US West Texas Intermediate crude lost 37 cents to settle at US$96.09 a barrel after dipping below US$95 intraday, while Brent shed US$1.17 to US$103.60. The slide followed Monday's roughly 7 percent plunge, the sharpest daily drop since late July, easing some inflation pressure.",
-          "source_name": "CNBC",
-          "source_url": "https://www.cnbc.com/2026/11/03/oil-prices-climb-after-us-reportedly-strikes-irans-qeshm-island.html",
-          "published": "2026-11-03"
-        },
-        {
-          "title_zh": "那斯達克11月開局再現科技股重挫（2026-11-02）",
-          "title_en": "Nasdaq opens November with another tech meltdown (2026-11-02)",
-          "summary_zh": "美股11月開局承壓，投資人持續拋售AI相關科技股。週一那斯達克綜合指數下跌約1.07%、標普500跌0.51%，道瓊則因資金轉進防禦類股逆勢上漲0.41%。此波賣壓源於市場檢視龐大AI基礎建設投資的回報，為隨後重創包括台灣在內亞洲晶片股的隔夜大跌定下基調。",
-          "summary_en": "US equities began November under pressure as investors kept dumping AI-linked technology shares. On Monday the Nasdaq Composite fell about 1.07 percent and the S&P 500 lost 0.51 percent, while the Dow bucked the trend with a 0.41 percent gain on rotation into defensives. The renewed selling, driven by scrutiny of returns on the massive AI build-out, set the tone for the heavy overnight losses that later hammered Asian chip stocks, including Taiwan's.",
-          "source_name": "CNBC",
-          "source_url": "https://www.cnbc.com/2026/11/01/stock-market-today-live-updates.html",
-          "published": "2026-11-02"
+          "title_zh": "債券與結構型商品成高資產配置主力",
+          "title_en": "Bonds and structured products lead high-net-worth portfolios",
+          "summary_zh": "中國信託與BCG報告指出，高資產客群優先增持項目中債券占49%居首，結構型商品與不動產各占28%。超高資產族群境外資產配置比重約69%，但高度配置（逾總資產20%）僅約35%。銀行多將海外債、結構型商品與DCI計入財管門檻，反映收益型與跨境商品需求穩定。",
+          "summary_en": "A CTBC–BCG wealth study found bond products topped the priority list for Taiwan's wealthy at 49% of allocations, followed by structured products and real estate at 28% each. Offshore allocation reached about 69% of ultra-high-net-worth portfolios, though heavy allocations (over 20% of total assets) stayed near 35%. Banks increasingly count offshore bonds, structured notes and DCI toward wealth-tier thresholds, signaling steady demand for yield-oriented, cross-border products.",
+          "source_name": "老喬報",
+          "source_url": "https://joelin.cc/?p=8309"
         }
       ]
     }
