@@ -216,7 +216,7 @@ body::before {
   align-items: center;
   margin-bottom: 2px;
 }
-.topbar-title-row h1 { margin: 0; }
+.topbar-title-row h1 { margin: 0; white-space: nowrap; flex-shrink: 0; }
 .topbar .updated {
   margin: 0;
   padding: 0;
