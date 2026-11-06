@@ -1,46 +1,46 @@
 {
-  "closing_date": "2026-11-05",
+  "closing_date": "2026-11-06",
   "indices": [
     {
       "name": "S&P 500",
       "name_zh": null,
-      "close": 7688.6201171875,
-      "daily_pct": 1.58,
-      "mtd_pct": 1.43,
-      "ytd_pct": 12.32,
-      "closing_date": "2026-11-04"
+      "close": 7353.72998046875,
+      "daily_pct": -4.36,
+      "mtd_pct": -2.99,
+      "ytd_pct": 7.42,
+      "closing_date": "2026-11-05"
     },
     {
       "name": "Nasdaq Composite",
       "name_zh": null,
-      "close": 25736.509765625,
-      "daily_pct": 1.44,
-      "mtd_pct": 1.18,
-      "ytd_pct": 10.73,
-      "closing_date": "2026-11-04"
+      "close": 24314.998046875,
+      "daily_pct": -5.52,
+      "mtd_pct": -4.41,
+      "ytd_pct": 4.62,
+      "closing_date": "2026-11-05"
     },
     {
       "name": "Dow Jones",
       "name_zh": null,
-      "close": 53356.12109375,
-      "daily_pct": 3.03,
-      "mtd_pct": 3.06,
-      "ytd_pct": 11.01,
-      "closing_date": "2026-11-04"
+      "close": 51523.05859375,
+      "daily_pct": -3.44,
+      "mtd_pct": -0.48,
+      "ytd_pct": 7.2,
+      "closing_date": "2026-11-05"
     },
     {
       "name": "PHLX Semiconductor",
       "name_zh": null,
-      "close": 10268.650390625,
-      "daily_pct": -3.13,
-      "mtd_pct": -3.93,
-      "ytd_pct": 44.97,
-      "closing_date": "2026-11-04"
+      "close": 9011.1376953125,
+      "daily_pct": -12.25,
+      "mtd_pct": -15.7,
+      "ytd_pct": 27.22,
+      "closing_date": "2026-11-05"
     },
     {
       "name": "Euro Stoxx 50",
       "name_zh": null,
-      "close": 6231.5400390625,
+      "close": 6231.54,
       "daily_pct": -0.55,
       "mtd_pct": 2.19,
       "ytd_pct": 8.1,
@@ -49,7 +49,7 @@
     {
       "name": "DAX",
       "name_zh": null,
-      "close": 26325.009765625,
+      "close": 26325.01,
       "daily_pct": -0.43,
       "mtd_pct": 2.4,
       "ytd_pct": 7.95,
@@ -58,7 +58,7 @@
     {
       "name": "FTSE 100",
       "name_zh": null,
-      "close": 10782.66015625,
+      "close": 10782.66,
       "daily_pct": -0.43,
       "mtd_pct": 0.93,
       "ytd_pct": 9.04,
@@ -67,7 +67,7 @@
     {
       "name": "CAC 40",
       "name_zh": null,
-      "close": 8205.3701171875,
+      "close": 8205.37,
       "daily_pct": 0.34,
       "mtd_pct": 2.62,
       "ytd_pct": 0.35,
@@ -76,8 +76,8 @@
     {
       "name": "Nikkei 225",
       "name_zh": null,
-      "close": 61077.9,
-      "daily_pct": -1.79,
+      "close": 62693.16,
+      "daily_pct": 0.81,
       "mtd_pct": -1.74,
       "ytd_pct": 23.54,
       "closing_date": "2026-11-05"
@@ -94,26 +94,26 @@
     {
       "name": "OTC 櫃買加權",
       "name_zh": null,
-      "close": 321.47,
-      "daily_pct": -6.41,
+      "close": null,
+      "daily_pct": null,
+      "mtd_pct": null,
+      "ytd_pct": null,
+      "closing_date": null
+    },
+    {
+      "name": "台指期(近月)",
+      "name_zh": null,
+      "close": 41915.0,
+      "daily_pct": -2.98,
       "mtd_pct": null,
       "ytd_pct": null,
       "closing_date": "2026-11-05"
     },
     {
-      "name": "台指期(近月)",
-      "name_zh": null,
-      "close": 43204.0,
-      "daily_pct": -0.34,
-      "mtd_pct": null,
-      "ytd_pct": null,
-      "closing_date": "2026-11-04"
-    },
-    {
       "name": "KOSPI",
       "name_zh": null,
-      "close": 5383.8,
-      "daily_pct": -5.28,
+      "close": 5550.3,
+      "daily_pct": -2.35,
       "mtd_pct": -0.82,
       "ytd_pct": 34.87,
       "closing_date": "2026-11-05"
@@ -121,8 +121,8 @@
     {
       "name": "Hang Seng 恆生",
       "name_zh": null,
-      "close": 24796.98,
-      "daily_pct": 3.67,
+      "close": 23093.37,
+      "daily_pct": -3.45,
       "mtd_pct": 2.68,
       "ytd_pct": -6.68,
       "closing_date": "2026-11-05"
@@ -130,8 +130,8 @@
     {
       "name": "Shanghai 上證",
       "name_zh": null,
-      "close": 3689.911,
-      "daily_pct": 0.1,
+      "close": 3697.52,
+      "daily_pct": 0.31,
       "mtd_pct": 2.42,
       "ytd_pct": -7.12,
       "closing_date": "2026-11-05"
@@ -139,11 +139,11 @@
     {
       "name": "CSI 300 滬深300",
       "name_zh": null,
-      "close": 4113.4111328125,
+      "close": 4056.92529296875,
       "daily_pct": null,
       "mtd_pct": null,
       "ytd_pct": null,
-      "closing_date": "2026-11-05"
+      "closing_date": "2026-11-06"
     },
     {
       "name": "Nifty 50",
@@ -157,8 +157,8 @@
     {
       "name": "S&P/ASX 200",
       "name_zh": null,
-      "close": 9065.099609375,
-      "daily_pct": null,
+      "close": 8795.2,
+      "daily_pct": -0.44,
       "mtd_pct": -0.83,
       "ytd_pct": 1.38,
       "closing_date": "2026-11-05"
@@ -167,38 +167,38 @@
   "bonds": [
     {
       "name": "US 10-Year",
-      "yield_pct": 4.89,
-      "daily_bps": -5.8,
-      "mtd_bps": -3.5,
-      "closing_date": "2026-11-04"
+      "yield_pct": 4.84,
+      "daily_bps": -5.7,
+      "mtd_bps": -9.2,
+      "closing_date": "2026-11-05"
     },
     {
       "name": "US 2-Year",
-      "yield_pct": 4.58,
-      "daily_bps": -3.0,
-      "mtd_bps": 2.0,
-      "closing_date": "2026-11-04"
+      "yield_pct": 4.48,
+      "daily_bps": 0.6,
+      "mtd_bps": -10.0,
+      "closing_date": "2026-11-06"
     },
     {
       "name": "Germany 10-Year",
-      "yield_pct": 3.34,
-      "daily_bps": -0.63,
+      "yield_pct": 3.25,
+      "daily_bps": -4.0,
       "mtd_bps": -2.47,
-      "closing_date": "2026-11-04"
+      "closing_date": "2026-11-06"
     },
     {
       "name": "Japan 10-Year",
-      "yield_pct": 2.85,
-      "daily_bps": 3.8,
-      "mtd_bps": 3.8,
-      "closing_date": "2026-11-04"
+      "yield_pct": 2.67,
+      "daily_bps": -9.8,
+      "mtd_bps": -1.1,
+      "closing_date": "2026-11-06"
     },
     {
       "name": "UK 10-Year",
-      "yield_pct": 5.23,
-      "daily_bps": 4.99,
+      "yield_pct": 5.14,
+      "daily_bps": -0.1,
       "mtd_bps": -4.53,
-      "closing_date": "2026-11-03"
+      "closing_date": "2026-11-06"
     },
     {
       "name": "TW 10-Year",
@@ -213,91 +213,91 @@
       "name": "DXY 美元指數",
       "close": 101.51000213623047,
       "daily_pct": -0.35,
-      "mtd_pct": -0.42,
-      "ytd_pct": 3.23,
+      "mtd_pct": -0.2,
+      "ytd_pct": 3.46,
       "closing_date": "2026-11-04"
     },
     {
       "name": "EUR/USD 歐元",
-      "close": 1.1207244396209717,
-      "daily_pct": 0.14,
-      "mtd_pct": 0.22,
-      "ytd_pct": -4.6,
-      "closing_date": "2026-11-04"
+      "close": 1.1234945058822632,
+      "daily_pct": 0.25,
+      "mtd_pct": 0.47,
+      "ytd_pct": -4.36,
+      "closing_date": "2026-11-05"
     },
     {
       "name": "USD/JPY 日圓",
-      "close": 158.468994140625,
-      "daily_pct": 0.35,
-      "mtd_pct": 0.42,
-      "ytd_pct": 1.31,
-      "closing_date": "2026-11-04"
+      "close": 158.35699462890625,
+      "daily_pct": -0.07,
+      "mtd_pct": 0.35,
+      "ytd_pct": 1.24,
+      "closing_date": "2026-11-05"
     },
     {
       "name": "GBP/USD 英鎊",
-      "close": 1.343418002128601,
-      "daily_pct": 0.18,
-      "mtd_pct": 0.42,
-      "ytd_pct": -0.25,
-      "closing_date": "2026-11-04"
+      "close": 1.3477089405059814,
+      "daily_pct": 0.32,
+      "mtd_pct": 0.74,
+      "ytd_pct": 0.07,
+      "closing_date": "2026-11-05"
     },
     {
       "name": "USD/CNY 人民幣",
-      "close": 6.670100212097168,
-      "daily_pct": 0.33,
-      "mtd_pct": 0.14,
-      "ytd_pct": -4.66,
-      "closing_date": "2026-11-04"
+      "close": 6.673099994659424,
+      "daily_pct": 0.04,
+      "mtd_pct": 0.18,
+      "ytd_pct": -4.62,
+      "closing_date": "2026-11-05"
     },
     {
       "name": "USD/TWD 新台幣",
-      "close": 32.733001708984375,
-      "daily_pct": 0.45,
-      "mtd_pct": 0.51,
-      "ytd_pct": 4.77,
-      "closing_date": "2026-11-04"
+      "close": 32.82120132446289,
+      "daily_pct": 0.27,
+      "mtd_pct": 0.78,
+      "ytd_pct": 5.05,
+      "closing_date": "2026-11-05"
     },
     {
       "name": "JPY/TWD 日圓兌台幣",
-      "close": 0.20652900636196136,
-      "daily_pct": 0.09,
-      "mtd_pct": 0.1,
-      "ytd_pct": 3.4,
-      "closing_date": "2026-11-04"
+      "close": 0.20726700127124786,
+      "daily_pct": 0.36,
+      "mtd_pct": 0.46,
+      "ytd_pct": 3.76,
+      "closing_date": "2026-11-05"
     }
   ],
   "commodities": [
     {
       "name": "黃金 (USD/oz)",
-      "close": 4073.0,
-      "daily_pct": 3.37,
-      "mtd_pct": 4.47,
-      "ytd_pct": -6.18,
-      "closing_date": "2026-11-04"
+      "close": 4070.300048828125,
+      "daily_pct": -1.05,
+      "mtd_pct": 4.4,
+      "ytd_pct": -6.24,
+      "closing_date": "2026-11-05"
     },
     {
       "name": "白銀 (USD/oz)",
-      "close": 52.119998931884766,
-      "daily_pct": 5.11,
-      "mtd_pct": 6.16,
-      "ytd_pct": -25.69,
-      "closing_date": "2026-11-04"
+      "close": 51.755001068115234,
+      "daily_pct": -0.92,
+      "mtd_pct": 5.41,
+      "ytd_pct": -26.21,
+      "closing_date": "2026-11-05"
     },
     {
       "name": "WTI 原油 (USD/bbl)",
-      "close": 88.12000274658203,
-      "daily_pct": -8.29,
-      "mtd_pct": -15.37,
-      "ytd_pct": 53.47,
-      "closing_date": "2026-11-04"
+      "close": 91.30999755859375,
+      "daily_pct": 0.87,
+      "mtd_pct": -12.3,
+      "ytd_pct": 59.02,
+      "closing_date": "2026-11-05"
     },
     {
       "name": "布蘭特原油 (USD/bbl)",
-      "close": 94.62000274658203,
-      "daily_pct": -8.67,
-      "mtd_pct": -19.57,
-      "ytd_pct": 55.5,
-      "closing_date": "2026-11-04"
+      "close": 99.47000122070312,
+      "daily_pct": 1.2,
+      "mtd_pct": -15.45,
+      "ytd_pct": 63.47,
+      "closing_date": "2026-11-05"
     },
     {
       "name": "比特幣 (USD)",
@@ -383,36 +383,25 @@
     }
   ],
   "rate_outlook": {
-    "us2y": 4.58,
-    "us10y": 4.89,
-    "yield_curve_10y2y": 0.31,
-    "yield_curve_10y2y_bps": 31,
+    "us2y": 4.46,
+    "us10y": 4.84,
+    "yield_curve_10y2y": 0.38,
+    "yield_curve_10y2y_bps": 38,
     "curve_shape": "正斜率",
-    "dxy": 101.51000213623047,
-    "dxy_daily_pct": -0.35,
-    "closing_date": "2026-11-04"
+    "dxy": 101.6760025024414,
+    "dxy_daily_pct": 0.16,
+    "closing_date": "2026-11-05"
   },
   "fedwatch": [
     {
-      "label": "Nov 2026",
-      "fomc_date": "2026-11-05",
-      "implied_rate": 3.88,
+      "label": "Dec 2026",
+      "fomc_date": "2026-12-16",
+      "implied_rate": 4.0,
       "delta_rate": null,
       "p_hike": null,
       "p_cut": null,
       "is_reference": true
-    },
-    {
-      "label": "Dec 2026",
-      "fomc_date": "2026-12-16",
-      "implied_rate": 3.99,
-      "delta_rate": 0.11,
-      "delta_bps": 11.0,
-      "p_hike": 44.0,
-      "p_hold": 56.0,
-      "p_cut": 0,
-      "is_reference": false
     }
   ],
-  "summary": "11/5 Hang Seng 恆生 +3.67%、11/4 Dow Jones +3.03%、11/5 Nifty 50 +2.40% 領漲；11/5 OTC 櫃買加權 -6.41%、11/5 KOSPI -5.28% 走弱。"
+  "summary": "11/5 Nifty 50 +2.40%、11/5 Nikkei 225 +0.81%、11/5 CAC 40 +0.34% 領漲；11/5 PHLX Semiconductor -12.25%、11/5 Nasdaq Composite -5.52% 走弱。"
 }
