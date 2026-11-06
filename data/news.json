@@ -3,7 +3,9 @@
   "tldr": [
     "台股11月6日盤中暴跌3,737點創紀錄，終場跌1,873點（-4.51%）收39,701.64點、失守4萬點，為史上第四大收盤跌點。",
     "三大法人賣超1,140億元，外資賣超912億、連21日減碼台積電與聯發科；投信逆勢買超266億元。",
-    "新台幣上演V型反轉，盤中破33元後，在央行調節與金管會限空令下終場升1.08角收32.768元。"
+    "新台幣上演V型反轉，盤中破33元後，在央行調節與金管會限空令下終場升1.08角收32.768元。",
+    "國安基金第10度授權護盤，金管會同步祭出五大救市措施，限空令自11月9日起上路。",
+    "美股11月5日AI股崩跌蒸發約3兆美元引爆賣壓，11月6日反彈、輝達回升6%。"
   ],
   "sections": [
     {
@@ -98,6 +100,120 @@
           "summary_en": "Taiwan's high-asset wealth-management market has scaled new highs, with FSC data showing high-asset AUM reaching NT$2.08 trillion, up more than 50% year-on-year, and the number of individuals with net worth above NT$100 million at a record. Banks are responding: KBank's new \"private-banking membership\" serves clients with assets over NT$100 million, extending into family governance and succession planning as competition for wealthy clients intensifies.",
           "source_name": "經濟日報",
           "source_url": "https://money.udn.com/money/story/5636/9499607"
+        }
+      ]
+    },
+    {
+      "section": "Tax & Regulations",
+      "section_zh": "稅務法規",
+      "items": [
+        {
+          "title_zh": "立院三讀「擬制遺產」新制，封堵臨終贈與避稅",
+          "title_en": "Legislature passes \"deemed estate\" rule tightening gift-tax avoidance (2026-08-21)",
+          "summary_zh": "立法院三讀通過遺產及贈與稅法修正，新增「擬制遺產」規定：被繼承人死亡前2年內贈與特定親屬的財產，將依占遺產總額比例計入遺產稅計算。財政部表示正研擬施行細則與申報書表，並於總統公布後加強宣導。此舉堵住臨終前移轉財產避稅的缺口，高資產家庭的傳承與稅務規劃難度隨之提高，須重新檢視贈與時點。",
+          "summary_en": "Taiwan's legislature passed amendments to the Estate and Gift Tax Act adding a \"deemed estate\" provision: assets a decedent gifted to certain relatives within two years before death are counted into the taxable estate on a proportional basis. The Ministry of Finance is drafting enforcement rules and filing forms and will step up guidance after promulgation. The change closes a near-death gifting loophole and raises succession-planning complexity for high-asset families.",
+          "source_name": "中央社",
+          "source_url": "https://cna.com.tw/news/afe/202608210289.aspx",
+          "published": "2026-08-21"
+        },
+        {
+          "title_zh": "財政部調高所得稅免稅額與扣除額，適用2027報稅季",
+          "title_en": "MOF lifts income-tax exemption and deductions for the new tax year (2025-11-27)",
+          "summary_zh": "財政部依物價指數調整，將綜合所得稅免稅額由9.7萬元調高至10.1萬元，標準扣除額由13.1萬元提高至13.6萬元。新標準適用於本年度所得、2027年5月報稅季申報。此一調整反映通膨連動機制，可略為減輕受薪家庭稅負，個人與雇主在薪資所得與扣繳規劃上可提前因應，掌握可支配所得變化。",
+          "summary_en": "The Ministry of Finance raised the personal income-tax exemption to NT$101,000 from NT$97,000 and the standard deduction to NT$136,000 from NT$131,000, reflecting inflation adjustments. The new thresholds apply to income earned in the current year and filed in the May 2027 tax season, modestly easing the burden on salaried households and shaping take-home pay and withholding planning for individuals and employers.",
+          "source_name": "Focus Taiwan",
+          "source_url": "https://focustaiwan.tw/business/202511270018",
+          "published": "2025-11-27"
+        }
+      ]
+    },
+    {
+      "section": "Macro & Policy",
+      "section_zh": "總經政策",
+      "items": [
+        {
+          "title_zh": "國安基金第10度授權護盤，本週台股累跌5,510點",
+          "title_en": "National Stabilization Fund authorized for a 10th rescue as the market plunges (2026-11-06)",
+          "summary_zh": "國安基金11月6日召開臨時委員會，以共識決通過授權執行秘書視市況動用資金執行市場安定任務，為史上第10度授權護盤。財政部指出，本週5個交易日加權指數累計重挫5,510點。分析師提醒，公告僅屬授權、不代表已實際進場買股，後續動用金額仍視市況而定，主要作用在穩定信心、減緩跌勢，投資人宜待止穩後再評估。",
+          "summary_en": "Taiwan's National Stabilization Fund convened an emergency committee on Nov. 6 and approved, by consensus, authorizing its executive secretary to deploy capital as needed to stabilize the market — its 10th such mandate. Officials noted the TAIEX had shed 5,510 points over the week's five sessions. Analysts cautioned the announcement authorizes but does not confirm actual buying, framing it mainly as a confidence signal to slow the pace of declines.",
+          "source_name": "經濟日報",
+          "source_url": "https://udn.com/news/story/7251/9862957",
+          "published": "2026-11-06"
+        },
+        {
+          "title_zh": "金管會祭五大救市措施，限空令11月9日上路",
+          "title_en": "FSC unveils five market-stabilizing measures with short-selling curbs from Nov. 9 (2026-11-06)",
+          "summary_zh": "金管會宣布自11月9日起採行五大措施：借券賣出上限由30%降至3%、融券保證金成數由90%提高至130%，並放寬融資融券擔保品種類以紓緩追繳壓力，同時鼓勵上市櫃公司評估庫藏股與召開法說會。證券商因避險或造市所需的借券賣出不受上限限制。措施旨在限制做空數量、提高放空成本，以維持市場秩序與穩定，降低投資人被追繳的連鎖賣壓。",
+          "summary_en": "The Financial Supervisory Commission announced five measures effective Nov. 9: cutting the cap on securities-lending short sales to 3% from 30%, raising the margin ratio for margin short selling to 130% from 90%, broadening acceptable collateral for margin trading to ease forced-sale pressure, and encouraging listed firms to weigh buybacks and hold investor conferences. Broker short sales for hedging or market-making are exempt. The curbs aim to limit downside bets and steady market order.",
+          "source_name": "經濟日報",
+          "source_url": "https://udn.com/news/story/7251/9862547",
+          "published": "2026-11-06"
+        }
+      ]
+    },
+    {
+      "section": "Global Markets",
+      "section_zh": "國際財經",
+      "items": [
+        {
+          "title_zh": "美股11月5日科技股崩跌引爆全球賣壓，拖累亞股走低",
+          "title_en": "US tech wreck on Nov. 5 ignites a global sell-off, dragging Asian markets lower (2026-11-05)",
+          "summary_zh": "11月5日華爾街爆發AI科技股重挫：那斯達克指數暴跌5.52%陷入修正、標普500跌4.36%、道瓊跌3.44%，輝達下挫約9%、美光跌逾17%、SanDisk跌逾22%，市值蒸發約3兆美元。賣壓隔日蔓延至亞股，成為台股盤中創紀錄暴跌、外資大舉匯出的導火線，全球科技股估值過高疑慮與獲利了結潮同步發酵。",
+          "summary_en": "A brutal AI-driven rout hit Wall Street on Nov. 5: the Nasdaq Composite tumbled 5.52% into correction, the S&P 500 fell 4.36% and the Dow dropped 3.44%, as Nvidia slid about 9%, Micron lost over 17% and SanDisk over 22%, wiping out roughly US$3 trillion in value. The sell-off spread across Asia the next day, setting the stage for Taiwan's record intraday plunge and heavy foreign outflows.",
+          "source_name": "TradingKey",
+          "source_url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262287984-nasdaq-5-percent-drop-ai-stocks-nvda-mu-sndk-tradingkey",
+          "published": "2026-11-05"
+        },
+        {
+          "title_zh": "美股11月6日反彈、AI疑慮緩解，輝達回升6%",
+          "title_en": "Wall Street rebounds on Nov. 6 as AI jitters fade, Nvidia bounces 6% (2026-11-06)",
+          "summary_zh": "美股11月6日止穩，那斯達克指數回升約1.6%、標普500走高，科技股回神，輝達在前一日重挫後反彈約6%；道瓊則相對落後、微跌約0.46%。市場同時消化10月就業報告與聯準會政策預期變化。此波部分回補為AI類股慘澹的一週畫下喘息，也為亞股週五盤前提供較穩定的隔夜指引，有助舒緩區域市場情緒。",
+          "summary_en": "US stocks steadied on Nov. 6, with the Nasdaq Composite rising roughly 1.6% and the S&P 500 gaining as technology shares recovered and Nvidia bounced about 6% after its prior-day slump; the Dow lagged, slipping around 0.46%. Investors weighed the October jobs report and shifting Fed expectations. The partial recovery capped a bruising week for AI names but offered Asian markets a steadier overnight lead into Friday's session.",
+          "source_name": "Yahoo Finance",
+          "source_url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-november-6-dow-sp-500-nasdaq-jobs-report-earnings-135953863.html",
+          "published": "2026-11-06"
+        }
+      ]
+    },
+    {
+      "section": "International",
+      "section_zh": "國際",
+      "items": [
+        {
+          "title_zh": "那斯達克與標普500反彈、道瓊收低，為AI股慘澹一週收尾",
+          "title_en": "Nasdaq and S&P 500 rebound, Dow slips to cap a bruising week for AI stocks (2026-11-06)",
+          "summary_zh": "美股週五止穩，那斯達克指數上漲約1.6%、標普500漲約0.3%至0.7%，道瓊則相對弱勢、下跌約237點至約51,286點。輝達在前一交易日重挫後反彈近6%，帶動科技股領漲回補。此次彈升為波動劇烈且收黑的一週畫下句點，市場仍聚焦AI估值偏高的疑慮與資金輪動。",
+          "summary_en": "US equities steadied on Friday as the Nasdaq Composite rose about 1.6% and the S&P 500 gained around 0.3%-0.7%, while the Dow Jones Industrial Average lagged, shedding roughly 237 points to about 51,286. Nvidia rebounded close to 6% after its prior-session plunge, helping technology lead the recovery. The bounce closed out a volatile, losing week dominated by worries over stretched AI valuations.",
+          "source_name": "Yahoo Finance",
+          "source_url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-november-6-dow-sp-500-nasdaq-jobs-report-earnings-135953863.html",
+          "published": "2026-11-06"
+        },
+        {
+          "title_zh": "前一交易日AI股崩盤蒸發3兆美元，那斯達克重挫5.5%",
+          "title_en": "AI meltdown wipes out $3 trillion as Nasdaq slumps 5.5% in prior session (2026-11-05)",
+          "summary_zh": "前一交易日那斯達克指數暴跌5.52%至24,315點，創19個月最大單日跌幅並確認進入修正；標普500跌4.36%收7,353.73點、道瓊跌3.44%。輝達下挫逾9%、美光跌逾17%、SanDisk跌逾22%，費城半導體指數崩跌。這波賣壓因市場憂心AI交易過熱而起，約3兆美元市值瞬間蒸發，點燃全球科技股連鎖修正。",
+          "summary_en": "In the previous trading session the Nasdaq Composite plunged 5.52% to 24,315, its worst day in 19 months, confirming a correction, while the S&P 500 fell 4.36% to 7,353.73 and the Dow dropped 3.44%. Nvidia sank over 9%, Micron lost more than 17% and SanDisk over 22% as the Philadelphia Semiconductor Index cratered. The rout erased roughly $3 trillion in market value amid fears over AI-trade excess.",
+          "source_name": "TradingKey",
+          "source_url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262287984-nasdaq-5-percent-drop-ai-stocks-nvda-mu-sndk-tradingkey",
+          "published": "2026-11-05"
+        },
+        {
+          "title_zh": "12月聯準會升息機率降至約70%",
+          "title_en": "Odds of a December Fed rate hike slip to about 70% after the sell-off (2026-11-06)",
+          "summary_zh": "根據芝商所FedWatch工具，市場對聯準會12月9日會議升息1碼的隱含機率降至約70.1%，低於前一日的82.7%與一週前的近80%。此一重新定價反映股市重挫與經濟數據訊號分歧使政策前景轉趨不明，投資人對聯準會下次會議究竟再度升息或按兵不動看法分歧，牽動美元與風險性資產後市走向。",
+          "summary_en": "Market-implied odds of a quarter-point Federal Reserve rate increase at the Dec. 9 meeting eased to roughly 70.1%, down from 82.7% a day earlier and near 80% a week ago, according to the CME FedWatch tool. The repricing came as the equity rout and mixed economic signals clouded the policy outlook, leaving investors split on whether the Fed tightens again or holds at its next decision.",
+          "source_name": "CNBC",
+          "source_url": "https://www.cnbc.com/2026/11/05/stock-market-today-live-updates.html",
+          "published": "2026-11-06"
+        },
+        {
+          "title_zh": "輝達劇烈震盪：先跌9%再彈6%，牽動大盤方向",
+          "title_en": "Nvidia whipsaws, sliding 9% then rebounding 6% as the AI bellwether sets the tone (2026-11-06)",
+          "summary_zh": "晶片指標股輝達成為本週波動縮影，於11月5日賣壓中重挫約9.3%，隔一交易日隨逢低買盤回補、反彈約6%。這家全球市值最高晶片廠的劇烈擺盪主導指數漲跌，凸顯市場過度集中於少數AI權值股，對AI交易的情緒已成為左右整體盤勢的關鍵，追高殺低風險升高，波動恐延續。",
+          "summary_en": "Chip bellwether Nvidia epitomized the week's volatility, tumbling about 9.3% in the Nov. 5 rout before rebounding roughly 6% the next session as buyers returned to beaten-down AI names. The swings in the world's most valuable chipmaker dominated index moves, underscoring how concentrated the market has become in a handful of AI leaders and how sentiment toward the AI trade now drives broad market direction.",
+          "source_name": "Yahoo Finance",
+          "source_url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-november-6-dow-sp-500-nasdaq-jobs-report-earnings-135953863.html",
+          "published": "2026-11-06"
         }
       ]
     }
