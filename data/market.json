@@ -85,8 +85,8 @@
     {
       "name": "TAIEX 加權指數",
       "name_zh": null,
-      "close": 39690.74,
-      "daily_pct": -4.53,
+      "close": 39701.640625,
+      "daily_pct": -4.51,
       "mtd_pct": -8.04,
       "ytd_pct": 43.54,
       "closing_date": "2026-11-06"
@@ -94,11 +94,11 @@
     {
       "name": "OTC 櫃買加權",
       "name_zh": null,
-      "close": 303.78,
-      "daily_pct": -5.5,
+      "close": null,
+      "daily_pct": null,
       "mtd_pct": null,
       "ytd_pct": null,
-      "closing_date": "2026-11-06"
+      "closing_date": null
     },
     {
       "name": "台指期(近月)",
@@ -174,8 +174,8 @@
     },
     {
       "name": "US 2-Year",
-      "yield_pct": 4.5,
-      "daily_bps": 2.2,
+      "yield_pct": 4.53,
+      "daily_bps": 5.5,
       "mtd_bps": -10.0,
       "closing_date": "2026-11-06"
     },
@@ -189,14 +189,14 @@
     {
       "name": "Japan 10-Year",
       "yield_pct": 2.64,
-      "daily_bps": -12.9,
+      "daily_bps": -12.8,
       "mtd_bps": -1.1,
       "closing_date": "2026-11-06"
     },
     {
       "name": "UK 10-Year",
-      "yield_pct": 5.17,
-      "daily_bps": 3.2,
+      "yield_pct": 5.16,
+      "daily_bps": 1.9,
       "mtd_bps": -13.07,
       "closing_date": "2026-11-06"
     },
@@ -213,8 +213,8 @@
       "name": "DXY 美元指數",
       "close": 101.55000305175781,
       "daily_pct": 0.04,
-      "mtd_pct": 0.16,
-      "ytd_pct": 3.83,
+      "mtd_pct": 0.38,
+      "ytd_pct": 4.06,
       "closing_date": "2026-11-05"
     },
     {
@@ -396,7 +396,7 @@
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 4.0,
+      "implied_rate": 4.01,
       "delta_rate": null,
       "p_hike": null,
       "p_cut": null,

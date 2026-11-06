@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06T21:13:43+08:00",
+  "generated_at": "2026-11-06T22:19:38+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -14,6 +14,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IREN.US",
+      "error": null
+    },
+    {
+      "symbol": "HIMS",
+      "name_zh": "Hims & Hers Health",
+      "kind": "US",
+      "price": 24.06,
+      "change_pct": -9.75,
+      "mtd_pct": -13.08,
+      "ytd_pct": -25.9,
+      "market_date": "2026-11-05",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HIMS.US",
       "error": null
     },
     {
@@ -42,20 +56,6 @@
       "per": 37.8563,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ABNB.US",
-      "error": null
-    },
-    {
-      "symbol": "HIMS",
-      "name_zh": "Hims & Hers Health",
-      "kind": "US",
-      "price": 24.06,
-      "change_pct": -9.75,
-      "mtd_pct": -13.08,
-      "ytd_pct": -25.9,
-      "market_date": "2026-11-05",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=HIMS.US",
       "error": null
     },
     {
@@ -101,6 +101,20 @@
       "error": null
     },
     {
+      "symbol": "SPY",
+      "name_zh": "State Street SPDR S&P 500 ETF T",
+      "kind": "US",
+      "price": 733,
+      "change_pct": -4.41,
+      "mtd_pct": -3.01,
+      "ytd_pct": 7.49,
+      "market_date": "2026-11-05",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPY.US",
+      "error": null
+    },
+    {
       "symbol": "VOO",
       "name_zh": "Vanguard S&P 500 ETF",
       "kind": "US",
@@ -129,6 +143,20 @@
       "error": null
     },
     {
+      "symbol": "AXON",
+      "name_zh": "Axon Enterprise",
+      "kind": "US",
+      "price": 382.56,
+      "change_pct": -9.81,
+      "mtd_pct": -10.57,
+      "ytd_pct": -32.64,
+      "market_date": "2026-11-05",
+      "per": 155.9383,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AXON.US",
+      "error": null
+    },
+    {
       "symbol": "TEAM",
       "name_zh": "Atlassian",
       "kind": "US",
@@ -143,31 +171,17 @@
       "error": null
     },
     {
-      "symbol": "TQQQ",
-      "name_zh": "ProShares UltraPro QQQ",
+      "symbol": "FLY",
+      "name_zh": "Firefly Aerospace",
       "kind": "US",
-      "price": 50.47,
-      "change_pct": -18.92,
-      "mtd_pct": -18.61,
-      "ytd_pct": -4.27,
+      "price": 15.18,
+      "change_pct": -11.57,
+      "mtd_pct": -15.39,
+      "ytd_pct": -32.16,
       "market_date": "2026-11-05",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TQQQ.US",
-      "error": null
-    },
-    {
-      "symbol": "CHTR",
-      "name_zh": "Charter Communications",
-      "kind": "US",
-      "price": 125.86,
-      "change_pct": 4.67,
-      "mtd_pct": 12.89,
-      "ytd_pct": -39.71,
-      "market_date": "2026-11-05",
-      "per": 4.1956,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CHTR.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=FLY.US",
       "error": null
     },
     {
@@ -185,20 +199,6 @@
       "error": null
     },
     {
-      "symbol": "AXON",
-      "name_zh": "Axon Enterprise",
-      "kind": "US",
-      "price": 382.56,
-      "change_pct": -9.81,
-      "mtd_pct": -10.57,
-      "ytd_pct": -32.64,
-      "market_date": "2026-11-05",
-      "per": 155.9383,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AXON.US",
-      "error": null
-    },
-    {
       "symbol": "FROG",
       "name_zh": "JFrog",
       "kind": "US",
@@ -213,17 +213,17 @@
       "error": null
     },
     {
-      "symbol": "IONQ",
-      "name_zh": "IonQ",
+      "symbol": "TQQQ",
+      "name_zh": "ProShares UltraPro QQQ",
       "kind": "US",
-      "price": 26.43,
-      "change_pct": -10.53,
-      "mtd_pct": -12.02,
-      "ytd_pct": -41.1,
+      "price": 50.47,
+      "change_pct": -18.92,
+      "mtd_pct": -18.61,
+      "ytd_pct": -4.27,
       "market_date": "2026-11-05",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IONQ.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TQQQ.US",
       "error": null
     },
     {
@@ -241,17 +241,17 @@
       "error": null
     },
     {
-      "symbol": "SPY",
-      "name_zh": "State Street SPDR S&P 500 ETF T",
+      "symbol": "CHTR",
+      "name_zh": "Charter Communications",
       "kind": "US",
-      "price": 733,
-      "change_pct": -4.41,
-      "mtd_pct": -3.01,
-      "ytd_pct": 7.49,
+      "price": 125.86,
+      "change_pct": 4.67,
+      "mtd_pct": 12.89,
+      "ytd_pct": -39.71,
       "market_date": "2026-11-05",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPY.US",
+      "per": 4.1956,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CHTR.US",
       "error": null
     },
     {
