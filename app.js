@@ -1,3 +1,10 @@
+// 2026-11-07 左側選單：量 topbar 實際高度寫進 --mb-topbar-h，side nav 黏在 topbar 下方
+(function(){
+  function mbTopbarH(){ var t=document.querySelector(".topbar"); if(!t) return; document.documentElement.style.setProperty("--mb-topbar-h", t.offsetHeight+"px"); }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", mbTopbarH); else mbTopbarH();
+  window.addEventListener("load", mbTopbarH); window.addEventListener("resize", mbTopbarH);
+  if (window.ResizeObserver) { var _t=document.querySelector(".topbar"); if(_t) new ResizeObserver(mbTopbarH).observe(_t); }
+})();
 // Morning Board app
 const $ = (id) => document.getElementById(id);
 
@@ -6918,25 +6925,63 @@ function renderCnyesNews() {
 }
 
 function renderNewsSheet() {
-  // 以瀏覽器實際日期為準（meta.today 由完整 build 產生，可能落後於已更新的新聞）。
+  // 2026-11-07 用戶「新聞不用分區塊，直接顯示標題及內文即可」：不分鉅亨／市場／財管…區塊、
+  // 不用折疊，鉅亨即時新聞在前、每日新聞（news.json 各分類）接著，一律「標題＋內文」平鋪。
   const _n = new Date();
   const today = `${_n.getFullYear()}-${String(_n.getMonth() + 1).padStart(2, "0")}-${String(_n.getDate()).padStart(2, "0")}`;
   const newsDate = (DATA.news && DATA.news.news_date) || "";
-  // 只有在新聞「落後於今天」才是真的尚未產生；新聞等於今天（甚至超前）都不是過期。
   const isStale = newsDate && newsDate < today;
   const staleBanner = isStale ? `
-    <div style="border-left:3px solid var(--warn-soft-border); padding:10px 14px; margin-bottom:12px; color:var(--warn-soft-text); font-size:18px; line-height:1.5">
-      <strong>今日新聞尚未產生</strong>　目前顯示 ${escapeHtml(newsDate)} 內容（今日 ${escapeHtml(today)}）。系統每日 05:00 起自動產生，通常 07:00 前更新完成；若尚未更新，07:00 / 08:00 / 09:30 / 11:30 會自動補抓。
+    <div style="border-left:3px solid var(--warn-soft-border); padding:10px 14px; margin-bottom:12px; color:var(--warn-soft-text); line-height:1.5">
+      今日新聞尚未產生　目前顯示 ${escapeHtml(newsDate)} 內容（今日 ${escapeHtml(today)}）。系統每日 05:00 起自動產生，通常 07:00 前更新完成；若尚未更新，07:00 / 08:00 / 09:30 / 11:30 會自動補抓。
     </div>
   ` : "";
+  return `${staleBanner}<div class="news-flat">${renderCnyesFlat()}${renderDailyNewsFlat()}</div>`;
+}
+
+function newsFlatItem(title, dateTxt, bodyHtml) {
   return `
-    ${staleBanner}
-    ${accSection("news-cnyes", "鉅亨新聞", renderCnyesNews(), true)}
-    ${accSection("news-market", "市場焦點", renderNewsByCategory("market"))}
-    ${accSection("news-wm", "財管焦點", renderNewsByCategory("wm"))}
-    ${accSection("news-tax", "稅務焦點", renderNewsByCategory("tax"))}
-    ${accSection("news-intl", "國際焦點", renderNewsByCategory("intl"))}
-  `;
+    <div class="news-flat-item">
+      <div class="news-flat-title">${escapeHtml(title)}${dateTxt ? `<span class="news-date">${escapeHtml(dateTxt)}</span>` : ""}</div>
+      <div class="news-flat-body">${bodyHtml}</div>
+    </div>`;
+}
+
+// 鉅亨即時新聞：全部分類攤平成一串，依發布時間新到舊
+function renderCnyesFlat() {
+  const cn = DATA.cnyes_news || {};
+  const items = [];
+  (cn.categories || []).forEach(c => (c.items || []).forEach(it => {
+    if (it.title && (it.paras || []).length) items.push(it);
+  }));
+  const seen = new Set();
+  const uniq = items.filter(it => { const k = it.title; if (seen.has(k)) return false; seen.add(k); return true; });
+  uniq.sort((a, b) => String(b.publish_at || "").localeCompare(String(a.publish_at || "")));
+  if (!uniq.length) return "";
+  const html = uniq.map(it => newsFlatItem(it.title, cnyesTimeFmt(it.publish_at), cnyesItemBody(it))).join("");
+  const builtFmt = cn.built_at ? cn.built_at.replace("T", " ") : "";
+  return html + `<p class="live-credit" style="margin:10px 0 14px">資料來源 鉅亨網（cnyes）即時新聞，盤中每 20 分鐘更新${builtFmt ? `（${escapeHtml(builtFmt)}）` : ""}；內容以鉅亨網為準，非投資建議或要約。</p>`;
+}
+
+// 每日新聞（news.json 全部分類）＋稅務深度文章：同樣平鋪
+function renderDailyNewsFlat() {
+  const newsDate = (DATA.news && DATA.news.news_date) || "";
+  const dateFmt = newsDate ? newsDate.slice(5).replace("-", "/") : "";
+  let html = "";
+  ((DATA.news && DATA.news.sections) || []).forEach(s => {
+    (s.items || []).filter(it => it.title_zh).forEach(it => {
+      const src = it.source_url ? `<a class="source" href="${it.source_url}" target="_blank" rel="noopener">${escapeHtml(it.source_name || "來源")}</a>` : "";
+      html += newsFlatItem(it.title_zh, newsItemDate(it) || dateFmt, newsBodyHtml(it) + src);
+    });
+  });
+  ((DATA.tax && DATA.tax.items) || []).forEach(it => {
+    const src = it.source_url ? `<a class="source" href="${it.source_url}" target="_blank" rel="noopener">${escapeHtml(it.source_name || "來源")}</a>` : "";
+    html += newsFlatItem(it.title, dateFmt, `<p>${escapeHtml(it.summary || "")}</p>${src}`);
+  });
+  if (!html && !((DATA.cnyes_news || {}).categories || []).length) {
+    html = `<p style="color:var(--text-mute); padding:20px 0">今日無新聞</p>`;
+  }
+  return html;
 }
 
 // 把 news.json 的 sections 名稱對應到 4 大類（市場/財管/稅務/國際）
