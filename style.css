@@ -3613,3 +3613,27 @@ table.mc-table td.mc-fc { font-weight: 600; color: var(--brand-primary); }
   .main-tab:hover { color: var(--brand-deep); border-color: var(--brand-primary); background: var(--surface-hover); }
   .main-tab.active { background: var(--brand-deep); border-color: var(--brand-deep); color: #fff; font-weight: 500; }
 }
+
+/* === 2026-11-07 字型設定比照工作資料站 work_data_theme.css（用戶：理財小幫手字型設定調整成跟工作資訊網站相同）
+   蘋果系統字型、內文 15px / 行距 1.7、h1 23 / h2 18 / h3 16px、全部字重 400（不粗體）、
+   字色 淺 #1c2733（次要 #5d6b7a）／深 #cfd8e0（次要 #93a5b8）。輸入框維持 ≥16px 避免 iOS 自動縮放。 === */
+:root { --text: #1c2733; --text-mute: #5d6b7a; }
+@media (prefers-color-scheme: dark) { :root { --text: #cfd8e0; --text-mute: #93a5b8; } }
+body, body *:not(svg):not(svg *) {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans TC", sans-serif !important;
+  font-weight: 400 !important;
+}
+body { font-size: 15px !important; line-height: 1.7 !important; -webkit-font-smoothing: antialiased; }
+h1 { font-size: 23px !important; }
+h2 { font-size: 18px !important; }
+h3 { font-size: 16px !important; }
+h4, h5, h6 { font-size: 15px !important; }
+p, li, dd, dt, blockquote, summary, td, th, label, span, div, a, button, [class*="desc"], [class*="text"], [class*="body"] > p,
+.preview, .preview .val, .news-item .summary, .news-item .news-body, .news-item h3, .news-item details summary,
+.idx-card .idx-nm, .idx-card .idx-px, .idx-card .idx-st .k, .idx-card .idx-st .v, .sr-title, .sr-snippet, .acc-sec .acc-sec-title {
+  font-size: 15px !important; line-height: 1.7 !important;
+}
+h1, h1 *, h2, h2 *, h3, h3 *, h4, h4 *, h5, h5 *, h6, h6 * { font-size: inherit !important; line-height: 1.4 !important; }
+.card h2, .sheet-head h2, .topbar h1, .sheet-head h1 { font-size: 18px !important; }
+small, .card-date, .news-date, .sr-meta, .topbar .updated, .test-badge, [class*="date-chip"], [class*="chip-date"], [class*="build-date"], [class*="meta"] { font-size: 13px !important; line-height: 1.5 !important; }
+input, textarea, select, .search-wrap input, .search-wrap input::placeholder { font-size: 16px !important; }
