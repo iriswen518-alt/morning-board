@@ -193,7 +193,7 @@
       if(l)return l.replace(/[\/\\:*?"<>|]/g,"·").replace(/\s+/g," ").slice(0,60);}return "未命名";}
   function viaObsidian(text){
     var d=new Date(),pad=function(n){return(n<10?"0":"")+n;},ymd=d.getFullYear()+pad(d.getMonth()+1)+pad(d.getDate()),iso=d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate());
-    var topic=topicOf(text),file="00市場日誌/市場日誌_"+ymd+"_"+topic;
+    var topic=topicOf(text),file="00卡片筆記/00市場日誌/市場日誌_"+ymd+"_"+topic;
     var content="---\ndate: "+iso+"\ntype: 市場日誌\ntopic: "+topic+"\nsource: 理財小幫手\n---\n\n# "+topic+"\n\n"+text+"\n";
     location.href="obsidian://new?vault=obsidian&file="+encodeURIComponent(file)+"&content="+encodeURIComponent(content);
   }
