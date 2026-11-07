@@ -485,12 +485,17 @@ def refresh_bonds(market):
             if hist:
                 last_date_iso, last_close = hist[-1]
                 month_start_iso = last_date_iso[:7] + "-01"
-                month_base = None
+                year_start_iso = last_date_iso[:4] + "-01-01"
+                month_base, year_base = None, None
                 for d, c in hist:
                     if d < month_start_iso:
                         month_base = c
+                    if d < year_start_iso:
+                        year_base = c
                 if month_base:
                     b["mtd_bps"] = round((close - month_base) * 100, 1)
+                if year_base:
+                    b["ytd_bps"] = round((close - year_base) * 100, 1)
             print(
                 f"refresh_bond: ✓ {name} y={b['yield_pct']}% "
                 f"d_bps={b.get('daily_bps')} mtd_bps={b.get('mtd_bps')} "

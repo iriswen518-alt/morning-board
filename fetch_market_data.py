@@ -511,6 +511,7 @@ def build_bond_rows(run_date, warnings) -> list[dict]:
                     "month_start": None,
                     "daily_bps": None,
                     "mtd_bps": None,
+                    "ytd_bps": None,
                     "note": "no free daily source — downstream websearch",
                 }
             )
@@ -538,6 +539,8 @@ def build_bond_rows(run_date, warnings) -> list[dict]:
                     "month_start": c["month_start"],
                     "daily_bps": bps(c["close"], c["prev_close"]),
                     "mtd_bps": bps(c["close"], c["month_start"]),
+                    "year_start": c["year_start"],
+                    "ytd_bps": bps(c["close"], c["year_start"]),
                 }
             )
         except Exception as e:  # noqa: BLE001
@@ -551,6 +554,7 @@ def build_bond_rows(run_date, warnings) -> list[dict]:
                     "month_start": None,
                     "daily_bps": None,
                     "mtd_bps": None,
+                    "ytd_bps": None,
                 }
             )
         time.sleep(0.4)
@@ -632,8 +636,8 @@ def render_price_table(rows: list[dict], first_col: str) -> str:
 
 
 def render_bond_table(rows: list[dict]) -> str:
-    head = "| 債別 | 殖利率 | 日變動bps | 月初殖利率 | MTDbps | 收盤日 |"
-    sep = "|------|-------:|----------:|----------:|-------:|--------|"
+    head = "| 債別 | 殖利率 | 日變動bps | 月初殖利率 | MTDbps | 收盤日 | YTDbps |"
+    sep = "|------|-------:|----------:|----------:|-------:|--------|-------:|"
     lines = [head, sep]
     for r in rows:
         # 2026-05-25：Japan/UK 10Y 無免費日頻率資料源，明確標 n/a 並加 footnote
@@ -641,15 +645,17 @@ def render_bond_table(rows: list[dict]) -> str:
         if is_spot_only and r.get("yield") is not None:
             daily_cell = '<span title="無免費日頻率資料源（Yahoo/FRED/ECB 均無），僅取即時殖利率">n/a*</span>'
             mtd_cell = '<span title="無免費日頻率資料源（Yahoo/FRED/ECB 均無），無法算 MTD">n/a*</span>'
+            ytd_cell = 'n/a*'
             month_start_cell = '<span title="無歷史資料">—</span>'
         else:
             daily_cell = fmt_bps(r["daily_bps"])
             mtd_cell = fmt_bps(r["mtd_bps"])
+            ytd_cell = fmt_bps(r.get("ytd_bps"))
             month_start_cell = fmt_yield(r["month_start"])
         lines.append(
             f"| {r['name']} | {fmt_yield(r['yield'])} | "
             f"{daily_cell} | {month_start_cell} | "
-            f"{mtd_cell} | {r['closing_date'] or '—'} |"
+            f"{mtd_cell} | {r['closing_date'] or '—'} | {ytd_cell} |"
         )
     return "\n".join(lines)
 

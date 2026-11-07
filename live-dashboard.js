@@ -1,7 +1,8 @@
 /* =========================================================
    今年表現 Market Dashboard — 即時行情分頁的次分頁層（不動 app.js / style.css）
    2026-08-06 次分頁改名：行情卡片→當日盤勢、市場儀表→今年表現，預設期間同步改今年以來
-   - 版面：全球市場水平橫條，零軸置中；紅色為漲、綠色為跌
+   - 版面：全球市場／匯市／債市三段水平橫條（2026-11-07 加匯市、債市），零軸置中；紅色為漲、綠色為跌
+   - 債市＝公債殖利率變動 bps（daily/mtd/ytd_bps），ytd_bps 由 fetch_market_data/refresh_taiex 供應
    - 期間：當日漲跌 / 當月漲跌 / 今年以來（chip 切換，記憶於 localStorage）
    - 資料：當日優先取 DATA.live 盤中報價，缺漏時回退 market.json daily_pct；
            當月／今年以來取 market.json 的 mtd_pct / ytd_pct
@@ -32,6 +33,7 @@
       "padding:9px 0;border-radius:8px;border:1px solid var(--border);background:var(--card-bg);color:var(--brand-deep,#003D91);cursor:pointer}" +
     ".mbd-subtabs button.on{background:var(--brand-deep,#003D91);border-color:var(--brand-deep,#003D91);color:#fff}" +
     ".mbd-wrap{margin:0 0 6px}" +
+    ".mbd-sec+.mbd-sec{margin-top:22px;padding-top:18px;border-top:1px solid var(--border)}" +
     ".mbd-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin:2px 0 12px}" +
     ".mbd-title{font-size:18px;font-weight:700;color:var(--brand-deep,#003D91)}" +
     ".mbd-date{font-size:13px;color:var(--text-mute,#77839a)}" +
@@ -107,6 +109,30 @@
     return m;
   }
 
+  var FX_MAP = {
+    "DXY 美元指數": "美元指數",
+    "EUR/USD 歐元": "歐元/美元",
+    "USD/JPY 日圓": "美元/日圓",
+    "GBP/USD 英鎊": "英鎊/美元",
+    "USD/CNY 人民幣": "美元/人民幣",
+    "USD/TWD 新台幣": "美元/台幣",
+    "JPY/TWD 日圓兌台幣": "日圓/台幣",
+  };
+  var BOND_MAP = {
+    "US 10-Year": "美國10年",
+    "US 2-Year": "美國2年",
+    "Germany 10-Year": "德國10年",
+    "Japan 10-Year": "日本10年",
+    "UK 10-Year": "英國10年",
+    "TW 10-Year": "台灣10年",
+  };
+
+  function pick(it, period, suffix) {
+    var k = (period === "daily" ? "daily" : period === "mtd" ? "mtd" : "ytd") + suffix;
+    return it[k] != null ? it[k] : null;
+  }
+
+  // 全球市場：當日優先取 DATA.live 盤中報價
   function rows(period) {
     var raw = appData().market || {};
     var list = raw.indices || raw.equity || [];
@@ -121,12 +147,28 @@
         var lp = rec && rec.ok !== false && rec.change_pct != null ? rec.change_pct : null;
         if (lp != null && Math.abs(lp) < 25) { v = lp; isLive = true; }
         else if (it.daily_pct != null) v = it.daily_pct;
-      } else if (period === "mtd") {
-        v = it.mtd_pct != null ? it.mtd_pct : null;
       } else {
-        v = it.ytd_pct != null ? it.ytd_pct : null;
+        v = pick(it, period, "_pct");
       }
       return { name: map[1] || it.name, v: v, live: isLive, date: it.closing_date };
+    });
+  }
+
+  // 匯市：market.json fx（refresh_taiex 盤中覆寫 close/daily/mtd/ytd）
+  function fxRows(period) {
+    var list = (appData().market || {}).fx || [];
+    return list.map(function (it) {
+      return { name: FX_MAP[it.name] || it.name, v: pick(it, period, "_pct"), live: false, date: it.closing_date };
+    });
+  }
+
+  // 債市：公債殖利率變動（bps）；全期間皆無值的（如台灣10年）不列
+  function bondRows(period) {
+    var list = (appData().market || {}).bonds || [];
+    return list.filter(function (it) {
+      return it.daily_bps != null || it.mtd_bps != null || it.ytd_bps != null;
+    }).map(function (it) {
+      return { name: BOND_MAP[it.name] || it.name, v: pick(it, period, "_bps"), live: false, date: it.closing_date };
     });
   }
 
@@ -143,35 +185,35 @@
     if (v == null) return "—";
     return (v > 0 ? "+" : "") + v.toFixed(2) + "%";
   }
+  function fmtBps(v) {
+    if (v == null) return "—";
+    return (v > 0 ? "+" : "") + v.toFixed(1) + "bp";
+  }
   function scaleLabel(s) {
     return s >= 10 ? String(s) : String(s);
   }
 
-  function renderDash() {
-    var period = getPeriod();
-    var data = rows(period);
-    if (!data.length) {
-      return '<div class="mbd-wrap"><p class="mbd-note">全球市場資料尚未載入，請稍後再試。</p></div>';
-    }
+  function sortRows(data) {
     data.sort(function (a, b) {
       if (a.v == null && b.v == null) return 0;
       if (a.v == null) return 1;
       if (b.v == null) return -1;
       return b.v - a.v;
     });
+    return data;
+  }
+
+  // 一段：標題列 + 刻度 + 橫條（unit: "%" 或 "bp"）
+  function renderBlock(title, data, opts) {
+    opts = opts || {};
+    var unit = opts.unit || "%";
+    var fmt = unit === "bp" ? fmtBps : fmtPct;
+    if (!data.length) return "";
+    sortRows(data);
     var s = scaleFor(data.map(function (r) { return r.v; }));
     var anyLive = data.some(function (r) { return r.live; });
-    var mk = appData().market || {};
-    var date = mk.closing_date || mk.primary_closing_date || "";
+    var date = opts.date || "";
     if (!date) { var f = data.find(function (r) { return r.date; }); date = f ? f.date : ""; }
-
-    var chips = [
-      ["daily", "當日漲跌"], ["mtd", "當月漲跌"], ["ytd", "今年以來"],
-    ].map(function (c) {
-      return '<button type="button" data-mbd-period="' + c[0] + '"' +
-        (period === c[0] ? ' class="on"' : "") + ">" + c[1] + "</button>";
-    }).join("");
-
     var body = data.map(function (r) {
       var cls = r.v == null ? "na" : (r.v > 0 ? "up" : (r.v < 0 ? "down" : "na"));
       var bar = "";
@@ -183,22 +225,48 @@
       return '<div class="mbd-row">' +
         '<span class="mbd-nm">' + esc(r.name) + "</span>" +
         '<div class="mbd-track">' + bar + "</div>" +
-        '<span class="mbd-val ' + cls + '">' + fmtPct(r.v) + "</span></div>";
+        '<span class="mbd-val ' + cls + '">' + fmt(r.v) + "</span></div>";
     }).join("");
-
-    return '<div class="mbd-wrap">' +
-      '<div class="mbd-head"><span class="mbd-title">全球市場</span>' +
+    return '<div class="mbd-sec">' +
+      '<div class="mbd-head"><span class="mbd-title">' + esc(title) + "</span>" +
       '<span class="mbd-date">' + esc(date) + (anyLive ? '<span class="mbd-live">盤中</span>' : "") + "</span></div>" +
-      '<div class="mbd-chips">' + chips + "</div>" +
-      '<div class="mbd-axis"><span></span><span class="mbd-scale"><span>-' + scaleLabel(s) +
-      "%</span><span>0</span><span>+" + scaleLabel(s) + "%</span></span><span></span></div>" +
+      (opts.chips || "") +
+      '<div class="mbd-axis"><span></span><span class="mbd-scale"><span>-' + scaleLabel(s) + unit +
+      "</span><span>0</span><span>+" + scaleLabel(s) + unit + "</span></span><span></span></div>" +
       body +
-      '<p class="mbd-note"><span>零軸置中，紅色為漲、綠色為跌</span> · <span>滿刻度</span> ±' +
-      scaleLabel(s) + "% · " +
+      (opts.note ? '<p class="mbd-note">' + opts.note + "</p>" : "") +
+      "</div>";
+  }
+
+  function renderDash() {
+    var period = getPeriod();
+    var data = rows(period);
+    if (!data.length) {
+      return '<div class="mbd-wrap"><p class="mbd-note">全球市場資料尚未載入，請稍後再試。</p></div>';
+    }
+    var mk = appData().market || {};
+    var date = mk.closing_date || mk.primary_closing_date || "";
+
+    var chips = '<div class="mbd-chips">' + [
+      ["daily", "當日漲跌"], ["mtd", "當月漲跌"], ["ytd", "今年以來"],
+    ].map(function (c) {
+      return '<button type="button" data-mbd-period="' + c[0] + '"' +
+        (period === c[0] ? ' class="on"' : "") + ">" + c[1] + "</button>";
+    }).join("") + "</div>";
+
+    var common = " · <span>數值僅供參考，非投資建議或要約</span>";
+    var eqNote = "<span>零軸置中，紅色為漲、綠色為跌</span> · " +
       (period === "daily"
         ? "<span>當日盤中每分鐘更新，休市時為最近收盤</span>"
-        : "<span>當月與今年以來取自收盤資料，台指期因每月換倉不計算</span>") +
-      " · <span>數值僅供參考，非投資建議或要約</span></p></div>";
+        : "<span>當月與今年以來取自收盤資料，台指期因每月換倉不計算</span>") + common;
+    var fxNote = "<span>美元/外幣上漲＝該外幣貶值；歐元、英鎊為外幣/美元，上漲＝該外幣升值</span>" + common;
+    var bdNote = "<span>公債殖利率變動，單位基點（1bp＝0.01%）；殖利率上升＝債券價格下跌</span>" + common;
+
+    return '<div class="mbd-wrap">' +
+      renderBlock("全球市場", data, { date: date, chips: chips, note: eqNote }) +
+      renderBlock("匯市", fxRows(period), { date: date, note: fxNote }) +
+      renderBlock("債市", bondRows(period), { unit: "bp", date: date, note: bdNote }) +
+      "</div>";
   }
 
   function renderSubtabs(view) {

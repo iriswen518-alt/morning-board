@@ -35,6 +35,7 @@ def map_bond(b):
         "yield_pct": r2(b.get("yield")),
         "daily_bps": r2(b.get("daily_bps")),
         "mtd_bps": r2(b.get("mtd_bps")),
+        "ytd_bps": r2(b.get("ytd_bps")),
         "closing_date": b.get("closing_date"),
     }
 

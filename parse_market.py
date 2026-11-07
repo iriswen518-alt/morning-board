@@ -67,7 +67,7 @@ def _table_rows(block: str) -> list[list[str]]:
 
 
 def parse_bonds(md: str) -> list[dict]:
-    """### Sovereign Bonds 表格：債別 | 殖利率 | 日變動bps | 月初bps | MTDbps | [收盤日]"""
+    """### Sovereign Bonds 表格：債別 | 殖利率 | 日變動bps | 月初bps | MTDbps | [收盤日] | [YTDbps]"""
     block = _section_block(md, "Sovereign Bonds")
     out = []
     for cells in _table_rows(block):
@@ -81,6 +81,7 @@ def parse_bonds(md: str) -> list[dict]:
             "yield_pct": parse_pct(cells[1]) if len(cells) > 1 else None,
             "daily_bps": parse_bps(cells[2]) if len(cells) > 2 else None,
             "mtd_bps": parse_bps(cells[4]) if len(cells) > 4 else None,
+            "ytd_bps": parse_bps(cells[6]) if len(cells) > 6 else None,
             "closing_date": row_date,
         })
     return out
