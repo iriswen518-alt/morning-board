@@ -13,7 +13,7 @@
     {
       "name": "Nasdaq Composite",
       "name_zh": null,
-      "close": 24579.423828125,
+      "close": 24579.4296875,
       "daily_pct": 1.09,
       "mtd_pct": -3.37,
       "ytd_pct": 5.75,
@@ -176,7 +176,7 @@
     {
       "name": "US 2-Year",
       "yield_pct": 4.52,
-      "daily_bps": 3.9,
+      "daily_bps": 4.5,
       "mtd_bps": -5.0,
       "ytd_bps": 104.0,
       "closing_date": "2026-11-07"
@@ -217,11 +217,11 @@
   "fx": [
     {
       "name": "DXY 美元指數",
-      "close": 101.55000305175781,
-      "daily_pct": 0.04,
-      "mtd_pct": 0.39,
-      "ytd_pct": 4.07,
-      "closing_date": "2026-11-05"
+      "close": 102.30000305175781,
+      "daily_pct": 0.74,
+      "mtd_pct": 0.41,
+      "ytd_pct": 4.09,
+      "closing_date": "2026-11-06"
     },
     {
       "name": "EUR/USD 歐元",
@@ -275,43 +275,43 @@
   "commodities": [
     {
       "name": "黃金 (USD/oz)",
-      "close": 4079.5,
-      "daily_pct": -0.83,
-      "mtd_pct": 4.63,
-      "ytd_pct": -6.03,
+      "close": 4074.89990234375,
+      "daily_pct": -0.94,
+      "mtd_pct": 4.51,
+      "ytd_pct": -6.13,
       "closing_date": "2026-11-06"
     },
     {
       "name": "白銀 (USD/oz)",
-      "close": 51.96500015258789,
-      "daily_pct": -0.51,
-      "mtd_pct": 5.84,
-      "ytd_pct": -25.91,
+      "close": 51.803001403808594,
+      "daily_pct": -0.82,
+      "mtd_pct": 5.51,
+      "ytd_pct": -26.14,
       "closing_date": "2026-11-06"
     },
     {
       "name": "WTI 原油 (USD/bbl)",
-      "close": 90.33999633789062,
-      "daily_pct": -0.2,
-      "mtd_pct": -13.23,
-      "ytd_pct": 57.33,
+      "close": 90.83000183105469,
+      "daily_pct": 0.34,
+      "mtd_pct": -12.76,
+      "ytd_pct": 58.19,
       "closing_date": "2026-11-06"
     },
     {
       "name": "布蘭特原油 (USD/bbl)",
-      "close": 97.76000213623047,
-      "daily_pct": -0.54,
-      "mtd_pct": -16.9,
-      "ytd_pct": 60.66,
+      "close": 98.31999969482422,
+      "daily_pct": 0.03,
+      "mtd_pct": -16.42,
+      "ytd_pct": 61.58,
       "closing_date": "2026-11-06"
     },
     {
       "name": "比特幣 (USD)",
-      "close": 75942.125,
-      "daily_pct": -5.55,
-      "mtd_pct": -1.93,
-      "ytd_pct": -13.22,
-      "closing_date": "2026-11-05"
+      "close": 75746.9296875,
+      "daily_pct": -0.26,
+      "mtd_pct": -2.18,
+      "ytd_pct": -13.44,
+      "closing_date": "2026-11-06"
     }
   ],
   "bond_etfs": [
@@ -394,8 +394,8 @@
     "yield_curve_10y2y": 0.35,
     "yield_curve_10y2y_bps": 35,
     "curve_shape": "正斜率",
-    "dxy": 102.27899932861328,
-    "dxy_daily_pct": 0.72,
+    "dxy": 102.30000305175781,
+    "dxy_daily_pct": 0.74,
     "closing_date": "2026-11-06"
   },
   "fedwatch": [
