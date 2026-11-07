@@ -187,6 +187,16 @@
     return fetch("http://127.0.0.1:8878/market",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({text:text})})
       .then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.error||"fail");return j;});
   }
+  // Safari 擋 https→http://127.0.0.1（mixed content）：改走 obsidian://new 直接在 vault 建檔（同 FloatNote 格式）
+  function topicOf(text){
+    var lines=text.split("\n");for(var i=0;i<lines.length;i++){var l=lines[i].trim().replace(/^[#\-• ]+/,"").trim();
+      if(l)return l.replace(/[\/\\:*?"<>|]/g,"·").replace(/\s+/g," ").slice(0,60);}return "未命名";}
+  function viaObsidian(text){
+    var d=new Date(),pad=function(n){return(n<10?"0":"")+n;},ymd=d.getFullYear()+pad(d.getMonth()+1)+pad(d.getDate()),iso=d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate());
+    var topic=topicOf(text),file="00市場日誌/市場日誌_"+ymd+"_"+topic;
+    var content="---\ndate: "+iso+"\ntype: 市場日誌\ntopic: "+topic+"\nsource: 理財小幫手\n---\n\n# "+topic+"\n\n"+text+"\n";
+    location.href="obsidian://new?vault=obsidian&file="+encodeURIComponent(file)+"&content="+encodeURIComponent(content);
+  }
   function flush(){ // 伺服器未啟動時暫存，之後再補送
     var q;try{q=JSON.parse(localStorage.getItem(KEY)||"[]");}catch(_){q=[];}
     if(!q.length)return;
@@ -198,7 +208,10 @@
     var text=ta.value.trim();if(!text)return;
     say("寫入中…");
     send(text).then(function(j){ta.value="";say("已寫入","ok");flush();})
-      .catch(function(){var q;try{q=JSON.parse(localStorage.getItem(KEY)||"[]");}catch(_){q=[];}
+      .catch(function(){
+        if(location.protocol==="https:"&&/Safari/.test(navigator.userAgent)&&!/Chrome|Chromium|Edg/.test(navigator.userAgent)){
+          viaObsidian(text);ta.value="";say("已交給 Obsidian 建檔","ok");return;}
+        var q;try{q=JSON.parse(localStorage.getItem(KEY)||"[]");}catch(_){q=[];}
         q.push(text);try{localStorage.setItem(KEY,JSON.stringify(q));}catch(_){}
         ta.value="";say("伺服器未啟動，已暫存","err");});
   });
