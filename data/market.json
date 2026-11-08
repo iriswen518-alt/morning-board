@@ -1,5 +1,5 @@
 {
-  "closing_date": "2026-11-06",
+  "closing_date": "2026-11-08",
   "indices": [
     {
       "name": "S&P 500",
@@ -85,7 +85,7 @@
     {
       "name": "TAIEX 加權指數",
       "name_zh": null,
-      "close": 39701.640625,
+      "close": 39701.64,
       "daily_pct": -4.51,
       "mtd_pct": -12.19,
       "ytd_pct": 37.07,
@@ -94,11 +94,11 @@
     {
       "name": "OTC 櫃買加權",
       "name_zh": null,
-      "close": null,
-      "daily_pct": null,
+      "close": 304.02,
+      "daily_pct": -5.43,
       "mtd_pct": null,
       "ytd_pct": null,
-      "closing_date": null
+      "closing_date": "2026-11-06"
     },
     {
       "name": "台指期(近月)",
@@ -148,11 +148,11 @@
     {
       "name": "Nifty 50",
       "name_zh": null,
-      "close": 25030.349609375,
-      "daily_pct": 2.01,
+      "close": 25115.900390625,
+      "daily_pct": 0.34,
       "mtd_pct": 8.58,
       "ytd_pct": -4.21,
-      "closing_date": "2026-11-06"
+      "closing_date": "2026-11-08"
     },
     {
       "name": "S&P/ASX 200",
@@ -233,11 +233,11 @@
     },
     {
       "name": "USD/JPY 日圓",
-      "close": 158.4250030517578,
-      "daily_pct": 0.59,
-      "mtd_pct": 0.39,
-      "ytd_pct": 1.29,
-      "closing_date": "2026-11-07"
+      "close": 157.4980010986328,
+      "daily_pct": -0.54,
+      "mtd_pct": -0.19,
+      "ytd_pct": 0.69,
+      "closing_date": "2026-11-06"
     },
     {
       "name": "GBP/USD 英鎊",
@@ -249,11 +249,11 @@
     },
     {
       "name": "USD/CNY 人民幣",
-      "close": 6.66480016708374,
-      "daily_pct": -0.35,
-      "mtd_pct": 0.06,
-      "ytd_pct": -4.74,
-      "closing_date": "2026-11-07"
+      "close": 6.688000202178955,
+      "daily_pct": 0.22,
+      "mtd_pct": 0.41,
+      "ytd_pct": -4.4,
+      "closing_date": "2026-11-06"
     },
     {
       "name": "USD/TWD 新台幣",
@@ -283,10 +283,10 @@
     },
     {
       "name": "白銀 (USD/oz)",
-      "close": 51.803001403808594,
-      "daily_pct": -0.82,
-      "mtd_pct": 5.51,
-      "ytd_pct": -26.14,
+      "close": 51.94200134277344,
+      "daily_pct": -0.56,
+      "mtd_pct": 5.79,
+      "ytd_pct": -25.94,
       "closing_date": "2026-11-06"
     },
     {
@@ -307,11 +307,11 @@
     },
     {
       "name": "比特幣 (USD)",
-      "close": 75746.9296875,
-      "daily_pct": -0.26,
+      "close": 75747.578125,
+      "daily_pct": 0.0,
       "mtd_pct": -2.18,
       "ytd_pct": -13.44,
-      "closing_date": "2026-11-06"
+      "closing_date": "2026-11-07"
     }
   ],
   "bond_etfs": [
@@ -409,5 +409,5 @@
       "is_reference": true
     }
   ],
-  "summary": "11/6 PHLX Semiconductor +4.21%、11/6 Nifty 50 +2.01%、11/6 Nasdaq Composite +1.09% 領漲；11/6 KOSPI -6.02%、11/6 Nikkei 225 -5.96% 走弱。"
+  "summary": "11/6 PHLX Semiconductor +4.21%、11/6 Nasdaq Composite +1.09%、11/8 Nifty 50 +0.34% 領漲；11/6 KOSPI -6.02%、11/6 Nikkei 225 -5.96% 走弱。"
 }
