@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-11-08T22:51",
+  "built_at": "2026-11-09T03:23",
   "indices": [
     {
       "ok": true,
@@ -191,8 +191,8 @@
       "ok": true,
       "symbol": "^DJI",
       "last": 51285.73,
-      "prev_close": 51523.06,
-      "change": -237.33,
+      "prev_close": 51523.1,
+      "change": -237.37,
       "change_pct": -0.46,
       "points": [
         51070.89,
@@ -471,8 +471,8 @@
       "ok": true,
       "symbol": "^GDAXI",
       "last": 25820.36,
-      "prev_close": 26325.01,
-      "change": -504.65,
+      "prev_close": 26325.0,
+      "change": -504.64,
       "change_pct": -1.92,
       "points": [
         25886.31,
@@ -565,8 +565,8 @@
       "ok": true,
       "symbol": "^FTSE",
       "last": 10673.94,
-      "prev_close": 10782.66,
-      "change": -108.72,
+      "prev_close": 10782.7,
+      "change": -108.76,
       "change_pct": -1.01,
       "points": [
         10624.81,
@@ -827,7 +827,7 @@
         57410.91,
         57434.77
       ],
-      "market_state": "CLOSED",
+      "market_state": "PRE",
       "asof": "11/06 15:45",
       "tz": "Asia/Tokyo",
       "name_zh": "日經225"
@@ -836,8 +836,8 @@
       "ok": true,
       "symbol": "^TWII",
       "last": 39701.64,
-      "prev_close": 41574.72,
-      "change": -1873.08,
+      "prev_close": 41574.7,
+      "change": -1873.06,
       "change_pct": -4.51,
       "points": [
         37897.75,
@@ -896,7 +896,7 @@
         39717.22,
         39701.64
       ],
-      "market_state": "CLOSED",
+      "market_state": "PRE",
       "asof": "11/06 13:33",
       "tz": "Asia/Taipei",
       "name_zh": "台股加權"
@@ -1146,7 +1146,7 @@
         5101.44,
         5059.69
       ],
-      "market_state": "CLOSED",
+      "market_state": "PRE",
       "asof": "11/06 20:05",
       "tz": "Asia/Seoul",
       "name_zh": "韓國綜合"
@@ -1155,8 +1155,8 @@
       "ok": true,
       "symbol": "^HSI",
       "last": 24481.86,
-      "prev_close": 24796.98,
-      "change": -315.12,
+      "prev_close": 24797.0,
+      "change": -315.14,
       "change_pct": -1.27,
       "points": [
         24474.68,
@@ -1230,7 +1230,7 @@
         24484.63,
         24481.86
       ],
-      "market_state": "CLOSED",
+      "market_state": "PRE",
       "asof": "11/06 16:09",
       "tz": "Asia/Hong_Kong",
       "name_zh": "恆生指數"
@@ -1294,7 +1294,7 @@
         3646.12,
         3649.18
       ],
-      "market_state": "CLOSED",
+      "market_state": "PRE",
       "asof": "11/06 15:00",
       "tz": "Asia/Shanghai",
       "name_zh": "上證指數"
@@ -1358,7 +1358,7 @@
         4051.16,
         4054.28
       ],
-      "market_state": "CLOSED",
+      "market_state": "PRE",
       "asof": "11/06 15:00",
       "tz": "Asia/Shanghai",
       "name_zh": "滬深300"
@@ -1448,7 +1448,7 @@
         25030.35,
         24986.4
       ],
-      "market_state": "CLOSED",
+      "market_state": "PRE",
       "asof": "11/08 15:33",
       "tz": "Asia/Kolkata",
       "name_zh": "印度Nifty"
