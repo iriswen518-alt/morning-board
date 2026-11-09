@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T13:11:37+08:00",
+  "generated_at": "2026-11-08T20:30:00+08:00",
   "week_of": "2026-11-01 ~ 2026-11-08",
   "week_of_start": "2026-11-01",
   "week_of_end": "2026-11-08",
@@ -25,7 +25,15 @@
       "weekly_source": "yahoo_chart",
       "news_highlights": [
         {
-          "headline_zh": "舊款輝達晶片使甲骨文失去微軟AI訂單",
+          "headline_zh": "美銀分析師提出晶片股三種情境",
+          "headline_en": "Buy the dip or wait? BofA maps out 3 scenarios for chip stocks and top picks",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=81a72e1c335433cf0a3d18736868a48a574e54018286732c4b46f2011f807138",
+          "published": "2026-11-07",
+          "importance": "HIGH"
+        },
+        {
+          "headline_zh": "輝達舊晶片致甲骨文失微軟AI交易",
           "headline_en": "Older Nvidia Chips Just Cost Oracle Its Microsoft AI Deal",
           "source": "Yahoo",
           "url": "https://finnhub.io/api/news?id=da45d73c226d99754d263d33e0357676b3992fee6376e0bc466ce55258610f69",
@@ -33,23 +41,15 @@
           "importance": "HIGH"
         },
         {
-          "headline_zh": "輝達與另外兩檔AI股值得關注",
-          "headline_en": "NVIDIA And 2 Other AI Stocks To Watch",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=f228c96c1a8cf5faa617067ba7968b3f4633d6316908a7a1ca070d366fd436e0",
-          "published": "2026-11-06",
-          "importance": "HIGH"
-        },
-        {
-          "headline_zh": "傳台積電為輝達生產記憶體晶片",
-          "headline_en": "TSMC Jumped 6% on a Report It Could Make Memory Chips for Nvidia",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=4656071d4b3ce3a4e4c318b6e687f8945cf4d610498bb5d773490cc1afca6762",
-          "published": "2026-11-06",
+          "headline_zh": "輝達傳投入數十億美元於先進封裝",
+          "headline_en": "Nvidia Is Reportedly Pouring Billions Into AI's Next Big Bottleneck: Advanced Chip Packaging",
+          "source": "Benzinga",
+          "url": "https://finnhub.io/api/news?id=79679a4f27730ff2fb7f170a2a6d454f20ac87390388c3ad994fde78c205a5d7",
+          "published": "2026-11-05",
           "importance": "HIGH"
         }
       ],
-      "thesis_check": "本週新聞顯示輝達在AI晶片市場的競爭與供應鏈動態持續受到關注，尤其與微軟的合作關係及台積電的潛在記憶體晶片合作，可能影響其長期市場地位。",
+      "thesis_check": "本週有分析師提出晶片股買入或等待的策略，並指出輝達舊晶片導致微軟交易受損，但同時輝達也傳出投入數十億美元於先進晶片封裝。這些消息對其市場策略與技術領先地位帶來檢視。",
       "next_week_catalyst": null
     },
     {
@@ -62,7 +62,7 @@
       "weekly_source": "yahoo_chart",
       "news_highlights": [
         {
-          "headline_zh": "蘋果獲民主黨助益？資料中心禁令利好",
+          "headline_zh": "民主黨數據中心禁令或利好蘋果",
           "headline_en": "Did Apple Just Get a Boost From Democrats? Data Center Moratoriums Could Benefit the iPhone Maker",
           "source": "Yahoo",
           "url": "https://finnhub.io/api/news?id=39e5969e027c562f17b35ca16ba5e3a3b1d3969bbf23aab560a1178d364484ef",
@@ -70,7 +70,7 @@
           "importance": "HIGH"
         },
         {
-          "headline_zh": "蘋果完成退出OKX-ICE平台",
+          "headline_zh": "蘋果等七巨頭退出OKX-ICE平台",
           "headline_en": "Apple Completes the Set: Every Magnificent Seven Stock Opts Out of OKX-ICE Venue",
           "source": "Yahoo",
           "url": "https://finnhub.io/api/news?id=ceca23beb1416d552b3ee4a5a04b40eb978bede81ef8f0570bdf3f2ed7f3a114",
@@ -78,7 +78,7 @@
           "importance": "HIGH"
         },
         {
-          "headline_zh": "蘋果選用通義千問推中國AI",
+          "headline_zh": "蘋果選用通義千問於中國AI發布",
           "headline_en": "Alibaba Just Gained 12% in a Week as the Nasdaq Fell: Take Profits, or Buy More?",
           "source": "Yahoo",
           "url": "https://finnhub.io/api/news?id=17cc7d0eca172eb54387030152115e64da4a1d301d086fbf54f12b5367c889a6",
@@ -86,7 +86,7 @@
           "importance": "HIGH"
         }
       ],
-      "thesis_check": "本週蘋果新聞聚焦於其潛在的資料中心政策利好、退出OKX-ICE平台，以及在中國AI市場的策略性合作，這些可能影響其生態系統與市場競爭力。",
+      "thesis_check": "本週有消息指出民主黨的數據中心禁令可能有利於蘋果，同時蘋果與其他大型科技公司皆選擇退出OKX-ICE平台。此外，蘋果在中國AI市場選擇Qwen的合作，顯示其在AI領域的策略佈局。",
       "next_week_catalyst": null
     },
     {
@@ -99,15 +99,15 @@
       "weekly_source": "yahoo_chart",
       "news_highlights": [
         {
-          "headline_zh": "AI實驗室運算承諾是什麼？",
-          "headline_en": "What are the AI lab compute commitments?",
+          "headline_zh": "兩檔成長股構築AI軟體骨幹",
+          "headline_en": "Got $5,000? 2 Growth Stocks Building the Software Backbone of Artificial Intelligence (AI).",
           "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=53ab11b478988689dbe1a9af461ad63ac122fbbd26292d5d5519ad078af205f2",
+          "url": "https://finnhub.io/api/news?id=8a0e31e1d929089c24079101285f3084e51ef00e8896467070e357f7da5b2cd1",
           "published": "2026-11-07",
-          "importance": "MED"
+          "importance": "HIGH"
         },
         {
-          "headline_zh": "舊款輝達晶片使甲骨文失去微軟AI訂單",
+          "headline_zh": "輝達舊晶片致甲骨文失微軟AI交易",
           "headline_en": "Older Nvidia Chips Just Cost Oracle Its Microsoft AI Deal",
           "source": "Yahoo",
           "url": "https://finnhub.io/api/news?id=da45d73c226d99754d263d33e0357676b3992fee6376e0bc466ce55258610f69",
@@ -115,15 +115,15 @@
           "importance": "HIGH"
         },
         {
-          "headline_zh": "Concentrix AI遷移工具對股東意義",
-          "headline_en": "What Concentrix (CNXC)'s AI Migration Tool Launch Means For Shareholders",
+          "headline_zh": "民主黨勝選促資金轉向雲端巨頭",
+          "headline_en": "AI Stocks Diverge as Democratic Election Victory Sparks Rotation Into Cloud Giants",
           "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=e6f4e5316ba04c76699926a81dbc2a55f886bce7ee823657c4f387ee6169c424",
+          "url": "https://finnhub.io/api/news?id=174929522c25ab1889259f93f164d38283188ecee20e75bde4c417a5ef1506c3",
           "published": "2026-11-06",
           "importance": "HIGH"
         }
       ],
-      "thesis_check": "本週微軟新聞顯示其在AI領域的投入與合作動態，包括與Oracle的AI晶片合作變化，以及透過Microsoft Marketplace推動AI工具，這些都影響其雲端和AI戰略。",
+      "thesis_check": "微軟本週被視為AI軟體骨幹的建設者之一，並因舊款輝達晶片導致與甲骨文的AI交易受影響。同時，民主黨選舉勝利後，資金流向雲端巨頭，對微軟有利。這些消息強化其在AI和雲端領域的關鍵地位。",
       "next_week_catalyst": null
     },
     {
@@ -136,7 +136,7 @@
       "weekly_source": "yahoo_chart",
       "news_highlights": [
         {
-          "headline_zh": "字母馬來西亞資料中心投資150億美元",
+          "headline_zh": "字母馬來西亞數據中心投資150億",
           "headline_en": "Alphabet's $15 Billion Investment in Malaysia Data Centers Shows That Midterm Results Won't Stop the AI Boom",
           "source": "Yahoo",
           "url": "https://finnhub.io/api/news?id=c9e0d62a85e4caec45401642c9eb518977595b14072f1fd62f51f8dcb21ddef0",
@@ -152,7 +152,7 @@
           "importance": "HIGH"
         },
         {
-          "headline_zh": "谷歌SpaceX董事會代表辭職",
+          "headline_zh": "谷歌代表辭任SpaceX董事會職務",
           "headline_en": "Google’s Man on SpaceX’s Board Just Quit After 11 Years",
           "source": "Yahoo",
           "url": "https://finnhub.io/api/news?id=df0370d04e6129cff6364cc27fd4b6f8509121f877c2ba049caf79179c8a5120",
@@ -160,7 +160,7 @@
           "importance": "HIGH"
         }
       ],
-      "thesis_check": "本週字母新聞顯示其在AI資料中心、SpaceX投資及AI技術整合方面的積極佈局，同時也伴隨SpaceX董事會成員變動，這些都影響其長期成長策略。",
+      "thesis_check": "字母公司本週宣布在馬來西亞投資150億美元建設數據中心，並擴大對SpaceX的持股至690億美元，深化AI合作。然而，其在SpaceX董事會的代表離職，可能對兩公司關係產生影響。這些事件凸顯字母在AI基礎設施和戰略合作上的積極佈局。",
       "next_week_catalyst": null
     },
     {
@@ -173,15 +173,7 @@
       "weekly_source": "yahoo_chart",
       "news_highlights": [
         {
-          "headline_zh": "亞馬遜裁員95人，員工面臨社保問題",
-          "headline_en": "He Loses His Job at 62 as Amazon Cuts 95 More Positions. He Claims Social Security to Get By, Then Faces an $8,400 Bill to Undo It",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=7399ae15fbdb3a278e9a2cbcf12eb44699f642435d080dd2de55ae99de3212cb",
-          "published": "2026-11-06",
-          "importance": "HIGH"
-        },
-        {
-          "headline_zh": "亞馬遜Prime會員享Uber Eats優惠",
+          "headline_zh": "亞馬遜Prime會員享Uber Eats新福利",
           "headline_en": "Amazon Prime members' new Uber Eats perk comes with a $25 minimum",
           "source": "Yahoo",
           "url": "https://finnhub.io/api/news?id=a16186d7e12afcdb51cb308ee680ee9608827cec9e0ff648ff534edc781fe8d5",
@@ -189,7 +181,15 @@
           "importance": "HIGH"
         },
         {
-          "headline_zh": "Anthropic將IPO，亞馬遜已持股",
+          "headline_zh": "民主黨勝選促資金轉向雲端巨頭",
+          "headline_en": "AI Stocks Diverge as Democratic Election Victory Sparks Rotation Into Cloud Giants",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=174929522c25ab1889259f93f164d38283188ecee20e75bde4c417a5ef1506c3",
+          "published": "2026-11-06",
+          "importance": "HIGH"
+        },
+        {
+          "headline_zh": "Anthropic可能數週內IPO，亞馬遜持股",
           "headline_en": "Anthropic's IPO Could Come Within Weeks. Amazon Already Owns a Piece of It.",
           "source": "Yahoo",
           "url": "https://finnhub.io/api/news?id=7f65afb899bade577843d84c1bd98ab3872b04ac7b254b75f0604de7990ae906",
@@ -197,7 +197,7 @@
           "importance": "HIGH"
         }
       ],
-      "thesis_check": "本週亞馬遜新聞顯示其在Prime會員服務上與Uber Eats合作，同時進行裁員，並透過對AI公司Anthropic的投資深化AI佈局，這些都影響其電商與雲端業務。",
+      "thesis_check": "亞馬遜本週為Prime會員推出新的Uber Eats福利，強化會員生態系。同時，民主黨選舉勝利後，資金流向雲端巨頭，對亞馬遜雲服務有利。此外，其投資的Anthropic公司可能在數週內IPO，為亞馬遜帶來潛在價值。",
       "next_week_catalyst": null
     },
     {
@@ -210,7 +210,7 @@
       "weekly_source": "yahoo_chart",
       "news_highlights": [
         {
-          "headline_zh": "台積電與兩檔AI基建股乘AGI浪潮",
+          "headline_zh": "Meta等公司AI支出計畫推動晶片業",
           "headline_en": "TSMC Stock And 2 AI Infrastructure Shares Riding The AGI Spending Wave",
           "source": "Yahoo",
           "url": "https://finnhub.io/api/news?id=2feeb59a3593a2e49392d3bbdba7d98f35e095d2460fe313666ae3b79fb0972f",
@@ -218,23 +218,23 @@
           "importance": "HIGH"
         },
         {
-          "headline_zh": "輝達與另外兩檔AI股值得關注",
-          "headline_en": "NVIDIA And 2 Other AI Stocks To Watch",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=f228c96c1a8cf5faa617067ba7968b3f4633d6316908a7a1ca070d366fd436e0",
-          "published": "2026-11-06",
-          "importance": "HIGH"
-        },
-        {
-          "headline_zh": "Meta債券發行揭示科技債新現實",
+          "headline_zh": "Meta債券發行揭示科技債務新現實",
           "headline_en": "Meta’s Bond Sale Shows New Reality for Tech Debt",
           "source": "Yahoo",
           "url": "https://finnhub.io/api/news?id=3c06917f1eea66e9cdfe75e3a62dcbb26447e40bee21b926bd33e5a8252574a9",
           "published": "2026-11-06",
           "importance": "HIGH"
+        },
+        {
+          "headline_zh": "蘋果等七巨頭退出OKX-ICE平台",
+          "headline_en": "Apple Completes the Set: Every Magnificent Seven Stock Opts Out of OKX-ICE Venue",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=ceca23beb1416d552b3ee4a5a04b40eb978bede81ef8f0570bdf3f2ed7f3a114",
+          "published": "2026-11-06",
+          "importance": "HIGH"
         }
       ],
-      "thesis_check": "本週Meta新聞聚焦於其AI基礎設施支出、債券發行策略，以及投資者對AI盈利路徑的審視，這些都影響其在AI領域的發展與財務健康。",
+      "thesis_check": "Meta本週的債券發行顯示科技債務的新現實，同時其AI支出計畫被提及。此外，Meta與蘋果等大型科技公司皆選擇退出OKX-ICE平台。這些事件反映Meta在AI基礎設施投資與資本市場策略上的動向。",
       "next_week_catalyst": null
     },
     {
@@ -247,7 +247,15 @@
       "weekly_source": "yahoo_chart",
       "news_highlights": [
         {
-          "headline_zh": "馬斯克停產Cybertruck轉向Cybercabs",
+          "headline_zh": "特斯拉股價近11個月未創新高",
+          "headline_en": "Tesla Stock Hasn't Closed at a Record in Nearly 11 Months. Here's How Its Past Record Droughts Ended.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=9bde60ba87ad89677c6d942a36c8ce4f538b51555a387e8ebd7657a85c2b6f92",
+          "published": "2026-11-07",
+          "importance": "HIGH"
+        },
+        {
+          "headline_zh": "馬斯克縮減Cybertruck轉向Cybercabs",
           "headline_en": "Elon Musk Is Winding Down Cybertruck Production to Build Cybercabs. The Model S and Model X Already Gave Up Their Factory Space to Robots.",
           "source": "Yahoo",
           "url": "https://finnhub.io/api/news?id=5db675a16d937dacfa09678316c388a2c2d3b9a167995d9284a9278b90251188",
@@ -261,17 +269,9 @@
           "url": "https://finnhub.io/api/news?id=3d55e63ba4c13e059af58c34a01f723d00019f7f507dfc0dd87efc3e40b12e02",
           "published": "2026-11-06",
           "importance": "HIGH"
-        },
-        {
-          "headline_zh": "特斯拉FSD普及率預計趨近100%",
-          "headline_en": "Prediction: Tesla’s FSD Attach Rate Will “Trend to 100%.” But Will It Be Enough to Save the Stock?",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=7cc2c0a0bb67e28905ccd95ec91dbe91fdfc92f3da7a51ba6a11028e9069af7c",
-          "published": "2026-11-06",
-          "importance": "HIGH"
         }
       ],
-      "thesis_check": "本週特斯拉新聞顯示其Cybertruck生產策略調整、對機器人軍團的野心，以及FSD普及率的預期，這些都直接影響其電動車和自動駕駛的長期發展。",
+      "thesis_check": "特斯拉股價近11個月未創新高，市場關注其過往紀錄乾旱期如何結束。本週消息指出，特斯拉正逐步減少Cybertruck生產以轉向Cybercabs，並計劃建立龐大的機器人軍隊，這些都顯示其在產品策略和未來願景上的重大轉變。",
       "next_week_catalyst": null
     },
     {
@@ -284,31 +284,31 @@
       "weekly_source": "yahoo_chart",
       "news_highlights": [
         {
-          "headline_zh": "博通：合理估值的可負擔成長股",
-          "headline_en": "Broadcom (NASDAQ:AVGO): Affordable Growth With a Reasonable Forward Valuation",
-          "source": "ChartMill",
-          "url": "https://finnhub.io/api/news?id=41bb7379c8ad3f742fa83ff9f0b7b3eca353502a2b99f51c4bbead17e4363283",
-          "published": "2026-11-06",
+          "headline_zh": "博通本週下跌15%，是否該買入？",
+          "headline_en": "Broadcom Just Dropped 15% in a Week. Is It Time to Sell, or Load Up?",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=e3a5b869e13481986e262a10d2a51aa108383fb4d7c19f1027c5f59a24a3b953",
+          "published": "2026-11-07",
           "importance": "HIGH"
         },
         {
-          "headline_zh": "博通AI營收爆發，投資者應關注",
-          "headline_en": "Broadcom's AI Revenue Is Exploding. Here's What Investors Should Watch Next.",
+          "headline_zh": "博通單日跌9%後是否值得買入？",
+          "headline_en": "Is Broadcom a Buy After Falling 9% in One Day?",
           "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=b1bd4aaa84c20039dc89cfc1118b69c4a6fd8c6629756b5966b8b1e90d98cce9",
-          "published": "2026-11-05",
+          "url": "https://finnhub.io/api/news?id=a1110cd10740f677495b2ba6ebccf43318a13a7c094e80c07666258eba980721",
+          "published": "2026-11-07",
           "importance": "HIGH"
         },
         {
-          "headline_zh": "Anthropic季報凸顯博通1610億美元風險",
-          "headline_en": "Anthropic’s “Down Quarter” Highlights Broadcom’s $161 Billion Risk",
+          "headline_zh": "Cathie Wood方舟基金賣出博通",
+          "headline_en": "Cathie Wood-Led Ark Loads Up On GOOG, AMD, NVDA And Biotech Stocks — But Sells CRWV, AVGO, LLY",
           "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=be1bcfde11b0b70cc4d2969045030264ef277982397ed1ff6eab6a8d2c58080a",
+          "url": "https://finnhub.io/api/news?id=373960795748ebd9a0e4ff508c187b0c23cf4a0e9127f67f9f9e844e3939dcaa",
           "published": "2026-11-05",
           "importance": "HIGH"
         }
       ],
-      "thesis_check": "本週博通新聞顯示其AI營收強勁增長，但同時也面臨與Anthropic相關的潛在風險，以及市場對其估值的討論，這些都影響其在AI晶片市場的表現。",
+      "thesis_check": "博通本週股價下跌，引發市場對其是否為買入機會的討論，有分析指出其基本面與估值仍具吸引力。然而，Cathie Wood的方舟基金本週賣出博通股票，顯示部分機構投資者對其看法有所調整。",
       "next_week_catalyst": null
     },
     {
@@ -321,7 +321,7 @@
       "weekly_source": "yahoo_chart",
       "news_highlights": [
         {
-          "headline_zh": "台積電與兩檔AI基建股乘AGI浪潮",
+          "headline_zh": "台積電等AI基礎設施股受惠支出潮",
           "headline_en": "TSMC Stock And 2 AI Infrastructure Shares Riding The AGI Spending Wave",
           "source": "Yahoo",
           "url": "https://finnhub.io/api/news?id=2feeb59a3593a2e49392d3bbdba7d98f35e095d2460fe313666ae3b79fb0972f",
@@ -329,7 +329,7 @@
           "importance": "HIGH"
         },
         {
-          "headline_zh": "傳台積電為輝達生產記憶體晶片",
+          "headline_zh": "台積電傳為輝達生產記憶體晶片",
           "headline_en": "TSMC Jumped 6% on a Report It Could Make Memory Chips for Nvidia",
           "source": "Yahoo",
           "url": "https://finnhub.io/api/news?id=4656071d4b3ce3a4e4c318b6e687f8945cf4d610498bb5d773490cc1afca6762",
@@ -337,60 +337,31 @@
           "importance": "HIGH"
         },
         {
-          "headline_zh": "台積電為輝達與超微生產晶片",
-          "headline_en": "TSMC Makes the Chips for Both Nvidia and AMD. Here's What a $5,000 Investment Could Be Worth by 2030.",
+          "headline_zh": "台灣半導體股因限空令上漲7.45%",
+          "headline_en": "Taiwan Semiconductor Stocks Jump 7.45% as Taiwan Slashes Short Selling After Rout",
           "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=120b3b5589321826597f01c9eddf3d0d673551d18b7bd44e70b0351d88a3bf19",
+          "url": "https://finnhub.io/api/news?id=6a2216d6ef4b55b586ba9aec121dde6fd02f28e9b0ab53e0f3d88d892ce7c161",
           "published": "2026-11-05",
           "importance": "HIGH"
         }
       ],
-      "thesis_check": "本週台積電ADR新聞顯示其在AI基礎設施中的關鍵地位，尤其與輝達在記憶體晶片生產上的潛在合作，以及其為主要晶片設計商代工的角色，這些都鞏固其產業領導地位。",
+      "thesis_check": "台積電本週受惠於AI支出浪潮，市場傳聞其可能為輝達生產記憶體晶片，此消息帶動股價上漲。同時，台灣監管機構限制放空，也對台積電等半導體股帶來支撐。這些事件強化台積電在AI供應鏈中的核心地位。",
       "next_week_catalyst": null
     }
   ],
   "popular_symbols_snapshot": [
-    "KRMN",
     "AA",
-    "RSP",
-    "FLY",
-    "SIRI",
-    "XLK",
-    "EPD",
-    "O",
-    "ROKU",
-    "STWD"
+    "VRT",
+    "CRWV",
+    "GLD",
+    "BE",
+    "WDC",
+    "BA",
+    "TEST",
+    "SPY",
+    "QQQ"
   ],
   "popular_stocks": [
-    {
-      "symbol": "KRMN",
-      "name_zh": "Karman",
-      "weekly_change_pct": 14.17,
-      "weekly_definition": "5 個交易日 close-to-close",
-      "weekly_as_of": "2026-11-06",
-      "weekly_start": "2026-10-30",
-      "weekly_source": "yahoo_chart",
-      "news_highlights": [
-        {
-          "headline_zh": "Karman (KRMN) 第三季財報電話會議內容",
-          "headline_en": "What Karman (KRMN) Said on Its Q3 Earnings Call",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=8ca60c75386e3caa8ca36a52084c99cedc29bf929a30e13739d4e3731bc7b553",
-          "published": "2026-11-06",
-          "importance": "HIGH"
-        },
-        {
-          "headline_zh": "Karman 獲火星任務降落傘設計合約",
-          "headline_en": "Karman Holdings (KRMN) Wins Mars Mission Parachute Design Contract",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=9afbff9764149454db01bc28099f0abaf199919210a8f14f6b6f1f966f861754",
-          "published": "2026-11-05",
-          "importance": "HIGH"
-        }
-      ],
-      "thesis_check": "本週Karman公布強勁的第三季財報，上調全年展望，並獲得NASA火星任務重要合約，顯示公司成長動能與技術實力。",
-      "next_week_catalyst": null
-    },
     {
       "symbol": "AA",
       "name_zh": "Alcoa",
@@ -401,255 +372,276 @@
       "weekly_source": "yahoo_chart",
       "news_highlights": [
         {
-          "headline_zh": "彭博：美委內瑞拉談鋁貨貿易復甦",
-          "headline_en": "'US, Venezuela in Talks on Fresh Aluminum Cargo in Trade Revival' - Bloomberg Exclusive",
-          "source": "Benzinga",
-          "url": "https://finnhub.io/api/news?id=4a2621d7c4d5befe6b337a911467e1811b1efc2be3fc2f791450e5a171b19f46",
-          "published": "2026-11-03",
-          "importance": "HIGH"
-        },
-        {
           "headline_zh": "鋁市場的廉價股票機會",
           "headline_en": "Here’s a Cheap Stock Play on the Aluminum Market",
           "source": "Yahoo",
           "url": "https://finnhub.io/api/news?id=9937645b80c3d8acd2132c8f13f81cb00a40b4f50ce0d3d2a169934589f8043f",
-          "published": "2026-11-06",
-          "importance": "MED"
-        }
-      ],
-      "thesis_check": "美國與委內瑞拉就鋁貨貿易復甦進行談判，可能影響全球鋁供應鏈，值得關注。",
-      "next_week_catalyst": null
-    },
-    {
-      "symbol": "RSP",
-      "name_zh": "Invesco S&P 500 Equal Weight ET",
-      "weekly_change_pct": -1.04,
-      "weekly_definition": "5 個交易日 close-to-close",
-      "weekly_as_of": "2026-11-06",
-      "weekly_start": "2026-10-30",
-      "weekly_source": "yahoo_chart",
-      "news_highlights": [
-        {
-          "headline_zh": "Invesco S&P 500 等權重 ETF (RSP) 增持 Okta 和 Moderna",
-          "headline_en": "Invesco S&P 500 Equal Weight (RSP) Adds Okta and Moderna on Nov. 4",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=27658733d4f4c4c46c2195333471ab042f3e55c76ff1b52ffcc425c42b840fee",
-          "published": "2026-11-05",
-          "importance": "HIGH"
-        },
-        {
-          "headline_zh": "消費必需品對決：VDC 與 RSPS 差異比較",
-          "headline_en": "Consumer Staples Showdown: Weighing the Differences Between VDC and RSPS",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=82fe305dc0170aa457616c5bbdd2220f65c07e41eff86531bbe4d81c41b5b0d7",
           "published": "2026-11-07",
           "importance": "MED"
+        },
+        {
+          "headline_zh": "美委就鋁貨運復談",
+          "headline_en": "'US, Venezuela in Talks on Fresh Aluminum Cargo in Trade Revival' - Bloomberg Exclusive",
+          "source": "Benzinga",
+          "url": "https://finnhub.io/api/news?id=4a2621d7c4d5befe6b337a911467e1811b1efc2be3fc2f791450e5a171b19f46",
+          "published": "2026-11-03",
+          "importance": "MED"
         }
       ],
-      "thesis_check": "本週RSP增持Okta和Moderna，反映其等權重策略下的持股調整。",
+      "thesis_check": "鋁市場展望樂觀，且美國與委內瑞拉的鋁貨運談判可能影響供應鏈。",
       "next_week_catalyst": null
     },
     {
-      "symbol": "FLY",
-      "name_zh": "Firefly Aerospace",
-      "weekly_change_pct": 15.75,
+      "symbol": "VRT",
+      "name_zh": "Vertiv Holdings, LLC",
+      "weekly_change_pct": -21.35,
       "weekly_definition": "5 個交易日 close-to-close",
       "weekly_as_of": "2026-11-06",
       "weekly_start": "2026-10-30",
       "weekly_source": "yahoo_chart",
       "news_highlights": [
         {
-          "headline_zh": "Firefly Aerospace 獲選 NASA 百億 CLPS 2 供應商",
-          "headline_en": "Firefly Aerospace Selected as a Vendor for NASA’s $10 Billion CLPS 2 Initiative",
+          "headline_zh": "德州數據中心凍結：Vistra優於Vertiv？",
+          "headline_en": "Texas Data Center Freeze: Is Vistra a Better Buy Than Vertiv?",
           "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=7f6a339c512cea8e9bd46e9c6d5370384b43a008e6b1f1b2b35c6e3a1b89cd9c",
+          "url": "https://finnhub.io/api/news?id=0949df4185740a5d3abf378200e987c9108d6372d97d723977a6c321d3ef723c",
           "published": "2026-11-07",
           "importance": "HIGH"
         },
         {
-          "headline_zh": "Firefly Aerospace (FLY) 獲 AST 13 億美元大單",
-          "headline_en": "Firefly Aerospace (FLY) Bags $1.3B Deal With AST, Shares Surge 36.8%",
+          "headline_zh": "Vertiv股價在近期交易後被低估",
+          "headline_en": "Vertiv (VRT) Stock Looks Below Fair Value After Recent Deals",
           "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=1ac59e2d54694c107c5b9b04bb0a79b257a64b4178244e63cddbc2357504d8cf",
+          "url": "https://finnhub.io/api/news?id=87f78031c0b61a0be1a735bd603950ce7c93fc94e2a4800891242370cf464550",
+          "published": "2026-11-07",
+          "importance": "HIGH"
+        }
+      ],
+      "thesis_check": "德州數據中心禁令對公司業務構成潛在風險，但有分析認為其股價在近期交易後可能被低估。",
+      "next_week_catalyst": null
+    },
+    {
+      "symbol": "CRWV",
+      "name_zh": "CoreWeave",
+      "weekly_change_pct": -15.44,
+      "weekly_definition": "5 個交易日 close-to-close",
+      "weekly_as_of": "2026-11-06",
+      "weekly_start": "2026-10-30",
+      "weekly_source": "yahoo_chart",
+      "news_highlights": [
+        {
+          "headline_zh": "CoreWeave向德州州長當選人承諾",
+          "headline_en": "CoreWeave Makes Big Promise To Gina Hinojosa As Data Center Backlash Intensifies — Says Communities Should Get Benefits Without ‘Shouldering Costs’",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=f279fa4108b3753dd17a6131420bec4f5ed51da6a8d479a95233217e5f189867",
+          "published": "2026-11-08",
+          "importance": "HIGH"
+        },
+        {
+          "headline_zh": "CoreWeave尋求與德州州長當選人休戰",
+          "headline_en": "CoreWeave seeks truce with Texas Governor-elect Hinojosa",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=9166bebecc6a632e53ba962c3b2c2d0865408358f84215a8b80da36b777f5145",
+          "published": "2026-11-07",
+          "importance": "HIGH"
+        }
+      ],
+      "thesis_check": "公司正積極與德州州長當選人溝通，以解決數據中心建設爭議並承諾支付基礎設施費用。",
+      "next_week_catalyst": null
+    },
+    {
+      "symbol": "GLD",
+      "name_zh": "SPDR Gold Shares",
+      "weekly_change_pct": 4.71,
+      "weekly_definition": "5 個交易日 close-to-close",
+      "weekly_as_of": "2026-11-06",
+      "weekly_start": "2026-10-30",
+      "weekly_source": "yahoo_chart",
+      "news_highlights": [
+        {
+          "headline_zh": "黃金ETF投資指南",
+          "headline_en": "Guide to Gold ETF Investing",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=4ac9e2943936f80450fb663aeb402b168afa4978a0b2b8adcce31ae4f9b87478",
           "published": "2026-11-06",
           "importance": "HIGH"
-        }
-      ],
-      "thesis_check": "Firefly Aerospace本週獲得NASA百億美元合約，並與AST SpaceMobile簽署13億美元大單，顯示公司在太空領域的強勁成長潛力。",
-      "next_week_catalyst": null
-    },
-    {
-      "symbol": "SIRI",
-      "name_zh": "SiriusXM",
-      "weekly_change_pct": 11.69,
-      "weekly_definition": "5 個交易日 close-to-close",
-      "weekly_as_of": "2026-11-06",
-      "weekly_start": "2026-10-30",
-      "weekly_source": "yahoo_chart",
-      "news_highlights": [
-        {
-          "headline_zh": "Sirius XM 股價在財報指引上調後獲支撐",
-          "headline_en": "Sirius XM Stock Gains Support After Earnings Guidance Raise",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=e562bb42a77cb56066fcd4cecd8ea03e2549bc3e5d1a7349e58dbd9c6579c6e6",
-          "published": "2026-11-04",
-          "importance": "HIGH"
         },
         {
-          "headline_zh": "波克夏增持 Sirius XM，股價創 52 週新高",
-          "headline_en": "Berkshire Hathaway Buys More Sirius XM, Sending Stock to 52-Week High",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=de7725d49bb0c64529c60ae047d7dffe75cd1b818eaf033c1907c1fd8ab9b34b",
-          "published": "2026-11-04",
-          "importance": "HIGH"
-        }
-      ],
-      "thesis_check": "Sirius XM本週上調財報指引，且獲得巴菲特旗下波克夏海瑟威增持，顯示市場對其未來表現持樂觀態度。",
-      "next_week_catalyst": null
-    },
-    {
-      "symbol": "XLK",
-      "name_zh": "State Street Technology Select",
-      "weekly_change_pct": -8.23,
-      "weekly_definition": "5 個交易日 close-to-close",
-      "weekly_as_of": "2026-11-06",
-      "weekly_start": "2026-10-30",
-      "weekly_source": "yahoo_chart",
-      "news_highlights": [
-        {
-          "headline_zh": "半導體 ETF？Lam Research 庫藏股影響",
-          "headline_en": "Own a Semiconductor ETF? Lam Research’s Buyback Move Affects You",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=2cd5dae399f22bc29396e67de3ee460f36486142044a13008b84f4ec321e94c8",
-          "published": "2026-11-05",
-          "importance": "MED"
-        },
-        {
-          "headline_zh": "別讓藍色浪潮嚇跑你對晶片股的信心",
-          "headline_en": "Don't Let The Blue Wave Scare You Out Of Chips",
+          "headline_zh": "2026年10月黃金ETF資金流向",
+          "headline_en": "Gold ETF Flows: October 2026",
           "source": "SeekingAlpha",
-          "url": "https://finnhub.io/api/news?id=7783bdf845b17db22569c6ed1f51f28948bf07f19d6b641587f85dd87209b374",
+          "url": "https://finnhub.io/api/news?id=09ee78f8734e1b7184b9229a7b75afbdc7a67235fc78466a81dfe9cbe3cb8704",
           "published": "2026-11-06",
-          "importance": "MED"
+          "importance": "HIGH"
         }
       ],
-      "thesis_check": "本週科技股面臨市場波動，但有分析指出半導體板塊在選舉後仍具韌性，且成分股Lam Research的庫藏股計畫可能對ETF產生影響。",
+      "thesis_check": "本週有報導指出央行購買、儲備多元化及地緣政治不確定性可能支撐黃金ETF，且十月份全球黃金ETF資金持續流入。",
       "next_week_catalyst": null
     },
     {
-      "symbol": "EPD",
-      "name_zh": "Enterprise Products Partners L.",
-      "weekly_change_pct": -2.94,
+      "symbol": "BE",
+      "name_zh": "Bloom Energy",
+      "weekly_change_pct": -14.73,
       "weekly_definition": "5 個交易日 close-to-close",
       "weekly_as_of": "2026-11-06",
       "weekly_start": "2026-10-30",
       "weekly_source": "yahoo_chart",
       "news_highlights": [
         {
-          "headline_zh": "Enterprise Products (EPD) 第三季財報關鍵指標",
-          "headline_en": "Enterprise Products (EPD) Q3 Earnings: Taking a Look at Key Metrics Versus Estimates",
+          "headline_zh": "Bloom Energy海外獲勝，德州反對數據中心",
+          "headline_en": "Bloom Energy wins abroad while Texas turns against data centers",
           "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=0dd71d00083cbee617bd06967cad7992bf049f0efe9de00d620613c81c64ab50",
-          "published": "2026-11-05",
+          "url": "https://finnhub.io/api/news?id=34a0b1e7d60b4338d6a027b7bea5ccb7fa592a8eb06560e31a8776c4287c7762",
+          "published": "2026-11-07",
           "importance": "HIGH"
         },
         {
-          "headline_zh": "人人愛這 6.5% 管線收益，但風險被忽視",
-          "headline_en": "Everyone Loves This 6.5% Pipeline Yield. Here's the Risk I Think They're Ignoring.",
+          "headline_zh": "Barclays看好加州合作，Bloom Energy股價上漲",
+          "headline_en": "Bloom Energy Stock Rallies as Barclays Turns Bullish on California Power Partnership",
           "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=b54b4a9a3c689c8bcaf0e5f1caa08f0b12ba9cfdeb2bd5ae3df88563246b08c2",
-          "published": "2026-11-06",
-          "importance": "MED"
-        }
-      ],
-      "thesis_check": "Enterprise Products本週公布第三季財報關鍵指標，同時市場對其高管線收益的潛在風險進行討論。",
-      "next_week_catalyst": null
-    },
-    {
-      "symbol": "O",
-      "name_zh": "Realty Income",
-      "weekly_change_pct": 3.71,
-      "weekly_definition": "5 個交易日 close-to-close",
-      "weekly_as_of": "2026-11-06",
-      "weekly_start": "2026-10-30",
-      "weekly_source": "yahoo_chart",
-      "news_highlights": [
-        {
-          "headline_zh": "2007 年來首次：5 年期美債殖利率達 5%",
-          "headline_en": "First Time Since 2007 - The 5-Year Treasury Pays 5%: What's Next For REITs",
-          "source": "SeekingAlpha",
-          "url": "https://finnhub.io/api/news?id=976a965f658f3041a48ae0b1525b76eaab5d69018526227c624c19e6b5ef76f",
-          "published": "2026-11-06",
-          "importance": "HIGH"
-        },
-        {
-          "headline_zh": "Realty Income 通過 2026 年激勵獎勵計畫",
-          "headline_en": "Realty Income Corporation Adopts 2026 Promote Award Plan",
-          "source": "Fintel",
-          "url": "https://finnhub.io/api/news?id=589ac0374efdea94b8268f4feedfbd5d07607a4d66eeff8f335d980c015c1189",
-          "published": "2026-11-06",
-          "importance": "MED"
-        }
-      ],
-      "thesis_check": "5年期美債殖利率升至5%可能對REITs板塊產生影響，Realty Income本週也通過了2026年激勵獎勵計畫。",
-      "next_week_catalyst": null
-    },
-    {
-      "symbol": "ROKU",
-      "name_zh": "Roku",
-      "weekly_change_pct": 3.48,
-      "weekly_definition": "5 個交易日 close-to-close",
-      "weekly_as_of": "2026-11-06",
-      "weekly_start": "2026-10-30",
-      "weekly_source": "yahoo_chart",
-      "news_highlights": [
-        {
-          "headline_zh": "福斯完成對串流巨頭 Roku 的收購",
-          "headline_en": "Fox completes acquisition of streaming giant Roku",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=0e8c51564b31d05ad03decdd9955287c7559df06ea0256c42608104a0e1f5a6b",
-          "published": "2026-11-06",
-          "importance": "HIGH"
-        },
-        {
-          "headline_zh": "James Hardie Industries 將加入標普中型股 400",
-          "headline_en": "James Hardie Industries Set to Join S&P MidCap 400",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=15de983157d3ae61cca87acb3fea3f4299c41755fdb8bc8f5efceedc9288fb5a",
-          "published": "2026-11-06",
-          "importance": "HIGH"
-        }
-      ],
-      "thesis_check": "福斯本週完成對Roku的收購，Roku將因此從標普中型股400指數中移除，這對其獨立投資論點產生重大改變。",
-      "next_week_catalyst": null
-    },
-    {
-      "symbol": "STWD",
-      "name_zh": "STARWOOD PROPERTY TRUST, INC. S",
-      "weekly_change_pct": -1.23,
-      "weekly_definition": "5 個交易日 close-to-close",
-      "weekly_as_of": "2026-11-06",
-      "weekly_start": "2026-10-30",
-      "weekly_source": "yahoo_chart",
-      "news_highlights": [
-        {
-          "headline_zh": "Starwood Property Trust 第三季 GAAP 淨虧損 3.897 億美元",
-          "headline_en": "Starwood Property Trust, Inc. Reports Third Quarter 2026 GAAP Net Loss of $389.7 million and Distributable Earnings of $116.8 million",
-          "source": "Fintel",
-          "url": "https://finnhub.io/api/news?id=18fa9e7f7f5be6842487ba4c273ccb7423fadd711e7fcb35c6703d977e83a406",
-          "published": "2026-11-05",
-          "importance": "HIGH"
-        },
-        {
-          "headline_zh": "Starwood Property Trust 第三季財報電話會議重點",
-          "headline_en": "Starwood Property Trust Q3 Earnings Call Highlights",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=4470baa215f6f6e170b9af701d9da02bb4bf3db45f12515f5384615682618676",
+          "url": "https://finnhub.io/api/news?id=d4349abb773cc15ac273d75399f7f588e1d4b75266fc1e86372a9030f27592bc",
           "published": "2026-11-07",
           "importance": "HIGH"
         }
       ],
-      "thesis_check": "Starwood Property Trust本週公布第三季財報，報告GAAP淨虧損，並在財報電話會議中提及將審查股息，反映公司在利率上升環境下的營運壓力。",
+      "thesis_check": "公司在海外市場取得重大進展，並因與加州的電力合作夥伴關係獲分析師看好，但美國國內數據中心政策變化帶來不確定性。",
+      "next_week_catalyst": null
+    },
+    {
+      "symbol": "WDC",
+      "name_zh": "Western Digital",
+      "weekly_change_pct": -27.95,
+      "weekly_definition": "5 個交易日 close-to-close",
+      "weekly_as_of": "2026-11-06",
+      "weekly_start": "2026-10-30",
+      "weekly_source": "yahoo_chart",
+      "news_highlights": [
+        {
+          "headline_zh": "AI記憶體熱潮未止：億萬富翁支持WDC",
+          "headline_en": "The AI Memory Boom Isn’t Over: Why Billionaires Are Backing Western Digital (WDC)",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=1b3359aca23d984d4cbe63e0e42048a8e45d65eec277585ac0069e0bcf6b6e9f",
+          "published": "2026-11-07",
+          "importance": "HIGH"
+        },
+        {
+          "headline_zh": "Marvell和WDC經歷2001年來最差一週",
+          "headline_en": "Marvell and Western Digital Just Had Their Worst Week Since 2001",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=70769b3692c742f8eb11cb89a033dc40386130feee8193af8ad270e1cdf0f480",
+          "published": "2026-11-07",
+          "importance": "HIGH"
+        }
+      ],
+      "thesis_check": "儘管本週股價經歷大幅下跌，但有億萬富翁看好其在AI記憶體市場的潛力，且有分析認為其股價被低估。",
+      "next_week_catalyst": null
+    },
+    {
+      "symbol": "BA",
+      "name_zh": "波音",
+      "weekly_change_pct": 1.08,
+      "weekly_definition": "5 個交易日 close-to-close",
+      "weekly_as_of": "2026-11-06",
+      "weekly_start": "2026-10-30",
+      "weekly_source": "yahoo_chart",
+      "news_highlights": [
+        {
+          "headline_zh": "市場對波音股票有何期望？",
+          "headline_en": "What Does The Market Want From Boeing Stock?",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=7bd3ddec1fd96e262cd59b928f33e7ba0cdf898c3c5006d15e8651578e3f9b44",
+          "published": "2026-11-06",
+          "importance": "HIGH"
+        },
+        {
+          "headline_zh": "Archer Aviation跌45%，將收購波音業務",
+          "headline_en": "Archer Aviation Is Down 45% in 2026: Dead Money, or Due for a Bounce?",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=413a5d930c2dbb0aa0109ec950345ce8f0288da372a607afede1a02906d8cad9",
+          "published": "2026-11-07",
+          "importance": "MED"
+        }
+      ],
+      "thesis_check": "市場對波音股票的期望成為關注焦點，同時有報導提及Archer Aviation將收購波音三項業務。",
+      "next_week_catalyst": null
+    },
+    {
+      "symbol": "TEST",
+      "name_zh": "YieldMax TSLA Performance & Dis",
+      "weekly_change_pct": -8.0,
+      "weekly_definition": "5 個交易日 close-to-close",
+      "weekly_as_of": "2026-11-06",
+      "weekly_start": "2026-10-30",
+      "weekly_source": "yahoo_chart",
+      "news_highlights": [
+        {
+          "headline_zh": "YieldMax宣布MSST、NVIT、TEST股息",
+          "headline_en": "YieldMax® ETFs Announces Distributions on MSST, NVIT, and TEST",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=fc22f55b2d2591c0e033712917df71f947310b29384bfec8bb44b3b6913b0608",
+          "published": "2026-11-02",
+          "importance": "HIGH"
+        }
+      ],
+      "thesis_check": "YieldMax宣布了包括TEST在內的ETF的股息分配。",
+      "next_week_catalyst": null
+    },
+    {
+      "symbol": "SPY",
+      "name_zh": "SPDR S&P 500 ETF",
+      "weekly_change_pct": -2.7,
+      "weekly_definition": "5 個交易日 close-to-close",
+      "weekly_as_of": "2026-11-06",
+      "weekly_start": "2026-10-30",
+      "weekly_source": "yahoo_chart",
+      "news_highlights": [
+        {
+          "headline_zh": "S&P 500經歷2025年4月以來最差一週",
+          "headline_en": "The S&P 500 Just Had Its Worst Week Since the April 2025 Tariff Crash",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=186506439d25e16e97211b934892117bb52c2ed737fcbc060d5479e24e4fa543",
+          "published": "2026-11-07",
+          "importance": "HIGH"
+        },
+        {
+          "headline_zh": "強勁就業報告使12月升息機率升至77%",
+          "headline_en": "Odds of a December Rate Hike Jump to 77% After a Blowout Jobs Report",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=9b45c8e60388b13d5ea5db653b592b569a19aaeca996ab9e3d20de458e50560d",
+          "published": "2026-11-07",
+          "importance": "HIGH"
+        }
+      ],
+      "thesis_check": "本週S&P 500經歷了自2025年4月以來最差的一週，且強勁的就業報告使12月升息機率大幅上升。",
+      "next_week_catalyst": null
+    },
+    {
+      "symbol": "QQQ",
+      "name_zh": "Invesco 那斯達克 100 ETF",
+      "weekly_change_pct": -4.98,
+      "weekly_definition": "5 個交易日 close-to-close",
+      "weekly_as_of": "2026-11-06",
+      "weekly_start": "2026-10-30",
+      "weekly_source": "yahoo_chart",
+      "news_highlights": [
+        {
+          "headline_zh": "AI市場情緒轉差，Anthropic IPO或延期",
+          "headline_en": "Anthropic Could Postpone Its $1.5 Trillion IPO, Per One Investor, As Market Sours On AI Trade. Another Says It Could End Up Closer To $1 Trillion",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=627625632998f1f743228a53bf42fbeb0d8b35cdf26c88fc4847800aefad92b3",
+          "published": "2026-11-07",
+          "importance": "HIGH"
+        },
+        {
+          "headline_zh": "Eric Balchunas稱拋售為「五級火警」",
+          "headline_en": "Eric Balchunas Calls It a “Five Alarm Fire” Sell-Off. Here’s What Record ETF Trading Tells You",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=9bc82061025df432a28ee434c5c7ce4f12c25214320d3804d3ec4e3174090253",
+          "published": "2026-11-07",
+          "importance": "HIGH"
+        }
+      ],
+      "thesis_check": "本週AI市場情緒轉差，可能影響科技股為主的QQQ，且ETF交易量創紀錄顯示市場恐慌情緒。",
       "next_week_catalyst": null
     }
   ],
