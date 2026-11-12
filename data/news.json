@@ -1,10 +1,9 @@
 {
-  "news_date": "2026-11-12",
+  "news_date": "2026-11-13",
   "tldr": [
-    "台廠法說財報報喜：廣達明年 AI 伺服器營收可望年增高雙位數、緯創前三季獲利翻倍、中信金前十月獲利創高。",
-    "美股反彈，CoreWeave 重燃 AI 行情，標普漲 1.31%、那指漲 1.60%、費半勁揚 5.66%；惟 10 月 CPI 火熱推升 Fed 12 月升息押注，10 年期美債殖利率逼近 5%。",
-    "金管會鬆綁金控資本適足以穩壽險型金控；台股 ETF 除息潮於 11 月中登場。",
-    "商品走弱：布蘭特原油因伊朗緊張緩和跌破 90 美元、創 8 月以來首見，金價在美元走強與升息預期下下跌。"
+    "輝達執行長突然請辭，美股隔夜收跌，拖累AI相關族群。",
+    "台股重挫2.63%，權值晶片股回檔，台積電失守月線。",
+    "金管會鬆綁高雄亞資專區，58家金融機構可擴大境外基金與虛擬資產ETF業務。"
   ],
   "sections": [
     {
@@ -12,20 +11,20 @@
       "section_zh": "股市行情",
       "items": [
         {
-          "title_zh": "盤前法說財報利多：廣達、緯創、中信金同步報喜",
-          "title_en": "Pre-market highlights: Quanta, Wistron and CTBC all post AI-era strength",
-          "summary_zh": "廣達法說指 AI 需求維持強勁，明年 AI 伺服器營收可望年增高雙位數，伺服器占比上看 85～90%；緯創前三季稅後純益 428.6 億元、年增逾一倍、每股純益 13.54 元，董事會再通過 134.23 億元資本支出，擴充台灣與墨西哥 AI 伺服器產能。中信金前十月合併稅後純益 685.5 億元，加計 FVOCI 處分利益累計 1,488 億元，超越歷年全年獲利，權值股利多支撐台股高檔買氣。",
-          "summary_en": "Quanta told its earnings call AI demand stays strong, guiding 2026 AI-server revenue to high double-digit growth with servers at 85–90% of sales. Wistron's nine-month net profit more than doubled to NT$42.86bn (EPS NT$13.54) and its board approved NT$13.4bn of capex to expand AI-server capacity in Taiwan and Mexico. CTBC Financial's Jan–Oct profit, including FVOCI disposal gains, reached a record NT$148.8bn.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6659644"
+          "title_zh": "台股重挫1,165點跌破月線 台積電領跌",
+          "title_en": "Taiwan's TAIEX tumbles 1,165 points as AI heavyweights retreat",
+          "summary_zh": "加權指數週四（11/12）終場下跌1,165.28點、跌幅2.63%，收43,091.87點，成交量約1兆132億元，結束連三日反彈。台積電下跌55元、收2,340元，跌幅2.30%，失守月線。盤面受短線獲利了結及輝達執行長人事傳聞拖累，AI權值股全面回檔；傳產台玻逆勢大漲逾6%抗跌。後市觀察均線反壓與外資動向。",
+          "summary_en": "Taiwan's benchmark TAIEX fell 1,165.28 points, or 2.63%, to close at 43,091.87 on Thursday (Nov 12), snapping a three-session rebound on turnover of about NT$1.01 trillion. TSMC dropped NT$55, or 2.30%, to NT$2,340, slipping below its monthly moving average as profit-taking and chatter around Nvidia's leadership weighed on chip names. Glass maker Taiwan Glass bucked the trend, rising more than 6%.",
+          "source_name": "中央社",
+          "source_url": "https://www.cna.com.tw/news/afe/202611120160.aspx"
         },
         {
-          "title_zh": "台橡前三季獲利暴增 19 億元，毛利率回落仍優於去年",
-          "title_en": "Taiwan Synthetic Rubber swings to a far higher nine-month profit",
-          "summary_zh": "台橡（2103）2026 年前三季稅後淨利 20.8 億元、每股盈餘 2.52 元，較去年同期 1.8 億元、0.22 元大增 19 億元，主因毛利年增 79%、增加 21.73 億元。單季毛利率第二季衝高至 21.15%，第三季回落至 10.44%、一季下滑 10.71 個百分點，但仍逼近去年全年 9.8%，營收續高於去年同期，顯示本業獲利動能回升。",
-          "summary_en": "Taiwan Synthetic Rubber (2103) reported nine-month net profit of NT$2.08bn (EPS NT$2.52), up from just NT$180mn a year earlier—a NT$1.9bn jump driven by a 79%, NT$2.17bn rise in gross profit. Quarterly gross margin peaked at 21.15% in Q2 before easing to 10.44% in Q3, still near last year's full-year 9.8%, with revenue holding above 2025 levels as core earnings momentum recovered.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6659895"
+          "title_zh": "台股進入均線反壓區 分析師籲低接不追高",
+          "title_en": "Chip sector faces resistance zone as Nvidia headwinds cloud the open",
+          "summary_zh": "券商盤前分析指出，台股在重挫後進入均線反壓區，短線留意上檔壓力；費城半導體指數雖強彈提供部分支撐，但輝達盤後因執行長人事變動承壓，恐壓抑反彈力道。法人建議以逢低分批承接為主、不宜追高，並緊盯外資買賣超與台指期換手訊號，待量能回穩再論方向。",
+          "summary_en": "Heading into Friday's session, brokerages flagged that the TAIEX has entered a moving-average resistance band after the sharp drop, urging investors not to chase highs. Philadelphia Semiconductor Index strength offered some support, but after-hours pressure on Nvidia tied to its leadership shake-up risks capping rebounds. Analysts suggested low-level accumulation rather than aggressive buying near resistance, watching foreign flows and futures for direction.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/5607/9873267"
         }
       ]
     },
@@ -34,20 +33,20 @@
       "section_zh": "產業動態",
       "items": [
         {
-          "title_zh": "友通機器人首案出貨，第三案採 NVIDIA Thor 拚 2027 量產",
-          "title_en": "Youtong ships first robotics project; third to run on NVIDIA Thor in 2027",
-          "summary_zh": "工業電腦廠友通（2397）表示，歐美品牌客戶的機器人專案已推進至第三案：第一案已量產出貨，第二案明年第二季量產，第三案採用 NVIDIA 的 Thor 邊緣 AI 平台，預計 2027 年第三季量產。專案涵蓋機器手臂與移動機器人整機方案，客戶最重視長期供貨與品質保證；友通並依應用、功耗與成本，於 AMD、Intel、NVIDIA 平台間提案，顯示邊緣 AI 導入動能升溫。",
-          "summary_en": "Industrial-computer maker Youtong (2397) said its European and US brand customers' robotics programs have reached a third project: the first is already in mass production, the second ramps in Q2, and the third—built on NVIDIA's Thor edge-AI platform—targets Q3 2027 volume production. The projects cover robotic arms and mobile robots, with customers prizing multi-year component-supply guarantees when designing long-life equipment.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6659881"
+          "title_zh": "台積電10月營收年增59.7% AI需求續強",
+          "title_en": "TSMC's October revenue jumps 59.7% on resilient AI chip demand",
+          "summary_zh": "台積電公布10月合併營收約新台幣5,869億元，月增14.7%、年增59.7%；今年前十月累計營收約4.49兆元，年增43.3%。數據顯示先進AI晶片需求依舊強勁，為公司第四季成長提供支撐；彭博引述分析師預估，本季營收年增率上看約63%。法人看好先進製程與CoWoS產能滿載將延續動能，惟近期股價受大盤與輝達消息牽動震盪。",
+          "summary_en": "Taiwan Semiconductor Manufacturing reported October consolidated revenue of about NT$586.9 billion, up 14.7% from September and 59.7% from a year earlier, taking January–October revenue to roughly NT$4.49 trillion, a 43.3% annual gain. The figures underscore still-robust demand for advanced AI accelerators; Bloomberg noted analysts expect around 63% growth for the final quarter, supporting the foundry's momentum into year-end.",
+          "source_name": "Bloomberg",
+          "source_url": "https://www.bloomberg.com/news/articles/2026-11-10/tsmc-taiwan-semiconductor-manufacturing-revenue-earnings-ai-chip-demand"
         },
         {
-          "title_zh": "蘋果 AI 眼鏡添供應鏈線索，設備商證實參與專案",
-          "title_en": "Apple AI-glasses clues grow as an equipment supplier confirms involvement",
-          "summary_zh": "中國製造設備供應商快克智能（603203）在第三季業績說明會透露，已參與蘋果 AI 眼鏡及新款智慧耳機專案，可望帶動精密焊接組裝與機器視覺檢測業務，但未揭露規格、訂單金額與上市時程；公司並稱受惠半導體、光通訊與資料中心需求，在手訂單充足。消息為蘋果穿戴裝置傳聞增添供應鏈佐證，外媒先前報導首款智慧眼鏡或於 2027 年底推出、初代不具 AR 顯示。",
-          "summary_en": "Chinese manufacturing-equipment maker Quick Intelligent (603203) told its Q3 briefing it is involved in Apple's AI-glasses and a new smart-earbuds project, expecting a lift to precision welding/assembly and machine-vision inspection work, though it disclosed no specs, order size or launch date. The remarks add supply-chain evidence to reports that Apple's first smart glasses may arrive in late 2027 without an AR display.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6659802"
+          "title_zh": "台積電董事會通過投資OpenAI、Anthropic上限10億美元",
+          "title_en": "TSMC board approves up to $1 billion in OpenAI and Anthropic stakes",
+          "summary_zh": "台積電董事會通過分別投資OpenAI特別股與Anthropic普通股（後者以未來IPO價格認購）各最高5億美元，合計上限約10億美元。此為投資額度上限，非代表已全額到位，但凸顯台積電與頂尖AI模型業者的綁定加深。這些客戶對先進製程的旺盛需求，可望回饋為晶圓代工長線訂單動能，強化其在AI供應鏈的核心地位。",
+          "summary_en": "TSMC's board authorized investments of up to US$500 million each in OpenAI preferred shares and Anthropic common stock (the latter tied to a future IPO price), capping total exposure at around US$1 billion. The approvals set ceilings rather than confirming fully deployed capital, but signal the foundry's deepening alignment with leading AI model developers whose demand for advanced nodes drives its long-term order book.",
+          "source_name": "TechNode",
+          "source_url": "https://technode.global/2026/11/11/tsmc-openai-anthropic-investments/"
         }
       ]
     },
@@ -56,20 +55,20 @@
       "section_zh": "金融業",
       "items": [
         {
-          "title_zh": "金管會鬆綁金控資本適足，穩壽險型母金控體質",
-          "title_en": "FSC eases financial-holding capital rules to steady insurance-led groups",
-          "summary_zh": "金管會修正金控資本適足性管理辦法，讓八家壽險型金控在計算資本適足率時，比照旗下壽險子公司適用十五年過渡措施，並將十一家保險型金控的申報期限延後一個月。此舉在新一代清償能力制度上路前，有助穩定母金控資本、支撐配息能力，兼顧審慎監理與集團穩健經營，對壽險型金控的資金調度與股利政策具正面影響。",
-          "summary_en": "Taiwan's Financial Supervisory Commission amended its financial-holding capital-adequacy rules so eight insurance-led financial holding companies can apply the same 15-year transition measure as their life-insurance subsidiaries when computing capital adequacy, and extended the filing deadline for eleven insurance-type holdings by a month. The move aims to stabilize parent-company capital and support dividend capacity ahead of new solvency standards.",
-          "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/5613/9199813"
+          "title_zh": "金管會鬆綁高雄亞資專區 58家金融業受惠",
+          "title_en": "Taiwan relaxes Kaohsiung asset-hub rules, benefiting 58 institutions",
+          "summary_zh": "金管會修正高雄亞洲資產管理專區試辦原則，11月11日起生效：解除部分未具證境外基金與私募股權基金的99人客戶上限，並開放銀行以信託方式銷售外國虛擬資產ETF。符合資格者計22家銀行、20家投信投顧、10家券商及6家壽險，共58家。此舉擴大亞資中心動能，有助金融業爭取高資產與跨境資金，深化財富管理與資產管理業務布局。",
+          "summary_en": "Taiwan's Financial Supervisory Commission revised the Kaohsiung Asian asset-management pilot rules, effective Nov 11, lifting the 99-investor cap on certain offshore and private-equity funds and letting banks distribute foreign virtual-asset ETFs via trust services. The FSC said 58 firms qualify — 22 banks, 20 fund houses, 10 brokers and 6 life insurers — a push to deepen the hub's momentum and keep high-end money onshore.",
+          "source_name": "中央社",
+          "source_url": "https://www.cna.com.tw/news/afe/202611100313.aspx"
         },
         {
-          "title_zh": "金管會公布上半年金檢缺失，點名銀行與金控",
-          "title_en": "FSC flags first-half examination shortcomings across banks and holdings",
-          "summary_zh": "金管會公布 2026 年上半年金融檢查缺失，涵蓋金控、國銀等十個業別，聚焦防制詐騙與洗錢、消費者保護、內部管理及資安四大領域。其中點名部分銀行辦理房貸時，未清楚說明房貸壽險可自主選擇，使客戶誤以為是核貸條件。金管會要求業者落實改善，強化消費者權益保障與內控法遵，對銀行作業流程與金融消保具提醒意義。",
-          "summary_en": "The FSC published the deficiencies found in its first-half 2026 financial examinations, spanning ten business categories from holding companies to domestic banks. Findings centered on four areas—fraud and anti-money-laundering controls, consumer protection, internal management and information security—including cases where some banks failed to make clear that mortgage life insurance is optional rather than a lending condition.",
-          "source_name": "工商時報",
-          "source_url": "https://ctee.com.tw/news/20260930700532-430301"
+          "title_zh": "保險業可試辦OIU遠距投保、預繳保費專屬帳戶",
+          "title_en": "Insurers gain remote underwriting and prepaid-premium pilots",
+          "summary_zh": "配合11月11日生效的高雄亞資專區修正，金管會開放保險業試辦設置「預繳保費專屬帳戶」的保險商品，並允許國際保險業務分公司（OIU）對非中國大陸地區境外客戶以遠距方式投保。保險局表示將逐案審查。此舉在風險可控前提下擴大跨境保險服務，有助壽險業爭取海外高資產客源，惟實際開辦進度仍待個案核准，短期貢獻有限但具長線布局意義。",
+          "summary_en": "As part of the same Nov 11 asset-hub revision, the FSC opened the door for insurers to pilot products with dedicated prepaid-premium accounts and to let offshore insurance units (OIUs) underwrite non-China overseas clients remotely. The insurance bureau said it will review applications case by case — a measured step to broaden cross-border insurance services and court overseas high-net-worth customers while keeping risk in check.",
+          "source_name": "今周刊",
+          "source_url": "https://www.businesstoday.com.tw/article/category/183017/post/202611120002/"
         }
       ]
     },
@@ -78,20 +77,20 @@
       "section_zh": "財富管理",
       "items": [
         {
-          "title_zh": "台股 ETF 除息潮集中 11 月中登場",
-          "title_en": "Taiwan ETF ex-dividend wave clusters in mid-November",
-          "summary_zh": "11 月台股 ETF 除息行事曆密集，涵蓋季配、半年配、月配、主動式與債券型 ETF。熱門高息 ETF 如 00878 與半年配的 006208 預計 11 月 17 日除息，多數最後買進日與除息日落在 11 月 16 至 19 日。已公告配息中，00851 單位配息居前；投信提醒未公告金額仍標示「待公告」，實際金額與日期應以證交所最新公告為準，並留意填息能力與成分股基本面。",
-          "summary_en": "November brings a packed Taiwan ETF ex-dividend calendar spanning quarterly, semi-annual, monthly, active and bond ETFs. Popular high-yield funds such as 00878 and the semi-annual 006208 go ex-dividend around November 17, with most last-buy and ex-dates falling between November 16 and 19. Among payouts already announced, 00851 tops the per-unit table; managers note undisclosed amounts are still marked \"pending\" and urge checking official TWSE notices.",
-          "source_name": "經理人",
-          "source_url": "https://www.managertoday.com.tw/articles/view/73232"
+          "title_zh": "高資產客戶可承作外國虛擬資產ETF、私募基金鬆綁",
+          "title_en": "High-net-worth clients gain access to foreign crypto ETFs and private equity",
+          "summary_zh": "金管會11月11日生效的亞資專區新制，開放銀行透過信託向高資產客戶銷售外國虛擬資產ETF，並解除向高資產客戶銷售的部分境外及私募股權基金99人上限。此舉擴大台灣私人銀行與財富管理商品架構，讓業者能為富裕客群提供更多另類投資與跨境配置選項，有助深化高資產客群經營；惟相關商品仍限符合資格的高資產客戶承作，銷售需落實適合度與風險揭露。",
+          "summary_en": "Under the FSC's Nov 11 asset-hub revision, banks may now sell foreign virtual-asset ETFs to high-net-worth clients through trust arrangements, while the 99-investor ceiling is lifted for qualifying offshore and private-equity funds aimed at wealthy investors. The changes widen the product shelf for Taiwan's private-banking segment, letting wealth managers offer more alternative and cross-border allocations to affluent customers.",
+          "source_name": "MoneyDJ理財網",
+          "source_url": "https://www.moneydj.com/kmdj/news/newsviewer.aspx?a=b0b46dec-6147-4397-b190-c42916725117"
         },
         {
-          "title_zh": "高資產財管續擴張，銀行搶進私人銀行客群",
-          "title_en": "High-asset wealth management keeps expanding as banks court private-banking clients",
-          "summary_zh": "台灣高資產財富管理規模（AUM）達 2 兆 767 億元、年增 50.63%（統計至 2025 年 11 月底），銀行持續深化高資產客戶服務。凱基銀行自 2026 年整併財富管理會員制度，並新增適用資產新台幣一億元以上的「私人銀行會員」等級，反映各行庫對高淨值資金的競爭加劇，財管與傳承、資產配置需求同步升溫。",
-          "summary_en": "Taiwan's high-asset wealth-management AUM reached NT$2.0767 trillion, up 50.63% year-on-year (as of end-November 2025), as banks deepen services for wealthy clients. KGI Bank is consolidating its wealth-management membership from 2026 and adding a \"private-banking member\" tier for clients with assets above NT$100 million, reflecting intensifying competition for high-net-worth money.",
-          "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/5613/9221671"
+          "title_zh": "財富管理轉向跨境配置與家族治理 高資產AUM突破2兆",
+          "title_en": "Taiwan's wealth pivot: cross-border allocation and family governance in focus",
+          "summary_zh": "業界報告指出，台灣高資產客群需求正從單純投資理財，轉向資產負債整合、跨境配置與家族治理，帶動銀行擴充融資、信託、另類投資與家族辦公室服務。KPMG估計銀行高資產財富管理規模已突破2兆元；中信與BCG報告指出，74%高資產客戶已持有境外資產，並預估個人財富年均成長約一成，結構型商品仍為重要配置工具。（本則為近期趨勢報告，非當日新聞）",
+          "summary_en": "Recent industry reports highlight that Taiwan's high-net-worth clients are shifting from pure investing toward integrated balance-sheet management, cross-border allocation and family governance, pushing banks to expand financing, trust, alternatives and family-office services. KPMG estimates banks' HNW wealth assets have topped NT$2 trillion, while CTBC–BCG research notes 74% of wealthy clients already hold offshore assets and projects roughly 10% annual growth in personal wealth.",
+          "source_name": "工商時報",
+          "source_url": "https://www.ctee.com.tw/news/20261008700172-439901"
         }
       ]
     },
@@ -100,20 +99,12 @@
       "section_zh": "稅務法規",
       "items": [
         {
-          "title_zh": "遺贈稅法修正三讀通過",
-          "title_en": "Estate-and-gift tax amendments clear the legislature",
-          "summary_zh": "立法院三讀通過遺產及贈與稅法部分條文修正，回應憲法法庭判決：取消稅額滿 30 萬元才能申請分期的門檻，並統一被繼承人死亡前 2 年內贈與特定親屬財產的遺產稅計算方式，改由受贈人按比例負擔稅額。財政部表示正研擬施行細則等子法規，並將於總統公布後加強宣導，對高資產族群的傳承規劃與贈與時點安排具實質影響。",
-          "summary_en": "Taiwan's legislature passed amendments to the Estate and Gift Tax Act responding to a Constitutional Court ruling, removing the NT$300,000 threshold for applying to pay tax in installments and standardizing how gifts to specified relatives within two years before death are taxed—with recipients bearing the tax proportionally. The Finance Ministry is drafting enforcement sub-rules and will step up guidance after promulgation.",
-          "source_name": "中央社",
-          "source_url": "https://www.cna.com.tw/news/afe/202608210289.aspx"
-        },
-        {
-          "title_zh": "2027 年遺贈稅免稅額可望調高",
-          "title_en": "2027 estate-and-gift tax exemptions set to rise on cumulative CPI gains",
-          "summary_zh": "依遺贈稅法，物價累計漲幅達 10% 以上免稅額才調整。截至 2026 年 8 月，適用指數累計漲幅已達 11.91%，預估 2027 年遺產稅免稅額約 1,492 萬元、贈與稅免稅額約 273 萬元，高於現行的 1,333 萬元與 244 萬元；確切幅度仍待財政部年底正式公告。調高後有利資產移轉與傳承節稅，建議高資產家庭預作規劃。",
-          "summary_en": "Under the Estate and Gift Tax Act, exemptions adjust once cumulative CPI gains reach 10%. With the applicable index up about 11.91% as of August 2026, the 2027 estate-tax exemption is estimated near NT$14.92mn and the gift-tax exemption near NT$2.73mn, up from the current NT$13.33mn and NT$2.44mn—though the Finance Ministry will confirm the exact figures in a year-end announcement.",
-          "source_name": "今周刊",
-          "source_url": "https://www.businesstoday.com.tw/article/category/183022/post/202607300014/"
+          "title_zh": "— 本日無重大新聞 —",
+          "title_en": "— No major news —",
+          "summary_zh": "內容待補。",
+          "summary_en": "Content pending.",
+          "source_name": "",
+          "source_url": ""
         }
       ]
     },
@@ -122,20 +113,12 @@
       "section_zh": "總經政策",
       "items": [
         {
-          "title_zh": "台灣 10 月 CPI 續揚 2.33%，連 6 月破 2%",
-          "title_en": "Taiwan's October CPI holds at 2.33%, above 2% for a sixth month",
-          "summary_zh": "主計總處公布 10 月消費者物價指數年增 2.33%，較 9 月回落，但已連續 6 個月超過 2% 警戒線，外食費、房租、油料費與機票旅遊費為主要推力；扣除蔬果與能源的核心 CPI 為 2.49%。主計總處認為物價屬溫和上漲、無輸入型通膨，並預估 11 月 CPI 仍高於 2% 且漲幅略高於 10 月，顯示通膨黏著度仍須關注。",
-          "summary_en": "The Directorate-General of Budget, Accounting and Statistics reported October CPI rose 2.33% year-on-year, easing from September but staying above the 2% alert line for a sixth straight month, with dining-out, rents, fuel and airfares the main drivers. Core CPI (excluding fruit, vegetables and energy) was 2.49%; officials see inflation as mild with no imported-inflation problem and expect November to stay above 2%.",
-          "source_name": "自由時報",
-          "source_url": "https://ec.ltn.com.tw/article/breakingnews/5630664"
-        },
-        {
-          "title_zh": "景氣對策信號連 10 紅，AI 動能撐場",
-          "title_en": "Business-cycle monitor stays \"red\" for a 10th month on AI momentum",
-          "summary_zh": "國發會公布景氣綜合判斷分數 41 分，景氣燈號連續 10 個月亮出代表熱絡的紅燈，為疫情以來最長紅燈周期，AI 相關生產動能是主要推力；領先與同時指標同步上升。國發會看好出口、投資與消費三大引擎續撐景氣，惟仍提醒須留意國際變數。景氣熱度延續，對內需、投資信心與資本市場氛圍形成支撐。",
-          "summary_en": "Taiwan's National Development Council reported the composite business-cycle indicator scored 41 points, keeping the signal \"red\" (booming) for a tenth consecutive month—the longest such run since the pandemic—with AI-related production the main engine. Leading and coincident indicators also rose, and the NDC expects exports, investment and consumption to keep supporting activity.",
-          "source_name": "優分析",
-          "source_url": "https://uanalyze.com.tw/articles/5510257955"
+          "title_zh": "— 本日無重大新聞 —",
+          "title_en": "— No major news —",
+          "summary_zh": "內容待補。",
+          "summary_en": "Content pending.",
+          "source_name": "",
+          "source_url": ""
         }
       ]
     },
@@ -144,20 +127,12 @@
       "section_zh": "國際財經",
       "items": [
         {
-          "title_zh": "美股盤後：費半勁揚 5.66%，AI 買盤回籠",
-          "title_en": "Taiwan media: US semiconductors surge 5.66% as AI buying returns",
-          "summary_zh": "鉅亨網報導，美股週三四大指數收高，AI 雲端業者 CoreWeave 第三季營收優於預期並上調全年財測，股價飆漲近 25%，帶動 AI 概念股反彈；輝達結束連兩日跌勢，那斯達克漲 1.60%、費城半導體指數勁揚 5.66%。風險偏好回升，有望挹注台灣半導體供應鏈買氣與今日台股開盤表現。",
-          "summary_en": "Taiwanese financial media reported US indices closed higher Wednesday, with cloud-AI firm CoreWeave beating on Q3 revenue and raising full-year guidance, its shares soaring nearly 25% and lifting AI names. The Philadelphia Semiconductor Index jumped 5.66% and Nvidia snapped a two-day slide, signaling renewed risk appetite that could support Taiwan's chip supply chain and today's open.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6658684"
-        },
-        {
-          "title_zh": "美元升息預期重燃，日元貶至近一個半月低點逼近 159",
-          "title_en": "Dollar firms on revived hike bets; yen slides toward 159",
-          "summary_zh": "鉅亨網報導，美國通膨數據火熱重燃聯準會升息預期，美元走強，日元週三亞市貶至兌美元約 158.97、創約一個半月新低。美日利差擴大與聯準會鷹派訊號使日元持續承壓，牽動亞洲區域資金流向與出口導向股市表現，後續須留意日本央行政策動向與美元走勢。",
-          "summary_en": "Taiwanese media reported the US dollar strengthened on revived Fed rate-hike expectations after hot inflation data, pushing the yen to a roughly six-week low near 158.97 against the dollar in Wednesday's Asian session. A wider US-Japan rate gap and hawkish Fed signals kept the yen under pressure, a dynamic that shapes regional capital flows and export-oriented Asian equities.",
-          "source_name": "鉅亨網",
-          "source_url": "https://news.cnyes.com/news/id/6658664"
+          "title_zh": "— 本日無重大新聞 —",
+          "title_en": "— No major news —",
+          "summary_zh": "內容待補。",
+          "summary_en": "Content pending.",
+          "source_name": "",
+          "source_url": ""
         }
       ]
     },
@@ -166,36 +141,12 @@
       "section_zh": "國際",
       "items": [
         {
-          "title_zh": "美股收紅，CoreWeave 財報重燃 AI 行情",
-          "title_en": "US stocks rally as CoreWeave earnings reignite the AI trade",
-          "summary_zh": "美股週三收高，CoreWeave 財報優於預期，紓解市場對 AI 投資可持續性的疑慮。標普 500 漲 1.31% 收 7,619.38 點，那斯達克漲 1.60% 收 25,466.19 點，道瓊漲 0.49% 收 52,486.49 點。輝達在遭 Baird 降評後仍反彈 2.87% 至 173.73 美元，超微大漲 7.32%、博通漲 3.99%。",
-          "summary_en": "Wall Street closed higher Wednesday as strong CoreWeave results eased doubts about AI spending. The S&P 500 rose 1.31% to 7,619.38, the Nasdaq gained 1.60% to 25,466.19, and the Dow added 0.49% to 52,486.49. Nvidia rebounded 2.87% to $173.73 after a Baird downgrade, while AMD jumped 7.32% and Broadcom rose 3.99%.",
-          "source_name": "Yahoo Finance",
-          "source_url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-nov-11-220503244.html"
-        },
-        {
-          "title_zh": "通膨升溫，Fed 官員釋出 12 月升息訊號",
-          "title_en": "Fed officials signal likely December hike after hot inflation",
-          "summary_zh": "芝加哥聯準銀總裁古斯比形容 10 月通膨數據「近乎令人不安」，強化市場對 12 月升息預期。美國 10 月 CPI 月增 0.4%，高於 0.3% 市場共識；聯準會理事華勒表示傾向升息、並不排除一次升 2 碼。美債殖利率走高，10 年期一度逼近 4.98%、盤中短暫突破 5%，反映緊縮預期升溫。",
-          "summary_en": "Chicago Fed President Goolsbee called October's inflation report \"borderline disturbing,\" reinforcing expectations of a December rate increase. October headline CPI rose 0.4% month-on-month, above the 0.3% consensus, and Governor Waller said he leans toward a hike and is open to a half-point move. The 10-year Treasury yield jumped toward 4.98%, briefly topping 5%.",
-          "source_name": "CNBC",
-          "source_url": "https://www.cnbc.com/2026/11/11/goolsbee-october-inflation-fed-rates-disturbing-distressing.html"
-        },
-        {
-          "title_zh": "布蘭特原油跌破 90 美元，創 8 月以來首見",
-          "title_en": "Brent dips below $90 for first time since August on Iran hopes",
-          "summary_zh": "布蘭特原油盤中跌破每桶 90 美元、為 8 月以來首次，收於約 91.49 美元。市場傳出美方可能允許伊朗進行有限鈾濃縮，加上川普釋出暫不擴大軍事行動訊號，供應疑慮降溫。布蘭特較 10 月底逼近 118 美元的半年高點回落約 22%，惟荷莫茲海峽油輪事件不斷，風險溢價仍在。",
-          "summary_en": "Brent crude briefly fell below $90 a barrel—its first time since August—settling around $91.49, as reports that Washington might allow Iran limited uranium enrichment and Trump's signals of restraint eased supply fears. Brent remains about 22% below its late-October six-month high near $118, though continued tanker incidents in the Strait of Hormuz keep a risk premium in play.",
-          "source_name": "CNBC",
-          "source_url": "https://www.cnbc.com/2026/11/10/oil-prices-trump-iran.html"
-        },
-        {
-          "title_zh": "通膨數據火熱、美元走強，金價承壓下跌",
-          "title_en": "Gold falls as hot inflation and a firmer dollar weigh",
-          "summary_zh": "金價下跌，美國 10 月通膨數據高於預期、美元走強，推升市場對聯準會 12 月升息押注，令不孳息的黃金承壓。美債殖利率同步走高，進一步削弱黃金吸引力，延續近期大幅賣壓，反映交易員重新定價美國貨幣政策將進一步緊縮的前景。",
-          "summary_en": "Gold prices fell as October's hotter-than-expected US inflation data and a stronger dollar lifted bets on a December Fed rate hike, pressuring non-yielding bullion. Rising Treasury yields added to the drag, extending a sharp recent selloff as traders repriced the path of US monetary policy toward further tightening.",
-          "source_name": "CNBC",
-          "source_url": "https://www.cnbc.com/2026/11/11/gold-edges-higher-after-sharp-selloff-fed-hike-bets-weigh.html"
+          "title_zh": "— 本日無重大新聞 —",
+          "title_en": "— No major news —",
+          "summary_zh": "內容待補。",
+          "summary_en": "Content pending.",
+          "source_name": "",
+          "source_url": ""
         }
       ]
     }
