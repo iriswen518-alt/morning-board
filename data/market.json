@@ -121,7 +121,7 @@
     {
       "name": "Hang Seng 恆生",
       "name_zh": null,
-      "close": 24008.55078125,
+      "close": 24008.55,
       "daily_pct": -1.26,
       "mtd_pct": 4.39,
       "ytd_pct": -5.13,
@@ -130,7 +130,7 @@
     {
       "name": "Shanghai 上證",
       "name_zh": null,
-      "close": 3655.82958984375,
+      "close": 3655.83,
       "daily_pct": -0.67,
       "mtd_pct": 2.27,
       "ytd_pct": -7.26,
@@ -175,35 +175,35 @@
     },
     {
       "name": "US 2-Year",
-      "yield_pct": 4.84,
-      "daily_bps": 11.4,
+      "yield_pct": 4.83,
+      "daily_bps": 10.4,
       "mtd_bps": 17.0,
       "ytd_bps": 126.0,
-      "closing_date": "2026-11-12"
+      "closing_date": "2026-11-13"
     },
     {
       "name": "Germany 10-Year",
-      "yield_pct": 3.33,
-      "daily_bps": 0.6,
+      "yield_pct": 3.32,
+      "daily_bps": -0.1,
       "mtd_bps": -2.5,
       "ytd_bps": 39.2,
-      "closing_date": "2026-11-12"
+      "closing_date": "2026-11-13"
     },
     {
       "name": "Japan 10-Year",
       "yield_pct": 2.83,
-      "daily_bps": 5.5,
+      "daily_bps": 5.4,
       "mtd_bps": 2.3,
       "ytd_bps": 77.4,
-      "closing_date": "2026-11-12"
+      "closing_date": "2026-11-13"
     },
     {
       "name": "UK 10-Year",
-      "yield_pct": 5.3,
-      "daily_bps": 8.0,
+      "yield_pct": 5.28,
+      "daily_bps": 5.9,
       "mtd_bps": -8.71,
       "ytd_bps": 61.8,
-      "closing_date": "2026-11-12"
+      "closing_date": "2026-11-13"
     },
     {
       "name": "TW 10-Year",
@@ -219,8 +219,8 @@
       "name": "DXY 美元指數",
       "close": 102.91000366210938,
       "daily_pct": 0.67,
-      "mtd_pct": 1.17,
-      "ytd_pct": 4.88,
+      "mtd_pct": 1.26,
+      "ytd_pct": 4.97,
       "closing_date": "2026-11-11"
     },
     {
@@ -402,7 +402,7 @@
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 4.07,
+      "implied_rate": 4.08,
       "delta_rate": null,
       "p_hike": null,
       "p_cut": null,
