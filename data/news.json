@@ -1,9 +1,11 @@
 {
   "news_date": "2026-11-13",
   "tldr": [
-    "輝達執行長突然請辭，美股隔夜收跌，拖累AI相關族群。",
-    "台股重挫2.63%，權值晶片股回檔，台積電失守月線。",
-    "金管會鬆綁高雄亞資專區，58家金融機構可擴大境外基金與虛擬資產ETF業務。"
+    "輝達執行長黃仁勳無預警請辭，美股收黑，那斯達克跌0.39%、輝達跌4.3%。",
+    "台股重挫1,165點（2.63%）收43,091，台積電失守月線。",
+    "台積電10月營收年增59.7%，董事會通過投資OpenAI、Anthropic上限10億美元。",
+    "金管會鬆綁高雄亞資專區，58家機構可擴大高資產客戶的虛擬資產ETF與私募基金業務。",
+    "美國10月CPI偏熱，12月升息機率升至約85%；油價因美伊緊張走高。"
   ],
   "sections": [
     {
@@ -99,12 +101,20 @@
       "section_zh": "稅務法規",
       "items": [
         {
-          "title_zh": "— 本日無重大新聞 —",
-          "title_en": "— No major news —",
-          "summary_zh": "內容待補。",
-          "summary_en": "Content pending.",
-          "source_name": "",
-          "source_url": ""
+          "title_zh": "10月房地合一稅年月雙增 前10月累計由負轉正",
+          "title_en": "October property-transaction tax turns positive year-to-date as housing taxes rise",
+          "summary_zh": "財政部公布10月個人房地合一稅實徵淨額48億元，月增7.7%、年增9.7%，帶動前10月累計達433億元，年增幅由負轉正至0.1%。同期土地增值稅年增5.9%、契稅年增2.5%。統計處官員表示，10月房市相關稅目普遍回升，反映交易回溫；惟累計增幅仍低，後續稅收動能仍須觀察房市與利率走向。",
+          "summary_en": "Taiwan's Ministry of Finance reported October net collections of the individual consolidated housing-and-land income tax at NT$4.8 billion, up 7.7% from a month earlier and 9.7% from a year earlier, lifting the January–October cumulative total to NT$43.3 billion and swinging the annual change to +0.1% from negative. Land value-increment tax rose 5.9% and deed tax 2.5%, signalling a steadier property market.",
+          "source_name": "中央社",
+          "source_url": "https://www.cna.com.tw/news/afe/202611110276.aspx"
+        },
+        {
+          "title_zh": "提醒：連續繼承取得房地 持有期間可併計",
+          "title_en": "Reminder: holding period can be combined for successively inherited property",
+          "summary_zh": "依財政部令釋，個人出售因連續繼承或受遺贈取得的房地，計算房地合一所得稅時，持有期間可併計被繼承人（遺贈人）的持有期間，適用於2016年1月1日以後的交易。由於稅率隨持有期間拉長而下降（持有逾10年最低15%），此規定對繼承人可觀減稅，財富傳承與不動產規劃時值得留意。（本則為現行適用規定，非新公告）",
+          "summary_en": "Under the finance ministry's standing interpretation, individuals selling real estate acquired through successive inheritance or bequest may combine the decedent's holding period when calculating the housing-and-land income tax, applicable to transactions from 2016 onward. Because the tax rate falls with longer holding (as low as 15% beyond ten years), the rule can meaningfully reduce the burden on heirs — a point worth noting for estate and succession planning.",
+          "source_name": "財政部賦稅署",
+          "source_url": "https://www.dot.gov.tw/singlehtml/ch26?cntId=7a5471a169e846608b8db0f6873e6480"
         }
       ]
     },
@@ -113,12 +123,20 @@
       "section_zh": "總經政策",
       "items": [
         {
-          "title_zh": "— 本日無重大新聞 —",
-          "title_en": "— No major news —",
-          "summary_zh": "內容待補。",
-          "summary_en": "Content pending.",
-          "source_name": "",
-          "source_url": ""
+          "title_zh": "台灣10月出口創高 AI需求帶動年增近六成",
+          "title_en": "Taiwan's October exports hit a record, jumping nearly 60% on AI demand",
+          "summary_zh": "台灣10月出口年增約60%、改寫新高，其中資通與視聽產品暴增72.9%至476億美元。財政部預估11月出口介於942億至967億美元，年增47%至51%。數據顯示AI伺服器與先進晶片需求持續驅動台灣貿易動能，為經濟成長提供支撐；惟成長高度集中於科技產品，傳產出口動能與基期墊高後的續航力仍須留意。",
+          "summary_en": "Taiwan's October exports surged roughly 60% year-on-year to a record, led by information, communications and audiovisual products, which leapt 72.9% to US$47.6 billion. The finance ministry projects November exports of US$94.2–96.7 billion, up 47%–51% from a year earlier. The data underscore how AI-server and advanced-chip demand continue to power the island's trade engine, though they also concentrate growth in a narrow tech base.",
+          "source_name": "Focus Taiwan",
+          "source_url": "https://focustaiwan.tw/business/202611090020"
+        },
+        {
+          "title_zh": "美國10月通膨偏熱 強化聯準會12月升息預期",
+          "title_en": "Hot US October inflation cements expectations of a December Fed hike",
+          "summary_zh": "美國10月CPI月增0.4%、核心月增0.3%，高於市場預期，強化聯準會將於12月8至9日會議再度升息的預期。目前政策利率區間為3.75%至4.00%，CME FedWatch顯示升息1碼機率約85%。通膨僵固使全球利率預期維持高檔，壓抑風險性資產、支撐美元走強，新興市場與亞股資金面亦承壓，牽動台股與匯市後市。",
+          "summary_en": "A hotter-than-expected US October CPI, up 0.4% on the month with core prices up 0.3%, reinforced bets that the Federal Reserve will raise rates again at its December 8–9 meeting. The policy range stands at 3.75%–4.00%, and CME's FedWatch showed roughly an 85% probability of a quarter-point increase. Persistent inflation keeps global rate expectations elevated, pressuring risk assets and keeping the dollar firm.",
+          "source_name": "The National",
+          "source_url": "https://www.thenationalnews.com/business/economy/2026/11/10/federal-reserve-inflation-interest-rates-december/"
         }
       ]
     },
@@ -127,12 +145,20 @@
       "section_zh": "國際財經",
       "items": [
         {
-          "title_zh": "— 本日無重大新聞 —",
-          "title_en": "— No major news —",
-          "summary_zh": "內容待補。",
-          "summary_en": "Content pending.",
-          "source_name": "",
-          "source_url": ""
+          "title_zh": "美股收黑 輝達人事震撼衝擊AI交易",
+          "title_en": "Wall Street slips as Nvidia's leadership shock rattles the AI trade",
+          "summary_zh": "輝達無預警宣布執行長黃仁勳將離任，美股週四收低，那斯達克指數跌約0.39%、標普500跌約0.35%。輝達盤中一度重挫14%，終場收跌4.3%，拖累科技類股；道瓊因權重較低相對抗跌。此事凸顯美股在歷史高檔之際，對大型AI權值股的集中度風險，市場波動加劇，連帶影響亞股與台股開盤情緒。",
+          "summary_en": "US stocks closed lower on Thursday after Nvidia's surprise announcement that chief executive Jensen Huang would step down, with the Nasdaq off about 0.39% and the S&P 500 down roughly 0.35%. Nvidia itself fell 4.3% after plunging as much as 14% intraday, dragging technology peers; the Dow, less exposed to the chipmaker, held up better. The episode highlighted concentration risk in mega-cap AI names near record highs.",
+          "source_name": "CNBC",
+          "source_url": "https://www.cnbc.com/2026/11/11/stock-market-today-live-updates.html"
+        },
+        {
+          "title_zh": "美伊緊張再起 油價反彈 荷莫茲海峽供應疑慮升溫",
+          "title_en": "Oil climbs as US–Iran tension revives Hormuz supply fears",
+          "summary_zh": "美國總統川普表示無須與伊朗達成協議後，國際油價週四走高，布蘭特原油漲約1.9%至每桶約94.48美元，西德州中質油漲約2%至約88.19美元。分析師警告，川普稱美國掌控荷莫茲海峽，恐引發伊朗對航運的進一步行動。惟受供給過剩影響，兩大指標原油11月以來跌幅仍深，油價中長線走勢仍偏弱，地緣風險成短線主要變數。",
+          "summary_en": "Crude prices rose on Thursday after US President Trump said Washington did not need a deal with Iran, with Brent up about 1.9% near US$94.48 a barrel and WTI up about 2% near US$88.19. Analysts cautioned that Trump's assertion that the US controls the Strait of Hormuz could prompt further Iranian action against shipping. Despite the bounce, both benchmarks remained down sharply for November on oversupply concerns.",
+          "source_name": "CNBC",
+          "source_url": "https://www.cnbc.com/2026/11/12/oil-prices-jump-after-trump-says-no-iran-deal-needed-weve-got-their-strait.html"
         }
       ]
     },
@@ -141,12 +167,40 @@
       "section_zh": "國際",
       "items": [
         {
-          "title_zh": "— 本日無重大新聞 —",
-          "title_en": "— No major news —",
-          "summary_zh": "內容待補。",
-          "summary_en": "Content pending.",
-          "source_name": "",
-          "source_url": ""
+          "title_zh": "輝達執行長黃仁勳無預警請辭 美股收黑",
+          "title_en": "Nvidia CEO Jensen Huang's abrupt exit sends Wall Street lower (2026-11-12)",
+          "summary_zh": "輝達宣布執行長黃仁勳將離任，美股週四收低。標普500指數跌約0.35%收7,592.40點，道瓊跌189點收52,297.09點，那斯達克跌0.39%收25,366.09點。輝達盤中一度重挫14%，終場收跌4.3%至166.19美元，部分競爭晶片股則逆勢上漲。",
+          "summary_en": "US stocks fell Thursday after Nvidia said chief executive Jensen Huang would step down. The S&P 500 slipped about 0.35% to 7,592.40, the Dow lost 189 points to 52,297.09 and the Nasdaq dropped 0.39% to 25,366.09. Nvidia ended down 4.3% at $166.19 after sliding as much as 14% intraday, while several rival chipmakers rallied.",
+          "source_name": "The Motley Fool",
+          "source_url": "https://www.fool.com/coverage/stock-market-today/2026/11/12/stock-market-today-nov-12-nvidia-ceo-s-stunning-exit-sends-wall-street-lower-as-rivals-surge/",
+          "published": "2026-11-12"
+        },
+        {
+          "title_zh": "俄烏和談在克里姆林宮登場 傳達成大規模換俘",
+          "title_en": "Russia–Ukraine peace talks open in the Kremlin (2026-11-12)",
+          "summary_zh": "路透報導，俄烏和談於克里姆林宮登場，美方談判代表威特科夫與庫許納與俄羅斯總統普亭會面；另在阿布達比的磋商傳達成大規模戰俘交換協議。此一外交進展略為緩和地緣風險溢價，惟中東局勢仍使油市維持緊張，市場靜待具體成果出爐。",
+          "summary_en": "Reuters reported that Ukraine peace talks began in the Kremlin, with US negotiators Steve Witkoff and Jared Kushner meeting President Vladimir Putin, while separate discussions in Abu Dhabi reportedly produced agreement on a major prisoner exchange. The diplomatic push tempered geopolitical risk premiums, even as oil markets stayed jittery over the Middle East.",
+          "source_name": "Investing.com（Reuters）",
+          "source_url": "https://www.investing.com/news/commodities-news/oil-prices-drop-more-than-1-as-hopes-for-iran-ukraine-peace-talks-pressure-markets-5020171",
+          "published": "2026-11-12"
+        },
+        {
+          "title_zh": "美國10月CPI偏熱 墊高12月升息機率",
+          "title_en": "Hot October CPI lifts odds of a December Fed rate hike (2026-11-10)",
+          "summary_zh": "美國10月通膨數據高於預期，CPI月增0.4%、核心月增0.3%，強化聯準會將於12月8至9日會議升息的市場預期。目前政策利率區間為3.75%至4.00%，CME FedWatch顯示升息1碼機率約85%。（2026-11-10為此主題最近可確認數據）",
+          "summary_en": "A hotter-than-expected US October inflation report — CPI up 0.4% on the month, core up 0.3% — reinforced expectations that the Federal Reserve will raise rates at its December 8–9 meeting. With the policy range at 3.75%–4.00%, CME's FedWatch tool showed roughly an 85% chance of a quarter-point increase.",
+          "source_name": "The National",
+          "source_url": "https://www.thenationalnews.com/business/economy/2026/11/10/federal-reserve-inflation-interest-rates-december/",
+          "published": "2026-11-10"
+        },
+        {
+          "title_zh": "台積電10月營收年增約六成 AI晶片需求穩固（一手外電）",
+          "title_en": "TSMC's October revenue jumps ~60%, signalling resilient AI chip demand (2026-11-10)",
+          "summary_zh": "彭博報導，台積電10月營收年增約60%，顯示AI晶片需求依舊強勁。全球最大晶圓代工廠的成長由先進製程與AI加速器驅動，鞏固半導體作為全球企業獲利引擎的角色；儘管本週晶片股波動加劇，AI資本支出循環的基本面仍相對穩固。（2026-11-10）",
+          "summary_en": "Bloomberg reported that TSMC's October revenue rose about 60% from a year earlier, a sign of still-resilient demand for AI chips. Growth at the world's largest contract chipmaker, driven by advanced nodes and AI accelerators, reinforces the sector's role as a global earnings engine, even amid heightened volatility in semiconductor shares this week.",
+          "source_name": "Bloomberg",
+          "source_url": "https://www.bloomberg.com/news/articles/2026-11-10/tsmc-taiwan-semiconductor-manufacturing-revenue-earnings-ai-chip-demand",
+          "published": "2026-11-10"
         }
       ]
     }
