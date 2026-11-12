@@ -31,7 +31,7 @@
     {
       "name": "PHLX Semiconductor",
       "name_zh": null,
-      "close": 10564.111328125,
+      "close": 10564.1103515625,
       "daily_pct": 5.66,
       "mtd_pct": -1.17,
       "ytd_pct": 49.14,
@@ -85,20 +85,20 @@
     {
       "name": "TAIEX 加權指數",
       "name_zh": null,
-      "close": 44257.1484375,
-      "daily_pct": 3.62,
+      "close": 43091.87,
+      "daily_pct": -2.63,
       "mtd_pct": -2.11,
       "ytd_pct": 52.8,
-      "closing_date": "2026-11-11"
+      "closing_date": "2026-11-12"
     },
     {
       "name": "OTC 櫃買加權",
       "name_zh": null,
-      "close": null,
-      "daily_pct": null,
+      "close": 335.73,
+      "daily_pct": -2.44,
       "mtd_pct": null,
       "ytd_pct": null,
-      "closing_date": null
+      "closing_date": "2026-11-12"
     },
     {
       "name": "台指期(近月)",
@@ -139,7 +139,7 @@
     {
       "name": "CSI 300 滬深300",
       "name_zh": null,
-      "close": 4093.477294921875,
+      "close": 4060.876708984375,
       "daily_pct": null,
       "mtd_pct": null,
       "ytd_pct": null,
@@ -157,11 +157,11 @@
     {
       "name": "S&P/ASX 200",
       "name_zh": null,
-      "close": 9153.2001953125,
-      "daily_pct": 0.27,
+      "close": 9146.7998046875,
+      "daily_pct": null,
       "mtd_pct": 2.75,
       "ytd_pct": 5.04,
-      "closing_date": "2026-11-11"
+      "closing_date": "2026-11-12"
     }
   ],
   "bonds": [
@@ -176,7 +176,7 @@
     {
       "name": "US 2-Year",
       "yield_pct": 4.77,
-      "daily_bps": 4.6,
+      "daily_bps": 4.2,
       "mtd_bps": 17.0,
       "ytd_bps": 126.0,
       "closing_date": "2026-11-12"
@@ -191,8 +191,8 @@
     },
     {
       "name": "Japan 10-Year",
-      "yield_pct": 2.77,
-      "daily_bps": -1.4,
+      "yield_pct": 2.79,
+      "daily_bps": 0.8,
       "mtd_bps": 2.3,
       "ytd_bps": 77.4,
       "closing_date": "2026-11-12"
@@ -219,8 +219,8 @@
       "name": "DXY 美元指數",
       "close": 102.91000366210938,
       "daily_pct": 0.67,
-      "mtd_pct": 1.16,
-      "ytd_pct": 4.86,
+      "mtd_pct": 1.07,
+      "ytd_pct": 4.78,
       "closing_date": "2026-11-11"
     },
     {
@@ -275,34 +275,34 @@
   "commodities": [
     {
       "name": "黃金 (USD/oz)",
-      "close": 3986.0,
-      "daily_pct": -1.1,
-      "mtd_pct": 2.23,
-      "ytd_pct": -8.18,
+      "close": 4000.5,
+      "daily_pct": -0.74,
+      "mtd_pct": 2.61,
+      "ytd_pct": -7.85,
       "closing_date": "2026-11-11"
     },
     {
       "name": "白銀 (USD/oz)",
-      "close": 51.44499969482422,
-      "daily_pct": 0.67,
-      "mtd_pct": 4.78,
-      "ytd_pct": -26.65,
+      "close": 51.88100051879883,
+      "daily_pct": 1.53,
+      "mtd_pct": 5.67,
+      "ytd_pct": -26.03,
       "closing_date": "2026-11-11"
     },
     {
       "name": "WTI 原油 (USD/bbl)",
-      "close": 85.91999816894531,
-      "daily_pct": -0.14,
-      "mtd_pct": -17.48,
-      "ytd_pct": 49.63,
+      "close": 86.52999877929688,
+      "daily_pct": 0.57,
+      "mtd_pct": -16.89,
+      "ytd_pct": 50.7,
       "closing_date": "2026-11-11"
     },
     {
       "name": "布蘭特原油 (USD/bbl)",
-      "close": 92.0,
-      "daily_pct": 0.56,
-      "mtd_pct": -21.8,
-      "ytd_pct": 51.19,
+      "close": 92.76000213623047,
+      "daily_pct": 1.39,
+      "mtd_pct": -21.15,
+      "ytd_pct": 52.44,
       "closing_date": "2026-11-11"
     },
     {
@@ -394,8 +394,8 @@
     "yield_curve_10y2y": 0.27,
     "yield_curve_10y2y_bps": 27,
     "curve_shape": "正斜率",
-    "dxy": 102.97100067138672,
-    "dxy_daily_pct": 0.06,
+    "dxy": 102.91000366210938,
+    "dxy_daily_pct": 0.67,
     "closing_date": "2026-11-11"
   },
   "fedwatch": [
@@ -409,5 +409,5 @@
       "is_reference": true
     }
   ],
-  "summary": "11/11 PHLX Semiconductor +5.66%、11/11 TAIEX 加權指數 +3.62%、11/11 台指期(近月) +3.39% 領漲；11/11 Hang Seng 恆生 -0.98% 走弱。"
+  "summary": "11/11 PHLX Semiconductor +5.66%、11/11 台指期(近月) +3.39%、11/11 KOSPI +2.60% 領漲；11/12 TAIEX 加權指數 -2.63%、11/12 OTC 櫃買加權 -2.44% 走弱。"
 }
