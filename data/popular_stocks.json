@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T13:47:31+08:00",
+  "generated_at": "2026-11-13T18:50:08+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -31,34 +31,6 @@
       "error": null
     },
     {
-      "symbol": "MSTR",
-      "name_zh": "MicroStrategy",
-      "kind": "US",
-      "price": 114.41,
-      "change_pct": -6.49,
-      "mtd_pct": -12.34,
-      "ytd_pct": -24.71,
-      "market_date": "2026-11-12",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MSTR.US",
-      "error": null
-    },
-    {
-      "symbol": "SMCI",
-      "name_zh": "美超微",
-      "kind": "US",
-      "price": 26.99,
-      "change_pct": -11.3,
-      "mtd_pct": -18.09,
-      "ytd_pct": -7.79,
-      "market_date": "2026-11-12",
-      "per": 4.978,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SMCI.US",
-      "error": null
-    },
-    {
       "symbol": "SLS",
       "name_zh": "SELLAS Life Sciences",
       "kind": "US",
@@ -70,34 +42,6 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SLS.US",
-      "error": null
-    },
-    {
-      "symbol": "COIN",
-      "name_zh": "Coinbase",
-      "kind": "US",
-      "price": 130.67,
-      "change_pct": -4.11,
-      "mtd_pct": -8.97,
-      "ytd_pct": -42.22,
-      "market_date": "2026-11-12",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=COIN.US",
-      "error": null
-    },
-    {
-      "symbol": "IBIT",
-      "name_zh": "iShares Bitcoin Trust ETF",
-      "kind": "US",
-      "price": 40.36,
-      "change_pct": -4.45,
-      "mtd_pct": -6.92,
-      "ytd_pct": -18.71,
-      "market_date": "2026-11-12",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IBIT.US",
       "error": null
     },
     {
@@ -115,20 +59,6 @@
       "error": null
     },
     {
-      "symbol": "NBIS",
-      "name_zh": "Nebius",
-      "kind": "US",
-      "price": 128.64,
-      "change_pct": -16.84,
-      "mtd_pct": -16.54,
-      "ytd_pct": 53.68,
-      "market_date": "2026-11-12",
-      "per": 991.8228,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=NBIS.US",
-      "error": null
-    },
-    {
       "symbol": "NU",
       "name_zh": "Nu",
       "kind": "US",
@@ -143,17 +73,45 @@
       "error": null
     },
     {
-      "symbol": "BMNR",
-      "name_zh": "BitMine Immersion Technologies,",
+      "symbol": "SMCI",
+      "name_zh": "美超微",
       "kind": "US",
-      "price": 18.45,
-      "change_pct": -4.11,
-      "mtd_pct": -8.57,
-      "ytd_pct": -32.04,
+      "price": 26.99,
+      "change_pct": -11.3,
+      "mtd_pct": -18.09,
+      "ytd_pct": -7.79,
+      "market_date": "2026-11-12",
+      "per": 4.978,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SMCI.US",
+      "error": null
+    },
+    {
+      "symbol": "IBIT",
+      "name_zh": "iShares Bitcoin Trust ETF",
+      "kind": "US",
+      "price": 40.36,
+      "change_pct": -4.45,
+      "mtd_pct": -6.92,
+      "ytd_pct": -18.71,
       "market_date": "2026-11-12",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BMNR.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=IBIT.US",
+      "error": null
+    },
+    {
+      "symbol": "COIN",
+      "name_zh": "Coinbase",
+      "kind": "US",
+      "price": 130.67,
+      "change_pct": -4.11,
+      "mtd_pct": -8.97,
+      "ytd_pct": -42.22,
+      "market_date": "2026-11-12",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=COIN.US",
       "error": null
     },
     {
@@ -171,17 +129,31 @@
       "error": null
     },
     {
-      "symbol": "SPCX",
-      "name_zh": "Space Exploration Technologies",
+      "symbol": "CADL",
+      "name_zh": "Candel Therapeutics",
       "kind": "US",
-      "price": 139.94,
-      "change_pct": 0.14,
-      "mtd_pct": 3.87,
-      "ytd_pct": null,
+      "price": 8.39,
+      "change_pct": -9.0,
+      "mtd_pct": 0.72,
+      "ytd_pct": 48.5,
       "market_date": "2026-11-12",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPCX.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CADL.US",
+      "error": null
+    },
+    {
+      "symbol": "CDNL",
+      "name_zh": "Cardinal Infrastructure Group I",
+      "kind": "US",
+      "price": 5.64,
+      "change_pct": -62.37,
+      "mtd_pct": -63.02,
+      "ytd_pct": -76.67,
+      "market_date": "2026-11-12",
+      "per": 23.1197,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CDNL.US",
       "error": null
     },
     {
@@ -199,31 +171,17 @@
       "error": null
     },
     {
-      "symbol": "PLBL",
-      "name_zh": "Polibeli",
+      "symbol": "CRCL",
+      "name_zh": "Circle Internet",
       "kind": "US",
-      "price": 7.27,
-      "change_pct": 28.79,
-      "mtd_pct": 35.38,
-      "ytd_pct": -33.67,
+      "price": 63.82,
+      "change_pct": -4.92,
+      "mtd_pct": -12.02,
+      "ytd_pct": -19.52,
       "market_date": "2026-11-12",
-      "per": 149.2878,
+      "per": 37.1988,
       "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=PLBL.US",
-      "error": null
-    },
-    {
-      "symbol": "CADL",
-      "name_zh": "Candel Therapeutics",
-      "kind": "US",
-      "price": 8.39,
-      "change_pct": -9.0,
-      "mtd_pct": 0.72,
-      "ytd_pct": 48.5,
-      "market_date": "2026-11-12",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CADL.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CRCL.US",
       "error": null
     },
     {
