@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T21:33:15+08:00",
+  "generated_at": "2026-11-14T22:13:12+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -101,17 +101,31 @@
       "error": null
     },
     {
-      "symbol": "SCHD",
-      "name_zh": "Schwab US Dividend Equity ETF",
+      "symbol": "EPD",
+      "name_zh": "Enterprise Products Partners L.",
       "kind": "US",
-      "price": 36.12,
-      "change_pct": 0.53,
-      "mtd_pct": 0.95,
-      "ytd_pct": 31.68,
+      "price": 38.28,
+      "change_pct": 2.35,
+      "mtd_pct": 0.34,
+      "ytd_pct": 19.4,
+      "market_date": "2026-11-13",
+      "per": 12.2319,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=EPD.US",
+      "error": null
+    },
+    {
+      "symbol": "VIG",
+      "name_zh": "Vanguard Div Appreciation ETF",
+      "kind": "US",
+      "price": 251.82,
+      "change_pct": 0.01,
+      "mtd_pct": 1.64,
+      "ytd_pct": 14.58,
       "market_date": "2026-11-13",
       "per": null,
       "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SCHD.US",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VIG.US",
       "error": null
     },
     {
@@ -126,6 +140,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VKTX.US",
+      "error": null
+    },
+    {
+      "symbol": "MPLX",
+      "name_zh": "MPLX LP",
+      "kind": "US",
+      "price": 57.25,
+      "change_pct": 1.17,
+      "mtd_pct": -4.84,
+      "ytd_pct": 7.27,
+      "market_date": "2026-11-13",
+      "per": 13.1908,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MPLX.US",
       "error": null
     },
     {
