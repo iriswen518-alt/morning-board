@@ -13,7 +13,7 @@
     {
       "name": "Nasdaq Composite",
       "name_zh": null,
-      "close": 25136.2734375,
+      "close": 25136.26953125,
       "daily_pct": -0.91,
       "mtd_pct": -1.18,
       "ytd_pct": 8.15,
@@ -31,7 +31,7 @@
     {
       "name": "PHLX Semiconductor",
       "name_zh": null,
-      "close": 10146.3232421875,
+      "close": 10146.3203125,
       "daily_pct": -3.43,
       "mtd_pct": -5.08,
       "ytd_pct": 43.25,
@@ -175,8 +175,8 @@
     },
     {
       "name": "US 2-Year",
-      "yield_pct": 4.86,
-      "daily_bps": -0.5,
+      "yield_pct": 4.87,
+      "daily_bps": 1.0,
       "mtd_bps": 32.0,
       "ytd_bps": 141.0,
       "closing_date": "2026-11-14"
@@ -217,11 +217,11 @@
   "fx": [
     {
       "name": "DXY 美元指數",
-      "close": 103.16999816894531,
-      "daily_pct": 0.25,
+      "close": 103.41000366210938,
+      "daily_pct": 0.23,
       "mtd_pct": 1.5,
       "ytd_pct": 5.22,
-      "closing_date": "2026-11-12"
+      "closing_date": "2026-11-13"
     },
     {
       "name": "EUR/USD 歐元",
@@ -275,43 +275,43 @@
   "commodities": [
     {
       "name": "黃金 (USD/oz)",
-      "close": 3887.60009765625,
-      "daily_pct": 0.06,
-      "mtd_pct": -0.29,
-      "ytd_pct": -10.45,
+      "close": 3886.300048828125,
+      "daily_pct": 0.03,
+      "mtd_pct": -0.32,
+      "ytd_pct": -10.48,
       "closing_date": "2026-11-13"
     },
     {
       "name": "白銀 (USD/oz)",
-      "close": 48.650001525878906,
-      "daily_pct": -2.65,
-      "mtd_pct": -0.91,
-      "ytd_pct": -30.63,
+      "close": 49.03099822998047,
+      "daily_pct": -1.88,
+      "mtd_pct": -0.13,
+      "ytd_pct": -30.09,
       "closing_date": "2026-11-13"
     },
     {
       "name": "WTI 原油 (USD/bbl)",
-      "close": 88.91999816894531,
-      "daily_pct": 0.2,
-      "mtd_pct": -14.6,
-      "ytd_pct": 54.86,
+      "close": 88.55999755859375,
+      "daily_pct": -0.2,
+      "mtd_pct": -14.94,
+      "ytd_pct": 54.23,
       "closing_date": "2026-11-13"
     },
     {
       "name": "布蘭特原油 (USD/bbl)",
-      "close": 96.08000183105469,
-      "daily_pct": 0.27,
-      "mtd_pct": -18.33,
-      "ytd_pct": 57.9,
+      "close": 95.83999633789062,
+      "daily_pct": 0.02,
+      "mtd_pct": -18.53,
+      "ytd_pct": 57.5,
       "closing_date": "2026-11-13"
     },
     {
       "name": "比特幣 (USD)",
-      "close": 71342.96875,
-      "daily_pct": -3.54,
-      "mtd_pct": -7.87,
-      "ytd_pct": -18.47,
-      "closing_date": "2026-11-12"
+      "close": 68249.2734375,
+      "daily_pct": -4.34,
+      "mtd_pct": -11.86,
+      "ytd_pct": -22.01,
+      "closing_date": "2026-11-13"
     }
   ],
   "bond_etfs": [
@@ -394,7 +394,7 @@
     "yield_curve_10y2y": 0.27,
     "yield_curve_10y2y_bps": 27,
     "curve_shape": "正斜率",
-    "dxy": 103.41100311279297,
+    "dxy": 103.41000366210938,
     "dxy_daily_pct": 0.23,
     "closing_date": "2026-11-13"
   },
@@ -402,7 +402,7 @@
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 4.07,
+      "implied_rate": 4.08,
       "delta_rate": null,
       "p_hike": null,
       "p_cut": null,
