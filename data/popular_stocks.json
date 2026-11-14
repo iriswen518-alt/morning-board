@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T20:30:09+08:00",
+  "generated_at": "2026-11-14T21:33:15+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -17,20 +17,6 @@
       "error": null
     },
     {
-      "symbol": "UAL",
-      "name_zh": "United Airlines",
-      "kind": "US",
-      "price": 109.31,
-      "change_pct": -1.74,
-      "mtd_pct": 4.86,
-      "ytd_pct": -2.24,
-      "market_date": "2026-11-13",
-      "per": 10.4612,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=UAL.US",
-      "error": null
-    },
-    {
       "symbol": "AAL",
       "name_zh": "American Airlines",
       "kind": "US",
@@ -42,6 +28,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AAL.US",
+      "error": null
+    },
+    {
+      "symbol": "UAL",
+      "name_zh": "United Airlines",
+      "kind": "US",
+      "price": 109.31,
+      "change_pct": -1.74,
+      "mtd_pct": 4.86,
+      "ytd_pct": -2.24,
+      "market_date": "2026-11-13",
+      "per": 10.4612,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=UAL.US",
       "error": null
     },
     {
@@ -87,17 +87,17 @@
       "error": null
     },
     {
-      "symbol": "VKTX",
-      "name_zh": "Viking Therapeutics",
+      "symbol": "LUV",
+      "name_zh": "Southwest Airlines",
       "kind": "US",
-      "price": 29.22,
-      "change_pct": 5.95,
-      "mtd_pct": 7.11,
-      "ytd_pct": -16.94,
+      "price": 44.94,
+      "change_pct": -0.64,
+      "mtd_pct": 5.92,
+      "ytd_pct": 8.73,
       "market_date": "2026-11-13",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VKTX.US",
+      "per": 21.0301,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LUV.US",
       "error": null
     },
     {
@@ -115,31 +115,17 @@
       "error": null
     },
     {
-      "symbol": "DIS",
-      "name_zh": "迪士尼",
+      "symbol": "VKTX",
+      "name_zh": "Viking Therapeutics",
       "kind": "US",
-      "price": 118.97,
-      "change_pct": 0.63,
-      "mtd_pct": 7.24,
-      "ytd_pct": 4.57,
+      "price": 29.22,
+      "change_pct": 5.95,
+      "mtd_pct": 7.11,
+      "ytd_pct": -16.94,
       "market_date": "2026-11-13",
-      "per": 23.8925,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=DIS.US",
-      "error": null
-    },
-    {
-      "symbol": "CVX",
-      "name_zh": "雪佛龍",
-      "kind": "US",
-      "price": 219.89,
-      "change_pct": 1.64,
-      "mtd_pct": -6.64,
-      "ytd_pct": 44.28,
-      "market_date": "2026-11-13",
-      "per": 15.9159,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CVX.US",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VKTX.US",
       "error": null
     },
     {
@@ -252,6 +238,48 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SMH.US",
+      "error": null
+    },
+    {
+      "symbol": "SOXX",
+      "name_zh": "iShares 半導體 ETF",
+      "kind": "US",
+      "price": 149.3,
+      "change_pct": -3.67,
+      "mtd_pct": -5.01,
+      "ytd_pct": 48.73,
+      "market_date": "2026-11-13",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SOXX.US",
+      "error": null
+    },
+    {
+      "symbol": "GLD",
+      "name_zh": "SPDR 黃金 ETF",
+      "kind": "US",
+      "price": 355.45,
+      "change_pct": 0.16,
+      "mtd_pct": -0.09,
+      "ytd_pct": -10.31,
+      "market_date": "2026-11-13",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GLD.US",
+      "error": null
+    },
+    {
+      "symbol": "TLT",
+      "name_zh": "iShares 20+ 年公債 ETF",
+      "kind": "US",
+      "price": 79.38,
+      "change_pct": -0.43,
+      "mtd_pct": -3.01,
+      "ytd_pct": -8.93,
+      "market_date": "2026-11-13",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TLT.US",
       "error": null
     }
   ]
