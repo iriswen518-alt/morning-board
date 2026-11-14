@@ -3,7 +3,9 @@
   "tldr": [
     "台股週五反彈583點、收43,675點，ASIC族群領軍，台積電漲10元至2,350元。",
     "鴻海第三季EPS 5.51元創高，看好AI機櫃出貨2027年續增高雙位數。",
-    "美股週五因通膨數據偏熱收黑，那斯達克跌約0.9%、標普跌約0.4%，但三大指數全週收漲。"
+    "美股週五因通膨數據偏熱收黑，那斯達克跌約0.9%、標普跌約0.4%，但三大指數全週收漲。",
+    "美國10月PPI年增6.5%、創2022年來最快，12月降息預期降溫，市場重新定價聯準會政策路徑。",
+    "亞洲科技股受全球AI賣壓拖累、恒生科技指數跌約3%，國際油價全週下滑約2.5%。"
   ],
   "sections": [
     {
@@ -47,6 +49,111 @@
           "summary_en": "Foxconn said third-quarter ASIC AI server shipments jumped about 1.5 times year on year, outpacing roughly 70% growth in GPU-based AI servers, as custom-silicon demand accelerates. The company cautioned that some GPU and ASIC racks ship on a consignment basis, so recognized revenue growth may lag unit shipments. The trend underscores a broadening AI hardware cycle extending beyond GPUs.",
           "source_name": "DIGITIMES",
           "source_url": "https://www.digitimes.com.tw/tech/dt/n/shwnws.asp?id=0000774563_XH34UKK67U2SLN2QK4N4J"
+        }
+      ]
+    },
+    {
+      "section": "Tax & Regulations",
+      "section_zh": "稅務法規",
+      "items": [
+        {
+          "title_zh": "美國期中選舉民主黨大勝 AI資料中心監理疑慮升溫（2026-11-13）",
+          "title_en": "US Democratic midterm sweep stokes AI data-center regulation fears (2026-11-13)",
+          "summary_zh": "外電報導指出，本週AI股承壓部分肇因於美國期中選舉由民主黨大勝，包含多個反對新建資料中心的州，市場憂心審照與法規趨嚴恐拖慢AI基礎建設擴張。對投資人而言，這為支撐全球晶片、電力與營建需求的AI資本支出循環增添政策風險，台灣供應鏈亦須留意後續法規走向。",
+          "summary_en": "Reuters-reported coverage tied part of the week's AI-stock weakness to Democrats' sweep of the US midterm elections, including in states opposed to new data centers, raising concern that tighter permitting and regulation could slow the AI infrastructure build-out. For investors, the shift adds policy risk to an AI capex cycle that has underpinned chip, power and construction demand worldwide, Taiwan's supply chain included.",
+          "source_name": "Investing.com (Reuters)",
+          "source_url": "https://www.investing.com/news/stock-market-news/global-ai-stocks-sink-as-nvidia-crisis-deepens-sector-selloff-5021776",
+          "published": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "section": "Macro & Policy",
+      "section_zh": "總經政策",
+      "items": [
+        {
+          "title_zh": "美國PPI年增6.5% 創2022年來最快（2026-11-13）",
+          "title_en": "US producer prices jump 6.5%, fastest since 2022 (2026-11-13)",
+          "summary_zh": "美國10月生產者物價指數年增6.5%，為2022年11月以來最高，惟月增0.3%略低於市場預期的0.4%；稍早公布的消費者物價月增0.4%亦偏熱。通膨升溫使聯準會政策路徑更趨複雜，支撐實質殖利率與美元，市場正重新定價利率前景，風險性資產評價隨之承壓。",
+          "summary_en": "October US producer prices rose 6.5% year on year, the hottest reading since November 2022, though the monthly gain of 0.3% came in just below the 0.4% economists expected. Consumer prices had risen 0.4% on the month in data released days earlier. The hot inflation backdrop complicates the Federal Reserve's path and has supported real yields and the dollar as markets reprice policy.",
+          "source_name": "247 Wall St.",
+          "source_url": "https://247wallst.com/cards/xpost-01m7akevfkn0pf82nk3gfwp6rm",
+          "published": "2026-11-13"
+        },
+        {
+          "title_zh": "通膨偏熱 12月聯準會降息預期降溫（2026-11-13）",
+          "title_en": "Hot inflation dims December Fed rate-cut hopes (2026-11-13)",
+          "summary_zh": "在有效聯邦基金利率約3.88%、通膨再度升溫下，市場對聯準會12月8至9日會議的預期已由寬鬆轉向觀望，部分評論甚至示警升息風險；下次CPI將於12月10日、會後才公布，官員須在偏強物價與勞動市場訊號間權衡。利率敏感族群與含台灣在內的新興市場資金流向，均受此重新定價影響。",
+          "summary_en": "With the effective federal funds rate near 3.88% and inflation re-accelerating, market expectations for the Fed's December 8-9 meeting have shifted away from easing, and some commentary even flags hike risk. The next CPI report lands December 10, after the meeting, leaving officials to weigh firm price data against labor-market signals. Rate-sensitive sectors and emerging-market flows, Taiwan included, are exposed to the repricing.",
+          "source_name": "247 Wall St.",
+          "source_url": "https://247wallst.com/cards/xpost-01m7akevfkn0pf82nk3gfwp6rm",
+          "published": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "section": "Global Markets",
+      "section_zh": "國際財經",
+      "items": [
+        {
+          "title_zh": "亞股週五多收黑 科技股領跌（2026-11-13）",
+          "title_en": "Asian markets mostly fall Friday as tech leads losses (2026-11-13)",
+          "summary_zh": "香港恒生指數收跌1.55%至23,637.60點，連三黑，恒生科技指數受全球AI股震盪拖累重挫約3%；南韓Kospi跌0.98%收5,290.53點，中國滬深300跌0.68%。日經225逆勢上漲0.53%、收61,142.35點。此一分化顯示AI科技股的弱勢正不均勻地擴散至亞洲各市場，資金對科技評價轉趨謹慎。",
+          "summary_en": "Hong Kong's Hang Seng closed down 1.55% at 23,637.60, a third straight loss, with its tech sub-index sliding about 3% on the global AI-stock fallout. South Korea's Kospi fell 0.98% to 5,290.53 and China's CSI 300 lost 0.68%. Japan's Nikkei 225 bucked the trend, rising 0.53% to 61,142.35. The split underscores how AI-driven tech weakness is rippling unevenly across Asia.",
+          "source_name": "BBN Times",
+          "source_url": "https://www.bbntimes.com/financial/hong-kong-stock-exchange-today-hang-seng-index-drops-1-55-to-23-637-60-as-tech-index-sinks-3-on-nvidia-fallout",
+          "published": "2026-11-13"
+        },
+        {
+          "title_zh": "黃金守住約3,900美元 避險需求分歧（2026-11-13）",
+          "title_en": "Gold holds near $3,900 as safe-haven demand stays mixed (2026-11-13)",
+          "summary_zh": "週五現貨黃金約在每盎司3,900至3,920美元，受通膨疑慮與中東緊張情勢支撐，但仍遠低於約5,600美元的歷史高點。AI股賣壓期間避險表現分歧：資金偏向美債、美元、瑞郎與日圓，比特幣則在7萬美元下方掙扎。顯示市場偏向謹慎、選擇性避險，而非全面湧入避風港，反映對後市方向仍無共識。",
+          "summary_en": "Spot gold traded around $3,900 to $3,920 an ounce on Friday, supported by inflation worries and Middle East tensions, though well below its record near $5,600. Safe-haven behaviour was uneven during the AI-stock selloff: investors leaned toward Treasuries, the dollar, the Swiss franc and the yen, while bitcoin struggled below $70,000. The picture suggests cautious, selective hedging rather than a broad flight to safety.",
+          "source_name": "BusinessToday",
+          "source_url": "https://www.businesstoday.in/personal-finance/news/story/gold-price-today-inflation-concerns-lift-demand-for-safe-haven-567270-2026-11-13",
+          "published": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "section": "International",
+      "section_zh": "國際",
+      "items": [
+        {
+          "title_zh": "美股週五收黑互見 全週仍收漲（2026-11-13）",
+          "title_en": "US stocks close mixed Friday, hold weekly gains (2026-11-13)",
+          "summary_zh": "美股週五漲跌互見：道瓊小漲約0.1%至52,347.55點，標普500跌0.4%至7,561.67點，那斯達克受科技股與偏熱通膨數據拖累跌0.9%至25,136.27點。儘管當日回落，三大指數全週仍收高，顯示買盤於拉回時仍提供支撐。",
+          "summary_en": "Wall Street ended Friday mixed: the Dow edged up about 0.1% to 52,347.55, while the S&P 500 slipped 0.4% to 7,561.67 and the Nasdaq fell 0.9% to 25,136.27 on tech weakness and hot inflation data. Despite the pullback, all three major indexes finished the week higher.",
+          "source_name": "Xinhua",
+          "source_url": "https://english.news.cn/northamerica/20261114/48afa9adbc4a440d9a21dabc97d755cf/c.html",
+          "published": "2026-11-13"
+        },
+        {
+          "title_zh": "AI與晶片股延續全球賣壓（2026-11-13）",
+          "title_en": "AI and chip stocks extend global selloff (2026-11-13)",
+          "summary_zh": "AI相關個股週五延續賣壓，輝達自高點回落約兩成、陷入熊市，香港科技指數亦下跌約3%。此波跌勢反映AI泡沫疑慮、融資隱憂，以及輝達在11月17日財報前的治理爭議，衝擊晶片與資料中心類股的投資信心，連帶壓抑亞洲科技供應鏈評價。",
+          "summary_en": "AI-linked shares extended a broad selloff into Friday, with Nvidia in a bear market after sliding about 20% from its peak and Hong Kong's tech index down roughly 3%. The drop reflects AI-bubble worries, financing concerns and governance scrutiny at Nvidia ahead of its November 17 earnings, rattling sentiment across chipmakers and data-center names.",
+          "source_name": "Investing.com (Reuters)",
+          "source_url": "https://www.investing.com/news/stock-market-news/global-ai-stocks-sink-as-nvidia-crisis-deepens-sector-selloff-5021776",
+          "published": "2026-11-13"
+        },
+        {
+          "title_zh": "油價全週下滑約2.5% 供給過剩壓抑（2026-11-13）",
+          "title_en": "Oil slips about 2.5% on the week on supply glut (2026-11-13)",
+          "summary_zh": "原油全週收低，週五西德州中級原油約每桶88.56美元、布蘭特約95.84美元，雙雙下跌約2.5%，全球供給過剩壓抑價格。西德州原油近一個月下跌近一成，但年增仍約五成，凸顯短線供需平衡脆弱，油價對增產與需求訊號高度敏感。",
+          "summary_en": "Crude settled lower for the week, with WTI near $88.56 and Brent around $95.84 a barrel on Friday, both down roughly 2.5% as a global supply surplus weighed on prices. WTI is down nearly 10% over the past month, though still up around 50% year on year, underscoring how fragile the near-term demand-supply balance has become.",
+          "source_name": "Aktualita",
+          "source_url": "https://aktualita.co/en/economy/world-oil-prices-today-november-14-2026-brent-and-wti-weaken-what-is-the-impact-on-indonesia",
+          "published": "2026-11-13"
+        },
+        {
+          "title_zh": "歐股週五小幅變動作收（2026-11-13）",
+          "title_en": "European stocks end Friday little changed (2026-11-13)",
+          "summary_zh": "泛歐STOXX 600指數幾乎持平，微漲約0.02%收664.14點，能源股上漲約1.1%抵銷科技股下跌1.25%的壓力；英國富時100指數上漲約0.36%至10,902.56點。平淡的收盤反映全球市場在具韌性的能源原物料類股與走弱的AI科技族群之間拉鋸，方向仍待通膨與AI財報指引。",
+          "summary_en": "Europe's STOXX 600 finished almost flat, edging up about 0.02% to 664.14, as gains in oil and gas (up roughly 1.1%) offset a 1.25% drop in technology shares. The UK's FTSE 100 added about 0.36% to 10,902.56. The muted close mirrored the global tug-of-war between resilient energy and commodity names and a weakening AI-driven tech complex.",
+          "source_name": "CappNotes",
+          "source_url": "https://cappnotes.substack.com/p/closing-look-friday-november-13-2026",
+          "published": "2026-11-13"
         }
       ]
     }
