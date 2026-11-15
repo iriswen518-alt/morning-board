@@ -1,21 +1,7 @@
 {
-  "generated_at": "2026-11-15T17:09:29+08:00",
+  "generated_at": "2026-11-15T20:58:00+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
-    {
-      "symbol": "SPCX",
-      "name_zh": "Space Exploration Technologies",
-      "kind": "US",
-      "price": 139.11,
-      "change_pct": -0.59,
-      "mtd_pct": 3.26,
-      "ytd_pct": null,
-      "market_date": "2026-11-13",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPCX.US",
-      "error": null
-    },
     {
       "symbol": "LHX",
       "name_zh": "L3Harris Technologies",
@@ -28,6 +14,20 @@
       "per": 24.8101,
       "per_kind": "trailing",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LHX.US",
+      "error": null
+    },
+    {
+      "symbol": "SPCX",
+      "name_zh": "Space Exploration Technologies",
+      "kind": "US",
+      "price": 139.11,
+      "change_pct": -0.59,
+      "mtd_pct": 3.26,
+      "ytd_pct": null,
+      "market_date": "2026-11-13",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPCX.US",
       "error": null
     },
     {
@@ -45,17 +45,17 @@
       "error": null
     },
     {
-      "symbol": "MSTR",
-      "name_zh": "MicroStrategy",
+      "symbol": "O",
+      "name_zh": "Realty Income",
       "kind": "US",
-      "price": 111.62,
-      "change_pct": -2.44,
-      "mtd_pct": -14.47,
-      "ytd_pct": -26.54,
+      "price": 58.82,
+      "change_pct": -0.74,
+      "mtd_pct": 3.32,
+      "ytd_pct": 4.35,
       "market_date": "2026-11-13",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MSTR.US",
+      "per": 41.2596,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=O.US",
       "error": null
     },
     {
