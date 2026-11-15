@@ -1,21 +1,7 @@
 {
-  "generated_at": "2026-11-15T20:58:00+08:00",
+  "generated_at": "2026-11-15T21:58:23+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
-    {
-      "symbol": "LHX",
-      "name_zh": "L3Harris Technologies",
-      "kind": "US",
-      "price": 272.35,
-      "change_pct": 0.19,
-      "mtd_pct": -1.89,
-      "ytd_pct": -7.23,
-      "market_date": "2026-11-13",
-      "per": 24.8101,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LHX.US",
-      "error": null
-    },
     {
       "symbol": "SPCX",
       "name_zh": "Space Exploration Technologies",
@@ -28,6 +14,20 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SPCX.US",
+      "error": null
+    },
+    {
+      "symbol": "LHX",
+      "name_zh": "L3Harris Technologies",
+      "kind": "US",
+      "price": 272.35,
+      "change_pct": 0.19,
+      "mtd_pct": -1.89,
+      "ytd_pct": -7.23,
+      "market_date": "2026-11-13",
+      "per": 24.8101,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=LHX.US",
       "error": null
     },
     {
@@ -45,17 +45,17 @@
       "error": null
     },
     {
-      "symbol": "O",
-      "name_zh": "Realty Income",
+      "symbol": "SMMT",
+      "name_zh": "Summit Therapeutics",
       "kind": "US",
-      "price": 58.82,
-      "change_pct": -0.74,
-      "mtd_pct": 3.32,
-      "ytd_pct": 4.35,
+      "price": 14.15,
+      "change_pct": -6.14,
+      "mtd_pct": -11.73,
+      "ytd_pct": -19.1,
       "market_date": "2026-11-13",
-      "per": 41.2596,
-      "per_kind": "trailing",
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=O.US",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SMMT.US",
       "error": null
     },
     {
