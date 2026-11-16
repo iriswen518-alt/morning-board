@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T13:02:27+08:00",
+  "generated_at": "2026-11-16T15:01:40+08:00",
   "source": "manual curation (targets.json)",
   "version": 3,
   "updated": "2026-11-13",
@@ -313,8 +313,8 @@
       "stats": [
         {
           "k": "近1年績效",
-          "v": "+66.28%",
-          "sub": "利安資金韓國（美元）・截至 11/12",
+          "v": "+63.85%",
+          "sub": "利安資金韓國（美元）・截至 11/13",
           "url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=LIC04-LI02"
         },
         {
@@ -352,7 +352,14 @@
       "alloc": "5–8% NAV",
       "tagline": "架上水電瓦斯基建基金近1月強彈+8.59%為架上最強，AI伺服器與晶圓廠擴產推升電力負載，油價因美伊緊張走高。",
       "ytd": "+strong (+15.14% for基建1Y)",
-      "stats": [],
+      "stats": [
+        {
+          "k": "WTI 原油 YTD",
+          "v": "+55.55%",
+          "sub": "今日 +0.68%・截至 11/16",
+          "url": "https://finance.yahoo.com/quote/CL=F"
+        }
+      ],
       "market_status": [
         "架上全球水電瓦斯及基礎建設收益產品近1月強勁反彈8.59%，為架上表現最佳的產品，顯示市場對基礎建設的青睞。",
         "AI伺服器與晶圓廠擴產持續推升資料中心用電與冷卻負載，電力基建需求明確，為公用事業與基礎建設提供結構性支撐。",
@@ -428,8 +435,8 @@
       "stats": [
         {
           "k": "近1年績效",
-          "v": "-0.25%",
-          "sub": "利安資金越南 A 級別美元・截至 11/12",
+          "v": "+0.50%",
+          "sub": "利安資金越南 A 級別美元・截至 11/13",
           "url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=LIC28-LI01"
         },
         {
@@ -467,7 +474,14 @@
       "alloc": "2–3% NAV",
       "tagline": "S&P/ASX 200月線轉正至+2.75%，Nifty 50單日小幅上漲+0.18%，惟美元走強與升息預期可能影響亞幣壓力，多元卡位。",
       "ytd": "+weak (+5.04% for ASX)",
-      "stats": [],
+      "stats": [
+        {
+          "k": "STI 海峽時報 YTD",
+          "v": "+11.66%",
+          "sub": "今日 -0.63%・截至 11/16",
+          "url": "https://finance.yahoo.com/quote/%5ESTI"
+        }
+      ],
       "market_status": [
         "S&P/ASX 200月線轉正至2.75%，但年內漲幅僅5.04%，顯示市場動能不足。",
         "Nifty 50單日小幅上漲0.18%收25299.35點，月線漲幅仍達9.55%，顯示印度市場動能轉強。",
@@ -751,16 +765,16 @@
       "tagline": "MSCI Korea Value-Up 改革題材；近一年 +220%",
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=LIC04-LI02",
       "fund_id": "uob_korea",
-      "nav": 2.441,
-      "nav_date": "2026-11-12",
-      "change_pct": -0.61,
+      "nav": 2.407,
+      "nav_date": "2026-11-13",
+      "change_pct": -1.39,
       "perf": {
-        "1m": -16.63,
-        "3m": -15.36,
-        "6m": -17.31,
-        "ytd": 56.47,
-        "1y": 66.28,
-        "3y": 193.74
+        "1m": -11.67,
+        "3m": -19.26,
+        "6m": -21.08,
+        "ytd": 54.29,
+        "1y": 63.85,
+        "3y": 189.65
       },
       "bop_name_zh": "利安資金韓國基金(美元)"
     },
@@ -772,16 +786,16 @@
       "tagline": "FDI 轉移之長期選擇權；MSCI 升等催化",
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=LIC28-LI01",
       "fund_id": "uob_vietnam",
-      "nav": 0.809,
-      "nav_date": "2026-11-12",
-      "change_pct": -0.61,
+      "nav": 0.81,
+      "nav_date": "2026-11-13",
+      "change_pct": 0.12,
       "perf": {
-        "1m": 0.75,
-        "3m": -4.03,
-        "6m": -9.3,
-        "ytd": -5.71,
-        "1y": -0.25,
-        "3y": 27.6
+        "1m": 1.38,
+        "3m": -2.88,
+        "6m": -8.16,
+        "ytd": -5.59,
+        "1y": 0.5,
+        "3y": 27.76
       },
       "bop_name_zh": "利安資金越南基金A級別美元"
     },
