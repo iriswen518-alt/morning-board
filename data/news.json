@@ -3,7 +3,8 @@
   "tldr": [
     "台股週一崩跌2,635點、收41,040點，寫下史上第二大收盤跌點；台積電資本支出暴衝疑慮、美股晶片股重挫與輝達人事震盪聯手重創權值股。",
     "台積電遭尾盤8,560張大單摜壓、收2,215元跌5.7%，鴻海重挫9.3%；券商估台積電2027年資本支出上看850至900億美元，市場憂心侵蝕獲利。",
-    "美股週一續跌第三天、那斯達克挫2.5%，晶片出口管制收緊加劇賣壓；輝達將於週二盤後公布財報，全球市場屏息以待。"
+    "美股週一續跌第三天、那斯達克挫2.49%收24,509.76點，輝達再跌4%、收156.14美元；輝達將於週二盤後公布財報，全球市場屏息以待。",
+    "美國擴大對中先進晶片與設備出口管制，應材示警營收恐短少6億美元，為全球半導體產業鏈增添政策面壓力。"
   ],
   "sections": [
     {
@@ -47,6 +48,92 @@
           "summary_en": "Morgan Stanley estimates TSMC's advanced CoWoS packaging capacity could climb to roughly 117,000 wafers per month in 2027 and 175,000 in 2028, with Nvidia and Broadcom absorbing the bulk of the output. The projected expansion underscores how custom AI silicon and GPU demand continue to drive leading-edge packaging investment, positioning Taiwan's packaging and testing supply chain as a key beneficiary even amid near-term market volatility.",
           "source_name": "股狗網 StatementDog",
           "source_url": "https://statementdog.com/news/15201"
+        }
+      ]
+    },
+    {
+      "section": "Macro & Policy",
+      "section_zh": "總經政策",
+      "items": [
+        {
+          "title_zh": "美國擴大先進晶片出口管制 全球供應鏈承壓",
+          "title_en": "US widens advanced-chip export curbs, pressuring the global supply chain",
+          "summary_zh": "美國持續收緊涉中先進半導體與晶片設備管制，包括撤銷部分外商在中國營運的出口授權。設備龍頭應用材料示警2026會計年度營收恐短少約6億美元，科磊、科林研發等供應商對中銷售亦將縮減。此波政策升級為原已受AI估值疑慮衝擊的產業再添結構性壓力，並牽動以出口為命脈的台灣科技經濟，後續licence審查與擴散範圍為關鍵觀察點。",
+          "summary_en": "Washington is tightening controls on advanced semiconductors and chipmaking equipment linked to China, including revoking certain export authorizations for foreign chipmakers' China operations. Equipment leader Applied Materials flagged an estimated US$600 million revenue headwind for fiscal 2026, while suppliers such as KLA and Lam Research face reduced China sales. The policy escalation adds a structural overhang for a sector already rattled by AI-valuation concerns, with knock-on effects for Taiwan's export-driven tech economy.",
+          "source_name": "Reuters via AOL",
+          "source_url": "https://www.aol.com/articles/applied-materials-flags-600-million-224151556.html"
+        },
+        {
+          "title_zh": "台灣Q3 GDP修正值與2027展望11月27日揭曉 預估分歧大",
+          "title_en": "Taiwan's revised Q3 GDP and 2027 outlook due Nov 27 amid wide forecast gaps",
+          "summary_zh": "主計總處將於11月27日公布第三季GDP修正值與最新預測，先前概估受AI相關出口帶動、成長率遄14.36%。各機構對2027年看法分歧：主計總處估約6.04%、央行5.82%，IMF與高盛則分別下看4.3%與3.3%。此一落差凸顯今年AI驅動的強勁動能能否在高基期下延續仍具高度不確定性，政策面須在維持成長與防範過熱間取得平衡，數據結果將牽動明年投資與匯率預期。",
+          "summary_en": "Taiwan's budget agency will publish its revised third-quarter GDP reading and updated projections on Nov 27, after an advance estimate of 14.36% growth powered by AI-related exports. Institutions diverge sharply on 2027: the budget agency sees about 6.04% and the central bank 5.82%, while the IMF and Goldman Sachs are far lower at 4.3% and 3.3%. The split highlights uncertainty over whether this year's AI-driven momentum can persist against a high base.",
+          "source_name": "優分析",
+          "source_url": "https://uanalyze.com.tw/articles/8713158044"
+        }
+      ]
+    },
+    {
+      "section": "Global Markets",
+      "section_zh": "國際財經",
+      "items": [
+        {
+          "title_zh": "AI估值疑慮引爆全球科技股輪動",
+          "title_en": "AI-valuation jitters trigger a broad global tech rotation",
+          "summary_zh": "市場對AI資本支出規模及其獲利轉化時程的焦慮升溫，驅使資金撤出科技權值股，拖累華爾街連三個交易日走低，並擴散至亞洲與歐洲股市。即便終端需求仍穩，晶片與AI基礎建設族群首當其衝，凸顯AI時代偏高估值對情緒變化高度敏感。此一氛圍使科技權值比重偏高的亞股（含台股）面臨進一步震盪風險，資金在獲利了結與逢低布局間反覆拉鋸。",
+          "summary_en": "Mounting anxiety over the scale of AI capital spending and when it will convert into profit has driven investors out of technology leaders, dragging Wall Street lower for a third straight session and rippling across Asian and European markets. Chip and AI-infrastructure names bore the brunt even as end-demand stays firm, underscoring how sensitive stretched AI-era valuations remain to shifts in sentiment — a dynamic that leaves tech-heavy Asian indexes, including Taiwan's, exposed to further swings.",
+          "source_name": "MarketScreener",
+          "source_url": "https://www.marketscreener.com/news/wall-street-slumps-on-ai-jitters-ahead-of-nvidia-results-anthropic-ipo-ce785edfdd8ef425"
+        },
+        {
+          "title_zh": "輝達財報成本週全球市場風向球",
+          "title_en": "Nvidia earnings become the week's global market catalyst",
+          "summary_zh": "輝達將於美國週二盤後公布會計年度第三季財報，全球投資人視此為已連三日震盪的AI交易關鍵試金石；市場同時關注即將登場的Anthropic（人工智慧公司）首次公開發行，使本週AI產業議程格外密集。鑑於輝達在全球指數的權重及其在AI供應鏈的核心地位，其財報與財測料將左右台灣、南韓等地晶片股後續數日的多空基調。",
+          "summary_en": "With Nvidia set to report fiscal third-quarter results after Tuesday's US close, investors worldwide are treating the print as the decisive test for an AI trade that has wobbled for three sessions. A looming Anthropic IPO adds to the week's heavy AI-sector agenda. Given Nvidia's weight in global indices and its central role in the AI supply chain, the results and guidance are likely to set the tone for chipmakers from Taiwan to South Korea in the days ahead.",
+          "source_name": "Yahoo Finance",
+          "source_url": "https://finance.yahoo.com/markets/live/stock-market-today-monday-november-16-dow-sp-500-nasdaq-nvidia-oil-091631084.html"
+        }
+      ]
+    },
+    {
+      "section": "International",
+      "section_zh": "國際",
+      "items": [
+        {
+          "title_zh": "美股連三日重挫 輝達領軍AI賣壓（2026-11-16）",
+          "title_en": "US stocks tumble for a third straight day as Nvidia leads an AI selloff (2026-11-16)",
+          "summary_zh": "華爾街週一再度大跌，輝達等AI相關個股領跌，標普500指數連續第三個交易日收黑。此波跌勢反映市場對AI高估值及龐大投資回報時程的疑慮加深，科技股明顯落後。投資人在輝達即將公布財報前趨於觀望，該財報被普遍視為AI交易的關鍵公投，情緒轉趨謹慎。",
+          "summary_en": "Wall Street fell sharply again on Monday as Nvidia and other AI-linked names dragged the market lower, extending the S&P 500's losing streak to a third session. The slide reflected deepening unease over lofty AI valuations and the pace at which heavy AI investment will pay off, with technology the clear laggard. Investors turned cautious ahead of Nvidia's upcoming earnings, a report widely seen as a referendum on the AI trade.",
+          "source_name": "Durango Herald (AP)",
+          "source_url": "https://www.durangoherald.com/articles/associated-press/more-drops-for-nvidia-and-other-ai-stocks-drag-the-us-market-lower/",
+          "published": "2026-11-16"
+        },
+        {
+          "title_zh": "輝達收跌4.1%至156美元 遠低於10月高點（2026-11-16）",
+          "title_en": "Nvidia closes down 4.1% at $156, well below its October peak, ahead of results (2026-11-16)",
+          "summary_zh": "輝達股價週一下跌4.12%、收156.14美元，延續跌勢，遠低於10月6日所創239.24美元的歷史收盤高點，這檔AI晶片指標股的餘波持續壓抑市場情緒。賣壓之際，投資人正為該公司將於週二盤後公布的會計年度第三季財報屏息以待，結果預料將牽動整體AI與半導體族群的方向。",
+          "summary_en": "Nvidia shares fell 4.12% to close at US$156.14 on Monday, extending a steep decline that has left the stock far below its all-time closing high of US$239.24 set on Oct 6, as the AI-chip bellwether's fallout continued to weigh on sentiment. The drop came as investors braced for the company's fiscal third-quarter earnings after Tuesday's close, with the result expected to swing the broader AI and semiconductor complex.",
+          "source_name": "The Washington Post",
+          "source_url": "https://www.washingtonpost.com/business/2026/11/16/stock-market-drops-amid-continued-nvidia-fallout/",
+          "published": "2026-11-16"
+        },
+        {
+          "title_zh": "美三大指數全面收黑：那斯達克跌2.49%、標普跌1.92%、道瓈跌1.41%（2026-11-16）",
+          "title_en": "Major US indexes close broadly lower: Nasdaq −2.49%, S&P −1.92%, Dow −1.41% (2026-11-16)",
+          "summary_zh": "美股週一大幅收低，那斯達克指數跌2.49%收24,509.76點，標普500跌1.92%收7,416.59點，道瓈工業指數跌1.41%收51,608.17點。科技股領跌，AI驅動的漲勢進一步收斂，交易員在本週密集題材登場前轉趨防禦。跌勢的廣度凸顯市場集中度偏高、且對情緒變化相當敏感，短線波動恐延續。",
+          "summary_en": "US stocks ended Monday sharply lower, with the Nasdaq Composite down 2.49% at 24,509.76, the S&P 500 off 1.92% at 7,416.59 and the Dow Jones Industrial Average down 1.41% at 51,608.17. Technology led the retreat as the AI-driven rally unwound further, while traders positioned defensively before a packed slate of catalysts later in the week. The breadth of the decline underscored how concentrated and sentiment-sensitive the market has become.",
+          "source_name": "Investing.com",
+          "source_url": "https://investing.com/news/stock-market-news/us-stocks-lower-at-close-of-trade-dow-jones-industrial-average-down-141-5030993",
+          "published": "2026-11-16"
+        },
+        {
+          "title_zh": "科技股重災 那斯達克領跌美股大盤（2026-11-16）",
+          "title_en": "Technology took the worst of it as the Nasdaq led the broad market lower (2026-11-16)",
+          "summary_zh": "科技股成為週一賣壓重災區，那斯達克指數終場重挫約2.5%，領跌美股三大指數。晶片股與其他AI相關成長股跌幅最深，反映市場對少數大型科技權值股的高度集中。當日跌勢的廣度顯示賣壓已不僅限於輝達單一個股，而是投資人正更全面地重新評估AI交易，風險情緒轉趨保守，短線震盪恐延續。",
+          "summary_en": "Technology shares bore the brunt of Monday's selloff, with the Nasdaq Composite sliding roughly 2.5% to lead the three major US indexes lower into the closing bell. Chipmakers and other AI-linked growth names were the heaviest drags, reflecting a market that has grown increasingly concentrated in a handful of megacap technology stocks. The session's breadth showed selling extending well beyond Nvidia, a sign that investors are reassessing the AI trade more broadly rather than reacting to a single name.",
+          "source_name": "24/7 Wall St.",
+          "source_url": "https://247wallst.com/cards/tech-took-the-worst-of-it-the-nasdaq-s-2-54-drop-nearly-do-gspc-market-bell-01m7k2rvdndtgg635thrxjgnck",
+          "published": "2026-11-16"
         }
       ]
     }
