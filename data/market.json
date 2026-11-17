@@ -13,7 +13,7 @@
     {
       "name": "Nasdaq Composite",
       "name_zh": null,
-      "close": 24509.7578125,
+      "close": 24509.759765625,
       "daily_pct": -2.49,
       "mtd_pct": -3.65,
       "ytd_pct": 5.45,
@@ -22,7 +22,7 @@
     {
       "name": "Dow Jones",
       "name_zh": null,
-      "close": 51608.19921875,
+      "close": 51608.171875,
       "daily_pct": -1.41,
       "mtd_pct": -0.31,
       "ytd_pct": 7.38,
@@ -31,7 +31,7 @@
     {
       "name": "PHLX Semiconductor",
       "name_zh": null,
-      "close": 9610.65234375,
+      "close": 9610.650390625,
       "daily_pct": -5.28,
       "mtd_pct": -10.09,
       "ytd_pct": 35.68,
@@ -85,20 +85,20 @@
     {
       "name": "TAIEX 加權指數",
       "name_zh": null,
-      "close": 41040.078125,
-      "daily_pct": -6.03,
+      "close": 40092.11,
+      "daily_pct": -2.31,
       "mtd_pct": -9.23,
       "ytd_pct": 41.7,
-      "closing_date": "2026-11-16"
+      "closing_date": "2026-11-17"
     },
     {
       "name": "OTC 櫃買加權",
       "name_zh": null,
-      "close": null,
-      "daily_pct": null,
+      "close": 306.61,
+      "daily_pct": -3.92,
       "mtd_pct": null,
       "ytd_pct": null,
-      "closing_date": null
+      "closing_date": "2026-11-17"
     },
     {
       "name": "台指期(近月)",
@@ -139,7 +139,7 @@
     {
       "name": "CSI 300 滬深300",
       "name_zh": null,
-      "close": 3981.91064453125,
+      "close": 3978.05029296875,
       "daily_pct": null,
       "mtd_pct": null,
       "ytd_pct": null,
@@ -157,11 +157,11 @@
     {
       "name": "S&P/ASX 200",
       "name_zh": null,
-      "close": 9044.7001953125,
-      "daily_pct": -0.41,
+      "close": 8883.2001953125,
+      "daily_pct": null,
       "mtd_pct": 1.53,
       "ytd_pct": 3.79,
-      "closing_date": "2026-11-16"
+      "closing_date": "2026-11-17"
     }
   ],
   "bonds": [
@@ -218,9 +218,9 @@
     {
       "name": "DXY 美元指數",
       "close": 103.55000305175781,
-      "daily_pct": -0.06,
-      "mtd_pct": 1.58,
-      "ytd_pct": 5.3,
+      "daily_pct": 0.14,
+      "mtd_pct": 1.57,
+      "ytd_pct": 5.29,
       "closing_date": "2026-11-16"
     },
     {
@@ -275,34 +275,34 @@
   "commodities": [
     {
       "name": "黃金 (USD/oz)",
-      "close": 3872.60009765625,
-      "daily_pct": 0.51,
-      "mtd_pct": -0.67,
-      "ytd_pct": -10.79,
+      "close": 3853.0,
+      "daily_pct": -0.86,
+      "mtd_pct": -1.18,
+      "ytd_pct": -11.24,
       "closing_date": "2026-11-16"
     },
     {
       "name": "白銀 (USD/oz)",
-      "close": 47.29499816894531,
-      "daily_pct": 1.09,
-      "mtd_pct": -3.67,
-      "ytd_pct": -32.56,
+      "close": 46.78499984741211,
+      "daily_pct": -4.58,
+      "mtd_pct": -4.71,
+      "ytd_pct": -33.29,
       "closing_date": "2026-11-16"
     },
     {
       "name": "WTI 原油 (USD/bbl)",
-      "close": 84.91999816894531,
-      "daily_pct": -0.93,
-      "mtd_pct": -18.44,
-      "ytd_pct": 47.89,
+      "close": 85.72000122070312,
+      "daily_pct": -3.21,
+      "mtd_pct": -17.67,
+      "ytd_pct": 49.29,
       "closing_date": "2026-11-16"
     },
     {
       "name": "布蘭特原油 (USD/bbl)",
-      "close": 91.55000305175781,
-      "daily_pct": -0.96,
-      "mtd_pct": -22.18,
-      "ytd_pct": 50.45,
+      "close": 92.44000244140625,
+      "daily_pct": -3.55,
+      "mtd_pct": -21.42,
+      "ytd_pct": 51.91,
       "closing_date": "2026-11-16"
     },
     {
@@ -394,20 +394,20 @@
     "yield_curve_10y2y": 0.29,
     "yield_curve_10y2y_bps": 29,
     "curve_shape": "正斜率",
-    "dxy": 103.49199676513672,
-    "dxy_daily_pct": -0.06,
+    "dxy": 103.55000305175781,
+    "dxy_daily_pct": 0.14,
     "closing_date": "2026-11-16"
   },
   "fedwatch": [
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 4.06,
+      "implied_rate": 4.07,
       "delta_rate": null,
       "p_hike": null,
       "p_cut": null,
       "is_reference": true
     }
   ],
-  "summary": "11/16 Nifty 50 +0.58%、11/16 Hang Seng 恆生 +0.49% 領漲；11/16 台指期(近月) -6.74%、11/16 TAIEX 加權指數 -6.03% 走弱。"
+  "summary": "11/16 Nifty 50 +0.58%、11/16 Hang Seng 恆生 +0.49% 領漲；11/16 台指期(近月) -6.74%、11/16 PHLX Semiconductor -5.28% 走弱。"
 }
