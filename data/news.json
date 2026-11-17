@@ -3,7 +3,8 @@
   "tldr": [
     "台股11月17日再跌2.31%收40,092點，延續周一歷史級重挫；AI估值疑慮與輝達財報前觀望重壓晶片股。",
     "主管機關動用5,000億元國安基金並收緊放空規範，力守40,000點大關。",
-    "台積電兩日市值蒸發約1,420億美元，但重申AI需求「無法滿足」、10月營收年增59.7%。"
+    "台積電兩日市值蒸發約1,420億美元，但重申AI需求「無法滿足」、10月營收年增59.7%。",
+    "輝達財報Q3營收1,158億美元（年增103%）、Q4財測上看1,300億美元，為黃仁勳請辭後首份財報，盤後帶動AI族群走高。"
   ],
   "sections": [
     {
@@ -69,6 +70,70 @@
           "summary_en": "Dealers suspected the NT$500 billion (US$15.3bn) National Financial Stabilization Fund bought shares to steady the market near the 40,000 threshold after days of heavy losses and continued foreign selling. The fund signaled it would keep supporting equities, reinforcing the state's backstop role as volatility spikes across the tech-heavy bourse.",
           "source_name": "Taiwan News",
           "source_url": "https://www.taiwannews.com.tw/en/news/6473114"
+        }
+      ]
+    },
+    {
+      "section": "Global Markets",
+      "section_zh": "國際財經",
+      "items": [
+        {
+          "title_zh": "華爾街連跌 標普收創7月來最低",
+          "title_en": "Wall Street extends slide; S&P 500 posts lowest close since July",
+          "summary_zh": "在輝達財報公布前，美股連續第四個交易日下挫，標準普爾500指數收在7月以來最低、道瓊下跌逾800點。投資人因估值偏高與聯準會利率路徑不確定而調節AI部位，形成偏空的全球氛圍，並外溢至亞洲與台灣盤面，壓抑區域科技股表現。",
+          "summary_en": "US stocks fell for a fourth straight session heading into Nvidia's results, with the S&P 500 logging its lowest close since July and the Dow shedding more than 800 points. Investors pared AI exposure amid stretched valuations and uncertainty over the Fed's rate path, setting a cautious global backdrop that spilled into Asian and Taiwan trading.",
+          "source_name": "CNBC",
+          "source_url": "https://www.cnbc.com/2026/11/16/stock-market-today-live-updates.html"
+        },
+        {
+          "title_zh": "Anthropic將登那斯達克 成AI需求試金石",
+          "title_en": "Anthropic heads for landmark Nasdaq debut as AI-demand test",
+          "summary_zh": "AI開發商Anthropic（Claude聊天助理開發商）準備以代碼ANT在那斯達克掛牌，外媒指估值上看2兆美元。這樁巨型IPO被視為當前科技股重新評價下、投資人對AI胃納的重要指標，本週吸引全球市場高度關注，其定價與掛牌表現牽動AI族群情緒。",
+          "summary_en": "AI developer Anthropic, maker of the Claude assistant, is set for a high-profile Nasdaq listing under the ticker ANT, with reports pointing to a potential valuation as high as US$2 trillion. The mega-debut is viewed as a key gauge of investor appetite for AI amid the current tech-sector repricing, drawing heavy attention across global markets this week.",
+          "source_name": "ABC7 News",
+          "source_url": "https://abc7news.com/post/anthropic-set-make-stock-market-debut-questions-swirl-safety-ai/19980936/"
+        }
+      ]
+    },
+    {
+      "section": "International",
+      "section_zh": "國際",
+      "items": [
+        {
+          "title_zh": "輝達Q3財報大勝、盤後走高 黃仁勳離任後首份成績單（2026-11-17）",
+          "title_en": "Nvidia smashes Q3 and rises after hours in first report since Huang exit (2026-11-17)",
+          "summary_zh": "輝達財測季營收1,158億美元、年增103%，優於1,093億美元預期；調整後EPS 2.68美元，資料中心營收1,076億美元。Q4財測約1,300億美元亦高於市場預估。這是黃仁勳離任後首份財報，股價盤後勁揚約5%，稍解AI估值疑慮。",
+          "summary_en": "Nvidia reported fiscal Q3 revenue of US$115.8 billion, up 103% and above the US$109.3bn estimate, with adjusted EPS of US$2.68 and data-center sales of US$107.6bn. Q4 guidance of about US$130bn topped forecasts. Shares rose roughly 5% after hours in the company's first report since Jensen Huang's departure.",
+          "source_name": "Decrypt",
+          "source_url": "https://decrypt.co/383505/nvidia-shares-rise-earnings-beat-first-report-jensen-huang-exit",
+          "published": "2026-11-17"
+        },
+        {
+          "title_zh": "輝達董事會表態無意讓黃仁勳回任 由Kress暫掌兵符（2026-11-17）",
+          "title_en": "Nvidia board signals no plan to reinstate Huang as Kress steadies ship (2026-11-17)",
+          "summary_zh": "在財報場合，輝達董事長表示董事會無意讓本月稍早請辭的黃仁勳回任，財務長Colette Kress擔任臨時執行長。此番談話在這家晶片龍頭備受矚目的季報前引發投資人高度關注，凸顯領導層動盪對公司治理與市場信心的影響。",
+          "summary_en": "At the earnings event, Nvidia's chairman said the board has no plans to reinstate Jensen Huang, who resigned earlier this month, with CFO Colette Kress serving as interim CEO. The comments drew intense investor focus given the leadership upheaval just before the chipmaker's closely watched quarterly report.",
+          "source_name": "NBC News",
+          "source_url": "https://www.nbcnews.com/business/business-news/live-blog/nvidia-stock-earnings-report-jensen-huang-rcna609804",
+          "published": "2026-11-17"
+        },
+        {
+          "title_zh": "輝達報喜 AI晶片同業齊漲 超微、博通、CoreWeave勁揚（2026-11-17）",
+          "title_en": "AI-chip peers rally after Nvidia beat; AMD, Broadcom, CoreWeave jump (2026-11-17)",
+          "summary_zh": "受輝達亮眼財報激勵，半導體與AI基礎設施類股盤後走高：超微漲約4.7%、博通約6%、CoreWeave逾10%，台積電ADR同步轉強。在連日因估值與資本支出疑慮引發的沉重賣壓後，這波反彈為受創的AI交易帶來喘息。",
+          "summary_en": "Semiconductor and AI-infrastructure names climbed in after-hours trading on Nvidia's strong results. AMD rose about 4.7%, Broadcom roughly 6% and CoreWeave over 10%, with TSMC also firmer. The move offered relief to a battered AI trade after days of heavy selling driven by valuation and spending concerns.",
+          "source_name": "Yahoo Finance",
+          "source_url": "https://finance.yahoo.com/markets/stocks/article/amd-broadcom-tsmc-stocks-rise-on-nvidia-earnings-coreweave-nebius-shares-also-rally-220159436.html",
+          "published": "2026-11-17"
+        },
+        {
+          "title_zh": "財報前美股重挫 道瓊下跌約860點（2026-11-17）",
+          "title_en": "US stocks slide into the print: Dow falls about 860 points (2026-11-17)",
+          "summary_zh": "在輝達財報公布前，美股大幅下挫，道瓊下跌約860點（約1.7%），那斯達克因晶片股走弱逼近七個月低點。投資人重新評估AI估值與利率預期，使市場在這份本季最關鍵財報前氣氛緊繃，波動明顯放大。",
+          "summary_en": "Ahead of Nvidia's report, US equities sold off sharply, with the Dow dropping roughly 860 points (about 1.7%) and the Nasdaq near a seven-month low as chip stocks slumped. Investors reassessed AI valuations and interest-rate expectations, leaving the market on edge before the quarter's most pivotal earnings release.",
+          "source_name": "Yahoo Finance",
+          "source_url": "https://finance.yahoo.com/markets/stocks/articles/dow-drops-nearly-860-points-212641725.html",
+          "published": "2026-11-17"
         }
       ]
     }
