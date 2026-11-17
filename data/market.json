@@ -4,38 +4,38 @@
     {
       "name": "S&P 500",
       "name_zh": null,
-      "close": 7416.58984375,
-      "daily_pct": -1.92,
+      "close": 7340.52978515625,
+      "daily_pct": -1.03,
       "mtd_pct": -2.16,
       "ytd_pct": 8.34,
-      "closing_date": "2026-11-16"
+      "closing_date": "2026-11-17"
     },
     {
       "name": "Nasdaq Composite",
       "name_zh": null,
-      "close": 24509.759765625,
-      "daily_pct": -2.49,
+      "close": 24328.3828125,
+      "daily_pct": -0.74,
       "mtd_pct": -3.65,
       "ytd_pct": 5.45,
-      "closing_date": "2026-11-16"
+      "closing_date": "2026-11-17"
     },
     {
       "name": "Dow Jones",
       "name_zh": null,
-      "close": 51608.171875,
-      "daily_pct": -1.41,
+      "close": 50759.421875,
+      "daily_pct": -1.64,
       "mtd_pct": -0.31,
       "ytd_pct": 7.38,
-      "closing_date": "2026-11-16"
+      "closing_date": "2026-11-17"
     },
     {
       "name": "PHLX Semiconductor",
       "name_zh": null,
-      "close": 9610.650390625,
-      "daily_pct": -5.28,
+      "close": 9642.8779296875,
+      "daily_pct": 0.34,
       "mtd_pct": -10.09,
       "ytd_pct": 35.68,
-      "closing_date": "2026-11-16"
+      "closing_date": "2026-11-17"
     },
     {
       "name": "Euro Stoxx 50",
@@ -148,7 +148,7 @@
     {
       "name": "Nifty 50",
       "name_zh": null,
-      "close": 25387.400390625,
+      "close": 25387.4,
       "daily_pct": 0.38,
       "mtd_pct": 9.71,
       "ytd_pct": -3.21,
@@ -167,11 +167,11 @@
   "bonds": [
     {
       "name": "US 10-Year",
-      "yield_pct": 5.12,
-      "daily_bps": -3.3,
-      "mtd_bps": 19.2,
-      "ytd_bps": 95.8,
-      "closing_date": "2026-11-16"
+      "yield_pct": 5.1,
+      "daily_bps": -1.8,
+      "mtd_bps": 17.4,
+      "ytd_bps": 94.0,
+      "closing_date": "2026-11-17"
     },
     {
       "name": "US 2-Year",
@@ -219,8 +219,8 @@
       "name": "DXY 美元指數",
       "close": 103.55000305175781,
       "daily_pct": 0.14,
-      "mtd_pct": 1.5,
-      "ytd_pct": 5.22,
+      "mtd_pct": 1.65,
+      "ytd_pct": 5.37,
       "closing_date": "2026-11-16"
     },
     {
@@ -409,5 +409,5 @@
       "is_reference": true
     }
   ],
-  "summary": "11/17 Nifty 50 +0.38% 領漲；11/16 台指期(近月) -6.74%、11/16 PHLX Semiconductor -5.28% 走弱。"
+  "summary": "11/17 Nifty 50 +0.38%、11/17 PHLX Semiconductor +0.34% 領漲；11/16 台指期(近月) -6.74%、11/17 OTC 櫃買加權 -3.92% 走弱。"
 }
