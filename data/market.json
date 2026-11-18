@@ -4,38 +4,38 @@
     {
       "name": "S&P 500",
       "name_zh": null,
-      "close": 7340.52978515625,
-      "daily_pct": -1.03,
+      "close": 7323.6298828125,
+      "daily_pct": -0.23,
       "mtd_pct": -3.16,
       "ytd_pct": 7.23,
-      "closing_date": "2026-11-17"
+      "closing_date": "2026-11-18"
     },
     {
       "name": "Nasdaq Composite",
       "name_zh": null,
-      "close": 24328.380859375,
-      "daily_pct": -0.74,
+      "close": 24429.884765625,
+      "daily_pct": 0.42,
       "mtd_pct": -4.36,
       "ytd_pct": 4.67,
-      "closing_date": "2026-11-17"
+      "closing_date": "2026-11-18"
     },
     {
       "name": "Dow Jones",
       "name_zh": null,
-      "close": 50759.421875,
-      "daily_pct": -1.64,
+      "close": 50198.171875,
+      "daily_pct": -1.11,
       "mtd_pct": -1.95,
       "ytd_pct": 5.61,
-      "closing_date": "2026-11-17"
+      "closing_date": "2026-11-18"
     },
     {
       "name": "PHLX Semiconductor",
       "name_zh": null,
-      "close": 9642.8798828125,
-      "daily_pct": 0.34,
+      "close": 9652.796875,
+      "daily_pct": 0.1,
       "mtd_pct": -9.79,
       "ytd_pct": 36.14,
-      "closing_date": "2026-11-17"
+      "closing_date": "2026-11-18"
     },
     {
       "name": "Euro Stoxx 50",
@@ -148,7 +148,7 @@
     {
       "name": "Nifty 50",
       "name_zh": null,
-      "close": 25227.94921875,
+      "close": 25227.95,
       "daily_pct": -0.63,
       "mtd_pct": 10.13,
       "ytd_pct": -2.84,
@@ -167,11 +167,11 @@
   "bonds": [
     {
       "name": "US 10-Year",
-      "yield_pct": 5.1,
-      "daily_bps": -1.8,
-      "mtd_bps": 17.4,
-      "ytd_bps": 94.0,
-      "closing_date": "2026-11-17"
+      "yield_pct": 5.07,
+      "daily_bps": -3.7,
+      "mtd_bps": 13.7,
+      "ytd_bps": 90.3,
+      "closing_date": "2026-11-18"
     },
     {
       "name": "US 2-Year",
@@ -219,8 +219,8 @@
       "name": "DXY 美元指數",
       "close": 103.48999786376953,
       "daily_pct": -0.06,
-      "mtd_pct": 1.92,
-      "ytd_pct": 5.65,
+      "mtd_pct": 1.88,
+      "ytd_pct": 5.62,
       "closing_date": "2026-11-17"
     },
     {
@@ -402,12 +402,12 @@
     {
       "label": "Dec 2026",
       "fomc_date": "2026-12-16",
-      "implied_rate": 4.07,
+      "implied_rate": 4.08,
       "delta_rate": null,
       "p_hike": null,
       "p_cut": null,
       "is_reference": true
     }
   ],
-  "summary": "11/18 KOSPI +1.99%、11/17 PHLX Semiconductor +0.34%、11/18 OTC 櫃買加權 +0.31% 領漲；11/17 台指期(近月) -1.74%、11/17 Dow Jones -1.64% 走弱。"
+  "summary": "11/18 KOSPI +1.99%、11/18 Nasdaq Composite +0.42%、11/18 OTC 櫃買加權 +0.31% 領漲；11/17 台指期(近月) -1.74%、11/18 FTSE 100 -1.30% 走弱。"
 }
