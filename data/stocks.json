@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T05:21:02+08:00",
+  "generated_at": "2026-11-20T10:58:33+08:00",
   "source": "finnhub (US price+daily) + Yahoo (US MTD/YTD) + TWSE (TW)",
   "us_stocks": [
     {
@@ -33,7 +33,7 @@
       "market_date": "2026-11-19",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AAPL.US",
       "error": null,
-      "per": 38.8056,
+      "per": 38.4604,
       "per_kind": "trailing"
     },
     {
@@ -67,7 +67,7 @@
       "market_date": "2026-11-19",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GOOGL.US",
       "error": null,
-      "per": 14.6757,
+      "per": 14.7618,
       "per_kind": "trailing"
     },
     {
@@ -93,10 +93,10 @@
       "kind": "US",
       "price": 596.22,
       "change_pct": -3.27,
-      "mtd_pct": -3.05,
-      "ytd_pct": -9.68,
-      "perf_1y": 1.0,
-      "perf_3y": 75.37,
+      "mtd_pct": 0.23,
+      "ytd_pct": -6.62,
+      "perf_1y": 3.13,
+      "perf_3y": 83.97,
       "perf_5y": 76.93,
       "market_date": "2026-11-19",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=META.US",
@@ -152,7 +152,7 @@
       "market_date": "2026-11-19",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=JPM.US",
       "error": null,
-      "per": 13.1772,
+      "per": 12.9031,
       "per_kind": "trailing"
     },
     {
@@ -186,7 +186,7 @@
       "market_date": "2026-11-19",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=UNH.US",
       "error": null,
-      "per": 21.4571,
+      "per": 18.2221,
       "per_kind": "trailing"
     },
     {
@@ -203,7 +203,7 @@
       "market_date": "2026-11-19",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=WMT.US",
       "error": null,
-      "per": 44.5314,
+      "per": 45.902,
       "per_kind": "trailing"
     },
     {
@@ -254,7 +254,7 @@
       "market_date": "2026-11-19",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=CAT.US",
       "error": null,
-      "per": 21.5121,
+      "per": 20.9414,
       "per_kind": "trailing"
     },
     {
@@ -271,7 +271,7 @@
       "market_date": "2026-11-19",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AVGO.US",
       "error": null,
-      "per": 43.723,
+      "per": 43.864,
       "per_kind": "trailing"
     },
     {
@@ -305,7 +305,7 @@
       "market_date": "2026-11-19",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=AMD.US",
       "error": null,
-      "per": 112.5771,
+      "per": 105.6338,
       "per_kind": "trailing"
     },
     {
@@ -322,7 +322,7 @@
       "market_date": "2026-11-19",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=QCOM.US",
       "error": null,
-      "per": 12.7337,
+      "per": 12.95,
       "per_kind": "trailing"
     },
     {
@@ -373,7 +373,7 @@
       "market_date": "2026-11-19",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MU.US",
       "error": null,
-      "per": 9.306,
+      "per": 9.5789,
       "per_kind": "trailing"
     },
     {
@@ -407,7 +407,7 @@
       "market_date": "2026-11-19",
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ASML.US",
       "error": null,
-      "per": 45.3505,
+      "per": 46.2305,
       "per_kind": "trailing"
     }
   ],
@@ -420,8 +420,8 @@
       "change_pct": -4.14,
       "mtd_pct": -14.05,
       "ytd_pct": 37.5,
-      "perf_1y": 55.67,
-      "perf_3y": 187.33,
+      "perf_1y": 37.4,
+      "perf_3y": 156.66,
       "perf_5y": 163.59,
       "market_date": "2026-11-19",
       "source_url": "https://tw.stock.yahoo.com/quote/0050.TW",
@@ -437,13 +437,13 @@
       "change_pct": -3.45,
       "mtd_pct": -11.39,
       "ytd_pct": 35.48,
-      "perf_1y": 54.8,
-      "perf_3y": 275.0,
+      "perf_1y": 37.8,
+      "perf_3y": 242.74,
       "perf_5y": 251.94,
       "market_date": "2026-11-19",
       "source_url": "https://tw.stock.yahoo.com/quote/2330.TW",
       "error": null,
-      "per": 22.14,
+      "per": 21.37,
       "per_kind": "trailing"
     },
     {
@@ -454,13 +454,13 @@
       "change_pct": -0.23,
       "mtd_pct": -10.18,
       "ytd_pct": -4.34,
-      "perf_1y": -3.91,
-      "perf_3y": 115.61,
+      "perf_1y": -10.99,
+      "perf_3y": 105.37,
       "perf_5y": 107.51,
       "market_date": "2026-11-19",
       "source_url": "https://tw.stock.yahoo.com/quote/2317.TW",
       "error": null,
-      "per": 13.37,
+      "per": 13.34,
       "per_kind": "trailing"
     },
     {
@@ -471,13 +471,13 @@
       "change_pct": -5.58,
       "mtd_pct": -4.98,
       "ytd_pct": 160.14,
-      "perf_1y": 236.75,
-      "perf_3y": 335.84,
+      "perf_1y": 185.65,
+      "perf_3y": 265.55,
       "perf_5y": 261.47,
       "market_date": "2026-11-19",
       "source_url": "https://tw.stock.yahoo.com/quote/2454.TW",
       "error": null,
-      "per": 63.37,
+      "per": 59.84,
       "per_kind": "trailing"
     },
     {
@@ -488,13 +488,13 @@
       "change_pct": -5.66,
       "mtd_pct": -25.09,
       "ytd_pct": 3.84,
-      "perf_1y": 18.04,
-      "perf_3y": 247.54,
+      "perf_1y": -5.66,
+      "perf_3y": 189.86,
       "perf_5y": 306.13,
       "market_date": "2026-11-19",
       "source_url": "https://tw.stock.yahoo.com/quote/2308.TW",
       "error": null,
-      "per": 31.83,
+      "per": 30.03,
       "per_kind": "trailing"
     },
     {
@@ -505,13 +505,13 @@
       "change_pct": -0.94,
       "mtd_pct": -17.45,
       "ytd_pct": -3.49,
-      "perf_1y": -1.85,
-      "perf_3y": 27.1,
+      "perf_1y": -8.94,
+      "perf_3y": 14.71,
       "perf_5y": 204.95,
       "market_date": "2026-11-19",
       "source_url": "https://tw.stock.yahoo.com/quote/2382.TW",
       "error": null,
-      "per": 10.81,
+      "per": 10.71,
       "per_kind": "trailing"
     },
     {
@@ -522,13 +522,13 @@
       "change_pct": -0.41,
       "mtd_pct": -3.56,
       "ytd_pct": 45.62,
-      "perf_1y": 72.3,
-      "perf_3y": 173.37,
+      "perf_1y": 59.35,
+      "perf_3y": 155.08,
       "perf_5y": 202.68,
       "market_date": "2026-11-19",
       "source_url": "https://tw.stock.yahoo.com/quote/2891.TW",
       "error": null,
-      "per": 17.56,
+      "per": 17.49,
       "per_kind": "trailing"
     },
     {
@@ -539,13 +539,13 @@
       "change_pct": -6.21,
       "mtd_pct": -16.69,
       "ytd_pct": 54.87,
-      "perf_1y": 55.18,
-      "perf_3y": -20.3,
+      "perf_1y": 36.08,
+      "perf_3y": -31.38,
       "perf_5y": -37.78,
       "market_date": "2026-11-19",
       "source_url": "https://tw.stock.yahoo.com/quote/1301.TW",
       "error": null,
-      "per": 24.39,
+      "per": 22.88,
       "per_kind": "trailing"
     }
   ]
