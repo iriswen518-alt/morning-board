@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T10:47:39+08:00",
+  "generated_at": "2026-11-21T17:57:29+08:00",
   "source": "bopfund.moneydj.com",
   "version": 2,
   "updated": "2026-05-14",
@@ -70,7 +70,27 @@
       },
       "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACDD04-2602",
       "match_score": 1.0,
-      "error": null
+      "error": null,
+      "perf_single": {
+        "1m": -35.08,
+        "3m": -34.49,
+        "6m": -29.16,
+        "1y": 49.44,
+        "2y": 129.19,
+        "3y": 197.28,
+        "5y": 248.03
+      },
+      "perf_dca": {
+        "1m": -35.08,
+        "3m": -35.31,
+        "6m": -33.82,
+        "1y": -9.98,
+        "2y": 55.57,
+        "3y": 89.11,
+        "5y": 175.43
+      },
+      "perf_date": "11-20",
+      "perf_url": "https://bopfund.moneydj.com/w/wr/wr03.djhtm?a=ACDD04-2602"
     },
     {
       "id": "allianz_income_grow",
