@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T23:26:32+08:00",
+  "generated_at": "2026-11-22T00:10:04+08:00",
   "source": "Yahoo trending + 主流 ETF 清單；price=finnhub, MTD/YTD=Yahoo",
   "stocks": [
     {
@@ -31,20 +31,6 @@
       "error": null
     },
     {
-      "symbol": "GPN",
-      "name_zh": "Global Payments",
-      "kind": "US",
-      "price": 91.83,
-      "change_pct": 9.95,
-      "mtd_pct": -5.17,
-      "ytd_pct": 18.64,
-      "market_date": "2026-11-20",
-      "per": null,
-      "per_kind": null,
-      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GPN.US",
-      "error": null
-    },
-    {
       "symbol": "PFF",
       "name_zh": "iShares Preferred and Income Se",
       "kind": "US",
@@ -73,6 +59,76 @@
       "error": null
     },
     {
+      "symbol": "GPN",
+      "name_zh": "Global Payments",
+      "kind": "US",
+      "price": 91.83,
+      "change_pct": 9.95,
+      "mtd_pct": -5.17,
+      "ytd_pct": 18.64,
+      "market_date": "2026-11-20",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=GPN.US",
+      "error": null
+    },
+    {
+      "symbol": "ON",
+      "name_zh": "ON Semiconductor",
+      "kind": "US",
+      "price": 60.84,
+      "change_pct": -7.43,
+      "mtd_pct": -15.11,
+      "ytd_pct": 12.35,
+      "market_date": "2026-11-20",
+      "per": 34.4571,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=ON.US",
+      "error": null
+    },
+    {
+      "symbol": "MOD",
+      "name_zh": "Modexus Solutions",
+      "kind": "US",
+      "price": 124.67,
+      "change_pct": -7.35,
+      "mtd_pct": -3.92,
+      "ytd_pct": -6.62,
+      "market_date": "2026-11-20",
+      "per": 51.7666,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=MOD.US",
+      "error": null
+    },
+    {
+      "symbol": "TTWO",
+      "name_zh": "Take-Two Interactive Software,",
+      "kind": "US",
+      "price": 210,
+      "change_pct": 0.65,
+      "mtd_pct": 10.43,
+      "ytd_pct": -17.98,
+      "market_date": "2026-11-20",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=TTWO.US",
+      "error": null
+    },
+    {
+      "symbol": "RSP",
+      "name_zh": "Invesco S&P 500 Equal Weight ET",
+      "kind": "US",
+      "price": 207.44,
+      "change_pct": -1.98,
+      "mtd_pct": -4.98,
+      "ytd_pct": 8.29,
+      "market_date": "2026-11-20",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=RSP.US",
+      "error": null
+    },
+    {
       "symbol": "SCHD",
       "name_zh": "Schwab US Dividend Equity ETF",
       "kind": "US",
@@ -84,6 +140,48 @@
       "per": null,
       "per_kind": null,
       "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=SCHD.US",
+      "error": null
+    },
+    {
+      "symbol": "VYMI",
+      "name_zh": "Vanguard International High Div",
+      "kind": "US",
+      "price": 95.16,
+      "change_pct": -1.92,
+      "mtd_pct": -6.15,
+      "ytd_pct": 5.73,
+      "market_date": "2026-11-20",
+      "per": null,
+      "per_kind": null,
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=VYMI.US",
+      "error": null
+    },
+    {
+      "symbol": "BMY",
+      "name_zh": "Bristol-Myers Squibb",
+      "kind": "US",
+      "price": 58.8,
+      "change_pct": 0.79,
+      "mtd_pct": -5.89,
+      "ytd_pct": 9.01,
+      "market_date": "2026-11-20",
+      "per": 13.1515,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=BMY.US",
+      "error": null
+    },
+    {
+      "symbol": "EPD",
+      "name_zh": "Enterprise Products Partners L.",
+      "kind": "US",
+      "price": 35.83,
+      "change_pct": -0.91,
+      "mtd_pct": -6.08,
+      "ytd_pct": 11.76,
+      "market_date": "2026-11-20",
+      "per": 11.8263,
+      "per_kind": "trailing",
+      "source_url": "https://bopfund.moneydj.com/w/wj/iQuoteChart.djhtm?a=EPD.US",
       "error": null
     },
     {
