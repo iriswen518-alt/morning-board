@@ -1,11 +1,9 @@
 {
-  "news_date": "2026-11-21",
+  "news_date": "2026-11-22",
   "tldr": [
-    "台股 11 月 20 日崩跌 6.23% 收 36,033.29 點，單週創 1991 年以來最慘，全球 AI 與晶片股賣壓重創科技權重偏高的台股。",
-    "賣壓席捲全亞洲，南韓 Kospi 跌約 5.2%、日經跌 5.1%，在美掛牌的台積電 ADR 與超微盤前續跌。",
-    "美股那斯達克跌約 5.3%，標普 500 與道瓊收盤跌入修正區，輝達全週跌幅上看逾一成。",
-    "金價跌至 2025 年 9 月以來低點、比特幣逼近五個月低點，鷹派聯準會升高 12 月升息預期。",
-    "國內方面，金管會預告穩定幣與虛擬資產子法，多份報告顯示台灣高資產財富規模持續攀升。"
+    "台股最近交易日重挫約1,768點、寫史上第七大收盤跌點，外資大舉提款權王台積電。",
+    "輝達示警AI需求強勁、台積電全力增援供應，法人估台積電2026毛利率可守六成。",
+    "金管會推動資產管理中心與ETF國際化，海外股票ETF受益人連九周創新高。"
   ],
   "sections": [
     {
@@ -13,20 +11,22 @@
       "section_zh": "股市行情",
       "items": [
         {
-          "title_zh": "台股崩跌 6.23% 單週創 1991 年來最慘",
-          "title_en": "Taiex plunges 6.23% to cap its worst week since 1991",
-          "summary_zh": "台股 11 月 20 日（週五）重挫 2,393.60 點、跌幅 6.23%，收 36,033.29 點，為史上第五大盤中跌點，全球 AI 與晶片股賣壓擴大，重創科技權重偏高的台股。成交量放大至約 8,773.5 億元。本週累計下跌約 17.5%，為 1991 年以來最慘單週表現，凸顯市場對 AI 高評價的信心快速轉向，資金從高本益比科技股撤離，短線觀望氣氛濃厚。",
-          "summary_en": "Taiwan's benchmark Taiex sank 2,393.60 points, or 6.23%, to close at 36,033.29 on Friday, Nov 20, its fifth-largest intraday point loss on record, as a deepening global selloff in AI and chip stocks battered the tech-heavy market. Turnover swelled to about NT$877.35 billion. For the week the index shed roughly 17.5%, its steepest weekly drop since 1991, underscoring how fast sentiment has turned on stretched AI valuations.",
-          "source_name": "Taiwan News",
-          "source_url": "https://www.taiwannews.com.tw/news/6478949"
+          "title_zh": "台股重挫 寫史上第七大跌點（最近交易日）",
+          "title_en": "Taiwan shares suffer one of their worst sessions on record (2026-11-20)",
+          "summary_zh": "受費城半導體指數單日重挫逾一成拖累，外資大舉調節權值股，加權指數最近交易日急殺約1,768點，為史上第七大收盤跌點；全週累計下跌約7,641點。市場對AI晶片股評價快速修正，權值股成為提款重災區，拖累指數失守多道技術關卡。",
+          "summary_en": "On the latest trading session the TAIEX plunged roughly 1,768 points, its seventh-largest point drop ever, as a slide of more than 10% in the Philadelphia Semiconductor Index triggered heavy foreign selling of heavyweight TSMC. The island's benchmark lost about 7,641 points over the week, reflecting a rapid global de-rating of AI-related chip names.",
+          "source_name": "ETtoday財經",
+          "source_url": "https://finance.ettoday.net/news/3275110",
+          "published": "2026-11-20"
         },
         {
-          "title_zh": "AI 晶片賣壓席捲亞股 南韓、日股同步重挫",
-          "title_en": "AI-chip rout spreads across Asia as Kospi, Nikkei tumble with Taiex",
-          "summary_zh": "11 月 20 日亞股全面走弱，南韓 Kospi 下跌約 5.2%、日經 225 跌約 5.1%，與台股同步下挫，投資人競相撤出 AI 相關個股。晶片廠與供應鏈領跌，惟部分業者表示在手訂單仍穩定，凸顯基本面韌性與股價崩跌之間的落差擴大。本週 Kospi 累跌 7.9%、日經跌 7.7%，反映 AI 投資疑慮已非單一市場現象，而是跨區域的系統性修正。",
-          "summary_en": "The selloff was region-wide on Friday: South Korea's Kospi fell about 5.2% and Japan's Nikkei 225 dropped around 5.1%, mirroring Taiwan's slide as investors fled AI-related names. Chipmakers and suppliers led losses even as some report order books remain steady, highlighting a widening gap between resilient fundamentals and collapsing share prices. For the week, the Kospi lost 7.9% and the Nikkei 7.7%.",
-          "source_name": "24/7 Wall St.",
-          "source_url": "https://247wallst.com/investing/2026/11/20/taiwan-stock-market-falls-6-2-to-cap-its-worst-week-since-1991-as-kospi-closes-down-5-2-and-nikkei-225-drops-5-1-in-ai-chip-selloff/"
+          "title_zh": "外資賣超收斂 台積電仍遭提款（最近交易日）",
+          "title_en": "Foreign outflows narrow but TSMC still hit hard (2026-11-20)",
+          "summary_zh": "最近交易日外資在集中市場賣超縮小至約94億元，但權值王台積電仍被賣超約1.18萬張，外資已連七個交易日調節台積電。所幸投信買盤進場部分承接，顯示外資避險性賣壓與本土低接買盤相互拉鋸，後市仍須觀察外資動向是否止穩。",
+          "summary_en": "Net foreign selling on the main board eased to about NT$9.4 billion in the latest session, yet overseas funds still offloaded roughly 11,800 lots of TSMC, extending their selling streak in the chipmaker to seven straight sessions. Domestic investment trusts partly absorbed the pressure, highlighting a tug-of-war between foreign risk-off flows and local bargain hunting.",
+          "source_name": "ETtoday財經",
+          "source_url": "https://finance.ettoday.net/news/3275671",
+          "published": "2026-11-20"
         }
       ]
     },
@@ -35,20 +35,20 @@
       "section_zh": "產業動態",
       "items": [
         {
-          "title_zh": "亞洲科技與晶片股重挫 Anthropic 美股強勢掛牌仍難止血",
-          "title_en": "Asian tech and chip stocks plunge despite Anthropic's strong Wall Street debut",
-          "summary_zh": "儘管台積電持股的 AI 開發商 Anthropic 於美股強勢掛牌，亞洲科技股（尤以晶片股為首）11 月 20 日仍全面下挫，市場對 AI 投資規模與回收年限的疑慮未解。個別 AI 贏家獲追捧、整體硬體供應鏈評價卻遭調降，凸顯資金對「建置資料中心算力」題材由全面擁抱轉為選擇性押注，台廠 AI 供應鏈評價短線承壓。",
-          "summary_en": "Asian technology shares, led by chip names, tumbled on Friday as worries over the scale and payback of AI spending persisted, even after AI developer Anthropic — in which TSMC holds a stake — made a strong US market debut. The disconnect shows investors rewarding individual AI winners while broadly derating the hardware supply chain that builds out data-center capacity.",
-          "source_name": "Anadolu Agency",
-          "source_url": "https://www.aa.com.tr/en/economy/asian-tech-stocks-plunge-despite-anthropics-strong-us-market-debut/4131708"
+          "title_zh": "台積電高層親訪輝達 供應鏈全力增援",
+          "title_en": "TSMC leadership visits Nvidia as supply chain ramps",
+          "summary_zh": "輝達在最新法說會透露，台積電領導層本週造訪並全力支援，財務長Kress指出記憶體與先進封裝供給已獲確保；輝達並將未來營收成長預估上修至約75%，歸因於供應鏈增援。顯示AI晶片需求延續，台灣晶圓代工與先進封裝生態系可望續受惠，供應穩定性成市場焦點。",
+          "summary_en": "Nvidia said on its latest earnings call that TSMC's top management visited this week and is going all-out to support demand, while CFO Colette Kress noted memory and advanced-packaging supply has been secured. Nvidia lifted its forward revenue-growth outlook toward about 75%, citing stronger supply-chain backing — a signal of durable AI chip demand flowing to Taiwan's foundry and packaging ecosystem.",
+          "source_name": "優分析uAnalyze",
+          "source_url": "https://uanalyze.com.tw/articles/2126159978"
         },
         {
-          "title_zh": "台積電 ADR 與超微續跌 晶片賣壓由亞洲蔓延至美股盤前",
-          "title_en": "TSMC ADR and AMD slide further as chip selloff jumps from Asia to US premarket",
-          "summary_zh": "11 月 20 日美股盤前，在美掛牌的台積電 ADR 下跌約 4.2%、超微（AMD）再跌約 7%，那斯達克期貨下滑 1.6%，亞洲晶片賣壓延燒至華爾街。此波走勢凸顯台積電居 AI 供應鏈核心地位——幾乎所有領先晶片設計商都仰賴其製造與封裝先進處理器，一旦 AI 資本支出預期降溫，台積電與整條供應鏈評價首當其衝，牽動台廠出貨與接單能見度。",
-          "summary_en": "US-listed Taiwan Semiconductor fell about 4.2% and AMD dropped another 7% in Friday premarket trade, with Nasdaq futures down 1.6%, as Asia's chip rout carried into Wall Street. The moves underline TSMC's position at the center of the AI supply chain — nearly every leading chip designer relies on it to manufacture and package advanced processors, so a cooling in AI capex expectations hits the whole chain first.",
-          "source_name": "24/7 Wall St.",
-          "source_url": "https://247wallst.com/investing/2026/11/20/amd-stock-drops-another-7-0-before-the-bell-and-taiwan-semiconductor-slides-4-2-as-nasdaq-futures-fall-1-6-after-asias-chip-selloff"
+          "title_zh": "法人估台積電2026毛利率可守六成",
+          "title_en": "Analysts see TSMC 2026 gross margin holding near 60%",
+          "summary_zh": "法人預估，在先進製程報價與AI需求帶動產能高度利用下，台積電2026全年毛利率可望維持約六成。此看法強化先進製程與先進封裝產能滿載的預期，意味獲利動能有望延續至2027年，與近期晶片股價急挫形成對比，凸顯基本面與股價短線脫鉤。",
+          "summary_en": "Brokerages project TSMC can sustain a full-year 2026 gross margin of around 60%, underpinned by advanced-node pricing and robust AI-driven utilization. The view reinforces expectations that leading-edge and advanced-packaging capacity remain effectively sold out, supporting earnings momentum into 2027 despite the sharp pullback in chip-sector share prices.",
+          "source_name": "Yahoo股市",
+          "source_url": "https://tw.stock.yahoo.com/news/%E6%B3%95%E4%BA%BA-%E5%8F%B0%E7%A9%8D2026%E6%AF%9B%E5%88%A9%E7%8E%87%E9%81%946%E6%88%90-201000570.html"
         }
       ]
     },
@@ -57,20 +57,20 @@
       "section_zh": "金融業",
       "items": [
         {
-          "title_zh": "金管會預告穩定幣與虛擬資產子法 完善 VASP 監理架構",
-          "title_en": "FSC previews stablecoin and virtual-asset sub-laws under new VASP Act",
-          "summary_zh": "金管會預告《虛擬資產服務法》9 項授權子法草案，預告期 40 天，其中包含穩定幣發行許可及管理辦法。草案規定非銀行發行人資本額門檻為 3 億元，穩定幣可與新台幣或單一外幣 1 比 1 連結（不含人民幣等），準備資產總值不得低於流通在外餘額並須定期由會計師查核。法規最快 2027 年上路，為台灣穩定幣與虛擬資產市場建立發行與贖回的合規框架。",
-          "summary_en": "Taiwan's Financial Supervisory Commission has opened a 40-day comment period on nine draft sub-regulations implementing the Virtual Asset Service Providers Act, including rules governing stablecoin issuance. Non-bank issuers would need NT$300 million in capital, and stablecoins could be pegged 1:1 to the NT dollar or a single foreign currency (excluding the yuan), with reserves fully backing coins in circulation and audited periodically.",
-          "source_name": "uAnalyze",
-          "source_url": "https://uanalyze.com.tw/articles/7237258297"
+          "title_zh": "金管會推資產管理中心 ETF邁向國際化",
+          "title_en": "FSC pushes Taiwan asset-management hub and ETF globalization",
+          "summary_zh": "金管會主委彭金隆重申，將打造具台灣特色的資產管理中心，並推動本土ETF邁向國際化，相關談話於投資大趨勢論壇場合提出。政策目標在深化資本市場廣度、引導家庭儲蓄進入受管理商品，亦是將台灣定位為亞洲財富與創新交會點整體布局的一環。",
+          "summary_en": "FSC Chairman Peng Chin-lung reiterated the regulator's goal of building an asset-management center with Taiwanese characteristics and internationalizing local ETFs, in remarks around the investment mega-trend forum. The policy aims to deepen capital-market breadth and channel household savings into managed products, part of a broader drive to position Taiwan as an Asian wealth and innovation hub.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/5648/9133312"
         },
         {
-          "title_zh": "金管會公布第五屆永續金融評鑑指標",
-          "title_en": "FSC rolls out fifth-round sustainable-finance evaluation metrics",
-          "summary_zh": "金管會公布第五屆（116 年）永續金融評鑑指標，延續以評分引導銀行、保險與證券業強化綠色金融與 ESG 作為的政策，促使資金投向永續目標。此舉呼應主管機關推動綠色投資的方向，將融資導入淨零轉型，為台灣氣候轉型與金融穩定議程的一環，業者後續在永續揭露與投融資配置的落實程度，將成為市場與主管機關關注重點。",
-          "summary_en": "The FSC announced the indicators for its fifth (2027-cycle) sustainable-finance evaluation, continuing a program that scores banks, insurers and securities firms on their green-finance and ESG practices to steer capital toward sustainability goals. The move reinforces regulators' push to channel financing into green investment as part of Taiwan's broader climate-transition and financial-stability agenda.",
-          "source_name": "金管會",
-          "source_url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0"
+          "title_zh": "高雄資產管理專區進駐62家機構",
+          "title_en": "Kaohsiung asset-management zone draws 62 institutions",
+          "summary_zh": "報導指出，高雄資產管理專區已有62家金融機構進駐、高資產客戶逾1萬人；首屆高雄國際金融博覽會聚焦家族辦公室、ETF投資與數位金融。此聚落顯示政策推動台灣財富管理版圖向台北以外擴散，強化南部金融能量，吸引金控業者加碼布局家族辦公室服務。",
+          "summary_en": "Reports say Kaohsiung's asset-management special zone has attracted 62 financial institutions serving more than 10,000 high-net-worth clients, as the inaugural Kaohsiung international financial expo showcased family offices, ETF investing and digital finance. The cluster signals policymakers' effort to broaden Taiwan's wealth-management footprint beyond Taipei and build southern financial capacity.",
+          "source_name": "今周刊",
+          "source_url": "https://www.businesstoday.com.tw/article/category/80393/post/202611060032/"
         }
       ]
     },
@@ -79,128 +79,20 @@
       "section_zh": "財富管理",
       "items": [
         {
-          "title_zh": "高資產人口估增至 12.4 萬人 持有資產 46 兆元",
-          "title_en": "High-net-worth population seen rising to 124,000 holding NT$46 trillion",
-          "summary_zh": "KPMG 與玉山銀行報告估計，台灣資產逾新台幣 1 億元的高資產人口將由 2023 年的 9.3 萬人，增至 2026 年約 12.4 萬人，持有資產約 46.1 兆元，ETF 與高資產業務為主要成長動能。數據顯示財富版圖快速質變，高資產客群關注焦點由單純追求資產增值，逐步轉向完善跨世代傳承規劃，帶動信託、保險與海外資產配置等傳承型商品需求同步升溫。",
-          "summary_en": "A KPMG–E.Sun study estimates Taiwan's population with NT$100 million-plus in assets will grow from 93,000 in 2023 to an estimated 124,000 in 2026, holding about NT$46.1 trillion, with ETFs and high-net-worth services the main engines of expansion. The data point to a fast-shifting wealth landscape as affluent clients move from pure asset growth toward cross-generational succession planning.",
-          "source_name": "KPMG Taiwan",
-          "source_url": "https://kpmg.com/tw/zh/media/press-releases/2026/06/2026-taiwan-wealth-management-trends-high-net-worth-growth.html"
-        },
-        {
-          "title_zh": "中信與 BCG 報告：2029 年高資產財富上看 59 兆元",
-          "title_en": "CTBC–BCG study sees HNW wealth reaching NT$59 trillion by 2029",
-          "summary_zh": "中國信託銀行與 BCG 報告預估，台灣高資產客群的個人財富總額將於 2029 年達約 59 兆元，客群人數增至約 15.5 萬人。此預測凸顯高資產族群動能延續，也反映銀行為爭取傳承、信託與跨境資產管理業務的競爭加劇。隨高資產需求由財富積累轉向財富保全與移轉，私人銀行與家族辦公室服務將成為各大金融機構布局財管版圖的關鍵戰場。",
-          "summary_en": "A study by CTBC Bank and BCG projects that the total personal wealth of Taiwan's high-net-worth clients will climb to about NT$59 trillion by 2029, with the number of such clients rising to roughly 155,000. The forecast underscores sustained momentum in the affluent segment and intensifying competition among banks to capture succession, trust and cross-border asset-management mandates.",
-          "source_name": "旺得富",
-          "source_url": "https://wantrich.chinatimes.com/news/20261112900536-420101"
-        }
-      ]
-    },
-    {
-      "section": "Tax & Regulations",
-      "section_zh": "稅務法規",
-      "items": [
-        {
-          "title_zh": "長照特別扣除額擬調高至 18 萬元 回溯適用今年",
-          "title_en": "Long-term care tax deduction set to rise to NT$180,000, backdated to 2026",
-          "summary_zh": "立法院朝野就提高長期照顧特別扣除額取得共識，擬由每名符合資格者 12 萬元提高至 18 萬元，並可望回溯自今年 1 月 1 日適用。此調整將減輕有長照需求家庭的稅負，並反映於 2027 年 5 月的綜所稅申報，有扶養被照顧者的納稅人可留意最終立法進度與適用條件，提前備妥長照資格證明等文件。",
-          "summary_en": "Taiwanese lawmakers have reached cross-party consensus to raise the long-term care special deduction from NT$120,000 to NT$180,000 per qualifying person, with the change expected to apply retroactively from Jan 1 this year. The move would ease the tax burden on households caring for dependents and feed into the May 2027 filing season.",
-          "source_name": "公視新聞",
-          "source_url": "https://news.pts.org.tw/article/783232"
-        },
-        {
-          "title_zh": "物價連動 綜所稅免稅額與扣除額調高 2027 年 5 月申報適用",
-          "title_en": "Inflation-linked bump lifts income-tax allowances for the 2027 filing season",
-          "summary_zh": "反映累計通膨，綜所稅免稅額調升至每人 10.1 萬元（70 歲以上 15.5 萬元），標準扣除額提高至 13.6 萬元，5% 課稅級距上限放寬至 61 萬元。相關調整適用於 2026 年度所得、於 2027 年 5 月申報，有助小幅減輕受薪家庭稅負；以租屋自住的單身上班族為例，免稅門檻約達 64.4 萬元，可留意年底前的節稅與扣除額規劃。",
-          "summary_en": "Reflecting cumulative inflation, Taiwan's personal income-tax exemption is set to rise to NT$101,000 (NT$155,000 for those aged 70+) and the standard deduction to NT$136,000, with the 5% bracket widened to income up to NT$610,000. The adjustments apply to the 2026 tax year, filed in May 2027, modestly lowering the burden for salaried households.",
+          "title_zh": "海外股票ETF受益人連九周創高",
+          "title_en": "Overseas-equity ETF holders hit record for a ninth straight week",
+          "summary_zh": "集保中心資料顯示，海外股票ETF受益人連續九周寫新高，其中以美國股票ETF最受青睞。此趨勢反映台灣投資人對全球分散配置的需求升溫，即便本土晶片股重挫，散戶資金仍持續流向海外指數型商品，海外ETF逐漸成為資產配置的新寵，顯示配置思維國際化。",
+          "summary_en": "TDCC data show the number of beneficiaries in overseas-equity ETFs has set fresh highs for nine consecutive weeks, with U.S. stock ETFs the most popular. The trend underscores Taiwanese investors' growing appetite for global diversification; even as domestic chip names tumble, retail flows keep heading toward offshore index products.",
           "source_name": "Yahoo股市",
-          "source_url": "https://tw.stock.yahoo.com/news/2027%E5%8F%AF%E6%9C%9B%E6%9C%89%E6%84%9F%E6%B8%9B%E7%A8%85-201000908.html"
-        }
-      ]
-    },
-    {
-      "section": "Macro & Policy",
-      "section_zh": "總經政策",
-      "items": [
-        {
-          "title_zh": "央行最新預測：2026 經濟成長上看逾 11% AI 熱潮為引擎",
-          "title_en": "Central bank's latest forecast sees 2026 growth above 11% on AI boom",
-          "summary_zh": "中央銀行最新預測將 2026 年經濟成長率上修至約 11.48%，上半年成長估達 14.15%，主要受惠 AI 與高效能運算（HPC）需求暢旺，帶動出口與民間投資。此次上修使台灣成長率維持在近數十年高點，惟在高比較基期下，後續成長料逐步回歸常態，結構性出口動能能否延續，以及全球 AI 投資熱度變化，為後市觀察重點。",
-          "summary_en": "Taiwan's central bank has lifted its 2026 GDP growth forecast to about 11.48%, with first-half growth estimated near 14.15%, driven by robust demand for AI and high-performance computing that has powered exports and private investment. The upgrade keeps Taiwan's growth near multi-decade highs, though a high base points to normalization in the quarters ahead.",
-          "source_name": "中央銀行",
-          "source_url": "https://www.cbc.gov.tw/dl-227598-390cb96431984af7b11c073e02de56ba.html"
+          "source_url": "https://tw.stock.yahoo.com/news/%E6%AF%94%E7%85%A7%E5%9C%8B%E9%9A%9B%E6%B3%95%E8%A6%8F-%E5%BD%AD%E9%87%91%E9%9A%86-%E6%89%93%E9%80%A0%E5%8F%B0%E7%81%A3%E6%88%90%E4%BA%9E%E6%B4%B2%E8%B3%87%E7%94%A2%E7%AE%A1%E7%90%86%E6%A8%9E%E7%B4%90-075753989.html"
         },
         {
-          "title_zh": "央行估今年通膨略高於 2% 明年可望回落",
-          "title_en": "Central bank expects inflation slightly above 2% this year, easing in 2027",
-          "summary_zh": "中央銀行預期今年消費者物價通膨率略高於 2%，隨國際油價回落，明年可望降至 2% 目標以下，貨幣政策維持穩健基調。央行也示警地緣政治與能源價格波動為通膨展望的主要上行風險，將持續觀察國際情勢與輸入性物價壓力，作為後續利率決策的重要依據，市場亦關注央行對高漲資產價格的看法。",
-          "summary_en": "The central bank projects consumer inflation running a little above 2% this year before cooling below the 2% target in 2027 as international oil prices retreat, keeping monetary policy on a steady footing. Officials flagged geopolitical tensions and energy-price swings as the main upside risks to the inflation outlook.",
-          "source_name": "中央銀行",
-          "source_url": "https://www.cbc.gov.tw/dl-227596-0ac222ecf5204894a292d5dc9003f795.html"
-        }
-      ]
-    },
-    {
-      "section": "Global Markets",
-      "section_zh": "國際財經",
-      "items": [
-        {
-          "title_zh": "AI 評價疑慮重創全球股市 美股基準指數跌入修正",
-          "title_en": "Global markets slammed by AI-valuation fears as US benchmarks correct",
-          "summary_zh": "以 AI 與晶片股為核心的全球賣壓本週加劇，美媒報導標普 500 與道瓊收盤跌入修正區間，那斯達克抹去 2026 年全年漲幅。由於標普 500 約半數成分股與 AI 題材相關，市場對資料中心支出規模與回收的疑慮，透過供應鏈與資金面擴散至全球股市，亞股與歐股同步走低，台股亦難置身事外，短線評價修正壓力明顯。",
-          "summary_en": "A worldwide selloff centered on AI and chip stocks deepened this week, with US coverage noting the S&P 500 and Dow closing in correction territory and the Nasdaq erasing its 2026 gain. With roughly half of the S&P 500 tied to the AI theme, doubts over the scale and payoff of data-center spending rippled across global equity markets, dragging Asian and European indexes lower in tandem.",
-          "source_name": "CNBC",
-          "source_url": "https://www.cnbc.com/2026/11/19/stock-market-today-live-updates.html"
-        },
-        {
-          "title_zh": "聯準會轉鷹 市場指向 12 月可能升息 壓抑風險資產",
-          "title_en": "Hawkish Fed turn points to a likely December rate hike, pressuring risk assets",
-          "summary_zh": "在聯準會會議紀要偏鷹、通膨數據轉熱後，市場已轉為押注 12 月幾乎確定升息 1 碼，CME FedWatch 顯示機率逾九成，部分官員甚至不排除更大幅度。緊縮（而非降息）的政策預期，進一步壓抑全球股市、黃金與加密貨幣，與 AI 評價疑慮形成雙重利空，推升跨市場避險情緒，資金流向高評價科技股的意願明顯下降。",
-          "summary_en": "Markets have swung to pricing a near-certain 25-basis-point Federal Reserve rate hike in December — with CME FedWatch odds cited above 90% — after hawkish Fed minutes and hotter inflation data, with some officials even floating a larger move. The prospect of tighter policy, rather than cuts, added to pressure on equities, gold and crypto worldwide.",
-          "source_name": "BigGo Finance",
-          "source_url": "https://finance.biggo.com/news/6d24bcc3-a21e-4f0a-84b5-b44750c4a0dd"
-        }
-      ]
-    },
-    {
-      "section": "International",
-      "section_zh": "國際",
-      "items": [
-        {
-          "title_zh": "美股重挫 標普與道瓊跌入修正區（2026-11-20）",
-          "title_en": "US stocks slammed as S&P 500 and Dow fall into correction (2026-11-20)",
-          "summary_zh": "美股週五崩跌，那斯達克指數下跌約 5.3% 至 22,617.73 點，標普 500 跌 3.7% 收 6,910.39 點，道瓊跌 1.9% 收 48,147.33 點。此波跌勢使標普與道瓊正式跌入修正區間，那斯達克今年以來轉為翻黑。全週那斯達克累跌約 10%、標普跌 8.6%、道瓊跌 8%，AI 高評價疑慮主導賣壓。",
-          "summary_en": "Wall Street tumbled Friday, with the Nasdaq Composite sliding about 5.3% to 22,617.73, the S&P 500 down 3.7% to 6,910.39 and the Dow off 1.9% to 48,147.33. The drop pushed the S&P 500 and Dow into correction and turned the Nasdaq negative for 2026. For the week the Nasdaq lost about 10%, the S&P 8.6% and the Dow 8%.",
-          "source_name": "FINCHANNEL",
-          "source_url": "https://finchannel.com/nasdaq-falls-5-3-as-sp-500-and-dow-enter-corrections/142573/american-business-trends/stock-prices/2026/11/",
-          "published": "2026-11-20"
-        },
-        {
-          "title_zh": "輝達本週跌幅上看逾一成 AI 疑慮升溫（2026-11-20）",
-          "title_en": "Nvidia on track for a weekly loss of more than 10% as AI doubts mount (2026-11-20)",
-          "summary_zh": "輝達股價週五再度下跌，連續第 7 個交易日走低，全週跌幅上看逾 10%，反映投資人對 AI 高評價的疑慮。同業超微（AMD）同步重挫。作為 AI 指標股，輝達此波回檔凸顯市場對該題材的熱度快速降溫，資金自高本益比半導體股撤出，牽動全球 AI 供應鏈評價與風險偏好。",
-          "summary_en": "Nvidia shares fell again on Friday, extending a seven-session losing streak and putting the stock on course to end the week down more than 10% amid investor concerns over stretched AI valuations. Peer AMD also slumped sharply. The retreat in the AI bellwether underscored how quickly enthusiasm for the trade has cooled.",
-          "source_name": "Yahoo Finance",
-          "source_url": "https://finance.yahoo.com/news/nvidia-stock-on-track-to-end-week-down-more-than-10-amid-investor-concerns-over-ai-valuations-205754686.html",
-          "published": "2026-11-20"
-        },
-        {
-          "title_zh": "金價跌至 2025 年 9 月以來低點 避險賣壓擴散（2026-11-20）",
-          "title_en": "Gold sinks to its lowest since September 2025 as risk-off selling spreads (2026-11-20)",
-          "summary_zh": "12 月黃金期貨週五結算價每盎司 3,515.40 美元，單日下跌約 4.6%、全週跌約 9.5%，為 2025 年 9 月以來最低，避險賣壓蔓延至貴金屬。油價同步走低，西德州原油約 84 美元，受中東出口供給充足影響連續第 3 週下跌，反映資金在高波動環境下重新調整資產配置。",
-          "summary_en": "December gold settled at $3,515.40 an ounce on Friday, down about 4.6% on the day and roughly 9.5% for the week — its lowest since September 2025 — as a broad risk-off move hit precious metals. Oil also fell, with WTI near $84 and crude posting a third straight weekly decline on strong Middle East export flows.",
-          "source_name": "Investrade",
-          "source_url": "https://investrade.com/market-review-november-20-2026/",
-          "published": "2026-11-20"
-        },
-        {
-          "title_zh": "比特幣逼近五個月低點 鷹派聯準會升高 12 月升息預期（2026-11-19）",
-          "title_en": "Bitcoin nears a five-month low as a hawkish Fed lifts December rate-hike bets (2026-11-19)",
-          "summary_zh": "比特幣下跌至近五個月低點，一度跌破 6.3 萬美元，有望連續第 7 週收黑；黃金同步走低，市場在通膨數據偏熱後，押注聯準會 12 月可能升息。政策預期由降息轉向緊縮，明顯削弱市場對風險性資產的胃納，資金轉趨保守，牽動加密貨幣與貴金屬同步承壓。",
-          "summary_en": "Bitcoin slid toward a near five-month low, slipping below the $63,000 area and heading for a seventh straight weekly loss, while gold also fell as traders priced in a likely December Federal Reserve rate hike following hotter inflation data. The shift to expecting tighter policy — rather than cuts — sapped appetite for risk assets across markets.",
-          "source_name": "The Market Periodical",
-          "source_url": "https://themarketperiodical.com/2026/11/19/heres-why-gold-and-bitcoin-prices-are-falling-today",
-          "published": "2026-11-19"
+          "title_zh": "債券與高股息ETF領軍11月除息",
+          "title_en": "Bond and high-yield ETFs headline early-November distributions",
+          "summary_zh": "市場報導指出，11月首周有9檔股債ETF除息，多數為債券ETF，最後買進日吸引存息買盤進場。另元大高股息0056等商品強調兼顧績效與配息，顯示存股族由單純追求殖利率，轉向重視殖利率與資本利得並重的配置思維，高股息商品也更看重長期總報酬表現。",
+          "summary_en": "Market coverage flags nine stock and bond ETFs going ex-dividend in the first week of November, most of them bond ETFs, with the final entitlement dates drawing income-seeking buyers. Separately, high-dividend products such as Yuanta 0056 are emphasizing total-return performance, reflecting a shift among income investors toward funds that balance yield with capital growth.",
+          "source_name": "Yahoo股市",
+          "source_url": "https://tw.stock.yahoo.com/news/%E4%BB%8A%E5%A4%A9%E6%9C%80%E5%BE%8C%E8%B2%B7%E9%80%B2%E6%97%A5-9%E6%AA%9411%E6%9C%88%E9%A6%96%E5%91%A8%E9%99%A4%E6%81%AFetf%E6%90%B6%E5%85%88%E7%9C%8B-024057891.html"
         }
       ]
     }
