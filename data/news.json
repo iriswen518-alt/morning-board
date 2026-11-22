@@ -1,10 +1,10 @@
 {
-  "news_date": "2026-11-22",
+  "news_date": "2026-11-23",
   "tldr": [
-    "台股最近交易日重挫約1,768點、寫史上第七大收盤跌點，外資大舉提款權王台積電。",
-    "輝達示警AI需求強勁、台積電全力增援供應，法人估台積電2026毛利率可守六成。",
-    "金管會推動資產管理中心與ETF國際化，海外股票ETF受益人連九周創新高。",
-    "美股最近交易日跌入修正，那斯達克重挫逾5%、抹去全年漲幅，AI股賣壓重創輝達。"
+    "外資連續調節台股、台指期空單創高，但投信買盤持續承接力守關卡。",
+    "輝達揭露橫跨台灣AI供應鏈的布局，大摩同步上修台積電CoWoS產能預估。",
+    "金管會預告穩定幣發行許可辦法，並調整借券放空措施以穩定波動市場。",
+    "高資產財富管理規模年增約50%，銀行擴充私人銀行與家族治理服務。"
   ],
   "sections": [
     {
@@ -12,22 +12,22 @@
       "section_zh": "股市行情",
       "items": [
         {
-          "title_zh": "台股重挫 寫史上第七大跌點（最近交易日）",
-          "title_en": "Taiwan shares suffer one of their worst sessions on record (2026-11-20)",
-          "summary_zh": "受費城半導體指數單日重挫逾一成拖累，外資大舉調節權值股，加權指數最近交易日急殺約1,768點，為史上第七大收盤跌點；全週累計下跌約7,641點。市場對AI晶片股評價快速修正，權值股成為提款重災區，拖累指數失守多道技術關卡。",
-          "summary_en": "On the latest trading session the TAIEX plunged roughly 1,768 points, its seventh-largest point drop ever, as a slide of more than 10% in the Philadelphia Semiconductor Index triggered heavy foreign selling of heavyweight TSMC. The island's benchmark lost about 7,641 points over the week, reflecting a rapid global de-rating of AI-related chip names.",
-          "source_name": "ETtoday財經",
-          "source_url": "https://finance.ettoday.net/news/3275110",
-          "published": "2026-11-20"
+          "title_zh": "外資賣壓延續 AI晶片評價快速修正（最近交易週）",
+          "title_en": "Foreign funds extend heavy selling as AI-chip valuations reset (2026-11-12)",
+          "summary_zh": "外資近期連續十個交易日淨賣超台股，累計賣超約8,305億元，台指期淨空單更攀升至10萬4,271口的歷史新高，台積電月內一度回測約2,135元的波段低點。法人認為這與年底結帳、資產再平衡及全球AI族群評價修正有關，而非個股基本面轉弱，後市須觀察外資空單是否回補。",
+          "summary_en": "Overseas investors have been net sellers of Taiwan shares for ten straight sessions, with cumulative outflows reaching roughly NT$830.5 billion, while their net short position in TAIEX futures swelled to a record 104,271 contracts. TSMC retested a swing low near NT$2,135 earlier in the month. The persistent de-risking reflects year-end book-closing and a global re-rating of AI-related names rather than a collapse in fundamentals.",
+          "source_name": "旺得富理財網",
+          "source_url": "https://wantrich.chinatimes.com/news/20261112900010-420101",
+          "published": "2026-11-12"
         },
         {
-          "title_zh": "外資賣超收斂 台積電仍遭提款（最近交易日）",
-          "title_en": "Foreign outflows narrow but TSMC still hit hard (2026-11-20)",
-          "summary_zh": "最近交易日外資在集中市場賣超縮小至約94億元，但權值王台積電仍被賣超約1.18萬張，外資已連七個交易日調節台積電。所幸投信買盤進場部分承接，顯示外資避險性賣壓與本土低接買盤相互拉鋸，後市仍須觀察外資動向是否止穩。",
-          "summary_en": "Net foreign selling on the main board eased to about NT$9.4 billion in the latest session, yet overseas funds still offloaded roughly 11,800 lots of TSMC, extending their selling streak in the chipmaker to seven straight sessions. Domestic investment trusts partly absorbed the pressure, highlighting a tug-of-war between foreign risk-off flows and local bargain hunting.",
-          "source_name": "ETtoday財經",
-          "source_url": "https://finance.ettoday.net/news/3275671",
-          "published": "2026-11-20"
+          "title_zh": "內資承接撐盤 指數力守關卡（最近交易週）",
+          "title_en": "Index defends key levels on domestic buying despite tech pressure (2026-11-12)",
+          "summary_zh": "近期加權指數劇烈震盪，盤中一度重挫逾1,100點，電子權值股賣壓沉重，但在投信買盤進場承接下守住43,000點大關，投信買超天數已逾22個交易日。外資避險性賣壓與本土低接買盤相互拉鋸，使指數維持高波動但區間整理格局，市場靜待外資動向止穩訊號。",
+          "summary_en": "The TAIEX has swung violently in recent sessions, at one point plunging over 1,100 points as heavyweight electronics names drew concentrated selling, but it held above the 43,000 level with domestic investment trusts providing support — their buying streak extending past 22 sessions. The tug-of-war between foreign risk-off flows and local bargain hunting has kept the benchmark volatile but range-bound.",
+          "source_name": "優分析uAnalyze",
+          "source_url": "https://uanalyze.com.tw/articles/1978359190",
+          "published": "2026-11-12"
         }
       ]
     },
@@ -36,20 +36,21 @@
       "section_zh": "產業動態",
       "items": [
         {
-          "title_zh": "台積電高層親訪輝達 供應鏈全力增援",
-          "title_en": "TSMC leadership visits Nvidia as supply chain ramps",
-          "summary_zh": "輝達在最新法說會透露，台積電領導層本週造訪並全力支援，財務長Kress指出記憶體與先進封裝供給已獲確保；輝達並將未來營收成長預估上修至約75%，歸因於供應鏈增援。顯示AI晶片需求延續，台灣晶圓代工與先進封裝生態系可望續受惠，供應穩定性成市場焦點。",
-          "summary_en": "Nvidia said on its latest earnings call that TSMC's top management visited this week and is going all-out to support demand, while CFO Colette Kress noted memory and advanced-packaging supply has been secured. Nvidia lifted its forward revenue-growth outlook toward about 75%, citing stronger supply-chain backing — a signal of durable AI chip demand flowing to Taiwan's foundry and packaging ecosystem.",
-          "source_name": "優分析uAnalyze",
-          "source_url": "https://uanalyze.com.tw/articles/2126159978"
+          "title_zh": "輝達揭露橫跨台灣AI生態系的供應鏈布局（近期）",
+          "title_en": "Nvidia unveils broad supply-chain pact spanning Taiwan's AI ecosystem (2026-11-17)",
+          "summary_zh": "輝達公布新協議，涵蓋台積電、鴻海、景碩、矽品、京元電與欣興等供應鏈廠商，擴產時程橫跨2026至2029年。台積電聚焦晶圓製造與先進封裝，鴻海負責次世代GPU與網路平台的系統製造；輝達並表示Vera Rubin NVL72系統已於2026年第3季起量產，採用台積電製程與CoWoS封裝，顯示AI需求續旺、台廠可望延續受惠。",
+          "summary_en": "Nvidia disclosed new arrangements covering TSMC, Hon Hai, Kinsus, SPIL, King Yuan Electronics and Unimicron, with capacity expansion phased across 2026–2029. TSMC and Hon Hai focus respectively on wafer fabrication plus advanced packaging and on system assembly for next-generation GPU and networking platforms. Nvidia said its Vera Rubin NVL72 system began volume shipments in Q3 2026 using TSMC process and CoWoS packaging.",
+          "source_name": "NOWnews",
+          "source_url": "https://www.nownews.com/news/6893357",
+          "published": "2026-11-17"
         },
         {
-          "title_zh": "法人估台積電2026毛利率可守六成",
-          "title_en": "Analysts see TSMC 2026 gross margin holding near 60%",
-          "summary_zh": "法人預估，在先進製程報價與AI需求帶動產能高度利用下，台積電2026全年毛利率可望維持約六成。此看法強化先進製程與先進封裝產能滿載的預期，意味獲利動能有望延續至2027年，與近期晶片股價急挫形成對比，凸顯基本面與股價短線脫鉤。",
-          "summary_en": "Brokerages project TSMC can sustain a full-year 2026 gross margin of around 60%, underpinned by advanced-node pricing and robust AI-driven utilization. The view reinforces expectations that leading-edge and advanced-packaging capacity remain effectively sold out, supporting earnings momentum into 2027 despite the sharp pullback in chip-sector share prices.",
-          "source_name": "Yahoo股市",
-          "source_url": "https://tw.stock.yahoo.com/news/%E6%B3%95%E4%BA%BA-%E5%8F%B0%E7%A9%8D2026%E6%AF%9B%E5%88%A9%E7%8E%87%E9%81%946%E6%88%90-201000570.html"
+          "title_zh": "大摩上修台積電CoWoS產能 輝達博通吃下多數（2026年）",
+          "title_en": "Morgan Stanley lifts TSMC CoWoS forecast as Nvidia, Broadcom book capacity (2026)",
+          "summary_zh": "法人調查預估，台積電2026年CoWoS月產能將提升至約12.5萬片，新增產能幾乎已被輝達與博通預訂，聯發科亦分得部分；摩根士丹利並將輝達2026年CoWoS-L需求由59萬片上修至70萬片。數據強化先進封裝產能滿載預期，意味相關台廠接單動能延續，為AI供應鏈後續營收提供支撐。",
+          "summary_en": "Brokerage surveys project TSMC's CoWoS monthly capacity rising to about 125,000 wafers in 2026, with nearly all incremental output pre-booked by Nvidia and Broadcom and a portion allocated to MediaTek. Morgan Stanley also raised its estimate of Nvidia's 2026 CoWoS-L demand from 590,000 to 700,000 units, reinforcing the view that leading-edge advanced-packaging capacity remains effectively sold out.",
+          "source_name": "股狗網statementdog",
+          "source_url": "https://statementdog.com/news/15201"
         }
       ]
     },
@@ -58,20 +59,22 @@
       "section_zh": "金融業",
       "items": [
         {
-          "title_zh": "金管會推資產管理中心 ETF邁向國際化",
-          "title_en": "FSC pushes Taiwan asset-management hub and ETF globalization",
-          "summary_zh": "金管會主委彭金隆重申，將打造具台灣特色的資產管理中心，並推動本土ETF邁向國際化，相關談話於投資大趨勢論壇場合提出。政策目標在深化資本市場廣度、引導家庭儲蓄進入受管理商品，亦是將台灣定位為亞洲財富與創新交會點整體布局的一環。",
-          "summary_en": "FSC Chairman Peng Chin-lung reiterated the regulator's goal of building an asset-management center with Taiwanese characteristics and internationalizing local ETFs, in remarks around the investment mega-trend forum. The policy aims to deepen capital-market breadth and channel household savings into managed products, part of a broader drive to position Taiwan as an Asian wealth and innovation hub.",
-          "source_name": "經濟日報",
-          "source_url": "https://money.udn.com/money/story/5648/9133312"
+          "title_zh": "金管會預告穩定幣發行許可辦法 並強化洗錢防制（近期）",
+          "title_en": "FSC previews stablecoin licensing rules and tightens AML standards (2026-11-03)",
+          "summary_zh": "金管會銀行局預告「穩定幣發行許可及管理辦法」草案，同步修正金融機構洗錢防制相關規定，為發行機構建立許可制度。此舉顯示主管機關將穩定幣納入監理框架的政策方向，未來銀行與電子支付機構切入數位資產商品的規則將隨之確立，市場關注後續子法與申請門檻。",
+          "summary_en": "The Banking Bureau pre-announced a draft \"Stablecoin Issuance Permit and Management Regulations\" alongside amendments to anti-money-laundering requirements for financial institutions, laying out a licensing regime for issuers. The move signals Taiwan's intent to bring stablecoins into a supervised framework, a step that will shape how banks and payment firms engage with digital-asset products going forward.",
+          "source_name": "金管會",
+          "source_url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2",
+          "published": "2026-11-03"
         },
         {
-          "title_zh": "高雄資產管理專區進駐62家機構",
-          "title_en": "Kaohsiung asset-management zone draws 62 institutions",
-          "summary_zh": "報導指出，高雄資產管理專區已有62家金融機構進駐、高資產客戶逾1萬人；首屆高雄國際金融博覽會聚焦家族辦公室、ETF投資與數位金融。此聚落顯示政策推動台灣財富管理版圖向台北以外擴散，強化南部金融能量，吸引金控業者加碼布局家族辦公室服務。",
-          "summary_en": "Reports say Kaohsiung's asset-management special zone has attracted 62 financial institutions serving more than 10,000 high-net-worth clients, as the inaugural Kaohsiung international financial expo showcased family offices, ETF investing and digital finance. The cluster signals policymakers' effort to broaden Taiwan's wealth-management footprint beyond Taipei and build southern financial capacity.",
-          "source_name": "今周刊",
-          "source_url": "https://www.businesstoday.com.tw/article/category/80393/post/202611060032/"
+          "title_zh": "證期局調整盤中借券賣出與融券成數 穩定市場（近期）",
+          "title_en": "Regulator adjusts intraday short-sale and margin rules to steady market (2026-11-06)",
+          "summary_zh": "金管會證期局宣布調整每日盤中借券賣出委託數量及融券保證金成數等措施，並呼籲投資人審慎操作。在股市波動加劇之際，此一暫時性調整旨在抑制盤中過度賣壓、維持交易秩序，屬主管機關穩定市場的政策工具之一，後續是否延長或鬆綁將視市況而定。",
+          "summary_en": "The Securities and Futures Bureau announced adjustments to daily intraday securities-lending short-sale order quantities and margin ratios for short selling, urging investors toward prudence amid heightened volatility. The temporary tightening aims to curb excessive intraday selling pressure during a turbulent period for equities, part of the regulator's toolkit for maintaining orderly trading.",
+          "source_name": "金管會",
+          "source_url": "https://www.fsc.gov.tw/ch/home.jsp?id=96",
+          "published": "2026-11-06"
         }
       ]
     },
@@ -80,128 +83,20 @@
       "section_zh": "財富管理",
       "items": [
         {
-          "title_zh": "海外股票ETF受益人連九周創高",
-          "title_en": "Overseas-equity ETF holders hit record for a ninth straight week",
-          "summary_zh": "集保中心資料顯示，海外股票ETF受益人連續九周寫新高，其中以美國股票ETF最受青睞。此趨勢反映台灣投資人對全球分散配置的需求升溫，即便本土晶片股重挫，散戶資金仍持續流向海外指數型商品，海外ETF逐漸成為資產配置的新寵，顯示配置思維國際化。",
-          "summary_en": "TDCC data show the number of beneficiaries in overseas-equity ETFs has set fresh highs for nine consecutive weeks, with U.S. stock ETFs the most popular. The trend underscores Taiwanese investors' growing appetite for global diversification; even as domestic chip names tumble, retail flows keep heading toward offshore index products.",
-          "source_name": "Yahoo股市",
-          "source_url": "https://tw.stock.yahoo.com/news/%E6%AF%94%E7%85%A7%E5%9C%8B%E9%9A%9B%E6%B3%95%E8%A6%8F-%E5%BD%AD%E9%87%91%E9%9A%86-%E6%89%93%E9%80%A0%E5%8F%B0%E7%81%A3%E6%88%90%E4%BA%9E%E6%B4%B2%E8%B3%87%E7%94%A2%E7%AE%A1%E7%90%86%E6%A8%9E%E7%B4%90-075753989.html"
-        },
-        {
-          "title_zh": "債券與高股息ETF領軍11月除息",
-          "title_en": "Bond and high-yield ETFs headline early-November distributions",
-          "summary_zh": "市場報導指出，11月首周有9檔股債ETF除息，多數為債券ETF，最後買進日吸引存息買盤進場。另元大高股息0056等商品強調兼顧績效與配息，顯示存股族由單純追求殖利率，轉向重視殖利率與資本利得並重的配置思維，高股息商品也更看重長期總報酬表現。",
-          "summary_en": "Market coverage flags nine stock and bond ETFs going ex-dividend in the first week of November, most of them bond ETFs, with the final entitlement dates drawing income-seeking buyers. Separately, high-dividend products such as Yuanta 0056 are emphasizing total-return performance, reflecting a shift among income investors toward funds that balance yield with capital growth.",
-          "source_name": "Yahoo股市",
-          "source_url": "https://tw.stock.yahoo.com/news/%E4%BB%8A%E5%A4%A9%E6%9C%80%E5%BE%8C%E8%B2%B7%E9%80%B2%E6%97%A5-9%E6%AA%9411%E6%9C%88%E9%A6%96%E5%91%A8%E9%99%A4%E6%81%AFetf%E6%90%B6%E5%85%88%E7%9C%8B-024057891.html"
-        }
-      ]
-    },
-    {
-      "section": "Tax & Regulations",
-      "section_zh": "稅務法規",
-      "items": [
-        {
-          "title_zh": "遺產稅免稅額2027年可能隨通膨調升",
-          "title_en": "Estate-tax exemption may rise with inflation in 2027",
-          "summary_zh": "依累計CPI漲幅估算，報導推估台灣遺產稅免稅額可能自現行1,333萬元調升至約1,492萬元，但確切數字須待財政部年底正式公告。贈與稅免稅額現為244萬元；2026年發生的繼承案件，直系血親卑親屬扣除額維持每人56萬元，實際金額仍以財政部公告為準。",
-          "summary_en": "Based on cumulative CPI gains, reports estimate Taiwan's estate-tax exemption could be lifted from the current NT$13.33 million toward roughly NT$14.92 million for 2027, though the exact figure awaits the Ministry of Finance's year-end announcement. The gift-tax exemption stands at NT$2.44 million, and the lineal-descendant deduction remains NT$560,000 per person for inheritances arising in 2026.",
+          "title_zh": "高資產財富管理規模快速擴張（2026年）",
+          "title_en": "High-asset wealth management scales up sharply (2026)",
+          "summary_zh": "金管會統計，截至2025年11月底高資產財富管理業務規模約2.08兆元、年增約50%，銀行積極擴充針對1億元以上客戶的私人銀行服務。服務內容延伸至以金融資產組合為擔保的Lombard Lending融資及家族治理，反映超高資產客群對整合型、全權委託式理財方案的需求升溫，帶動銀行財管手續費收入動能。",
+          "summary_en": "FSC data put Taiwan's high-asset wealth-management scheme at roughly NT$2.08 trillion as of end-November 2025, up about 50% year-on-year, as banks expand private-banking services for clients with NT$100 million or more. Offerings now extend to Lombard lending against financial-asset portfolios and family-governance services, reflecting rising demand from ultra-high-net-worth clients for integrated, discretionary solutions.",
           "source_name": "經濟日報",
-          "source_url": "https://udn.com/news/story/7243/9197837"
+          "source_url": "https://money.udn.com/money/story/5613/9282175"
         },
         {
-          "title_zh": "遺贈稅新制 身故前2年贈與納入課稅",
-          "title_en": "New estate-tax rule brings two-year gifts into the net",
-          "summary_zh": "依遺產及贈與稅法修正，被繼承人死亡前2年內贈與特定親屬的財產，將以擬制遺產依遺產總額比例計算稅額，且稅負改由受贈人承擔。財政部表示正研擬施行細則等子法規，並修訂相關申報書表與線上申辦系統，督導各地國稅局規劃後續稽徵作業。",
-          "summary_en": "Under amendments to the Estate and Gift Tax Act, assets gifted to specified relatives within two years before death are now treated as deemed estate and taxed in proportion to the total estate, with the tax burden shifting to the recipient. The Ministry of Finance is drafting sub-regulations and updating filing forms and online systems to implement the collection rules.",
-          "source_name": "ETtoday財經",
-          "source_url": "https://finance.ettoday.net/news/3105961"
-        }
-      ]
-    },
-    {
-      "section": "Macro & Policy",
-      "section_zh": "總經政策",
-      "items": [
-        {
-          "title_zh": "央行利率連十次按兵不動",
-          "title_en": "Central bank holds rates for a tenth straight meeting",
-          "summary_zh": "央行在最近一季理監事會維持政策利率（重貼現率）2%不變，為連續第十次凍結。總裁楊金龍指出，考量產業表現分化的「K型經濟」與首購族房貸負擔，政策傾向審慎；市場預期下次12月理監事會前，貨幣政策將維持穩定基調，留意房市與資金狀況。",
-          "summary_en": "At its most recent quarterly board meeting the CBC kept the policy (rediscount) rate unchanged at 2%, marking ten consecutive holds. Governor Yang Chin-long cited a \"K-shaped\" economy with uneven sectoral strength and the mortgage burden on first-home buyers as reasons for caution, signalling steady policy ahead of the next scheduled review in December.",
-          "source_name": "中央社",
-          "source_url": "https://www.cna.com.tw/news/afe/202609170308.aspx"
-        },
-        {
-          "title_zh": "央行上修2026通膨與成長預測",
-          "title_en": "CBC lifts 2026 inflation and growth forecasts",
-          "summary_zh": "央行將2026年CPI年增率預測上修至2.03%、核心CPI至2.16%，理由為服務類價格僵固與消費性電子漲價；2027年CPI預測則降至1.83%。央行並上修2026全年經濟成長預測至雙位數，主要受惠AI相關出口與投資，顯示景氣仍熱、物價壓力並存，為後續政策增添觀察變數。",
-          "summary_en": "The central bank raised its 2026 CPI forecast to 2.03% and core CPI to 2.16%, citing sticky service prices and pricier consumer electronics, while trimming its 2027 CPI view to 1.83%. It also upgraded 2026 full-year GDP growth toward double digits, driven by AI-related exports and investment, underscoring an economy running hot even as price pressures persist.",
-          "source_name": "中央銀行",
-          "source_url": "https://www.cbc.gov.tw/tw/cp-302-192864-4319f-1.html"
-        }
-      ]
-    },
-    {
-      "section": "Global Markets",
-      "section_zh": "國際財經",
-      "items": [
-        {
-          "title_zh": "AI泡沫化疑慮拖累美股並蔓延亞洲",
-          "title_en": "AI-bubble fears drag down U.S. stocks and spill into Asia",
-          "summary_zh": "台灣媒體報導，市場對AI泡沫化的擔憂升溫，即便輝達財報強勁，股價仍先盛後衰、拖累美股走低；此賣壓蔓延至亞洲市場，台股在電子類股領跌下同步重挫。凸顯區域科技供應鏈與AI行情高度連動，國際資金情緒一旦轉弱，亞股難以自外於美股波動。",
-          "summary_en": "Taiwanese media report that mounting worries over an AI bubble soured sentiment: even strong Nvidia earnings failed to hold, with the shares fading after an early pop and dragging U.S. indices lower. The selling pressure spread across Asian markets, with Taiwan's electronics sector leading losses, highlighting how tightly the regional tech complex is tied to the AI trade's swings.",
-          "source_name": "關鍵評論網",
-          "source_url": "https://www.thenewslens.com/article/261425"
-        },
-        {
-          "title_zh": "輝達財報利多僅一日行情 AI股熄火",
-          "title_en": "Nvidia's earnings bounce proves fleeting as AI trade cools",
-          "summary_zh": "報導指出，輝達財報帶來的激勵效應僅維持約一天，AI相關個股隨即熄火，拖累台股重挫近千點、改寫波段新低。此一走勢凸顯AI主導的多頭行情已轉趨脆弱，在評價面疑慮與全球風險情緒轉差下，投資人傾向獲利了結，國際與台股連動的賣壓難以快速止穩。",
-          "summary_en": "Coverage notes that the lift from Nvidia's results lasted barely a day before AI-related shares rolled over, sending Taiwan's benchmark down nearly 1,000 points to a fresh swing low. The episode underscores how fragile the AI-led rally has become, with investors quick to lock in profits amid valuation anxiety and a deteriorating global risk mood.",
-          "source_name": "Statement Dog",
-          "source_url": "https://statementdog.com/news/15090"
-        }
-      ]
-    },
-    {
-      "section": "International",
-      "section_zh": "國際",
-      "items": [
-        {
-          "title_zh": "美股跌入修正 那指抹去2026全年漲幅（最近交易日）",
-          "title_en": "Wall Street plunges into correction as AI selloff erases Nasdaq's 2026 gains (2026-11-20)",
-          "summary_zh": "美股收下疫情初期以來最糟一週。道瓊下跌1.93%收48,147點，標普500跌3.70%收6,910點，那斯達克綜合指數重挫5.28%收22,618點、抹去全年漲幅。標普與道瓊雙雙跌入修正區間，AI與半導體股全面補跌，賣壓擴散至各類股，顯示市場對高評價科技股信心明顯動搖。",
-          "summary_en": "U.S. stocks closed their worst week since the early pandemic. The Dow fell 1.93% to 48,147, the S&P 500 dropped 3.70% to 6,910, and the Nasdaq Composite tumbled 5.28% to 22,618, wiping out its gains for the year. The S&P 500 and Dow entered correction territory as a broad-based rout in AI and semiconductor stocks accelerated.",
-          "source_name": "Fox Business",
-          "source_url": "https://www.foxbusiness.com/markets/wall-street-suffers-historic-losses-dow-sp-500-plunge-correction-territory",
-          "published": "2026-11-20"
-        },
-        {
-          "title_zh": "輝達重挫約13% AI獲利疑慮加深（最近交易日）",
-          "title_en": "Nvidia tumbles about 13% as AI-viability doubts deepen (2026-11-20)",
-          "summary_zh": "那斯達克抹去2026年全部漲幅，投資人質疑AI榮景的獲利模式，權值股輝達下跌約13%領跌。記憶體、晶片與AI基礎設施類股跌勢最重，反映市場對今年帶動大盤的AI族群進行劇烈重新評價，資金撤出速度之快加深了市場的避險氛圍。",
-          "summary_en": "The Nasdaq erased all of its 2026 gains as investors questioned the economics of the AI boom, with Nvidia falling roughly 13% to lead the selloff. Memory, chip and AI-infrastructure names were hit hardest, reflecting a sharp repricing of the sector that had powered much of the year's advance.",
-          "source_name": "TradingKey",
-          "source_url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262316111-nasdaq-falls-ai-stock-selloff-nvidia-sec-probe-tradingkey",
-          "published": "2026-11-20"
-        },
-        {
-          "title_zh": "傳美SEC檢視輝達會計帳務（最近交易日）",
-          "title_en": "SEC said to be examining Nvidia's accounting (2026-11-21)",
-          "summary_zh": "報導指出，美國監管機構正檢視輝達的會計帳務，為這家晶片巨頭增添法律壓力；在AI賣壓下，輝達股價一度下滑至約131美元。此一審查加深投資人對AI行情的疑慮，市場擔憂評價最高的科技族群，後續恐面臨更嚴格的檢視與信心考驗，壓抑風險性資產表現。",
-          "summary_en": "Reports say U.S. regulators are looking into Nvidia's accounting, adding to legal pressure on the chipmaker as its shares slid toward the $131 level during the AI selloff. The scrutiny compounds investor unease about the AI trade and feeds concern that the sector's richest valuations may face tougher questions ahead.",
-          "source_name": "COINOTAG",
-          "source_url": "https://en.coinotag.com/nvidia-nvda-slides-9-percent-131-ai-selloff",
-          "published": "2026-11-21"
-        },
-        {
-          "title_zh": "恐慌指數VIX飆破37 波動率急升（最近交易日）",
-          "title_en": "'Fear index' VIX spikes above 37 as volatility surges (2026-11-20)",
-          "summary_zh": "芝加哥選擇權交易所波動率指數（VIX）自本週初約20點，到週五收盤飆升至37點之上，為數月來最劇烈的跳升，反映股市賣壓加劇。此一攀升顯示市場情緒迅速轉向避險，避險性買盤增加，投資人為後續數週可能的劇烈震盪預作準備，短線波動風險明顯升高。",
-          "summary_en": "The Cboe Volatility Index jumped from around 20 at the start of the week to above 37 by Friday's close, its sharpest spike in months, as the equity rout intensified. The surge signals a rapid shift to risk aversion, with hedging demand climbing and investors bracing for further swings in the weeks ahead.",
-          "source_name": "Charles Schwab",
-          "source_url": "https://www.schwab.com/learn/story/market-volatility",
-          "published": "2026-11-20"
+          "title_zh": "調查揭台灣富裕家族傳承共識不足（2026年）",
+          "title_en": "Study flags wealth-governance gap among Taiwan's affluent families (2026)",
+          "summary_zh": "北富銀調查發現，僅約16.9%家族對財富治理達成共識，因而倡議結合投資、保險、信託、融資與家族辦公室的「財富藍圖」。KPMG另估1億元以上高資產家戶由2023年9.3萬戶增至2025年11.8萬戶，且對私募股權、私募信貸等另類投資興趣上升，顯示傳承規劃與另類配置成為財管業者的新兵家必爭之地。",
+          "summary_en": "A North Fubon survey found only about 16.9% of wealthy families have reached consensus on wealth governance, prompting the bank to promote a \"wealth blueprint\" combining investment, insurance, trusts, financing and family-office services. KPMG separately estimated the number of households holding NT$100 million or more rose from 93,000 in 2023 to 118,000 in 2025, with alternative assets such as private equity and private credit gaining traction.",
+          "source_name": "聯合新聞網",
+          "source_url": "https://udn.com/news/story/7238/9585792"
         }
       ]
     }
