@@ -1,11 +1,149 @@
 {
-  "built_at": "2026-11-23T01:00",
+  "built_at": "2026-11-23T06:24",
   "source": "鉅亨網（cnyes）",
   "categories": [
     {
       "key": "headline",
       "label": "鉅亨頭條",
       "items": [
+        {
+          "news_id": "6669872",
+          "title": "高盛為馬斯克「操作」融資買GPU！採用公司債與ABS混合架構",
+          "title_en": "Goldman Sachs Helps Musk Secure Financing for GPU Purchase Using Hybrid Corporate Bond and ABS Structure",
+          "publish_at": 1795385403,
+          "url": "https://news.cnyes.com/news/id/6669872",
+          "paras": [
+            "高盛集團(GS-US) 與阿波羅全球管理公司（Apollo Global Management）上周四（19日）協助馬斯克旗下SpaceX(SPCX-US) 完成約320億美元債券定價，這筆交易是SpaceX總額約440億美元融資計畫的核心部分，也為科技業如何籌措龐大人工智慧（AI）晶片採購資金提供新的融資模式。",
+            "這批債券結合公司債與資產支持證券（ABS）的特性，是高盛耗時一年多設計的融資方案，目的是在不大幅增加企業資產負債表負擔的情況下，為價格昂貴的AI晶片取得資金。",
+            "儘管獲得貝萊德(BLK-US) 、Pimco等大型機構認購，SpaceX仍須支付相當高的融資成本。",
+            "上周市場對AI產業成長前景的疑慮升高，拖累全球股市，美股下跌8.6%。隨著支撐全球經濟的AI基礎建設逐漸逼近融資市場的承受極限，SpaceX這筆交易也受到關注，可能成為其他科技巨頭未來採購晶片時參考的融資範例。",
+            "AI晶片融資面臨兩難\n\nAI晶片融資一直是市場難題。晶片採購成本高昂，但使用壽命僅有數年，企業若透過傳統公司債籌資，可能推升整體負債，進而影響信用評等，因此不少買家對此有所顧慮。",
+            "改以ABS等複雜金融工具籌資，雖有助於避免新增債務直接衝擊信用評等，卻也面臨市場規模不足的問題。",
+            "Diameter的Goodwin估計，未來市場需要採購約1.5兆美元的晶片，其中大部分將仰賴債務融資。在現有信貸市場中，規模約8.3兆美元的美國投資級公司債市場，是少數具備相近承接能力的資金來源。",
+            "摩根大通銀行(JPM-US) 分析師今年6月在報告中指出，找到合適的晶片融資模式是一個價值數十億美元的問題。隨著AI晶片資金需求龐大，但五年期資金供給相對有限，市場勢必需要更具創意的融資方式。",
+            "高盛設計新架構 投資人須預先投入資金\n\n知情人士透露，高盛今年夏天向SpaceX提出一套融資架構，由特殊目的載體（SPV）負責採購輝達(NVDA-US) 晶片，再發行債券籌資，並透過與SpaceX簽訂約五年的租賃合約，以租金收入償還債務。",
+            "這套架構本質上屬於ABS，但保留部分傳統公司債的特徵，包括配置美國證券統一識別碼（CUSIP），讓專注於高評級公司債的投資人也能參與。",
+            "相較於先前協助Anthropic(ANT-US) 擴充算力、規模達350億美元的「Big Sky」融資計畫，高盛這次也調整了資金運作流程。",
+            "Big Sky採取私募配售方式，先由投資人承諾出資，待設備到位後再分階段動用資金，債券之後才轉換為可供更多機構交易的形式。這種分階段安排雖能配合設備交付進度，卻增加交易複雜度，也讓習慣隨時買賣公司債的投資人較難參與。",
+            "SpaceX採用的方案則要求投資人一開始就全額出資。晶片交付前，資金會存放在專用帳戶，並可配置美國短期公債等短期工具，利用投資收益抵銷設備到位前的融資成本。",
+            "待GPU陸續交付後，帳戶資金才會撥出，用於採購晶片並出租給SpaceX。由於債券在發行後即可供合格機構投資人交易，不必等待分階段提款，流程也更接近傳統公司債市場。",
+            "貝萊德、Pimco認購 SpaceX融資成本偏高\n\nSpaceX此次整體融資規模約440億美元，涵蓋優先及次級部分。知情人士表示，參與認購的買方包括保險公司、結構型信貸投資人、資產管理機構及退休基金。",
+            "上周四完成定價的約320億美元債券中，約60億美元已於本周透過銀團分銷。SpaceX披露，交易支持者包括貝萊德、KKR(KKR-US) 及高盛資產管理。知情人士則指出，Pimco認購約40億美元，Blue Owl (OBDC-US) 也是主要投資人之一。",
+            "不過，為了吸引投資人參與，SpaceX必須提供較高的融資溢價。上周發售給公司債投資人的證券，定價利差較SpaceX今年稍早發行的同期限債券高出約100個基點。",
+            "更令市場關注的是，SpaceX先前發行的舊債近期在次級市場持續走跌，跌幅擴大已令債券交易員感到意外。"
+          ],
+          "paras_en": [
+            "Goldman Sachs Group (GS-US) and Apollo Global Management assisted SpaceX (SPCX-US) in pricing approximately $32 billion in bonds last Thursday (19th), a key component of SpaceX’s roughly $44 billion financing plan and a new model for how the tech industry can raise funds for expensive AI chip purchases.",
+            "This tranche blends corporate bonds with asset‑backed securities (ABS) and was designed over more than a year by Goldman to secure capital for costly AI chips without significantly loading the company’s balance sheet.",
+            "Despite subscriptions from large institutions such as BlackRock (BLK-US) and Pimco, SpaceX still faces high financing costs.",
+            "Last week, market concerns about AI growth prospects weighed on global equities, dragging U.S. stocks down 8.6%. As AI infrastructure approaches the limits of the financing market, this deal has attracted attention and may serve as a reference for other tech giants’ future chip procurement financing.",
+            "AI chip financing faces a dilemma: the high cost of chips and their short lifespan mean that traditional corporate bonds could raise overall debt and affect credit ratings, causing buyers to hesitate.",
+            "Using complex instruments like ABS can avoid direct debt impact on credit ratings but suffers from insufficient market size.",
+            "Goodwin of Diameter estimates that the market will need to purchase about $1.5 trillion in chips, most of which will rely on debt financing. The U.S. investment‑grade corporate bond market, roughly $8.3 trillion, is one of the few sources with comparable capacity.",
+            "JPMorgan Chase analysts in a June report said finding a suitable chip‑financing model is a multi‑billion‑dollar problem. With huge demand for AI chip funding but limited five‑year supply, the market will need more creative financing methods.",
+            "Goldman proposed a new structure this summer, where a special purpose vehicle (SPV) would purchase NVIDIA (NVDA-US) chips, issue bonds to raise funds, and use a five‑year lease agreement with SpaceX to repay the debt through rental income.",
+            "The structure is essentially an ABS but retains some traditional corporate bond features, including a CUSIP, allowing investors focused on high‑rated corporate bonds to participate.",
+            "Compared to Goldman’s earlier assistance to Anthropic (ANT-US) for the $35 billion “Big Sky” expansion, Goldman adjusted the funding workflow this time.",
+            "Big Sky used a private placement, with investors committing funds first, then drawing them in stages after equipment delivery, and only later converting bonds into tradable instruments. This staged approach matched delivery but increased complexity and made it harder for investors used to trading corporate bonds on the fly.",
+            "SpaceX’s scheme requires investors to pay the full amount upfront. Before chip delivery, the money sits in a dedicated account and can be invested in U.S. short‑term Treasury instruments, using investment returns to offset pre‑delivery financing costs.",
+            "Once GPUs are delivered, the account funds are released to purchase chips and lease them to SpaceX. Because the bonds can be traded by qualified institutional investors immediately after issuance, there is no need for staged withdrawals, making the process closer to a traditional corporate bond market.",
+            "SpaceX’s total financing is about $44 billion, covering senior and subordinated tranches. Participants include insurers, structured credit investors, asset managers, and pension funds.",
+            "Of the $32 billion priced last Thursday, about $6 billion has already been distributed through a syndicate this week. SpaceX disclosed that supporters include BlackRock, KKR (KKR-US), and Goldman’s asset management arm, while Pimco subscribed roughly $4 billion and Blue Owl (OBDC-US) was also a major investor.",
+            "To attract investors, SpaceX had to offer a higher financing premium. The bonds sold to corporate‑bond investors last week had a pricing spread about 100 basis points higher than SpaceX’s earlier same‑term issuance.",
+            "Even more attention was drawn by the recent decline in SpaceX’s older bonds on the secondary market, with the drop widening unexpectedly, surprising bond traders."
+          ]
+        },
+        {
+          "news_id": "6669871",
+          "title": "5000億美元AI晶片融資陷分歧：輝達擔保比例成焦點",
+          "title_en": "$500 Billion AI Chip Financing Faces Dispute: Nvidia's Guarantee Ratio Becomes Focal Point",
+          "publish_at": 1795384803,
+          "url": "https://news.cnyes.com/news/id/6669871",
+          "paras": [
+            "《華爾街日報》上週引述知情人士報導，由阿波羅、黑石、貝萊德、布魯克菲爾德、高盛及KKR等機構參與的5000億美元AI晶片融資計畫，目前仍停留在籌資目標階段。各方簽署的諒解備忘錄(MOU)僅列出目標金額、客戶類型及潛在信用支持方式，並未規定必須籌足5000億美元，輝達亦未預先承諾具體擔保額度。該計畫旨在協助OpenAI、Anthropic等AI企業融資採購輝達晶片",
+            "報導指出，輝達前執行長黃仁勳8月曾表示，願意提供的信用支持上限為專案成本的25%，但隨著貸款人對低評級AI企業趨於謹慎，部分投資者要求殘值擔保比例超過25%才願意出資。",
+            "對比之下，其他晶片融資案的擔保比例更高。博通為Anthropic規模350億美元的「Project Big Sky」提供約85%殘值擔保，後續630億美元的「Project North Star」涵蓋比例也略低於75%。",
+            "殘值擔保意味著，若借款人違約且晶片處置價值不足以涵蓋約定金額，供應商恐須承擔額外償付責任。由於AI晶片迭代迅速，貸款人還需評估設備貶值、合約現金流及到期再融資風險，對輝達而言，提供擔保恐意味著揹負多年潛在負債。",
+            "輝達正調整客戶融資政策。《華爾街日報》此前報導指黃仁勳上月在柏林會晤新雲廠商時，要求對方先取得客戶預付款，再爭取GPU配額。",
+            "過去，輝達曾透過承租客戶持有的晶片提供收入合約支持，但部分相關交易已暫停。輝達臨時執行長克蕾絲上週二在財報電話會上表示，公司正嚴格評估後續投資、承諾與擔保，顯示對擴大信用支持轉趨審慎。",
+            "儘管如此，晶片融資市場整體仍在擴張。根據高盛統計，今年來已有480億美元晶片及算力融資、800億美元資料中心債券發行，並將2027年全球AI專案融資規模預測從3000億美元上調至5450億美元。輝達與華爾街合作的首筆晶片抵押融資仍在談判，預計最早2027年才能完成。"
+          ],
+          "paras_en": [
+            "The Wall Street Journal last week, citing sources, reported that a $500 billion AI chip financing plan involving institutions such as Apollo, Blackstone, BlackRock, Brookfield, Goldman Sachs and KKR is still only at the fundraising target stage. The memorandum of understanding (MOU) signed by the parties lists only the target amount, client types and possible credit support mechanisms, without requiring the full $500 billion to be raised, and Nvidia has not pre‑committed any specific guarantee amount. The plan is intended to help AI companies such as OpenAI and Anthropic finance purchases of Nvidia chips.",
+            "The report notes that former Nvidia CEO Jensen Huang said in August that he was willing to provide credit support up to 25% of project costs, but as lenders become more cautious toward lower‑rated AI firms, some investors are demanding residual‑value guarantees above 25% before they will fund the deals.",
+            "By contrast, other chip‑financing deals feature higher guarantee ratios. Broadcom is providing roughly an 85% residual‑value guarantee for Anthropic’s $35 billion “Project Big Sky,” and the subsequent $63 billion “Project North Star” carries a coverage ratio just under 75%.",
+            "A residual‑value guarantee means that if the borrower defaults and the disposition value of the chips is insufficient to cover the agreed amount, the supplier may have to assume additional repayment liability. Because AI chips iterate rapidly, lenders must also assess equipment depreciation, contract cash flows and rollover‑risk at maturity; for Nvidia, offering guarantees could mean assuming years of potential debt.",
+            "Nvidia is adjusting its customer financing policy. The Wall Street Journal previously reported that Huang, during a meeting with a new cloud provider in Berlin last month, asked the counterpart to secure customer pre‑payments before seeking GPU allocations.",
+            "In the past, Nvidia supported revenue contracts by leasing chips held by customers, but some of those transactions have been paused. Interim CEO Crestron (Kris) said on Tuesday’s earnings call that the company is rigorously evaluating future investments, commitments and guarantees, indicating a more cautious stance toward expanding credit support.",
+            "Nevertheless, the overall chip‑financing market continues to expand. According to Goldman Sachs, to date this year there have been $48 billion in chip and compute financing and $80 billion in data‑center bond issuances, and the forecast for global AI project financing in 2027 has been raised from $300 billion to $5.45 trillion. The first chip‑collateral financing deal between Nvidia and Wall Street is still under negotiation and is not expected to close before 2027."
+          ]
+        },
+        {
+          "news_id": "6669876",
+          "title": "〈台股盤前要聞〉金管會：23日起全面禁平盤以下放空、10月外銷訂單連21紅",
+          "title_en": "Taiwan Stock Market Pre‑Market News: Financial Supervisory Commission Bans Short‑Selling Below Par from the 23rd, October Export Orders Rise for the 21st Consecutive Month",
+          "publish_at": 1795381816,
+          "url": "https://news.cnyes.com/news/id/6669876",
+          "paras": [
+            "台股盤前要聞 \n\n1.台股近期跌跌不休，單周累計重挫 7,641.83 點、跌幅達 17.5%，20日加權指數收在 36,033.29 點。為遏止市場非理性恐慌並維護交易秩序，金管會緊急宣布祭出第三波穩定股市措施，自 23日起實施「全面禁止平盤以下放空」等五大救市新制，盼能有效提振市場信心。",
+            "2.經濟部統計處20日公布 115 年 10 月外銷訂單金額一舉衝上 1238.2 億美元，不僅較上月增加 96.1 億美元或成長 8.4%，更較去年同月大增 543.9 億美元或激增 78.3%，連續第 3 個月站穩千億美元大關並改寫歷年單月新高紀錄。累計今年 1 至 10 月外銷訂單達 9430.2 億美元，較去年同期大幅增加 3484.9 億美元，年增幅達 58.6%，整體接單表現極為強勁。",
+            "3.電子權值股、傳產20日全倒，上市櫃365家公司慘亮綠燈，即便金管會祭出「有條件禁空令」，仍擋不住沈重賣壓，台股今天早盤以37646.13點開低後一路下殺，一度跌至35738.68點，終場跌2393.6點或6.23%，創史上第三大跌點，收36033.29點，成交量8773.5億元。台股本周狂瀉7641.83點，跌幅17.5%，周線收黑。",
+            "4.電子權值股、傳產20日全倒，大盤跌2393.6點或6.23%，創史上第三大跌點，收36033.29點，成交量8773.5億元。外資持續提款，賣超94.13億元，連5賣，並再度大舉砍出0050，上周大賣0050超過30萬張，不過反手加碼聯電與面板雙虎。",
+            "5.上海航交所20日公布最新一期上海出口集裝箱運價指數(SCFI)，較上周續跌68.55點至3503.78點，周減1.92%，為連3周走跌，並續創9月中旬以來低，反映傳統淡季，尤其美國線運價續弱，顯示市場需求轉趨保守，貨攬業者不諱言，運價下修壓力可能延續至12月中旬。",
+            "第三波救市來了！金管會：23日起全面禁平盤下放空、籲法人停止出借股票",
+            "〈外銷訂單〉21紅！10月外銷訂單1238億美元連3月破千億 續創單月新高",
+            "限空令2.0擋不住賣壓狂瀉2393點創史上第三大跌點 上周跌逾7000點跌幅17.5%",
+            "外資再提款94億元 續砍0050上周大賣逾30萬張",
+            "〈航運指數〉SCFI連3跌反映傳統淡季 恐修正至12月中旬",
+            "台股單周重挫7641點！上市櫃市值蒸發逾27兆元 全球市值排名退居第7",
+            "央行外匯局出面信心喊話 出口大廠在賣匯 匯市供需趨平衡了",
+            "台股跌跌不休 林修銘信心喊話：基本面穩健、AI中長期仍看俏",
+            "華碩Q4放量出貨輝達Vera Rubin NVL72 全方位AI工廠示範架構亮相SC26",
+            "中華電信董事長簡志誠：持續爭取AWS合作 建議調整28GHz頻譜",
+            "綠白聯手也擋不住！普發2萬條例三讀過關 最快預算生效3個月發放"
+          ],
+          "paras_en": [
+            "The Taiwan stock market has been sliding continuously, with a weekly cumulative drop of 7,641.83 points, a decline of 17.5%. On the 20th, the weighted index closed at 36,033.29 points. To curb irrational panic and preserve orderly trading, the Financial Supervisory Commission (FSC) urgently announced a third round of market‑stabilising measures, effective from the 23rd, including a \"comprehensive ban on short‑selling below the par price\" among five new rescue rules, hoping to restore investor confidence.",
+            "The Ministry of Economic Affairs’ Statistics Department reported on the 20th that October 2023 export orders surged to USD 123.82 billion, up by USD 9.61 billion (8.4%) from the previous month and up by USD 54.39 billion (78.3%) year‑on‑year, marking the third consecutive month above the USD 100 billion threshold and setting a new single‑month record. Cumulative export orders for January‑October this year reached USD 943.02 billion, an increase of USD 348.49 billion (58.6%) over the same period last year, indicating extremely strong order intake.",
+            "On the 20th, both electronic heavyweight stocks and traditional‑industry stocks plunged, and all 365 listed companies flashed red lights. Even with the FSC’s conditional short‑selling ban, heavy selling pressure persisted. The market opened lower at 37,646.13 points, fell sharply to a low of 35,738.68 points, and closed down 2,393.6 points or 6.23% at 36,033.29 points – the third‑largest point drop in history – with a turnover of NT$877.35 billion. This week the market plunged 7,641.83 points, a 17.5% decline, ending the week in the red.",
+            "Electronic heavyweight stocks and traditional‑industry stocks collapsed on the 20th, dragging the index down 2,393.6 points or 6.23%, the third‑largest point drop ever, closing at 36,033.29 points with NT$877.35 billion traded. Foreign investors continued to pull out, net‑selling NT$94.13 billion, selling five consecutive days, and again heavily shorted the 0050 ETF. Last week they sold more than 300,000 contracts of 0050, but simultaneously added positions in United Microelectronics Corp. and the two major panel makers.",
+            "The Shanghai Shipping Exchange released the latest Shanghai Container Freight Index (SCFI) on the 20th, which fell another 68.55 points to 3,503.78 points, a weekly decline of 1.92%. This marks the third consecutive week of drops and the lowest level since mid‑September, reflecting the traditional off‑season, especially weak rates on U.S. routes. Market participants note that downward pressure on freight rates could persist until mid‑December.",
+            "The third wave of market‑rescue measures has arrived! The FSC announced that starting on the 23rd, short‑selling below the par price will be completely prohibited, and it urges institutional investors to stop lending shares.",
+            "Export Orders Hit a 21‑Month High! October export orders reached USD 123.8 billion, marking the third consecutive month above the USD 100 billion mark and setting a new monthly record.",
+            "The short‑selling ban 2.0 could not stop the selling avalanche: a 2,393‑point drop created the third‑largest point decline in history, with last week’s loss exceeding 7,000 points and a 17.5% weekly decline.",
+            "Foreign investors withdrew another NT$94 billion and continued to slash the 0050 ETF, having sold over 300,000 contracts last week.",
+            "Shipping Index: SCFI fell for the third straight week, reflecting the traditional off‑season, with expectations of rate adjustments extending into mid‑December.",
+            "The Taiwan stock market suffered a weekly loss of 7,641 points! The market‑capitalisation of listed companies erased more than NT$27 trillion, dropping Taiwan’s global market‑cap ranking to seventh place.",
+            "The Central Bank’s Foreign Exchange Bureau stepped in with confidence‑boosting remarks, noting that major exporters are selling foreign currency, bringing supply and demand in the FX market back toward balance.",
+            "The market keeps sliding. Lin Hsiu‑Ming voiced confidence: fundamentals remain solid and AI’s medium‑ to long‑term outlook stays bullish.",
+            "ASUS announced a Q4 surge in shipments of NVIDIA’s Vera Rubin NVL72 GPUs, showcasing a full‑scale AI factory demonstration architecture at SC26.",
+            "Chunghwa Telecom Chairman Chien Chih‑Cheng said the company continues to pursue cooperation with AWS and recommends adjusting the 28 GHz spectrum allocation.",
+            "Even a green‑white coalition could not stop the momentum: the universal dividend bill of NT$20,000 passed its third reading, and the budget is expected to take effect within three months of enactment."
+          ]
+        },
+        {
+          "news_id": "6669878",
+          "title": "輝達換帥＋AI融資急凍　華爾街開始重新定價「Fed鷹派邏輯」",
+          "title_en": "Nvidia Leadership Change and AI Financing Freeze Prompt Wall Street to Re‑price “Fed Hawk Logic”",
+          "publish_at": 1795381258,
+          "url": "https://news.cnyes.com/news/id/6669878",
+          "paras": [
+            "AI晶片巨擘輝達11月12日宣布黃仁勳即日起辭去執行長職務，董事會17日明確表態無意讓黃仁勳回任，原財務長克蕾絲已臨時接棒，董事會同步啟動外部遴選程序。",
+            "黃仁勳任內曾撮合六大機構搭建逾5000億美元AI基礎設施融資平台，並為OpenAI資料中心項目提供1050億美元擔保。自克蕾絲上任後，身兼財務長的她已將擔保上限從約2500億美元大幅壓縮至1050億美元。",
+            "摩根大通分析師判斷，既有承諾將履行，但新交易將需更長時間或更高補償條件，AI基建融資邊際成本正持續攀升，分析師普遍預期繼任者在這類交易上會明顯更保守。",
+            "這場人事地震也牽動總體經濟。TD Economics已將AI熱潮列為通膨壓力來源之一。若黃仁勳離場導致融資平台新增交易放緩、邊緣AI項目延後，聯準會(Fed)評估「需求是否過熱」時將面臨更不確定圖景。",
+            "放貸機構與信用投資人如今要求，未來任何融資必須以借款方客戶合約或財務擔保為後盾，而非僅憑輝達背書。",
+            "不過，黃仁勳離開不會讓Fed下月放棄升息。唯有未來兩季AI資本開支融資條件持續收緊、核心通膨出現連續下行訊號，Fed才有空間從「升息」轉向「暫停」。"
+          ],
+          "paras_en": [
+            "Nvidia, the AI chip giant, announced on November 12 that Jensen Huang will step down as CEO effective immediately, and the board on the 17th made clear it has no intention of reinstating him; former CFO Colette Kress has temporarily taken over, and the board has simultaneously launched an external search for a new CEO.",
+            "During Huang’s tenure he helped orchestrate a financing platform for AI infrastructure worth over $500 billion involving six major institutions, and provided a $105 billion guarantee for OpenAI’s data‑center project. Since Kress assumed the CFO role she has sharply reduced the guarantee ceiling from roughly $250 billion to $105 billion.",
+            "JPMorgan analysts judge that existing commitments will be honoured, but new deals will require longer timelines or higher compensation terms, as the marginal cost of AI‑infrastructure financing continues to rise; analysts generally expect the successor to be markedly more conservative on such transactions.",
+            "The personnel shock also reverberates through the broader economy. TD Economics has added the AI boom to its list of inflation‑pressure sources. If Huang’s departure slows new deals on the financing platform and pushes back edge‑AI projects, the Fed’s assessment of whether demand is overheating will face a more uncertain picture.",
+            "Lending institutions and credit investors now demand that any future financing be backed by the borrower’s customer contracts or financial guarantees, rather than relying solely on Nvidia’s endorsement.",
+            "Nevertheless, Huang’s exit will not cause the Fed to abandon rate hikes next month. Only if AI‑related capital‑expenditure financing conditions tighten further over the next two quarters and core inflation shows a sustained downward trend will the Fed have room to shift from “rate‑raising” to a “pause.”"
+          ]
+        },
         {
           "news_id": "6669881",
           "title": "〈台股風向球〉連環套賣壓需時間換空間 長期投資人心態先穩住",
@@ -121,114 +259,6 @@
             "Before the meeting, the South Korean market fell sharply again on Friday (20); the KOSPI plunged 5.2% to a ten‑month low, the KOSDAQ also dropped more than 5%, with the KOSPI closing at 4,869.96 points, down 267.93 points or 5.21%, breaking the 5,000‑point barrier for the first time in three trading days.",
             "The South Korean market is viewed as a bellwether for AI investment; as concerns over valuations and rising debt deepen, investors are withdrawing their funds."
           ]
-        },
-        {
-          "news_id": "6669853",
-          "title": "歐盟擬向科技巨頭課徵3%數位稅 2.04兆歐元預算修訂案引發法德分歧",
-          "title_en": "EU Plans 3% Digital Tax on Tech Giants, 2.04 Trillion‑Euro Budget Revision Sparks France‑Germany Rift",
-          "publish_at": 1795345202,
-          "url": "https://news.cnyes.com/news/id/6669853",
-          "paras": [
-            "歐洲理事會主席科斯塔(Antonio Costa)周六(21日)提出歐盟 2028 至 2034 年長期預算(MFF)最新修訂草案。為了減輕各國直接財政負擔，科斯塔主張向全球大型科技企業課徵 3% 數位服務稅，並同步開徵電子廢棄物稅與提高菸草稅。",
-            "然而，新草案將歐盟執委會(European Commission)原先規劃的預算大砍 2,040 億歐元，引發法國與德國等核心成員國在「削減支出」與「維持產業與農業補貼」上的強烈對立。",
-            "課徵3%數位稅\n\n科斯塔本次提出的全新收入管道，核心在於建立歐盟的「自有資源」，用以補足財政缺口並降低成員國的年度撥款壓力。根據草案內容，數位服務稅將鎖定雙重門檻企業：在歐盟境內年度數位業務營收達 5,000 萬歐元以上，且全球年度總營收超過 7.5 億歐元的大型科技巨頭。",
-            "符合標準的企業，需就其在歐盟境內的線上廣告、數位中介服務以及使用者生成數據等業務，按年度淨營業額的 3% 繳納稅款。",
-            "此外，歐盟計畫針對電子廢棄物徵稅、調高菸草稅，並探索加密資產稅與無線電頻譜拍賣收益。歐盟理事會估算，這些新開闢的自有資源每年可帶來約 600 億歐元的進帳。",
-            "針對外界疑慮，科斯塔特別強調：「這項稅收絕非針對任何特定公司或國家。」不過外界普遍認為，此舉恐將引發美國總統川普政府的強烈反彈。",
-            "成員國陣營強烈對立\n\n儘管科斯塔對草案寄予厚望，宣稱「我相信這項提案能讓我們更接近最終協議」，但修訂草案一出，隨即遭到節儉派成員國與農業支持派雙向夾擊。",
-            "以德國為首的節儉派國家認為預算規模依然過重。德國總理梅爾茨(Friedrich Merz)直言，預算的「整體規模依然過高」，並強調「幾乎所有成員國」都必須在國內進行財政整頓。瑞典歐洲事務部長羅森克蘭茨(Jessica Rosencrantz)在社群媒體 X 上警示：「我們距離達成妥協還有很長一段路要走。」主張歐盟應將重點放在削減支出與減輕各國出資負擔上。",
-            "身為歐盟第二大經濟體及淨出資國的法國，則強烈反對過度削減預算。法國總統馬克宏(Emmanuel Macron)辦公室發表聲明，批評提案「令人深感失望」，特別是在共同農業政策(CAP)與農民收入支持方面遠低於需求，強調「就目前而言，歐洲理事會主席的這份提案無法做為達成協議的基礎」。",
-            "這份修訂草案將成為下周布魯塞爾歐盟領袖峰會的交鋒焦點。科斯塔極力爭取在 2026 年 12 月底前達成共識，主因是擔心談判若拖延至 2027 年，隨著法國等地將迎來大選，疑歐派政黨的崛起可能讓未來協商更難達成共識。"
-          ],
-          "paras_en": [
-            "EU Council President Antonio Costa on Saturday (the 21st) presented the latest revision of the EU’s 2028‑2034 long‑term budget (MFF). To ease the direct fiscal burden on member states, Costa proposes a 3% digital services tax on large global tech firms, alongside new e‑waste and higher tobacco taxes.",
-            "However, the new draft slashes the European Commission’s original budget by €204 billion, sparking a sharp clash between core members such as France and Germany over “spending cuts” versus “maintaining industry and agricultural subsidies.”",
-            "A 3% Digital Tax\nCosta’s new revenue stream aims to create an EU “own resource” to fill fiscal gaps and reduce annual allocations to member states. Under the draft, the digital services tax will target firms that meet a dual threshold: annual digital revenues of at least €50 million within the EU and total worldwide annual turnover exceeding €750 million.",
-            "Qualifying companies must pay 3% of their net annual turnover derived from online advertising, digital intermediary services and user‑generated data within the EU.",
-            "In addition, the EU plans to levy a tax on e‑waste, raise tobacco duties, and explore taxes on crypto assets and revenues from radio‑spectrum auctions. The Council estimates these new own‑resource streams could generate roughly €60 billion a year.",
-            "Addressing external concerns, Costa stressed, “This tax is not aimed at any specific company or country.” Nonetheless, observers widely expect a strong backlash from the United States under President Trump’s administration.",
-            "Member‑State Camps Clash\nAlthough Costa is optimistic, saying “I believe this proposal brings us closer to a final agreement,” the revised draft was immediately caught between fiscally‑conservative states and those backing agricultural support.",
-            "Led by Germany, the fiscally‑conservative bloc argues the budget remains too large. German Chancellor Friedrich Merz bluntly said the “overall size is still too high” and stressed that “almost all member states” must tighten domestic finances. Sweden’s European Affairs Minister Jessica Rosencrantz warned on X that “we have a long way to go before reaching a compromise,” urging the EU to focus on cutting spending and easing national contributions.",
-            "France, the EU’s second‑largest economy and net contributor, strongly opposes deep cuts. President Emmanuel Macron’s office issued a statement calling the proposal “deeply disappointing,” especially on the Common Agricultural Policy and farmer income support, and stressed that “as it stands, the Council President’s proposal cannot serve as a basis for an agreement.”",
-            "The revised draft will be the focal point of next week’s EU leaders summit in Brussels. Costa is pushing to secure a consensus by the end of December 2026, fearing that delays into 2027 could coincide with elections in France and elsewhere, potentially empowering Eurosceptic parties and making future negotiations even harder."
-          ]
-        },
-        {
-          "news_id": "6669857",
-          "title": "華爾街日報：民主黨擬定針對川普調查重點 白宮批政治騙局拒配合",
-          "title_en": "Wall Street Journal: Democrats Draft Investigation Focus on Trump; White House Calls It a Political Scam and Refuses to Cooperate",
-          "publish_at": 1795341605,
-          "url": "https://news.cnyes.com/news/id/6669857",
-          "paras": [
-            "據《華爾街日報》報導，預計接任美國眾議院監督委員會主席的加州民主黨聯邦眾議員賈西亞(Robert Garcia)，日前向前總統川普家族及政府官員發出12封保存紀錄通知信，預告民主黨在明年新一屆國會取得傳票權後將發動密集調查。",
-            "賈西亞公開宣示：「這僅僅是個開始。」",
-            "民主黨擬定的調查重點鎖定四大領域：",
-            "一、家族商業利益：信中指控小唐納·川普(Donald Trump Jr.)與埃里克·川普(Eric Trump)利用家族加密貨幣企業 World Liberty Financial 謀利。對此，該公司發言人反駁調查是「毫無根據的政治迫害」，強調公司符合所有法律。此外，川普女婿庫許納(Jared Kushner)收取的高額費用與前大使Kimberly Guilfoyle涉嫌索費事宜，也遭質疑為變相酬金。",
-            "二、移民執法疑雲：前國土安全部長Kristi Noem被控將合約頒給捐款者；前特別雇員Corey Lewandowski則遭指向私營拘留所業者索酬，其發言人回應稱賈西亞編造誤導說法，「將在適當場合證明是錯誤的」。前幕僚長米勒推行逮捕配額與大搜捕亦受調查。",
-            "三、白宮建設與愛潑斯坦案：民主黨關注耗資逾6億美元的白宮新宴會廳建設，質疑半導體巨頭輝達在獲准售晶片後捐款的動機。愛潑斯坦案方面，賈西亞要求副總統范斯與前幕僚長威爾斯提供會議紀錄，質疑政府保護川普；司法部長Todd Blanche則否認Ghislaine Maxwell獲得移監優待，強調因生命安全威脅才轉移。",
-            "四、白宮強烈反擊：白宮發言人Lauren Bis直斥調查純屬「騙局」。白宮法律顧問Will Scharf致信表明政府絕不配合少數黨要求，並警告賈西亞，缺乏正當立法目的的調查恐「越界構成公然的犯罪行為」。兩黨國會監督角力即將全面升溫。"
-          ],
-          "paras_en": [
-            "According to the Wall Street Journal, Robert Garcia, a Democratic U.S. Representative from California who is expected to become chair of the House Oversight Committee, recently sent 12 preservation‑notice letters to members of the Trump family and government officials, warning that Democrats will launch an intensive investigation once the new Congress gains subpoena power next year.",
-            "Garcia publicly declared, “This is just the beginning.”",
-            "The Democrats’ proposed investigation targets four major areas:",
-            "1. Family business interests: The letters allege that Donald Trump Jr. and Eric Trump profited from the family’s cryptocurrency venture, World Liberty Financial. A company spokesperson dismissed the probe as “baseless political persecution,” insisting the firm complies with all laws. The high fees paid to Jared Kushner and alleged fee‑seeking by former ambassador Kimberly Guilfoyle are also being questioned as disguised compensation.",
-            "2. Immigration‑enforcement concerns: Former Homeland Security Secretary Kristi Noem is accused of awarding contracts to donors; former special employee Corey Lewandowski is alleged to have solicited payments from private detention‑facility operators, with his spokesperson saying Garcia fabricated misleading statements that “will be proven wrong at the appropriate time.” Former chief of staff Miller’s arrest‑quota program and large‑scale raids are also under scrutiny.",
-            "3. White House construction and the Epstein case: Democrats are focusing on the more than $600 million new White House banquet hall, questioning the motives of semiconductor giant Nvidia after it was allowed to sell chips following a donation. In the Epstein matter, Garcia has asked Vice President Kamala Harris and former chief of staff William Wells for meeting minutes, alleging government protection of Trump; Attorney General Todd Blanche denied that Ghislaine Maxwell received preferential treatment in prison, emphasizing that a transfer was made due to safety threats.",
-            "4. White House strong rebuttal: White House spokesperson Lauren Bis labeled the investigation a “scam.” White House legal counsel Will Scharf wrote that the administration will not cooperate with the minority party’s request and warned Garcia that an investigation lacking a legitimate legislative purpose could “overstep and constitute an outright criminal act.” The partisan battle over congressional oversight is set to heat up."
-          ]
-        },
-        {
-          "news_id": "6669840",
-          "title": "韓股暴跌 散戶已無現金攤平！26兆韓元融資面臨斷頭風暴",
-          "title_en": "Korean Stocks Plunge, Retail Investors Run Out of Cash to Average Down! 26 Trillion Won Margin Debt Faces Liquidation Storm",
-          "publish_at": 1795339202,
-          "url": "https://news.cnyes.com/news/id/6669840",
-          "paras": [
-            "南韓股市重挫之際，散戶投資人正面臨資金告罄與斷頭平倉的雙重危機。南韓KOSPI指數周五(20日)大跌5.21%，收在4,869.96點，失守4,900點大關；KOSDAQ指數下挫5.71%。半導體巨頭三星電子與SK海力士分別重挫7.01%與5.92%，雙雙觸發邊車(Sidecar)暫停交易機制。",
-            "當日外資與機構法人在KOSPI各自賣超約1兆韓元，散戶雖逆勢逢低接刀，在兩大市場合計買超1.8184兆韓元(KOSPI買超1.5381兆韓元、KOSDAQ買超2,803億韓元)，但後續逢低加碼攤平的「子彈」已急劇枯竭。",
-            "據南韓金融投資協會(KOFIA)最新統計，截至19日，南韓證券市場的投資人備用資金(客戶保證金)降至81.5669兆韓元，相較於12日的92.2347兆韓元，短短一周內大幅蒸發10.6678兆韓元(減幅達11.57%)，相當於平均每天有1.52兆韓元資金離開市場。",
-            "《Financial News》報導，投資人在股市下跌初期，通常會動用閒置資金與帳戶餘額逢低攤平，但當市場暴跌成為常態，資金便會消耗殆盡，「無論股票看起來多麼便宜，沒有子彈就無法扣動扳機」，這顯示市場隨時可用於加碼的後備火力已嚴重受創。",
-            "比資金乾涸更令人擔憂的，是高高掛起的槓桿融資餘額。截至19日，韓股融資貸款餘額仍高達26.0832兆韓元(KOSPI占20.2068兆韓元，KOSDAQ占5.8764兆韓元)，未結算應收帳款達9,700億韓元。",
-            "散戶用自有資金買股還能忍受虧損等待反彈，但融資買股無法等待，分析師估算，若投資人以500萬韓元本金搭配500萬韓元融資買進股票，當股價下跌30%時，本金即遭吞噬60%。一旦維持率跌破門檻，券商將展開強制平倉(斷頭)，高達26兆韓元的融資餘額，恐演變成「股價下跌觸發斷頭、斷頭賣壓再壓低股價」的連鎖惡性循環。",
-            "雪上加霜的是，韓股20日收盤後，美股爆發重挫海嘯，那斯達克指數大跌5.13%，費城半導體指數崩跌逾10%，AI龍頭輝達單日暴跌14.01%，這使得23日(周一)開盤將是對南韓股市資金承載能力與市場供需極限的嚴峻考驗。"
-          ],
-          "paras_en": [
-            "South Korea’s stock market suffered a sharp decline, leaving retail investors facing a double crisis of depleted cash and forced liquidation. The KOSPI index fell 5.21% on Friday (the 20th), closing at 4,869.96 points and slipping below the 4,900‑point threshold; the KOSDAQ index dropped 5.71%. Semiconductor giants Samsung Electronics and SK Hynix slid 7.01% and 5.92% respectively, both triggering the Sidecar trading‑halt mechanism.",
-            "On the same day, foreign and institutional investors sold roughly 1 trillion won each on the KOSPI. Retail investors, buying the dip against the trend, net‑bought 1.8184 trillion won across the two markets (1.5381 trillion won on the KOSPI and 280.3 billion won on the KOSDAQ), but the “bullets” they hoped to use for further averaging down have rapidly run out.",
-            "According to the latest figures from the Korea Financial Investment Association (KOFIA), as of the 19th the reserve funds (client margin) in South Korea’s securities market fell to 81.5669 trillion won, down from 92.2347 trillion won on the 12th – a sharp evaporation of 10.6678 trillion won (11.57%) in just one week, equivalent to an average daily outflow of about 1.52 trillion won.",
-            "Financial News reported that investors typically dip into idle cash and account balances to average down when a market first falls, but when sharp declines become the norm, those funds are exhausted. “No matter how cheap a stock looks, without bullets you can’t pull the trigger,” the article said, indicating that the market’s backup firepower for additional buying has been severely damaged.",
-            "Even more concerning than the cash shortage is the towering leveraged‑margin balance. As of the 19th, margin loans on Korean stocks remained at a staggering 26.0832 trillion won (20.2068 trillion won on the KOSPI and 5.8764 trillion won on the KOSDAQ), with unsettled receivables amounting to 970 billion won.",
-            "Retail investors can endure losses with their own capital while waiting for a rebound, but those who bought on margin cannot. Analysts estimate that if an investor uses 5 million won of own money matched with 5 million won of borrowed funds to purchase a stock, a 30% price drop would wipe out 60% of the equity. Once the maintenance margin falls below the required level, brokers will trigger forced liquidations. The 26 trillion won of outstanding margin could spark a vicious chain reaction: falling prices trigger liquidations, which add sell pressure and push prices even lower.",
-            "To make matters worse, after the Korean market closed on the 20th, U.S. equities suffered a severe sell‑off. The Nasdaq plunged 5.13%, the Philadelphia Semiconductor Index fell more than 10%, and AI leader Nvidia tumbled 14.01% in a single day. This sets up a harsh test on Monday the 23rd for the South Korean market’s capacity to absorb capital and its supply‑demand limits."
-          ]
-        },
-        {
-          "news_id": "6669851",
-          "title": "比特幣崩了！5.5萬美元背後 加密市場發生了什麼？",
-          "title_en": "Bitcoin Crashed! What’s Happening in the Crypto Market Behind the $55,000?",
-          "publish_at": 1795336804,
-          "url": "https://news.cnyes.com/news/id/6669851",
-          "paras": [
-            "在美股崩跌的背景下，比特幣也遭遇強勁的拋售賣壓，並跌破 6 萬美元心理關卡，一度下探至 55,251.60 美元，創下自 2024 年 9 月以來的新低。根據《路透》報導，比特幣隨後雖短暫重回 6 萬美元上方，但市場避險情緒依然高漲。",
-            "回顧整體走勢，比特幣自 2025 年 10 月創下逾 12.6 萬美元的高點後便進入調整期，2026 年 11 月的這波拋售幾乎完全回吐了同年前期從 5.77 萬美元反彈至 8 萬美元的漲幅。",
-            "市場分析指出，本輪加密市場的回檔並非源於單一交易所危機或大型項目崩盤，而是全球風險資產的同步調整。《路透》分析認為，全球投資人對人工智慧(AI)基礎設施巨額投入能否轉化為實際盈利產生疑慮，導致科技股估值面臨修正壓力；而比特幣在實際交易中仍高度被視為高風險資產，因而與科技股同步承壓。",
-            "此外，美國借貸成本上升、實質殖利率走高以及美元走強，加上市場對美國聯準會(Fed)未來貨幣政策路徑的疑慮，共同促使資本轉向低風險資產。",
-            "機構資金的動向進一步加劇了市場下行壓力。根據 CoinDesk 報導，貝萊德(BlackRock)旗下的 iShares 比特幣信託(IBIT)在統計時段內錄得 5.411 億美元的單日淨流出，創下該基金成立以來的最大單日資金流出紀錄。",
-            "在衍生品市場方面，CoinDesk 數據顯示清算規模達數億美元，後續相關統計更顯示 24 小時內加密衍生品爆倉金額高達約 24 億美元，其中做多倉位遭受集中清算。價格下挫引發保證金不足與強制平倉，賣壓循環加速了槓桿去化進程。",
-            "隨著比特幣跌破先前夏末約 5.77 萬美元的支撐區間，市場對於加密牛市是否終結出現顯著分歧。部分觀點認為上漲周期已經結束，市場正轉入漫長熊市；另一派觀點則主張，此波回檔屬於總體流動性收緊與槓桿清算引發的深度調整，長期邏輯並未毀壞。",
-            "分析師指出，要判斷市場是否全面轉熊，仍需觀察數項核心指標：首先是比特幣現貨 ETF 能否恢復持續性淨流入；其次為衍生品槓桿清算是否趨緩並由現貨買盤接手；最後則是美聯準會貨幣政策與總體流動性是否改善。"
-          ],
-          "paras_en": [
-            "Against the backdrop of a U.S. stock market plunge, Bitcoin also faced strong selling pressure, slipping below the psychological $60,000 barrier and briefly dipping to $55,251.60, a new low since September 2024. Reuters reported that Bitcoin briefly rebounded above $60,000, but hedging sentiment in the market remained high.",
-            "Looking back at the overall trend, Bitcoin peaked at over $126,000 in October 2025 and entered a correction phase. The November 2026 sell‑off has almost completely erased the gains from the earlier rebound that lifted Bitcoin from $57,700 to $80,000 earlier this year.",
-            "Market analysts note that this crypto pullback is not driven by a single exchange crisis or a major project collapse, but by a synchronized adjustment of global risk assets. Reuters analysis suggests investors are questioning whether massive AI‑infrastructure spending will translate into real profits, putting pressure on tech‑stock valuations; meanwhile Bitcoin is still viewed as a high‑risk asset in actual trading, so it is bearing pressure alongside tech stocks.",
-            "In addition, rising U.S. borrowing costs, higher real yields, a stronger dollar, and doubts about the Federal Reserve’s future policy path have collectively pushed capital toward low‑risk assets.",
-            "Institutional fund flows have further amplified the downward pressure. According to CoinDesk, BlackRock’s iShares Bitcoin Trust (IBIT) recorded a single‑day net outflow of $541.1 million during the reporting period, the largest daily outflow since the fund’s inception.",
-            "In the derivatives market, CoinDesk data show liquidation volumes reaching several hundred million dollars, with 24‑hour crypto‑derivative forced‑liquidation amounts hitting roughly $2.4 billion, primarily affecting long positions. The price drop triggered margin calls and forced liquidations, accelerating the deleveraging cycle.",
-            "As Bitcoin fell below the late‑summer support zone around $57,700, the market showed a clear split on whether the crypto bull run is over. Some view the up‑cycle as finished and the market entering a prolonged bear market; others argue the pullback reflects a deep correction caused by tighter overall liquidity and leveraged liquidations, without destroying the long‑term thesis.",
-            "Analysts say that to determine whether the market has fully turned bearish, several core indicators must be watched: first, whether spot Bitcoin ETFs can resume sustained net inflows; second, whether leveraged derivatives liquidations are easing and being taken over by spot buying; and finally, whether Fed monetary policy and overall liquidity improve."
-          ]
         }
       ]
     },
@@ -236,6 +266,49 @@
       "key": "tw_stock",
       "label": "台股焦點",
       "items": [
+        {
+          "news_id": "6669876",
+          "title": "〈台股盤前要聞〉金管會：23日起全面禁平盤以下放空、10月外銷訂單連21紅",
+          "title_en": "Taiwan Stock Market Pre‑Market News: Financial Supervisory Commission Bans Short‑Selling Below Par from the 23rd, October Export Orders Rise for the 21st Consecutive Month",
+          "publish_at": 1795381816,
+          "url": "https://news.cnyes.com/news/id/6669876",
+          "paras": [
+            "台股盤前要聞 \n\n1.台股近期跌跌不休，單周累計重挫 7,641.83 點、跌幅達 17.5%，20日加權指數收在 36,033.29 點。為遏止市場非理性恐慌並維護交易秩序，金管會緊急宣布祭出第三波穩定股市措施，自 23日起實施「全面禁止平盤以下放空」等五大救市新制，盼能有效提振市場信心。",
+            "2.經濟部統計處20日公布 115 年 10 月外銷訂單金額一舉衝上 1238.2 億美元，不僅較上月增加 96.1 億美元或成長 8.4%，更較去年同月大增 543.9 億美元或激增 78.3%，連續第 3 個月站穩千億美元大關並改寫歷年單月新高紀錄。累計今年 1 至 10 月外銷訂單達 9430.2 億美元，較去年同期大幅增加 3484.9 億美元，年增幅達 58.6%，整體接單表現極為強勁。",
+            "3.電子權值股、傳產20日全倒，上市櫃365家公司慘亮綠燈，即便金管會祭出「有條件禁空令」，仍擋不住沈重賣壓，台股今天早盤以37646.13點開低後一路下殺，一度跌至35738.68點，終場跌2393.6點或6.23%，創史上第三大跌點，收36033.29點，成交量8773.5億元。台股本周狂瀉7641.83點，跌幅17.5%，周線收黑。",
+            "4.電子權值股、傳產20日全倒，大盤跌2393.6點或6.23%，創史上第三大跌點，收36033.29點，成交量8773.5億元。外資持續提款，賣超94.13億元，連5賣，並再度大舉砍出0050，上周大賣0050超過30萬張，不過反手加碼聯電與面板雙虎。",
+            "5.上海航交所20日公布最新一期上海出口集裝箱運價指數(SCFI)，較上周續跌68.55點至3503.78點，周減1.92%，為連3周走跌，並續創9月中旬以來低，反映傳統淡季，尤其美國線運價續弱，顯示市場需求轉趨保守，貨攬業者不諱言，運價下修壓力可能延續至12月中旬。",
+            "第三波救市來了！金管會：23日起全面禁平盤下放空、籲法人停止出借股票",
+            "〈外銷訂單〉21紅！10月外銷訂單1238億美元連3月破千億 續創單月新高",
+            "限空令2.0擋不住賣壓狂瀉2393點創史上第三大跌點 上周跌逾7000點跌幅17.5%",
+            "外資再提款94億元 續砍0050上周大賣逾30萬張",
+            "〈航運指數〉SCFI連3跌反映傳統淡季 恐修正至12月中旬",
+            "台股單周重挫7641點！上市櫃市值蒸發逾27兆元 全球市值排名退居第7",
+            "央行外匯局出面信心喊話 出口大廠在賣匯 匯市供需趨平衡了",
+            "台股跌跌不休 林修銘信心喊話：基本面穩健、AI中長期仍看俏",
+            "華碩Q4放量出貨輝達Vera Rubin NVL72 全方位AI工廠示範架構亮相SC26",
+            "中華電信董事長簡志誠：持續爭取AWS合作 建議調整28GHz頻譜",
+            "綠白聯手也擋不住！普發2萬條例三讀過關 最快預算生效3個月發放"
+          ],
+          "paras_en": [
+            "The Taiwan stock market has been sliding continuously, with a weekly cumulative drop of 7,641.83 points, a decline of 17.5%. On the 20th, the weighted index closed at 36,033.29 points. To curb irrational panic and preserve orderly trading, the Financial Supervisory Commission (FSC) urgently announced a third round of market‑stabilising measures, effective from the 23rd, including a \"comprehensive ban on short‑selling below the par price\" among five new rescue rules, hoping to restore investor confidence.",
+            "The Ministry of Economic Affairs’ Statistics Department reported on the 20th that October 2023 export orders surged to USD 123.82 billion, up by USD 9.61 billion (8.4%) from the previous month and up by USD 54.39 billion (78.3%) year‑on‑year, marking the third consecutive month above the USD 100 billion threshold and setting a new single‑month record. Cumulative export orders for January‑October this year reached USD 943.02 billion, an increase of USD 348.49 billion (58.6%) over the same period last year, indicating extremely strong order intake.",
+            "On the 20th, both electronic heavyweight stocks and traditional‑industry stocks plunged, and all 365 listed companies flashed red lights. Even with the FSC’s conditional short‑selling ban, heavy selling pressure persisted. The market opened lower at 37,646.13 points, fell sharply to a low of 35,738.68 points, and closed down 2,393.6 points or 6.23% at 36,033.29 points – the third‑largest point drop in history – with a turnover of NT$877.35 billion. This week the market plunged 7,641.83 points, a 17.5% decline, ending the week in the red.",
+            "Electronic heavyweight stocks and traditional‑industry stocks collapsed on the 20th, dragging the index down 2,393.6 points or 6.23%, the third‑largest point drop ever, closing at 36,033.29 points with NT$877.35 billion traded. Foreign investors continued to pull out, net‑selling NT$94.13 billion, selling five consecutive days, and again heavily shorted the 0050 ETF. Last week they sold more than 300,000 contracts of 0050, but simultaneously added positions in United Microelectronics Corp. and the two major panel makers.",
+            "The Shanghai Shipping Exchange released the latest Shanghai Container Freight Index (SCFI) on the 20th, which fell another 68.55 points to 3,503.78 points, a weekly decline of 1.92%. This marks the third consecutive week of drops and the lowest level since mid‑September, reflecting the traditional off‑season, especially weak rates on U.S. routes. Market participants note that downward pressure on freight rates could persist until mid‑December.",
+            "The third wave of market‑rescue measures has arrived! The FSC announced that starting on the 23rd, short‑selling below the par price will be completely prohibited, and it urges institutional investors to stop lending shares.",
+            "Export Orders Hit a 21‑Month High! October export orders reached USD 123.8 billion, marking the third consecutive month above the USD 100 billion mark and setting a new monthly record.",
+            "The short‑selling ban 2.0 could not stop the selling avalanche: a 2,393‑point drop created the third‑largest point decline in history, with last week’s loss exceeding 7,000 points and a 17.5% weekly decline.",
+            "Foreign investors withdrew another NT$94 billion and continued to slash the 0050 ETF, having sold over 300,000 contracts last week.",
+            "Shipping Index: SCFI fell for the third straight week, reflecting the traditional off‑season, with expectations of rate adjustments extending into mid‑December.",
+            "The Taiwan stock market suffered a weekly loss of 7,641 points! The market‑capitalisation of listed companies erased more than NT$27 trillion, dropping Taiwan’s global market‑cap ranking to seventh place.",
+            "The Central Bank’s Foreign Exchange Bureau stepped in with confidence‑boosting remarks, noting that major exporters are selling foreign currency, bringing supply and demand in the FX market back toward balance.",
+            "The market keeps sliding. Lin Hsiu‑Ming voiced confidence: fundamentals remain solid and AI’s medium‑ to long‑term outlook stays bullish.",
+            "ASUS announced a Q4 surge in shipments of NVIDIA’s Vera Rubin NVL72 GPUs, showcasing a full‑scale AI factory demonstration architecture at SC26.",
+            "Chunghwa Telecom Chairman Chien Chih‑Cheng said the company continues to pursue cooperation with AWS and recommends adjusting the 28 GHz spectrum allocation.",
+            "Even a green‑white coalition could not stop the momentum: the universal dividend bill of NT$20,000 passed its third reading, and the budget is expected to take effect within three months of enactment."
+          ]
+        },
         {
           "news_id": "6669881",
           "title": "〈台股風向球〉連環套賣壓需時間換空間 長期投資人心態先穩住",
@@ -422,35 +495,6 @@
             "Looking back, TSMC’s share price hit $479 on June 30, fell to $372.72 on July 29, then rebounded to set a mid‑term high in October. However, renewed selling pressure has now pushed the price below its 200‑day moving average.",
             "As of Friday’s close, TSMC’s ADR was trading at $318.71, not only below the 200‑day moving average but also about 15.8% lower than the 20‑day average of $392.34. Trading volume spiked on Friday; the stock opened at $337.99, down from the prior day’s close of $352.09, and never regained that level during the session."
           ]
-        },
-        {
-          "news_id": "6669743",
-          "title": "台股血崩7641點下周守住35000！國安基金急派「定心丸」喊話4大撐盤亮點",
-          "title_en": "Taiwan Stock Market Plummets 7,641 Points; Next Week Defends 35,000 Mark—National Security Fund Deploys “Calming Pill” Highlighting Four Support Points",
-          "publish_at": 1795247926,
-          "url": "https://news.cnyes.com/news/id/6669743",
-          "paras": [
-            "輝達（NVDA-US）執行長黃仁勳辭任風暴與美國AI監管趨嚴等利空夾擊，台股本周狂瀉7641.83點，跌幅高達17.5%，終場收在36033.29點，下周正式面臨35000點整數關卡保衛戰。面對市場恐慌情緒升溫，國安基金表示已進場展開護盤任務，強調台灣經濟基本面創下多項歷史新高，點出四大撐盤亮點，呼籲股民保持信心、無須過度恐慌。",
-            "回顧這波股災背景，自輝達創辦人黃仁勳辭去執行長職務後，市場對後黃仁勳時代的AI產業營運展望產生高度疑慮，加上美國AI監管政策可能趨嚴、龐大資本支出投資效益及融資風險等變數交織，導致美股連日重挫並全面波及亞股。台股從上周五收盤的43675.12點一路下殺，16日單日暴跌2635.04點，20日再度重挫2393.6點，單周累計血崩逾7600點，創下1991年以來最大單周跌幅。",
-            "隨著加權指數昨日收在36033.29點，盤中更一度下探35959點低點，市場普遍預期台股下周將迎來嚴峻的35000點整數關卡保衛戰。面對指數劇烈修正與超過300家上市櫃公司打入跌停的恐慌氛圍，投資人擔憂融資斷頭與外資持續提款，紛紛關注國家隊護盤力道能否有效止跌回穩。",
-            "為安定市場軍心，國安基金主動對外說明最新護盤動態與總體經濟數據。國安基金指出，自115年11月6日召開臨時委員會議，授權執行秘書執行市場安定任務後，國家隊資金便已正式進場展開護盤操作，全力發揮穩定金融市場的功能，讓全台股民能夠安心面對短期波動。",
-            "在觀察籌碼面變化方面，國安基金分析，近期外資雖然連續多日對台股呈現賣超調節，但隨著護盤機制啟動與市場逐步消化非理性賣壓，外資賣超力道已漸趨收斂。國安基金強調，當前台股下跌主要受國際消息面與市場心理因素牽動，並非台灣產業競爭力出現結構性反轉，呼籲投資人切勿在恐慌中盲目殺低。",
-            "國安基金進一步列舉四大總經與產業數據，力證台股基本面依然強勁。首先是經濟成長表現亮眼，根據行政院主計總處公布最新預測，115年台灣經濟成長率高達11.05%，一舉創下近39年來新高紀錄；同時，9月景氣對策信號續亮紅燈，達成連續10個月紅燈的史上最長紀錄，顯示國內景氣動能充沛。",
-            "其次在外貿接單與出口表現上，今年累計至10月的外銷訂單金額高達9430億美元，較去年同期大幅成長58.6%，同期累計出口金額也達到7582.9億美元，年增率高達47.7%，兩項關鍵指標雙雙改寫歷史新高紀錄，反映全球對台灣科技與AI供應鏈的實質需求依舊熱絡。",
-            "此外，上市櫃公司基本面獲利同樣交出亮眼成績單。根據統計，10月全體上市櫃公司未加計金融保險業的單月營收達6.74兆元，累計今年前10月營收更已衝上56.89兆元，不僅持續改寫歷史新高，更提前超越去年全年的50.77兆元水準，展現企業強大的營運韌性。",
-            "展望後市，國安基金重申，台灣經濟基本面穩健且展望樂觀，後續將會同金管會等相關部會密切關注國際政經局勢與台股交易動態，並視市場情況適時採取必要穩市措施。國安基金最後呼籲廣大投資人保持信心，以理性態度看待台股短期震盪，穩健評估優質企業的長期投資價值。"
-          ],
-          "paras_en": [
-            "Nvidia (NVDA-US) CEO Jensen Huang's resignation amid a storm of negative factors, including tightening U.S. AI regulations, sent Taiwan's stock market tumbling 7,641.83 points this week, a 17.5% drop, closing at 36,033.29 points and setting up a showdown next week to hold the 35,000 round‑number barrier. In response to rising market panic, the National Security Fund said it has entered the market to protect it, stressing that Taiwan’s economic fundamentals have reached several historic highs and pointing out four key support highlights, urging investors to stay confident and not overreact.",
-            "Looking back at the background of this market crash, after Nvidia founder Jensen Huang stepped down as CEO, doubts surged about the post‑Huang AI industry outlook, compounded by the prospect of stricter U.S. AI regulation, massive capital‑intensive investments and financing risks. These factors drove U.S. equities into a sharp decline that spilled over to Asian markets. Taiwan’s index fell from Friday’s close of 43,675.12 points, dropping 2,635.04 points on the 16th and another 2,393.6 points on the 20th, totaling a weekly plunge of over 7,600 points—the biggest one‑week fall since 1991.",
-            "With the weighted index closing yesterday at 36,033.29 points and briefly dipping to a low of 35,959 points intraday, the market broadly expects a tough battle next week to defend the 35,000 round‑number level. Amid the index’s sharp correction and more than 300 listed companies hitting daily limits, investors worry about margin calls and continued foreign‑capital outflows, closely watching whether the state‑backed “national team” can effectively halt the decline and stabilize the market.",
-            "To steady market sentiment, the National Security Fund proactively briefed the public on its latest market‑support actions and macroeconomic data. It noted that since the emergency committee meeting on November 6, 2026 (year 115 of the Republic), which authorized the executive secretary to carry out market‑stabilization tasks, state funds have formally entered the market to perform protective operations, fully leveraging their role in stabilizing the financial system so that all Taiwanese investors can face short‑term volatility with confidence.",
-            "Regarding capital flows, the fund observed that although foreign investors have posted consecutive days of net selling, the activation of the support mechanism and the market’s gradual absorption of irrational sell pressure have begun to curb the net‑selling force. The fund emphasized that the current decline is driven by international news and market psychology rather than a structural reversal of Taiwan’s industrial competitiveness, urging investors not to panic‑sell at low levels.",
-            "The fund further listed four macro‑economic and industry data points to prove that Taiwan’s fundamentals remain strong. First, economic growth is impressive: the Directorate‑General of Budget, Accounting and Statistics reported a 2026 growth rate of 11.05%, a 39‑year high. At the same time, the September economic‑policy signal remained red for the tenth consecutive month, the longest streak on record, indicating robust domestic economic momentum.",
-            "Second, in foreign trade, cumulative export orders through October reached US$943 billion, up 58.6% year‑over‑year, while cumulative export value hit US$758.29 billion, a 47.7% increase, both setting new historical highs and reflecting strong global demand for Taiwan’s technology and AI supply chains.",
-            "Third, listed companies’ profitability also posted strong results. In October, total revenue of all listed firms excluding financial and insurance sectors reached NT$6.74 trillion for the month, and cumulative revenue for the first ten months of the year rose to NT$56.89 trillion, surpassing the full‑year 2025 level of NT$50.77 trillion and setting new records, demonstrating robust corporate resilience.",
-            "Looking ahead, the National Security Fund reiterated that Taiwan’s economic fundamentals are solid and outlook optimistic. It will continue to work closely with the Financial Supervisory Commission and other agencies to monitor international political‑economic developments and market dynamics, taking timely stabilizing measures as needed. The fund’s final call is for investors to stay confident, assess short‑term volatility rationally, and prudently evaluate the long‑term investment value of quality companies."
-          ]
         }
       ]
     },
@@ -458,6 +502,101 @@
       "key": "us_stock",
       "label": "美股焦點",
       "items": [
+        {
+          "news_id": "6669872",
+          "title": "高盛為馬斯克「操作」融資買GPU！採用公司債與ABS混合架構",
+          "title_en": "Goldman Sachs Helps Musk Secure Financing for GPU Purchase Using Hybrid Corporate Bond and ABS Structure",
+          "publish_at": 1795385403,
+          "url": "https://news.cnyes.com/news/id/6669872",
+          "paras": [
+            "高盛集團(GS-US) 與阿波羅全球管理公司（Apollo Global Management）上周四（19日）協助馬斯克旗下SpaceX(SPCX-US) 完成約320億美元債券定價，這筆交易是SpaceX總額約440億美元融資計畫的核心部分，也為科技業如何籌措龐大人工智慧（AI）晶片採購資金提供新的融資模式。",
+            "這批債券結合公司債與資產支持證券（ABS）的特性，是高盛耗時一年多設計的融資方案，目的是在不大幅增加企業資產負債表負擔的情況下，為價格昂貴的AI晶片取得資金。",
+            "儘管獲得貝萊德(BLK-US) 、Pimco等大型機構認購，SpaceX仍須支付相當高的融資成本。",
+            "上周市場對AI產業成長前景的疑慮升高，拖累全球股市，美股下跌8.6%。隨著支撐全球經濟的AI基礎建設逐漸逼近融資市場的承受極限，SpaceX這筆交易也受到關注，可能成為其他科技巨頭未來採購晶片時參考的融資範例。",
+            "AI晶片融資面臨兩難\n\nAI晶片融資一直是市場難題。晶片採購成本高昂，但使用壽命僅有數年，企業若透過傳統公司債籌資，可能推升整體負債，進而影響信用評等，因此不少買家對此有所顧慮。",
+            "改以ABS等複雜金融工具籌資，雖有助於避免新增債務直接衝擊信用評等，卻也面臨市場規模不足的問題。",
+            "Diameter的Goodwin估計，未來市場需要採購約1.5兆美元的晶片，其中大部分將仰賴債務融資。在現有信貸市場中，規模約8.3兆美元的美國投資級公司債市場，是少數具備相近承接能力的資金來源。",
+            "摩根大通銀行(JPM-US) 分析師今年6月在報告中指出，找到合適的晶片融資模式是一個價值數十億美元的問題。隨著AI晶片資金需求龐大，但五年期資金供給相對有限，市場勢必需要更具創意的融資方式。",
+            "高盛設計新架構 投資人須預先投入資金\n\n知情人士透露，高盛今年夏天向SpaceX提出一套融資架構，由特殊目的載體（SPV）負責採購輝達(NVDA-US) 晶片，再發行債券籌資，並透過與SpaceX簽訂約五年的租賃合約，以租金收入償還債務。",
+            "這套架構本質上屬於ABS，但保留部分傳統公司債的特徵，包括配置美國證券統一識別碼（CUSIP），讓專注於高評級公司債的投資人也能參與。",
+            "相較於先前協助Anthropic(ANT-US) 擴充算力、規模達350億美元的「Big Sky」融資計畫，高盛這次也調整了資金運作流程。",
+            "Big Sky採取私募配售方式，先由投資人承諾出資，待設備到位後再分階段動用資金，債券之後才轉換為可供更多機構交易的形式。這種分階段安排雖能配合設備交付進度，卻增加交易複雜度，也讓習慣隨時買賣公司債的投資人較難參與。",
+            "SpaceX採用的方案則要求投資人一開始就全額出資。晶片交付前，資金會存放在專用帳戶，並可配置美國短期公債等短期工具，利用投資收益抵銷設備到位前的融資成本。",
+            "待GPU陸續交付後，帳戶資金才會撥出，用於採購晶片並出租給SpaceX。由於債券在發行後即可供合格機構投資人交易，不必等待分階段提款，流程也更接近傳統公司債市場。",
+            "貝萊德、Pimco認購 SpaceX融資成本偏高\n\nSpaceX此次整體融資規模約440億美元，涵蓋優先及次級部分。知情人士表示，參與認購的買方包括保險公司、結構型信貸投資人、資產管理機構及退休基金。",
+            "上周四完成定價的約320億美元債券中，約60億美元已於本周透過銀團分銷。SpaceX披露，交易支持者包括貝萊德、KKR(KKR-US) 及高盛資產管理。知情人士則指出，Pimco認購約40億美元，Blue Owl (OBDC-US) 也是主要投資人之一。",
+            "不過，為了吸引投資人參與，SpaceX必須提供較高的融資溢價。上周發售給公司債投資人的證券，定價利差較SpaceX今年稍早發行的同期限債券高出約100個基點。",
+            "更令市場關注的是，SpaceX先前發行的舊債近期在次級市場持續走跌，跌幅擴大已令債券交易員感到意外。"
+          ],
+          "paras_en": [
+            "Goldman Sachs Group (GS-US) and Apollo Global Management assisted SpaceX (SPCX-US) in pricing approximately $32 billion in bonds last Thursday (19th), a key component of SpaceX’s roughly $44 billion financing plan and a new model for how the tech industry can raise funds for expensive AI chip purchases.",
+            "This tranche blends corporate bonds with asset‑backed securities (ABS) and was designed over more than a year by Goldman to secure capital for costly AI chips without significantly loading the company’s balance sheet.",
+            "Despite subscriptions from large institutions such as BlackRock (BLK-US) and Pimco, SpaceX still faces high financing costs.",
+            "Last week, market concerns about AI growth prospects weighed on global equities, dragging U.S. stocks down 8.6%. As AI infrastructure approaches the limits of the financing market, this deal has attracted attention and may serve as a reference for other tech giants’ future chip procurement financing.",
+            "AI chip financing faces a dilemma: the high cost of chips and their short lifespan mean that traditional corporate bonds could raise overall debt and affect credit ratings, causing buyers to hesitate.",
+            "Using complex instruments like ABS can avoid direct debt impact on credit ratings but suffers from insufficient market size.",
+            "Goodwin of Diameter estimates that the market will need to purchase about $1.5 trillion in chips, most of which will rely on debt financing. The U.S. investment‑grade corporate bond market, roughly $8.3 trillion, is one of the few sources with comparable capacity.",
+            "JPMorgan Chase analysts in a June report said finding a suitable chip‑financing model is a multi‑billion‑dollar problem. With huge demand for AI chip funding but limited five‑year supply, the market will need more creative financing methods.",
+            "Goldman proposed a new structure this summer, where a special purpose vehicle (SPV) would purchase NVIDIA (NVDA-US) chips, issue bonds to raise funds, and use a five‑year lease agreement with SpaceX to repay the debt through rental income.",
+            "The structure is essentially an ABS but retains some traditional corporate bond features, including a CUSIP, allowing investors focused on high‑rated corporate bonds to participate.",
+            "Compared to Goldman’s earlier assistance to Anthropic (ANT-US) for the $35 billion “Big Sky” expansion, Goldman adjusted the funding workflow this time.",
+            "Big Sky used a private placement, with investors committing funds first, then drawing them in stages after equipment delivery, and only later converting bonds into tradable instruments. This staged approach matched delivery but increased complexity and made it harder for investors used to trading corporate bonds on the fly.",
+            "SpaceX’s scheme requires investors to pay the full amount upfront. Before chip delivery, the money sits in a dedicated account and can be invested in U.S. short‑term Treasury instruments, using investment returns to offset pre‑delivery financing costs.",
+            "Once GPUs are delivered, the account funds are released to purchase chips and lease them to SpaceX. Because the bonds can be traded by qualified institutional investors immediately after issuance, there is no need for staged withdrawals, making the process closer to a traditional corporate bond market.",
+            "SpaceX’s total financing is about $44 billion, covering senior and subordinated tranches. Participants include insurers, structured credit investors, asset managers, and pension funds.",
+            "Of the $32 billion priced last Thursday, about $6 billion has already been distributed through a syndicate this week. SpaceX disclosed that supporters include BlackRock, KKR (KKR-US), and Goldman’s asset management arm, while Pimco subscribed roughly $4 billion and Blue Owl (OBDC-US) was also a major investor.",
+            "To attract investors, SpaceX had to offer a higher financing premium. The bonds sold to corporate‑bond investors last week had a pricing spread about 100 basis points higher than SpaceX’s earlier same‑term issuance.",
+            "Even more attention was drawn by the recent decline in SpaceX’s older bonds on the secondary market, with the drop widening unexpectedly, surprising bond traders."
+          ]
+        },
+        {
+          "news_id": "6669871",
+          "title": "5000億美元AI晶片融資陷分歧：輝達擔保比例成焦點",
+          "title_en": "$500 Billion AI Chip Financing Faces Dispute: Nvidia's Guarantee Ratio Becomes Focal Point",
+          "publish_at": 1795384803,
+          "url": "https://news.cnyes.com/news/id/6669871",
+          "paras": [
+            "《華爾街日報》上週引述知情人士報導，由阿波羅、黑石、貝萊德、布魯克菲爾德、高盛及KKR等機構參與的5000億美元AI晶片融資計畫，目前仍停留在籌資目標階段。各方簽署的諒解備忘錄(MOU)僅列出目標金額、客戶類型及潛在信用支持方式，並未規定必須籌足5000億美元，輝達亦未預先承諾具體擔保額度。該計畫旨在協助OpenAI、Anthropic等AI企業融資採購輝達晶片",
+            "報導指出，輝達前執行長黃仁勳8月曾表示，願意提供的信用支持上限為專案成本的25%，但隨著貸款人對低評級AI企業趨於謹慎，部分投資者要求殘值擔保比例超過25%才願意出資。",
+            "對比之下，其他晶片融資案的擔保比例更高。博通為Anthropic規模350億美元的「Project Big Sky」提供約85%殘值擔保，後續630億美元的「Project North Star」涵蓋比例也略低於75%。",
+            "殘值擔保意味著，若借款人違約且晶片處置價值不足以涵蓋約定金額，供應商恐須承擔額外償付責任。由於AI晶片迭代迅速，貸款人還需評估設備貶值、合約現金流及到期再融資風險，對輝達而言，提供擔保恐意味著揹負多年潛在負債。",
+            "輝達正調整客戶融資政策。《華爾街日報》此前報導指黃仁勳上月在柏林會晤新雲廠商時，要求對方先取得客戶預付款，再爭取GPU配額。",
+            "過去，輝達曾透過承租客戶持有的晶片提供收入合約支持，但部分相關交易已暫停。輝達臨時執行長克蕾絲上週二在財報電話會上表示，公司正嚴格評估後續投資、承諾與擔保，顯示對擴大信用支持轉趨審慎。",
+            "儘管如此，晶片融資市場整體仍在擴張。根據高盛統計，今年來已有480億美元晶片及算力融資、800億美元資料中心債券發行，並將2027年全球AI專案融資規模預測從3000億美元上調至5450億美元。輝達與華爾街合作的首筆晶片抵押融資仍在談判，預計最早2027年才能完成。"
+          ],
+          "paras_en": [
+            "The Wall Street Journal last week, citing sources, reported that a $500 billion AI chip financing plan involving institutions such as Apollo, Blackstone, BlackRock, Brookfield, Goldman Sachs and KKR is still only at the fundraising target stage. The memorandum of understanding (MOU) signed by the parties lists only the target amount, client types and possible credit support mechanisms, without requiring the full $500 billion to be raised, and Nvidia has not pre‑committed any specific guarantee amount. The plan is intended to help AI companies such as OpenAI and Anthropic finance purchases of Nvidia chips.",
+            "The report notes that former Nvidia CEO Jensen Huang said in August that he was willing to provide credit support up to 25% of project costs, but as lenders become more cautious toward lower‑rated AI firms, some investors are demanding residual‑value guarantees above 25% before they will fund the deals.",
+            "By contrast, other chip‑financing deals feature higher guarantee ratios. Broadcom is providing roughly an 85% residual‑value guarantee for Anthropic’s $35 billion “Project Big Sky,” and the subsequent $63 billion “Project North Star” carries a coverage ratio just under 75%.",
+            "A residual‑value guarantee means that if the borrower defaults and the disposition value of the chips is insufficient to cover the agreed amount, the supplier may have to assume additional repayment liability. Because AI chips iterate rapidly, lenders must also assess equipment depreciation, contract cash flows and rollover‑risk at maturity; for Nvidia, offering guarantees could mean assuming years of potential debt.",
+            "Nvidia is adjusting its customer financing policy. The Wall Street Journal previously reported that Huang, during a meeting with a new cloud provider in Berlin last month, asked the counterpart to secure customer pre‑payments before seeking GPU allocations.",
+            "In the past, Nvidia supported revenue contracts by leasing chips held by customers, but some of those transactions have been paused. Interim CEO Crestron (Kris) said on Tuesday’s earnings call that the company is rigorously evaluating future investments, commitments and guarantees, indicating a more cautious stance toward expanding credit support.",
+            "Nevertheless, the overall chip‑financing market continues to expand. According to Goldman Sachs, to date this year there have been $48 billion in chip and compute financing and $80 billion in data‑center bond issuances, and the forecast for global AI project financing in 2027 has been raised from $300 billion to $5.45 trillion. The first chip‑collateral financing deal between Nvidia and Wall Street is still under negotiation and is not expected to close before 2027."
+          ]
+        },
+        {
+          "news_id": "6669878",
+          "title": "輝達換帥＋AI融資急凍　華爾街開始重新定價「Fed鷹派邏輯」",
+          "title_en": "Nvidia Leadership Change and AI Financing Freeze Prompt Wall Street to Re‑price “Fed Hawk Logic”",
+          "publish_at": 1795381258,
+          "url": "https://news.cnyes.com/news/id/6669878",
+          "paras": [
+            "AI晶片巨擘輝達11月12日宣布黃仁勳即日起辭去執行長職務，董事會17日明確表態無意讓黃仁勳回任，原財務長克蕾絲已臨時接棒，董事會同步啟動外部遴選程序。",
+            "黃仁勳任內曾撮合六大機構搭建逾5000億美元AI基礎設施融資平台，並為OpenAI資料中心項目提供1050億美元擔保。自克蕾絲上任後，身兼財務長的她已將擔保上限從約2500億美元大幅壓縮至1050億美元。",
+            "摩根大通分析師判斷，既有承諾將履行，但新交易將需更長時間或更高補償條件，AI基建融資邊際成本正持續攀升，分析師普遍預期繼任者在這類交易上會明顯更保守。",
+            "這場人事地震也牽動總體經濟。TD Economics已將AI熱潮列為通膨壓力來源之一。若黃仁勳離場導致融資平台新增交易放緩、邊緣AI項目延後，聯準會(Fed)評估「需求是否過熱」時將面臨更不確定圖景。",
+            "放貸機構與信用投資人如今要求，未來任何融資必須以借款方客戶合約或財務擔保為後盾，而非僅憑輝達背書。",
+            "不過，黃仁勳離開不會讓Fed下月放棄升息。唯有未來兩季AI資本開支融資條件持續收緊、核心通膨出現連續下行訊號，Fed才有空間從「升息」轉向「暫停」。"
+          ],
+          "paras_en": [
+            "Nvidia, the AI chip giant, announced on November 12 that Jensen Huang will step down as CEO effective immediately, and the board on the 17th made clear it has no intention of reinstating him; former CFO Colette Kress has temporarily taken over, and the board has simultaneously launched an external search for a new CEO.",
+            "During Huang’s tenure he helped orchestrate a financing platform for AI infrastructure worth over $500 billion involving six major institutions, and provided a $105 billion guarantee for OpenAI’s data‑center project. Since Kress assumed the CFO role she has sharply reduced the guarantee ceiling from roughly $250 billion to $105 billion.",
+            "JPMorgan analysts judge that existing commitments will be honoured, but new deals will require longer timelines or higher compensation terms, as the marginal cost of AI‑infrastructure financing continues to rise; analysts generally expect the successor to be markedly more conservative on such transactions.",
+            "The personnel shock also reverberates through the broader economy. TD Economics has added the AI boom to its list of inflation‑pressure sources. If Huang’s departure slows new deals on the financing platform and pushes back edge‑AI projects, the Fed’s assessment of whether demand is overheating will face a more uncertain picture.",
+            "Lending institutions and credit investors now demand that any future financing be backed by the borrower’s customer contracts or financial guarantees, rather than relying solely on Nvidia’s endorsement.",
+            "Nevertheless, Huang’s exit will not cause the Fed to abandon rate hikes next month. Only if AI‑related capital‑expenditure financing conditions tighten further over the next two quarters and core inflation shows a sustained downward trend will the Fed have room to shift from “rate‑raising” to a “pause.”"
+          ]
+        },
         {
           "news_id": "6669829",
           "title": "本週操盤筆記：美國10月PCE、Q3 GDP修正值及南韓央行利率決議",
@@ -600,109 +739,6 @@
             "Goldman Sachs data show that global AI‑related capital spending is approaching $1 trillion in 2026, with cumulative debt issuance around $600 billion. Musk disclosed that SpaceX completed roughly $40 billion of debt financing in October 2026 to buy GPUs, but warned that the debt market is rapidly shutting its doors to emerging cloud providers (neocloud providers) that lack data‑center‑related revenue beyond the hardware itself.",
             "Amid tightening credit and more cautious investors, Musk predicts that over 200 companies in the AI data‑center space will face a wave of mergers and acquisitions or outright failure."
           ]
-        },
-        {
-          "news_id": "6669843",
-          "title": "伊朗宣稱擊中巴林美軍雷達 沙烏地攔截一枚飛彈",
-          "title_en": "Iran Claims to Hit US Radar in Bahrain, Saudi Arabia Intercepts a Missile",
-          "publish_at": 1795328403,
-          "url": "https://news.cnyes.com/news/id/6669843",
-          "paras": [
-            "伊朗伊斯蘭革命衛隊(IRGC)周六(21日)宣稱發射飛彈與無人機，擊中美軍設於巴林的防空雷達系統，以報復美軍侵犯其領空及襲擊雷達站。另一方面，沙烏地阿拉伯成功攔截襲擊其重要原油出口終端站的飛彈，而荷姆茲海峽周邊接連發生油輪遇襲事件。",
-            "根據伊朗國營媒體報導，革命衛隊針對巴林阿爾里法(al-Riffa)與阿瓦利(Awali)基地的美軍愛國者防空雷達發動打擊。巴林內政部證實一處民營工業設施在「伊朗侵略」中起火，所幸無人傷亡，隨後發布安全解除通知。革命衛隊還宣稱在荷姆茲海峽擊落美軍MQ-9與MQ-1無人機。",
-            "此外，由沙烏地主導的聯軍表示，已成功攔截並摧毀一枚朝向沙烏地西部延布(Yanbu)原油出口終端站發射的胡塞組織(青年運動)彈道飛彈，以及先前飛往利雅德的無人機。",
-            "伊朗外交政策與國家安全委員會發言人Ebrahim Rezaei警告，若伊朗的煉油廠或電廠遭襲，伊朗將全力打擊以色列的基礎設施。伊朗副外長Kazem Gharibabadi指責美國的經濟封鎖是「戰爭行為」，並強調濃縮核原料「在任何情況下」都不會移出伊朗。",
-            "伊朗軍方發言人准將Mohammad Akraminia表示，美國任何新侵略都將面臨「果斷且立即的回應」，美方必須接受伊朗條件以結束戰爭。",
-            "美國總統川普周六接受採訪時重申，他希望達成一項永久協議，阻止伊朗獲得核武器，即使「在4年、15年或20年後，我們迎來一位無能的總統」。",
-            "他形容伊朗領導層「非常難對付，且經常在協議達成次日毀約」。",
-            "針對伊朗宣稱擊傷美軍戰機的說法，美軍中央司令部予以否認，強調中東地區所有美軍F-16戰鬥機均安全無虞。",
-            "航運安全方面，英國海事貿易行動辦公室(UKMTO)指出，兩艘離開荷姆茲海峽的油輪在阿曼外海遭「不明拋射物」擊中，海峽威脅等級已調升至「嚴重」。",
-            "海峽船隻通行量較戰前驟降約65%，受到衝突衝擊，倫敦布蘭特原油期貨價格維持在每桶83.62美元的高位，顯著高於戰前水準。"
-          ],
-          "paras_en": [
-            "Iran's Islamic Revolutionary Guard Corps (IRGC) said on Saturday (the 21st) that it launched missiles and drones that struck a US air‑defense radar system stationed in Bahrain, claiming retaliation for US incursions into its airspace and attacks on radar sites. Meanwhile, Saudi Arabia successfully intercepted a missile aimed at a key oil‑export terminal, and a series of attacks on tankers have occurred around the Hormuz Strait.",
-            "According to Iran’s state media, the Revolutionary Guard targeted US Patriot air‑defense radars at the al‑Riffa and Awali bases in Bahrain. Bahrain’s interior ministry confirmed that a private industrial facility caught fire during the \"Iranian aggression,\" but there were no casualties and a safety clearance was later issued. The Guard also claimed to have shot down US MQ‑9 and MQ‑1 drones over the Hormuz Strait.",
-            "In addition, a Saudi‑led coalition said it had successfully intercepted and destroyed a ballistic missile launched by the Houthi youth movement toward the Yanbu oil‑export terminal in western Saudi Arabia, as well as a drone that was previously heading toward Riyadh.",
-            "Ebrahim Rezaei, spokesperson for Iran’s Foreign Policy and National Security Committee, warned that if Iran’s refineries or power plants were attacked, Iran would fully strike Israeli infrastructure. Deputy Foreign Minister Kazem Gharibabadi accused the United States of an \"act of war\" with its economic blockade and stressed that enriched nuclear material would not be moved out of Iran under any circumstances.",
-            "Iranian military spokesman Brigadier General Mohammad Akraminia said any new US aggression would meet a \"decisive and immediate response,\" and that the United States must accept Iran’s conditions to end the war.",
-            "U.S. President Donald Trump reiterated in an interview on Saturday that he wants a permanent deal to prevent Iran from acquiring nuclear weapons, even if \"in four, fifteen or twenty years we get an incompetent president.\"",
-            "He described Iran’s leadership as \"very difficult to deal with and often reneges on agreements the day after they are reached.\"",
-            "The US Central Command denied Iran's claim of having damaged US aircraft, emphasizing that all US F‑16 fighter jets in the Middle East remain safe and operational.",
-            "Regarding maritime safety, the United Kingdom Maritime Trade Operations (UKMTO) reported that two tankers leaving the Hormuz Strait were hit by \"unidentified projectiles\" in Omani waters, prompting the threat level for the strait to be raised to \"severe.\"",
-            "Ship traffic through the strait has fallen about 65% from pre‑war levels due to the conflict, while London Brent crude futures have stayed high at $83.62 a barrel, well above pre‑war prices."
-          ]
-        },
-        {
-          "news_id": "6669841",
-          "title": "全美融資餘額自1.5兆美元高點回落 那斯達克指數跌入修正區",
-          "title_en": "U.S. Margin Debt Falls From $1.5 Trillion Peak as Nasdaq Slides Into Correction Zone",
-          "publish_at": 1795326003,
-          "url": "https://news.cnyes.com/news/id/6669841",
-          "paras": [
-            "隨著美國股市高檔震盪，市場風險偏好出現鬆動跡象。根據數據統計，截至 10 月，全美融資餘額(Margin Debt)已從今年 6 月創下的 1.502 兆美元歷史新高，回落至 1.448 兆美元，短短數月內滑落約 540 億美元。",
-            "這波融資去槓桿適逢美股科技股賣壓湧現，以科技股為主體的那斯達克指數自近期高點拉回近 12%，正式跌入修正區域，而標普 500 指數則仍在歷史高檔附近徘徊。",
-            "針對融資餘額的急劇變動，《The Motley Fool》專欄分析師Sean Williams警告，融資債務一直是衡量市場過度投機的關鍵指標。Williams指出，自 1998 年以來，美股共出現四次融資債務在短期內呈拋物線飆升逾 65% 至 80% 以上的情形，而前三次最終皆引發市場重挫：",
-            "1999 年 3 月至 2000 年 3 月(網路泡沫)：融資債務在 12 個月內暴增 80% 至近 3,000 億美元，隨後標普 500 指數與那斯達克指數分別崩跌 49% 與 78%。",
-            "2006 年 6 月至 2007 年 7 月(次貸金融危機)：融資債務於 13 個月內激增 66% 至約 4,160 億美元，隨後爆發大蕭條，標普 500 指數大跌 57%。",
-            "2020 年 3 月至 2021 年 10 月(疫情資金浪潮)：融資債務在 19 個月內暴增 95% 至 9,360 億美元，直接引發 2022 年熊市，那斯達克指數修正幅度達 33%。",
-            "2025 年 4 月至 2026 年 6 月：融資債務在 14 個月內急升 77% 至 1.502 兆美元新高。",
-            "Williams強調，借貸資金雖能放大獲利，但也會加劇虧損；當投資人在融資拋物線大增後開始減碼去槓桿，歷史經驗顯示這往往是市場見頂與泡沫破裂的重大警訊，而非單純的短暫休整。",
-            "在人工智慧(AI)浪潮推升股市之際，波克夏海瑟威(Berkshire Hathaway)前執行長華倫·巴菲特(Warren Buffett)早年的警語重新引發關注。巴菲特曾在 1999 年《Fortune》雜誌撰文指出，技術變革與投資報酬是兩回事。他以航空業為例，儘管航空技術改變了人類生活，但在過去二十年間卻有 129 家航空公司破產；電視與廣播產業亦然，未能持續為股東創造長期報酬。",
-            "巴菲特當時強調：「投資的關鍵不在於評估一個行業會對社會產生多大影響或成長多少，而是確定任何給定公司的競爭優勢，最重要的是此優勢的持久性。」",
-            "Williams認為，這項原則同樣適用於當前的 AI 產業浪潮。"
-          ],
-          "paras_en": [
-            "As the U.S. equity market trades in a high‑level range, market risk appetite shows signs of loosening. According to data, by October the total U.S. margin debt had retreated from the historic high of $1.502 trillion set in June to $1.448 trillion, a drop of roughly $54 billion in just a few months.",
-            "This deleveraging of margin debt coincides with a surge of selling pressure on U.S. tech stocks. The Nasdaq index, which is heavily weighted toward technology, has pulled back nearly 12% from recent highs and officially entered correction territory, while the S&P 500 remains near its historic peaks.",
-            "Regarding the sharp swing in margin debt, Motley Fool columnist Sean Williams warned that margin debt is a key gauge of market over‑speculation. Williams noted that since 1998 the U.S. market has experienced four episodes in which margin debt surged parabolically by more than 65%‑80% over a short period, and the first three all culminated in steep market declines:",
-            "March 1999 – March 2000 (dot‑com bubble): margin debt exploded by about 80% in 12 months to nearly $300 billion, after which the S&P 500 and Nasdaq fell 49% and 78% respectively.",
-            "June 2006 – July 2007 (sub‑prime crisis): margin debt jumped 66% in 13 months to roughly $416 billion, preceding the Great Recession and a 57% plunge in the S&P 500.",
-            "March 2020 – October 2021 (pandemic liquidity wave): margin debt surged 95% over 19 months to $936 billion, directly triggering the 2022 bear market and a 33% correction in the Nasdaq.",
-            "April 2025 – June 2026: margin debt rose 77% in 14 months to a new high of $1.502 trillion.",
-            "Williams emphasized that borrowed money can amplify gains but also magnifies losses; when investors start cutting back and deleveraging after a parabolic rise in margin debt, history shows this is often a major warning sign of a market top and bubble burst rather than a mere short‑term pause.",
-            "Amid the AI‑driven market rally, early remarks by former Berkshire Hathaway CEO Warren Buffett have resurfaced. In a 1999 Fortune article, Buffett warned that technological change and investment returns are separate matters. He cited the airline industry, noting that despite transformative technology, 129 airlines have gone bankrupt over the past two decades, and made a similar point about TV and radio firms failing to deliver lasting shareholder returns.",
-            "Buffett stressed at the time: “The key to investing is not to assess how much impact an industry will have on society or how fast it will grow, but to determine a given company’s competitive advantage, and most importantly, the durability of that advantage.”",
-            "Williams believes the same principle applies to today’s AI industry wave."
-          ]
-        },
-        {
-          "news_id": "6669834",
-          "title": "2018年劇本重演？美股暴跌 投資人質疑聯準會緊縮政策",
-          "title_en": "Is 2018 Repeating? US Stocks Plunge, Investors Question Fed Tightening Policy",
-          "publish_at": 1795323603,
-          "url": "https://news.cnyes.com/news/id/6669834",
-          "paras": [
-            "全球金融市場近期再掀波瀾，美股持續下挫與金融條件急劇緊縮，使市場瀰漫著與2018年末高度相似的危險氣息。在聯準會(Fed)升息預期居高不下之際，投資人強烈疑慮貨幣政策緊縮恐將進一步加劇市場動盪。",
-            "2018年恐慌：清倉式變現與緊縮陰霾\n\n美股近期遭遇嚴峻賣壓，標普500指數連續六個交易日收跌，跌破200日均線，盤中甚至出現漲幅逾1%後逆轉重挫2%的劇烈波動。全數11個產業類股無一倖免，連公用事業與日常消費品等傳統防禦性類股也同步倒地。",
-            "針對此輪重挫，高盛交易主管 Rich Privorotsky 在最新報告中指出，當前市場賣壓並非傳統的「類股輪動」，而是屬於「全面清倉式變現」。Privorotsky 警告，市場正經歷從風險偏好下降轉向更深層流動性收縮的危險階段。",
-            "同時，高盛美國金融條件指數(FCI)總經籃子升至124.48，創下過去一年新高，顯示金融條件正以罕見速度急速緊縮。",
-            "2018年末升息過度迫使聯準會「轉向」\n\n當前市場情勢與2018年四季度如出一轍。2018年聯準會全年四次升息，並於12月將聯邦基金利率區間上調至2.25%—2.50%。隨後，標普500指數自9月高點一路重挫至12月24日低點，累計跌幅達19.8%，逼近技術性熊市。",
-            "歷史經驗顯示，持續累積的市場壓力最終倒逼貨幣政策轉向。2019年1月30日，聯準會公開表態未來調整利率時將「保持耐心」，釋出明確的暫停升息訊號，美股隨即迎來顯著反彈。",
-            "Privorotsky 分析指出，當前市場同樣面臨金融條件緊縮與經濟成長承壓的雙重威脅，政策立場與市場現實之間的矛盾正在持續加深。",
-            "黃金失守透露流動性危機\n\n聯準會官員近期密集釋放鷹派訊息，加劇了市場恐慌。聯準會理事華勒公開提及升息50個基點(2碼)的可能性，配合會議紀錄中對持續升息的支持立場，不僅拉高資本成本，也使人工智慧(AI)基礎建設投資的回報預期大受打擊。",
-            "更值得注意的是跨資產的異常聯動。通常作為避險資產的黃金，此次竟與股市同步暴跌，金價跌破每盎司3600美元，銅價出現單日大跌約5%的劇烈下挫。",
-            "Privorotsky 強調，黃金是觀察當前流動性危機深度的最佳指標；股票與黃金同步被拋售，意味著投資人不再只是轉移資產，而是變現求現，反映出整體金融系統的流動性收縮。",
-            "澳盛銀行(ANZ)對此進一步補充，黃金投機性多頭目前仍有約200噸的潛在減碼空間，意味著市場去槓桿的壓力可能尚未完全釋放完畢。",
-            "政策催化劑何時顯現？\n\n儘管悲觀情緒籠罩，Privorotsky 認為當前單邊去槓桿的規模顯示美股可能已接近戰術性低點。由於法人機構倉位已明顯低配，一旦出現正面催化劑，反彈幅度將相當劇烈。在操作策略上，Privorotsky 繼續看好「做多短天期國債」，認為債市已開始為聯準會的政策失誤訂價。",
-            "然而，真正的趨勢扭轉仍賴於政策預期的明確改變。目前高盛經濟學家團隊仍預測聯準會將於12月升息25個基點(1碼)，並於2027年3月再次升息，這與債券市場的訂價存在顯著分歧。",
-            "Privorotsky 研判，雖然市場正密切關注 PCE 物價指數與非農就業報告，但真正能迫使聯準會重新評估政策路徑的，恐將是後續公布的 11 月 CPI 消費者物價指數。"
-          ],
-          "paras_en": [
-            "Global financial markets have recently been roiled again, with US equities continuing to fall and financial conditions tightening sharply, creating a danger reminiscent of late 2018. With expectations of further Fed rate hikes remaining high, investors are deeply concerned that monetary tightening could further exacerbate market turbulence.",
-            "2018 panic: forced liquidation and tightening gloom\n\nUS stocks have recently faced severe selling pressure, with the S&P 500 closing lower for six consecutive trading days and slipping below its 200‑day moving average. Intraday the index even swung from a gain of more than 1% to a plunge of about 2% in a volatile reversal. All 11 industry sectors were hit, including traditionally defensive utilities and consumer staples, which also fell hard.",
-            "Regarding this sharp sell‑off, Goldman Sachs trading head Rich Privorotsky noted in a new report that the current market pressure is not a typical sector rotation but a “full‑blown liquidation.” Privorotsky warned that the market is moving from a decline in risk appetite to a deeper phase of liquidity contraction.",
-            "At the same time, Goldman Sachs’ US Financial Conditions Index (FCI) rose to 124.48, a one‑year high, indicating that financial conditions are tightening at an unusually rapid pace.",
-            "Late‑2018 rate hikes forced the Fed to “turn around”\n\nThe present market situation mirrors the fourth quarter of 2018. In 2018 the Fed raised rates four times and in December lifted the federal‑funds target range to 2.25%‑2.50%. Subsequently the S&P 500 fell from its September peak to a low on Dec. 24, a cumulative drop of 19.8%, edging toward a technical bear market.",
-            "Historical experience shows that sustained market pressure eventually forces a policy pivot. On Jan. 30, 2019 the Fed publicly said it would “remain patient” when adjusting rates, signalling a clear pause in hikes, and US stocks promptly rallied.",
-            "Privorotsky analysis points out that the market now faces a dual threat of tightening financial conditions and pressured economic growth, deepening the conflict between policy stance and market reality.",
-            "Gold loses its safe‑haven status, revealing a liquidity crisis\n\nFed officials have recently been issuing hawkish messages, heightening market fear. Fed Governor Christopher Waller publicly mentioned the possibility of a 50‑basis‑point (½‑point) rate hike, and meeting minutes showed continued support for further tightening, which not only raises capital costs but also sharply dents expected returns on AI infrastructure investments.",
-            "More noteworthy is the abnormal cross‑asset linkage. Gold, usually a hedge asset, this time fell in lockstep with equities, slipping below $3,600 per ounce, while copper plunged about 5% in a single day.",
-            "Privorotsky emphasized that gold is the best gauge of the depth of the current liquidity crisis; simultaneous selling of stocks and gold means investors are not merely reallocating assets but are cashing out, reflecting a contraction of liquidity across the financial system.",
-            "ANZ added that speculative long positions in gold still have roughly 200 tons of potential reduction, suggesting that de‑leveraging pressure may not yet be fully exhausted.",
-            "When will a policy catalyst appear?\n\nDespite the gloom, Privorotsky believes the scale of the current one‑sided de‑leveraging indicates US equities may be near a tactical bottom. With institutional positions already under‑weighted, any positive catalyst could trigger a sharp rebound. Strategically, Privorotsky continues to favor “long short‑term Treasury bonds,” arguing that the bond market is beginning to price in the Fed’s policy missteps.",
-            "However, a true trend reversal still depends on a clear shift in policy expectations. Goldman Sachs economists still forecast a 25‑basis‑point (¼‑point) Fed hike in December and another in March 2027, a view that diverges markedly from bond‑market pricing.",
-            "Privorotsky judges that while the market is watching the PCE price index and the non‑farm payroll report closely, the data point most likely to force the Fed to reassess its policy path will be the upcoming November CPI consumer price index."
-          ]
         }
       ]
     },
@@ -710,6 +746,101 @@
       "key": "wd_stock",
       "label": "國際財經",
       "items": [
+        {
+          "news_id": "6669872",
+          "title": "高盛為馬斯克「操作」融資買GPU！採用公司債與ABS混合架構",
+          "title_en": "Goldman Sachs Helps Musk Secure Financing for GPU Purchase Using Hybrid Corporate Bond and ABS Structure",
+          "publish_at": 1795385403,
+          "url": "https://news.cnyes.com/news/id/6669872",
+          "paras": [
+            "高盛集團(GS-US) 與阿波羅全球管理公司（Apollo Global Management）上周四（19日）協助馬斯克旗下SpaceX(SPCX-US) 完成約320億美元債券定價，這筆交易是SpaceX總額約440億美元融資計畫的核心部分，也為科技業如何籌措龐大人工智慧（AI）晶片採購資金提供新的融資模式。",
+            "這批債券結合公司債與資產支持證券（ABS）的特性，是高盛耗時一年多設計的融資方案，目的是在不大幅增加企業資產負債表負擔的情況下，為價格昂貴的AI晶片取得資金。",
+            "儘管獲得貝萊德(BLK-US) 、Pimco等大型機構認購，SpaceX仍須支付相當高的融資成本。",
+            "上周市場對AI產業成長前景的疑慮升高，拖累全球股市，美股下跌8.6%。隨著支撐全球經濟的AI基礎建設逐漸逼近融資市場的承受極限，SpaceX這筆交易也受到關注，可能成為其他科技巨頭未來採購晶片時參考的融資範例。",
+            "AI晶片融資面臨兩難\n\nAI晶片融資一直是市場難題。晶片採購成本高昂，但使用壽命僅有數年，企業若透過傳統公司債籌資，可能推升整體負債，進而影響信用評等，因此不少買家對此有所顧慮。",
+            "改以ABS等複雜金融工具籌資，雖有助於避免新增債務直接衝擊信用評等，卻也面臨市場規模不足的問題。",
+            "Diameter的Goodwin估計，未來市場需要採購約1.5兆美元的晶片，其中大部分將仰賴債務融資。在現有信貸市場中，規模約8.3兆美元的美國投資級公司債市場，是少數具備相近承接能力的資金來源。",
+            "摩根大通銀行(JPM-US) 分析師今年6月在報告中指出，找到合適的晶片融資模式是一個價值數十億美元的問題。隨著AI晶片資金需求龐大，但五年期資金供給相對有限，市場勢必需要更具創意的融資方式。",
+            "高盛設計新架構 投資人須預先投入資金\n\n知情人士透露，高盛今年夏天向SpaceX提出一套融資架構，由特殊目的載體（SPV）負責採購輝達(NVDA-US) 晶片，再發行債券籌資，並透過與SpaceX簽訂約五年的租賃合約，以租金收入償還債務。",
+            "這套架構本質上屬於ABS，但保留部分傳統公司債的特徵，包括配置美國證券統一識別碼（CUSIP），讓專注於高評級公司債的投資人也能參與。",
+            "相較於先前協助Anthropic(ANT-US) 擴充算力、規模達350億美元的「Big Sky」融資計畫，高盛這次也調整了資金運作流程。",
+            "Big Sky採取私募配售方式，先由投資人承諾出資，待設備到位後再分階段動用資金，債券之後才轉換為可供更多機構交易的形式。這種分階段安排雖能配合設備交付進度，卻增加交易複雜度，也讓習慣隨時買賣公司債的投資人較難參與。",
+            "SpaceX採用的方案則要求投資人一開始就全額出資。晶片交付前，資金會存放在專用帳戶，並可配置美國短期公債等短期工具，利用投資收益抵銷設備到位前的融資成本。",
+            "待GPU陸續交付後，帳戶資金才會撥出，用於採購晶片並出租給SpaceX。由於債券在發行後即可供合格機構投資人交易，不必等待分階段提款，流程也更接近傳統公司債市場。",
+            "貝萊德、Pimco認購 SpaceX融資成本偏高\n\nSpaceX此次整體融資規模約440億美元，涵蓋優先及次級部分。知情人士表示，參與認購的買方包括保險公司、結構型信貸投資人、資產管理機構及退休基金。",
+            "上周四完成定價的約320億美元債券中，約60億美元已於本周透過銀團分銷。SpaceX披露，交易支持者包括貝萊德、KKR(KKR-US) 及高盛資產管理。知情人士則指出，Pimco認購約40億美元，Blue Owl (OBDC-US) 也是主要投資人之一。",
+            "不過，為了吸引投資人參與，SpaceX必須提供較高的融資溢價。上周發售給公司債投資人的證券，定價利差較SpaceX今年稍早發行的同期限債券高出約100個基點。",
+            "更令市場關注的是，SpaceX先前發行的舊債近期在次級市場持續走跌，跌幅擴大已令債券交易員感到意外。"
+          ],
+          "paras_en": [
+            "Goldman Sachs Group (GS-US) and Apollo Global Management assisted SpaceX (SPCX-US) in pricing approximately $32 billion in bonds last Thursday (19th), a key component of SpaceX’s roughly $44 billion financing plan and a new model for how the tech industry can raise funds for expensive AI chip purchases.",
+            "This tranche blends corporate bonds with asset‑backed securities (ABS) and was designed over more than a year by Goldman to secure capital for costly AI chips without significantly loading the company’s balance sheet.",
+            "Despite subscriptions from large institutions such as BlackRock (BLK-US) and Pimco, SpaceX still faces high financing costs.",
+            "Last week, market concerns about AI growth prospects weighed on global equities, dragging U.S. stocks down 8.6%. As AI infrastructure approaches the limits of the financing market, this deal has attracted attention and may serve as a reference for other tech giants’ future chip procurement financing.",
+            "AI chip financing faces a dilemma: the high cost of chips and their short lifespan mean that traditional corporate bonds could raise overall debt and affect credit ratings, causing buyers to hesitate.",
+            "Using complex instruments like ABS can avoid direct debt impact on credit ratings but suffers from insufficient market size.",
+            "Goodwin of Diameter estimates that the market will need to purchase about $1.5 trillion in chips, most of which will rely on debt financing. The U.S. investment‑grade corporate bond market, roughly $8.3 trillion, is one of the few sources with comparable capacity.",
+            "JPMorgan Chase analysts in a June report said finding a suitable chip‑financing model is a multi‑billion‑dollar problem. With huge demand for AI chip funding but limited five‑year supply, the market will need more creative financing methods.",
+            "Goldman proposed a new structure this summer, where a special purpose vehicle (SPV) would purchase NVIDIA (NVDA-US) chips, issue bonds to raise funds, and use a five‑year lease agreement with SpaceX to repay the debt through rental income.",
+            "The structure is essentially an ABS but retains some traditional corporate bond features, including a CUSIP, allowing investors focused on high‑rated corporate bonds to participate.",
+            "Compared to Goldman’s earlier assistance to Anthropic (ANT-US) for the $35 billion “Big Sky” expansion, Goldman adjusted the funding workflow this time.",
+            "Big Sky used a private placement, with investors committing funds first, then drawing them in stages after equipment delivery, and only later converting bonds into tradable instruments. This staged approach matched delivery but increased complexity and made it harder for investors used to trading corporate bonds on the fly.",
+            "SpaceX’s scheme requires investors to pay the full amount upfront. Before chip delivery, the money sits in a dedicated account and can be invested in U.S. short‑term Treasury instruments, using investment returns to offset pre‑delivery financing costs.",
+            "Once GPUs are delivered, the account funds are released to purchase chips and lease them to SpaceX. Because the bonds can be traded by qualified institutional investors immediately after issuance, there is no need for staged withdrawals, making the process closer to a traditional corporate bond market.",
+            "SpaceX’s total financing is about $44 billion, covering senior and subordinated tranches. Participants include insurers, structured credit investors, asset managers, and pension funds.",
+            "Of the $32 billion priced last Thursday, about $6 billion has already been distributed through a syndicate this week. SpaceX disclosed that supporters include BlackRock, KKR (KKR-US), and Goldman’s asset management arm, while Pimco subscribed roughly $4 billion and Blue Owl (OBDC-US) was also a major investor.",
+            "To attract investors, SpaceX had to offer a higher financing premium. The bonds sold to corporate‑bond investors last week had a pricing spread about 100 basis points higher than SpaceX’s earlier same‑term issuance.",
+            "Even more attention was drawn by the recent decline in SpaceX’s older bonds on the secondary market, with the drop widening unexpectedly, surprising bond traders."
+          ]
+        },
+        {
+          "news_id": "6669871",
+          "title": "5000億美元AI晶片融資陷分歧：輝達擔保比例成焦點",
+          "title_en": "$500 Billion AI Chip Financing Faces Dispute: Nvidia's Guarantee Ratio Becomes Focal Point",
+          "publish_at": 1795384803,
+          "url": "https://news.cnyes.com/news/id/6669871",
+          "paras": [
+            "《華爾街日報》上週引述知情人士報導，由阿波羅、黑石、貝萊德、布魯克菲爾德、高盛及KKR等機構參與的5000億美元AI晶片融資計畫，目前仍停留在籌資目標階段。各方簽署的諒解備忘錄(MOU)僅列出目標金額、客戶類型及潛在信用支持方式，並未規定必須籌足5000億美元，輝達亦未預先承諾具體擔保額度。該計畫旨在協助OpenAI、Anthropic等AI企業融資採購輝達晶片",
+            "報導指出，輝達前執行長黃仁勳8月曾表示，願意提供的信用支持上限為專案成本的25%，但隨著貸款人對低評級AI企業趨於謹慎，部分投資者要求殘值擔保比例超過25%才願意出資。",
+            "對比之下，其他晶片融資案的擔保比例更高。博通為Anthropic規模350億美元的「Project Big Sky」提供約85%殘值擔保，後續630億美元的「Project North Star」涵蓋比例也略低於75%。",
+            "殘值擔保意味著，若借款人違約且晶片處置價值不足以涵蓋約定金額，供應商恐須承擔額外償付責任。由於AI晶片迭代迅速，貸款人還需評估設備貶值、合約現金流及到期再融資風險，對輝達而言，提供擔保恐意味著揹負多年潛在負債。",
+            "輝達正調整客戶融資政策。《華爾街日報》此前報導指黃仁勳上月在柏林會晤新雲廠商時，要求對方先取得客戶預付款，再爭取GPU配額。",
+            "過去，輝達曾透過承租客戶持有的晶片提供收入合約支持，但部分相關交易已暫停。輝達臨時執行長克蕾絲上週二在財報電話會上表示，公司正嚴格評估後續投資、承諾與擔保，顯示對擴大信用支持轉趨審慎。",
+            "儘管如此，晶片融資市場整體仍在擴張。根據高盛統計，今年來已有480億美元晶片及算力融資、800億美元資料中心債券發行，並將2027年全球AI專案融資規模預測從3000億美元上調至5450億美元。輝達與華爾街合作的首筆晶片抵押融資仍在談判，預計最早2027年才能完成。"
+          ],
+          "paras_en": [
+            "The Wall Street Journal last week, citing sources, reported that a $500 billion AI chip financing plan involving institutions such as Apollo, Blackstone, BlackRock, Brookfield, Goldman Sachs and KKR is still only at the fundraising target stage. The memorandum of understanding (MOU) signed by the parties lists only the target amount, client types and possible credit support mechanisms, without requiring the full $500 billion to be raised, and Nvidia has not pre‑committed any specific guarantee amount. The plan is intended to help AI companies such as OpenAI and Anthropic finance purchases of Nvidia chips.",
+            "The report notes that former Nvidia CEO Jensen Huang said in August that he was willing to provide credit support up to 25% of project costs, but as lenders become more cautious toward lower‑rated AI firms, some investors are demanding residual‑value guarantees above 25% before they will fund the deals.",
+            "By contrast, other chip‑financing deals feature higher guarantee ratios. Broadcom is providing roughly an 85% residual‑value guarantee for Anthropic’s $35 billion “Project Big Sky,” and the subsequent $63 billion “Project North Star” carries a coverage ratio just under 75%.",
+            "A residual‑value guarantee means that if the borrower defaults and the disposition value of the chips is insufficient to cover the agreed amount, the supplier may have to assume additional repayment liability. Because AI chips iterate rapidly, lenders must also assess equipment depreciation, contract cash flows and rollover‑risk at maturity; for Nvidia, offering guarantees could mean assuming years of potential debt.",
+            "Nvidia is adjusting its customer financing policy. The Wall Street Journal previously reported that Huang, during a meeting with a new cloud provider in Berlin last month, asked the counterpart to secure customer pre‑payments before seeking GPU allocations.",
+            "In the past, Nvidia supported revenue contracts by leasing chips held by customers, but some of those transactions have been paused. Interim CEO Crestron (Kris) said on Tuesday’s earnings call that the company is rigorously evaluating future investments, commitments and guarantees, indicating a more cautious stance toward expanding credit support.",
+            "Nevertheless, the overall chip‑financing market continues to expand. According to Goldman Sachs, to date this year there have been $48 billion in chip and compute financing and $80 billion in data‑center bond issuances, and the forecast for global AI project financing in 2027 has been raised from $300 billion to $5.45 trillion. The first chip‑collateral financing deal between Nvidia and Wall Street is still under negotiation and is not expected to close before 2027."
+          ]
+        },
+        {
+          "news_id": "6669878",
+          "title": "輝達換帥＋AI融資急凍　華爾街開始重新定價「Fed鷹派邏輯」",
+          "title_en": "Nvidia Leadership Change and AI Financing Freeze Prompt Wall Street to Re‑price “Fed Hawk Logic”",
+          "publish_at": 1795381258,
+          "url": "https://news.cnyes.com/news/id/6669878",
+          "paras": [
+            "AI晶片巨擘輝達11月12日宣布黃仁勳即日起辭去執行長職務，董事會17日明確表態無意讓黃仁勳回任，原財務長克蕾絲已臨時接棒，董事會同步啟動外部遴選程序。",
+            "黃仁勳任內曾撮合六大機構搭建逾5000億美元AI基礎設施融資平台，並為OpenAI資料中心項目提供1050億美元擔保。自克蕾絲上任後，身兼財務長的她已將擔保上限從約2500億美元大幅壓縮至1050億美元。",
+            "摩根大通分析師判斷，既有承諾將履行，但新交易將需更長時間或更高補償條件，AI基建融資邊際成本正持續攀升，分析師普遍預期繼任者在這類交易上會明顯更保守。",
+            "這場人事地震也牽動總體經濟。TD Economics已將AI熱潮列為通膨壓力來源之一。若黃仁勳離場導致融資平台新增交易放緩、邊緣AI項目延後，聯準會(Fed)評估「需求是否過熱」時將面臨更不確定圖景。",
+            "放貸機構與信用投資人如今要求，未來任何融資必須以借款方客戶合約或財務擔保為後盾，而非僅憑輝達背書。",
+            "不過，黃仁勳離開不會讓Fed下月放棄升息。唯有未來兩季AI資本開支融資條件持續收緊、核心通膨出現連續下行訊號，Fed才有空間從「升息」轉向「暫停」。"
+          ],
+          "paras_en": [
+            "Nvidia, the AI chip giant, announced on November 12 that Jensen Huang will step down as CEO effective immediately, and the board on the 17th made clear it has no intention of reinstating him; former CFO Colette Kress has temporarily taken over, and the board has simultaneously launched an external search for a new CEO.",
+            "During Huang’s tenure he helped orchestrate a financing platform for AI infrastructure worth over $500 billion involving six major institutions, and provided a $105 billion guarantee for OpenAI’s data‑center project. Since Kress assumed the CFO role she has sharply reduced the guarantee ceiling from roughly $250 billion to $105 billion.",
+            "JPMorgan analysts judge that existing commitments will be honoured, but new deals will require longer timelines or higher compensation terms, as the marginal cost of AI‑infrastructure financing continues to rise; analysts generally expect the successor to be markedly more conservative on such transactions.",
+            "The personnel shock also reverberates through the broader economy. TD Economics has added the AI boom to its list of inflation‑pressure sources. If Huang’s departure slows new deals on the financing platform and pushes back edge‑AI projects, the Fed’s assessment of whether demand is overheating will face a more uncertain picture.",
+            "Lending institutions and credit investors now demand that any future financing be backed by the borrower’s customer contracts or financial guarantees, rather than relying solely on Nvidia’s endorsement.",
+            "Nevertheless, Huang’s exit will not cause the Fed to abandon rate hikes next month. Only if AI‑related capital‑expenditure financing conditions tighten further over the next two quarters and core inflation shows a sustained downward trend will the Fed have room to shift from “rate‑raising” to a “pause.”"
+          ]
+        },
         {
           "news_id": "6669829",
           "title": "本週操盤筆記：美國10月PCE、Q3 GDP修正值及南韓央行利率決議",
@@ -853,91 +984,6 @@
             "Even more concerning than the cash shortage is the towering leveraged‑margin balance. As of the 19th, margin loans on Korean stocks remained at a staggering 26.0832 trillion won (20.2068 trillion won on the KOSPI and 5.8764 trillion won on the KOSDAQ), with unsettled receivables amounting to 970 billion won.",
             "Retail investors can endure losses with their own capital while waiting for a rebound, but those who bought on margin cannot. Analysts estimate that if an investor uses 5 million won of own money matched with 5 million won of borrowed funds to purchase a stock, a 30% price drop would wipe out 60% of the equity. Once the maintenance margin falls below the required level, brokers will trigger forced liquidations. The 26 trillion won of outstanding margin could spark a vicious chain reaction: falling prices trigger liquidations, which add sell pressure and push prices even lower.",
             "To make matters worse, after the Korean market closed on the 20th, U.S. equities suffered a severe sell‑off. The Nasdaq plunged 5.13%, the Philadelphia Semiconductor Index fell more than 10%, and AI leader Nvidia tumbled 14.01% in a single day. This sets up a harsh test on Monday the 23rd for the South Korean market’s capacity to absorb capital and its supply‑demand limits."
-          ]
-        },
-        {
-          "news_id": "6669849",
-          "title": "狂發30張照片回味APEC！川普曬與普丁合影 標註「我的朋友」",
-          "title_en": "Trump Floods Social Media with 30 Photos Reliving APEC, Posts Putin Photo Labeled “My Friend”",
-          "publish_at": 1795333143,
-          "url": "https://news.cnyes.com/news/id/6669849",
-          "paras": [
-            "結束中國深圳的亞太經濟合作會議(APEC)後，美國總統川普周六(21日)在社群平台上，一口氣發表30多張會議照片，高調在與俄羅斯總統普丁的合照標註「我的朋友」(My Friend)，並於白宮記者會與專訪中辯護表示，與擁有4,000枚核武器的國家領導人交友是一件好事。",
-            "川普與普丁在APEC期間，舉行了約40分鐘的場邊會談，會前川普在媒體鏡頭前微笑指向普丁稱：「這是誰？這是我的朋友。」",
-            "俄羅斯總統外交助理烏沙科夫(Yuri Ushakov)證實，雙方討論了和平解決烏克蘭戰爭的方案，美方特使庫許納(Jared Kushner)澄清，任何協議都會與烏克蘭及歐洲密切協商，絕非單方面強加。",
-            "然而，川普高調展現的友誼引發歐洲盟友強烈疑慮。波蘭總理圖斯克(Donald Tusk)在社群平台 X 上感嘆：「願上帝保佑我們免受這種朋友的傷害」，並強調普丁絕非歐洲的朋友。波蘭外長席科爾斯基(Radosław Sikorski)表示，川普擁抱普丁的畫面令人憂心，讓人質疑關鍵時刻川普究竟會選擇波蘭還是普丁。",
-            "波蘭國防部長柯西尼亞克-卡密希(Władysław Kosiniak-Kamysz)指出，俄軍連夜以飛彈與無人機侵犯波蘭領空，顯示地緣威脅近在咫尺。此外，烏克蘭總統澤倫斯基(Volodymyr Zelenskyy)對此苦笑攤手未作回應；丹麥首相佛瑞德里克森(Mette Frederiksen)形容會晤「令人極難理解」；德國總理梅爾茨(Friedrich Merz)則警告切莫讓會談演變為二戰末期瓜分歐洲的「雅爾達會議」重演。",
-            "不過，部分盟友試圖緩和氛圍。英國首相柏南(Andy Burnham)指出，川普並未陷於普丁的魅力攻勢，反而在會中極為關切戰爭造成的慘重生命損失；北約秘書長呂特(Mark Rutte)也為核武大國外交對話的必要性進行辯護。",
-            "對於主辦城市深圳，川普盛讚城市發展規模與成就。川普返回美國後召開記者會表示，深圳「完美得無可挑剔」。他指出深圳僅在短短 40 年內，就從一座小漁村發展成如今的現代化大都市規模。",
-            "川普特別提到自己仔細觀察了深圳的基礎建設，稱讚其道路與護欄不僅沒有坑坑窪窪，甚至連修補補綴的痕跡都沒有，並對當地的建設與維護工作表達了高度尊重。",
-            "在深圳期間，川普讚許深圳是「非常棒的城市」，同時感到遺憾與「惋惜」，認為媒體的報導遠無法完整展現這座城市的全景。"
-          ],
-          "paras_en": [
-            "After the Asia-Pacific Economic Cooperation (APEC) summit in Shenzhen, China, U.S. President Donald Trump posted more than 30 photos from the meeting on Saturday (the 21st), boldly labeling a picture with Russian President Vladimir Putin as “My Friend” and defending the friendship at a White House press briefing and interview, saying it’s a good thing to be friends with the leader of a nation that possesses 4,000 nuclear weapons.",
-            "During APEC, Trump and Putin held a roughly 40‑minute side meeting. Before the talks, Trump smiled at the cameras and pointed at Putin, saying, “Who’s this? This is my friend.”",
-            "Russian presidential aide Yuri Ushakov confirmed that the two leaders discussed a peaceful solution to the war in Ukraine. U.S. envoy Jared Kushner clarified that any agreement would be negotiated closely with Ukraine and Europe, not imposed unilaterally.",
-            "Trump’s high‑profile display of friendship sparked strong concerns among European allies. Polish Prime Minister Donald Tusk wrote on X, “May God protect us from the harm of such friends,” stressing that Putin is not Europe’s friend. Polish Foreign Minister Radosław Sikorski said the image of Trump embracing Putin was worrisome and raised doubts about whether Trump would side with Poland or Putin in a critical moment.",
-            "Polish Defence Minister Władysław Kosiniak‑Kamysz noted that Russian forces overnight violated Polish airspace with missiles and drones, showing the geographic threat is immediate. Ukrainian President Volodymyr Zelenskyy merely smiled wryly and gave no comment; Danish Prime Minister Mette Frederiksen called the meeting “hard to understand”; German Chancellor Friedrich Merz warned that the talks must not turn into a post‑World‑War‑II “Yalta”‑type partition of Europe.",
-            "Some allies tried to soften the atmosphere. British Prime Minister Andy Burnham said Trump was not swayed by Putin’s charm offensive but was deeply concerned about the massive loss of life caused by the war; NATO Secretary‑General Mark Rutte also defended the necessity of diplomatic dialogue between nuclear‑armed powers.",
-            "Trump praised Shenzhen’s scale of development and achievements. After returning to the United States, he held a press conference calling Shenzhen “perfectly flawless,” noting that in just 40 years the city had grown from a small fishing village into a modern metropolis.",
-            "Trump specifically said he had closely observed Shenzhen’s infrastructure, complimenting its roads and guardrails for being free of potholes and even lacking any repair marks, and expressed high respect for the city’s construction and maintenance work.",
-            "While in Shenzhen, Trump described the city as “a very great city,” while also expressing regret and “sorrow,” saying media coverage falls far short of fully portraying the city’s full picture."
-          ]
-        },
-        {
-          "news_id": "6669844",
-          "title": "馬斯克警告：AI產業2027年將面臨數千億美元資金短缺危機",
-          "title_en": "Musk Warns AI Industry Could Face a Multi‑Hundred‑Billion‑Dollar Funding Shortfall by 2027",
-          "publish_at": 1795330805,
-          "url": "https://news.cnyes.com/news/id/6669844",
-          "paras": [
-            "特斯拉(TSLA-US)執行長馬斯克(Elon Musk)周六(21日)警告，全球人工智慧(AI)產業在 2027 年，恐將迎來高達數千億美元的資金短缺危機。",
-            "馬斯克在社群平台 X 上與 AI 研究員François Chollet對談時表示，儘管市場對算力的需求依然旺盛，但產業正面臨「在收益進帳前就把現金耗盡」的財務瓶頸。",
-            "AI 研究員Chollet指出，目前全球對算力的需求極為強勁，GPU 顯示卡現貨價格持續攀升，高頻寬記憶體(HBM)與 DRAM 產能早已被訂購一空。對此，馬斯克回應強調，危機的核心在於硬體採購與實現獲利之間的時間差，而非需求不足。企業必須在獲得客戶付費前數月，提前採購晶片、興建數據中心、爭取龐大電力並建置冷卻系統。",
-            "馬斯克說：「讓如此大規模的算力上線、冷卻並穩定運作極為困難。購買算力到穩定變現之間只要出現幾個月的延遲，就會創造出數千億美元的額外營運資金缺口。」",
-            "此外，電力與基礎設施瓶頸進一步延緩部署，馬斯克先前亦預估 2027 年全球 AI 晶片部署將面臨至少 15 GW 的電力缺口。",
-            "高盛的數據顯示，2026 年全球 AI 相關資本支出已逼近 1 兆美元，累積債務發行量高達約 6,000 億美元。馬斯克透露，旗下 SpaceX 雖於 2026 年 10 月完成約 400 億美元的債務融資以購入 GPU，但他警告，債務市場對缺乏數據中心以外實質營收的新興雲端服務商(neocloud providers)正迅速關閉融資大門。",
-            "在信貸緊縮與投資人態度轉趨謹慎下，馬斯克預測，AI 數據中心領域將有超過 200 家企業面臨併購潮或直接倒閉。"
-          ],
-          "paras_en": [
-            "Tesla (TSLA-US) CEO Elon Musk warned on Saturday (the 21st) that the global artificial intelligence (AI) industry could encounter a funding shortfall of up to several hundred billion dollars by 2027.",
-            "In a conversation on the X platform with AI researcher François Chollet, Musk said that although demand for compute power remains strong, the industry is hitting a financial bottleneck of \"burning cash before any revenue comes in.\"",
-            "Chollet noted that worldwide demand for compute is extremely strong, GPU spot prices keep climbing, and capacity for high‑bandwidth memory (HBM) and DRAM has already been fully booked. Musk replied that the crisis stems from the time lag between hardware procurement and profit realization, not from insufficient demand. Companies must purchase chips, build data centers, secure massive power supplies and install cooling systems months before customers actually pay.",
-            "Musk said: \"Getting such massive compute online, cooled and running reliably is extremely difficult. A delay of just a few months between buying compute and turning it into stable revenue creates an extra operating‑capital gap of several hundred billion dollars.\"",
-            "He added that power‑and‑infrastructure bottlenecks further slow deployment, and Musk previously estimated that global AI‑chip deployment will face at least a 15 GW power shortfall in 2027.",
-            "Goldman Sachs data show that global AI‑related capital spending is approaching $1 trillion in 2026, with cumulative debt issuance around $600 billion. Musk disclosed that SpaceX completed roughly $40 billion of debt financing in October 2026 to buy GPUs, but warned that the debt market is rapidly shutting its doors to emerging cloud providers (neocloud providers) that lack data‑center‑related revenue beyond the hardware itself.",
-            "Amid tightening credit and more cautious investors, Musk predicts that over 200 companies in the AI data‑center space will face a wave of mergers and acquisitions or outright failure."
-          ]
-        },
-        {
-          "news_id": "6669843",
-          "title": "伊朗宣稱擊中巴林美軍雷達 沙烏地攔截一枚飛彈",
-          "title_en": "Iran Claims to Hit US Radar in Bahrain, Saudi Arabia Intercepts a Missile",
-          "publish_at": 1795328403,
-          "url": "https://news.cnyes.com/news/id/6669843",
-          "paras": [
-            "伊朗伊斯蘭革命衛隊(IRGC)周六(21日)宣稱發射飛彈與無人機，擊中美軍設於巴林的防空雷達系統，以報復美軍侵犯其領空及襲擊雷達站。另一方面，沙烏地阿拉伯成功攔截襲擊其重要原油出口終端站的飛彈，而荷姆茲海峽周邊接連發生油輪遇襲事件。",
-            "根據伊朗國營媒體報導，革命衛隊針對巴林阿爾里法(al-Riffa)與阿瓦利(Awali)基地的美軍愛國者防空雷達發動打擊。巴林內政部證實一處民營工業設施在「伊朗侵略」中起火，所幸無人傷亡，隨後發布安全解除通知。革命衛隊還宣稱在荷姆茲海峽擊落美軍MQ-9與MQ-1無人機。",
-            "此外，由沙烏地主導的聯軍表示，已成功攔截並摧毀一枚朝向沙烏地西部延布(Yanbu)原油出口終端站發射的胡塞組織(青年運動)彈道飛彈，以及先前飛往利雅德的無人機。",
-            "伊朗外交政策與國家安全委員會發言人Ebrahim Rezaei警告，若伊朗的煉油廠或電廠遭襲，伊朗將全力打擊以色列的基礎設施。伊朗副外長Kazem Gharibabadi指責美國的經濟封鎖是「戰爭行為」，並強調濃縮核原料「在任何情況下」都不會移出伊朗。",
-            "伊朗軍方發言人准將Mohammad Akraminia表示，美國任何新侵略都將面臨「果斷且立即的回應」，美方必須接受伊朗條件以結束戰爭。",
-            "美國總統川普周六接受採訪時重申，他希望達成一項永久協議，阻止伊朗獲得核武器，即使「在4年、15年或20年後，我們迎來一位無能的總統」。",
-            "他形容伊朗領導層「非常難對付，且經常在協議達成次日毀約」。",
-            "針對伊朗宣稱擊傷美軍戰機的說法，美軍中央司令部予以否認，強調中東地區所有美軍F-16戰鬥機均安全無虞。",
-            "航運安全方面，英國海事貿易行動辦公室(UKMTO)指出，兩艘離開荷姆茲海峽的油輪在阿曼外海遭「不明拋射物」擊中，海峽威脅等級已調升至「嚴重」。",
-            "海峽船隻通行量較戰前驟降約65%，受到衝突衝擊，倫敦布蘭特原油期貨價格維持在每桶83.62美元的高位，顯著高於戰前水準。"
-          ],
-          "paras_en": [
-            "Iran's Islamic Revolutionary Guard Corps (IRGC) said on Saturday (the 21st) that it launched missiles and drones that struck a US air‑defense radar system stationed in Bahrain, claiming retaliation for US incursions into its airspace and attacks on radar sites. Meanwhile, Saudi Arabia successfully intercepted a missile aimed at a key oil‑export terminal, and a series of attacks on tankers have occurred around the Hormuz Strait.",
-            "According to Iran’s state media, the Revolutionary Guard targeted US Patriot air‑defense radars at the al‑Riffa and Awali bases in Bahrain. Bahrain’s interior ministry confirmed that a private industrial facility caught fire during the \"Iranian aggression,\" but there were no casualties and a safety clearance was later issued. The Guard also claimed to have shot down US MQ‑9 and MQ‑1 drones over the Hormuz Strait.",
-            "In addition, a Saudi‑led coalition said it had successfully intercepted and destroyed a ballistic missile launched by the Houthi youth movement toward the Yanbu oil‑export terminal in western Saudi Arabia, as well as a drone that was previously heading toward Riyadh.",
-            "Ebrahim Rezaei, spokesperson for Iran’s Foreign Policy and National Security Committee, warned that if Iran’s refineries or power plants were attacked, Iran would fully strike Israeli infrastructure. Deputy Foreign Minister Kazem Gharibabadi accused the United States of an \"act of war\" with its economic blockade and stressed that enriched nuclear material would not be moved out of Iran under any circumstances.",
-            "Iranian military spokesman Brigadier General Mohammad Akraminia said any new US aggression would meet a \"decisive and immediate response,\" and that the United States must accept Iran’s conditions to end the war.",
-            "U.S. President Donald Trump reiterated in an interview on Saturday that he wants a permanent deal to prevent Iran from acquiring nuclear weapons, even if \"in four, fifteen or twenty years we get an incompetent president.\"",
-            "He described Iran’s leadership as \"very difficult to deal with and often reneges on agreements the day after they are reached.\"",
-            "The US Central Command denied Iran's claim of having damaged US aircraft, emphasizing that all US F‑16 fighter jets in the Middle East remain safe and operational.",
-            "Regarding maritime safety, the United Kingdom Maritime Trade Operations (UKMTO) reported that two tankers leaving the Hormuz Strait were hit by \"unidentified projectiles\" in Omani waters, prompting the threat level for the strait to be raised to \"severe.\"",
-            "Ship traffic through the strait has fallen about 65% from pre‑war levels due to the conflict, while London Brent crude futures have stayed high at $83.62 a barrel, well above pre‑war prices."
           ]
         }
       ]
