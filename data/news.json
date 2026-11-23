@@ -3,7 +3,9 @@
   "tldr": [
     "Fed官員偏鴿使12月降息機率回升至約七成，台股季線附近震盪盤堅。",
     "AI需求續旺，台積電10月營收創高、PCB與ABF載板進入多年上升循環。",
-    "金管會推進數位金融與資產管理政策，預告穩定幣草案並力推台灣成為亞洲資產管理中心。"
+    "金管會推進數位金融與資產管理政策，預告穩定幣草案並力推台灣成為亞洲資產管理中心。",
+    "美股劇烈震盪：繼2025年4月來最糟一週後，週一因輝達受黃仁勳回任激勵，寫下2025年4月來最強單日。",
+    "台灣稅務焦點：死亡前兩年內贈與併入遺產課稅，2027年遺贈稅免稅額可望隨CPI調升。"
   ],
   "sections": [
     {
@@ -97,6 +99,113 @@
           "source_name": "經濟日報",
           "source_url": "https://money.udn.com/money/story/5613/9231185",
           "published": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "section": "Tax & Regulations",
+      "section_zh": "稅務法規",
+      "items": [
+        {
+          "title_zh": "擬制遺產修法：死亡前兩年內贈與併入遺產課稅",
+          "title_en": "Taiwan tightens estate-tax treatment of pre-death gifts",
+          "summary_zh": "立法院三讀修正遺贈稅法，將被繼承人死亡前兩年內的贈與併入遺產課稅，並改由受贈人負擔相應稅額。財政部表示正研擬施行細則等子法規、修訂申報書表與線上申辦系統，待總統公布後加強宣導，提醒高資產族群提前檢視贈與與傳承規劃。",
+          "summary_en": "Following a legislative amendment, gifts made within two years before a decedent's death are to be folded back into the taxable estate, with the recipient bearing the corresponding tax. The Ministry of Finance says it is drafting the enforcement rules and updating return forms and online filing systems ahead of full implementation.",
+          "source_name": "中央社",
+          "source_url": "https://cna.com.tw/news/afe/202608210289.aspx"
+        },
+        {
+          "title_zh": "2027年遺贈稅免稅額可望隨CPI調升",
+          "title_en": "2027 estate- and gift-tax exemptions seen rising with inflation",
+          "summary_zh": "累計消費者物價漲幅達法定門檻，市場預估明年遺產稅免稅額可能由現行1,333萬元調升至約1,492萬元、贈與稅免稅額由244萬元調升至約273萬元。實際幅度須待財政部年底正式公告為準，相關扣除額部分品項維持不變，建議納稅人留意年底公告後再行規劃。",
+          "summary_en": "With cumulative CPI gains exceeding the statutory threshold, the estate-tax exemption (currently NT$13.33m) and gift-tax exemption (NT$2.44m) are expected to be adjusted upward for 2027, with estimates pointing to roughly NT$14.9m and NT$2.7m. The figures remain estimates pending the Ministry of Finance's year-end announcement.",
+          "source_name": "經濟日報",
+          "source_url": "https://udn.com/news/story/7243/9197837"
+        }
+      ]
+    },
+    {
+      "section": "Macro & Policy",
+      "section_zh": "總經政策",
+      "items": [
+        {
+          "title_zh": "央行利率連10凍、上修今年經濟成長率至11.48%",
+          "title_en": "Taiwan's central bank holds rates for a 10th meeting, lifts growth forecast",
+          "summary_zh": "中央銀行最近一次理監事會維持政策利率不變，重貼現率續為2%，為連續第10次按兵不動。因AI相關需求強勁，央行將今年經濟成長率預測大幅上修至11.48%，全年CPI約2.03%；總裁楊金龍指出主要機構多預期明年通膨回落至2%以下，市場聚焦12月理監事會動向。",
+          "summary_en": "The CBC kept its policy rates unchanged at its latest board meeting, extending the hold, with the discount rate at 2%. It raised this year's GDP growth forecast sharply to 11.48% on strong AI-related demand, while full-year CPI came in near 2.03%; Governor Yang signaled room to watch as inflation is expected to ease below 2% next year.",
+          "source_name": "中央社",
+          "source_url": "https://cna.com.tw/news/afe/202609170308.aspx"
+        },
+        {
+          "title_zh": "美國12月降息預期回升，牽動新台幣與資金行情",
+          "title_en": "Revived US rate-cut bets shape Taiwan's liquidity backdrop",
+          "summary_zh": "受Fed官員偏鴿發言影響，市場預期12月美國降息機率回升至約七成，略為紓解新台幣與國內資金面壓力。隨美債殖利率波動加大，美國利率前景仍是左右台股、債市與基金資金流向的關鍵外部變數，年底前市場將緊盯Fed與國內利率政策的連動。",
+          "summary_en": "Market-implied odds of a December US rate cut have swung back up toward 70% after dovish Fed commentary, easing pressure on the Taiwan dollar and local liquidity. The shifting rate outlook, alongside volatile US Treasury yields, remains a key external driver for Taiwan equities, bonds and fund flows into year-end.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/5607/9158598"
+        }
+      ]
+    },
+    {
+      "section": "Global Markets",
+      "section_zh": "國際財經",
+      "items": [
+        {
+          "title_zh": "美股劇烈震盪：先重挫進入修正、後強勁反彈",
+          "title_en": "US equities whipsaw: historic weekly rout then a sharp rebound",
+          "summary_zh": "台灣媒體密切追蹤美股近期劇烈波動：科技股領跌使主要指數一度跌入修正區，標普500寫下2025年4月以來最糟一週，隨後在輝達領軍下強勁反彈。此波動連帶衝擊亞股與半導體族群，台股投資人高度關注美國科技股情緒與資金流向變化。",
+          "summary_en": "Taiwan media tracked a dramatic swing on Wall Street, where a tech-led sell-off drove US indices into correction — the S&P 500's worst week since April 2025 — before a powerful rebound led by Nvidia. The turbulence rippled through Asian markets and chip-related names, keeping Taiwan investors focused on US tech sentiment.",
+          "source_name": "鉅亨網",
+          "source_url": "https://news.cnyes.com/news/id/6658684"
+        },
+        {
+          "title_zh": "輝達領導層風波主導全球科技焦點",
+          "title_en": "Nvidia leadership turmoil dominates global tech headlines",
+          "summary_zh": "台灣媒體大篇幅報導輝達執行長黃仁勳相關風波，其去留一度牽動市場、使輝達股價單週累跌約13%，為2025年4月以來最大單週跌幅，隨後情緒才趨穩。由於台灣在AI供應鏈居關鍵地位，此事件後續發展仍是本地半導體股重要的擺盪變數，牽動供應鏈評價。",
+          "summary_en": "Taiwan outlets gave heavy coverage to the saga around Nvidia CEO Jensen Huang, whose status had rattled markets and sent the stock down roughly 13% in one week — its steepest weekly drop since April 2025 — before sentiment stabilized. Given Taiwan's central role in the AI supply chain, the story remains a key swing factor for local chip stocks.",
+          "source_name": "自由時報",
+          "source_url": "https://ec.ltn.com.tw/article/breakingnews/5635106"
+        }
+      ]
+    },
+    {
+      "section": "International",
+      "section_zh": "國際",
+      "items": [
+        {
+          "title_zh": "美股創2025年4月以來最強單日，輝達因黃仁勳回任飆漲（2026-11-23）",
+          "title_en": "Stocks post best day since April 2025 as Nvidia soars on Huang's return",
+          "summary_zh": "美股週一強勁反彈，那斯達克指數大漲近7%、道瓊飆升，輝達因黃仁勳回任執行長而勁揚，領軍先前重挫的AI與晶片股。此前那斯達克才經歷2020年以來最糟一週，週一反彈為2025年4月以來最強單日表現，市場風險胃納明顯回溫。",
+          "summary_en": "US equities staged a powerful rebound Monday, with the Nasdaq jumping nearly 7% and the Dow soaring, as Nvidia surged after Jensen Huang's return as CEO. The rally followed the Nasdaq's worst week since 2020 and was its strongest session since April 2025, led by beaten-down AI and chip names.",
+          "source_name": "NBC News",
+          "source_url": "https://nbcnews.com/business/markets/stocks-rebound-ai-tech-selloff-nvidia-rcna610833",
+          "published": "2026-11-23"
+        },
+        {
+          "title_zh": "美債殖利率走緩、美國PCE數據前黃金反彈（2026-11-23）",
+          "title_en": "Gold rebounds as Treasury yields ease ahead of US PCE",
+          "summary_zh": "現貨金價單日上漲約2.8%、重返每盎司3,600美元之上，受美債殖利率走緩及輝達領軍的股市反彈帶動風險情緒回升。此前金價才寫下約八個月來最大單週跌幅；投資人正為即將公布、攸關Fed政策路徑的美國核心PCE通膨數據預作布局。",
+          "summary_en": "Spot gold jumped around 2.8% to reclaim the $3,600 handle as Treasury yields eased and the Nvidia-led equity rally lifted risk sentiment. The bounce followed gold's steepest weekly drop in about eight months, with investors positioning ahead of the US core PCE inflation reading that will test the Fed's policy path.",
+          "source_name": "Invezz",
+          "source_url": "https://invezz.com/ng/news/2026/11/23/gold-price-today-jumps-28percent-as-treasury-yields-ease-can-the-rally-last/",
+          "published": "2026-11-23"
+        },
+        {
+          "title_zh": "亞股多數收黑、科技股賣壓延續（2026-11-23）",
+          "title_en": "Asian markets end mostly lower as tech sell-off extends",
+          "summary_zh": "亞洲股市週一多數收低，上週區域科技股的賣壓延續，香港恒生指數連續第四個交易日下跌，印度主要指數跌逾1%、波動率明顯跳升。亞股這波下跌發生在美股稍晚強勁反彈之前，使亞洲市場在下一個交易日具有回補反彈的空間，區域資金動向值得追蹤。",
+          "summary_en": "Asian equities closed largely in the red Monday as the previous week's rout in regional tech names carried over, with Hong Kong's Hang Seng notching a fourth straight losing session and Indian benchmarks dropping over 1% as volatility spiked. The declines preceded the later US rebound, leaving Asia poised to catch up at the next open.",
+          "source_name": "Upstox",
+          "source_url": "https://upstox.com/news/market-news/stocks/nifty-50-sensex-fall-1-india-vix-jumps-nearly-8-key-factors-explained/article-203852",
+          "published": "2026-11-23"
+        },
+        {
+          "title_zh": "美股上週收盤回顧：寫2025年4月來最糟一週、跌入修正（2026-11-21，上週收盤）",
+          "title_en": "Wall Street's worst week since April 2025 ended in correction",
+          "summary_zh": "在週一反彈之前，美股剛歷經慘烈一段：標普500連跌七個交易日、為2020年2月以來最長連跌，並跌入修正區間，晶片股更寫下2001年以來最差單週。這波賣壓重新洗牌市場部位，也為隨後的強勁反彈鋪路，凸顯當前行情波動劇烈、對消息面高度敏感。",
+          "summary_en": "Before Monday's bounce, US stocks had just suffered a brutal stretch: the S&P 500 fell for seven straight sessions — its longest such streak since February 2020 — and entered correction territory, while chip stocks logged their worst week since 2001. The sell-off reset positioning and set the stage for the subsequent rebound.",
+          "source_name": "TheStreet",
+          "source_url": "https://pro.thestreet.com/market-commentary/the-sp-500s-worst-week-since-april-2025-ends-in-a-correction"
         }
       ]
     }
