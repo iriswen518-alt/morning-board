@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T07:03:36+08:00",
+  "generated_at": "2026-11-23T10:00:09+08:00",
   "source": "bopfund.moneydj.com",
   "funds": [
     {
@@ -26,7 +26,27 @@
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLH40-FR1I",
       "match_score": 1.0,
       "error": null,
-      "distribution_yield_pct": null
+      "distribution_yield_pct": null,
+      "perf_single": {
+        "1m": -9.43,
+        "3m": -11.31,
+        "6m": -7.93,
+        "1y": 7.96,
+        "2y": 36.63,
+        "3y": 50.52,
+        "5y": 32.63
+      },
+      "perf_dca": {
+        "1m": -9.43,
+        "3m": -10.79,
+        "6m": -10.36,
+        "1y": -4.67,
+        "2y": 10.81,
+        "3y": 21.19,
+        "5y": 35.15
+      },
+      "perf_date": "11-20",
+      "perf_url": "https://bopfund.moneydj.com/w/wb/wb03.djhtm?a=FLH40-FR1I"
     },
     {
       "id": "franklin_corporate_bond",
@@ -52,7 +72,27 @@
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLZA9-FR76",
       "match_score": 1.0,
       "error": null,
-      "distribution_yield_pct": null
+      "distribution_yield_pct": null,
+      "perf_single": {
+        "1m": 0.12,
+        "3m": -2.41,
+        "6m": -1.18,
+        "1y": 0.97,
+        "2y": 7.81,
+        "3y": 21.48,
+        "5y": 17.34
+      },
+      "perf_dca": {
+        "1m": 0.12,
+        "3m": -1.31,
+        "6m": -1.52,
+        "1y": -1.01,
+        "2y": 1.94,
+        "3y": 5.69,
+        "5y": 13.79
+      },
+      "perf_date": "11-20",
+      "perf_url": "https://bopfund.moneydj.com/w/wb/wb03.djhtm?a=FLZA9-FR76"
     },
     {
       "id": "franklin_sinoam_multi_asset",
@@ -78,7 +118,27 @@
       "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACFT47-2817",
       "match_score": 1.0,
       "error": null,
-      "distribution_yield_pct": null
+      "distribution_yield_pct": null,
+      "perf_single": {
+        "1m": -9.77,
+        "3m": -9.98,
+        "6m": -8.1,
+        "1y": 10.43,
+        "2y": 16.94,
+        "3y": 44.5,
+        "5y": 48.97
+      },
+      "perf_dca": {
+        "1m": -9.77,
+        "3m": -9.91,
+        "6m": -10.59,
+        "1y": -2.96,
+        "2y": 7.8,
+        "3y": 14.95,
+        "5y": 31.27
+      },
+      "perf_date": "11-19",
+      "perf_url": "https://bopfund.moneydj.com/w/wr/wr03.djhtm?a=ACFT47-2817"
     },
     {
       "id": "amundi_em_bond",
@@ -104,7 +164,27 @@
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=PIZA4-PI0V",
       "match_score": 1.0,
       "error": null,
-      "distribution_yield_pct": null
+      "distribution_yield_pct": null,
+      "perf_single": {
+        "1m": -2.56,
+        "3m": -5.31,
+        "6m": -3.94,
+        "1y": 0.04,
+        "2y": 10.86,
+        "3y": 26.67,
+        "5y": 11.07
+      },
+      "perf_dca": {
+        "1m": -2.56,
+        "3m": -4.14,
+        "6m": -4.55,
+        "1y": -3.46,
+        "2y": 2.05,
+        "3y": 7.08,
+        "5y": 15.74
+      },
+      "perf_date": "11-20",
+      "perf_url": "https://bopfund.moneydj.com/w/wb/wb03.djhtm?a=PIZA4-PI0V"
     },
     {
       "id": "amundi_global_strategic",
@@ -130,7 +210,27 @@
       "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACCF304-1813",
       "match_score": 1.0,
       "error": null,
-      "distribution_yield_pct": null
+      "distribution_yield_pct": null,
+      "perf_single": {
+        "1m": 1.97,
+        "3m": 1.67,
+        "6m": 3.92,
+        "1y": null,
+        "2y": null,
+        "3y": null,
+        "5y": null
+      },
+      "perf_dca": {
+        "1m": 1.97,
+        "3m": 2.45,
+        "6m": 2.46,
+        "1y": null,
+        "2y": null,
+        "3y": null,
+        "5y": null
+      },
+      "perf_date": "11-19",
+      "perf_url": "https://bopfund.moneydj.com/w/wr/wr03.djhtm?a=ACCF304-1813"
     },
     {
       "id": "schroder_global_income",
@@ -141,22 +241,42 @@
       "currency": "美元",
       "bop_code": "PYZR9-SC88",
       "fund_type": "B",
-      "nav": 293.2575,
-      "nav_date": "2026-11-19",
-      "change": -0.38,
-      "change_pct": -0.13,
+      "nav": 287.6548,
+      "nav_date": "2026-11-20",
+      "change": -5.6,
+      "change_pct": -1.91,
       "perf": {
-        "1m": -3.86,
-        "3m": -7.49,
-        "6m": -3.25,
-        "ytd": 5.68,
-        "1y": 9.24,
-        "3y": 46.54
+        "1m": -5.34,
+        "3m": -9.32,
+        "6m": -4.84,
+        "ytd": 3.66,
+        "1y": 6.52,
+        "3y": 43.16
       },
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=PYZR9-SC88",
       "match_score": 1.0,
       "error": null,
-      "distribution_yield_pct": null
+      "distribution_yield_pct": null,
+      "perf_single": {
+        "1m": -5.34,
+        "3m": -9.32,
+        "6m": -4.84,
+        "1y": 6.52,
+        "2y": 25.63,
+        "3y": 43.16,
+        "5y": 27.75
+      },
+      "perf_dca": {
+        "1m": -5.34,
+        "3m": -7.52,
+        "6m": -6.9,
+        "1y": -2.85,
+        "2y": 7.66,
+        "3y": 15.89,
+        "5y": 28.63
+      },
+      "perf_date": "11-20",
+      "perf_url": "https://bopfund.moneydj.com/w/wb/wb03.djhtm?a=PYZR9-SC88"
     },
     {
       "id": "pinebridge_japan_multi_asset",
@@ -182,7 +302,27 @@
       "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACAI451-WA17",
       "match_score": 1.0,
       "error": null,
-      "distribution_yield_pct": null
+      "distribution_yield_pct": null,
+      "perf_single": {
+        "1m": -2.98,
+        "3m": 0.25,
+        "6m": 0.3,
+        "1y": 10.72,
+        "2y": null,
+        "3y": null,
+        "5y": null
+      },
+      "perf_dca": {
+        "1m": -2.98,
+        "3m": -1.18,
+        "6m": -0.46,
+        "1y": 1.98,
+        "2y": null,
+        "3y": null,
+        "5y": null
+      },
+      "perf_date": "11-19",
+      "perf_url": "https://bopfund.moneydj.com/w/wr/wr03.djhtm?a=ACAI451-WA17"
     },
     {
       "id": "first_global_utilities",
@@ -208,7 +348,27 @@
       "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACNC70-1228",
       "match_score": 1.0,
       "error": null,
-      "distribution_yield_pct": null
+      "distribution_yield_pct": null,
+      "perf_single": {
+        "1m": 3.03,
+        "3m": 1.73,
+        "6m": 1.52,
+        "1y": 13.19,
+        "2y": 20.27,
+        "3y": 36.52,
+        "5y": 55.95
+      },
+      "perf_dca": {
+        "1m": 3.03,
+        "3m": 3.51,
+        "6m": 2.71,
+        "1y": 4.61,
+        "2y": 12.75,
+        "3y": 17.93,
+        "5y": 28.53
+      },
+      "perf_date": "11-19",
+      "perf_url": "https://bopfund.moneydj.com/w/wr/wr03.djhtm?a=ACNC70-1228"
     },
     {
       "id": "allianz_tw_tech",
@@ -234,7 +394,27 @@
       "source_url": "https://bopfund.moneydj.com/w/wr/wr902.djhtm?a=ACDD04-2602",
       "match_score": 1.0,
       "error": null,
-      "distribution_yield_pct": null
+      "distribution_yield_pct": null,
+      "perf_single": {
+        "1m": -35.08,
+        "3m": -34.49,
+        "6m": -29.16,
+        "1y": 49.44,
+        "2y": 129.19,
+        "3y": 197.28,
+        "5y": 248.03
+      },
+      "perf_dca": {
+        "1m": -35.08,
+        "3m": -35.31,
+        "6m": -33.82,
+        "1y": -9.98,
+        "2y": 55.57,
+        "3y": 89.11,
+        "5y": 175.43
+      },
+      "perf_date": "11-20",
+      "perf_url": "https://bopfund.moneydj.com/w/wr/wr03.djhtm?a=ACDD04-2602"
     },
     {
       "id": "ab_intl_tech",
@@ -260,7 +440,27 @@
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=ALZ03-AL08",
       "match_score": 1.0,
       "error": null,
-      "distribution_yield_pct": null
+      "distribution_yield_pct": null,
+      "perf_single": {
+        "1m": -19.56,
+        "3m": -21.14,
+        "6m": -22.13,
+        "1y": 9.4,
+        "2y": 33.3,
+        "3y": 87.65,
+        "5y": 39.68
+      },
+      "perf_dca": {
+        "1m": -19.56,
+        "3m": -21.14,
+        "6m": -22.75,
+        "1y": -11.52,
+        "2y": 8.25,
+        "3y": 24.13,
+        "5y": 59.52
+      },
+      "perf_date": "11-20",
+      "perf_url": "https://bopfund.moneydj.com/w/wb/wb03.djhtm?a=ALZ03-AL08"
     },
     {
       "id": "franklin_gold",
@@ -286,7 +486,27 @@
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLZ01-FA01",
       "match_score": 1.0,
       "error": null,
-      "distribution_yield_pct": null
+      "distribution_yield_pct": null,
+      "perf_single": {
+        "1m": -24.04,
+        "3m": -35.19,
+        "6m": -28.01,
+        "1y": -5.44,
+        "2y": 105.74,
+        "3y": 193.07,
+        "5y": 94.18
+      },
+      "perf_dca": {
+        "1m": -24.04,
+        "3m": -31.06,
+        "6m": -26.21,
+        "1y": -26.39,
+        "2y": 13.14,
+        "3y": 55.58,
+        "5y": 94.12
+      },
+      "perf_date": "11-20",
+      "perf_url": "https://bopfund.moneydj.com/w/wb/wb03.djhtm?a=FLZ01-FA01"
     },
     {
       "id": "investec_gold",
@@ -312,7 +532,27 @@
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=GSF17-IG14",
       "match_score": 1.0,
       "error": null,
-      "distribution_yield_pct": null
+      "distribution_yield_pct": null,
+      "perf_single": {
+        "1m": -18.05,
+        "3m": -25.01,
+        "6m": -13.5,
+        "1y": -3.95,
+        "2y": 108.33,
+        "3y": 172.51,
+        "5y": 122.34
+      },
+      "perf_dca": {
+        "1m": -18.05,
+        "3m": -22.61,
+        "6m": -15.31,
+        "1y": -17.36,
+        "2y": 23.07,
+        "3y": 61.18,
+        "5y": 99.53
+      },
+      "perf_date": "11-19",
+      "perf_url": "https://bopfund.moneydj.com/w/wb/wb03.djhtm?a=GSF17-IG14"
     },
     {
       "id": "uob_korea",
@@ -338,7 +578,27 @@
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=LIC04-LI02",
       "match_score": 1.0,
       "error": null,
-      "distribution_yield_pct": null
+      "distribution_yield_pct": null,
+      "perf_single": {
+        "1m": -10.1,
+        "3m": -18.17,
+        "6m": -15.33,
+        "1y": 69.59,
+        "2y": 178.48,
+        "3y": 172.96,
+        "5y": 121.78
+      },
+      "perf_dca": {
+        "1m": -10.1,
+        "3m": -17.26,
+        "6m": -20.33,
+        "1y": 5.68,
+        "2y": 73.18,
+        "3y": 102.82,
+        "5y": 130.73
+      },
+      "perf_date": "11-19",
+      "perf_url": "https://bopfund.moneydj.com/w/wb/wb03.djhtm?a=LIC04-LI02"
     },
     {
       "id": "uob_vietnam",
@@ -364,7 +624,27 @@
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=LIC28-LI01",
       "match_score": 1.0,
       "error": null,
-      "distribution_yield_pct": null
+      "distribution_yield_pct": null,
+      "perf_single": {
+        "1m": -0.51,
+        "3m": -3.2,
+        "6m": -11.19,
+        "1y": -4.03,
+        "2y": 15.25,
+        "3y": 23.39,
+        "5y": -9.45
+      },
+      "perf_dca": {
+        "1m": -0.51,
+        "3m": -3.42,
+        "6m": -5.48,
+        "1y": -6.18,
+        "2y": 0.51,
+        "3y": 5.21,
+        "5y": 8.39
+      },
+      "perf_date": "11-19",
+      "perf_url": "https://bopfund.moneydj.com/w/wb/wb03.djhtm?a=LIC28-LI01"
     },
     {
       "id": "franklin_india",
@@ -390,8 +670,28 @@
       "source_url": "https://bopfund.moneydj.com/w/wb/wb902.djhtm?a=FLZ79-FR59",
       "match_score": 1.0,
       "error": null,
-      "distribution_yield_pct": null
+      "distribution_yield_pct": null,
+      "perf_single": {
+        "1m": 12.21,
+        "3m": 6.33,
+        "6m": 15.57,
+        "1y": -4.07,
+        "2y": -6.18,
+        "3y": 15.92,
+        "5y": 15.94
+      },
+      "perf_dca": {
+        "1m": 12.21,
+        "3m": 9.72,
+        "6m": 11.36,
+        "1y": 7.76,
+        "2y": 1.83,
+        "3y": 1.2,
+        "5y": 12.86
+      },
+      "perf_date": "11-20",
+      "perf_url": "https://bopfund.moneydj.com/w/wb/wb03.djhtm?a=FLZ79-FR59"
     }
   ],
-  "dca_generated_at": "2026-11-23T09:02:04+08:00"
+  "dca_generated_at": "2026-11-23T10:00:21+08:00"
 }
