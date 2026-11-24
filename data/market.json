@@ -4,38 +4,38 @@
     {
       "name": "S&P 500",
       "name_zh": null,
-      "close": 7237.169921875,
-      "daily_pct": 4.73,
+      "close": 7201.06982421875,
+      "daily_pct": -0.5,
       "mtd_pct": -4.52,
       "ytd_pct": 5.72,
-      "closing_date": "2026-11-23"
+      "closing_date": "2026-11-24"
     },
     {
       "name": "Nasdaq Composite",
       "name_zh": null,
-      "close": 24089.560546875,
-      "daily_pct": 6.51,
+      "close": 23733.53515625,
+      "daily_pct": -1.48,
       "mtd_pct": -5.3,
       "ytd_pct": 3.65,
-      "closing_date": "2026-11-23"
+      "closing_date": "2026-11-24"
     },
     {
       "name": "Dow Jones",
       "name_zh": null,
-      "close": 49595.30859375,
-      "daily_pct": 3.01,
+      "close": 50018.69921875,
+      "daily_pct": 0.85,
       "mtd_pct": -4.2,
       "ytd_pct": 3.19,
-      "closing_date": "2026-11-23"
+      "closing_date": "2026-11-24"
     },
     {
       "name": "PHLX Semiconductor",
       "name_zh": null,
-      "close": 9588.0498046875,
-      "daily_pct": 14.03,
+      "close": 8832.5009765625,
+      "daily_pct": -7.88,
       "mtd_pct": -10.3,
       "ytd_pct": 35.36,
-      "closing_date": "2026-11-23"
+      "closing_date": "2026-11-24"
     },
     {
       "name": "Euro Stoxx 50",
@@ -167,11 +167,11 @@
   "bonds": [
     {
       "name": "US 10-Year",
-      "yield_pct": 4.92,
-      "daily_bps": 0.6,
-      "mtd_bps": -1.1,
-      "ytd_bps": 75.5,
-      "closing_date": "2026-11-23"
+      "yield_pct": 4.9,
+      "daily_bps": -1.4,
+      "mtd_bps": -2.5,
+      "ytd_bps": 74.1,
+      "closing_date": "2026-11-24"
     },
     {
       "name": "US 2-Year",
@@ -219,8 +219,8 @@
       "name": "DXY 美元指數",
       "close": 104.31999969482422,
       "daily_pct": 0.49,
-      "mtd_pct": 1.89,
-      "ytd_pct": 5.62,
+      "mtd_pct": 1.92,
+      "ytd_pct": 5.65,
       "closing_date": "2026-11-23"
     },
     {
@@ -409,5 +409,5 @@
       "is_reference": true
     }
   ],
-  "summary": "11/23 PHLX Semiconductor +14.03%、11/24 OTC 櫃買加權 +8.24%、11/23 Nasdaq Composite +6.51% 領漲；11/23 Nifty 50 -1.75%、11/24 DAX -1.26% 走弱。"
+  "summary": "11/24 OTC 櫃買加權 +8.24%、11/24 KOSPI +6.32%、11/24 Nikkei 225 +3.91% 領漲；11/24 PHLX Semiconductor -7.88%、11/23 Nifty 50 -1.75% 走弱。"
 }
