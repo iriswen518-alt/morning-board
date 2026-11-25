@@ -3804,14 +3804,30 @@ function renderMarketSheet() {
   const calInner = renderMarketCalendarSection();
   const calSection = calInner ? accSection("mv-calendar", "財經日曆", calInner) : "";
 
+  // 市場多空：七大市場多空分析（~/scripts/market_bullbear/make_pdf.py 產生 reports/bullbear/*.html，2026-11-25）
+  const bbSection = accSection("mv-bullbear", "市場多空", renderBullBearBlock());
+
   return `
     ${overviewSection}
     ${calSection}
     ${accSection("mv-us-analysis", "美股分析", usInner)}
     ${accSection("mv-tw-analysis", "台股分析", twInner)}
+    ${bbSection}
     ${weeklySection}
     ${monthlySection}
   `;
+}
+
+// ── 市場多空：七份多空分析報告（中英對照、手機直式網頁）────────────────────
+const BULLBEAR_REPORTS = [
+  ["TW", "台灣加權指數"], ["US", "美股主要指數"], ["JP", "日經225指數"], ["KR", "韓國KOSPI指數"],
+  ["EU", "歐洲STOXX 600指數"], ["BOND", "美國公債殖利率"], ["USD", "美元匯率"],
+];
+function renderBullBearBlock() {
+  const items = BULLBEAR_REPORTS.map(([k, name]) =>
+    `<li class="bb-item"><a class="bb-link" href="reports/bullbear/${k}.html">${escapeHtml(name)}多空分析<span class="bb-arrow">→</span></a></li>`
+  ).join("");
+  return `<p class="wr-range">階段走勢預測、多空邏輯、觀察指標、技術線圖、指數及權值股表現、相關指標變化</p><ul class="bb-list">${items}</ul>`;
 }
 
 // ── 市場週報：彙整 7 日內權威來源對市場的最新看法 ────────────────────────────
