@@ -3808,11 +3808,11 @@ function renderMarketSheet() {
   const bbSection = accSection("mv-bullbear", "市場多空", renderBullBearBlock());
 
   return `
+    ${bbSection}
     ${overviewSection}
     ${calSection}
     ${accSection("mv-us-analysis", "美股分析", usInner)}
     ${accSection("mv-tw-analysis", "台股分析", twInner)}
-    ${bbSection}
     ${weeklySection}
     ${monthlySection}
   `;
@@ -3825,7 +3825,7 @@ const BULLBEAR_REPORTS = [
 ];
 function renderBullBearBlock() {
   const items = BULLBEAR_REPORTS.map(([k, name]) =>
-    `<li class="bb-item"><a class="bb-link" href="reports/bullbear/${k}.html">${escapeHtml(name)}多空分析<span class="bb-arrow">→</span></a></li>`
+    `<li class="bb-item"><a class="bb-link" href="reports/bullbear/${k}.pdf">${escapeHtml(name)}多空分析<span class="bb-arrow">→</span></a></li>`
   ).join("");
   return `<p class="wr-range">階段走勢預測、多空邏輯、觀察指標、技術線圖、指數及權值股表現、相關指標變化</p><ul class="bb-list">${items}</ul>`;
 }
