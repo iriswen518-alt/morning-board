@@ -3,7 +3,9 @@
   "tldr": [
     "台股週五收漲156點至39,308點，台積電反彈1.63%，假期量能清淡、週線收紅。",
     "輝達暫停對東南亞四國出貨AI伺服器，台股半導體設備股則因獲利了結回檔。",
-    "金管會要求金融業年底前完成資安自評，並調高融券保證金成數以穩定市場。"
+    "金管會要求金融業年底前完成資安自評，並調高融券保證金成數以穩定市場。",
+    "美股黑色星期五半日交易大漲（道瓊漲592點），AI與晶片股回神，標普500繳出近19個月最佳單週表現。",
+    "市場已完全反映聯準會12月9日升息1碼，國際油價則因中東局勢升溫連4漲。"
   ],
   "sections": [
     {
@@ -91,6 +93,114 @@
           "summary_en": "A string of actively managed ETFs gained regulatory approval through October and November, including Fuh Hwa's Taiwan New Star Active ETF (00418A), approved on Nov. 3, alongside several other active products. The launches widen the menu for wealth-management clients seeking actively managed, exchange-traded exposure.",
           "source_name": "元大證券財富管理中心",
           "source_url": "https://wealth.yuanta.com.tw/"
+        }
+      ]
+    },
+    {
+      "section": "Tax & Regulations",
+      "section_zh": "稅務法規",
+      "items": [
+        {
+          "title_zh": "物價達門檻，遺產稅免稅額擬調高至1,492萬、贈與稅273萬",
+          "title_en": "Estate-tax exemption set to rise to NT$14.92m as inflation hits threshold",
+          "summary_zh": "因CPI累計漲幅達法定調整門檻，財政部估算115年度遺產稅免稅額可由1,333萬元調高159萬元至1,492萬元，贈與稅免稅額則由244萬元調至273萬元。財政部表示將於年底正式公告，實際金額以公告為準。此一調整將小幅減輕高資產族群的稅負與傳承成本。",
+          "summary_en": "With cumulative CPI gains crossing the statutory trigger, Taiwan's estate-tax exemption is expected to climb NT$1.59m to NT$14.92m, and the gift-tax exemption to rise from NT$2.44m to NT$2.73m, for the 2026 tax year. The Ministry of Finance says it will formalize the figures by year-end.",
+          "source_name": "自由財經",
+          "source_url": "https://ec.ltn.com.tw/article/breakingnews/5630601"
+        },
+        {
+          "title_zh": "遺贈稅修法上路：死亡前2年內贈與改按受贈比例分別課稅",
+          "title_en": "Estate & gift tax reform reshapes who pays on gifts made before death",
+          "summary_zh": "2026年修正的遺產及贈與稅法規定，被繼承人死亡前2年內贈與配偶及各順序繼承人的財產仍併入遺產總額計稅，但改由各受贈人依受贈財產占比分別負擔稅額、分別發單，源於憲法法庭判決。配偶剩餘財產差額分配扣除計算與分期繳納限制亦一併放寬，影響高資產家族傳承規劃。",
+          "summary_en": "Under 2026 amendments to the Estate and Gift Tax Act, property gifted to spouses and heirs within two years before death is still added back to the taxable estate, but the tax is now split among recipients in proportion to what each received—following a Constitutional Court ruling. Rules on spousal remainder claims and installment payments were also eased.",
+          "source_name": "客新聞",
+          "source_url": "https://hakkanews.tw/2026/09/11/302743/"
+        }
+      ]
+    },
+    {
+      "section": "Macro & Policy",
+      "section_zh": "總經政策",
+      "items": [
+        {
+          "title_zh": "10月CPI年增2.33%，連6月高於2%通膨警戒線",
+          "title_en": "October CPI at 2.33%, above the 2% alert line for a sixth month",
+          "summary_zh": "主計總處公布10月消費者物價指數年增2.33%，已連續6個月超過2%通膨警戒線，扣除蔬果能源的核心CPI年增2.23%。主計總處預估11月CPI仍將高於2%。通膨黏著度偏高，牽動央行後續貨幣政策,也影響實質購買力與定存、債券等理財配置考量。",
+          "summary_en": "Taiwan's consumer price index rose 2.33% year-on-year in October, staying above the central bank's 2% watch level for a sixth straight month, with core CPI up 2.23%. Statistics officials expect November inflation to stay above 2%, keeping pressure on the central bank's policy stance.",
+          "source_name": "經濟日報",
+          "source_url": "https://money.udn.com/money/story/10869/9859986"
+        },
+        {
+          "title_zh": "進口物價創近50年最大漲幅，主計總處：無輸入性通膨",
+          "title_en": "Import prices post biggest jump in nearly 50 years, but no imported inflation, officials say",
+          "summary_zh": "主計總處指出，雖然10月進口物價指數漲幅創下近50年最大，但多數受影響產品以供出口為主，因此沒有輸入性通膨問題。惟專家提醒，新台幣貶值對輸入性物價的壓力將逐步升高，央行若有政策調整，預料將採漸進方式因應。",
+          "summary_en": "Taiwan's import price index recorded its largest increase in almost half a century, yet the statistics agency said there was no imported-inflation problem because most affected goods are re-exported. A weakening Taiwan dollar, however, is seen gradually adding to price pressure.",
+          "source_name": "華視新聞",
+          "source_url": "https://news.cts.com.tw/cna/money/202611/202611053097853.html"
+        }
+      ]
+    },
+    {
+      "section": "Global Markets",
+      "section_zh": "國際財經",
+      "items": [
+        {
+          "title_zh": "中東局勢升溫，油價連4漲、WTI重回86美元",
+          "title_en": "Oil rises for a fourth day as Middle East tensions flare",
+          "summary_zh": "國際原油11月27日連續第4個交易日上漲，WTI重回每桶約86美元、布蘭特約93美元。市場聚焦地緣風險升高：伊朗稱兩艘油輪在霍爾木茲海峽觸雷，先前並傳出沙烏地阿拉伯煉油設施遇襲。油價走高恐再添全球通膨與運輸成本壓力，牽動能源與航運等類股。",
+          "summary_en": "Crude extended a four-session rally on Nov. 27, with WTI back near US$86 a barrel and Brent around US$93, as geopolitical risk intensified. Iran said two tankers struck mines in the Strait of Hormuz, following reported attacks on Saudi refining facilities. The run-up adds to global inflation and transport-cost worries.",
+          "source_name": "Mitrade",
+          "source_url": "https://www.mitrade.com/zh/insights/commodity-analysis/oil/20261127A01"
+        },
+        {
+          "title_zh": "比特幣守穩6萬美元上方，仍較2025年高點腰斬",
+          "title_en": "Bitcoin steadies above US$60,000 after steep slide from 2025 peak",
+          "summary_zh": "比特幣11月27日在約6.1萬至6.2萬美元區間拉鋸，隨美股回穩守住6萬美元關卡。惟相較2025年10月的歷史高點，比特幣仍重挫約52%，反映本波避險情緒下加密資產的回檔幅度。價格劇烈波動，提醒投資人留意數位資產的高風險特性與部位控管。",
+          "summary_en": "Bitcoin was changing hands around US$61,000–62,000 on Nov. 27, holding above the US$60,000 mark as risk appetite returned to Wall Street. The token remains down roughly 52% from its October 2025 record high, underscoring how sharply crypto has retreated during the latest risk-off stretch.",
+          "source_name": "ChainCatcher",
+          "source_url": "https://www.chaincatcher.com/article/2308392"
+        }
+      ]
+    },
+    {
+      "section": "International",
+      "section_zh": "國際",
+      "items": [
+        {
+          "title_zh": "美股黑色星期五半日交易大漲（2026-11-27）",
+          "title_en": "US stocks surge in shortened Black Friday session (2026-11-27)",
+          "summary_zh": "感恩節後半日交易，前期遭重擊的AI與晶片股回神，帶動美股全面走高。道瓊上漲591.99點（1.18%）收50,774.94點，標普500漲1.60%收7,297.49點，那斯達克勁揚2.31%收24,129.50點，標普繳出近19個月最佳單週表現。",
+          "summary_en": "Wall Street rallied in a half-day post-Thanksgiving session as beaten-down AI and chip names rebounded. The Dow rose 591.99 points (1.18%) to 50,774.94, the S&P 500 added 1.60% to 7,297.49 and the Nasdaq jumped 2.31% to 24,129.50, giving the S&P its best week in 19 months.",
+          "source_name": "The Motley Fool",
+          "source_url": "https://www.fool.com/coverage/stock-market-today/2026/11/27/stock-market-today-nov-27-s-and-p-500-posts-best-week-in-19-months-as-ai-stocks-rebound/",
+          "published": "2026-11-27"
+        },
+        {
+          "title_zh": "美債殖利率走升，市場幾乎篤定聯準會12月升息（2026-11-27）",
+          "title_en": "Treasury yields climb as markets price near-certain December Fed hike (2026-11-27)",
+          "summary_zh": "假期後清淡交易中，美國公債殖利率走高，2年期來到4.693%，10年期彈升7.4個基點至4.921%。期貨市場已完全反映12月9日會議升息1碼（25個基點），CME FedWatch顯示升息機率近98%，與市場年中以來的降息預期大幅逆轉。",
+          "summary_en": "US Treasury yields rose in thin post-holiday trade, with the two-year at 4.693% and the 10-year up 7.4 basis points to 4.921%. Futures now fully price a 25bp rate increase at the Dec. 9 meeting, with CME FedWatch putting the odds of a hike near 98%.",
+          "source_name": "Yahoo Finance",
+          "source_url": "https://finance.yahoo.com/markets/currencies/articles/u-treasury-yields-rise-shortened-094900410.html",
+          "published": "2026-11-27"
+        },
+        {
+          "title_zh": "黃金自15個月低點反彈，重上3,650美元（2026-11-27）",
+          "title_en": "Gold rebounds toward US$3,650 after touching a 15-month low (2026-11-27)",
+          "summary_zh": "黃金11月27日延續強勁反彈，即使美元與美債殖利率走堅，金價仍站上每盎司約3,650美元。此前金價一度跌至近15個月低點約3,427美元，隨風險偏好回溫與避險需求拉鋸而回升，顯示資金在股債金之間重新布局。",
+          "summary_en": "Gold extended a sharp bounce on Nov. 27, trading near US$3,650 an ounce even as the US dollar and Treasury yields firmed. The metal is recovering from a 15-month low near US$3,427 hit midweek, as returning risk appetite competes with safe-haven demand.",
+          "source_name": "FXStreet",
+          "source_url": "https://www.fxstreet.com/news/gold-defies-surging-us-dollar-and-treasury-yields-as-bulls-target-3-700-202611271819",
+          "published": "2026-11-27"
+        },
+        {
+          "title_zh": "關稅疑慮緩解，歐亞股市同步反彈（2026-11-27）",
+          "title_en": "European and Asian stocks rally as tariff fears ease (2026-11-27)",
+          "summary_zh": "隨美股走高、貿易關稅疑慮降溫，全球股市普遍反彈。亞洲早盤日本日經指數上漲約2.1%，南韓KOSPI勁揚逾4%；歐洲Stoxx 600指數上漲約1.5%，延續在震盪的11月後的回升走勢，顯示投資人風險胃納明顯回溫。",
+          "summary_en": "Global equities rebounded with Wall Street, as easing trade-tariff worries lifted sentiment. Japan's Nikkei climbed about 2.1% and South Korea's Kospi jumped over 4% in early Asian trade, while Europe's Stoxx 600 added roughly 1.5%, extending a broad recovery after a volatile November.",
+          "source_name": "Eurasia Business News",
+          "source_url": "https://eurasiabusinessnews.com/2026/11/27/stock-markets-today-november-26-2026-european-and-asian-stocks-rally-as-tariff-fears-ease/",
+          "published": "2026-11-27"
         }
       ]
     }
