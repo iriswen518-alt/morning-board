@@ -31,7 +31,7 @@
     {
       "name": "PHLX Semiconductor",
       "name_zh": null,
-      "close": 9186.7060546875,
+      "close": 9186.7099609375,
       "daily_pct": 4.69,
       "mtd_pct": -14.05,
       "ytd_pct": 29.7,
@@ -217,7 +217,7 @@
   "fx": [
     {
       "name": "DXY 美元指數",
-      "close": 104.01399993896484,
+      "close": 104.01000213623047,
       "daily_pct": 0.33,
       "mtd_pct": 2.09,
       "ytd_pct": 5.83,
@@ -275,18 +275,18 @@
   "commodities": [
     {
       "name": "黃金 (USD/oz)",
-      "close": 3668.5,
-      "daily_pct": 3.75,
-      "mtd_pct": -5.91,
-      "ytd_pct": -15.49,
+      "close": 3639.60009765625,
+      "daily_pct": 2.94,
+      "mtd_pct": -6.65,
+      "ytd_pct": -16.16,
       "closing_date": "2026-11-27"
     },
     {
       "name": "白銀 (USD/oz)",
-      "close": 43.70199966430664,
-      "daily_pct": 9.11,
-      "mtd_pct": -10.99,
-      "ytd_pct": -37.69,
+      "close": 43.16699981689453,
+      "daily_pct": 7.78,
+      "mtd_pct": -12.08,
+      "ytd_pct": -38.45,
       "closing_date": "2026-11-27"
     },
     {
@@ -299,19 +299,19 @@
     },
     {
       "name": "布蘭特原油 (USD/bbl)",
-      "close": 90.83999633789062,
-      "daily_pct": -3.98,
-      "mtd_pct": -22.78,
-      "ytd_pct": 49.29,
+      "close": 95.44000244140625,
+      "daily_pct": 0.88,
+      "mtd_pct": -18.87,
+      "ytd_pct": 56.84,
       "closing_date": "2026-11-27"
     },
     {
       "name": "比特幣 (USD)",
-      "close": 60494.7109375,
-      "daily_pct": 0.19,
-      "mtd_pct": -21.88,
-      "ytd_pct": -30.87,
-      "closing_date": "2026-11-26"
+      "close": 59866.37109375,
+      "daily_pct": -1.04,
+      "mtd_pct": -22.69,
+      "ytd_pct": -31.59,
+      "closing_date": "2026-11-27"
     }
   ],
   "bond_etfs": [
@@ -394,7 +394,7 @@
     "yield_curve_10y2y": 0.25,
     "yield_curve_10y2y_bps": 25,
     "curve_shape": "正斜率",
-    "dxy": 104.01399993896484,
+    "dxy": 104.01000213623047,
     "dxy_daily_pct": 0.33,
     "closing_date": "2026-11-27"
   },
